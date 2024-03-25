@@ -8,7 +8,7 @@ To install requirements:
 pip install -r requirements.txt
 ```
 ## Data Pre-Processing
-Run `python preprocess_shakespeare.py path/to/raw/shakespeare.txt output_directory/` from `data/shakespeare/`.
+Run `python preprocess_shakespeare.py all_data/all_data.txt all_data/` from `data/shakespeare/`.
 ## Usage
 Here is one example to run FedTP:
 ```
