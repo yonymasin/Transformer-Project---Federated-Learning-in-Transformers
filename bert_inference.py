@@ -302,8 +302,8 @@ class BertTrainer:
 ##                      BERT Inference                      ##
 ##############################################################
 
-def test_bert(path_to_data="./data/stack_overflow_questions/train-sample.csv"):
-	train_dataloader, val_dataloader, test_dataloader = preprocess_sof_data(path_to_data)
+def test_bert(train_dataloader, test_dataloader):
+	
 	# load tokenizer and pretrained model
 	tokenizer_base = BertTokenizer.from_pretrained('bert-base-uncased')
 	bert_base = MyBertForSequenceClassification.from_pretrained(
@@ -327,3 +327,7 @@ def test_bert(path_to_data="./data/stack_overflow_questions/train-sample.csv"):
 	
 	# evaluate on test set
 	trainer_bert_base.evaluate()
+
+if __name__ == '__main__':
+	train_dataloader, val_dataloader, test_dataloader = preprocess_sof_data(path_to_data)
+	test_bert(train_dataloader, test_dataloader)
