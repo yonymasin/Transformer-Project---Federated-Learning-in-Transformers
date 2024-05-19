@@ -5,10 +5,12 @@ import torch.utils.data as data
 import copy
 from collections import defaultdict
 
-from fedtp_datasets import CharacterDataset
+from create_datasets import CharacterDataset, create_stack_overflow_questions_dataset
+
+from constants import *
 
 import torch.nn as nn
-from datastore import *
+
 
 logging.basicConfig()
 logger = logging.getLogger()
@@ -196,12 +198,12 @@ def get_spe_dataloaders(dataset, data_dir, batch_size, chunk_len, is_validation=
     for task_id, task_dir in enumerate(os.listdir(data_dir)):
         task_data_path = os.path.join(data_dir, task_dir)
 
-        train_iterator = get_spe_loader(dataset=dataset,
+        train_iterator = get_spe_loader(dataset_name=dataset,
                                         path=os.path.join(task_data_path, f"train{EXTENSIONS[dataset]}"),
                                         batch_size=batch_size, chunk_len=chunk_len, inputs=inputs, targets=targets,
                                         train=True)
 
-        val_iterator = get_spe_loader(dataset=dataset,
+        val_iterator = get_spe_loader(dataset_name=dataset,
                                       path=os.path.join(task_data_path, f"train{EXTENSIONS[dataset]}"),
                                       batch_size=batch_size, chunk_len=chunk_len, inputs=inputs, targets=targets,
                                       train=False)
@@ -211,7 +213,7 @@ def get_spe_dataloaders(dataset, data_dir, batch_size, chunk_len, is_validation=
         else:
             test_set = "test"
 
-        test_iterator = get_spe_loader(dataset=dataset,
+        test_iterator = get_spe_loader(dataset_name=dataset,
                                        path=os.path.join(task_data_path, f"{test_set}{EXTENSIONS[dataset]}"),
                                        batch_size=batch_size, chunk_len=chunk_len, inputs=inputs, targets=targets,
                                        train=False)
@@ -221,20 +223,33 @@ def get_spe_dataloaders(dataset, data_dir, batch_size, chunk_len, is_validation=
             val_iterators.append(val_iterator)
             test_iterators.append(test_iterator)
 
-    original_client_num = task_id + 1
+    original_client_num = task_id + 1 # TODO: for Stack Overflow Questions dataset need to think how to compute num of clients
 
     return train_iterators, val_iterators, test_iterators, original_client_num
 
 
-def get_spe_loader(dataset, path, batch_size, train, chunk_len=5, inputs=None, targets=None):
-    if dataset == "shakespeare":
+def collate_fn(batch):
+    """ Instructs how the DataLoader should process the data into a batch"""
+
+    text = [item['text'] for item in batch]
+    tabular = torch.stack([torch.tensor(item['tabular']) for item in batch])
+    labels = torch.stack([torch.tensor(item['label']) for item in batch])
+
+    return {'text': text, 'tabular': tabular, 'label': labels}
+
+
+def get_spe_loader(dataset_name, path, batch_size, train, chunk_len=5, inputs=None, targets=None):
+    if dataset_name == "shakespeare":
         dataset = CharacterDataset(path, chunk_len=chunk_len)
+    elif dataset_name == 'stack_overflow_questions':
+        dataset = create_stack_overflow_questions_dataset(path)
     else:
-        raise NotImplementedError(f"{dataset} not recognized type; possible are {list(LOADER_TYPE.keys())}")
+        raise NotImplementedError(f"{dataset_name} not recognized type")
 
     if len(dataset) == 0:
         return
 
     drop_last = (len(dataset) > batch_size) and train
+    current_collate_fn = collate_fn if dataset_name == 'stack_overflow_questions' else None
+    return data.DataLoader(dataset, batch_size=batch_size, shuffle=train, drop_last=drop_last, num_workers=NUM_WORKERS, collate_fn=current_collate_fn)
 
-    return data.DataLoader(dataset, batch_size=batch_size, shuffle=train, drop_last=drop_last, num_workers=NUM_WORKERS)

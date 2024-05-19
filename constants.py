@@ -6,7 +6,8 @@ ALL_STRATEGIES = {
 }
 
 EXTENSIONS = {
-    "shakespeare": ".txt"
+    "shakespeare": ".txt",
+    "stack_overflow_questions": ".csv"
 }
 
 EMBEDDING_DIM = {
@@ -51,6 +52,14 @@ CHARACTERS_WEIGHTS = {
     'y': 0.6388302610200002
 }
 
+SOQ_LABEL_STRING_TO_INT = {
+        'open': 0,
+        'not a real question': 1,
+        'off topic': 1,
+        'not constructive': 1,
+        'too localized': 1
+    }
 
 # NUM_WORKERS = os.cpu_count()  # number of workers used to load data and in GPClassifier
 NUM_WORKERS = 1
+NUM_TAGS = 5

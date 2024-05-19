@@ -1,5 +1,5 @@
 ''' Define the Transformer model '''
-#https://github.com/jadore801120/attention-is-all-you-need-pytorch
+# https://github.com/jadore801120/attention-is-all-you-need-pytorch
 import torch
 import torch.nn as nn
 import numpy as np
@@ -28,6 +28,7 @@ class PositionalEncoding(nn.Module):
 
     def _get_sinusoid_encoding_table(self, n_position, d_hid):
         ''' Sinusoid position encoding table '''
+
         # TODO: make it with torch instead of numpy
 
         def get_position_angle_vec(position):
@@ -170,11 +171,11 @@ class Transformer(nn.Module):
 
         for p in self.parameters():
             if p.dim() > 1:
-                nn.init.xavier_uniform_(p) 
+                nn.init.xavier_uniform_(p)
 
         assert d_model == d_word_vec, \
-        'To facilitate the residual connections, \
-         the dimensions of all module outputs shall be the same.'
+            'To facilitate the residual connections, \
+             the dimensions of all module outputs shall be the same.'
 
         # if trg_emb_prj_weight_sharing:
         #     # Share the weight between target word embedding & last dense layer
@@ -183,16 +184,14 @@ class Transformer(nn.Module):
         # if emb_src_trg_weight_sharing:
         #     self.encoder.src_word_emb.weight = self.decoder.trg_word_emb.weight
 
-
     def produce_feature(self, src_seq):
         enc_output, *_ = self.encoder(src_seq)
         return enc_output
 
-
     def forward(self, src_seq):
 
         enc_output, *_ = self.encoder(src_seq)
-        
+
         seq_logit = self.trg_word_prj(enc_output)
         if self.scale_prj:
             seq_logit *= self.d_model ** -0.5

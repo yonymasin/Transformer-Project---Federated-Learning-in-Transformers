@@ -5,9 +5,12 @@ import datetime
 import argparse
 from collections import OrderedDict
 
-from models.Hypernetworks import ShakesHyper
+from models.Hypernetworks import ShakesHyper, LoraHyper
 from models.language_transformer import Transformer
 from methods.method import *
+
+from models.Bert import BertForSequenceClassification
+from models.Lora import add_lora_layers, freeze_model
 
 
 def get_args():
@@ -101,7 +104,16 @@ def init_nets(net_configs, dropout_p, n_parties, args):
                               d_k=64, d_v=64, d_model=128,
                               d_word_vec=128, d_inner=256,
                               n_layers=args.depth, n_head=8, dropout=0.1)
-
+        elif args.model == "bert-lora":
+            bert_base = BertForSequenceClassification.from_pretrained(  # Pre-trained BERT
+                model_type='bert-base-uncased',
+                config_args={"vocab_size": 30522, "n_classes": 2}
+                # these are default configs but just added for explicity
+            )
+            # TODO: add LoRA parameters to Args
+            add_lora_layers(bert_base, ("query", "key", "value"), r=8, lora_alpha=16)  # add the LoRA layers into the model
+            freeze_model(bert_base)  # freeze the non-LoRA parameters
+            net = bert_base
         else:
             raise NotImplementedError("not supported yet")
 
@@ -120,18 +132,20 @@ def init_hyper(args, sam_node=None):
     # embed_dim = int(1 + args.n_parties / 4)
     embed_dim = args.client_embed_size
 
-    if args.model == "transformer":
-        if args.dataset != "shakespeare":
-            raise NotImplementedError("ShakesHyper only supports shakespeare dataset.")
-
+    if args.dataset == "shakespeare":
         hnet = ShakesHyper(args.n_parties, embed_dim, hidden_dim=args.hyper_hid, dim=128,
+                           heads=8, dim_head=64, n_hidden=args.n_hidden,
+                           depth=args.depth, client_sample=sam_node)
+
+    elif args.dataset == "stack_overflow_questions":
+        hnet = LoraHyper(args.n_parties, embed_dim, hidden_dim=args.hyper_hid, dim=128,
                            heads=8, dim_head=64, n_hidden=args.n_hidden,
                            depth=args.depth, client_sample=sam_node)
 
     return hnet
 
+
 if __name__ == '__main__':
-    # torch.set_printoptions(profile="full")
     args = get_args()
     logging.info("Dataset: %s" % args.dataset)
     logging.info("Backbone: %s" % args.model)
@@ -203,14 +217,20 @@ if __name__ == '__main__':
     acc_all = []
 
     logger.info("Partitioning data")
-
-    if args.model not in ["lstm", "transformer"]:
-        raise NotImplementedError("shakespeare supports lstm or transformer")
-    data_dir = os.path.join("data", "shakespeare", "all_data", "train")
-    train_dl_global, val_dl_global, test_dl_global, original_c_num = get_spe_dataloaders(args.dataset, data_dir,
+    if args.dataset == 'shakespeare':
+        if args.model not in ["lstm", "transformer"]:
+            raise NotImplementedError("shakespeare supports lstm or transformer")
+        data_dir = os.path.join("data", "shakespeare", "all_data", "train")
+        train_dl_global, val_dl_global, test_dl_global, original_c_num = get_spe_dataloaders(args.dataset, data_dir,
                                                                                              args.batch_size,
                                                                                              args.chunk_len)
-    args.n_parties = len(train_dl_global)
+        args.n_parties = len(train_dl_global)
+    elif args.dataset == 'stack_overflow_questions':
+        #data_dir = './data/stack_overflow_questions/'
+        data_dir = os.path.join("data", "stack_overflow_questions", "train")
+        train_dl_global, val_dl_global, test_dl_global, original_c_num = get_spe_dataloaders(args.dataset, data_dir,
+                                                                                             args.batch_size,
+                                                                                             args.chunk_len)
 
     logging.info("Test beginning round: %d" % args.test_round)
     logger.info("Drop Client Number: %d" % (original_c_num - args.n_parties))
@@ -230,7 +250,7 @@ if __name__ == '__main__':
         global_models, global_model_meta_data, global_layer_type = init_nets(args.net_config, 0, 1, args)
         global_model = global_models[0]
 
-        global_para = global_model.state_dict()
+        global_para = global_model.state_dict()  # TODO: verify that only LoRA layers are set here
 
         if args.is_same_initial:
             for net_id, net in nets.items():
@@ -252,23 +272,28 @@ if __name__ == '__main__':
                 for idx in selected:
                     nets[idx].load_state_dict(global_para)
 
-            if args.dataset == 'shakespeare':
+            # train local models
+            if args.dataset == 'shakespeare' or args.dataset == 'stack_overflow_questions':
                 local_train_net_per(nets, selected, args, train_dl_global, test_dl_global, logger, device=device)
 
             # update global model
-            if args.dataset == 'shakespeare':
+            if args.dataset == 'shakespeare' or args.dataset == 'stack_overflow_questions':
                 instance_number_per_client = [len(train_dl_global[r].dataset) for r in selected]
                 total_data_points = sum(instance_number_per_client)
                 fed_avg_freqs = [instance_number_per_client[r] / total_data_points for r in
                                  range(len(instance_number_per_client))]
 
             for idx in range(len(selected)):
-                net_para = nets[selected[idx]].state_dict()
+                net_para = nets[selected[idx]].state_dict()  # TODO: verify here as well that only LoRA layers are taken
                 if idx == 0:
                     for key in net_para:
+                        if args.model == "bert-lora" and "lora" not in key and "classifier" not in key:
+                            continue
                         global_para[key] = net_para[key] * fed_avg_freqs[idx]
                 else:
                     for key in net_para:
+                        if args.model == "bert-lora" and "lora" not in key and "classifier" not in key:
+                            continue
                         global_para[key] += net_para[key] * fed_avg_freqs[idx]
             global_model.load_state_dict(global_para)
 
@@ -303,7 +328,7 @@ if __name__ == '__main__':
             json.dump(results_dict, file, indent=4)
 
     elif args.alg == 'FedTP':
-        if args.model not in ["vit", "transformer"]:
+        if args.model not in ["transformer", "bert-lora"]:
             raise NotImplementedError("FedTP only supports ViT and transformer")
 
         logger.info("Initializing nets")
@@ -313,7 +338,7 @@ if __name__ == '__main__':
         global_model = global_models[0]
 
         logger.info("Initializing hyper")
-        if args.dataset == "shakespeare":
+        if args.dataset == "shakespeare" or args.dataset == "stack_overflow_questions":
             sam_node = int(args.n_parties * args.sample)
             hnet = init_hyper(args, sam_node).to(device)
 
@@ -358,11 +383,11 @@ if __name__ == '__main__':
                     nets[idx].load_state_dict(node_weights, strict=False)
                     del node_weights
 
-            if args.dataset == 'shakespeare':
+            if args.dataset == 'shakespeare' or args.dataset == 'stack_overflow_questions':
                 nets_list = local_train_net_per(nets, selected, args, train_dl_global, test_dl_global, logger, device=device)
 
             # update global model
-            if args.dataset == 'shakespeare':
+            if args.dataset == 'shakespeare' or args.dataset == 'stack_overflow_questions':
                 instance_number_per_client = [len(train_dl_global[r].dataset) for r in selected]
                 total_data_points = sum(instance_number_per_client)
                 fed_avg_freqs = [instance_number_per_client[r] / total_data_points for r in
@@ -382,10 +407,14 @@ if __name__ == '__main__':
 
                 if idx == 0:
                     for key in net_para:
+                        if args.model == "bert-lora" and "lora" not in key and "classifier" not in key:
+                            continue
                         global_para[key] = net_para[key] * fed_avg_freqs[idx]
                     grads_update = [fed_avg_freqs[idx] * x for x in hnet_grads]
                 else:
                     for key in net_para:
+                        if args.model == "bert-lora" and "lora" not in key and "classifier" not in key:
+                            continue
                         global_para[key] += net_para[key] * fed_avg_freqs[idx]
                     for g in range(len(hnet_grads)):
                         grads_update[g] += fed_avg_freqs[idx] * hnet_grads[g]
