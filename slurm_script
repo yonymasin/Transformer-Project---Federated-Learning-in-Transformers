@@ -1,0 +1,19 @@
+#!/bin/bash
+
+##Resource Request
+
+#SBATCH --job-name fedTP
+#SBATCH --mail-user=ben.halperin@campus.technion.ac.il
+#SBATCH --mail-type=ALL           # Valid values are NONE, BEGIN, END, FAIL, REQUEUE, ALL
+#SBATCH --gres=gpu:6000ADA:1          # Request 1 gpu type A40
+#SBATCH --exclude=nlp-a40-1          # Do not use this gpu becasue it doesnt have enough memory
+#SBATCH --output /home/ben.halperin/Transformer-Project---Federated-Learning-in-Transformers/output/result.out
+#SBATCH --ntasks=1  ## number of tasks (analyses) to run
+#SBATCH --time=20-10:10:00  ## time for analysis (day-hour:min:sec)
+
+##Load the CUDA module
+module load cuda
+
+## Run the script
+python main.py --model=transformer --dataset=shakespeare --alg=FedTP --eval_step=5  --lr=0.01 --batch-size=64 --epochs=5 --n_parties=50 --beta=0.01 --comm_round=300 --device=cuda:0 --datadir='./data/' --logdir='./logs_emb/'  --init_seed=0 --chunk_len=1 --sample=0.1 --test_round=100
+echo Done
