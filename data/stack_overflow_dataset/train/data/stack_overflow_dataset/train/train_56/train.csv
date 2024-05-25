@@ -1,0 +1,1946 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+6430945,06/21/2011 19:32:20,528123,12/02/2010 14:49:58,28,0,Using the http interface for VLC. Why is the loop flag toggling back and forth ad infinitum?,"I have a cd player I'm writing in Java, porting VLC with the http interface.  I'm trying to combine the loop and repeat functions in order to have a Repeat button with 3 states (Repeat none, Repeat One, and Repeat All).  For some odd reason, the ""loop"" boolean is switching back and forth every second, so there is no way to reliably ""Repeat All"".  I just have to hope the loop boolean is in the right state at the right time.  But as it is changing every second, this seems almost impossible to use.  Has anybody seen this?  Or know any solutions?",http,vlc,,,,,open,0,108,17,"Using the http interface for VLC. Why is the loop flag toggling back and forth ad infinitum? I have a cd player I'm writing in Java, porting VLC with the http interface.  I'm trying to combine the loop and repeat functions in order to have a Repeat button with 3 states (Repeat none, Repeat One, and Repeat All).  For some odd reason, the ""loop"" boolean is switching back and forth every second, so there is no way to reliably ""Repeat All"".  I just have to hope the loop boolean is in the right state at the right time.  But as it is changing every second, this seems almost impossible to use.  Has anybody seen this?  Or know any solutions?",2
+11305119,07/03/2012 05:43:24,1219622,02/19/2012 18:44:09,13,0,OpenGTS gprmc connection problems,"you wrote that solved the problem with openGTS connenction. Can you explain it ?
+
+http://stackoverflow.com/questions/11289123/opengts-error-gprmc-data-is-not-available
+
+That is my problem, it seems that they are the same. Thank you.",http,tomcat,servlets,,,07/03/2012 17:37:27,not a real question,1,26,4,"OpenGTS gprmc connection problems you wrote that solved the problem with openGTS connenction. Can you explain it ?
+
+http://stackoverflow.com/questions/11289123/opengts-error-gprmc-data-is-not-available
+
+That is my problem, it seems that they are the same. Thank you.",3
+6268024,06/07/2011 15:53:07,737952,05/04/2011 12:18:55,8,0,JS Errors because of proxy_ajp,"We have an application running on tomcat6 with apache 2.2.16 and we have proxy_ajp enabled on port 80 that routes via ajp module. We also have an HTTP connector on port 9090. 
+
+Accessing the application using port 9090 works fine. When we access using port 80, we start getting JS errors on different pages of the application.
+
+Can anyone point out what could be the possible cause of these JS errors? Is it related to proxy_ajp? If yes, how can we resolve it?
+
+Any help will be appreciated!
+
+
+Thanks
+Noman A.",http,proxy,tomcat6,ajp,,05/07/2012 17:18:14,too localized,1,87,5,"JS Errors because of proxy_ajp We have an application running on tomcat6 with apache 2.2.16 and we have proxy_ajp enabled on port 80 that routes via ajp module. We also have an HTTP connector on port 9090. 
+
+Accessing the application using port 9090 works fine. When we access using port 80, we start getting JS errors on different pages of the application.
+
+Can anyone point out what could be the possible cause of these JS errors? Is it related to proxy_ajp? If yes, how can we resolve it?
+
+Any help will be appreciated!
+
+
+Thanks
+Noman A.",4
+6598029,07/06/2011 14:26:58,706719,04/13/2011 19:53:07,36,0,Can't access my domain when I write http://mydomian but I can when I go to www.mydomian,"This is a strange one. Must be a DNS configuration or something. I cannot connect when I enter http://mydomain.com but when I write in www.mydomain.com I can.
+
+Can anyone shed some light? I use WHM as my control panel.
+
+Thanks.",http,web,domain,dns,whm,07/06/2011 19:45:15,off topic,1,38,16,"Can't access my domain when I write http://mydomian but I can when I go to www.mydomian This is a strange one. Must be a DNS configuration or something. I cannot connect when I enter http://mydomain.com but when I write in www.mydomain.com I can.
+
+Can anyone shed some light? I use WHM as my control panel.
+
+Thanks.",5
+8131233,11/15/2011 03:45:41,88597,04/08/2009 13:38:53,4872,220,What is httpd <defunct>?,"    32537 apache    16   0 87424  15m 7324 S  2.3  0.3   0:00.52 httpd              
+     3302 mysql     15   0  156m  41m 4756 S  1.3  0.7  10:50.91 mysqld             
+      489 apache    16   0 87016  14m 6692 S  0.7  0.2   0:00.27 httpd              
+      990 apache    15   0     0    0    0 Z  0.7  0.0   0:00.12 httpd <defunct>    
+      665 apache    15   0 86992  13m 5644 S  0.3  0.2   0:00.20 httpd              
+    32218 apache    15   0 87356  14m 6344 S  0.3  0.2   0:00.53 httpd              
+        1 root      15   0  2160  640  556 S  0.0  0.0   0:01.18 init  
+
+From `top`, there is an occasional `httpd <defunct>` showing up. What does it do? 
+
+I found that the web server sometimes does not response to `FPDF` (print PDF at user's request). Is it related?",http,centos,httpd,,,11/15/2011 22:19:16,off topic,1,310,4,"What is httpd <defunct>?     32537 apache    16   0 87424  15m 7324 S  2.3  0.3   0:00.52 httpd              
+     3302 mysql     15   0  156m  41m 4756 S  1.3  0.7  10:50.91 mysqld             
+      489 apache    16   0 87016  14m 6692 S  0.7  0.2   0:00.27 httpd              
+      990 apache    15   0     0    0    0 Z  0.7  0.0   0:00.12 httpd <defunct>    
+      665 apache    15   0 86992  13m 5644 S  0.3  0.2   0:00.20 httpd              
+    32218 apache    15   0 87356  14m 6344 S  0.3  0.2   0:00.53 httpd              
+        1 root      15   0  2160  640  556 S  0.0  0.0   0:01.18 init  
+
+From `top`, there is an occasional `httpd <defunct>` showing up. What does it do? 
+
+I found that the web server sometimes does not response to `FPDF` (print PDF at user's request). Is it related?",3
+2999434,06/08/2010 16:47:46,340247,05/13/2010 12:25:46,61,1,Erlang:  HTTP Accept Header with Inets,"I am trying to do the equivalent of the following curl command :
+
+curl -H ""Accept: text/plain"" http://127.0.0.1:8033/stats
+
+I tried with an Inets simple http request.  But, it isn't processed.
+
+How can I specify in Inets (or some other Erlang http client for that matter) the accept header requirement?",http,erlang,inets,,,,open,0,47,7,"Erlang:  HTTP Accept Header with Inets I am trying to do the equivalent of the following curl command :
+
+curl -H ""Accept: text/plain"" http://127.0.0.1:8033/stats
+
+I tried with an Inets simple http request.  But, it isn't processed.
+
+How can I specify in Inets (or some other Erlang http client for that matter) the accept header requirement?",3
+7202019,08/26/2011 08:34:25,875681,08/03/2011 00:34:21,3,0,"HTTP PUT - enclosed entity be stored under the supplied Request-URI, does that mean Delete and Add?","According to the [spec][1]:
+
+> The PUT method requests that the enclosed entity be stored under the
+> supplied Request-URI. If the Request-URI refers to an already existing
+> resource, the enclosed entity SHOULD be considered as a modified
+> version of the one residing on the origin server.
+
+So if I have to implement a RESTFul service to change the age of a Person:
+
+> id: 100, name: John Doe, description: Tall, age: 40
+
+to **age 60**, should my PUT request contain
+
+> id: 100, name: John Doe, description: Tall, age: 60
+
+or just
+> age: 60
+
+Should the server be expected to merge and update just what changed or completely delete and re-add the resource?
+  [1]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.6",http,rest,http-post,http-put,restful-architecture,,open,0,109,17,"HTTP PUT - enclosed entity be stored under the supplied Request-URI, does that mean Delete and Add? According to the [spec][1]:
+
+> The PUT method requests that the enclosed entity be stored under the
+> supplied Request-URI. If the Request-URI refers to an already existing
+> resource, the enclosed entity SHOULD be considered as a modified
+> version of the one residing on the origin server.
+
+So if I have to implement a RESTFul service to change the age of a Person:
+
+> id: 100, name: John Doe, description: Tall, age: 40
+
+to **age 60**, should my PUT request contain
+
+> id: 100, name: John Doe, description: Tall, age: 60
+
+or just
+> age: 60
+
+Should the server be expected to merge and update just what changed or completely delete and re-add the resource?
+  [1]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.6",5
+5539793,04/04/2011 14:17:04,404568,07/28/2010 13:41:24,960,38,Tunnelling TCP over HTTP,"For assorted obscure reasons I have a situation where I need to tunnel a TCP connection across an HTTP connection: the local client wants a raw stream to a remote server, but the only way of getting to the remote server is via HTTP.
+
+Note that I **don't** have access to the HTTP CONNECT verb, so I have to use a stream of GET/POST requests for this.
+
+So far I've found software like GNU httptunnel, which almost does what I want but is buggy and rather limited in that it only supports a single tunnel; attempting to communicate with it without tearing down the tunnel first causes problems. And most of the other things I've found all expect CONNECT to work, and so are unsuitable for me.
+
+Can anyone suggest some other software I should look at? Ideally I'd like something that runs as a server rather than bolting on to Apache (because I don't use Apache), but I'm not picky.
+
+For extra points, my client is actually running Java (a really clunky PBP profile), and so I'm going to need an access library. I'm willing to write one, but obviously would rather not...",http,networking,tcp,recommendation,tunneling,07/27/2011 23:09:55,off topic,1,190,4,"Tunnelling TCP over HTTP For assorted obscure reasons I have a situation where I need to tunnel a TCP connection across an HTTP connection: the local client wants a raw stream to a remote server, but the only way of getting to the remote server is via HTTP.
+
+Note that I **don't** have access to the HTTP CONNECT verb, so I have to use a stream of GET/POST requests for this.
+
+So far I've found software like GNU httptunnel, which almost does what I want but is buggy and rather limited in that it only supports a single tunnel; attempting to communicate with it without tearing down the tunnel first causes problems. And most of the other things I've found all expect CONNECT to work, and so are unsuitable for me.
+
+Can anyone suggest some other software I should look at? Ideally I'd like something that runs as a server rather than bolting on to Apache (because I don't use Apache), but I'm not picky.
+
+For extra points, my client is actually running Java (a really clunky PBP profile), and so I'm going to need an access library. I'm willing to write one, but obviously would rather not...",5
+2446267,03/15/2010 10:06:19,292246,03/12/2010 09:40:34,5,0,I need to encrypt the names of my http form elements,"I have a form with certain elements, input boxes, check boxes etc. I need to encrypt the names of these input boxes and check boxes. I'm currently using a Rijndael encryption/decryption method through c# however this is making the encrypted names too long to be passed in a post. Is there a better way to get decent encrypted names? my purpose is to have the names encrypted before the post happens so if someone views the code behind the names are already encrypted.",http,asp.net,encryption,c#,rijndael,,open,0,83,11,"I need to encrypt the names of my http form elements I have a form with certain elements, input boxes, check boxes etc. I need to encrypt the names of these input boxes and check boxes. I'm currently using a Rijndael encryption/decryption method through c# however this is making the encrypted names too long to be passed in a post. Is there a better way to get decent encrypted names? my purpose is to have the names encrypted before the post happens so if someone views the code behind the names are already encrypted.",5
+5769979,04/24/2011 10:16:16,568822,01/09/2011 14:32:12,139,2,Secured HTTP : HTTPS Content,"Everlasting...
+
+Hi Everybody.
+
+I Can't Visit any videos in Link Below :
+
+    Https://youtube.com
+
+What is the problem with https ? ",http,networking,internet,network-protocols,,04/24/2011 12:28:49,off topic,1,21,5,"Secured HTTP : HTTPS Content Everlasting...
+
+Hi Everybody.
+
+I Can't Visit any videos in Link Below :
+
+    Https://youtube.com
+
+What is the problem with https ? ",4
+7686746,10/07/2011 11:42:36,724015,04/12/2011 09:53:21,1,0,Using filezilla with blocked FTP ports,"My mobile provider on my cell-phone, whitch i used as a modem, has blocked ftp ports, and i can use just http/https connetction.
+But i need to work with files (editing by Notepadd++ in filezilla) by ftp.
+How i can go through it ?
+
+I don't know anything in proxy, port-forwarding etc.",http,ftp,filezilla,,,10/07/2011 17:44:15,off topic,1,49,6,"Using filezilla with blocked FTP ports My mobile provider on my cell-phone, whitch i used as a modem, has blocked ftp ports, and i can use just http/https connetction.
+But i need to work with files (editing by Notepadd++ in filezilla) by ftp.
+How i can go through it ?
+
+I don't know anything in proxy, port-forwarding etc.",3
+8341234,12/01/2011 12:15:44,811785,06/23/2011 07:50:59,4103,312,How to disable HTTP Trace in IIS7,"I'm trying to secure my web site, as much as I can. I came across a concept called [Cross-Site Tracing][1] (also see [here][2]).
+
+The best countermeasure of this attack, is to stop IIS, from responding to HTTP Requests with **Trace** method. However, I don't know how can I do this.
+
+Any ideas?
+
+
+  [1]: http://en.wikipedia.org/wiki/Cross-site_tracing
+  [2]: http://www.cgisecurity.com/whitehat-mirror/WH-WhitePaper_XST_ebook.pdf",http,iis,web-security,http-method,,12/01/2011 18:07:47,off topic,1,56,7,"How to disable HTTP Trace in IIS7 I'm trying to secure my web site, as much as I can. I came across a concept called [Cross-Site Tracing][1] (also see [here][2]).
+
+The best countermeasure of this attack, is to stop IIS, from responding to HTTP Requests with **Trace** method. However, I don't know how can I do this.
+
+Any ideas?
+
+
+  [1]: http://en.wikipedia.org/wiki/Cross-site_tracing
+  [2]: http://www.cgisecurity.com/whitehat-mirror/WH-WhitePaper_XST_ebook.pdf",4
+3087626,06/21/2010 19:04:48,116895,06/03/2009 20:40:38,2276,120,Was the HTTP_REFERER misspelling intentional?,"I read recently (I can't recall where, or I'd return to that source) that the misspelling of HTTP_REFERER in the spec was intentional.  Is that accurate?  If so, why?",http,specifications,typo,rumor,,,open,0,31,5,"Was the HTTP_REFERER misspelling intentional? I read recently (I can't recall where, or I'd return to that source) that the misspelling of HTTP_REFERER in the spec was intentional.  Is that accurate?  If so, why?",4
+11389933,07/09/2012 06:21:21,966103,09/27/2011 01:43:00,421,22,How to fix Wget download filename,"Wget can't detect filename when 301/302 redirections
+
+for example
+
+download mysql source code from http://www.mysql.com/downloads/mirror.php?id=408580
+
+wget http://www.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz/from/http://cdn.mysql.com/
+
+it will be save as `index.html`
+
+wget http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz
+
+it will be save as `mysql-5.5.25a-linux2.6-x86_64.tar.gz`
+
+but the first url is only a jump for second url
+
+
+    curl -I http://www.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz/from/http://cdn.mysql.com/
+    
+    HTTP/1.1 302 Found
+    Date: Mon, 09 Jul 2012 06:11:50 GMT
+    Server: Apache/2.2
+    Expires: Thu, 19 Nov 1981 08:52:00 GMT
+    Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+    Pragma: no-cache
+    Set-Cookie: mirror=http%3A%2F%2Fcdn.mysql.com%2F; expires=Sat, 08-Jul-2017 06:11:50 GMT; path=/
+    Location: http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz
+    Content-Encoding: gzip
+    Vary: Accept-Encoding
+    Content-Type: text/html; charset=utf-8
+
+
+how to save http://www.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz/from/http://cdn.mysql.com/ as "".tar.gz"" automatically (no `-O` arg )?",http,shell,url,download,wget,07/10/2012 14:02:45,off topic,1,131,6,"How to fix Wget download filename Wget can't detect filename when 301/302 redirections
+
+for example
+
+download mysql source code from http://www.mysql.com/downloads/mirror.php?id=408580
+
+wget http://www.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz/from/http://cdn.mysql.com/
+
+it will be save as `index.html`
+
+wget http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz
+
+it will be save as `mysql-5.5.25a-linux2.6-x86_64.tar.gz`
+
+but the first url is only a jump for second url
+
+
+    curl -I http://www.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz/from/http://cdn.mysql.com/
+    
+    HTTP/1.1 302 Found
+    Date: Mon, 09 Jul 2012 06:11:50 GMT
+    Server: Apache/2.2
+    Expires: Thu, 19 Nov 1981 08:52:00 GMT
+    Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+    Pragma: no-cache
+    Set-Cookie: mirror=http%3A%2F%2Fcdn.mysql.com%2F; expires=Sat, 08-Jul-2017 06:11:50 GMT; path=/
+    Location: http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz
+    Content-Encoding: gzip
+    Vary: Accept-Encoding
+    Content-Type: text/html; charset=utf-8
+
+
+how to save http://www.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.25a-linux2.6-x86_64.tar.gz/from/http://cdn.mysql.com/ as "".tar.gz"" automatically (no `-O` arg )?",5
+8588231,12/21/2011 10:17:36,1064906,11/25/2011 02:42:05,6,0,Streaming Rtsp over a socks proxy,"I would like to know if it's possible to stream RTSP (.3gp) videos over a socks proxy?  I have yet to see any programs offering this feature, And believe me i have looked far and wide.  
+
+If anybody should happen to know of anyone who can freelance this sort of thing, i would definitely be interested in that as well....  Visual/audio output are unnecessary if this makes things easier..... I have attempted to take on somebody to have this sort of thing completed, yet they bailed on me and i'm left high and dry without anything to show for it.",http,networking,proxy,streaming,rtsp,,open,0,103,6,"Streaming Rtsp over a socks proxy I would like to know if it's possible to stream RTSP (.3gp) videos over a socks proxy?  I have yet to see any programs offering this feature, And believe me i have looked far and wide.  
+
+If anybody should happen to know of anyone who can freelance this sort of thing, i would definitely be interested in that as well....  Visual/audio output are unnecessary if this makes things easier..... I have attempted to take on somebody to have this sort of thing completed, yet they bailed on me and i'm left high and dry without anything to show for it.",5
+1326430,08/25/2009 06:46:41,31152,10/24/2008 12:32:34,358,25,Is there a HTTP header field / hack to tell the browser NOT to pipeline its requests ?,"I am implementing a minimalistic web server application on a Microcontroller. When I have several images (or CSS/JS) on the web page, the browser creates several connections and fetches them. But the Microcontroller can not catch up with this. Is there a way to tell the browser to stop pipelining and fetch them one by one ?
+
+Note :: ""Connection: close"" is already in place.
+",http,http-headers,,,,,open,0,64,18,"Is there a HTTP header field / hack to tell the browser NOT to pipeline its requests ? I am implementing a minimalistic web server application on a Microcontroller. When I have several images (or CSS/JS) on the web page, the browser creates several connections and fetches them. But the Microcontroller can not catch up with this. Is there a way to tell the browser to stop pipelining and fetch them one by one ?
+
+Note :: ""Connection: close"" is already in place.
+",2
+7008831,08/10/2011 09:52:00,222163,12/01/2009 14:46:00,265,14,Does unsubscribe link need to be idempotent,"So we have an unsubscribe link - this is by it's nature an HTTP GET.
+
+The [appropriate RFC][1] says this should be idempotent but to my mind the user expectation will be that they are clicking a link to take an action.
+
+I've implemented this so that the link takes you to a page that has a big confirm button which then updates your subscription, confirms that and displays the final state of your account (we have more than one type of subscription)
+
+But I wonder if it would not be a better UX if the person simply skipped the confirm button stage...
+
+The answer to the question ""Am I overthinking this?"" is definitely yes but I wondered what people's views were on balancing the best practice of an idempotent GET with the best practice of not confounding user's expectations...
+
+
+  [1]: http://t.co/xH5nYHf",http,user-experience,idempotent,,,08/10/2011 16:15:25,off topic,1,139,7,"Does unsubscribe link need to be idempotent So we have an unsubscribe link - this is by it's nature an HTTP GET.
+
+The [appropriate RFC][1] says this should be idempotent but to my mind the user expectation will be that they are clicking a link to take an action.
+
+I've implemented this so that the link takes you to a page that has a big confirm button which then updates your subscription, confirms that and displays the final state of your account (we have more than one type of subscription)
+
+But I wonder if it would not be a better UX if the person simply skipped the confirm button stage...
+
+The answer to the question ""Am I overthinking this?"" is definitely yes but I wondered what people's views were on balancing the best practice of an idempotent GET with the best practice of not confounding user's expectations...
+
+
+  [1]: http://t.co/xH5nYHf",3
+5405295,03/23/2011 12:33:37,263285,02/01/2010 06:31:59,115,22,How to fallback from Negotiate method to Basic only when Negotiate fails,"I have a webapplication which does the kerberos and basic authentication as well. I do not know what the client is capable of. So both auth mechanisms are sent in 401 reply.
+
+The reply header will contain,
+
+    WWW-Authenticate: Negotiate
+    WWW-Authenticate: Basic realm=""MyREALM""
+
+But, I want the client to fall back to basic auth only if negotiate fails.
+
+I want the flow should be like, 
+
+ 1. The client request
+ 2. Server responds with WWW-Authenticate: Negotiate
+ 3. The client re-request with (either with wrong auth data or with some flag indicating it can't proceed)
+ 4. The server response again with WWW-Authenticate: Basic realm=""MYREALM""
+ 5. Client does basic auth.
+
+How can I do this? I modified the server code to do this. But the browser which is not in any domain (its supposed to do basic auth) does not respond after step2.",http,authentication,browser,basic-authentication,negotiate,,open,0,142,12,"How to fallback from Negotiate method to Basic only when Negotiate fails I have a webapplication which does the kerberos and basic authentication as well. I do not know what the client is capable of. So both auth mechanisms are sent in 401 reply.
+
+The reply header will contain,
+
+    WWW-Authenticate: Negotiate
+    WWW-Authenticate: Basic realm=""MyREALM""
+
+But, I want the client to fall back to basic auth only if negotiate fails.
+
+I want the flow should be like, 
+
+ 1. The client request
+ 2. Server responds with WWW-Authenticate: Negotiate
+ 3. The client re-request with (either with wrong auth data or with some flag indicating it can't proceed)
+ 4. The server response again with WWW-Authenticate: Basic realm=""MYREALM""
+ 5. Client does basic auth.
+
+How can I do this? I modified the server code to do this. But the browser which is not in any domain (its supposed to do basic auth) does not respond after step2.",5
+8546501,12/17/2011 17:19:25,1066986,11/26/2011 14:35:21,10,0,node.js HTTP request parsing (using net module),"Writing an HTTP simple server on top of Net node.js module, not using HTTP module.
+
+I have a server listening at localhost:port with a socket opened.
+
+    socket.on('data', function(data){
+    	clientMsg += data;
+    });
+
+Once I type the address in the browser I can see the GET request is in clientMsg.
+
+In order to return a response I use:
+
+     socket.on('close', function(){ something response generating here});
+But this is not working well as it sends the response only once I click ESC or STOP in the browser.
+
+So the question is, how can I know the browser finished sending the message and waits for a response, without closing the connection?
+",http,node.js,response,,,,open,0,115,7,"node.js HTTP request parsing (using net module) Writing an HTTP simple server on top of Net node.js module, not using HTTP module.
+
+I have a server listening at localhost:port with a socket opened.
+
+    socket.on('data', function(data){
+    	clientMsg += data;
+    });
+
+Once I type the address in the browser I can see the GET request is in clientMsg.
+
+In order to return a response I use:
+
+     socket.on('close', function(){ something response generating here});
+But this is not working well as it sends the response only once I click ESC or STOP in the browser.
+
+So the question is, how can I know the browser finished sending the message and waits for a response, without closing the connection?
+",3
+6532902,06/30/2011 09:46:08,822750,06/30/2011 09:35:30,1,0,HttpClient Behaviour when MAX_CONNECTIONS have been opened and are busy,"I am using httpClient (4.1.x) in a multi-threaded environment. I am using the ThreadSafeClientConnManager class to create a connection pool of persistent connections, which different threads invoke as and when requests are received by my web server. 
+
+HttpClient has a MAX_CONNECTIONS parameter and a MAX_CONNECTIONS_PER_ROUTE parameter that can be configured depending upon the number of concurrent requests that need to be serviced. 
+
+My question is regarding the behavior of the ThreadSafeClientConnManager when the MAX_CONNECTIONS limit is reached. Support MAX_CONNECTIONS have been opened and they are all busy, i.e being used by other threads. Now, a new request, by a new thread is made to the connection pool for a connection. Now, does it (ConnectionPool) ignore this request OR does the invocation block the calling thread and it waits until the connection manager is able to find a free connection?",http,https,httpclient,httpclient-4.x,,,open,0,139,10,"HttpClient Behaviour when MAX_CONNECTIONS have been opened and are busy I am using httpClient (4.1.x) in a multi-threaded environment. I am using the ThreadSafeClientConnManager class to create a connection pool of persistent connections, which different threads invoke as and when requests are received by my web server. 
+
+HttpClient has a MAX_CONNECTIONS parameter and a MAX_CONNECTIONS_PER_ROUTE parameter that can be configured depending upon the number of concurrent requests that need to be serviced. 
+
+My question is regarding the behavior of the ThreadSafeClientConnManager when the MAX_CONNECTIONS limit is reached. Support MAX_CONNECTIONS have been opened and they are all busy, i.e being used by other threads. Now, a new request, by a new thread is made to the connection pool for a connection. Now, does it (ConnectionPool) ignore this request OR does the invocation block the calling thread and it waits until the connection manager is able to find a free connection?",4
+4672201,01/12/2011 17:58:37,99923,05/02/2009 17:30:50,2001,111,Other common protocols besides HTTP?,"I usually pass data between my web servers (in different locations) using HTTP requests (sometimes using SSL if it's sensitive). I was wondering if there were any **lighter protocols** that I might be able to swap HTTP(S) for that would also support public/private keys like SSH or something.
+
+I used PHP sockets to build a SMTP client before so I wouldn't mind doing that if required.",http,protocols,alternative,,,,open,0,65,5,"Other common protocols besides HTTP? I usually pass data between my web servers (in different locations) using HTTP requests (sometimes using SSL if it's sensitive). I was wondering if there were any **lighter protocols** that I might be able to swap HTTP(S) for that would also support public/private keys like SSH or something.
+
+I used PHP sockets to build a SMTP client before so I wouldn't mind doing that if required.",3
+11033856,06/14/2012 13:14:41,1456297,06/14/2012 13:12:27,1,0,What is the simplest way to create http traffic from multiple sources on one virtual machine to another vm?,"I'm thinking about just making my own http client with simple GET requests to generate the traffic, but how do I create multiple source IP's for each socket?",http,vmware,,,,,open,0,28,19,"What is the simplest way to create http traffic from multiple sources on one virtual machine to another vm? I'm thinking about just making my own http client with simple GET requests to generate the traffic, but how do I create multiple source IP's for each socket?",2
+6577397,07/05/2011 01:58:06,701441,04/11/2011 02:03:27,188,0,Why can't I use http for file download ?,Why does file download use ftp protocol why can't we use http for that ? ,http,ftp,,,,07/05/2011 03:21:37,not a real question,1,16,9,Why can't I use http for file download ? Why does file download use ftp protocol why can't we use http for that ? ,2
+46585,09/05/2008 19:05:12,572,08/06/2008 20:56:54,2991,241,When do you use POST and when do you use GET?,"From what I can gather, there are three categories - never use GET and use POST, never use POST and use GET, and it doesn't matter which one you use.
+
+Am I correct in assuming those three cases? If so, what are some examples from each case?",http,post,get,,,07/17/2012 13:50:17,not constructive,1,46,11,"When do you use POST and when do you use GET? From what I can gather, there are three categories - never use GET and use POST, never use POST and use GET, and it doesn't matter which one you use.
+
+Am I correct in assuming those three cases? If so, what are some examples from each case?",3
+8930317,01/19/2012 17:14:19,1149555,01/14/2012 17:42:30,9,0,SSL Client Server Communcation,"When we use SSL(Secured Socket Level) Server has private key whereas client has public key. 
+In such cases client encrypt data and server decrypt it to get actual details, but how it will work if server is sending some critical financial details to client. In this situation as client has only public key so whether it is possible for key to decrypt details.
+
+In short how secure communication from server-->Client works.
+
+
+
+",http,ssl,https,,,05/04/2012 13:27:06,not a real question,1,70,4,"SSL Client Server Communcation When we use SSL(Secured Socket Level) Server has private key whereas client has public key. 
+In such cases client encrypt data and server decrypt it to get actual details, but how it will work if server is sending some critical financial details to client. In this situation as client has only public key so whether it is possible for key to decrypt details.
+
+In short how secure communication from server-->Client works.
+
+
+
+",3
+4686280,01/13/2011 22:53:31,562997,01/04/2011 18:56:21,31,1,when favicon.ico is requested?,When does a browser request favicon.ico? Is it after getting 200 HTTP status code? Or maybe before accessing page itself? I have no idea...,http,favicon,,,,,open,0,24,4,when favicon.ico is requested? When does a browser request favicon.ico? Is it after getting 200 HTTP status code? Or maybe before accessing page itself? I have no idea...,2
+9627441,03/09/2012 00:52:00,126353,06/21/2009 00:34:56,5453,133,"""Cannot GET /"" with Connect on Node.js","I'm trying to start serving some static web pages using `connect` like this:
+
+    var connect = require(""connect"");
+    var nowjs = require(""now"");
+    var io = require(""socket.io"");
+    
+    
+    var app = connect.createServer(
+      connect.static(__dirname + '/public')
+    );
+    
+    app.listen(8180);
+
+So I added a simple `index.html` at the `/public` directory on the same directory as the `app.js` file is, but when I try to view the page on my browser I get this response from node:
+
+> Cannot GET /
+
+What I'm doing wrong and how I can correct it?",http,node.js,connect,,,,open,0,116,7,"""Cannot GET /"" with Connect on Node.js I'm trying to start serving some static web pages using `connect` like this:
+
+    var connect = require(""connect"");
+    var nowjs = require(""now"");
+    var io = require(""socket.io"");
+    
+    
+    var app = connect.createServer(
+      connect.static(__dirname + '/public')
+    );
+    
+    app.listen(8180);
+
+So I added a simple `index.html` at the `/public` directory on the same directory as the `app.js` file is, but when I try to view the page on my browser I get this response from node:
+
+> Cannot GET /
+
+What I'm doing wrong and how I can correct it?",3
+9935337,03/30/2012 00:03:43,1191228,02/05/2012 22:06:50,6,0,How can I redirect a minecraft client to a minecraft server,"I want to use .htaccess to cause any client connecting to the webhost with a specified port (25565) will automatically be redirected to a seperate host.
+
+The minecraft ip and website ip are both different.
+
+Example:
+minecraft client -> website url --(redirects to)-> minecraft server
+
+I was wondering if this was possible and if if so where should I start.",http,.htaccess,website,minecraft,,06/10/2012 19:42:52,off topic,1,56,11,"How can I redirect a minecraft client to a minecraft server I want to use .htaccess to cause any client connecting to the webhost with a specified port (25565) will automatically be redirected to a seperate host.
+
+The minecraft ip and website ip are both different.
+
+Example:
+minecraft client -> website url --(redirects to)-> minecraft server
+
+I was wondering if this was possible and if if so where should I start.",4
+6583270,07/05/2011 13:18:51,234645,12/18/2009 15:47:18,5349,258,What key do browsers use to cache CSS files?,"I use an ASP.NET web handler to combine my CSS files.
+
+The URL format that this requires is:
+
+    /Combiner.ashx?f=~/stylesheets/reset.css--~/stylesheets/base.css&t=text/css&v=3.1.4.2113
+
+It takes any number of CSS files to combine followed by the type and finally the version number of the site assembly.
+
+The HTTP expires header is set to one month in the future.
+
+Since I'm including the version number in the query string I would have hoped that this would stop browsers serving up invalid content. However, the version number appears to be getting ignored and both Chrome and IE both think the content is not modified.
+
+I have confirmed that the version number has definitely changed.
+
+Any ideas as to why this is being ignored?",http,browser-cache,,,,,open,0,113,9,"What key do browsers use to cache CSS files? I use an ASP.NET web handler to combine my CSS files.
+
+The URL format that this requires is:
+
+    /Combiner.ashx?f=~/stylesheets/reset.css--~/stylesheets/base.css&t=text/css&v=3.1.4.2113
+
+It takes any number of CSS files to combine followed by the type and finally the version number of the site assembly.
+
+The HTTP expires header is set to one month in the future.
+
+Since I'm including the version number in the query string I would have hoped that this would stop browsers serving up invalid content. However, the version number appears to be getting ignored and both Chrome and IE both think the content is not modified.
+
+I have confirmed that the version number has definitely changed.
+
+Any ideas as to why this is being ignored?",2
+5419326,03/24/2011 12:46:03,573927,01/13/2011 08:29:42,44,8,After isntalling openssl can't access apache tomcat from http,"I'm hoping this is easy and not needing to restore a backup.  A young engineer of ours installed openssl on our server and now we can't access our apache-tomcat server.  Furthermore, we can't even access our postgres db from the command line.
+
+Any quick suggestions that could remedy this issue?
+",http,postgresql,https,openssl,tomcat,03/24/2011 13:06:51,off topic,1,51,9,"After isntalling openssl can't access apache tomcat from http I'm hoping this is easy and not needing to restore a backup.  A young engineer of ours installed openssl on our server and now we can't access our apache-tomcat server.  Furthermore, we can't even access our postgres db from the command line.
+
+Any quick suggestions that could remedy this issue?
+",5
+7469400,09/19/2011 10:20:44,952455,09/19/2011 10:20:44,1,0,Symfony 1.4: POST-Request is cut off,"I am trying to send a form which has 7 checkboxes and 7 hiddenfields.
+After submitting the last 2 checkboxes and the last hiddenfield is missing.
+HTML-Source is clearly ok. Firebug clearly shows, that all these fields get submitted.
+
+When I do a <?php print_r ($_REQUEST); ?> it shows, that said fields are missing.
+Every form-Element has an unique name. 
+
+Is there any config-parameter that could have to do with that?
+I know this question is rather general without sourcecode. But maybe someone has a hint.",http,post,symfony,,,05/08/2012 18:04:09,too localized,1,81,6,"Symfony 1.4: POST-Request is cut off I am trying to send a form which has 7 checkboxes and 7 hiddenfields.
+After submitting the last 2 checkboxes and the last hiddenfield is missing.
+HTML-Source is clearly ok. Firebug clearly shows, that all these fields get submitted.
+
+When I do a <?php print_r ($_REQUEST); ?> it shows, that said fields are missing.
+Every form-Element has an unique name. 
+
+Is there any config-parameter that could have to do with that?
+I know this question is rather general without sourcecode. But maybe someone has a hint.",3
+8954308,01/21/2012 15:47:19,532430,12/06/2010 14:49:09,1405,65,Is the HTTP package server safe to use in production?,"Go implements [FastCGI][1], as well as a native [HTTP server][2] in its standard library.
+
+Is it safe to use the server from the HTTP package in production (as an application server) or is it recommended to use the FastCGI interface to connect to a more robust solution like Apache in terms of security?
+
+
+  [1]: http://weekly.golang.org/pkg/net/http/fcgi/
+  [2]: http://weekly.golang.org/pkg/net/http/",http,go,,,,01/23/2012 18:27:31,not constructive,1,58,10,"Is the HTTP package server safe to use in production? Go implements [FastCGI][1], as well as a native [HTTP server][2] in its standard library.
+
+Is it safe to use the server from the HTTP package in production (as an application server) or is it recommended to use the FastCGI interface to connect to a more robust solution like Apache in terms of security?
+
+
+  [1]: http://weekly.golang.org/pkg/net/http/fcgi/
+  [2]: http://weekly.golang.org/pkg/net/http/",2
+3090395,06/22/2010 05:00:07,193619,10/21/2009 06:48:23,3325,184,Is there a simple ActionScript class that fetches the content from a URL and returns it?,"Is there a standard class that simply returns the response received from a URL given a URL?
+
+Looking through the documentation, I found mx.servicetags.HTTPService, but I don't think it's what I'm looking for.",http,actionscript,fetch,,,,open,0,32,16,"Is there a simple ActionScript class that fetches the content from a URL and returns it? Is there a standard class that simply returns the response received from a URL given a URL?
+
+Looking through the documentation, I found mx.servicetags.HTTPService, but I don't think it's what I'm looking for.",3
+6683319,07/13/2011 17:53:58,378622,06/29/2010 04:04:12,1421,66,Randomly getting HTTP 400 errors while scraping,"My scraping program usually works, but it occassionally gets a HTTP 400 error from the server.  There is no lasting throttle effect; it goes back to working immediately after the 400 response..  I'd estimate that ~1/100 of the responses I get are 400's, while the rest are success (200's).  What could be going on.. anything I could do to eliminate these errors?",http,screen-scraping,,,,,open,0,65,7,"Randomly getting HTTP 400 errors while scraping My scraping program usually works, but it occassionally gets a HTTP 400 error from the server.  There is no lasting throttle effect; it goes back to working immediately after the 400 response..  I'd estimate that ~1/100 of the responses I get are 400's, while the rest are success (200's).  What could be going on.. anything I could do to eliminate these errors?",2
+6603928,07/06/2011 22:43:35,806539,06/20/2011 11:32:09,85,1,Should I URL-encode POST data?,"I'm POSTing data to an external API (using PHP, if it's relevant). 
+
+Should I URL-encode the POST variables that I pass?
+
+Or do I only need to URL-encode GET data?
+
+Thanks! 
+
+UPDATE: This is my PHP, in case it is relevant: 
+
+	$fields = array(
+	    'mediaupload'=>$file_field,
+	    'username'=>urlencode($_POST[""username""]),
+	    'password'=>urlencode($_POST[""password""]),
+	    'latitude'=>urlencode($_POST[""latitude""]),
+	    'longitude'=>urlencode($_POST[""longitude""]),
+	    'datetime'=>urlencode($_POST[""datetime""]),
+	    'category'=>urlencode($_POST[""category""]),
+	    'metacategory'=>urlencode($_POST[""metacategory""]),
+	    'caption'=>($_POST[""description""])
+	);
+	$fields_string = http_build_query($fields);
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL,$url);
+	curl_setopt($ch,CURLOPT_POST,count($fields));
+    curl_setopt($ch,CURLOPT_POSTFIELDS,$fields);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	$response = curl_exec($ch);",http,post,http-post,urlencode,url-encoding,,open,0,91,5,"Should I URL-encode POST data? I'm POSTing data to an external API (using PHP, if it's relevant). 
+
+Should I URL-encode the POST variables that I pass?
+
+Or do I only need to URL-encode GET data?
+
+Thanks! 
+
+UPDATE: This is my PHP, in case it is relevant: 
+
+	$fields = array(
+	    'mediaupload'=>$file_field,
+	    'username'=>urlencode($_POST[""username""]),
+	    'password'=>urlencode($_POST[""password""]),
+	    'latitude'=>urlencode($_POST[""latitude""]),
+	    'longitude'=>urlencode($_POST[""longitude""]),
+	    'datetime'=>urlencode($_POST[""datetime""]),
+	    'category'=>urlencode($_POST[""category""]),
+	    'metacategory'=>urlencode($_POST[""metacategory""]),
+	    'caption'=>($_POST[""description""])
+	);
+	$fields_string = http_build_query($fields);
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL,$url);
+	curl_setopt($ch,CURLOPT_POST,count($fields));
+    curl_setopt($ch,CURLOPT_POSTFIELDS,$fields);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	$response = curl_exec($ch);",5
+6733178,07/18/2011 12:53:43,33225,10/31/2008 21:47:27,17392,558,Tool to visualise how HTTP traffic is split into TCP packets?,"I have a webserver and I’m trying to tune its behaviour.
+
+For this purpose, it would be nice to be able to see exactly how the HTTP traffic is split into individual TCP packets.
+
+Is there a tool that can visualise this nicely?",http,tcp,visualization,,,,open,0,41,11,"Tool to visualise how HTTP traffic is split into TCP packets? I have a webserver and I’m trying to tune its behaviour.
+
+For this purpose, it would be nice to be able to see exactly how the HTTP traffic is split into individual TCP packets.
+
+Is there a tool that can visualise this nicely?",3
+7144507,08/22/2011 07:51:03,862699,07/26/2011 03:47:07,10,0,How to determin a packet is HTTP protocol packet?,"When I type an URL like http://192.168.1.101:**8080**/index.html into my browser, I capture a HTTP packet whose TCP source-port is 8080 but not 80, by WireShark.   
+My question is: It seems to be incorrect to determine a HTTP packet just by measuring whether its port is 80, so how can I do it?",http,,,,,08/24/2011 01:33:35,off topic,1,54,9,"How to determin a packet is HTTP protocol packet? When I type an URL like http://192.168.1.101:**8080**/index.html into my browser, I capture a HTTP packet whose TCP source-port is 8080 but not 80, by WireShark.   
+My question is: It seems to be incorrect to determine a HTTP packet just by measuring whether its port is 80, so how can I do it?",1
+10839125,05/31/2012 18:25:26,1293964,03/26/2012 20:27:30,1,2,Get Amazon S3 to redirect to my endpoint on missing object requests?,"We use S3 for online storage of files. To reduce costs, many of those files can be generated on demand with a path known ahead of time. Is it possible to get S3 bucket to redirect missing object requests to my pre-configured endpoint (which can then generate and serve the file on demand)? Example: request to http://bucket1.s3.amazonaws.com/path2/file3.jpg would temporarily redirect (307) to http://mydomain.com/missing_s3_obj/bucket1/path2/file3.jpg.",http,redirect,amazon-s3,,,,open,0,63,12,"Get Amazon S3 to redirect to my endpoint on missing object requests? We use S3 for online storage of files. To reduce costs, many of those files can be generated on demand with a path known ahead of time. Is it possible to get S3 bucket to redirect missing object requests to my pre-configured endpoint (which can then generate and serve the file on demand)? Example: request to http://bucket1.s3.amazonaws.com/path2/file3.jpg would temporarily redirect (307) to http://mydomain.com/missing_s3_obj/bucket1/path2/file3.jpg.",3
+9750518,03/17/2012 13:55:37,1036698,11/09/2011 00:10:09,43,5,Make specific links download only,"I'm running Helix Media Server and ideally for each of the video files for HTTP Streaming, I'd like to have a rtsp streaming link, http streaming link and http download link.
+
+Right now, depending on the device/browser which clicks the links, the http link will start playing right away.
+
+Is it possible to have certain links to be force download, while also having the option to http stream them?
+
+Thanks.",http,stream,links,rtsp,helix,,open,0,67,5,"Make specific links download only I'm running Helix Media Server and ideally for each of the video files for HTTP Streaming, I'd like to have a rtsp streaming link, http streaming link and http download link.
+
+Right now, depending on the device/browser which clicks the links, the http link will start playing right away.
+
+Is it possible to have certain links to be force download, while also having the option to http stream them?
+
+Thanks.",5
+8470917,12/12/2011 07:00:43,578079,01/17/2011 05:15:19,19,0,ssl connection error in java,"I have total 3 pages: index.jsp, Search.java and result.jsp.My project is running in  tomcat server on my local machine with http, but when i am adding security constraint and i clicked **Enable Authentication Constraint** and also added **Enable User Data Constraint** and set **Transport Guarantee** to **Confidential**. I wrote **Search.java in place of Resource Name, Search.java** in place of **URL pattern** and selected **http method as POST**. Now i am getting SSL connection error when i am running my application. Browser does not take **https** automatically why? If i am also using https://localhost:8080/myproject then also same error(ssl connection error) is coming and sometimes coming as **the requested resource has been denied** why? How can i resolve this problem? When I am running without this security constraint it is runnin  I want to connect my url by https only, how can i do it, any help is appreciated. ",http,https,web-security,,,12/12/2011 16:52:59,not a real question,1,150,5,"ssl connection error in java I have total 3 pages: index.jsp, Search.java and result.jsp.My project is running in  tomcat server on my local machine with http, but when i am adding security constraint and i clicked **Enable Authentication Constraint** and also added **Enable User Data Constraint** and set **Transport Guarantee** to **Confidential**. I wrote **Search.java in place of Resource Name, Search.java** in place of **URL pattern** and selected **http method as POST**. Now i am getting SSL connection error when i am running my application. Browser does not take **https** automatically why? If i am also using https://localhost:8080/myproject then also same error(ssl connection error) is coming and sometimes coming as **the requested resource has been denied** why? How can i resolve this problem? When I am running without this security constraint it is runnin  I want to connect my url by https only, how can i do it, any help is appreciated. ",3
+801944,04/29/2009 11:34:35,361526,03/30/2009 11:54:37,1,2,Mjpeg VLC and HTTP Streaming,"I'm generating a MJpeg Stream and trying to stream it to VLC and play it there.
+
+The code:
+
+            public void SendMultiPartData(String contentType, Func<byte[]> getData)
+        {
+            MemoryStream mem = null;
+            response.StatusCode = 200;
+            for ( byte[] buffer = getData(); buffer != null && buffer.Length > 0; buffer = getData())
+            {
+                response.ContentType = ""multipart/x-mixed-replace; boundary=--testboundary"";
+                ASCIIEncoding ae = new ASCIIEncoding();
+                byte[] boundary = ae.GetBytes(""\r\n--testboundary\r\nContent-Type: "" + contentType + ""\r\nContent-Length:"" + buffer.Length + ""\r\n\r\n"");
+                mem = new MemoryStream(boundary);
+                mem.WriteTo(response.OutputStream);
+                mem = new MemoryStream(buffer);
+                mem.WriteTo(response.OutputStream);
+                response.OutputStream.Flush();
+            }
+            mem.Close();
+            listener.Close();
+        }
+If I try to open the stream with firefox, there's no problem at all, although with VLC it doesn't work (VLC seems to keep reading but never shows the video)
+
+I've been sniffing VLC-to-VLC streaming and they seems to use as HTTP header ""application/octet-stream"" instead of multipart/x-mixed-replace
+
+Any ideas ?
+
+Tks in advance,
+Jose",http,streaming,c#,mjpeg,vlc,,open,0,356,5,"Mjpeg VLC and HTTP Streaming I'm generating a MJpeg Stream and trying to stream it to VLC and play it there.
+
+The code:
+
+            public void SendMultiPartData(String contentType, Func<byte[]> getData)
+        {
+            MemoryStream mem = null;
+            response.StatusCode = 200;
+            for ( byte[] buffer = getData(); buffer != null && buffer.Length > 0; buffer = getData())
+            {
+                response.ContentType = ""multipart/x-mixed-replace; boundary=--testboundary"";
+                ASCIIEncoding ae = new ASCIIEncoding();
+                byte[] boundary = ae.GetBytes(""\r\n--testboundary\r\nContent-Type: "" + contentType + ""\r\nContent-Length:"" + buffer.Length + ""\r\n\r\n"");
+                mem = new MemoryStream(boundary);
+                mem.WriteTo(response.OutputStream);
+                mem = new MemoryStream(buffer);
+                mem.WriteTo(response.OutputStream);
+                response.OutputStream.Flush();
+            }
+            mem.Close();
+            listener.Close();
+        }
+If I try to open the stream with firefox, there's no problem at all, although with VLC it doesn't work (VLC seems to keep reading but never shows the video)
+
+I've been sniffing VLC-to-VLC streaming and they seems to use as HTTP header ""application/octet-stream"" instead of multipart/x-mixed-replace
+
+Any ideas ?
+
+Tks in advance,
+Jose",5
+9459026,02/27/2012 01:33:59,915666,08/27/2011 16:44:05,6,0,How to execute 10.000 http get requests a second?,What kind of software and server should I use to execute 10.000 http get requests a second and check the HTTP status code?,http,,,,,02/27/2012 17:29:14,not a real question,1,23,9,How to execute 10.000 http get requests a second? What kind of software and server should I use to execute 10.000 http get requests a second and check the HTTP status code?,1
+6824676,07/26/2011 02:45:24,860849,07/25/2011 03:23:23,4,0,how to build scalable http server?,"I just want to run a web forum website that can be scaled based on demands.
+
+What framework/stack should I use? I know this is a broad question, so just give your best answers.
+
+Thanks!",http,distributed,scale,,,07/26/2011 03:20:03,not a real question,1,33,6,"how to build scalable http server? I just want to run a web forum website that can be scaled based on demands.
+
+What framework/stack should I use? I know this is a broad question, so just give your best answers.
+
+Thanks!",3
+11301003,07/02/2012 20:52:35,73951,03/04/2009 21:54:03,1116,73,Is it necessary to append querystrings to images in an img tag and images in css to refresh cached items?,"I know that a common practice is to set an expire time far in the future for css, javascript and image files and then make sure that all browsers fetches the latest content as soon the files changes by appending a querystring (or changing filename) like this
+
+From this `<link rel=""stylesheet"" type=""text/css"" href=""base.css"">`:
+
+to this:
+
+    <link rel=""stylesheet"" type=""text/css"" href=""base.css?v=1234"">
+    
+or:
+
+    <link rel=""stylesheet"" type=""text/css"" href=""base_1234.css"">
+
+But what about images referenced in a css file?
+
+    // Inside base.css 
+    background: url(/img/logo.png)
+
+    // Is this necessary(?):
+    background: url(/img/logo.png?v=1234)
+
+Or will `/img/logo.png` be reloaded when base.css changes filename to `base.css?v=1234` or `base_1234.css` automatically?
+
+And also, what about images in `src` for `img`-tags?",http,http-caching,expire,,,,open,0,124,20,"Is it necessary to append querystrings to images in an img tag and images in css to refresh cached items? I know that a common practice is to set an expire time far in the future for css, javascript and image files and then make sure that all browsers fetches the latest content as soon the files changes by appending a querystring (or changing filename) like this
+
+From this `<link rel=""stylesheet"" type=""text/css"" href=""base.css"">`:
+
+to this:
+
+    <link rel=""stylesheet"" type=""text/css"" href=""base.css?v=1234"">
+    
+or:
+
+    <link rel=""stylesheet"" type=""text/css"" href=""base_1234.css"">
+
+But what about images referenced in a css file?
+
+    // Inside base.css 
+    background: url(/img/logo.png)
+
+    // Is this necessary(?):
+    background: url(/img/logo.png?v=1234)
+
+Or will `/img/logo.png` be reloaded when base.css changes filename to `base.css?v=1234` or `base_1234.css` automatically?
+
+And also, what about images in `src` for `img`-tags?",3
+6434088,06/22/2011 01:59:14,102704,05/07/2009 07:13:48,3695,129,"Why isn't BOSH more popular, especially as an alternative to WebSockets and long-polling?","[BOSH](http://xmpp.org/extensions/xep-0124.html) is...
+
+>  a transport protocol that emulates the semantics of a long-lived, bidirectional TCP connection between two entities (such as a client and a server) by efficiently using multiple synchronous HTTP request/response pairs without requiring the use of frequent polling or chunked responses.
+
+This sounds like [WebSockets](http://en.wikipedia.org/wiki/WebSockets) and HTTP long-polling except that it uses two open HTTP connections instead of one and doesn't extend the HTTP protocol. Why isn't this more common, especially since WebSockets are far from being baked?",http,comet,websocket,bosh,,02/22/2012 14:30:51,not constructive,1,80,13,"Why isn't BOSH more popular, especially as an alternative to WebSockets and long-polling? [BOSH](http://xmpp.org/extensions/xep-0124.html) is...
+
+>  a transport protocol that emulates the semantics of a long-lived, bidirectional TCP connection between two entities (such as a client and a server) by efficiently using multiple synchronous HTTP request/response pairs without requiring the use of frequent polling or chunked responses.
+
+This sounds like [WebSockets](http://en.wikipedia.org/wiki/WebSockets) and HTTP long-polling except that it uses two open HTTP connections instead of one and doesn't extend the HTTP protocol. Why isn't this more common, especially since WebSockets are far from being baked?",4
+2171093,01/31/2010 08:52:58,39278,11/20/2008 11:15:31,793,132,POST File Stream octet-stream,"Can I pass ""application/octet-stream"" or say a word document as stream or binary via POST protocol ? (yes/no)?",http,post,protocols,,,,open,0,18,4,"POST File Stream octet-stream Can I pass ""application/octet-stream"" or say a word document as stream or binary via POST protocol ? (yes/no)?",3
+5221824,03/07/2011 15:58:36,646510,03/06/2011 00:25:33,22,1,resfult design of URLs for widgets owned by users,"My RESTful API always has authentication so all calls are authenticated for a particular user.
+
+Which is a better RESTful design of URLs over the HTTP protocol?
+Remember that the user id 3 is already authenticated via basic http auth/digest.
+
+http://server.com/users/3/widgets/  (Returns all widgets for user id 3)  
+http://server.com/users/3/widgets/13  (Returns widget id 13)
+
+
+or:
+
+http://server.com/widgets/  (Returns all widgets for user id 3)  
+http://server.com//widgets/13  (Returns widget id 13)
+
+
+Is it better to always have a unique URL like `http://server.com/users/3/widgets/ ` even know only user #3 will be the only one accessing it?  Is it redundant to re-specify /user/3 on every call like `http://server.com/users/3/widgets/`",http,rest,,,,,open,0,103,9,"resfult design of URLs for widgets owned by users My RESTful API always has authentication so all calls are authenticated for a particular user.
+
+Which is a better RESTful design of URLs over the HTTP protocol?
+Remember that the user id 3 is already authenticated via basic http auth/digest.
+
+http://server.com/users/3/widgets/  (Returns all widgets for user id 3)  
+http://server.com/users/3/widgets/13  (Returns widget id 13)
+
+
+or:
+
+http://server.com/widgets/  (Returns all widgets for user id 3)  
+http://server.com//widgets/13  (Returns widget id 13)
+
+
+Is it better to always have a unique URL like `http://server.com/users/3/widgets/ ` even know only user #3 will be the only one accessing it?  Is it redundant to re-specify /user/3 on every call like `http://server.com/users/3/widgets/`",2
+10845524,06/01/2012 06:37:21,1100515,12/15/2011 18:21:59,1,0,header expires and htaccess file,"I am new to this field. I just wanted my swf/javascript etc file to be replaced with another swf/javascript etc file after specific time of interval or after so and so days,months.
+
+I dnt know anything about this.
+
+ 
+                                          **Thanks.**",http,,,,,06/02/2012 17:04:51,not a real question,1,80,5,"header expires and htaccess file I am new to this field. I just wanted my swf/javascript etc file to be replaced with another swf/javascript etc file after specific time of interval or after so and so days,months.
+
+I dnt know anything about this.
+
+ 
+                                          **Thanks.**",1
+3131698,06/28/2010 10:46:16,46768,12/16/2008 18:26:48,822,28,Does WebKit Cache 3rd Party Resources?,"In Chrome and Safari a remote image included on my site never seems to get requested with caching-friendly headers (If-Modified-Since, etc) despite the server returning the appropriate information. Local resources, on the other hand, are requested with these headers. In contrast Firefox requests the remote resources with caching-friendly headers.
+
+This is for images on S3 though I don't think it's unique to S3...",http,caching,webkit,,,,open,0,62,6,"Does WebKit Cache 3rd Party Resources? In Chrome and Safari a remote image included on my site never seems to get requested with caching-friendly headers (If-Modified-Since, etc) despite the server returning the appropriate information. Local resources, on the other hand, are requested with these headers. In contrast Firefox requests the remote resources with caching-friendly headers.
+
+This is for images on S3 though I don't think it's unique to S3...",3
+8093132,11/11/2011 11:11:15,487397,10/26/2010 09:10:22,74,3,Google Latitude API with HTTP?,"This might be the stupiest question of the day but does Google Latitudes API work with unsecured pages, HTTP?",http,google,https,oauth-2.0,google-latitude,,open,0,19,5,"Google Latitude API with HTTP? This might be the stupiest question of the day but does Google Latitudes API work with unsecured pages, HTTP?",5
+6672428,07/12/2011 23:28:04,591176,01/26/2011 19:16:06,64,9,What is your favorite http client for PHP?,"curl has caused me a world of hurt. I'm not sure if it's libcurl itself or PHP's usage of libcurl, but it simply doesn't do what I need it to do.
+
+PEAR is also out of the question as deployment is a nightmare.
+
+So what are my alternatives for a ""purist"" http client in PHP?",http,php5,httpclient,,,11/11/2011 16:46:03,not constructive,1,53,8,"What is your favorite http client for PHP? curl has caused me a world of hurt. I'm not sure if it's libcurl itself or PHP's usage of libcurl, but it simply doesn't do what I need it to do.
+
+PEAR is also out of the question as deployment is a nightmare.
+
+So what are my alternatives for a ""purist"" http client in PHP?",3
+6981406,08/08/2011 11:25:50,853934,07/20/2011 12:38:09,81,1,Is REST even designed to be used by a SaaS? Are there any examples of this? What's all the jazz about it whilst it's not even being used widely,"Yes, REST is there for machines to communicate with each other and bla bla and bla.
+What's the use of it is no user-centric real-life software uses it where user commands the machine to communicate with another machine? 
+And if this is the case, in which REST is there for APIs and SOLELY and ONLY web-services, what's all the jazz about it? 
+
+Thank you.
+
+PS. This is a very serious question.",http,web-applications,rest,saas,,08/08/2011 12:24:20,not constructive,1,69,29,"Is REST even designed to be used by a SaaS? Are there any examples of this? What's all the jazz about it whilst it's not even being used widely Yes, REST is there for machines to communicate with each other and bla bla and bla.
+What's the use of it is no user-centric real-life software uses it where user commands the machine to communicate with another machine? 
+And if this is the case, in which REST is there for APIs and SOLELY and ONLY web-services, what's all the jazz about it? 
+
+Thank you.
+
+PS. This is a very serious question.",4
+5700879,04/18/2011 09:26:05,214531,11/19/2009 11:50:38,120,7,What is the correct http status code when expectations on user input fail?,"Given i have a HTTP-Interface, and for example
+
+`POST /user`
+
+expects some specific JSON to be posted (for example `{""username"": ""keppla""}`), or
+
+`GET /search`
+
+expects a parameter like `/search?term=whatisearch`
+
+When the client does not send the expected data, what would be a correct error code?",http,rest,,,,,open,0,40,13,"What is the correct http status code when expectations on user input fail? Given i have a HTTP-Interface, and for example
+
+`POST /user`
+
+expects some specific JSON to be posted (for example `{""username"": ""keppla""}`), or
+
+`GET /search`
+
+expects a parameter like `/search?term=whatisearch`
+
+When the client does not send the expected data, what would be a correct error code?",2
+10468667,05/06/2012 06:31:01,1377696,05/06/2012 06:21:47,1,0,how to send data with http 1.1 and GET method with out Respons,"how to send data with HTTP 1.1 and GET method with out Response
+for reduce band-witch i need it
+
+> Content-Length: 32
+GET http://tttgt.in/1/y/?1000060WxFXzh1t55c9j000qd0000000 HTTP/1.1
+
+SEND OK
+HTTP/1.1 400 Bad Request
+Date: Sun, 06 May 2012 06:24:14 GMT
+Server: LiteSpeed
+Connection: close
+Cache-Control: private, no-cache, max-age=0
+Pragma: no-cache
+Content-Type: text/html
+Content-Length: 362",http,get,,,,05/07/2012 11:32:01,not a real question,1,40,13,"how to send data with http 1.1 and GET method with out Respons how to send data with HTTP 1.1 and GET method with out Response
+for reduce band-witch i need it
+
+> Content-Length: 32
+GET http://tttgt.in/1/y/?1000060WxFXzh1t55c9j000qd0000000 HTTP/1.1
+
+SEND OK
+HTTP/1.1 400 Bad Request
+Date: Sun, 06 May 2012 06:24:14 GMT
+Server: LiteSpeed
+Connection: close
+Cache-Control: private, no-cache, max-age=0
+Pragma: no-cache
+Content-Type: text/html
+Content-Length: 362",2
+3674120,09/09/2010 05:53:46,443107,09/09/2010 05:53:46,1,0,Problems decrypting HTTP Live Stream,"I have a single key encrypted HTTP Live Stream which decodes fine in Quicktime and iPhone.  I'm trying to create a simple client application to do the decryption of the ts files.  Right now I've used openssl to decrypt.  I believe I have the correct arguments to openssl and I'm inserting the key and the IV properly.  I can successfully decrypt the first .ts file in the stream but fail to decrypt after.  I'm using the following script which I found in the archives here and I reversed to do decryption:<p>
+
+<pre>
+#!/bin/sh
+
+hexKey=$(cat encryption.key | hexdump-e '16/1 ""%02x""') 
+hexIV='00000000000000000000000000000001' 
+openssl aes-128-cbc -d -in ./multi_2.ts -out ./clear.ts -p-nosalt -iv ${hexIV}  -K ${hexKey}
+</pre>
+
+where:
+
+encryption.key is the key file I retrieved from the M3u8 stream file.<br>
+multi_2.ts is the second .ts file in the m3u8 stream file.<br>
+
+Any help would be appreciated.
+
+",http,stream,openssl,live,encryption,,open,0,140,5,"Problems decrypting HTTP Live Stream I have a single key encrypted HTTP Live Stream which decodes fine in Quicktime and iPhone.  I'm trying to create a simple client application to do the decryption of the ts files.  Right now I've used openssl to decrypt.  I believe I have the correct arguments to openssl and I'm inserting the key and the IV properly.  I can successfully decrypt the first .ts file in the stream but fail to decrypt after.  I'm using the following script which I found in the archives here and I reversed to do decryption:<p>
+
+<pre>
+#!/bin/sh
+
+hexKey=$(cat encryption.key | hexdump-e '16/1 ""%02x""') 
+hexIV='00000000000000000000000000000001' 
+openssl aes-128-cbc -d -in ./multi_2.ts -out ./clear.ts -p-nosalt -iv ${hexIV}  -K ${hexKey}
+</pre>
+
+where:
+
+encryption.key is the key file I retrieved from the M3u8 stream file.<br>
+multi_2.ts is the second .ts file in the m3u8 stream file.<br>
+
+Any help would be appreciated.
+
+",5
+11527205,07/17/2012 16:52:49,966276,09/27/2011 04:47:34,6,0,How common are firewalls that inspect packets and only pass HTTP?,"We're building a desktop application that sends and receives protobuf messages to our servers on TCP port 80.
+
+However, if it's common for firewalls to block non-HTTP traffic, then we'll have to encode our messages in Base64 inside HTTP messages.
+
+We'd love to avoid this because HTTP and Base64 adds extraneous bytes, and a little complexity. But we'll have to do it if there are a significant number of deployed firewalls that would otherwise block our traffic.
+
+Does anyone have a sense of how common it is for firewalls to block non-http traffic?",http,tcp,firewall,,,07/18/2012 05:09:53,off topic,1,90,11,"How common are firewalls that inspect packets and only pass HTTP? We're building a desktop application that sends and receives protobuf messages to our servers on TCP port 80.
+
+However, if it's common for firewalls to block non-HTTP traffic, then we'll have to encode our messages in Base64 inside HTTP messages.
+
+We'd love to avoid this because HTTP and Base64 adds extraneous bytes, and a little complexity. But we'll have to do it if there are a significant number of deployed firewalls that would otherwise block our traffic.
+
+Does anyone have a sense of how common it is for firewalls to block non-http traffic?",3
+3307379,07/22/2010 09:22:45,393690,07/16/2010 09:52:29,6,0,how to send a post request with a web browser,how to send a post request with a web browser?,http,post,httpwebrequest,,,07/22/2010 09:40:33,not a real question,1,10,10,how to send a post request with a web browser how to send a post request with a web browser?,3
+7091799,08/17/2011 11:07:06,541976,12/14/2010 13:00:43,119,0,what does this mean: Requested Range Not Satisfiable,"i get this 416 error and dont know how to fix it
+
+   http://stackoverflow.com/questions/6584291/http-error-416-requested-range-not-satisfiable
+
+didnt help much
+
+
+please help?",http,,,,,08/17/2011 11:19:40,not a real question,1,18,8,"what does this mean: Requested Range Not Satisfiable i get this 416 error and dont know how to fix it
+
+   http://stackoverflow.com/questions/6584291/http-error-416-requested-range-not-satisfiable
+
+didnt help much
+
+
+please help?",1
+367392,12/15/2008 03:12:54,8946,09/15/2008 17:17:51,1383,65,Can an HTTP Get legally contain content?,"Can an HTTP Get legally contain content?  The idea would be to put the request fields in as URL encoded content instead of in the URL to leave the URL clean in a web application for which I am going to be refactoring the resources.
+
+I suspect it's not allowed, but the spec at W3C didn't seem to say.",http,get-command,,,,12/16/2008 08:04:38,off topic,1,59,7,"Can an HTTP Get legally contain content? Can an HTTP Get legally contain content?  The idea would be to put the request fields in as URL encoded content instead of in the URL to leave the URL clean in a web application for which I am going to be refactoring the resources.
+
+I suspect it's not allowed, but the spec at W3C didn't seem to say.",2
+9472364,02/27/2012 21:14:00,1236507,02/27/2012 21:01:11,1,0,VB.NET don't get a successfull answer of a HTTP-Server,"    tcpClient.Connect(""www.***.com"", 80)
+
+    Dim message As String = ""GET /***.html HTTP/1.1"" & Chr(10) & ""Host: www.***.com"" & Chr(10)
+    tcpClient.Client.Send(System.Text.Encoding.Default.GetBytes(message))
+
+I tried it with a few websites but it doesn't worked anywhere, I just become a error, that thers an timeout or the request is false and the server couldn't handle it. Here the code for the TcpClient:
+
+    Dim tcpClient As New TcpClient
+
+Does anyone know whats wrong? I tried some combinations of the 'message' without Host and so on.",http,get,request,tcpclient,vb.net-2010,,open,0,89,9,"VB.NET don't get a successfull answer of a HTTP-Server     tcpClient.Connect(""www.***.com"", 80)
+
+    Dim message As String = ""GET /***.html HTTP/1.1"" & Chr(10) & ""Host: www.***.com"" & Chr(10)
+    tcpClient.Client.Send(System.Text.Encoding.Default.GetBytes(message))
+
+I tried it with a few websites but it doesn't worked anywhere, I just become a error, that thers an timeout or the request is false and the server couldn't handle it. Here the code for the TcpClient:
+
+    Dim tcpClient As New TcpClient
+
+Does anyone know whats wrong? I tried some combinations of the 'message' without Host and so on.",5
+299628,11/18/2008 18:14:26,598,08/07/2008 02:49:41,3708,125,Is an entity body allowed for an HTTP DELETE request?,"When issuing an HTTP DELETE request, the request URI should completely identify the resource to delete. However, is it allowable to add extra meta-data as part of the entity body of the request?",http,rest,,,,,open,0,33,10,"Is an entity body allowed for an HTTP DELETE request? When issuing an HTTP DELETE request, the request URI should completely identify the resource to delete. However, is it allowable to add extra meta-data as part of the entity body of the request?",2
+6502181,06/28/2011 05:55:31,376535,06/25/2010 17:56:14,23,0,how to find web sites performance improvement using jmeter,"I have an web application. 
+I want to do the load testing.  It shows a real time status of some services. So the status page(http://server/currentstatus) would be visited by most users. It'll be refreshing automatically every 5, 10, 15 .. (on users choice). I am very new on load/performance testing. So I need to know how do calculate how much load my app can take?
+
+The question may not be clear. I am using jmeter for testing load. When I run it using 500 threads, Ramp up period 5 sec and loop 5 I see my jmeter stops responding after sometime. 
+If I put ramp up to 1 sec and loop to 1 I see it successfully finishes. I run this config (threads=500, rampup=1s, loop=1) many times. But I see the average response time varies a lot. I see all the values varies a lot. If these values varies this much how do I check performance improvement? If it was accepting 500 users and I do some performance improvement which lead it accepting 5000 users. In this case, how does it reflect the result of jmeter?",http,jmeter,,,,,open,0,186,9,"how to find web sites performance improvement using jmeter I have an web application. 
+I want to do the load testing.  It shows a real time status of some services. So the status page(http://server/currentstatus) would be visited by most users. It'll be refreshing automatically every 5, 10, 15 .. (on users choice). I am very new on load/performance testing. So I need to know how do calculate how much load my app can take?
+
+The question may not be clear. I am using jmeter for testing load. When I run it using 500 threads, Ramp up period 5 sec and loop 5 I see my jmeter stops responding after sometime. 
+If I put ramp up to 1 sec and loop to 1 I see it successfully finishes. I run this config (threads=500, rampup=1s, loop=1) many times. But I see the average response time varies a lot. I see all the values varies a lot. If these values varies this much how do I check performance improvement? If it was accepting 500 users and I do some performance improvement which lead it accepting 5000 users. In this case, how does it reflect the result of jmeter?",2
+3373683,07/30/2010 16:54:21,389651,07/12/2010 16:13:07,81,0,Scraping Data From a Dynamic Website,"Background: The page has a table with data in it. There are several hyperlinks that when clicked, the data in the table is replaced with new data. Also, the page is an aspx page. 
+
+Goal: I want to scrape the data in the table for all hyperlinks pressed.
+
+I have looked at what is going on via firebug and when a hyperlink is clicked, it generates an http post back to the server via ajax. The problem is that there are a lot of really garbage post parameters being sent. I assume this is because asp does some sessioning type things. I assume that even if I copied the exact parameters my browser sent, most of them won't be valid later anyway. 
+
+How do people usually write http scripts that deal with this kind of stuff?",http,asp.net-ajax,screen-scraping,,,,open,0,135,6,"Scraping Data From a Dynamic Website Background: The page has a table with data in it. There are several hyperlinks that when clicked, the data in the table is replaced with new data. Also, the page is an aspx page. 
+
+Goal: I want to scrape the data in the table for all hyperlinks pressed.
+
+I have looked at what is going on via firebug and when a hyperlink is clicked, it generates an http post back to the server via ajax. The problem is that there are a lot of really garbage post parameters being sent. I assume this is because asp does some sessioning type things. I assume that even if I copied the exact parameters my browser sent, most of them won't be valid later anyway. 
+
+How do people usually write http scripts that deal with this kind of stuff?",3
+8575551,12/20/2011 12:37:25,1107783,12/20/2011 12:00:41,1,0,Display geo coordinates on Bing Maps via share-able http requests,"I have a set of geo coordinates and I'd like to build a URL string(http request), once shared can be followed to view Bing maps with a polyline connecting all the geo coordinates and push pin at each geo coordinate. I did that this is possible with Google Maps http://code.google.com/apis/maps/documentation/staticmaps/index.html. Something like that for Bing Maps would be ideal.  
+
+I have looked through the Bing Maps api at http://msdn.microsoft.com/en-us/library/ff701702.aspx, but not find any share-able http request building documentation. ",http,maps,request,bing,,,open,0,80,10,"Display geo coordinates on Bing Maps via share-able http requests I have a set of geo coordinates and I'd like to build a URL string(http request), once shared can be followed to view Bing maps with a polyline connecting all the geo coordinates and push pin at each geo coordinate. I did that this is possible with Google Maps http://code.google.com/apis/maps/documentation/staticmaps/index.html. Something like that for Bing Maps would be ideal.  
+
+I have looked through the Bing Maps api at http://msdn.microsoft.com/en-us/library/ff701702.aspx, but not find any share-able http request building documentation. ",4
+11300641,07/02/2012 20:23:09,1366436,04/30/2012 18:13:53,11,1,Get file size from multipart form upload Content-Length header,"So, I'm uploading a file, and then downloading it... but the Content-Length in the upload headers do not match the file size. I'm guessing there is some other data involved with this calculation and transfer, but what exactly? How do I get an accurate file size from the Content-Length? Is it even possible?
+
+I know there are the boundaries, and maybe some other things, but check it:
+
+    5380216 - 5379906 = 310
+
+    ""----WebKitFormBoundaryeoFyqD4zr6smwYDG"".size
+    → 38
+
+So the boundary size is 38... 310 has some LCDs of 5, 10, 31... those don't work well with 38 in any way... I'm lost!
+
+File sizes:
+
+    -rw-r--r--@  1 williamcotton  staff    5379906 Jul  2 12:02 testfile-downloaded.zip
+    -rw-r--r--@  1 williamcotton  staff    5379906 Jun  8 14:23 testfile-uploaded.zip
+
+HTTP Header
+
+    { 
+      host: 'localhost:8887',
+      connection: 'keep-alive',
+      'content-length': '5380217',
+      'cache-control': 'max-age=0',
+      origin: 'http://localhost:8887',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1193.0 Safari/537.1',
+      'content-type': 'multipart/form-data; boundary=----WebKitFormBoundaryeoFyqD4zr6smwYDG',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      referer: 'http://localhost:8887/',
+      'accept-encoding': 'gzip,deflate,sdch',
+      'accept-language': 'en-US,en;q=0.8',
+      'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' 
+    }
+
+tl;dr
+
+File size is 5379906
+
+Content-Length is reported as 5380216
+
+why?
+",http,http-headers,multipartform-data,content-length,multipart-form,,open,0,259,9,"Get file size from multipart form upload Content-Length header So, I'm uploading a file, and then downloading it... but the Content-Length in the upload headers do not match the file size. I'm guessing there is some other data involved with this calculation and transfer, but what exactly? How do I get an accurate file size from the Content-Length? Is it even possible?
+
+I know there are the boundaries, and maybe some other things, but check it:
+
+    5380216 - 5379906 = 310
+
+    ""----WebKitFormBoundaryeoFyqD4zr6smwYDG"".size
+    → 38
+
+So the boundary size is 38... 310 has some LCDs of 5, 10, 31... those don't work well with 38 in any way... I'm lost!
+
+File sizes:
+
+    -rw-r--r--@  1 williamcotton  staff    5379906 Jul  2 12:02 testfile-downloaded.zip
+    -rw-r--r--@  1 williamcotton  staff    5379906 Jun  8 14:23 testfile-uploaded.zip
+
+HTTP Header
+
+    { 
+      host: 'localhost:8887',
+      connection: 'keep-alive',
+      'content-length': '5380217',
+      'cache-control': 'max-age=0',
+      origin: 'http://localhost:8887',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1193.0 Safari/537.1',
+      'content-type': 'multipart/form-data; boundary=----WebKitFormBoundaryeoFyqD4zr6smwYDG',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      referer: 'http://localhost:8887/',
+      'accept-encoding': 'gzip,deflate,sdch',
+      'accept-language': 'en-US,en;q=0.8',
+      'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' 
+    }
+
+tl;dr
+
+File size is 5379906
+
+Content-Length is reported as 5380216
+
+why?
+",5
+9917788,03/29/2012 00:56:40,1028974,11/04/2011 02:51:57,408,1,"Why one can't download the web page of a tweet through an ""http-get"" request?","Through a web browser, I can view the tweet page via visiting an url like 
+
+**http://twitter.com/#!/[user-name]/status/[long-integer]**
+
+but I can't get the correct page content through the unix command ""wget"". Instead, I get the welcome page of Twitter.com. How does Twitter.com distinguish a command line ""get"" request and a request through a browser? Thank you.",http,twitter,,,,,open,0,53,14,"Why one can't download the web page of a tweet through an ""http-get"" request? Through a web browser, I can view the tweet page via visiting an url like 
+
+**http://twitter.com/#!/[user-name]/status/[long-integer]**
+
+but I can't get the correct page content through the unix command ""wget"". Instead, I get the welcome page of Twitter.com. How does Twitter.com distinguish a command line ""get"" request and a request through a browser? Thank you.",2
+8776911,01/08/2012 10:52:31,485659,10/24/2010 15:05:49,98,0,server migration causes escaping of http:// to http:/,"While migrating a website, we've noticed that absolute urls one the new server are being escaped: from http://test.com to http:/test.com
+What can be the cause?",http,escaping,,,,01/09/2012 10:40:28,off topic,1,24,8,"server migration causes escaping of http:// to http:/ While migrating a website, we've noticed that absolute urls one the new server are being escaped: from http://test.com to http:/test.com
+What can be the cause?",2
+11462993,07/13/2012 01:34:02,1416838,05/25/2012 07:47:32,6,0,how to change query string from request to response,"
+i've tried with HTTP Servlet Request Wrapper, the request parameter has change, but the query string on response was never change when i send response.
+
+any solution?
+
+Thanks In Advance
+",http,get,query-string,,,07/13/2012 01:42:22,not a real question,1,28,9,"how to change query string from request to response 
+i've tried with HTTP Servlet Request Wrapper, the request parameter has change, but the query string on response was never change when i send response.
+
+any solution?
+
+Thanks In Advance
+",3
+10765243,05/26/2012 09:57:17,72176,02/28/2009 09:07:13,465,43,How can I rewrite this CURL multipart/form-data request without using -F?,"How can I rewrite the following CURL command, so that it doesn't use the `-F` option, but still generates the exact same HTTP request?  i.e. so that it passes the multipart/form-data in the body directly.
+
+    curl -v -i -X POST -F example=test http://localhost:3000/myapp
+",http,curl,multipartform-data,,,,open,0,47,11,"How can I rewrite this CURL multipart/form-data request without using -F? How can I rewrite the following CURL command, so that it doesn't use the `-F` option, but still generates the exact same HTTP request?  i.e. so that it passes the multipart/form-data in the body directly.
+
+    curl -v -i -X POST -F example=test http://localhost:3000/myapp
+",3
+982351,06/11/2009 17:04:29,80911,03/21/2009 17:47:45,805,66,Alternative bodies for HTTP PUT,"I'm developing a REST-ful webservice, and I have a question about the HTTP PUT method.
+
+I want to allow people to submit content using a application/form-data request body. However, the default response will be in application/xml. 
+
+Is this acceptable? 
+
+Evert",http,put,rest,,,,open,0,39,5,"Alternative bodies for HTTP PUT I'm developing a REST-ful webservice, and I have a question about the HTTP PUT method.
+
+I want to allow people to submit content using a application/form-data request body. However, the default response will be in application/xml. 
+
+Is this acceptable? 
+
+Evert",3
+9816614,03/22/2012 04:52:02,921193,08/31/2011 08:27:10,395,3,Redirect saving POST parameters using HTTP,"I have 2 web-pages.
+
+ So, 1st page takes some POST parameters, and then process it. I want to redirect this query(with all POST params) to my own 2nd page, if  parameter ""appId"" = ""myApp""; 
+
+In start of 1st page I make next: 
+
+        if (getParameter(""id"") == ""myApp"") 
+        {
+            request.setHttpHeader("""")  - ??? WHAT MUST BE HERE? WHICH HEADERS?
+        }
+
+P.S. I need only HTTP solution, using native (java) methods (like forward and redirect) don't help me. 
+
+Thanks.",http,post,redirect,,,,open,0,110,6,"Redirect saving POST parameters using HTTP I have 2 web-pages.
+
+ So, 1st page takes some POST parameters, and then process it. I want to redirect this query(with all POST params) to my own 2nd page, if  parameter ""appId"" = ""myApp""; 
+
+In start of 1st page I make next: 
+
+        if (getParameter(""id"") == ""myApp"") 
+        {
+            request.setHttpHeader("""")  - ??? WHAT MUST BE HERE? WHICH HEADERS?
+        }
+
+P.S. I need only HTTP solution, using native (java) methods (like forward and redirect) don't help me. 
+
+Thanks.",3
+9507778,02/29/2012 22:37:44,823112,06/30/2011 13:18:41,27,0,what happens in an application server (tomcat etc.) when a client request is cancelled and the server is still working ? (writing on its output),"If a client cancel its request, the application server is suposed to throw the following error :
+
+    java.net.SocketException: Connection reset by peer: socket write error
+
+But what is exactly happening ?
+
+Let's say I'm doing a very expensive operation on the server side, and I'm writing some data to the outputstream everytime my server service get a new result (kind of streaming).
+In the middle of this operation, the client cancel the request. What happens ?
+
+The operation stops, because the socket throws this error when the connection closed ? If it's not stopped, what happens to the data flushed in the outputstream after that ?
+
+Thanks
+",http,request,cancel,,,,open,0,105,25,"what happens in an application server (tomcat etc.) when a client request is cancelled and the server is still working ? (writing on its output) If a client cancel its request, the application server is suposed to throw the following error :
+
+    java.net.SocketException: Connection reset by peer: socket write error
+
+But what is exactly happening ?
+
+Let's say I'm doing a very expensive operation on the server side, and I'm writing some data to the outputstream everytime my server service get a new result (kind of streaming).
+In the middle of this operation, the client cancel the request. What happens ?
+
+The operation stops, because the socket throws this error when the connection closed ? If it's not stopped, what happens to the data flushed in the outputstream after that ?
+
+Thanks
+",3
+5254546,03/10/2011 01:52:10,496949,11/04/2010 08:45:00,2954,2,Post a data onto the web,"Watch the transfered content, I found the content of the file is enclosed with some special characters
+
+like 10000
+
+ending with 0 ,
+
+why is there such encodings when uploading files?",http,,,,,03/13/2011 14:20:32,not a real question,1,28,6,"Post a data onto the web Watch the transfered content, I found the content of the file is enclosed with some special characters
+
+like 10000
+
+ending with 0 ,
+
+why is there such encodings when uploading files?",1
+7868808,10/23/2011 20:01:14,462204,09/15/2008 17:36:23,90,0,Does YouTube use FTP to upload?,"sorry maybe a dumb question...
+
+I'm curious if YouTube (for example) uses FTP to upload videos?  I was trying to look around the source of the upload page and saw it seemed like they do some kind of plugin detection for Java, Flash, Silverlight, etc... does this mean they use one of those to have the client make an FTP connection and do an upload instead of doing a normal HTML form, HTTP upload?
+
+Thanks for any enlightenment =)",http,upload,ftp,youtube,,10/24/2011 18:19:32,off topic,1,78,6,"Does YouTube use FTP to upload? sorry maybe a dumb question...
+
+I'm curious if YouTube (for example) uses FTP to upload videos?  I was trying to look around the source of the upload page and saw it seemed like they do some kind of plugin detection for Java, Flash, Silverlight, etc... does this mean they use one of those to have the client make an FTP connection and do an upload instead of doing a normal HTML form, HTTP upload?
+
+Thanks for any enlightenment =)",4
+8079578,11/10/2011 12:34:40,476716,10/15/2010 09:24:16,2903,161,Is it valid to list multiple fields in a single Vary header?,"I know you can do this
+
+    Vary: Accept-Encoding
+    Vary: Accept-Language
+
+but can you do this
+
+    Vary: Accept-Encoding, Accept-Language",http,cache-control,,,,,open,0,26,12,"Is it valid to list multiple fields in a single Vary header? I know you can do this
+
+    Vary: Accept-Encoding
+    Vary: Accept-Language
+
+but can you do this
+
+    Vary: Accept-Encoding, Accept-Language",2
+10542076,05/10/2012 21:01:25,1388111,05/10/2012 20:55:54,1,0,"SSL redirection on registration page, non SSL on others pages","I have a little problem, here it is :
+
+I woudl like to redirect ALL MY PAGES to http (https to http redirection).
+I would like only one page (register.php) to get redirected from http to https.
+
+The main problem, is that when I redirect everything execept register.php on my forum, the https is not valid ! (http://i.stack.imgur.com/qvVI4.jpg) since all the ressources like my images (logo for example) are redirected to normal http (so on my https page it can't get the valid https because my images and ressources are not encoded because of the redirection the redirect everything to http).
+
+Here is the code :
+
+    RewriteCond %{SERVER_PORT} ^443$
+    RewriteCond %{REQUEST_URI} !^/register\.php$
+    #RewriteCond %{REQUEST_URI} !^/logo.png
+    RewriteRule (.*) http://mywebsite.com/$1 [R=301,L]
+
+Best regards to all.
+
+
+  ",http,.htaccess,redirect,ssl,https,,open,0,132,10,"SSL redirection on registration page, non SSL on others pages I have a little problem, here it is :
+
+I woudl like to redirect ALL MY PAGES to http (https to http redirection).
+I would like only one page (register.php) to get redirected from http to https.
+
+The main problem, is that when I redirect everything execept register.php on my forum, the https is not valid ! (http://i.stack.imgur.com/qvVI4.jpg) since all the ressources like my images (logo for example) are redirected to normal http (so on my https page it can't get the valid https because my images and ressources are not encoded because of the redirection the redirect everything to http).
+
+Here is the code :
+
+    RewriteCond %{SERVER_PORT} ^443$
+    RewriteCond %{REQUEST_URI} !^/register\.php$
+    #RewriteCond %{REQUEST_URI} !^/logo.png
+    RewriteRule (.*) http://mywebsite.com/$1 [R=301,L]
+
+Best regards to all.
+
+
+  ",5
+7617116,09/30/2011 23:42:00,640570,03/02/2011 05:03:51,1,0,Odd HTTP requests with ??W? in the CGI args starting around July 28,"On about July 28th, we started seeing a few random CGI requests to our various servers (multiple different unrelated applications) that seemed to have ""??W?"" appended to the end of the request.
+
+A lot of these appear to come from Windows Media Center PCs, but not all.
+
+It seems impossible to search google for ""??W?"" and get anything useful, so I thought I would try here.
+
+Thanks.",http,web,,,,10/01/2011 13:23:44,off topic,1,64,13,"Odd HTTP requests with ??W? in the CGI args starting around July 28 On about July 28th, we started seeing a few random CGI requests to our various servers (multiple different unrelated applications) that seemed to have ""??W?"" appended to the end of the request.
+
+A lot of these appear to come from Windows Media Center PCs, but not all.
+
+It seems impossible to search google for ""??W?"" and get anything useful, so I thought I would try here.
+
+Thanks.",2
+10419960,05/02/2012 18:57:19,1100043,12/15/2011 14:18:50,21,4,Open Source HTTP Compliance Test Suites,"Does anyone know of some good open-source HTTP compliance testing software? I could search and find one called [httest][1], though I haven't tried it yet. I have heard a lot of these softwares cannot test conformance properly as they claim to. If someone knows any better software then do suggest.
+
+[1]:http://htt.sourceforge.net/cgi-bin/cwiki/bin/public",http,testing,protocols,,,06/06/2012 10:48:35,not constructive,1,50,6,"Open Source HTTP Compliance Test Suites Does anyone know of some good open-source HTTP compliance testing software? I could search and find one called [httest][1], though I haven't tried it yet. I have heard a lot of these softwares cannot test conformance properly as they claim to. If someone knows any better software then do suggest.
+
+[1]:http://htt.sourceforge.net/cgi-bin/cwiki/bin/public",3
+8683756,12/30/2011 20:28:46,998635,10/17/2011 06:30:05,336,4,HTTP protocol deep understanding? how does it affect best practices in web programming?,"Understanding HTTP/TCP protocol is a bonus point for a web developer.
+
+But does it really matter for a better client/server programmer?
+
+core of the web is HTTP but my question is, is it worth to read complete RFC or a book like
+<a href=""http://shop.oreilly.com/product/9781565925090.do"">HTTP: definitive guide</a>?
+
+My assumption is that unless we are not too much involved in HTTP headers like streaming/file transfer/encoding over HTTP, it doesn't matter for normal applications.
+Basic understanding of frame format and status codes should be sufficient i guess.
+
+Any suggestion is welcomed.
+",http,https,httpwebrequest,http-headers,,12/31/2011 06:29:53,not constructive,1,82,13,"HTTP protocol deep understanding? how does it affect best practices in web programming? Understanding HTTP/TCP protocol is a bonus point for a web developer.
+
+But does it really matter for a better client/server programmer?
+
+core of the web is HTTP but my question is, is it worth to read complete RFC or a book like
+<a href=""http://shop.oreilly.com/product/9781565925090.do"">HTTP: definitive guide</a>?
+
+My assumption is that unless we are not too much involved in HTTP headers like streaming/file transfer/encoding over HTTP, it doesn't matter for normal applications.
+Basic understanding of frame format and status codes should be sufficient i guess.
+
+Any suggestion is welcomed.
+",4
+6035447,05/17/2011 18:30:04,251420,01/15/2010 10:02:29,202,13,are cookies secure from hijacking over http,I see facebook sends cookies over http. How are they secure from hijacking? If I were to copy the cookie onto another computer would I be logged in?,http,cookies,https,,,,open,0,28,7,are cookies secure from hijacking over http I see facebook sends cookies over http. How are they secure from hijacking? If I were to copy the cookie onto another computer would I be logged in?,3
+5646512,04/13/2011 08:38:05,313389,04/10/2010 08:52:41,595,10,login form with https and http,"i want to use https only for login form and after the user logs in send it to http .
+
+login form is in page ""a.php"" and the action of login form is ""b.php"" .
+
+my question is:
+
+- which one should i call:  https://mysite.com/a.php or http://mysite.com/a.php
+
+- the action should be : https://mysite.com/b.php or http://mysite.com/b.php
+
+
+i mean post data is send according to form page or action page protocol??
+",http,https,web-security,,,,open,0,66,6,"login form with https and http i want to use https only for login form and after the user logs in send it to http .
+
+login form is in page ""a.php"" and the action of login form is ""b.php"" .
+
+my question is:
+
+- which one should i call:  https://mysite.com/a.php or http://mysite.com/a.php
+
+- the action should be : https://mysite.com/b.php or http://mysite.com/b.php
+
+
+i mean post data is send according to form page or action page protocol??
+",3
+3097027,06/22/2010 20:47:05,310283,04/06/2010 18:11:21,21,0,Script to determine if an HTTP reponse is from intended domain.,"I am trying to write a script that will send an HTTP ""GET"" to a URL then determine if the response came from the same domain or not. 
+
+I have been playing around with VBS and the WinHttp.WinHttpRequest.5.1 object. Sadly this does not give me any access to where exactly the response came from. 
+
+I tried parsing through the response headers but that only yields results if the web-server sets a cookie with the server's domain in it. For example (in my script below) ""google.com"" will pass but ""avg.com"" will fail.
+
+I am not very attached to my current script and gladly will change if anyone knows a better way.
+
+My current script:
+
+      Dim objWinHttp
+      Dim strContent, strURL
+      Set objWinHttp = CreateObject(""WinHttp.WinHttpRequest.5.1"")
+      objWinHttp.SetTimeouts 29000, 29000, 29000, 29000
+      objWinHttp.Option(0) = ""Website_monitor_light/1.0""
+      objWinHttp.Option(6) = True
+      If (InStr(WScript.Arguments.Item(0), ""www."") = 1) Then
+       URL = ""http://"" & WScript.Arguments.Item(0)
+      Else
+       URL = ""http://www."" & WScript.Arguments.Item(0)
+      End If
+      objWinHttp.Open ""GET"", URL
+      On Error Resume Next
+      objWinHttp.Send()
+      If (objWinHttp.Status = 200) Then
+       strContent = objWinHttp.GetAllResponseHeaders
+      End If
+      Wscript.Quit InStr(strContent, ""domain=."" & Mid(URL,12))
+
+Thanks a million.",http,scripting,vbscript,winhttprequest,,,open,0,268,11,"Script to determine if an HTTP reponse is from intended domain. I am trying to write a script that will send an HTTP ""GET"" to a URL then determine if the response came from the same domain or not. 
+
+I have been playing around with VBS and the WinHttp.WinHttpRequest.5.1 object. Sadly this does not give me any access to where exactly the response came from. 
+
+I tried parsing through the response headers but that only yields results if the web-server sets a cookie with the server's domain in it. For example (in my script below) ""google.com"" will pass but ""avg.com"" will fail.
+
+I am not very attached to my current script and gladly will change if anyone knows a better way.
+
+My current script:
+
+      Dim objWinHttp
+      Dim strContent, strURL
+      Set objWinHttp = CreateObject(""WinHttp.WinHttpRequest.5.1"")
+      objWinHttp.SetTimeouts 29000, 29000, 29000, 29000
+      objWinHttp.Option(0) = ""Website_monitor_light/1.0""
+      objWinHttp.Option(6) = True
+      If (InStr(WScript.Arguments.Item(0), ""www."") = 1) Then
+       URL = ""http://"" & WScript.Arguments.Item(0)
+      Else
+       URL = ""http://www."" & WScript.Arguments.Item(0)
+      End If
+      objWinHttp.Open ""GET"", URL
+      On Error Resume Next
+      objWinHttp.Send()
+      If (objWinHttp.Status = 200) Then
+       strContent = objWinHttp.GetAllResponseHeaders
+      End If
+      Wscript.Quit InStr(strContent, ""domain=."" & Mid(URL,12))
+
+Thanks a million.",4
+7801144,10/18/2011 00:24:03,704703,04/12/2011 18:55:00,2052,95,How to disable HTTP pipelining from iOS5 devices,"One of my clients is having a problem with their service ever since iOS5 came out. Their service reacts weirdly to HTTP pipelining calls and it will take a few days to fix it. Is there any meta or HTTP response setting I can set to disable this feature? 
+
+I Googled to no prevail. Thanks.",http,webview,ios5,,,,open,0,55,8,"How to disable HTTP pipelining from iOS5 devices One of my clients is having a problem with their service ever since iOS5 came out. Their service reacts weirdly to HTTP pipelining calls and it will take a few days to fix it. Is there any meta or HTTP response setting I can set to disable this feature? 
+
+I Googled to no prevail. Thanks.",3
+9029695,01/27/2012 06:22:54,1002672,10/19/2011 07:56:10,6,0,How can I open a file as a Http link,"I want to open a file in the folder (**/root/Desktop/HTMLFiles/sample.html**) as **http://localhost/HTMLFiles/sample.html**. I'm using a Linux machine.
+
+Can anyone help me?
+
+Thanks in advance,
+Gnik",http,hyperlink,links,folder,folders,01/28/2012 23:25:08,not a real question,1,22,10,"How can I open a file as a Http link I want to open a file in the folder (**/root/Desktop/HTMLFiles/sample.html**) as **http://localhost/HTMLFiles/sample.html**. I'm using a Linux machine.
+
+Can anyone help me?
+
+Thanks in advance,
+Gnik",5
+6935443,08/04/2011 02:15:19,791604,06/09/2011 19:26:21,1420,39,Why do I get an ErrorClosed when delaying HTTP requests in Windows?,"I'm trying to implement the following pattern in a program that interfaces with the DGS website using the [HTTP library](http://hackage.haskell.org/package/HTTP):
+
+1. log in
+2. get some data
+3. let the user muck with the data
+4. send the modified data back
+5. start again at step two
+
+It works great on Linux, but from Windows, the program prints `Network.Browser.request: Error raised ErrorClosed` at step four. I've distilled the above pattern into a minimal test case below:
+
+    import Control.Concurrent
+    import Network.Browser
+    import Network.HTTP
+    import Network.URI
+    
+    auth = URIAuth
+    	{ uriRegName = ""dragongoserver.sourceforge.net""
+    	, uriUserInfo = """"
+    	, uriPort = """"
+    	}
+    
+    uri path = nullURI
+    	{ uriScheme = ""http:""
+    	, uriAuthority = Just auth
+    	, uriPath = '/' : path
+    	}
+    
+    get path = request . formToRequest . Form GET (uri path)
+    
+    main = browse $ do
+    	get ""login.php"" [(""quick_mode"", ""1""), (""userid"", ""smartypants""), (""passwd"", ""smartypants"")]
+    	ioAction (threadDelay 5000000)
+    	get ""sgf.php"" [(""gid"", ""491179"")]
+
+How can I keep the connection open?",http,haskell,,,,,open,0,224,12,"Why do I get an ErrorClosed when delaying HTTP requests in Windows? I'm trying to implement the following pattern in a program that interfaces with the DGS website using the [HTTP library](http://hackage.haskell.org/package/HTTP):
+
+1. log in
+2. get some data
+3. let the user muck with the data
+4. send the modified data back
+5. start again at step two
+
+It works great on Linux, but from Windows, the program prints `Network.Browser.request: Error raised ErrorClosed` at step four. I've distilled the above pattern into a minimal test case below:
+
+    import Control.Concurrent
+    import Network.Browser
+    import Network.HTTP
+    import Network.URI
+    
+    auth = URIAuth
+    	{ uriRegName = ""dragongoserver.sourceforge.net""
+    	, uriUserInfo = """"
+    	, uriPort = """"
+    	}
+    
+    uri path = nullURI
+    	{ uriScheme = ""http:""
+    	, uriAuthority = Just auth
+    	, uriPath = '/' : path
+    	}
+    
+    get path = request . formToRequest . Form GET (uri path)
+    
+    main = browse $ do
+    	get ""login.php"" [(""quick_mode"", ""1""), (""userid"", ""smartypants""), (""passwd"", ""smartypants"")]
+    	ioAction (threadDelay 5000000)
+    	get ""sgf.php"" [(""gid"", ""491179"")]
+
+How can I keep the connection open?",2
+8103286,11/12/2011 07:59:07,1042913,11/12/2011 07:50:44,1,1,"Does Youtube Uses ""HTTP Live Streaming Protocols""","I develop apps for IOS and recently my app is rejected by them under clause 9.4 ( HTTP Live streaming protocol)
+
+I really want to know that , is using the youtube uploaded videos can resolve this issue?
+
+Currently I have uploaded the videos to my private servers. 
+
+Any help in this regard will be highly appreciated by this enthusiast.
+
+Thanks in advance.",http,streaming,live,,,11/16/2011 08:55:45,off topic,1,60,7,"Does Youtube Uses ""HTTP Live Streaming Protocols"" I develop apps for IOS and recently my app is rejected by them under clause 9.4 ( HTTP Live streaming protocol)
+
+I really want to know that , is using the youtube uploaded videos can resolve this issue?
+
+Currently I have uploaded the videos to my private servers. 
+
+Any help in this regard will be highly appreciated by this enthusiast.
+
+Thanks in advance.",3
+4278637,11/25/2010 15:32:11,321468,04/20/2010 15:55:18,5291,252,.htaccess to restict access by file type,"I don't have too much experience with .htaccess files and I would like one that disallows access (403 Forbiden) to `.myext` files in a folder and all its sub-folders.
+
+Can anyone write me a quick rule?
+
+Thank you,
+Alin",http,.htaccess,,,,,open,0,36,7,".htaccess to restict access by file type I don't have too much experience with .htaccess files and I would like one that disallows access (403 Forbiden) to `.myext` files in a folder and all its sub-folders.
+
+Can anyone write me a quick rule?
+
+Thank you,
+Alin",2
+1529680,10/07/2009 05:36:05,184155,10/05/2009 05:18:54,18,5,HTTP packet reconstruction,"If I have a large HTTP packet which has been split up into a number of TCP packets, how can I reconstruct them back into a single HTTP packet?  Basically, where in the packet do I look to tell when a HTTP packet is starting/ending?  I can't seem to see any flags/fields in the TCP header that denote the start or end of the HTTP packet.  ",http,tcp,packet,,,,open,0,70,3,"HTTP packet reconstruction If I have a large HTTP packet which has been split up into a number of TCP packets, how can I reconstruct them back into a single HTTP packet?  Basically, where in the packet do I look to tell when a HTTP packet is starting/ending?  I can't seem to see any flags/fields in the TCP header that denote the start or end of the HTTP packet.  ",3
+11548787,07/18/2012 19:21:57,1526733,07/15/2012 10:15:21,6,0,can you telnet to ssh?,"I know you cant telnet and negotiate with HTTP server by using HTTP protocol standards
+
+example:
+
+    telnet google.com 80
+    Trying 173.194.70.139...
+    Connected to google.com.
+    Escape character is '^]'.
+    GET / HTTP.1.1
+    HOST: my.com
+
+and I get in response:
+
+    HTTP/1.0 400 Bad Request
+    Content-Type: text/html; charset=UTF-8
+    Content-Length: 925
+    Date: Wed, 18 Jul 2012 19:17:26 GMT
+    Server: GFE/2.0
+
+but my question is could I do the same with SSH protocol ? 
+",http,tcp,ssh,telnet,,07/19/2012 15:20:19,off topic,1,100,5,"can you telnet to ssh? I know you cant telnet and negotiate with HTTP server by using HTTP protocol standards
+
+example:
+
+    telnet google.com 80
+    Trying 173.194.70.139...
+    Connected to google.com.
+    Escape character is '^]'.
+    GET / HTTP.1.1
+    HOST: my.com
+
+and I get in response:
+
+    HTTP/1.0 400 Bad Request
+    Content-Type: text/html; charset=UTF-8
+    Content-Length: 925
+    Date: Wed, 18 Jul 2012 19:17:26 GMT
+    Server: GFE/2.0
+
+but my question is could I do the same with SSH protocol ? 
+",4
+8690893,12/31/2011 22:29:07,1107128,12/20/2011 04:28:02,1,0,How can a webserver serve a file that it is currently downloading to a browser?,"If my webserver is downloading a large file from another server, is it possible for my webserver to stream that file to a web browser as a local download at the same time the webserver is downloading the file?
+
+If this is possible what technology would this use? Any insight would be helpful.",http,webserver,,,,01/01/2012 05:02:23,not a real question,1,52,15,"How can a webserver serve a file that it is currently downloading to a browser? If my webserver is downloading a large file from another server, is it possible for my webserver to stream that file to a web browser as a local download at the same time the webserver is downloading the file?
+
+If this is possible what technology would this use? Any insight would be helpful.",2
+6793924,07/22/2011 17:41:17,645703,03/05/2011 03:36:19,50,0,How to set Chunked Transfer's chunk-size,"( From http://www.tcpipguide.com/free/t_HTTPDataLengthIssuesChunkedTransfersandMessageTrai-3.htm#Table_279 )
+
+Quote:
+
+**Table 279**
+
+    HTTP/1.1 200 OK
+    Date: Mon, 22 Mar 2004 11:15:03 GMT
+    Content-Type: text/html
+    Transfer-Encoding: chunked
+    Trailer: Expires
+    
+    29
+    <html><body><p>The file you requested is
+    5
+    3,400
+    23
+    bytes long and was last modified:
+    1d
+    Sat, 20 Mar 2004 21:12:00 GMT
+    13
+    .</p></body></html>
+    0
+    Expires: Sat, 27 Mar 2004 21:12:00 GMT
+
+When I use Apache and PHP to learn Chunked Transfer Encoding, I found chunk-size is all about 8k bytes,but chunk-size in Table 279 is really small(e.g. 29 ,5, 23, 1d).
+
+Could someone tell me how to set these small chunk-sizes? thanks.
+
+I have searched tons of web pages , but got nothing.",http,,,,,,open,0,157,6,"How to set Chunked Transfer's chunk-size ( From http://www.tcpipguide.com/free/t_HTTPDataLengthIssuesChunkedTransfersandMessageTrai-3.htm#Table_279 )
+
+Quote:
+
+**Table 279**
+
+    HTTP/1.1 200 OK
+    Date: Mon, 22 Mar 2004 11:15:03 GMT
+    Content-Type: text/html
+    Transfer-Encoding: chunked
+    Trailer: Expires
+    
+    29
+    <html><body><p>The file you requested is
+    5
+    3,400
+    23
+    bytes long and was last modified:
+    1d
+    Sat, 20 Mar 2004 21:12:00 GMT
+    13
+    .</p></body></html>
+    0
+    Expires: Sat, 27 Mar 2004 21:12:00 GMT
+
+When I use Apache and PHP to learn Chunked Transfer Encoding, I found chunk-size is all about 8k bytes,but chunk-size in Table 279 is really small(e.g. 29 ,5, 23, 1d).
+
+Could someone tell me how to set these small chunk-sizes? thanks.
+
+I have searched tons of web pages , but got nothing.",1
+1442504,09/18/2009 03:50:44,158175,08/18/2009 04:43:07,22,1,Parsing HTTP status code,"I am using PHP to parse the numeric portion of the HTTP status code response.  Given a standard ""HTTP/1.1 200 OK"" response, I'd use:
+
+    $data = explode(' ', ""HTTP/1.1 200 OK"");
+    $code = $data[1];
+
+I'm not an expert on HTTP.  Would I ever encounter a response where the code is not at the position of $data[1] as in the above example?  I just want to be sure that this method of delimiting the response code will always work for any response.
+
+Thanks, Brian",http,header,php,http-status-codes,,,open,0,90,4,"Parsing HTTP status code I am using PHP to parse the numeric portion of the HTTP status code response.  Given a standard ""HTTP/1.1 200 OK"" response, I'd use:
+
+    $data = explode(' ', ""HTTP/1.1 200 OK"");
+    $code = $data[1];
+
+I'm not an expert on HTTP.  Would I ever encounter a response where the code is not at the position of $data[1] as in the above example?  I just want to be sure that this method of delimiting the response code will always work for any response.
+
+Thanks, Brian",4
+8639591,12/26/2011 22:34:42,800639,06/16/2011 01:20:15,1464,51,Modifying headers on Chrome,"I've found very useful addon for FF but I'm chrome lover. 
+
+I wonder, if there is any alternative extension for chrome to this addon? Any suggestions?
+
+https://addons.mozilla.org/en-US/firefox/addon/modify-headers/",http,google-chrome,browser,extension,firefox-addon,12/27/2011 09:01:32,off topic,1,26,4,"Modifying headers on Chrome I've found very useful addon for FF but I'm chrome lover. 
+
+I wonder, if there is any alternative extension for chrome to this addon? Any suggestions?
+
+https://addons.mozilla.org/en-US/firefox/addon/modify-headers/",5
+9390036,02/22/2012 06:21:21,1191047,02/05/2012 19:23:04,11,0,Difference between http:// and http:\\,"What is difference between writing a URL (say google.com)
+  http://www.google.com 
+      and
+  http:\\www.google.com",http,url,,,,03/21/2012 05:48:07,not a real question,1,20,5,"Difference between http:// and http:\\ What is difference between writing a URL (say google.com)
+  http://www.google.com 
+      and
+  http:\\www.google.com",2
+9807309,03/21/2012 15:06:44,1283685,03/21/2012 14:47:51,1,0,HTTPS SSL Self-Signed Certificate with CA Certificate issue,"I have a website on our Internal network that is also accessible to the public. I have purchased and installed an SSL certificate for that public site. The site is available using both https://site.domain.com (Public) and https://site.domain.local (Internal).
+ 
+The problem I am having is creating and installing a self-signed certificate for the internal ""site.domain.local"" so that people on our internal network do not get the security warning. I have a keystore in the root folder and also created a self-signed certificate in that keystore with no luck. The public key is working just fine. I am running Debian linux with Tomcat 7 installed and I am also using Active Directory on the network with Microsoft DNS. Any and all help would be greatly appreciated. If you need more details, please ask.",http,https,ssl-certificate,self-signed,,,open,0,131,8,"HTTPS SSL Self-Signed Certificate with CA Certificate issue I have a website on our Internal network that is also accessible to the public. I have purchased and installed an SSL certificate for that public site. The site is available using both https://site.domain.com (Public) and https://site.domain.local (Internal).
+ 
+The problem I am having is creating and installing a self-signed certificate for the internal ""site.domain.local"" so that people on our internal network do not get the security warning. I have a keystore in the root folder and also created a self-signed certificate in that keystore with no luck. The public key is working just fine. I am running Debian linux with Tomcat 7 installed and I am also using Active Directory on the network with Microsoft DNS. Any and all help would be greatly appreciated. If you need more details, please ask.",4
+6868249,07/29/2011 03:07:54,662165,03/16/2011 09:04:12,53,0,Is it possible to get the http requests spotify does?,"So, I just got spotify and I was wondering if it's possible to get the http request the application does...",http,https,,,,07/29/2011 12:46:17,not a real question,1,20,10,"Is it possible to get the http requests spotify does? So, I just got spotify and I was wondering if it's possible to get the http request the application does...",2
+11019514,06/13/2012 16:43:31,1373214,05/03/2012 17:38:22,29,1,Efficient way to replicate a database over the internet,"I need to code a solution to replicate a database from one physical site to a cloud server over HTTP (preferably using Java). I would like some recomendations on how to do that.
+
+The porpose of this is to remotely monitor (using a java web application) a process that is happening at the orginal database site. I need to replicate the DB bucause the original site often has serious conectivity limitations, so i can't have my web monitor to directly connect to the orinal DB.
+
+**A little information about the on-site process:**
+
+A dozen sensors monitor various aspects of the process and the data collected is processed and inserted at the databse at the rate of 1 record/minute. At the time, a local team complements the stored records with aditional data.
+
+I can interfere in the local team work process, but i cannot interfere in the data accquisition and the original database insertion. I can also add server tasks on the original site in order to have scheduled tasks and/or daemons running.
+
+My preference is transfer the database as it grows.
+
+**The options i have considered:**
+
+ - Periodical direct database insertions (on the cloud replica) from an application running on the local site
+ - Periodicaly export data to XML and transfering to the remote cloud, where i would have another daemon to import the data.
+ - Socket connection transfering the data from the local site to the remote site.
+
+What do you suggest?",http,database-replication,,,,06/14/2012 17:50:20,not constructive,1,236,9,"Efficient way to replicate a database over the internet I need to code a solution to replicate a database from one physical site to a cloud server over HTTP (preferably using Java). I would like some recomendations on how to do that.
+
+The porpose of this is to remotely monitor (using a java web application) a process that is happening at the orginal database site. I need to replicate the DB bucause the original site often has serious conectivity limitations, so i can't have my web monitor to directly connect to the orinal DB.
+
+**A little information about the on-site process:**
+
+A dozen sensors monitor various aspects of the process and the data collected is processed and inserted at the databse at the rate of 1 record/minute. At the time, a local team complements the stored records with aditional data.
+
+I can interfere in the local team work process, but i cannot interfere in the data accquisition and the original database insertion. I can also add server tasks on the original site in order to have scheduled tasks and/or daemons running.
+
+My preference is transfer the database as it grows.
+
+**The options i have considered:**
+
+ - Periodical direct database insertions (on the cloud replica) from an application running on the local site
+ - Periodicaly export data to XML and transfering to the remote cloud, where i would have another daemon to import the data.
+ - Socket connection transfering the data from the local site to the remote site.
+
+What do you suggest?",2
+11746514,07/31/2012 18:19:17,647110,03/06/2011 16:57:48,365,19,HTTP 1.1 compliance,"I am writting a HTTP server and want to be sure that it supports all mandatory features of HTTP 1.1.
+
+Unfortunatelly I cannot find a list of mandatory and optional features of HTTP 1.1
+So it would be hard work to go through the RFC.
+
+Does someone can point me to such a feature list?
+I am also interested in tools which test HTTP 1.1 compliance of a HTTP server.",http,testing,rfc,,,08/01/2012 02:19:51,not a real question,1,66,3,"HTTP 1.1 compliance I am writting a HTTP server and want to be sure that it supports all mandatory features of HTTP 1.1.
+
+Unfortunatelly I cannot find a list of mandatory and optional features of HTTP 1.1
+So it would be hard work to go through the RFC.
+
+Does someone can point me to such a feature list?
+I am also interested in tools which test HTTP 1.1 compliance of a HTTP server.",3
+9907896,03/28/2012 12:51:39,389432,02/18/2010 19:55:31,898,29,what are the alternatives for php://input and $HTTP_RAW_POST_DATA when file_get_contents and always_populate_raw_post_data are disabled,"My hosting http://squarebrothers.com has disabled all the socket functionality except curl. They are so irresponsible on my questions for enabling it. i can think of another hosting yet i want to know the following.
+
+I have asked a question related to this and this is a continuation yet another question.
+
+I am unable to use file_get_contents('php://input') and always_populate_raw_post_data is disabled in php.ini so i cannot use $HTTP_RAW_POST_DATA.
+
+So what is or are the alternatives to get a raw post data.
+
+For example i have setup notifications callback url with facebook. so when ever there is an event then facebook will post information to my site's specific url.
+
+so i need to read the raw post data from facebook and according to the above description i want to know the alternatives for php://input and $HTTP_RAW_POST_DATA.
+
+**is it possible to read total content when some body posts to my site including the header so that i can strip off the header part and can use the body of the post?**",http,file-get-contents,php-ini,,,,open,0,162,14,"what are the alternatives for php://input and $HTTP_RAW_POST_DATA when file_get_contents and always_populate_raw_post_data are disabled My hosting http://squarebrothers.com has disabled all the socket functionality except curl. They are so irresponsible on my questions for enabling it. i can think of another hosting yet i want to know the following.
+
+I have asked a question related to this and this is a continuation yet another question.
+
+I am unable to use file_get_contents('php://input') and always_populate_raw_post_data is disabled in php.ini so i cannot use $HTTP_RAW_POST_DATA.
+
+So what is or are the alternatives to get a raw post data.
+
+For example i have setup notifications callback url with facebook. so when ever there is an event then facebook will post information to my site's specific url.
+
+so i need to read the raw post data from facebook and according to the above description i want to know the alternatives for php://input and $HTTP_RAW_POST_DATA.
+
+**is it possible to read total content when some body posts to my site including the header so that i can strip off the header part and can use the body of the post?**",3
+107390,09/20/2008 06:34:41,10708,09/16/2008 01:12:33,53,9,What's the difference between a POST and a PUT HTTP REQUEST?,"They both seem to be sending data to the server inside the body, so what makes them different?",http,protocols,,,,,open,0,18,11,"What's the difference between a POST and a PUT HTTP REQUEST? They both seem to be sending data to the server inside the body, so what makes them different?",2
+3935208,10/14/2010 16:07:00,224922,12/04/2009 16:51:10,2413,4,100% websockets instead of HTTP in the future?,"Today I thought about why the Web traditionally is stateless - opening a connection, then close it as fast as possible.
+
+I realized that this was the HTTP.
+
+And soon we will have fully implemented web-sockets to use for live things.
+
+So I thought, could websockets replace http in the future so that every connection made will be opened til the client disconnects. Cause why would we want to open -> close, open -> close and so on like we do today?
+",http,browser,websocket,,,10/15/2010 01:15:08,not a real question,1,79,8,"100% websockets instead of HTTP in the future? Today I thought about why the Web traditionally is stateless - opening a connection, then close it as fast as possible.
+
+I realized that this was the HTTP.
+
+And soon we will have fully implemented web-sockets to use for live things.
+
+So I thought, could websockets replace http in the future so that every connection made will be opened til the client disconnects. Cause why would we want to open -> close, open -> close and so on like we do today?
+",3
+9057347,01/29/2012 22:25:05,408870,08/02/2010 17:03:52,3,0,"After configuring https traffic, http traffic fails","I just configured my Server to verify against a signed SSL cert.
+
+So now, https://www.mysite.com works great
+
+However, if you try to go to http://www.mysite.com
+
+Things break-
+Error 118 (net::ERR_CONNECTION_TIMED_OUT): The operation timed out.
+
+Any thoughts?",http,ssl,https,dns,certificate,01/30/2012 15:06:49,off topic,1,31,7,"After configuring https traffic, http traffic fails I just configured my Server to verify against a signed SSL cert.
+
+So now, https://www.mysite.com works great
+
+However, if you try to go to http://www.mysite.com
+
+Things break-
+Error 118 (net::ERR_CONNECTION_TIMED_OUT): The operation timed out.
+
+Any thoughts?",5
+5166761,03/02/2011 11:22:05,363140,06/10/2010 05:59:49,50,4,what is Internt Protocol V6,"HI all,
+Recently i came to know that within few months IP addresses are going to be exhausted,
+a new version of internet protocol is coming into action known as IPV6.
+Can someone throw some light on this?
+how the current IPs are managed?
+",http,,,,,03/02/2011 11:24:56,not a real question,1,40,5,"what is Internt Protocol V6 HI all,
+Recently i came to know that within few months IP addresses are going to be exhausted,
+a new version of internet protocol is coming into action known as IPV6.
+Can someone throw some light on this?
+how the current IPs are managed?
+",1
+1041542,06/24/2009 23:51:38,71743,02/27/2009 06:54:45,56,1,How to download multiple files with one HTTP request?,"Use case: user clicks the link on a webpage - boom! load of files sitting in his folder.<br>
+I tried to pack files using [multipart/mixed message][1], but it seems to work only for Firefox
+
+This is how my response looks like:
+
+    HTTP/1.0 200 OK
+    Connection: close
+    Date: Wed, 24 Jun 2009 23:41:40 GMT
+    Content-Type: multipart/mixed;boundary=AMZ90RFX875LKMFasdf09DDFF3
+    Client-Date: Wed, 24 Jun 2009 23:41:40 GMT
+    Client-Peer: 127.0.0.1:3000
+    Client-Response-Num: 1
+    MIME-Version: 1.0
+    Status: 200
+
+    --AMZ90RFX875LKMFasdf09DDFF3 
+    Content-type: image/jpeg 
+    Content-transfer-encoding: binary 
+    Content-disposition: attachment; filename=""001.jpg"" 
+    
+    << here goes binary data >>--AMZ90RFX875LKMFasdf09DDFF3 
+    Content-type: image/jpeg 
+    Content-transfer-encoding: binary 
+    Content-disposition: attachment; filename=""002.jpg"" 
+    
+    << here goes binary data >>--AMZ90RFX875LKMFasdf09DDFF3 
+    --AMZ90RFX875LKMFasdf09DDFF3--
+
+Thank you<br>
+
+P.S. No, zipping files is not an option
+
+  [1]: http://en.wikipedia.org/wiki/MIME#Multipart_subtypes",http,browser,,,,,open,0,181,9,"How to download multiple files with one HTTP request? Use case: user clicks the link on a webpage - boom! load of files sitting in his folder.<br>
+I tried to pack files using [multipart/mixed message][1], but it seems to work only for Firefox
+
+This is how my response looks like:
+
+    HTTP/1.0 200 OK
+    Connection: close
+    Date: Wed, 24 Jun 2009 23:41:40 GMT
+    Content-Type: multipart/mixed;boundary=AMZ90RFX875LKMFasdf09DDFF3
+    Client-Date: Wed, 24 Jun 2009 23:41:40 GMT
+    Client-Peer: 127.0.0.1:3000
+    Client-Response-Num: 1
+    MIME-Version: 1.0
+    Status: 200
+
+    --AMZ90RFX875LKMFasdf09DDFF3 
+    Content-type: image/jpeg 
+    Content-transfer-encoding: binary 
+    Content-disposition: attachment; filename=""001.jpg"" 
+    
+    << here goes binary data >>--AMZ90RFX875LKMFasdf09DDFF3 
+    Content-type: image/jpeg 
+    Content-transfer-encoding: binary 
+    Content-disposition: attachment; filename=""002.jpg"" 
+    
+    << here goes binary data >>--AMZ90RFX875LKMFasdf09DDFF3 
+    --AMZ90RFX875LKMFasdf09DDFF3--
+
+Thank you<br>
+
+P.S. No, zipping files is not an option
+
+  [1]: http://en.wikipedia.org/wiki/MIME#Multipart_subtypes",2
+2089309,01/18/2010 21:22:12,75793,03/09/2009 19:36:41,573,37,Http caching - style.css?123 or style_123.css?,"I'm currently playing around with a build / deployment script for minifying static resources. Following good practice I'd like to set an expire header far into the future for most of my javascript, stylesheet and images. 
+
+To my question, when one or more of the static files has changed clients should ask for the newest version of the file. Will adding something like /css/style.css **?1235** after the url be enough to trigger a new request? Or do I have to rename all my static files for each build (something like /css/style **_12345**.css)?",http,caching,expires,,,,open,0,92,6,"Http caching - style.css?123 or style_123.css? I'm currently playing around with a build / deployment script for minifying static resources. Following good practice I'd like to set an expire header far into the future for most of my javascript, stylesheet and images. 
+
+To my question, when one or more of the static files has changed clients should ask for the newest version of the file. Will adding something like /css/style.css **?1235** after the url be enough to trigger a new request? Or do I have to rename all my static files for each build (something like /css/style **_12345**.css)?",3
+10657953,05/18/2012 18:32:26,30344,10/22/2008 12:09:47,112,3,How to simulate a full browser's request to an HTML document?,"Goal
+====
+
+I want to simulate with a request to a html-document just the way a browser does. This means I not only want to download the main HTML file but also linked stuff like css, js, images.
+
+For now I only want to parse the first HTML document. I.e. I am not taking requests into account which result from parsing say the css (background-images, web-fonts) or javascript (ajax) etc.
+
+To implement this I need to know how a browser exactly processes a website. I haven't found a good reference on that. Any help on that would be greatly appreciated and likely solve my problem.
+
+Assumption
+==========
+
+As I lacked any good references I assumed the process (without taking redirects, the rendering etc. into account) works like that:
+
+1. A persistent HTTP-connection is established with www.facebook.com
+2. The Path ""/"" is requested and the HTML is received
+3. When the the document is fully (?) received it is parsed and a list of URLs that need to be requested is filled (divided into head and body objects?!)
+4. The first URL is taken from the head-list and it is checked wether a persistent HTTP-connection is established with that host
+    - If there is not, it is established and the afterwards the Object is requested
+    - If there is, it is added to the connection's ""download queue""
+5. Step 4 is repeated until the list is empty
+6. Then Steps 4-5 are repeated for the ""body list""
+
+Is this even close to how a browser works? **Bonus question:** Does the order of javascript and css files in the header make a difference?
+
+Doubts
+======
+
+I conducted a few tests with the Chrome Developer Tools (Chrome 18) to confirm. I connected to www.facebook.com measuring when each Object was loaded. When reloading using Ctrl + R the results looked like this:
+
+![Output in the Chrome-Developer-Network-Tab for a request to www.facebook.com][1]
+
+What puzzles me the most is that most requests are concurrent to others even when from the same host (static.ak.fbcdn.net). Pipelining is disabled my browser (which is the default setting) so why are the request still seem to happen simultaneously?
+
+  [1]: http://i.stack.imgur.com/AoRTo.png",http,browser,language-agnostic,html-parsing,simulation,,open,0,347,11,"How to simulate a full browser's request to an HTML document? Goal
+====
+
+I want to simulate with a request to a html-document just the way a browser does. This means I not only want to download the main HTML file but also linked stuff like css, js, images.
+
+For now I only want to parse the first HTML document. I.e. I am not taking requests into account which result from parsing say the css (background-images, web-fonts) or javascript (ajax) etc.
+
+To implement this I need to know how a browser exactly processes a website. I haven't found a good reference on that. Any help on that would be greatly appreciated and likely solve my problem.
+
+Assumption
+==========
+
+As I lacked any good references I assumed the process (without taking redirects, the rendering etc. into account) works like that:
+
+1. A persistent HTTP-connection is established with www.facebook.com
+2. The Path ""/"" is requested and the HTML is received
+3. When the the document is fully (?) received it is parsed and a list of URLs that need to be requested is filled (divided into head and body objects?!)
+4. The first URL is taken from the head-list and it is checked wether a persistent HTTP-connection is established with that host
+    - If there is not, it is established and the afterwards the Object is requested
+    - If there is, it is added to the connection's ""download queue""
+5. Step 4 is repeated until the list is empty
+6. Then Steps 4-5 are repeated for the ""body list""
+
+Is this even close to how a browser works? **Bonus question:** Does the order of javascript and css files in the header make a difference?
+
+Doubts
+======
+
+I conducted a few tests with the Chrome Developer Tools (Chrome 18) to confirm. I connected to www.facebook.com measuring when each Object was loaded. When reloading using Ctrl + R the results looked like this:
+
+![Output in the Chrome-Developer-Network-Tab for a request to www.facebook.com][1]
+
+What puzzles me the most is that most requests are concurrent to others even when from the same host (static.ak.fbcdn.net). Pipelining is disabled my browser (which is the default setting) so why are the request still seem to happen simultaneously?
+
+  [1]: http://i.stack.imgur.com/AoRTo.png",5
+6743328,07/19/2011 06:57:24,843932,07/14/2011 05:50:16,11,1,Protocol used for downloading file from file server.,Which protocol can be used when downloading a file from a File server? Is it FTP or any other like HTTP?,http,ftp,,,,07/19/2011 08:23:24,not a real question,1,21,8,Protocol used for downloading file from file server. Which protocol can be used when downloading a file from a File server? Is it FTP or any other like HTTP?,2
+4273734,11/25/2010 04:30:36,40149,11/23/2008 23:31:00,916,49,"How to make Varnish ignore, not delete cookies","I want to use Varnish to cache certain pages even in the presence of cookies. There are 3 possibilities that I need to take care of:
+
+ 1. An anonymous user is viewing some page
+ 2. A logged in user is viewing some page with light customization. These customizations are all stored in a signed-cookie and are dynamically populated by Javascript. The vary-cookie http header is not set.
+ 3. A logged in user is viewing some page with customized data from the database. The vary-cookie http header is set.
+
+The expected behaviors would be:
+
+ 1. Cache the page. This is the most basic scenario for Varnish to handle.
+ 2. Cache the page and do not delete the cookie because some Javascript logic needs it.
+ 3. Never cache this page because vary-cookie is signalling the cookie contents will affect the output of this page.
+
+I have read some docs on Varnish and I cannot tell if this is the default behavior or if there is some setup I have to do in VCL to make it happen.
+",http,caching,cookies,varnish,,01/31/2012 18:12:15,off topic,1,173,8,"How to make Varnish ignore, not delete cookies I want to use Varnish to cache certain pages even in the presence of cookies. There are 3 possibilities that I need to take care of:
+
+ 1. An anonymous user is viewing some page
+ 2. A logged in user is viewing some page with light customization. These customizations are all stored in a signed-cookie and are dynamically populated by Javascript. The vary-cookie http header is not set.
+ 3. A logged in user is viewing some page with customized data from the database. The vary-cookie http header is set.
+
+The expected behaviors would be:
+
+ 1. Cache the page. This is the most basic scenario for Varnish to handle.
+ 2. Cache the page and do not delete the cookie because some Javascript logic needs it.
+ 3. Never cache this page because vary-cookie is signalling the cookie contents will affect the output of this page.
+
+I have read some docs on Varnish and I cannot tell if this is the default behavior or if there is some setup I have to do in VCL to make it happen.
+",4
+1087185,07/06/2009 14:10:21,126769,06/22/2009 08:06:23,860,54,"HTTP testing tool, easily send POST/GET/PUT","I'm in the need of a tool to help debugging a webapp - anyone know of some simple 
+client tools that allow you to easily send and construct customizable POST/GET/PUT/DELETE HTTP requests ?",http,testing,debugging,,,07/24/2012 15:16:02,not constructive,1,33,6,"HTTP testing tool, easily send POST/GET/PUT I'm in the need of a tool to help debugging a webapp - anyone know of some simple 
+client tools that allow you to easily send and construct customizable POST/GET/PUT/DELETE HTTP requests ?",3
+2771566,05/05/2010 08:26:18,330361,05/01/2010 13:17:47,1,0,Using http service and its client in the same computer,"I am going to develop a http service and an application as its client which both of them are in the same computer. 
+
+I have 2 questions : 
+
+   1. Might any firewall block this application?
+   2. If so, how can i solve the problem?
+
+Tanx in advance.
+",http,service,firewall,,,,open,0,51,10,"Using http service and its client in the same computer I am going to develop a http service and an application as its client which both of them are in the same computer. 
+
+I have 2 questions : 
+
+   1. Might any firewall block this application?
+   2. If so, how can i solve the problem?
+
+Tanx in advance.
+",3
+11034395,06/14/2012 13:41:25,1456112,06/14/2012 11:42:51,1,0,Desktop application to list all page elements of an URL,"I need to make an application which will access an URL and return the time spent to load all elements(images, css, js...) and compare this results with the previous results and indicate that they improved and worsened.
+
+This application need to be a Desktop app, and I will save the informations in a text file ou xml, or use a database, and use this file do compare with previous results.
+
+I have searched for a similar application, but nothing...
+
+There are some plugins for firefox that list these elements, like Yslow or Firebug, but not what I need.
+
+So, i'm totally lost and I don't know how to start this work?
+
+Exists the possibility of make this application? What language is better for this type of application?
+
+Thks!
+",http,url,internet,,,06/14/2012 17:38:21,not a real question,1,122,10,"Desktop application to list all page elements of an URL I need to make an application which will access an URL and return the time spent to load all elements(images, css, js...) and compare this results with the previous results and indicate that they improved and worsened.
+
+This application need to be a Desktop app, and I will save the informations in a text file ou xml, or use a database, and use this file do compare with previous results.
+
+I have searched for a similar application, but nothing...
+
+There are some plugins for firefox that list these elements, like Yslow or Firebug, but not what I need.
+
+So, i'm totally lost and I don't know how to start this work?
+
+Exists the possibility of make this application? What language is better for this type of application?
+
+Thks!
+",3
+8383139,12/05/2011 09:21:52,989042,10/11/2011 07:42:57,7,0,wget - download one file help.php but with many variants of HTTP GET params,"How to download file help.php via wget, but save many files with different get params.
+For example i have two pages help.php?page=1 and help.php?page=2 and i have to save it as two different files.
+How to do this?",http,ubuntu,get,wget,,12/05/2011 15:43:53,off topic,1,36,14,"wget - download one file help.php but with many variants of HTTP GET params How to download file help.php via wget, but save many files with different get params.
+For example i have two pages help.php?page=1 and help.php?page=2 and i have to save it as two different files.
+How to do this?",4
+8737567,01/05/2012 04:16:25,959654,09/22/2011 17:11:04,127,6,Why a https URL isn't blocked,"I happened to notice this a lot and now I'm at the brink of my curiousity. If domains are blocked, how is that one can access say for example `https://facebook.com` while it's not possible to access `http://facebook.com` ? Thanks in advance.",http,url,https,,,01/05/2012 14:52:53,off topic,1,41,6,"Why a https URL isn't blocked I happened to notice this a lot and now I'm at the brink of my curiousity. If domains are blocked, how is that one can access say for example `https://facebook.com` while it's not possible to access `http://facebook.com` ? Thanks in advance.",3
+1011256,06/18/2009 07:26:04,105929,05/13/2009 03:12:36,2975,163,is htmlspecialchars suficient to escape XML element content in HTTP response?,"I'm returning an UTF-8 XML response and some elements have user provided content, so I must ensure they are properly escaped. Is using `htmlspecialchars(..., ENT_COMPAT, 'UTF-8')` enough for a proper escape of an XML element text?",http,xml,utf-8,php,,,open,0,36,11,"is htmlspecialchars suficient to escape XML element content in HTTP response? I'm returning an UTF-8 XML response and some elements have user provided content, so I must ensure they are properly escaped. Is using `htmlspecialchars(..., ENT_COMPAT, 'UTF-8')` enough for a proper escape of an XML element text?",4
+130238,09/24/2008 22:03:34,20903,09/23/2008 05:06:32,335,15,Sending an HTTP request to a different IP than what the hostname resolves to?,"I want to be able to send an HTTP request to ""admin.foo.com"", but have the request go to an IP which does not map to ""admin.foo.com"" in DNS.  I know I can edit **/etc/hosts** to do this, but I'd like to avoid doing that.
+
+To explicate, normally when you browse to `""http://admin.foo.com""`, it sends an HTTP request that looks something like this:
+
+    GET / HTTP/1.0
+    User-Agent: Wget/1.10.2 (well, it'd be Firefox, but you get the point)
+    Accept: */*
+    Host: admin.foo.com
+    Connection: Keep-Alive
+
+...and that request is sent to admin.foo.com's IP, which (let's say) is 10.0.0.1.  The ""Host"" header is extracted from the URL, and that header is what Apache uses to determine which virtual host to use.  If I put the IP address of admin.foo.com into Firefox, it sends the request to the right server, but the Host field has the IP address in it, and then Apache doesn't know what vhost to use, and defaults to using no vhost at all, which (in its config) causes a 403/Forbidden, so I can't navigate to the new server's IP to test this.
+
+Again, I know I can use **/etc/hosts** for this, but I'd like to avoid doing so, and I figure Firefox must have some sekrit way to do this ;)
+",http,firefox,ip,,,09/24/2008 22:58:27,off topic,1,225,14,"Sending an HTTP request to a different IP than what the hostname resolves to? I want to be able to send an HTTP request to ""admin.foo.com"", but have the request go to an IP which does not map to ""admin.foo.com"" in DNS.  I know I can edit **/etc/hosts** to do this, but I'd like to avoid doing that.
+
+To explicate, normally when you browse to `""http://admin.foo.com""`, it sends an HTTP request that looks something like this:
+
+    GET / HTTP/1.0
+    User-Agent: Wget/1.10.2 (well, it'd be Firefox, but you get the point)
+    Accept: */*
+    Host: admin.foo.com
+    Connection: Keep-Alive
+
+...and that request is sent to admin.foo.com's IP, which (let's say) is 10.0.0.1.  The ""Host"" header is extracted from the URL, and that header is what Apache uses to determine which virtual host to use.  If I put the IP address of admin.foo.com into Firefox, it sends the request to the right server, but the Host field has the IP address in it, and then Apache doesn't know what vhost to use, and defaults to using no vhost at all, which (in its config) causes a 403/Forbidden, so I can't navigate to the new server's IP to test this.
+
+Again, I know I can use **/etc/hosts** for this, but I'd like to avoid doing so, and I figure Firefox must have some sekrit way to do this ;)
+",3

@@ -1,0 +1,1009 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9096606,02/01/2012 13:30:14,224763,12/04/2009 13:14:15,35,0,Transform list of compex objects to flatt list with LINQ,"I have List of Vehicle as shown bellow. I want to show this in CSV file, so in order to do this i would like to flatten this list:
+
+     class Vehicle
+    {
+        int vid;
+        string name;
+        string desc;
+        CarType car;
+        TruckType truck;
+        TankType tank;       
+    }
+
+    class CarType
+    {
+        int id;
+        string color;
+        string manual;
+        string model;      
+    }
+
+    class TruckType
+    {
+        int id;
+        string width;
+        string heigh;       
+    }
+
+    class TankType
+    {
+        int id;
+        string color;
+        string size;       
+    }
+
+
+How to get all properties (including those in the complex properties) into flat list.
+How to do it with linq?",linq,object,,,,,open,0,271,10,"Transform list of compex objects to flatt list with LINQ I have List of Vehicle as shown bellow. I want to show this in CSV file, so in order to do this i would like to flatten this list:
+
+     class Vehicle
+    {
+        int vid;
+        string name;
+        string desc;
+        CarType car;
+        TruckType truck;
+        TankType tank;       
+    }
+
+    class CarType
+    {
+        int id;
+        string color;
+        string manual;
+        string model;      
+    }
+
+    class TruckType
+    {
+        int id;
+        string width;
+        string heigh;       
+    }
+
+    class TankType
+    {
+        int id;
+        string color;
+        string size;       
+    }
+
+
+How to get all properties (including those in the complex properties) into flat list.
+How to do it with linq?",2
+2820731,05/12/2010 16:20:10,281671,02/25/2010 23:03:51,135,1,Getting A LINQ .InsertOnSubmit To Work,"I'm trying to get an insert to work using LINQ and am having some difficulties.
+
+I am using this example to base my code: http://msdn.microsoft.com/en-us/library/bb763516.aspx
+
+I have my data object set up, but don't know what's going on when db.Orders.InsertOnSubmit is executed.  
+
+How can I create this db object to insert a data object into my database using InsertOnSubmit?
+
+
+",linq,insertonsubmit,,,,,open,0,58,6,"Getting A LINQ .InsertOnSubmit To Work I'm trying to get an insert to work using LINQ and am having some difficulties.
+
+I am using this example to base my code: http://msdn.microsoft.com/en-us/library/bb763516.aspx
+
+I have my data object set up, but don't know what's going on when db.Orders.InsertOnSubmit is executed.  
+
+How can I create this db object to insert a data object into my database using InsertOnSubmit?
+
+
+",2
+547684,02/13/2009 21:08:25,16387,09/17/2008 16:47:20,245,20,Querying a timestamp column from LINQ to SQL,"My table has a timestamp column named ""RowVer"" which LINQ maps to type System.Data.Linq.Binary. This data type seems useless to me because (unless I'm missing something) I can't do things like this:
+
+    // Select all records that changed since the last time we inserted/updated.
+    IEnumerable<UserSession> rows = db.UserSessions.Where
+    ( usr => usr.RowVer > ???? );
+
+So, one of the solutions I'm looking at is to add a new ""calculated column"" called RowTrack which is defined in SQL like this:
+
+    CREATE TABLE UserSession
+    (
+    RowVer timestamp NOT NULL,
+    RowTrack  AS (convert(bigint,[RowVer])),
+    -- ... other columns ...
+    )
+
+This allows me to query the database like I want to:
+
+    // Select all records that changed since the last time we inserted/updated.
+    IEnumerable<UserSession> rows = db.UserSessions.Where
+    ( usr => usr.RowTrack > 123456 );
+
+Is this a bad way to do things? How performant is querying on a calculated column? Is there a better work-around?
+
+Also, I'm developing against Sql Server 2000 for ultimate backwards compatibility, but I can talk the boss into making 2005 the lowest common denominator.",linq,sql-server,performance,,,,open,0,208,8,"Querying a timestamp column from LINQ to SQL My table has a timestamp column named ""RowVer"" which LINQ maps to type System.Data.Linq.Binary. This data type seems useless to me because (unless I'm missing something) I can't do things like this:
+
+    // Select all records that changed since the last time we inserted/updated.
+    IEnumerable<UserSession> rows = db.UserSessions.Where
+    ( usr => usr.RowVer > ???? );
+
+So, one of the solutions I'm looking at is to add a new ""calculated column"" called RowTrack which is defined in SQL like this:
+
+    CREATE TABLE UserSession
+    (
+    RowVer timestamp NOT NULL,
+    RowTrack  AS (convert(bigint,[RowVer])),
+    -- ... other columns ...
+    )
+
+This allows me to query the database like I want to:
+
+    // Select all records that changed since the last time we inserted/updated.
+    IEnumerable<UserSession> rows = db.UserSessions.Where
+    ( usr => usr.RowTrack > 123456 );
+
+Is this a bad way to do things? How performant is querying on a calculated column? Is there a better work-around?
+
+Also, I'm developing against Sql Server 2000 for ultimate backwards compatibility, but I can talk the boss into making 2005 the lowest common denominator.",3
+8708212,01/03/2012 05:13:15,335160,05/07/2010 06:48:31,277,13,What is the best to use Linq or Data Access Application Block?,What is the best way to use Linq or Data Access Application Block?What are the advantages and disadvantages of each?,linq,daab,,,,01/03/2012 08:26:18,not constructive,1,20,12,What is the best to use Linq or Data Access Application Block? What is the best way to use Linq or Data Access Application Block?What are the advantages and disadvantages of each?,2
+3584059,08/27/2010 12:25:24,368999,06/17/2010 06:30:54,26,2,LINQ performance,"I am reading records from database and check some conditions and store in `List<Result>`. Result is a class. Then performing LINQ query in `List<Result>` like grouping, counting etc. So there may be chance that min 50,000 records in `List<Result>`, so in this whether its better to go for LINQ (or) reinsert the records to db and perform the queries?",linq,.net-3.5,,,,,open,0,59,2,"LINQ performance I am reading records from database and check some conditions and store in `List<Result>`. Result is a class. Then performing LINQ query in `List<Result>` like grouping, counting etc. So there may be chance that min 50,000 records in `List<Result>`, so in this whether its better to go for LINQ (or) reinsert the records to db and perform the queries?",2
+8639907,12/26/2011 23:33:41,1100753,12/15/2011 20:56:32,7,0,Can I filter the Users returned by GetAllUsers based on a role they are in,"I am trying to create an administration interface where users and roles (among other things) can be administered. I have a list of users who can be edited, deleted or viewed. I have this code in the action:
+
+            var model = Membership.GetAllUsers().Cast<MembershipUser>().Select(x => new UserModel
+            {
+                UserName = x.UserName,
+                Email = x.Email,
+                UserRoles = Roles.GetRolesForUser(x.UserName)
+            });
+            return View(model);
+
+This is all fine except that I don't want admins to be able to edit each other. So I need to filter out all users in the ""super admin"" role. I can certainly figure this out by stepping through each role for each user to see if they are a member. I am wondering if there is a nice sucinct way to do this by filtering the result set in the Select statement, or using Except or Where",linq,asp.net-mvc-3,,,,,open,0,224,15,"Can I filter the Users returned by GetAllUsers based on a role they are in I am trying to create an administration interface where users and roles (among other things) can be administered. I have a list of users who can be edited, deleted or viewed. I have this code in the action:
+
+            var model = Membership.GetAllUsers().Cast<MembershipUser>().Select(x => new UserModel
+            {
+                UserName = x.UserName,
+                Email = x.Email,
+                UserRoles = Roles.GetRolesForUser(x.UserName)
+            });
+            return View(model);
+
+This is all fine except that I don't want admins to be able to edit each other. So I need to filter out all users in the ""super admin"" role. I can certainly figure this out by stepping through each role for each user to see if they are a member. I am wondering if there is a nice sucinct way to do this by filtering the result set in the Select statement, or using Except or Where",2
+6771280,07/21/2011 04:32:55,272219,02/13/2010 00:43:41,169,4,How to learn MVC 3 and Entity Framework?,"I have a need to learn MVC 3 with the Razor view engine and Entity Framework 4, and am trying to figure out where to start. 
+
+Over a year ago, I build a site in MVC 2 and LINQ to SQL, but it's been a long time since I've thought about it at all and I've forgotten a lot. Though, I still have a loose understanding of routing, action links, and a bit of LINQ. So, I'm not exactly starting from scratch, but it feels like it.
+
+I've been doing lots of digging around, in order to learn what I can, but have really only begun to feel a bit overwhelmed. I watched the videos on http://www.asp.net/mvc. While these certainly helped, there are still lots of holes in my knowledge.
+
+In any case, here are some specific things I'm hoping you guys can help me find:
+
+ - a good, hands-on MVC 3 tutorial (not unlike the nerd dinner tutorials that were available for MVC 2)
+ - a clear explanation of Entity Framework 4, including coverage of
+   topics such as lazy loading and POCO objects
+ - a clear explaination of LINQ, focusing on all of the extension
+   methods available, etc
+ - resources that are NOT focused on code first models. I already have a
+   database that is in use (I'm not sure I see the value in code
+   first anyway)
+
+Does anyone know of a resource or two that has these things?
+",linq,asp.net-mvc-3,entity-framework-4,,,06/04/2012 21:08:12,off topic,1,246,8,"How to learn MVC 3 and Entity Framework? I have a need to learn MVC 3 with the Razor view engine and Entity Framework 4, and am trying to figure out where to start. 
+
+Over a year ago, I build a site in MVC 2 and LINQ to SQL, but it's been a long time since I've thought about it at all and I've forgotten a lot. Though, I still have a loose understanding of routing, action links, and a bit of LINQ. So, I'm not exactly starting from scratch, but it feels like it.
+
+I've been doing lots of digging around, in order to learn what I can, but have really only begun to feel a bit overwhelmed. I watched the videos on http://www.asp.net/mvc. While these certainly helped, there are still lots of holes in my knowledge.
+
+In any case, here are some specific things I'm hoping you guys can help me find:
+
+ - a good, hands-on MVC 3 tutorial (not unlike the nerd dinner tutorials that were available for MVC 2)
+ - a clear explanation of Entity Framework 4, including coverage of
+   topics such as lazy loading and POCO objects
+ - a clear explaination of LINQ, focusing on all of the extension
+   methods available, etc
+ - resources that are NOT focused on code first models. I already have a
+   database that is in use (I'm not sure I see the value in code
+   first anyway)
+
+Does anyone know of a resource or two that has these things?
+",3
+1907487,12/15/2009 13:31:52,231940,12/15/2009 09:04:38,3,0,LINQ and nHibernate,"NHibernate and LINQ both or for Object-Relational mapping,apart from different vendor API,
+what is the difference between nHibernate and LINQ ?",linq,nhibernate,,,,07/22/2012 02:41:50,not constructive,1,20,3,"LINQ and nHibernate NHibernate and LINQ both or for Object-Relational mapping,apart from different vendor API,
+what is the difference between nHibernate and LINQ ?",2
+8100076,11/11/2011 21:16:44,233944,12/17/2009 16:37:17,1290,41,LINQ GroupBy continuous time,"Assuming I have a simple structure that looks like this:
+
+    public class Range
+    {
+	    public DateTime Start { get; set; }
+	    public DateTime End { get; set; }
+
+	    public Range(DateTime start, DateTime end)
+	    {
+		    this.Start = start;
+		    this.Start = end;
+	    }
+    }
+
+And I create an collection like so:
+
+    var dr1 = new Range(new DateTime(2011, 11, 1, 12, 0, 0), new DateTime(2011, 11, 1, 13, 0, 0));
+	var dr2 = new Range(new DateTime(2011, 11, 1, 13, 0, 0), new DateTime(2011, 11, 1, 14, 0, 0));
+	var dr3 = new Range(new DateTime(2011, 11, 1, 14, 0, 0), new DateTime(2011, 11, 1, 15, 0, 0));
+	var dr4 = new Range(new DateTime(2011, 11, 1, 16, 0, 0), new DateTime(2011, 11, 1, 17, 0, 0));
+	
+	var ranges = new List<Range>() { dr1, dr2, dr3, dr4 };
+
+What I want to do is group the ranges where they are continuous - i.e. they are continuous if the Start and End values are the same.
+
+We can assume that there are no collisions/duplicates or overlaps in the Range values.
+
+In the example posted, I would end up with two groups:
+
+2011-11-1 12:00:00 - 2011-11-1 15:00:00
+
+2011-11-1 16:00:00 - 2011-11-1 17:00:00
+
+It's fairly easy to come up with an iterative solution for this. But is they some LINQ magic I can use to get this in a pretty one-liner?
+
+Thanks in advance",linq,linq-to-objects,,,,,open,0,246,4,"LINQ GroupBy continuous time Assuming I have a simple structure that looks like this:
+
+    public class Range
+    {
+	    public DateTime Start { get; set; }
+	    public DateTime End { get; set; }
+
+	    public Range(DateTime start, DateTime end)
+	    {
+		    this.Start = start;
+		    this.Start = end;
+	    }
+    }
+
+And I create an collection like so:
+
+    var dr1 = new Range(new DateTime(2011, 11, 1, 12, 0, 0), new DateTime(2011, 11, 1, 13, 0, 0));
+	var dr2 = new Range(new DateTime(2011, 11, 1, 13, 0, 0), new DateTime(2011, 11, 1, 14, 0, 0));
+	var dr3 = new Range(new DateTime(2011, 11, 1, 14, 0, 0), new DateTime(2011, 11, 1, 15, 0, 0));
+	var dr4 = new Range(new DateTime(2011, 11, 1, 16, 0, 0), new DateTime(2011, 11, 1, 17, 0, 0));
+	
+	var ranges = new List<Range>() { dr1, dr2, dr3, dr4 };
+
+What I want to do is group the ranges where they are continuous - i.e. they are continuous if the Start and End values are the same.
+
+We can assume that there are no collisions/duplicates or overlaps in the Range values.
+
+In the example posted, I would end up with two groups:
+
+2011-11-1 12:00:00 - 2011-11-1 15:00:00
+
+2011-11-1 16:00:00 - 2011-11-1 17:00:00
+
+It's fairly easy to come up with an iterative solution for this. But is they some LINQ magic I can use to get this in a pretty one-liner?
+
+Thanks in advance",2
+5516306,04/01/2011 16:41:41,634710,02/25/2011 18:54:41,247,3,Linq static method error,"I have created following function to get dates difference:
+
+        public static double MonthsDifference(DateTime dtStart, DateTime dtNow)
+        {
+            DateTime start = dtStart;
+            DateTime end = dtNow;
+            int compMonth = (end.Month + end.Year * 12) - (start.Month + start.Year * 12);
+            double daysInEndMonth = (end - end.AddMonths(1)).Days;
+            double months = compMonth + (start.Day - end.Day) / daysInEndMonth;
+            return months;
+        }
+
+I am using it in my LINQ query
+
+ 
+
+    var query = from c in context.AccountOwners.Where( MonthsDifference(p.Account.StateChangeDate,DateTime.Now) < 4 )
+                            select c;
+                return query.Count();
+
+but it is giving error:
+
+LINQ to Entities does not recognize the method 'Double MonthsDifference(System.DateTime, System.DateTime)' method, and this method cannot be translated into a store expression. 
+
+Please suggest solution
+
+",linq,linq-to-sql,,,,,open,0,241,4,"Linq static method error I have created following function to get dates difference:
+
+        public static double MonthsDifference(DateTime dtStart, DateTime dtNow)
+        {
+            DateTime start = dtStart;
+            DateTime end = dtNow;
+            int compMonth = (end.Month + end.Year * 12) - (start.Month + start.Year * 12);
+            double daysInEndMonth = (end - end.AddMonths(1)).Days;
+            double months = compMonth + (start.Day - end.Day) / daysInEndMonth;
+            return months;
+        }
+
+I am using it in my LINQ query
+
+ 
+
+    var query = from c in context.AccountOwners.Where( MonthsDifference(p.Account.StateChangeDate,DateTime.Now) < 4 )
+                            select c;
+                return query.Count();
+
+but it is giving error:
+
+LINQ to Entities does not recognize the method 'Double MonthsDifference(System.DateTime, System.DateTime)' method, and this method cannot be translated into a store expression. 
+
+Please suggest solution
+
+",2
+6951019,08/05/2011 03:18:05,868995,07/29/2011 08:33:45,45,0,Cannot convert type 'WpfA.DataClass.tblGroup' to 'WpfA.Group',"The table has two columns. 
+
+columns1= IdGroup
+
+columns2= Hgroup
+
+    
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            this.SetData();
+        }
+        private void SetData()
+        {
+            using (DataClass.DataClassesAccDataContext DataContext = new DataClass.DataClassesAccDataContext())
+            {
+                List<Group> myGroup = (Group)DataContext.tblGroup.ToList();
+            }
+        }
+    }
+
+    public class Group
+    {
+        public string Name { get; set; }
+        public string Family { get; set; }
+        public bool Selecting { get; set; }
+    }
+
+error :
+
+Cannot convert type 'WpfA.DataClass.tblGroup' to 'WpfA.Group'
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/RPQU0.jpg",linq,c#-4.0,,,,,open,0,232,6,"Cannot convert type 'WpfA.DataClass.tblGroup' to 'WpfA.Group' The table has two columns. 
+
+columns1= IdGroup
+
+columns2= Hgroup
+
+    
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            this.SetData();
+        }
+        private void SetData()
+        {
+            using (DataClass.DataClassesAccDataContext DataContext = new DataClass.DataClassesAccDataContext())
+            {
+                List<Group> myGroup = (Group)DataContext.tblGroup.ToList();
+            }
+        }
+    }
+
+    public class Group
+    {
+        public string Name { get; set; }
+        public string Family { get; set; }
+        public bool Selecting { get; set; }
+    }
+
+error :
+
+Cannot convert type 'WpfA.DataClass.tblGroup' to 'WpfA.Group'
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/RPQU0.jpg",2
+11334972,07/04/2012 20:12:39,18352,09/18/2008 23:19:37,235,1,Sorted query from mongodb in f#,Would like to pull the latest record from a collection in F#. Any solutions?,linq,mongodb,f#,,,07/05/2012 00:15:57,not a real question,1,14,6,Sorted query from mongodb in f# Would like to pull the latest record from a collection in F#. Any solutions?,3
+7442876,09/16/2011 09:47:21,936705,09/09/2011 11:55:16,11,1,fluent nhibernate: querying Many-to-many entity with equivalent of the 'any' keyword,"I have a mant-to-many relationship modeled in the database (with a bridge table) between Student and Professor (_students_selected) , in my entites i have modeled it as a many-to-many relationship i.e. a Professor has many Students.
+
+    HasManyToMany(x => x.Students)
+       .Table(""_students_selected"").ChildKeyColumn(""student_key"").ParentKeyColumn(""professor_key"");
+    
+    public class Professor    
+    {
+            private IList<Students> _students;
+            public virtual Student Students
+            {
+                get { return _students; }
+                set { _students = value; }
+            }
+    }
+
+I am unable to query over the professors students, i have tried the following however nhibernate does not recognise Any to filter through the list. Whats the equivalent to any?
+
+    _unitOfWork.Session.QueryOver<Professor>()
+       .Where(x => x.Students.Any(i => i.Id.IsIn(childStudentList))).List();
+
+",linq,nhibernate,fluent,any,,,open,0,209,11,"fluent nhibernate: querying Many-to-many entity with equivalent of the 'any' keyword I have a mant-to-many relationship modeled in the database (with a bridge table) between Student and Professor (_students_selected) , in my entites i have modeled it as a many-to-many relationship i.e. a Professor has many Students.
+
+    HasManyToMany(x => x.Students)
+       .Table(""_students_selected"").ChildKeyColumn(""student_key"").ParentKeyColumn(""professor_key"");
+    
+    public class Professor    
+    {
+            private IList<Students> _students;
+            public virtual Student Students
+            {
+                get { return _students; }
+                set { _students = value; }
+            }
+    }
+
+I am unable to query over the professors students, i have tried the following however nhibernate does not recognise Any to filter through the list. Whats the equivalent to any?
+
+    _unitOfWork.Session.QueryOver<Professor>()
+       .Where(x => x.Students.Any(i => i.Id.IsIn(childStudentList))).List();
+
+",4
+3832337,09/30/2010 15:49:25,92153,04/17/2009 14:44:59,313,2,Interview Question: What is LINQ?,"I have had recently two telephone interviews.
+
+In both of them I have been asked what is LINQ as the last question.
+
+Well I said that Linq is an unnamed method in place of a delegate. And that it would provide lazy loading through its nature of IQueryabe and IEnumerable.
+
+But somehow that wasn't enough.
+
+I find it very hard to explain this precisely on a telephone interview.  
+
+Does anyone know better?
+
+Thanks,
+",linq,interview-questions,,,,12/01/2011 18:13:28,not constructive,1,69,5,"Interview Question: What is LINQ? I have had recently two telephone interviews.
+
+In both of them I have been asked what is LINQ as the last question.
+
+Well I said that Linq is an unnamed method in place of a delegate. And that it would provide lazy loading through its nature of IQueryabe and IEnumerable.
+
+But somehow that wasn't enough.
+
+I find it very hard to explain this precisely on a telephone interview.  
+
+Does anyone know better?
+
+Thanks,
+",2
+2882258,05/21/2010 13:05:33,204691,11/06/2009 10:26:27,63,0,VB.NET logical expression evaluator,"I need to test a logical expression held in a string to see if it evaluate to TRUE or FALSE.(the strig is built dynamically)   
+For example the resulting string may contain ""'dog'<'cat' OR (1>4 AND 4<6)"". There are no variables in the string, it will logically evaluate. It will only contain simple operators = > < >< >= <= and AND , OR and Open and Close Brackets, string constants and numbers. (converted to correct syntax && || etc.)
+
+I currently acheive this by creating a jscipt function and compiling it into a .dll. I then reference the .dll in my VB.NET project.
+
+    class ExpressionEvaluator  
+    {  
+ function Evaluate(Expression : String)  
+ {  
+  return eval(Expression);  
+ }  
+    }  
+
+Is there a simpler method using built in .NET functions or Lamdba expressions.",linq,lambda,eval,vb.net,expression,,open,0,152,4,"VB.NET logical expression evaluator I need to test a logical expression held in a string to see if it evaluate to TRUE or FALSE.(the strig is built dynamically)   
+For example the resulting string may contain ""'dog'<'cat' OR (1>4 AND 4<6)"". There are no variables in the string, it will logically evaluate. It will only contain simple operators = > < >< >= <= and AND , OR and Open and Close Brackets, string constants and numbers. (converted to correct syntax && || etc.)
+
+I currently acheive this by creating a jscipt function and compiling it into a .dll. I then reference the .dll in my VB.NET project.
+
+    class ExpressionEvaluator  
+    {  
+ function Evaluate(Expression : String)  
+ {  
+  return eval(Expression);  
+ }  
+    }  
+
+Is there a simpler method using built in .NET functions or Lamdba expressions.",5
+9300169,02/15/2012 19:44:15,368259,06/16/2010 13:12:28,796,30,LINQ indexOf a particular entry,"I have an MVC3 C#.Net web app.  I have the below string array.
+
+        public static string[] HeaderNamesWbs = new[]
+                                           {
+                                              WBS_NUMBER,
+                                              BOE_TITLE,
+                                              SOW_DESCRIPTION,
+                                              HARRIS_WIN_THEME,
+                                              COST_BOGEY
+                                           };
+
+I want to find the Index of a given entry when in another loop.  I thought the list would have an IndexOf.  I can't find it.  Any ideas?",linq,indexof,,,,,open,0,373,5,"LINQ indexOf a particular entry I have an MVC3 C#.Net web app.  I have the below string array.
+
+        public static string[] HeaderNamesWbs = new[]
+                                           {
+                                              WBS_NUMBER,
+                                              BOE_TITLE,
+                                              SOW_DESCRIPTION,
+                                              HARRIS_WIN_THEME,
+                                              COST_BOGEY
+                                           };
+
+I want to find the Index of a given entry when in another loop.  I thought the list would have an IndexOf.  I can't find it.  Any ideas?",2
+7338165,09/07/2011 17:42:15,702769,04/11/2011 19:14:09,340,0,"What is it that makes methods such as Select, Join, Where a Linq-to-Object's standard query operators and not...?","1) Internally, what is it that makes methods such `Select`, `Join`, `Where` etc ( besides the fact that query expressions get translated by compiler into these method calls )  a Linq-to-Object's *standard query operators* and not just regular methods that happen to operate on sequences of data? 
+
+Namelly, all the functionality offered by those operators could also be implemented in regular methods, but we don't call those regular methods *standard query operators*?!
+
+2) Same question for Linq-to-XML methods – thus, what makes them *query operators* and not just regular methods that operate on XML data? 
+
+Thank you
+",linq,linq-to-objects,,,,,open,0,97,18,"What is it that makes methods such as Select, Join, Where a Linq-to-Object's standard query operators and not...? 1) Internally, what is it that makes methods such `Select`, `Join`, `Where` etc ( besides the fact that query expressions get translated by compiler into these method calls )  a Linq-to-Object's *standard query operators* and not just regular methods that happen to operate on sequences of data? 
+
+Namelly, all the functionality offered by those operators could also be implemented in regular methods, but we don't call those regular methods *standard query operators*?!
+
+2) Same question for Linq-to-XML methods – thus, what makes them *query operators* and not just regular methods that operate on XML data? 
+
+Thank you
+",2
+269058,11/06/2008 15:17:46,28260,10/15/2008 14:20:01,374,26,How do you add an index field to Linq results,"Lets say I have an array like this:
+
+    string [] Filelist = ...
+
+I want to create an Linq result where each entry has it's position in the array like this:
+
+    var list = from f in Filelist
+        select new { Index = (something), Filename = f};
+
+I want Index to be 0 for the 1st item, 1 for the 2nd, etc.
+
+What should I use for the expression Index= ?",linq,c#,,,,,open,0,81,10,"How do you add an index field to Linq results Lets say I have an array like this:
+
+    string [] Filelist = ...
+
+I want to create an Linq result where each entry has it's position in the array like this:
+
+    var list = from f in Filelist
+        select new { Index = (something), Filename = f};
+
+I want Index to be 0 for the 1st item, 1 for the 2nd, etc.
+
+What should I use for the expression Index= ?",2
+7773945,10/14/2011 21:49:23,996184,10/14/2011 21:23:17,1,0,How do I discern whether a Type is a static array initializer?,"I'll start by saying that I'm working off the assumption that static array initializers are turned into private nested classes by the compiler, usually with names like `__StaticArrayInitTypeSize=12`. As I understand it, having read [this extremely informative article][1], these private classes are value types, and they aren't tagged with the `CompilerGeneratedAttribute` class.
+
+I'm working on a project that needs to process certain types and ignore others.
+
+I have to be able to process custom struct types, which, like the generated static array initializer classes, are value types. I must ignore the generated static array initializer classes. I also must ignore enumerations and delegates.
+
+I'm pulling these classes with Linq, like so:
+
+    var typesToProcess = allTypes.Where(type => !type.IsEnum &&
+                                                !type.IsArray &&
+                                                !type.IsSubclassOf(typeof(Delegate)));
+
+I'm fairly sure that the `IsArray` property isn't what I think it is. At any rate, the generated static array initializer class still shows up in the `typesToProcess` Enumerable.
+
+Has anyone else dealt with this? How can I discern the difference between a custom struct and a generated static array initializer class? I could hack it by doing a string comparison of the type name against `__StaticArrayInitTypeSize`, but is there a cleaner solution?
+
+  [1]: http://bartdesmet.net/blogs/bart/archive/2008/08/21/how-c-array-initializers-work.aspx",linq,reflection,c#-3.0,,,,open,0,289,12,"How do I discern whether a Type is a static array initializer? I'll start by saying that I'm working off the assumption that static array initializers are turned into private nested classes by the compiler, usually with names like `__StaticArrayInitTypeSize=12`. As I understand it, having read [this extremely informative article][1], these private classes are value types, and they aren't tagged with the `CompilerGeneratedAttribute` class.
+
+I'm working on a project that needs to process certain types and ignore others.
+
+I have to be able to process custom struct types, which, like the generated static array initializer classes, are value types. I must ignore the generated static array initializer classes. I also must ignore enumerations and delegates.
+
+I'm pulling these classes with Linq, like so:
+
+    var typesToProcess = allTypes.Where(type => !type.IsEnum &&
+                                                !type.IsArray &&
+                                                !type.IsSubclassOf(typeof(Delegate)));
+
+I'm fairly sure that the `IsArray` property isn't what I think it is. At any rate, the generated static array initializer class still shows up in the `typesToProcess` Enumerable.
+
+Has anyone else dealt with this? How can I discern the difference between a custom struct and a generated static array initializer class? I could hack it by doing a string comparison of the type name against `__StaticArrayInitTypeSize`, but is there a cleaner solution?
+
+  [1]: http://bartdesmet.net/blogs/bart/archive/2008/08/21/how-c-array-initializers-work.aspx",3
+1145558,07/17/2009 20:34:54,50058,12/30/2008 03:36:27,419,25,Linq list of lists to single list,"Seems like this is the kind of thing that would have already been answered but I'm unable to find it.
+
+My question is pretty simple, how can I do this in one statement so that instead of having to new the empty list and then aggregate in the next line, that I can have a single linq statement that outputs my final list. details is a list of items that each contain a list of residences, I just want all of the residences in a flat list.
+
+    var residences = new List<DAL.AppForm_Residences>();
+    details.Select(d => d.AppForm_Residences).ToList().ForEach(d => residences.AddRange(d));",linq,,,,,,open,0,102,7,"Linq list of lists to single list Seems like this is the kind of thing that would have already been answered but I'm unable to find it.
+
+My question is pretty simple, how can I do this in one statement so that instead of having to new the empty list and then aggregate in the next line, that I can have a single linq statement that outputs my final list. details is a list of items that each contain a list of residences, I just want all of the residences in a flat list.
+
+    var residences = new List<DAL.AppForm_Residences>();
+    details.Select(d => d.AppForm_Residences).ToList().ForEach(d => residences.AddRange(d));",1
+2063632,01/14/2010 11:06:28,70414,02/24/2009 15:08:15,768,41,Linq query with Datetime Object ,"I want to receive the newest item from a collection. Each item has an DateTime field (EditDate) and I do a little query like that.
+
+    var s = from l in OCollectionAgents
+        where l.IDOfVehicle == agent.IDOfVehicle
+        orderby
+        agent.EditDate ascending
+        select l;
+
+After the query I do
+
+    agent.DetailInformationOfResults.NewestAgentEditDate = s.First().EditDate;
+
+But no matter if is set the sort direction to **ascending** or **descending** I always get the same item. The oldest item.
+
+I fixed the problem by doing
+
+    agent.DetailInformationOfResults.NewestAgentEditDate = s.Max(d => d.EditDate);
+
+This is a solution but I still wonder why my query result does not change the sort direction.
+
+
+	",linq,datetime,,,,,open,0,133,6,"Linq query with Datetime Object  I want to receive the newest item from a collection. Each item has an DateTime field (EditDate) and I do a little query like that.
+
+    var s = from l in OCollectionAgents
+        where l.IDOfVehicle == agent.IDOfVehicle
+        orderby
+        agent.EditDate ascending
+        select l;
+
+After the query I do
+
+    agent.DetailInformationOfResults.NewestAgentEditDate = s.First().EditDate;
+
+But no matter if is set the sort direction to **ascending** or **descending** I always get the same item. The oldest item.
+
+I fixed the problem by doing
+
+    agent.DetailInformationOfResults.NewestAgentEditDate = s.Max(d => d.EditDate);
+
+This is a solution but I still wonder why my query result does not change the sort direction.
+
+
+	",2
+2736944,04/29/2010 11:42:12,250686,01/14/2010 11:48:35,10,1,Subsonic 3.0 Query limit with MySQL c#.net LinQ,"a quick question which may or may not be easily answered.
+
+Currently, in order to return a limited result set of data to my calling reference using SubSonic I use a similar function as below:
+
+    _DataSet = from CatSet in t2_aspnet_shopping_item_category.All()
+                            join CatProdAssignedLink in t2_aspnet_shopping_link_categoryproduct.All() on CatSet.CategoryID equals CatProdAssignedLink.CategoryID
+                            join ProdSet in t2_aspnet_shopping_item_product.All() on CatProdAssignedLink.ProductID equals ProdSet.ProductID
+                            where ProdSet.ProductID == __ProductID
+                            orderby CatProdAssignedLink.LinkID ascending                            
+                            select CatSet;
+
+and select the first item from the data set.
+
+Is there a way to limit the lookup initially to a certain amount of rows? I'm using MySQL as the base database.",linq,subsonic3,mysql,limit,,,open,0,260,8,"Subsonic 3.0 Query limit with MySQL c#.net LinQ a quick question which may or may not be easily answered.
+
+Currently, in order to return a limited result set of data to my calling reference using SubSonic I use a similar function as below:
+
+    _DataSet = from CatSet in t2_aspnet_shopping_item_category.All()
+                            join CatProdAssignedLink in t2_aspnet_shopping_link_categoryproduct.All() on CatSet.CategoryID equals CatProdAssignedLink.CategoryID
+                            join ProdSet in t2_aspnet_shopping_item_product.All() on CatProdAssignedLink.ProductID equals ProdSet.ProductID
+                            where ProdSet.ProductID == __ProductID
+                            orderby CatProdAssignedLink.LinkID ascending                            
+                            select CatSet;
+
+and select the first item from the data set.
+
+Is there a way to limit the lookup initially to a certain amount of rows? I'm using MySQL as the base database.",4
+4633797,01/08/2011 12:15:36,553739,12/25/2010 08:13:52,84,3,LINQ Queries in C#,"Why we need LINQ in C# , if we can do anything uding ADO.net. than what is the need of LINQ queries?
+Are the optimized enough than ADO.net?
+Which is best one to use",linq,,,,,01/16/2012 05:26:01,not constructive,1,32,4,"LINQ Queries in C# Why we need LINQ in C# , if we can do anything uding ADO.net. than what is the need of LINQ queries?
+Are the optimized enough than ADO.net?
+Which is best one to use",1
+7565357,09/27/2011 07:05:41,118500,06/06/2009 11:05:38,4063,406,Linq to SQL: How to save the final queries to a log file?,"I am looking after an application with lots of LINQ to SQL queries. Some of the data loading is taking quite a bit of time. I wanted to know the exact query that is fired on SQL server. Is there any way of storing the generated T-SQL statements to some kind of a log file?
+
+Please suggest some other possible ways as well.",linq,entity-framework,linq-to-sql,logging,,,open,0,62,13,"Linq to SQL: How to save the final queries to a log file? I am looking after an application with lots of LINQ to SQL queries. Some of the data loading is taking quite a bit of time. I wanted to know the exact query that is fired on SQL server. Is there any way of storing the generated T-SQL statements to some kind of a log file?
+
+Please suggest some other possible ways as well.",4
+9441010,02/25/2012 03:46:02,1016740,10/27/2011 14:56:26,36,0,Retrieve data with the linq query,"I have table **StudentAccount** with columns Code,Amount,Description,Valid Period 
+for selected period there might be same code and description 
+write a linq query that gets the data Code/Description needs to be unique for the selected date range.( the date is in the format 1/1/1990-1/1/1991)",linq,entity-framework,,,,,open,0,43,6,"Retrieve data with the linq query I have table **StudentAccount** with columns Code,Amount,Description,Valid Period 
+for selected period there might be same code and description 
+write a linq query that gets the data Code/Description needs to be unique for the selected date range.( the date is in the format 1/1/1990-1/1/1991)",2
+10459062,05/05/2012 05:13:19,1376313,05/05/2012 05:09:34,1,0,Query list of products and price from CRM 2011,"I need to query products and their price for the default price list and unit of measure. I am using query below without any luck. any ideas? Thanks.
+
+from pli in ctx.ProductPriceLevelSet
+join pr in ctx.ProductSet
+on new { ID = pli.ProductId.Id, PLID = pli.PriceLevelId.Id } equals new { ID = pr.ProductId.Value, PLID = pr.PriceLevelId.Id}
+
+D.",linq,crm,,,,05/14/2012 13:02:11,not a real question,1,52,9,"Query list of products and price from CRM 2011 I need to query products and their price for the default price list and unit of measure. I am using query below without any luck. any ideas? Thanks.
+
+from pli in ctx.ProductPriceLevelSet
+join pr in ctx.ProductSet
+on new { ID = pli.ProductId.Id, PLID = pli.PriceLevelId.Id } equals new { ID = pr.ProductId.Value, PLID = pr.PriceLevelId.Id}
+
+D.",2
+9561845,03/05/2012 04:59:48,571806,01/11/2011 19:48:04,53,1,How can i select the all attribute original and new original together by dont use the specify column obj?,"i want to Use LINQ like this "" 
+Select * , 'Yoyo' From abc "" in LINQ 
+by didnt use 
+Select a,b,c,'Yoyo' From abc ?
+
+Thank's ^^",linq,,,,,07/18/2012 12:42:32,not a real question,1,26,19,"How can i select the all attribute original and new original together by dont use the specify column obj? i want to Use LINQ like this "" 
+Select * , 'Yoyo' From abc "" in LINQ 
+by didnt use 
+Select a,b,c,'Yoyo' From abc ?
+
+Thank's ^^",1
+8848913,01/13/2012 10:15:36,298336,03/21/2010 07:16:45,684,7,Convert foreach loop with repeater in linq,"How can I convert below code in LINQ
+
+    foreach (RepeaterItem ri in rptNews.Items)
+                {
+                    HiddenField hdnUserId = (HiddenField)ri.FindControl(""hdnId"");
+                    int userId = Users.Current.UserId;
+                    if (Convert.ToInt32(hdnUserId.Value) != userId)
+                    {
+                        ((ImageButton)ri.FindControl(""img1"")).Visible = false;
+                        ((ImageButton)ri.FindControl(""img2"")).Visible = false;
+                       
+                    }
+                    
+                }
+
+
+Also please guide me how can I learn to translate this kind of code to linq.  ",linq,foreach,asp.net-4.0,,,,open,0,269,7,"Convert foreach loop with repeater in linq How can I convert below code in LINQ
+
+    foreach (RepeaterItem ri in rptNews.Items)
+                {
+                    HiddenField hdnUserId = (HiddenField)ri.FindControl(""hdnId"");
+                    int userId = Users.Current.UserId;
+                    if (Convert.ToInt32(hdnUserId.Value) != userId)
+                    {
+                        ((ImageButton)ri.FindControl(""img1"")).Visible = false;
+                        ((ImageButton)ri.FindControl(""img2"")).Visible = false;
+                       
+                    }
+                    
+                }
+
+
+Also please guide me how can I learn to translate this kind of code to linq.  ",3
+10365053,04/28/2012 15:44:46,56861,01/19/2009 22:04:11,1378,33,Generic Entity Framework Updater,"I'm trying to write something where I can pass in a class (which will include new data, including the primary key values) and using entity framework, retrieve the entity using the primary key. So, I have a class, including the primary key values, but I don't necessarily know the primary key (but Entity Framework does).
+
+(I also later need to then update the entity generically, but that's a separate question)
+
+Is there a simple way to do this in LINQ?",linq,entity-framework,,,,,open,0,78,4,"Generic Entity Framework Updater I'm trying to write something where I can pass in a class (which will include new data, including the primary key values) and using entity framework, retrieve the entity using the primary key. So, I have a class, including the primary key values, but I don't necessarily know the primary key (but Entity Framework does).
+
+(I also later need to then update the entity generically, but that's a separate question)
+
+Is there a simple way to do this in LINQ?",2
+7083871,08/16/2011 19:29:52,32967,10/31/2008 01:47:36,192,5,"'Date' is not supported in LINQ to Entitiies. Only initializers, entity members, and entity navigation properties are supported","I am trying to execute the following code and am receiving an error
+
+    ` public List<Log> GetLoggingData(DateTime LogDate, string title)
+            {
+                var context = new LoggingEntities();
+                var query = from t in context.Logs
+                        
+                          where t.Title == title 
+                          && t.Timestamp == LogDate
+                           
+                          select t;
+            return query.ToList();
+        }`
+The error I'm receiving is ""The specified type member 'Date' is not supported in LINQ to Entities. Only initializers, entity members, and entity navigation properties are supported.""  I have tried various attempts of casting everythign to a string, only comparing the date part, but can't seem to get the right combinaation.  Any help is greatly appreciated.
+",linq,entity-framework,linq-to-entities,,,,open,0,292,18,"'Date' is not supported in LINQ to Entitiies. Only initializers, entity members, and entity navigation properties are supported I am trying to execute the following code and am receiving an error
+
+    ` public List<Log> GetLoggingData(DateTime LogDate, string title)
+            {
+                var context = new LoggingEntities();
+                var query = from t in context.Logs
+                        
+                          where t.Title == title 
+                          && t.Timestamp == LogDate
+                           
+                          select t;
+            return query.ToList();
+        }`
+The error I'm receiving is ""The specified type member 'Date' is not supported in LINQ to Entities. Only initializers, entity members, and entity navigation properties are supported.""  I have tried various attempts of casting everythign to a string, only comparing the date part, but can't seem to get the right combinaation.  Any help is greatly appreciated.
+",3
+10237347,04/19/2012 21:49:55,41508,11/28/2008 01:57:30,578,2,Linq query Left Join condition,"I'm trying to recreate the following sql query using Linq syntax, for some reason it is not working, please let me know what am I doing wrong here
+
+My sql query:
+-------------------
+select 
+cf.VisitConfigId,
+cf.VisitName,
+sv.VisitDate 
+from SubjectVisitConfig cf 
+left join SubjectVisit sv on cf.VisitConfigId = sv.VisitConfigId
+
+
+My Linq query:
+-----------------------
+            var q = from cf in ctms.SubjectVisitConfigs
+                    join sv in ctms.SubjectVisits on cf.VisitConfigId equals  
+                    sv.VisitConfigId into JoinedVisits
+                    from sv in JoinedVisits.DefaultIfEmpty()
+                    where sv.SubjectId == subjectId.Value && sv.SiteId == siteId.Value
+                    select new
+                               {
+                                   sv.VisitId,
+                                   VisitDate = sv.VisitDate != null ? sv.VisitDate : null,
+                                   cf.VisitName
+                               };
+
+
+Thanks for your help!
+
+",linq,query,join,condition,,,open,0,361,5,"Linq query Left Join condition I'm trying to recreate the following sql query using Linq syntax, for some reason it is not working, please let me know what am I doing wrong here
+
+My sql query:
+-------------------
+select 
+cf.VisitConfigId,
+cf.VisitName,
+sv.VisitDate 
+from SubjectVisitConfig cf 
+left join SubjectVisit sv on cf.VisitConfigId = sv.VisitConfigId
+
+
+My Linq query:
+-----------------------
+            var q = from cf in ctms.SubjectVisitConfigs
+                    join sv in ctms.SubjectVisits on cf.VisitConfigId equals  
+                    sv.VisitConfigId into JoinedVisits
+                    from sv in JoinedVisits.DefaultIfEmpty()
+                    where sv.SubjectId == subjectId.Value && sv.SiteId == siteId.Value
+                    select new
+                               {
+                                   sv.VisitId,
+                                   VisitDate = sv.VisitDate != null ? sv.VisitDate : null,
+                                   cf.VisitName
+                               };
+
+
+Thanks for your help!
+
+",4
+7401238,09/13/2011 11:39:53,942429,09/13/2011 11:39:53,1,0,question about System.Linq.Dynamic,"I have a question regarding using some features from the System.Linq.Dynamic assembly.
+
+I needed using queries like ""@""NOT (Person.Name = """"test"""")"" for example, now the problem is that I do not have a certain object type, but instead need reading the property names and their values (and may be types, though I actually must deduce the types from the values) ... I solved this by using reflection (created the type and the properties as needed at runtime) .... but I still wonder whether that is possible without creating the types and properties, but using anonymuous types (I basically need to not have to enter those types, just the values ... of course I can write code to find out the type of the value entered for ex it has quotes - that means it's a string ...), or if there is a another library in .Net for accomplishing this task (I did not have very much time for looking into the Dynamic class ... how it's working etc)
+.
+",linq,dynamic,,,,09/14/2011 09:06:48,not a real question,1,167,3,"question about System.Linq.Dynamic I have a question regarding using some features from the System.Linq.Dynamic assembly.
+
+I needed using queries like ""@""NOT (Person.Name = """"test"""")"" for example, now the problem is that I do not have a certain object type, but instead need reading the property names and their values (and may be types, though I actually must deduce the types from the values) ... I solved this by using reflection (created the type and the properties as needed at runtime) .... but I still wonder whether that is possible without creating the types and properties, but using anonymuous types (I basically need to not have to enter those types, just the values ... of course I can write code to find out the type of the value entered for ex it has quotes - that means it's a string ...), or if there is a another library in .Net for accomplishing this task (I did not have very much time for looking into the Dynamic class ... how it's working etc)
+.
+",2
+6888236,07/31/2011 08:00:26,377133,06/26/2010 21:13:01,946,44,Group items in pairs,"I have list of items, for example: `{ i1, i2, i3, i4, i5, i6, i7 }`.  
+I want to get a list, where every item is a pair of items from source list: `{ {i1, i2}, {i3, i4}, {i5, i6}, {i7} }`.  
+`i7` is a single item in pair because there is no item `i8`.  
+Is it possible to do with LINQ?",linq,,,,,,open,0,65,4,"Group items in pairs I have list of items, for example: `{ i1, i2, i3, i4, i5, i6, i7 }`.  
+I want to get a list, where every item is a pair of items from source list: `{ {i1, i2}, {i3, i4}, {i5, i6}, {i7} }`.  
+`i7` is a single item in pair because there is no item `i8`.  
+Is it possible to do with LINQ?",1
+9350378,02/19/2012 15:14:08,661597,03/16/2011 00:04:55,1,0,MS MVC issue passing id from main to details,"i am fighting this problem almost 2 days and i am desperate. I wanna create the database app. using Linq to sql. First i created the list of powerplants(passed from database) and i want to view detail of each powerplant. But here comes the problem. I propably do something wrong.
+
+Controller:
+
+ 
+
+    public ActionResult Databases()
+            {
+    
+    
+                var dataContext = new powerPlantModelDataContext();
+    
+                var powerPlant = from q in dataContext.PowerPlants
+                             select q;
+    
+                ViewData[""Powerplant""] = powerPlant.ToList();
+    
+                return View();
+            }
+    
+            public ActionResult DatabasesDetail(int ID) 
+            {
+    
+                var dataContext = new powerPlantModelDataContext();
+    
+                var powerPlant = from q in dataContext.PowerPlants
+                                 where q.Property.Equals(ID)
+                                 select q;
+    
+                ViewData[""Powerplant""] = powerPlant.Single();
+    
+                return View();
+            }
+
+View1:(databases.aspx) - her is the detail link
+
+     <% foreach (RenewalSourcesWeb.Models.PowerPlant pp in (List<RenewalSourcesWeb.Models.PowerPlant>)ViewData[""Powerplant""])%>
+    <% { %>
+    <table>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Mesto
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <%=pp.ID%>
+            </td>
+            <td>
+                <%=pp.Property.BasicProperty.City%>
+            </td>
+            <td>
+                <%= Html.ActionLink(""Detail"", ""DatabasesDetail"", new { id = pp.ID_Properties})%>
+            </td>
+        </tr>
+    </table>
+
+View2: databasedetails.aspx (problem)
+
+     <% RenewalSourcesWeb.Models.PowerPlant op = (RenewalSourcesWeb.Models.PowerPlant)ViewData[""Powerplant""]; %>
+    
+         <% foreach (RenewalSourcesWeb.Models.Property q in op.Property)  { %>
+    
+         <%=op.Property.ConnectProperty.Archivation%>
+         <%=op.Property.ContactProperty.ContactName %>
+    
+        <%} %>
+
+
+I think there is logical error.I think the problem is that i passing wrong argument to controller or something. If anyone have a clue can you check the action link ,controller and the database detail for mistake.
+Thanks, i really appreciate any help.
+
+Juraj",linq,mvc,linq-to-sql,ms,,08/01/2012 14:10:09,too localized,1,792,9,"MS MVC issue passing id from main to details i am fighting this problem almost 2 days and i am desperate. I wanna create the database app. using Linq to sql. First i created the list of powerplants(passed from database) and i want to view detail of each powerplant. But here comes the problem. I propably do something wrong.
+
+Controller:
+
+ 
+
+    public ActionResult Databases()
+            {
+    
+    
+                var dataContext = new powerPlantModelDataContext();
+    
+                var powerPlant = from q in dataContext.PowerPlants
+                             select q;
+    
+                ViewData[""Powerplant""] = powerPlant.ToList();
+    
+                return View();
+            }
+    
+            public ActionResult DatabasesDetail(int ID) 
+            {
+    
+                var dataContext = new powerPlantModelDataContext();
+    
+                var powerPlant = from q in dataContext.PowerPlants
+                                 where q.Property.Equals(ID)
+                                 select q;
+    
+                ViewData[""Powerplant""] = powerPlant.Single();
+    
+                return View();
+            }
+
+View1:(databases.aspx) - her is the detail link
+
+     <% foreach (RenewalSourcesWeb.Models.PowerPlant pp in (List<RenewalSourcesWeb.Models.PowerPlant>)ViewData[""Powerplant""])%>
+    <% { %>
+    <table>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Mesto
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <%=pp.ID%>
+            </td>
+            <td>
+                <%=pp.Property.BasicProperty.City%>
+            </td>
+            <td>
+                <%= Html.ActionLink(""Detail"", ""DatabasesDetail"", new { id = pp.ID_Properties})%>
+            </td>
+        </tr>
+    </table>
+
+View2: databasedetails.aspx (problem)
+
+     <% RenewalSourcesWeb.Models.PowerPlant op = (RenewalSourcesWeb.Models.PowerPlant)ViewData[""Powerplant""]; %>
+    
+         <% foreach (RenewalSourcesWeb.Models.Property q in op.Property)  { %>
+    
+         <%=op.Property.ConnectProperty.Archivation%>
+         <%=op.Property.ContactProperty.ContactName %>
+    
+        <%} %>
+
+
+I think there is logical error.I think the problem is that i passing wrong argument to controller or something. If anyone have a clue can you check the action link ,controller and the database detail for mistake.
+Thanks, i really appreciate any help.
+
+Juraj",4
