@@ -1,0 +1,1811 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+5151799,03/01/2011 07:56:06,638984,03/01/2011 07:56:06,1,0,what is the MVC?,"what is mvc? in c# 
+
+...............",mvc,,,,,03/01/2011 07:58:44,not a real question,1,6,4,"what is the MVC? what is mvc? in c# 
+
+...............",1
+10869108,06/03/2012 09:09:37,752892,05/13/2011 18:54:11,1,2,Node Js best Frameworks and best practices,"I'm looking for best practice building Node Js application.
+Are there any best practices in terms of middle ware, templating and also framework that holds it all together (MVC or RVP pattern).
+Any help is much appreciated.
+",mvc,templates,node.js,,,06/04/2012 09:59:01,not constructive,1,35,7,"Node Js best Frameworks and best practices I'm looking for best practice building Node Js application.
+Are there any best practices in terms of middle ware, templating and also framework that holds it all together (MVC or RVP pattern).
+Any help is much appreciated.
+",3
+5532345,04/03/2011 20:38:43,369765,02/22/2010 12:49:04,270,9,MVC render to String in the Controller Or else were,"So basically I have a partial view which can build a nice table for me. I would like to email this table out every week to my users. instead of building it again I would like to pass the control the model it requires and then receive back the html as a string that has been build from the control.
+
+Is it possible to do this in the controller, I feel it should be a pretty simple process",mvc,controller,partial-views,,,,open,0,77,10,"MVC render to String in the Controller Or else were So basically I have a partial view which can build a nice table for me. I would like to email this table out every week to my users. instead of building it again I would like to pass the control the model it requires and then receive back the html as a string that has been build from the control.
+
+Is it possible to do this in the controller, I feel it should be a pretty simple process",3
+5562054,04/06/2011 05:57:03,685754,03/31/2011 12:51:24,13,3,Stackoverflow Web Architecture,"This may sound weird question but I will give it a shot anyway. Can anyone tell me what is the Architecture behind Stackoverflow. 
+
+We are a bunch of developers and had a bit of a discussion as to what is the Architecture/technology behind this great invention.  :)
+
+Some guess with technology is ASP.NET MVC may be MySQL db, but we could be wrong. 
+
+Thanks...",mvc,architecture,stackoverflow,lamp,,04/06/2011 06:10:55,off topic,1,64,3,"Stackoverflow Web Architecture This may sound weird question but I will give it a shot anyway. Can anyone tell me what is the Architecture behind Stackoverflow. 
+
+We are a bunch of developers and had a bit of a discussion as to what is the Architecture/technology behind this great invention.  :)
+
+Some guess with technology is ASP.NET MVC may be MySQL db, but we could be wrong. 
+
+Thanks...",4
+11000322,06/12/2012 15:56:28,910526,08/24/2011 20:21:14,33,6,error installing mvc 4,"Please excuse the length of this post, I wanted to include all info i deemed necessary to debug.
+
+I've been unable to install mvc 4 for vs 2010 after many attempts. I had the mvc 4 beta installed because I created a webapi project. I also had mvc 2 & 3 installed. I uninstalled mvc 4 using the (bundle) link in Programs n Features ... Now trying to install mvc 4 and i'm getting an  undescriptive error log that  I can't make heads or tails of ... any help would be appreciated.
+
+My system environment contains 
+
+windows 7 x64 enterprise
+vs 2010 sp1 ( see info below log file)
+Web Platform Installer 4.0  
+
+
+    [201C:04BC][2012-06-12T11:09:18]: Burn v3.6.2712.0, path: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\installers\MVC4VS2010\8EDB940F9A4EEC0C0F0324B5D647F17738C665CA\AspNetMVC4Setup.exe, cmdline: '/q /log C:\Users\<userName>\AppData\Local\Temp\MVC4_install.htm -burn.unelevated BurnPipe.{B9B09A3A-ED62-4F21-931F-941AE3AD242A} {FC1D5F36-4FCF-44CC-A4A5-B430AEC97063} 7584'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleOriginalSource' to value 'C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\installers\MVC4VS2010\8EDB940F9A4EEC0C0F0324B5D647F17738C665CA\AspNetMVC4Setup.exe'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleName' to value 'Microsoft ASP.NET MVC 4'
+    [201C:04BC][2012-06-12T11:09:18]: Detect 9 packages
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'netfx4' to value '4.0.30319'
+    [201C:04BC][2012-06-12T11:09:18]: Setting version variable 'PowerShellExeVersion' to value '6.1.7600.16385'
+    [201C:04BC][2012-06-12T11:09:18]: Setting numeric variable 'procore2010_exists' to value 1
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'procore2010_sp1' to value '40219.342'
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\VS\Servicing\10.0\vstdcore'
+    [201C:04BC][2012-06-12T11:09:18]: Setting numeric variable 'vstdcore2010_exists' to value 0
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\VS\Servicing\10.0\vstdcore'
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\VS\Servicing\10.0\vstscore'
+    [201C:04BC][2012-06-12T11:09:18]: Setting numeric variable 'vstscore2010_exists' to value 0
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\VS\Servicing\10.0\vstscore'
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\vns\Servicing\10.0\xcor'
+    [201C:04BC][2012-06-12T11:09:18]: Setting numeric variable 'xcor2010_exists' to value 0
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\vns\Servicing\10.0\xcor'
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: VS10SP1_KB2581019_x86.exe, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: VS10SP1_KB2591016_x86.exe, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: Nuget.msi, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetWebPages2.msi, state: Present, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetWebPages2VS2010Tools.msi, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetWebPages2VWD2010Tools.msi, state: Absent, cached: None
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetMVC4.msi, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetMVC4VS2010Tools.msi, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetMVC4VWD2010Tools.msi, state: Absent, cached: None
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((NOT vstscore2010_exists) OR ((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists))) AND ((NOT vstdcore2010_exists) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists))) AND ((NOT procore2010_exists) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists)))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Condition '(NOT xcor2010_exists) OR ((xcor2010_sp1 >= v40219.01) AND (xcor2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Condition 'netfx4 >= v4.0.30319' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Condition 'NOT (netfx4 > v4.0.30319 AND netfx4 < v4.5.50131)' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Condition 'PowerShellExeVersion >= v2.0' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Detect complete, result: 0x0
+    [201C:04BC][2012-06-12T11:09:18]: Plan 9 packages, action: Install
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists)) OR ((xcor2010_sp1 >= v40219.01) AND (xcor2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Skipping dependency registration on package with no dependency providers: VS10SP1_KB2581019_x86.exe
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_VS10SP1_KB2581019_x86.exe' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_0_VS10SP1_KB2581019_x86.exe.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists)) OR ((xcor2010_sp1 >= v40219.01) AND (xcor2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Skipping dependency registration on package with no dependency providers: VS10SP1_KB2591016_x86.exe
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_VS10SP1_KB2591016_x86.exe' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_1_VS10SP1_KB2591016_x86.exe.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists)) OR ((xcor2010_sp1 >= v40219.01) AND (xcor2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleRollbackLog_Nuget.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_2_Nuget.msi_rollback.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_Nuget.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_2_Nuget.msi.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleRollbackLog_AspNetWebPages2VS2010Tools.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_3_AspNetWebPages2VS2010Tools.msi_rollback.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_AspNetWebPages2VS2010Tools.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_3_AspNetWebPages2VS2010Tools.msi.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '(xcor2010_sp1 >= v40219.01) AND (xcor2010_exists)' evaluates to false.
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleRollbackLog_AspNetMVC4.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_4_AspNetMVC4.msi_rollback.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_AspNetMVC4.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_4_AspNetMVC4.msi.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleRollbackLog_AspNetMVC4VS2010Tools.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_5_AspNetMVC4VS2010Tools.msi_rollback.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_AspNetMVC4VS2010Tools.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_5_AspNetMVC4VS2010Tools.msi.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '(xcor2010_sp1 >= v40219.01) AND (xcor2010_exists)' evaluates to false.
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: VS10SP1_KB2581019_x86.exe, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: None, cache: No, uncache: No, dependency: None
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: VS10SP1_KB2591016_x86.exe, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: None, cache: No, uncache: No, dependency: None
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: Nuget.msi, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: Uninstall, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetWebPages2.msi, state: Present, default requested: Present, ba requested: Present, execute: None, rollback: None, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetWebPages2VS2010Tools.msi, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: Uninstall, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetWebPages2VWD2010Tools.msi, state: Absent, default requested: Absent, ba requested: Absent, execute: None, rollback: None, cache: No, uncache: No, dependency: None
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetMVC4.msi, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: Uninstall, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetMVC4VS2010Tools.msi, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: Uninstall, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetMVC4VWD2010Tools.msi, state: Absent, default requested: Absent, ba requested: Absent, execute: None, rollback: None, cache: No, uncache: No, dependency: None
+    [201C:04BC][2012-06-12T11:09:18]: Plan complete, result: 0x0
+    [201C:04BC][2012-06-12T11:09:18]: Apply begin
+    [1DA0:2234][2012-06-12T11:09:18]: Automatic updates could not be paused due to error: 0x80240025. Continuing...
+    [1DA0:2234][2012-06-12T11:09:18]: Creating a system restore point.
+    [1DA0:2234][2012-06-12T11:09:18]: Could not create system restore point, error: 0x80070422. Continuing...
+    [1DA0:2234][2012-06-12T11:09:18]: Caching bundle from: 'C:\Users\<userName>\AppData\Local\Temp\{a2aa0550-73d2-4f8e-ade9-b901851851fc}\.be\AspNetMVC4Setup.exe' to: 'C:\ProgramData\Package Cache\{a2aa0550-73d2-4f8e-ade9-b901851851fc}\AspNetMVC4Setup.exe'
+    [1DA0:2234][2012-06-12T11:09:19]: Registering bundle dependency provider: {a2aa0550-73d2-4f8e-ade9-b901851851fc}, version: 4.0.20505.0
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: VS10SP1_KB2581019_x86.exe at path: C:\ProgramData\Package Cache\9ACF484DD18F53B5E56809ABA965A32DACE6A809\VS10SP1-KB2581019-x86.exe.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: VS10SP1_KB2591016_x86.exe at path: C:\ProgramData\Package Cache\5BA5217D49F8BECD7CA452F2F366CD7C99FF1F16\VS10SP1-KB2591016-x86.exe.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: Nuget.msi at path: C:\ProgramData\Package Cache\{8FEC8DF9-6B13-4CAD-8FF3-063F332D16EB}v1.8.20505.0\Nuget.msi.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: AspNetWebPages2VS2010Tools.msi at path: C:\ProgramData\Package Cache\{01866492-9599-46F4-BE9A-F6A264C09108}v2.0.20505.0\AspNetWebPages2VS2010Tools.msi.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: cab3ECB64089A75B346241FCE810109AA85 at path: C:\ProgramData\Package Cache\{01866492-9599-46F4-BE9A-F6A264C09108}v2.0.20505.0\WebPages2_VisualStudio2010.cab.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: AspNetMVC4.msi at path: C:\ProgramData\Package Cache\{8719C066-3A8C-4528-B82F-5094DB869F43}v4.0.20505.0\AspNetMVC4.msi.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: cab4B3E83F27633398CE0AAFFFED6B2BF23 at path: C:\ProgramData\Package Cache\{8719C066-3A8C-4528-B82F-5094DB869F43}v4.0.20505.0\MVC4_runtime.cab.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: AspNetMVC4VS2010Tools.msi at path: C:\ProgramData\Package Cache\{EA14A6CE-A0E1-410D-872D-B04CC186BA99}v4.0.20505.0\AspNetMVC4VS2010Tools.msi.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: cabB4603D3274E047299B381454BE3590A6 at path: C:\ProgramData\Package Cache\{EA14A6CE-A0E1-410D-872D-B04CC186BA99}v4.0.20505.0\MVC4_VisualStudio2010.cab.
+    [1DA0:2234][2012-06-12T11:09:19]: Applying execute package: VS10SP1_KB2581019_x86.exe, action: Install, path: C:\ProgramData\Package Cache\9ACF484DD18F53B5E56809ABA965A32DACE6A809\VS10SP1-KB2581019-x86.exe, arguments: '""C:\ProgramData\Package Cache\9ACF484DD18F53B5E56809ABA965A32DACE6A809\VS10SP1-KB2581019-x86.exe"" /q /norestart'
+    [1DA0:2234][2012-06-12T11:09:21]: Error 0x8007066a: Process returned error: 0x66a
+    [1DA0:2234][2012-06-12T11:09:21]: Error 0x8007066a: Failed to execute EXE package.
+    [201C:04BC][2012-06-12T11:09:21]: Error 0x8007066a: Failed to configure per-machine EXE package.
+    [201C:04BC][2012-06-12T11:09:21]: Error 0x8007066a: Failed to execute EXE package.
+    [1DA0:2234][2012-06-12T11:09:21]: Removing bundle dependency provider: {a2aa0550-73d2-4f8e-ade9-b901851851fc}
+    [1DA0:2234][2012-06-12T11:09:21]: Removing cached bundle: {a2aa0550-73d2-4f8e-ade9-b901851851fc}, from path: C:\ProgramData\Package Cache\{a2aa0550-73d2-4f8e-ade9-b901851851fc}\
+    [201C:04BC][2012-06-12T11:09:21]: Apply complete, result: 0x8007066a restart: No
+    [201C:04BC][2012-06-12T11:09:21]: Shutting down, exit code: 0x8007066a
+    [201C:04BC][2012-06-12T11:09:21]: Variable: AdminToolsFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: AppDataFolder = C:\Users\<userName>\AppData\Roaming\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: CommonAppDataFolder = C:\ProgramData\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: CommonFiles64Folder = C:\Program Files\Common Files
+    [201C:04BC][2012-06-12T11:09:21]: Variable: CommonFilesFolder = C:\Program Files (x86)\Common Files\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: CompatibilityMode = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: Date = 6/12/2012
+    [201C:04BC][2012-06-12T11:09:21]: Variable: DesktopFolder = C:\Users\<userName>\Desktop\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: FavoritesFolder = C:\Users\<userName>\Favorites\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: FontsFolder = C:\Windows\Fonts\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: InstallerName = WiX Burn
+    [201C:04BC][2012-06-12T11:09:21]: Variable: InstallerVersion = 3.6.2712.0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: LocalAppDataFolder = C:\Users\<userName>\AppData\Local\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: LogonUser = <userName>
+    [201C:04BC][2012-06-12T11:09:21]: Variable: MyPicturesFolder = C:\Users\<userName>\Pictures\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: netfx4 = 4.0.30319
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTProductType = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteBackOffice = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteDataCenter = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteEnterprise = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuitePersonal = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteSmallBusiness = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteSmallBusinessRestricted = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteWebServer = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: PersonalFolder = C:\Users\<userName>\Documents\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: PowerShellExeVersion = 6.1.7600.16385
+    [201C:04BC][2012-06-12T11:09:21]: Variable: Privileged = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: procore2010_exists = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: procore2010_sp1 = 40219.342
+    [201C:04BC][2012-06-12T11:09:21]: Variable: ProgramFiles64Folder = C:\Program Files
+    [201C:04BC][2012-06-12T11:09:21]: Variable: ProgramFilesFolder = C:\Program Files (x86)\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: ProgramMenuFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: RebootPending = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: SendToFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\SendTo\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: ServicePackLevel = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: StartMenuFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Start Menu\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: StartupFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: System64Folder = C:\Windows\SysWOW64\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: SystemFolder = C:\Windows\system32\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: SystemLanguageID = 1033
+    [201C:04BC][2012-06-12T11:09:21]: Variable: TempFolder = C:\Users\<userName>\AppData\Local\Temp\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: TemplateFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Templates\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: TerminalServer = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: UserLanguageID = 1033
+    [201C:04BC][2012-06-12T11:09:21]: Variable: VersionMsi = 5.0.0.0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: VersionNT = 6.1.0.0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: VersionNT64 = 6.1.0.0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: vstdcore2010_exists = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: vstdcore2010_sp1 = 
+    [201C:04BC][2012-06-12T11:09:21]: Variable: vstscore2010_exists = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: vstscore2010_sp1 = 
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WindowsFolder = C:\Windows\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WindowsVolume = C:\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleAction = 4
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleElevated = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleInstalled = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLastUsedSource = 
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog = C:\Users\<userName>\AppData\Local\Temp\MVC4_install.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_AspNetMVC4.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_4_AspNetMVC4.msi.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_AspNetMVC4VS2010Tools.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_5_AspNetMVC4VS2010Tools.msi.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_AspNetWebPages2VS2010Tools.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_3_AspNetWebPages2VS2010Tools.msi.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_Nuget.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_2_Nuget.msi.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_VS10SP1_KB2581019_x86.exe = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_0_VS10SP1_KB2581019_x86.exe.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_VS10SP1_KB2591016_x86.exe = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_1_VS10SP1_KB2591016_x86.exe.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleName = Microsoft ASP.NET MVC 4
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleOriginalSource = C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\installers\MVC4VS2010\8EDB940F9A4EEC0C0F0324B5D647F17738C665CA\AspNetMVC4Setup.exe
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleProviderKey = {a2aa0550-73d2-4f8e-ade9-b901851851fc}
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleRollbackLog_AspNetMVC4.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_4_AspNetMVC4.msi_rollback.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleRollbackLog_AspNetMVC4VS2010Tools.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_5_AspNetMVC4VS2010Tools.msi_rollback.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleRollbackLog_AspNetWebPages2VS2010Tools.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_3_AspNetWebPages2VS2010Tools.msi_rollback.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleRollbackLog_Nuget.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_2_Nuget.msi_rollback.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleTag = 
+    [201C:04BC][2012-06-12T11:09:21]: Variable: xcor2010_exists = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: xcor2010_sp1 = 
+    [201C:04BC][2012-06-12T11:09:21]: Exit code: 0x8007066a
+    
+    
+    ----------------------------log file from  wpi 4.0 installer---------------------------
+    
+    DownloadManager Information: 0 : Loading product xml from: https://go.microsoft.com/?linkid=9808264
+    DownloadManager Information: 0 : https://go.microsoft.com/?linkid=9808264 responded with 302
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 302 Found
+    Cache-Control: private
+    Content-Length: 175
+    Content-Type: text/html; charset=utf-8
+    Expires: Tue, 12 Jun 2012 15:08:06 GMT
+    Location: https://www.microsoft.com/web/webpi/4.0/webproductlist.xml
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 2.0.50727
+    Set-Cookie: MC1=GUID=7bc9a4edd0644146a30aa6f87cb93196&HASH=eda4&LV=20126&V=3; domain=microsoft.com; expires=Sun, 03-Oct-2010 07:00:00 GMT; path=/
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:06 GMT
+    
+    
+    DownloadManager Information: 0 : https://www.microsoft.com/web/webpi/4.0/webproductlist.xml responded with 304
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 304 Not Modified
+    Cache-Control: max-age=900
+    Accept-Ranges: bytes
+    ETag: ""cb25e8931048cd1:0""
+    Server: Microsoft-IIS/8.0
+    P3P: CP=""ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI""
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:06 GMT
+    
+    
+    DownloadManager Information: 0 : Remote file has not changed, using local cached file: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\-1897360160.xml.temp
+    DownloadManager Information: 0 : Filtering by majorOS: 6, minorOS: 1, majorSP: 1, minorSP: 0, productType: 4, architecture: x64
+    DownloadManager Information: 0 : Loading product xml from: https://www.microsoft.com/web/webpi/4.0/webapplicationlist.xml
+    DownloadManager Information: 0 : https://www.microsoft.com/web/webpi/4.0/webapplicationlist.xml responded with 304
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 304 Not Modified
+    Cache-Control: max-age=900
+    Accept-Ranges: bytes
+    ETag: ""5743f5d2148cd1:0""
+    Server: Microsoft-IIS/8.0
+    P3P: CP=""ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI""
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:06 GMT
+    
+    
+    DownloadManager Information: 0 : Remote file has not changed, using local cached file: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\251486345.xml.temp
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Information: 0 : Filtering by majorOS: 6, minorOS: 1, majorSP: 1, minorSP: 0, productType: 4, architecture: x64
+    DownloadManager Information: 0 : Loading product xml from: https://www.microsoft.com/web/webpi/4.0/mediaproductlist.xml
+    DownloadManager Information: 0 : https://www.microsoft.com/web/webpi/4.0/mediaproductlist.xml responded with 304
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 304 Not Modified
+    Cache-Control: max-age=900
+    Accept-Ranges: bytes
+    ETag: ""5d94f4ad344cd1:0""
+    Server: Microsoft-IIS/8.0
+    P3P: CP=""ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI""
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:07 GMT
+    
+    
+    DownloadManager Information: 0 : Remote file has not changed, using local cached file: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\598799360.xml.temp
+    DownloadManager Information: 0 : Filtering by majorOS: 6, minorOS: 1, majorSP: 1, minorSP: 0, productType: 4, architecture: x64
+    DownloadManager Information: 0 : Loading product xml from: https://www.microsoft.com/web/webpi/4.0/toolsproductlist.xml
+    DownloadManager Information: 0 : https://www.microsoft.com/web/webpi/4.0/toolsproductlist.xml responded with 304
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 304 Not Modified
+    Cache-Control: max-age=900
+    Accept-Ranges: bytes
+    ETag: ""f752fed6ed47cd1:0""
+    Server: Microsoft-IIS/8.0
+    P3P: CP=""ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI""
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:07 GMT         
+    
+    DownloadManager Information: 0 : Remote file has not changed, using local cached file: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\1505006577.xml.temp
+    DownloadManager Information: 0 : Filtering by majorOS: 6, minorOS: 1, majorSP: 1, minorSP: 0, productType: 4, architecture: x64
+    DownloadManager Information: 0 : Getting ratings file from http://go.microsoft.com/?linkid=9752395
+    DownloadManager Information: 0 : http://go.microsoft.com/?linkid=9752395 responded with 302
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 302 Found
+    Cache-Control: private
+    Content-Length: 203
+    Content-Type: text/html; charset=utf-8
+    Expires: Tue, 12 Jun 2012 15:08:08 GMT
+    Location: http://www.microsoft.com/web/handlers/WebPI.ashx?command=getatomfeedwithavgratingquery
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 2.0.50727
+    Set-Cookie: MC1=GUID=42969058f2d7c34ba4fcbc951f9b2694&HASH=5890&LV=20126&V=3; domain=microsoft.com; expires=Sun, 03-Oct-2010 07:00:00 GMT; path=/
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:07 GMT
+    
+    
+    DownloadManager Information: 0 : Contextual entry products: mvc4vs2010
+    DownloadManager Information: 0 : Adding product ASP.NET MVC 4 Installer (Visual Studio 2010) (MVC4VS2010) to cart
+    DownloadManager Information: 0 : Contextual navigation to product 'MVC4VS2010'
+    DownloadManager Information: 0 : Ratings file loaded successfully
+    DownloadManager Information: 0 : Adding product 'MVC4VS2010'
+    DownloadManager Information: 0 : Setting current install to 1
+    DownloadManager Information: 0 : Starting install sequence
+    DownloadManager Information: 0 : Downloading file 'http://download.microsoft.com/download/A/A/4/AA42BC20-1656-4B28-B3EB-F2728124C5AA/AspNetMVC4Setup.exe' to: C:\Users\<userName>\AppData\Local\Temp\tmp430A.tmp
+    DownloadManager Information: 0 : Content-disposition header: attachment
+    DownloadManager Information: 0 : File 'C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\installers\MVC4VS2010\8EDB940F9A4EEC0C0F0324B5D647F17738C665CA\AspNetMVC4Setup.exe' already exists, deleting old copy of the file
+    DownloadManager Information: 0 : Moving downloaded file 'C:\Users\<userName>\AppData\Local\Temp\tmp430A.tmp' to: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Instal",mvc,,,,,06/12/2012 15:59:52,not a real question,1,3124,4,"error installing mvc 4 Please excuse the length of this post, I wanted to include all info i deemed necessary to debug.
+
+I've been unable to install mvc 4 for vs 2010 after many attempts. I had the mvc 4 beta installed because I created a webapi project. I also had mvc 2 & 3 installed. I uninstalled mvc 4 using the (bundle) link in Programs n Features ... Now trying to install mvc 4 and i'm getting an  undescriptive error log that  I can't make heads or tails of ... any help would be appreciated.
+
+My system environment contains 
+
+windows 7 x64 enterprise
+vs 2010 sp1 ( see info below log file)
+Web Platform Installer 4.0  
+
+
+    [201C:04BC][2012-06-12T11:09:18]: Burn v3.6.2712.0, path: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\installers\MVC4VS2010\8EDB940F9A4EEC0C0F0324B5D647F17738C665CA\AspNetMVC4Setup.exe, cmdline: '/q /log C:\Users\<userName>\AppData\Local\Temp\MVC4_install.htm -burn.unelevated BurnPipe.{B9B09A3A-ED62-4F21-931F-941AE3AD242A} {FC1D5F36-4FCF-44CC-A4A5-B430AEC97063} 7584'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleOriginalSource' to value 'C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\installers\MVC4VS2010\8EDB940F9A4EEC0C0F0324B5D647F17738C665CA\AspNetMVC4Setup.exe'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleName' to value 'Microsoft ASP.NET MVC 4'
+    [201C:04BC][2012-06-12T11:09:18]: Detect 9 packages
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'netfx4' to value '4.0.30319'
+    [201C:04BC][2012-06-12T11:09:18]: Setting version variable 'PowerShellExeVersion' to value '6.1.7600.16385'
+    [201C:04BC][2012-06-12T11:09:18]: Setting numeric variable 'procore2010_exists' to value 1
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'procore2010_sp1' to value '40219.342'
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\VS\Servicing\10.0\vstdcore'
+    [201C:04BC][2012-06-12T11:09:18]: Setting numeric variable 'vstdcore2010_exists' to value 0
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\VS\Servicing\10.0\vstdcore'
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\VS\Servicing\10.0\vstscore'
+    [201C:04BC][2012-06-12T11:09:18]: Setting numeric variable 'vstscore2010_exists' to value 0
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\VS\Servicing\10.0\vstscore'
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\vns\Servicing\10.0\xcor'
+    [201C:04BC][2012-06-12T11:09:18]: Setting numeric variable 'xcor2010_exists' to value 0
+    [201C:04BC][2012-06-12T11:09:18]: Registry key not found. Key = 'Software\Microsoft\DevDiv\vns\Servicing\10.0\xcor'
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: VS10SP1_KB2581019_x86.exe, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: VS10SP1_KB2591016_x86.exe, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: Nuget.msi, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetWebPages2.msi, state: Present, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetWebPages2VS2010Tools.msi, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetWebPages2VWD2010Tools.msi, state: Absent, cached: None
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetMVC4.msi, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetMVC4VS2010Tools.msi, state: Absent, cached: Complete
+    [201C:04BC][2012-06-12T11:09:18]: Detected package: AspNetMVC4VWD2010Tools.msi, state: Absent, cached: None
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((NOT vstscore2010_exists) OR ((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists))) AND ((NOT vstdcore2010_exists) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists))) AND ((NOT procore2010_exists) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists)))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Condition '(NOT xcor2010_exists) OR ((xcor2010_sp1 >= v40219.01) AND (xcor2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Condition 'netfx4 >= v4.0.30319' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Condition 'NOT (netfx4 > v4.0.30319 AND netfx4 < v4.5.50131)' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Condition 'PowerShellExeVersion >= v2.0' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Detect complete, result: 0x0
+    [201C:04BC][2012-06-12T11:09:18]: Plan 9 packages, action: Install
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists)) OR ((xcor2010_sp1 >= v40219.01) AND (xcor2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Skipping dependency registration on package with no dependency providers: VS10SP1_KB2581019_x86.exe
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_VS10SP1_KB2581019_x86.exe' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_0_VS10SP1_KB2581019_x86.exe.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists)) OR ((xcor2010_sp1 >= v40219.01) AND (xcor2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Skipping dependency registration on package with no dependency providers: VS10SP1_KB2591016_x86.exe
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_VS10SP1_KB2591016_x86.exe' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_1_VS10SP1_KB2591016_x86.exe.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists)) OR ((xcor2010_sp1 >= v40219.01) AND (xcor2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleRollbackLog_Nuget.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_2_Nuget.msi_rollback.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_Nuget.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_2_Nuget.msi.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleRollbackLog_AspNetWebPages2VS2010Tools.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_3_AspNetWebPages2VS2010Tools.msi_rollback.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_AspNetWebPages2VS2010Tools.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_3_AspNetWebPages2VS2010Tools.msi.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '(xcor2010_sp1 >= v40219.01) AND (xcor2010_exists)' evaluates to false.
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleRollbackLog_AspNetMVC4.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_4_AspNetMVC4.msi_rollback.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_AspNetMVC4.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_4_AspNetMVC4.msi.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '((vstscore2010_sp1 >= v40219.01) AND (vstscore2010_exists)) OR ((vstdcore2010_sp1 >= v40219.01) AND (vstdcore2010_exists)) OR ((procore2010_sp1 >= v40219.01) AND (procore2010_exists))' evaluates to true.
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleRollbackLog_AspNetMVC4VS2010Tools.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_5_AspNetMVC4VS2010Tools.msi_rollback.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Setting string variable 'WixBundleLog_AspNetMVC4VS2010Tools.msi' to value 'C:\Users\<userName>\AppData\Local\Temp\MVC4_install_5_AspNetMVC4VS2010Tools.msi.htm'
+    [201C:04BC][2012-06-12T11:09:18]: Condition '(xcor2010_sp1 >= v40219.01) AND (xcor2010_exists)' evaluates to false.
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: VS10SP1_KB2581019_x86.exe, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: None, cache: No, uncache: No, dependency: None
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: VS10SP1_KB2591016_x86.exe, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: None, cache: No, uncache: No, dependency: None
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: Nuget.msi, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: Uninstall, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetWebPages2.msi, state: Present, default requested: Present, ba requested: Present, execute: None, rollback: None, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetWebPages2VS2010Tools.msi, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: Uninstall, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetWebPages2VWD2010Tools.msi, state: Absent, default requested: Absent, ba requested: Absent, execute: None, rollback: None, cache: No, uncache: No, dependency: None
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetMVC4.msi, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: Uninstall, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetMVC4VS2010Tools.msi, state: Absent, default requested: Present, ba requested: Present, execute: Install, rollback: Uninstall, cache: No, uncache: No, dependency: Register
+    [201C:04BC][2012-06-12T11:09:18]: Planned package: AspNetMVC4VWD2010Tools.msi, state: Absent, default requested: Absent, ba requested: Absent, execute: None, rollback: None, cache: No, uncache: No, dependency: None
+    [201C:04BC][2012-06-12T11:09:18]: Plan complete, result: 0x0
+    [201C:04BC][2012-06-12T11:09:18]: Apply begin
+    [1DA0:2234][2012-06-12T11:09:18]: Automatic updates could not be paused due to error: 0x80240025. Continuing...
+    [1DA0:2234][2012-06-12T11:09:18]: Creating a system restore point.
+    [1DA0:2234][2012-06-12T11:09:18]: Could not create system restore point, error: 0x80070422. Continuing...
+    [1DA0:2234][2012-06-12T11:09:18]: Caching bundle from: 'C:\Users\<userName>\AppData\Local\Temp\{a2aa0550-73d2-4f8e-ade9-b901851851fc}\.be\AspNetMVC4Setup.exe' to: 'C:\ProgramData\Package Cache\{a2aa0550-73d2-4f8e-ade9-b901851851fc}\AspNetMVC4Setup.exe'
+    [1DA0:2234][2012-06-12T11:09:19]: Registering bundle dependency provider: {a2aa0550-73d2-4f8e-ade9-b901851851fc}, version: 4.0.20505.0
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: VS10SP1_KB2581019_x86.exe at path: C:\ProgramData\Package Cache\9ACF484DD18F53B5E56809ABA965A32DACE6A809\VS10SP1-KB2581019-x86.exe.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: VS10SP1_KB2591016_x86.exe at path: C:\ProgramData\Package Cache\5BA5217D49F8BECD7CA452F2F366CD7C99FF1F16\VS10SP1-KB2591016-x86.exe.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: Nuget.msi at path: C:\ProgramData\Package Cache\{8FEC8DF9-6B13-4CAD-8FF3-063F332D16EB}v1.8.20505.0\Nuget.msi.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: AspNetWebPages2VS2010Tools.msi at path: C:\ProgramData\Package Cache\{01866492-9599-46F4-BE9A-F6A264C09108}v2.0.20505.0\AspNetWebPages2VS2010Tools.msi.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: cab3ECB64089A75B346241FCE810109AA85 at path: C:\ProgramData\Package Cache\{01866492-9599-46F4-BE9A-F6A264C09108}v2.0.20505.0\WebPages2_VisualStudio2010.cab.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: AspNetMVC4.msi at path: C:\ProgramData\Package Cache\{8719C066-3A8C-4528-B82F-5094DB869F43}v4.0.20505.0\AspNetMVC4.msi.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: cab4B3E83F27633398CE0AAFFFED6B2BF23 at path: C:\ProgramData\Package Cache\{8719C066-3A8C-4528-B82F-5094DB869F43}v4.0.20505.0\MVC4_runtime.cab.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: AspNetMVC4VS2010Tools.msi at path: C:\ProgramData\Package Cache\{EA14A6CE-A0E1-410D-872D-B04CC186BA99}v4.0.20505.0\AspNetMVC4VS2010Tools.msi.
+    [1DA0:02BC][2012-06-12T11:09:19]: Verified existing payload: cabB4603D3274E047299B381454BE3590A6 at path: C:\ProgramData\Package Cache\{EA14A6CE-A0E1-410D-872D-B04CC186BA99}v4.0.20505.0\MVC4_VisualStudio2010.cab.
+    [1DA0:2234][2012-06-12T11:09:19]: Applying execute package: VS10SP1_KB2581019_x86.exe, action: Install, path: C:\ProgramData\Package Cache\9ACF484DD18F53B5E56809ABA965A32DACE6A809\VS10SP1-KB2581019-x86.exe, arguments: '""C:\ProgramData\Package Cache\9ACF484DD18F53B5E56809ABA965A32DACE6A809\VS10SP1-KB2581019-x86.exe"" /q /norestart'
+    [1DA0:2234][2012-06-12T11:09:21]: Error 0x8007066a: Process returned error: 0x66a
+    [1DA0:2234][2012-06-12T11:09:21]: Error 0x8007066a: Failed to execute EXE package.
+    [201C:04BC][2012-06-12T11:09:21]: Error 0x8007066a: Failed to configure per-machine EXE package.
+    [201C:04BC][2012-06-12T11:09:21]: Error 0x8007066a: Failed to execute EXE package.
+    [1DA0:2234][2012-06-12T11:09:21]: Removing bundle dependency provider: {a2aa0550-73d2-4f8e-ade9-b901851851fc}
+    [1DA0:2234][2012-06-12T11:09:21]: Removing cached bundle: {a2aa0550-73d2-4f8e-ade9-b901851851fc}, from path: C:\ProgramData\Package Cache\{a2aa0550-73d2-4f8e-ade9-b901851851fc}\
+    [201C:04BC][2012-06-12T11:09:21]: Apply complete, result: 0x8007066a restart: No
+    [201C:04BC][2012-06-12T11:09:21]: Shutting down, exit code: 0x8007066a
+    [201C:04BC][2012-06-12T11:09:21]: Variable: AdminToolsFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: AppDataFolder = C:\Users\<userName>\AppData\Roaming\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: CommonAppDataFolder = C:\ProgramData\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: CommonFiles64Folder = C:\Program Files\Common Files
+    [201C:04BC][2012-06-12T11:09:21]: Variable: CommonFilesFolder = C:\Program Files (x86)\Common Files\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: CompatibilityMode = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: Date = 6/12/2012
+    [201C:04BC][2012-06-12T11:09:21]: Variable: DesktopFolder = C:\Users\<userName>\Desktop\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: FavoritesFolder = C:\Users\<userName>\Favorites\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: FontsFolder = C:\Windows\Fonts\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: InstallerName = WiX Burn
+    [201C:04BC][2012-06-12T11:09:21]: Variable: InstallerVersion = 3.6.2712.0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: LocalAppDataFolder = C:\Users\<userName>\AppData\Local\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: LogonUser = <userName>
+    [201C:04BC][2012-06-12T11:09:21]: Variable: MyPicturesFolder = C:\Users\<userName>\Pictures\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: netfx4 = 4.0.30319
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTProductType = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteBackOffice = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteDataCenter = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteEnterprise = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuitePersonal = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteSmallBusiness = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteSmallBusinessRestricted = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: NTSuiteWebServer = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: PersonalFolder = C:\Users\<userName>\Documents\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: PowerShellExeVersion = 6.1.7600.16385
+    [201C:04BC][2012-06-12T11:09:21]: Variable: Privileged = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: procore2010_exists = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: procore2010_sp1 = 40219.342
+    [201C:04BC][2012-06-12T11:09:21]: Variable: ProgramFiles64Folder = C:\Program Files
+    [201C:04BC][2012-06-12T11:09:21]: Variable: ProgramFilesFolder = C:\Program Files (x86)\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: ProgramMenuFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: RebootPending = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: SendToFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\SendTo\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: ServicePackLevel = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: StartMenuFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Start Menu\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: StartupFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: System64Folder = C:\Windows\SysWOW64\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: SystemFolder = C:\Windows\system32\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: SystemLanguageID = 1033
+    [201C:04BC][2012-06-12T11:09:21]: Variable: TempFolder = C:\Users\<userName>\AppData\Local\Temp\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: TemplateFolder = C:\Users\<userName>\AppData\Roaming\Microsoft\Windows\Templates\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: TerminalServer = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: UserLanguageID = 1033
+    [201C:04BC][2012-06-12T11:09:21]: Variable: VersionMsi = 5.0.0.0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: VersionNT = 6.1.0.0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: VersionNT64 = 6.1.0.0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: vstdcore2010_exists = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: vstdcore2010_sp1 = 
+    [201C:04BC][2012-06-12T11:09:21]: Variable: vstscore2010_exists = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: vstscore2010_sp1 = 
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WindowsFolder = C:\Windows\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WindowsVolume = C:\
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleAction = 4
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleElevated = 1
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleInstalled = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLastUsedSource = 
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog = C:\Users\<userName>\AppData\Local\Temp\MVC4_install.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_AspNetMVC4.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_4_AspNetMVC4.msi.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_AspNetMVC4VS2010Tools.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_5_AspNetMVC4VS2010Tools.msi.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_AspNetWebPages2VS2010Tools.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_3_AspNetWebPages2VS2010Tools.msi.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_Nuget.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_2_Nuget.msi.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_VS10SP1_KB2581019_x86.exe = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_0_VS10SP1_KB2581019_x86.exe.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleLog_VS10SP1_KB2591016_x86.exe = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_1_VS10SP1_KB2591016_x86.exe.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleName = Microsoft ASP.NET MVC 4
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleOriginalSource = C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\installers\MVC4VS2010\8EDB940F9A4EEC0C0F0324B5D647F17738C665CA\AspNetMVC4Setup.exe
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleProviderKey = {a2aa0550-73d2-4f8e-ade9-b901851851fc}
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleRollbackLog_AspNetMVC4.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_4_AspNetMVC4.msi_rollback.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleRollbackLog_AspNetMVC4VS2010Tools.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_5_AspNetMVC4VS2010Tools.msi_rollback.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleRollbackLog_AspNetWebPages2VS2010Tools.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_3_AspNetWebPages2VS2010Tools.msi_rollback.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleRollbackLog_Nuget.msi = C:\Users\<userName>\AppData\Local\Temp\MVC4_install_2_Nuget.msi_rollback.htm
+    [201C:04BC][2012-06-12T11:09:21]: Variable: WixBundleTag = 
+    [201C:04BC][2012-06-12T11:09:21]: Variable: xcor2010_exists = 0
+    [201C:04BC][2012-06-12T11:09:21]: Variable: xcor2010_sp1 = 
+    [201C:04BC][2012-06-12T11:09:21]: Exit code: 0x8007066a
+    
+    
+    ----------------------------log file from  wpi 4.0 installer---------------------------
+    
+    DownloadManager Information: 0 : Loading product xml from: https://go.microsoft.com/?linkid=9808264
+    DownloadManager Information: 0 : https://go.microsoft.com/?linkid=9808264 responded with 302
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 302 Found
+    Cache-Control: private
+    Content-Length: 175
+    Content-Type: text/html; charset=utf-8
+    Expires: Tue, 12 Jun 2012 15:08:06 GMT
+    Location: https://www.microsoft.com/web/webpi/4.0/webproductlist.xml
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 2.0.50727
+    Set-Cookie: MC1=GUID=7bc9a4edd0644146a30aa6f87cb93196&HASH=eda4&LV=20126&V=3; domain=microsoft.com; expires=Sun, 03-Oct-2010 07:00:00 GMT; path=/
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:06 GMT
+    
+    
+    DownloadManager Information: 0 : https://www.microsoft.com/web/webpi/4.0/webproductlist.xml responded with 304
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 304 Not Modified
+    Cache-Control: max-age=900
+    Accept-Ranges: bytes
+    ETag: ""cb25e8931048cd1:0""
+    Server: Microsoft-IIS/8.0
+    P3P: CP=""ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI""
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:06 GMT
+    
+    
+    DownloadManager Information: 0 : Remote file has not changed, using local cached file: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\-1897360160.xml.temp
+    DownloadManager Information: 0 : Filtering by majorOS: 6, minorOS: 1, majorSP: 1, minorSP: 0, productType: 4, architecture: x64
+    DownloadManager Information: 0 : Loading product xml from: https://www.microsoft.com/web/webpi/4.0/webapplicationlist.xml
+    DownloadManager Information: 0 : https://www.microsoft.com/web/webpi/4.0/webapplicationlist.xml responded with 304
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 304 Not Modified
+    Cache-Control: max-age=900
+    Accept-Ranges: bytes
+    ETag: ""5743f5d2148cd1:0""
+    Server: Microsoft-IIS/8.0
+    P3P: CP=""ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI""
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:06 GMT
+    
+    
+    DownloadManager Information: 0 : Remote file has not changed, using local cached file: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\251486345.xml.temp
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Warning: 0 : Could not resolve keyword ID ApplicationSpotlight
+    DownloadManager Information: 0 : Filtering by majorOS: 6, minorOS: 1, majorSP: 1, minorSP: 0, productType: 4, architecture: x64
+    DownloadManager Information: 0 : Loading product xml from: https://www.microsoft.com/web/webpi/4.0/mediaproductlist.xml
+    DownloadManager Information: 0 : https://www.microsoft.com/web/webpi/4.0/mediaproductlist.xml responded with 304
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 304 Not Modified
+    Cache-Control: max-age=900
+    Accept-Ranges: bytes
+    ETag: ""5d94f4ad344cd1:0""
+    Server: Microsoft-IIS/8.0
+    P3P: CP=""ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI""
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:07 GMT
+    
+    
+    DownloadManager Information: 0 : Remote file has not changed, using local cached file: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\598799360.xml.temp
+    DownloadManager Information: 0 : Filtering by majorOS: 6, minorOS: 1, majorSP: 1, minorSP: 0, productType: 4, architecture: x64
+    DownloadManager Information: 0 : Loading product xml from: https://www.microsoft.com/web/webpi/4.0/toolsproductlist.xml
+    DownloadManager Information: 0 : https://www.microsoft.com/web/webpi/4.0/toolsproductlist.xml responded with 304
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 304 Not Modified
+    Cache-Control: max-age=900
+    Accept-Ranges: bytes
+    ETag: ""f752fed6ed47cd1:0""
+    Server: Microsoft-IIS/8.0
+    P3P: CP=""ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI""
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:07 GMT         
+    
+    DownloadManager Information: 0 : Remote file has not changed, using local cached file: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\1505006577.xml.temp
+    DownloadManager Information: 0 : Filtering by majorOS: 6, minorOS: 1, majorSP: 1, minorSP: 0, productType: 4, architecture: x64
+    DownloadManager Information: 0 : Getting ratings file from http://go.microsoft.com/?linkid=9752395
+    DownloadManager Information: 0 : http://go.microsoft.com/?linkid=9752395 responded with 302
+    DownloadManager Information: 0 : Response headers:
+    HTTP/1.1 302 Found
+    Cache-Control: private
+    Content-Length: 203
+    Content-Type: text/html; charset=utf-8
+    Expires: Tue, 12 Jun 2012 15:08:08 GMT
+    Location: http://www.microsoft.com/web/handlers/WebPI.ashx?command=getatomfeedwithavgratingquery
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 2.0.50727
+    Set-Cookie: MC1=GUID=42969058f2d7c34ba4fcbc951f9b2694&HASH=5890&LV=20126&V=3; domain=microsoft.com; expires=Sun, 03-Oct-2010 07:00:00 GMT; path=/
+    X-Powered-By: ASP.NET
+    Date: Tue, 12 Jun 2012 15:09:07 GMT
+    
+    
+    DownloadManager Information: 0 : Contextual entry products: mvc4vs2010
+    DownloadManager Information: 0 : Adding product ASP.NET MVC 4 Installer (Visual Studio 2010) (MVC4VS2010) to cart
+    DownloadManager Information: 0 : Contextual navigation to product 'MVC4VS2010'
+    DownloadManager Information: 0 : Ratings file loaded successfully
+    DownloadManager Information: 0 : Adding product 'MVC4VS2010'
+    DownloadManager Information: 0 : Setting current install to 1
+    DownloadManager Information: 0 : Starting install sequence
+    DownloadManager Information: 0 : Downloading file 'http://download.microsoft.com/download/A/A/4/AA42BC20-1656-4B28-B3EB-F2728124C5AA/AspNetMVC4Setup.exe' to: C:\Users\<userName>\AppData\Local\Temp\tmp430A.tmp
+    DownloadManager Information: 0 : Content-disposition header: attachment
+    DownloadManager Information: 0 : File 'C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Installer\installers\MVC4VS2010\8EDB940F9A4EEC0C0F0324B5D647F17738C665CA\AspNetMVC4Setup.exe' already exists, deleting old copy of the file
+    DownloadManager Information: 0 : Moving downloaded file 'C:\Users\<userName>\AppData\Local\Temp\tmp430A.tmp' to: C:\Users\<userName>\AppData\Local\Microsoft\Web Platform Instal",1
+6880030,07/29/2011 23:30:34,866468,07/27/2011 23:27:55,1,0,$.getJSON difference between Firefox and Internet Explorer,"Spent a while searching on this and found nothing that related directly. I have resolved the issue, but wonder why it is so. Maybe someone can answer this. Maybe this info will help someone else.
+
+My javascript was as such:
+
+    var userServicePath = serverPath + '/Login/RegisterUserDetails/' + userId;
+    $.getJSON(userServicePath, null, createAndPopulateHiddenFields);
+
+My Controller ran a query, populated an object and returned the object via:
+    
+    return Json(qry, JsonRequestBehavior.AllowGet);
+
+This worked fine until I added a few more fields. After modifying the object and controller, my response in IE showed null for my new fields. The breakpoint on the return value in the controller verified the new values were getting into the object properly. Even Firebug showed the values.
+
+Just an FYI, my routing in MVC is set up with an id value for the third value in the url. Anyone have any ideas why this would work in FF, but not in IE.
+
+And for the fix,... I removed the userId from the userServicePath string and added it as a parameter in the getJSON code.
+
+    var userServicePath = serverPath + '/Login/RegisterUserDetails';
+    $.getJSON(userServicePath, { id: userId }, createAndPopulateHiddenFields);
+
+If anyone has an answer, that would be great. Otherwise, hopefully someone else in my shoes can spend less time searching for an answer and move on.",mvc,internet-explorer,firefox,getjson,,,open,0,226,7,"$.getJSON difference between Firefox and Internet Explorer Spent a while searching on this and found nothing that related directly. I have resolved the issue, but wonder why it is so. Maybe someone can answer this. Maybe this info will help someone else.
+
+My javascript was as such:
+
+    var userServicePath = serverPath + '/Login/RegisterUserDetails/' + userId;
+    $.getJSON(userServicePath, null, createAndPopulateHiddenFields);
+
+My Controller ran a query, populated an object and returned the object via:
+    
+    return Json(qry, JsonRequestBehavior.AllowGet);
+
+This worked fine until I added a few more fields. After modifying the object and controller, my response in IE showed null for my new fields. The breakpoint on the return value in the controller verified the new values were getting into the object properly. Even Firebug showed the values.
+
+Just an FYI, my routing in MVC is set up with an id value for the third value in the url. Anyone have any ideas why this would work in FF, but not in IE.
+
+And for the fix,... I removed the userId from the userServicePath string and added it as a parameter in the getJSON code.
+
+    var userServicePath = serverPath + '/Login/RegisterUserDetails';
+    $.getJSON(userServicePath, { id: userId }, createAndPopulateHiddenFields);
+
+If anyone has an answer, that would be great. Otherwise, hopefully someone else in my shoes can spend less time searching for an answer and move on.",4
+10828330,05/31/2012 06:13:16,1427546,05/31/2012 05:20:18,1,0,validators serialization,"We have a option to add question in our MVC project.Here we've validator section like email validator and so on.We can check the validator checkbox when adding question. we'll get the validators and serilalize it as xml like 
+
+**ExtensionSerializer.SerializeValidators(question.Validators);** because it will store in database as xml string.
+now when we get the question details like
+**ExtensionSerializer.DeSerializeValidators(processQuestion.Extension)**
+Note :extenstion is a property in ProcessQuestion class which returns xml string
+
+But the problem here arrised the extension property always getting 'null'.How the problem will be resolved?",mvc,serialization,validator,,,06/12/2012 17:58:08,not a real question,1,81,2,"validators serialization We have a option to add question in our MVC project.Here we've validator section like email validator and so on.We can check the validator checkbox when adding question. we'll get the validators and serilalize it as xml like 
+
+**ExtensionSerializer.SerializeValidators(question.Validators);** because it will store in database as xml string.
+now when we get the question details like
+**ExtensionSerializer.DeSerializeValidators(processQuestion.Extension)**
+Note :extenstion is a property in ProcessQuestion class which returns xml string
+
+But the problem here arrised the extension property always getting 'null'.How the problem will be resolved?",3
+8328077,11/30/2011 15:08:54,996431,10/15/2011 02:40:34,150,0,MVC Create in Controller with 2 tables,"I am trying to create 2 new records in 2 tables - employee and address table.           
+I have the following so far:
+
+        db.employee.AddObject(empmodel.employee);
+        db.address.AddObject(empmodel.address); 
+        db.SaveChanges();
+
+
+When an employee record is created, it creates an EmpID record which is autogenerated.
+I need to get that EmpID and create a new record in the address table with that EmpID as 
+as there is a primary foreign key relationship between the 2 tables.
+
+I am not sure how to get the EmpID from employee table and then create a new record for the address table. I thought I could get it after AddObject but it did not create an employee record. 
+
+
+",mvc,,,,,12/01/2011 15:35:57,not a real question,1,138,7,"MVC Create in Controller with 2 tables I am trying to create 2 new records in 2 tables - employee and address table.           
+I have the following so far:
+
+        db.employee.AddObject(empmodel.employee);
+        db.address.AddObject(empmodel.address); 
+        db.SaveChanges();
+
+
+When an employee record is created, it creates an EmpID record which is autogenerated.
+I need to get that EmpID and create a new record in the address table with that EmpID as 
+as there is a primary foreign key relationship between the 2 tables.
+
+I am not sure how to get the EmpID from employee table and then create a new record for the address table. I thought I could get it after AddObject but it did not create an employee record. 
+
+
+",1
+6683064,07/13/2011 17:30:22,843208,07/13/2011 17:30:22,1,0,Spring MCV 3.0 404 error,"    I'm trying to build an application using Spring MVC 3.0 within Eclipse using the Dynamic Web Project. I'm able to get to the initial page, but I can not navigate to any other pages from there w/out getting a 404 error and I'm not hitting any of my breakpoints in the controller class. Please let me know if there's something I'm missing. Thanks!
+
+    applicationContext.xml
+
+    Code:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xmlns=""http://www.springframework.org/schema/beans""
+    	xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""  xmlns:context=""http://www.springframework.org/schema/context""
+    	xmlns:mvc=""http://www.springframework.org/schema/mvc""
+    	xsi:schemaLocation=""http://www.springframework.org/schema/beans 
+    	   		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    	   		http://www.springframework.org/schema/context
+    	   		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    			http://www.springframework.org/schema/mvc 
+    			http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"">
+
+    	<!-- Activates various annotations to be detected in bean classes -->
+    	<context:annotation-config />
+
+    	<!-- Scans the classpath for annotated components that will be auto-registered 
+    		as Spring beans. For example @Controller and @Service. Make sure to set the 
+    		correct base-package -->
+    	<context:component-scan base-package=""src"" />
+
+    	<!-- Configures the annotation-driven Spring MVC Controller programming 
+    		model. Note that, with Spring 3.0, this tag works in Servlet MVC only! -->
+    	<mvc:annotation-driven />
+
+    	<!-- Load Hibernate related configuration -->
+    	<import resource=""hibernate-context.xml"" />
+
+    </beans>
+
+
+
+    spring-servlet.xml
+
+    Code:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xsi:schemaLocation="" http://www.springframework.org/schema/beans 
+           ...
+            xmlns:mvc=""http://www.springframework.org/schema/mvc""  
+            xmlns:aop=""http://www.springframework.org/schema/aop"" 
+            xmlns:context=""http://www.springframework.org/schema/context"" 
+            xmlns:p=""http://www.springframework.org/schema/p"" 
+            xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" 
+            xmlns=""http://www.springframework.org/schema/beans""> 
+
+    	<bean
+            class=""org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"" />
+
+        <bean
+            class=""org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"" />
+    	   		
+    	
+    	<!-- Declare a view resolver -->
+        <bean id=""viewResolver"" class=""org.springframework.web.servlet.view.InternalResourceViewResolver"">
+               <property name=""viewClass"" value=""org.springframework.web.servlet.view.JstlView""/>
+               <property name=""prefix"" value=""/WEB-INF/jsp""/>
+               <property name=""suffix"" value="".jsp""/>
+            </bean>
+
+
+    </beans>
+
+
+
+
+    web.xml
+
+    Code:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <web-app id=""WebApp_ID"" version=""2.4"" xmlns=""http://java.sun.com/xml/ns/j2ee"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"">
+    	
+    	<servlet>
+    		<servlet-name>spring</servlet-name>
+    		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    		    <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                /WEB-INF/applicationContext.xml
+         </param-value>
+        </init-param>
+    		<load-on-startup>1</load-on-startup>
+    	</servlet>
+    	
+    	<servlet-mapping>
+    		<servlet-name>spring</servlet-name>
+    		<url-pattern>/SpringHibernateExample/*</url-pattern>
+    	</servlet-mapping>
+        
+         <welcome-file-list>
+            <welcome-file>/jsp/personspage.jsp</welcome-file>
+        </welcome-file-list>
+
+    	<listener>
+    		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    	</listener>
+    	
+    </web-app>
+
+
+
+    MainController.java
+    Code:
+
+    package controller;
+
+    import java.util.List;
+
+    import javax.annotation.Resource;
+
+    import org.apache.log4j.Logger;
+    import org.springframework.stereotype.Controller;
+    import org.springframework.ui.Model;
+    import org.springframework.web.bind.annotation.ModelAttribute;
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RequestMethod;
+    import org.springframework.web.bind.annotation.RequestParam;
+
+    import service.PersonService;
+    import domain.Person;
+
+    /**
+     * Handles and retrieves person request
+     */
+    @Controller
+    @RequestMapping(""/main"")
+    public class MainController {
+
+    	protected static Logger logger = Logger.getLogger(""controller"");
+
+    	@Resource(name = ""personService"")
+    	private PersonService personService;
+
+    	/**
+    	 * Handles and retrieves all persons and show it in a JSP page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons"", method = RequestMethod.GET)
+    	public String getPersons(Model model) {
+
+    		logger.debug(""Received request to show all persons"");
+
+    		// Retrieve all persons by delegating the call to PersonService
+    		List<Person> persons = personService.getAll();
+
+    		// Attach persons to the Model
+    		model.addAttribute(""persons"", persons);
+
+    		// This will resolve to /WEB-INF/jsp/personspage.jsp
+    		return ""personspage"";
+    	}
+
+    	/**
+    	 * Retrieves the add page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/add"", method = RequestMethod.GET)
+    	public String getAdd(Model model) {
+    		logger.debug(""Received request to show add page"");
+
+    		// Create new Person and add to model
+    		// This is the formBackingOBject
+    		model.addAttribute(""personAttribute"", new Person());
+
+    		// This will resolve to /WEB-INF/jsp/addpage.jsp
+    		return ""addpage"";
+    	}
+
+    	/**
+    	 * Adds a new person by delegating the processing to PersonService. Displays
+    	 * a confirmation JSP page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/add"", method = RequestMethod.POST)
+    	public String add(@ModelAttribute(""personAttribute"") Person person) {
+    		logger.debug(""Received request to add new person"");
+
+    		// The ""personAttribute"" model has been passed to the controller from
+    		// the JSP
+    		// We use the name ""personAttribute"" because the JSP uses that name
+
+    		// Call PersonService to do the actual adding
+    		personService.add(person);
+
+    		// This will resolve to /WEB-INF/jsp/addedpage.jsp
+    		return ""addedpage"";
+    	}
+
+    	/**
+    	 * Deletes an existing person by delegating the processing to PersonService.
+    	 * Displays a confirmation JSP page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/delete"", method = RequestMethod.GET)
+    	public String delete(
+    			@RequestParam(value = ""id"", required = true) Integer id, Model model) {
+
+    		logger.debug(""Received request to delete existing person"");
+
+    		// Call PersonService to do the actual deleting
+    		personService.delete(id);
+
+    		// Add id reference to Model
+    		model.addAttribute(""id"", id);
+
+    		// This will resolve to /WEB-INF/jsp/deletedpage.jsp
+    		return ""deletedpage"";
+    	}
+
+    	/**
+    	 * Retrieves the edit page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/edit"", method = RequestMethod.GET)
+    	public String getEdit(
+    			@RequestParam(value = ""id"", required = true) Integer id, Model model) {
+    		logger.debug(""Received request to show edit page"");
+
+    		// Retrieve existing Person and add to model
+    		// This is the formBackingOBject
+    		model.addAttribute(""personAttribute"", personService.get(id));
+
+    		// This will resolve to /WEB-INF/jsp/editpage.jsp
+    		return ""editpage"";
+    	}
+
+    	/**
+    	 * Edits an existing person by delegating the processing to PersonService.
+    	 * Displays a confirmation JSP page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/edit"", method = RequestMethod.POST)
+    	public String saveEdit(@ModelAttribute(""personAttribute"") Person person,
+    			@RequestParam(value = ""id"", required = true) Integer id, Model model) {
+    		logger.debug(""Received request to update person"");
+
+    		// The ""personAttribute"" model has been passed to the controller from
+    		// the JSP
+    		// We use the name ""personAttribute"" because the JSP uses that name
+
+    		// We manually assign the id because we disabled it in the JSP page
+    		// When a field is disabled it will not be included in the
+    		// ModelAttribute
+    		person.setId(id);
+
+    		// Delegate to PersonService for editing
+    		personService.edit(person);
+
+    		// Add id reference to Model
+    		model.addAttribute(""id"", id);
+
+    		// This will resolve to /WEB-INF/jsp/editedpage.jsp
+    		return ""editedpage"";
+    	}
+
+    }
+
+    personspage.jsp
+    Code:
+
+    <%@ taglib uri=""http://java.sun.com/jsp/jstl/core"" prefix=""c"" %>
+    <%@ page language=""java"" contentType=""text/html; charset=UTF-8""
+        pageEncoding=""UTF-8""%>
+    <!DOCTYPE html PUBLIC ""-//W3C//DTD HTML 4.01 Transitional//EN"" ""http://www.w3.org/TR/html4/loose.dtd"">
+    <html>
+    <head>
+    <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"">
+    <title>People Page</title>
+    </head>
+    <body>
+    <h1>Persons</h1>
+
+    <c:url var=""addUrl"" value=""/main/persons/add"" />
+    <table style=""border: 1px solid; width: 500px; text-align:center"">
+    	<thead style=""background:#fcf"">
+    		<tr>
+    			<th>First Name</th>
+    			<th>Last Name</th>
+    			<th>Money</th>
+    			<th colspan=""3""></th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    	<c:forEach items=""${persons}"" var=""person"">
+    			<c:url var=""editUrl"" value=""/persons/edit?id=${person.id}"" />
+    			<c:url var=""deleteUrl"" value=""/persons/delete?id=${person.id}"" />
+    		<tr>
+    			<td><c:out value=""${person.firstName}"" /></td>
+    			<td><c:out value=""${person.lastName}"" /></td>
+    			<td><c:out value=""${person.money}"" /></td>
+    			<td><a href=""${editUrl}"">Edit</a></td>
+    			<td><a href=""${deleteUrl}"">Delete</a></td>
+    			<td><a href=""${addUrl}"">Add</a></td>
+    		</tr>
+    	</c:forEach>
+    	</tbody>
+    </table>
+
+    <c:if test=""${empty persons}"">
+    	There are currently no persons in the list. <a href=""${addUrl}"">Add</a> a person.
+    </c:if>
+
+    </body>
+    </html>
+",mvc,spring,http-status-code-404,,,,open,0,1888,5,"Spring MCV 3.0 404 error     I'm trying to build an application using Spring MVC 3.0 within Eclipse using the Dynamic Web Project. I'm able to get to the initial page, but I can not navigate to any other pages from there w/out getting a 404 error and I'm not hitting any of my breakpoints in the controller class. Please let me know if there's something I'm missing. Thanks!
+
+    applicationContext.xml
+
+    Code:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xmlns=""http://www.springframework.org/schema/beans""
+    	xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""  xmlns:context=""http://www.springframework.org/schema/context""
+    	xmlns:mvc=""http://www.springframework.org/schema/mvc""
+    	xsi:schemaLocation=""http://www.springframework.org/schema/beans 
+    	   		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    	   		http://www.springframework.org/schema/context
+    	   		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    			http://www.springframework.org/schema/mvc 
+    			http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"">
+
+    	<!-- Activates various annotations to be detected in bean classes -->
+    	<context:annotation-config />
+
+    	<!-- Scans the classpath for annotated components that will be auto-registered 
+    		as Spring beans. For example @Controller and @Service. Make sure to set the 
+    		correct base-package -->
+    	<context:component-scan base-package=""src"" />
+
+    	<!-- Configures the annotation-driven Spring MVC Controller programming 
+    		model. Note that, with Spring 3.0, this tag works in Servlet MVC only! -->
+    	<mvc:annotation-driven />
+
+    	<!-- Load Hibernate related configuration -->
+    	<import resource=""hibernate-context.xml"" />
+
+    </beans>
+
+
+
+    spring-servlet.xml
+
+    Code:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xsi:schemaLocation="" http://www.springframework.org/schema/beans 
+           ...
+            xmlns:mvc=""http://www.springframework.org/schema/mvc""  
+            xmlns:aop=""http://www.springframework.org/schema/aop"" 
+            xmlns:context=""http://www.springframework.org/schema/context"" 
+            xmlns:p=""http://www.springframework.org/schema/p"" 
+            xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" 
+            xmlns=""http://www.springframework.org/schema/beans""> 
+
+    	<bean
+            class=""org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"" />
+
+        <bean
+            class=""org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"" />
+    	   		
+    	
+    	<!-- Declare a view resolver -->
+        <bean id=""viewResolver"" class=""org.springframework.web.servlet.view.InternalResourceViewResolver"">
+               <property name=""viewClass"" value=""org.springframework.web.servlet.view.JstlView""/>
+               <property name=""prefix"" value=""/WEB-INF/jsp""/>
+               <property name=""suffix"" value="".jsp""/>
+            </bean>
+
+
+    </beans>
+
+
+
+
+    web.xml
+
+    Code:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <web-app id=""WebApp_ID"" version=""2.4"" xmlns=""http://java.sun.com/xml/ns/j2ee"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"">
+    	
+    	<servlet>
+    		<servlet-name>spring</servlet-name>
+    		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    		    <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                /WEB-INF/applicationContext.xml
+         </param-value>
+        </init-param>
+    		<load-on-startup>1</load-on-startup>
+    	</servlet>
+    	
+    	<servlet-mapping>
+    		<servlet-name>spring</servlet-name>
+    		<url-pattern>/SpringHibernateExample/*</url-pattern>
+    	</servlet-mapping>
+        
+         <welcome-file-list>
+            <welcome-file>/jsp/personspage.jsp</welcome-file>
+        </welcome-file-list>
+
+    	<listener>
+    		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    	</listener>
+    	
+    </web-app>
+
+
+
+    MainController.java
+    Code:
+
+    package controller;
+
+    import java.util.List;
+
+    import javax.annotation.Resource;
+
+    import org.apache.log4j.Logger;
+    import org.springframework.stereotype.Controller;
+    import org.springframework.ui.Model;
+    import org.springframework.web.bind.annotation.ModelAttribute;
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RequestMethod;
+    import org.springframework.web.bind.annotation.RequestParam;
+
+    import service.PersonService;
+    import domain.Person;
+
+    /**
+     * Handles and retrieves person request
+     */
+    @Controller
+    @RequestMapping(""/main"")
+    public class MainController {
+
+    	protected static Logger logger = Logger.getLogger(""controller"");
+
+    	@Resource(name = ""personService"")
+    	private PersonService personService;
+
+    	/**
+    	 * Handles and retrieves all persons and show it in a JSP page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons"", method = RequestMethod.GET)
+    	public String getPersons(Model model) {
+
+    		logger.debug(""Received request to show all persons"");
+
+    		// Retrieve all persons by delegating the call to PersonService
+    		List<Person> persons = personService.getAll();
+
+    		// Attach persons to the Model
+    		model.addAttribute(""persons"", persons);
+
+    		// This will resolve to /WEB-INF/jsp/personspage.jsp
+    		return ""personspage"";
+    	}
+
+    	/**
+    	 * Retrieves the add page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/add"", method = RequestMethod.GET)
+    	public String getAdd(Model model) {
+    		logger.debug(""Received request to show add page"");
+
+    		// Create new Person and add to model
+    		// This is the formBackingOBject
+    		model.addAttribute(""personAttribute"", new Person());
+
+    		// This will resolve to /WEB-INF/jsp/addpage.jsp
+    		return ""addpage"";
+    	}
+
+    	/**
+    	 * Adds a new person by delegating the processing to PersonService. Displays
+    	 * a confirmation JSP page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/add"", method = RequestMethod.POST)
+    	public String add(@ModelAttribute(""personAttribute"") Person person) {
+    		logger.debug(""Received request to add new person"");
+
+    		// The ""personAttribute"" model has been passed to the controller from
+    		// the JSP
+    		// We use the name ""personAttribute"" because the JSP uses that name
+
+    		// Call PersonService to do the actual adding
+    		personService.add(person);
+
+    		// This will resolve to /WEB-INF/jsp/addedpage.jsp
+    		return ""addedpage"";
+    	}
+
+    	/**
+    	 * Deletes an existing person by delegating the processing to PersonService.
+    	 * Displays a confirmation JSP page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/delete"", method = RequestMethod.GET)
+    	public String delete(
+    			@RequestParam(value = ""id"", required = true) Integer id, Model model) {
+
+    		logger.debug(""Received request to delete existing person"");
+
+    		// Call PersonService to do the actual deleting
+    		personService.delete(id);
+
+    		// Add id reference to Model
+    		model.addAttribute(""id"", id);
+
+    		// This will resolve to /WEB-INF/jsp/deletedpage.jsp
+    		return ""deletedpage"";
+    	}
+
+    	/**
+    	 * Retrieves the edit page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/edit"", method = RequestMethod.GET)
+    	public String getEdit(
+    			@RequestParam(value = ""id"", required = true) Integer id, Model model) {
+    		logger.debug(""Received request to show edit page"");
+
+    		// Retrieve existing Person and add to model
+    		// This is the formBackingOBject
+    		model.addAttribute(""personAttribute"", personService.get(id));
+
+    		// This will resolve to /WEB-INF/jsp/editpage.jsp
+    		return ""editpage"";
+    	}
+
+    	/**
+    	 * Edits an existing person by delegating the processing to PersonService.
+    	 * Displays a confirmation JSP page
+    	 * 
+    	 * @return the name of the JSP page
+    	 */
+    	@RequestMapping(value = ""/persons/edit"", method = RequestMethod.POST)
+    	public String saveEdit(@ModelAttribute(""personAttribute"") Person person,
+    			@RequestParam(value = ""id"", required = true) Integer id, Model model) {
+    		logger.debug(""Received request to update person"");
+
+    		// The ""personAttribute"" model has been passed to the controller from
+    		// the JSP
+    		// We use the name ""personAttribute"" because the JSP uses that name
+
+    		// We manually assign the id because we disabled it in the JSP page
+    		// When a field is disabled it will not be included in the
+    		// ModelAttribute
+    		person.setId(id);
+
+    		// Delegate to PersonService for editing
+    		personService.edit(person);
+
+    		// Add id reference to Model
+    		model.addAttribute(""id"", id);
+
+    		// This will resolve to /WEB-INF/jsp/editedpage.jsp
+    		return ""editedpage"";
+    	}
+
+    }
+
+    personspage.jsp
+    Code:
+
+    <%@ taglib uri=""http://java.sun.com/jsp/jstl/core"" prefix=""c"" %>
+    <%@ page language=""java"" contentType=""text/html; charset=UTF-8""
+        pageEncoding=""UTF-8""%>
+    <!DOCTYPE html PUBLIC ""-//W3C//DTD HTML 4.01 Transitional//EN"" ""http://www.w3.org/TR/html4/loose.dtd"">
+    <html>
+    <head>
+    <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"">
+    <title>People Page</title>
+    </head>
+    <body>
+    <h1>Persons</h1>
+
+    <c:url var=""addUrl"" value=""/main/persons/add"" />
+    <table style=""border: 1px solid; width: 500px; text-align:center"">
+    	<thead style=""background:#fcf"">
+    		<tr>
+    			<th>First Name</th>
+    			<th>Last Name</th>
+    			<th>Money</th>
+    			<th colspan=""3""></th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    	<c:forEach items=""${persons}"" var=""person"">
+    			<c:url var=""editUrl"" value=""/persons/edit?id=${person.id}"" />
+    			<c:url var=""deleteUrl"" value=""/persons/delete?id=${person.id}"" />
+    		<tr>
+    			<td><c:out value=""${person.firstName}"" /></td>
+    			<td><c:out value=""${person.lastName}"" /></td>
+    			<td><c:out value=""${person.money}"" /></td>
+    			<td><a href=""${editUrl}"">Edit</a></td>
+    			<td><a href=""${deleteUrl}"">Delete</a></td>
+    			<td><a href=""${addUrl}"">Add</a></td>
+    		</tr>
+    	</c:forEach>
+    	</tbody>
+    </table>
+
+    <c:if test=""${empty persons}"">
+    	There are currently no persons in the list. <a href=""${addUrl}"">Add</a> a person.
+    </c:if>
+
+    </body>
+    </html>
+",3
+3847712,10/02/2010 22:13:04,226256,12/07/2009 10:28:39,46,4,CakePHP SignBox Component,"I'm trying to implement a simple login box to my web application, just a regular username and password field if no session is detected and a welcome message if there is one, i started with the following:
+
+1. I thought a simple element will do the job, but i realized than i can't include css or js(not inline) from an element because the $scripts_for_layout would be already sent to the output buffer.
+
+2. I'm now thinking of implementing it as a component, not sure if this would be the right architecture(is it?) but i can definitely add the js/css and output them in the head tag from there. The question is now where should i place the markup for the login box, an element or view maybe, and how do i inject them to the view? a simple $this->set('x', htmlmarkup) in the component and another echo in the view. What's right way to do it. 
+
+Thanks.
+Yehia",mvc,cakephp,,,,,open,0,154,3,"CakePHP SignBox Component I'm trying to implement a simple login box to my web application, just a regular username and password field if no session is detected and a welcome message if there is one, i started with the following:
+
+1. I thought a simple element will do the job, but i realized than i can't include css or js(not inline) from an element because the $scripts_for_layout would be already sent to the output buffer.
+
+2. I'm now thinking of implementing it as a component, not sure if this would be the right architecture(is it?) but i can definitely add the js/css and output them in the head tag from there. The question is now where should i place the markup for the login box, an element or view maybe, and how do i inject them to the view? a simple $this->set('x', htmlmarkup) in the component and another echo in the view. What's right way to do it. 
+
+Thanks.
+Yehia",2
+11370043,07/06/2012 21:44:44,996431,10/15/2011 02:40:34,1370,1,MVC ViewModel Class,"I am using C# MVC with Razor.
+Say if I have a view that shows a list, drop down, and 2 text boxes.
+Should all of this information be kept in 1 class which will be used by my view?
+
+
+",mvc,,,,,07/08/2012 01:39:18,not constructive,1,38,3,"MVC ViewModel Class I am using C# MVC with Razor.
+Say if I have a view that shows a list, drop down, and 2 text boxes.
+Should all of this information be kept in 1 class which will be used by my view?
+
+
+",1
+6059025,05/19/2011 13:00:31,755817,05/16/2011 14:37:30,11,0,MVC 3 projekt deployment,"Hi Guys i´m trying to deploy an MVC 3 project to my server runing IIS 7 
+
+i tryied : create a package with VS2010 the resulting zip-file i moved to the server and imported this
+to the IIS7 this is going well so far i can also open the loginpage in teh browser but when loggining in(Database query for checking login data ) there comes a message ""Sorry, an error occurred while processing your request. ""
+
+how do i have to deploy are there other ways ? i manage the Data base connection via a dll also tried
+to connect to localhost but this didn´t work too 
+
+Greetings",mvc,asp.net-mvc-3,deployment,,,,open,0,105,4,"MVC 3 projekt deployment Hi Guys i´m trying to deploy an MVC 3 project to my server runing IIS 7 
+
+i tryied : create a package with VS2010 the resulting zip-file i moved to the server and imported this
+to the IIS7 this is going well so far i can also open the loginpage in teh browser but when loggining in(Database query for checking login data ) there comes a message ""Sorry, an error occurred while processing your request. ""
+
+how do i have to deploy are there other ways ? i manage the Data base connection via a dll also tried
+to connect to localhost but this didn´t work too 
+
+Greetings",3
+2153805,01/28/2010 10:34:36,260857,01/28/2010 10:34:36,1,0,MVC POST not returning modifed view model,"I have a standard Edit scenario with GET and POST, the form has a Save button and a Lookup button that allows the user to lookup a postcode, which fills out the address and returns it in the form fields. The Lookup button posts back to the Edit controller method.
+
+The following isn't real code but demonstrates my problem...
+
+    [AcceptVerbs(HttpVerbs.Post)]
+    public ActionResult Edit(int CustomerId, string LookupButton)
+    {
+        Customer customer = new Customer();
+        UpdateModel(customer);
+        //customer.County = ""Hello world!"";
+        return View(customer);
+
+        ...
+    }
+
+This code does as expected, just returns the existing form data, however when I uncomment the line that manually changes the County field, those changes don't appear on the form. This has thrown me, because in the form 
+
+    <%= ViewData.Eval(""County"") %>
+
+will return ""Hello world!"" but 
+
+    <%= Html.TextBox(""County"") %>
+
+still retains the old value!
+
+    <input id=""County"" name=""County"" type=""text"" value="""" />
+
+
+Customer is an EF4 class.
+
+Any help much appreciated.",mvc,post,,,,,open,0,202,7,"MVC POST not returning modifed view model I have a standard Edit scenario with GET and POST, the form has a Save button and a Lookup button that allows the user to lookup a postcode, which fills out the address and returns it in the form fields. The Lookup button posts back to the Edit controller method.
+
+The following isn't real code but demonstrates my problem...
+
+    [AcceptVerbs(HttpVerbs.Post)]
+    public ActionResult Edit(int CustomerId, string LookupButton)
+    {
+        Customer customer = new Customer();
+        UpdateModel(customer);
+        //customer.County = ""Hello world!"";
+        return View(customer);
+
+        ...
+    }
+
+This code does as expected, just returns the existing form data, however when I uncomment the line that manually changes the County field, those changes don't appear on the form. This has thrown me, because in the form 
+
+    <%= ViewData.Eval(""County"") %>
+
+will return ""Hello world!"" but 
+
+    <%= Html.TextBox(""County"") %>
+
+still retains the old value!
+
+    <input id=""County"" name=""County"" type=""text"" value="""" />
+
+
+Customer is an EF4 class.
+
+Any help much appreciated.",2
+4475515,12/17/2010 23:01:34,546620,12/17/2010 23:01:34,1,0,MVC: Am i doing it right?,"Hey ppl. I dont know if i understood 100% the MVC concept.
+
+Im having troubles with the Model-View relation.
+
+In order to present the data to the user, the View must have access to the data, right?
+Is this access obtained by passing all the needed data to the view directly (and having the view hold the data within its class as an atribute), or just obtain the data ""parsed"" as strings, ints, etc... as it is needed (as the user navigates through the GUI) from the controller, by raising events? <-- i feel like this is a little bit event overkill, since the data hasnt changed
+
+ 
+
+BTW, can you tell me what those arrows on the MVC diagram on wikipedia do on a real example? Thanks /",mvc,,,,,,open,0,125,6,"MVC: Am i doing it right? Hey ppl. I dont know if i understood 100% the MVC concept.
+
+Im having troubles with the Model-View relation.
+
+In order to present the data to the user, the View must have access to the data, right?
+Is this access obtained by passing all the needed data to the view directly (and having the view hold the data within its class as an atribute), or just obtain the data ""parsed"" as strings, ints, etc... as it is needed (as the user navigates through the GUI) from the controller, by raising events? <-- i feel like this is a little bit event overkill, since the data hasnt changed
+
+ 
+
+BTW, can you tell me what those arrows on the MVC diagram on wikipedia do on a real example? Thanks /",1
+8525920,12/15/2011 20:06:54,996431,10/15/2011 02:40:34,252,0,MVC c# - Stateless,"I have heard that MVC .NET is stateless. What are the implications of this and why is it that MVC is stateless. 
+
+    c#",mvc,,,,,12/15/2011 22:45:55,not constructive,1,27,4,"MVC c# - Stateless I have heard that MVC .NET is stateless. What are the implications of this and why is it that MVC is stateless. 
+
+    c#",1
+11301249,07/02/2012 21:12:15,1409617,05/22/2012 07:43:33,1,0,create joomla db component:read / update,"I've browsed through a lot tutorials, but still have questions about MVC...
+I want to make a simple DB component, that
+-displays db info
+-allows to edit
+-add
+-delete
+
+
+My most general question is: how many controllers should i make, how many models, and how many views?
+
+What I thought would be good was to make 1 controller, 4 views (one for display, one for edit, 1 for add and 1 for delete), and I thought using just 1 model, but i'm not sure if this is the good approach.  Should i use 4 models...?  Or should i link the same model to all the views?
+
+
+Thx,
+vinny",mvc,view,joomla,model,controller,07/02/2012 22:36:59,not a real question,1,101,6,"create joomla db component:read / update I've browsed through a lot tutorials, but still have questions about MVC...
+I want to make a simple DB component, that
+-displays db info
+-allows to edit
+-add
+-delete
+
+
+My most general question is: how many controllers should i make, how many models, and how many views?
+
+What I thought would be good was to make 1 controller, 4 views (one for display, one for edit, 1 for add and 1 for delete), and I thought using just 1 model, but i'm not sure if this is the good approach.  Should i use 4 models...?  Or should i link the same model to all the views?
+
+
+Thx,
+vinny",5
+4455758,12/15/2010 22:49:38,157856,08/17/2009 16:00:29,81,4,MVC2 Authorize Roles from SQL,"I have a table in my SQL2008 DB for Users and one for Roles and then the UserRoles bridging table. I am at the point where I have to RoleProvider to work and have decorated some of my Actions with [Authorize(Roles = ""Administrator,Developer"")]
+
+I actually build the navigation on my site per user so the RoleProvider is just to prevent a lower level user from getting the URL from his Admin buddy and going to a page that he is not supposed to. 
+
+We build the site navigation on a per user base and have a mapping between the user, his role and the pages that the role he is in is allowed to see. I just want to know if there is any way to change the [Authorize(Roles = """")] to get the list of roles with permission to that action dynamically from my database? That way I do not have to go decorate all actions that I have, it will just be pulled from the DB as if by magic.
+
+A simple example will be appreciated, thank you.
+Jack",mvc,roles,dynamic,authorize,,,open,0,178,5,"MVC2 Authorize Roles from SQL I have a table in my SQL2008 DB for Users and one for Roles and then the UserRoles bridging table. I am at the point where I have to RoleProvider to work and have decorated some of my Actions with [Authorize(Roles = ""Administrator,Developer"")]
+
+I actually build the navigation on my site per user so the RoleProvider is just to prevent a lower level user from getting the URL from his Admin buddy and going to a page that he is not supposed to. 
+
+We build the site navigation on a per user base and have a mapping between the user, his role and the pages that the role he is in is allowed to see. I just want to know if there is any way to change the [Authorize(Roles = """")] to get the list of roles with permission to that action dynamically from my database? That way I do not have to go decorate all actions that I have, it will just be pulled from the DB as if by magic.
+
+A simple example will be appreciated, thank you.
+Jack",4
+6160721,05/28/2011 09:16:29,690851,04/04/2011 09:33:17,45,0,Suggest a project so that I can learn the Model - View - Controller,"i am new to the web and i understand that MVC is very important to web development. I'd like to do a project that could help me understand the MVC.   
+Plus, I also can't clearly understand what it is actually. i mean i can't find any good lesson or article that describes to the n00b. so if you guys could help me in that matter too that would be most appreciated.   
+Thanks in advance. ",mvc,,,,,05/28/2011 12:39:56,off topic,1,79,14,"Suggest a project so that I can learn the Model - View - Controller i am new to the web and i understand that MVC is very important to web development. I'd like to do a project that could help me understand the MVC.   
+Plus, I also can't clearly understand what it is actually. i mean i can't find any good lesson or article that describes to the n00b. so if you guys could help me in that matter too that would be most appreciated.   
+Thanks in advance. ",1
+7026357,08/11/2011 13:03:51,84325,03/29/2009 18:16:33,1153,6,How to know the live environment of a zend view script (xxx.phtml),"I want to know how can I know which object and function I can call in a zend view script.
+(If I want to know the included files then I can call get_included_files(), I want to know something like this)",mvc,zend-framework,,,,08/12/2011 00:35:22,not a real question,1,39,12,"How to know the live environment of a zend view script (xxx.phtml) I want to know how can I know which object and function I can call in a zend view script.
+(If I want to know the included files then I can call get_included_files(), I want to know something like this)",2
+8896421,01/17/2012 14:35:26,901273,08/18/2011 19:28:01,15,0,Uploading MVC to Filezilla,"When I run my application, the link is:
+
+    http://localhost:1234/Account/LogOn
+
+But when I upload it to Filezilla, I go:
+
+    http://0.0.0.0/Account/LogOn
+
+and it says ""The resource cannot be found.""
+
+Which is the correct path?",mvc,filezilla,,,,01/17/2012 15:19:00,not a real question,1,35,4,"Uploading MVC to Filezilla When I run my application, the link is:
+
+    http://localhost:1234/Account/LogOn
+
+But when I upload it to Filezilla, I go:
+
+    http://0.0.0.0/Account/LogOn
+
+and it says ""The resource cannot be found.""
+
+Which is the correct path?",2
+5551259,04/05/2011 11:44:46,417289,08/11/2010 13:29:15,18,3,MVC question: direct modell <-> view communication - why?,"can anybody tell me, why communicates the model direct with the view in the MVC pattern, and why not just throught the controller?
+
+http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+",mvc,,,,,,open,0,23,9,"MVC question: direct modell <-> view communication - why? can anybody tell me, why communicates the model direct with the view in the MVC pattern, and why not just throught the controller?
+
+http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+",1
+8676208,12/30/2011 04:36:52,1095480,12/13/2011 10:04:02,28,3,How can i do pagination and searching in YII?,"Here is my controller code for displaying..
+
+      $this->layout = 'admin-home';
+                 $studios = AccountsStudios::model()->with('generalUserStudiosesCount')->findAll();
+				 
+				 #print_r($studios);
+				 $this->render('listStudios', array('studios' => $studios));
+
+
+Am entirely new to YII... i want to include filter option,search and pagination .
+
+Any good references?",mvc,yii,yii-mvc,,,,open,0,55,9,"How can i do pagination and searching in YII? Here is my controller code for displaying..
+
+      $this->layout = 'admin-home';
+                 $studios = AccountsStudios::model()->with('generalUserStudiosesCount')->findAll();
+				 
+				 #print_r($studios);
+				 $this->render('listStudios', array('studios' => $studios));
+
+
+Am entirely new to YII... i want to include filter option,search and pagination .
+
+Any good references?",3
+10735676,05/24/2012 10:28:44,1414756,05/24/2012 10:24:12,1,0,can not use 'OnComplete' client event with telerik mvc grid,"i use telerik mvc release 2011.2.712,Jquery 1.4.1
+the problem is :
+when i use clientEvent OnComplete or OnCommand i get error
+
+**Unknown method 'OnComplete' of 'telerik.web.mvc.UI.fluent.GridClientEventsBuilder'**
+please any body can help me",mvc,grid,telerik,,,05/24/2012 20:41:18,not a real question,1,28,10,"can not use 'OnComplete' client event with telerik mvc grid i use telerik mvc release 2011.2.712,Jquery 1.4.1
+the problem is :
+when i use clientEvent OnComplete or OnCommand i get error
+
+**Unknown method 'OnComplete' of 'telerik.web.mvc.UI.fluent.GridClientEventsBuilder'**
+please any body can help me",3
+8654245,12/28/2011 09:48:00,1079985,12/04/2011 11:30:40,28,0,How to put jsp in WEB-INF correct?,"I'm using MVC and want to put my jsp pages in WEB-INF to avoid direct access to it. I have an index.jsp page and other pages in jps folder in Web Content and it works. It looks like this:
+
+    -Web Content
+    -index.jsp
+    -jsp
+    --main_read.jsp
+    --...
+By the way, index.jsp is my login page and whether user is logged, in controller I use
+
+    RequestDispatcher dispatcher =
+			getServletContext().getRequestDispatcher(""jsp/main_read.jsp"");
+    dispatcher.forward(request, response);
+I works perfect, but when I'm trying to put my jsp in WEB-INF it fails:
+
+    -Web Content
+    -index.jsp
+    -WEB-INF
+    --jsp
+    ---jsp
+    ----main_read.jsp
+    ----...
+And gives an error like this
+
+    HTTP Status 404 - /Libruary/jsp/main_read.jsp
+
+    type Status report
+
+    message /Libruary/jsp/main_read.jsp
+
+    description The requested resource (/Libruary/jsp/main_read.jsp) is not available.
+    Apache Tomcat/6.0.26
+
+Probably the problem is in the page path, I write in `dispatcher.forward`, but anyway, help me please.",mvc,jsp,web-inf,,,,open,0,186,7,"How to put jsp in WEB-INF correct? I'm using MVC and want to put my jsp pages in WEB-INF to avoid direct access to it. I have an index.jsp page and other pages in jps folder in Web Content and it works. It looks like this:
+
+    -Web Content
+    -index.jsp
+    -jsp
+    --main_read.jsp
+    --...
+By the way, index.jsp is my login page and whether user is logged, in controller I use
+
+    RequestDispatcher dispatcher =
+			getServletContext().getRequestDispatcher(""jsp/main_read.jsp"");
+    dispatcher.forward(request, response);
+I works perfect, but when I'm trying to put my jsp in WEB-INF it fails:
+
+    -Web Content
+    -index.jsp
+    -WEB-INF
+    --jsp
+    ---jsp
+    ----main_read.jsp
+    ----...
+And gives an error like this
+
+    HTTP Status 404 - /Libruary/jsp/main_read.jsp
+
+    type Status report
+
+    message /Libruary/jsp/main_read.jsp
+
+    description The requested resource (/Libruary/jsp/main_read.jsp) is not available.
+    Apache Tomcat/6.0.26
+
+Probably the problem is in the page path, I write in `dispatcher.forward`, but anyway, help me please.",3
+2068627,01/15/2010 00:33:30,85140,03/31/2009 14:36:58,1230,95,Where does validating the input belongs to in an MVC application?,"I have a MVC application that receives an input from a form.  
+This is a login form so the only validation that is necessary is to check whether the input is non-empty.  
+Right now before I pass it to the model I validate it in the controller.  
+Is this a best practice or not? Does it belong to the model?",mvc,model,controller,language-agnostic,best-practice,,open,0,63,11,"Where does validating the input belongs to in an MVC application? I have a MVC application that receives an input from a form.  
+This is a login form so the only validation that is necessary is to check whether the input is non-empty.  
+Right now before I pass it to the model I validate it in the controller.  
+Is this a best practice or not? Does it belong to the model?",5
+2593203,04/07/2010 14:20:28,285245,03/03/2010 11:44:34,6,0,Question and Answers form & controller problem,"I have a Question table and an Answers table linked by questionID (1 to many). I'd like to be able to update both table from the one form.
+
+I can easily add a question but to have it also add the answers (into their own recordsets) is causing a headache.
+
+how do I set my form up to allow for the answers to be created and also what do I do in the Controller.
+
+Any help would be gratefully appreciated as I've not been able to locate any good examples on the web.
+
+thanks in advance.",mvc,c#,asp.net-mvc,,,,open,0,92,7,"Question and Answers form & controller problem I have a Question table and an Answers table linked by questionID (1 to many). I'd like to be able to update both table from the one form.
+
+I can easily add a question but to have it also add the answers (into their own recordsets) is causing a headache.
+
+how do I set my form up to allow for the answers to be created and also what do I do in the Controller.
+
+Any help would be gratefully appreciated as I've not been able to locate any good examples on the web.
+
+thanks in advance.",3
+8920003,01/19/2012 01:35:05,830988,07/06/2011 06:34:49,136,6,General MVC Guidelines,"I was just thinking it'd be nice to have a checklist of guidelines for following the MVC pattern with stuff like ""Fat model, skinny controller"". Might there be a resource that has collected such guidelines? And if not, can we create one here?",mvc,design-patterns,language-agnostic,,,01/21/2012 14:14:37,not constructive,1,43,3,"General MVC Guidelines I was just thinking it'd be nice to have a checklist of guidelines for following the MVC pattern with stuff like ""Fat model, skinny controller"". Might there be a resource that has collected such guidelines? And if not, can we create one here?",3
+6771076,07/21/2011 03:51:16,1280996,05/26/2011 00:39:31,56,0,Designing a e-newsletter distriubtion application on web,"There are some kinds of design  problem and i hope those experience can share some hints.
+Here i will use php and mysql to build a e-news distribution.The system is for e business And the major concern is privacy, and i also have to concern about the user in viewing and distributing
+
+Questions are:
+
+1. Is php and mysql apporepraite ?
+2. What will you demand for if you are the user (sender)?",mvc,web-applications,,,,07/21/2011 21:48:22,not a real question,1,70,7,"Designing a e-newsletter distriubtion application on web There are some kinds of design  problem and i hope those experience can share some hints.
+Here i will use php and mysql to build a e-news distribution.The system is for e business And the major concern is privacy, and i also have to concern about the user in viewing and distributing
+
+Questions are:
+
+1. Is php and mysql apporepraite ?
+2. What will you demand for if you are the user (sender)?",2
+11418598,07/10/2012 17:22:58,1308116,04/02/2012 13:13:08,1,0,MVC $ajax post and download files,"$ajax post call the Controller Action, and Return File object
+
+This is the ajax call 
+                            $.ajax({
+                                url: ""Home/download"",
+                                type: 'POST',
+                                success: function (response) {
+
+                                    //window.open(response);
+                                    //window.location = response;   
+                                }
+                            })
+
+This is the Action Controller: 
+
+        [HttpPost]
+        public ActionResult download()
+        {
+
+            try
+            {
+                return File(""~/Content/MyFile.pdf"", ""application/pdf"", ""MyRenamedFile.pdf"");
+
+            }
+            catch
+            {
+                throw new HttpException(404, ""Couldn't find"");
+            }
+        }
+
+However, does not work, I am wondering how can I do that(download files through my logic)?
+
+Thanks
+",mvc,,,,,07/12/2012 19:18:15,too localized,1,446,6,"MVC $ajax post and download files $ajax post call the Controller Action, and Return File object
+
+This is the ajax call 
+                            $.ajax({
+                                url: ""Home/download"",
+                                type: 'POST',
+                                success: function (response) {
+
+                                    //window.open(response);
+                                    //window.location = response;   
+                                }
+                            })
+
+This is the Action Controller: 
+
+        [HttpPost]
+        public ActionResult download()
+        {
+
+            try
+            {
+                return File(""~/Content/MyFile.pdf"", ""application/pdf"", ""MyRenamedFile.pdf"");
+
+            }
+            catch
+            {
+                throw new HttpException(404, ""Couldn't find"");
+            }
+        }
+
+However, does not work, I am wondering how can I do that(download files through my logic)?
+
+Thanks
+",1
+4593678,01/04/2011 12:41:30,302533,03/26/2010 13:14:24,229,8,Sample CakePHP Application,"I'm looking for a basic CakePHP application I can use as base for a new project and future ones as well. What I need is basic functionality such as users, user groups, login and register and forgot password. I have been doing some Googling and found a few tutorials and that but all don't seem to be what I'm after. I found BakeMe which seemed good, but had lots of errors and doesn't seem to have been updated.
+
+Anyone know of some good ones? Or perhaps have their own skeleton they use for new projects that they would be happy to share. Thanks.",mvc,cakephp,,,,,open,0,102,3,"Sample CakePHP Application I'm looking for a basic CakePHP application I can use as base for a new project and future ones as well. What I need is basic functionality such as users, user groups, login and register and forgot password. I have been doing some Googling and found a few tutorials and that but all don't seem to be what I'm after. I found BakeMe which seemed good, but had lots of errors and doesn't seem to have been updated.
+
+Anyone know of some good ones? Or perhaps have their own skeleton they use for new projects that they would be happy to share. Thanks.",2
+4121965,11/08/2010 07:25:08,500417,11/08/2010 07:23:23,1,0,how to create mvc website in VS2010 Ultimate...,Give me the step by step Information...Please...!,mvc,,,,,11/08/2010 07:30:53,not a real question,1,7,8,how to create mvc website in VS2010 Ultimate... Give me the step by step Information...Please...!,1
+8122154,11/14/2011 13:16:20,1045519,11/14/2011 11:54:05,1,0,MVC logic: View needs more data,"I'm new to MVC and I probably don't completely understand its logic yet and that's why I always get into troubles.
+
+To my mind, MVC is supposed to separate three parts of a web-application: the Model (dealing with the data: fetching, changing etc.), the Controller (desciding what data to return as a response depending on a user request) and the View (transforming the data got from the Controller (eg. to HTML) for sending back to user as a response).
+
+""Separation"" means that those three elements are abstract from one another. The Controller doesn't care about the details of the realization of the Model part (and vice versa), it just tells what data he needs to get (or to change) and knows how to process it, the Model has nothing to do with the View (that is with the way data would be transformed).
+Finally, the Controller has nothing to do with the View transformation, he just knows what data need to be transformed (depending on a request) and in what way (that is eg. selecting the correct template for the current data).
+And the View part is abstract from the Controller, its job is to transform the specific array of input data in some preset way.
+
+So now let's say I've got a web-site. It has the index page (/), and some non-index pages (/vacancy/, /about/, /articles/bytag/fun/5/ etc.).
+At the top of each page there is a logo. The problem is: I want the logo to be a hyperlink to the index page on every page of my site except the index page itself (because I don't want my pages to contain hyperlinks to themselves).
+So I want ""&lt;img src='logo.png'&gt;"" on the index page and ""&lt;a href=""/""&gt;&lt;img src='logo.png'&gt;&lt;/a&gt;"" on other pages.
+
+Of course, i don't want to repeat myself and create several templates (header_index and header_nonindex) with the same logo image. So, what I need to do is to check if I'm on the index page in some place of my template (that is inside the View part) and depending on the result to add or not to add the link tag.
+
+And here i face a logical problem. I can't get the adress in the View (because logically this part has nothing to do with user request, it transforms data, recieved from the Controller).
+So I need my Controller to send the specific data (eg. the page adress, or the boolean like ""isIndex"") to the View. But the View can't ""require"" data from the Controller, the View is just the way data is transformed. So if any specific variable is needed for the transformation itself, adding it to the Controller would make the View dependent on the specific Controller and the Controller - related to the specific View which would break the whole idea of abstraction and separation.
+Thus there is no way to do what I need without breaking the MVC logic.
+
+Which part of this do I get wrong?",mvc,,,,,,open,0,480,6,"MVC logic: View needs more data I'm new to MVC and I probably don't completely understand its logic yet and that's why I always get into troubles.
+
+To my mind, MVC is supposed to separate three parts of a web-application: the Model (dealing with the data: fetching, changing etc.), the Controller (desciding what data to return as a response depending on a user request) and the View (transforming the data got from the Controller (eg. to HTML) for sending back to user as a response).
+
+""Separation"" means that those three elements are abstract from one another. The Controller doesn't care about the details of the realization of the Model part (and vice versa), it just tells what data he needs to get (or to change) and knows how to process it, the Model has nothing to do with the View (that is with the way data would be transformed).
+Finally, the Controller has nothing to do with the View transformation, he just knows what data need to be transformed (depending on a request) and in what way (that is eg. selecting the correct template for the current data).
+And the View part is abstract from the Controller, its job is to transform the specific array of input data in some preset way.
+
+So now let's say I've got a web-site. It has the index page (/), and some non-index pages (/vacancy/, /about/, /articles/bytag/fun/5/ etc.).
+At the top of each page there is a logo. The problem is: I want the logo to be a hyperlink to the index page on every page of my site except the index page itself (because I don't want my pages to contain hyperlinks to themselves).
+So I want ""&lt;img src='logo.png'&gt;"" on the index page and ""&lt;a href=""/""&gt;&lt;img src='logo.png'&gt;&lt;/a&gt;"" on other pages.
+
+Of course, i don't want to repeat myself and create several templates (header_index and header_nonindex) with the same logo image. So, what I need to do is to check if I'm on the index page in some place of my template (that is inside the View part) and depending on the result to add or not to add the link tag.
+
+And here i face a logical problem. I can't get the adress in the View (because logically this part has nothing to do with user request, it transforms data, recieved from the Controller).
+So I need my Controller to send the specific data (eg. the page adress, or the boolean like ""isIndex"") to the View. But the View can't ""require"" data from the Controller, the View is just the way data is transformed. So if any specific variable is needed for the transformation itself, adding it to the Controller would make the View dependent on the specific Controller and the Controller - related to the specific View which would break the whole idea of abstraction and separation.
+Thus there is no way to do what I need without breaking the MVC logic.
+
+Which part of this do I get wrong?",1
+1443141,09/18/2009 08:03:53,110976,05/22/2009 09:20:53,595,5,File/folder structure for MVC architecture in simple PHP,"HI All, 
+
+I want to create a web site in MVC architecture, with out using any frameworks.
+What would be the **Files/Folder** structure (**Module/Views/Models**).
+
+
+",mvc,php,,,,,open,0,23,8,"File/folder structure for MVC architecture in simple PHP HI All, 
+
+I want to create a web site in MVC architecture, with out using any frameworks.
+What would be the **Files/Folder** structure (**Module/Views/Models**).
+
+
+",2
+1832354,12/02/2009 11:29:23,100187,05/03/2009 10:26:16,217,18,How crucial is Model View Controller pattern for a software?,"I just attended an enterprise architecture session at my firm. The architect(astronaut) made a strong statement within the first 10 minutes.
+
+""If your software does not use the Model View Controller pattern, it cannot be called as software""
+
+Well, it did create some noise in the room. What do you folks think.
+",mvc,design-patterns,,,,,open,0,50,10,"How crucial is Model View Controller pattern for a software? I just attended an enterprise architecture session at my firm. The architect(astronaut) made a strong statement within the first 10 minutes.
+
+""If your software does not use the Model View Controller pattern, it cannot be called as software""
+
+Well, it did create some noise in the room. What do you folks think.
+",2

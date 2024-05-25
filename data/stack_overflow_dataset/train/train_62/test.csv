@@ -1,0 +1,1818 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+5211259,03/06/2011 15:11:31,522482,11/27/2010 19:05:29,5,1,Strange Bar Overlayed on Flex Interface,"When I set my Flex application to run in FullScreen_Interactive, as soon as I click on a control this bar appears along the bottom of the screen.  It's quite obtrusive and has shown up on two different computers so far.
+
+There's a lot of solid white underneath it and it covers at least 5-10% of the bottom of the screen, it blocks the controls also. I obviously never made/placed this thing, has anyone else come across this?
+
+",flex,air,components,flash-builder,bar,,open,0,77,6,"Strange Bar Overlayed on Flex Interface When I set my Flex application to run in FullScreen_Interactive, as soon as I click on a control this bar appears along the bottom of the screen.  It's quite obtrusive and has shown up on two different computers so far.
+
+There's a lot of solid white underneath it and it covers at least 5-10% of the bottom of the screen, it blocks the controls also. I obviously never made/placed this thing, has anyone else come across this?
+
+",5
+7583045,09/28/2011 12:14:10,939317,09/11/2011 15:59:54,1,0,online platform for flex application?,Is there any platform/compiler for creating flex application online? Any version will work. I know some action script online compiler but not able to find any flex online compiler.  ,flex,compiler,flex4,online,,,open,0,31,5,online platform for flex application? Is there any platform/compiler for creating flex application online? Any version will work. I know some action script online compiler but not able to find any flex online compiler.  ,4
+8130227,11/15/2011 00:53:29,378443,06/28/2010 21:04:08,46,2,"Flex: Karaoke app out of sync on playback,after publishing on an external server","I'm trying to create a Karaoke app in my spare time, but i'm having some problem syncing the recording and the backing track.
+
+Basically, after i start to publish to an external media server (wowza), when i play back with the recording (mp3, ripped from the recording flv) and the backing track (mp3 too), i notice a delay of 0-800 ms between the 2 track, which is a big time for this type of application.
+This delay is always random, as bigger in windows than macs.
+
+I already tried many solution, amongs the others:
+
+- Playback with the Sound.extract method, taking 2048 samples each time, to have less latency for the audio start/processing;
+
+- Set the microphone silence level to 0;
+
+- Sync by cuepoint, in different cases in flv or in the mp3 (extending the sound class)
+
+But every time, i get mixed results (worse results in windows, best results in mac)
+
+Anyone has some suggestion to give? Any help would be appreciated :-)",flex,actionscript,synchronization,delay,wowza,,open,0,157,13,"Flex: Karaoke app out of sync on playback,after publishing on an external server I'm trying to create a Karaoke app in my spare time, but i'm having some problem syncing the recording and the backing track.
+
+Basically, after i start to publish to an external media server (wowza), when i play back with the recording (mp3, ripped from the recording flv) and the backing track (mp3 too), i notice a delay of 0-800 ms between the 2 track, which is a big time for this type of application.
+This delay is always random, as bigger in windows than macs.
+
+I already tried many solution, amongs the others:
+
+- Playback with the Sound.extract method, taking 2048 samples each time, to have less latency for the audio start/processing;
+
+- Set the microphone silence level to 0;
+
+- Sync by cuepoint, in different cases in flv or in the mp3 (extending the sound class)
+
+But every time, i get mixed results (worse results in windows, best results in mac)
+
+Anyone has some suggestion to give? Any help would be appreciated :-)",5
+4024143,10/26/2010 13:29:48,462563,09/30/2010 07:17:32,26,6,asp communication with flex,i was developed one .net application. It contains flash animation in one of the asp pages. And i need to write action script code for playing and pausing that swf file. I am using flex builder3. However how can i execute the asp application from  flex builder? How can i load asp page into mxml file? Any idea?,flex,asp,,,,,open,0,59,4,asp communication with flex i was developed one .net application. It contains flash animation in one of the asp pages. And i need to write action script code for playing and pausing that swf file. I am using flex builder3. However how can i execute the asp application from  flex builder? How can i load asp page into mxml file? Any idea?,2
+4203399,11/17/2010 10:19:08,358435,06/04/2010 12:29:28,39,0,How to record voice and send it to server?,"I need to record the voice of the student from the client and send it to server to check whether there are any gramatical mistakes in it. I have designed the client in flex.
+
+My problem is, i have no idea of how to store the recorded sound and send it to the server. can you guys give some guidelines? And one more question is red5 better than flash media server?",flex,flash,,,,,open,0,70,9,"How to record voice and send it to server? I need to record the voice of the student from the client and send it to server to check whether there are any gramatical mistakes in it. I have designed the client in flex.
+
+My problem is, i have no idea of how to store the recorded sound and send it to the server. can you guys give some guidelines? And one more question is red5 better than flash media server?",2
+1845645,12/04/2009 08:33:26,98514,04/30/2009 12:31:20,222,15,FABridge question,"If i create a table in JQuery or any other Ajax framework, can i completely pass the table to flex with the same look and feel... using FABridge.",flex,ajax,,,,,open,0,28,2,"FABridge question If i create a table in JQuery or any other Ajax framework, can i completely pass the table to flex with the same look and feel... using FABridge.",2
+5637039,04/12/2011 14:38:58,653331,03/10/2011 10:26:00,64,1,Making buttons link - Adobe flex - Blackberry Playbook,"Maybe a simple question but I'm having alot of trouble making a button change the view of a Flex blackberry playbook app. I am coding it **entirely in actionscript**, no MXML.
+
+    myButton.addEventListener(MouseEvent.CLICK, doSomethingOnClick);
+
+    private function doSomethingOnClick(e:MouseEvent):void {
+        navigator.pushView(view.Login, ""testdata"");
+    }
+
+When I try this I get:
+
+1120: Access of undefined property navigator.
+
+Which is weird as it works in a MXML file. How do I change views in actionscript?
+
+Thanks
+Phil
+",flex,air,blackberry-playbook,,,,open,0,82,9,"Making buttons link - Adobe flex - Blackberry Playbook Maybe a simple question but I'm having alot of trouble making a button change the view of a Flex blackberry playbook app. I am coding it **entirely in actionscript**, no MXML.
+
+    myButton.addEventListener(MouseEvent.CLICK, doSomethingOnClick);
+
+    private function doSomethingOnClick(e:MouseEvent):void {
+        navigator.pushView(view.Login, ""testdata"");
+    }
+
+When I try this I get:
+
+1120: Access of undefined property navigator.
+
+Which is weird as it works in a MXML file. How do I change views in actionscript?
+
+Thanks
+Phil
+",3
+4465152,12/16/2010 20:37:57,7893,09/15/2008 14:38:54,1092,35,Can Adobe Air application turn off self-signed certificate warnings?,"Disclaimer: I'm an Air newbie (about 20 minutes in to this experiment).
+
+I have a demo application using Adobe Air that accesses my own SSL web service that uses a self-signed certificate. In .NET clients, I can explicitly handle (and ignore) certificate warnings and suppress them via the ServicePointManager.ServerCertificateValidationCallback. Does anything similar exist in Air? I've examined the URLRequest and URLLoader classes but haven't found anything.",flex,adobe,air,,,,open,0,65,9,"Can Adobe Air application turn off self-signed certificate warnings? Disclaimer: I'm an Air newbie (about 20 minutes in to this experiment).
+
+I have a demo application using Adobe Air that accesses my own SSL web service that uses a self-signed certificate. In .NET clients, I can explicitly handle (and ignore) certificate warnings and suppress them via the ServicePointManager.ServerCertificateValidationCallback. Does anything similar exist in Air? I've examined the URLRequest and URLLoader classes but haven't found anything.",3
+7397394,09/13/2011 05:51:14,587419,01/24/2011 11:39:05,11,0,Is it possible to build yahoo financial interactive chart kind of functionality in Adobe Flex?,I am looking forward to build similar chart which has been provided by yahoo financial interactive chart in flex. Does yahoo provide open source API of this chart? Is any other open source library would be of use in this case? ,flex,api,charts,yahoo,financial,09/13/2011 10:33:52,not constructive,1,42,15,Is it possible to build yahoo financial interactive chart kind of functionality in Adobe Flex? I am looking forward to build similar chart which has been provided by yahoo financial interactive chart in flex. Does yahoo provide open source API of this chart? Is any other open source library would be of use in this case? ,5
+2199753,02/04/2010 12:54:39,266179,02/04/2010 12:36:21,1,1,Flex Builder Speed issue,"Is anyone help me to speed up my flex application when i use more than 100 SWC's...
+",flex,performance,,,,02/04/2010 22:33:55,not a real question,1,17,4,"Flex Builder Speed issue Is anyone help me to speed up my flex application when i use more than 100 SWC's...
+",2
+1510621,10/02/2009 16:30:14,320691,06/15/2009 16:30:45,25,1,Returning to Flex after PayPal Express Checkout payment,"I have successfully integrated PayPal Express into a Flex application.  In DoExpressCheckoutPayment.php, I have the following JavaScript line of code that will not execute:
+
+    window.opener.window.document.getElementById('index').paymentComplete();
+
+'index' - http://mysite.com/index.html# contains index.swf
+'paymentComplete()' - the function that finishes processing the transaction
+
+Has anyone successfully activated callback methods back from a popup to a Flex application using JavaScript?
+
+Thank you in advance for any help,
+
+Orville",flex,javascript,paypal,,,,open,0,62,8,"Returning to Flex after PayPal Express Checkout payment I have successfully integrated PayPal Express into a Flex application.  In DoExpressCheckoutPayment.php, I have the following JavaScript line of code that will not execute:
+
+    window.opener.window.document.getElementById('index').paymentComplete();
+
+'index' - http://mysite.com/index.html# contains index.swf
+'paymentComplete()' - the function that finishes processing the transaction
+
+Has anyone successfully activated callback methods back from a popup to a Flex application using JavaScript?
+
+Thank you in advance for any help,
+
+Orville",3
+7256998,08/31/2011 12:39:01,223364,12/02/2009 23:49:34,21,2,Looking for examples of command chaining in Parsley 2.4,"In order to help me understand, I'm looking for examples of command chaining in Parsley. What I mean by command chaining is when one command returns a result that is then immediately used to initiate another command. I ask this question here because the parsley forums have been down for 2 days.",flex,flex4.5,parsley,,,,open,0,52,9,"Looking for examples of command chaining in Parsley 2.4 In order to help me understand, I'm looking for examples of command chaining in Parsley. What I mean by command chaining is when one command returns a result that is then immediately used to initiate another command. I ask this question here because the parsley forums have been down for 2 days.",3
+6093081,05/23/2011 05:13:52,702166,04/11/2011 12:39:35,34,2,Size of .apk file is more when packaged from command line in flex mobile app,"I have a built a mobile application using flash builder burrito and when i export the app from the builder the size of the apk file is say 1180KB,but when i try packaging the same application from the command line the size increases dramatically(to 2679KB).In both the cases if we see the size of swf file it is 2679KB only.So the builder is using some compression techniques to reduce the file size.Is there any options available in command line to do the same compression technique??.I have used the following command to package the swf file..
+
+  
+
+    adt -package -target apk -storetype pkcs12 -keystore testCert.p12 projectRunTime.apk projectRunTime-app.xml projectRunTime.swf
+
+
+Thanks in advance!!! ",flex,flex4,air,flex4.5,,,open,0,114,15,"Size of .apk file is more when packaged from command line in flex mobile app I have a built a mobile application using flash builder burrito and when i export the app from the builder the size of the apk file is say 1180KB,but when i try packaging the same application from the command line the size increases dramatically(to 2679KB).In both the cases if we see the size of swf file it is 2679KB only.So the builder is using some compression techniques to reduce the file size.Is there any options available in command line to do the same compression technique??.I have used the following command to package the swf file..
+
+  
+
+    adt -package -target apk -storetype pkcs12 -keystore testCert.p12 projectRunTime.apk projectRunTime-app.xml projectRunTime.swf
+
+
+Thanks in advance!!! ",4
+4991984,02/14/2011 12:08:59,497006,11/04/2010 09:42:01,3,0,context menu is not display in web project in flex,context menu is working well in desktop project but not display in web project...........kindly help and suggest if anyone has some suitable answer,flex,actionscript-3,,,,,open,0,23,10,context menu is not display in web project in flex context menu is working well in desktop project but not display in web project...........kindly help and suggest if anyone has some suitable answer,2
+4303163,11/29/2010 11:08:57,520434,11/25/2010 16:49:12,1,0,java server connection to flex application,"Ho to connect the java server to flex application? 
+
+
+Is Blazeds plays a role here (or) Remote services?",flex,,,,,06/18/2012 13:31:38,not a real question,1,18,6,"java server connection to flex application Ho to connect the java server to flex application? 
+
+
+Is Blazeds plays a role here (or) Remote services?",1
+4773199,01/23/2011 09:49:12,539511,12/12/2010 12:05:35,26,0,Programmatic equivalent of: {foo(boundProperty)} ?,"Is there a programmatic equivalent of the following:
+
+When using mxml, I can bind a property to a function, so that if the property changes, the bound function will be invoked (with the bound property as parameter.
+
+For example:
+
+    <fx:Script>
+        <![CDATA[
+
+            [Bindable]
+            var type:String;
+            private function getText(t:String):String{
+            }
+
+        ]]>
+    </fx:Script>
+
+
+    <s:Label text=""{getText(type)}"" />
+
+Is there a programmatic equivalent?
+Thanks in advance!",flex,flex3,flex4,,,,open,0,124,5,"Programmatic equivalent of: {foo(boundProperty)} ? Is there a programmatic equivalent of the following:
+
+When using mxml, I can bind a property to a function, so that if the property changes, the bound function will be invoked (with the bound property as parameter.
+
+For example:
+
+    <fx:Script>
+        <![CDATA[
+
+            [Bindable]
+            var type:String;
+            private function getText(t:String):String{
+            }
+
+        ]]>
+    </fx:Script>
+
+
+    <s:Label text=""{getText(type)}"" />
+
+Is there a programmatic equivalent?
+Thanks in advance!",3
+6460949,06/23/2011 21:43:10,767942,05/24/2011 14:43:50,371,15,Flash Builder 4.5 strange behavior ?,"I am recently experiencing some very strange behavious with Fash Builder 4.5.
+Sometime it just do not wish to open MXML files, false reporting them as a missing resources.
+
+- Did someone had this issue, and how did fixed it ?",flex,flash-builder,,,,,open,0,39,6,"Flash Builder 4.5 strange behavior ? I am recently experiencing some very strange behavious with Fash Builder 4.5.
+Sometime it just do not wish to open MXML files, false reporting them as a missing resources.
+
+- Did someone had this issue, and how did fixed it ?",2
+2778562,05/06/2010 05:02:02,334091,05/06/2010 05:02:01,1,0,flashlog viewer,"I want to build an application using air. The application should load the flashlog file and display the contents after performing some text filtering.
+But when i load the application this clears my flashlog.txt though my file mode is READ.
+
+I can understand that running my air application clears the flashlog and prepares it for new logging. Is there a workaround for this.
+
+I dont want to open the flashlog file everytime and check for traces from my web application",flex,logging,flashlog,air,,,open,0,77,2,"flashlog viewer I want to build an application using air. The application should load the flashlog file and display the contents after performing some text filtering.
+But when i load the application this clears my flashlog.txt though my file mode is READ.
+
+I can understand that running my air application clears the flashlog and prepares it for new logging. Is there a workaround for this.
+
+I dont want to open the flashlog file everytime and check for traces from my web application",4
+7990522,11/03/2011 05:07:00,833372,07/07/2011 11:03:06,11,0,Highlight the first item in the tilelist in flex,I am navigating the items of tile list using next and previous button. I need to highlight the first item in the tilelist by default ( like the first item is being selected by default),flex,tilelist,,,,,open,0,35,9,Highlight the first item in the tilelist in flex I am navigating the items of tile list using next and previous button. I need to highlight the first item in the tilelist by default ( like the first item is being selected by default),2
+2103048,01/20/2010 16:33:54,120854,06/10/2009 20:17:27,339,25,overloading event handler possible?,"I want to extend my function to a better design to where I can pass a canvas object into so I have have to write N functions.. I'm not sure as how to do this properly I've come up with a naive design with a switch but even then if I add another canvas I still need to write new code for the new canvas.
+
+    function fadeCanvasOut(event:TimerEvent):void
+    { 
+    canvas1.alpha -= 0.1;
+    }
+
+    private function showForm():void
+    {
+    var myTimer:Timer = new Timer(20, 10);
+    myTimer.addEventListener(""timer"", fadeFormIn);
+    myTimer.start();		
+    }
+
+what I need is something like:
+
+    function fadeCanvasOut(event:TimerEvent, aCanvas:Canvas):void
+    { 
+    aCanvas.alpha -= 0.1;
+    }
+
+    private function showForm(aCanvas:Canvas):void
+    {
+    var myTimer:Timer = new Timer(20, 10);
+    myTimer.addEventListener(""timer"", fadeFormIn(timerEvent, canvas1);
+    myTimer.start();		
+    }
+
+if someone could please enlighten me I would appreciate it.",flex,oop,actionscript,,,,open,0,185,4,"overloading event handler possible? I want to extend my function to a better design to where I can pass a canvas object into so I have have to write N functions.. I'm not sure as how to do this properly I've come up with a naive design with a switch but even then if I add another canvas I still need to write new code for the new canvas.
+
+    function fadeCanvasOut(event:TimerEvent):void
+    { 
+    canvas1.alpha -= 0.1;
+    }
+
+    private function showForm():void
+    {
+    var myTimer:Timer = new Timer(20, 10);
+    myTimer.addEventListener(""timer"", fadeFormIn);
+    myTimer.start();		
+    }
+
+what I need is something like:
+
+    function fadeCanvasOut(event:TimerEvent, aCanvas:Canvas):void
+    { 
+    aCanvas.alpha -= 0.1;
+    }
+
+    private function showForm(aCanvas:Canvas):void
+    {
+    var myTimer:Timer = new Timer(20, 10);
+    myTimer.addEventListener(""timer"", fadeFormIn(timerEvent, canvas1);
+    myTimer.start();		
+    }
+
+if someone could please enlighten me I would appreciate it.",3
+9792192,03/20/2012 17:45:54,924315,09/01/2011 21:52:48,74,3,"What is considered a ""large"" Flex application?","Or what is the largest you've worked on?  (In terms of number of files, number of ""views"", or any other useful metric.)",flex,flex4,,,,03/21/2012 22:51:58,not constructive,1,23,7,"What is considered a ""large"" Flex application? Or what is the largest you've worked on?  (In terms of number of files, number of ""views"", or any other useful metric.)",2
+5060269,02/20/2011 21:42:56,388473,07/10/2010 15:00:03,163,2,A weird error with Flash Builder 4?,"I get the following on Flash Builder 4 **but** I can run the application fine, and there aren;t any erros on the error log. This is really frustrating since I can't see what I'm working with.
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/bndY5.png",flex,ide,flash-builder,problem-solving,,,open,0,42,7,"A weird error with Flash Builder 4? I get the following on Flash Builder 4 **but** I can run the application fine, and there aren;t any erros on the error log. This is really frustrating since I can't see what I'm working with.
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/bndY5.png",4
+1114923,07/11/2009 23:36:47,69095,02/20/2009 20:59:20,50,4,Flex RemoteObject - handling multiple requests ,"I have a couple of remote object methods that I want to respond to in different ways depending on the context, but I'd rather not set up a bunch of different RemoteObject aliases.  Any advice on doing that?  Some background:
+
+Let's say I have an admin application that displays sales stats in different ways.  The remote method looks like: 
+
+	<mx:RemoteObject id=""rpt"" destination=""AMFServer"">
+	  <mx:method name=""getSalesStats"" fault=""getSalesStatsFault(event)"" 
+	  	result = ""getSalesStatsSuccess(event)"" />
+	</mx:RemoteObject>
+
+The getSalesStats method takes an employee ID and a sales type as its arguments.  You'd call it like: 
+
+    rpt.getSalesStats(120, ""peanuts"");
+
+    public function getSalesStatsSuccess(e:ResultEvent):void {
+       salesdata:ArrayCollection = e.result.rows as ArrayCollection; 
+       salesGraph.dataProvider = salesdata; 
+       salesGraphPanel.title = ""Peanut Sales, 1990"";
+    }
+
+I want to be able to call this method in different contexts, sometimes sending the result to a chart and sometimes to a datagrid; I want to be able to change the title and type of chart depending on what the user wants.  Some of what I want can be achieved by evaluating the data returned from the server; the object contains the report name, so I can evaluate that value.  But some things need to change based on more than just what I get back from the server.  If this was a synchronous call, it would be easy; I'd do something like: 
+
+    function buttonOneClick():void {
+       myData1:ArrayCollection = getSalesStats(120, ""peanuts"");
+       myChart.dataProvider = myData1;
+    }
+    
+    function buttonTwoClick():void {
+       myData2:ArrayCollection = getSalesStats(120, ""cashews"");
+       myDataGrid.dataProvider = myData2; 
+    }
+
+I'd like to pass something through the remote method to the responding function, like: 
+
+    rpt.getSalesStats(120, ""peanuts"", ""clicked button one"");
+
+but that of course throws an error because the server doesn't want that last argument.  Any thoughts?  I'll clarify if this is confusing.. ",flex,remoteobject,,,,,open,0,358,7,"Flex RemoteObject - handling multiple requests  I have a couple of remote object methods that I want to respond to in different ways depending on the context, but I'd rather not set up a bunch of different RemoteObject aliases.  Any advice on doing that?  Some background:
+
+Let's say I have an admin application that displays sales stats in different ways.  The remote method looks like: 
+
+	<mx:RemoteObject id=""rpt"" destination=""AMFServer"">
+	  <mx:method name=""getSalesStats"" fault=""getSalesStatsFault(event)"" 
+	  	result = ""getSalesStatsSuccess(event)"" />
+	</mx:RemoteObject>
+
+The getSalesStats method takes an employee ID and a sales type as its arguments.  You'd call it like: 
+
+    rpt.getSalesStats(120, ""peanuts"");
+
+    public function getSalesStatsSuccess(e:ResultEvent):void {
+       salesdata:ArrayCollection = e.result.rows as ArrayCollection; 
+       salesGraph.dataProvider = salesdata; 
+       salesGraphPanel.title = ""Peanut Sales, 1990"";
+    }
+
+I want to be able to call this method in different contexts, sometimes sending the result to a chart and sometimes to a datagrid; I want to be able to change the title and type of chart depending on what the user wants.  Some of what I want can be achieved by evaluating the data returned from the server; the object contains the report name, so I can evaluate that value.  But some things need to change based on more than just what I get back from the server.  If this was a synchronous call, it would be easy; I'd do something like: 
+
+    function buttonOneClick():void {
+       myData1:ArrayCollection = getSalesStats(120, ""peanuts"");
+       myChart.dataProvider = myData1;
+    }
+    
+    function buttonTwoClick():void {
+       myData2:ArrayCollection = getSalesStats(120, ""cashews"");
+       myDataGrid.dataProvider = myData2; 
+    }
+
+I'd like to pass something through the remote method to the responding function, like: 
+
+    rpt.getSalesStats(120, ""peanuts"", ""clicked button one"");
+
+but that of course throws an error because the server doesn't want that last argument.  Any thoughts?  I'll clarify if this is confusing.. ",2
+1649012,10/30/2009 10:26:30,27483,10/13/2008 15:34:06,348,31,Crop image in flex  using a non-rectangular shape,"I've been following this tutorial to crop images in flex: http://code.mediablur.com/ImageCropper/ImageCropperDemo.html.
+
+At the heart of its cropping is using a method called ""copyPixels"".  However, this method takes as one of its arguments a rectangular shape for its crop region.  Are there other strategies I can use to crop it not using a rectangle.  
+
+I am going after letting the user specify the region that should be cropped using a series of points.",flex,image,crop,,,,open,0,74,9,"Crop image in flex  using a non-rectangular shape I've been following this tutorial to crop images in flex: http://code.mediablur.com/ImageCropper/ImageCropperDemo.html.
+
+At the heart of its cropping is using a method called ""copyPixels"".  However, this method takes as one of its arguments a rectangular shape for its crop region.  Are there other strategies I can use to crop it not using a rectangle.  
+
+I am going after letting the user specify the region that should be cropped using a series of points.",3
+2871842,05/20/2010 07:45:00,345824,05/20/2010 07:21:03,1,0,How to transform a String into an object name selectedItem in the DataGrid? flex3,"I need to get the value of the item clicked and the name of the columns.
+
+       for each(item in colunas) {
+    
+             var itemok:String = item.dataField;
+             Alert.show(''+datagridlist.selectedItem.itemok); // show value of column
+    
+        }
+
+**But this way it returns 'undefined'.**
+
+But if I put the name already in function, I can get the correct data, example:
+
+    Alert.show(''+datagridlist.selectedItem.create); // create is a column name in mysql
+
+But this variable must be created dynamically, example:
+
+    var itemok:String = item.dataField;
+    Alert.show(''+datagridlist.selectedItem.itemok); // show value of column
+
+Could someone help me? I'm at it on time and I can not convert the string to column name.
+
+I thank you all now
+",flex,datagrid,selecteditem,,,,open,0,154,14,"How to transform a String into an object name selectedItem in the DataGrid? flex3 I need to get the value of the item clicked and the name of the columns.
+
+       for each(item in colunas) {
+    
+             var itemok:String = item.dataField;
+             Alert.show(''+datagridlist.selectedItem.itemok); // show value of column
+    
+        }
+
+**But this way it returns 'undefined'.**
+
+But if I put the name already in function, I can get the correct data, example:
+
+    Alert.show(''+datagridlist.selectedItem.create); // create is a column name in mysql
+
+But this variable must be created dynamically, example:
+
+    var itemok:String = item.dataField;
+    Alert.show(''+datagridlist.selectedItem.itemok); // show value of column
+
+Could someone help me? I'm at it on time and I can not convert the string to column name.
+
+I thank you all now
+",3
+8915687,01/18/2012 18:54:36,437631,09/02/2010 06:33:49,367,14,Practical programming test in interview for flex programmer,"i'm looking for the best way to test a candidate for a position of flex programmer.
+need to test flex basic knowledge, abillity to solve UI programming challenges and maybe some flex mobile.
+any ideas?",flex,interview-questions,flex4.5,,,01/19/2012 16:05:56,not constructive,1,33,8,"Practical programming test in interview for flex programmer i'm looking for the best way to test a candidate for a position of flex programmer.
+need to test flex basic knowledge, abillity to solve UI programming challenges and maybe some flex mobile.
+any ideas?",3
+6762219,07/20/2011 12:52:35,741496,05/06/2011 09:42:53,48,9,What is the sense of Flex Modules,"As far as my understanding goes Modules kann be used to split an Application into different parts.
+
+A big advantage seems to be to be able to load Module after Application Start, to get a better Startup performance.
+
+I personally would like Modules to make me able to have an own Code Sandbox for the Module Code.
+So neither the Main App Code nor the Module Code should influence each other. But for examples CSS Styles from modules influence the Main Application an visa vers.
+
+My Question:
+1. What can I use Modules for beside Runtimeloading ?
+2. Are there options to run code in an own sandbox ? For Example via Loading swf assets ?",flex,actionscript-3,flash-builder,,,07/21/2011 14:49:58,not a real question,1,110,7,"What is the sense of Flex Modules As far as my understanding goes Modules kann be used to split an Application into different parts.
+
+A big advantage seems to be to be able to load Module after Application Start, to get a better Startup performance.
+
+I personally would like Modules to make me able to have an own Code Sandbox for the Module Code.
+So neither the Main App Code nor the Module Code should influence each other. But for examples CSS Styles from modules influence the Main Application an visa vers.
+
+My Question:
+1. What can I use Modules for beside Runtimeloading ?
+2. Are there options to run code in an own sandbox ? For Example via Loading swf assets ?",3
+7722135,10/11/2011 06:27:25,842112,07/13/2011 06:39:10,142,18,creating dynamic lineseries in linechart,"   This is my array collection
+
+     [Bindable]private var Projects:ArrayCollection = new ArrayCollection( [
+    				{ Department: ""Software"", TotalProjects: 73,Completed:30,Inprogress:30,Approved:13},
+    				{ Department: ""XML"",TotalProjects: 50,Completed:20,Inprogress:20,Approved:10},
+    				{ Department: ""Publishing"",TotalProjects: 25,Completed:5,Inprogress:10,Approved:10},
+    				{ Department: ""Indesign"", TotalProjects: 70,Completed:30,Inprogress:30,Approved:10},
+    				{ Department: ""Imaging"", TotalProjects: 42,Completed:30,Inprogress:10,Approved:2}]);
+
+line series for line chart:
+
+    <mx:series>
+					
+
+    <mx:LineSeries id=""cs1""
+    								   yField=""TotalProjects""
+    								   xField=""Department""
+    								   displayName=""TotalProjects"">
+						
+					</mx:LineSeries>
+					<mx:LineSeries id=""cs2""
+								   yField=""Inprogress""
+								   xField=""Department""
+								   displayName=""Inprogress"">
+						
+					</mx:LineSeries>
+					<mx:LineSeries id=""cs3""
+								   yField=""Completed""
+								   xField=""Department""
+								   displayName=""Completed"">
+						
+					</mx:LineSeries>
+					<mx:LineSeries id=""cs4""
+								   yField=""Approved""
+								   xField=""Department""
+								   displayName=""Approved"">
+						
+					</mx:LineSeries>
+					
+					
+				</mx:series>
+how can i create `mx:LineSeries` dynamically depending upon array collection values. Now only 4 line series is there but some times i have to show more as per the array collection values change ex: if one more status `HoldProject` added to array collection?
+",flex,arraycollection,linechart,,,,open,0,163,5,"creating dynamic lineseries in linechart    This is my array collection
+
+     [Bindable]private var Projects:ArrayCollection = new ArrayCollection( [
+    				{ Department: ""Software"", TotalProjects: 73,Completed:30,Inprogress:30,Approved:13},
+    				{ Department: ""XML"",TotalProjects: 50,Completed:20,Inprogress:20,Approved:10},
+    				{ Department: ""Publishing"",TotalProjects: 25,Completed:5,Inprogress:10,Approved:10},
+    				{ Department: ""Indesign"", TotalProjects: 70,Completed:30,Inprogress:30,Approved:10},
+    				{ Department: ""Imaging"", TotalProjects: 42,Completed:30,Inprogress:10,Approved:2}]);
+
+line series for line chart:
+
+    <mx:series>
+					
+
+    <mx:LineSeries id=""cs1""
+    								   yField=""TotalProjects""
+    								   xField=""Department""
+    								   displayName=""TotalProjects"">
+						
+					</mx:LineSeries>
+					<mx:LineSeries id=""cs2""
+								   yField=""Inprogress""
+								   xField=""Department""
+								   displayName=""Inprogress"">
+						
+					</mx:LineSeries>
+					<mx:LineSeries id=""cs3""
+								   yField=""Completed""
+								   xField=""Department""
+								   displayName=""Completed"">
+						
+					</mx:LineSeries>
+					<mx:LineSeries id=""cs4""
+								   yField=""Approved""
+								   xField=""Department""
+								   displayName=""Approved"">
+						
+					</mx:LineSeries>
+					
+					
+				</mx:series>
+how can i create `mx:LineSeries` dynamically depending upon array collection values. Now only 4 line series is there but some times i have to show more as per the array collection values change ex: if one more status `HoldProject` added to array collection?
+",3
+11110447,06/19/2012 22:33:30,1467695,06/19/2012 22:24:04,1,0,How can I create BlazeDS module in intellij 11.0?,"I am trying to create a BlazeDS module in Intellij Idea to be the server for a Flex application, written in Intellij Idea too, but I cant. Does anybody know how to do it with Intellij Idea 11.0?",flex,intellij-idea,,,,06/20/2012 12:03:41,not a real question,1,38,9,"How can I create BlazeDS module in intellij 11.0? I am trying to create a BlazeDS module in Intellij Idea to be the server for a Flex application, written in Intellij Idea too, but I cant. Does anybody know how to do it with Intellij Idea 11.0?",2
+2193333,02/03/2010 16:06:25,5304,09/09/2008 00:22:24,2258,92,How to find the list item currently under the mouse pointer in Flex?,I have some List and TileList controls. How can I get a reference to the list item that's currently under the mouse pointer?,flex,,,,,,open,0,23,13,How to find the list item currently under the mouse pointer in Flex? I have some List and TileList controls. How can I get a reference to the list item that's currently under the mouse pointer?,1
+7434311,09/15/2011 16:32:09,693670,04/05/2011 19:54:39,111,2,Flex Method on Leave TextInput,"Does anyone know of an event that can be called after a user clicks out of a TextInput?
+
+
+I would like the user to enter information, and when they finish I would like to format the information.
+
+
+Thanks in advance for any advice!",flex,actionscript-3,,,,,open,0,41,5,"Flex Method on Leave TextInput Does anyone know of an event that can be called after a user clicks out of a TextInput?
+
+
+I would like the user to enter information, and when they finish I would like to format the information.
+
+
+Thanks in advance for any advice!",2
+996353,06/15/2009 14:15:35,122099,06/12/2009 15:30:04,1,0,Visualising StackOverFlow!,"I recently downloaded the stack overflow xml dump, and began playing around with the files.   I plan to develop some visualisations of the data, for the community of course, but I am wondering does anybody have any suggestions on how they would like to view or indeed interact with this data?  Social Network Analysis springs to mind, and maybe some Flex interactive charts....
+
+cheers,
+
+eyup",flex,stackoverflow,xml,,,06/15/2009 14:25:06,not a real question,1,66,2,"Visualising StackOverFlow! I recently downloaded the stack overflow xml dump, and began playing around with the files.   I plan to develop some visualisations of the data, for the community of course, but I am wondering does anybody have any suggestions on how they would like to view or indeed interact with this data?  Social Network Analysis springs to mind, and maybe some Flex interactive charts....
+
+cheers,
+
+eyup",3
+1975352,12/29/2009 16:02:25,168260,09/04/2009 02:11:09,14,1,Flex Multi Service call problem,"I tried to call a service using a for loop and it seems that only the first service call seems to work. My guess is that once a service is called it needs to wait until result event until it can be called again. How can I workaround this? 
+
+Waiting for each service to complete before querying for another is too slow.
+
+Ex.
+
+callresponder id=""test""
+SomeService properly imported through Flash Builder 4
+
+for (var i:int=0;i< pool.length;i++)
+{
+    test.token = SomeService.getSomething(pool[i].someValue);
+}
+
+Only one would be successful. Help! I don't want to call after result event!",flex,gumbo,service,token,,,open,0,91,5,"Flex Multi Service call problem I tried to call a service using a for loop and it seems that only the first service call seems to work. My guess is that once a service is called it needs to wait until result event until it can be called again. How can I workaround this? 
+
+Waiting for each service to complete before querying for another is too slow.
+
+Ex.
+
+callresponder id=""test""
+SomeService properly imported through Flash Builder 4
+
+for (var i:int=0;i< pool.length;i++)
+{
+    test.token = SomeService.getSomething(pool[i].someValue);
+}
+
+Only one would be successful. Help! I don't want to call after result event!",4
+4274663,11/25/2010 07:35:36,99694,05/02/2009 00:59:25,917,15,Rich Text Editor for Flex 4 that provides link,"I have built a rich Text Editor for Flex 4 using the instruction in the following link: 
+http://blog.flexexamples.com/2009/07/24/creating-a-simple-text-editor-using-the-spark-textarea-control-in-flex-4/ 
+
+it works great. I want to be able to add link to it (user selecting text to link it to external web page). How do I do that?
+
+I'm open for other suggestions to implement Rich Text Editor with link support if you have any.",flex,richtexteditor,,,,,open,0,62,9,"Rich Text Editor for Flex 4 that provides link I have built a rich Text Editor for Flex 4 using the instruction in the following link: 
+http://blog.flexexamples.com/2009/07/24/creating-a-simple-text-editor-using-the-spark-textarea-control-in-flex-4/ 
+
+it works great. I want to be able to add link to it (user selecting text to link it to external web page). How do I do that?
+
+I'm open for other suggestions to implement Rich Text Editor with link support if you have any.",2
+5784874,04/26/2011 01:04:24,724563,04/26/2011 01:04:24,1,0,List size validation in flex,is it possible to check if there is any item in a list? ,flex,actionscript-3,validation,size,,,open,0,14,5,List size validation in flex is it possible to check if there is any item in a list? ,4
+6840188,07/27/2011 06:24:13,575239,01/14/2011 04:53:28,43,2,How to get parent of context menu,"Is there any way to know the parent/component which initiates context menu?   
+I have a panel which contains different custom components. i want to open respective  popup window of custom component from context menu when user right click on the respective component.
+
+How can i find the parent custom component which initiates context menu?
+
+for ex:
+
+custom compoent: 1. Label, 2. Buttom
+
+context menu Item: properties
+
+On right click over 'Label' opens a context menu which has item 'properties', on clicking properties it should open custom popoup window showing properties of Label. 
+similarly, for Button.
+
+I am trying to listen Event on click of context menu, but it is not useful.
+
+what is the correct way to achieve this?",flex,actionscript-3,flex4,,,,open,0,115,7,"How to get parent of context menu Is there any way to know the parent/component which initiates context menu?   
+I have a panel which contains different custom components. i want to open respective  popup window of custom component from context menu when user right click on the respective component.
+
+How can i find the parent custom component which initiates context menu?
+
+for ex:
+
+custom compoent: 1. Label, 2. Buttom
+
+context menu Item: properties
+
+On right click over 'Label' opens a context menu which has item 'properties', on clicking properties it should open custom popoup window showing properties of Label. 
+similarly, for Button.
+
+I am trying to listen Event on click of context menu, but it is not useful.
+
+what is the correct way to achieve this?",3
+3834413,09/30/2010 20:07:48,251047,01/14/2010 20:31:25,190,4,JSON Decoder - not working,"The code below is not working and i'm not getting any errors. This is Flex 4.0
+ 
+
+
+import com.adobe.serializers.json.JSONDecoder;
+
+var s:String=""{hours:16, minutes:9, seconds:2}"";
+var obj:Object=j.decode(s);
+Alert(obj.hours.toString());
+
+Pls help.
+
+-Vivek",flex,,,,,,open,0,23,5,"JSON Decoder - not working The code below is not working and i'm not getting any errors. This is Flex 4.0
+ 
+
+
+import com.adobe.serializers.json.JSONDecoder;
+
+var s:String=""{hours:16, minutes:9, seconds:2}"";
+var obj:Object=j.decode(s);
+Alert(obj.hours.toString());
+
+Pls help.
+
+-Vivek",1
+4258682,11/23/2010 17:02:01,143373,07/23/2009 03:21:02,652,7,Debug a Adobe AIR application which uses NativeProcess API to invoke a executable,"How can I find the return value of a executable which has been invoked by a AIR app using the [NativeProcess API][1]? I am using Flash Builder 4. The following [c++ generated executable][2] 
+
+    festival --tts ""HelloSpeak.txt""
+
+works fine on the Windows cmd line , but on invoking by the NativeProcess API like in the example article doesn't produce the desired result. I invoke the command with the arguments on a button click handler, but there is no TTS generated output. I don't have a clue of what is happening!!
+
+
+  [1]: http://www.adobe.com/devnet/air/flex/quickstart/articles/interacting_with_native_process.html
+  [2]: http://festvox.org/festtut/notes/festtut_3.html#SEC8",flex,air,flash-builder,festival,,,open,0,98,13,"Debug a Adobe AIR application which uses NativeProcess API to invoke a executable How can I find the return value of a executable which has been invoked by a AIR app using the [NativeProcess API][1]? I am using Flash Builder 4. The following [c++ generated executable][2] 
+
+    festival --tts ""HelloSpeak.txt""
+
+works fine on the Windows cmd line , but on invoking by the NativeProcess API like in the example article doesn't produce the desired result. I invoke the command with the arguments on a button click handler, but there is no TTS generated output. I don't have a clue of what is happening!!
+
+
+  [1]: http://www.adobe.com/devnet/air/flex/quickstart/articles/interacting_with_native_process.html
+  [2]: http://festvox.org/festtut/notes/festtut_3.html#SEC8",4
+8471224,12/12/2011 07:37:32,936329,09/09/2011 07:31:53,8,0,Flex DateFormat validation in java,"I have a XLSX file which contain 2 columns 1 being a formatted date, time or datetime field and other being the relavant format string of type FLEX. So this file contains Flex date format string with formatted value. This files can be contain more than one thousand such combination records. 
+Eg:
+
+ 
+
+> M/D/YYYY L:NN:SS A  --------- 7/4/1958 11:34:30 AM
+> 
+> 
+>  MM/DD/YYYY  ------------------- 07/13/2009
+> 
+> 
+>  L:NN:SS A  -----------------------             1:24:20 PM
+
+What i need to know is, is there anyway that i can validate this given date , time or date time values at right side are formmated according to given FLEX format in the left side.
+Important thing is , **this need to be happened in java side**.",flex,date-formatting,,,,,open,0,135,5,"Flex DateFormat validation in java I have a XLSX file which contain 2 columns 1 being a formatted date, time or datetime field and other being the relavant format string of type FLEX. So this file contains Flex date format string with formatted value. This files can be contain more than one thousand such combination records. 
+Eg:
+
+ 
+
+> M/D/YYYY L:NN:SS A  --------- 7/4/1958 11:34:30 AM
+> 
+> 
+>  MM/DD/YYYY  ------------------- 07/13/2009
+> 
+> 
+>  L:NN:SS A  -----------------------             1:24:20 PM
+
+What i need to know is, is there anyway that i can validate this given date , time or date time values at right side are formmated according to given FLEX format in the left side.
+Important thing is , **this need to be happened in java side**.",2
+8976620,01/23/2012 18:23:59,733284,05/01/2011 12:54:30,84,0,Installing AIR runtime and AIR application in own click,"I have AIR application that i have created. One of my customers wants me to give him a CD that will automatically install the application with computer that has no AIR runtime installed.
+
+How can i create an automatic installer that can install the AIR runtime and my AIR application easily? 
+
+Thanks in advance,
+Lior",flex,air,,,,,open,0,53,9,"Installing AIR runtime and AIR application in own click I have AIR application that i have created. One of my customers wants me to give him a CD that will automatically install the application with computer that has no AIR runtime installed.
+
+How can i create an automatic installer that can install the AIR runtime and my AIR application easily? 
+
+Thanks in advance,
+Lior",2
+128298,09/24/2008 16:46:16,11612,09/16/2008 09:30:01,16,4,flex tutorials or books,"Can anyone recommend any good sites or good books for learning flex?
+
+Thanks
+Damien
+",flex,books,tutorials,,,09/20/2011 15:09:46,not constructive,1,12,4,"flex tutorials or books Can anyone recommend any good sites or good books for learning flex?
+
+Thanks
+Damien
+",3
+2274009,02/16/2010 15:38:36,184298,10/05/2009 10:50:45,3,1,Flex3 - Using an image as a HSlider,"I'm using a hslider to select a range of values. However, I only have 5 values. 
+The problem I'm having is that the dragging of a thumb does not look too good and the values of the thumbs are displayed in labels, beside the slider...
+I was then thinking about how to improve the look of the dragging and the slider.
+
+I came up with this: having an image that would behave like a slider. 
+For example, something like this: a background image (sorry for the ""drawing"")
+
+
+    |  1  |  2  |  3  |  4  |  5  |
+
+     -/\----------------/\--------
+With 2 thumbs (min and max values) that would stay in the middle of each box. 
+
+I don't know if my explanation is understandable. If not, let me know and I'll try to explain it in some other way =)
+
+Thanks for your help.
+
+Regards.",flex,slider,,,,,open,0,156,8,"Flex3 - Using an image as a HSlider I'm using a hslider to select a range of values. However, I only have 5 values. 
+The problem I'm having is that the dragging of a thumb does not look too good and the values of the thumbs are displayed in labels, beside the slider...
+I was then thinking about how to improve the look of the dragging and the slider.
+
+I came up with this: having an image that would behave like a slider. 
+For example, something like this: a background image (sorry for the ""drawing"")
+
+
+    |  1  |  2  |  3  |  4  |  5  |
+
+     -/\----------------/\--------
+With 2 thumbs (min and max values) that would stay in the middle of each box. 
+
+I don't know if my explanation is understandable. If not, let me know and I'll try to explain it in some other way =)
+
+Thanks for your help.
+
+Regards.",2
+5426718,03/24/2011 23:14:17,527235,12/01/2010 22:01:10,45,1,AMF body dropped on Deserialization,"I am trying to do a simple Flex AMF call to a ColdFusion server via BlazeDS.  Using a RemoteObject, I am trying to send a login request to the server, and responding with success or failure.  For some reason, when the data gets to BlazeDS, the body of the message gets dropped during deserializaion(I think).  Here is my ColdFusion/BlazeDS log code and the CFC and Flex ActionScript call. 
+
+Any and all help is appreciated.  Thank!
+
+    [BlazeDS]Channel endpoint my-cfamf received request.
+    [BlazeDS]Deserializing AMF/HTTP request
+    Version: 3
+      (Message #0 targetURI=null, responseURI=/3)
+        (Array #0)
+          [0] = (Typed Object #0 'flex.messaging.messages.RemotingMessage')
+            source = ""service.UserService""
+            operation = ""authenticateUser""
+            destination = ""ColdFusion""
+            timestamp = 0
+            headers = (Object #1)
+              DSEndpoint = ""my-cfamf""
+              DSId = ""883A97CF-4A08-0B8E-9056-1BF562A40EB4""
+            body = (Array #2)
+              [0] = ""Username""
+              [1] = ""Password""
+            clientId = null
+            messageId = ""D1743AB9-54B8-E73C-85C7-E990DE7F1ECE""
+            timeToLive = 0
+    
+    [BlazeDS]Before invoke service: remoting-service
+      incomingMessage: Flex Message (flex.messaging.messages.RemotingMessage) 
+        operation = authenticateUser
+        clientId = 883AAF5D-900B-410A-1E8B-3B3FBD6552A6
+        destination = ColdFusion
+        messageId = D1743AB9-54B8-E73C-85C7-E990DE7F1ECE
+        timestamp = 1300998708880
+        timeToLive = 0
+        body = null
+        hdr(DSId) = 883A97CF-4A08-0B8E-9056-1BF562A40EB4
+        hdr(DSEndpoint) = my-cfamf
+    
+    
+    -- Flex
+    			remoteUserService = new RemoteObject;
+    			remoteUserService.destination = ""ColdFusion"";
+    			remoteUserService.source = ""service.UserService"";
+    			remoteUserService.authenticateUser.addEventListener(""result"",  authenticate_requestComplete);
+    			remoteUserService.authenticateUser.addEventListener(""fault"",  authenticate_requestFailure);		
+    			remoteUserService.authenticateUser({username:username, password:password});
+    
+    -- ColdFusion
+    
+    	<cffunction name=""authenticateUser"" access=""remote"" returnType=""Struct"">
+    		<cfargument name=""username"" type=""string"">
+    		<cfargument name=""password"" type=""string"">
+    		
+    		
+    		<cfset ret = getAuthenticationService().authenticate(username, password) />
+    		
+    		<cfreturn ret>
+    	</cffunction>",flex,coldfusion,blazeds,amf,livecycle,,open,0,545,5,"AMF body dropped on Deserialization I am trying to do a simple Flex AMF call to a ColdFusion server via BlazeDS.  Using a RemoteObject, I am trying to send a login request to the server, and responding with success or failure.  For some reason, when the data gets to BlazeDS, the body of the message gets dropped during deserializaion(I think).  Here is my ColdFusion/BlazeDS log code and the CFC and Flex ActionScript call. 
+
+Any and all help is appreciated.  Thank!
+
+    [BlazeDS]Channel endpoint my-cfamf received request.
+    [BlazeDS]Deserializing AMF/HTTP request
+    Version: 3
+      (Message #0 targetURI=null, responseURI=/3)
+        (Array #0)
+          [0] = (Typed Object #0 'flex.messaging.messages.RemotingMessage')
+            source = ""service.UserService""
+            operation = ""authenticateUser""
+            destination = ""ColdFusion""
+            timestamp = 0
+            headers = (Object #1)
+              DSEndpoint = ""my-cfamf""
+              DSId = ""883A97CF-4A08-0B8E-9056-1BF562A40EB4""
+            body = (Array #2)
+              [0] = ""Username""
+              [1] = ""Password""
+            clientId = null
+            messageId = ""D1743AB9-54B8-E73C-85C7-E990DE7F1ECE""
+            timeToLive = 0
+    
+    [BlazeDS]Before invoke service: remoting-service
+      incomingMessage: Flex Message (flex.messaging.messages.RemotingMessage) 
+        operation = authenticateUser
+        clientId = 883AAF5D-900B-410A-1E8B-3B3FBD6552A6
+        destination = ColdFusion
+        messageId = D1743AB9-54B8-E73C-85C7-E990DE7F1ECE
+        timestamp = 1300998708880
+        timeToLive = 0
+        body = null
+        hdr(DSId) = 883A97CF-4A08-0B8E-9056-1BF562A40EB4
+        hdr(DSEndpoint) = my-cfamf
+    
+    
+    -- Flex
+    			remoteUserService = new RemoteObject;
+    			remoteUserService.destination = ""ColdFusion"";
+    			remoteUserService.source = ""service.UserService"";
+    			remoteUserService.authenticateUser.addEventListener(""result"",  authenticate_requestComplete);
+    			remoteUserService.authenticateUser.addEventListener(""fault"",  authenticate_requestFailure);		
+    			remoteUserService.authenticateUser({username:username, password:password});
+    
+    -- ColdFusion
+    
+    	<cffunction name=""authenticateUser"" access=""remote"" returnType=""Struct"">
+    		<cfargument name=""username"" type=""string"">
+    		<cfargument name=""password"" type=""string"">
+    		
+    		
+    		<cfset ret = getAuthenticationService().authenticate(username, password) />
+    		
+    		<cfreturn ret>
+    	</cffunction>",5
+600469,03/01/2009 20:41:34,17255,09/18/2008 05:24:31,2460,111,Do you use an architectural framework for Flex/AIR development?,"Given that Flex is still a relatively young technology, there are already a bunch of architectural frameworks available for Flex/AIR (and Flash) development, the main ones being Cairngorm and PureMVC. The amount of architectural frameworks is remarkable compared to other technologies.
+
+**I was wondering how many of you use an architectural framework for Flex development. If so, why, or why not if you don't use any?**
+
+---
+
+To share my own experience and point of view: I have used Cairngorm (and ARP for Flash development) on a variety of projects and found that at times, we needed to write extra code just to fit into the framework, which obviously didn't feel right. Although I haven't used PureMVC on many occasions, I have the same gut feeling after looking at the examples applications.
+
+Architectural frameworks equal religion in some way. Most followers are convinced that their framework is THE framework and are not open or very skeptical when it comes to using other frameworks. (I also find myself hesitant and skeptical to check out new frameworks, but that is mainly because I would rather wait until the hype is over.)
+
+In conclusion, I'm thinking that it is better to have a sound knowledge of patterns and practices that you can apply in your application instead of choosing a framework and sticking to it. There is simply no right or wrong and I don't believe that there will ever be a framework that is considered the holy grail.",flex,air,actionscript,frameworks,architecture,08/24/2011 17:19:05,not constructive,1,241,9,"Do you use an architectural framework for Flex/AIR development? Given that Flex is still a relatively young technology, there are already a bunch of architectural frameworks available for Flex/AIR (and Flash) development, the main ones being Cairngorm and PureMVC. The amount of architectural frameworks is remarkable compared to other technologies.
+
+**I was wondering how many of you use an architectural framework for Flex development. If so, why, or why not if you don't use any?**
+
+---
+
+To share my own experience and point of view: I have used Cairngorm (and ARP for Flash development) on a variety of projects and found that at times, we needed to write extra code just to fit into the framework, which obviously didn't feel right. Although I haven't used PureMVC on many occasions, I have the same gut feeling after looking at the examples applications.
+
+Architectural frameworks equal religion in some way. Most followers are convinced that their framework is THE framework and are not open or very skeptical when it comes to using other frameworks. (I also find myself hesitant and skeptical to check out new frameworks, but that is mainly because I would rather wait until the hype is over.)
+
+In conclusion, I'm thinking that it is better to have a sound knowledge of patterns and practices that you can apply in your application instead of choosing a framework and sticking to it. There is simply no right or wrong and I don't believe that there will ever be a framework that is considered the holy grail.",5
+1670982,11/04/2009 00:11:29,140652,07/18/2009 13:07:49,107,3,Binding custom components values,"I have built a custom component using some containers and a TileList.
+Now when I instantiate that component in my main Flex app, I want to get the value of the selected item in the tileList that the user clicks on. In other words, everytime the user clicks an item in the tileList, I want it to assign that selected value to a global application variable in the main flex app.
+Any ideas how to do that?",flex,actionscript-3,mxml,,,,open,0,75,4,"Binding custom components values I have built a custom component using some containers and a TileList.
+Now when I instantiate that component in my main Flex app, I want to get the value of the selected item in the tileList that the user clicks on. In other words, everytime the user clicks an item in the tileList, I want it to assign that selected value to a global application variable in the main flex app.
+Any ideas how to do that?",3
+2011167,01/06/2010 05:43:42,244463,01/06/2010 05:10:14,1,0,Using summary data from dataprovider to populate chart.,"In Flex, how do i create a summary(say total of various domains) from the data provider and display in chart?
+
+Say this is my dataprovider.. I want to display the total estimate of each territory as a slice in piechart
+  
+
+    private var dpFlat:ArrayCollection = new ArrayCollection([
+  {Region:""Southwest"", Territory:""Arizona"", 
+      Territory_Rep:""Barbara Jennings"", Actual:38865, Estimate:40000}, 
+  {Region:""Southwest"", Territory:""Arizona"", 
+      Territory_Rep:""Dana Binn"", Actual:29885, Estimate:30000},  
+  {Region:""Southwest"", Territory:""Central California"", 
+      Territory_Rep:""Joe Smith"", Actual:29134, Estimate:30000},  
+  {Region:""Southwest"", Territory:""Nevada"", 
+      Territory_Rep:""Bethany Pittman"", Actual:52888, Estimate:45000},  
+  {Region:""Southwest"", Territory:""Northern California"", 
+      Territory_Rep:""Lauren Ipsum"", Actual:38805, Estimate:40000}, 
+  {Region:""Southwest"", Territory:""Northern California"", 
+      Territory_Rep:""T.R. Smith"", Actual:55498, Estimate:40000},  
+  {Region:""Southwest"", Territory:""Southern California"", 
+      Territory_Rep:""Alice Treu"", Actual:44985, Estimate:45000}, 
+  {Region:""Southwest"", Territory:""Southern California"", 
+      Territory_Rep:""Jane Grove"", Actual:44913, Estimate:45000}
+]);",flex,,,,,,open,0,170,8,"Using summary data from dataprovider to populate chart. In Flex, how do i create a summary(say total of various domains) from the data provider and display in chart?
+
+Say this is my dataprovider.. I want to display the total estimate of each territory as a slice in piechart
+  
+
+    private var dpFlat:ArrayCollection = new ArrayCollection([
+  {Region:""Southwest"", Territory:""Arizona"", 
+      Territory_Rep:""Barbara Jennings"", Actual:38865, Estimate:40000}, 
+  {Region:""Southwest"", Territory:""Arizona"", 
+      Territory_Rep:""Dana Binn"", Actual:29885, Estimate:30000},  
+  {Region:""Southwest"", Territory:""Central California"", 
+      Territory_Rep:""Joe Smith"", Actual:29134, Estimate:30000},  
+  {Region:""Southwest"", Territory:""Nevada"", 
+      Territory_Rep:""Bethany Pittman"", Actual:52888, Estimate:45000},  
+  {Region:""Southwest"", Territory:""Northern California"", 
+      Territory_Rep:""Lauren Ipsum"", Actual:38805, Estimate:40000}, 
+  {Region:""Southwest"", Territory:""Northern California"", 
+      Territory_Rep:""T.R. Smith"", Actual:55498, Estimate:40000},  
+  {Region:""Southwest"", Territory:""Southern California"", 
+      Territory_Rep:""Alice Treu"", Actual:44985, Estimate:45000}, 
+  {Region:""Southwest"", Territory:""Southern California"", 
+      Territory_Rep:""Jane Grove"", Actual:44913, Estimate:45000}
+]);",1
+7531527,09/23/2011 15:42:50,951135,09/18/2011 10:42:04,6,0,Is older version of flex SDK really required?,"I am configuring one already done project on my system which uses old flex sdk. following is my POM 
+    
+
+        <FLEX_HOME>${build.flex3sdk.path}</FLEX_HOME>
+        <flash.player.version>10</flash.player.version>
+        <flex.sdk.version>4.1.0.16248</flex.sdk.version>
+
+I have latest flex SDK the version for this flex is ""Version 4.5.1 build 21328"". I am getting compile time error.  Does a flex Mojo is dependent on the version of flex SDK ?
+why even changing the above POM to following is not helping me resolve the error?
+
+            <FLEX_HOME>${build.flex3sdk.path}</FLEX_HOME>
+            <flash.player.version>10</flash.player.version>
+            <flex.sdk.version>4.5.1.21328</flex.sdk.version>
+
+**Where can I find old sdk Version 4.1.0.16248?** Kind of stuck .. PLz help",flex,sdk,compilation,,,,open,0,145,8,"Is older version of flex SDK really required? I am configuring one already done project on my system which uses old flex sdk. following is my POM 
+    
+
+        <FLEX_HOME>${build.flex3sdk.path}</FLEX_HOME>
+        <flash.player.version>10</flash.player.version>
+        <flex.sdk.version>4.1.0.16248</flex.sdk.version>
+
+I have latest flex SDK the version for this flex is ""Version 4.5.1 build 21328"". I am getting compile time error.  Does a flex Mojo is dependent on the version of flex SDK ?
+why even changing the above POM to following is not helping me resolve the error?
+
+            <FLEX_HOME>${build.flex3sdk.path}</FLEX_HOME>
+            <flash.player.version>10</flash.player.version>
+            <flex.sdk.version>4.5.1.21328</flex.sdk.version>
+
+**Where can I find old sdk Version 4.1.0.16248?** Kind of stuck .. PLz help",3
+4024498,10/26/2010 14:08:00,245527,01/07/2010 13:01:28,1,1,AS3 Date problem,"Any idea why the day is coming out wrong when the date is accurate? 
+
+I'm debugging and I can see the date variables which are correct but the day is wrong. 
+
+
+date	Date (@9f14161)	
+	date	26 [0x1a]	
+	dateUTC	26 [0x1a]	
+	day	5	
+	dayUTC	5	
+	fullYear	2010 [0x7da]	
+	fullYearUTC	2010 [0x7da]	
+	hours	17 [0x11]	
+	hoursUTC	17 [0x11]	
+	milliseconds	0	
+	millisecondsUTC	0	
+	minutes	0	
+	minutesUTC	0	
+	month	10 [0xa]	
+	monthUTC	10 [0xa]	
+	seconds	0	
+	secondsUTC	0	
+	time	1290790800000 [0x12c89208a80]	
+	timezoneOffset	0	
+
+
+That is my date variables, as you can see, The date is 26 (today), month is 10 (this month) and the year is 2010 (this year) yet the day is coming out at 5 which is a friday.",flex,flash,actionscript-3,datetime,,,open,0,79,3,"AS3 Date problem Any idea why the day is coming out wrong when the date is accurate? 
+
+I'm debugging and I can see the date variables which are correct but the day is wrong. 
+
+
+date	Date (@9f14161)	
+	date	26 [0x1a]	
+	dateUTC	26 [0x1a]	
+	day	5	
+	dayUTC	5	
+	fullYear	2010 [0x7da]	
+	fullYearUTC	2010 [0x7da]	
+	hours	17 [0x11]	
+	hoursUTC	17 [0x11]	
+	milliseconds	0	
+	millisecondsUTC	0	
+	minutes	0	
+	minutesUTC	0	
+	month	10 [0xa]	
+	monthUTC	10 [0xa]	
+	seconds	0	
+	secondsUTC	0	
+	time	1290790800000 [0x12c89208a80]	
+	timezoneOffset	0	
+
+
+That is my date variables, as you can see, The date is 26 (today), month is 10 (this month) and the year is 2010 (this year) yet the day is coming out at 5 which is a friday.",4
+2040164,01/11/2010 05:52:52,49560,12/28/2008 15:59:55,508,9,Flex : Problem with instantiating an mxml component,"I have two mxml files in a flex project: 
+But when I trace a.cBtn, it is null.
+Why should it be?
+
+test.mxml : 
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <mx:Application xmlns:mx=""http://www.adobe.com/2006/mxml"" layout=""absolute"" creationComplete=""runIt()"">
+    <mx:Script>
+    	<![CDATA[
+    		public function runIt():void
+    		{
+    			var a:abc = new abc();
+    			trace(a.cBtn);//a.cBtn is null here
+    		}
+    	]]>
+    </mx:Script>	
+    </mx:Application>
+
+And, abc.mxml :
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <mx:Canvas xmlns:mx=""http://www.adobe.com/2006/mxml"" width=""400"" height=""300"">
+    	<mx:Button x=""108"" y=""73"" label=""Button"" id=""cBtn""/>
+    	
+    </mx:Canvas>
+
+",flex,xml,flash,actionscript,,,open,0,115,8,"Flex : Problem with instantiating an mxml component I have two mxml files in a flex project: 
+But when I trace a.cBtn, it is null.
+Why should it be?
+
+test.mxml : 
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <mx:Application xmlns:mx=""http://www.adobe.com/2006/mxml"" layout=""absolute"" creationComplete=""runIt()"">
+    <mx:Script>
+    	<![CDATA[
+    		public function runIt():void
+    		{
+    			var a:abc = new abc();
+    			trace(a.cBtn);//a.cBtn is null here
+    		}
+    	]]>
+    </mx:Script>	
+    </mx:Application>
+
+And, abc.mxml :
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <mx:Canvas xmlns:mx=""http://www.adobe.com/2006/mxml"" width=""400"" height=""300"">
+    	<mx:Button x=""108"" y=""73"" label=""Button"" id=""cBtn""/>
+    	
+    </mx:Canvas>
+
+",4
+3093728,06/22/2010 13:49:37,373242,06/22/2010 13:49:36,1,0,File size limit for upload in Adobe Air,I am building an Adobe AIR app and integrated an FTP client for file transfers. But I found out that maximum file upload size is 100 MB. I need to transfer bigger files. Any suggestions or workarounds? ,flex,ftp,air,,,,open,0,38,8,File size limit for upload in Adobe Air I am building an Adobe AIR app and integrated an FTP client for file transfers. But I found out that maximum file upload size is 100 MB. I need to transfer bigger files. Any suggestions or workarounds? ,3
+9478365,02/28/2012 08:07:41,1220759,02/20/2012 10:18:17,1,0,how to getBy multi fields using LCDS,"I am new to Flex. In my project, I use LCDS to define a holiday table which contain holidayId, countryCode and companyCode. LCDS generated all the getBy which are very handy. However, I need to get the records which are having countryCode = US AND companyCode = ABC. Surely I cannot use any of those generated getBy (each of them deals with a single field only). Can you suggest me how to modify the code in generated services (in my case, it is _Super_HolidayService.as) to handle multi-key data retrieval or point me to the right direction. Thanks.",flex,lcds,,,,,open,0,97,7,"how to getBy multi fields using LCDS I am new to Flex. In my project, I use LCDS to define a holiday table which contain holidayId, countryCode and companyCode. LCDS generated all the getBy which are very handy. However, I need to get the records which are having countryCode = US AND companyCode = ABC. Surely I cannot use any of those generated getBy (each of them deals with a single field only). Can you suggest me how to modify the code in generated services (in my case, it is _Super_HolidayService.as) to handle multi-key data retrieval or point me to the right direction. Thanks.",2
+7447854,09/16/2011 16:37:45,846476,07/15/2011 12:45:54,15,0,Flex Spark datagrid - disable selection of a row,"I want to disable (and look disabled) some rows in a spark datagrid. I found this answer to stop selection which is great
+http://stackoverflow.com/questions/7447127/in-flex-is-there-a-way-to-capture-and-optionally-cancel-a-row-selection-event-in
+
+But I want in addition to show that the particular row is not selectable. Ideally I want to have some sort of overlay but I am not sure if that is possible. My alternative solution is to change the text color to grey for the unselectable row. Looking at the datagrid renders they all seem to be column based. I looked at skinning potentially (overriding the alternating color property) but this just sets the background property and not the text color. Is this possible?
+
+Thanks",flex,datagrid,flex4,spark,enabled,,open,0,106,9,"Flex Spark datagrid - disable selection of a row I want to disable (and look disabled) some rows in a spark datagrid. I found this answer to stop selection which is great
+http://stackoverflow.com/questions/7447127/in-flex-is-there-a-way-to-capture-and-optionally-cancel-a-row-selection-event-in
+
+But I want in addition to show that the particular row is not selectable. Ideally I want to have some sort of overlay but I am not sure if that is possible. My alternative solution is to change the text color to grey for the unselectable row. Looking at the datagrid renders they all seem to be column based. I looked at skinning potentially (overriding the alternating color property) but this just sets the background property and not the text color. Is this possible?
+
+Thanks",5
+2186178,02/02/2010 17:26:22,143074,07/22/2009 18:17:29,233,17,Flex combobox custom icon,"Trying to set the up and down state icons of a Flex Combobox to images.  I see the property for changing the color of the icon, but no property to skin it.  How can I do this?",flex,combobox,icons,,,,open,0,39,4,"Flex combobox custom icon Trying to set the up and down state icons of a Flex Combobox to images.  I see the property for changing the color of the icon, but no property to skin it.  How can I do this?",3
+2577634,04/05/2010 09:11:53,309109,04/05/2010 09:11:53,1,0,can we add system icons into the flex application,"can i add system icons (.doc, .ppt icons etc) into my flex application without embedding them into the application directly.",flex,actionscript-3,,,,,open,0,20,9,"can we add system icons into the flex application can i add system icons (.doc, .ppt icons etc) into my flex application without embedding them into the application directly.",2
+8492811,12/13/2011 16:41:56,844286,07/14/2011 10:04:16,41,5,load image from filesystem in flex,"i have the following:
+
+    <s:Image  source=""{path}/imageName""/>
+
+how can i determine that path to load the image from filesystem lets say from
+C:\Users\sstauross\Desktop ??
+",flex,image,filesystems,load,,,open,0,25,6,"load image from filesystem in flex i have the following:
+
+    <s:Image  source=""{path}/imageName""/>
+
+how can i determine that path to load the image from filesystem lets say from
+C:\Users\sstauross\Desktop ??
+",4
+447002,01/15/2009 14:45:21,2077,08/20/2008 07:26:21,1277,21,"In Flex, how do I know when the properties of a dynamic object change?","I have a dynamic class that serves as a storage container for configuration settings. The settings are variables of that class and it has methods to read from and write to a configuration file, database etc. Now I want to trigger writing to the persistant storage whenever a class variable is changed. As the variables are added dynamically at runtime, I can't use get/set methods, also, if I could, that would lead to a lot of boilerplate code.
+
+How can I have an event triggered for changing properties of my class?",flex,dynamic-class,events,,,,open,0,90,14,"In Flex, how do I know when the properties of a dynamic object change? I have a dynamic class that serves as a storage container for configuration settings. The settings are variables of that class and it has methods to read from and write to a configuration file, database etc. Now I want to trigger writing to the persistant storage whenever a class variable is changed. As the variables are added dynamically at runtime, I can't use get/set methods, also, if I could, that would lead to a lot of boilerplate code.
+
+How can I have an event triggered for changing properties of my class?",3
+2669835,04/19/2010 18:25:22,320620,04/19/2010 17:49:29,1,0,Flex textarea control not updating properly.,"I am writing a flex application that involves modifying a textarea very frequently. I have encountered issues with the textarea sometimes not displaying my modifications.
+
+The following actionscript code illustrates my problem:
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <mx:Application xmlns:mx=""http://www.adobe.com/2006/mxml"" layout=""absolute"" minWidth=""955"" minHeight=""600"">
+    	<mx:TextArea x=""82"" y=""36"" width=""354"" height=""291"" id=""textArea"" creationComplete=""initApp()""/>
+    	
+    	<mx:Script>
+    		<![CDATA[
+    			private var testSentence:String = ""The big brown fox jumps over the lazy dog."";
+    			
+    			private var testCounter:int = 0;
+    			
+    			private function initApp():void {
+    				var timer:Timer = new Timer(10);
+    				timer.addEventListener(TimerEvent.TIMER, playSentence);
+    				timer.start();
+    			}
+    			
+    			private function playSentence(event:TimerEvent):void {
+    				textArea.editable = false;
+    
+    				if (testCounter == testSentence.length)  {
+    					testCounter = 0;
+    					textArea.text += ""\n"";
+    				}
+    				else {
+    					textArea.text += testSentence.charAt(testCounter++);
+    				}
+    				
+    				textArea.editable = true;
+    			}
+    		]]>
+    	</mx:Script>
+    </mx:Application>
+
+When you run the above code in a flex project, it should repeatedly print, character by character, the sentence ""The big brown fox jumps over the lazy dog."". But, if you are typing into the textarea at the same time, you will notice the text the timer prints is distorted.
+
+I am really curious as to why this happens. The single-threaded nature of flex and disabling user input for the textarea when I make modifications should prevent this from happening, but for some reason this doesn't seem to be working.
+
+I must note too that, when running the timer at larger intervals (around 100ms) it seems to work perfectly, so I am tempted to think it's some kind of synchronization issue in the internals of the flex framework.
+
+Any ideas on what could be causing the problem?
+",flex,flex3,actionscript-3,actionscript,,,open,0,347,6,"Flex textarea control not updating properly. I am writing a flex application that involves modifying a textarea very frequently. I have encountered issues with the textarea sometimes not displaying my modifications.
+
+The following actionscript code illustrates my problem:
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <mx:Application xmlns:mx=""http://www.adobe.com/2006/mxml"" layout=""absolute"" minWidth=""955"" minHeight=""600"">
+    	<mx:TextArea x=""82"" y=""36"" width=""354"" height=""291"" id=""textArea"" creationComplete=""initApp()""/>
+    	
+    	<mx:Script>
+    		<![CDATA[
+    			private var testSentence:String = ""The big brown fox jumps over the lazy dog."";
+    			
+    			private var testCounter:int = 0;
+    			
+    			private function initApp():void {
+    				var timer:Timer = new Timer(10);
+    				timer.addEventListener(TimerEvent.TIMER, playSentence);
+    				timer.start();
+    			}
+    			
+    			private function playSentence(event:TimerEvent):void {
+    				textArea.editable = false;
+    
+    				if (testCounter == testSentence.length)  {
+    					testCounter = 0;
+    					textArea.text += ""\n"";
+    				}
+    				else {
+    					textArea.text += testSentence.charAt(testCounter++);
+    				}
+    				
+    				textArea.editable = true;
+    			}
+    		]]>
+    	</mx:Script>
+    </mx:Application>
+
+When you run the above code in a flex project, it should repeatedly print, character by character, the sentence ""The big brown fox jumps over the lazy dog."". But, if you are typing into the textarea at the same time, you will notice the text the timer prints is distorted.
+
+I am really curious as to why this happens. The single-threaded nature of flex and disabling user input for the textarea when I make modifications should prevent this from happening, but for some reason this doesn't seem to be working.
+
+I must note too that, when running the timer at larger intervals (around 100ms) it seems to work perfectly, so I am tempted to think it's some kind of synchronization issue in the internals of the flex framework.
+
+Any ideas on what could be causing the problem?
+",4
+11581727,07/20/2012 14:51:11,193882,10/21/2009 14:59:40,83,3,OutlookDD with Adobe Air Native Extension?,"Is it possible to develope something like javaoutlookdd (http://sourceforge.net/projects/javaoutlookdd/) for air with adobe air native extension? Or are there restrictions?
+
+regards
+Cyrill 
+",flex,air,adobe,air-native-extension,,07/24/2012 02:35:21,not a real question,1,21,6,"OutlookDD with Adobe Air Native Extension? Is it possible to develope something like javaoutlookdd (http://sourceforge.net/projects/javaoutlookdd/) for air with adobe air native extension? Or are there restrictions?
+
+regards
+Cyrill 
+",4
+2556976,03/31/2010 22:39:32,122238,06/12/2009 19:20:53,94,7,Remove HSlider horizontal control line,"Does anyone know how can the horizontal control line be removed or made invisible. 
+
+What am trying to say is, I just want to show the drag-thumb and not the horizontal line. 
+
+Is there a way to do so, with out using skins?
+
+Regards
+Zeeshan",flex,actionscript-3,,,,,open,0,43,5,"Remove HSlider horizontal control line Does anyone know how can the horizontal control line be removed or made invisible. 
+
+What am trying to say is, I just want to show the drag-thumb and not the horizontal line. 
+
+Is there a way to do so, with out using skins?
+
+Regards
+Zeeshan",2
+5600330,04/08/2011 20:16:10,212692,11/17/2009 08:39:09,106,3,flex/AIR datagrid access particular row,"I am stuck in a problem working on Flex datagrid, in an AIR application.
+
+How can I access a specific row in datagrid in Flex. Please note that i am not talking about the selectedItem or any particular record of dataProvider of datagrid. 
+
+What exactly I want to do is I am showing some files data (name, description etc.) on a datagrid, and the data of these files comes from an array which is the dataProvider of the datagrid.
+
+Now when these files are being uploaded one by one to the server (using a webservice), I want to show a ProgressBar on, say, ""Progress"" column in the datagrid. How can I access this column for a particular row in datagrid  i.e. current file being uploaded.
+
+Please refer to image to better understand my query.![enter image description here][1]
+
+Please guide me.
+
+Thanks
+
+
+  [1]: http://i.stack.imgur.com/ilHBo.png",flex,datagrid,,,,,open,0,140,5,"flex/AIR datagrid access particular row I am stuck in a problem working on Flex datagrid, in an AIR application.
+
+How can I access a specific row in datagrid in Flex. Please note that i am not talking about the selectedItem or any particular record of dataProvider of datagrid. 
+
+What exactly I want to do is I am showing some files data (name, description etc.) on a datagrid, and the data of these files comes from an array which is the dataProvider of the datagrid.
+
+Now when these files are being uploaded one by one to the server (using a webservice), I want to show a ProgressBar on, say, ""Progress"" column in the datagrid. How can I access this column for a particular row in datagrid  i.e. current file being uploaded.
+
+Please refer to image to better understand my query.![enter image description here][1]
+
+Please guide me.
+
+Thanks
+
+
+  [1]: http://i.stack.imgur.com/ilHBo.png",2
+3232988,07/12/2010 23:11:48,148610,07/31/2009 17:06:11,15,1,Flex FileReference upload() and .data ... does this load the whole file into memory?,"I need to upload a very large file to my server, through my Flex application, and I see that Flex Filereference upload() seems to be able to handle it. Does the upload() methods uploads a 'stream' to the servlet, or does it sends the whole ByteArray (As I understand it, the ByteArray will have the whole file contents, so a >1Gb file will flood my memory).
+
+I haven't found confirmation of one or the other. It seems flex.net.FileReference source code is part of flash, not the open source flex, so I cant take a peek. 
+
+Anyone can confirm or deny the usage of the whole byteArray when sending file contents to the server?
+
+Thanks",flex,file-upload,filereference,,,,open,0,112,14,"Flex FileReference upload() and .data ... does this load the whole file into memory? I need to upload a very large file to my server, through my Flex application, and I see that Flex Filereference upload() seems to be able to handle it. Does the upload() methods uploads a 'stream' to the servlet, or does it sends the whole ByteArray (As I understand it, the ByteArray will have the whole file contents, so a >1Gb file will flood my memory).
+
+I haven't found confirmation of one or the other. It seems flex.net.FileReference source code is part of flash, not the open source flex, so I cant take a peek. 
+
+Anyone can confirm or deny the usage of the whole byteArray when sending file contents to the server?
+
+Thanks",3
+7421926,09/14/2011 19:31:15,259433,01/26/2010 17:25:19,111,7,ItemRenderer hieght (and height changes) not reflected in AdvancedDataGrid row,"I have an AdvancedDataGrid with variable row height set to true.
+I have written a cutsom item renderer based on the DataGroup spark component.  Each row in the grid has multiple entities to display, the x position and width of the entites are based on the data of the entity itself.
+
+I have a custom layout written for the DataGroup that measures and posistions each entity based on its data. Each entity in each row can either truncate or not truncate its label.  When the labels are not truncated, I calculate the actual width of the object and validate its size manualy (to force the label to have the correct width and layout all its text lines and remeasure itself) within the DataGroup's Layout's measure method to accurately measure the datagroup itself.
+
+The layouts, measuring, sizing, display, etc all work correctly.  The entitys report the correct height they need when not truncating the labels, the datagroup reports the correct size it needs to draw all of its row's worth of entities (all from measure methods like they need to under the UIComponent lifecycle).
+
+When inside the AdvancedDataGrid itself, rows are not sized correctly.  The majority of the rows do not require multiple lines and display just fine.  Those that require multiple lines have larger row heights, but not large enough to accomodate the entire text in most cases.  The DataGroup for that row (and its itemRenderers) are clipped.  Furthermore, When scrolling the grid, every row scrolled onscreen is the default 1 text line height, irregardless of data.  In any case, resizing the AdvancedDataGrid (not resizing its columns, but the grid itself) forces all rows to snap to the correct desired height.  Scrolling again produces incorreclty sized rows.
+
+Additionally, the layout of each entity in the row is determined by several external factors - most commonly being visible range (along the horizontal).  Changing this visible range will trigger all item renderers to resize themselves (through the custom layout class) to their new sizes and remeasuring the new DataGroup layout.  This actually triggers a custom hierarchy parser which rebuilds all the ArrayCollections used inside the AdvandedDataGrid data provider, so ArrayCollections are dispatching change events that each row's DataGroup reacts to, so the DataGroup itself is invalidating its size and layout.
+
+These resizes do not trigger the AdvancedDataGrid to remeasure its row heights, and I must rezise the ADG itself again to snap the rows to the correct height.
+
+Anyone have any experience with dynamically sized rows in an AdvancedDataGrid or ItemRenderers which must forcibly make the AdvandedDataGrid re-layout its rows?
+
+Unfortunately, I cannot provide source code as there are a huge number of classes going into this, hierarchial data, rolling up closed nodes into multiple rows, custom hierarchy parsers, a multitude of item renderers  - that and its a Government contract.
+
+
+I have run into a similar issue with a much simpler item renderer, basically a label that will respect a max height, resize itself upto that height as its wordwrapping data will require, and then create scrollbars for itself.  Again, the data sizes almost correclty when the grid is created, then changing the column width within the grid does not resize the row height as the item renderer adjusts to its new width.  Only in resizing the grid itself do the item renderers resize correctly, create scroll bars, and the grids row heights are correct.  The source for that item renderer:
+
+    <s:Scroller xmlns:fx=""http://ns.adobe.com/mxml/2009"" 
+    			xmlns:s=""library://ns.adobe.com/flex/spark"" 
+    			xmlns:mx=""library://ns.adobe.com/flex/mx""
+    			implements=""mx.controls.listClasses.IDropInListItemRenderer,mx.controls.listClasses.IListItemRenderer""
+    			horizontalScrollPolicy=""off"" width=""100%"">
+    	<fx:Script>
+    		<![CDATA[
+    			
+    			import mx.controls.listClasses.BaseListData;
+    			import mx.controls.listClasses.IDropInListItemRenderer;
+    			import mx.controls.listClasses.IListItemRenderer;
+    			import mx.events.ResizeEvent;
+    			
+    			
+    			private var _listData:BaseListData;
+    			private var _data:Object;
+    			
+    			private var _listOrData_c:Boolean = false;
+    			
+    			public function get listData():BaseListData
+    			{
+    				return _listData;
+    			}
+    			public function set listData(value:BaseListData):void
+    			{
+    				_listData = value;
+    				_listOrData_c = true;
+    				invalidateProperties();
+    			}
+    			
+    			public function get data():Object
+    			{
+    				return _data
+    			}
+    			public function set data(value:Object):void
+    			{
+    				_data = value;
+    				_listOrData_c = true;
+    				invalidateProperties();
+    			}
+    			
+    			override protected function commitProperties():void
+    			{
+    				if(_listOrData_c)
+    				{
+    					_listOrData_c = false;
+    					label.text = _listData.label;
+    				}
+    				
+    				super.commitProperties();
+    			}
+    
+    		]]>
+    	</fx:Script>
+    	<fx:Declarations>
+    		<!-- Place non-visual elements (e.g., services, value objects) here -->
+    	</fx:Declarations>
+    	<s:Group width=""100%"">
+    		<s:layout>
+    			<s:BasicLayout clipAndEnableScrolling=""true"" />
+    		</s:layout>
+    		<s:Label id=""label"" width=""100%""/>
+    	</s:Group>
+    </s:Scroller>
+
+Throw it into a AdvancedDataGrid and set some data with very large text blocks.  Resize columns, then resize the grid itself, hopefully you can reproduce the same results.  Using Flex 4.1.
+
+Thanks for the help.
+",flex,actionscript,itemrenderer,advanceddatagrid,,,open,0,926,10,"ItemRenderer hieght (and height changes) not reflected in AdvancedDataGrid row I have an AdvancedDataGrid with variable row height set to true.
+I have written a cutsom item renderer based on the DataGroup spark component.  Each row in the grid has multiple entities to display, the x position and width of the entites are based on the data of the entity itself.
+
+I have a custom layout written for the DataGroup that measures and posistions each entity based on its data. Each entity in each row can either truncate or not truncate its label.  When the labels are not truncated, I calculate the actual width of the object and validate its size manualy (to force the label to have the correct width and layout all its text lines and remeasure itself) within the DataGroup's Layout's measure method to accurately measure the datagroup itself.
+
+The layouts, measuring, sizing, display, etc all work correctly.  The entitys report the correct height they need when not truncating the labels, the datagroup reports the correct size it needs to draw all of its row's worth of entities (all from measure methods like they need to under the UIComponent lifecycle).
+
+When inside the AdvancedDataGrid itself, rows are not sized correctly.  The majority of the rows do not require multiple lines and display just fine.  Those that require multiple lines have larger row heights, but not large enough to accomodate the entire text in most cases.  The DataGroup for that row (and its itemRenderers) are clipped.  Furthermore, When scrolling the grid, every row scrolled onscreen is the default 1 text line height, irregardless of data.  In any case, resizing the AdvancedDataGrid (not resizing its columns, but the grid itself) forces all rows to snap to the correct desired height.  Scrolling again produces incorreclty sized rows.
+
+Additionally, the layout of each entity in the row is determined by several external factors - most commonly being visible range (along the horizontal).  Changing this visible range will trigger all item renderers to resize themselves (through the custom layout class) to their new sizes and remeasuring the new DataGroup layout.  This actually triggers a custom hierarchy parser which rebuilds all the ArrayCollections used inside the AdvandedDataGrid data provider, so ArrayCollections are dispatching change events that each row's DataGroup reacts to, so the DataGroup itself is invalidating its size and layout.
+
+These resizes do not trigger the AdvancedDataGrid to remeasure its row heights, and I must rezise the ADG itself again to snap the rows to the correct height.
+
+Anyone have any experience with dynamically sized rows in an AdvancedDataGrid or ItemRenderers which must forcibly make the AdvandedDataGrid re-layout its rows?
+
+Unfortunately, I cannot provide source code as there are a huge number of classes going into this, hierarchial data, rolling up closed nodes into multiple rows, custom hierarchy parsers, a multitude of item renderers  - that and its a Government contract.
+
+
+I have run into a similar issue with a much simpler item renderer, basically a label that will respect a max height, resize itself upto that height as its wordwrapping data will require, and then create scrollbars for itself.  Again, the data sizes almost correclty when the grid is created, then changing the column width within the grid does not resize the row height as the item renderer adjusts to its new width.  Only in resizing the grid itself do the item renderers resize correctly, create scroll bars, and the grids row heights are correct.  The source for that item renderer:
+
+    <s:Scroller xmlns:fx=""http://ns.adobe.com/mxml/2009"" 
+    			xmlns:s=""library://ns.adobe.com/flex/spark"" 
+    			xmlns:mx=""library://ns.adobe.com/flex/mx""
+    			implements=""mx.controls.listClasses.IDropInListItemRenderer,mx.controls.listClasses.IListItemRenderer""
+    			horizontalScrollPolicy=""off"" width=""100%"">
+    	<fx:Script>
+    		<![CDATA[
+    			
+    			import mx.controls.listClasses.BaseListData;
+    			import mx.controls.listClasses.IDropInListItemRenderer;
+    			import mx.controls.listClasses.IListItemRenderer;
+    			import mx.events.ResizeEvent;
+    			
+    			
+    			private var _listData:BaseListData;
+    			private var _data:Object;
+    			
+    			private var _listOrData_c:Boolean = false;
+    			
+    			public function get listData():BaseListData
+    			{
+    				return _listData;
+    			}
+    			public function set listData(value:BaseListData):void
+    			{
+    				_listData = value;
+    				_listOrData_c = true;
+    				invalidateProperties();
+    			}
+    			
+    			public function get data():Object
+    			{
+    				return _data
+    			}
+    			public function set data(value:Object):void
+    			{
+    				_data = value;
+    				_listOrData_c = true;
+    				invalidateProperties();
+    			}
+    			
+    			override protected function commitProperties():void
+    			{
+    				if(_listOrData_c)
+    				{
+    					_listOrData_c = false;
+    					label.text = _listData.label;
+    				}
+    				
+    				super.commitProperties();
+    			}
+    
+    		]]>
+    	</fx:Script>
+    	<fx:Declarations>
+    		<!-- Place non-visual elements (e.g., services, value objects) here -->
+    	</fx:Declarations>
+    	<s:Group width=""100%"">
+    		<s:layout>
+    			<s:BasicLayout clipAndEnableScrolling=""true"" />
+    		</s:layout>
+    		<s:Label id=""label"" width=""100%""/>
+    	</s:Group>
+    </s:Scroller>
+
+Throw it into a AdvancedDataGrid and set some data with very large text blocks.  Resize columns, then resize the grid itself, hopefully you can reproduce the same results.  Using Flex 4.1.
+
+Thanks for the help.
+",4
+10261836,04/21/2012 18:37:12,258594,01/25/2010 16:44:36,449,20,flex itemRenderer variables from/to main scope,"I'm working on creating a datagrid that has a checkbox column. I have some functions that run within the itemRenderer that creates an array collection containing the item information and weather or not the checkbox is checked or not.
+
+Everything seems to be work the way I'd like, but now I just need to access the arraycollection created in the itemRenderer scope in my main application. How can I go about access this?
+
+Here's the function that creates the AC within the itemRenderer
+
+    private function onChange():void {
+          data[""isSelected""] = cb.selected;
+            var dp:ArrayCollection = _dataGrid.dataProvider as ArrayCollection;
+            dp.dispatchEvent(new CollectionEvent(CollectionEvent.COLLECTION_CHANGE));               
+        }",flex,datagrid,scope,actionscript-2,itemrenderer,,open,0,153,6,"flex itemRenderer variables from/to main scope I'm working on creating a datagrid that has a checkbox column. I have some functions that run within the itemRenderer that creates an array collection containing the item information and weather or not the checkbox is checked or not.
+
+Everything seems to be work the way I'd like, but now I just need to access the arraycollection created in the itemRenderer scope in my main application. How can I go about access this?
+
+Here's the function that creates the AC within the itemRenderer
+
+    private function onChange():void {
+          data[""isSelected""] = cb.selected;
+            var dp:ArrayCollection = _dataGrid.dataProvider as ArrayCollection;
+            dp.dispatchEvent(new CollectionEvent(CollectionEvent.COLLECTION_CHANGE));               
+        }",5
+2872857,05/20/2010 10:27:18,329788,04/30/2010 13:34:41,1,0,Two Objects created with the same Address in Flex,"I have an issue in flex which is causing a bit of a headache!
+
+I am adding objects to an ArrayCollection but in doing so, another ArrayCollection is also picking up these changes even though there is no binding occurring. 
+
+I can see from the debug that the two ACs have the same address but for the life of me can't figure out why.
+
+I have two Array Collections:
+
+    model.index.rows //The main array collection
+
+    model.index.holdRows //The array collection that imitates the above
+
+This phantom data binding occurs only for the first iteration in the loop and for all others it will just write it the once.
+
+The reason this is proving troublesome is that it creates duplicate entries in my datagrid.
+
+
+
+    public override function handleMessage(message:IMessage):void
+        {
+
+            super.handleMessage(message);
+            if (message is IndexResponse)
+            {
+               var response:IndexResponse = message as IndexResponse;
+               
+               	model.index.rows.removeAll();
+                model.index.indexIsEmpty = response.nullIndex;
+                
+                if (model.index.indexIsEmpty !== true)
+                {
+
+                    //Update the index model from the response. Note: each property of the row object will be shown in the UI as a column in the grid
+                    response.index.forEach(function(entry:EntryData, i:int, a:Array):void
+                        {
+                            var row:Object = { fileID: entry.fileID, dadName: entry.dadName };
+
+                            entry.tags.forEach(function(tag:Tag, i:int, a:Array):void
+                                {
+                                    row[tag.name] = tag.value;
+                                });
+
+                            model.index.rows.addItem(row);
+
+                        });
+
+                  if(model.index.indexForNetworkView == true){
+                  	                  	
+                  	model.index.holdRows.source = model.index.holdRows.source.concat(model.index.rows.source);
+                  	model.index.indexCounter++;
+                  	model.index.indexForNetworkView = false;
+                  	controller.indexController.showNetwork(model.index.indexCounter);                  	
+                  }
+                  	model.index.rows.refresh();
+                    controller.networkController.show();                  
+                }
+               
+            }
+
+Has anyone else who has encountered something simillar propose a solution?
+
+",flex,objects,arraycollection,as3,,,open,0,884,9,"Two Objects created with the same Address in Flex I have an issue in flex which is causing a bit of a headache!
+
+I am adding objects to an ArrayCollection but in doing so, another ArrayCollection is also picking up these changes even though there is no binding occurring. 
+
+I can see from the debug that the two ACs have the same address but for the life of me can't figure out why.
+
+I have two Array Collections:
+
+    model.index.rows //The main array collection
+
+    model.index.holdRows //The array collection that imitates the above
+
+This phantom data binding occurs only for the first iteration in the loop and for all others it will just write it the once.
+
+The reason this is proving troublesome is that it creates duplicate entries in my datagrid.
+
+
+
+    public override function handleMessage(message:IMessage):void
+        {
+
+            super.handleMessage(message);
+            if (message is IndexResponse)
+            {
+               var response:IndexResponse = message as IndexResponse;
+               
+               	model.index.rows.removeAll();
+                model.index.indexIsEmpty = response.nullIndex;
+                
+                if (model.index.indexIsEmpty !== true)
+                {
+
+                    //Update the index model from the response. Note: each property of the row object will be shown in the UI as a column in the grid
+                    response.index.forEach(function(entry:EntryData, i:int, a:Array):void
+                        {
+                            var row:Object = { fileID: entry.fileID, dadName: entry.dadName };
+
+                            entry.tags.forEach(function(tag:Tag, i:int, a:Array):void
+                                {
+                                    row[tag.name] = tag.value;
+                                });
+
+                            model.index.rows.addItem(row);
+
+                        });
+
+                  if(model.index.indexForNetworkView == true){
+                  	                  	
+                  	model.index.holdRows.source = model.index.holdRows.source.concat(model.index.rows.source);
+                  	model.index.indexCounter++;
+                  	model.index.indexForNetworkView = false;
+                  	controller.indexController.showNetwork(model.index.indexCounter);                  	
+                  }
+                  	model.index.rows.refresh();
+                    controller.networkController.show();                  
+                }
+               
+            }
+
+Has anyone else who has encountered something simillar propose a solution?
+
+",4
+4642299,01/09/2011 22:37:03,19224,09/19/2008 19:29:32,2510,38,"Will MXML ever ""compile"" to html5?","My question may be silly but I think it´s not.
+
+I´m using flex with Ruby on Rails backend to develop rich internet apps. Recently flash has been attacked, an example is Steve Job´s [thoughts on Flash][1]. 
+
+I think flex is a wonderfull tool, but to be honest I really would rather to have a tool as productive as flex but compliant with open standards.
+
+For me, in a perfect world I would code in MXML just like I do now and Flex Builder would build a pure html5 front-end.
+
+My question is, is it likely to happen? It is allowed to dream anything, right... :-)
+
+
+  [1]: http://www.apple.com/hotnews/thoughts-on-flash/",flex,html5,,,,01/10/2011 16:08:25,not constructive,1,105,6,"Will MXML ever ""compile"" to html5? My question may be silly but I think it´s not.
+
+I´m using flex with Ruby on Rails backend to develop rich internet apps. Recently flash has been attacked, an example is Steve Job´s [thoughts on Flash][1]. 
+
+I think flex is a wonderfull tool, but to be honest I really would rather to have a tool as productive as flex but compliant with open standards.
+
+For me, in a perfect world I would code in MXML just like I do now and Flex Builder would build a pure html5 front-end.
+
+My question is, is it likely to happen? It is allowed to dream anything, right... :-)
+
+
+  [1]: http://www.apple.com/hotnews/thoughts-on-flash/",2
+2039437,01/11/2010 01:32:31,200960,11/02/2009 13:28:33,17,2,flex 3 passing data from modules to parent application to switch views in the viewstack,"Hello Fellow stackoverflowers,
+
+I´m stuck writing a piece of code.
+I have application with a viewstack witch load 5 modules.
+each module is loaded via the moduleLoader tag and they all have an id.
+
+Every loaded module has a context menu. the context menu has 5 menuItems.
+one menuItem for each view for the viewstack.
+
+The context menu is loaded via xml.
+
+this is my application file.
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <mx:Application xmlns:mx=""http://www.adobe.com/2006/mxml"" 
+          layout=""absolute""
+          backgroundColor=""#b1b1b1""
+          backgroundGradientColors=""[#b1b1b1,#252525]"">
+ 
+ <mx:Script>
+  <![CDATA[
+   import mx.core.Container;
+   
+            
+            //change viewstack views via modules context menu
+            public function switchView(viewId:String):void
+         {
+             var container:Container = Container(tops.getChildByName(viewId));
+             if (container != null)
+             {
+                 tops.selectedChild = container;
+             }
+         }
+  ]]>
+ </mx:Script>
+
+    <mx:ViewStack id=""tops"" width=""100%"" height=""100%"">
+      <mx:ModuleLoader id=""admin"" url=""view/admin.swf"" width=""100%"" height=""100%""/>
+      <mx:ModuleLoader id=""tv"" url=""view/tv.swf"" width=""100%"" height=""100%""/>
+      <mx:ModuleLoader id=""community"" url=""view/community.swf"" width=""100%"" height=""100%""/>
+      <mx:ModuleLoader id=""shop"" url=""view/shop.swf"" width=""100%"" height=""100%""/>
+      <mx:ModuleLoader id=""communicator"" url=""view/communicator.swf"" width=""100%"" height=""100%""/>
+    </mx:ViewStack>
+
+
+    </mx:Application>
+
+and this is my switch statement in my Module
+
+   public function changeView():void{
+    var action:String;
+    switch(action){
+     case(""admin"");
+        parentApplication.switchView('admin');
+     break;
+    }
+
+    switch(action){
+     case(""tv"");
+        parentApplication.switchView('tv');
+     break;
+
+    switch(action){
+     case(""community"");
+        parentApplication.switchView('community');
+     break;
+    }
+
+    switch(action){
+     case(""shop"");
+        parentApplication.switchView('shop');
+     break;
+    }
+
+    switch(action){
+     case(""communicator"");
+        parentApplication.switchView('communicator');
+     break;
+    }
+   }
+
+and this is my context menu xml
+
+      <mx:XML id=""appMenu"">
+  <root>
+            <menuitem enabled=""false""/>
+            <menuitem label=""Administration"" action=""admin"" icon=""adminMDI""/>
+            <menuitem label=""Television"" action=""tv"" icon=""tvMDI""/>
+            <menuitem label=""Community"" action=""community"" icon=""communityMDI""/>
+            <menuitem label=""Shopping Mall"" action=""shop"" icon=""shoppingMallMDI""/>
+            <menuitem label=""Communicator"" action=""communicator"" icon=""communicatorMDI""/>                                                              
+        </root>
+      </mx:XML>
+
+What i would like to do is switch the views in the viewstack by clicking on one of the menuitems in the context menu. 
+i can't communicate from my module to the application.
+What am i doing wrong?
+what must i do?
+Can anybody help me out?
+
+Oyeah before i forget 
+
+the xml of the context menu is in the module but, the context menu is in a as file that extensiate a button.
+
+please can any body give me a good example how to accomplish this.
+
+Thank
+
+
+DJ",flex,module,communication,viewstack,contextmenu,,open,0,728,15,"flex 3 passing data from modules to parent application to switch views in the viewstack Hello Fellow stackoverflowers,
+
+I´m stuck writing a piece of code.
+I have application with a viewstack witch load 5 modules.
+each module is loaded via the moduleLoader tag and they all have an id.
+
+Every loaded module has a context menu. the context menu has 5 menuItems.
+one menuItem for each view for the viewstack.
+
+The context menu is loaded via xml.
+
+this is my application file.
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <mx:Application xmlns:mx=""http://www.adobe.com/2006/mxml"" 
+          layout=""absolute""
+          backgroundColor=""#b1b1b1""
+          backgroundGradientColors=""[#b1b1b1,#252525]"">
+ 
+ <mx:Script>
+  <![CDATA[
+   import mx.core.Container;
+   
+            
+            //change viewstack views via modules context menu
+            public function switchView(viewId:String):void
+         {
+             var container:Container = Container(tops.getChildByName(viewId));
+             if (container != null)
+             {
+                 tops.selectedChild = container;
+             }
+         }
+  ]]>
+ </mx:Script>
+
+    <mx:ViewStack id=""tops"" width=""100%"" height=""100%"">
+      <mx:ModuleLoader id=""admin"" url=""view/admin.swf"" width=""100%"" height=""100%""/>
+      <mx:ModuleLoader id=""tv"" url=""view/tv.swf"" width=""100%"" height=""100%""/>
+      <mx:ModuleLoader id=""community"" url=""view/community.swf"" width=""100%"" height=""100%""/>
+      <mx:ModuleLoader id=""shop"" url=""view/shop.swf"" width=""100%"" height=""100%""/>
+      <mx:ModuleLoader id=""communicator"" url=""view/communicator.swf"" width=""100%"" height=""100%""/>
+    </mx:ViewStack>
+
+
+    </mx:Application>
+
+and this is my switch statement in my Module
+
+   public function changeView():void{
+    var action:String;
+    switch(action){
+     case(""admin"");
+        parentApplication.switchView('admin');
+     break;
+    }
+
+    switch(action){
+     case(""tv"");
+        parentApplication.switchView('tv');
+     break;
+
+    switch(action){
+     case(""community"");
+        parentApplication.switchView('community');
+     break;
+    }
+
+    switch(action){
+     case(""shop"");
+        parentApplication.switchView('shop');
+     break;
+    }
+
+    switch(action){
+     case(""communicator"");
+        parentApplication.switchView('communicator');
+     break;
+    }
+   }
+
+and this is my context menu xml
+
+      <mx:XML id=""appMenu"">
+  <root>
+            <menuitem enabled=""false""/>
+            <menuitem label=""Administration"" action=""admin"" icon=""adminMDI""/>
+            <menuitem label=""Television"" action=""tv"" icon=""tvMDI""/>
+            <menuitem label=""Community"" action=""community"" icon=""communityMDI""/>
+            <menuitem label=""Shopping Mall"" action=""shop"" icon=""shoppingMallMDI""/>
+            <menuitem label=""Communicator"" action=""communicator"" icon=""communicatorMDI""/>                                                              
+        </root>
+      </mx:XML>
+
+What i would like to do is switch the views in the viewstack by clicking on one of the menuitems in the context menu. 
+i can't communicate from my module to the application.
+What am i doing wrong?
+what must i do?
+Can anybody help me out?
+
+Oyeah before i forget 
+
+the xml of the context menu is in the module but, the context menu is in a as file that extensiate a button.
+
+please can any body give me a good example how to accomplish this.
+
+Thank
+
+
+DJ",5
+6966997,08/06/2011 13:10:58,672430,03/23/2011 05:23:45,1,1,Getting user's locale in Adobe Flex,"I am working on an AIR desktop application, and am trying to get the user's locale string. I basically need to know whether the user's locale is English or French. `Capabilities.language` doesn't seem to work for me, as it only displays the OS's UI language.
+
+How can I get the user's current locale?
+
+Once determined, I intend to set it to `resourceManager.localeChain`, so that the appropriate 'properties' files are used to display my UI literals.
+
+Thanks in advance!
+
+Pritin",flex,actionscript-3,air,,,,open,0,75,6,"Getting user's locale in Adobe Flex I am working on an AIR desktop application, and am trying to get the user's locale string. I basically need to know whether the user's locale is English or French. `Capabilities.language` doesn't seem to work for me, as it only displays the OS's UI language.
+
+How can I get the user's current locale?
+
+Once determined, I intend to set it to `resourceManager.localeChain`, so that the appropriate 'properties' files are used to display my UI literals.
+
+Thanks in advance!
+
+Pritin",3

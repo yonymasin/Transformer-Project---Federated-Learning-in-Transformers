@@ -1,0 +1,1413 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9094295,02/01/2012 10:30:52,1110885,12/22/2011 01:15:43,1,0,Creating a new excel worksheet via .Copy() and moving it to the last position,"I've been at this for quite a while,
+
+I want to create a new worksheet by copying another. This places the new sheet before the sheet being copied. I then want to move it to the very end of all of the sheets.
+
+The aim is to have worksheets called > summary1 > summary2 > summary3 .. etc in that order
+
+Here is what I have (excuse brevity)
+
+    $ex = New-Object -ComObject Excel.Application
+    $ex.Visible = $true
+    $wb = $ex.Workbooks.Add()
+    
+    for ($i = 1; $i -le 3; ++$i)
+    {
+    	$wb.Worksheets.Item(2).Copy($wb.Worksheets.Item(2))
+    	$newSheet = $wb.Worksheets.Item(2)
+    	$newSheet.Activate()
+    	$name = ""Summary$i""
+    	$newSheet.Name = $name
+    	$wb.Worksheets.Item(""Summary"").Move($wb.Worksheets.Item($i + 1))		
+    }
+
+It works for the first sheet, it renames the sheet then moves it to the end but after that everytime it reaches the .Move method it doesn't do anything except .Activate() the original ""Summary"" sheet.
+
+I have no idea how to explain this behaviour.. Thankyou kindly in advance.",excel,powershell,copy,position,move,,open,0,186,14,"Creating a new excel worksheet via .Copy() and moving it to the last position I've been at this for quite a while,
+
+I want to create a new worksheet by copying another. This places the new sheet before the sheet being copied. I then want to move it to the very end of all of the sheets.
+
+The aim is to have worksheets called > summary1 > summary2 > summary3 .. etc in that order
+
+Here is what I have (excuse brevity)
+
+    $ex = New-Object -ComObject Excel.Application
+    $ex.Visible = $true
+    $wb = $ex.Workbooks.Add()
+    
+    for ($i = 1; $i -le 3; ++$i)
+    {
+    	$wb.Worksheets.Item(2).Copy($wb.Worksheets.Item(2))
+    	$newSheet = $wb.Worksheets.Item(2)
+    	$newSheet.Activate()
+    	$name = ""Summary$i""
+    	$newSheet.Name = $name
+    	$wb.Worksheets.Item(""Summary"").Move($wb.Worksheets.Item($i + 1))		
+    }
+
+It works for the first sheet, it renames the sheet then moves it to the end but after that everytime it reaches the .Move method it doesn't do anything except .Activate() the original ""Summary"" sheet.
+
+I have no idea how to explain this behaviour.. Thankyou kindly in advance.",5
+9008243,01/25/2012 18:35:28,579228,01/18/2011 00:06:10,71,3,Excel keep loading my spreadsheet with an error,"I keep getting this error when I load my spreadsheet. It makes me repair it, which strips all the validators. The file is saved as an xlsm.
+
+""Excel found unreadable content in '<filename>' Do you wnat to recover the contents of this workbook. If you trust the source of this workbook, click yes""
+
+You have to click yes or it won't load. Then I get this error.
+""Excel was able to open the file by removing or repairing the unreadable content
+Removed Feature: Data validation from /xl/worksheets/sheet1.xml part""
+
+I haven't a clue about this, and it's really annoying. If anyone has any suggestions, I would be very grateful. Thanks,
+James",excel,vba,,,,,open,0,104,8,"Excel keep loading my spreadsheet with an error I keep getting this error when I load my spreadsheet. It makes me repair it, which strips all the validators. The file is saved as an xlsm.
+
+""Excel found unreadable content in '<filename>' Do you wnat to recover the contents of this workbook. If you trust the source of this workbook, click yes""
+
+You have to click yes or it won't load. Then I get this error.
+""Excel was able to open the file by removing or repairing the unreadable content
+Removed Feature: Data validation from /xl/worksheets/sheet1.xml part""
+
+I haven't a clue about this, and it's really annoying. If anyone has any suggestions, I would be very grateful. Thanks,
+James",2
+7739104,10/12/2011 11:08:02,193971,10/21/2009 17:13:04,1282,11,Import/Export sheet from excel 2003 using VBA,"Need to export and import a sheet from my workbook using VBA.
+
+What's the easier way to do it? 
+
+Export as CSV? 
+
+Export as txt? 
+
+Can I save the object (the copy/paste object) to a file and then import that object",excel,vba,export,excel-2003,,,open,0,40,7,"Import/Export sheet from excel 2003 using VBA Need to export and import a sheet from my workbook using VBA.
+
+What's the easier way to do it? 
+
+Export as CSV? 
+
+Export as txt? 
+
+Can I save the object (the copy/paste object) to a file and then import that object",4
+9920585,03/29/2012 07:06:15,1068425,11/27/2011 22:35:54,34,0,How to add more than 3 sheets to an excel workbook from within MATLAB,"How do I add more sheets to an excel workbook from within matlab?
+
+I set up the workbook like so (based on code I got from someone else's post in this forum):
+
+
+        %# create Excel COM Server
+        Excel = actxserver('Excel.Application');
+        Excel.Visible = true;
+        %# create new XLS file
+        wb = Excel.Workbooks.Add();
+        wsheet=1;
+        wb.Sheets.Item(wsheet).Activate();
+
+That's fine.  Then later on inside the loop I open a new sheet after so many loops:
+
+        ...
+        if loop==sheetlimit,
+             wsheet=wsheet+1;
+             wb.Sheets.Item(wsheet).Activate();
+        end
+
+
+This works up to sheet 3.  But when wsheet=4 I get this error message which doesn't explain anything:
+
+        Error in ==> filename at 97
+            wb.Sheets.Item(wsheet).Activate();
+
+Appreciate any help. Thanks.",excel,matlab,export-to-excel,,,,open,0,215,14,"How to add more than 3 sheets to an excel workbook from within MATLAB How do I add more sheets to an excel workbook from within matlab?
+
+I set up the workbook like so (based on code I got from someone else's post in this forum):
+
+
+        %# create Excel COM Server
+        Excel = actxserver('Excel.Application');
+        Excel.Visible = true;
+        %# create new XLS file
+        wb = Excel.Workbooks.Add();
+        wsheet=1;
+        wb.Sheets.Item(wsheet).Activate();
+
+That's fine.  Then later on inside the loop I open a new sheet after so many loops:
+
+        ...
+        if loop==sheetlimit,
+             wsheet=wsheet+1;
+             wb.Sheets.Item(wsheet).Activate();
+        end
+
+
+This works up to sheet 3.  But when wsheet=4 I get this error message which doesn't explain anything:
+
+        Error in ==> filename at 97
+            wb.Sheets.Item(wsheet).Activate();
+
+Appreciate any help. Thanks.",3
+9935923,03/30/2012 01:41:24,1299645,09/30/2011 00:58:14,129,16,How do I get words from a cell in excel,"I wanted to get the words from a cell. For example, cell A2 has a value of ""My name is jayson"". I wanted to get the words: ""name"" & ""jayson"". I want to exclude words with less than 3 characters. How do I do it using a formula/function in excel?
+
+Thanks.",excel,excel-vba,excel-formula,,,,open,0,50,10,"How do I get words from a cell in excel I wanted to get the words from a cell. For example, cell A2 has a value of ""My name is jayson"". I wanted to get the words: ""name"" & ""jayson"". I want to exclude words with less than 3 characters. How do I do it using a formula/function in excel?
+
+Thanks.",3
+8825511,01/11/2012 19:35:13,1143992,01/11/2012 19:32:25,1,0,Copying range from and multiple worbooks VBA,"I need to find a VBA code to copy a cell from multiple workbooks in a folder to workbooks of the same name in an other folder?
+
+Thank you",excel,vba,range,multiple,,01/12/2012 09:42:02,not a real question,1,28,7,"Copying range from and multiple worbooks VBA I need to find a VBA code to copy a cell from multiple workbooks in a folder to workbooks of the same name in an other folder?
+
+Thank you",4
+7738818,10/12/2011 10:43:03,891216,08/12/2011 06:16:59,19,0,Dynamically setting the sum formulla in excel,"I want to sum two cells values.like i want sum of A1 and A2 in C1 then the formulla will be =sum(A1,A2). but in this formulla row number fixed(i.e. 1 and 2). but I want that row number should be decided dynamically in excel. 
+
+suppose i have integer values in cell range A1 to A100.Now i want sum of any two values beween A1 to A100. I am putting row number in B1 and B2 and writting this formulla in C1 
+=SUM(A&B1,A&B2)
+
+so in above formulla Column A is fixed and i want to pick row number from other cell.
+
+for example if i enter the 5 in B1 and 10 in B2 the formulla should sum the A5 and A10 values.similarly i can enter any value between 1- 100 in column B1 and B2.
+
+I want to do it directly in excel not in macro.",excel,excel-2003,,,,,open,0,143,7,"Dynamically setting the sum formulla in excel I want to sum two cells values.like i want sum of A1 and A2 in C1 then the formulla will be =sum(A1,A2). but in this formulla row number fixed(i.e. 1 and 2). but I want that row number should be decided dynamically in excel. 
+
+suppose i have integer values in cell range A1 to A100.Now i want sum of any two values beween A1 to A100. I am putting row number in B1 and B2 and writting this formulla in C1 
+=SUM(A&B1,A&B2)
+
+so in above formulla Column A is fixed and i want to pick row number from other cell.
+
+for example if i enter the 5 in B1 and 10 in B2 the formulla should sum the A5 and A10 values.similarly i can enter any value between 1- 100 in column B1 and B2.
+
+I want to do it directly in excel not in macro.",2
+11568637,07/19/2012 20:18:16,1325349,04/10/2012 23:59:00,68,2,VBA to Rearrange certain columns and rows,"I have a excel spreadsheet formatted like this:
+
+![Before][1]
+
+
+What I have been trying to do is format it to look like this:
+
+![After][2]
+
+
+  [1]: http://i.stack.imgur.com/mO1UM.png
+  [2]: http://i.stack.imgur.com/qw0nC.png
+
+So it's kind of transposed I guess (not sure how to call it).
+
+I've spent the last hour and a half trying to do it in VBA with no success.
+
+This is just a sample of how it is formatted, in reality there's about 50,000 of these, so I need to do it using VBA or something of the sort.
+
+Would someone be able to help me out with how to do this?
+
+Thank You.",excel,vba,macros,transpose,,,open,0,97,7,"VBA to Rearrange certain columns and rows I have a excel spreadsheet formatted like this:
+
+![Before][1]
+
+
+What I have been trying to do is format it to look like this:
+
+![After][2]
+
+
+  [1]: http://i.stack.imgur.com/mO1UM.png
+  [2]: http://i.stack.imgur.com/qw0nC.png
+
+So it's kind of transposed I guess (not sure how to call it).
+
+I've spent the last hour and a half trying to do it in VBA with no success.
+
+This is just a sample of how it is formatted, in reality there's about 50,000 of these, so I need to do it using VBA or something of the sort.
+
+Would someone be able to help me out with how to do this?
+
+Thank You.",4
+3202587,07/08/2010 10:17:04,386267,07/08/2010 05:43:44,6,0,Excel Macros programming,"I want to learn excel macros programming...Please send me the link
+    for the beginners..(like simple populate data to excel and update 
+    data to database from excel)...",excel,macros,,,,,open,0,33,3,"Excel Macros programming I want to learn excel macros programming...Please send me the link
+    for the beginners..(like simple populate data to excel and update 
+    data to database from excel)...",2
+8103474,11/12/2011 08:46:41,1003589,10/19/2011 16:12:41,1,0,how to make excel form to be a non modal window to all applications,"I need to make the excel form like a non modal window which should float around all other applications other than excel like a find text box in office .....
+
+How to override the excel form controls 
+
+please suggest me the codes 
+
+am waiting for your responses
+
+thanks
+Prabu M",excel,vba,office,,,11/12/2011 21:47:13,not a real question,1,47,14,"how to make excel form to be a non modal window to all applications I need to make the excel form like a non modal window which should float around all other applications other than excel like a find text box in office .....
+
+How to override the excel form controls 
+
+please suggest me the codes 
+
+am waiting for your responses
+
+thanks
+Prabu M",3
+1723492,11/12/2009 16:26:01,106528,05/13/2009 18:13:53,74,1,How to edit my excel dropdown list ?,"How to edit my excel dropdown list ?
+
+
+i went to Data>validation>Settings> In that i found the values as =Attribute_Brands
+
+What i have to do for editing this?
+",excel,excel-2003,dropdownlist,lookup-tables,,02/24/2012 14:27:39,off topic,1,26,8,"How to edit my excel dropdown list ? How to edit my excel dropdown list ?
+
+
+i went to Data>validation>Settings> In that i found the values as =Attribute_Brands
+
+What i have to do for editing this?
+",4
+7085054,08/16/2011 21:09:16,810606,06/22/2011 14:59:21,44,0,Cannot properly read the value of a cell,"I am trying to read the value of cell A1 as such:
+
+    Dim myCell As Long
+    myCell = Range(""A1"").Value
+
+The above returns myCell as 0 and ",excel,vba,excel-vba,,,08/17/2011 00:13:46,not a real question,1,32,8,"Cannot properly read the value of a cell I am trying to read the value of cell A1 as such:
+
+    Dim myCell As Long
+    myCell = Range(""A1"").Value
+
+The above returns myCell as 0 and ",3
+3259348,07/15/2010 19:44:24,239219,12/27/2009 16:44:10,20,2,Convert a lot of excel files,How can i convert a lot of '97 excel file to '95. I look for other solution as File - Save As.,excel,file,spreadsheet,,,04/01/2012 18:25:21,not a real question,1,22,6,Convert a lot of excel files How can i convert a lot of '97 excel file to '95. I look for other solution as File - Save As.,3
+1133475,07/15/2009 19:30:19,129750,06/27/2009 04:52:11,1,1,insert row keeping formula in excel,"I have a range of rows with a column with a formula I populated using ctrl-D. How can I insert a new line so values are blank but formulas are copied?
+
+Thank you",excel,,,,,,open,0,32,6,"insert row keeping formula in excel I have a range of rows with a column with a formula I populated using ctrl-D. How can I insert a new line so values are blank but formulas are copied?
+
+Thank you",1
+2622644,04/12/2010 14:08:05,21765,09/24/2008 17:11:11,222,9,Excel VSTO set selection,"How do I set the selection in the active worksheet to a specific Range, using C# and VSTO 2008?",excel,vsto,c#,selection,,,open,0,19,4,"Excel VSTO set selection How do I set the selection in the active worksheet to a specific Range, using C# and VSTO 2008?",4
+8390251,12/05/2011 18:47:06,1082046,12/05/2011 17:54:40,1,0,Outlook and excel working together,"I would like to know if this is even poosible??? 
+
+I have a simple speadsheet that has some simple headers
+A         B             C           D         E
+Email/ TypeMess. / Email link /Date
+
+And maybe Name of contact if it can be add
+Everytime a email is either sent or recived from my outlook it stamps email address in coloumn A if it was sent or recived in column B Either a link to the email or the either the body of the email in cloumn C and the date the action was happened...
+If some can help me with this or tell me where i can find the help for this i would be sooo happy thanks...
+",excel,vba,outlook,,,12/06/2011 16:09:24,not a real question,1,149,5,"Outlook and excel working together I would like to know if this is even poosible??? 
+
+I have a simple speadsheet that has some simple headers
+A         B             C           D         E
+Email/ TypeMess. / Email link /Date
+
+And maybe Name of contact if it can be add
+Everytime a email is either sent or recived from my outlook it stamps email address in coloumn A if it was sent or recived in column B Either a link to the email or the either the body of the email in cloumn C and the date the action was happened...
+If some can help me with this or tell me where i can find the help for this i would be sooo happy thanks...
+",3
+11318023,07/03/2012 19:41:37,1463720,06/18/2012 12:50:37,3,0,Sum of two no.s gives zero vba excel,"I am facing a strange problem here , I am not able to get why ! Please Help me ..
+
+    Public Function getCategory(Value As String, Optional col As Long = 1) As String
+       Sheets(""Product Master"").Select
+       Range(""A2"").Select
+       Dim I As Long
+       Do Until Selection.Value = Value
+       ActiveCell.Offset(1, 0).Select
+       Loop
+       getCategory = Selection.Value
+    End Function
+
+
+    Sub Calculate()
+    Dim furnitureTotal As Double
+    Dim furQuantity As Integer
+    furnitureTotal = 0
+    furQuantity = 0
+
+    Dim applianceTotal As Double
+    Dim appQuantity As Integer
+    applianceTotal = 0
+    appQuantity = 0
+    
+    Dim whiteGoodsTotal As Double
+    Dim whiteGoodQuantity As Integer
+    whiteGoodQuantity = 0
+    whiteGoodsTotal = 0
+    
+    Dim softFurTotal As Double
+    Dim softFurQuantity As Integer
+    softFurTotal = 0
+    softFurQuantity = 0
+    
+    Dim description As String
+    Dim total As Double
+    Dim quantity As Integer
+    
+    Sheets(""Invoice"").Select
+    Range(""F64"").Select
+    Do Until (ActiveCell.Value = ""Finish"" Or ActiveCell.Value = """")
+        description = ActiveCell.Value
+        ActiveCell.Offset(0, 1).Select
+        quantity = Selection.Value
+        ActiveCell.Offset(0, 6).Select
+        total = Selection.Value
+        If (getCategory(description) = ""Furniture"") Then
+            furnitureTotal = furnitureTotal + Val(total)  <---------- this line
+            furQuantity = furQuantity + quantity
+            End If
+        
+        If getCategory(description) = ""Electronics"" Then
+            applianceTotal = applianceTotal + total
+            appQuantity = appQuantity + quantity
+            End If
+        
+        If getCategory(description) = ""White Goods"" Then
+            whiteGoodsTotal = whiteGoodsTotal + total
+            whiteGoodQuantity = whiteGoodQuantity + quantity
+            End If
+            
+        If getCategory(description) = ""Soft Furnishings"" Then
+            softFurTotal = softFurTotal + total
+            softFurQuantity = softFurQuantity + quantity
+            End If
+        
+        Sheets(""Invoice"").Select
+        ActiveCell.Offset(1, -7).Select
+    Loop
+    
+    Sheets(""Invoice"").Select
+    Range(""L24"").Select
+    Selection.Value = furQuantity
+    ActiveCell.Offset(0, 1).Select
+    Selection.Value = furnitureTotal
+    Range(""L25"").Select
+    Selection.Value = appQuantity
+    ActiveCell.Offset(0, 1).Select
+    Selection.Value = applianceTotal
+    Range(""L26"").Select
+    Selection.Value = whiteGoodQuantity
+    ActiveCell.Offset(0, 1).Select
+    Selection.Value = whiteGoodsTotal
+    Range(""L27"").Select
+    Selection.Value = softFurQuantity
+    ActiveCell.Offset(0, 1).Select
+    Selection.Value = softFurTotal
+    
+
+    End Sub
+
+I ran this code when each description belonged to furniture category . When I run it the values of all the variables remain 0 . When I opened the debugger and viewed the values of variables  
+it showed the values of variable in line  
+    furnitureTotal = furnitureTotal + Val(total)
+to be 0,0 and 1750 respectively . I cannot understand why it does not add two double values .Is this related to the lifetime of variable ? if yes can you tell me something so that i can get out of this problem",excel,vba,sum,add,zero,,open,0,803,8,"Sum of two no.s gives zero vba excel I am facing a strange problem here , I am not able to get why ! Please Help me ..
+
+    Public Function getCategory(Value As String, Optional col As Long = 1) As String
+       Sheets(""Product Master"").Select
+       Range(""A2"").Select
+       Dim I As Long
+       Do Until Selection.Value = Value
+       ActiveCell.Offset(1, 0).Select
+       Loop
+       getCategory = Selection.Value
+    End Function
+
+
+    Sub Calculate()
+    Dim furnitureTotal As Double
+    Dim furQuantity As Integer
+    furnitureTotal = 0
+    furQuantity = 0
+
+    Dim applianceTotal As Double
+    Dim appQuantity As Integer
+    applianceTotal = 0
+    appQuantity = 0
+    
+    Dim whiteGoodsTotal As Double
+    Dim whiteGoodQuantity As Integer
+    whiteGoodQuantity = 0
+    whiteGoodsTotal = 0
+    
+    Dim softFurTotal As Double
+    Dim softFurQuantity As Integer
+    softFurTotal = 0
+    softFurQuantity = 0
+    
+    Dim description As String
+    Dim total As Double
+    Dim quantity As Integer
+    
+    Sheets(""Invoice"").Select
+    Range(""F64"").Select
+    Do Until (ActiveCell.Value = ""Finish"" Or ActiveCell.Value = """")
+        description = ActiveCell.Value
+        ActiveCell.Offset(0, 1).Select
+        quantity = Selection.Value
+        ActiveCell.Offset(0, 6).Select
+        total = Selection.Value
+        If (getCategory(description) = ""Furniture"") Then
+            furnitureTotal = furnitureTotal + Val(total)  <---------- this line
+            furQuantity = furQuantity + quantity
+            End If
+        
+        If getCategory(description) = ""Electronics"" Then
+            applianceTotal = applianceTotal + total
+            appQuantity = appQuantity + quantity
+            End If
+        
+        If getCategory(description) = ""White Goods"" Then
+            whiteGoodsTotal = whiteGoodsTotal + total
+            whiteGoodQuantity = whiteGoodQuantity + quantity
+            End If
+            
+        If getCategory(description) = ""Soft Furnishings"" Then
+            softFurTotal = softFurTotal + total
+            softFurQuantity = softFurQuantity + quantity
+            End If
+        
+        Sheets(""Invoice"").Select
+        ActiveCell.Offset(1, -7).Select
+    Loop
+    
+    Sheets(""Invoice"").Select
+    Range(""L24"").Select
+    Selection.Value = furQuantity
+    ActiveCell.Offset(0, 1).Select
+    Selection.Value = furnitureTotal
+    Range(""L25"").Select
+    Selection.Value = appQuantity
+    ActiveCell.Offset(0, 1).Select
+    Selection.Value = applianceTotal
+    Range(""L26"").Select
+    Selection.Value = whiteGoodQuantity
+    ActiveCell.Offset(0, 1).Select
+    Selection.Value = whiteGoodsTotal
+    Range(""L27"").Select
+    Selection.Value = softFurQuantity
+    ActiveCell.Offset(0, 1).Select
+    Selection.Value = softFurTotal
+    
+
+    End Sub
+
+I ran this code when each description belonged to furniture category . When I run it the values of all the variables remain 0 . When I opened the debugger and viewed the values of variables  
+it showed the values of variable in line  
+    furnitureTotal = furnitureTotal + Val(total)
+to be 0,0 and 1750 respectively . I cannot understand why it does not add two double values .Is this related to the lifetime of variable ? if yes can you tell me something so that i can get out of this problem",5
+296696,11/17/2008 19:59:55,1354,08/14/2008 17:42:32,511,20,How do I make sure public VBA methods don't show up in the list of Excel macros?,"In Excel VBA (2003), I've noticed that any **Public** or **Friend**  **Sub** method in either a module or *ThisWorkbook* that doesn't have any arguments will show up as a Macro that can be run by the user. I.e. when the user goes to Tools --> Macro --> Macros... (or Alt+F8) the method will show up in the list that can be run.
+
+For sanity's sake (organization, maintenance, etc) I do need to separate the code into modules. I'm hoping to find a non-hacky way to hide some methods from the user, but still allow them to be visible to other code modules. Note that all the code is contained within the same *application*, so no external code is called.
+
+My current work-around is to use **Function**s that return a boolean instead of **Sub**s, and just ignore the return value. This doesn't feel quite right, however, so any advice about how to structure a non-trivial Excel VBA application would be much appreciated.",excel,vba,,,,,open,0,160,17,"How do I make sure public VBA methods don't show up in the list of Excel macros? In Excel VBA (2003), I've noticed that any **Public** or **Friend**  **Sub** method in either a module or *ThisWorkbook* that doesn't have any arguments will show up as a Macro that can be run by the user. I.e. when the user goes to Tools --> Macro --> Macros... (or Alt+F8) the method will show up in the list that can be run.
+
+For sanity's sake (organization, maintenance, etc) I do need to separate the code into modules. I'm hoping to find a non-hacky way to hide some methods from the user, but still allow them to be visible to other code modules. Note that all the code is contained within the same *application*, so no external code is called.
+
+My current work-around is to use **Function**s that return a boolean instead of **Sub**s, and just ignore the return value. This doesn't feel quite right, however, so any advice about how to structure a non-trivial Excel VBA application would be much appreciated.",2
+8333404,11/30/2011 21:49:30,777015,05/31/2011 03:04:00,8,0,Excel - Advanced Text Filters,"I have a long list of strings:
+""apple is red""
+""apple is big""
+""apple tastes yummy""
+""lemon is yellow""
+""lemon is big""
+""lemon tastes sour""
+""orange is rotten""
+""watermelon is red""
+
+Now I want to create a short list of filter words like:
+""red""
+""big""
+
+I need an Excel fitler that can return the rows or records that DOES NOT have the words from the filter:
+
+Result should be:
+""apple tastes yummy""
+""lemon is yellow""
+""lemon tastes sour""
+""orange is rotten""
+
+I would greatly appreciate your ideas!  I hope I can do it without using VBA.
+Thanks,
+David",excel,filter,,,,12/01/2011 03:56:15,off topic,1,79,5,"Excel - Advanced Text Filters I have a long list of strings:
+""apple is red""
+""apple is big""
+""apple tastes yummy""
+""lemon is yellow""
+""lemon is big""
+""lemon tastes sour""
+""orange is rotten""
+""watermelon is red""
+
+Now I want to create a short list of filter words like:
+""red""
+""big""
+
+I need an Excel fitler that can return the rows or records that DOES NOT have the words from the filter:
+
+Result should be:
+""apple tastes yummy""
+""lemon is yellow""
+""lemon tastes sour""
+""orange is rotten""
+
+I would greatly appreciate your ideas!  I hope I can do it without using VBA.
+Thanks,
+David",2
+6578068,07/05/2011 04:51:34,317289,04/15/2010 08:55:05,97,5,Unique values in Excel list,"I have an excel file in which say i have some items in Col A
+
+    Apple
+    Banana
+    Grapes
+    Banana
+    Apple
+    Grapes
+    Mango
+    Mango
+
+now i want a create a list dropdown in Cell B1 with unique values from Col A... any help would be appreaciated 
+",excel,,,,,11/09/2011 00:21:52,off topic,1,69,5,"Unique values in Excel list I have an excel file in which say i have some items in Col A
+
+    Apple
+    Banana
+    Grapes
+    Banana
+    Apple
+    Grapes
+    Mango
+    Mango
+
+now i want a create a list dropdown in Cell B1 with unique values from Col A... any help would be appreaciated 
+",1
+6975442,08/07/2011 20:05:39,883087,08/07/2011 20:05:39,1,0,Excel: how to get cells count with some year of date?,"I've got column with dates
+for example: 
+21.01.2011
+20.02.2011
+21.02.2010
+19.03.2009
+
+I need to get count of cells with for example 2011 year
+I don't want to use macroses and aditional (helpers) cells.
+Thank's.",excel,,,,,08/07/2011 20:17:23,off topic,1,27,11,"Excel: how to get cells count with some year of date? I've got column with dates
+for example: 
+21.01.2011
+20.02.2011
+21.02.2010
+19.03.2009
+
+I need to get count of cells with for example 2011 year
+I don't want to use macroses and aditional (helpers) cells.
+Thank's.",1
+6000533,05/14/2011 07:54:13,582129,01/19/2011 21:20:28,91,1,workaround named range character limit,"I'm building a graph, where the series are named ranges. It all works fine as I have a dropbox, where I select the customer, and it loops through the data, creating the string for the named range and edits it, refresh the graph, voila!
+
+Now, the problem is that it seems I have a limit of 255 characters for this string, and if a customer has a lot of records, then it errors.
+
+Has anyone come across a similar issue or knows a workaround?
+
+    For i = 8 To lRow
+        If Sheets(""Data"").Cells(i, 4).Value = cmbInst.Value Then
+            nRangeTrade = nRangeTrade & ""Data!$A$"" & i & "",""
+            nRangeSettle = nRangeSettle & ""Data!$C$"" & i & "",""
+        End If
+    Next
+
+nRangeTrade : 
+""Data!$A$85,Data!$A$97,Data!$A$98,Data!$A$156,Data!$A$157,Data!$A$308,Data!$A$309,Data!$A$464,Data!$A$473,Data!$A$474,Data!$A$478,Data!$A$490,Data!$A$541,Data!$A$546,Data!$A$633,Da""
+
+as you can see, this is where the problems kick in.",excel,excel-vba,,,,,open,0,169,5,"workaround named range character limit I'm building a graph, where the series are named ranges. It all works fine as I have a dropbox, where I select the customer, and it loops through the data, creating the string for the named range and edits it, refresh the graph, voila!
+
+Now, the problem is that it seems I have a limit of 255 characters for this string, and if a customer has a lot of records, then it errors.
+
+Has anyone come across a similar issue or knows a workaround?
+
+    For i = 8 To lRow
+        If Sheets(""Data"").Cells(i, 4).Value = cmbInst.Value Then
+            nRangeTrade = nRangeTrade & ""Data!$A$"" & i & "",""
+            nRangeSettle = nRangeSettle & ""Data!$C$"" & i & "",""
+        End If
+    Next
+
+nRangeTrade : 
+""Data!$A$85,Data!$A$97,Data!$A$98,Data!$A$156,Data!$A$157,Data!$A$308,Data!$A$309,Data!$A$464,Data!$A$473,Data!$A$474,Data!$A$478,Data!$A$490,Data!$A$541,Data!$A$546,Data!$A$633,Da""
+
+as you can see, this is where the problems kick in.",2
+7731348,10/11/2011 19:22:45,945360,09/14/2011 19:12:28,21,0,What causes an excel file to open as read-only?,"An excel file exists on a network that can be accessed by several users.
+
+However, after some investigation it was found that some users open the file as read-only.
+
+I'm opening the file with VBA and workBook.Open(). This routine has a read-only property, but even explicitly sending this parameter as false, the file still opens as read only. When users who experienced this bug were asked to open the file straight from the network, the file opens as read only, despite being fine for other users. Additionally, permission rights to the folder has been ruled out as the cause.
+
+Does macro security prevent a file from being opened normally? What else can cause a file to open as read-only?",excel,vba,readonly,,,10/12/2011 01:53:05,off topic,1,116,9,"What causes an excel file to open as read-only? An excel file exists on a network that can be accessed by several users.
+
+However, after some investigation it was found that some users open the file as read-only.
+
+I'm opening the file with VBA and workBook.Open(). This routine has a read-only property, but even explicitly sending this parameter as false, the file still opens as read only. When users who experienced this bug were asked to open the file straight from the network, the file opens as read only, despite being fine for other users. Additionally, permission rights to the folder has been ruled out as the cause.
+
+Does macro security prevent a file from being opened normally? What else can cause a file to open as read-only?",3
+10499172,05/08/2012 13:04:07,1382096,05/08/2012 12:50:04,1,0,how to import xlsx file(2010) into R,"we have more than 7000 excel data files for .xlsx(2010). my R version is R 2.15.0.
+if i do manual operation to convert xlsx to xlx, .cvs, or txt., it will spend more time to do it .",excel,,,,,05/09/2012 13:23:30,not a real question,1,37,7,"how to import xlsx file(2010) into R we have more than 7000 excel data files for .xlsx(2010). my R version is R 2.15.0.
+if i do manual operation to convert xlsx to xlx, .cvs, or txt., it will spend more time to do it .",1
+10075500,04/09/2012 15:25:21,986758,10/09/2011 21:08:18,148,3,Excel VBA form lag,"I am creating an excel application that will open a userform when the user goes to a specific sheet. When the user clicks this sheet, the form appears. However, I don't want to user to be able to see what's in the sheet. I just want it to open without the lag or already be loaded in that sheet. Is there a way to do this?
+
+Thanks.",excel,vba,,,,,open,0,66,4,"Excel VBA form lag I am creating an excel application that will open a userform when the user goes to a specific sheet. When the user clicks this sheet, the form appears. However, I don't want to user to be able to see what's in the sheet. I just want it to open without the lag or already be loaded in that sheet. Is there a way to do this?
+
+Thanks.",2
+8441492,12/09/2011 05:33:15,169497,09/07/2009 04:53:48,449,55,Calculating Elapsed Time in Excel Sheet using Macro,"My Excel Sheet looks like the following:
+
+A---------------------B---------------------C  
+Intime----------------Outtime---------------Elapsedtime  
+10:00 AM--------------  
+11:00 AM--------------  
+9:00 AM  
+
+
+I want to calculate on Column C only when I enter data on Column B and this should be done using Macro.... 
+
+Please help me to solve this....",excel,excel-vba,,,,,open,0,47,8,"Calculating Elapsed Time in Excel Sheet using Macro My Excel Sheet looks like the following:
+
+A---------------------B---------------------C  
+Intime----------------Outtime---------------Elapsedtime  
+10:00 AM--------------  
+11:00 AM--------------  
+9:00 AM  
+
+
+I want to calculate on Column C only when I enter data on Column B and this should be done using Macro.... 
+
+Please help me to solve this....",2
+10086611,04/10/2012 09:58:03,1103337,12/17/2011 10:21:37,13,0,R reading Excel files with carriage returns,"I create a routine in R to import multiple Excel files that I need to merge in one big txt file. I use the read.xls function. Some of these xls files have carriage returns in cells (""\n""). Then, when I write the txt files (write.table) R interpret this ""\n"" as new lines.
+How can I clean the xls files or read properly them to remove the not necessary ""\n""?
+
+Thanks!",excel,r,carriage-return,,,,open,0,68,7,"R reading Excel files with carriage returns I create a routine in R to import multiple Excel files that I need to merge in one big txt file. I use the read.xls function. Some of these xls files have carriage returns in cells (""\n""). Then, when I write the txt files (write.table) R interpret this ""\n"" as new lines.
+How can I clean the xls files or read properly them to remove the not necessary ""\n""?
+
+Thanks!",3
+11108305,06/19/2012 19:49:08,1467378,06/19/2012 19:21:03,3,0,How to make data static in Excel,"I have used a formula to calculate data for each row in a column.  The calculation takes values from other columns.  I now wish to copy the new column of data and paste it onto another sheet so that I can use it there, but when I do this I get errors because the formulas no longer work on the new sheet.  
+
+How can I copy my calculated data and paste it somewhere else, exactly as it appears in the original column?",excel,variables,data,script,static,06/20/2012 21:08:11,off topic,1,85,7,"How to make data static in Excel I have used a formula to calculate data for each row in a column.  The calculation takes values from other columns.  I now wish to copy the new column of data and paste it onto another sheet so that I can use it there, but when I do this I get errors because the formulas no longer work on the new sheet.  
+
+How can I copy my calculated data and paste it somewhere else, exactly as it appears in the original column?",5
+5428794,03/25/2011 05:16:19,662033,03/16/2011 07:26:11,6,0,BiffException while reading an excel sheet,"i have a code to read from an excel sheet which is in old format(97-2003). I made some changes to data and ended up a 2007 format excel sheet. when i used this xlsx sheet instead of xls sheet, am getting this 
+jxl.read.biff.BiffException: Unable to recognize OLE stream
+	at jxl.read.biff.CompoundFile.<init>(CompoundFile.java:116)
+	at jxl.read.biff.File.<init>(File.java:127)
+	at jxl.Workbook.getWorkbook(Workbook.java:268)
+	at readexcel.ReadExcel.readContent(ReadExcel.java:50)
+	at readexcel.ReadExcel.init(ReadExcel.java:25)
+	at readexcel.ReadExcel.main(ReadExcel.java:183)
+
+Can someone help me out on this",excel,jxl,,,,,open,0,60,6,"BiffException while reading an excel sheet i have a code to read from an excel sheet which is in old format(97-2003). I made some changes to data and ended up a 2007 format excel sheet. when i used this xlsx sheet instead of xls sheet, am getting this 
+jxl.read.biff.BiffException: Unable to recognize OLE stream
+	at jxl.read.biff.CompoundFile.<init>(CompoundFile.java:116)
+	at jxl.read.biff.File.<init>(File.java:127)
+	at jxl.Workbook.getWorkbook(Workbook.java:268)
+	at readexcel.ReadExcel.readContent(ReadExcel.java:50)
+	at readexcel.ReadExcel.init(ReadExcel.java:25)
+	at readexcel.ReadExcel.main(ReadExcel.java:183)
+
+Can someone help me out on this",2
+10020667,04/04/2012 23:27:30,1314042,04/04/2012 23:18:22,1,0,Sorting Excel Content,"Basically my data set includes individuals in basketball teams and their associated stat lines. There is a row for each season the individual played:
+
+year|player|team|stats etc
+
+I am looking to write a macro in excel that can copy all individuals who have played for multiple teams such that each season row appears in a new spreadsheet. Visually:
+
+1990|Bob|Bulls|Stats
+
+1990|James|Bulls|Stats
+
+1991|Bob|Lakers|Stats
+
+1991|James|Bulls|Stats
+
+The macro would identify that Bob switched teams and then accordingly copy those two rows of data into a new spreadsheet while leaving James out since he never switched teams. 
+
+Any help would be much appreciated!",excel,sorting,filter,copy,lookup,04/05/2012 08:36:25,off topic,1,90,3,"Sorting Excel Content Basically my data set includes individuals in basketball teams and their associated stat lines. There is a row for each season the individual played:
+
+year|player|team|stats etc
+
+I am looking to write a macro in excel that can copy all individuals who have played for multiple teams such that each season row appears in a new spreadsheet. Visually:
+
+1990|Bob|Bulls|Stats
+
+1990|James|Bulls|Stats
+
+1991|Bob|Lakers|Stats
+
+1991|James|Bulls|Stats
+
+The macro would identify that Bob switched teams and then accordingly copy those two rows of data into a new spreadsheet while leaving James out since he never switched teams. 
+
+Any help would be much appreciated!",5
+7489991,09/20/2011 18:32:55,955416,09/20/2011 18:32:55,1,0,Is there a way to have a program find the next available row in a spreadsheet?,How can I create a program that sorts through a spreadsheet finds the last line of data then copies/pastes in new text in the next available row?,excel,vba,macros,office-programing,,,open,0,27,16,Is there a way to have a program find the next available row in a spreadsheet? How can I create a program that sorts through a spreadsheet finds the last line of data then copies/pastes in new text in the next available row?,4
+9089836,02/01/2012 02:12:49,1181740,02/01/2012 01:54:23,1,0,"Copy Excel worksheet without VBA , Buttons and Macro","A excel spreadsheet has a button to copy, save, append file name with date and time all in a new path. Works great.But I need this new file minus VBA. 
+I tried some code but it stripped all VBA out of existing file and new file. 
+How do I leave intact vba excel spreadsheet and create this new file ? 
+
+
+ ",excel,vba,,,,02/01/2012 08:09:12,not a real question,1,62,9,"Copy Excel worksheet without VBA , Buttons and Macro A excel spreadsheet has a button to copy, save, append file name with date and time all in a new path. Works great.But I need this new file minus VBA. 
+I tried some code but it stripped all VBA out of existing file and new file. 
+How do I leave intact vba excel spreadsheet and create this new file ? 
+
+
+ ",2
+11550143,07/18/2012 20:51:51,725523,04/26/2011 14:12:18,127,9,Changing cell color based on it's content,"I have a list of car dealershipships.  What i'd like to do, is change the color of the cell based on what type of dealership it is.  So, for example, if I have the cells:
+
+    ABC Ford
+    DEF Chevrolet
+    GHI Honda
+    JKL Hyundai
+    MNO Ford
+    PQR Volvo
+    STU Honda
+    VWX Honda
+    YZZ Mitsubishi
+
+I would like any cells that contain ""Ford"" to turn red, and cells that contain ""Chevrolet"" to turn blue, etc... etc... etc...
+
+Is this possible?",excel,formatting,formulas,,,07/19/2012 06:35:30,off topic,1,105,7,"Changing cell color based on it's content I have a list of car dealershipships.  What i'd like to do, is change the color of the cell based on what type of dealership it is.  So, for example, if I have the cells:
+
+    ABC Ford
+    DEF Chevrolet
+    GHI Honda
+    JKL Hyundai
+    MNO Ford
+    PQR Volvo
+    STU Honda
+    VWX Honda
+    YZZ Mitsubishi
+
+I would like any cells that contain ""Ford"" to turn red, and cells that contain ""Chevrolet"" to turn blue, etc... etc... etc...
+
+Is this possible?",3
+7583051,09/28/2011 12:14:38,688412,04/01/2011 23:10:33,106,3,excel vba - type mismatch and optimise,"![b][1]
+
+Here is my code basically when you run it asks for input of xml files then you select some and it generates the values of the xpaths from the first sheet. See screenshot above for before it is run and screenhot at the bottom for after it is run.
+
+It works fine when I select just a few xmls as input at the file dialog but sometimes if I select many files (such as over 1000) it spawns a 'Type mismatch error' and the Results sheet remains blank. This error seems to be intermittent and not related to the data, not sure if having other spreadsheets at the same time could cause it. I'm raking over the code but have no idea what is causing the error. Note, i'm already using Option Explicit.
+
+    Public Sub copybyFile()
+    Dim aDoc As DOMDocument
+    Dim aNode As IXMLDOMNode
+    Dim numOfXpaths As Integer
+    Dim tagOccurrences As Integer
+    Dim filenames As Variant
+    Dim f As Integer
+    Dim maxcol As String
+    Dim c As Range
+    Dim aNodes As IXMLDOMNodeList
+    
+    filenames = Application.GetOpenFilename(MultiSelect:=True)
+    numOfXpaths = colToRow + 1
+    f = 1
+    maxcol = Number2Char(numOfXpaths)
+    
+    For f = 1 To UBound(filenames)
+            aDoc.Load (filenames(f))
+        For Each c In Worksheets(""Results"").Range(""A1:"" & maxcol & ""1"")
+            If c.Value <> """" Then
+                tagOccurrences = 0
+                On Error Resume Next
+                Set aNodes = aDoc.selectNodes(c.Value)
+                If aNodes.Length > 0 Then 'if at least one node of the xpath is present
+                    For Each aNode In aNodes 'loop thru each occurence of a node
+                        If tagOccurrences = 0 Then 'first occurence of tag
+                            'tagValue = aNode.Text
+                            'MsgBox aNode.Text
+                                c.Offset(f, 0).Value = aNode.Text
+                        End If
+                        tagOccurrences = tagOccurrences + 1
+                    Next
+                End If
+            End If
+            Set aNodes = Nothing
+            'Set tagValue = Nothing
+        Next c
+        Worksheets(""Results"").Range(maxcol & ""1"").Offset(f, 0).Value = filenames(f)
+    Next f
+    End Sub
+      
+    Function Number2Char(ByVal c) As String
+    Number2Char = Split(Cells(1, c).Address, ""$"")(1)
+    End Function
+    
+    Function colToRow()
+    Dim xpathcount As Integer
+    Dim c As Integer
+    'Dim colToRow As Integer
+    xpathcount = Worksheets(""Xpaths"").Cells(Rows.Count, ""A"").End(xlUp).Row - 1
+    For c = 0 To xpathcount
+        Worksheets(""Results"").Range(""A1"").Offset(0, c) = Worksheets(""Xpaths"").Range(""A1"").Offset(c, 0)
+        Worksheets(""Results"").Range(""A1"").Offset(0, c).Columns.AutoFit
+    Next c
+    Worksheets(""Results"").Range(""A1"").Offset(0, xpathcount + 1) = ""Filename""
+    colToRow = xpathcount + 1
+    End Function
+
+![a][2]
+
+Big props if you are able to optimise the performance using array/transpose or otherwise.
+
+
+  [1]: http://i.stack.imgur.com/3w1Yb.jpg
+  [2]: http://i.stack.imgur.com/do32y.jpg",excel,vba,scripting,vb,macros,06/19/2012 17:41:51,too localized,1,839,7,"excel vba - type mismatch and optimise ![b][1]
+
+Here is my code basically when you run it asks for input of xml files then you select some and it generates the values of the xpaths from the first sheet. See screenshot above for before it is run and screenhot at the bottom for after it is run.
+
+It works fine when I select just a few xmls as input at the file dialog but sometimes if I select many files (such as over 1000) it spawns a 'Type mismatch error' and the Results sheet remains blank. This error seems to be intermittent and not related to the data, not sure if having other spreadsheets at the same time could cause it. I'm raking over the code but have no idea what is causing the error. Note, i'm already using Option Explicit.
+
+    Public Sub copybyFile()
+    Dim aDoc As DOMDocument
+    Dim aNode As IXMLDOMNode
+    Dim numOfXpaths As Integer
+    Dim tagOccurrences As Integer
+    Dim filenames As Variant
+    Dim f As Integer
+    Dim maxcol As String
+    Dim c As Range
+    Dim aNodes As IXMLDOMNodeList
+    
+    filenames = Application.GetOpenFilename(MultiSelect:=True)
+    numOfXpaths = colToRow + 1
+    f = 1
+    maxcol = Number2Char(numOfXpaths)
+    
+    For f = 1 To UBound(filenames)
+            aDoc.Load (filenames(f))
+        For Each c In Worksheets(""Results"").Range(""A1:"" & maxcol & ""1"")
+            If c.Value <> """" Then
+                tagOccurrences = 0
+                On Error Resume Next
+                Set aNodes = aDoc.selectNodes(c.Value)
+                If aNodes.Length > 0 Then 'if at least one node of the xpath is present
+                    For Each aNode In aNodes 'loop thru each occurence of a node
+                        If tagOccurrences = 0 Then 'first occurence of tag
+                            'tagValue = aNode.Text
+                            'MsgBox aNode.Text
+                                c.Offset(f, 0).Value = aNode.Text
+                        End If
+                        tagOccurrences = tagOccurrences + 1
+                    Next
+                End If
+            End If
+            Set aNodes = Nothing
+            'Set tagValue = Nothing
+        Next c
+        Worksheets(""Results"").Range(maxcol & ""1"").Offset(f, 0).Value = filenames(f)
+    Next f
+    End Sub
+      
+    Function Number2Char(ByVal c) As String
+    Number2Char = Split(Cells(1, c).Address, ""$"")(1)
+    End Function
+    
+    Function colToRow()
+    Dim xpathcount As Integer
+    Dim c As Integer
+    'Dim colToRow As Integer
+    xpathcount = Worksheets(""Xpaths"").Cells(Rows.Count, ""A"").End(xlUp).Row - 1
+    For c = 0 To xpathcount
+        Worksheets(""Results"").Range(""A1"").Offset(0, c) = Worksheets(""Xpaths"").Range(""A1"").Offset(c, 0)
+        Worksheets(""Results"").Range(""A1"").Offset(0, c).Columns.AutoFit
+    Next c
+    Worksheets(""Results"").Range(""A1"").Offset(0, xpathcount + 1) = ""Filename""
+    colToRow = xpathcount + 1
+    End Function
+
+![a][2]
+
+Big props if you are able to optimise the performance using array/transpose or otherwise.
+
+
+  [1]: http://i.stack.imgur.com/3w1Yb.jpg
+  [2]: http://i.stack.imgur.com/do32y.jpg",5
+7970700,11/01/2011 18:00:09,1024211,11/01/2011 17:34:14,1,0,Columns ith Drop Down Menus in Excel,"I'm an amateur VBA user and need some guidance... 
+
+I have two worksheets in Excel (1) Billing, (1) Contract.  Billing Sheet has a column with a drop-down menu with billing descriptions. Columns B & C are start & stop times. Column D are 'cost' that located on in the Contract Sheet and are associated with the billing description.  Depending on the billing description, the cost in Column D (Billing Sheet) populates. 
+
+I need help with either a formula (if possible) or VBA code that if the user inputs something from the drop-down that exceeds the contract, the 'contract decription' will replace the initial drop-down entry and the overage desciption will automatically drop down to the row beneath as well as automatically populate the start & stop times in that same row. Any help would be greatly appreciated.",excel,vba,formula,,,,open,0,139,7,"Columns ith Drop Down Menus in Excel I'm an amateur VBA user and need some guidance... 
+
+I have two worksheets in Excel (1) Billing, (1) Contract.  Billing Sheet has a column with a drop-down menu with billing descriptions. Columns B & C are start & stop times. Column D are 'cost' that located on in the Contract Sheet and are associated with the billing description.  Depending on the billing description, the cost in Column D (Billing Sheet) populates. 
+
+I need help with either a formula (if possible) or VBA code that if the user inputs something from the drop-down that exceeds the contract, the 'contract decription' will replace the initial drop-down entry and the overage desciption will automatically drop down to the row beneath as well as automatically populate the start & stop times in that same row. Any help would be greatly appreciated.",3
+9776611,03/19/2012 19:30:07,882445,08/07/2011 05:30:34,157,14,Insert picture into excel cell,"This may sound silly, but I need to generate a report with pictures, and I can not get the pictures into a single cell. I can get the pictures to ""float"" around my worksheet, but I need to put them into a cell. How can I do this?",excel,excel-2010,,,,,open,0,48,5,"Insert picture into excel cell This may sound silly, but I need to generate a report with pictures, and I can not get the pictures into a single cell. I can get the pictures to ""float"" around my worksheet, but I need to put them into a cell. How can I do this?",2
+11511500,07/16/2012 19:48:08,1048319,11/15/2011 19:29:56,368,8,Creating a progress bar in Excel VBA,"I found an Excel VBA script and ""tutorial"", except it doesn't really break the code, and the bar code into separate sections. 
+
+
+http://spreadsheetpage.com/index.php/tip/displaying_a_progress_indicator/
+
+The script attached to the ""demo"" adds random numbers into an excel sheet, as the progress bar goes across. 
+
+What this code on the sheet doesn't do is break the sections up, so saying ' this is the code for the random numbers, and ' this is the code for the actual progression bar.
+
+Could someone disect this code and make it more ""user friendly"" for those who can't speak VBAeese as well as those who seemed to of written it? 
+
+Thanks in advance. ",excel,excel-vba,,,,07/18/2012 14:12:47,too localized,1,106,7,"Creating a progress bar in Excel VBA I found an Excel VBA script and ""tutorial"", except it doesn't really break the code, and the bar code into separate sections. 
+
+
+http://spreadsheetpage.com/index.php/tip/displaying_a_progress_indicator/
+
+The script attached to the ""demo"" adds random numbers into an excel sheet, as the progress bar goes across. 
+
+What this code on the sheet doesn't do is break the sections up, so saying ' this is the code for the random numbers, and ' this is the code for the actual progression bar.
+
+Could someone disect this code and make it more ""user friendly"" for those who can't speak VBAeese as well as those who seemed to of written it? 
+
+Thanks in advance. ",2
+11539254,07/18/2012 10:26:03,1534415,07/18/2012 10:13:18,1,0,formatting in excel,"In excel2010 Version can we format time column into text along with AM/PM information for corresponding time. 
+
+eg.COLUMN A has ""daily"" as text and column B has ""6.00 PM "" as value . can we append these A & B Columns and display as ""daily 6.00 PM"" in single cell?
+
+
+  ",excel,formating,,,,07/19/2012 13:49:42,off topic,1,52,3,"formatting in excel In excel2010 Version can we format time column into text along with AM/PM information for corresponding time. 
+
+eg.COLUMN A has ""daily"" as text and column B has ""6.00 PM "" as value . can we append these A & B Columns and display as ""daily 6.00 PM"" in single cell?
+
+
+  ",2
+11057668,06/15/2012 20:19:35,1365781,04/30/2012 12:07:56,9,0,Excel (Macro) How to save column B with column A filename,"My skills in Excel is not good enough so i hope you can help me here.
+I have a Excel file that have numbers in column A and text in column B with 300 rows.
+How can i save a txt file with each row in column B with column A filename?
+
+Se my example here:
+
+http://bildr.no/view/1205751
+
+Best Regards
+Frank",excel,save,columns,filenames,,,open,0,54,11,"Excel (Macro) How to save column B with column A filename My skills in Excel is not good enough so i hope you can help me here.
+I have a Excel file that have numbers in column A and text in column B with 300 rows.
+How can i save a txt file with each row in column B with column A filename?
+
+Se my example here:
+
+http://bildr.no/view/1205751
+
+Best Regards
+Frank",4
+7170088,08/24/2011 03:24:54,626528,02/21/2011 12:08:07,354,11,How to set Value of the union Range?,"I have a union Range, combined from multiple cells spread across the workbook. Is it possible to assign new values to all cells of this Range at once?",excel,vsto,,,,,open,0,28,8,"How to set Value of the union Range? I have a union Range, combined from multiple cells spread across the workbook. Is it possible to assign new values to all cells of this Range at once?",2
+8420344,12/07/2011 18:14:09,1086193,12/07/2011 17:34:15,1,0,Time off tracking tool - Creating a cell value that increments by a designated amount on specific days of the year,"I am using MS Excel 2007 and I am creating a worksheet that will help employees track Paid Time Off (PTO).  The number of hours an employee has available to use increments by a specific amount of hours twice a month on specific days.  Specifically the 2nd and the 17th of each month.
+I have put the number of hours to add each pay period in one cell lets say A1, I put the =today() function in another cell lets say B1, and the total number of hours available in yet another cell lets say C1.
+I would like the value in the total hours avail cell(C1) to increment by the number that I specified in cell A1 each 2nd and each 17th of each month when the =today() cell reaches that particular month and day.  For example:
+
+An employee gets 5 hours of PTO each pay period.  Pay periods end on the 2nd and the 17th of each month.
+Lets say that todays date is March 2nd 2011. The calculation would need to total all the hours accrued on each pay period from the begining of the year, Jan 1, 2011 to the present day.
+The total for march 2nd would equal 25.  On Mach 17th, the number would increment by 5 (the value in A1) and the total would be 30.  This would continue to the end of the year.
+
+I hope this make sense - I'm not really a programmer type of person.",excel,worksheet-function,,,,12/07/2011 20:26:25,off topic,1,246,21,"Time off tracking tool - Creating a cell value that increments by a designated amount on specific days of the year I am using MS Excel 2007 and I am creating a worksheet that will help employees track Paid Time Off (PTO).  The number of hours an employee has available to use increments by a specific amount of hours twice a month on specific days.  Specifically the 2nd and the 17th of each month.
+I have put the number of hours to add each pay period in one cell lets say A1, I put the =today() function in another cell lets say B1, and the total number of hours available in yet another cell lets say C1.
+I would like the value in the total hours avail cell(C1) to increment by the number that I specified in cell A1 each 2nd and each 17th of each month when the =today() cell reaches that particular month and day.  For example:
+
+An employee gets 5 hours of PTO each pay period.  Pay periods end on the 2nd and the 17th of each month.
+Lets say that todays date is March 2nd 2011. The calculation would need to total all the hours accrued on each pay period from the begining of the year, Jan 1, 2011 to the present day.
+The total for march 2nd would equal 25.  On Mach 17th, the number would increment by 5 (the value in A1) and the total would be 30.  This would continue to the end of the year.
+
+I hope this make sense - I'm not really a programmer type of person.",2
+7182822,08/24/2011 21:57:44,873599,08/01/2011 23:04:30,32,0,What color code is this?,"I'm looking at a code snippet which places text in an excel header:
+
+`headerText.Append(@""&""""Calibri""""&20&K04-024HEADER-TEXT"");`
+
+`&""""Calibri""""` modifies the font, `&20` modifies the size, and `&K04-024` modifies the color (to navyish).
+
+The question is, what kind of color code is this (`K04-024`)?  I've seen various types before but nothing like this.  I've tried scouring google and can't find anything about it.",excel,colors,header,,,,open,0,58,5,"What color code is this? I'm looking at a code snippet which places text in an excel header:
+
+`headerText.Append(@""&""""Calibri""""&20&K04-024HEADER-TEXT"");`
+
+`&""""Calibri""""` modifies the font, `&20` modifies the size, and `&K04-024` modifies the color (to navyish).
+
+The question is, what kind of color code is this (`K04-024`)?  I've seen various types before but nothing like this.  I've tried scouring google and can't find anything about it.",3
+11220169,06/27/2012 05:51:32,1436683,06/05/2012 06:45:23,26,0,Lat -long to x-y,"I have 2 columns that have latitude and longitude data in degrees, what simple formula that takes into account the curvature of the Earth can I use to convert them into x and y coordinates in meters using Excel?",excel,coordinates,latitude-longitude,,,06/27/2012 13:10:49,off topic,1,39,4,"Lat -long to x-y I have 2 columns that have latitude and longitude data in degrees, what simple formula that takes into account the curvature of the Earth can I use to convert them into x and y coordinates in meters using Excel?",3
+1432746,09/16/2009 12:48:17,78522,03/16/2009 10:43:13,255,40,Excel DateAdd not working properly ?,"I am trying to use Excel the DateAdd function to find the next working day.
+It seems that Excel is not working as expected with this function, and always provides the same result wether you use d, w or y for the period argument. (by the way the explanations of the ""y"" value are beyond my logic).
+
+I tried the following code, and get identicial results in all 3 columns. Am I mad ?
+
+    Sub test()
+        Dim i As Integer
+        For i = 1 To 9
+            Debug.Print i;
+            Debug.Print DateAdd(""d"", i, #9/10/2009#);
+            Debug.Print DateAdd(""w"", i, #9/10/2009#);
+            Debug.Print DateAdd(""y"", i, #9/10/2009#)
+        Next i
+    End Sub
+Result:  
+    1 11/09/2009 11/09/2009 11/09/2009   
+    2 12/09/2009 12/09/2009 12/09/2009   
+    3 13/09/2009 13/09/2009 13/09/2009  
+    4 14/09/2009 14/09/2009 14/09/2009  
+    5 15/09/2009 15/09/2009 15/09/2009  
+    6 16/09/2009 16/09/2009 16/09/2009  
+    7 17/09/2009 17/09/2009 17/09/2009  
+    8 18/09/2009 18/09/2009 18/09/2009  
+    9 19/09/2009 19/09/2009 19/09/2009 
+ ",excel,vba,excel-vba,,,,open,0,258,6,"Excel DateAdd not working properly ? I am trying to use Excel the DateAdd function to find the next working day.
+It seems that Excel is not working as expected with this function, and always provides the same result wether you use d, w or y for the period argument. (by the way the explanations of the ""y"" value are beyond my logic).
+
+I tried the following code, and get identicial results in all 3 columns. Am I mad ?
+
+    Sub test()
+        Dim i As Integer
+        For i = 1 To 9
+            Debug.Print i;
+            Debug.Print DateAdd(""d"", i, #9/10/2009#);
+            Debug.Print DateAdd(""w"", i, #9/10/2009#);
+            Debug.Print DateAdd(""y"", i, #9/10/2009#)
+        Next i
+    End Sub
+Result:  
+    1 11/09/2009 11/09/2009 11/09/2009   
+    2 12/09/2009 12/09/2009 12/09/2009   
+    3 13/09/2009 13/09/2009 13/09/2009  
+    4 14/09/2009 14/09/2009 14/09/2009  
+    5 15/09/2009 15/09/2009 15/09/2009  
+    6 16/09/2009 16/09/2009 16/09/2009  
+    7 17/09/2009 17/09/2009 17/09/2009  
+    8 18/09/2009 18/09/2009 18/09/2009  
+    9 19/09/2009 19/09/2009 19/09/2009 
+ ",3
+7772228,10/14/2011 18:54:28,995989,10/14/2011 18:40:13,1,0,Data validation for a route sheet,"I need to create a list of locations that a truck driver must go to on a daily basis.  The pool of locations is finite (48). The combinations are infinite. Some days 10 some 25, etc. I know a drop down list is not practical but don't know how else to create a ""pick list"" Is Access the way to go or can I do it in Excel?  Can I list all the locations outside the printable area and then cherry pick them somehow?  ",excel,validation,data,access,,10/17/2011 23:30:20,off topic,1,88,6,"Data validation for a route sheet I need to create a list of locations that a truck driver must go to on a daily basis.  The pool of locations is finite (48). The combinations are infinite. Some days 10 some 25, etc. I know a drop down list is not practical but don't know how else to create a ""pick list"" Is Access the way to go or can I do it in Excel?  Can I list all the locations outside the printable area and then cherry pick them somehow?  ",4
+3302437,07/21/2010 18:18:05,44394,12/08/2008 20:09:58,384,5,Is there a fast way to get the number of rows in an Excel sheet using ADO.Net?,"Is there a better way than
+
+    string connectionString = ""Provider=Microsoft.ACE.OLEDB.12.0;Data Source=<xlxsName>;Extended Properties=\""Excel 8.0;HDR=YES;IMEX=1;ReadOnly=True\"""";
+    string sql = string.Format(""SELECT COUNT (*) FROM [{0}] "", worksheetName);
+    using (OleDbConnection conn = new OleDbConnection(connectionString)) {
+        OleDbCommand cmd = new OleDbCommand(sql, conn);
+        conn.Open();
+        totalCount = (int)cmd.ExecuteScalar();
+        conn.Close();
+    }
+
+to get a row count from an excel sheet? If possible I'd prefer to use ADO.Net instead of Excel interop
+            
+
+
+
+
+",excel,ado.net,,,,,open,0,113,17,"Is there a fast way to get the number of rows in an Excel sheet using ADO.Net? Is there a better way than
+
+    string connectionString = ""Provider=Microsoft.ACE.OLEDB.12.0;Data Source=<xlxsName>;Extended Properties=\""Excel 8.0;HDR=YES;IMEX=1;ReadOnly=True\"""";
+    string sql = string.Format(""SELECT COUNT (*) FROM [{0}] "", worksheetName);
+    using (OleDbConnection conn = new OleDbConnection(connectionString)) {
+        OleDbCommand cmd = new OleDbCommand(sql, conn);
+        conn.Open();
+        totalCount = (int)cmd.ExecuteScalar();
+        conn.Close();
+    }
+
+to get a row count from an excel sheet? If possible I'd prefer to use ADO.Net instead of Excel interop
+            
+
+
+
+
+",2
+11434258,07/11/2012 13:55:18,1517967,07/11/2012 13:51:08,1,0,How can I extract keywords from Tridion into an Excel format?,How can I extract keywords from Tridion into an Excel format? This is for the purpose of translation of the website.,excel,content-management-system,keywords,tridion,extraction,07/18/2012 14:13:52,not a real question,1,21,11,How can I extract keywords from Tridion into an Excel format? How can I extract keywords from Tridion into an Excel format? This is for the purpose of translation of the website.,5
+11253325,06/28/2012 21:42:27,1121983,12/29/2011 21:55:47,198,22,Hide non-significant data in Excel chart,"Is there a way to tell excel to not display non-significant series in a chart?
+
+Let's say I have a hundred numbers, having the sum of the the last 90 being less than one of the top 5. I'd like to draw a pie chart with the bottom 90 not shown, or shown as a ""others"" slice.
+
+Is there a simple chart option or formula I can use? Would I need to get an Excel update?",excel,charts,,,,07/05/2012 14:24:56,off topic,1,74,6,"Hide non-significant data in Excel chart Is there a way to tell excel to not display non-significant series in a chart?
+
+Let's say I have a hundred numbers, having the sum of the the last 90 being less than one of the top 5. I'd like to draw a pie chart with the bottom 90 not shown, or shown as a ""others"" slice.
+
+Is there a simple chart option or formula I can use? Would I need to get an Excel update?",2
+3051610,06/16/2010 08:14:40,103264,05/08/2009 01:16:16,482,2,compare two excel sheets,"how do you compare two excel sheet and determine which column is missing?
+
+(would like to compare a list of countries from sheet A with sheet B, then mark which country is missing)
+
+Note: they are in random order.",excel,excel-vba,excel-2007,compare,,,open,0,37,4,"compare two excel sheets how do you compare two excel sheet and determine which column is missing?
+
+(would like to compare a list of countries from sheet A with sheet B, then mark which country is missing)
+
+Note: they are in random order.",4
+9962881,04/01/2012 08:10:23,946391,11/27/2010 14:38:05,81,2,Combining Excel COUNTIFS with aggregate functions,"Say I have an Excel spreadsheet containing student details and dates of courses the student attended. Lets say the row headers are:
+
+Name - Student Grade - Date of course A - Date of course B - Date of course C etc...
+
+Then obviously a separate row per student containing their grade and dates of the courses the student was present in. I want to avoid making modifications to the sheet as the format has been established for a while.
+
+I'm looking for some way of counting all the students with a grade a specific grade, which attended courses between specific dates. For example, count all students with a ""C"" grade, which attended courses between 1st Jan 2012 to 31st March 2012.
+
+I guess the final formula will be some sort of combination of COUNTIFS and MAX on the date range columns, but I can't see how I can apply this on a row-by-row basis.
+
+All suggestions much appreciated!
+
+Best regards,
+Chris",excel,excel-formula,,,,,open,0,155,6,"Combining Excel COUNTIFS with aggregate functions Say I have an Excel spreadsheet containing student details and dates of courses the student attended. Lets say the row headers are:
+
+Name - Student Grade - Date of course A - Date of course B - Date of course C etc...
+
+Then obviously a separate row per student containing their grade and dates of the courses the student was present in. I want to avoid making modifications to the sheet as the format has been established for a while.
+
+I'm looking for some way of counting all the students with a grade a specific grade, which attended courses between specific dates. For example, count all students with a ""C"" grade, which attended courses between 1st Jan 2012 to 31st March 2012.
+
+I guess the final formula will be some sort of combination of COUNTIFS and MAX on the date range columns, but I can't see how I can apply this on a row-by-row basis.
+
+All suggestions much appreciated!
+
+Best regards,
+Chris",2
+7666774,10/05/2011 19:40:40,368892,06/17/2010 03:29:16,422,1,VLOOKUP Error - EXCEL,"I am trying to use VLOOKUP for the following:
+Column A has all my data ids ( numbers) and Column B has a subset of my data ids in coulmn A
+
+I need to get a list of all the ids which do not exist in Column B.
+
+My VLOOKUP function looks like this:
+
+= VLOOKUP(A1,B:B,2,FALSE)
+
+I keep getting #N/A and #REF errors. I am not sure why.
+
+Can some one please tell me what I am doing wrong. I am going on and on trying everything and nothing seems to be working.
+
+Is my formula incorrect?
+
+Thanks.",excel,microsoft,,,,,open,0,90,4,"VLOOKUP Error - EXCEL I am trying to use VLOOKUP for the following:
+Column A has all my data ids ( numbers) and Column B has a subset of my data ids in coulmn A
+
+I need to get a list of all the ids which do not exist in Column B.
+
+My VLOOKUP function looks like this:
+
+= VLOOKUP(A1,B:B,2,FALSE)
+
+I keep getting #N/A and #REF errors. I am not sure why.
+
+Can some one please tell me what I am doing wrong. I am going on and on trying everything and nothing seems to be working.
+
+Is my formula incorrect?
+
+Thanks.",2
+8744809,01/05/2012 15:15:24,1132436,01/05/2012 15:04:42,1,0,Extract numbers from text and text cells,"I need a SUM from an column of cells that contains text and numbers.The data style looks like this.
+
+TwoD crowd still: 15
+ThreeD crowd traveling: 22
+ThreeD crowd establisher: 22
+Reactive behavioral crowd: 24
+
+
+I have found a link to a solution, which is a .xlam file. But I don't know how to run it.
+http://www.financeforexcel.com/post/Excel-Add-in-Extract-Numbers-from-Text.aspx
+
+What would be the best way to SUM the list?
+Thanks",excel,excel-vba,,,,,open,0,60,7,"Extract numbers from text and text cells I need a SUM from an column of cells that contains text and numbers.The data style looks like this.
+
+TwoD crowd still: 15
+ThreeD crowd traveling: 22
+ThreeD crowd establisher: 22
+Reactive behavioral crowd: 24
+
+
+I have found a link to a solution, which is a .xlam file. But I don't know how to run it.
+http://www.financeforexcel.com/post/Excel-Add-in-Extract-Numbers-from-Text.aspx
+
+What would be the best way to SUM the list?
+Thanks",2
+11731493,07/31/2012 00:20:46,1402052,05/17/2012 21:34:53,1,0,How to structure a multi-spreadsheet project using Excel,"I'm working on a large research project with a great number of statistics in it. It involves several spreadsheets, with many workbooks inside each. As these spreadsheets get larger and more intricate (and cross-reference each other more), we're noticing a lot more lag time while editing them, hitting the undo button, etc.
+
+So we're wondering: what causes Excel to ""choke"" more? Is it raw amounts of data? References to other spreadsheets? References to other workbooks? Formatting/formulas? Any advice as to its weak points would go a long way in helping us to keep the project managable.",excel,,,,,08/01/2012 02:53:08,off topic,1,95,8,"How to structure a multi-spreadsheet project using Excel I'm working on a large research project with a great number of statistics in it. It involves several spreadsheets, with many workbooks inside each. As these spreadsheets get larger and more intricate (and cross-reference each other more), we're noticing a lot more lag time while editing them, hitting the undo button, etc.
+
+So we're wondering: what causes Excel to ""choke"" more? Is it raw amounts of data? References to other spreadsheets? References to other workbooks? Formatting/formulas? Any advice as to its weak points would go a long way in helping us to keep the project managable.",1
+8989332,01/24/2012 15:22:57,1167273,01/24/2012 14:56:24,1,0,"Not sure what type of Excel formula (SUM, SUMIF ect...) to use for my calculation, can you get me going in the right direction?","In Excel Formulas there are so many different functions, that I am not sure which to use to get started. So if I were to give you an example could you point me in the right direction for learning what I need to do?
+
+
+Ok so say you want 6 Apples (D3)
+And you want 3 oranges (D4) (also buying 1-7 apples gets you 1 orange free so they only need to pay for 2 oranges but if they buy 8-14 they get 2 oranges free and if they buy 15-21 they would get 3 oranges free and so on and so on. multiples of 7 apples get you a free orange)
+And 5 grapes (D5) (these are sold by the 3, so no matter if you buy 5 you get charged 2 because these are only sold in 3's)
+And 4 Bananas (D6) (sold by the each)
+
+So is there a way to formulate this and make it all be one price in I3? The prices are D3=E11, D4=E12, D5=E13 and D6=E14 but for some reason it will not pick anything up past D4=E12, the code stops changing colors when I am putting in the formula. 
+
+Not sure if this makes any sense so any help you can give would be greatly appreciated! 
+
+
+",excel,formulas,,,,,open,0,210,24,"Not sure what type of Excel formula (SUM, SUMIF ect...) to use for my calculation, can you get me going in the right direction? In Excel Formulas there are so many different functions, that I am not sure which to use to get started. So if I were to give you an example could you point me in the right direction for learning what I need to do?
+
+
+Ok so say you want 6 Apples (D3)
+And you want 3 oranges (D4) (also buying 1-7 apples gets you 1 orange free so they only need to pay for 2 oranges but if they buy 8-14 they get 2 oranges free and if they buy 15-21 they would get 3 oranges free and so on and so on. multiples of 7 apples get you a free orange)
+And 5 grapes (D5) (these are sold by the 3, so no matter if you buy 5 you get charged 2 because these are only sold in 3's)
+And 4 Bananas (D6) (sold by the each)
+
+So is there a way to formulate this and make it all be one price in I3? The prices are D3=E11, D4=E12, D5=E13 and D6=E14 but for some reason it will not pick anything up past D4=E12, the code stops changing colors when I am putting in the formula. 
+
+Not sure if this makes any sense so any help you can give would be greatly appreciated! 
+
+
+",2
+7483848,09/20/2011 10:42:55,954535,09/20/2011 10:37:05,1,0,normalise data and draw a graph,"i have a data as:
+
+13880.23
+
+6056.203
+
+9311.61
+
+7866.84
+
+2206.36
+
+1831.2
+
+11293.25
+
+5762.053
+
+7996.76
+
+14815.93
+
+11838.63
+
+17314.97
+
+17998.97
+
+800.07
+
+2598.04
+
+8223.87
+
+9669.02
+
+7596.847
+
+233.47
+
+82.2
+
+-24.42
+
+-76.52
+
+-161.84
+
+949.8
+
+-276.28
+
+-377.83
+
+-325.57
+
+these are the energies of files 1 to 27 in an order. i have to draw a graph in excel sheet but since the energy varies from 13880 to -325, graph will be either too large or will not show values properly. Can a method be possible to bring these values in a particular range and then plot a graph? how can i do this?",excel,graph,,,,09/20/2011 19:33:29,off topic,1,69,6,"normalise data and draw a graph i have a data as:
+
+13880.23
+
+6056.203
+
+9311.61
+
+7866.84
+
+2206.36
+
+1831.2
+
+11293.25
+
+5762.053
+
+7996.76
+
+14815.93
+
+11838.63
+
+17314.97
+
+17998.97
+
+800.07
+
+2598.04
+
+8223.87
+
+9669.02
+
+7596.847
+
+233.47
+
+82.2
+
+-24.42
+
+-76.52
+
+-161.84
+
+949.8
+
+-276.28
+
+-377.83
+
+-325.57
+
+these are the energies of files 1 to 27 in an order. i have to draw a graph in excel sheet but since the energy varies from 13880 to -325, graph will be either too large or will not show values properly. Can a method be possible to bring these values in a particular range and then plot a graph? how can i do this?",2
+3892305,10/08/2010 16:04:39,356379,06/02/2010 11:37:24,164,0,Using vlookup in Excel to match a Surname and First name and output unique ref number?,"I have a spreadsheet which has 3 columns
+
+Col A is a unique reference number
+Col B is the surname
+Col C is the firstname
+
+In another worksheet I want to be able to type in a surname in cell A2, a firstname in cell A3 and have cell A1 automatically populated with the unique reference number.
+
+Is this possible in Excel and if so could you give me an example of how to do it?
+
+Thanks,
+
+Greg",excel,vlookup,,,,,open,0,71,16,"Using vlookup in Excel to match a Surname and First name and output unique ref number? I have a spreadsheet which has 3 columns
+
+Col A is a unique reference number
+Col B is the surname
+Col C is the firstname
+
+In another worksheet I want to be able to type in a surname in cell A2, a firstname in cell A3 and have cell A1 automatically populated with the unique reference number.
+
+Is this possible in Excel and if so could you give me an example of how to do it?
+
+Thanks,
+
+Greg",2
+7097809,08/17/2011 18:44:05,552659,12/23/2010 17:40:28,8,2,Print from batch with Microsoft Excel Viewer (XLVIEW.EXE),"Does anyone know how<br>
+can i print document with batch file with<br>
+Microsoft Excel Viewer (XLVIEW.EXE) ?
+",excel,printing,microsoft,viewer,,08/17/2011 20:05:53,off topic,1,15,8,"Print from batch with Microsoft Excel Viewer (XLVIEW.EXE) Does anyone know how<br>
+can i print document with batch file with<br>
+Microsoft Excel Viewer (XLVIEW.EXE) ?
+",4
+11535622,07/18/2012 06:41:34,1533835,07/18/2012 06:40:29,1,0,Automated reports from excel,"I want to generate automated reports using data in excel. The reports are expected to be in pdf format. 
+
+How can i do that?
+
+Cheers
+
+Dinesh",excel,vba,macros,automation,office,08/01/2012 02:59:38,not a real question,1,24,4,"Automated reports from excel I want to generate automated reports using data in excel. The reports are expected to be in pdf format. 
+
+How can i do that?
+
+Cheers
+
+Dinesh",5
+6894922,08/01/2011 06:39:21,872296,08/01/2011 06:39:21,1,0,How to read multiple excel sheets in R programming?,How to read multiple excel sheets in R programming? Please give a sample code for this.,excel,,,,,08/01/2011 22:39:39,not a real question,1,16,9,How to read multiple excel sheets in R programming? How to read multiple excel sheets in R programming? Please give a sample code for this.,1
+836065,05/07/2009 17:42:48,22599,09/26/2008 08:45:20,365,13,How to write an Excel function which returns a value from an SQL database?,"I want to write the following function which should be used in an Excel worksheet:
+
+    =GetRecField(""Foo Record Key"", ""FooField1"")
+
+...which will connect internally through ODBC to an SQL database, execute there an
+
+    SELECT FooField1 FROM MyTable WHERE KEY_FIELD='Foo Record Key';
+
+and will return the resulting value as the result of the function GetRecField. The above SQL is granted to return only one record (IOW KEY_FIELD has an unique constraint).
+
+Of course, the above function can be called multiple times in a worksheet so, please try to avoid a blind `QueryTables.Add`
+
+TIA.
+",excel,odbc,sql,,,,open,0,93,14,"How to write an Excel function which returns a value from an SQL database? I want to write the following function which should be used in an Excel worksheet:
+
+    =GetRecField(""Foo Record Key"", ""FooField1"")
+
+...which will connect internally through ODBC to an SQL database, execute there an
+
+    SELECT FooField1 FROM MyTable WHERE KEY_FIELD='Foo Record Key';
+
+and will return the resulting value as the result of the function GetRecField. The above SQL is granted to return only one record (IOW KEY_FIELD has an unique constraint).
+
+Of course, the above function can be called multiple times in a worksheet so, please try to avoid a blind `QueryTables.Add`
+
+TIA.
+",3
+10540119,05/10/2012 18:29:32,1342214,04/18/2012 18:32:17,13,0,Formatting the date in Excel to show current date using Access VBA,"I'm trying to format the date value in Access VBA to show the current date on an excel file (for which I'm writing an Access VBA code). However, using Date() hasn't helped (I'm guessing it only works within Access). For example, using Cells(2, 3) = Date() just shows a number ""41039"", and not the date. I tried Format as well, and that hasn't worked either.
+I'm a newbie to Access VBA and would really appreciate any answers to the above question.",excel,access-vba,,,,,open,0,80,12,"Formatting the date in Excel to show current date using Access VBA I'm trying to format the date value in Access VBA to show the current date on an excel file (for which I'm writing an Access VBA code). However, using Date() hasn't helped (I'm guessing it only works within Access). For example, using Cells(2, 3) = Date() just shows a number ""41039"", and not the date. I tried Format as well, and that hasn't worked either.
+I'm a newbie to Access VBA and would really appreciate any answers to the above question.",2
+4164044,11/12/2010 11:16:01,505088,08/25/2009 18:52:23,1,1,How do I read the formatted textual representation of a cell in Excel ,"I'm using the COM interface to Excel and I would like to get hold of the formatted textual representation of a cell rather than the true underlying value.
+
+For example, suppose the cell contains the number 1.23456 and the user has specified the number format with 1 decimal place.  Then I'd like to be able to read the string ""1.2"".  I know that I can use Range.Text but this fails in a couple of significant ways.  Range.Text returns what the user sees in the view of the sheet and so if the cell is hidden then the empty string is returned.  If the cell's width is low then a truncated string is returned.  Range.Text also falls down because it is limited to 1024 characters.
+
+Another use case is when the cell evaluates to an error, e.g. #DIV/0!, #NAME?, #REF! etc.  I know that I can read Range.Value and test if the variant is type varError (I'm using Delphi, in VBA it would be vbError).  What I can't figure out is how to get hold of the text representation #DIV/0! etc.  Again Range.Text returns this, but not if the cell is hidden or is too narrow.",excel,com,,,,,open,0,201,14,"How do I read the formatted textual representation of a cell in Excel  I'm using the COM interface to Excel and I would like to get hold of the formatted textual representation of a cell rather than the true underlying value.
+
+For example, suppose the cell contains the number 1.23456 and the user has specified the number format with 1 decimal place.  Then I'd like to be able to read the string ""1.2"".  I know that I can use Range.Text but this fails in a couple of significant ways.  Range.Text returns what the user sees in the view of the sheet and so if the cell is hidden then the empty string is returned.  If the cell's width is low then a truncated string is returned.  Range.Text also falls down because it is limited to 1024 characters.
+
+Another use case is when the cell evaluates to an error, e.g. #DIV/0!, #NAME?, #REF! etc.  I know that I can read Range.Value and test if the variant is type varError (I'm using Delphi, in VBA it would be vbError).  What I can't figure out is how to get hold of the text representation #DIV/0! etc.  Again Range.Text returns this, but not if the cell is hidden or is too narrow.",2

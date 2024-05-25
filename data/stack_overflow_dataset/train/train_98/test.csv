@@ -1,0 +1,982 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+5167450,03/02/2011 12:28:02,309834,01/13/2009 12:14:25,248,2,How to define dependency between tests in MStest,"I have some tests which are dependent on the success and failure of some tests. How can I define dependency as I am using VS2010 Mstest and selenium. 
+E.g
+
+if test1 is failed then dont run test5, test 6. is this possible.",visual-studio-2010,testing,automation,selenium,mstest,,open,0,41,8,"How to define dependency between tests in MStest I have some tests which are dependent on the success and failure of some tests. How can I define dependency as I am using VS2010 Mstest and selenium. 
+E.g
+
+if test1 is failed then dont run test5, test 6. is this possible.",5
+10834799,05/31/2012 13:39:31,1228479,02/23/2012 13:42:01,24,3,Windows Azure VM Role Deployment Issue & 'Beta Programs' missing from portal,"I am trying to follow the tutorial [here][1].
+Scroll down to, Task 5 – Creating the Service Model
+
+On Step 4 i.e.
+""4.Once the solution is created, right-click the Roles folder inside the MyVMRole project, point to Add, and then select New Virtual Machine Role.""
+
+The 'New Virtual Machine Role' option doesn't appear on my VS.
+This of course is because, I haven't got an invite into the beta program of MS Azure VM Role and haven't installed the VS tool.
+
+My question is how do I join the beta program or apply for this tool?
+
+I saw some online posts to go to Azure Management Portal -> Home -> Beta Programs.
+But for me, the 'Beta Programs' folder doesn't appear in the portal. Please help.
+
+  [1]: http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_vmrolelab_topic2",visual-studio-2010,azure,,,,06/07/2012 23:11:44,off topic,1,121,12,"Windows Azure VM Role Deployment Issue & 'Beta Programs' missing from portal I am trying to follow the tutorial [here][1].
+Scroll down to, Task 5 – Creating the Service Model
+
+On Step 4 i.e.
+""4.Once the solution is created, right-click the Roles folder inside the MyVMRole project, point to Add, and then select New Virtual Machine Role.""
+
+The 'New Virtual Machine Role' option doesn't appear on my VS.
+This of course is because, I haven't got an invite into the beta program of MS Azure VM Role and haven't installed the VS tool.
+
+My question is how do I join the beta program or apply for this tool?
+
+I saw some online posts to go to Azure Management Portal -> Home -> Beta Programs.
+But for me, the 'Beta Programs' folder doesn't appear in the portal. Please help.
+
+  [1]: http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_vmrolelab_topic2",2
+10195039,04/17/2012 16:17:12,847370,07/16/2011 01:04:04,18,0,How to move the caret to the end of line in the VS2010 with Resharper?,"I'm using Vs2010 and ReSharper 6.
+
+When I enter the string with quotation,then I press the ENTER.
+
+The ""+"" is displayed at end of line,and the new quotation has appeared.
+
+I hope NO ""+"" and a pair of quotation appeared. Could you help me?
+
+oh,I have installed CodeRush within VS2010.The CodeRush and ReSharper conflict?",visual-studio-2010,resharper,keyboard-shortcuts,intellisense,,,open,0,50,15,"How to move the caret to the end of line in the VS2010 with Resharper? I'm using Vs2010 and ReSharper 6.
+
+When I enter the string with quotation,then I press the ENTER.
+
+The ""+"" is displayed at end of line,and the new quotation has appeared.
+
+I hope NO ""+"" and a pair of quotation appeared. Could you help me?
+
+oh,I have installed CodeRush within VS2010.The CodeRush and ReSharper conflict?",4
+8351798,12/02/2011 04:28:29,1022054,10/31/2011 13:38:28,8,0,My VS 2010 damaged. I cant get it repair?,"I don't know what happened,i can boot up VS 2010 but when i open ErrorList, 
+the VS 2010 will not respond until i shut it down from taskmng. 
+The ErrorList wont show up on startup.
+Same thing also happens when i try to compile my code but there are some errors.
+
+
+I tried use my DVD to uninstall entire VS2010 and install it again.  But it didn't work.
+
+
+I also tried use DVD to repair VS2010. Wont work:(
+
+
+but same DVD works on other PC that has same OS (WinXP SP3).
+
+then, i tried to delete settings in ""C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\settings""
+
+but still wont work..
+then,what should i do?(i dont want to reinstall my OS)
+
+thx!
+",visual-studio-2010,,,,,12/02/2011 15:20:58,off topic,1,112,9,"My VS 2010 damaged. I cant get it repair? I don't know what happened,i can boot up VS 2010 but when i open ErrorList, 
+the VS 2010 will not respond until i shut it down from taskmng. 
+The ErrorList wont show up on startup.
+Same thing also happens when i try to compile my code but there are some errors.
+
+
+I tried use my DVD to uninstall entire VS2010 and install it again.  But it didn't work.
+
+
+I also tried use DVD to repair VS2010. Wont work:(
+
+
+but same DVD works on other PC that has same OS (WinXP SP3).
+
+then, i tried to delete settings in ""C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\settings""
+
+but still wont work..
+then,what should i do?(i dont want to reinstall my OS)
+
+thx!
+",1
+6444850,06/22/2011 18:39:33,18309,09/18/2008 22:13:45,3178,40,Why is my project reference working without issue but as soon as I build the solution the reference fails?,"I have multiple projects under one solution. I add a reference to Project A from Project B. Now I can add 'using ProjectA.Models;' (intellisense works!) to classes in Project B because it now has the reference, and the keyword coloring for custom objects works, the autocomplete/intellisense all works fine... 
+
+Right until I build my solution. Suddenly I get a reference failure, the 'using' line that I added becomes underlined with red, and all the object references lose their keyword coloring.
+
+I can repeat the process indefinitely by removing and recreating the reference, which allows the IDE to be fine with 'using ProjectA;' and all intellisense, right up until I hit build again.
+
+What is causing this?",visual-studio-2010,reference,projects-and-solutions,,,,open,0,114,19,"Why is my project reference working without issue but as soon as I build the solution the reference fails? I have multiple projects under one solution. I add a reference to Project A from Project B. Now I can add 'using ProjectA.Models;' (intellisense works!) to classes in Project B because it now has the reference, and the keyword coloring for custom objects works, the autocomplete/intellisense all works fine... 
+
+Right until I build my solution. Suddenly I get a reference failure, the 'using' line that I added becomes underlined with red, and all the object references lose their keyword coloring.
+
+I can repeat the process indefinitely by removing and recreating the reference, which allows the IDE to be fine with 'using ProjectA;' and all intellisense, right up until I hit build again.
+
+What is causing this?",3
+5369944,03/20/2011 16:56:10,524110,11/29/2010 16:13:02,59,1,"Auto-completion - so called Intellisense - ""feature request""","For a long time i've been wondering now, why aren't the auto-completion items organized by inheritance?, rather than alphabetically. 
+
+It could have been nicer if such an option existed - to organize it by inheritance, and other options.
+
+Sometimes it's confusing (especially when you deal with a monstrous auto-completion list, like in WPF) because i want to see just the methods inherited from a specific class, not Object or other stuff(FrameworkObject, DependencyObject, UIElement, tons...)
+
+Maybe you're heard of such a feature.",visual-studio-2010,intellisense,,,,03/20/2011 17:16:37,off topic,1,79,8,"Auto-completion - so called Intellisense - ""feature request"" For a long time i've been wondering now, why aren't the auto-completion items organized by inheritance?, rather than alphabetically. 
+
+It could have been nicer if such an option existed - to organize it by inheritance, and other options.
+
+Sometimes it's confusing (especially when you deal with a monstrous auto-completion list, like in WPF) because i want to see just the methods inherited from a specific class, not Object or other stuff(FrameworkObject, DependencyObject, UIElement, tons...)
+
+Maybe you're heard of such a feature.",2
+9051787,01/29/2012 08:01:04,1129318,01/04/2012 06:26:11,21,0,The type or namespace name 'KasraDll' could not be found (are you missing a using directive or an assembly reference?),"I have a project that is built in my computer. but when I want create a team build with TFS i am getting this error:
+
+> The type or namespace name 'KasraDll' could not be found (are you
+> missing a using directive or an assembly reference?)
+
+sincerely you M.Bagheri",visual-studio-2010,tfs,tfs2010,tfsbuild,,,open,0,47,20,"The type or namespace name 'KasraDll' could not be found (are you missing a using directive or an assembly reference?) I have a project that is built in my computer. but when I want create a team build with TFS i am getting this error:
+
+> The type or namespace name 'KasraDll' could not be found (are you
+> missing a using directive or an assembly reference?)
+
+sincerely you M.Bagheri",4
+11213672,06/26/2012 18:24:56,7453,09/15/2008 13:45:58,1289,55,What do the Visual Studio watch window icons represent,"What do the each of the watch window icons and overlays in Visual Studio represent?  Is there a legend on an MSDN page somewhere?
+
+![Example of some icons][1]
+
+
+  [1]: http://i.stack.imgur.com/Ky4x4.png",visual-studio-2010,debugging,,,,,open,0,31,9,"What do the Visual Studio watch window icons represent What do the each of the watch window icons and overlays in Visual Studio represent?  Is there a legend on an MSDN page somewhere?
+
+![Example of some icons][1]
+
+
+  [1]: http://i.stack.imgur.com/Ky4x4.png",2
+5407340,03/23/2011 15:08:55,582813,01/20/2011 10:38:00,67,4,Cannot build specflow from source,"I downloaded specflow's source from here: https://github.com/techtalk/SpecFlow
+
+I tried to build this source with VS2010 but, ""Vs2010Integration"" project couldn't be loaded for some reason.
+Does anyone knows what I'm missing?
+Some plugins, maybe wrong VS, maybe some configurations to be set?
+
+regards,
+
+Vajda
+",visual-studio-2010,specflow,,,,,open,0,38,5,"Cannot build specflow from source I downloaded specflow's source from here: https://github.com/techtalk/SpecFlow
+
+I tried to build this source with VS2010 but, ""Vs2010Integration"" project couldn't be loaded for some reason.
+Does anyone knows what I'm missing?
+Some plugins, maybe wrong VS, maybe some configurations to be set?
+
+regards,
+
+Vajda
+",2
+6199129,06/01/2011 09:37:35,468968,10/07/2010 10:45:37,298,9,"Error messag pop up, when i start any solution in VS2010","below error message pop-ups whenever i start any **solutions**.....in **VS2010**
+
+what should i have to do for come out of it???
+
+![Error Message Every time i start any solutions of VS2010][1]
+
+  [1]: http://i.stack.imgur.com/29g4U.png",visual-studio-2010,error-message,,,,06/01/2011 11:17:06,not a real question,1,32,11,"Error messag pop up, when i start any solution in VS2010 below error message pop-ups whenever i start any **solutions**.....in **VS2010**
+
+what should i have to do for come out of it???
+
+![Error Message Every time i start any solutions of VS2010][1]
+
+  [1]: http://i.stack.imgur.com/29g4U.png",2
+11385917,07/08/2012 19:15:03,93647,04/21/2009 08:11:02,1222,15,is it possible to use VS Profilier (Perfomance Wizard) on machine without VS installed?,"I have perfomance issue that can not be reproduced on my development machine.
+
+Issue only reproduce on ""deployement"" machine so I have to run profilier right there (normally I use development machine for such type of work).
+
+Can I do that remotely? For example can I use Visual Studio UI from my development machine to run profilier via network on deployment machine?
+
+Probably I can install only ""profilier"" part (without VS) to deployment machine and run it from command-line via RDP?
+
+What options do I have? Of course I can just install VS on deployment machine but I want to install as less things as possible as this machine is used for business and VS is not requried there.
+
+**upd** just googled Standalone Profilier http://www.microsoft.com/en-us/download/details.aspx?id=23205 Probably this is what I need...",visual-studio-2010,,,,,,open,0,126,14,"is it possible to use VS Profilier (Perfomance Wizard) on machine without VS installed? I have perfomance issue that can not be reproduced on my development machine.
+
+Issue only reproduce on ""deployement"" machine so I have to run profilier right there (normally I use development machine for such type of work).
+
+Can I do that remotely? For example can I use Visual Studio UI from my development machine to run profilier via network on deployment machine?
+
+Probably I can install only ""profilier"" part (without VS) to deployment machine and run it from command-line via RDP?
+
+What options do I have? Of course I can just install VS on deployment machine but I want to install as less things as possible as this machine is used for business and VS is not requried there.
+
+**upd** just googled Standalone Profilier http://www.microsoft.com/en-us/download/details.aspx?id=23205 Probably this is what I need...",1
+2978850,06/05/2010 02:11:00,24279,10/01/2008 19:29:48,3325,118,"Which is better for VS2010, VisualHG or hgscc (64 bit install)?  ","Simple question, have you used them, which do you prefer?  Do either of them display the current branch in an easy to see place?  ",visual-studio-2010,mercurial,,,,04/27/2012 12:02:31,not constructive,1,27,13,"Which is better for VS2010, VisualHG or hgscc (64 bit install)?   Simple question, have you used them, which do you prefer?  Do either of them display the current branch in an easy to see place?  ",2
+7315546,09/06/2011 06:06:19,806393,06/20/2011 09:45:27,13,2,Access referenced projects by makros,"Can I access the referenced projects by makros in Visual Studio 2010?
+
+I want to do something like that:
+
+Linker -> Input: <br/>
+Additional Dependencies: libsIWantToUse.lib; %(AllReferencedProjects)",visual-studio-2010,,,,,,open,0,24,5,"Access referenced projects by makros Can I access the referenced projects by makros in Visual Studio 2010?
+
+I want to do something like that:
+
+Linker -> Input: <br/>
+Additional Dependencies: libsIWantToUse.lib; %(AllReferencedProjects)",1
+7732998,10/11/2011 21:55:30,990385,10/11/2011 21:48:57,1,0,Need Help Asap Im stuck i dont kno where to Begin I did it in a flow chart but im trying to do it in matlab,"Goal: to learn how to:
+formulate an AI problem,
+to specify a goal,
+to find the shortest way to reach the goal.
+Let us have the following set of blocks A, B, C, D, E, F, in the following configuration
+B C
+A D
+F E
+
+We have to reconfigure them as follows:
+A D
+B E
+C F
+
+The available operations are:
+1.Move a block from the top to the buffer
+2.Move a block from the buffer to the top
+3.Move a block from the top of one column to the top of another column
+
+You have to formulate the goal, formulate the problem, and find your solution, preferably with a minimized cost. The cost should be measured as ""1 cost unit"" per 1 block move.
+
+Your solution has to be presented as a flow chart or (and) in the Matlab program (preferably), with a description. Also it can be done in C++ or Java. Thanks",visual-studio-2010,matlab,java-ee,,,10/12/2011 02:23:23,too localized,1,140,26,"Need Help Asap Im stuck i dont kno where to Begin I did it in a flow chart but im trying to do it in matlab Goal: to learn how to:
+formulate an AI problem,
+to specify a goal,
+to find the shortest way to reach the goal.
+Let us have the following set of blocks A, B, C, D, E, F, in the following configuration
+B C
+A D
+F E
+
+We have to reconfigure them as follows:
+A D
+B E
+C F
+
+The available operations are:
+1.Move a block from the top to the buffer
+2.Move a block from the buffer to the top
+3.Move a block from the top of one column to the top of another column
+
+You have to formulate the goal, formulate the problem, and find your solution, preferably with a minimized cost. The cost should be measured as ""1 cost unit"" per 1 block move.
+
+Your solution has to be presented as a flow chart or (and) in the Matlab program (preferably), with a description. Also it can be done in C++ or Java. Thanks",3
+10149404,04/13/2012 23:08:25,349596,05/21/2010 23:25:10,407,14,Visual Studio 2010 Class Diagram Extension,Is there an Extension out there to render Class Diagrams without the need to create a class diagram file in the project? I am looking for the ability to select classes in a project and be able to view their hierarchy/relationships on the fly without having to get a class diagram  file created and thus having to deal with source control checkout/undo.,visual-studio-2010,class-diagram,visual-studio-extensions,,,04/18/2012 16:11:28,not constructive,1,63,6,Visual Studio 2010 Class Diagram Extension Is there an Extension out there to render Class Diagrams without the need to create a class diagram file in the project? I am looking for the ability to select classes in a project and be able to view their hierarchy/relationships on the fly without having to get a class diagram  file created and thus having to deal with source control checkout/undo.,3
+9312416,02/16/2012 13:47:16,245869,01/07/2010 19:53:10,360,11,"C++: Use auto, or typedef?","I'd hate to ask an intentionally subjective question on here, but I don't have anyone else to ask this directly...
+
+I'm trying to ""lead by example"" in my team by adopting more modern C++ concepts in new code I write. My coworkers are a bit shy of templates, and gripe about having to type `unique_ptr<Foobar>` or `shared_ptr<Foobar>` instead of just `Foobar*` when utilizing some classes I've recently created (factory methods return `unique_ptr`s and I store lists of these objects in vectors using `shared_ptr`).
+
+They twisted my arm and convinced me to typedef these into something easier to type, eg `FoobarUniquePtr`.
+
+But now I'm in a mess of const-correctness with these typedefs. I'd have to define extra typedefs for each const and non const type, and `const const_FoobarUniquePtr` doesn't seem to properly express the const semantics.
+
+So, to my question, would it make sense to stop using these typedefs and instead shove `auto` at my teammates when they complain about having to type the templated smart pointers? I'm also open to any better suggestions.",visual-studio-2010,c++11,,,,02/17/2012 05:35:36,off topic,1,169,5,"C++: Use auto, or typedef? I'd hate to ask an intentionally subjective question on here, but I don't have anyone else to ask this directly...
+
+I'm trying to ""lead by example"" in my team by adopting more modern C++ concepts in new code I write. My coworkers are a bit shy of templates, and gripe about having to type `unique_ptr<Foobar>` or `shared_ptr<Foobar>` instead of just `Foobar*` when utilizing some classes I've recently created (factory methods return `unique_ptr`s and I store lists of these objects in vectors using `shared_ptr`).
+
+They twisted my arm and convinced me to typedef these into something easier to type, eg `FoobarUniquePtr`.
+
+But now I'm in a mess of const-correctness with these typedefs. I'd have to define extra typedefs for each const and non const type, and `const const_FoobarUniquePtr` doesn't seem to properly express the const semantics.
+
+So, to my question, would it make sense to stop using these typedefs and instead shove `auto` at my teammates when they complain about having to type the templated smart pointers? I'm also open to any better suggestions.",2
+11302063,07/02/2012 22:33:44,1150042,01/15/2012 04:06:28,19,0,How to convert infopath form created in sharepoint 2010 to word 2010,"I have created a infopath form inside sharepoint 2010.  My question is how do I convert this to word internally?
+
+Thank You",visual-studio-2010,infopath,,,,07/04/2012 00:41:25,off topic,1,22,12,"How to convert infopath form created in sharepoint 2010 to word 2010 I have created a infopath form inside sharepoint 2010.  My question is how do I convert this to word internally?
+
+Thank You",2
+6034054,05/17/2011 16:27:14,441862,09/07/2010 21:43:12,6,10,How to Edit .csproj files with PowerShell - Visual Studio 2010,"I need some help editing a csproj file using PowerShell. I basically need to select a node and alter it.  
+
+Example:
+
+    <None Include=""T4\WebConfigSettingGeneratorScript.tt"">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WebConfigSettingGeneratorScript1.txt</LastGenOutput>
+    </None>
+
+I need to remove the  TextTemplatingFileGenerator attribute from this tag.",visual-studio-2010,powershell,,,,,open,0,53,11,"How to Edit .csproj files with PowerShell - Visual Studio 2010 I need some help editing a csproj file using PowerShell. I basically need to select a node and alter it.  
+
+Example:
+
+    <None Include=""T4\WebConfigSettingGeneratorScript.tt"">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WebConfigSettingGeneratorScript1.txt</LastGenOutput>
+    </None>
+
+I need to remove the  TextTemplatingFileGenerator attribute from this tag.",2
+7028188,08/11/2011 15:01:19,358649,06/04/2010 16:14:55,155,0,How to rearrage class members using Coderush Express,"I've installed coderush express for visual studio 2010 and can't figure out how to rearrange my class members so that they are arranged by convention.
+
+How can i do this?",visual-studio-2010,coderush-xpress,,,,,open,0,29,8,"How to rearrage class members using Coderush Express I've installed coderush express for visual studio 2010 and can't figure out how to rearrange my class members so that they are arranged by convention.
+
+How can i do this?",2
+6158950,05/28/2011 00:46:52,773925,05/28/2011 00:46:52,1,0,Problem with Visual Studio 2010 and MSMQ,"I have a problem trying to debug a windows service. This service read to a MSMQ and Im putting a break point on the MessageQueueReceiveCompleted because I want to watch which data I'm getting from the Queue, but always in different point of the code (of the method MessageQueueReceiveCompleted ) the debug end to run without show any problem... only stop to run... I don't know why this happen but is very strange...
+
+Tks",visual-studio-2010,windows-services,window,msmq,,06/07/2011 11:56:26,not a real question,1,73,7,"Problem with Visual Studio 2010 and MSMQ I have a problem trying to debug a windows service. This service read to a MSMQ and Im putting a break point on the MessageQueueReceiveCompleted because I want to watch which data I'm getting from the Queue, but always in different point of the code (of the method MessageQueueReceiveCompleted ) the debug end to run without show any problem... only stop to run... I don't know why this happen but is very strange...
+
+Tks",4
+6910869,08/02/2011 10:49:13,149753,08/03/2009 13:38:31,112,8,External Component has thrown an exception: Visual Studio 2010: SEHException: what causes it?,"Sorry this is not really a question, but I thought it was worth getting this out there because there are so many people who are probably suffering from this.
+
+This happened to a colleague yesterday (i.e. he got the exception message).
+
+He applied the advice in http://forums.asp.net/t/1704958.aspx/7/10?Re+SEHException+thrown+when+I+run+the+application (i.e. uninstall Trusteer Rapport) and now he's OK.
+
+",visual-studio-2010,,,,,08/03/2011 20:21:04,too localized,1,53,13,"External Component has thrown an exception: Visual Studio 2010: SEHException: what causes it? Sorry this is not really a question, but I thought it was worth getting this out there because there are so many people who are probably suffering from this.
+
+This happened to a colleague yesterday (i.e. he got the exception message).
+
+He applied the advice in http://forums.asp.net/t/1704958.aspx/7/10?Re+SEHException+thrown+when+I+run+the+application (i.e. uninstall Trusteer Rapport) and now he's OK.
+
+",1
+5045849,02/18/2011 19:48:35,443704,09/09/2010 17:57:52,1,0,Combining Multiple Solutions into one Solution in VS2010,"I have a solution file that has the following example projects:
+SharedLibrary
+NonSharedLibrary
+WebProject
+WebProject.Install
+
+Then another solution file that has the following example projects:
+SharedLibrary
+WindowsServiceProject
+WindowsServiceProject.Install
+
+Currently I open both in two separate instances of VS2010. The share library is the same in both but shared through my source control.
+Is there an easy way to create another Solution file that when opened, opens all necessary projects for both. Then when testing, etc. you just change your startup project.
+
+All the while maintaining the ability to open the old solutions if you want to just work on one of them.
+
+Has any one does this before and/or know of a good methodology?",visual-studio-2010,multiple,visual,solution,studio,,open,0,102,8,"Combining Multiple Solutions into one Solution in VS2010 I have a solution file that has the following example projects:
+SharedLibrary
+NonSharedLibrary
+WebProject
+WebProject.Install
+
+Then another solution file that has the following example projects:
+SharedLibrary
+WindowsServiceProject
+WindowsServiceProject.Install
+
+Currently I open both in two separate instances of VS2010. The share library is the same in both but shared through my source control.
+Is there an easy way to create another Solution file that when opened, opens all necessary projects for both. Then when testing, etc. you just change your startup project.
+
+All the while maintaining the ability to open the old solutions if you want to just work on one of them.
+
+Has any one does this before and/or know of a good methodology?",5
+10287261,04/23/2012 19:50:36,700372,04/09/2011 22:25:03,2304,113,Deploy VSTO Excel 2010 AddIn automatically,Is there a way to deploy a vsto Excel 2010 AddIn to a list of machines automatically? One thing I had considered was adding a reference to the .vsto file in a user startup script. Any other ideas though? Has anyone performed this sort of deployment before?,visual-studio-2010,vsto,excel-2010,excel-interop,,,open,0,47,6,Deploy VSTO Excel 2010 AddIn automatically Is there a way to deploy a vsto Excel 2010 AddIn to a list of machines automatically? One thing I had considered was adding a reference to the .vsto file in a user startup script. Any other ideas though? Has anyone performed this sort of deployment before?,4
+9212128,02/09/2012 13:55:54,571659,01/11/2011 17:57:26,3,0,Visual Studio 2010 property sheet inheritance,"I am trying to move my c++ project setting into property sheets.  I use multiple third party libraries, but they are not used by all of the projects.
+Is there any way to use property sheets to bring in settings specific to the third party library I need for each project (mainly include and library directories).  I would like to be able to do this at a project level rather than a global level so if I get a new library I can test it without breaking my normal development projects.
+
+As an example:
+Library1: needs include directory X:\Lib1\Include and lib directory X:\Lib1\Lib
+Library2: needs include directory Y:\Lib2\Include and lib directory Y:\Lib2\Lib
+
+I tried creating two property sheets, but it appears that as VS moves through the hierarchy, it just uses the newest version of the settings that it finds (according to that hierarchy).
+
+Is there any way to configure these so the directories properties are cumulative?
+
+Thanks,
+Eric",visual-studio-2010,include,vsprops,,,,open,0,153,6,"Visual Studio 2010 property sheet inheritance I am trying to move my c++ project setting into property sheets.  I use multiple third party libraries, but they are not used by all of the projects.
+Is there any way to use property sheets to bring in settings specific to the third party library I need for each project (mainly include and library directories).  I would like to be able to do this at a project level rather than a global level so if I get a new library I can test it without breaking my normal development projects.
+
+As an example:
+Library1: needs include directory X:\Lib1\Include and lib directory X:\Lib1\Lib
+Library2: needs include directory Y:\Lib2\Include and lib directory Y:\Lib2\Lib
+
+I tried creating two property sheets, but it appears that as VS moves through the hierarchy, it just uses the newest version of the settings that it finds (according to that hierarchy).
+
+Is there any way to configure these so the directories properties are cumulative?
+
+Thanks,
+Eric",3
+8173716,11/17/2011 20:19:53,1052583,07/05/2010 15:52:16,1,0,Using installer to pin application to start menu,"I am making an installer for my application using visual studio installer.I was wondering if there is any way to ""pin"" my application to the ""Windows Start Menu"" using the installer",visual-studio-2010,installer,setup-project,,,,open,0,31,8,"Using installer to pin application to start menu I am making an installer for my application using visual studio installer.I was wondering if there is any way to ""pin"" my application to the ""Windows Start Menu"" using the installer",3
+7276708,09/01/2011 21:22:05,171142,09/09/2009 22:08:36,721,26,"How to remove ""Welcome to the Setup Wizard"" text from Visual Studio Installer project","I have a Visual Studio Installer Project that I'm making in Visual Studio 2010 and am unable to figure out how to remove the ""Welcome to the [Product Name] Setup Wizard"" text from the wizard's dialog boxes.
+
+For example: How do I remove the text ""Welcome to the Setup1 Setup Wizard"" from the screenshot below?
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/mYghK.png",visual-studio-2010,installer,setup-project,,,,open,0,60,14,"How to remove ""Welcome to the Setup Wizard"" text from Visual Studio Installer project I have a Visual Studio Installer Project that I'm making in Visual Studio 2010 and am unable to figure out how to remove the ""Welcome to the [Product Name] Setup Wizard"" text from the wizard's dialog boxes.
+
+For example: How do I remove the text ""Welcome to the Setup1 Setup Wizard"" from the screenshot below?
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/mYghK.png",3
+7766942,10/14/2011 11:28:29,787822,06/07/2011 15:12:37,177,19,Visual Studio 2010: When creating new project vs2010 wants to open html,"As title says when I'm creating new project in vs2010 it wants to open wizzard html in browser. The file it wants to open: 
+
+> file:///C:/Program Files/Microsoft Visual Studio
+> 10.0/VC/VCWizards/AppWiz/Generic/Application/html/1033/default.htm
+
+So in the end I can't create project. Any ideas what can be wrong? I'm using Windows 7 64bit. I tried uninstalling Internet Explorer but it didn't solve my problem.",visual-studio-2010,,,,,,open,0,59,12,"Visual Studio 2010: When creating new project vs2010 wants to open html As title says when I'm creating new project in vs2010 it wants to open wizzard html in browser. The file it wants to open: 
+
+> file:///C:/Program Files/Microsoft Visual Studio
+> 10.0/VC/VCWizards/AppWiz/Generic/Application/html/1033/default.htm
+
+So in the end I can't create project. Any ideas what can be wrong? I'm using Windows 7 64bit. I tried uninstalling Internet Explorer but it didn't solve my problem.",1
+5609330,04/10/2011 02:13:21,700500,04/10/2011 02:13:21,1,0,Visual Studio Form and database newbie,"I'm completely new to Visual Studio 2010. I want to create a standalone win32 program that is basically a Form and records the inputed data to a database, which can be reviewed within the program.
+I am currently using Visual Studio Express. I have succesfully designed my form, but I have no idea on how to save the data. 
+I have attempted to try to create a SQL database through Visual Studio Express, but I have no idea want I'm doing.
+I have tried to watch a few YouTube tutorials, but I am still stumped by the SQL issue.
+
+And advice would be greatly appreciated.",visual-studio-2010,,,,,04/10/2011 09:34:40,not a real question,1,102,6,"Visual Studio Form and database newbie I'm completely new to Visual Studio 2010. I want to create a standalone win32 program that is basically a Form and records the inputed data to a database, which can be reviewed within the program.
+I am currently using Visual Studio Express. I have succesfully designed my form, but I have no idea on how to save the data. 
+I have attempted to try to create a SQL database through Visual Studio Express, but I have no idea want I'm doing.
+I have tried to watch a few YouTube tutorials, but I am still stumped by the SQL issue.
+
+And advice would be greatly appreciated.",1
+8367659,12/03/2011 12:33:01,1024302,11/01/2011 18:44:04,1,0,How to create membership users in sharepoint 2010,"I have configured FBA for my sharepoint site & now i want to create membership users for that site from sharepoint site itself.
+
+My need is when i add new item in sharepoint list suppose users, then the membership user has to be created & they are available to me in peaple picker. I tried this by using Itemadded event reciever. but seems it doesn't support membersip provider.
+
+I have created users with application pages & this works fine but i want using sharepoint list.
+
+Is it possible? & if not then please give me some ideas!",visual-studio-2010,sharepoint,,,,12/05/2011 04:49:35,not a real question,1,94,8,"How to create membership users in sharepoint 2010 I have configured FBA for my sharepoint site & now i want to create membership users for that site from sharepoint site itself.
+
+My need is when i add new item in sharepoint list suppose users, then the membership user has to be created & they are available to me in peaple picker. I tried this by using Itemadded event reciever. but seems it doesn't support membersip provider.
+
+I have created users with application pages & this works fine but i want using sharepoint list.
+
+Is it possible? & if not then please give me some ideas!",2
+10036186,04/05/2012 21:21:07,685022,03/31/2011 03:06:36,163,3,Visual Studio 2010 default properties for new C++ projects?,"I never got in to personalizing VS2010 but I wanted to know if there was a way to configure VS2010 to have these properties as default for new projects?
+
+Right now I have to manually add these changes for each project I create in both the Release and Active(Debug) configurations of the project properties.
+
+    Project Properties->Configuration Properties->C/C++->General->Additional Include Directories = Path to includes
+    Project Properties->Configuration Properties->Linker->General->Additional Library Directories = Path to Libs
+    Project Properties->Configuration Properties->Linker->Input->Additional Dependencies = debug.lib
+    Project Properties->Configuration Properties->Debugging->Environment = Extra PATH to binaries",visual-studio-2010,configuration,default,,,,open,0,97,9,"Visual Studio 2010 default properties for new C++ projects? I never got in to personalizing VS2010 but I wanted to know if there was a way to configure VS2010 to have these properties as default for new projects?
+
+Right now I have to manually add these changes for each project I create in both the Release and Active(Debug) configurations of the project properties.
+
+    Project Properties->Configuration Properties->C/C++->General->Additional Include Directories = Path to includes
+    Project Properties->Configuration Properties->Linker->General->Additional Library Directories = Path to Libs
+    Project Properties->Configuration Properties->Linker->Input->Additional Dependencies = debug.lib
+    Project Properties->Configuration Properties->Debugging->Environment = Extra PATH to binaries",3
+5100180,02/24/2011 03:55:01,631606,02/24/2011 03:55:01,1,0,Migration Problem from vs2008 to 2010,"I have Solution in vs2008 with framework 2.0. Now i migrated solution to vs2010 .net framework 2, and it works.
+
+Here problem occur when I changed framework from 2.0 to 4.0, after that when I run application(win-form) it throws error on resource file saying
+
+""System.IO.FileNotFoundException: Could not load file or assembly 'SpServer.resources, Version=1.0.0.2, Culture=en-US, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'SpServer.resources, Version=1.0.0.2, Culture=en-US, PublicKeyToken=null' ---> System.IO.FileNotFoundException: Could not load file or assembly '...SpServer.resources.dll' or one of its dependencies. The system cannot find the file specified.
+
+ 
+
+I have not made any extra resource file, and assembly was not satellite assembly too before if there is error. Please let me know how to sort out this issue",visual-studio-2010,,,,,,open,0,121,6,"Migration Problem from vs2008 to 2010 I have Solution in vs2008 with framework 2.0. Now i migrated solution to vs2010 .net framework 2, and it works.
+
+Here problem occur when I changed framework from 2.0 to 4.0, after that when I run application(win-form) it throws error on resource file saying
+
+""System.IO.FileNotFoundException: Could not load file or assembly 'SpServer.resources, Version=1.0.0.2, Culture=en-US, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'SpServer.resources, Version=1.0.0.2, Culture=en-US, PublicKeyToken=null' ---> System.IO.FileNotFoundException: Could not load file or assembly '...SpServer.resources.dll' or one of its dependencies. The system cannot find the file specified.
+
+ 
+
+I have not made any extra resource file, and assembly was not satellite assembly too before if there is error. Please let me know how to sort out this issue",1
+7340349,09/07/2011 20:47:25,815600,06/25/2011 19:07:18,26,0,How to Deploy Dtabase in Application Installtion,"I have an application which uses Sql Server Express Edition to store data. I have a database with 8-10 tables in it. I have mdf and ldf file with me. Now i want to install my application in some other computer, then how to deploy my database with my installation files (assuming the other computer already have Sql Server with them). Can i use my mdf and ldf files, or i need to create my database and tables again programatically during installation of my Application.
+
+I am a newbie, please guide me. I am using .Net framework 4.0 and Visual Studio Professional Edition.",visual-studio-2010,installation,setup-deployment,database-deployment,,,open,0,102,7,"How to Deploy Dtabase in Application Installtion I have an application which uses Sql Server Express Edition to store data. I have a database with 8-10 tables in it. I have mdf and ldf file with me. Now i want to install my application in some other computer, then how to deploy my database with my installation files (assuming the other computer already have Sql Server with them). Can i use my mdf and ldf files, or i need to create my database and tables again programatically during installation of my Application.
+
+I am a newbie, please guide me. I am using .Net framework 4.0 and Visual Studio Professional Edition.",4
+10434784,05/03/2012 15:43:29,323051,04/22/2010 08:40:27,1889,84,Custom syntax highlighting in Visual Studio 2010 in a html file,"Is it possible to create syntax highlighting for custom defined words in known file type?
+
+For example I want to have VS text editor color the tags `<@` and `@>` a specified color when viewed in a html file...is this possible?",visual-studio-2010,,,,,,open,0,40,11,"Custom syntax highlighting in Visual Studio 2010 in a html file Is it possible to create syntax highlighting for custom defined words in known file type?
+
+For example I want to have VS text editor color the tags `<@` and `@>` a specified color when viewed in a html file...is this possible?",1
+9935910,03/30/2012 01:39:13,1302179,03/30/2012 01:10:00,1,0,VS2010 report error:,"Can someone please help me to solve this error:
+
+Error	2	The report definition is not valid.  
+Details:
+ The element 'Style' in namespace 'http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition' has invalid child element 'Colo6r' in namespace 'http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition'. List of possible elements expected: 'Border, TopBorder, BottomBorder, LeftBorder, RightBorder, BackgroundColor, BackgroundGradientType, BackgroundGradientEndColor, BackgroundHatchType, BackgroundImage, FontStyle, FontFamily, FontSize, FontWeight, Format, TextDecoration, TextAlign, TextEffect, VerticalAlign, Color, ShadowColor, ShadowOffset, PaddingLeft, PaddingRight, PaddingTop, PaddingBottom, LineHeight, Direction, WritingMode, Language, UnicodeBiDi, Calendar, NumeralLanguage, NumeralVariant' in namespace 'http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition' as well as any element in namespace '##other'.",visual-studio-2010,report,viewer,,,03/31/2012 03:23:50,not a real question,1,80,3,"VS2010 report error: Can someone please help me to solve this error:
+
+Error	2	The report definition is not valid.  
+Details:
+ The element 'Style' in namespace 'http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition' has invalid child element 'Colo6r' in namespace 'http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition'. List of possible elements expected: 'Border, TopBorder, BottomBorder, LeftBorder, RightBorder, BackgroundColor, BackgroundGradientType, BackgroundGradientEndColor, BackgroundHatchType, BackgroundImage, FontStyle, FontFamily, FontSize, FontWeight, Format, TextDecoration, TextAlign, TextEffect, VerticalAlign, Color, ShadowColor, ShadowOffset, PaddingLeft, PaddingRight, PaddingTop, PaddingBottom, LineHeight, Direction, WritingMode, Language, UnicodeBiDi, Calendar, NumeralLanguage, NumeralVariant' in namespace 'http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition' as well as any element in namespace '##other'.",3
+9446755,02/25/2012 18:26:00,6486,09/15/2008 11:06:04,1417,31,difference between build deployment package and msbuild t:package,"I am trying to complete my automated deployment process see [this question for further info][1] and it is close.  I can right click on my MVC project in VS2010 and select ""Build deployment package"" and it successfully builds it, and this will deploy to the remote server.  When I run the following command the build fails:
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe mvcproject.csproj /T:Package /p:Configuration=Deployment
+
+The error I get is:
+
+    MSDEPLOY : error : Object of type 'manifest' and path 'C:\hoh_code\GIT\ai-poker- project\Packages\Deployment\PokerLeague
+    WebSite\PokerLeagueWebSite.SourceManifest.xml' cannot be created. [C:\hoh_code\GIT\ai-poker-project\Clients\PokerLeague
+    WebSite\PokerLeagueWebSite.csproj]
+    MSDEPLOY : error : One or more entries in the manifest 'sitemanifest' are not valid. [C:\hoh_code\GIT\ai-poker-project\
+    Clients\PokerLeagueWebSite\PokerLeagueWebSite.csproj]
+    MSDEPLOY : error : An error occurred when reading the IIS Configuration File 'MACHINE/REDIRECTION'. The identity perfor
+    ming the operation was 'wiggly\Jon'. [C:\hoh_code\GIT\ai-poker-project\Clients\PokerLeagueWebSite\PokerLeagueWebSite.cs
+    proj]
+    MSDEPLOY : error : Filename: \\?\C:\Windows\system32\inetsrv\config\redirection.config [C:\hoh_code\GIT\ai-poker-projec
+    t\Clients\PokerLeagueWebSite\PokerLeagueWebSite.csproj]
+    MSDEPLOY : error : Cannot read configuration file due to insufficient permissions [C:\hoh_code\GIT\ai-poker-project\Cli
+    ents\PokerLeagueWebSite\PokerLeagueWebSite.csproj]
+
+
+I was under the impression that the right click I was doing was the same thing as the msbuild command.  I tried setting the output level to detailed but could not see the command that was triggering it correctly, (possibly not seeing the wood for the tree's though).
+
+My question is, what can I do to get the project to build via the command line so I can build it on my CI Server (doesn't have VS2010) so that it can be automatically deployed, and why is VS2010 succeeding when the command line fails?
+  [1]: http://stackoverflow.com/questions/9357369/deploy-mvc-site-with-msdeploy-including-iis-settings-from-ci-server-that-doesnt",visual-studio-2010,msbuild,manifest,msdeploy,web-deployment-project,,open,0,282,8,"difference between build deployment package and msbuild t:package I am trying to complete my automated deployment process see [this question for further info][1] and it is close.  I can right click on my MVC project in VS2010 and select ""Build deployment package"" and it successfully builds it, and this will deploy to the remote server.  When I run the following command the build fails:
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe mvcproject.csproj /T:Package /p:Configuration=Deployment
+
+The error I get is:
+
+    MSDEPLOY : error : Object of type 'manifest' and path 'C:\hoh_code\GIT\ai-poker- project\Packages\Deployment\PokerLeague
+    WebSite\PokerLeagueWebSite.SourceManifest.xml' cannot be created. [C:\hoh_code\GIT\ai-poker-project\Clients\PokerLeague
+    WebSite\PokerLeagueWebSite.csproj]
+    MSDEPLOY : error : One or more entries in the manifest 'sitemanifest' are not valid. [C:\hoh_code\GIT\ai-poker-project\
+    Clients\PokerLeagueWebSite\PokerLeagueWebSite.csproj]
+    MSDEPLOY : error : An error occurred when reading the IIS Configuration File 'MACHINE/REDIRECTION'. The identity perfor
+    ming the operation was 'wiggly\Jon'. [C:\hoh_code\GIT\ai-poker-project\Clients\PokerLeagueWebSite\PokerLeagueWebSite.cs
+    proj]
+    MSDEPLOY : error : Filename: \\?\C:\Windows\system32\inetsrv\config\redirection.config [C:\hoh_code\GIT\ai-poker-projec
+    t\Clients\PokerLeagueWebSite\PokerLeagueWebSite.csproj]
+    MSDEPLOY : error : Cannot read configuration file due to insufficient permissions [C:\hoh_code\GIT\ai-poker-project\Cli
+    ents\PokerLeagueWebSite\PokerLeagueWebSite.csproj]
+
+
+I was under the impression that the right click I was doing was the same thing as the msbuild command.  I tried setting the output level to detailed but could not see the command that was triggering it correctly, (possibly not seeing the wood for the tree's though).
+
+My question is, what can I do to get the project to build via the command line so I can build it on my CI Server (doesn't have VS2010) so that it can be automatically deployed, and why is VS2010 succeeding when the command line fails?
+  [1]: http://stackoverflow.com/questions/9357369/deploy-mvc-site-with-msdeploy-including-iis-settings-from-ci-server-that-doesnt",5
+9086993,01/31/2012 21:09:33,353305,05/28/2010 22:30:42,1,0,Unable to find an entry point named 'AxSquare' in DLL 'C:\PracProj\Maths\Maths\bin\Release\Maths.dll',"Before you make a comment saying its a redundant question, please allow me to put up the details:
+
+Situation:
+ Though I know VB, I never get a chance to create a DLL with the help of Visual Studio 2010 using VB
+
+Steps tried:
+
+ - Launch VS 2010 and created a Project by selecting ""VB Class library
+   (.dll)""
+ - Created a Class [say Maths.vb] with following code:
+
+
+Namespace Maths
+    Public Class Maths
+
+        Public Const DLL_PROCESS_DETACH = 0
+        Public Const DLL_PROCESS_ATTACH = 1
+        Public Const DLL_THREAD_ATTACH = 2
+        Public Const DLL_THREAD_DETACH = 3
+
+        Public Function DllMain(ByVal hInst As Long, ByVal fdwReason As Long,
+          ByVal lpvReserved As Long) As Boolean
+            MsgBox(""A"")
+            Select Case fdwReason
+                Case DLL_PROCESS_DETACH
+                    ' No per-process cleanup needed
+                Case DLL_PROCESS_ATTACH
+                    MsgBox(""A"")
+                    DllMain = True
+                Case DLL_THREAD_ATTACH
+                    ' No per-thread initialization needed
+                Case DLL_THREAD_DETACH
+                    ' No per-thread cleanup needed
+                    '                Case Else
+                    '                   DllMain = False
+            End Select
+        End Function
+
+        Public Function AxIncrement(ByVal var As Integer) As Integer
+            If Not IsNumeric(var) Then Err.Raise(5)
+
+            AxIncrement = var + 1
+        End Function
+
+        Public Function AxDecrement(ByVal var As Integer) As Integer
+            If Not IsNumeric(var) Then Err.Raise(5)
+
+            AxDecrement = var - 1
+        End Function
+
+        Public Function AxSquare(ByVal var As Long) As Long
+            If Not IsNumeric(var) Then Err.Raise(5)
+
+            AxSquare = var ^ 2
+        End Function
+    End Class
+End Namespace
+
+
+
+ - Do Right Click on Project and Create a Build >> This step will give
+   you a dll created Maths.dll
+ - Now Close the Project and create a New Project Say StandardEXE
+ - Create a Form [say Form1.vb] with three buttons and put the following
+   code by clicking View Code:
+
+
+Pulic Class Form1
+    Dim incr As Integer
+    Dim decr As Integer
+    Dim sqr As Long
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        incr = 1
+        decr = 100
+        sqr = 2
+    End Sub
+
+
+    Private Sub cmdSquare_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSquare.Click
+        sqr = AxSquare(sqr)
+        cmdSquare.Text = ""x = "" & CStr(sqr)
+    End Sub
+
+    Private Sub cmdIncrement_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdIncrement.Click
+        incr = Increment(incr)
+        cmdIncrement.Text = ""x = "" & CStr(incr)
+    End Sub
+
+    Private Sub cmdDecrement_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDecrement.Click
+        decr = Increment(decr)
+        cmdDecrement.Text = ""x = "" & CStr(decr)
+    End Sub
+    End Class
+
+ - Right Click on Project and Select Add >> Module1.vb . Paste the below
+   code:
+
+
+        Module Module1
+            Public Declare Function Increment Lib ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" (ByVal var As Integer) As Integer
+            Public Declare Function Decrement Lib ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" (ByVal var As Integer) As Integer
+            Public Declare Function AxSquare Lib ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" (ByVal var As Long) As Long
+            Public Declare Function DllMain Lib ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" (ByVal hInst As Long, ByVal fdwReason As Long, ByVal lpvReserved As Long) As Boolean
+        End Module
+
+
+>>> Where ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" is the path of previous created DLL
+
+ - Now Run the Form1.Vb
+You will find the form gets visible and once you click on any of the button you will get the Error saying ""**Unable to find an entry point named 'AxSquare' in DLL 'C:\PracProj\Maths\Maths\bin\Release\Maths.dll'.**""
+   And I tried every thing and not able to solve this.
+
+Please guide me with the missing steps.",visual-studio-2010,dll,,,,,open,0,1099,11,"Unable to find an entry point named 'AxSquare' in DLL 'C:\PracProj\Maths\Maths\bin\Release\Maths.dll' Before you make a comment saying its a redundant question, please allow me to put up the details:
+
+Situation:
+ Though I know VB, I never get a chance to create a DLL with the help of Visual Studio 2010 using VB
+
+Steps tried:
+
+ - Launch VS 2010 and created a Project by selecting ""VB Class library
+   (.dll)""
+ - Created a Class [say Maths.vb] with following code:
+
+
+Namespace Maths
+    Public Class Maths
+
+        Public Const DLL_PROCESS_DETACH = 0
+        Public Const DLL_PROCESS_ATTACH = 1
+        Public Const DLL_THREAD_ATTACH = 2
+        Public Const DLL_THREAD_DETACH = 3
+
+        Public Function DllMain(ByVal hInst As Long, ByVal fdwReason As Long,
+          ByVal lpvReserved As Long) As Boolean
+            MsgBox(""A"")
+            Select Case fdwReason
+                Case DLL_PROCESS_DETACH
+                    ' No per-process cleanup needed
+                Case DLL_PROCESS_ATTACH
+                    MsgBox(""A"")
+                    DllMain = True
+                Case DLL_THREAD_ATTACH
+                    ' No per-thread initialization needed
+                Case DLL_THREAD_DETACH
+                    ' No per-thread cleanup needed
+                    '                Case Else
+                    '                   DllMain = False
+            End Select
+        End Function
+
+        Public Function AxIncrement(ByVal var As Integer) As Integer
+            If Not IsNumeric(var) Then Err.Raise(5)
+
+            AxIncrement = var + 1
+        End Function
+
+        Public Function AxDecrement(ByVal var As Integer) As Integer
+            If Not IsNumeric(var) Then Err.Raise(5)
+
+            AxDecrement = var - 1
+        End Function
+
+        Public Function AxSquare(ByVal var As Long) As Long
+            If Not IsNumeric(var) Then Err.Raise(5)
+
+            AxSquare = var ^ 2
+        End Function
+    End Class
+End Namespace
+
+
+
+ - Do Right Click on Project and Create a Build >> This step will give
+   you a dll created Maths.dll
+ - Now Close the Project and create a New Project Say StandardEXE
+ - Create a Form [say Form1.vb] with three buttons and put the following
+   code by clicking View Code:
+
+
+Pulic Class Form1
+    Dim incr As Integer
+    Dim decr As Integer
+    Dim sqr As Long
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        incr = 1
+        decr = 100
+        sqr = 2
+    End Sub
+
+
+    Private Sub cmdSquare_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSquare.Click
+        sqr = AxSquare(sqr)
+        cmdSquare.Text = ""x = "" & CStr(sqr)
+    End Sub
+
+    Private Sub cmdIncrement_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdIncrement.Click
+        incr = Increment(incr)
+        cmdIncrement.Text = ""x = "" & CStr(incr)
+    End Sub
+
+    Private Sub cmdDecrement_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDecrement.Click
+        decr = Increment(decr)
+        cmdDecrement.Text = ""x = "" & CStr(decr)
+    End Sub
+    End Class
+
+ - Right Click on Project and Select Add >> Module1.vb . Paste the below
+   code:
+
+
+        Module Module1
+            Public Declare Function Increment Lib ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" (ByVal var As Integer) As Integer
+            Public Declare Function Decrement Lib ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" (ByVal var As Integer) As Integer
+            Public Declare Function AxSquare Lib ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" (ByVal var As Long) As Long
+            Public Declare Function DllMain Lib ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" (ByVal hInst As Long, ByVal fdwReason As Long, ByVal lpvReserved As Long) As Boolean
+        End Module
+
+
+>>> Where ""C:\PracProj\Maths\Maths\bin\Release\Maths.dll"" is the path of previous created DLL
+
+ - Now Run the Form1.Vb
+You will find the form gets visible and once you click on any of the button you will get the Error saying ""**Unable to find an entry point named 'AxSquare' in DLL 'C:\PracProj\Maths\Maths\bin\Release\Maths.dll'.**""
+   And I tried every thing and not able to solve this.
+
+Please guide me with the missing steps.",2
+5025358,02/17/2011 05:21:10,526095,12/01/2010 05:23:02,170,1,how many times we can extend vs2010 trail version,"Hello i have vs2010 trail version. 60 days back i extend the trail version.. but now the period is over. i again attempt to extend it but it is not accepting the key which i get now from microsoft. only one time we are able to extend? please help me... i dont have vs now.. 
+
+Thank you",visual-studio-2010,,,,,02/18/2011 18:49:03,too localized,1,57,9,"how many times we can extend vs2010 trail version Hello i have vs2010 trail version. 60 days back i extend the trail version.. but now the period is over. i again attempt to extend it but it is not accepting the key which i get now from microsoft. only one time we are able to extend? please help me... i dont have vs now.. 
+
+Thank you",1
+7480775,09/20/2011 06:01:04,954083,09/20/2011 06:01:04,1,0,Visual Studio high CPU usage,I've got problem with Visual Studio 2010 Enterprise edition. My cpu usage peaks top after search on entire solution or undoing pending changes and doesn't go down until I turn off VS. Does somebody have similar experience?,visual-studio-2010,,,,,09/21/2011 07:33:11,off topic,1,37,5,Visual Studio high CPU usage I've got problem with Visual Studio 2010 Enterprise edition. My cpu usage peaks top after search on entire solution or undoing pending changes and doesn't go down until I turn off VS. Does somebody have similar experience?,1
+10669000,05/19/2012 21:32:11,420116,08/14/2010 00:52:03,1394,66,Defining Project Paths in a Solution via Macro/Environment Variable,"Is there a way to define the project file path in a solution using a user macro/environment variable? I can't seem to do that.
+
+Kind of like an environment variable is used to define the additional include directories in a C++ project, except I want to do the same for the location of a project file in a solution.
+
+I've tried editing the solution in a text editor to change the path to start with %MyMacroName% or $(MyMacroName) but neither of them seems to parse just right. The project files can't be located when the solution is opened.",visual-studio-2010,visual-studio,environment-variables,projects-and-solutions,,,open,0,96,9,"Defining Project Paths in a Solution via Macro/Environment Variable Is there a way to define the project file path in a solution using a user macro/environment variable? I can't seem to do that.
+
+Kind of like an environment variable is used to define the additional include directories in a C++ project, except I want to do the same for the location of a project file in a solution.
+
+I've tried editing the solution in a text editor to change the path to start with %MyMacroName% or $(MyMacroName) but neither of them seems to parse just right. The project files can't be located when the solution is opened.",4
+3314401,07/22/2010 23:47:01,32484,10/29/2008 17:48:46,4816,119,What is the difference between intellitrace and moving to a previous line of code when stepping through?,"I read a description of how intellitrace in VS2010 Ultimate is like going back in time, in the execution of your application.
+
+However, this sounds just like moving the line marker to a previous line (that yellow arrow in the breakpoints margin to the left of the code, when you are stepping through code).
+
+Thanks",visual-studio-2010,,,,,,open,0,53,17,"What is the difference between intellitrace and moving to a previous line of code when stepping through? I read a description of how intellitrace in VS2010 Ultimate is like going back in time, in the execution of your application.
+
+However, this sounds just like moving the line marker to a previous line (that yellow arrow in the breakpoints margin to the left of the code, when you are stepping through code).
+
+Thanks",1
+9654399,03/11/2012 11:05:45,397702,07/21/2010 08:46:45,8,1,Everything 64 bit yet Visual Studio still shows Microsoft.ACE.OLEDB.12.0 not registered error,"**Setup:**
+Windows 7 64 bit
+Office 2010 Professional + 64 bit
+Visual Studio 2010 Professional
+----------------------------------------
+
+Using Connection string ""*Provider=Microsoft.ACE.OLEDB.12.0;DataSource=c:\\testdb.accb;*"" I get the ‘*Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine* error.
+
+The provider/driver is working fine within Office 2010, I can link to the database from inside Excel and the connection properties shows *Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\TestDB.accdb;Mode=Share Deny Write;Extended Properties="""";Jet OLEDB:System database="""";Jet OLEDB:Registry Path="""";Jet OLEDB:Engine Type=6;Jet OLEDB:Database Locking Mode=0;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="""";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False*
+
+I have been Googling  this for the last 3 days and can get nowhere, most of the solutions out there are based on the problem arising when trying to connect to Office 2007 or Office 2010 32 bit, but everything on my system is 64 bit. Even though I thought none of them relevant, I did try the usual recommended solutions of installing AccessDatabaseEngine_x64 and setting my VS project build to x86 instead of Any CPU but none of it made any difference.
+
+Anyone know how I can resolve this?
+",visual-studio-2010,ms-access-2010,,,,,open,0,184,12,"Everything 64 bit yet Visual Studio still shows Microsoft.ACE.OLEDB.12.0 not registered error **Setup:**
+Windows 7 64 bit
+Office 2010 Professional + 64 bit
+Visual Studio 2010 Professional
+----------------------------------------
+
+Using Connection string ""*Provider=Microsoft.ACE.OLEDB.12.0;DataSource=c:\\testdb.accb;*"" I get the ‘*Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine* error.
+
+The provider/driver is working fine within Office 2010, I can link to the database from inside Excel and the connection properties shows *Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\TestDB.accdb;Mode=Share Deny Write;Extended Properties="""";Jet OLEDB:System database="""";Jet OLEDB:Registry Path="""";Jet OLEDB:Engine Type=6;Jet OLEDB:Database Locking Mode=0;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="""";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False*
+
+I have been Googling  this for the last 3 days and can get nowhere, most of the solutions out there are based on the problem arising when trying to connect to Office 2007 or Office 2010 32 bit, but everything on my system is 64 bit. Even though I thought none of them relevant, I did try the usual recommended solutions of installing AccessDatabaseEngine_x64 and setting my VS project build to x86 instead of Any CPU but none of it made any difference.
+
+Anyone know how I can resolve this?
+",2
+10832145,05/31/2012 10:51:24,1341926,04/18/2012 16:14:00,32,0,parameters in visual basic 2010,"how can use parameters in my vb application? 
+
+i want to make it so that when the parameter its ""/y"" i want some thing like this to hapen
+
+> if parameter = ""/y"" then 
+> 
+> msgbox(""you used the parameter /y"")
+> 
+> else
+> 
+> msgbox(""you dint use any parameter"")
+> 
+> end if
+
+
+i want some thing like this to hapen when i use the parameter ""/y""
+the parameters are used when for ex: im running the .exe on cmd
+
+thanks for any help and have a good day 
+
+
+
+
+
+
+
+
+
+
+",visual-studio-2010,parameters,,,,,open,0,85,5,"parameters in visual basic 2010 how can use parameters in my vb application? 
+
+i want to make it so that when the parameter its ""/y"" i want some thing like this to hapen
+
+> if parameter = ""/y"" then 
+> 
+> msgbox(""you used the parameter /y"")
+> 
+> else
+> 
+> msgbox(""you dint use any parameter"")
+> 
+> end if
+
+
+i want some thing like this to hapen when i use the parameter ""/y""
+the parameters are used when for ex: im running the .exe on cmd
+
+thanks for any help and have a good day 
+
+
+
+
+
+
+
+
+
+
+",2
+5342696,03/17/2011 17:16:06,273119,02/14/2010 22:02:02,70,9,Autocomplete order Visual Studio 2010,"Is there any way to change the order by of the autocomplete functionality for Visual Studio 2010?
+
+I want to see the autocomplete options ordered by type, I mean:
+
+1. Methods
+2. Variables
+3. etc...
+
+I dont wan't to get it ordered alphabetically!!
+",visual-studio-2010,autocomplete,order-by,,,,open,0,38,5,"Autocomplete order Visual Studio 2010 Is there any way to change the order by of the autocomplete functionality for Visual Studio 2010?
+
+I want to see the autocomplete options ordered by type, I mean:
+
+1. Methods
+2. Variables
+3. etc...
+
+I dont wan't to get it ordered alphabetically!!
+",3
+8401359,12/06/2011 14:19:39,210188,11/13/2009 04:58:45,126,4,C2491: 'std::numpunct<_Elem>::id' : definition of dllimport static data member not allowed,"error C2491: 'std::numpunct<_Elem>::id' : definition of dllimport static data member not allowed	
+
+
+followed the instruction void _declspecimport()
+{
+}
+changed to void _declspecimport();
+ even then error pertains
+",visual-studio-2010,visual-c++,,,,12/06/2011 19:23:44,not a real question,1,23,11,"C2491: 'std::numpunct<_Elem>::id' : definition of dllimport static data member not allowed error C2491: 'std::numpunct<_Elem>::id' : definition of dllimport static data member not allowed	
+
+
+followed the instruction void _declspecimport()
+{
+}
+changed to void _declspecimport();
+ even then error pertains
+",2
+7687898,10/07/2011 13:24:20,40667,11/25/2008 15:12:45,3512,79,What are some tangible benefits of upgrading to VS2010 from VS2008?,"I'm looking for some concrete benefits, if any, that would come from our team upgrading from VS2008 to VS2010.  We use WebForms only and don't use Entity Framework nor write tests so improvements to those aren't tangible benefits when considering an upgrade.  Apart from a slicker editor and maybe some ASP.NET/C# improvements (assuming moving from .NET 3.5 to 4.0 doesn't break our system) are there any additional benefits to upgrading that would make it worth the cost?",visual-studio-2010,visual-studio-2008,,,,10/10/2011 04:43:42,not constructive,1,79,11,"What are some tangible benefits of upgrading to VS2010 from VS2008? I'm looking for some concrete benefits, if any, that would come from our team upgrading from VS2008 to VS2010.  We use WebForms only and don't use Entity Framework nor write tests so improvements to those aren't tangible benefits when considering an upgrade.  Apart from a slicker editor and maybe some ASP.NET/C# improvements (assuming moving from .NET 3.5 to 4.0 doesn't break our system) are there any additional benefits to upgrading that would make it worth the cost?",2
+4643870,01/10/2011 05:12:29,62478,02/04/2009 15:37:10,225,0,Visual NUnit and App.config,"I'm using the Visual NUnit runner for VS.NET 2010 and am unable to get it read my app.config file.  I've seen posts online about coping the VisualNunitRunner.exe.config file to the project folder but my app is still unable to load a configuration section from the config.  Has anyone run into this problem that can explain the specific steps to resolve?
+
+Thanks.",visual-studio-2010,nunit,,,,,open,0,62,4,"Visual NUnit and App.config I'm using the Visual NUnit runner for VS.NET 2010 and am unable to get it read my app.config file.  I've seen posts online about coping the VisualNunitRunner.exe.config file to the project folder but my app is still unable to load a configuration section from the config.  Has anyone run into this problem that can explain the specific steps to resolve?
+
+Thanks.",2
+10757500,05/25/2012 15:47:11,534295,12/07/2010 22:14:15,1,1,Collapse and deselect TFS pending changes hierarchy,"The TFS pending changes view (VS2010) is annoying to use, especially the fact that the hierarchy view is always expanded. Further when I check in a few files, the pending changes view is refreshed and all the items are expanded and is selected. Considering there are multiple solutions in the workarea (which are functionally and logically disjoint) and at any time I could be working on multiple tracks, the auto refresh, expand and select forces me to go through each node and collapse and deselect it.
+
+A bit of searching brought me to this [page][1] where there specify a workaround to have the Hierarichal view selected by default using macros. Extending this method to resolve the above issue didn't materialize as I believe the events of node collapse and deselection are not getting recorded.
+
+Is there any solution to this issue similar to say the VS Power Tool which provided an exceptional feature 'Collapse All', that collapses all the projects in the solution!
+
+Thank you in advance.
+
+Regards.
+
+
+  [1]: https://connect.microsoft.com/VisualStudio/feedback/details/520449/window-pending-changes-does-not-remember-flat-or-hierarchical-view",visual-studio-2010,view,tfs,hierarchical,pending-changes,,open,0,167,7,"Collapse and deselect TFS pending changes hierarchy The TFS pending changes view (VS2010) is annoying to use, especially the fact that the hierarchy view is always expanded. Further when I check in a few files, the pending changes view is refreshed and all the items are expanded and is selected. Considering there are multiple solutions in the workarea (which are functionally and logically disjoint) and at any time I could be working on multiple tracks, the auto refresh, expand and select forces me to go through each node and collapse and deselect it.
+
+A bit of searching brought me to this [page][1] where there specify a workaround to have the Hierarichal view selected by default using macros. Extending this method to resolve the above issue didn't materialize as I believe the events of node collapse and deselection are not getting recorded.
+
+Is there any solution to this issue similar to say the VS Power Tool which provided an exceptional feature 'Collapse All', that collapses all the projects in the solution!
+
+Thank you in advance.
+
+Regards.
+
+
+  [1]: https://connect.microsoft.com/VisualStudio/feedback/details/520449/window-pending-changes-does-not-remember-flat-or-hierarchical-view",5
+4457483,12/16/2010 04:38:46,481130,10/20/2010 00:26:49,1,0,Can't find 'ClassLibrary' in visual studio 2010 ,"The version of Visual studio 2010 that I'm using is 10.0.30319.1 TRMRel . It's really strange when I want to add a new project, I can see just some of project types (not all of them like classlibrary)!!! I have looked for ClassLibrary every where ,but no luck.
+I have tried to reset my settings by ""Import and Export Setting"" / Reset all setting and choose 'Visual C# Development setting' . but still nothing changes ! 
+
+I appreciate any help
+
+Thank you,
+",visual-studio-2010,,,,,,open,0,80,8,"Can't find 'ClassLibrary' in visual studio 2010  The version of Visual studio 2010 that I'm using is 10.0.30319.1 TRMRel . It's really strange when I want to add a new project, I can see just some of project types (not all of them like classlibrary)!!! I have looked for ClassLibrary every where ,but no luck.
+I have tried to reset my settings by ""Import and Export Setting"" / Reset all setting and choose 'Visual C# Development setting' . but still nothing changes ! 
+
+I appreciate any help
+
+Thank you,
+",1
+8418435,12/07/2011 16:06:57,110569,03/25/2009 14:25:28,151,4,Why is connectionStrings.config ignored when publishing from VS2010,"I'm publishing my web application project to a shared network folder, web.config is published, but my other config files are ignored. These config files all have their ""Build Action"" property set to ""Content"".",visual-studio-2010,,,,,,open,0,33,8,"Why is connectionStrings.config ignored when publishing from VS2010 I'm publishing my web application project to a shared network folder, web.config is published, but my other config files are ignored. These config files all have their ""Build Action"" property set to ""Content"".",1
+4751038,01/20/2011 18:33:16,74216,03/05/2009 12:57:48,36,2,"""Unable to evaluate the expression"" and Async CTP.","Some time ago I have installed Async CTP
+And today i have installed ASP.NET MVC 3 (not RC).
+
+I start receiving ""Unable to evaluate the expression"" in debug mode.
+
+So i have uninstalled Async CTP, ASP.NET MVC 3 and all related updates but with no results.
+Would be anybody so kind as to help me figgure out?",visual-studio-2010,debugging,asp.net-mvc-3,async-ctp,,,open,0,53,8,"""Unable to evaluate the expression"" and Async CTP. Some time ago I have installed Async CTP
+And today i have installed ASP.NET MVC 3 (not RC).
+
+I start receiving ""Unable to evaluate the expression"" in debug mode.
+
+So i have uninstalled Async CTP, ASP.NET MVC 3 and all related updates but with no results.
+Would be anybody so kind as to help me figgure out?",4
+10584414,05/14/2012 13:37:01,6898,09/15/2008 12:47:05,3687,154,Coderush xpress (11.2.11) not working in VS2010,"I've just upgraded CodeRush Xpress from 10.1.4 to 11.2.11 (the latest version). 
+
+Although the DexExpress menu has been restored, and I can still get to the options screen (CTRL + Shift + Alt + O), but none of the other shortcuts (e.g. CTRL + ') do anything. In the options screens, the the Refactor short is set and is enabled.
+
+There also used to be a 'Refactor!' context menu that no longer appears.
+
+I've enabled the message log, but it doesn't flinch when I try any key combo - it's doing absolutely nothing.
+
+I've also tried repairing the installation but no joy... and have disabled all other VS extensions.
+
+Am I missing something? Has anyone got this working with VS2010 (v10.0.040219.1 SP1Rel)?
+
+I've also tried posting on the DX forums but they are out of action at the moment.
+",visual-studio-2010,coderush-xpress,,,,,open,0,134,7,"Coderush xpress (11.2.11) not working in VS2010 I've just upgraded CodeRush Xpress from 10.1.4 to 11.2.11 (the latest version). 
+
+Although the DexExpress menu has been restored, and I can still get to the options screen (CTRL + Shift + Alt + O), but none of the other shortcuts (e.g. CTRL + ') do anything. In the options screens, the the Refactor short is set and is enabled.
+
+There also used to be a 'Refactor!' context menu that no longer appears.
+
+I've enabled the message log, but it doesn't flinch when I try any key combo - it's doing absolutely nothing.
+
+I've also tried repairing the installation but no joy... and have disabled all other VS extensions.
+
+Am I missing something? Has anyone got this working with VS2010 (v10.0.040219.1 SP1Rel)?
+
+I've also tried posting on the DX forums but they are out of action at the moment.
+",2

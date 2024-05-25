@@ -1,0 +1,2460 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+5898216,05/05/2011 13:09:56,655754,03/11/2011 17:27:33,29,2,how to use @sequencegenerator in spring,how to use @sequencegenerator in spring,spring,,,,,05/05/2011 16:48:08,not a real question,1,6,6,how to use @sequencegenerator in spring how to use @sequencegenerator in spring,1
+4017014,10/25/2010 17:03:26,477544,10/15/2010 22:28:42,11,0,why use spring ??,"I am very much confused whether i should use spring <p>
+Reason - I want to develop a loosely coupled code which i think can be developed using Factory pattern and interfaces... and dependency injection can be implemented without using spring too...(by passing parameters).. why should i use spring then ?? Which are the other benefits of spring which i am unaware of..It would be really helpful if you could give me <b>code samples</b> comparing spring codes and simple java code(interfaces)...<b>indicating how spring code is better</b>...
+<p>Thanks ",spring,interface,,,,10/26/2010 13:36:14,not constructive,1,86,4,"why use spring ?? I am very much confused whether i should use spring <p>
+Reason - I want to develop a loosely coupled code which i think can be developed using Factory pattern and interfaces... and dependency injection can be implemented without using spring too...(by passing parameters).. why should i use spring then ?? Which are the other benefits of spring which i am unaware of..It would be really helpful if you could give me <b>code samples</b> comparing spring codes and simple java code(interfaces)...<b>indicating how spring code is better</b>...
+<p>Thanks ",2
+6973693,08/07/2011 15:23:32,353528,05/29/2010 10:38:24,16,0,Displaying a blob image in a jsp page using Spring MVC 3,"I have a class with (amongst others) the field picture which is retreived from the database:
+
+    public class Person {
+      String name;
+      Blob picture;
+    }
+
+So then I haven a controller where I add the person object to the model
+
+    @RequestMapping(value = ""/online"", method = RequestMethod.GET)
+    public String getCurrentUser(Model model) {
+      Person person = getMyPerson()
+      model.addAttribute(""person"", person);
+      return ""online"";
+    }
+
+And finally I have a .jsp page to display the user:
+
+    <html>
+      <%@ taglib prefix=""c"" uri=""http://java.sun.com/jsp/jstl/core"" %>
+       ..some tags
+       
+       Persons name: ${person.name}
+       Persons picture: ?your_answer_here? 
+    </html>
+
+So the question (obviously) is how do I display the blob field as an image? I have tried and failed with <img src=${person.picture} />. I really don't want to perform a new query to the database, I just want to display the image I already have ..",spring,jsp,spring-mvc,,,,open,0,207,12,"Displaying a blob image in a jsp page using Spring MVC 3 I have a class with (amongst others) the field picture which is retreived from the database:
+
+    public class Person {
+      String name;
+      Blob picture;
+    }
+
+So then I haven a controller where I add the person object to the model
+
+    @RequestMapping(value = ""/online"", method = RequestMethod.GET)
+    public String getCurrentUser(Model model) {
+      Person person = getMyPerson()
+      model.addAttribute(""person"", person);
+      return ""online"";
+    }
+
+And finally I have a .jsp page to display the user:
+
+    <html>
+      <%@ taglib prefix=""c"" uri=""http://java.sun.com/jsp/jstl/core"" %>
+       ..some tags
+       
+       Persons name: ${person.name}
+       Persons picture: ?your_answer_here? 
+    </html>
+
+So the question (obviously) is how do I display the blob field as an image? I have tried and failed with <img src=${person.picture} />. I really don't want to perform a new query to the database, I just want to display the image I already have ..",3
+7435046,09/15/2011 17:30:23,146345,07/28/2009 11:31:57,102,2,Springsourcetoolsuite sample project throwing maven dependency issues,"I am new to STS and installed the latest version yesterday. Once installed I went to New->Spring Template Project->Simple Spring Batch Project and followed the instructions like giving a project name, specifying a package name and clicked finish. 
+
+The project is showing a lot of errors. I tried updating maven dependencies and clicked almost all logical options in maven. I even see that org.springframework is not resolved. I see ""Failed to read artificat descriptor errors"".
+
+Can anybody guide me here? Since this is a sample project I expected it to compile and run straight away. Am i missing something?
+
+My STS version is 2.7.2 and maven is 4.0",spring,sts-springsourcetoolsuite,spring-batch,,,,open,0,106,7,"Springsourcetoolsuite sample project throwing maven dependency issues I am new to STS and installed the latest version yesterday. Once installed I went to New->Spring Template Project->Simple Spring Batch Project and followed the instructions like giving a project name, specifying a package name and clicked finish. 
+
+The project is showing a lot of errors. I tried updating maven dependencies and clicked almost all logical options in maven. I even see that org.springframework is not resolved. I see ""Failed to read artificat descriptor errors"".
+
+Can anybody guide me here? Since this is a sample project I expected it to compile and run straight away. Am i missing something?
+
+My STS version is 2.7.2 and maven is 4.0",3
+5032586,02/17/2011 17:48:12,570224,01/10/2011 18:25:16,190,12,Read log4j.xml from within a jar in Spring app,"I am trying to read a log4j.cml from within a jar. My conf is something like
+
+
+      <bean id=""log4jInitialization""
+        class=""org.springframework.beans.factory.config.MethodInvokingFactoryBean"">
+        <property name=""targetClass""
+          value=""org.springframework.util.Log4jConfigurer"" />
+        <property name=""targetMethod"" value=""initLogging"" />
+        <property name=""arguments"">
+          <list>
+            <value>classpath*:conf/prod/log4j.xml</value>
+          </list>
+        </property>
+      </bean>
+
+It throws the following exception:
+
+    log4j:ERROR Could not parse url [file:/Users/sgoyal/workspace/matchmaker-service/classpath*:conf/prod/log4j.xml].
+    java.io.FileNotFoundException: /Users/sgoyal/workspace/matchmaker-service/classpath*:conf/prod/log4j.xml (No such file or directory)
+    	at java.io.FileInputStream.open(Native Method)
+    	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+    	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+    	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:70)
+    	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:161)
+    	at java.net.URL.openStream(URL.java:1010)
+    	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
+    	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
+    	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+    	at org.apache.xerces.parsers.DTDConfiguration.parse(Unknown Source)
+    	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+    	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+    	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+    	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:180)
+    	at org.apache.log4j.xml.DOMConfigurator$2.parse(DOMConfigurator.java:612)
+    	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:711)
+    	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:618)
+    	at org.apache.log4j.xml.DOMConfigurator.configure(DOMConfigurator.java:743)
+    	at org.springframework.util.Log4jConfigurer.initLogging(Log4jConfigurer.java:69)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    	at java.lang.reflect.Method.invoke(Method.java:597)
+    	at org.springframework.util.MethodInvoker.invoke(MethodInvoker.java:273)
+    	at org.springframework.beans.factory.config.MethodInvokingFactoryBean.doInvoke(MethodInvokingFactoryBean.java:162)
+    	at org.springframework.beans.factory.config.MethodInvokingFactoryBean.afterPropertiesSet(MethodInvokingFactoryBean.java:152)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+    	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.getTypeForFactoryBean(AbstractBeanFactory.java:1328)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:678)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:500)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:317)
+    	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:185)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:823)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:780)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:697)
+    	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+    	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+    	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:283)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+    	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
+    	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+    	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+    	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276)
+    	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197)
+    	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+    	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+    	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+    	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+    	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+    	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+    	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:124)
+    	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+    	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+    	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+    	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+    	at org.mortbay.jetty.Server.doStart(Server.java:224)
+    	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+    	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+    	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+    	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+    	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+    	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:483)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:678)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(DefaultLifecycleExecutor.java:553)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:523)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:371)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:332)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:181)
+    	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:356)
+    	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:137)
+    	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+    	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:41)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    	at java.lang.reflect.Method.invoke(Method.java:597)
+    	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+    	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+    	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+    	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+
+
+ - I can see, it is not able to find/read the xml. 
+ - Have verified that this file is present
+ - Can read config property files in a similar manner in same app.
+ - Any pointer? (have searched Google et al.)
+
+-- Thanks!",spring,,,,,,open,0,673,9,"Read log4j.xml from within a jar in Spring app I am trying to read a log4j.cml from within a jar. My conf is something like
+
+
+      <bean id=""log4jInitialization""
+        class=""org.springframework.beans.factory.config.MethodInvokingFactoryBean"">
+        <property name=""targetClass""
+          value=""org.springframework.util.Log4jConfigurer"" />
+        <property name=""targetMethod"" value=""initLogging"" />
+        <property name=""arguments"">
+          <list>
+            <value>classpath*:conf/prod/log4j.xml</value>
+          </list>
+        </property>
+      </bean>
+
+It throws the following exception:
+
+    log4j:ERROR Could not parse url [file:/Users/sgoyal/workspace/matchmaker-service/classpath*:conf/prod/log4j.xml].
+    java.io.FileNotFoundException: /Users/sgoyal/workspace/matchmaker-service/classpath*:conf/prod/log4j.xml (No such file or directory)
+    	at java.io.FileInputStream.open(Native Method)
+    	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+    	at java.io.FileInputStream.<init>(FileInputStream.java:66)
+    	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:70)
+    	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:161)
+    	at java.net.URL.openStream(URL.java:1010)
+    	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
+    	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
+    	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+    	at org.apache.xerces.parsers.DTDConfiguration.parse(Unknown Source)
+    	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+    	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+    	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+    	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:180)
+    	at org.apache.log4j.xml.DOMConfigurator$2.parse(DOMConfigurator.java:612)
+    	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:711)
+    	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:618)
+    	at org.apache.log4j.xml.DOMConfigurator.configure(DOMConfigurator.java:743)
+    	at org.springframework.util.Log4jConfigurer.initLogging(Log4jConfigurer.java:69)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    	at java.lang.reflect.Method.invoke(Method.java:597)
+    	at org.springframework.util.MethodInvoker.invoke(MethodInvoker.java:273)
+    	at org.springframework.beans.factory.config.MethodInvokingFactoryBean.doInvoke(MethodInvokingFactoryBean.java:162)
+    	at org.springframework.beans.factory.config.MethodInvokingFactoryBean.afterPropertiesSet(MethodInvokingFactoryBean.java:152)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+    	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.getTypeForFactoryBean(AbstractBeanFactory.java:1328)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:678)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:500)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:317)
+    	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:185)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:823)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:780)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:697)
+    	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+    	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+    	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:283)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+    	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
+    	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+    	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+    	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276)
+    	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197)
+    	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+    	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+    	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+    	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+    	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+    	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+    	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:124)
+    	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+    	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+    	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+    	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+    	at org.mortbay.jetty.Server.doStart(Server.java:224)
+    	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+    	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+    	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+    	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+    	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+    	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:483)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:678)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(DefaultLifecycleExecutor.java:553)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:523)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:371)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:332)
+    	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:181)
+    	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:356)
+    	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:137)
+    	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+    	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:41)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    	at java.lang.reflect.Method.invoke(Method.java:597)
+    	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+    	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+    	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+    	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+
+
+ - I can see, it is not able to find/read the xml. 
+ - Have verified that this file is present
+ - Can read config property files in a similar manner in same app.
+ - Any pointer? (have searched Google et al.)
+
+-- Thanks!",1
+3586673,08/27/2010 17:24:58,425528,08/19/2010 17:09:10,24,0,"If you use a regular HTML <form> tag instead of the Spring <form:form> tag, how do you specify it's submitted?","
+In the Spring docs, [the section on multipart support][1] has an example of specifying a multipart form as this:
+
+    <form method=""post"" action=""upload.form"" enctype=""multipart/form-data"">
+
+This doesn't use the Spring form tags which I am familiar with and instead submits the form to the `upload.form` action.
+
+How does Spring know what `upload.form` means? Do you have to create a mapping for it and, if so, where is this done?
+
+
+  [1]: http://static.springsource.org/spring/docs/2.0.x/reference/mvc.html#mvc-multipart",spring,spring-mvc,html-form,,,,open,0,71,20,"If you use a regular HTML <form> tag instead of the Spring <form:form> tag, how do you specify it's submitted? 
+In the Spring docs, [the section on multipart support][1] has an example of specifying a multipart form as this:
+
+    <form method=""post"" action=""upload.form"" enctype=""multipart/form-data"">
+
+This doesn't use the Spring form tags which I am familiar with and instead submits the form to the `upload.form` action.
+
+How does Spring know what `upload.form` means? Do you have to create a mapping for it and, if so, where is this done?
+
+
+  [1]: http://static.springsource.org/spring/docs/2.0.x/reference/mvc.html#mvc-multipart",3
+6127774,05/25/2011 16:31:04,245502,01/07/2010 12:29:47,67,7,How can I validate a complex model object in Spring 3 using @Valid annotations?,"I have a model object modelling a purchase order. The purchase order has a few fields (such as ID and date) and a list of line-items as ArrayList<LineItem>. I can validate the parent purchase order ok, but it chokes when validating the line-items.
+
+Can anyone help me with validation of complex objects? If I cannot validate complex objects auto-magically, how can I write a custom validator that relies upon the constraint annotations in the parent and then iterates over the child line-items? This Validator instance needs to be able to call `something.validate(purchaseOrder)` and (for each line-item) `something.validate(lineItem)`. Where do I get ""something"" from?
+
+Thanks!
+
+I have specified <mvc:annotation-driven /> in dispatcher-servlet. I am not using @InitBinder. And I am using @Valid annotation for validation in controller's method like
+
+	    @RequestMapping(params=""confirmPurchaseOrder"")
+	    public String confirm(
+	    		@ModelAttribute(""purchaseOrder"") @Valid PurchaseOrder purchaseOrder,
+	    		BindingResult result,
+	    		@RequestParam(""account"") String accountString,
+	    		@RequestParam(""division"") String divisionString,
+	    		Model model)
+	    {
+	    	if (result.hasErrors()) {
+	    		return PURCHASE_ORDER_CREATE_VIEW;
+	    	}
+
+The domain classes look like this: -
+
+	public class PurchaseOrder implements Comparable<PurchaseOrder> {
+	    /** Based on GUID */
+	    private String id;
+	
+	    /** SOP */
+	    @NotNull
+	    private Integer SOP;
+	
+	    /** Reference from client */
+	    @NotBlank
+	    private String purchaseOrderReference;
+	
+	    /** PO date */
+	    @DateTimeFormat(style=""S-"")
+	    @NotNull
+	    private Date date;
+	
+	    @Valid
+	    private final Collection<LineItem> lineItems = new ArrayList<LineItem>();
+
+
+And
+
+	public class LineItem {
+	    ...Elided
+
+	    /** Generated from GUID */
+	    private String id;
+	
+	    @NotNull
+	    @DateTimeFormat(style=""S-"")
+	    @Future
+	    private Date expiry;
+	    
+	    private String softwareVersion;
+	
+	    @NotNull
+	    @NumberFormat(style = Style.NUMBER)
+	    @Min(1)
+	    private Integer licenceCount;
+
+When committing a Purchase Order with an empty expiry date, I get the following exception: -
+ `org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.beans.InvalidPropertyException: Invalid property 'lineItems[]' of bean class [com.nit.ols.domain.PurchaseOrder]: Invalid index in property path 'lineItems[]'; nested exception is java.lang.NumberFormatException: For input string: """"
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:730)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:634)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:641)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+`",spring,spring-mvc,,,,,open,0,390,14,"How can I validate a complex model object in Spring 3 using @Valid annotations? I have a model object modelling a purchase order. The purchase order has a few fields (such as ID and date) and a list of line-items as ArrayList<LineItem>. I can validate the parent purchase order ok, but it chokes when validating the line-items.
+
+Can anyone help me with validation of complex objects? If I cannot validate complex objects auto-magically, how can I write a custom validator that relies upon the constraint annotations in the parent and then iterates over the child line-items? This Validator instance needs to be able to call `something.validate(purchaseOrder)` and (for each line-item) `something.validate(lineItem)`. Where do I get ""something"" from?
+
+Thanks!
+
+I have specified <mvc:annotation-driven /> in dispatcher-servlet. I am not using @InitBinder. And I am using @Valid annotation for validation in controller's method like
+
+	    @RequestMapping(params=""confirmPurchaseOrder"")
+	    public String confirm(
+	    		@ModelAttribute(""purchaseOrder"") @Valid PurchaseOrder purchaseOrder,
+	    		BindingResult result,
+	    		@RequestParam(""account"") String accountString,
+	    		@RequestParam(""division"") String divisionString,
+	    		Model model)
+	    {
+	    	if (result.hasErrors()) {
+	    		return PURCHASE_ORDER_CREATE_VIEW;
+	    	}
+
+The domain classes look like this: -
+
+	public class PurchaseOrder implements Comparable<PurchaseOrder> {
+	    /** Based on GUID */
+	    private String id;
+	
+	    /** SOP */
+	    @NotNull
+	    private Integer SOP;
+	
+	    /** Reference from client */
+	    @NotBlank
+	    private String purchaseOrderReference;
+	
+	    /** PO date */
+	    @DateTimeFormat(style=""S-"")
+	    @NotNull
+	    private Date date;
+	
+	    @Valid
+	    private final Collection<LineItem> lineItems = new ArrayList<LineItem>();
+
+
+And
+
+	public class LineItem {
+	    ...Elided
+
+	    /** Generated from GUID */
+	    private String id;
+	
+	    @NotNull
+	    @DateTimeFormat(style=""S-"")
+	    @Future
+	    private Date expiry;
+	    
+	    private String softwareVersion;
+	
+	    @NotNull
+	    @NumberFormat(style = Style.NUMBER)
+	    @Min(1)
+	    private Integer licenceCount;
+
+When committing a Purchase Order with an empty expiry date, I get the following exception: -
+ `org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.beans.InvalidPropertyException: Invalid property 'lineItems[]' of bean class [com.nit.ols.domain.PurchaseOrder]: Invalid index in property path 'lineItems[]'; nested exception is java.lang.NumberFormatException: For input string: """"
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:730)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:634)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:641)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+`",2
+8993628,01/24/2012 20:26:46,1052913,11/18/2011 00:11:58,15,0,"spring version 3.1.0.RELEASE, and HttpSessionContextIntegrationFilter ","I am new to spring security and looking how to resolve the following compilation failure.
+
+We upgraded spring version from 3.0.5.RELEASE to 3.1.0.RELEASE.
+
+The following code is failing to compile now, and I am not sure yet how to get rid of HttpSessionContextIntegrationFilter and how to get Spring Security Context now.
+    
+    public static final String EVENT_KEY = HttpSessionContextIntegrationFilter.SPRING_SECURITY_CONTEXT_KEY;
+
+EVENT_KEY is used here
+
+     /**
+     * When user's logout, remove their name from the hashMap
+     *
+     * @param event the session binding event
+     * @see javax.servlet.http.HttpSessionAttributeListener#attributeRemoved(javax.servlet.http.HttpSessionBindingEvent)
+     */
+    public void attributeRemoved(HttpSessionBindingEvent event) {
+        if (event.getName().equals(EVENT_KEY) && !isAnonymous()) {
+            SecurityContext securityContext = (SecurityContext) event.getValue();
+            Authentication auth = securityContext.getAuthentication();
+            if (auth != null && (auth.getPrincipal() instanceof User)) {
+                User user = (User) auth.getPrincipal();
+                removeUsername(user);
+            }
+        }
+    }
+
+Thanks",spring,spring-security,,,,,open,0,244,6,"spring version 3.1.0.RELEASE, and HttpSessionContextIntegrationFilter  I am new to spring security and looking how to resolve the following compilation failure.
+
+We upgraded spring version from 3.0.5.RELEASE to 3.1.0.RELEASE.
+
+The following code is failing to compile now, and I am not sure yet how to get rid of HttpSessionContextIntegrationFilter and how to get Spring Security Context now.
+    
+    public static final String EVENT_KEY = HttpSessionContextIntegrationFilter.SPRING_SECURITY_CONTEXT_KEY;
+
+EVENT_KEY is used here
+
+     /**
+     * When user's logout, remove their name from the hashMap
+     *
+     * @param event the session binding event
+     * @see javax.servlet.http.HttpSessionAttributeListener#attributeRemoved(javax.servlet.http.HttpSessionBindingEvent)
+     */
+    public void attributeRemoved(HttpSessionBindingEvent event) {
+        if (event.getName().equals(EVENT_KEY) && !isAnonymous()) {
+            SecurityContext securityContext = (SecurityContext) event.getValue();
+            Authentication auth = securityContext.getAuthentication();
+            if (auth != null && (auth.getPrincipal() instanceof User)) {
+                User user = (User) auth.getPrincipal();
+                removeUsername(user);
+            }
+        }
+    }
+
+Thanks",2
+11512002,07/16/2012 20:27:33,1442498,06/07/2012 14:38:16,1,0,Enterprise level technology stack,"Our company is performing a recap on our software and thus we're selecting a new technology stack.  Some of the technology will be chosen for us, some we get to decide on what to use and how to use it.
+
+Our new system:
+Webservice for thousands of customers, each with hundreds of users hitting the service which will update every 5 minutes or so (asynchronously).
+
+Messaging service provided by mule.
+
+Heavy duty processing on the back end, the processing runs independently of the webservice and can be treated as a separate system that uses the same database.
+
+Light processing server that acts as a median between the database and the web services.
+
+The technology we must use is mule, hibernate and some sort of portlet container.  I don't plan on making anything that uses portal framework, just be portal friendly.
+
+Our choices are:
+jetty or tomcat with spring
+possibly mule/spring as the backend server?
+glassfish or jboss and can also use spring
+
+I realize that we CAN build the services we need with any of the choices above, I don't find any of them lacking.  What I don't know are some of the pitfalls of using JEE or Spring at the enterprise level.
+
+Would it be sufficient to manage the system resources and tuning through mule?  Could we use mule/spring as the application server service?  I want to setup an event processing server where a message maps to a workflow, this does sound like mule, but I don't want to end up with a bpel like system... I don't see anyone making this comparison but does look oddly familiar.  In addition I need to be able to tweak memory and threading models.  Mule claims to do all of this, but I'm leery of the claims outside of reliable message delivery.  Mostly, I'm concerned that some people think that mule will do it all, has anyone done this?
+
+When just using Spring it looks like I'm going to have to write more of the infrastructure side than I would with jee especially for the heavy duty back end processing.  Is spring setup to manage and monitor the services I'll be running.  Glassfish has a nice looking monitoring suite...
+
+I'm leaning towards glassfish without spring, but I haven't used any of the above technologies.  I have no use for EJBs, since we'll be using hibernate, which is one of the draws of jee, so I want to be more sure if I go this route.
+
+The ultimate decider, even more than added functionality, is ease of use and speed of development.  Whatever I can do with less files (produced by a developer, I don't care about generated) and less code is what we'll ultimately go with.",spring,hibernate,java-ee,esb,,07/17/2012 07:18:06,not constructive,1,451,4,"Enterprise level technology stack Our company is performing a recap on our software and thus we're selecting a new technology stack.  Some of the technology will be chosen for us, some we get to decide on what to use and how to use it.
+
+Our new system:
+Webservice for thousands of customers, each with hundreds of users hitting the service which will update every 5 minutes or so (asynchronously).
+
+Messaging service provided by mule.
+
+Heavy duty processing on the back end, the processing runs independently of the webservice and can be treated as a separate system that uses the same database.
+
+Light processing server that acts as a median between the database and the web services.
+
+The technology we must use is mule, hibernate and some sort of portlet container.  I don't plan on making anything that uses portal framework, just be portal friendly.
+
+Our choices are:
+jetty or tomcat with spring
+possibly mule/spring as the backend server?
+glassfish or jboss and can also use spring
+
+I realize that we CAN build the services we need with any of the choices above, I don't find any of them lacking.  What I don't know are some of the pitfalls of using JEE or Spring at the enterprise level.
+
+Would it be sufficient to manage the system resources and tuning through mule?  Could we use mule/spring as the application server service?  I want to setup an event processing server where a message maps to a workflow, this does sound like mule, but I don't want to end up with a bpel like system... I don't see anyone making this comparison but does look oddly familiar.  In addition I need to be able to tweak memory and threading models.  Mule claims to do all of this, but I'm leery of the claims outside of reliable message delivery.  Mostly, I'm concerned that some people think that mule will do it all, has anyone done this?
+
+When just using Spring it looks like I'm going to have to write more of the infrastructure side than I would with jee especially for the heavy duty back end processing.  Is spring setup to manage and monitor the services I'll be running.  Glassfish has a nice looking monitoring suite...
+
+I'm leaning towards glassfish without spring, but I haven't used any of the above technologies.  I have no use for EJBs, since we'll be using hibernate, which is one of the draws of jee, so I want to be more sure if I go this route.
+
+The ultimate decider, even more than added functionality, is ease of use and speed of development.  Whatever I can do with less files (produced by a developer, I don't care about generated) and less code is what we'll ultimately go with.",4
+8822745,01/11/2012 16:19:22,469029,10/07/2010 11:47:22,507,26,Spring Load Time Weaving in Eclipse RCP,"I'm trying to use Spring's load-time-weaving capabilities with `@Configurable` within an Eclipse RCP application. I am using Spring OSGI Extender to load my application context.
+
+	<?xml version=""1.0"" encoding=""UTF-8""?>
+	<beans xmlns=""http://www.springframework.org/schema/beans""
+		xmlns:context=""http://www.springframework.org/schema/context""
+		xmlns:aop=""http://www.springframework.org/schema/aop"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+		xsi:schemaLocation=""..."">
+		<context:annotation-config />
+		<context:load-time-weaver />
+		<context:spring-configured />
+	</beans>
+
+The application gets created all right, but when I try to annotate a class not managed by Spring (in my case an SWT Dialog) I get the following exception:
+
+
+	Exception in thread ""SpringOsgiExtenderThread-2"" org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loadTimeWeaver': Initialization of bean failed; nested exception is java.lang.IllegalStateException: ClassLoader [org.springframework.osgi.util.BundleDelegatingClassLoader] does NOT provide an 'addTransformer(ClassFileTransformer)' method. Specify a custom LoadTimeWeaver or start your Java virtual machine with Spring's agent: -javaagent:org.springframework.instrument.jar
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext.access$1600(AbstractDelegatedExecutionApplicationContext.java:69)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext$4.run(AbstractDelegatedExecutionApplicationContext.java:355)
+	at org.springframework.osgi.util.internal.PrivilegedUtils.executeWithCustomTCCL(PrivilegedUtils.java:85)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext.completeRefresh(AbstractDelegatedExecutionApplicationContext.java:320)
+	at org.springframework.osgi.extender.internal.dependencies.startup.DependencyWaiterApplicationContextExecutor$CompleteRefreshTask.run(DependencyWaiterApplicationContextExecutor.java:132)
+	at java.lang.Thread.run(Thread.java:662)
+	Caused by: java.lang.IllegalStateException: ClassLoader [org.springframework.osgi.util.BundleDelegatingClassLoader] does NOT provide an 'addTransformer(ClassFileTransformer)' method. Specify a custom LoadTimeWeaver or start your Java virtual machine with Spring's agent: -javaagent:org.springframework.instrument.jar
+	at org.springframework.context.weaving.DefaultContextLoadTimeWeaver.setBeanClassLoader(DefaultContextLoadTimeWeaver.java:93)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	... 13 more
+
+I have tried starting the Application with -javaagent:... in the VM settings, to no avail.
+
+Does anyone have experience with this?
+
+Thanks a lot!",spring,eclipse-rcp,aspectj,,,,open,0,165,7,"Spring Load Time Weaving in Eclipse RCP I'm trying to use Spring's load-time-weaving capabilities with `@Configurable` within an Eclipse RCP application. I am using Spring OSGI Extender to load my application context.
+
+	<?xml version=""1.0"" encoding=""UTF-8""?>
+	<beans xmlns=""http://www.springframework.org/schema/beans""
+		xmlns:context=""http://www.springframework.org/schema/context""
+		xmlns:aop=""http://www.springframework.org/schema/aop"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+		xsi:schemaLocation=""..."">
+		<context:annotation-config />
+		<context:load-time-weaver />
+		<context:spring-configured />
+	</beans>
+
+The application gets created all right, but when I try to annotate a class not managed by Spring (in my case an SWT Dialog) I get the following exception:
+
+
+	Exception in thread ""SpringOsgiExtenderThread-2"" org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loadTimeWeaver': Initialization of bean failed; nested exception is java.lang.IllegalStateException: ClassLoader [org.springframework.osgi.util.BundleDelegatingClassLoader] does NOT provide an 'addTransformer(ClassFileTransformer)' method. Specify a custom LoadTimeWeaver or start your Java virtual machine with Spring's agent: -javaagent:org.springframework.instrument.jar
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext.access$1600(AbstractDelegatedExecutionApplicationContext.java:69)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext$4.run(AbstractDelegatedExecutionApplicationContext.java:355)
+	at org.springframework.osgi.util.internal.PrivilegedUtils.executeWithCustomTCCL(PrivilegedUtils.java:85)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext.completeRefresh(AbstractDelegatedExecutionApplicationContext.java:320)
+	at org.springframework.osgi.extender.internal.dependencies.startup.DependencyWaiterApplicationContextExecutor$CompleteRefreshTask.run(DependencyWaiterApplicationContextExecutor.java:132)
+	at java.lang.Thread.run(Thread.java:662)
+	Caused by: java.lang.IllegalStateException: ClassLoader [org.springframework.osgi.util.BundleDelegatingClassLoader] does NOT provide an 'addTransformer(ClassFileTransformer)' method. Specify a custom LoadTimeWeaver or start your Java virtual machine with Spring's agent: -javaagent:org.springframework.instrument.jar
+	at org.springframework.context.weaving.DefaultContextLoadTimeWeaver.setBeanClassLoader(DefaultContextLoadTimeWeaver.java:93)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	... 13 more
+
+I have tried starting the Application with -javaagent:... in the VM settings, to no avail.
+
+Does anyone have experience with this?
+
+Thanks a lot!",3
+9720406,03/15/2012 13:11:32,1271587,03/15/2012 13:04:58,1,0,Spring integration with Shindig,"I have a Spring bean containing an interface, as part of an OSGI bundle.
+
+I would like to use that bean in my Shindig project ( WAR). and inject it's implementation.
+
+I tried to use Guice Spring integration in order to this, but no good.
+
+What are my options to use OSGI bundle with @Autowire spring annotations,
+inside my Shindig project?
+
+Thank you,
+Doron",spring,osgi,apache-shindig,,,,open,0,58,4,"Spring integration with Shindig I have a Spring bean containing an interface, as part of an OSGI bundle.
+
+I would like to use that bean in my Shindig project ( WAR). and inject it's implementation.
+
+I tried to use Guice Spring integration in order to this, but no good.
+
+What are my options to use OSGI bundle with @Autowire spring annotations,
+inside my Shindig project?
+
+Thank you,
+Doron",3
+8223545,11/22/2011 07:49:43,1059099,11/22/2011 04:54:32,1,0,Customizing spring exception handler AbstractHandlerExceptionResolver error view,"Hi <BR> I am building one application using Spring 3.0.<br>And for exception handling i had made use of **AbstractHandlerExceptionResolver** .<br>My Class handles all exceptions and then using ModelAndView I am sending exception class name to view.<br>I have also one properties file having mapping between exception class and error messages.<br>so in view it will set error message for exception class name set in returned modelandview and will be displayed to user. below is the code snippets<br>**My Exception Handler**
+    
+    public class CentralizedExceptionHander extends
+		AbstractHandlerExceptionResolver {
+	@Override
+	protected ModelAndView doResolveException(HttpServletRequest request,
+			HttpServletResponse response, Object handler, Exception ex) {
+
+		ex.printStackTrace();
+		ModelAndView exceptionalModel = new ModelAndView(""BusinessException"");
+		exceptionalModel.addObject(""EXCEPTION_THROWN"", ex.getClass().getName());
+		return exceptionalModel;
+	}
+}<br><br>**My Properties File**<br>
+    
+org.springframework.security.access.AccessDeniedException =HTTP Status 403 - Access is denied.You do not have permission to this service.<br>**My Controller**
+
+    @RequestMapping(value = ""/account/createUser.do"", method = RequestMethod.POST)
+	public ModelAndView submitCreateUserPage(
+	@ModelAttribute(""userModel"") User user, BindingResult result
+
+	) throws UserAlreadyExistsException {
+		....
+		// this will throw UserAlreadyExistsException if user with same username already exists in system.
+}<br><br>i am using **InternalResourceViewResolver** for handler maping<br> In my View I am displaying error message from getting it from properties file.<br>
+Above code working fine..but i want to enhance it..<br>What I want to do , instead of returning control to **my View - BusinessException.jsp** i want to redirect user to last page where he was before exception occurs.<br>i.e<br>if I am at **CreateUser.jsp(mapped from /account/createUser.do)** and exception occurs then instead of redirecting to BusinessException.jsp , i want to redirect t same page i.e createUser.jsp from which request came...<br>please help...",spring,,,,,,open,0,242,7,"Customizing spring exception handler AbstractHandlerExceptionResolver error view Hi <BR> I am building one application using Spring 3.0.<br>And for exception handling i had made use of **AbstractHandlerExceptionResolver** .<br>My Class handles all exceptions and then using ModelAndView I am sending exception class name to view.<br>I have also one properties file having mapping between exception class and error messages.<br>so in view it will set error message for exception class name set in returned modelandview and will be displayed to user. below is the code snippets<br>**My Exception Handler**
+    
+    public class CentralizedExceptionHander extends
+		AbstractHandlerExceptionResolver {
+	@Override
+	protected ModelAndView doResolveException(HttpServletRequest request,
+			HttpServletResponse response, Object handler, Exception ex) {
+
+		ex.printStackTrace();
+		ModelAndView exceptionalModel = new ModelAndView(""BusinessException"");
+		exceptionalModel.addObject(""EXCEPTION_THROWN"", ex.getClass().getName());
+		return exceptionalModel;
+	}
+}<br><br>**My Properties File**<br>
+    
+org.springframework.security.access.AccessDeniedException =HTTP Status 403 - Access is denied.You do not have permission to this service.<br>**My Controller**
+
+    @RequestMapping(value = ""/account/createUser.do"", method = RequestMethod.POST)
+	public ModelAndView submitCreateUserPage(
+	@ModelAttribute(""userModel"") User user, BindingResult result
+
+	) throws UserAlreadyExistsException {
+		....
+		// this will throw UserAlreadyExistsException if user with same username already exists in system.
+}<br><br>i am using **InternalResourceViewResolver** for handler maping<br> In my View I am displaying error message from getting it from properties file.<br>
+Above code working fine..but i want to enhance it..<br>What I want to do , instead of returning control to **my View - BusinessException.jsp** i want to redirect user to last page where he was before exception occurs.<br>i.e<br>if I am at **CreateUser.jsp(mapped from /account/createUser.do)** and exception occurs then instead of redirecting to BusinessException.jsp , i want to redirect t same page i.e createUser.jsp from which request came...<br>please help...",1
+7244102,08/30/2011 13:40:14,99863,05/02/2009 13:54:14,481,5,Recommended way to access Spring Context in a JMS Listener,"I am working in a Web Application running in JBoss that utilizes Spring and whenever requests come into the application our web layer gets access to the Spring ApplicationContext via 
+
+    ApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(request.getSession().getServletContext() );
+
+We are adding some JMS Listeners in our application that also need access to ApplicationContext, but
+unfortunately the JMS Listeners don't have access to the HttpServletRequest api.
+
+What is the best practice in Spring to get access to the ApplicationContext inside a MessageListener.  Our JMS Listeners are also injected via our spring configuration files.
+
+",spring,jms,,,,,open,0,91,10,"Recommended way to access Spring Context in a JMS Listener I am working in a Web Application running in JBoss that utilizes Spring and whenever requests come into the application our web layer gets access to the Spring ApplicationContext via 
+
+    ApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(request.getSession().getServletContext() );
+
+We are adding some JMS Listeners in our application that also need access to ApplicationContext, but
+unfortunately the JMS Listeners don't have access to the HttpServletRequest api.
+
+What is the best practice in Spring to get access to the ApplicationContext inside a MessageListener.  Our JMS Listeners are also injected via our spring configuration files.
+
+",2
+7361610,09/09/2011 12:27:08,898588,08/17/2011 12:12:31,6,0,Remove/unbind spring rmi service,"I export bean as rmi-service by spring. 
+
+Can I remove rmi service from rmi registry or stop it in application? 
+
+",spring,rmi,,,,,open,0,21,4,"Remove/unbind spring rmi service I export bean as rmi-service by spring. 
+
+Can I remove rmi service from rmi registry or stop it in application? 
+
+",2
+6767244,07/20/2011 19:15:25,539211,12/11/2010 22:24:56,1528,68,"Spring MVC 3 and Apache Tiles 2, but no controller","I am trying to get Spring MVC 3 and Apache Tiles 2 to play nice together. I can get simple pages to display and those pages have been built with Tiles templates, but for the life of me I cannot get my controller to be called. I would appreciate any help.
+
+`web.xml`
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <web-app version=""2.5"" xmlns=""http://java.sun.com/xml/ns/j2ee""
+    		xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+    		xsi:schemaLocation=""http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd"">
+    	
+    	<listener>
+    		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    	</listener>
+    
+    	<context-param>
+    		<param-name>contextConfigLocation</param-name>
+    		<param-value>/WEB-INF/spring/web-application-context.xml</param-value>
+    	</context-param>
+    	
+    	<servlet>
+    		<servlet-name>tiles</servlet-name>
+    		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    		<init-param>
+    			<param-name>contextConfigLocation</param-name>
+    			<param-value></param-value>
+    		</init-param>
+    	</servlet>
+    	
+    	<servlet-mapping>
+    		<servlet-name>tiles</servlet-name>
+    		<url-pattern>*.html</url-pattern>
+    	</servlet-mapping>
+    	
+    	<welcome-file-list>
+    		<welcome-file>index.jsp</welcome-file>
+    	</welcome-file-list>
+    
+    </web-app>
+
+`web-application-context.xml`
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xmlns=""http://www.springframework.org/schema/beans""
+        xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+        xsi:schemaLocation=""http://www.springframework.org/schema/beans 
+                               http://www.springframework.org/schema/beans/spring-beans.xsd"">
+    
+        <!-- Imports the configurations of the different infrastructure systems of the application -->
+        <import resource=""webmvc-context.xml"" />
+    
+    </beans>
+
+`webmvc-context.xml`
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xmlns=""http://www.springframework.org/schema/beans""
+           xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+           xmlns:p=""http://www.springframework.org/schema/p""
+           xmlns:mvc=""http://www.springframework.org/schema/mvc""
+           xmlns:context=""http://www.springframework.org/schema/context""
+           xsi:schemaLocation=""http://www.springframework.org/schema/beans 
+                               http://www.springframework.org/schema/beans/spring-beans.xsd
+                               http://www.springframework.org/schema/mvc
+                               http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                               http://www.springframework.org/schema/context
+            				   http://www.springframework.org/schema/context/spring-context-2.5.xsd""
+    	   default-autowire=""byName"">
+        
+        <!-- Static resource mapping (css, js, images, etc) -->
+        <mvc:resources mapping=""/resources/**"" location=""/WEB-INF/resouces/"" />
+        
+        <!-- Required stuff for autowiring of controllers -->
+        <context:annotation-config />
+        <context:component-scan base-package=""com.tarigmaa.gem"" />
+        <mvc:annotation-driven/>
+        <bean class=""org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"" />
+    	<bean class=""org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"" />
+    
+    	<!-- Static views (no controller) -->
+        <!-- <mvc:view-controller path=""/index.html"" /> -->
+        
+        <!-- Tiles initialization -->
+        <bean id=""tilesConfigurer""
+              class=""org.springframework.web.servlet.view.tiles2.TilesConfigurer""
+              p:definitions=""/WEB-INF/tiles-defs/templates.xml"" />
+    
+    	<bean id=""tilesViewResolver""
+    		  class=""org.springframework.web.servlet.view.UrlBasedViewResolver""
+    		  p:viewClass=""org.springframework.web.servlet.view.tiles2.TilesView"" />
+    	
+    	<!-- Map URLs to controllers -->
+    	<bean id=""urlMapping""
+    		  class=""org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"">
+    		<property name=""alwaysUseFullPath"" value=""true"" />
+    		
+    		<property name=""mappings"">
+    			<props>
+    				<prop key=""/index.html"">exampleController</prop>
+    				<prop key=""/index2.html"">exampleController</prop>
+    			</props>
+    		</property>
+    	</bean>
+    	
+    	<!-- Define the controllers -->
+    	<bean id=""exampleController"" class=""com.tarigma.GEM.HomeController"" />
+    
+    </beans>
+
+`com.tarigma.GEM.HomeController`
+
+    package com.tarigma.GEM;
+    
+    import java.util.Locale;
+    
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
+    import org.springframework.stereotype.Controller;
+    import org.springframework.ui.Model;
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RequestMethod;
+    
+    /**
+     * Handles requests for the application home page.
+     */
+    @Controller
+    public class HomeController {
+    	
+    	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+    	
+    	@RequestMapping(value = ""/index.html"", method = RequestMethod.GET)
+    	public String home(Locale locale, Model model) {
+    		logger.info(""Welcome from /index.html"");
+    		model.addAttribute (""title"", ""Nik"");
+    		return ""index"";
+    	}
+    	
+    	@RequestMapping(value = ""/index2.html"", method = RequestMethod.GET)
+    	public String home2(Locale locale, Model model) {
+    		logger.info (""Welcome from /index2.html"");
+    		model.addAttribute(""title"", ""Jeff"");
+    		return ""index2"";
+    	}
+    }
+
+I know I have dumped a lot of code here and I apologize for that. I have been at this for days and I am running out patience. Thanks in advance.",spring,spring-mvc,tiles2,apache-tiles,,,open,0,1020,10,"Spring MVC 3 and Apache Tiles 2, but no controller I am trying to get Spring MVC 3 and Apache Tiles 2 to play nice together. I can get simple pages to display and those pages have been built with Tiles templates, but for the life of me I cannot get my controller to be called. I would appreciate any help.
+
+`web.xml`
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <web-app version=""2.5"" xmlns=""http://java.sun.com/xml/ns/j2ee""
+    		xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+    		xsi:schemaLocation=""http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd"">
+    	
+    	<listener>
+    		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    	</listener>
+    
+    	<context-param>
+    		<param-name>contextConfigLocation</param-name>
+    		<param-value>/WEB-INF/spring/web-application-context.xml</param-value>
+    	</context-param>
+    	
+    	<servlet>
+    		<servlet-name>tiles</servlet-name>
+    		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    		<init-param>
+    			<param-name>contextConfigLocation</param-name>
+    			<param-value></param-value>
+    		</init-param>
+    	</servlet>
+    	
+    	<servlet-mapping>
+    		<servlet-name>tiles</servlet-name>
+    		<url-pattern>*.html</url-pattern>
+    	</servlet-mapping>
+    	
+    	<welcome-file-list>
+    		<welcome-file>index.jsp</welcome-file>
+    	</welcome-file-list>
+    
+    </web-app>
+
+`web-application-context.xml`
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xmlns=""http://www.springframework.org/schema/beans""
+        xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+        xsi:schemaLocation=""http://www.springframework.org/schema/beans 
+                               http://www.springframework.org/schema/beans/spring-beans.xsd"">
+    
+        <!-- Imports the configurations of the different infrastructure systems of the application -->
+        <import resource=""webmvc-context.xml"" />
+    
+    </beans>
+
+`webmvc-context.xml`
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xmlns=""http://www.springframework.org/schema/beans""
+           xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+           xmlns:p=""http://www.springframework.org/schema/p""
+           xmlns:mvc=""http://www.springframework.org/schema/mvc""
+           xmlns:context=""http://www.springframework.org/schema/context""
+           xsi:schemaLocation=""http://www.springframework.org/schema/beans 
+                               http://www.springframework.org/schema/beans/spring-beans.xsd
+                               http://www.springframework.org/schema/mvc
+                               http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                               http://www.springframework.org/schema/context
+            				   http://www.springframework.org/schema/context/spring-context-2.5.xsd""
+    	   default-autowire=""byName"">
+        
+        <!-- Static resource mapping (css, js, images, etc) -->
+        <mvc:resources mapping=""/resources/**"" location=""/WEB-INF/resouces/"" />
+        
+        <!-- Required stuff for autowiring of controllers -->
+        <context:annotation-config />
+        <context:component-scan base-package=""com.tarigmaa.gem"" />
+        <mvc:annotation-driven/>
+        <bean class=""org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"" />
+    	<bean class=""org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"" />
+    
+    	<!-- Static views (no controller) -->
+        <!-- <mvc:view-controller path=""/index.html"" /> -->
+        
+        <!-- Tiles initialization -->
+        <bean id=""tilesConfigurer""
+              class=""org.springframework.web.servlet.view.tiles2.TilesConfigurer""
+              p:definitions=""/WEB-INF/tiles-defs/templates.xml"" />
+    
+    	<bean id=""tilesViewResolver""
+    		  class=""org.springframework.web.servlet.view.UrlBasedViewResolver""
+    		  p:viewClass=""org.springframework.web.servlet.view.tiles2.TilesView"" />
+    	
+    	<!-- Map URLs to controllers -->
+    	<bean id=""urlMapping""
+    		  class=""org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"">
+    		<property name=""alwaysUseFullPath"" value=""true"" />
+    		
+    		<property name=""mappings"">
+    			<props>
+    				<prop key=""/index.html"">exampleController</prop>
+    				<prop key=""/index2.html"">exampleController</prop>
+    			</props>
+    		</property>
+    	</bean>
+    	
+    	<!-- Define the controllers -->
+    	<bean id=""exampleController"" class=""com.tarigma.GEM.HomeController"" />
+    
+    </beans>
+
+`com.tarigma.GEM.HomeController`
+
+    package com.tarigma.GEM;
+    
+    import java.util.Locale;
+    
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
+    import org.springframework.stereotype.Controller;
+    import org.springframework.ui.Model;
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RequestMethod;
+    
+    /**
+     * Handles requests for the application home page.
+     */
+    @Controller
+    public class HomeController {
+    	
+    	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+    	
+    	@RequestMapping(value = ""/index.html"", method = RequestMethod.GET)
+    	public String home(Locale locale, Model model) {
+    		logger.info(""Welcome from /index.html"");
+    		model.addAttribute (""title"", ""Nik"");
+    		return ""index"";
+    	}
+    	
+    	@RequestMapping(value = ""/index2.html"", method = RequestMethod.GET)
+    	public String home2(Locale locale, Model model) {
+    		logger.info (""Welcome from /index2.html"");
+    		model.addAttribute(""title"", ""Jeff"");
+    		return ""index2"";
+    	}
+    }
+
+I know I have dumped a lot of code here and I apologize for that. I have been at this for days and I am running out patience. Thanks in advance.",4
+5995754,05/13/2011 17:44:31,752798,05/13/2011 17:43:06,1,0,How can I add a URL parameter but hide others in a POST - Spring MVC,"I'm trying to add a URL parameter within a Spring MVC application.  It's a basic search page that shows results.
+
+In the search page, there is a form that is set to POST.  There are many hidden fields and other fields I don't want in the URL. So, I don't want to do a GET.
+
+I do want the search query in the URL.  So after clicking the search button, the resulting search results page needs to have a URL like **/search?query=hello**
+
+To get it to work, I'm creating a RequestMapping method in the Spring MVC Controller and doing a redirect: tacking on the query parameter.  However, I'm not sure using a redirect is the best answer, seems there could be performance concerns redirecting as well.
+
+I looked around and noticed folks using javascript and the location object, but setting the location object obviously relaunches the URL you set it to.  I also looked at the HTTPServletResponse & HTTPServletRequest objects, but couldn't find much.
+
+Any thoughts on how I can force the search parameter to be added to the URL?",spring,url,spring-mvc,parameters,controller,,open,0,180,16,"How can I add a URL parameter but hide others in a POST - Spring MVC I'm trying to add a URL parameter within a Spring MVC application.  It's a basic search page that shows results.
+
+In the search page, there is a form that is set to POST.  There are many hidden fields and other fields I don't want in the URL. So, I don't want to do a GET.
+
+I do want the search query in the URL.  So after clicking the search button, the resulting search results page needs to have a URL like **/search?query=hello**
+
+To get it to work, I'm creating a RequestMapping method in the Spring MVC Controller and doing a redirect: tacking on the query parameter.  However, I'm not sure using a redirect is the best answer, seems there could be performance concerns redirecting as well.
+
+I looked around and noticed folks using javascript and the location object, but setting the location object obviously relaunches the URL you set it to.  I also looked at the HTTPServletResponse & HTTPServletRequest objects, but couldn't find much.
+
+Any thoughts on how I can force the search parameter to be added to the URL?",5
+10641045,05/17/2012 18:01:28,1185502,02/02/2012 15:32:49,5,0,how can i use RequestMapping in Spring?,"I'm using spring in a web app , but I don't know how to execute specific method when he type a url like : www.site.com/controller/method
+
+I know that in codeigniter (php) it can be done",spring,,,,,05/17/2012 23:17:17,not a real question,1,34,7,"how can i use RequestMapping in Spring? I'm using spring in a web app , but I don't know how to execute specific method when he type a url like : www.site.com/controller/method
+
+I know that in codeigniter (php) it can be done",1
+2701127,04/23/2010 18:40:41,187099,10/09/2009 10:46:07,17,0,Spring MVC 3.0: Avoiding explicit JAXBElement<> wrapper in method arg,"I have the following method and want to avoid having to explicitly show the JAXBElement<> syntax. Is there some sort of annotation that would allow the method to appear to accept raw MessageResponse objects but in actuality work the same as shown below? I'm not sure how clear that was so I'll say this: I'm looking for some syntactic sugar :)
+
+        @ServiceActivator
+    public void handleMessageResponse(JAXBElement<MessageResponse> jaxbResponse) {
+        MessageResponse response = jaxbResponse.getValue();
+        MessageStatus status = messageStatusDao.getByStoreIdAndMessageId(response.getStoreId(), response.getMessageId());
+        status.setStatusTimestamp(response.getDate());
+        status.setStatus(""Complete"");
+    }",spring,mvc,3.0,jaxb,,,open,0,120,10,"Spring MVC 3.0: Avoiding explicit JAXBElement<> wrapper in method arg I have the following method and want to avoid having to explicitly show the JAXBElement<> syntax. Is there some sort of annotation that would allow the method to appear to accept raw MessageResponse objects but in actuality work the same as shown below? I'm not sure how clear that was so I'll say this: I'm looking for some syntactic sugar :)
+
+        @ServiceActivator
+    public void handleMessageResponse(JAXBElement<MessageResponse> jaxbResponse) {
+        MessageResponse response = jaxbResponse.getValue();
+        MessageStatus status = messageStatusDao.getByStoreIdAndMessageId(response.getStoreId(), response.getMessageId());
+        status.setStatusTimestamp(response.getDate());
+        status.setStatus(""Complete"");
+    }",4
+10750445,05/25/2012 07:40:48,1416805,05/25/2012 07:28:40,1,0,How to apply transactions best practice for read operations in Spring MVC using Hibernate?,"As it is mentioned in blogs/books (e.g. Java Transactions Design Strategies by Mark Richards), read operations must have the Propagation.SUPPORTS attribute.
+
+In a simple Spring 3.1 MVC project with Hibernate 4.1 the scenario is:
+
+ - Declarative transaction management using @Transactional
+ - sessionFactory of org.springframework.orm.hibernate4.LocalSessionFactoryBean
+ - Transaction manager of org.springframework.orm.hibernate4.HibernateTransactionManager
+ - Service class with @Transactional(propagation=Propagation.REQUIRED)
+ - Function of that Service class that only retrieves a resultset (performs read operation) with @Transactional(propagation=Propagation.SUPPORTS)
+ - Function of read operation retieves the resultset using sessionFactory.getCurrentSession().get()
+
+Of course, when a Controller executes the function of read operation, the exception ""No Session found for current thread"" is raised because a transaction is not started and a session is not obtained.
+
+Based on the above configuration (while it is best e.g. non-invasive, less code etc) the Propagation.SUPPORTS attribute cannot be used unless a transaction is started before with Propagation.REQUIRED or Propagation.REQUIRES_NEW.
+
+How do we use use Propagation.SUPPORTS for read operations without having to start a transaction e.g. with Propagation.REQUIRED before but still taking advantage the benefits of declarative transaction management?
+
+Thank you in advance.",spring,hibernate,transactions,,,,open,0,171,14,"How to apply transactions best practice for read operations in Spring MVC using Hibernate? As it is mentioned in blogs/books (e.g. Java Transactions Design Strategies by Mark Richards), read operations must have the Propagation.SUPPORTS attribute.
+
+In a simple Spring 3.1 MVC project with Hibernate 4.1 the scenario is:
+
+ - Declarative transaction management using @Transactional
+ - sessionFactory of org.springframework.orm.hibernate4.LocalSessionFactoryBean
+ - Transaction manager of org.springframework.orm.hibernate4.HibernateTransactionManager
+ - Service class with @Transactional(propagation=Propagation.REQUIRED)
+ - Function of that Service class that only retrieves a resultset (performs read operation) with @Transactional(propagation=Propagation.SUPPORTS)
+ - Function of read operation retieves the resultset using sessionFactory.getCurrentSession().get()
+
+Of course, when a Controller executes the function of read operation, the exception ""No Session found for current thread"" is raised because a transaction is not started and a session is not obtained.
+
+Based on the above configuration (while it is best e.g. non-invasive, less code etc) the Propagation.SUPPORTS attribute cannot be used unless a transaction is started before with Propagation.REQUIRED or Propagation.REQUIRES_NEW.
+
+How do we use use Propagation.SUPPORTS for read operations without having to start a transaction e.g. with Propagation.REQUIRED before but still taking advantage the benefits of declarative transaction management?
+
+Thank you in advance.",3
+7792538,10/17/2011 10:38:53,774395,05/28/2011 14:25:10,107,3,Stop Tests on first Failure with Maven/JUnit/Spring,"I'd like Maven to stop trying to run my JUnit Spring tests when it encounters the first error. Is this possible?
+
+My test classes look like the following, and I run them just as a standard Maven target.
+
+    @ContextConfiguration(locations = {""classpath:/spring-config/store-persistence.xml"",""classpath:/spring-config/store-security.xml"",""classpath:/spring-config/store-service.xml"", ""classpath:/spring-config/store-servlet.xml"" })
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @Transactional
+    public class SkuLicenceServiceIntegrationTest
+    {
+    ...
+
+If there's an error in the Spring config, then each test will try to restart the Spring context, which takes 20 seconds a go. This means we don't find out for ages that any tests have failed, as it'll try to run the whole lot before concluding that the build was a failure!",spring,maven,junit,jenkins,surefire,,open,0,119,7,"Stop Tests on first Failure with Maven/JUnit/Spring I'd like Maven to stop trying to run my JUnit Spring tests when it encounters the first error. Is this possible?
+
+My test classes look like the following, and I run them just as a standard Maven target.
+
+    @ContextConfiguration(locations = {""classpath:/spring-config/store-persistence.xml"",""classpath:/spring-config/store-security.xml"",""classpath:/spring-config/store-service.xml"", ""classpath:/spring-config/store-servlet.xml"" })
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @Transactional
+    public class SkuLicenceServiceIntegrationTest
+    {
+    ...
+
+If there's an error in the Spring config, then each test will try to restart the Spring context, which takes 20 seconds a go. This means we don't find out for ages that any tests have failed, as it'll try to run the whole lot before concluding that the build was a failure!",5
+11618895,07/23/2012 19:09:38,620448,02/16/2011 22:14:42,952,55,Values of @PathVariable and @ModelAttribute overlapping,"I have an `User` object stored in the session with `@SessionAttributes`. And a straight-forward method decorated with `@ModelAttribute` in order to initialize it whenever the session's value is null.
+
+User class:
+
+    @Entity
+    @Table( name=""USER"")
+    public class User implements java.io.Serializable {
+    
+        private Long id;
+        private String username;
+        private String password;
+        ....
+    
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(name =""ID"")
+        public Long getId() {
+            return id;
+        }
+    
+        public void setId(Long id) {
+            this.id = id;
+        }
+        ...
+
+Controller:
+
+    @RequestMapping(""/item"")
+    @Controller
+    @SessionAttributes({""user""})
+    public class MyController {
+
+@ModelAttribute method:
+
+
+    @ModelAttribute(""user"")
+        public User createUser(Principal principal) {
+            return userService.findByUsername(principal.getName());
+        }
+
+It all seems to work as expected except in this particular method:
+
+    @RequestMapping(value = ""/{action}/{id}"", method = RequestMethod.GET)
+        public String showItem(@PathVariable(""id"") Long id, @PathVariable(""action"") Action action, @ModelAttribute(""user"") User user,
+                Model uiModel) {
+       ...    
+    }
+
+**The problem is that `User.id` is being set with `@PathVariable(""id"")`**. I believe I ran into this with `@RequestParam` too. I'm assuming that's because both have the same name and type. After reading [Spring's documentation][1] (see below) I'm assuming this is expected behavior:
+
+>The next step is data binding. The WebDataBinder class matches request parameter names — including query string parameters and form fields — to model attribute fields by name. Matching fields are populated after type conversion (from String to the target field type) has been applied where necessary. 
+
+However, I would think this scenario is fairly common, how are other people handling this? If my findings are correct and this is expected behavior (or bug), this seems to be very error prone. 
+
+**Possible solutions:**
+
+ 1. Change `@PathVariable(""id"")` to `@PathVariable(""somethingElse"")`. Works but it's not as straightforward with @RequestParam (e.g. I don't know how to change jqgrid's request parameter id to something else but this is another issue).  
+ 2. Change `@PathVariable(""id"")` type from Long to Int. This will make `User.id` and `id` types differ but the cast to Long looks ugly :)
+ 3. Don't use `@ModelAttribute` here and query the DB for `User` again. Not consistent with other methods and involves redundant DB calls.
+
+Any suggestions?
+
+  [1]: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-modelattrib-method-args",spring,spring-mvc,,,,,open,0,534,6,"Values of @PathVariable and @ModelAttribute overlapping I have an `User` object stored in the session with `@SessionAttributes`. And a straight-forward method decorated with `@ModelAttribute` in order to initialize it whenever the session's value is null.
+
+User class:
+
+    @Entity
+    @Table( name=""USER"")
+    public class User implements java.io.Serializable {
+    
+        private Long id;
+        private String username;
+        private String password;
+        ....
+    
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(name =""ID"")
+        public Long getId() {
+            return id;
+        }
+    
+        public void setId(Long id) {
+            this.id = id;
+        }
+        ...
+
+Controller:
+
+    @RequestMapping(""/item"")
+    @Controller
+    @SessionAttributes({""user""})
+    public class MyController {
+
+@ModelAttribute method:
+
+
+    @ModelAttribute(""user"")
+        public User createUser(Principal principal) {
+            return userService.findByUsername(principal.getName());
+        }
+
+It all seems to work as expected except in this particular method:
+
+    @RequestMapping(value = ""/{action}/{id}"", method = RequestMethod.GET)
+        public String showItem(@PathVariable(""id"") Long id, @PathVariable(""action"") Action action, @ModelAttribute(""user"") User user,
+                Model uiModel) {
+       ...    
+    }
+
+**The problem is that `User.id` is being set with `@PathVariable(""id"")`**. I believe I ran into this with `@RequestParam` too. I'm assuming that's because both have the same name and type. After reading [Spring's documentation][1] (see below) I'm assuming this is expected behavior:
+
+>The next step is data binding. The WebDataBinder class matches request parameter names — including query string parameters and form fields — to model attribute fields by name. Matching fields are populated after type conversion (from String to the target field type) has been applied where necessary. 
+
+However, I would think this scenario is fairly common, how are other people handling this? If my findings are correct and this is expected behavior (or bug), this seems to be very error prone. 
+
+**Possible solutions:**
+
+ 1. Change `@PathVariable(""id"")` to `@PathVariable(""somethingElse"")`. Works but it's not as straightforward with @RequestParam (e.g. I don't know how to change jqgrid's request parameter id to something else but this is another issue).  
+ 2. Change `@PathVariable(""id"")` type from Long to Int. This will make `User.id` and `id` types differ but the cast to Long looks ugly :)
+ 3. Don't use `@ModelAttribute` here and query the DB for `User` again. Not consistent with other methods and involves redundant DB calls.
+
+Any suggestions?
+
+  [1]: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-modelattrib-method-args",2
+7851528,10/21/2011 15:16:20,971813,09/29/2011 19:09:06,15,0,Reading uncommitted generated IDs in Spring / JPA,"I am trying to retrieve the generated ID of a newly created Entity within a transaction, but when I try to read the ID value it is null.  I assume this is because the transaction has not yet been committed and the Entity's ID has yet to be created.
+
+I am using Spring MVC and transactions (using @Transactional on my service), and using JPA for the data layer.  I'm not an expert in transaction management, so I'm not even sure if this is possible. This is example code being executing in the presentation layer (Spring portlet MVC):
+
+    Long parentId = getParentId();
+    Folder parentFolder = linksService.getItem(parentId, Folder.class);
+    Folder newFolder;
+    newFolder = new Folder();
+    newFolder.setName(""new folder"");
+    newFolder.setParent(parentFolder);
+    parentFolder.addItem(newItem);
+    linksService.saveItem(parentFolder); // this calls entityManager.merge(parentFolder)
+
+    // this returns null
+    String itemId = newFolder.getItemId();",spring,jpa,,,,,open,0,160,8,"Reading uncommitted generated IDs in Spring / JPA I am trying to retrieve the generated ID of a newly created Entity within a transaction, but when I try to read the ID value it is null.  I assume this is because the transaction has not yet been committed and the Entity's ID has yet to be created.
+
+I am using Spring MVC and transactions (using @Transactional on my service), and using JPA for the data layer.  I'm not an expert in transaction management, so I'm not even sure if this is possible. This is example code being executing in the presentation layer (Spring portlet MVC):
+
+    Long parentId = getParentId();
+    Folder parentFolder = linksService.getItem(parentId, Folder.class);
+    Folder newFolder;
+    newFolder = new Folder();
+    newFolder.setName(""new folder"");
+    newFolder.setParent(parentFolder);
+    parentFolder.addItem(newItem);
+    linksService.saveItem(parentFolder); // this calls entityManager.merge(parentFolder)
+
+    // this returns null
+    String itemId = newFolder.getItemId();",2
+8313608,11/29/2011 15:45:54,606621,02/07/2011 14:56:14,53,2,OpenSource project based on Spring,"I would like to participate on OpenSource project based on Spring (Core, Batch, Integration) to improve my Sping Skills.
+
+Can someone suggest me the suitabble project?",spring,open-source,,,,11/29/2011 19:04:38,not constructive,1,25,5,"OpenSource project based on Spring I would like to participate on OpenSource project based on Spring (Core, Batch, Integration) to improve my Sping Skills.
+
+Can someone suggest me the suitabble project?",2
+7950678,10/31/2011 06:49:29,941759,09/13/2011 04:04:36,12,0,Trying to pass view implicitly using mvc:view controller,"I have a spring configuration file with MANY entries such as the one below.
+
+`<mvc:view-controller path=""/test/one"" view-name=""one.xml"" />
+<mvc:view-controller path=""/test/two"" view-name=""two.xml"" />
+<mvc:view-controller path=""/test/three"" view-name=""three.xml"" />`
+
+Now I am integrating controller code and I am trying to avoid having to have a request mapping for every single page. Is there a way for Spring MVC to implicitly find the page with the view as specified in the controllers.xml.
+
+So instead of returning a string as the View. I would like a method where I was returning void or just the model to the page and for it to find the page
+
+
+    @RequestMapping(value = ""/test/one"", method = RequestMethod.GET)
+	public String getOne(HttpServletRequest request, Model model) {
+    return ""one.xml"" // would like to be able to return void here or just the mode
+
+
+}
+
+",spring,spring-mvc,,,,,open,0,130,8,"Trying to pass view implicitly using mvc:view controller I have a spring configuration file with MANY entries such as the one below.
+
+`<mvc:view-controller path=""/test/one"" view-name=""one.xml"" />
+<mvc:view-controller path=""/test/two"" view-name=""two.xml"" />
+<mvc:view-controller path=""/test/three"" view-name=""three.xml"" />`
+
+Now I am integrating controller code and I am trying to avoid having to have a request mapping for every single page. Is there a way for Spring MVC to implicitly find the page with the view as specified in the controllers.xml.
+
+So instead of returning a string as the View. I would like a method where I was returning void or just the model to the page and for it to find the page
+
+
+    @RequestMapping(value = ""/test/one"", method = RequestMethod.GET)
+	public String getOne(HttpServletRequest request, Model model) {
+    return ""one.xml"" // would like to be able to return void here or just the mode
+
+
+}
+
+",2
+7631140,10/03/2011 04:54:19,373201,06/22/2010 13:14:43,609,17,spring aop not firing for annotation,"I am using an annotation on a method. and whenever that annoation is present I want to intercept it using aop. What am i missing.
+
+
+    <bean id=""emailAdvice"" class=""com.merc.spring.aop.advice.MultiThreadEmailAdvice""/> 
+
+    <aop:config>  
+        <aop:aspect ref=""emailAdvice"">  
+            <aop:around 
+                method=""fork""  
+                pointcut=""execution(* org.springframework.mail.javamail.JavaMailSenderImpl.send(..))""/>  
+        </aop:aspect>  
+        <aop:aspect ref=""emailAdvice"">
+            <aop:around method=""sendEmailAdvice"" pointcut=""@annotation(sendMailAnnotation)"" arg-names=""sendMailAnnotation""/>
+        </aop:aspect>
+    </aop:config>
+
+    @SendMailAnnotation()
+    public void testAnnotationEmail(){
+        System.out.println(""send an email"");
+    }
+
+    @Aspect
+    public class MultiThreadEmailAdvice {
+    public void sendEmailAdvice(ProceedingJoinPoint pjp, SendMailAnnotation sendMailAnnotation)throws Throwable{
+        System.out.println(""before method execution"");
+
+        pjp.proceed();
+            
+        System.out.println(""after method execution"");
+
+        System.out.println(sendMailAnnotation.from());
+    }
+    }",spring,aop,,,,,open,0,246,6,"spring aop not firing for annotation I am using an annotation on a method. and whenever that annoation is present I want to intercept it using aop. What am i missing.
+
+
+    <bean id=""emailAdvice"" class=""com.merc.spring.aop.advice.MultiThreadEmailAdvice""/> 
+
+    <aop:config>  
+        <aop:aspect ref=""emailAdvice"">  
+            <aop:around 
+                method=""fork""  
+                pointcut=""execution(* org.springframework.mail.javamail.JavaMailSenderImpl.send(..))""/>  
+        </aop:aspect>  
+        <aop:aspect ref=""emailAdvice"">
+            <aop:around method=""sendEmailAdvice"" pointcut=""@annotation(sendMailAnnotation)"" arg-names=""sendMailAnnotation""/>
+        </aop:aspect>
+    </aop:config>
+
+    @SendMailAnnotation()
+    public void testAnnotationEmail(){
+        System.out.println(""send an email"");
+    }
+
+    @Aspect
+    public class MultiThreadEmailAdvice {
+    public void sendEmailAdvice(ProceedingJoinPoint pjp, SendMailAnnotation sendMailAnnotation)throws Throwable{
+        System.out.println(""before method execution"");
+
+        pjp.proceed();
+            
+        System.out.println(""after method execution"");
+
+        System.out.println(sendMailAnnotation.from());
+    }
+    }",2
+9367596,02/20/2012 19:58:49,412834,08/06/2010 09:04:43,23,2,ClassNotFoundException with Spring 3.1 and Tomcat 7,"I have found similar questions on StackOverflow, but not quite the same as mine:
+
+I've configured a Spring bean 'ontologyClient' that is a POJO that I have imported from a library which is added to my Maven dependencies. I have checked and double checked that the produced WAR file contains the org.erasmusmc.ontology.OntologyClient class. However, when Spring wants to instantiate the bean, Tomcat's classloader throws a ClassNotFoundException. I am out of ideas, hopefully somebody can help me out!
+
+applicationContext.xml:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xmlns=""http://www.springframework.org/schema/beans""
+       xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+       xmlns:aop=""http://www.springframework.org/schema/aop""
+       xmlns:context=""http://www.springframework.org/schema/context""
+       xmlns:jee=""http://www.springframework.org/schema/jee""
+       xmlns:tx=""http://www.springframework.org/schema/tx""
+       xmlns:p=""http://www.springframework.org/schema/p""
+       xmlns:task=""http://www.springframework.org/schema/task""
+
+       xsi:schemaLocation=""http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+          http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+          http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+          http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd"">
+  
+    <context:component-scan base-package=""nl.lumc.conceptrecognizer"" />
+    <context:component-scan base-package=""org.nbic.interop.conceptlinker.service.impl"" />
+  
+    <bean class=""org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter"">
+      <property name=""baseAddress"" value=""http://localhost:8080/"" />
+    </bean>
+
+ 
+    <bean id=""ontologyClient"" class=""org.erasmusmc.ontology.OntologyClient"">      
+      <constructor-arg index=""0"" value=""localhost"" />
+      <constructor-arg index=""1"" value=""abcde""/>
+      <constructor-arg index=""2"" value=""abcde"" />
+      <constructor-arg index=""3"" value=""Anni2_1_june2009"" />
+    </bean>  
+  
+    <bean id=""conceptRecognizerService""
+      class=""nl.lumc.conceptrecognizer.services.ConceptRecognizerService""
+      p:ontologyClient-ref=""ontologyClient"" 
+    />
+  
+    </beans>
+
+
+
+
+Tomcat log:
+
+<pre>
+
+    Using CATALINA_BASE:   /usr/local/apache-tomcat-7.0.22
+    Using CATALINA_HOME:   /usr/local/apache-tomcat-7.0.22
+    Using CATALINA_TMPDIR: /usr/local/apache-tomcat-7.0.22/temp
+    Using JRE_HOME:        /usr/java/jdk1.7.0
+    Using CLASSPATH:       /usr/local/apache-tomcat-7.0.22/bin/bootstrap.jar:/usr/local/apache-tomcat-7.0.22/bin/tomcat-juli.jar
+    feb 20, 2012 7:56:13 PM org.apache.catalina.core.AprLifecycleListener init
+    INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+    feb 20, 2012 7:56:13 PM org.apache.coyote.AbstractProtocol init
+    INFO: Initializing ProtocolHandler [""http-bio-7080""]
+    feb 20, 2012 7:56:13 PM org.apache.coyote.AbstractProtocol init
+    INFO: Initializing ProtocolHandler [""ajp-bio-8009""]
+    feb 20, 2012 7:56:13 PM org.apache.catalina.startup.Catalina load
+    INFO: Initialization processed in 673 ms
+    feb 20, 2012 7:56:14 PM org.apache.catalina.core.StandardService startInternal
+    INFO: Starting service Catalina
+    feb 20, 2012 7:56:14 PM org.apache.catalina.core.StandardEngine startInternal
+    INFO: Starting Servlet Engine: Apache Tomcat/7.0.22
+    feb 20, 2012 7:56:14 PM org.apache.catalina.startup.HostConfig deployDescriptor
+    INFO: Deploying configuration descriptor ROOT.xml from /usr/local/apache-tomcat-7.0.22/conf/Catalina/localhost
+    feb 20, 2012 7:56:14 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+    INFO: Root WebApplicationContext: initialization started
+    feb 20, 2012 7:56:14 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+    INFO: Refreshing Root WebApplicationContext: startup date [Mon Feb 20 19:56:14 CET 2012]; root of context hierarchy
+    feb 20, 2012 7:56:14 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+    INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+    feb 20, 2012 7:56:15 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+    INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7b6d63d5: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,ontologyClient,groundhogManager,conceptProfilesGroundhog,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+    feb 20, 2012 7:56:15 PM org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+    INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7b6d63d5: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,ontologyClient,groundhogManager,conceptProfilesGroundhog,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+    feb 20, 2012 7:56:15 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+    SEVERE: Context initialization failed
+    org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.erasmusmc.ontology.OntologyClient] for bean with name 'ontologyClient' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.erasmusmc.ontology.OntologyClient
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1262)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:576)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1331)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:897)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:566)
+    	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+    	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+    	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:384)
+    	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+    	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+    	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4723)
+    	at org.apache.catalina.core.StandardContext$1.call(StandardContext.java:5226)
+    	at org.apache.catalina.core.StandardContext$1.call(StandardContext.java:5221)
+    	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+    	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+    	at java.lang.Thread.run(Thread.java:722)
+    Caused by: java.lang.ClassNotFoundException: org.erasmusmc.ontology.OntologyClient
+    	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1678)
+    	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1523)
+    	at org.springframework.util.ClassUtils.forName(ClassUtils.java:257)
+    	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:417)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1283)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1254)
+    	... 17 more
+
+</pre>
+
+One thing to note is that the ontology dependency is a locally installed Maven artefact. However I don't see how this could be the cause, because the required Jar file is copied to WEB-INF/lib like it should.
+",spring,tomcat,classnotfoundexception,,,,open,0,837,7,"ClassNotFoundException with Spring 3.1 and Tomcat 7 I have found similar questions on StackOverflow, but not quite the same as mine:
+
+I've configured a Spring bean 'ontologyClient' that is a POJO that I have imported from a library which is added to my Maven dependencies. I have checked and double checked that the produced WAR file contains the org.erasmusmc.ontology.OntologyClient class. However, when Spring wants to instantiate the bean, Tomcat's classloader throws a ClassNotFoundException. I am out of ideas, hopefully somebody can help me out!
+
+applicationContext.xml:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <beans xmlns=""http://www.springframework.org/schema/beans""
+       xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+       xmlns:aop=""http://www.springframework.org/schema/aop""
+       xmlns:context=""http://www.springframework.org/schema/context""
+       xmlns:jee=""http://www.springframework.org/schema/jee""
+       xmlns:tx=""http://www.springframework.org/schema/tx""
+       xmlns:p=""http://www.springframework.org/schema/p""
+       xmlns:task=""http://www.springframework.org/schema/task""
+
+       xsi:schemaLocation=""http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+          http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+          http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+          http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd"">
+  
+    <context:component-scan base-package=""nl.lumc.conceptrecognizer"" />
+    <context:component-scan base-package=""org.nbic.interop.conceptlinker.service.impl"" />
+  
+    <bean class=""org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter"">
+      <property name=""baseAddress"" value=""http://localhost:8080/"" />
+    </bean>
+
+ 
+    <bean id=""ontologyClient"" class=""org.erasmusmc.ontology.OntologyClient"">      
+      <constructor-arg index=""0"" value=""localhost"" />
+      <constructor-arg index=""1"" value=""abcde""/>
+      <constructor-arg index=""2"" value=""abcde"" />
+      <constructor-arg index=""3"" value=""Anni2_1_june2009"" />
+    </bean>  
+  
+    <bean id=""conceptRecognizerService""
+      class=""nl.lumc.conceptrecognizer.services.ConceptRecognizerService""
+      p:ontologyClient-ref=""ontologyClient"" 
+    />
+  
+    </beans>
+
+
+
+
+Tomcat log:
+
+<pre>
+
+    Using CATALINA_BASE:   /usr/local/apache-tomcat-7.0.22
+    Using CATALINA_HOME:   /usr/local/apache-tomcat-7.0.22
+    Using CATALINA_TMPDIR: /usr/local/apache-tomcat-7.0.22/temp
+    Using JRE_HOME:        /usr/java/jdk1.7.0
+    Using CLASSPATH:       /usr/local/apache-tomcat-7.0.22/bin/bootstrap.jar:/usr/local/apache-tomcat-7.0.22/bin/tomcat-juli.jar
+    feb 20, 2012 7:56:13 PM org.apache.catalina.core.AprLifecycleListener init
+    INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+    feb 20, 2012 7:56:13 PM org.apache.coyote.AbstractProtocol init
+    INFO: Initializing ProtocolHandler [""http-bio-7080""]
+    feb 20, 2012 7:56:13 PM org.apache.coyote.AbstractProtocol init
+    INFO: Initializing ProtocolHandler [""ajp-bio-8009""]
+    feb 20, 2012 7:56:13 PM org.apache.catalina.startup.Catalina load
+    INFO: Initialization processed in 673 ms
+    feb 20, 2012 7:56:14 PM org.apache.catalina.core.StandardService startInternal
+    INFO: Starting service Catalina
+    feb 20, 2012 7:56:14 PM org.apache.catalina.core.StandardEngine startInternal
+    INFO: Starting Servlet Engine: Apache Tomcat/7.0.22
+    feb 20, 2012 7:56:14 PM org.apache.catalina.startup.HostConfig deployDescriptor
+    INFO: Deploying configuration descriptor ROOT.xml from /usr/local/apache-tomcat-7.0.22/conf/Catalina/localhost
+    feb 20, 2012 7:56:14 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+    INFO: Root WebApplicationContext: initialization started
+    feb 20, 2012 7:56:14 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+    INFO: Refreshing Root WebApplicationContext: startup date [Mon Feb 20 19:56:14 CET 2012]; root of context hierarchy
+    feb 20, 2012 7:56:14 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+    INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+    feb 20, 2012 7:56:15 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+    INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7b6d63d5: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,ontologyClient,groundhogManager,conceptProfilesGroundhog,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+    feb 20, 2012 7:56:15 PM org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+    INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7b6d63d5: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,ontologyClient,groundhogManager,conceptProfilesGroundhog,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+    feb 20, 2012 7:56:15 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+    SEVERE: Context initialization failed
+    org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.erasmusmc.ontology.OntologyClient] for bean with name 'ontologyClient' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.erasmusmc.ontology.OntologyClient
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1262)
+    	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:576)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1331)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:897)
+    	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:566)
+    	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+    	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+    	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:384)
+    	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+    	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+    	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4723)
+    	at org.apache.catalina.core.StandardContext$1.call(StandardContext.java:5226)
+    	at org.apache.catalina.core.StandardContext$1.call(StandardContext.java:5221)
+    	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+    	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+    	at java.lang.Thread.run(Thread.java:722)
+    Caused by: java.lang.ClassNotFoundException: org.erasmusmc.ontology.OntologyClient
+    	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1678)
+    	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1523)
+    	at org.springframework.util.ClassUtils.forName(ClassUtils.java:257)
+    	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:417)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1283)
+    	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1254)
+    	... 17 more
+
+</pre>
+
+One thing to note is that the ontology dependency is a locally installed Maven artefact. However I don't see how this could be the cause, because the required Jar file is copied to WEB-INF/lib like it should.
+",3
+7122642,08/19/2011 13:55:12,892029,08/12/2011 15:08:13,121,1,Spring/Camel Garbage Collection with Dependency Injections,"I have configured a Spring app (using Camel for integration with an ActiveMQ broker) such that two particular classes, say, `Person` and `Personality`, get wired-up and injected with all of their dependencies automatically through the Spring container. For the sake of this example, `Person` objects *have* `Personality` objects as members/properties.  So the Spring config file wires up `Personality` instance, and those beans are referenced in the wired `People` beans:
+
+    <bean id=""personality"" class=""com.me.someProgram.Personality"" singleton=""false"">
+        <!-- blah... -->
+    </bean>
+
+    <bean id=""person"" class=""com.me.someProgram.Person"" singleton=""false"">
+        <!-- People have Personalities -->
+        <property name=""personality"" ref=""personality""/>
+        <!-- blah... -->
+    </bean>
+
+Both beans are specified as *prototypes* in scope because this makes sense for my application.  Basically, I need to grab a new instance of `Personality` every time I get a new `Person`.
+
+**My question:**
+
+This is my first application using Spring, and IoC/dependency injection in general.  I am worried about garbage collection and memory leaks. When beans are prototypes, and you have prototypes nested inside of prototypes (via *has-a* relationship), do you have to worry about GC/memory leaks? Or does the Spring container alleviate all of those concerns for you? Are there best practices with regards to Spring/IoC memory management? Any anti-patterns to steer clear of?
+
+My actual business objects are quite large, and I will produce many of them, so if I start heading down a road that is riddled with bad memory management, it's going to be a very, very bumpy ride.
+
+Thanks!",spring,memory-management,dependency-injection,garbage-collection,,,open,0,276,6,"Spring/Camel Garbage Collection with Dependency Injections I have configured a Spring app (using Camel for integration with an ActiveMQ broker) such that two particular classes, say, `Person` and `Personality`, get wired-up and injected with all of their dependencies automatically through the Spring container. For the sake of this example, `Person` objects *have* `Personality` objects as members/properties.  So the Spring config file wires up `Personality` instance, and those beans are referenced in the wired `People` beans:
+
+    <bean id=""personality"" class=""com.me.someProgram.Personality"" singleton=""false"">
+        <!-- blah... -->
+    </bean>
+
+    <bean id=""person"" class=""com.me.someProgram.Person"" singleton=""false"">
+        <!-- People have Personalities -->
+        <property name=""personality"" ref=""personality""/>
+        <!-- blah... -->
+    </bean>
+
+Both beans are specified as *prototypes* in scope because this makes sense for my application.  Basically, I need to grab a new instance of `Personality` every time I get a new `Person`.
+
+**My question:**
+
+This is my first application using Spring, and IoC/dependency injection in general.  I am worried about garbage collection and memory leaks. When beans are prototypes, and you have prototypes nested inside of prototypes (via *has-a* relationship), do you have to worry about GC/memory leaks? Or does the Spring container alleviate all of those concerns for you? Are there best practices with regards to Spring/IoC memory management? Any anti-patterns to steer clear of?
+
+My actual business objects are quite large, and I will produce many of them, so if I start heading down a road that is riddled with bad memory management, it's going to be a very, very bumpy ride.
+
+Thanks!",4
+7348466,09/08/2011 13:02:40,539211,12/11/2010 22:24:56,1688,63,"Spring MVC, Spring Security, Simply Require Username","I have a Spring 3 MVC website using Spring Security 3.1.0RC2. Currently I am using the `org.springframework.security.ldap.authentication.ad.ActiveDirectoryAuthenticationProvider` for log-in. For demo purposes, my boss just wants to have to enter a username (any username) and not have it validated against anything, instead, just grant access. Is there some way I can make sure the user entered a username and that's it?",spring,spring-mvc,spring-security,,,,open,0,61,7,"Spring MVC, Spring Security, Simply Require Username I have a Spring 3 MVC website using Spring Security 3.1.0RC2. Currently I am using the `org.springframework.security.ldap.authentication.ad.ActiveDirectoryAuthenticationProvider` for log-in. For demo purposes, my boss just wants to have to enter a username (any username) and not have it validated against anything, instead, just grant access. Is there some way I can make sure the user entered a username and that's it?",3
+9504589,02/29/2012 18:26:42,1240930,02/29/2012 18:11:59,1,0,Can I use Spring Security 3.0.7 with Spring 3.0.2?,"I'm new to Spring Security. When I downloaded it, I saw ""Spring Security 3.0.7 requires a minimum of Spring 3.0.6 and Java 5."", this warning made me wonder if I can use it in my project based on Spring 3.0.2 and if I should wait for some troubles with this combination of versions.",spring,spring-security,,,,03/08/2012 19:46:52,too localized,1,53,9,"Can I use Spring Security 3.0.7 with Spring 3.0.2? I'm new to Spring Security. When I downloaded it, I saw ""Spring Security 3.0.7 requires a minimum of Spring 3.0.6 and Java 5."", this warning made me wonder if I can use it in my project based on Spring 3.0.2 and if I should wait for some troubles with this combination of versions.",2
+11348094,07/05/2012 15:54:18,734205,05/02/2011 09:18:22,101,1,Handle activemq-spring connection errors,"I have configured (with spring) my application to listen to a jms que with activemq, and everything works fine.
+My activemq server is installed on another server and sometime it can go offline and I would like to handle the connection error. Is that possible?
+
+Here is my spring configuration
+
+    	<amq:connectionFactory id=""jmsFactory"" brokerURL=""tcp://xxx.xxx.xxx.xxx:61616"" />
+       	<bean id=""messageConverter"" class=""com.unic.thesting.main.jms.message.TheStingMessageConverter"" scope=""tenant""/>
+        <jms:listener-container concurrency=""10"" connection-factory=""thestingJmsFactory"" destination-type=""queue"" message-converter=""thestingMessageConverter"">
+			<jms:listener destination=""in"" ref=""orderStatusConsumer"" method=""consume""/>
+		</jms:listener-container>
+       
+		<bean id=""jmsTemplate"" class=""org.springframework.jms.core.JmsTemplate"" scope=""tenant"">
+			<property name=""messageConverter"" ref=""messageConverter"" />
+			<property name=""connectionFactory"">
+				<bean class=""org.springframework.jms.connection.SingleConnectionFactory"" scope=""tenant"">
+					<property name=""targetConnectionFactory"">
+						<ref local=""jmsFactory"" />
+					</property>
+				</bean>
+			</property>
+		</bean>",spring,activemq,spring-jms,,,,open,0,99,4,"Handle activemq-spring connection errors I have configured (with spring) my application to listen to a jms que with activemq, and everything works fine.
+My activemq server is installed on another server and sometime it can go offline and I would like to handle the connection error. Is that possible?
+
+Here is my spring configuration
+
+    	<amq:connectionFactory id=""jmsFactory"" brokerURL=""tcp://xxx.xxx.xxx.xxx:61616"" />
+       	<bean id=""messageConverter"" class=""com.unic.thesting.main.jms.message.TheStingMessageConverter"" scope=""tenant""/>
+        <jms:listener-container concurrency=""10"" connection-factory=""thestingJmsFactory"" destination-type=""queue"" message-converter=""thestingMessageConverter"">
+			<jms:listener destination=""in"" ref=""orderStatusConsumer"" method=""consume""/>
+		</jms:listener-container>
+       
+		<bean id=""jmsTemplate"" class=""org.springframework.jms.core.JmsTemplate"" scope=""tenant"">
+			<property name=""messageConverter"" ref=""messageConverter"" />
+			<property name=""connectionFactory"">
+				<bean class=""org.springframework.jms.connection.SingleConnectionFactory"" scope=""tenant"">
+					<property name=""targetConnectionFactory"">
+						<ref local=""jmsFactory"" />
+					</property>
+				</bean>
+			</property>
+		</bean>",3
+10354781,04/27/2012 16:54:22,1123626,12/30/2011 22:21:05,32,0,Spring 3 internet domain specific controller,"I'm trying to build an application that will serve multiple internet sites. Each site would have its own controller. 
+
+This is the starting point. This part works.
+
+    @Controller
+    @RequestMapping(value=""/"")
+    public class HockeyPlController extends BaseController {
+
+	@RequestMapping(method=RequestMethod.GET)
+	public ModelAndView load(Model model, Locale locale) {
+		ModelAndView modelAndView=new ModelAndView();
+		modelAndView.setViewName(WebView.HOCKEY_PL_INDEX.getViewName());
+		return modelAndView;
+	}
+
+
+Now, the challenge is to make this controller respond to a particular domain url. Bozho had some sample code for this in another post. I'm trying to follow his example by annotating the controller this way:
+
+   @RequestMapping(value=""/"", headers=""Host=www.hockey.pl"") 
+
+This does not work, unfortunately. It's getting to Spring but it dies there.
+
+In case it matters, I defined the domain url in Windows host file just like localhost, and use the following to test: `http://www.hockey.pl:8080/SiteAdmin/` . SiteAdmin is the context root.
+
+Here's some info from my console:
+
+DispatcherServlet with name 'spring' processing GET request for [/SiteAdmin/]
+Looking up handler method for path /
+Resolving exception from handler [null]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+Null ModelAndView returned to DispatcherServlet with name 'spring': assuming HandlerAdapter completed request handling",spring,controller,,,,,open,0,174,6,"Spring 3 internet domain specific controller I'm trying to build an application that will serve multiple internet sites. Each site would have its own controller. 
+
+This is the starting point. This part works.
+
+    @Controller
+    @RequestMapping(value=""/"")
+    public class HockeyPlController extends BaseController {
+
+	@RequestMapping(method=RequestMethod.GET)
+	public ModelAndView load(Model model, Locale locale) {
+		ModelAndView modelAndView=new ModelAndView();
+		modelAndView.setViewName(WebView.HOCKEY_PL_INDEX.getViewName());
+		return modelAndView;
+	}
+
+
+Now, the challenge is to make this controller respond to a particular domain url. Bozho had some sample code for this in another post. I'm trying to follow his example by annotating the controller this way:
+
+   @RequestMapping(value=""/"", headers=""Host=www.hockey.pl"") 
+
+This does not work, unfortunately. It's getting to Spring but it dies there.
+
+In case it matters, I defined the domain url in Windows host file just like localhost, and use the following to test: `http://www.hockey.pl:8080/SiteAdmin/` . SiteAdmin is the context root.
+
+Here's some info from my console:
+
+DispatcherServlet with name 'spring' processing GET request for [/SiteAdmin/]
+Looking up handler method for path /
+Resolving exception from handler [null]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+Null ModelAndView returned to DispatcherServlet with name 'spring': assuming HandlerAdapter completed request handling",2
+8485068,12/13/2011 06:10:06,887235,08/10/2011 05:36:27,384,21,Spring Error: org.springframework.beans.factory.BeanCreationException,"I have a web application which I am exporting as EAR and trying to deploy on Websphere 6.1 application server. 
+
+The deployment goes fine. Even, the index page loads fine which is a login screen. 
+
+However, on entering credentials and hitting enter, the next page does not load and HTTP 500 Internal Server Error is thrown. 
+
+The next page which gets loaded is a JSP having a country drop down, whose values gets fetched from database via hibernate. 
+
+I have Datasource created in Websphere with all details and even test connection succeeds. 
+
+However, I get the below error on checking the server System.out logs:
+
+    org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ds': 
+    Invocation of init method failed; nested exception is javax.naming.NameNotFoundException: 
+    Context: uschwasvmdev04Cell01/clusters/URMDUS, name: jdbc/mydbXA: First component in name 
+    mydbXA not found. [Root exception is org.omg.CosNaming.NamingContextPackage.NotFound: 
+    IDL:omg.org/CosNaming/NamingContext/NotFound:1.0]
+
+The description of NameNotFoundException says:
+
+""This exception is thrown when a component of the name cannot be resolved because it is not bound. ""
+
+JNDI Lookup in my services.xml also seems fine:
+
+    <jee:jndi-lookup id=""ds"" jndi-name=""jdbc/mydbXA"" resource-ref=""true"" />
+
+What am I missing here ?
+
+Thanks for reading!",spring,web-applications,websphere,,,,open,0,199,3,"Spring Error: org.springframework.beans.factory.BeanCreationException I have a web application which I am exporting as EAR and trying to deploy on Websphere 6.1 application server. 
+
+The deployment goes fine. Even, the index page loads fine which is a login screen. 
+
+However, on entering credentials and hitting enter, the next page does not load and HTTP 500 Internal Server Error is thrown. 
+
+The next page which gets loaded is a JSP having a country drop down, whose values gets fetched from database via hibernate. 
+
+I have Datasource created in Websphere with all details and even test connection succeeds. 
+
+However, I get the below error on checking the server System.out logs:
+
+    org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ds': 
+    Invocation of init method failed; nested exception is javax.naming.NameNotFoundException: 
+    Context: uschwasvmdev04Cell01/clusters/URMDUS, name: jdbc/mydbXA: First component in name 
+    mydbXA not found. [Root exception is org.omg.CosNaming.NamingContextPackage.NotFound: 
+    IDL:omg.org/CosNaming/NamingContext/NotFound:1.0]
+
+The description of NameNotFoundException says:
+
+""This exception is thrown when a component of the name cannot be resolved because it is not bound. ""
+
+JNDI Lookup in my services.xml also seems fine:
+
+    <jee:jndi-lookup id=""ds"" jndi-name=""jdbc/mydbXA"" resource-ref=""true"" />
+
+What am I missing here ?
+
+Thanks for reading!",3
+5719486,04/19/2011 16:18:16,715592,04/19/2011 16:18:16,1,0,Nesting Custom Tags in Spring,"I am trying create custom namespaces after reading the article at [Custom Namespaces][1]
+
+
+  [1]: http://static.springsource.org/spring/docs/2.0.5/reference/extensible-xml.html
+
+I am able to create simple tags and and able to consume them 
+
+for e.g.
+
+         <mns:test id=""test"" port=""8003"" host=""localhost""/>
+
+
+but i am not able to use this tag in another custom tag.
+
+my requirement is like this, i have to create aother custom tag and inject the other simple tag in it.
+
+     <mns:test id=""test1"" port=""8003"" host=""localhost""/>
+     <mns:test id=""test2"" port=""8003"" host=""localhost""/>
+     <mns:test id=""test3"" port=""8003"" host=""localhost""/>
+
+     <mns:instance id=""instance"" username=""XXXXX"" password=""YYYYYY"">
+        <mns:test  ref=""test1"" />
+        <mns:test  ref=""test2"" />
+        <mns:test  ref=""test3"" />
+	</mns:instance>
+
+
+Please help me..",spring,namespaces,tags,,,,open,0,140,5,"Nesting Custom Tags in Spring I am trying create custom namespaces after reading the article at [Custom Namespaces][1]
+
+
+  [1]: http://static.springsource.org/spring/docs/2.0.5/reference/extensible-xml.html
+
+I am able to create simple tags and and able to consume them 
+
+for e.g.
+
+         <mns:test id=""test"" port=""8003"" host=""localhost""/>
+
+
+but i am not able to use this tag in another custom tag.
+
+my requirement is like this, i have to create aother custom tag and inject the other simple tag in it.
+
+     <mns:test id=""test1"" port=""8003"" host=""localhost""/>
+     <mns:test id=""test2"" port=""8003"" host=""localhost""/>
+     <mns:test id=""test3"" port=""8003"" host=""localhost""/>
+
+     <mns:instance id=""instance"" username=""XXXXX"" password=""YYYYYY"">
+        <mns:test  ref=""test1"" />
+        <mns:test  ref=""test2"" />
+        <mns:test  ref=""test3"" />
+	</mns:instance>
+
+
+Please help me..",3
+7659797,10/05/2011 10:18:26,484972,06/15/2010 10:42:22,2753,132,SpringSource Tool Suite and GWT without using ROO?,"I would like to know if anyone has any experience in using STS to create a Spring-enabled GWT web application *without* using Spring ROO.
+
+There are 2 scenarios that I have.
+
+ 1. I have an existing GWT application (not Spring-enabled, built in Eclipse 3.7) that I want to convert to a Spring-enabled GWT application in STS. I want STS to pick up that this is now Spring-enabled so that I can use the built-in features of STS for Spring.
+
+ 2. Create a new GWT web application that is Spring-enabled in STS, but without using Spring ROO.
+
+I have as of yet found no tutorials on how to do either. All the examples that point to creating a Spring-enabled GWT web application in STS use ROO to scaffold it for them.
+
+Sorry if it is a bit unclear what I mean. Feel free to comment and I will try to explain more.
+
+Thanks!",spring,gwt,sts-springsourcetoolsuite,,,,open,0,148,8,"SpringSource Tool Suite and GWT without using ROO? I would like to know if anyone has any experience in using STS to create a Spring-enabled GWT web application *without* using Spring ROO.
+
+There are 2 scenarios that I have.
+
+ 1. I have an existing GWT application (not Spring-enabled, built in Eclipse 3.7) that I want to convert to a Spring-enabled GWT application in STS. I want STS to pick up that this is now Spring-enabled so that I can use the built-in features of STS for Spring.
+
+ 2. Create a new GWT web application that is Spring-enabled in STS, but without using Spring ROO.
+
+I have as of yet found no tutorials on how to do either. All the examples that point to creating a Spring-enabled GWT web application in STS use ROO to scaffold it for them.
+
+Sorry if it is a bit unclear what I mean. Feel free to comment and I will try to explain more.
+
+Thanks!",3
+11122801,06/20/2012 15:22:25,938367,09/10/2011 16:27:18,10,0,Spring + Hibernate + Annotation + XmlWebApplicationContext,"When Tomcat starts I get this messages:
+
+
+    	INFO: Initializing Spring FrameworkServlet 'spring'
+	2012-06-20 17:02:55,209 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'spring': initialization started>
+	2012-06-20 17:02:55,243 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'spring-servlet': startup date [Wed Jun 20 17:02:55 CEST 2012]; root of context hierarchy>
+	2012-06-20 17:02:55,305 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-servlet.xml]>
+	
+	
+	
+	2012-06-20 17:02:56,094 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Bean 'hibernateConfiguration' of type [class com.xxxxxxxxxx.android.market.config.HibernateConfiguration$$EnhancerByCGLIB$$53f79727] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+	2012-06-20 17:02:56,690 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - <Building new Hibernate SessionFactory>
+	2012-06-20 17:02:57,285 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - <Updating database schema for Hibernate SessionFactory>
+	2012-06-20 17:02:57,621 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Bean 'sessionFactoryBean' of type [class org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+	
+	
+	2012-06-20 17:02:57,694 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - <Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@46ed5d9d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,beanConfiguration,hibernateConfiguration,AppService,appController,homeController,jspViewResolver,messageSource,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,appCategory,appDAO,appReleaseDAO,appService,sessionFactoryBean,transactionManager,persistenceExceptionTranslationPostProcessor]; root of factory hierarchy>
+	2012-06-20 17:02:58,011 INFO [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping] - <Mapped URL path [/{id}] onto handler 'appController'>
+	2012-06-20 17:02:58,012 INFO [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping] - <Mapped URL path [/{id}.*] onto handler 'appController'>
+	2012-06-20 17:02:58,012 INFO [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping] - <Mapped URL path [/{id}/] onto handler 'appController'>
+	2012-06-20 17:02:58,012 INFO [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping] - <Root mapping to handler 'homeController'>
+	2012-06-20 17:02:58,482 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'spring': initialization completed in 3273 ms>
+	Jun 20, 2012 5:02:58 PM org.apache.coyote.http11.Http11Protocol start
+	INFO: Starting Coyote HTTP/1.1 on http-8080
+	Jun 20, 2012 5:02:58 PM org.apache.jk.common.ChannelSocket init
+	INFO: JK: ajp13 listening on /0.0.0.0:8009
+	Jun 20, 2012 5:02:58 PM org.apache.jk.server.JkMain start
+	INFO: Jk running ID=0 time=0/122  config=null
+	Jun 20, 2012 5:02:58 PM org.apache.catalina.startup.Catalina start
+	INFO: Server startup in 4237 ms
+
+
+Here is my Hibernate config class. It's annotated based and when I use inside of the Junit tets @ContextConfiguration all works.
+
+    	package com.xxxxxxxxxxxxx.android.market.config;
+	
+	import java.util.Properties;
+	
+	import org.hibernate.dialect.MySQL5InnoDBDialect;
+	import org.springframework.context.annotation.Bean;
+	import org.springframework.context.annotation.Configuration;
+	import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+	import org.springframework.orm.hibernate3.HibernateTransactionManager;
+	import org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean;
+	
+	import com.xxxxxxxxxxxxx.android.market.dao.xxx;
+	import com.xxxxxxxxxxxxx.android.market.dao.xxx;
+	import com.xxxxxxxxxxxxx.android.market.dao.xxx;
+	
+	@Configuration
+	public class HibernateConfiguration {
+	
+		@Bean
+		public AnnotationSessionFactoryBean sessionFactoryBean() {
+			Properties props = new Properties();
+			props.put(""hibernate.dialect"", MySQL5InnoDBDialect.class.getName());
+			props.put(""hibernate.format_sql"", ""true"");
+			props.put(""hibernate.connection.driver_class"", ""com.mysql.jdbc.Driver"");
+			props.put(""hibernate.connection.password"", ""philipp"");
+			props.put(""hibernate.connection.url"", ""jdbc:mysql://localhost/Market"");
+			props.put(""hibernate.connection.username"", ""philipp"");
+	
+			AnnotationSessionFactoryBean bean = new AnnotationSessionFactoryBean();
+			bean.setAnnotatedClasses(new Class[] { xxx.class, xxx.class, xxx.class });
+			bean.setHibernateProperties(props);
+			bean.setSchemaUpdate(true);
+			return bean;
+		}
+	
+		@Bean
+		public HibernateTransactionManager transactionManager() {
+			return new HibernateTransactionManager(sessionFactoryBean().getObject());
+		}
+	
+		@Bean
+		public PersistenceExceptionTranslationPostProcessor persistenceExceptionTranslationPostProcessor() {
+			return new PersistenceExceptionTranslationPostProcessor();
+		}
+	
+	}
+
+
+My spring-servlet.xml
+
+    	<beans xmlns=""http://www.springframework.org/schema/beans""
+		xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:aop=""http://www.springframework.org/schema/aop""
+		xmlns:context=""http://www.springframework.org/schema/context""
+		xmlns:jee=""http://www.springframework.org/schema/jee"" xmlns:lang=""http://www.springframework.org/schema/lang""
+		xmlns:p=""http://www.springframework.org/schema/p"" xmlns:tx=""http://www.springframework.org/schema/tx""
+		xmlns:util=""http://www.springframework.org/schema/util""
+		xsi:schemaLocation=""http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+	        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+	        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"">
+	
+		<context:annotation-config />
+	
+		<!-- eingefügt aus app-context -->
+		<context:component-scan base-package=""com.xxxxxxxxxxxxx.android.market.config"" />
+		<context:component-scan base-package=""com.xxxxxxxxxxxxx.android.market.market.dao"" />
+		<context:component-scan base-package=""com.xxxxxxxxxxxxx.android.market.service.app"" />
+		<context:component-scan base-package=""com.xxxxxxxxxxxxx.android.market.controller"" />
+		<!-- eingefügt aus app-context -->
+	
+		<bean id=""jspViewResolver""
+			class=""org.springframework.web.servlet.view.InternalResourceViewResolver"">
+			<property name=""viewClass""
+				value=""org.springframework.web.servlet.view.JstlView"" />
+			<property name=""prefix"" value=""/WEB-INF/jsp/"" />
+			<property name=""suffix"" value="".jsp"" />
+		</bean>
+	
+		<bean id=""messageSource""
+			class=""org.springframework.context.support.ReloadableResourceBundleMessageSource"">
+			<property name=""basename"" value=""classpath:messages"" />
+			<property name=""defaultEncoding"" value=""UTF-8"" />
+		</bean>
+	
+		<tx:annotation-driven transaction-manager=""transactionManager"" />
+	
+	</beans>
+
+
+Now, when will get some items by rest-api from the database I get this:
+
+    	org.hibernate.HibernateException: No Hibernate Session bound to thread, and configuration does not allow creation of non-transactional one here
+		org.springframework.orm.hibernate3.SpringSessionContext.currentSession(SpringSessionContext.java:63)
+		org.hibernate.impl.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:685)
+		com.xxxxxxxxxxxxx.android.market.dao.AppDAOImpl.currentSession(AppDAOImpl.java:22)
+		com.xxxxxxxxxxxxx.android.market.dao.AppDAOImpl.getAppById(AppDAOImpl.java:46)
+		sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+		sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+		java.lang.reflect.Method.invoke(Method.java:597)
+		org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:309)
+		org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:183)
+		org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+		org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:155)
+		org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+		org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+		$Proxy21.getAppById(Unknown Source)
+		com.xxxxxxxxxxxxx.android.market.service.app.AppServiceImpl.getAppById(AppServiceImpl.java:29)
+		com.xxxxxxxxxxxxx.android.market.controller.AppController.getApp(AppController.java:22)
+		sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+		sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+		java.lang.reflect.Method.invoke(Method.java:597)
+		org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:176)
+		org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:436)
+		org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:424)
+		org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:790)
+		org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+		org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+		org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
+		javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+		javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	
+
+This error is clear because I have no `$Proxy21.getAppById(Unknown Source)`.",spring,hibernate,annotations,,,,open,0,453,7,"Spring + Hibernate + Annotation + XmlWebApplicationContext When Tomcat starts I get this messages:
+
+
+    	INFO: Initializing Spring FrameworkServlet 'spring'
+	2012-06-20 17:02:55,209 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'spring': initialization started>
+	2012-06-20 17:02:55,243 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'spring-servlet': startup date [Wed Jun 20 17:02:55 CEST 2012]; root of context hierarchy>
+	2012-06-20 17:02:55,305 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-servlet.xml]>
+	
+	
+	
+	2012-06-20 17:02:56,094 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Bean 'hibernateConfiguration' of type [class com.xxxxxxxxxx.android.market.config.HibernateConfiguration$$EnhancerByCGLIB$$53f79727] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+	2012-06-20 17:02:56,690 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - <Building new Hibernate SessionFactory>
+	2012-06-20 17:02:57,285 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - <Updating database schema for Hibernate SessionFactory>
+	2012-06-20 17:02:57,621 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Bean 'sessionFactoryBean' of type [class org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)>
+	
+	
+	2012-06-20 17:02:57,694 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - <Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@46ed5d9d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,beanConfiguration,hibernateConfiguration,AppService,appController,homeController,jspViewResolver,messageSource,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,appCategory,appDAO,appReleaseDAO,appService,sessionFactoryBean,transactionManager,persistenceExceptionTranslationPostProcessor]; root of factory hierarchy>
+	2012-06-20 17:02:58,011 INFO [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping] - <Mapped URL path [/{id}] onto handler 'appController'>
+	2012-06-20 17:02:58,012 INFO [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping] - <Mapped URL path [/{id}.*] onto handler 'appController'>
+	2012-06-20 17:02:58,012 INFO [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping] - <Mapped URL path [/{id}/] onto handler 'appController'>
+	2012-06-20 17:02:58,012 INFO [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping] - <Root mapping to handler 'homeController'>
+	2012-06-20 17:02:58,482 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'spring': initialization completed in 3273 ms>
+	Jun 20, 2012 5:02:58 PM org.apache.coyote.http11.Http11Protocol start
+	INFO: Starting Coyote HTTP/1.1 on http-8080
+	Jun 20, 2012 5:02:58 PM org.apache.jk.common.ChannelSocket init
+	INFO: JK: ajp13 listening on /0.0.0.0:8009
+	Jun 20, 2012 5:02:58 PM org.apache.jk.server.JkMain start
+	INFO: Jk running ID=0 time=0/122  config=null
+	Jun 20, 2012 5:02:58 PM org.apache.catalina.startup.Catalina start
+	INFO: Server startup in 4237 ms
+
+
+Here is my Hibernate config class. It's annotated based and when I use inside of the Junit tets @ContextConfiguration all works.
+
+    	package com.xxxxxxxxxxxxx.android.market.config;
+	
+	import java.util.Properties;
+	
+	import org.hibernate.dialect.MySQL5InnoDBDialect;
+	import org.springframework.context.annotation.Bean;
+	import org.springframework.context.annotation.Configuration;
+	import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+	import org.springframework.orm.hibernate3.HibernateTransactionManager;
+	import org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean;
+	
+	import com.xxxxxxxxxxxxx.android.market.dao.xxx;
+	import com.xxxxxxxxxxxxx.android.market.dao.xxx;
+	import com.xxxxxxxxxxxxx.android.market.dao.xxx;
+	
+	@Configuration
+	public class HibernateConfiguration {
+	
+		@Bean
+		public AnnotationSessionFactoryBean sessionFactoryBean() {
+			Properties props = new Properties();
+			props.put(""hibernate.dialect"", MySQL5InnoDBDialect.class.getName());
+			props.put(""hibernate.format_sql"", ""true"");
+			props.put(""hibernate.connection.driver_class"", ""com.mysql.jdbc.Driver"");
+			props.put(""hibernate.connection.password"", ""philipp"");
+			props.put(""hibernate.connection.url"", ""jdbc:mysql://localhost/Market"");
+			props.put(""hibernate.connection.username"", ""philipp"");
+	
+			AnnotationSessionFactoryBean bean = new AnnotationSessionFactoryBean();
+			bean.setAnnotatedClasses(new Class[] { xxx.class, xxx.class, xxx.class });
+			bean.setHibernateProperties(props);
+			bean.setSchemaUpdate(true);
+			return bean;
+		}
+	
+		@Bean
+		public HibernateTransactionManager transactionManager() {
+			return new HibernateTransactionManager(sessionFactoryBean().getObject());
+		}
+	
+		@Bean
+		public PersistenceExceptionTranslationPostProcessor persistenceExceptionTranslationPostProcessor() {
+			return new PersistenceExceptionTranslationPostProcessor();
+		}
+	
+	}
+
+
+My spring-servlet.xml
+
+    	<beans xmlns=""http://www.springframework.org/schema/beans""
+		xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:aop=""http://www.springframework.org/schema/aop""
+		xmlns:context=""http://www.springframework.org/schema/context""
+		xmlns:jee=""http://www.springframework.org/schema/jee"" xmlns:lang=""http://www.springframework.org/schema/lang""
+		xmlns:p=""http://www.springframework.org/schema/p"" xmlns:tx=""http://www.springframework.org/schema/tx""
+		xmlns:util=""http://www.springframework.org/schema/util""
+		xsi:schemaLocation=""http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+	        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+	        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"">
+	
+		<context:annotation-config />
+	
+		<!-- eingefügt aus app-context -->
+		<context:component-scan base-package=""com.xxxxxxxxxxxxx.android.market.config"" />
+		<context:component-scan base-package=""com.xxxxxxxxxxxxx.android.market.market.dao"" />
+		<context:component-scan base-package=""com.xxxxxxxxxxxxx.android.market.service.app"" />
+		<context:component-scan base-package=""com.xxxxxxxxxxxxx.android.market.controller"" />
+		<!-- eingefügt aus app-context -->
+	
+		<bean id=""jspViewResolver""
+			class=""org.springframework.web.servlet.view.InternalResourceViewResolver"">
+			<property name=""viewClass""
+				value=""org.springframework.web.servlet.view.JstlView"" />
+			<property name=""prefix"" value=""/WEB-INF/jsp/"" />
+			<property name=""suffix"" value="".jsp"" />
+		</bean>
+	
+		<bean id=""messageSource""
+			class=""org.springframework.context.support.ReloadableResourceBundleMessageSource"">
+			<property name=""basename"" value=""classpath:messages"" />
+			<property name=""defaultEncoding"" value=""UTF-8"" />
+		</bean>
+	
+		<tx:annotation-driven transaction-manager=""transactionManager"" />
+	
+	</beans>
+
+
+Now, when will get some items by rest-api from the database I get this:
+
+    	org.hibernate.HibernateException: No Hibernate Session bound to thread, and configuration does not allow creation of non-transactional one here
+		org.springframework.orm.hibernate3.SpringSessionContext.currentSession(SpringSessionContext.java:63)
+		org.hibernate.impl.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:685)
+		com.xxxxxxxxxxxxx.android.market.dao.AppDAOImpl.currentSession(AppDAOImpl.java:22)
+		com.xxxxxxxxxxxxx.android.market.dao.AppDAOImpl.getAppById(AppDAOImpl.java:46)
+		sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+		sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+		java.lang.reflect.Method.invoke(Method.java:597)
+		org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:309)
+		org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:183)
+		org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+		org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:155)
+		org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+		org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+		$Proxy21.getAppById(Unknown Source)
+		com.xxxxxxxxxxxxx.android.market.service.app.AppServiceImpl.getAppById(AppServiceImpl.java:29)
+		com.xxxxxxxxxxxxx.android.market.controller.AppController.getApp(AppController.java:22)
+		sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+		sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+		java.lang.reflect.Method.invoke(Method.java:597)
+		org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:176)
+		org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:436)
+		org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:424)
+		org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:790)
+		org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+		org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:669)
+		org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:574)
+		javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+		javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	
+
+This error is clear because I have no `$Proxy21.getAppById(Unknown Source)`.",3
+7608027,09/30/2011 08:49:18,965884,09/26/2011 21:39:24,1,0,Hidden field in spring MVC,"I wanted to use spring hidden tag in below code. Is this possible in below code, what I have to write in my controller to do that or what I am doing is correct.
+
+    <c:forEach var=""record"" items=""${records}"">
+			<tr>
+				<td>
+				<form:form id=""myForm"" action=""list.html"" method=""post"">
+    				<input type=""hidden"" name=""record"" value=""${record}"" />
+    			<a href=""#"" onclick=""document.getElementById('myForm').submit();"">Submit</a>
+				</form:form>
+			</tr>
+		</c:forEach>
+
+Any help will be highly appriciated.
+
+Thanks ",spring,spring-mvc,,,,,open,0,63,5,"Hidden field in spring MVC I wanted to use spring hidden tag in below code. Is this possible in below code, what I have to write in my controller to do that or what I am doing is correct.
+
+    <c:forEach var=""record"" items=""${records}"">
+			<tr>
+				<td>
+				<form:form id=""myForm"" action=""list.html"" method=""post"">
+    				<input type=""hidden"" name=""record"" value=""${record}"" />
+    			<a href=""#"" onclick=""document.getElementById('myForm').submit();"">Submit</a>
+				</form:form>
+			</tr>
+		</c:forEach>
+
+Any help will be highly appriciated.
+
+Thanks ",2
+10467930,05/06/2012 03:51:30,741162,05/06/2011 05:55:00,20,0,"Spring-security cannot match ""?parameter"" format?","I use spring-security to secure my web, when I'm learning it by spring-roo generated config file in applicationContext-security.xml, in `<http>` node:
+
+     <intercept-url pattern=""/userses?form"" access=""hasRole('ROLE_ADMIN')"" />
+
+It means when you want to create a Users object, firstly you need to login to get ADMIN permission. But actually it didn't work. Check the log:
+
+    2012-05-06 11:39:11,250 [http-8088-7] DEBUG org.springframework.security.web.util.AntPathRequestMatcher - Checking match of request : '/userses'; against '/userses?form'
+
+The framework use the /userses instead of /userses?form to compare with, authentication process skipped as string didn't match. To verify this I also try another url:
+
+    <intercept-url pattern=""/userses/abc"" access=""hasRole('ROLE_ADMIN')"" />
+
+I requested the <webRoot>/userses/abc, it detected user is not authorized, and moved to /login page, checked the log:
+
+    2012-05-06 11:46:44,343 [http-8088-7] DEBUG org.springframework.security.web.util.AntPathRequestMatcher - Checking match of request : '/uesrses/abc'; against '/userses/abc'
+
+So my question is: Doesn't spring-secure 3 support ""?parameter"" pattern or I missed something to config to support this?
+PS: All the code is generated by roo without modification, also wonder why it doesn't work.",spring,spring-security,spring-roo,,,,open,0,171,5,"Spring-security cannot match ""?parameter"" format? I use spring-security to secure my web, when I'm learning it by spring-roo generated config file in applicationContext-security.xml, in `<http>` node:
+
+     <intercept-url pattern=""/userses?form"" access=""hasRole('ROLE_ADMIN')"" />
+
+It means when you want to create a Users object, firstly you need to login to get ADMIN permission. But actually it didn't work. Check the log:
+
+    2012-05-06 11:39:11,250 [http-8088-7] DEBUG org.springframework.security.web.util.AntPathRequestMatcher - Checking match of request : '/userses'; against '/userses?form'
+
+The framework use the /userses instead of /userses?form to compare with, authentication process skipped as string didn't match. To verify this I also try another url:
+
+    <intercept-url pattern=""/userses/abc"" access=""hasRole('ROLE_ADMIN')"" />
+
+I requested the <webRoot>/userses/abc, it detected user is not authorized, and moved to /login page, checked the log:
+
+    2012-05-06 11:46:44,343 [http-8088-7] DEBUG org.springframework.security.web.util.AntPathRequestMatcher - Checking match of request : '/uesrses/abc'; against '/userses/abc'
+
+So my question is: Doesn't spring-secure 3 support ""?parameter"" pattern or I missed something to config to support this?
+PS: All the code is generated by roo without modification, also wonder why it doesn't work.",3
+9596191,03/07/2012 05:13:09,1179885,01/31/2012 08:47:49,16,1,Invoking a spring action repeatedly without user interaction,"I Have a requirement like below :
+
+Get invoked a particular action repeatedly without user interaction.For example, I have a message status page which displayed JMS message status.Message status can be changed by a number of application components.What I wanted is, my status UI has to pick latest message status.I need the action which displays status UI to be called repeatedly in an interval of 5 seconds or so, so that UI will get displayed with latest status.
+
+How can I achieve this in spring.Is it something,Polling an action?
+
+Any help highly appreciated",spring,spring-mvc,jboss,jms,spring-3,,open,0,90,8,"Invoking a spring action repeatedly without user interaction I Have a requirement like below :
+
+Get invoked a particular action repeatedly without user interaction.For example, I have a message status page which displayed JMS message status.Message status can be changed by a number of application components.What I wanted is, my status UI has to pick latest message status.I need the action which displays status UI to be called repeatedly in an interval of 5 seconds or so, so that UI will get displayed with latest status.
+
+How can I achieve this in spring.Is it something,Polling an action?
+
+Any help highly appreciated",5
+8922907,01/19/2012 08:17:19,705414,04/13/2011 06:40:40,1341,1,"For the spring autodetection, what's the difference between component and service?","I think both component and service can be used to detect bean automatically, anyone can show me the difference between those two annotations?",spring,,,,,,open,0,23,11,"For the spring autodetection, what's the difference between component and service? I think both component and service can be used to detect bean automatically, anyone can show me the difference between those two annotations?",1
+9413832,02/23/2012 13:15:41,1228416,02/23/2012 13:08:42,1,0,Difference between AOP & inheritance in OOPS concept?,"Can u please clarify my doubt regarding the concept behind AOP & INHERITANCE concept in 
+OOP ?
+We can use the same services through inheritance also .Then why we will go for AOP in spring  framework?
+
+",spring,,,,,,open,0,36,8,"Difference between AOP & inheritance in OOPS concept? Can u please clarify my doubt regarding the concept behind AOP & INHERITANCE concept in 
+OOP ?
+We can use the same services through inheritance also .Then why we will go for AOP in spring  framework?
+
+",1
+11294142,07/02/2012 12:56:14,1217696,02/18/2012 06:31:48,60,3,Error in load Properties file and upload image in jboss 7 server,"In jeety , Glassfish server when project is deploy then make one folder in webapp but in jboss 7 server have no webapp folder.
+
+where is project deploy( folder name ) in jboss 7?
+
+so there are some problem like read properties file and image upload . b'caz i use class path and server path for it.
+
+for ex in jboss 7:
+get File path : ""E:/jboss-as-7.1.1.Final/bin/content/mwp.war/WEB-INF/classes/analytics.properties""
+
+    Properties pro = new Properties();
+    String fileName = this.getClass().getClassLoader().getResource(""analytics.properties"").getFile();
+    pro.store(new FileOutputStream(fileName),null);
+
+
+then get error :
+
+    16:21:52,004 ERROR [stderr] (MSC service thread 1-3)    at java.io.FileOutputStream.open(Native Method)
+    16:21:52,006 ERROR [stderr] (MSC service thread 1-3)    at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+    16:21:52,007 ERROR [stderr] (MSC service thread 1-3)    at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+    16:21:52,008 ERROR [stderr] (MSC service thread 1-3)    at mwp.slktechlabs.model.analytics.AnalyticsDBData.updateAnalyticsPropertiesData(AnalyticsDBData.ja
+    va:95)
+    16:21:52,010 ERROR [stderr] (MSC service thread 1-3)    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    16:21:52,011 ERROR [stderr] (MSC service thread 1-3)    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    16:21:52,013 ERROR [stderr] (MSC service thread 1-3)    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    16:21:52,015 ERROR [stderr] (MSC service thread 1-3)    at java.lang.reflect.Method.invoke(Method.java:601)
+    16:21:52,016 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleEle
+    ment.invoke(InitDestroyAnnotationBeanPostProcessor.java:340)
+    16:21:52,018 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMet
+    adata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:305)
+    16:21:52,020 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessB
+    eforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:148)
+    16:21:52,023 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.ja
+    va:166)
+    16:21:52,025 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingle
+    tonBeanRegistry.java:487)
+    16:21:52,027 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultS
+    ingletonBeanRegistry.java:463)
+    16:21:52,029 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(Default
+    SingletonBeanRegistry.java:431)
+    16:21:52,031 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationC
+    ontext.java:1053)
+    16:21:52,033 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContex
+    t.java:463)
+    16:21:52,035 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:294
+    )
+    16:21:52,036 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:215)
+    16:21:52,038 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.j
+    ava:47)
+    16:21:52,040 ERROR [stderr] (MSC service thread 1-3)    at org.apache.catalina.core.StandardContext.contextListenerStart(StandardContext.java:3392)
+    16:21:52,041 ERROR [stderr] (MSC service thread 1-3)    at org.apache.catalina.core.StandardContext.start(StandardContext.java:3850)
+    16:21:52,043 ERROR [stderr] (MSC service thread 1-3)    at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+    16:21:52,045 ERROR [stderr] (MSC service thread 1-3)    at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:18
+    11)
+    16:21:52,046 ERROR [stderr] (MSC service thread 1-3)    at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+    16:21:52,048 ERROR [stderr] (MSC service thread 1-3)    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+    16:21:52,050 ERROR [stderr] (MSC service thread 1-3)    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+    16:21:52,051 ERROR [stderr] (MSC service thread 1-3)    at java.lang.Thread.run(Thread.java:722)
+
+so how to remove this error ?
+
+Thanks,
+kamlesh",spring,java-ee,jboss,jboss7.x,,,open,0,566,12,"Error in load Properties file and upload image in jboss 7 server In jeety , Glassfish server when project is deploy then make one folder in webapp but in jboss 7 server have no webapp folder.
+
+where is project deploy( folder name ) in jboss 7?
+
+so there are some problem like read properties file and image upload . b'caz i use class path and server path for it.
+
+for ex in jboss 7:
+get File path : ""E:/jboss-as-7.1.1.Final/bin/content/mwp.war/WEB-INF/classes/analytics.properties""
+
+    Properties pro = new Properties();
+    String fileName = this.getClass().getClassLoader().getResource(""analytics.properties"").getFile();
+    pro.store(new FileOutputStream(fileName),null);
+
+
+then get error :
+
+    16:21:52,004 ERROR [stderr] (MSC service thread 1-3)    at java.io.FileOutputStream.open(Native Method)
+    16:21:52,006 ERROR [stderr] (MSC service thread 1-3)    at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+    16:21:52,007 ERROR [stderr] (MSC service thread 1-3)    at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+    16:21:52,008 ERROR [stderr] (MSC service thread 1-3)    at mwp.slktechlabs.model.analytics.AnalyticsDBData.updateAnalyticsPropertiesData(AnalyticsDBData.ja
+    va:95)
+    16:21:52,010 ERROR [stderr] (MSC service thread 1-3)    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    16:21:52,011 ERROR [stderr] (MSC service thread 1-3)    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    16:21:52,013 ERROR [stderr] (MSC service thread 1-3)    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    16:21:52,015 ERROR [stderr] (MSC service thread 1-3)    at java.lang.reflect.Method.invoke(Method.java:601)
+    16:21:52,016 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleEle
+    ment.invoke(InitDestroyAnnotationBeanPostProcessor.java:340)
+    16:21:52,018 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMet
+    adata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:305)
+    16:21:52,020 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessB
+    eforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:148)
+    16:21:52,023 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.ja
+    va:166)
+    16:21:52,025 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingle
+    tonBeanRegistry.java:487)
+    16:21:52,027 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultS
+    ingletonBeanRegistry.java:463)
+    16:21:52,029 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(Default
+    SingletonBeanRegistry.java:431)
+    16:21:52,031 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationC
+    ontext.java:1053)
+    16:21:52,033 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContex
+    t.java:463)
+    16:21:52,035 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:294
+    )
+    16:21:52,036 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:215)
+    16:21:52,038 ERROR [stderr] (MSC service thread 1-3)    at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.j
+    ava:47)
+    16:21:52,040 ERROR [stderr] (MSC service thread 1-3)    at org.apache.catalina.core.StandardContext.contextListenerStart(StandardContext.java:3392)
+    16:21:52,041 ERROR [stderr] (MSC service thread 1-3)    at org.apache.catalina.core.StandardContext.start(StandardContext.java:3850)
+    16:21:52,043 ERROR [stderr] (MSC service thread 1-3)    at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+    16:21:52,045 ERROR [stderr] (MSC service thread 1-3)    at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:18
+    11)
+    16:21:52,046 ERROR [stderr] (MSC service thread 1-3)    at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+    16:21:52,048 ERROR [stderr] (MSC service thread 1-3)    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+    16:21:52,050 ERROR [stderr] (MSC service thread 1-3)    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+    16:21:52,051 ERROR [stderr] (MSC service thread 1-3)    at java.lang.Thread.run(Thread.java:722)
+
+so how to remove this error ?
+
+Thanks,
+kamlesh",4

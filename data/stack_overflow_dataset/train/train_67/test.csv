@@ -1,0 +1,1195 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+7879106,10/24/2011 16:58:44,629290,01/29/2011 17:35:19,156,5,"htaccess RewriteCond, Multiple Conditions for RewriteRule","I use .htaccess Mod Rewrite to send the URL to index.php, which then parses the URL and builds each page of my website.
+This works perfectly fine, allowing me to easily manage clean URLs using PHP instead of .htaccess.
+
+Ex: http://domain.com/some/url/here/ -> goes to index.php, which loads a page with multiple PHP files put together
+
+However, I'm trying to allow certain PHP files to load as regular PHP files (without sending the URL to index.php to parse).
+
+Ex: http://domain.com/some/url/here/ still works as mentioned above.
+http://domain.com/specialexception.php will load as a regular php file, without sending to index.php
+
+I have the following code:
+
+    <IfModule mod_rewrite.c>
+    
+    	RewriteEngine On
+    	
+    	RewriteCond $1 !^specialexception\.php$ [NC]
+    	RewriteRule !\.(css|gif|jpg|png|ico|txt|xml|js|pdf|htm|zip)$ /path/to/index.php [NC,L]
+    		
+    </IfModule>
+
+However, the RewriteCond line is simply ignored right now.
+
+I would appreciate any help/ideas!
+
+Thank you.
+",.htaccess,mod-rewrite,,,,,open,0,148,6,"htaccess RewriteCond, Multiple Conditions for RewriteRule I use .htaccess Mod Rewrite to send the URL to index.php, which then parses the URL and builds each page of my website.
+This works perfectly fine, allowing me to easily manage clean URLs using PHP instead of .htaccess.
+
+Ex: http://domain.com/some/url/here/ -> goes to index.php, which loads a page with multiple PHP files put together
+
+However, I'm trying to allow certain PHP files to load as regular PHP files (without sending the URL to index.php to parse).
+
+Ex: http://domain.com/some/url/here/ still works as mentioned above.
+http://domain.com/specialexception.php will load as a regular php file, without sending to index.php
+
+I have the following code:
+
+    <IfModule mod_rewrite.c>
+    
+    	RewriteEngine On
+    	
+    	RewriteCond $1 !^specialexception\.php$ [NC]
+    	RewriteRule !\.(css|gif|jpg|png|ico|txt|xml|js|pdf|htm|zip)$ /path/to/index.php [NC,L]
+    		
+    </IfModule>
+
+However, the RewriteCond line is simply ignored right now.
+
+I would appreciate any help/ideas!
+
+Thank you.
+",2
+3776122,09/23/2010 07:14:47,173524,09/15/2009 05:27:31,145,5,"CodeIgniter: Multiple Apps, remove .php from url","My question may look similar to others, but it's different as you'll se:
+
+I have 5 CI apps running with the same System Folder, as described in [CI User Guide][1].
+Now, I want some .htacces file to remove just the .php from the url, like, as example: http://example.com/appName/controller/action instead of http://example.com/appName.php/controller/action (removing the .php portion of the url)
+
+Can I do that? I have no experience with .htaccess files. Also, I'm developing the site in Windows 7 with XAMPP, to deploy the site to a LAMP server.
+
+Thanks in advance
+
+
+  [1]: http://codeigniter.com/user_guide/general/managing_apps.html",.htaccess,codeigniter,codeigniter-url,,,,open,0,89,7,"CodeIgniter: Multiple Apps, remove .php from url My question may look similar to others, but it's different as you'll se:
+
+I have 5 CI apps running with the same System Folder, as described in [CI User Guide][1].
+Now, I want some .htacces file to remove just the .php from the url, like, as example: http://example.com/appName/controller/action instead of http://example.com/appName.php/controller/action (removing the .php portion of the url)
+
+Can I do that? I have no experience with .htaccess files. Also, I'm developing the site in Windows 7 with XAMPP, to deploy the site to a LAMP server.
+
+Thanks in advance
+
+
+  [1]: http://codeigniter.com/user_guide/general/managing_apps.html",3
+6686354,07/13/2011 22:15:18,730046,04/28/2011 20:20:04,15,2,virus problem google_verify.php and ftp passwords,"Couple days ago I had problems with my sites. In all ftp servers I got some php file called google_verify.php and in my .htaccess file the following text was added:
+
+    <IfModule mod_php5.c>
+    php_value auto_append_file ""google_verify.php""
+    </IfModule>
+
+    <IfModule mod_php4.c>
+    php_value auto_append_file ""google_verify.php""
+    </IfModule>
+
+I suspect that my pc is infected with some kind of virus who can read my ftp access parameters from my ftp manager.
+
+Does anybody know something more about this virus and how I can clean my computer?
+
+Thanks in advance 
+",.htaccess,ftp,passwords,virus,,,open,0,99,6,"virus problem google_verify.php and ftp passwords Couple days ago I had problems with my sites. In all ftp servers I got some php file called google_verify.php and in my .htaccess file the following text was added:
+
+    <IfModule mod_php5.c>
+    php_value auto_append_file ""google_verify.php""
+    </IfModule>
+
+    <IfModule mod_php4.c>
+    php_value auto_append_file ""google_verify.php""
+    </IfModule>
+
+I suspect that my pc is infected with some kind of virus who can read my ftp access parameters from my ftp manager.
+
+Does anybody know something more about this virus and how I can clean my computer?
+
+Thanks in advance 
+",4
+9287927,02/15/2012 04:36:20,1184426,02/02/2012 06:23:31,7,0,Htaccess code to redirect from current page to previous page?,"I want to redirect from current page to previous page..  I want this previous page button in most of the pages..
+
+Is there any common htaccess code for all pages?
+
+Can someone help me?",.htaccess,,,,,,open,0,33,10,"Htaccess code to redirect from current page to previous page? I want to redirect from current page to previous page..  I want this previous page button in most of the pages..
+
+Is there any common htaccess code for all pages?
+
+Can someone help me?",1
+6076110,05/20/2011 18:22:51,755889,05/16/2011 15:24:46,3,0,"301 redirect not working, sending me to 404","I have a bunch of pages with no extention, and I want them to redirect to the correct pages with the extention.
+
+Example""
+
+RewriteRule ^pageone$ /pagetwo.html [R=301,L]
+
+This still sends me to a 404, but it works perfect on my apache test server, just not on the web server.
+
+Ive also tried this, with the same results:
+
+Redirect 301 /pageone http:/pagetwo.html",.htaccess,redirect,,,,,open,0,56,8,"301 redirect not working, sending me to 404 I have a bunch of pages with no extention, and I want them to redirect to the correct pages with the extention.
+
+Example""
+
+RewriteRule ^pageone$ /pagetwo.html [R=301,L]
+
+This still sends me to a 404, but it works perfect on my apache test server, just not on the web server.
+
+Ive also tried this, with the same results:
+
+Redirect 301 /pageone http:/pagetwo.html",2
+11599796,07/22/2012 11:15:17,492040,10/30/2010 08:55:06,110,3,How to use www images when im viewing development(dev.mysite.com) site?,"I'm running a site that has a development site which is dev.mysite.com, my problem is i dont want to use the dev images instead i just want to use all the images from www when im viewing the dev.mysite.com",.htaccess,redirect,,,,07/22/2012 22:01:07,not a real question,1,39,10,"How to use www images when im viewing development(dev.mysite.com) site? I'm running a site that has a development site which is dev.mysite.com, my problem is i dont want to use the dev images instead i just want to use all the images from www when im viewing the dev.mysite.com",2
+5361126,03/19/2011 09:00:01,646793,03/06/2011 09:57:45,1,0,htaccess works but content doesn't load.,"When I use index.php?id=this-is-an-article the page loads with the content, when I use /articles/this-is-an-article the page loads without any content, any idea as to how I can resolve this?
+
+.htaccess: 
+
+
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteBase /
+    
+    # force www. in all requests
+    RewriteCond %{HTTP_HOST} ^mysite\.net [NC]
+    RewriteRule ^(.*)$ http://www.mysite.net/$1 [L,R=301]
+    
+    # enable hiding php extension
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php
+    RewriteRule ^(.*)\$ $1.php
+    
+    RewriteCond %{SCRIPT_FILENAME} !-d  
+    RewriteCond %{SCRIPT_FILENAME} !-f  
+    RewriteRule ^page/(\d+)*$ ./index.php?p=$1  
+    
+    # index.php?id=this-is-an-article => /articles/this-is-an-article 
+    RewriteRule /articles/(.*)  index.php?id=$1 [NC,L]
+
+Thanks in advance.
+",.htaccess,mod-rewrite,content,loading,,,open,0,158,6,"htaccess works but content doesn't load. When I use index.php?id=this-is-an-article the page loads with the content, when I use /articles/this-is-an-article the page loads without any content, any idea as to how I can resolve this?
+
+.htaccess: 
+
+
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteBase /
+    
+    # force www. in all requests
+    RewriteCond %{HTTP_HOST} ^mysite\.net [NC]
+    RewriteRule ^(.*)$ http://www.mysite.net/$1 [L,R=301]
+    
+    # enable hiding php extension
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php
+    RewriteRule ^(.*)\$ $1.php
+    
+    RewriteCond %{SCRIPT_FILENAME} !-d  
+    RewriteCond %{SCRIPT_FILENAME} !-f  
+    RewriteRule ^page/(\d+)*$ ./index.php?p=$1  
+    
+    # index.php?id=this-is-an-article => /articles/this-is-an-article 
+    RewriteRule /articles/(.*)  index.php?id=$1 [NC,L]
+
+Thanks in advance.
+",4
+2085137,01/18/2010 09:58:29,229849,12/11/2009 18:12:23,178,0,advance url rewriting,"how can i change 
+
+http://www.mydomain.com/down.php?key=1223
+
+to
+
+http://www.mydomain.com/?k=1223
+
+i have google it but not found any ans...please help me...
+
+i am using apache server with unix",.htaccess,,,,,01/16/2012 18:23:39,off topic,1,21,3,"advance url rewriting how can i change 
+
+http://www.mydomain.com/down.php?key=1223
+
+to
+
+http://www.mydomain.com/?k=1223
+
+i have google it but not found any ans...please help me...
+
+i am using apache server with unix",1
+9215985,02/09/2012 17:45:20,1168963,01/25/2012 10:27:04,11,1,.htaccess rewrite to another domain on the same server without url change,"I have a web application that has ""pretty urls"". The `.htaccess` file there looks like this:
+
+    Options +FollowSymlinks
+    RewriteEngine on
+    RewriteRule ^([a-z0-9]+)(/)?([a-z0-9]+)?$ /home/user/domains/domain1.com/public_html/sites/index.php?site=$1&page=$3 [QSA]
+So when I enter `domain1.com/site/page` it actually shows me `domain1.com/index.php?site=site&page=page`. This works fine.
+### BUT ###
+I have another domain, let's say `domain2.com`. I have it in the same account in the DirectAdmin. When I enter the ftp account and go to `domains/` I see there both `domain1.com` and `domain2.com`.
+
+I want to force `domain2.co.il` to show `domain1.com/index.php?site=domain2`
+
+I placed the same `.htaccess` file (with a minor change of the `site` parameter) in the `public_html` of `domain2.com`. The result is 404 error.
+
+So the question is: How to make it work the way I want?
+
+
+----------
+
+
+I also read the following posts, but I can't seem to find use out of them. Maybe I just don't understand how:
+
+ - http://stackoverflow.com/questions/8231648/2-domains-1-host-domain-url-rewrite
+ - http://stackoverflow.com/questions/987343/how-can-i-redirect-to-a-different-domain-without-changing-the-url-in-the-address
+ - http://www.directadmin.com/forum/archive/index.php/t-1528.html",.htaccess,mod-rewrite,url-rewriting,,,,open,0,149,12,".htaccess rewrite to another domain on the same server without url change I have a web application that has ""pretty urls"". The `.htaccess` file there looks like this:
+
+    Options +FollowSymlinks
+    RewriteEngine on
+    RewriteRule ^([a-z0-9]+)(/)?([a-z0-9]+)?$ /home/user/domains/domain1.com/public_html/sites/index.php?site=$1&page=$3 [QSA]
+So when I enter `domain1.com/site/page` it actually shows me `domain1.com/index.php?site=site&page=page`. This works fine.
+### BUT ###
+I have another domain, let's say `domain2.com`. I have it in the same account in the DirectAdmin. When I enter the ftp account and go to `domains/` I see there both `domain1.com` and `domain2.com`.
+
+I want to force `domain2.co.il` to show `domain1.com/index.php?site=domain2`
+
+I placed the same `.htaccess` file (with a minor change of the `site` parameter) in the `public_html` of `domain2.com`. The result is 404 error.
+
+So the question is: How to make it work the way I want?
+
+
+----------
+
+
+I also read the following posts, but I can't seem to find use out of them. Maybe I just don't understand how:
+
+ - http://stackoverflow.com/questions/8231648/2-domains-1-host-domain-url-rewrite
+ - http://stackoverflow.com/questions/987343/how-can-i-redirect-to-a-different-domain-without-changing-the-url-in-the-address
+ - http://www.directadmin.com/forum/archive/index.php/t-1528.html",3
+10884466,06/04/2012 16:11:30,1435540,06/04/2012 16:02:31,1,0,Beautifying the Url using .htaccess,"I have this link 
+http://xxxx.com/yyyy/index.php?class=Applications&function=create
+
+and I want to make it look like this
+
+http://xxxx.com/yyyy/create
+
+I know that I have to use the 
+RewriteEngine on
+
+RewriteRule ..................
+
+But Since I'm new at it, I don't know how to format it...Help me out.",.htaccess,,,,,06/05/2012 17:16:30,off topic,1,37,5,"Beautifying the Url using .htaccess I have this link 
+http://xxxx.com/yyyy/index.php?class=Applications&function=create
+
+and I want to make it look like this
+
+http://xxxx.com/yyyy/create
+
+I know that I have to use the 
+RewriteEngine on
+
+RewriteRule ..................
+
+But Since I'm new at it, I don't know how to format it...Help me out.",1
+9221520,02/10/2012 01:28:29,673108,03/23/2011 13:28:40,452,6,RewriteRule wont work when link contains dash (on loaclhost xampp),"
+    RewriteEngine On
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+This works for links like:
+
+    <a href=""/subpagewithoutdash"">working link</a>
+
+But it doesn't work for links with dash:
+
+    <a href=""/subpage-with-dash"">not working link</a>
+
+Any idea of how to fix it? I am sitting on a Windows computer with Xampp installed (localhost).",.htaccess,url-rewriting,,,,,open,0,60,10,"RewriteRule wont work when link contains dash (on loaclhost xampp) 
+    RewriteEngine On
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+This works for links like:
+
+    <a href=""/subpagewithoutdash"">working link</a>
+
+But it doesn't work for links with dash:
+
+    <a href=""/subpage-with-dash"">not working link</a>
+
+Any idea of how to fix it? I am sitting on a Windows computer with Xampp installed (localhost).",2
+8433034,12/08/2011 15:04:34,395210,07/05/2010 12:32:29,170,6,.htaccess to allow @fontface,"I am using the master .htaccess from [http://docs.joomla.org][1]
+
+
+  [1]: http://docs.joomla.org/Htaccess_examples_%28security%29
+
+Its working well but its also locking out all my `woff|eot|svg|ttf`
+
+How can I add these to the allowed filetypes?
+My fonts reside in `/templates/mytemplate/css/type/` folder",.htaccess,joomla,,,,12/09/2011 13:51:47,off topic,1,34,4,".htaccess to allow @fontface I am using the master .htaccess from [http://docs.joomla.org][1]
+
+
+  [1]: http://docs.joomla.org/Htaccess_examples_%28security%29
+
+Its working well but its also locking out all my `woff|eot|svg|ttf`
+
+How can I add these to the allowed filetypes?
+My fonts reside in `/templates/mytemplate/css/type/` folder",2
+11564458,07/19/2012 15:44:41,234240,12/18/2009 00:10:32,2056,109,.htaccess causing 500 internal server errors,"I'd like to protect a directory in my `uploads` folder in wordpress located at `http://site.com/wp-content/uploads/assets`, so I tried adding an `.htaccess` to the `assets` folder with the following code:
+
+    Options All -Indexes
+    <FilesMatch "".(htaccess|mustache)$"">
+    Order Allow,Deny
+    Deny from all
+    </FilesMatch>
+
+My `assets` folder contains subfolders as well, which include css and image files. I'm trying to restrict access from browsing the directory and directly accessing my `.mustache` template files.
+
+However, the CSS will not load, producing a 500 error when trying to link to it on my page.
+
+Example structure:
+
+    /assets
+        template.mustache
+        image.jpg
+        file.php
+
+        media/
+            style.css
+            script.js
+
+Can anyone see what I am doing wrong?
+
+Thanks!
+
+",.htaccess,,,,,,open,0,169,6,".htaccess causing 500 internal server errors I'd like to protect a directory in my `uploads` folder in wordpress located at `http://site.com/wp-content/uploads/assets`, so I tried adding an `.htaccess` to the `assets` folder with the following code:
+
+    Options All -Indexes
+    <FilesMatch "".(htaccess|mustache)$"">
+    Order Allow,Deny
+    Deny from all
+    </FilesMatch>
+
+My `assets` folder contains subfolders as well, which include css and image files. I'm trying to restrict access from browsing the directory and directly accessing my `.mustache` template files.
+
+However, the CSS will not load, producing a 500 error when trying to link to it on my page.
+
+Example structure:
+
+    /assets
+        template.mustache
+        image.jpg
+        file.php
+
+        media/
+            style.css
+            script.js
+
+Can anyone see what I am doing wrong?
+
+Thanks!
+
+",1
+9930210,03/29/2012 17:15:37,1009409,10/23/2011 10:16:11,8,0,.htaccess rewrite url,"I know not my .htaccess is working since it is showing the ErrorDocument 404 when it can't locate a file.
+
+I am trying to re-write the url so that domain.com/products/123 will become domain.com?product.php?productid=123
+
+This is my .htaccess and it is not doing the trick. When I write domain.com/products/123 in the browser, I get the ErrorDocument 404.
+
+
+    RewriteEngine on
+    RewriteRule ^/products/([0-9]+)/$ product.php?productid=$1
+
+    ErrorDocument 404 /page404.php
+
+What am I doing wrong?",.htaccess,mod-rewrite,rewrite,,,03/30/2012 18:49:24,off topic,1,75,3,".htaccess rewrite url I know not my .htaccess is working since it is showing the ErrorDocument 404 when it can't locate a file.
+
+I am trying to re-write the url so that domain.com/products/123 will become domain.com?product.php?productid=123
+
+This is my .htaccess and it is not doing the trick. When I write domain.com/products/123 in the browser, I get the ErrorDocument 404.
+
+
+    RewriteEngine on
+    RewriteRule ^/products/([0-9]+)/$ product.php?productid=$1
+
+    ErrorDocument 404 /page404.php
+
+What am I doing wrong?",3
+11502027,07/16/2012 09:56:12,233679,12/17/2009 10:13:45,1164,45,.htaccess: Hide URL variables,"I have no idea how to play with .htaccess file to change / hide variables from URL
+
+I have url
+
+    http://localhost/my_site/project-detail/?pro_id=7
+and I want to either hide **pro_id=7** like
+
+    http://localhost/my_site/project-detail/
+but could be able to catch this $_GET['pro_id'] in my php script file.
+
+or 
+
+    http://localhost/my_site/project-detail/7",.htaccess,php5,,,,,open,0,51,4,".htaccess: Hide URL variables I have no idea how to play with .htaccess file to change / hide variables from URL
+
+I have url
+
+    http://localhost/my_site/project-detail/?pro_id=7
+and I want to either hide **pro_id=7** like
+
+    http://localhost/my_site/project-detail/
+but could be able to catch this $_GET['pro_id'] in my php script file.
+
+or 
+
+    http://localhost/my_site/project-detail/7",2
+9081453,01/31/2012 14:44:34,785204,06/05/2011 23:03:01,88,8,Setting expires via htaccess on combine script,"I'm using a script to combine my css and js files together, wich results in an url like this:
+
+http://gportdev.nl/framework/wp-content/themes/gport_framework/public/css/combine.php?type=css&files=base/reset.css,theme/layout.css,theme/typography.css,forms/uniform.default.css,video/video-js.css,slider/nivo-slider.css,slider/themes/default/default.css
+
+I am using the following code to set expires and ET's, but I'm wondering how i can make sure that the above url also gets expires.
+
+    <FilesMatch ""\.(swf|ico|jpg|jpeg|png|js|css|gif|combine.php)(\.gz)?$"">
+    
+    Header set Expires ""Thu, 15 Apr 2015 20:00:00 GMT""
+    Header unset ETag
+    FileETag None
+    
+    </FilesMatch>
+
+Is there any way to achieve this? simply adding combine.php doesn't work for me.
+
+Thanks!",.htaccess,,,,,02/01/2012 14:54:03,off topic,1,97,7,"Setting expires via htaccess on combine script I'm using a script to combine my css and js files together, wich results in an url like this:
+
+http://gportdev.nl/framework/wp-content/themes/gport_framework/public/css/combine.php?type=css&files=base/reset.css,theme/layout.css,theme/typography.css,forms/uniform.default.css,video/video-js.css,slider/nivo-slider.css,slider/themes/default/default.css
+
+I am using the following code to set expires and ET's, but I'm wondering how i can make sure that the above url also gets expires.
+
+    <FilesMatch ""\.(swf|ico|jpg|jpeg|png|js|css|gif|combine.php)(\.gz)?$"">
+    
+    Header set Expires ""Thu, 15 Apr 2015 20:00:00 GMT""
+    Header unset ETag
+    FileETag None
+    
+    </FilesMatch>
+
+Is there any way to achieve this? simply adding combine.php doesn't work for me.
+
+Thanks!",1
+9835298,03/23/2012 07:06:06,1233040,02/25/2012 20:57:27,1,0,301 redirects mirrored domain,"I'm redesigning a site for a friend on my localhost. His old site is an .asp based site and we're replacing it with a WordPress site on LAMP hosting. The old site sits on domain A and also has another domain, domain B parked on top of it mirroring it. 
+
+Google has picked up domain B for most of his search engine results and yahoo and bing etc have picked up domain A.
+
+The plan is to 301 redirect the the old pages of his site on domain A to the new WordPress versions and park domain B on top of it like before. My question is, will this work, if not what would be a better way to approach it?
+
+We'd prefer not to lose any of the search engine listings in the redesign, and the search engines don't appear to have penalized him for duplicate content.
+
+Thanks very much in advance!
+
+",.htaccess,redirect,http-status-code-301,mirror,,03/25/2012 18:56:24,off topic,1,150,4,"301 redirects mirrored domain I'm redesigning a site for a friend on my localhost. His old site is an .asp based site and we're replacing it with a WordPress site on LAMP hosting. The old site sits on domain A and also has another domain, domain B parked on top of it mirroring it. 
+
+Google has picked up domain B for most of his search engine results and yahoo and bing etc have picked up domain A.
+
+The plan is to 301 redirect the the old pages of his site on domain A to the new WordPress versions and park domain B on top of it like before. My question is, will this work, if not what would be a better way to approach it?
+
+We'd prefer not to lose any of the search engine listings in the redesign, and the search engines don't appear to have penalized him for duplicate content.
+
+Thanks very much in advance!
+
+",4
+8206702,11/21/2011 02:40:46,378183,06/28/2010 15:50:07,1186,28,How do I make .htaccess redirect from a specific domain?,"I had the following directive in a site's `.htaccess` file, at the root:
+
+    # redirect to contact page
+    redirectMatch 301 ^(/about)/?$ /contact/
+
+However the site also hosts several other domains, which appear in the root folder as their own directories. For example, `http://mysite.com/anothersite/` displays the same thing as `http://anothersite.com`
+
+Because of this, the redirect rule, as it is written, also redirects `http://anothersite.com/about/` to `http://anothersite.com/contact/`.
+
+How can I rewrite the directive in the root `.htaccess` file so that it *only applies to*`http://mysite.com/about/`?",.htaccess,redirect,,,,,open,0,84,10,"How do I make .htaccess redirect from a specific domain? I had the following directive in a site's `.htaccess` file, at the root:
+
+    # redirect to contact page
+    redirectMatch 301 ^(/about)/?$ /contact/
+
+However the site also hosts several other domains, which appear in the root folder as their own directories. For example, `http://mysite.com/anothersite/` displays the same thing as `http://anothersite.com`
+
+Because of this, the redirect rule, as it is written, also redirects `http://anothersite.com/about/` to `http://anothersite.com/contact/`.
+
+How can I rewrite the directive in the root `.htaccess` file so that it *only applies to*`http://mysite.com/about/`?",2
+11521547,07/17/2012 11:29:57,1531559,07/17/2012 11:19:04,1,0,301 Redirect Rule gives different results on different hosting environment,"I have been doing some URL rewriting for a customer in a test environment that work fine in my environment but when I move to theirs I get different results and the rule fails. 
+
+I am 301 redirecting legacy dynamic URLs in the following format: 
+
+    http://www.companyname.com/page.php?pagename=AboutCompany&lang=EN
+    to
+    http://www.companyname.com/EN/about-company/
+
+Using the ruleset below this works fine on my 'Heart Internet' shared hosting but fails on their 'Go Daddy' shared hosting (configs below). On the Go Daddy environment the legacy URL gets redirected to: 
+
+    http://www.companyname.com/GET/about-company/
+    instead of
+    http://www.companyname.com/EN/about-company/
+
+where does the 'GET' come? This is a barebones page with no other code influencing these rules. 
+
+    RewriteCond %{QUERY_STRING} pagename=AboutCompany
+    RewriteCond %{QUERY_STRING} lang=([^&]+)
+    RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /page.php
+    RewriteRule ^page.php$ /%1/about-company/? [R=301,L]
+
+    RewriteRule ^([A-Za-z]+)/about-company$ page.php?pagename=AboutCompany&lang=$1 [NC,L]
+    RewriteRule ^([A-Za-z]+)/about-company/$ page.php?pagename=AboutCompany&lang=$1 [NC,L]
+
+The 'lang' querystring differs depending on the user language preference (EN or FR or DE etc...) 
+
+<strong>Test Enviroment: </strong><br/>
+Windows  <br/>
+IIS7.5  <br/>
+PHP 5.3.6  <br/> 
+
+<strong>Customer Enviroment:</strong>  <br/>
+Linux  <br/>
+Apache  <br/>
+PHP 5.2  <br/>
+
+Thanks, M. ",.htaccess,mod-rewrite,redirect,query-string,,,open,0,200,10,"301 Redirect Rule gives different results on different hosting environment I have been doing some URL rewriting for a customer in a test environment that work fine in my environment but when I move to theirs I get different results and the rule fails. 
+
+I am 301 redirecting legacy dynamic URLs in the following format: 
+
+    http://www.companyname.com/page.php?pagename=AboutCompany&lang=EN
+    to
+    http://www.companyname.com/EN/about-company/
+
+Using the ruleset below this works fine on my 'Heart Internet' shared hosting but fails on their 'Go Daddy' shared hosting (configs below). On the Go Daddy environment the legacy URL gets redirected to: 
+
+    http://www.companyname.com/GET/about-company/
+    instead of
+    http://www.companyname.com/EN/about-company/
+
+where does the 'GET' come? This is a barebones page with no other code influencing these rules. 
+
+    RewriteCond %{QUERY_STRING} pagename=AboutCompany
+    RewriteCond %{QUERY_STRING} lang=([^&]+)
+    RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /page.php
+    RewriteRule ^page.php$ /%1/about-company/? [R=301,L]
+
+    RewriteRule ^([A-Za-z]+)/about-company$ page.php?pagename=AboutCompany&lang=$1 [NC,L]
+    RewriteRule ^([A-Za-z]+)/about-company/$ page.php?pagename=AboutCompany&lang=$1 [NC,L]
+
+The 'lang' querystring differs depending on the user language preference (EN or FR or DE etc...) 
+
+<strong>Test Enviroment: </strong><br/>
+Windows  <br/>
+IIS7.5  <br/>
+PHP 5.3.6  <br/> 
+
+<strong>Customer Enviroment:</strong>  <br/>
+Linux  <br/>
+Apache  <br/>
+PHP 5.2  <br/>
+
+Thanks, M. ",4
+9346612,02/19/2012 04:12:21,547563,12/04/2010 09:10:40,23,2,Pretty URL getting redirected to query part,"I am using .htaccess for URL rewriting. I have used code like:
+RewriteRule ^([a-zA-Z0-9-_]+)$ index.php?page=d/ctg/item&itmctgals=$1 [QSA]
+
+and URL is smstongue.com/friendship-sms (the alias URL) but it is showing URL with query part in URL i.e. smstongue.com/?page=d/ctg/browse&itmctgals=friendship-sms
+
+But I want to show URL like smstongue.com/friendship-sms in browser URL bar.
+How to do this. ",.htaccess,url-rewriting,,,,,open,0,48,7,"Pretty URL getting redirected to query part I am using .htaccess for URL rewriting. I have used code like:
+RewriteRule ^([a-zA-Z0-9-_]+)$ index.php?page=d/ctg/item&itmctgals=$1 [QSA]
+
+and URL is smstongue.com/friendship-sms (the alias URL) but it is showing URL with query part in URL i.e. smstongue.com/?page=d/ctg/browse&itmctgals=friendship-sms
+
+But I want to show URL like smstongue.com/friendship-sms in browser URL bar.
+How to do this. ",2
+10850683,06/01/2012 12:54:01,1348756,04/21/2012 19:57:05,15,0,.htaccess rewrite url to arguments,"    Options +FollowSymLinks
+     
+    RewriteEngine On
+    RewriteRule ^products/([a-zA-Z]+)/([0-9]+)/$ index.php?product=$1&price=$2
+
+This code makes http://www.example.com/products/computer/1000 into http://www.example.com/index.php?product=computer&price=1000.
+
+Is it possible to make http://www.example.com/scriptName/arg1/val1/arg2/val2/arg3/val3 into http://www.example.com/scriptName.php?arg1=val1&arg2=val2&arg3=val3? The user should be able to give an unlimited number of arguments. This way one can have /index.php?page=forum&subforum=subforum&quote1=postNo1&quote2=postNo43 and so on rewrite /index/page/forum/subforum/subforum/quote1/postNo1/quote2/postNo43
+
+How would the .htaccess code look?",.htaccess,,,,,,open,0,62,5,".htaccess rewrite url to arguments     Options +FollowSymLinks
+     
+    RewriteEngine On
+    RewriteRule ^products/([a-zA-Z]+)/([0-9]+)/$ index.php?product=$1&price=$2
+
+This code makes http://www.example.com/products/computer/1000 into http://www.example.com/index.php?product=computer&price=1000.
+
+Is it possible to make http://www.example.com/scriptName/arg1/val1/arg2/val2/arg3/val3 into http://www.example.com/scriptName.php?arg1=val1&arg2=val2&arg3=val3? The user should be able to give an unlimited number of arguments. This way one can have /index.php?page=forum&subforum=subforum&quote1=postNo1&quote2=postNo43 and so on rewrite /index/page/forum/subforum/subforum/quote1/postNo1/quote2/postNo43
+
+How would the .htaccess code look?",1
+4714023,01/17/2011 14:03:22,572827,01/12/2011 14:19:06,3,0,Check to see if a key exists in a query string - htaccess,"my url has query string(s) as follows:
+
+    ?v=11&icid=someid&near=far
+    OR
+    ?icid=some&v=11&near=far
+    OR
+    ?icid=some&near=far&v=11
+    OR
+    ?v=11
+    OR
+    There may be more but ""v"" exists
+
+in htaccess, how do I do the following please?
+
+if key ""v"" exists
+and
+the value is not [1-11]
+redirect to my site
+
+
+so far I've got the following:
+
+sample url: http://www.mysite.com/2010/01/17/breaking-news/? (one of the above QS's)
+
+RewriteCond %{QUERY_STRING} v <br>
+RewriteCond %{QUERY_STRING} v=([^1-11]+) <br>
+RewriteRule ([1000-9999]+)/([^/]+)/([^/]+)/([^/]+)/?([0-99]+)?$ http: // %{HTTP_HOST}/? [R,L]
+
+Any help on this is much appreciated.
+
+Thanks,
+L
+check to see if the query string has the key ""v"" and it's value falls in between 1 and 11?
+
+",.htaccess,,,,,,open,0,115,13,"Check to see if a key exists in a query string - htaccess my url has query string(s) as follows:
+
+    ?v=11&icid=someid&near=far
+    OR
+    ?icid=some&v=11&near=far
+    OR
+    ?icid=some&near=far&v=11
+    OR
+    ?v=11
+    OR
+    There may be more but ""v"" exists
+
+in htaccess, how do I do the following please?
+
+if key ""v"" exists
+and
+the value is not [1-11]
+redirect to my site
+
+
+so far I've got the following:
+
+sample url: http://www.mysite.com/2010/01/17/breaking-news/? (one of the above QS's)
+
+RewriteCond %{QUERY_STRING} v <br>
+RewriteCond %{QUERY_STRING} v=([^1-11]+) <br>
+RewriteRule ([1000-9999]+)/([^/]+)/([^/]+)/([^/]+)/?([0-99]+)?$ http: // %{HTTP_HOST}/? [R,L]
+
+Any help on this is much appreciated.
+
+Thanks,
+L
+check to see if the query string has the key ""v"" and it's value falls in between 1 and 11?
+
+",1
+10911996,06/06/2012 09:59:11,675593,07/23/2010 10:06:43,16,0,I want to allow an IP range in .htaccess,"From 145.050.039.008 to 145.050.039.017
+
+I am confused about the correct syntax.
+Is it:
+
+allow from 145.050.039.008 145.050.039.017
+
+or:
+
+allow from 145.050.039.008,145.050.039.017
+
+or:
+
+allow from 145.050.039.008/017
+
+?
+
+Thanks,
+Jelmar
+
+
+",.htaccess,,,,,06/06/2012 18:07:33,not a real question,1,18,9,"I want to allow an IP range in .htaccess From 145.050.039.008 to 145.050.039.017
+
+I am confused about the correct syntax.
+Is it:
+
+allow from 145.050.039.008 145.050.039.017
+
+or:
+
+allow from 145.050.039.008,145.050.039.017
+
+or:
+
+allow from 145.050.039.008/017
+
+?
+
+Thanks,
+Jelmar
+
+
+",1
+9243925,02/11/2012 20:46:47,1204119,02/11/2012 18:11:25,11,0,access denied on localhost .htacces,"i have a private section where specific users can login on my system (restricted to 4 users)
+
+i want to add IP restriction in the .htaccess using:
+
+    <Limit GET POST PUT>
+    order allow,deny
+    allow from 127.0.0.1
+    allow from 192.168
+    allow from 67.xx.xx
+    # etc..
+    deny from all
+    </Limit>
+
+but i get this error:
+
+    Forbidden
+    
+    You don't have permission to access / on this server.
+    
+    Additionally, a 403 Forbidden error was encountered while trying to use an ErrorDocument to handle the request.
+
+when i try to access this site locally (i have lamp on my desktop installed)
+
+why do i get an access denied?
+",.htaccess,,,,,02/12/2012 21:14:52,off topic,1,140,5,"access denied on localhost .htacces i have a private section where specific users can login on my system (restricted to 4 users)
+
+i want to add IP restriction in the .htaccess using:
+
+    <Limit GET POST PUT>
+    order allow,deny
+    allow from 127.0.0.1
+    allow from 192.168
+    allow from 67.xx.xx
+    # etc..
+    deny from all
+    </Limit>
+
+but i get this error:
+
+    Forbidden
+    
+    You don't have permission to access / on this server.
+    
+    Additionally, a 403 Forbidden error was encountered while trying to use an ErrorDocument to handle the request.
+
+when i try to access this site locally (i have lamp on my desktop installed)
+
+why do i get an access denied?
+",1
+7080357,08/16/2011 15:01:03,223367,12/02/2009 23:52:01,2917,13,How do i remove only one trailing slash,"This snippet will remove all the slashes on the end of a url
+
+    # Remove the trailing slash
+    RewriteCond %{HTTP_HOST} ^(www.)?site\.com$ [NC]
+    RewriteRule ^(.+)/$ http://site.com/$1 [R=301,L]
+
+but how do i customize this to only do it for 
+
+    http://site.com/only_me/
+
+to 
+
+    http://site.com/only_me
+
+Also do what is this doing 
+
+    RewriteCond %{HTTP_HOST} ^(www.)?site\.com$ [NC]
+
+and do i need it ",.htaccess,mod-rewrite,,,,,open,0,73,8,"How do i remove only one trailing slash This snippet will remove all the slashes on the end of a url
+
+    # Remove the trailing slash
+    RewriteCond %{HTTP_HOST} ^(www.)?site\.com$ [NC]
+    RewriteRule ^(.+)/$ http://site.com/$1 [R=301,L]
+
+but how do i customize this to only do it for 
+
+    http://site.com/only_me/
+
+to 
+
+    http://site.com/only_me
+
+Also do what is this doing 
+
+    RewriteCond %{HTTP_HOST} ^(www.)?site\.com$ [NC]
+
+and do i need it ",2
+8023544,11/05/2011 21:51:20,310648,04/07/2010 05:26:33,969,3,Issue with mod_rewrite,"this is my htaccess file:
+
+    Options +FollowSymlinks
+    RewriteEngine on
+    RewriteRule ^(.*) url.php?p=$1 [NC]
+
+Im trying to redirect like this: mysite.com/sometext to mysite.com/url.php?p=sometext
+
+But with that file the browser gives me always an error; *Internal Server Error, The server encountered an internal error or misconfiguration and was unable to complete your request.*
+
+Thanks for any help.",.htaccess,mod-rewrite,,,,,open,0,61,3,"Issue with mod_rewrite this is my htaccess file:
+
+    Options +FollowSymlinks
+    RewriteEngine on
+    RewriteRule ^(.*) url.php?p=$1 [NC]
+
+Im trying to redirect like this: mysite.com/sometext to mysite.com/url.php?p=sometext
+
+But with that file the browser gives me always an error; *Internal Server Error, The server encountered an internal error or misconfiguration and was unable to complete your request.*
+
+Thanks for any help.",2
+7709713,10/10/2011 07:30:21,659731,03/14/2011 23:18:46,460,30,htaccess not working properly,"My current htaccess looks like this:
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^/\.]+)/?$ index.php?page=$1
+    RewriteRule ^([^/\.]+)/([^/\.]+)?$ index.php?page=$1&subsectie=$2
+    RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)?$ index.php?page=$1&subsectie=$2&subid=$3
+    RewriteBase /
+
+When I go to http://site.com/subfolder/ I get redirected to the index.php page. When I remove this line: `RewriteRule ^([^/\.]+)/([^/\.]+)?$ index.php?page=$1&subsectie=$2` it works properly. However I don't see anything wrong with it, plus I have the `!-f` and `!-d` flags.
+
+Anyone with more experience than me could point me out in the right direction? Thanks in advance.",.htaccess,,,,,,open,0,100,4,"htaccess not working properly My current htaccess looks like this:
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^/\.]+)/?$ index.php?page=$1
+    RewriteRule ^([^/\.]+)/([^/\.]+)?$ index.php?page=$1&subsectie=$2
+    RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)?$ index.php?page=$1&subsectie=$2&subid=$3
+    RewriteBase /
+
+When I go to http://site.com/subfolder/ I get redirected to the index.php page. When I remove this line: `RewriteRule ^([^/\.]+)/([^/\.]+)?$ index.php?page=$1&subsectie=$2` it works properly. However I don't see anything wrong with it, plus I have the `!-f` and `!-d` flags.
+
+Anyone with more experience than me could point me out in the right direction? Thanks in advance.",1
+5209468,03/06/2011 08:27:48,257705,01/24/2010 06:28:02,801,26,ServerAlias Name,"I want to add an exception such as not xx.com in the server alias for httpd.conf.
+
+
+Thanks
+Jean",.htaccess,mod-rewrite,,,,03/06/2011 22:45:33,off topic,1,16,2,"ServerAlias Name I want to add an exception such as not xx.com in the server alias for httpd.conf.
+
+
+Thanks
+Jean",2
+11223495,06/27/2012 09:49:52,988440,10/10/2011 21:26:29,57,1,Magento category urls infinite redirect,"In Magento, I currently have on the site category urls which have no trailing slash, i.e. www.example.com/gifts
+
+I want to change category urls to have a trailing slash, such as www.example.com/gifts/
+
+To do this I went into the admin section, and edited the SEO section under system -> Configuration -> 'Catalog' -> Search engine optimizations.
+
+There I added a '/' in the Category URL Suffix box.
+
+That is all standard, and after rebuilding the index, the site does indeed display all category urls with a trailing slash, e.g. www.example.com/gifts/
+
+The **problem** is, when I click on www.example.com/gifts/ (or any category now), I get an **infinite redirect loop**. 
+
+Chrome says ""Error 310 (net::ERR_TOO_MANY_REDIRECTS): There were too many redirects."", and doing a CURL -I -0 on the url shows a *301 redirect* to *Location: /gifts/*.
+
+I have checked my htaccess file, and there are definitely no rules related to trailing slash or category redirects. 
+
+Has anyone seen this issue before, or have any idea at all what might be causing this?
+
+Its a complete blocker for me, so any insight or help would be very appreciated.
+
+Thanks
+Paul
+",.htaccess,magento,,,,,open,0,177,5,"Magento category urls infinite redirect In Magento, I currently have on the site category urls which have no trailing slash, i.e. www.example.com/gifts
+
+I want to change category urls to have a trailing slash, such as www.example.com/gifts/
+
+To do this I went into the admin section, and edited the SEO section under system -> Configuration -> 'Catalog' -> Search engine optimizations.
+
+There I added a '/' in the Category URL Suffix box.
+
+That is all standard, and after rebuilding the index, the site does indeed display all category urls with a trailing slash, e.g. www.example.com/gifts/
+
+The **problem** is, when I click on www.example.com/gifts/ (or any category now), I get an **infinite redirect loop**. 
+
+Chrome says ""Error 310 (net::ERR_TOO_MANY_REDIRECTS): There were too many redirects."", and doing a CURL -I -0 on the url shows a *301 redirect* to *Location: /gifts/*.
+
+I have checked my htaccess file, and there are definitely no rules related to trailing slash or category redirects. 
+
+Has anyone seen this issue before, or have any idea at all what might be causing this?
+
+Its a complete blocker for me, so any insight or help would be very appreciated.
+
+Thanks
+Paul
+",2
+4687353,01/14/2011 02:09:34,565389,01/06/2011 11:55:57,51,0,How do I get next parameter in my .htaccess,"Current URL
+
+    http://domain.com/page/2/
+
+.htaccess
+
+    RewriteRule ^page/([0-9]+)/$ /index.php?p=$1 [L]
+
+Next URL
+
+    http://domain.com/page/2/?by=1
+
+How to get the `by=1`? 
+
+Because when I `print_r($_GET)` It's only display `Array ( [p] => 2 ) `
+
+What should I write in my .htacces to get the `[by] => 1`",.htaccess,mod-rewrite,,,,,open,0,48,9,"How do I get next parameter in my .htaccess Current URL
+
+    http://domain.com/page/2/
+
+.htaccess
+
+    RewriteRule ^page/([0-9]+)/$ /index.php?p=$1 [L]
+
+Next URL
+
+    http://domain.com/page/2/?by=1
+
+How to get the `by=1`? 
+
+Because when I `print_r($_GET)` It's only display `Array ( [p] => 2 ) `
+
+What should I write in my .htacces to get the `[by] => 1`",2
+7870792,10/24/2011 02:24:18,994461,10/13/2011 22:35:41,6,0,.htaccess Rewrite Rule Problems,"can anyone help me with htaccess rewrite?
+I have now links like:
+ 
+<code>http://site.com/all_users.php?uid=cv19143939y</code>
+
+but i want something like this
+
+<code>http://site.com/profile/cv19143939y</code>
+
+Im try with this
+
+<code>
+RewriteEngine on
+RewriteRule ^profile/([0-9]+) all_users.php?uid=$1 [L]
+</code>
+
+and this 
+
+<code>RewriteRule ^profile/$1 all_users.php?uid=$1 [L]</code>
+
+but simple dont work..",.htaccess,rewrite,,,,02/05/2012 04:22:54,off topic,1,32,4,".htaccess Rewrite Rule Problems can anyone help me with htaccess rewrite?
+I have now links like:
+ 
+<code>http://site.com/all_users.php?uid=cv19143939y</code>
+
+but i want something like this
+
+<code>http://site.com/profile/cv19143939y</code>
+
+Im try with this
+
+<code>
+RewriteEngine on
+RewriteRule ^profile/([0-9]+) all_users.php?uid=$1 [L]
+</code>
+
+and this 
+
+<code>RewriteRule ^profile/$1 all_users.php?uid=$1 [L]</code>
+
+but simple dont work..",2
+4009397,10/24/2010 17:20:24,484578,10/22/2010 19:12:14,6,0,htaccess redirection from domain.com to sub.domain.com while maintaining file access to folders,"I'd like to redirect a website from http:// domain.com & http:// www.domain.com to http://v2.domain.com, while maintaining access to http:// (www.)domain.com/images/*
+
+I've tried several methods but somehow I can no longer access the /images folder anymore. 
+
+P.S: both subdomain & root has different content/CMS. Any ideas as to how to implement this?
+
+Thanks",.htaccess,redirect,,,,,open,0,50,12,"htaccess redirection from domain.com to sub.domain.com while maintaining file access to folders I'd like to redirect a website from http:// domain.com & http:// www.domain.com to http://v2.domain.com, while maintaining access to http:// (www.)domain.com/images/*
+
+I've tried several methods but somehow I can no longer access the /images folder anymore. 
+
+P.S: both subdomain & root has different content/CMS. Any ideas as to how to implement this?
+
+Thanks",2
+8285755,11/27/2011 13:03:52,1041095,11/11/2011 05:10:21,1,0,SEO Friendly URLS,"How do i convert the following url
+
+mydomain/mylanguage/Actor/index.php?id=ActorName
+
+to
+
+mydomain/mylanguage/Actor/ActorName.html
+
+and
+mydomain/mylanguage/Actor/photos.php?id=ActorName&start=0
+
+to
+
+mydomain/mylanguage/Actor/ActorName/photos/<imagename>.html
+
+using htaccess. kindly help me",.htaccess,url,mod-rewrite,seo,friendly,11/27/2011 20:46:02,off topic,1,11,3,"SEO Friendly URLS How do i convert the following url
+
+mydomain/mylanguage/Actor/index.php?id=ActorName
+
+to
+
+mydomain/mylanguage/Actor/ActorName.html
+
+and
+mydomain/mylanguage/Actor/photos.php?id=ActorName&start=0
+
+to
+
+mydomain/mylanguage/Actor/ActorName/photos/<imagename>.html
+
+using htaccess. kindly help me",5
+10368042,04/28/2012 22:18:43,845529,07/14/2011 22:39:05,79,1,.htaccess 404 error page relative url,"I am trying to create a custom 404 page and i want to use in the .htaccess page the relative path of the page. But it is not working. For tha full path I am getting results. Is there any way to make the relative path to work? I have this in the .htaccess file ErrorDocument 404 /notfound.php
+",.htaccess,,,,,,open,0,58,6,".htaccess 404 error page relative url I am trying to create a custom 404 page and i want to use in the .htaccess page the relative path of the page. But it is not working. For tha full path I am getting results. Is there any way to make the relative path to work? I have this in the .htaccess file ErrorDocument 404 /notfound.php
+",1
+9502026,02/29/2012 15:36:19,89761,04/11/2009 13:33:18,8126,340,.htaccess rewrite folder exception,"So I have the following rewrite rules:
+
+    RewriteRule ([^/]*)/([^/]*)/([^/]*)$ /index.php?grandparent=$1&parent=$2&page=$3
+    RewriteRule ([^/]*)/([^/]*)$ /index.php?&parent=$1&page=$2
+    RewriteRule ([^/]*)$ /index.php?page=$1    
+
+But I need this to not pass to the index page for some subdomains, so I have the following rewrite conditions before this:
+
+    RewriteCond %{REQUEST_URI} !^/css/.*$
+    RewriteCond %{REQUEST_URI} !^/js/.*$
+    RewriteCond %{REQUEST_URI} !^/admin/.*$
+
+so that the rules will not apply when looking for any file in those directories (including files that may be in subdirectories of those directories). yet they still keep getting rewritten to `index.php`. How can I make exceptions for these directories?",.htaccess,,,,,03/11/2012 19:39:44,off topic,1,109,4,".htaccess rewrite folder exception So I have the following rewrite rules:
+
+    RewriteRule ([^/]*)/([^/]*)/([^/]*)$ /index.php?grandparent=$1&parent=$2&page=$3
+    RewriteRule ([^/]*)/([^/]*)$ /index.php?&parent=$1&page=$2
+    RewriteRule ([^/]*)$ /index.php?page=$1    
+
+But I need this to not pass to the index page for some subdomains, so I have the following rewrite conditions before this:
+
+    RewriteCond %{REQUEST_URI} !^/css/.*$
+    RewriteCond %{REQUEST_URI} !^/js/.*$
+    RewriteCond %{REQUEST_URI} !^/admin/.*$
+
+so that the rules will not apply when looking for any file in those directories (including files that may be in subdirectories of those directories). yet they still keep getting rewritten to `index.php`. How can I make exceptions for these directories?",1
+11651243,07/25/2012 13:49:09,1551776,07/25/2012 13:32:01,1,0,Removing unwanted characters from URL in htaccess,"Our current htaccess setup correctly converts urls like this: site.com/page.php?sid=Friend to site.com/Friend 
+
+However, due to an unrelated oversight, we had almost all of our URLs double-indexed as site.com/Friend>  Because the greater than sign is a special character it doesn't call page.php so the > needs to be stripped out in htaccess and can't be done on page.php.  Compounding matters is that the way they're indexed is as: site.com/Friend%3E which also might need to be stripped out.
+
+What we would like is to have another directive that looks for an ending of > (or %3E), strips it off, then redirects to the variable that's there without that ending > In essence so that site.com/Friend> (or site.com/Friend%3E) still points to site.com/Friend
+
+Thank you for your help.",.htaccess,mod-rewrite,string-replacement,,,,open,0,124,7,"Removing unwanted characters from URL in htaccess Our current htaccess setup correctly converts urls like this: site.com/page.php?sid=Friend to site.com/Friend 
+
+However, due to an unrelated oversight, we had almost all of our URLs double-indexed as site.com/Friend>  Because the greater than sign is a special character it doesn't call page.php so the > needs to be stripped out in htaccess and can't be done on page.php.  Compounding matters is that the way they're indexed is as: site.com/Friend%3E which also might need to be stripped out.
+
+What we would like is to have another directive that looks for an ending of > (or %3E), strips it off, then redirects to the variable that's there without that ending > In essence so that site.com/Friend> (or site.com/Friend%3E) still points to site.com/Friend
+
+Thank you for your help.",3
+5566944,04/06/2011 13:14:13,689362,04/02/2011 23:54:04,3,0,htaccess - rewrite urls,"How can I rewrite url: **http://my_domain_name/file_name** to:
+**http://my_domain_name/depictions/file_name.html**
+
+For example: url: http://domain.com/application
+to url: http://domain.com/depictions/application.html",.htaccess,url,rewrite,,,,open,0,12,4,"htaccess - rewrite urls How can I rewrite url: **http://my_domain_name/file_name** to:
+**http://my_domain_name/depictions/file_name.html**
+
+For example: url: http://domain.com/application
+to url: http://domain.com/depictions/application.html",3
+8451238,12/09/2011 20:19:56,686920,04/01/2011 04:16:29,11,1,Magento .htaccess Redirection of index.php to root,"I do not want my URLs on my Store to contain index.php
+
+I have tried the following code in my .htaccess file to redirect index.php to root.
+
+**RewriteBase / RewriteCond %{THE_REQUEST} ^[A-Z]{3,9} /index.php HTTP/**
+
+**RewriteRule ^index.php$ http://www.pudu.com.au/ [R=301,L]**
+
+
+I then tried to resolve http://www.pudu.com.au/index.php and it showed me an error page as shown in the attachment
+
+error.png
+![enter image description here][1]
+
+I need help in resolving this issue.
+
+All my urls including product pages contain index.php which I want to get rid off.
+
+Looking forward for some help.
+
+Thanks & Regards, 
+Hemanth
+
+
+  [1]: http://i.stack.imgur.com/oQ8rZ.png",.htaccess,magento,,,,,open,0,85,7,"Magento .htaccess Redirection of index.php to root I do not want my URLs on my Store to contain index.php
+
+I have tried the following code in my .htaccess file to redirect index.php to root.
+
+**RewriteBase / RewriteCond %{THE_REQUEST} ^[A-Z]{3,9} /index.php HTTP/**
+
+**RewriteRule ^index.php$ http://www.pudu.com.au/ [R=301,L]**
+
+
+I then tried to resolve http://www.pudu.com.au/index.php and it showed me an error page as shown in the attachment
+
+error.png
+![enter image description here][1]
+
+I need help in resolving this issue.
+
+All my urls including product pages contain index.php which I want to get rid off.
+
+Looking forward for some help.
+
+Thanks & Regards, 
+Hemanth
+
+
+  [1]: http://i.stack.imgur.com/oQ8rZ.png",2
+9429378,02/24/2012 10:44:01,1118481,12/28/2011 00:22:34,6,0,"htaccess rewrite adds ""index.php"" when I add a trailing slash to an address","I've got my htaccess rewriting on the following rules:
+
+    RewriteRule ^([a-zA-Z0-9\-]*)/([0-9]*)/([a-zA-Z0-9\-_]*)$ /content.php?a=$1&b=$2&c=$3
+    RewriteRule ^([a-zA-Z0-9\-]*)/([0-9]*)$ /content.php?a=$1&b=$2
+    RewriteRule ^([a-zA-Z0-9\-]*)$ /index.php?a=$1
+
+that works wonderfully when i go to ""mydomain.com/nameofpage/id""
+
+but when i add a trailing slash ""mydomain.com/nameofpage/id/"" the browser adds ""index.php"" to the end and 404's me.
+
+Thoughts?
+
+Thanks!",.htaccess,mod-rewrite,,,,,open,0,51,13,"htaccess rewrite adds ""index.php"" when I add a trailing slash to an address I've got my htaccess rewriting on the following rules:
+
+    RewriteRule ^([a-zA-Z0-9\-]*)/([0-9]*)/([a-zA-Z0-9\-_]*)$ /content.php?a=$1&b=$2&c=$3
+    RewriteRule ^([a-zA-Z0-9\-]*)/([0-9]*)$ /content.php?a=$1&b=$2
+    RewriteRule ^([a-zA-Z0-9\-]*)$ /index.php?a=$1
+
+that works wonderfully when i go to ""mydomain.com/nameofpage/id""
+
+but when i add a trailing slash ""mydomain.com/nameofpage/id/"" the browser adds ""index.php"" to the end and 404's me.
+
+Thoughts?
+
+Thanks!",2
+10896029,06/05/2012 10:54:51,1309682,04/03/2012 06:34:24,36,11,htaccess www redirect with mod_rewrite,"Let me explain my problem. Let say I have defined mod_rewrite rule and after implimenting the rule, url is:
+
+    http://www.domain.com/1/2/3
+
+<br>The actual url is:
+
+    http://www.domain.com/?id=1&name=2&class=3
+<br>
+The above rule is working without problems. But when I use www redirect rule, I am getting some strange problem. This rule redirects non-www url to www.
+
+    RewriteRule ^(.*)$ http://www.domain.com/$1 [R=301,L]
+
+<br>Now, if i open this url:
+
+    http://domain.com/1/2/3
+it redirects to 
+
+    http://www.domain.com/?id=1&name=2&class=3
+I want it to redirect to:
+
+    http://www.domain.com/1/2/3
+<br>Thanks in advance!",.htaccess,mod-rewrite,,,,06/05/2012 19:40:17,off topic,1,90,5,"htaccess www redirect with mod_rewrite Let me explain my problem. Let say I have defined mod_rewrite rule and after implimenting the rule, url is:
+
+    http://www.domain.com/1/2/3
+
+<br>The actual url is:
+
+    http://www.domain.com/?id=1&name=2&class=3
+<br>
+The above rule is working without problems. But when I use www redirect rule, I am getting some strange problem. This rule redirects non-www url to www.
+
+    RewriteRule ^(.*)$ http://www.domain.com/$1 [R=301,L]
+
+<br>Now, if i open this url:
+
+    http://domain.com/1/2/3
+it redirects to 
+
+    http://www.domain.com/?id=1&name=2&class=3
+I want it to redirect to:
+
+    http://www.domain.com/1/2/3
+<br>Thanks in advance!",2

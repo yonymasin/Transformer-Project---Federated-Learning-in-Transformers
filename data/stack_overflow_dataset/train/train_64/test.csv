@@ -1,0 +1,2034 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+6697645,07/14/2011 17:45:43,112222,05/25/2009 18:36:48,5491,419,Scala Get First and Last elements of List using Pattern Matching,"I am doing a pattern matching on a list. Is there anyway I can access the first and last element of the list to compare? 
+
+I want to do something like..
+
+    case List(x, _*, y) if(x == y) => true
+
+or
+
+`case x :: _* :: y => `
+
+or something similar... 
+where `x` and `y` are first and last elements of the list..
+
+How can I do that.. any Ideas?
+
+",scala,functional-programming,pattern-matching,,,,open,0,70,11,"Scala Get First and Last elements of List using Pattern Matching I am doing a pattern matching on a list. Is there anyway I can access the first and last element of the list to compare? 
+
+I want to do something like..
+
+    case List(x, _*, y) if(x == y) => true
+
+or
+
+`case x :: _* :: y => `
+
+or something similar... 
+where `x` and `y` are first and last elements of the list..
+
+How can I do that.. any Ideas?
+
+",3
+3618016,09/01/2010 12:35:59,431989,08/26/2010 14:57:02,1,1,why FunctionN(0-22) ProductN(1-22) TupleN(1-22)?,"The api has FunctionN(0-22) ProductN(1-22) TupleN(1-22) 
+the question is:
+1.why the number is end of 22? why not 21 or 23?
+2.why Function is start with 0 ? but Product and Tuple are not?",scala,,,,,,open,0,32,4,"why FunctionN(0-22) ProductN(1-22) TupleN(1-22)? The api has FunctionN(0-22) ProductN(1-22) TupleN(1-22) 
+the question is:
+1.why the number is end of 22? why not 21 or 23?
+2.why Function is start with 0 ? but Product and Tuple are not?",1
+5682277,04/15/2011 20:55:35,315734,04/13/2010 17:16:49,430,4,"How to initialize and ""modify"" a cyclic persistent data structure in Scala?","I have searched and found some info on this topic but the answers are either confusing or not applicable.
+
+I have something like this:
+
+    class Thing (val name:String, val refs:IndexedSeq[Ref])
+    class Ref (val name:String, val thing:Thing)
+
+Now, I want to say, load in a file, parse it and populate this data structure from it. It being immutable and cyclic, how might one do so?
+
+Also, let's say I do get this data structure populated, now I want to modify it, like change rootThing.refs(3).name, how might one do that?",scala,immutable,cyclic,,,,open,0,91,12,"How to initialize and ""modify"" a cyclic persistent data structure in Scala? I have searched and found some info on this topic but the answers are either confusing or not applicable.
+
+I have something like this:
+
+    class Thing (val name:String, val refs:IndexedSeq[Ref])
+    class Ref (val name:String, val thing:Thing)
+
+Now, I want to say, load in a file, parse it and populate this data structure from it. It being immutable and cyclic, how might one do so?
+
+Also, let's say I do get this data structure populated, now I want to modify it, like change rootThing.refs(3).name, how might one do that?",3
+3981507,10/20/2010 19:21:41,391960,07/14/2010 19:02:40,80,0,How to represent lists of blocks in Configgy?,"Configgy supports lists of strings as values and blocks of key/value pairs.
+But it seems it does not support lists of blocks of key/value pairs as values.
+
+Am I missing something?",scala,configuration-files,,,,,open,0,29,8,"How to represent lists of blocks in Configgy? Configgy supports lists of strings as values and blocks of key/value pairs.
+But it seems it does not support lists of blocks of key/value pairs as values.
+
+Am I missing something?",2
+11525646,07/17/2012 15:19:48,262114,01/29/2010 20:19:01,507,61,Change code to use functional style,"I tried to solve a programming contest *[problem][1]* in Scala, but I have a feeling, that it could be done in a more functional way. I compared it with the solution written in imperative style and it is not shorter or less complex at all. Do you have any idea how to ""impove"" or approach the problem in a more functional way?
+
+Here is my solution:
+
+    object Sunshine extends App {
+    
+      def tanning(bedNumber:Int, part1 : List[Char], part2: List[Char], inBed: List[Char], tanned:Int, walkedAway: Int) : Int  = {
+    
+         val actCustomer =part2.head
+         val tanningTuple=(part1.indexOf(actCustomer),inBed.indexOf(actCustomer),bedNumber>inBed.length,part2.tail)
+    
+         tanningTuple  match {
+          case(_,_,_,Nil)  => walkedAway
+            // enter,can be tanned
+          case (-1,-1,true,_) =>
+            tanning(bedNumber,actCustomer::part1,part2.tail,actCustomer::inBed,tanned,walkedAway)
+            // enter, can not be tanned
+          case (-1,-1,false,_) =>
+            tanning(bedNumber,actCustomer::part1,part2.tail,inBed,tanned,walkedAway)
+            //leave, not in bed
+          case (x ,-1,_,_) if x>=0 =>
+            tanning(bedNumber,actCustomer::part1,part2.tail,inBed,tanned,walkedAway+1)
+          //leave, in bed
+          case (x,y,_,_) if x>=0 && y>=0 =>
+            tanning(bedNumber,actCustomer::part1,part2.tail,inBed-actCustomer,tanned+1,walkedAway)
+        }
+      }
+    
+      println(tanning(2,List(),""ABBAJJKZKZ"".toList,List(),0,0))
+      println(tanning(3,List(),""GACCBDDBAGEE"".toList,List(),0,0))
+      println(tanning(3,List(),""GACCBGDDBAEE"".toList,List(),0,0))
+      println(tanning(1,List(),""ABCBCA"".toList,List(),0,0))
+    }
+
+  [1]: https://hallg.inf.unideb.hu/progcont/exercises.html?locale=en&pid=1631
+
+
+",scala,functional-programming,contest,,,07/17/2012 18:28:59,off topic,1,364,6,"Change code to use functional style I tried to solve a programming contest *[problem][1]* in Scala, but I have a feeling, that it could be done in a more functional way. I compared it with the solution written in imperative style and it is not shorter or less complex at all. Do you have any idea how to ""impove"" or approach the problem in a more functional way?
+
+Here is my solution:
+
+    object Sunshine extends App {
+    
+      def tanning(bedNumber:Int, part1 : List[Char], part2: List[Char], inBed: List[Char], tanned:Int, walkedAway: Int) : Int  = {
+    
+         val actCustomer =part2.head
+         val tanningTuple=(part1.indexOf(actCustomer),inBed.indexOf(actCustomer),bedNumber>inBed.length,part2.tail)
+    
+         tanningTuple  match {
+          case(_,_,_,Nil)  => walkedAway
+            // enter,can be tanned
+          case (-1,-1,true,_) =>
+            tanning(bedNumber,actCustomer::part1,part2.tail,actCustomer::inBed,tanned,walkedAway)
+            // enter, can not be tanned
+          case (-1,-1,false,_) =>
+            tanning(bedNumber,actCustomer::part1,part2.tail,inBed,tanned,walkedAway)
+            //leave, not in bed
+          case (x ,-1,_,_) if x>=0 =>
+            tanning(bedNumber,actCustomer::part1,part2.tail,inBed,tanned,walkedAway+1)
+          //leave, in bed
+          case (x,y,_,_) if x>=0 && y>=0 =>
+            tanning(bedNumber,actCustomer::part1,part2.tail,inBed-actCustomer,tanned+1,walkedAway)
+        }
+      }
+    
+      println(tanning(2,List(),""ABBAJJKZKZ"".toList,List(),0,0))
+      println(tanning(3,List(),""GACCBDDBAGEE"".toList,List(),0,0))
+      println(tanning(3,List(),""GACCBGDDBAEE"".toList,List(),0,0))
+      println(tanning(1,List(),""ABCBCA"".toList,List(),0,0))
+    }
+
+  [1]: https://hallg.inf.unideb.hu/progcont/exercises.html?locale=en&pid=1631
+
+
+",3
+10063579,04/08/2012 14:34:45,278223,02/21/2010 18:45:05,1509,58,Change default capacity/load factor of scala mutable.HashMap,"I am currently using scala 2.9.1.
+I create a mutable.HashMap using :
+
+    > val m = mutable.HashMap.empty[Int, Int]
+
+I am kind of new to scala. In java, I was able to specify the capacity and load factor in the constructor of a HashMap. I am not able to find any way to do the same in scala.
+
+Thanks in Advance",scala,collections,,,,,open,0,60,7,"Change default capacity/load factor of scala mutable.HashMap I am currently using scala 2.9.1.
+I create a mutable.HashMap using :
+
+    > val m = mutable.HashMap.empty[Int, Int]
+
+I am kind of new to scala. In java, I was able to specify the capacity and load factor in the constructor of a HashMap. I am not able to find any way to do the same in scala.
+
+Thanks in Advance",2
+6643030,07/10/2011 18:29:01,124708,06/17/2009 22:20:23,199,6,What is the rule for parenthesis in Scala method invocation?,"
+Isn't toList a method that converts something into a List?
+
+If yes so why can't I use parenthesis with it? I must be missing something more fundamental here.
+
+Here is the example:
+
+    val l = Array(1,2,3).toList // works fine
+    
+    val l = Array(1,2,3).toList() // gives the error below
+
+not enough arguments for method apply: (n: Int)Int in trait LinearSeqOptimized.
+Unspecified value parameter n.
+",scala,,,,,,open,0,69,10,"What is the rule for parenthesis in Scala method invocation? 
+Isn't toList a method that converts something into a List?
+
+If yes so why can't I use parenthesis with it? I must be missing something more fundamental here.
+
+Here is the example:
+
+    val l = Array(1,2,3).toList // works fine
+    
+    val l = Array(1,2,3).toList() // gives the error below
+
+not enough arguments for method apply: (n: Int)Int in trait LinearSeqOptimized.
+Unspecified value parameter n.
+",1
+2051938,01/12/2010 20:02:01,164128,08/27/2009 11:03:00,534,29,Pattern matching with multiline XML case,"I must be doing some stupid mistake. I have a server that returns the XML `<a><b>123</b></a>` and now I would like to match against that XML. So I write something like
+
+    xml match {
+      case <a><b>{_}</b></a> => true
+    }
+
+This works as long as I do not have to deal with multi-line XML literals. So the important thing is that the server sends me the whole XML as a one-liner. The XML is large enough to explode a single line of code, but I can not figure out how to get this to work.
+
+Server sends `<a><b>123</b><c>123</c><d>123</d><e>123</e><f>123</f></a>` and I would like to do this:
+
+    xml match {
+      case <a>
+        <b>{_}</b>
+        <c>{valueOfC}</c>
+        <d>{_}</d>
+        <e>{_}</e>
+        <f>{_}</f>
+      </a> => valueOfC
+    }
+
+But I always get a MatchError. If I write everything in a single line it works. So the question is: how can I match XML while writing human-readable code?
+
+I have of course tried to find an answer via Google. Funny enough all examples are one-liners or work recursive.",scala,xml,pattern-matching,,,,open,0,225,6,"Pattern matching with multiline XML case I must be doing some stupid mistake. I have a server that returns the XML `<a><b>123</b></a>` and now I would like to match against that XML. So I write something like
+
+    xml match {
+      case <a><b>{_}</b></a> => true
+    }
+
+This works as long as I do not have to deal with multi-line XML literals. So the important thing is that the server sends me the whole XML as a one-liner. The XML is large enough to explode a single line of code, but I can not figure out how to get this to work.
+
+Server sends `<a><b>123</b><c>123</c><d>123</d><e>123</e><f>123</f></a>` and I would like to do this:
+
+    xml match {
+      case <a>
+        <b>{_}</b>
+        <c>{valueOfC}</c>
+        <d>{_}</d>
+        <e>{_}</e>
+        <f>{_}</f>
+      </a> => valueOfC
+    }
+
+But I always get a MatchError. If I write everything in a single line it works. So the question is: how can I match XML while writing human-readable code?
+
+I have of course tried to find an answer via Google. Funny enough all examples are one-liners or work recursive.",3
+7322433,09/06/2011 15:35:02,921832,08/31/2011 14:36:24,1,0,What Scala sources would you recommend to read?,"What Scala sources would you recommend to read? For beginners, for pros...",scala,source,,,,09/06/2011 16:06:32,not constructive,1,12,8,"What Scala sources would you recommend to read? What Scala sources would you recommend to read? For beginners, for pros...",2
+11198998,06/25/2012 23:50:51,149002,08/01/2009 16:08:45,1315,16,"Scala Play 2, passing request to method","I have a `Play 2.0` app
+
+`TestController.scala`
+
+    def foo(p1: String) = Action {implicit request =>
+      Ok(bar(p1))
+    }
+    
+    private def bar(p1: String) = {
+    //access request parameter here
+    }
+
+What's the syntax for passing `request` to `bar`
+
+",scala,playframework,,,,,open,0,58,7,"Scala Play 2, passing request to method I have a `Play 2.0` app
+
+`TestController.scala`
+
+    def foo(p1: String) = Action {implicit request =>
+      Ok(bar(p1))
+    }
+    
+    private def bar(p1: String) = {
+    //access request parameter here
+    }
+
+What's the syntax for passing `request` to `bar`
+
+",2
+10281625,04/23/2012 13:35:29,349648,05/25/2010 06:49:30,112,2,Getting the fields of case classes defined in an object enclosed in another object,"I have two case classes defined as follows
+
+    object Outer {
+       case class OuterCase(outerParam: Int)
+       object Inner {
+          case class InnerCase(innerParam: Int)
+       }
+    }
+
+and I would like to get the field names of their instances like this:
+
+    import scala.tools.nsc.interpreter.ProductCompletion
+
+    object EncapsulatedCase extends App {
+       val outer = Outer.OuterCase(1)
+       println(""outer: "" + new ProductCompletion(outer).caseNames)
+       
+       val inner = Outer.Inner.InnerCase(2)
+       println(""inner: "" + new ProductCompletion(inner).caseNames)
+    }
+
+This works as expected for the object `outer`, but not for `inner`. Here is the output:
+
+    outer: List(outerParam)
+    inner: List()
+
+The only difference I see is that class `InnerCase` is defined in an object itself defined in another object, whereas `OuterCase` is enclosed in only one object.
+
+Why would that be a problem? Why can I get the parameter names of the `outer` but not the `inner` case object?
+
+I observed this behavior with Scala 2.9.2.
+
+Thank you!
+",scala,reflection,inner-classes,case-class,,,open,0,215,14,"Getting the fields of case classes defined in an object enclosed in another object I have two case classes defined as follows
+
+    object Outer {
+       case class OuterCase(outerParam: Int)
+       object Inner {
+          case class InnerCase(innerParam: Int)
+       }
+    }
+
+and I would like to get the field names of their instances like this:
+
+    import scala.tools.nsc.interpreter.ProductCompletion
+
+    object EncapsulatedCase extends App {
+       val outer = Outer.OuterCase(1)
+       println(""outer: "" + new ProductCompletion(outer).caseNames)
+       
+       val inner = Outer.Inner.InnerCase(2)
+       println(""inner: "" + new ProductCompletion(inner).caseNames)
+    }
+
+This works as expected for the object `outer`, but not for `inner`. Here is the output:
+
+    outer: List(outerParam)
+    inner: List()
+
+The only difference I see is that class `InnerCase` is defined in an object itself defined in another object, whereas `OuterCase` is enclosed in only one object.
+
+Why would that be a problem? Why can I get the parameter names of the `outer` but not the `inner` case object?
+
+I observed this behavior with Scala 2.9.2.
+
+Thank you!
+",4
+9549073,03/03/2012 19:18:40,73046,03/03/2009 02:49:39,1569,64,What's the best way to serialize a scala case class that has elements that aren't serializable?,"If you have a Scala case class that looks like:
+
+    case class Fnord(x: Parcelable, y: Parcelable)
+
+Where Parcelable doesn't extend Serializable, but does have a way to return a ByteArray of itself (something that does implement Serializable).
+
+How to do you make the case class Serializable?  Is there a way to do custom (de)serialization on particular fields?
+
+(I'm solving it right now by creating a simple wrapper class that is serializable and using that in the case classes, but it'd be nice to skip that step.)",scala,,,,,,open,0,87,16,"What's the best way to serialize a scala case class that has elements that aren't serializable? If you have a Scala case class that looks like:
+
+    case class Fnord(x: Parcelable, y: Parcelable)
+
+Where Parcelable doesn't extend Serializable, but does have a way to return a ByteArray of itself (something that does implement Serializable).
+
+How to do you make the case class Serializable?  Is there a way to do custom (de)serialization on particular fields?
+
+(I'm solving it right now by creating a simple wrapper class that is serializable and using that in the case classes, but it'd be nice to skip that step.)",1
+6402037,06/19/2011 11:12:52,517294,11/23/2010 10:41:12,174,18,Tutorials of Scala programming language.,"I was flipping through an article and suddenly read about [Scala][1].
+
+Where I can find the good tutorials of Scala?
+
+I am posting this question after hour of googling efforts.
+
+
+  [1]: http://www.scala-lang.org/
+
+
+Thanks.",scala,tutorials,video-tutorials,,,06/19/2011 17:34:58,not a real question,1,31,5,"Tutorials of Scala programming language. I was flipping through an article and suddenly read about [Scala][1].
+
+Where I can find the good tutorials of Scala?
+
+I am posting this question after hour of googling efforts.
+
+
+  [1]: http://www.scala-lang.org/
+
+
+Thanks.",3
+7463264,09/18/2011 17:54:10,7355,09/15/2008 13:36:15,2619,102,Why is scalac complaining about method + on String?,"Given the following Scala code:
+
+    def stream(callback: (String, Array[Byte]) => Unit) {
+        callback(""application/json;charset=utf-8"", Array(1))
+        callback(""application/xml;charset=utf-8"", Array(1))
+    }
+
+    @Test
+    def whenStreaming_thenShouldSeeSameMessages() {
+        var actualMessages = List.empty[(String, Array[Byte])]
+        sut.stream {
+            (contentType, payload) =>
+                actualMessages += (contentType, payload)
+        }
+
+        expect(List(""application/json;charset=utf-8"", ""application/xml;charset=utf-8"")) {
+            actualMessages
+        }
+    }
+
+Why am I getting the following error message:
+
+    error: too many arguments for method +: (other: String)java.lang.String
+    actualMessages += (contentType, payload)
+
+Specifically, payload is highlighted in IDEA, and on the command line, += is highlighted. I really don't understand that error message.",scala,types,,,,,open,0,189,9,"Why is scalac complaining about method + on String? Given the following Scala code:
+
+    def stream(callback: (String, Array[Byte]) => Unit) {
+        callback(""application/json;charset=utf-8"", Array(1))
+        callback(""application/xml;charset=utf-8"", Array(1))
+    }
+
+    @Test
+    def whenStreaming_thenShouldSeeSameMessages() {
+        var actualMessages = List.empty[(String, Array[Byte])]
+        sut.stream {
+            (contentType, payload) =>
+                actualMessages += (contentType, payload)
+        }
+
+        expect(List(""application/json;charset=utf-8"", ""application/xml;charset=utf-8"")) {
+            actualMessages
+        }
+    }
+
+Why am I getting the following error message:
+
+    error: too many arguments for method +: (other: String)java.lang.String
+    actualMessages += (contentType, payload)
+
+Specifically, payload is highlighted in IDEA, and on the command line, += is highlighted. I really don't understand that error message.",2
+4008271,10/24/2010 12:51:56,485597,10/24/2010 12:51:56,1,0,Explain this pattern matching code,"This code is from [this article][1]:
+
+    object & { def unapply[A](a: A) = Some(a, a) }
+    
+    ""Julie"" match {
+      case Brothers(_) & Sisters(_) => ""Julie has both brother(s) and sister(s)""
+      case Siblings(_) => ""Julie's siblings are all the same sex""
+      case _ => ""Julie has no siblings""
+    }
+
+    // => ""Julie has both brother(s) and sister(s)""
+
+I am unable to understand how `&` actually works. I don't see anywhere a boolean test for conjunction. Can someone please explain this scala magic to me?
+
+  [1]: http://notes.langdale.com.au/Querying_a_Dataset_with_Scala_s_Pattern_Matching.html",scala,,,,,,open,0,116,5,"Explain this pattern matching code This code is from [this article][1]:
+
+    object & { def unapply[A](a: A) = Some(a, a) }
+    
+    ""Julie"" match {
+      case Brothers(_) & Sisters(_) => ""Julie has both brother(s) and sister(s)""
+      case Siblings(_) => ""Julie's siblings are all the same sex""
+      case _ => ""Julie has no siblings""
+    }
+
+    // => ""Julie has both brother(s) and sister(s)""
+
+I am unable to understand how `&` actually works. I don't see anywhere a boolean test for conjunction. Can someone please explain this scala magic to me?
+
+  [1]: http://notes.langdale.com.au/Querying_a_Dataset_with_Scala_s_Pattern_Matching.html",1
+1722137,11/12/2009 13:21:31,16853,09/17/2008 21:33:16,11796,342,scala 2.8 collections design tutorial,"Following on from [my breathless confusion][1], what are some good resources which explain how the new scala **2.8** collections library has been structured. I'm interested to find some information on how the following fit together:
+
+ - The collection classes/traits themselves (e.g. `List`, `Iterable`)
+ - Why the *Like* classes exist (e.g. `TraversableLike`)
+ - What the companion methods are for (e.g. `List.companion`)
+ - How I know what `implicit` objects are in scope at a given point
+
+
+  [1]: http://stackoverflow.com/questions/1721356/scala-2-8-canbuildfrom",scala,scala-2.8,collections,tutorials,,06/14/2012 16:48:27,not constructive,1,77,5,"scala 2.8 collections design tutorial Following on from [my breathless confusion][1], what are some good resources which explain how the new scala **2.8** collections library has been structured. I'm interested to find some information on how the following fit together:
+
+ - The collection classes/traits themselves (e.g. `List`, `Iterable`)
+ - Why the *Like* classes exist (e.g. `TraversableLike`)
+ - What the companion methods are for (e.g. `List.companion`)
+ - How I know what `implicit` objects are in scope at a given point
+
+
+  [1]: http://stackoverflow.com/questions/1721356/scala-2-8-canbuildfrom",4
+4321228,12/01/2010 04:36:01,516982,11/23/2010 04:52:24,41,5,anyone used Jedit to code in Scala,does anyone used jedit as the ide for scala featuring code completion and other goodies.....,scala,jedit,,,,12/01/2010 08:39:21,not a real question,1,15,7,anyone used Jedit to code in Scala does anyone used jedit as the ide for scala featuring code completion and other goodies.....,2
+1223834,08/03/2009 18:18:53,33775,11/03/2008 21:39:38,247,12,How does Scala's apply() method magic work?,"In Scala, if I define a method called apply in a class or a top-level object, that method will be called whenever I append a pair a parentheses to an instance of that class, and put the appropriate arguments for apply() in between them.  e.g.,
+
+    class Foo(x: Int) {
+      def apply(y: Int) = {
+        x*x + y*y
+      }
+    }
+
+    val f = new Foo(3)
+    f(4)   // returns 25
+
+So basically, < object >(< args >) is just syntactic sugar for < object >.apply(< args >).  But here's my question: how does Scala do this conversion?  Is there a globally defined implicit conversion going on here, similar to the implicit type conversions in the Predef object (but different in kind)?  Or is it some deeper magic?  I ask because it seems like Scala strongly favors consistent application of a smaller set of rules, rather than many rules with many exceptions.  This initially seems like an exception to me, but I thought I'd ask to see if anyone with a deeper understanding of the language could explain to me how this fits in.",scala,,,,,,open,0,217,7,"How does Scala's apply() method magic work? In Scala, if I define a method called apply in a class or a top-level object, that method will be called whenever I append a pair a parentheses to an instance of that class, and put the appropriate arguments for apply() in between them.  e.g.,
+
+    class Foo(x: Int) {
+      def apply(y: Int) = {
+        x*x + y*y
+      }
+    }
+
+    val f = new Foo(3)
+    f(4)   // returns 25
+
+So basically, < object >(< args >) is just syntactic sugar for < object >.apply(< args >).  But here's my question: how does Scala do this conversion?  Is there a globally defined implicit conversion going on here, similar to the implicit type conversions in the Predef object (but different in kind)?  Or is it some deeper magic?  I ask because it seems like Scala strongly favors consistent application of a smaller set of rules, rather than many rules with many exceptions.  This initially seems like an exception to me, but I thought I'd ask to see if anyone with a deeper understanding of the language could explain to me how this fits in.",1
+5608027,04/09/2011 21:26:39,592882,01/27/2011 21:05:58,470,30,"Scala compilation, why so slow?","I'm very new to Scala. I'm trying to compile and run ""helloworld"" scala script. I use WinXP and I've created batch file.
+
+    echo off
+    D:
+    cd ""D:\Dist\Scala\scala-2.8.1.final\bin""
+    cls
+    call scala %1
+    pause
+
+I use this file as default application to open *.scala files. It takes at about 7 seconds to show output after I run the file. When I use IntelliJ IDEA plugin, it takes even 15 seconds... Is it realy to make it faster?",scala,,,,,07/20/2012 12:28:39,not constructive,1,92,5,"Scala compilation, why so slow? I'm very new to Scala. I'm trying to compile and run ""helloworld"" scala script. I use WinXP and I've created batch file.
+
+    echo off
+    D:
+    cd ""D:\Dist\Scala\scala-2.8.1.final\bin""
+    cls
+    call scala %1
+    pause
+
+I use this file as default application to open *.scala files. It takes at about 7 seconds to show output after I run the file. When I use IntelliJ IDEA plugin, it takes even 15 seconds... Is it realy to make it faster?",1
+7878444,10/24/2011 15:58:09,481602,10/20/2010 11:17:00,917,14,Create new *package* in a Scala Compiler Plugin,"In my quest to generate new code in a Scala compiler plugin, I have now created working classes. The next logical step is to put those classes in a new, non-existing package. In Java, a package is basically a directory name, but in Scala a package seems much more complicated. So far I haven't found/recognized an example where a compiler plugin creates a new package.
+
+At my current level of understanding, I would think that I would need to create first a package symbol with:
+
+    parentPackage.newPackage(...)
+    // ...
+
+and than later create a Tree for the package with PackageDef. But PackageDef doesn't take the symbol as parameter, as one would expect, and searching for:
+
+    Scala newPackage PackageDef
+
+returned nothing useful. So it seems that I don't need to do those two steps together. Possibly one is done for my by the compiler, but I don't know which one. So far, what I have looks like this:
+
+    val newPkg = parentPackage.newPackage(NoPosition, newTermName(name))
+    newPkg.moduleClass.setInfo(new PackageClassInfoType(new Scope,
+        newPkg.moduleClass))
+    newPkg.setInfo(newPkg.moduleClass.tpe)
+    parentPackage.info.decls.enter(newPkg)
+    // ...
+    val newPkgTree = PackageDef(Ident(newPkg.name), List(ClassDef(...)))
+",scala,plugins,compiler,package,,,open,0,205,8,"Create new *package* in a Scala Compiler Plugin In my quest to generate new code in a Scala compiler plugin, I have now created working classes. The next logical step is to put those classes in a new, non-existing package. In Java, a package is basically a directory name, but in Scala a package seems much more complicated. So far I haven't found/recognized an example where a compiler plugin creates a new package.
+
+At my current level of understanding, I would think that I would need to create first a package symbol with:
+
+    parentPackage.newPackage(...)
+    // ...
+
+and than later create a Tree for the package with PackageDef. But PackageDef doesn't take the symbol as parameter, as one would expect, and searching for:
+
+    Scala newPackage PackageDef
+
+returned nothing useful. So it seems that I don't need to do those two steps together. Possibly one is done for my by the compiler, but I don't know which one. So far, what I have looks like this:
+
+    val newPkg = parentPackage.newPackage(NoPosition, newTermName(name))
+    newPkg.moduleClass.setInfo(new PackageClassInfoType(new Scope,
+        newPkg.moduleClass))
+    newPkg.setInfo(newPkg.moduleClass.tpe)
+    parentPackage.info.decls.enter(newPkg)
+    // ...
+    val newPkgTree = PackageDef(Ident(newPkg.name), List(ClassDef(...)))
+",4
+3231160,07/12/2010 18:33:53,384641,07/06/2010 14:33:28,36,1,grouping items in an iterable by looking for a sentinel value (in scala),"I have an iterator of lines from a very large file that need to be put in groups as I move along. I know where each group ends because there is a sentinel value on the last line of each group. So basically I want to write a function that takes an iterator and a sentinel value, and returns an iterator of groups each terminated by the sentinel value. Something like:
+
+    scala> groups(""abc.defg.hi.jklmn."".iterator, '.')
+    res1: Iterator[Seq[Char]] = non-empty iterator
+
+    scala> groups(""abc.defg.hi.jklmn."".iterator, '.').toList
+    res19: List[Seq[Char]] = List(List(a, b, c, .), List(d, e, f, g, .), List(h, i, .), List(j, k, l, m, n, .))
+
+Note that I want the sentinel items included at the end of each of the groups. Here's my current solution:
+
+    def groups[T](iter: Iterator[T], sentinel: T) = new Iterator[Seq[T]] {                   
+      def hasNext = iter.hasNext
+      def next = iter.takeWhile(_ != sentinel).toList ++ List(sentinel)
+    }
+
+I think this will work, and I guess it is fine, but having to re-add the sentinel every time gives me a code smell. Is there a better way to do this?",scala,iterator,grouping,,,,open,0,222,13,"grouping items in an iterable by looking for a sentinel value (in scala) I have an iterator of lines from a very large file that need to be put in groups as I move along. I know where each group ends because there is a sentinel value on the last line of each group. So basically I want to write a function that takes an iterator and a sentinel value, and returns an iterator of groups each terminated by the sentinel value. Something like:
+
+    scala> groups(""abc.defg.hi.jklmn."".iterator, '.')
+    res1: Iterator[Seq[Char]] = non-empty iterator
+
+    scala> groups(""abc.defg.hi.jklmn."".iterator, '.').toList
+    res19: List[Seq[Char]] = List(List(a, b, c, .), List(d, e, f, g, .), List(h, i, .), List(j, k, l, m, n, .))
+
+Note that I want the sentinel items included at the end of each of the groups. Here's my current solution:
+
+    def groups[T](iter: Iterator[T], sentinel: T) = new Iterator[Seq[T]] {                   
+      def hasNext = iter.hasNext
+      def next = iter.takeWhile(_ != sentinel).toList ++ List(sentinel)
+    }
+
+I think this will work, and I guess it is fine, but having to re-add the sentinel every time gives me a code smell. Is there a better way to do this?",3
+1379540,09/04/2009 14:14:55,61342,02/02/2009 02:48:57,1325,24,Learning Sclala.,"What was your methodology to learn Scala? (exercises? small project? library? manual?)
+
+What surprises have you encountered when you have been learning Scala?
+Both subjectively positive and negative.
+
+Please state also what is your background i.e. primary language of your choice.
+",scala,,,,,09/17/2011 17:16:02,not constructive,1,38,2,"Learning Sclala. What was your methodology to learn Scala? (exercises? small project? library? manual?)
+
+What surprises have you encountered when you have been learning Scala?
+Both subjectively positive and negative.
+
+Please state also what is your background i.e. primary language of your choice.
+",1
+4477484,12/18/2010 09:27:21,243104,01/04/2010 10:30:31,233,4,What is preventing Scala from gaining mass popularity?,"This question was asked on my blog and I thought it would be interesting to garner a range of opinions rather than just my own.
+
+I don't know of any measurements that show that Scala's popularity is NOT growing, but I have noticed on sites like http://langpop.com/ that Scala tends to be way down the list.",scala,popularity,,,,12/19/2010 02:46:25,off topic,1,55,8,"What is preventing Scala from gaining mass popularity? This question was asked on my blog and I thought it would be interesting to garner a range of opinions rather than just my own.
+
+I don't know of any measurements that show that Scala's popularity is NOT growing, but I have noticed on sites like http://langpop.com/ that Scala tends to be way down the list.",2
+6628849,07/08/2011 18:34:41,220447,11/28/2009 12:50:35,2085,67,Default type for method calls,"I would like to know how if it is possible to have a default time when calling a method in Scala. Suppose I have the following method somewhere:
+
+    def apply[A]( id: String )( implicit processor: Processor[A] ) =
+      processor( data get id )
+
+I would like `A` to be `String`, when the compiler has no hints about what type to infer. So I can overload my definition with: 
+
+    def apply( id: String )( implicit processor: Processor[String] ) =
+      processor( data get id )
+
+But both methods will have the same signature after erasure... Is there any way to provide a default type ?
+",scala,types,sbt,,,,open,0,118,5,"Default type for method calls I would like to know how if it is possible to have a default time when calling a method in Scala. Suppose I have the following method somewhere:
+
+    def apply[A]( id: String )( implicit processor: Processor[A] ) =
+      processor( data get id )
+
+I would like `A` to be `String`, when the compiler has no hints about what type to infer. So I can overload my definition with: 
+
+    def apply( id: String )( implicit processor: Processor[String] ) =
+      processor( data get id )
+
+But both methods will have the same signature after erasure... Is there any way to provide a default type ?
+",3
+1324466,08/24/2009 20:08:18,135589,07/09/2009 11:33:07,768,50,Practical examples of using symbols in Scala?,"Scala has symbols - names that start with a single quote ' and which are a kind of string constants.
+
+I know symbols from Ruby (where they start with a colon). In Ruby they are used for some meta-programming tasks, like generating getters and setters for member variables (for example `attr_reader :name` to generate a getter for `name`).
+
+I haven't seen a lot of use of symbols in Scala code yet. What are practical uses for symbols in Scala?",scala,symbols,,,,,open,0,77,7,"Practical examples of using symbols in Scala? Scala has symbols - names that start with a single quote ' and which are a kind of string constants.
+
+I know symbols from Ruby (where they start with a colon). In Ruby they are used for some meta-programming tasks, like generating getters and setters for member variables (for example `attr_reader :name` to generate a getter for `name`).
+
+I haven't seen a lot of use of symbols in Scala code yet. What are practical uses for symbols in Scala?",2
+7720036,10/11/2011 00:04:36,164650,08/28/2009 05:01:07,1,0,Creating a scala Reader from a file,"How do you instantiate a _scala.util.parsing.input.Reader_ to read from a file? The API mentions in passing something about PagedSeq and java.io.Reader, but it's not clear at all how to accomplish that.",scala,,,,,,open,0,31,7,"Creating a scala Reader from a file How do you instantiate a _scala.util.parsing.input.Reader_ to read from a file? The API mentions in passing something about PagedSeq and java.io.Reader, but it's not clear at all how to accomplish that.",1
+4146455,11/10/2010 16:09:23,456684,08/25/2008 20:11:03,377,5,Scala String Concatentation Problem,"This was a fairly hard bug to find in my code but once i found it i was surprised the compiler didn't catch it or understand why it was valid.
+
+    val my_string =
+        ""abc"" +
+        ""def""
+        ""ghi""
+
+The value of `my_string` ended up being `abcdef` since i missed the `+` sign after `def`.  Why didn't the compiler complain and what happened to `ghi`?",scala,,,,,,open,0,87,4,"Scala String Concatentation Problem This was a fairly hard bug to find in my code but once i found it i was surprised the compiler didn't catch it or understand why it was valid.
+
+    val my_string =
+        ""abc"" +
+        ""def""
+        ""ghi""
+
+The value of `my_string` ended up being `abcdef` since i missed the `+` sign after `def`.  Why didn't the compiler complain and what happened to `ghi`?",1
+7118720,08/19/2011 08:13:46,108915,05/18/2009 17:01:57,2684,97,Help me get this for comprehension right,"I have the following (working) code
+
+    val superSuperSorts = superSorts.flatMap(relations.get(_)).flatMap(x=>x)
+
+And I give you the types here
+
+    val superSorts: Set[Sort]
+    val relations: Map[Sort, Set[Sort]]
+
+Changing it to this for-comprehension gives me a compile error
+
+    val superSuperSorts = 
+      for(
+      ss <- superSorts;
+      sss <- relations.get(ss); //get Option[Set[Sort]] and flatten the option
+      s <- sss                  //extract the elements from the Set
+    ) yield s
+
+of this reading
+
+    error: type mismatch; 
+    found   : scala.collection.immutable.Set[edu.uulm.scbayes.logic.Sort] 
+    required: Option[?] 
+    s <- sss
+
+Please explain why my for-comprehension is wrong.",scala,,,,,,open,0,149,7,"Help me get this for comprehension right I have the following (working) code
+
+    val superSuperSorts = superSorts.flatMap(relations.get(_)).flatMap(x=>x)
+
+And I give you the types here
+
+    val superSorts: Set[Sort]
+    val relations: Map[Sort, Set[Sort]]
+
+Changing it to this for-comprehension gives me a compile error
+
+    val superSuperSorts = 
+      for(
+      ss <- superSorts;
+      sss <- relations.get(ss); //get Option[Set[Sort]] and flatten the option
+      s <- sss                  //extract the elements from the Set
+    ) yield s
+
+of this reading
+
+    error: type mismatch; 
+    found   : scala.collection.immutable.Set[edu.uulm.scbayes.logic.Sort] 
+    required: Option[?] 
+    s <- sss
+
+Please explain why my for-comprehension is wrong.",1
+6738219,07/18/2011 19:23:52,273115,02/14/2010 21:52:24,100,4,Replacing imperative PriorityQueue in my algorithm,"I currently have a method that uses a scala.collection.mutable.PriorityQueue to combine elements in a certain order. For instance the code looks a bit like this:
+
+     def process[A : Ordering](as: Set[A], f: (A, A) => A): A = {
+       val queue = new scala.collection.mutable.PriorityQueue[A]() ++ as
+       while (queue.size > 1) {
+         val a1 = queue.dequeue
+         val a2 = queue.dequeue
+         queue.enqueue(f(a1, a2))
+       }
+       queue.dequeue
+     }
+
+The code works as written, but is necessarily pretty imperative. I thought of using a SortedSet instead of the PriorityQueue, but my attempts make the process look a lot messier. What is a more declarative, succinct way of doing what I want to do?
+",scala,priority-queue,sortedset,declarative-programming,,,open,0,162,6,"Replacing imperative PriorityQueue in my algorithm I currently have a method that uses a scala.collection.mutable.PriorityQueue to combine elements in a certain order. For instance the code looks a bit like this:
+
+     def process[A : Ordering](as: Set[A], f: (A, A) => A): A = {
+       val queue = new scala.collection.mutable.PriorityQueue[A]() ++ as
+       while (queue.size > 1) {
+         val a1 = queue.dequeue
+         val a2 = queue.dequeue
+         queue.enqueue(f(a1, a2))
+       }
+       queue.dequeue
+     }
+
+The code works as written, but is necessarily pretty imperative. I thought of using a SortedSet instead of the PriorityQueue, but my attempts make the process look a lot messier. What is a more declarative, succinct way of doing what I want to do?
+",4
+6632153,07/09/2011 01:40:59,455615,02/13/2010 20:03:14,2411,58,Reflection for nested classes,"I see that most people who have been playing with ScalaSigParser, in an effort to ser/des idiomatic Scala case classes in a nice way, have avoided this issue, but I'd like to know if it's possible.  I have a situation much like the following:
+
+    trait OuterTrait {
+      abstract class InnerAbstract(i: Int)
+    }
+
+    object OuterObject extends OuterTrait {
+      case class InnerConcrete(i: Int) extends InnerAbstract(i)
+    }
+
+    val bippy = OuterObject.InnerConcrete(123)
+
+    val s = serialize(bippy)
+
+    // time passes...
+
+    val obj = deserialize[OuterObject.InnerConcrete](s)
+
+So, I can find the ScalaSig for OuterTrait, but I haven't managed to find a nice general way to identify the outer object from the InnerConcrete class.  Any protips?  ",scala,reflection,nested-class,,,,open,0,145,4,"Reflection for nested classes I see that most people who have been playing with ScalaSigParser, in an effort to ser/des idiomatic Scala case classes in a nice way, have avoided this issue, but I'd like to know if it's possible.  I have a situation much like the following:
+
+    trait OuterTrait {
+      abstract class InnerAbstract(i: Int)
+    }
+
+    object OuterObject extends OuterTrait {
+      case class InnerConcrete(i: Int) extends InnerAbstract(i)
+    }
+
+    val bippy = OuterObject.InnerConcrete(123)
+
+    val s = serialize(bippy)
+
+    // time passes...
+
+    val obj = deserialize[OuterObject.InnerConcrete](s)
+
+So, I can find the ScalaSig for OuterTrait, but I haven't managed to find a nice general way to identify the outer object from the InnerConcrete class.  Any protips?  ",3
+9867628,03/26/2012 06:34:36,1040866,11/11/2011 01:02:53,1,0,ZooKeeper returning junk characters for HBase server address,"how's it goin?
+
+Sorry if I sound stupid here.
+
+I'm trying to create a basic play2.0 - HBase app. When I try to connect HBase from play, ZooKeeper is returning me junk characters for HBase server address.
+
+    def main(args : Array[String]) : Unit = {
+     val conf =  HBaseConfiguration create
+     val admin = new HBaseAdmin(conf)
+
+     // list the tables
+     val listtables = admin.listTables()
+     listtables.foreach(println)
+    }
+
+
+I've nailed down to the weak spot and it's at org.apache.hadoop.hbase.zookeeper.ZooKeeperNodeTracker. It's loading data with junk values for local address and port, which is then passed down to HServerAddress class for further action.
+
+I've looked at my hbase-site.xml (contains just localhost) and hbase-default.xml, which are looking just fine as directed by Apache.
+
+    <configuration>
+    <property>
+        <name>hbase.rootdir</name>
+        <value>file:///Users/gchandra/Applications/hbase-0.92.1/data-store/hbase</value>
+    </property>
+    </configuration>
+
+
+Pasted below is stack trace.
+
+    Exception in thread ""main"" java.lang.IllegalArgumentException: Not a host:port pair: ?���5610@L-C02FF6MTDF91��192.168.1.4,64256,1332739256936
+	at org.apache.hadoop.hbase.HServerAddress.<init>(HServerAddress.java:60)
+	at org.apache.hadoop.hbase.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:63)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation.getMaster(HConnectionManager.java:354)
+	at org.apache.hadoop.hbase.client.HBaseAdmin.<init>(HBaseAdmin.java:94)
+	at services.HBaseConnection$.main(HBaseConnection.scala:20)
+	at services.HBaseConnection.main(HBaseConnection.scala)
+
+Appreciate it if someone could help me out here! Thanks! ",scala,hadoop,playframework,hbase,zookeeper,06/03/2012 19:55:24,too localized,1,205,8,"ZooKeeper returning junk characters for HBase server address how's it goin?
+
+Sorry if I sound stupid here.
+
+I'm trying to create a basic play2.0 - HBase app. When I try to connect HBase from play, ZooKeeper is returning me junk characters for HBase server address.
+
+    def main(args : Array[String]) : Unit = {
+     val conf =  HBaseConfiguration create
+     val admin = new HBaseAdmin(conf)
+
+     // list the tables
+     val listtables = admin.listTables()
+     listtables.foreach(println)
+    }
+
+
+I've nailed down to the weak spot and it's at org.apache.hadoop.hbase.zookeeper.ZooKeeperNodeTracker. It's loading data with junk values for local address and port, which is then passed down to HServerAddress class for further action.
+
+I've looked at my hbase-site.xml (contains just localhost) and hbase-default.xml, which are looking just fine as directed by Apache.
+
+    <configuration>
+    <property>
+        <name>hbase.rootdir</name>
+        <value>file:///Users/gchandra/Applications/hbase-0.92.1/data-store/hbase</value>
+    </property>
+    </configuration>
+
+
+Pasted below is stack trace.
+
+    Exception in thread ""main"" java.lang.IllegalArgumentException: Not a host:port pair: ?���5610@L-C02FF6MTDF91��192.168.1.4,64256,1332739256936
+	at org.apache.hadoop.hbase.HServerAddress.<init>(HServerAddress.java:60)
+	at org.apache.hadoop.hbase.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:63)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation.getMaster(HConnectionManager.java:354)
+	at org.apache.hadoop.hbase.client.HBaseAdmin.<init>(HBaseAdmin.java:94)
+	at services.HBaseConnection$.main(HBaseConnection.scala:20)
+	at services.HBaseConnection.main(HBaseConnection.scala)
+
+Appreciate it if someone could help me out here! Thanks! ",5
+1251666,08/09/2009 16:14:14,127863,06/23/2009 21:27:26,1024,42,Scala actors: receive vs react,"Let me first say that I have quite a lot of Java experience, but have only recently become interested in functional languages. Recently I've started looking at Scala, which seems like a very nice language.
+
+However, I've been reading about Scala's Actor framework in [_Programming in Scala_](http://www.artima.com/shop/programming_in_scala), and there's one thing I don't understand. In chapter 30.4 it says that using `react` instead of `receive` makes it possible to re-use threads, which is good for performance, since threads are expensive in the JVM.
+
+Does this mean that, as long as I remember to call `react` instead of `receive`, I can start as much Actors as I like? Before discovering Scala, I've been playing with Erlang, and the author of [_Programming Erlang_](http://www.pragprog.com/titles/jaerlang/programming-erlang) boasts about spawning over 200,000 processes without breaking a sweat. I'd hate to do that with Java threads. What kind of limits am I looking at in Scala as compared to Erlang (and Java)?
+
+Also, how does this thread re-use work in Scala? Let's assume, for simplicity, that I have only one thread. Will all the actors that I start run sequentially in this thread, or will some sort of task-switching take place? For example, if I start two actors that ping-pong messages to each other, will I risk deadlock if they're started in the same thread?
+
+According to _Programming in Scala_, writing actors to use `react` is more difficult than with `receive`. This sounds plausible, since `react` doesn't return. However, the book goes on to show how you can put a `react` inside a loop using `Actor.loop`. As a result, you get
+
+    loop {
+        react {
+            ...
+        }
+    }
+
+which, to me, seems pretty similar to
+
+    while (true) {
+        receive {
+            ...
+        }
+    }
+
+which is used earlier in the book. Still, the book says that ""in practice, programs will need at least a few `receive`'s"". So what am I missing here? What can `receive` do that `react` cannot, besides return? And why do I care?
+
+Finally, coming to the core of what I don't understand: the book keeps mentioning how using `react` makes it possible to discard the call stack to re-use the thread. How does that work? Why is it necessary to discard the call stack? And why can the call stack be discarded when a function terminates by throwing an exception (`react`), but not when it terminates by returning (`receive`)?
+
+I have the impression that _Programming in Scala_ has been glossing over some of the key issues here, which is a shame, because otherwise it's a truly excellent book.
+
+",scala,actor,multithreading,,,,open,0,478,5,"Scala actors: receive vs react Let me first say that I have quite a lot of Java experience, but have only recently become interested in functional languages. Recently I've started looking at Scala, which seems like a very nice language.
+
+However, I've been reading about Scala's Actor framework in [_Programming in Scala_](http://www.artima.com/shop/programming_in_scala), and there's one thing I don't understand. In chapter 30.4 it says that using `react` instead of `receive` makes it possible to re-use threads, which is good for performance, since threads are expensive in the JVM.
+
+Does this mean that, as long as I remember to call `react` instead of `receive`, I can start as much Actors as I like? Before discovering Scala, I've been playing with Erlang, and the author of [_Programming Erlang_](http://www.pragprog.com/titles/jaerlang/programming-erlang) boasts about spawning over 200,000 processes without breaking a sweat. I'd hate to do that with Java threads. What kind of limits am I looking at in Scala as compared to Erlang (and Java)?
+
+Also, how does this thread re-use work in Scala? Let's assume, for simplicity, that I have only one thread. Will all the actors that I start run sequentially in this thread, or will some sort of task-switching take place? For example, if I start two actors that ping-pong messages to each other, will I risk deadlock if they're started in the same thread?
+
+According to _Programming in Scala_, writing actors to use `react` is more difficult than with `receive`. This sounds plausible, since `react` doesn't return. However, the book goes on to show how you can put a `react` inside a loop using `Actor.loop`. As a result, you get
+
+    loop {
+        react {
+            ...
+        }
+    }
+
+which, to me, seems pretty similar to
+
+    while (true) {
+        receive {
+            ...
+        }
+    }
+
+which is used earlier in the book. Still, the book says that ""in practice, programs will need at least a few `receive`'s"". So what am I missing here? What can `receive` do that `react` cannot, besides return? And why do I care?
+
+Finally, coming to the core of what I don't understand: the book keeps mentioning how using `react` makes it possible to discard the call stack to re-use the thread. How does that work? Why is it necessary to discard the call stack? And why can the call stack be discarded when a function terminates by throwing an exception (`react`), but not when it terminates by returning (`receive`)?
+
+I have the impression that _Programming in Scala_ has been glossing over some of the key issues here, which is a shame, because otherwise it's a truly excellent book.
+
+",3
+5225272,03/07/2011 21:08:36,243233,01/04/2010 14:22:58,434,26,What can we do with Haskell that we cannot do with Scala ?,"(Or at least in much fewer lines of code...)
+
+I am interested in the features that differentiate Haskell from Scala along with the feature that make them similar.",scala,haskell,functional-programming,,,03/07/2011 21:19:31,not constructive,1,27,13,"What can we do with Haskell that we cannot do with Scala ? (Or at least in much fewer lines of code...)
+
+I am interested in the features that differentiate Haskell from Scala along with the feature that make them similar.",3
+9267969,02/13/2012 21:02:59,277297,02/19/2010 20:26:29,69,3,Why do I need a curried function to be able to pass function literals with short placeholder syntax?,"Given this definition:
+
+    class Foo(var x: String) {}
+
+    object Helper {
+      def model[T](get: ⇒ T, set: T ⇒ Unit) : Model[T] = new Model[T] {
+        override def getObject(): T = get
+
+        override def setObject(obj: T) { set(obj) }
+      }
+    }
+
+I try to call `model` like this:
+
+    val f = new Foo(""initial"")
+    val stringModel = model(f.x, f.x = _)
+
+But that doesn't work, the compiler gives me this, complaining about the underscore:
+
+    missing parameter type for expanded function ((x$1) => f.x = x$1)
+
+If I change the definition of `model` to use two parameter lists like this:
+
+    def model[T](get: ⇒ T)(set: T ⇒ Unit) // rest is unchanged
+
+Then I can call it like this:
+
+    model(f.x)(f.x = _)
+
+Which I find nice and concise. I don't really mind doing it like this, though it makes method overloading harder. I would like to understand, however, why the second variant works and the first one doesn't?",scala,,,,,,open,0,197,18,"Why do I need a curried function to be able to pass function literals with short placeholder syntax? Given this definition:
+
+    class Foo(var x: String) {}
+
+    object Helper {
+      def model[T](get: ⇒ T, set: T ⇒ Unit) : Model[T] = new Model[T] {
+        override def getObject(): T = get
+
+        override def setObject(obj: T) { set(obj) }
+      }
+    }
+
+I try to call `model` like this:
+
+    val f = new Foo(""initial"")
+    val stringModel = model(f.x, f.x = _)
+
+But that doesn't work, the compiler gives me this, complaining about the underscore:
+
+    missing parameter type for expanded function ((x$1) => f.x = x$1)
+
+If I change the definition of `model` to use two parameter lists like this:
+
+    def model[T](get: ⇒ T)(set: T ⇒ Unit) // rest is unchanged
+
+Then I can call it like this:
+
+    model(f.x)(f.x = _)
+
+Which I find nice and concise. I don't really mind doing it like this, though it makes method overloading harder. I would like to understand, however, why the second variant works and the first one doesn't?",1
+5504740,03/31/2011 18:46:14,31610,10/26/2008 17:16:50,10045,311,How can I make this probably simple Producer actor example working?,"I was trying to write a simple producer class, in order to learn Actors. I wanted to have a producer, which starts with some directory, represented by a File object, and then sends messages to other actors in order to process the files. Initially, I was reading the contents of the files, but, for simplicity's sake, now I'm just collecting their paths.
+Once again, this has no real world value, but it has practical value to me, as I think this will allow me to understand the actors better. Here's what I have so far:
+
+    import java.io._
+    import java.util.concurrent._
+    import scala.actors.Actor
+    import scala.io.Source
+    import java.util.concurrent.locks.ReentrantLock
+    import java.util.concurrent.atomic.AtomicLong
+    
+    case class FileSystemObject(path:File)
+    case class FileContent(content:String)
+    
+    case object Stop
+    case object Processed
+    
+    class ResultAcumulator extends Actor {
+    	
+    	var results:List[String] = Nil
+    	var finished = false
+    	
+    	def act() = {
+    		loop {
+    			react {
+    				case FileContent(content) => {
+    					results ::= content
+    				}
+    				case Stop => {
+    					finished = true;
+    					exit
+    				}
+    			}
+    		}
+    	}
+    }
+    
+    class FileSystemReader(accumulator:Actor) extends Actor {
+    	def act() = {
+    		loop {
+    			react {
+    				case FileSystemObject(path) => {
+    					if(path.isFile) {
+    						accumulator ! FileContent(path.toString)
+    						sender ! Processed
+    					}
+    				}
+    				case Stop => exit
+    			}
+    		}
+    	}
+    }
+    
+    class FileSystemProducer(start:File,acumulator:Actor,reader:Actor) extends Actor {
+    	var totalFilesProcessed = 0
+    	
+    	def act() = {
+    		val files = start.listFiles
+    		files.foreach{ f =>
+    			(reader ! FileSystemObject(f))
+    		}
+    		loop {
+    			react {
+    				case Processed => {
+    					totalFilesProcessed += 1
+    					if(totalFilesProcessed == files.length) {
+    						reader ! Stop
+    						acumulator ! Stop
+    						Xo.decrementLatch
+    					}
+    				}
+    			}
+    		}
+    		
+    	}
+    }
+    object Xo {
+    	
+    	 var latch = new CountDownLatch(1)
+    	 
+    	 def decrementLatch = latch.countDown
+    	
+    	 def main(args : Array[String]) = {
+    		 
+    		 val acumulator = new ResultAcumulator
+    		 val fsReader = new FileSystemReader(acumulator)
+    		 val producer = new FileSystemProducer(new File(""d:/rails/a""),acumulator,fsReader)
+    		 
+    		 acumulator.start
+    		 fsReader.start
+    		 producer.start
+    		 
+    		 latch.await
+    		 
+    		 acumulator.results.foreach(println)
+    		 
+    	 }
+    }
+
+In the state it is now, it runs forever, and I see no output. Ah, one more thing. Before the program exits, I would like it to list the results ""processed"". I searched around a little and found the CountDownLatch class. I would like to keep this implemented with a loop/react instead of a while/receive. I am pretty sure the problem is caused by the fact that I have these lines:
+
+    files.foreach{ f =>
+        (reader ! FileSystemObject(f))
+    }
+
+and that I have the react loop a little lower, but I have no clue how to go about fixing it.",scala,concurrency,actor,,,,open,0,715,11,"How can I make this probably simple Producer actor example working? I was trying to write a simple producer class, in order to learn Actors. I wanted to have a producer, which starts with some directory, represented by a File object, and then sends messages to other actors in order to process the files. Initially, I was reading the contents of the files, but, for simplicity's sake, now I'm just collecting their paths.
+Once again, this has no real world value, but it has practical value to me, as I think this will allow me to understand the actors better. Here's what I have so far:
+
+    import java.io._
+    import java.util.concurrent._
+    import scala.actors.Actor
+    import scala.io.Source
+    import java.util.concurrent.locks.ReentrantLock
+    import java.util.concurrent.atomic.AtomicLong
+    
+    case class FileSystemObject(path:File)
+    case class FileContent(content:String)
+    
+    case object Stop
+    case object Processed
+    
+    class ResultAcumulator extends Actor {
+    	
+    	var results:List[String] = Nil
+    	var finished = false
+    	
+    	def act() = {
+    		loop {
+    			react {
+    				case FileContent(content) => {
+    					results ::= content
+    				}
+    				case Stop => {
+    					finished = true;
+    					exit
+    				}
+    			}
+    		}
+    	}
+    }
+    
+    class FileSystemReader(accumulator:Actor) extends Actor {
+    	def act() = {
+    		loop {
+    			react {
+    				case FileSystemObject(path) => {
+    					if(path.isFile) {
+    						accumulator ! FileContent(path.toString)
+    						sender ! Processed
+    					}
+    				}
+    				case Stop => exit
+    			}
+    		}
+    	}
+    }
+    
+    class FileSystemProducer(start:File,acumulator:Actor,reader:Actor) extends Actor {
+    	var totalFilesProcessed = 0
+    	
+    	def act() = {
+    		val files = start.listFiles
+    		files.foreach{ f =>
+    			(reader ! FileSystemObject(f))
+    		}
+    		loop {
+    			react {
+    				case Processed => {
+    					totalFilesProcessed += 1
+    					if(totalFilesProcessed == files.length) {
+    						reader ! Stop
+    						acumulator ! Stop
+    						Xo.decrementLatch
+    					}
+    				}
+    			}
+    		}
+    		
+    	}
+    }
+    object Xo {
+    	
+    	 var latch = new CountDownLatch(1)
+    	 
+    	 def decrementLatch = latch.countDown
+    	
+    	 def main(args : Array[String]) = {
+    		 
+    		 val acumulator = new ResultAcumulator
+    		 val fsReader = new FileSystemReader(acumulator)
+    		 val producer = new FileSystemProducer(new File(""d:/rails/a""),acumulator,fsReader)
+    		 
+    		 acumulator.start
+    		 fsReader.start
+    		 producer.start
+    		 
+    		 latch.await
+    		 
+    		 acumulator.results.foreach(println)
+    		 
+    	 }
+    }
+
+In the state it is now, it runs forever, and I see no output. Ah, one more thing. Before the program exits, I would like it to list the results ""processed"". I searched around a little and found the CountDownLatch class. I would like to keep this implemented with a loop/react instead of a while/receive. I am pretty sure the problem is caused by the fact that I have these lines:
+
+    files.foreach{ f =>
+        (reader ! FileSystemObject(f))
+    }
+
+and that I have the react loop a little lower, but I have no clue how to go about fixing it.",3
+9647959,03/10/2012 16:16:17,546427,06/10/2010 18:25:18,533,10,Is it realistic for me to expect that I might be able to use Scala for a full stack?,"I am thinking of writing a web app in Scala using the Play! framework for the front end, and probably MongoDB for the backend. Is there any reason why I wouldn't be able to / want to use scala for the entire application? In other words, are there areas where I would be forced to use ruby or php? I like the idea of just having the full stack in Scala, but I don't really know if that is realistic or not.
+
+I am very new to web development, but have experience in java, which is why play framework and scala seem like good choices. But I apologize if my questions doesn't exactly make sense.",scala,playframework,,,,03/10/2012 20:48:51,not constructive,1,114,19,"Is it realistic for me to expect that I might be able to use Scala for a full stack? I am thinking of writing a web app in Scala using the Play! framework for the front end, and probably MongoDB for the backend. Is there any reason why I wouldn't be able to / want to use scala for the entire application? In other words, are there areas where I would be forced to use ruby or php? I like the idea of just having the full stack in Scala, but I don't really know if that is realistic or not.
+
+I am very new to web development, but have experience in java, which is why play framework and scala seem like good choices. But I apologize if my questions doesn't exactly make sense.",2
+11635981,07/24/2012 17:16:11,1485877,06/27/2012 13:54:56,98,2,Scala: Tutorial on building a complex hierarchy of traits and classes,"I have posted several questions on SO recently dealing with Scala [traits][1], [representation types][2], [member types][3], [manifests][4], and [implicit evidence][5]. Behind these questions is my project to build modeling software for biological protein networks. Despite the immensely helpful answers, which have gotten me closer than I ever could get on my own, I have still not arrived at an solution for my project. A couple of answers have suggested that my design is flawed, which is why the solutions to the `Foo`-framed questions don't work in practice. Here I am posting a more complicated (but still greatly simplified) version of my problem. My hope is that the problem and solution will serve a useful tutorial for people trying to build complex hierarchies of traits and classes in Scala.
+
+The highest-level class in my project is the biological reaction rule. A rule describes how one or two reactants are transformed by a reaction. Each reactant is a graph that has nodes called monomers and edges that connect between named sites on the monomers. Each site also has a state that it can be in. A rule might say something like this: there is one reactant made of monomer A bound to monomer B through sites a1 and b1, respectively; the bond is broken by the rule leaving sites a1 and b1 unbound; simultaneously on monomer A, the state of site a1 is changed from U to P. I would write this as:
+
+    A(a1~U-1).B(b1-1) -> A(a1~P) + B(b1)
+
+(Parsing strings like this in Scala was so easy, it made my head spin.) The `-1` indicates that bond #1 is between those sites--the number is just a arbitrary label.
+
+Here is what I have so far along with the reasoning for why I added each component. It compiles, but only with gratuitous use of `asInstanceOf`. I know I can solve any type problem with `asInstanceOf`, but I might as well go back to Matlab if that's what it takes:
+
+I represent rules with a basic class:
+
+    case class Rule(
+      reactants: Seq[ReactantGraph], // The starting monomers and edges
+      producedMonomers: Seq[ProducedMonomer], // Only new monomers go here
+      producedEdges: Seq[ProducedEdge] // All new edges
+    ) {
+      // Example method that shows different monomers being combined and down-cast
+      def combineIntoOneGraph: Graph = {
+        val all_monomers = reactants.flatMap(_.monomers) ++ producedMonomers
+        val all_edges = reactants.flatMap(_.edges) ++ producedEdges
+        GraphClass(all_monomers, all_edges)
+      }
+    }
+
+The class for graphs `GraphClass` has type parameters because so that I can put constraints on what kinds of monomers and edges are allowed in a particular graph; for example, there cannot be any `ProducedMonomer`s in the `Reactant` of a `Rule`. I would also like to be able to `collect` all the `Monomer`s of a particular type, say `ReactantMonomer`s. I use type aliases to manage the constraints.
+
+    case class GraphClass[
+      +MonomerType <: Monomer,
+      +EdgeType <: Edge
+    ](
+      monomers: Seq[MonomerType],
+      edges: Seq[EdgeType]
+    ) {
+      // Methods that demonstrate the need for a manifest on MonomerClass
+      def justTheProductMonomers: Seq[ProductMonomer] = {
+        monomers.collect{
+          case x if isProductMonomer(x) => x.asInstanceOf[ProductMonomer]
+        }
+      }
+      def isProductMonomer(monomer: Monomer): Boolean = (
+        monomer.manifest._1 <:< manifest[ProductStateSite] &&
+        monomer.manifest._2 <:< manifest[ProductEdgeSite]
+      )
+    }
+
+    // The most generic Graph
+    type Graph = GraphClass[Monomer, Edge]
+    // Anything allowed in a reactant
+    type ReactantGraph = GraphClass[ReactantMonomer, ReactantEdge]
+    // Anything allowed in a product, which I sometimes extract from a Rule
+    type ProductGraph = GraphClass[ProductMonomer, ProductEdge]
+
+The class for monomers `MonomerClass` has type parameters, as well, so that I can put constraints on the sites; for example, a `ConsumedMonomer` cannot have a `StaticSite`. Furthermore, I need to `collect` all the monomers of a particular type to, say, collect all the monomers in a rule that are in the product, so I add a `Manifest` to each type parameter.
+
+    case class MonomerClass[
+      +StateSiteType <: StateSite : Manifest,
+      +EdgeSiteType <: EdgeSite : Manifest
+    ](
+      stateSites: Seq[StateSiteType],
+      edgeSites: Seq[EdgeSiteType]
+    ) {
+      type MyType = MonomerClass[StateSiteType, EdgeSiteType]
+      def manifest = (
+        implicitly[Manifest[_ <: StateSiteType]],
+        implicitly[Manifest[_ <: EdgeSiteType]]
+      )
+      // Method that demonstrates the need for implicit evidence
+      // This is where it gets bad
+      def replaceSiteWithIntersection[A >: StateSiteType <: ReactantStateSite](
+        thisSite: A, // This is a member of this.stateSites
+        monomer: ReactantMonomer
+      )(
+        // Only the sites on ReactantMonomers have the Observed property
+        implicit evidence: MyType <:< ReactantMonomer
+      ): MyType = {
+        val new_this = evidence(this) // implicit evidence usually needs some help
+        monomer.stateSites.find(_.name == thisSite.name) match {
+          case Some(otherSite) => 
+            val newSites = stateSites map {
+              case `thisSite` => (
+                thisSite.asInstanceOf[StateSiteType with ReactantStateSite]
+                .createIntersection(otherSite).asInstanceOf[StateSiteType]
+              )
+              case other => other
+            }
+            copy(stateSites = newSites)
+          case None => this
+        }
+      }
+    }
+
+    type Monomer = MonomerClass[StateSite, EdgeSite]
+    type ReactantMonomer = MonomerClass[ReactantStateSite, ReactantEdgeSite]
+    type ProductMonomer = MonomerClass[ProductStateSite, ProductEdgeSite]
+    type ConsumedMonomer = MonomerClass[ConsumedStateSite, ConsumedEdgeSite]
+    type ProducedMonomer = MonomerClass[ProducedStateSite, ProducedEdgeSite]
+    type StaticMonomer = MonomerClass[StaticStateSite, StaticEdgeSite]
+
+My current implementations for the `StateSite` and `EdgeSite` do not have type parameters; they are standard hierarchies of traits, terminating in classes that have a name and some `String`s that represent the appropriate state. (Be nice about using strings to hold object states; they are actually name classes in my real code.) One important purpose of these traits is provide functionality that all the subclasses need, Well, isn't that the purpose of all traits. My traits are special in that many of the methods make small changes to a property of the object that is common to all subclasses of the trait and then return a copy. It would be preferable if the return type matched the underlying type of the object. The lame way to do this is to make all the trait methods abstract, and copy the desired methods into all the subclasses. I am unsure of the Scala way to do this. Some sources suggest a member type `MyType` that stores the underlying type (shown here). Other sources suggest a representation type parameter.
+
+    trait StateSite {
+      type MyType <: StateSite 
+      def name: String
+    }
+    trait ReactantStateSite extends StateSite {
+      type MyType <: ReactantStateSite
+      def observed: Seq[String]
+      def stateCopy(observed: Seq[String]): MyType
+      def createIntersection(otherSite: ReactantStateSite): MyType = {
+        val newStates = observed.intersect(otherSite.observed)
+        stateCopy(newStates)
+      }
+    }
+    trait ProductStateSite extends StateSite
+    trait ConservedStateSite extends ReactantStateSite with ProductStateSite 
+    case class ConsumedStateSite(name: String, consumed: Seq[String]) 
+      extends ReactantStateSite {
+      type MyType = ConsumedStateSite
+      def observed = consumed
+      def stateCopy(observed: Seq[String]) = copy(consumed = observed)
+    }
+    case class ProducedStateSite(name: String, Produced: String)
+      extends ProductStateSite 
+    case class ChangedStateSite(
+      name: String, 
+      consumed: Seq[String], 
+      Produced: String
+    )
+      extends ConservedStateSite {
+      type MyType = ChangedStateSite
+      def observed = consumed
+      def stateCopy(observed: Seq[String]) = copy(consumed = observed)
+    }
+    case class StaticStateSite(name: String, static: Seq[String])
+      extends ConservedStateSite {
+      type MyType = StaticStateSite
+      def observed = static
+      def stateCopy(observed: Seq[String]) = copy(static = observed)
+    }
+
+The `EdgeSite` class introduces massive complexity into my code that I don't think it is particularly important to understanding Scala. Here is a simplified version that can just be bound or unbound. In reality, `EdgeSite`s also needs to be able to specify something like ""this site could be bound to this site or that site, both of which may or may not even be mentioned in this graph""
+
+    trait EdgeSite {def name: String}
+    trait ReactantEdgeSite extends EdgeSite
+    trait ProductEdgeSite extends EdgeSite
+    trait ConservedEdgeSite extends ReactantEdgeSite with ProductEdgeSite
+
+    trait ConsumedEdgeSite extends ReactantEdgeSite
+    trait ProducedEdgeSite extends ProductEdgeSite
+    trait StaticEdgeSite extends ConservedEdgeSite 
+
+    trait ReactantBoundEdgeSite extends ReactantEdgeSite
+    trait ProductBoundEdgeSite extends ProductEdgeSite
+
+    case class ConsumedUnboundEdgeSite(name: String) 
+      extends ConsumedEdgeSite 
+    case class ConsumedBoundEdgeSite(name: String) 
+      extends ConsumedEdgeSite with ReactantBoundEdgeSite
+
+    case class ProducedUnboundEdgeSite(name: String) 
+      extends ProducedEdgeSite 
+    case class ProducedBoundEdgeSite(name: String) 
+      extends ProducedEdgeSite with ProductBoundEdgeSite
+
+    case class ChangedUnboundEdgeSiteToBound(name: String) 
+      extends ConservedEdgeSite with ProductBoundEdgeSite
+    case class ChangedBoundEdgeSiteToUnbound(name: String) 
+      extends ConservedEdgeSite with ReactantBoundEdgeSite
+
+    case class StaticUnboundEdgeSite(name: String) 
+      extends StaticEdgeSite 
+    case class StaticBoundEdgeSite(name: String) 
+      extends StaticEdgeSite with ReactantBoundEdgeSite with ProductBoundEdgeSite
+
+Finally, a simple class for the `BoundEdge`s holds pointers to two bound edge sites. These objects are attached to the `Graph`s to indicate how the `Monomer`s, which are also part of the `Graph`s, are connected.
+
+    trait Edge {def targets: (EdgeSite, EdgeSite)}
+    trait ReactantEdge {def targets: (ReactantBoundEdgeSite, ReactantBoundEdgeSite)}
+    trait ProductEdge {def targets: (ProductBoundEdgeSite, ProductBoundEdgeSite)}
+
+    case class ConsumedEdge(targets: (ReactantBoundEdgeSite, ReactantBoundEdgeSite))
+      extends ReactantEdge 
+    case class ProducedEdge(targets: (ProductBoundEdgeSite, ProductBoundEdgeSite))
+      extends ProductEdge 
+    case class StaticEdge(targets: (StaticBoundEdgeSite, StaticBoundEdgeSite))
+      extends ReactantEdge with ProductEdge
+
+My biggest problems are with methods framed like `MonomerClass.replaceSiteWithIntersection`. A lot of methods do some complicated search for particular members of the class, then pass those members to other functions where complicated changes are made to them and return a copy, which then replaces the original in a copy of the higher-level object. Scala is distinctly unhappy with passing instances of a type or member parameter around because of two main reasons that I can see: (1) the covariant type parameter ends up as input to any method that takes them as input, and (2) it is difficult to convince Scala that a method that returns a copy indeed returns an object with exactly the same type as was put in.
+
+I have undoubtedly left some things that will not be clear to everyone. If there are any details I need to add, or excess details I need to delete, I will try to be quick to clear things up.
+
+
+  [1]: http://stackoverflow.com/questions/11618915
+  [2]: http://stackoverflow.com/questions/11277656
+  [3]: http://stackoverflow.com/questions/11236122
+  [4]: http://stackoverflow.com/questions/11284538/
+  [5]: http://stackoverflow.com/questions/11588014",scala,,,,,,open,0,2273,11,"Scala: Tutorial on building a complex hierarchy of traits and classes I have posted several questions on SO recently dealing with Scala [traits][1], [representation types][2], [member types][3], [manifests][4], and [implicit evidence][5]. Behind these questions is my project to build modeling software for biological protein networks. Despite the immensely helpful answers, which have gotten me closer than I ever could get on my own, I have still not arrived at an solution for my project. A couple of answers have suggested that my design is flawed, which is why the solutions to the `Foo`-framed questions don't work in practice. Here I am posting a more complicated (but still greatly simplified) version of my problem. My hope is that the problem and solution will serve a useful tutorial for people trying to build complex hierarchies of traits and classes in Scala.
+
+The highest-level class in my project is the biological reaction rule. A rule describes how one or two reactants are transformed by a reaction. Each reactant is a graph that has nodes called monomers and edges that connect between named sites on the monomers. Each site also has a state that it can be in. A rule might say something like this: there is one reactant made of monomer A bound to monomer B through sites a1 and b1, respectively; the bond is broken by the rule leaving sites a1 and b1 unbound; simultaneously on monomer A, the state of site a1 is changed from U to P. I would write this as:
+
+    A(a1~U-1).B(b1-1) -> A(a1~P) + B(b1)
+
+(Parsing strings like this in Scala was so easy, it made my head spin.) The `-1` indicates that bond #1 is between those sites--the number is just a arbitrary label.
+
+Here is what I have so far along with the reasoning for why I added each component. It compiles, but only with gratuitous use of `asInstanceOf`. I know I can solve any type problem with `asInstanceOf`, but I might as well go back to Matlab if that's what it takes:
+
+I represent rules with a basic class:
+
+    case class Rule(
+      reactants: Seq[ReactantGraph], // The starting monomers and edges
+      producedMonomers: Seq[ProducedMonomer], // Only new monomers go here
+      producedEdges: Seq[ProducedEdge] // All new edges
+    ) {
+      // Example method that shows different monomers being combined and down-cast
+      def combineIntoOneGraph: Graph = {
+        val all_monomers = reactants.flatMap(_.monomers) ++ producedMonomers
+        val all_edges = reactants.flatMap(_.edges) ++ producedEdges
+        GraphClass(all_monomers, all_edges)
+      }
+    }
+
+The class for graphs `GraphClass` has type parameters because so that I can put constraints on what kinds of monomers and edges are allowed in a particular graph; for example, there cannot be any `ProducedMonomer`s in the `Reactant` of a `Rule`. I would also like to be able to `collect` all the `Monomer`s of a particular type, say `ReactantMonomer`s. I use type aliases to manage the constraints.
+
+    case class GraphClass[
+      +MonomerType <: Monomer,
+      +EdgeType <: Edge
+    ](
+      monomers: Seq[MonomerType],
+      edges: Seq[EdgeType]
+    ) {
+      // Methods that demonstrate the need for a manifest on MonomerClass
+      def justTheProductMonomers: Seq[ProductMonomer] = {
+        monomers.collect{
+          case x if isProductMonomer(x) => x.asInstanceOf[ProductMonomer]
+        }
+      }
+      def isProductMonomer(monomer: Monomer): Boolean = (
+        monomer.manifest._1 <:< manifest[ProductStateSite] &&
+        monomer.manifest._2 <:< manifest[ProductEdgeSite]
+      )
+    }
+
+    // The most generic Graph
+    type Graph = GraphClass[Monomer, Edge]
+    // Anything allowed in a reactant
+    type ReactantGraph = GraphClass[ReactantMonomer, ReactantEdge]
+    // Anything allowed in a product, which I sometimes extract from a Rule
+    type ProductGraph = GraphClass[ProductMonomer, ProductEdge]
+
+The class for monomers `MonomerClass` has type parameters, as well, so that I can put constraints on the sites; for example, a `ConsumedMonomer` cannot have a `StaticSite`. Furthermore, I need to `collect` all the monomers of a particular type to, say, collect all the monomers in a rule that are in the product, so I add a `Manifest` to each type parameter.
+
+    case class MonomerClass[
+      +StateSiteType <: StateSite : Manifest,
+      +EdgeSiteType <: EdgeSite : Manifest
+    ](
+      stateSites: Seq[StateSiteType],
+      edgeSites: Seq[EdgeSiteType]
+    ) {
+      type MyType = MonomerClass[StateSiteType, EdgeSiteType]
+      def manifest = (
+        implicitly[Manifest[_ <: StateSiteType]],
+        implicitly[Manifest[_ <: EdgeSiteType]]
+      )
+      // Method that demonstrates the need for implicit evidence
+      // This is where it gets bad
+      def replaceSiteWithIntersection[A >: StateSiteType <: ReactantStateSite](
+        thisSite: A, // This is a member of this.stateSites
+        monomer: ReactantMonomer
+      )(
+        // Only the sites on ReactantMonomers have the Observed property
+        implicit evidence: MyType <:< ReactantMonomer
+      ): MyType = {
+        val new_this = evidence(this) // implicit evidence usually needs some help
+        monomer.stateSites.find(_.name == thisSite.name) match {
+          case Some(otherSite) => 
+            val newSites = stateSites map {
+              case `thisSite` => (
+                thisSite.asInstanceOf[StateSiteType with ReactantStateSite]
+                .createIntersection(otherSite).asInstanceOf[StateSiteType]
+              )
+              case other => other
+            }
+            copy(stateSites = newSites)
+          case None => this
+        }
+      }
+    }
+
+    type Monomer = MonomerClass[StateSite, EdgeSite]
+    type ReactantMonomer = MonomerClass[ReactantStateSite, ReactantEdgeSite]
+    type ProductMonomer = MonomerClass[ProductStateSite, ProductEdgeSite]
+    type ConsumedMonomer = MonomerClass[ConsumedStateSite, ConsumedEdgeSite]
+    type ProducedMonomer = MonomerClass[ProducedStateSite, ProducedEdgeSite]
+    type StaticMonomer = MonomerClass[StaticStateSite, StaticEdgeSite]
+
+My current implementations for the `StateSite` and `EdgeSite` do not have type parameters; they are standard hierarchies of traits, terminating in classes that have a name and some `String`s that represent the appropriate state. (Be nice about using strings to hold object states; they are actually name classes in my real code.) One important purpose of these traits is provide functionality that all the subclasses need, Well, isn't that the purpose of all traits. My traits are special in that many of the methods make small changes to a property of the object that is common to all subclasses of the trait and then return a copy. It would be preferable if the return type matched the underlying type of the object. The lame way to do this is to make all the trait methods abstract, and copy the desired methods into all the subclasses. I am unsure of the Scala way to do this. Some sources suggest a member type `MyType` that stores the underlying type (shown here). Other sources suggest a representation type parameter.
+
+    trait StateSite {
+      type MyType <: StateSite 
+      def name: String
+    }
+    trait ReactantStateSite extends StateSite {
+      type MyType <: ReactantStateSite
+      def observed: Seq[String]
+      def stateCopy(observed: Seq[String]): MyType
+      def createIntersection(otherSite: ReactantStateSite): MyType = {
+        val newStates = observed.intersect(otherSite.observed)
+        stateCopy(newStates)
+      }
+    }
+    trait ProductStateSite extends StateSite
+    trait ConservedStateSite extends ReactantStateSite with ProductStateSite 
+    case class ConsumedStateSite(name: String, consumed: Seq[String]) 
+      extends ReactantStateSite {
+      type MyType = ConsumedStateSite
+      def observed = consumed
+      def stateCopy(observed: Seq[String]) = copy(consumed = observed)
+    }
+    case class ProducedStateSite(name: String, Produced: String)
+      extends ProductStateSite 
+    case class ChangedStateSite(
+      name: String, 
+      consumed: Seq[String], 
+      Produced: String
+    )
+      extends ConservedStateSite {
+      type MyType = ChangedStateSite
+      def observed = consumed
+      def stateCopy(observed: Seq[String]) = copy(consumed = observed)
+    }
+    case class StaticStateSite(name: String, static: Seq[String])
+      extends ConservedStateSite {
+      type MyType = StaticStateSite
+      def observed = static
+      def stateCopy(observed: Seq[String]) = copy(static = observed)
+    }
+
+The `EdgeSite` class introduces massive complexity into my code that I don't think it is particularly important to understanding Scala. Here is a simplified version that can just be bound or unbound. In reality, `EdgeSite`s also needs to be able to specify something like ""this site could be bound to this site or that site, both of which may or may not even be mentioned in this graph""
+
+    trait EdgeSite {def name: String}
+    trait ReactantEdgeSite extends EdgeSite
+    trait ProductEdgeSite extends EdgeSite
+    trait ConservedEdgeSite extends ReactantEdgeSite with ProductEdgeSite
+
+    trait ConsumedEdgeSite extends ReactantEdgeSite
+    trait ProducedEdgeSite extends ProductEdgeSite
+    trait StaticEdgeSite extends ConservedEdgeSite 
+
+    trait ReactantBoundEdgeSite extends ReactantEdgeSite
+    trait ProductBoundEdgeSite extends ProductEdgeSite
+
+    case class ConsumedUnboundEdgeSite(name: String) 
+      extends ConsumedEdgeSite 
+    case class ConsumedBoundEdgeSite(name: String) 
+      extends ConsumedEdgeSite with ReactantBoundEdgeSite
+
+    case class ProducedUnboundEdgeSite(name: String) 
+      extends ProducedEdgeSite 
+    case class ProducedBoundEdgeSite(name: String) 
+      extends ProducedEdgeSite with ProductBoundEdgeSite
+
+    case class ChangedUnboundEdgeSiteToBound(name: String) 
+      extends ConservedEdgeSite with ProductBoundEdgeSite
+    case class ChangedBoundEdgeSiteToUnbound(name: String) 
+      extends ConservedEdgeSite with ReactantBoundEdgeSite
+
+    case class StaticUnboundEdgeSite(name: String) 
+      extends StaticEdgeSite 
+    case class StaticBoundEdgeSite(name: String) 
+      extends StaticEdgeSite with ReactantBoundEdgeSite with ProductBoundEdgeSite
+
+Finally, a simple class for the `BoundEdge`s holds pointers to two bound edge sites. These objects are attached to the `Graph`s to indicate how the `Monomer`s, which are also part of the `Graph`s, are connected.
+
+    trait Edge {def targets: (EdgeSite, EdgeSite)}
+    trait ReactantEdge {def targets: (ReactantBoundEdgeSite, ReactantBoundEdgeSite)}
+    trait ProductEdge {def targets: (ProductBoundEdgeSite, ProductBoundEdgeSite)}
+
+    case class ConsumedEdge(targets: (ReactantBoundEdgeSite, ReactantBoundEdgeSite))
+      extends ReactantEdge 
+    case class ProducedEdge(targets: (ProductBoundEdgeSite, ProductBoundEdgeSite))
+      extends ProductEdge 
+    case class StaticEdge(targets: (StaticBoundEdgeSite, StaticBoundEdgeSite))
+      extends ReactantEdge with ProductEdge
+
+My biggest problems are with methods framed like `MonomerClass.replaceSiteWithIntersection`. A lot of methods do some complicated search for particular members of the class, then pass those members to other functions where complicated changes are made to them and return a copy, which then replaces the original in a copy of the higher-level object. Scala is distinctly unhappy with passing instances of a type or member parameter around because of two main reasons that I can see: (1) the covariant type parameter ends up as input to any method that takes them as input, and (2) it is difficult to convince Scala that a method that returns a copy indeed returns an object with exactly the same type as was put in.
+
+I have undoubtedly left some things that will not be clear to everyone. If there are any details I need to add, or excess details I need to delete, I will try to be quick to clear things up.
+
+
+  [1]: http://stackoverflow.com/questions/11618915
+  [2]: http://stackoverflow.com/questions/11277656
+  [3]: http://stackoverflow.com/questions/11236122
+  [4]: http://stackoverflow.com/questions/11284538/
+  [5]: http://stackoverflow.com/questions/11588014",1
+6119323,05/25/2011 03:47:47,243755,01/05/2010 08:48:52,477,10,Scala syntax problem,"The following code can be compiled
+
+      def isEven(a:Int)=
+        if (a%2==0) true else false
+        
+      def main(args: Array[String]) {
+        	List(1, 10) filter isEven foreach println
+       
+
+but if I change to following ( List(1,10) --> List(1 to 10))
+
+  
+
+    def isEven(a:Int)=
+        if (a%2==0) true else false
+        
+      def main(args: Array[String]) {
+        	List(1 to 10) filter isEven foreach println
+       }
+
+
+What's difference between List(1,10) and List(1 to 10) ?
+
+",scala,,,,,,open,0,138,3,"Scala syntax problem The following code can be compiled
+
+      def isEven(a:Int)=
+        if (a%2==0) true else false
+        
+      def main(args: Array[String]) {
+        	List(1, 10) filter isEven foreach println
+       
+
+but if I change to following ( List(1,10) --> List(1 to 10))
+
+  
+
+    def isEven(a:Int)=
+        if (a%2==0) true else false
+        
+      def main(args: Array[String]) {
+        	List(1 to 10) filter isEven foreach println
+       }
+
+
+What's difference between List(1,10) and List(1 to 10) ?
+
+",1
+3688851,09/10/2010 22:33:45,274627,02/16/2010 18:37:28,1193,10,"Squeryl - ""CustomTypesMode is not a member of package org.squeryl.customtypes""?","I've built Squeryl framework with SBT and am trying to use it  with Scala 2.8 and NetBeans 6.9. I've defined an entity model as it is <a href=""http://squeryl.org/schema-definition.html"">desctibed in Squeryl intro</a>, but the IDE and compiler complain that ""CustomTypesMode is not a member of package org.squeryl.customtypes"". What might the reason be?
+
+PS: Whoever has enough points, please be so kind to add ""squeryl"" tag.",scala,,,,,,open,0,64,10,"Squeryl - ""CustomTypesMode is not a member of package org.squeryl.customtypes""? I've built Squeryl framework with SBT and am trying to use it  with Scala 2.8 and NetBeans 6.9. I've defined an entity model as it is <a href=""http://squeryl.org/schema-definition.html"">desctibed in Squeryl intro</a>, but the IDE and compiler complain that ""CustomTypesMode is not a member of package org.squeryl.customtypes"". What might the reason be?
+
+PS: Whoever has enough points, please be so kind to add ""squeryl"" tag.",1
+6774232,07/21/2011 09:51:08,855614,07/21/2011 09:34:34,1,0,Methods in trait become volatile methods when mixed in concrete classes in 2.9.0-1 but not 2.8.1,"I noticed this breaking (for me using it with OGNL) change in 2.9.0-1:
+
+I find that, in 2.9, methods declared in a trait become volatile when mixed in a class:
+
+Example in 2.9.0-1
+
+
+    import java.lang.reflect.Modifier
+    
+    trait SuperTrait {
+        def getKnoll = ""Kanutten""
+    }
+    
+    class KlassWithKnoll extends SuperTrait {
+        def getKnall = ""Mars""
+    
+    }
+    
+    val qsc = classOf[KlassWithKnoll]
+    val knollGetter = qsc.getDeclaredMethod(""getKnoll"")
+    println(""isVolatile: "" + Modifier.isVolatile(knollGetter.getModifiers()))
+
+This prints out
+
+    isVolatile: true
+
+But in 2.8.1:
+
+it prints out
+
+    isVolatile: false
+
+
+This is actually a breaking change for me as OGNL refuses to execute volatile (why I don't know) in its expressions.
+
+So - my question is; Why was this change made?",scala,,,,,,open,0,162,16,"Methods in trait become volatile methods when mixed in concrete classes in 2.9.0-1 but not 2.8.1 I noticed this breaking (for me using it with OGNL) change in 2.9.0-1:
+
+I find that, in 2.9, methods declared in a trait become volatile when mixed in a class:
+
+Example in 2.9.0-1
+
+
+    import java.lang.reflect.Modifier
+    
+    trait SuperTrait {
+        def getKnoll = ""Kanutten""
+    }
+    
+    class KlassWithKnoll extends SuperTrait {
+        def getKnall = ""Mars""
+    
+    }
+    
+    val qsc = classOf[KlassWithKnoll]
+    val knollGetter = qsc.getDeclaredMethod(""getKnoll"")
+    println(""isVolatile: "" + Modifier.isVolatile(knollGetter.getModifiers()))
+
+This prints out
+
+    isVolatile: true
+
+But in 2.8.1:
+
+it prints out
+
+    isVolatile: false
+
+
+This is actually a breaking change for me as OGNL refuses to execute volatile (why I don't know) in its expressions.
+
+So - my question is; Why was this change made?",1
+6820195,07/25/2011 17:48:29,820265,06/29/2011 02:24:41,36,0,Future investment: Erlang vs. Scala,"since concurrent programming becomes constantly more important, I was wondering
+what you think about Erlang vs. Scala in that respect. It seems to me that Scala
+has a larger user base and potentially a brighter future than Erlang. Furthermore,
+Scala is kind of java.
+
+I know these questions are alway a bit subjective, but what would be the better
+future investment: Erlang or Scala. Or even another language?
+
+Thanks,
+Mark
+",scala,concurrency,erlang,concurrent-programming,,07/26/2011 00:02:23,not constructive,1,63,5,"Future investment: Erlang vs. Scala since concurrent programming becomes constantly more important, I was wondering
+what you think about Erlang vs. Scala in that respect. It seems to me that Scala
+has a larger user base and potentially a brighter future than Erlang. Furthermore,
+Scala is kind of java.
+
+I know these questions are alway a bit subjective, but what would be the better
+future investment: Erlang or Scala. Or even another language?
+
+Thanks,
+Mark
+",4
+5417009,03/24/2011 09:21:52,671521,03/22/2011 15:46:43,15,0,How to write derivative function?,"Hello everybody? I am trying to do my homework that I have to write method of derivative. I am thinking to write a function of derivative. (It is Scala)
+
+Please give me a hint for this. 
+Thank you",scala,,,,,03/24/2011 15:21:22,not a real question,1,37,5,"How to write derivative function? Hello everybody? I am trying to do my homework that I have to write method of derivative. I am thinking to write a function of derivative. (It is Scala)
+
+Please give me a hint for this. 
+Thank you",1
+9725825,03/15/2012 18:24:27,770361,05/25/2011 21:29:26,9176,185,Is there a way to get ArrowAssoc work in pattern matching?,"E.g if I want to write
+
+    1 -> 2 match {
+      case 1 -> 2 => ""matched""
+      case _      => ""not matched""
+    }
+    // error: not found: value ->
+rather than the slightly less obvious
+
+    1 -> 2 match {
+      case (1, 2) => ""matched""
+      case _      => ""not matched""
+    }",scala,pattern-matching,,,,,open,0,95,11,"Is there a way to get ArrowAssoc work in pattern matching? E.g if I want to write
+
+    1 -> 2 match {
+      case 1 -> 2 => ""matched""
+      case _      => ""not matched""
+    }
+    // error: not found: value ->
+rather than the slightly less obvious
+
+    1 -> 2 match {
+      case (1, 2) => ""matched""
+      case _      => ""not matched""
+    }",2
+4214452,11/18/2010 11:54:36,399965,07/23/2010 06:56:58,31,1,RabbitMQ only once getting message count from queue,"I am trying to fetch the message from the RabbitMq's queue but only first time it gives me the message count and then it is not giving me any count.I am using scala language and uses its actor.Any kind of help will be appreciated.
+
+
+code as follows
+
+           def act {
+    loop {
+      FACTORY = new ConnectionFactory()
+      //       println(""loop"")
+      FACTORY.setUsername(""guest"")
+      FACTORY.setPassword(""guest"")
+      FACTORY.setVirtualHost(""/"")
+      FACTORY.setPort(5672)
+      FACTORY.setHost(""localhost"")
+      **conn = FACTORY.newConnection**
+      QUEUE_CHANNEL = conn.createChannel
+      QUEUE_CHANNEL.exchangeDeclare(EXCHANGE_NAME, ""direct"", durable)
+
+      var no = QUEUE_CHANNEL.queueDeclare(QUEUE_NAME, durable,     false,false,null).getMessageCount
+      println(""calling to main Q"" + no)
+      QUEUE_CHANNEL.queueBind(QUEUE_NAME, EXCHANGE_NAME, QUEUE_ROUTING_KEY)
+      if (no > 0) {
+        println(""calling to main Q"" + no)
+        getQ
+      }
+    }
+    }
+     
+         def getQ {
+        try {
+         println(""gettng main q"")
+      val consumer = new QueueingConsumer(QUEUE_CHANNEL)
+      QUEUE_CHANNEL basicConsume (QUEUE_NAME, false, consumer)
+      val delivery = consumer.nextDelivery
+      val msg = new java.io.ObjectInputStream(
+        new java.io.ByteArrayInputStream(delivery.getBody)).readObject
+      var obj = msg.asInstanceOf[QueueObject]
+      QUEUE_CHANNEL.basicAck(delivery.getEnvelope().getDeliveryTag, false)
+      //println(obj.status)
+      if (obj != null)
+        add(obj) //add to particular queue
+    } catch {
+      case e: InterruptedException => println(e)
+    }
+    }
+
+My code is getting into infinite loop at this line **conn = FACTORY.newConnection** when it go there second time.",scala,rabbitmq,actor,,,,open,0,388,8,"RabbitMQ only once getting message count from queue I am trying to fetch the message from the RabbitMq's queue but only first time it gives me the message count and then it is not giving me any count.I am using scala language and uses its actor.Any kind of help will be appreciated.
+
+
+code as follows
+
+           def act {
+    loop {
+      FACTORY = new ConnectionFactory()
+      //       println(""loop"")
+      FACTORY.setUsername(""guest"")
+      FACTORY.setPassword(""guest"")
+      FACTORY.setVirtualHost(""/"")
+      FACTORY.setPort(5672)
+      FACTORY.setHost(""localhost"")
+      **conn = FACTORY.newConnection**
+      QUEUE_CHANNEL = conn.createChannel
+      QUEUE_CHANNEL.exchangeDeclare(EXCHANGE_NAME, ""direct"", durable)
+
+      var no = QUEUE_CHANNEL.queueDeclare(QUEUE_NAME, durable,     false,false,null).getMessageCount
+      println(""calling to main Q"" + no)
+      QUEUE_CHANNEL.queueBind(QUEUE_NAME, EXCHANGE_NAME, QUEUE_ROUTING_KEY)
+      if (no > 0) {
+        println(""calling to main Q"" + no)
+        getQ
+      }
+    }
+    }
+     
+         def getQ {
+        try {
+         println(""gettng main q"")
+      val consumer = new QueueingConsumer(QUEUE_CHANNEL)
+      QUEUE_CHANNEL basicConsume (QUEUE_NAME, false, consumer)
+      val delivery = consumer.nextDelivery
+      val msg = new java.io.ObjectInputStream(
+        new java.io.ByteArrayInputStream(delivery.getBody)).readObject
+      var obj = msg.asInstanceOf[QueueObject]
+      QUEUE_CHANNEL.basicAck(delivery.getEnvelope().getDeliveryTag, false)
+      //println(obj.status)
+      if (obj != null)
+        add(obj) //add to particular queue
+    } catch {
+      case e: InterruptedException => println(e)
+    }
+    }
+
+My code is getting into infinite loop at this line **conn = FACTORY.newConnection** when it go there second time.",3
+9222425,02/10/2012 03:47:09,1118703,08/30/2011 01:25:42,11,0,How to copy attributes from the input CssSel,"    <lift:sample.render>
+    <ul class=""my_ul"">
+    <li class=""my_li""><sample:data /></li>
+    </ul>
+    </lift:sample.render>
+
+    // expected result is
+    <ul class=""my_ul"">
+    <li class=""my_li"">Data 1</li>
+    <li class=""my_li"">Data 2</li>
+    <li class=""my_li"">Data 3</li>
+    </ul>
+    <ul class=""my_ul"">
+    <li class=""my_li"">Data 4</li>
+    <li class=""my_li"">Data 5</li>
+    <li class=""my_li"">Data 6</li>
+    </ul>
+    <ul class=""my_ul"">
+    <li class=""my_li"">Data 7</li>
+    <li class=""my_li"">Data 8</li>
+    <li class=""my_li"">Data 9</li>
+    </ul>
+    ......
+
+1. I want to keep the attributes, so that the elements can display normal
+2. how can I generate data as above, given the source data is a list of String. (List[String](""data 1"", ""data 2"", ...))
+3. Implement with LiftSnippet or CssSel
+",scala,lift,,,,,open,0,155,8,"How to copy attributes from the input CssSel     <lift:sample.render>
+    <ul class=""my_ul"">
+    <li class=""my_li""><sample:data /></li>
+    </ul>
+    </lift:sample.render>
+
+    // expected result is
+    <ul class=""my_ul"">
+    <li class=""my_li"">Data 1</li>
+    <li class=""my_li"">Data 2</li>
+    <li class=""my_li"">Data 3</li>
+    </ul>
+    <ul class=""my_ul"">
+    <li class=""my_li"">Data 4</li>
+    <li class=""my_li"">Data 5</li>
+    <li class=""my_li"">Data 6</li>
+    </ul>
+    <ul class=""my_ul"">
+    <li class=""my_li"">Data 7</li>
+    <li class=""my_li"">Data 8</li>
+    <li class=""my_li"">Data 9</li>
+    </ul>
+    ......
+
+1. I want to keep the attributes, so that the elements can display normal
+2. how can I generate data as above, given the source data is a list of String. (List[String](""data 1"", ""data 2"", ...))
+3. Implement with LiftSnippet or CssSel
+",2
+2695492,04/23/2010 00:46:54,46768,12/16/2008 18:26:48,655,29,Using Sub-Types And Return Types in Scala to Process a Generic Object Into a Specific One,"I think this is about covariance but I'm weak on the topic...
+
+I have a generic Event class used for things like database persistance, let's say like this:
+
+    class Event(
+      subject: Long,
+      verb: String,
+      directobject: Option[Long],
+      indirectobject: Option[Long],
+      timestamp: Long)
+    {
+      def getSubject = subject
+      def getVerb = verb
+      def getDirectObject = directobject
+      def getIndirectObject = indirectobject
+      def getTimestamp = timestamp
+    }
+
+However, I have lots of different event verbs and I want to use pattern matching and such with these different event types, so I  will create some corresponding case classes:
+
+    trait EventCC
+    case class Login(user: Long, timestamp: Long) extends EventCC
+    case class Follow(
+      follower: Long,
+      followee: Long,
+      timestamp: Long
+    ) extends EventCC
+
+Now, the question is, how can I easily convert generic Events to the specific case classes.
+
+This is my first stab at it:
+
+    def event2CC[T <: EventCC](event: Event): T = event.getVerb match {
+      case ""login"" => Login(event.getSubject, event.getTimestamp)
+      case ""follow"" => Follow(
+        event.getSubject,
+        event.getDirectObject.getOrElse(0),
+        event.getTimestamp
+      )
+      // ...
+    }
+
+Unfortunately, this is wrong.
+
+    <console>:11: error: type mismatch;
+     found   : Login
+     required: T
+                 case ""login"" => Login(event.getSubject, event.getTimestamp)
+                                 ^
+    <console>:12: error: type mismatch;
+     found   : Follow
+     required: T
+                 case ""follow"" => Follow(event.getSubject, 
+    event.getDirectObject.getOrElse(0), event.getTimestamp)
+
+Could someone with greater type-fu than me explain if, 1) if what I want to do is possible (or reasonable, for that matter), and 2) if so, how to fix `event2CC`. Thanks!",scala,covariance,return-type,subclass,subtype,,open,0,451,16,"Using Sub-Types And Return Types in Scala to Process a Generic Object Into a Specific One I think this is about covariance but I'm weak on the topic...
+
+I have a generic Event class used for things like database persistance, let's say like this:
+
+    class Event(
+      subject: Long,
+      verb: String,
+      directobject: Option[Long],
+      indirectobject: Option[Long],
+      timestamp: Long)
+    {
+      def getSubject = subject
+      def getVerb = verb
+      def getDirectObject = directobject
+      def getIndirectObject = indirectobject
+      def getTimestamp = timestamp
+    }
+
+However, I have lots of different event verbs and I want to use pattern matching and such with these different event types, so I  will create some corresponding case classes:
+
+    trait EventCC
+    case class Login(user: Long, timestamp: Long) extends EventCC
+    case class Follow(
+      follower: Long,
+      followee: Long,
+      timestamp: Long
+    ) extends EventCC
+
+Now, the question is, how can I easily convert generic Events to the specific case classes.
+
+This is my first stab at it:
+
+    def event2CC[T <: EventCC](event: Event): T = event.getVerb match {
+      case ""login"" => Login(event.getSubject, event.getTimestamp)
+      case ""follow"" => Follow(
+        event.getSubject,
+        event.getDirectObject.getOrElse(0),
+        event.getTimestamp
+      )
+      // ...
+    }
+
+Unfortunately, this is wrong.
+
+    <console>:11: error: type mismatch;
+     found   : Login
+     required: T
+                 case ""login"" => Login(event.getSubject, event.getTimestamp)
+                                 ^
+    <console>:12: error: type mismatch;
+     found   : Follow
+     required: T
+                 case ""follow"" => Follow(event.getSubject, 
+    event.getDirectObject.getOrElse(0), event.getTimestamp)
+
+Could someone with greater type-fu than me explain if, 1) if what I want to do is possible (or reasonable, for that matter), and 2) if so, how to fix `event2CC`. Thanks!",5
+2148592,01/27/2010 16:34:24,89493,04/10/2009 15:25:20,208,6,Scala import java package appending com,"I'm working on a Scala project that is importing two java libraries.  Through poor planning, the two java libraries have similar package names, one with com on the front, one without.
+
+The problem is that Scala is looking for the package with com in front first, and telling me that the package doesn't exist.  If I remove all references to the library with com in front of the package, the compile works.
+
+To show an example that makes sense:
+
+In foo.jar we have a package company.product.core
+
+In bar.jar we have a package com.company.product.other.
+
+If both jars are on the classpath, the line:
+
+    import company.product.core.ClassName
+
+Fails with the error ""value core is not a member of package com.companyname.product""  If we remove bar.jar, the compile works fine.
+
+Is Scala trying to save me from typing com.?  Is there a way to tell it to import only what I tell it to?",scala,java,,,,,open,0,149,6,"Scala import java package appending com I'm working on a Scala project that is importing two java libraries.  Through poor planning, the two java libraries have similar package names, one with com on the front, one without.
+
+The problem is that Scala is looking for the package with com in front first, and telling me that the package doesn't exist.  If I remove all references to the library with com in front of the package, the compile works.
+
+To show an example that makes sense:
+
+In foo.jar we have a package company.product.core
+
+In bar.jar we have a package com.company.product.other.
+
+If both jars are on the classpath, the line:
+
+    import company.product.core.ClassName
+
+Fails with the error ""value core is not a member of package com.companyname.product""  If we remove bar.jar, the compile works fine.
+
+Is Scala trying to save me from typing com.?  Is there a way to tell it to import only what I tell it to?",2

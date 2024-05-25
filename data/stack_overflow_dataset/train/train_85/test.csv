@@ -1,0 +1,1967 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+2263404,02/15/2010 00:10:20,114970,05/31/2009 01:32:57,125,0,What package I should install for 'pcre-devel'?,"I need to install pcre-devel package to compile lighttpd on ubuntu:
+
+configure: error: pcre-config not found, install the pcre-devel package or build with --without-pcre
+
+Can you please tell me how to do that?
+
+Thank you.
+
+",ubuntu,,,,,10/28/2011 02:58:12,off topic,1,32,7,"What package I should install for 'pcre-devel'? I need to install pcre-devel package to compile lighttpd on ubuntu:
+
+configure: error: pcre-config not found, install the pcre-devel package or build with --without-pcre
+
+Can you please tell me how to do that?
+
+Thank you.
+
+",1
+8345955,12/01/2011 17:54:05,738811,05/04/2011 21:07:06,842,3,Clang linker doesn't find libraries,"Clang cannot compile simple program, because linker cannot find some files, altough these files are placed in library directory. How to make clang to find these files?  
+  
+    $ cat prog.c
+    int main(){return 0;}
+    $ clang -v
+    clang version 2.9 (tags/RELEASE_29/final)
+    Target: i386-pc-linux-gnu
+    Thread model: posix
+    $ clang prog.c
+    /usr/bin/ld: cannot find crt1.o: No such file or directory
+    /usr/bin/ld: cannot find crti.o: No such file or directory
+    /usr/bin/ld: cannot find crtbegin.o: No such file or directory
+    /usr/bin/ld: cannot find -lgcc
+    /usr/bin/ld: cannot find -lgcc_s
+    clang: error: linker command failed with exit code 1 (use -v to see invocation)
+    $ sudo find / -name crti.o
+    /usr/lib/crti.o
+    /usr/lib/i386-linux-gnu/crti.o
+    $ sudo find / -name crt1.o
+    /usr/lib/i386-linux-gnu/crt1.o
+    /usr/lib/crt1.o
+    $ gcc prog.c
+    $ 
+
+",ubuntu,clang,,,,,open,0,185,5,"Clang linker doesn't find libraries Clang cannot compile simple program, because linker cannot find some files, altough these files are placed in library directory. How to make clang to find these files?  
+  
+    $ cat prog.c
+    int main(){return 0;}
+    $ clang -v
+    clang version 2.9 (tags/RELEASE_29/final)
+    Target: i386-pc-linux-gnu
+    Thread model: posix
+    $ clang prog.c
+    /usr/bin/ld: cannot find crt1.o: No such file or directory
+    /usr/bin/ld: cannot find crti.o: No such file or directory
+    /usr/bin/ld: cannot find crtbegin.o: No such file or directory
+    /usr/bin/ld: cannot find -lgcc
+    /usr/bin/ld: cannot find -lgcc_s
+    clang: error: linker command failed with exit code 1 (use -v to see invocation)
+    $ sudo find / -name crti.o
+    /usr/lib/crti.o
+    /usr/lib/i386-linux-gnu/crti.o
+    $ sudo find / -name crt1.o
+    /usr/lib/i386-linux-gnu/crt1.o
+    /usr/lib/crt1.o
+    $ gcc prog.c
+    $ 
+
+",2
+8738623,01/05/2012 06:42:09,1101518,12/16/2011 08:15:04,17,0,Dependancy issue while openssh server installation,"Am getting following error while installing openssh server in my virtualbox.  
+openssh-server : Depends: openssh-client (= 1:5.3p1-3ubuntu7) but 1:5.5p1-4ubuntu4 is to be installed
+E: Broken packages
+I am using ubuntu 10.10
+
+        root@blackbox:/# apt-get install openssh-server
+        Reading package lists... Done
+        Building dependency tree       
+        Reading state information... Done
+        Some packages could not be installed. This may mean that you have
+        requested an impossible situation or if you are using the unstable
+        distribution that some required packages have not yet been created
+        or been moved out of Incoming.
+        The following information may help to resolve the situation:
+
+        The following packages have unmet dependencies:
+        openssh-server : Depends: openssh-client (= 1:5.3p1-3ubuntu7) but 1:5.5p1-4ubuntu4 is to be installed
+        E: Broken packages
+        root@blackbox:/# 
+",ubuntu,openssh,,,,01/05/2012 18:59:17,off topic,1,214,6,"Dependancy issue while openssh server installation Am getting following error while installing openssh server in my virtualbox.  
+openssh-server : Depends: openssh-client (= 1:5.3p1-3ubuntu7) but 1:5.5p1-4ubuntu4 is to be installed
+E: Broken packages
+I am using ubuntu 10.10
+
+        root@blackbox:/# apt-get install openssh-server
+        Reading package lists... Done
+        Building dependency tree       
+        Reading state information... Done
+        Some packages could not be installed. This may mean that you have
+        requested an impossible situation or if you are using the unstable
+        distribution that some required packages have not yet been created
+        or been moved out of Incoming.
+        The following information may help to resolve the situation:
+
+        The following packages have unmet dependencies:
+        openssh-server : Depends: openssh-client (= 1:5.3p1-3ubuntu7) but 1:5.5p1-4ubuntu4 is to be installed
+        E: Broken packages
+        root@blackbox:/# 
+",2
+5681010,04/15/2011 18:42:56,502867,11/10/2010 07:02:33,142,0,Stop an application through terminal,"I am using Ubuntu and i would like to stop a running application from terminal, more precisely through a script. One way is to get the pid of the process and issue a kill command with the pid of the process. But how do i get the pid of running applications? Or is there any better way to do this?",ubuntu,,,,,,open,0,60,5,"Stop an application through terminal I am using Ubuntu and i would like to stop a running application from terminal, more precisely through a script. One way is to get the pid of the process and issue a kill command with the pid of the process. But how do i get the pid of running applications? Or is there any better way to do this?",1
+7300377,09/04/2011 15:52:29,770908,02/09/2011 04:26:03,547,3,How to add ubuntu (inside windows) in fedora grub?,"i have 3 os(windows7,ubuntu 11.04,fedora).ubuntu install inside windows.fedora's boot loader is currently working.i need to add ubuntu in ferodra's grub menu.
+
+
+fedora grub file
+
+
+
+
+    default=0
+    timeout=15
+    splashimage=(hd0,8)/boot/grub/splash.xpm.gz
+    hiddenmenu
+    title Fedora (2.6.38.6-26.rc1.fc15.i686.PAE)
+	root (hd0,8)
+	kernel /boot/vmlinuz-2.6.38.6-26.rc1.fc15.i686.PAE ro root=UUID=1f745484-544a-4249-8d9f-dcd103ccf545 rd_NO_LUKS rd_NO_LVM rd_NO_MD rd_NO_DM LANG=en_US.UTF-8 SYSFONT=latarcyrheb-sun16 KEYTABLE=us rhgb quiet
+	initrd /boot/initramfs-2.6.38.6-26.rc1.fc15.i686.PAE.img
+    title Other
+	rootnoverify (hd0,0)
+	chainloader +1
+
+
+
+ubuntu grub file(only ubuntu's entry specified below)
+
+
+
+
+     menuentry ""Ubuntu, Linux 2.6.38-8-generic"" {
+	insmod part_msdos
+	insmod ntfs
+	set root='(/dev/sda,msdos2)'
+	search --no-floppy --fs-uuid --set=root 6E8283B482837F79
+	loopback loop0 /ubuntu/disks/root.disk
+	set root=(loop0)
+	linux /boot/vmlinuz-2.6.38-8-generic root=UUID=6E8283B482837F79 loop=/ubuntu/disks/root.disk ro   quiet splash
+	initrd /boot/initrd.img-2.6.38-8-generic
+    }
+
+I need ubuntu in fedora grub menu.The problem is difference in grub version.",ubuntu,fedora,grub,,,09/04/2011 16:05:22,off topic,1,116,9,"How to add ubuntu (inside windows) in fedora grub? i have 3 os(windows7,ubuntu 11.04,fedora).ubuntu install inside windows.fedora's boot loader is currently working.i need to add ubuntu in ferodra's grub menu.
+
+
+fedora grub file
+
+
+
+
+    default=0
+    timeout=15
+    splashimage=(hd0,8)/boot/grub/splash.xpm.gz
+    hiddenmenu
+    title Fedora (2.6.38.6-26.rc1.fc15.i686.PAE)
+	root (hd0,8)
+	kernel /boot/vmlinuz-2.6.38.6-26.rc1.fc15.i686.PAE ro root=UUID=1f745484-544a-4249-8d9f-dcd103ccf545 rd_NO_LUKS rd_NO_LVM rd_NO_MD rd_NO_DM LANG=en_US.UTF-8 SYSFONT=latarcyrheb-sun16 KEYTABLE=us rhgb quiet
+	initrd /boot/initramfs-2.6.38.6-26.rc1.fc15.i686.PAE.img
+    title Other
+	rootnoverify (hd0,0)
+	chainloader +1
+
+
+
+ubuntu grub file(only ubuntu's entry specified below)
+
+
+
+
+     menuentry ""Ubuntu, Linux 2.6.38-8-generic"" {
+	insmod part_msdos
+	insmod ntfs
+	set root='(/dev/sda,msdos2)'
+	search --no-floppy --fs-uuid --set=root 6E8283B482837F79
+	loopback loop0 /ubuntu/disks/root.disk
+	set root=(loop0)
+	linux /boot/vmlinuz-2.6.38-8-generic root=UUID=6E8283B482837F79 loop=/ubuntu/disks/root.disk ro   quiet splash
+	initrd /boot/initrd.img-2.6.38-8-generic
+    }
+
+I need ubuntu in fedora grub menu.The problem is difference in grub version.",3
+9044203,01/28/2012 09:29:11,530439,12/04/2010 13:21:01,299,0,How to make a jar file run on startup & and when you log out (Ubunto)?,"I have no idea where to start looking. I've been reading about daemons and didn't understand the concept.
+
+More details :
+
+- I've been writing a crawler which never stops and crawlers over RSS in the internet.
+- The crawler has been written in java - therefore its a jar right now.
+- I'm an administrator on a machine that has Ubunto 11.04 .
+- There is some chances for the machine to crash , so I'd like the crawler to run every time you startup the machine.
+- Furthermore, I'd like it to keep running even when i logged out. I'm not sure this is possible, but most of the time I'm logged out, and I still want to it crawl.
+
+Any ideas?  Can someone point me in the right direction?",ubuntu,jar,web-crawler,crawler,ubuntu-11.04,01/29/2012 14:05:21,off topic,1,126,16,"How to make a jar file run on startup & and when you log out (Ubunto)? I have no idea where to start looking. I've been reading about daemons and didn't understand the concept.
+
+More details :
+
+- I've been writing a crawler which never stops and crawlers over RSS in the internet.
+- The crawler has been written in java - therefore its a jar right now.
+- I'm an administrator on a machine that has Ubunto 11.04 .
+- There is some chances for the machine to crash , so I'd like the crawler to run every time you startup the machine.
+- Furthermore, I'd like it to keep running even when i logged out. I'm not sure this is possible, but most of the time I'm logged out, and I still want to it crawl.
+
+Any ideas?  Can someone point me in the right direction?",5
+7214006,08/27/2011 10:39:58,909532,08/24/2011 11:41:51,1,0,Cyrillic in the terminal when connecting to the server via ssh (Ubuntu),"Sorry for my English. Please help. The situation is this - the laptop ubuntu 11.04, the terminal displays Cyrillic fine, but when you connect to the server (ubuntu 10.04 64bit) with ssh Russian text is displayed as strange. 
+If you enter the first few letters of the Cyrillic alphabet does not appear, then a colon, then a question mark, and then go to the normal Russian letters. And if you enter any command using the Cyrillic alphabet it naturally does not work. 
+It looks like this.
+
+    root@83971-1:~# :�ий текст
+
+How can I fix it? Thank you.",ubuntu,ssh,cyrillic,,,,open,0,98,12,"Cyrillic in the terminal when connecting to the server via ssh (Ubuntu) Sorry for my English. Please help. The situation is this - the laptop ubuntu 11.04, the terminal displays Cyrillic fine, but when you connect to the server (ubuntu 10.04 64bit) with ssh Russian text is displayed as strange. 
+If you enter the first few letters of the Cyrillic alphabet does not appear, then a colon, then a question mark, and then go to the normal Russian letters. And if you enter any command using the Cyrillic alphabet it naturally does not work. 
+It looks like this.
+
+    root@83971-1:~# :�ий текст
+
+How can I fix it? Thank you.",3
+11643813,07/25/2012 06:22:01,991201,10/12/2011 09:55:57,6,0,Exception: Extraction failed with code: 2,"I am trying to install ubuntu 12.04 in my windows system using wubi..But it giving me error while it extracting the file that **Exception: Extraction failed with code: 2**
+
+please help me to install it on windows.
+
+Thanks Manju Rawat",ubuntu,installation,,,,07/28/2012 10:58:19,off topic,1,38,6,"Exception: Extraction failed with code: 2 I am trying to install ubuntu 12.04 in my windows system using wubi..But it giving me error while it extracting the file that **Exception: Extraction failed with code: 2**
+
+please help me to install it on windows.
+
+Thanks Manju Rawat",2
+11389152,07/09/2012 04:38:19,852774,07/19/2011 20:17:37,182,3,VGA Monitor won't work after NVIDIA driver update on Ubuntu 12.04,"I recently installed Ubuntu 12.04, and the first thing that came up was the driver manager, which told me to install the drivers for my nvidia graphics card (I don't remember what it is). 
+
+I have a laptop and my screen is broken, so I must use an external monitor to see what is on my screen. After the install and restart, the external monitor is no longer detected. How can this be fixed? I know the display still works because i can see the bottom corner of my laptop screen.
+
+When I revert back to before I installed the driver the monitor will display again.",ubuntu,graphics,driver,,,07/19/2012 13:10:04,off topic,1,105,11,"VGA Monitor won't work after NVIDIA driver update on Ubuntu 12.04 I recently installed Ubuntu 12.04, and the first thing that came up was the driver manager, which told me to install the drivers for my nvidia graphics card (I don't remember what it is). 
+
+I have a laptop and my screen is broken, so I must use an external monitor to see what is on my screen. After the install and restart, the external monitor is no longer detected. How can this be fixed? I know the display still works because i can see the bottom corner of my laptop screen.
+
+When I revert back to before I installed the driver the monitor will display again.",3
+6881710,07/30/2011 07:12:10,614157,02/12/2011 11:20:20,68,6,Updating multiple Ubuntu machines,How to update multiple Ubuntu machines in a LAN quickly and efficiently saving network bandwidth?,ubuntu,update,performance,,,07/06/2012 22:14:43,off topic,1,15,4,Updating multiple Ubuntu machines How to update multiple Ubuntu machines in a LAN quickly and efficiently saving network bandwidth?,3
+7298748,09/04/2011 11:05:58,923305,09/01/2011 10:43:47,1,0,which searchengine do ubuntu use for terminal search,"I am curious to know that do Ubuntu has an search engine for searching packages from repository.if it has any please tell which search engine do it uses..
+",ubuntu,,,,,09/04/2011 12:20:53,off topic,1,28,8,"which searchengine do ubuntu use for terminal search I am curious to know that do Ubuntu has an search engine for searching packages from repository.if it has any please tell which search engine do it uses..
+",1
+10615490,05/16/2012 09:19:08,1389581,05/11/2012 13:40:59,1,1,how to install ZTE MF190 3g modem on ubuntu 12.04,"$ lsusb
+
+Bus 002 Device 009: ID 19d2:1256 ZTE WCDMA Technologies MSM 
+
+then I made a config file 
+
+    ########################################################
+    # ZTE MF190
+    #
+    # Contributor: Eshwar Andhavarapu
+    
+    DefaultVendor=  0x19d2
+    DefaultProduct= 0x1224
+    
+    TargetVendor=   0x19d2
+    TargetProduct=  0x1256
+    
+    MessageContent=""5553424312345678000000000000061e000000000000000000000000000000""
+    MessageContent2=""5553424312345679000000000000061b000000020000000000000000000000""
+    
+    NeedResponse=1
+    
+    
+    ########################################################
+
+then when I use
+$ usb_modeswitch -c zte_mf190.conf
+
+it gives error 
+
+    Looking for target devices ...
+       found matching product ID
+       adding device
+     Found devices in target mode or class (1)
+    Looking for default devices ...
+       found matching product ID
+       adding device
+     Found device in default mode, class or configuration (1)
+    Accessing device 000 on bus 002 ...
+    Getting the current device configuration ...
+    Error getting the current configuration (error -1). Assuming configuration 1.
+    Using first interface: 0x00
+    Using endpoints 0x01 (out) and 0x81 (in)
+    Not a storage device, skipping SCSI inquiry
+    Error: could not get description string ""manufacturer""
+    Error: could not get description string ""product""
+    Error: could not get description string ""serial number""
+    
+    USB description data (for identification)
+    -------------------------
+    Manufacturer: 
+         Product: 
+      Serial No.: 
+    -------------------------
+    Looking for active driver ...
+     No driver found. Either detached before or never attached
+    Setting up communication with interface 0
+     Could not claim interface (error -1). Skipping message sending
+    -> Run lsusb to note any changes. Bye.
+
+what should I do to connect 3g modem to ubuntu?
+
+",ubuntu,driver,modem,3g,,05/17/2012 14:02:12,off topic,1,385,10,"how to install ZTE MF190 3g modem on ubuntu 12.04 $ lsusb
+
+Bus 002 Device 009: ID 19d2:1256 ZTE WCDMA Technologies MSM 
+
+then I made a config file 
+
+    ########################################################
+    # ZTE MF190
+    #
+    # Contributor: Eshwar Andhavarapu
+    
+    DefaultVendor=  0x19d2
+    DefaultProduct= 0x1224
+    
+    TargetVendor=   0x19d2
+    TargetProduct=  0x1256
+    
+    MessageContent=""5553424312345678000000000000061e000000000000000000000000000000""
+    MessageContent2=""5553424312345679000000000000061b000000020000000000000000000000""
+    
+    NeedResponse=1
+    
+    
+    ########################################################
+
+then when I use
+$ usb_modeswitch -c zte_mf190.conf
+
+it gives error 
+
+    Looking for target devices ...
+       found matching product ID
+       adding device
+     Found devices in target mode or class (1)
+    Looking for default devices ...
+       found matching product ID
+       adding device
+     Found device in default mode, class or configuration (1)
+    Accessing device 000 on bus 002 ...
+    Getting the current device configuration ...
+    Error getting the current configuration (error -1). Assuming configuration 1.
+    Using first interface: 0x00
+    Using endpoints 0x01 (out) and 0x81 (in)
+    Not a storage device, skipping SCSI inquiry
+    Error: could not get description string ""manufacturer""
+    Error: could not get description string ""product""
+    Error: could not get description string ""serial number""
+    
+    USB description data (for identification)
+    -------------------------
+    Manufacturer: 
+         Product: 
+      Serial No.: 
+    -------------------------
+    Looking for active driver ...
+     No driver found. Either detached before or never attached
+    Setting up communication with interface 0
+     Could not claim interface (error -1). Skipping message sending
+    -> Run lsusb to note any changes. Bye.
+
+what should I do to connect 3g modem to ubuntu?
+
+",4
+6085375,05/22/2011 00:55:00,373485,06/22/2010 18:17:13,123,2,iptables redirect -> address in use?,"I'm running a Tornado server on a random port (e.g. 22000) on Ubuntu 10.04 and ,want to redirect incoming port 80 requests to it. I've read that something like this will accomplish the task:
+
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 22000
+
+What I've noticed however, is that this only works if I *first* start my tornado server, then invoke the above command. If I invoke this command first, and then try to start my server, Python tells me the address is in use. Once this happens, I can't seem to get the port back. For example, if I then invoke the iptables comand above for port 22001, and 'sudo iptables -t nat -L -n -v' gives me:
+
+Chain PREROUTING (policy ACCEPT 6 packets, 384 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    6   376 REDIRECT   tcp  --  eth0   *       0.0.0.0/0            0.0.0.0/0           tcp dpt:80 redir ports 22001 
+
+And I then try to start another Python sever on port 22000, Python still tells me the port is in use, even after a '/sbin/iptables -F'. What am I doing wrong here?
+",ubuntu,iptables,,,,05/22/2011 02:30:54,off topic,1,259,6,"iptables redirect -> address in use? I'm running a Tornado server on a random port (e.g. 22000) on Ubuntu 10.04 and ,want to redirect incoming port 80 requests to it. I've read that something like this will accomplish the task:
+
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 22000
+
+What I've noticed however, is that this only works if I *first* start my tornado server, then invoke the above command. If I invoke this command first, and then try to start my server, Python tells me the address is in use. Once this happens, I can't seem to get the port back. For example, if I then invoke the iptables comand above for port 22001, and 'sudo iptables -t nat -L -n -v' gives me:
+
+Chain PREROUTING (policy ACCEPT 6 packets, 384 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    6   376 REDIRECT   tcp  --  eth0   *       0.0.0.0/0            0.0.0.0/0           tcp dpt:80 redir ports 22001 
+
+And I then try to start another Python sever on port 22000, Python still tells me the port is in use, even after a '/sbin/iptables -F'. What am I doing wrong here?
+",2
+10463247,05/05/2012 15:23:27,239532,12/28/2009 11:36:56,306,6,Qt4 app in KDE/Gnome functioning not as needed,"have a trouble with a custom QT4 app that I have downloaded.I have binary. By one pc on fresh ubuntu 12.04 it works, by me, in Kubuntu, it's starting, I see icon on tray, I click, the main page of software is shown, but any other click is closing it down, so no button is working, What could be reason? any ideas?
+
+
+Here is ldd command output 
+
+
+            linux-gate.so.1 =>  (0x004af000)
+        libQtSql.so.4 => /usr/lib/i386-linux-gnu/libQtSql.so.4 (0x004e4000)
+        libQtGui.so.4 => /usr/lib/i386-linux-gnu/libQtGui.so.4 (0x00522000)
+        libQtNetwork.so.4 => /usr/lib/i386-linux-gnu/libQtNetwork.so.4 (0x00110000)
+        libQtCore.so.4 => /usr/lib/i386-linux-gnu/libQtCore.so.4 (0x00ff5000)
+        libstdc++.so.6 => /usr/lib/i386-linux-gnu/libstdc++.so.6 (0x0025d000)
+        libgcc_s.so.1 => /lib/i386-linux-gnu/libgcc_s.so.1 (0x00342000)
+        libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0x02619000)
+        libfontconfig.so.1 => /usr/lib/i386-linux-gnu/libfontconfig.so.1 (0x00360000)
+        libpthread.so.0 => /lib/i386-linux-gnu/libpthread.so.0 (0x00394000)
+        libaudio.so.2 => /usr/lib/i386-linux-gnu/libaudio.so.2 (0x003af000)
+        libglib-2.0.so.0 => /lib/i386-linux-gnu/libglib-2.0.so.0 (0x0f34f000)
+        libpng12.so.0 => /lib/i386-linux-gnu/libpng12.so.0 (0x003c8000)
+        libz.so.1 => /lib/i386-linux-gnu/libz.so.1 (0x003f2000)
+        libfreetype.so.6 => /usr/lib/i386-linux-gnu/libfreetype.so.6 (0x16496000)
+        libgobject-2.0.so.0 => /usr/lib/i386-linux-gnu/libgobject-2.0.so.0 (0x00435000)
+        libSM.so.6 => /usr/lib/i386-linux-gnu/libSM.so.6 (0x00408000)
+        libICE.so.6 => /usr/lib/i386-linux-gnu/libICE.so.6 (0x00484000)
+        libXi.so.6 => /usr/lib/i386-linux-gnu/libXi.so.6 (0x0049e000)
+        libXrender.so.1 => /usr/lib/i386-linux-gnu/libXrender.so.1 (0x004b0000)
+        libXext.so.6 => /usr/lib/i386-linux-gnu/libXext.so.6 (0x004ba000)
+        libX11.so.6 => /usr/lib/i386-linux-gnu/libX11.so.6 (0x1400e000)
+        libm.so.6 => /lib/i386-linux-gnu/libm.so.6 (0x1e014000)
+        libdl.so.2 => /lib/i386-linux-gnu/libdl.so.2 (0x004cc000)
+        librt.so.1 => /lib/i386-linux-gnu/librt.so.1 (0x004d1000)
+        /lib/ld-linux.so.2 (0x00413000)
+        libexpat.so.1 => /lib/i386-linux-gnu/libexpat.so.1 (0x128bd000)
+        libXt.so.6 => /usr/lib/i386-linux-gnu/libXt.so.6 (0x04741000)
+        libXau.so.6 => /usr/lib/i386-linux-gnu/libXau.so.6 (0x004da000)
+        libpcre.so.3 => /lib/i386-linux-gnu/libpcre.so.3 (0x1d459000)
+        libffi.so.6 => /usr/lib/i386-linux-gnu/libffi.so.6 (0x07786000)
+        libuuid.so.1 => /lib/i386-linux-gnu/libuuid.so.1 (0x004de000)
+        libxcb.so.1 => /usr/lib/i386-linux-gnu/libxcb.so.1 (0x09d9f000)
+        libXdmcp.so.6 => /usr/lib/i386-linux-gnu/libXdmcp.so.6 (0x0afad000)
+
+And I want to add that machine where it's not working, it's also 12.04 , but upgraded from 10.04LTS. Maybe some lib is missing????",ubuntu,qt4,,,,05/06/2012 18:05:30,off topic,1,466,8,"Qt4 app in KDE/Gnome functioning not as needed have a trouble with a custom QT4 app that I have downloaded.I have binary. By one pc on fresh ubuntu 12.04 it works, by me, in Kubuntu, it's starting, I see icon on tray, I click, the main page of software is shown, but any other click is closing it down, so no button is working, What could be reason? any ideas?
+
+
+Here is ldd command output 
+
+
+            linux-gate.so.1 =>  (0x004af000)
+        libQtSql.so.4 => /usr/lib/i386-linux-gnu/libQtSql.so.4 (0x004e4000)
+        libQtGui.so.4 => /usr/lib/i386-linux-gnu/libQtGui.so.4 (0x00522000)
+        libQtNetwork.so.4 => /usr/lib/i386-linux-gnu/libQtNetwork.so.4 (0x00110000)
+        libQtCore.so.4 => /usr/lib/i386-linux-gnu/libQtCore.so.4 (0x00ff5000)
+        libstdc++.so.6 => /usr/lib/i386-linux-gnu/libstdc++.so.6 (0x0025d000)
+        libgcc_s.so.1 => /lib/i386-linux-gnu/libgcc_s.so.1 (0x00342000)
+        libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0x02619000)
+        libfontconfig.so.1 => /usr/lib/i386-linux-gnu/libfontconfig.so.1 (0x00360000)
+        libpthread.so.0 => /lib/i386-linux-gnu/libpthread.so.0 (0x00394000)
+        libaudio.so.2 => /usr/lib/i386-linux-gnu/libaudio.so.2 (0x003af000)
+        libglib-2.0.so.0 => /lib/i386-linux-gnu/libglib-2.0.so.0 (0x0f34f000)
+        libpng12.so.0 => /lib/i386-linux-gnu/libpng12.so.0 (0x003c8000)
+        libz.so.1 => /lib/i386-linux-gnu/libz.so.1 (0x003f2000)
+        libfreetype.so.6 => /usr/lib/i386-linux-gnu/libfreetype.so.6 (0x16496000)
+        libgobject-2.0.so.0 => /usr/lib/i386-linux-gnu/libgobject-2.0.so.0 (0x00435000)
+        libSM.so.6 => /usr/lib/i386-linux-gnu/libSM.so.6 (0x00408000)
+        libICE.so.6 => /usr/lib/i386-linux-gnu/libICE.so.6 (0x00484000)
+        libXi.so.6 => /usr/lib/i386-linux-gnu/libXi.so.6 (0x0049e000)
+        libXrender.so.1 => /usr/lib/i386-linux-gnu/libXrender.so.1 (0x004b0000)
+        libXext.so.6 => /usr/lib/i386-linux-gnu/libXext.so.6 (0x004ba000)
+        libX11.so.6 => /usr/lib/i386-linux-gnu/libX11.so.6 (0x1400e000)
+        libm.so.6 => /lib/i386-linux-gnu/libm.so.6 (0x1e014000)
+        libdl.so.2 => /lib/i386-linux-gnu/libdl.so.2 (0x004cc000)
+        librt.so.1 => /lib/i386-linux-gnu/librt.so.1 (0x004d1000)
+        /lib/ld-linux.so.2 (0x00413000)
+        libexpat.so.1 => /lib/i386-linux-gnu/libexpat.so.1 (0x128bd000)
+        libXt.so.6 => /usr/lib/i386-linux-gnu/libXt.so.6 (0x04741000)
+        libXau.so.6 => /usr/lib/i386-linux-gnu/libXau.so.6 (0x004da000)
+        libpcre.so.3 => /lib/i386-linux-gnu/libpcre.so.3 (0x1d459000)
+        libffi.so.6 => /usr/lib/i386-linux-gnu/libffi.so.6 (0x07786000)
+        libuuid.so.1 => /lib/i386-linux-gnu/libuuid.so.1 (0x004de000)
+        libxcb.so.1 => /usr/lib/i386-linux-gnu/libxcb.so.1 (0x09d9f000)
+        libXdmcp.so.6 => /usr/lib/i386-linux-gnu/libXdmcp.so.6 (0x0afad000)
+
+And I want to add that machine where it's not working, it's also 12.04 , but upgraded from 10.04LTS. Maybe some lib is missing????",2
+8332546,11/30/2011 20:29:46,1074188,11/30/2011 20:25:32,1,0,Backup with Duplicity to Google-Mail,"I want to make backups of my home-directory of a ubuntu-server with Duplicity (http://duplicity.nongnu.org/). The destination of the backups is my google-mail-account and everything works well expect the fact that I have to enter my IMAP-password every single time although it is stored in the configuration.
+For example:
+
+    duply ftpbackup status[/code]
+    eingebe, erscheint folgendes:
+    [code]heiko@vs:~$ duply ftpbackup status
+    Start duply v1.5.1.4, time is 11/27/11 16:18:34.
+    Using profile '/home/heiko/.duply/ftpbackup'.
+    Using installed duplicity (0.6.08b) (please report, this is a bug), gpg 1.4.10 (Home:     ~/.gnupg)
+    Test - Encryption with key *** (OK)
+    Test - Decryption with key *** (OK)
+    Test - Compare Original w/ Decryption (OK)
+    Cleanup - Delete '/tmp/duply.30688.1322407114_*'(OK)
+
+    --- Start running command STATUS 16:18:35.066 ---
+    Enter account password: 
+
+It only continues after entering the right passwort.
+
+I want to automate the whole process with a cronjob, but the password request is disrupting.
+
+My configuration is the following:
+
+	# gpg key data (for symmetric encryption comment out GPG_KEY)
+	GPG_KEY='***'
+	GPG_PW='***'
+	# gpg options passed from duplicity to gpg process (default='')
+	# e.g. ""--trust-model pgp|classic|direct|always"" 
+	#   or ""--compress-algo=bzip2 --bzip2-compress-level=9""
+	#GPG_OPTS=''
+	
+	# credentials & server address of the backup target (URL-Format)
+	# syntax is
+	#   scheme://[user:password@]host[:port]/[/]path
+	# probably one out of
+	#   file:///some_dir
+	#   ftp://user[:password]@other.host[:port]/some_dir
+	#   hsi://user[:password]@other.host/some_dir
+	#   cf+http://container_name
+	#   imap://user[:password]@host.com[/from_address_prefix]
+	#   imaps://user[:password]@host.com[/from_address_prefix]
+	#   rsync://user[:password]@other.host[:port]::/module/some_dir
+	#   rsync://user[:password]@other.host[:port]/relative_path
+	#   rsync://user[:password]@other.host[:port]//absolute_path
+	#   # for the s3 user/password are AWS_ACCESS_KEY_ID/AWS_SECRET_ACCESS_KEY
+	#   s3://[user:password]@host/bucket_name[/prefix]
+	#   s3+http://[user:password]@bucket_name[/prefix]
+	#   scp://user[:password]@other.host[:port]/some_dir
+	#   ssh://user[:password]@other.host[:port]/some_dir
+	#   tahoe://alias/directory
+	#   webdav://user[:password]@other.host/some_dir
+	#   webdavs://user[:password]@other.host/some_dir 
+	# ATTENTION: characters other than A-Za-z0-9.-_.~ in user,password,path have 
+	#            to be replaced by their url encoded pendants, see
+	#            http://en.wikipedia.org/wiki/Url_encoding 
+	#            if you define the credentials as TARGET_USER, TARGET_PASS below 
+	#            duply will url_encode them for you
+	TARGET='imaps://imap.googlemail.com/vServer'
+	# optionally the username/password can be defined as extra variables
+	# setting them here _and_ in TARGET results in an error
+	TARGET_USER='***'
+	TARGET_PASS='***'
+	
+	# base directory to backup
+	SOURCE='/home/heiko'
+	
+	# Time frame for old backups to keep, Used for the ""purge"" command.  
+	# see duplicity man page, chapter TIME_FORMATS)
+	# defaults to 1M, if not set
+	#MAX_AGE=1M
+	
+	# Number of full backups to keep. Used for the ""purge-full"" command. 
+	# See duplicity man page, action ""remove-all-but-n-full"".
+	# defaults to 1, if not set 
+	#MAX_FULL_BACKUPS=1
+	
+	# verbosity of output (5 for gpg errors, 9 for bug fixing)
+	# default is 4, if not set
+	#VERBOSITY=5
+	
+	# temporary file space. at least the size of the biggest file in backup
+	# for a successful restoration process. (default is '/tmp', if not set)
+	#TEMP_DIR=/tmp
+	
+	# sets duplicity --time-separator option (since v0.4.4.RC2) to allow users 
+	# to change the time separator from ':' to another character that will work 
+	# on their system.  HINT: For Windows SMB shares, use --time-separator='_'.
+	# NOTE: '-' is not valid as it conflicts with date separator.
+	# ATTENTION: only use this with duplicity < 0.5.10, since then default file 
+	#            naming is compatible and this option is pending depreciation 
+	#DUPL_PARAMS=""$DUPL_PARAMS --time-separator _ ""
+	
+	# activates duplicity --short-filenames option, when uploading to a file
+	# system that can't have filenames longer than 30 characters (e.g. Mac OS 8)
+	# or have problems with ':' as part of the filename (e.g. Microsoft Windows)
+	# ATTENTION: only use this with duplicity < 0.5.10, later versions default file 
+	#            naming is compatible and this option is pending depreciation
+	#DUPL_PARAMS=""$DUPL_PARAMS --short-filenames ""
+	 
+	# activates duplicity --full-if-older-than option (since duplicity v0.4.4.RC3) 
+	# forces a full backup if last full backup reaches a specified age, for the 
+	# format of MAX_FULLBKP_AGE see duplicity man page, chapter TIME_FORMATS
+	# Uncomment the following two lines to enable this setting.
+	#MAX_FULLBKP_AGE=1M
+	#DUPL_PARAMS=""$DUPL_PARAMS --full-if-older-than $MAX_FULLBKP_AGE "" 
+	
+	# sets duplicity --volsize option (available since v0.4.3.RC7)
+	# set the size of backup chunks to VOLSIZE MB instead of the default 25MB.
+	# VOLSIZE must be number of MB's to set the volume size to.
+	# Uncomment the following two lines to enable this setting. 
+	VOLSIZE=10
+	DUPL_PARAMS=""$DUPL_PARAMS --volsize $VOLSIZE ""
+	
+	# more duplicity command line options can be added in the following way
+	# don't forget to leave a separating space char at the end
+	#DUPL_PARAMS=""$DUPL_PARAMS --put_your_options_here ""
+
+Can anybody help me?
+
+Thanks",ubuntu,backup,imap,,,12/01/2011 04:12:06,off topic,1,754,5,"Backup with Duplicity to Google-Mail I want to make backups of my home-directory of a ubuntu-server with Duplicity (http://duplicity.nongnu.org/). The destination of the backups is my google-mail-account and everything works well expect the fact that I have to enter my IMAP-password every single time although it is stored in the configuration.
+For example:
+
+    duply ftpbackup status[/code]
+    eingebe, erscheint folgendes:
+    [code]heiko@vs:~$ duply ftpbackup status
+    Start duply v1.5.1.4, time is 11/27/11 16:18:34.
+    Using profile '/home/heiko/.duply/ftpbackup'.
+    Using installed duplicity (0.6.08b) (please report, this is a bug), gpg 1.4.10 (Home:     ~/.gnupg)
+    Test - Encryption with key *** (OK)
+    Test - Decryption with key *** (OK)
+    Test - Compare Original w/ Decryption (OK)
+    Cleanup - Delete '/tmp/duply.30688.1322407114_*'(OK)
+
+    --- Start running command STATUS 16:18:35.066 ---
+    Enter account password: 
+
+It only continues after entering the right passwort.
+
+I want to automate the whole process with a cronjob, but the password request is disrupting.
+
+My configuration is the following:
+
+	# gpg key data (for symmetric encryption comment out GPG_KEY)
+	GPG_KEY='***'
+	GPG_PW='***'
+	# gpg options passed from duplicity to gpg process (default='')
+	# e.g. ""--trust-model pgp|classic|direct|always"" 
+	#   or ""--compress-algo=bzip2 --bzip2-compress-level=9""
+	#GPG_OPTS=''
+	
+	# credentials & server address of the backup target (URL-Format)
+	# syntax is
+	#   scheme://[user:password@]host[:port]/[/]path
+	# probably one out of
+	#   file:///some_dir
+	#   ftp://user[:password]@other.host[:port]/some_dir
+	#   hsi://user[:password]@other.host/some_dir
+	#   cf+http://container_name
+	#   imap://user[:password]@host.com[/from_address_prefix]
+	#   imaps://user[:password]@host.com[/from_address_prefix]
+	#   rsync://user[:password]@other.host[:port]::/module/some_dir
+	#   rsync://user[:password]@other.host[:port]/relative_path
+	#   rsync://user[:password]@other.host[:port]//absolute_path
+	#   # for the s3 user/password are AWS_ACCESS_KEY_ID/AWS_SECRET_ACCESS_KEY
+	#   s3://[user:password]@host/bucket_name[/prefix]
+	#   s3+http://[user:password]@bucket_name[/prefix]
+	#   scp://user[:password]@other.host[:port]/some_dir
+	#   ssh://user[:password]@other.host[:port]/some_dir
+	#   tahoe://alias/directory
+	#   webdav://user[:password]@other.host/some_dir
+	#   webdavs://user[:password]@other.host/some_dir 
+	# ATTENTION: characters other than A-Za-z0-9.-_.~ in user,password,path have 
+	#            to be replaced by their url encoded pendants, see
+	#            http://en.wikipedia.org/wiki/Url_encoding 
+	#            if you define the credentials as TARGET_USER, TARGET_PASS below 
+	#            duply will url_encode them for you
+	TARGET='imaps://imap.googlemail.com/vServer'
+	# optionally the username/password can be defined as extra variables
+	# setting them here _and_ in TARGET results in an error
+	TARGET_USER='***'
+	TARGET_PASS='***'
+	
+	# base directory to backup
+	SOURCE='/home/heiko'
+	
+	# Time frame for old backups to keep, Used for the ""purge"" command.  
+	# see duplicity man page, chapter TIME_FORMATS)
+	# defaults to 1M, if not set
+	#MAX_AGE=1M
+	
+	# Number of full backups to keep. Used for the ""purge-full"" command. 
+	# See duplicity man page, action ""remove-all-but-n-full"".
+	# defaults to 1, if not set 
+	#MAX_FULL_BACKUPS=1
+	
+	# verbosity of output (5 for gpg errors, 9 for bug fixing)
+	# default is 4, if not set
+	#VERBOSITY=5
+	
+	# temporary file space. at least the size of the biggest file in backup
+	# for a successful restoration process. (default is '/tmp', if not set)
+	#TEMP_DIR=/tmp
+	
+	# sets duplicity --time-separator option (since v0.4.4.RC2) to allow users 
+	# to change the time separator from ':' to another character that will work 
+	# on their system.  HINT: For Windows SMB shares, use --time-separator='_'.
+	# NOTE: '-' is not valid as it conflicts with date separator.
+	# ATTENTION: only use this with duplicity < 0.5.10, since then default file 
+	#            naming is compatible and this option is pending depreciation 
+	#DUPL_PARAMS=""$DUPL_PARAMS --time-separator _ ""
+	
+	# activates duplicity --short-filenames option, when uploading to a file
+	# system that can't have filenames longer than 30 characters (e.g. Mac OS 8)
+	# or have problems with ':' as part of the filename (e.g. Microsoft Windows)
+	# ATTENTION: only use this with duplicity < 0.5.10, later versions default file 
+	#            naming is compatible and this option is pending depreciation
+	#DUPL_PARAMS=""$DUPL_PARAMS --short-filenames ""
+	 
+	# activates duplicity --full-if-older-than option (since duplicity v0.4.4.RC3) 
+	# forces a full backup if last full backup reaches a specified age, for the 
+	# format of MAX_FULLBKP_AGE see duplicity man page, chapter TIME_FORMATS
+	# Uncomment the following two lines to enable this setting.
+	#MAX_FULLBKP_AGE=1M
+	#DUPL_PARAMS=""$DUPL_PARAMS --full-if-older-than $MAX_FULLBKP_AGE "" 
+	
+	# sets duplicity --volsize option (available since v0.4.3.RC7)
+	# set the size of backup chunks to VOLSIZE MB instead of the default 25MB.
+	# VOLSIZE must be number of MB's to set the volume size to.
+	# Uncomment the following two lines to enable this setting. 
+	VOLSIZE=10
+	DUPL_PARAMS=""$DUPL_PARAMS --volsize $VOLSIZE ""
+	
+	# more duplicity command line options can be added in the following way
+	# don't forget to leave a separating space char at the end
+	#DUPL_PARAMS=""$DUPL_PARAMS --put_your_options_here ""
+
+Can anybody help me?
+
+Thanks",3
+10288769,04/23/2012 21:44:27,451664,09/18/2010 23:33:24,116,1,How can I run a single Dynamips instance on bootup?,"I have an Ubuntu server machine that I'm using to emulate a Cisco router using Dynamips. I don't need to use Dynagen because I'm not running a lab of emulated routers on a single machine... I'm simply using one machine to run one instance of a router for a larger experiment.
+
+I can start the single instance of Dynamips without using Dynagen by executing the following command:
+
+    sudo dynamips -X -p 0:C7200-IO-FE -s 0:0:linux_eth:eth0 -p 1:PA-FE-TX -s 1:0:linux_eth:eth1 /dynamips/cisco_ios.bin
+
+Is it possible to execute this command in some way on bootup? I tried adding the command to the `/etc/rc.local` file, followed by `> /dev/null 2>&1 &` but that didn't work. When I run the command in a terminal followed by `&`, the process immediately stops.
+
+Any ideas?",ubuntu,boot,rc,,,04/27/2012 14:32:18,off topic,1,127,10,"How can I run a single Dynamips instance on bootup? I have an Ubuntu server machine that I'm using to emulate a Cisco router using Dynamips. I don't need to use Dynagen because I'm not running a lab of emulated routers on a single machine... I'm simply using one machine to run one instance of a router for a larger experiment.
+
+I can start the single instance of Dynamips without using Dynagen by executing the following command:
+
+    sudo dynamips -X -p 0:C7200-IO-FE -s 0:0:linux_eth:eth0 -p 1:PA-FE-TX -s 1:0:linux_eth:eth1 /dynamips/cisco_ios.bin
+
+Is it possible to execute this command in some way on bootup? I tried adding the command to the `/etc/rc.local` file, followed by `> /dev/null 2>&1 &` but that didn't work. When I run the command in a terminal followed by `&`, the process immediately stops.
+
+Any ideas?",3
+8492148,12/13/2011 15:56:15,809829,06/22/2011 07:01:24,33,0,GUI for name/dns server on Ubuntu,"I'm currently running Plesk, which is rather expensive, just for name server and dns server.
+I've read a lot abount BIND and tried to play with it. I've also tried out ProBIND as a GUI for BIND, but again, this failed.
+
+Are there any GUI for BIND or similar for newbies like me, who just want to have a simple, small name server running with the ability to add/remove/edit domains and their DNS setup?
+
+Any good tutorial will do.
+
+i'm running Ubuntu (but could change Linux OS).",ubuntu,dns,bind,nameserver,,12/13/2011 21:16:09,off topic,1,83,6,"GUI for name/dns server on Ubuntu I'm currently running Plesk, which is rather expensive, just for name server and dns server.
+I've read a lot abount BIND and tried to play with it. I've also tried out ProBIND as a GUI for BIND, but again, this failed.
+
+Are there any GUI for BIND or similar for newbies like me, who just want to have a simple, small name server running with the ability to add/remove/edit domains and their DNS setup?
+
+Any good tutorial will do.
+
+i'm running Ubuntu (but could change Linux OS).",4
+935443,06/01/2009 15:54:15,112310,05/25/2009 23:58:08,80,12,64bit vs 32bit ubuntu on low memory systems - why does ubuntu 64bit eat my ram?,"Following a friends advice, I have just replaced a 64bit version of ubuntu with the 32bit version on my desktop.
+
+My desktop is a 2yr old dell with 1GB RAM.
+
+Suddenly, it seems like I am using almost 50% less RAM during my usual workflow.
+
+Could someone explain why this would be the case? Is it normal, or was my 64bit installation hosed?",ubuntu,64bit,32bit,,,06/01/2009 16:14:08,off topic,1,60,16,"64bit vs 32bit ubuntu on low memory systems - why does ubuntu 64bit eat my ram? Following a friends advice, I have just replaced a 64bit version of ubuntu with the 32bit version on my desktop.
+
+My desktop is a 2yr old dell with 1GB RAM.
+
+Suddenly, it seems like I am using almost 50% less RAM during my usual workflow.
+
+Could someone explain why this would be the case? Is it normal, or was my 64bit installation hosed?",3
+9792667,03/20/2012 18:19:47,936812,09/09/2011 13:05:49,1,0,"How to disable the ""Chromium didn't shut down correctly"" message? Chromium 17, Ubuntu 10.04","I am running Chromium in a kiosk-like environment and if the computer is powered off forcefully while Chromium is running, the next time it boots it will display the message ""Chromium didn't shut down correctly. To reopen the pages you had open, click Restore.""
+
+I have tried saving some files within the ~/.config/chromium directory and replacing them before chromium loads but it doesnt seem to help. I cannot replace the entire folder as I need to keep things like local storage and cookies working normally.
+
+I want to either HIDE this message from appearing, check for its existence and remove it, or prevent it being triggered in the first place.
+
+Any advice?!",ubuntu,switch-statement,shutdown,chromium,kiosk,03/20/2012 19:25:40,off topic,1,109,14,"How to disable the ""Chromium didn't shut down correctly"" message? Chromium 17, Ubuntu 10.04 I am running Chromium in a kiosk-like environment and if the computer is powered off forcefully while Chromium is running, the next time it boots it will display the message ""Chromium didn't shut down correctly. To reopen the pages you had open, click Restore.""
+
+I have tried saving some files within the ~/.config/chromium directory and replacing them before chromium loads but it doesnt seem to help. I cannot replace the entire folder as I need to keep things like local storage and cookies working normally.
+
+I want to either HIDE this message from appearing, check for its existence and remove it, or prevent it being triggered in the first place.
+
+Any advice?!",5
+11526546,07/17/2012 16:09:26,524481,11/29/2010 23:18:37,463,2,/usr/bin/ld: cannot find -llibboost_filesystem,"So I'm trying to compile my app (note: my first makefile) and I've verified the libraries are in /usr/lib so I'm really not sure at all why I'm getting this errors when I run make:
+
+    Linking bin/Pathing...
+    /usr/bin/ld: cannot find -llibboost_filesystem
+    /usr/bin/ld: cannot find -llibboost_thread-mt
+    /usr/bin/ld: cannot find -llibboost_system
+    collect2: ld returned 1 exit status
+    make: *** [bin/Pathing] Error 1
+
+The relevant line: 
+LDFLAGS  = -L/usr/lib -llibboost_filesystem -llibboost_thread-mt -llibboost_system
+
+Do you see anything glaringly wrong here?  (Trying to compile on 64-bit Ubuntu 11.10 if it matters...)
+
+The entire makefile for those curious:
+
+    # this variable is used to set the executable name
+    APP      = Pathing
+    
+    # this  variable is used to set the extension of files to be compiled
+    SRCEXT   = cpp
+    
+    #this variable sets to top files hierarchy
+    SRCDIR   = Pathing
+    
+    # intermediate object files will be organized under this directory (value of OBJDIR)
+    OBJDIR   = obj
+    
+    #Executable file will be under $BINDIR
+    BINDIR   = bin
+    
+    #This command will look for all source files to be compiled
+    SRCS    := $(shell find $(SRCDIR) -name '*.$(SRCEXT)')
+    
+    #this command is used to determine the subdiretories tree
+    SRCDIRS := $(shell find . -name '*.$(SRCEXT)' -exec dirname {} \; | uniq)
+    
+    
+    OBJS    := $(patsubst %.$(SRCEXT),$(OBJDIR)/%.o,$(SRCS))
+    
+    DEBUG    = -g
+    INCLUDES = -I./libs/PlistCpp/src -I/usr/local/include/thrift -I./thrift/gen-cpp  -I./Pathing  -I./libs/Detour -I./libs/DetourCrowd -I./libs/DetourTileCache
+    CFLAGS   = -DHAVE_NETINET_IN_H -Wall -pedantic -ansi -c $(DEBUG) $(INCLUDES)
+    LDFLAGS  = -L/usr/lib -llibboost_filesystem -llibboost_thread-mt -llibboost_system         
+    
+    ifeq ($(SRCEXT), cpp)
+    CC       = $(CXX)
+    else
+    CFLAGS  += -std=gnu99
+    endif
+    
+    .PHONY: all clean distclean
+    
+    
+    all: $(BINDIR)/$(APP)
+    
+    $(BINDIR)/$(APP): buildrepo $(OBJS)
+            @mkdir -p `dirname $@`
+            @echo ""Linking $@...""
+            @$(CC) $(OBJS) $(LDFLAGS) -o $@
+    
+    $(OBJDIR)/%.o: %.$(SRCEXT)
+            @echo ""Generating dependencies for $<...""
+            @$(call make-depend,$<,$@,$(subst .o,.d,$@))
+            @echo ""Compiling $<...""
+            @$(CC) $(CFLAGS) $< -o $@
+    
+    clean:
+            $(RM) -r $(OBJDIR)
+    
+    distclean: clean
+            $(RM) -r $(BINDIR)
+    
+    buildrepo:
+            @$(call make-repo)
+    
+    define make-repo
+       for dir in $(SRCDIRS); \
+       do \
+            mkdir -p $(OBJDIR)/$$dir; \
+       done
+    endef
+    
+    
+    # usage: $(call make-depend,source-file,object-file,depend-file)
+    define make-depend
+      $(CC) -MM       \
+            -MF $3    \
+            -MP       \
+            -MT $2    \
+            $(CFLAGS) \
+            $1
+    endef
+
+And here is an example which shows the files in /usr/lib:
+
+    -rw-r--r--  1 root root   48666 2011-06-03 16:30 libboost_system.a
+    lrwxrwxrwx  1 root root      17 2011-06-03 16:30 libboost_system-mt.a -> libboost_system.a
+    lrwxrwxrwx  1 root root      25 2011-06-03 16:30 libboost_system-mt.so -> libboost_system.so.1.46.1
+    lrwxrwxrwx  1 root root      25 2011-06-03 16:30 libboost_system.so -> libboost_system.so.1.46.1
+    -rw-r--r--  1 root root   14568 2011-06-03 16:30 libboost_system.so.1.46.1",ubuntu,make,gnu-make,,,,open,0,891,4,"/usr/bin/ld: cannot find -llibboost_filesystem So I'm trying to compile my app (note: my first makefile) and I've verified the libraries are in /usr/lib so I'm really not sure at all why I'm getting this errors when I run make:
+
+    Linking bin/Pathing...
+    /usr/bin/ld: cannot find -llibboost_filesystem
+    /usr/bin/ld: cannot find -llibboost_thread-mt
+    /usr/bin/ld: cannot find -llibboost_system
+    collect2: ld returned 1 exit status
+    make: *** [bin/Pathing] Error 1
+
+The relevant line: 
+LDFLAGS  = -L/usr/lib -llibboost_filesystem -llibboost_thread-mt -llibboost_system
+
+Do you see anything glaringly wrong here?  (Trying to compile on 64-bit Ubuntu 11.10 if it matters...)
+
+The entire makefile for those curious:
+
+    # this variable is used to set the executable name
+    APP      = Pathing
+    
+    # this  variable is used to set the extension of files to be compiled
+    SRCEXT   = cpp
+    
+    #this variable sets to top files hierarchy
+    SRCDIR   = Pathing
+    
+    # intermediate object files will be organized under this directory (value of OBJDIR)
+    OBJDIR   = obj
+    
+    #Executable file will be under $BINDIR
+    BINDIR   = bin
+    
+    #This command will look for all source files to be compiled
+    SRCS    := $(shell find $(SRCDIR) -name '*.$(SRCEXT)')
+    
+    #this command is used to determine the subdiretories tree
+    SRCDIRS := $(shell find . -name '*.$(SRCEXT)' -exec dirname {} \; | uniq)
+    
+    
+    OBJS    := $(patsubst %.$(SRCEXT),$(OBJDIR)/%.o,$(SRCS))
+    
+    DEBUG    = -g
+    INCLUDES = -I./libs/PlistCpp/src -I/usr/local/include/thrift -I./thrift/gen-cpp  -I./Pathing  -I./libs/Detour -I./libs/DetourCrowd -I./libs/DetourTileCache
+    CFLAGS   = -DHAVE_NETINET_IN_H -Wall -pedantic -ansi -c $(DEBUG) $(INCLUDES)
+    LDFLAGS  = -L/usr/lib -llibboost_filesystem -llibboost_thread-mt -llibboost_system         
+    
+    ifeq ($(SRCEXT), cpp)
+    CC       = $(CXX)
+    else
+    CFLAGS  += -std=gnu99
+    endif
+    
+    .PHONY: all clean distclean
+    
+    
+    all: $(BINDIR)/$(APP)
+    
+    $(BINDIR)/$(APP): buildrepo $(OBJS)
+            @mkdir -p `dirname $@`
+            @echo ""Linking $@...""
+            @$(CC) $(OBJS) $(LDFLAGS) -o $@
+    
+    $(OBJDIR)/%.o: %.$(SRCEXT)
+            @echo ""Generating dependencies for $<...""
+            @$(call make-depend,$<,$@,$(subst .o,.d,$@))
+            @echo ""Compiling $<...""
+            @$(CC) $(CFLAGS) $< -o $@
+    
+    clean:
+            $(RM) -r $(OBJDIR)
+    
+    distclean: clean
+            $(RM) -r $(BINDIR)
+    
+    buildrepo:
+            @$(call make-repo)
+    
+    define make-repo
+       for dir in $(SRCDIRS); \
+       do \
+            mkdir -p $(OBJDIR)/$$dir; \
+       done
+    endef
+    
+    
+    # usage: $(call make-depend,source-file,object-file,depend-file)
+    define make-depend
+      $(CC) -MM       \
+            -MF $3    \
+            -MP       \
+            -MT $2    \
+            $(CFLAGS) \
+            $1
+    endef
+
+And here is an example which shows the files in /usr/lib:
+
+    -rw-r--r--  1 root root   48666 2011-06-03 16:30 libboost_system.a
+    lrwxrwxrwx  1 root root      17 2011-06-03 16:30 libboost_system-mt.a -> libboost_system.a
+    lrwxrwxrwx  1 root root      25 2011-06-03 16:30 libboost_system-mt.so -> libboost_system.so.1.46.1
+    lrwxrwxrwx  1 root root      25 2011-06-03 16:30 libboost_system.so -> libboost_system.so.1.46.1
+    -rw-r--r--  1 root root   14568 2011-06-03 16:30 libboost_system.so.1.46.1",3
+9194738,02/08/2012 13:58:56,1182796,02/01/2012 13:29:59,1,0,How to install Internet explorer in Ubuntu?,I have struggled in installing Internet explorer in in UBUNTU...can anyone help me to do?  ,ubuntu,,,,,02/08/2012 14:01:25,off topic,1,17,7,How to install Internet explorer in Ubuntu? I have struggled in installing Internet explorer in in UBUNTU...can anyone help me to do?  ,1
+10826110,05/31/2012 00:46:38,1337645,04/17/2012 02:12:54,1,0,www and subdomains in /etc/hosts,"I'm setting up Ubuntu for the first time and I'd like to use this as a server to host websites: 
+
+    www.something.net
+    blah1.something.net
+    blah2.something.net
+
+what do i need to set up as the hostname? and how does this need to be set up in /etc/hosts file?
+
+thanks!",ubuntu,subdomains,hostname,hosts,,05/31/2012 03:10:55,off topic,1,54,5,"www and subdomains in /etc/hosts I'm setting up Ubuntu for the first time and I'd like to use this as a server to host websites: 
+
+    www.something.net
+    blah1.something.net
+    blah2.something.net
+
+what do i need to set up as the hostname? and how does this need to be set up in /etc/hosts file?
+
+thanks!",4
+8800256,01/10/2012 08:13:30,1140351,01/10/2012 07:49:23,1,0,Ubuntu preseed install. 50% of / and /tmp,"I need to install ubuntu server 10.04 by preseed file and part disk into 50% for / and rest for /tmp. I tried this:
+
+        # Partitioning
+    # use first hard drive SCSI/SATA:
+    d-i partman-auto/disk string /dev/sda
+    d-i partman-auto/method string regular
+    d-i partman-auto/purge_lvm_from_device boolean true
+    d-i partman-lvm/device_remove_lvm boolean true
+    d-i partman-md/device_remove_md boolean true
+    d-i partman-lvm/confirm boolean true
+    d-i partman-auto/choose_recipe select atomic
+    
+    # Actualy use 50% for / and rest 50% for /LOGS
+    d-i partman-auto/expert_recipe string                         \
+          boot-root ::                                            \
+                  2048 50% 1000000000 ext4                        \
+                          $primary{ }                             \
+                          method{ format } format{ }              \
+                          use_filesystem{ } filesystem{ ext4 }    \
+                          mountpoint{ / }                         \
+                  .                                               \
+                  2048 50% -1 ext4                                \
+                          method{ format } format{ }              \
+                          use_filesystem{ } filesystem{ ext4 }    \
+                          mountpoint{ /TMP}                       \
+                  .                                               \
+                  50% 4096 50% linux-swap                         \
+                          method{ swap } format{ }                \
+                  .
+    
+    d-i partman-partitioning/confirm_write_new_label boolean true
+    d-i partman/choose_partition select finish
+    d-i partman/confirm boolean true
+    d-i partman/confirm_nooverwrite boolean true
+
+
+
+Can anyone tell me, why it diesn't works? It creates only 1.9 Gb to / and /tmp.
+
+Thanks!
+",ubuntu,install,partitioning,,,,open,0,896,8,"Ubuntu preseed install. 50% of / and /tmp I need to install ubuntu server 10.04 by preseed file and part disk into 50% for / and rest for /tmp. I tried this:
+
+        # Partitioning
+    # use first hard drive SCSI/SATA:
+    d-i partman-auto/disk string /dev/sda
+    d-i partman-auto/method string regular
+    d-i partman-auto/purge_lvm_from_device boolean true
+    d-i partman-lvm/device_remove_lvm boolean true
+    d-i partman-md/device_remove_md boolean true
+    d-i partman-lvm/confirm boolean true
+    d-i partman-auto/choose_recipe select atomic
+    
+    # Actualy use 50% for / and rest 50% for /LOGS
+    d-i partman-auto/expert_recipe string                         \
+          boot-root ::                                            \
+                  2048 50% 1000000000 ext4                        \
+                          $primary{ }                             \
+                          method{ format } format{ }              \
+                          use_filesystem{ } filesystem{ ext4 }    \
+                          mountpoint{ / }                         \
+                  .                                               \
+                  2048 50% -1 ext4                                \
+                          method{ format } format{ }              \
+                          use_filesystem{ } filesystem{ ext4 }    \
+                          mountpoint{ /TMP}                       \
+                  .                                               \
+                  50% 4096 50% linux-swap                         \
+                          method{ swap } format{ }                \
+                  .
+    
+    d-i partman-partitioning/confirm_write_new_label boolean true
+    d-i partman/choose_partition select finish
+    d-i partman/confirm boolean true
+    d-i partman/confirm_nooverwrite boolean true
+
+
+
+Can anyone tell me, why it diesn't works? It creates only 1.9 Gb to / and /tmp.
+
+Thanks!
+",3
+3792609,09/25/2010 05:26:51,381636,07/02/2010 00:34:50,5,0,ubuntu livecd hangs - unable to access my laptop,"My Acer Aspire Laptop is unbootable?
+I'm trying to reinstall Ubuntu 10.04.1.
+Boot options accessible OK via F2.
+In fact, it still leads me into the olg grub2 menu, but I can't use any of the options because of corrupted installations on the various partitions (hence my wish to reinstall).
+Any type of LiveCD hangs in the middle of the installation.
+With ubuntu-10.04.1-desktop-i385.iso (MD5Sum checked), the installation seems to hang at ""Running /script/casper-premount"" (when run in non-quite mode), (and nothing seems to happen from there).
+I tried various other installations (via UNetBootin eg RescueCD on USB stick etc)...
+The laptop seems to access both USB and CDROM ok...
+My laptop has become totally unusable?
+What can I do?
+Is the 'c' option at the old GRUB2 menu of any use?
+
+Any help would be much appreciated - I'm rather desperate to get my laptop working again!",ubuntu,laptop,livecd,,,09/25/2010 13:06:37,off topic,1,135,9,"ubuntu livecd hangs - unable to access my laptop My Acer Aspire Laptop is unbootable?
+I'm trying to reinstall Ubuntu 10.04.1.
+Boot options accessible OK via F2.
+In fact, it still leads me into the olg grub2 menu, but I can't use any of the options because of corrupted installations on the various partitions (hence my wish to reinstall).
+Any type of LiveCD hangs in the middle of the installation.
+With ubuntu-10.04.1-desktop-i385.iso (MD5Sum checked), the installation seems to hang at ""Running /script/casper-premount"" (when run in non-quite mode), (and nothing seems to happen from there).
+I tried various other installations (via UNetBootin eg RescueCD on USB stick etc)...
+The laptop seems to access both USB and CDROM ok...
+My laptop has become totally unusable?
+What can I do?
+Is the 'c' option at the old GRUB2 menu of any use?
+
+Any help would be much appreciated - I'm rather desperate to get my laptop working again!",3
+10110657,04/11/2012 17:07:23,1121291,12/29/2011 13:51:16,5,0,cant load windows after trying to install ubuntu,"I have a Dell xps 1530 and windows7 on it.
+I'm beginner to linux and i encountered a problem after i tried to install ubuntu.  recently i run ubuntu installer and after some steps , partitioning page displayed . on that page i changed a part of my ""C: drive"" from ""ntfs"" to ""ext4"" ! but before completion i pressed the ""quit"" button . and after that when i start my compuetr ""windows boot Manager""  came up after the dell logo and it says:
+_____________________________________
+Windows Failed to start. A recent hardware or software change might be the cause.
+
+Status: 0xc000000f
+Info: the boot selection failed because a required device is inaccessible.
+______________________________________
+
+It gives me the option to start up using the Operating System CD and try reparing it , but none of repairing option help me. i'm afraid to do anything else since i have tons of files related to my work in it and i REALLY don't want to loose them.
+
+Now i have neither win7 nor ubuntu and i dont know what happend to my hard disk and if my files are still accessible or not!
+Is there any suggetions to find my files?
+
+help,please :(((",ubuntu,harddisk,,,,04/13/2012 19:02:47,off topic,1,192,8,"cant load windows after trying to install ubuntu I have a Dell xps 1530 and windows7 on it.
+I'm beginner to linux and i encountered a problem after i tried to install ubuntu.  recently i run ubuntu installer and after some steps , partitioning page displayed . on that page i changed a part of my ""C: drive"" from ""ntfs"" to ""ext4"" ! but before completion i pressed the ""quit"" button . and after that when i start my compuetr ""windows boot Manager""  came up after the dell logo and it says:
+_____________________________________
+Windows Failed to start. A recent hardware or software change might be the cause.
+
+Status: 0xc000000f
+Info: the boot selection failed because a required device is inaccessible.
+______________________________________
+
+It gives me the option to start up using the Operating System CD and try reparing it , but none of repairing option help me. i'm afraid to do anything else since i have tons of files related to my work in it and i REALLY don't want to loose them.
+
+Now i have neither win7 nor ubuntu and i dont know what happend to my hard disk and if my files are still accessible or not!
+Is there any suggetions to find my files?
+
+help,please :(((",2
+11717310,07/30/2012 07:46:52,1134753,01/06/2012 16:53:51,120,3,Can't mount after EBS snapshot and restore on Ubuntu 12.04,"I'm trying to backup and restore an EBS volume on EC2.
+So this is what I'm doing:
+
+    ec2-create-snapshot <ebs volume> -d <snapshot name>
+    ec2-create-volume --snapshot <snapshot code> -z us-east-1a
+    ec2-run-instances ami-82fa58eb -n 1 -g default -k <keypair> -t m1.large -z us-east-1a
+    (That is an instance of ubuntu 12.04)
+    ec2-attach-volume <restored volume code> -i <instance code> -d /dev/sdf
+    sudo mkdir /mongo
+    (the directory that the volume was mounted on the original instance)
+    sudo mount /dev/xvdf /mongo -t ext4 -o defaults,auto,noatime,noexec
+
+I get the following error:
+
+    mount: wrong fs type, bad option, bad superblock on /dev/xvdf,
+           missing codepage or helper program, or other error
+
+dmesg | tail return the following:
+
+    [2530743.900350] EXT4-fs (xvdf): mounted filesystem with ordered data mode. Opts: (null)
+    [2531604.280710] blkfront device/vbd/2128 num-ring-pages 1 nr_ents 32.
+    [2531604.862635] blkfront: xvdf: barrier or flush: disabled
+    [2531604.883965]  xvdf: unknown partition table
+    [2531656.336763] EXT4-fs (xvdf): VFS: Can't find ext4 filesystem
+
+When I detach the restored EBS and attach the original EBS to the new instance, it works.
+
+What am I missing? Or what do I do wrong?
+",ubuntu,amazon-ec2,amazon-web-services,backup,mount,08/01/2012 00:22:33,off topic,1,221,10,"Can't mount after EBS snapshot and restore on Ubuntu 12.04 I'm trying to backup and restore an EBS volume on EC2.
+So this is what I'm doing:
+
+    ec2-create-snapshot <ebs volume> -d <snapshot name>
+    ec2-create-volume --snapshot <snapshot code> -z us-east-1a
+    ec2-run-instances ami-82fa58eb -n 1 -g default -k <keypair> -t m1.large -z us-east-1a
+    (That is an instance of ubuntu 12.04)
+    ec2-attach-volume <restored volume code> -i <instance code> -d /dev/sdf
+    sudo mkdir /mongo
+    (the directory that the volume was mounted on the original instance)
+    sudo mount /dev/xvdf /mongo -t ext4 -o defaults,auto,noatime,noexec
+
+I get the following error:
+
+    mount: wrong fs type, bad option, bad superblock on /dev/xvdf,
+           missing codepage or helper program, or other error
+
+dmesg | tail return the following:
+
+    [2530743.900350] EXT4-fs (xvdf): mounted filesystem with ordered data mode. Opts: (null)
+    [2531604.280710] blkfront device/vbd/2128 num-ring-pages 1 nr_ents 32.
+    [2531604.862635] blkfront: xvdf: barrier or flush: disabled
+    [2531604.883965]  xvdf: unknown partition table
+    [2531656.336763] EXT4-fs (xvdf): VFS: Can't find ext4 filesystem
+
+When I detach the restored EBS and attach the original EBS to the new instance, it works.
+
+What am I missing? Or what do I do wrong?
+",5
+8815139,01/11/2012 06:37:13,1047140,11/15/2011 08:33:42,83,0,Install Ubuntu on Sony Vaio Z with Bios FakeRaid,"I have a Sony Vaio VPCZ122GX which have Bios fakeRaid (dm-raid). 
+I want to install ubuntu but I use both normal and alternate version but it can not create boot loader.
+I did google and someone say disable Bios Raid. But I don't know how to do this.
+Anyone know this, please let me know. Or Show me another way to install Ubuntu. Thank you very much",ubuntu,raid,sony,,,01/11/2012 13:12:57,off topic,1,65,9,"Install Ubuntu on Sony Vaio Z with Bios FakeRaid I have a Sony Vaio VPCZ122GX which have Bios fakeRaid (dm-raid). 
+I want to install ubuntu but I use both normal and alternate version but it can not create boot loader.
+I did google and someone say disable Bios Raid. But I don't know how to do this.
+Anyone know this, please let me know. Or Show me another way to install Ubuntu. Thank you very much",3
+9866106,03/26/2012 03:02:27,1042861,11/12/2011 06:09:58,55,4,nginx on VirtualBox Ubuntu guest serves stale content,"I don't know if this is a problem with Ubuntu, VirtualBox or nginx.
+
+I am running nginx on Ubuntu, which is a VirtualBox guest on Windows 7.  A Windows 7 folder is mounted as a auto-mount, read-only Shared Folder in VirtualBox.  Ubuntu sees the folder as /media/sf_jsource
+
+Now, if I edit a file in that folder on Windows 7, a shell command (cat) on Ubuntu sees the new content.  That would seem to imply that VirtualBox and Ubuntu are picking up the new changes just fine.
+
+However, the nginx server running on Ubuntu keeps serving the stale content.  That suggested that the problem was with nginx caching files.  I googled around and saw a couple of entries (from 2010, 2011) to disable the nginx cache.  However, I have not enabled any cache in the nginx config, and I don't see any /var/cache/nginx or /opt/cache/nginx directory to purge.
+
+Now, the funny thing is that restarting nginx doesn't fix the problem.  I have to restart the Ubuntu guest for nginx to see the new content, which doesn't make sense since cat in Ubuntu was seeing the changes anyway before reboot.
+
+Pretty much everything (nginx, Ubuntu, VirualBox) is the latest version as of early 2012.",ubuntu,nginx,virtualbox,,,03/27/2012 14:45:21,off topic,1,204,8,"nginx on VirtualBox Ubuntu guest serves stale content I don't know if this is a problem with Ubuntu, VirtualBox or nginx.
+
+I am running nginx on Ubuntu, which is a VirtualBox guest on Windows 7.  A Windows 7 folder is mounted as a auto-mount, read-only Shared Folder in VirtualBox.  Ubuntu sees the folder as /media/sf_jsource
+
+Now, if I edit a file in that folder on Windows 7, a shell command (cat) on Ubuntu sees the new content.  That would seem to imply that VirtualBox and Ubuntu are picking up the new changes just fine.
+
+However, the nginx server running on Ubuntu keeps serving the stale content.  That suggested that the problem was with nginx caching files.  I googled around and saw a couple of entries (from 2010, 2011) to disable the nginx cache.  However, I have not enabled any cache in the nginx config, and I don't see any /var/cache/nginx or /opt/cache/nginx directory to purge.
+
+Now, the funny thing is that restarting nginx doesn't fix the problem.  I have to restart the Ubuntu guest for nginx to see the new content, which doesn't make sense since cat in Ubuntu was seeing the changes anyway before reboot.
+
+Pretty much everything (nginx, Ubuntu, VirualBox) is the latest version as of early 2012.",3
+8286781,11/27/2011 15:51:08,1067563,11/27/2011 03:39:04,11,3,Why ubuntu 11.10 hangs frequenty?,"I am using Ubuntu from a long time and recently I have shifted to its newest version 11.10, Its interface is nice but my touch-pad got hanged frequently after short intervals of time, then no key or key combination works, The only option is that I have to restart of logout from my laptop.
+
+I have tried a lot to solve this problem but not found any satisfactory help till now. 
+Most of my friends who are using Ubuntu 11.10 reported me the same, seems like its a bug or something else.
+
+Please let me know that how to get out of this problem?
+
+Thank You.",ubuntu,ubuntu-11.04,,,,11/27/2011 15:55:24,off topic,1,103,5,"Why ubuntu 11.10 hangs frequenty? I am using Ubuntu from a long time and recently I have shifted to its newest version 11.10, Its interface is nice but my touch-pad got hanged frequently after short intervals of time, then no key or key combination works, The only option is that I have to restart of logout from my laptop.
+
+I have tried a lot to solve this problem but not found any satisfactory help till now. 
+Most of my friends who are using Ubuntu 11.10 reported me the same, seems like its a bug or something else.
+
+Please let me know that how to get out of this problem?
+
+Thank You.",2
+4695804,01/14/2011 20:49:53,94374,04/22/2009 14:10:58,452,26,Verizon Fivespot firewall exceptions,"I have a Verizon Fivespot Wi-Fi router and am having issues connecting to the computer that uses it to get on the internet. I am able to connect to the Fivespot admin pages remotely and I am able to connect to the internet from the computer behind the Fivespot.
+
+> I've tried asking this on superuser
+> but have gotten nothing, I figure this
+> is pertinent to programmers working on
+> remote computers as well.
+
+There are two sections pertinent to this issue, Port Filtering 
+![alt text][1]
+And, Port Forwarding
+![alt text][2]
+I've tried each individually and both together but cannot access anything through the router except for the admin page.
+
+I am trying to connect through SSH on Port 22 to an Ubuntu 10.04 box over wifi.
+
+I have called Verizon Tech Support but they were unhelpful, the person essentially read what it says on each screen without any elaboration.
+
+Any help is greatly appreciated!
+
+
+  [1]: http://i.stack.imgur.com/matXi.png
+  [2]: http://i.stack.imgur.com/tILF6.png",ubuntu,ubuntu-10.04,verizon-wireless,firewall-access,,11/25/2011 07:02:05,off topic,1,152,4,"Verizon Fivespot firewall exceptions I have a Verizon Fivespot Wi-Fi router and am having issues connecting to the computer that uses it to get on the internet. I am able to connect to the Fivespot admin pages remotely and I am able to connect to the internet from the computer behind the Fivespot.
+
+> I've tried asking this on superuser
+> but have gotten nothing, I figure this
+> is pertinent to programmers working on
+> remote computers as well.
+
+There are two sections pertinent to this issue, Port Filtering 
+![alt text][1]
+And, Port Forwarding
+![alt text][2]
+I've tried each individually and both together but cannot access anything through the router except for the admin page.
+
+I am trying to connect through SSH on Port 22 to an Ubuntu 10.04 box over wifi.
+
+I have called Verizon Tech Support but they were unhelpful, the person essentially read what it says on each screen without any elaboration.
+
+Any help is greatly appreciated!
+
+
+  [1]: http://i.stack.imgur.com/matXi.png
+  [2]: http://i.stack.imgur.com/tILF6.png",4
+7944161,10/30/2011 09:32:15,986280,10/09/2011 10:49:09,11,15,How to create a installer for Ubuntu,"is there any tool to create something like an Installer for Ubuntu as there is for Windows?
+
+thanks
+
+Jon",ubuntu,installer,,,,10/31/2011 02:47:42,off topic,1,17,7,"How to create a installer for Ubuntu is there any tool to create something like an Installer for Ubuntu as there is for Windows?
+
+thanks
+
+Jon",2
+9622882,03/08/2012 18:32:19,593411,01/28/2011 06:56:35,25,1,How to format unreadable drive on Ubuntu,"I have a new 3TB drive that I messed up.  After days of agony I'm just hoping to format the thing and start over, but...
+
+fdisk can't read it anymore
+blkid doesn't show it
+
+the only thing showing anything is testdrive shows
+    DISK /dev/sdb - 3000 GB / 2794 GiB - ATA ST33000651AS
+
+Background if curious:
+Installed Ubuntu on one motherboard then moved it to another.  Found out you can't do that and something went awry.  Spent days trying to recover the data to no avail.  Then couldn't get it to show up in gparted, it would just hang.  Read somewhere to format it in Windows.  No better after that.  Came across ""testdrive"" which I'd never heard of.  On the first run it showed 3 primaries on the 3TB.  I thought great maybe that's the issue.  However they don't show up.  Even if they did I wouldn't know what to do.  Anyhow that's where I'm at.",ubuntu,format,harddrive,,,03/09/2012 01:48:52,off topic,1,166,7,"How to format unreadable drive on Ubuntu I have a new 3TB drive that I messed up.  After days of agony I'm just hoping to format the thing and start over, but...
+
+fdisk can't read it anymore
+blkid doesn't show it
+
+the only thing showing anything is testdrive shows
+    DISK /dev/sdb - 3000 GB / 2794 GiB - ATA ST33000651AS
+
+Background if curious:
+Installed Ubuntu on one motherboard then moved it to another.  Found out you can't do that and something went awry.  Spent days trying to recover the data to no avail.  Then couldn't get it to show up in gparted, it would just hang.  Read somewhere to format it in Windows.  No better after that.  Came across ""testdrive"" which I'd never heard of.  On the first run it showed 3 primaries on the 3TB.  I thought great maybe that's the issue.  However they don't show up.  Even if they did I wouldn't know what to do.  Anyhow that's where I'm at.",3
+9980906,04/02/2012 17:26:55,881936,08/06/2011 13:01:29,100,1,Ubuntu Xen Virtualization,"I am using Ubuntu 11.04. 
+My project is to create a virtual laboratory wherein the students will log in from dump terminals and via network, they will be logged into a virtual OS which will most probably implemented using XEN. 
+My questions are : 
+
+ 1. Am I using right Ubuntu? Coz i read that for such kind of a system,we need ubuntu server.
+ 
+ 2. Is XEN advisable?
+
+Thanks for future help.",ubuntu,terminal,virtual,virtualization,xen,04/13/2012 04:21:45,off topic,1,72,3,"Ubuntu Xen Virtualization I am using Ubuntu 11.04. 
+My project is to create a virtual laboratory wherein the students will log in from dump terminals and via network, they will be logged into a virtual OS which will most probably implemented using XEN. 
+My questions are : 
+
+ 1. Am I using right Ubuntu? Coz i read that for such kind of a system,we need ubuntu server.
+ 
+ 2. Is XEN advisable?
+
+Thanks for future help.",5
+6421225,06/21/2011 06:27:37,653116,03/10/2011 07:59:36,67,17,i wont to install voltdb on ubuntu 32 bit version,"can any one help me to install voltdb on ubuntu 32 bit version
+ i have following error 
+Exception in thread ""main"" java.lang.NoClassDefFoundError: org/voltdb/VoltDB
+Caused by: java.lang.ClassNotFoundException: org.voltdb.VoltDB
+at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:321)
+at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:334)",ubuntu,ubuntu-10.04,,,,06/21/2011 16:34:39,off topic,1,34,10,"i wont to install voltdb on ubuntu 32 bit version can any one help me to install voltdb on ubuntu 32 bit version
+ i have following error 
+Exception in thread ""main"" java.lang.NoClassDefFoundError: org/voltdb/VoltDB
+Caused by: java.lang.ClassNotFoundException: org.voltdb.VoltDB
+at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:321)
+at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:334)",2
+11239115,06/28/2012 06:25:35,1487604,06/28/2012 06:01:45,1,0,Ubuntu: Graphics freeze,"We have recently updated a java application which runs on an Ubuntu PC, and are now experiencing a graphics problem that we didn't encounter before.
+
+The system is running constantly, and randomly maybe twice a month but sometimes within a few days the systems graphics will freeze, and the gnome panels are frozen. 
+
+We use team viewer and can access the system remotely when frozen and both teamviewer and our java app are still running ok (new log files being generated). I have ruled out Teamviewer - same version as on many other systems and it still works even when graphics frozen (although picture etc. is frozen).
+
+I am thinking it may be a graphics driver issue as the new GUI is different.
+
+Any suggestions on ways to trouble shoot would be most welcome, are there any ubuntu logs that may help identify this problem,
+
+Cheers
+
+",ubuntu,graphics,,,,07/08/2012 00:02:08,off topic,1,142,3,"Ubuntu: Graphics freeze We have recently updated a java application which runs on an Ubuntu PC, and are now experiencing a graphics problem that we didn't encounter before.
+
+The system is running constantly, and randomly maybe twice a month but sometimes within a few days the systems graphics will freeze, and the gnome panels are frozen. 
+
+We use team viewer and can access the system remotely when frozen and both teamviewer and our java app are still running ok (new log files being generated). I have ruled out Teamviewer - same version as on many other systems and it still works even when graphics frozen (although picture etc. is frozen).
+
+I am thinking it may be a graphics driver issue as the new GUI is different.
+
+Any suggestions on ways to trouble shoot would be most welcome, are there any ubuntu logs that may help identify this problem,
+
+Cheers
+
+",2
+9422223,02/23/2012 22:14:17,1114024,12/23/2011 21:48:27,1,0,A stable but not too conservative distribution,"Good evening. As the title states, I am searching for a distribution that can prove reliable, but still not too conservative, in terms of hardware-support, modern packages, and such.
+
+I am no long time user; I have been using GNU/Linux for 2 years only. I used **Slackware** for the first year and **Arch Linux** for the second, both obviously having their pro's and cons.
+
+I know Slackware offers *sbopkg*, but **Arch Linux**'s *pacman* was just marvelous.
+I liked **Arch Linux** so well that I thought I had found ""my"" distro. As the second year passed, I grew kind of tired of the system instability (nothing else can be expected, I know) from a bleeding-edge package management system in a rolling release distro. At this point I really started missing **Slackware**'s stability.
+
+So just today, I peeked at this **Ubuntu** I have been hearing about. I was, frankly, a bit horrified, as I tried to make myself consider using it permanently. In regards to where I came from (**Slack** / **Arch**), **Ubuntu** felt very bloated, sluggish and, well, more about show than effect. I have been hearing a great variety of opinions regarding *Unity*, but I have absolutely no knowledge about Ubuntu, so I need your help.
+
+I do not care for visual candy, but the WM / DE *must* support Java applications well, as this is what I will be programming for the coming years.
+
+**TL;DR - I seek a distribution which is stable, but still supports modern hardware and packages.**
+
+I *REALLY* value lightweight, customizable solutions (I cannot stress this enough. I felt like I was in a cage while using Ubuntu(Unity).
+
+Am I asking too much? If not - what are your suggestions? 
+
+Thanks a lot in advance,
+krystah",ubuntu,distribution,window-managers,archlinux,slackware,02/24/2012 11:16:56,off topic,1,282,7,"A stable but not too conservative distribution Good evening. As the title states, I am searching for a distribution that can prove reliable, but still not too conservative, in terms of hardware-support, modern packages, and such.
+
+I am no long time user; I have been using GNU/Linux for 2 years only. I used **Slackware** for the first year and **Arch Linux** for the second, both obviously having their pro's and cons.
+
+I know Slackware offers *sbopkg*, but **Arch Linux**'s *pacman* was just marvelous.
+I liked **Arch Linux** so well that I thought I had found ""my"" distro. As the second year passed, I grew kind of tired of the system instability (nothing else can be expected, I know) from a bleeding-edge package management system in a rolling release distro. At this point I really started missing **Slackware**'s stability.
+
+So just today, I peeked at this **Ubuntu** I have been hearing about. I was, frankly, a bit horrified, as I tried to make myself consider using it permanently. In regards to where I came from (**Slack** / **Arch**), **Ubuntu** felt very bloated, sluggish and, well, more about show than effect. I have been hearing a great variety of opinions regarding *Unity*, but I have absolutely no knowledge about Ubuntu, so I need your help.
+
+I do not care for visual candy, but the WM / DE *must* support Java applications well, as this is what I will be programming for the coming years.
+
+**TL;DR - I seek a distribution which is stable, but still supports modern hardware and packages.**
+
+I *REALLY* value lightweight, customizable solutions (I cannot stress this enough. I felt like I was in a cage while using Ubuntu(Unity).
+
+Am I asking too much? If not - what are your suggestions? 
+
+Thanks a lot in advance,
+krystah",5
+11670035,07/26/2012 13:10:00,1554752,07/26/2012 13:00:37,1,0,Making liveCD from existing Ubuntu Server install,"I would like to make a bootable live cd that is the exact same environment as the existing install on the hard drive. I know for Ubuntu desktop you can use remastersys, but it requires a GUI and won't run on the server edition. I've also run across a method that involves chroot and using apt-get to add additional packages that you want to include, but there are some things that I've done to the install that I wouldn't know how to do using this method (like installing the enthought distribution of python from source using an elaborate .sh file).
+
+Is there any options, similar to remastersys, that will just take the existing install and build it into a livecd iso image? If it helps, I don't need to have the option to install from the cd, just boot into it so it will start running the processes I have set to run at startup. ",ubuntu,customizing,livecd,server,,07/26/2012 13:51:36,off topic,1,155,7,"Making liveCD from existing Ubuntu Server install I would like to make a bootable live cd that is the exact same environment as the existing install on the hard drive. I know for Ubuntu desktop you can use remastersys, but it requires a GUI and won't run on the server edition. I've also run across a method that involves chroot and using apt-get to add additional packages that you want to include, but there are some things that I've done to the install that I wouldn't know how to do using this method (like installing the enthought distribution of python from source using an elaborate .sh file).
+
+Is there any options, similar to remastersys, that will just take the existing install and build it into a livecd iso image? If it helps, I don't need to have the option to install from the cd, just boot into it so it will start running the processes I have set to run at startup. ",4
+3057257,06/16/2010 21:18:11,51496,01/05/2009 01:35:03,62,3,Ubuntu 10.04 (Lucid) OpenLDAP invalid credentials issue,"This won't be a question, but a solution to an infuriating problem on Ubuntu 10.04.
+If you tried to deploy an LDAP server using this distro following the tutorials below, you'll be on serious trouble.
+Tutorials:
+[https://help.ubuntu.com/9.10/serverguide/C/openldap-server.html][1]
+[https://help.ubuntu.com/9.10/serverguide/C/samba-ldap.html][2]
+
+The error first appear, on the line:
+""ldapsearch -xLLL -b cn=config -D cn=admin,cn=config -W olcDatabase=hdb olcAccess""
+
+It simply won't allow admin to access the ""cn=config"", thus you won't be able to deploy the LDAP server correctly.
+After almost a week searching for a solution, I've found this page:
+https://bugs.launchpad.net/ubuntu-docs/+bug/333733
+
+On comment #5, the solution is presented. Quoting the author:
+
+> when you get to the setting up ACL part you all of a sudden need to use a  cn=admin,cn=config, that doesn't exist
+
+> creating a config.ldif with
+> dn: olcDatabase={0}config,cn=config
+> changetype: modify
+> add: olcRootDN
+> olcRootDN: cn=admin,cn=config
+
+> dn: olcDatabase={0}config,cn=config
+> changetype: modify
+> add: olcRootPW
+> olcRootPW: secret
+
+> dn: olcDatabase={0}config,cn=config
+> changetype: modify
+> delete: olcAccess
+
+> and adding it with
+> ldapadd -Y EXTERNAL -H ldapi:/// -f config.ldif
+
+It's unacceptable that a Linux distribution, popular like Ubuntu, have such ridiculous bug.
+Hope it helps everyone!
+
+ 
+
+
+  [1]: https://help.ubuntu.com/9.10/serverguide/C/openldap-server.html
+  [2]: https://help.ubuntu.com/9.10/serverguide/C/samba-ldap.html",ubuntu,ldap,openldap,ubuntu-lucid,,06/17/2010 13:44:24,off topic,1,169,7,"Ubuntu 10.04 (Lucid) OpenLDAP invalid credentials issue This won't be a question, but a solution to an infuriating problem on Ubuntu 10.04.
+If you tried to deploy an LDAP server using this distro following the tutorials below, you'll be on serious trouble.
+Tutorials:
+[https://help.ubuntu.com/9.10/serverguide/C/openldap-server.html][1]
+[https://help.ubuntu.com/9.10/serverguide/C/samba-ldap.html][2]
+
+The error first appear, on the line:
+""ldapsearch -xLLL -b cn=config -D cn=admin,cn=config -W olcDatabase=hdb olcAccess""
+
+It simply won't allow admin to access the ""cn=config"", thus you won't be able to deploy the LDAP server correctly.
+After almost a week searching for a solution, I've found this page:
+https://bugs.launchpad.net/ubuntu-docs/+bug/333733
+
+On comment #5, the solution is presented. Quoting the author:
+
+> when you get to the setting up ACL part you all of a sudden need to use a  cn=admin,cn=config, that doesn't exist
+
+> creating a config.ldif with
+> dn: olcDatabase={0}config,cn=config
+> changetype: modify
+> add: olcRootDN
+> olcRootDN: cn=admin,cn=config
+
+> dn: olcDatabase={0}config,cn=config
+> changetype: modify
+> add: olcRootPW
+> olcRootPW: secret
+
+> dn: olcDatabase={0}config,cn=config
+> changetype: modify
+> delete: olcAccess
+
+> and adding it with
+> ldapadd -Y EXTERNAL -H ldapi:/// -f config.ldif
+
+It's unacceptable that a Linux distribution, popular like Ubuntu, have such ridiculous bug.
+Hope it helps everyone!
+
+ 
+
+
+  [1]: https://help.ubuntu.com/9.10/serverguide/C/openldap-server.html
+  [2]: https://help.ubuntu.com/9.10/serverguide/C/samba-ldap.html",4
+11644034,07/25/2012 06:42:05,642979,03/03/2011 12:38:26,1,0,Strange file ownership with Ubuntu,"Normally we know when we create one file in Linux, the file's owner and group will set with the creator. For example, I have one user usera, after I execute
+
+**usera@srv1:$touch a.txt**
+
+I will find the owner of this file will be usera, just like
+
+**usera@srv1:$ll**
+
+**-rw-r--r-- 1 usera usera       0 2012-07-25 14:29 1.txt**
+
+But now the result is:
+
+**-rw-r--r-- 1 root usera       0 2012-07-25 14:29 1.txt**
+
+It seems that not only the touch command, but also others are all have the same problem. For example, if I use vim to create a new file:
+
+**usera@srv1:$vim a.txt**
+
+I can enter edit screen, but cannot save it. The error message is the same as we do not have write permission on that file.
+
+So what happens on our server, the server is Ubuntu 11.04 64bits.",ubuntu,permissions,ownership,,,07/25/2012 09:10:25,off topic,1,136,5,"Strange file ownership with Ubuntu Normally we know when we create one file in Linux, the file's owner and group will set with the creator. For example, I have one user usera, after I execute
+
+**usera@srv1:$touch a.txt**
+
+I will find the owner of this file will be usera, just like
+
+**usera@srv1:$ll**
+
+**-rw-r--r-- 1 usera usera       0 2012-07-25 14:29 1.txt**
+
+But now the result is:
+
+**-rw-r--r-- 1 root usera       0 2012-07-25 14:29 1.txt**
+
+It seems that not only the touch command, but also others are all have the same problem. For example, if I use vim to create a new file:
+
+**usera@srv1:$vim a.txt**
+
+I can enter edit screen, but cannot save it. The error message is the same as we do not have write permission on that file.
+
+So what happens on our server, the server is Ubuntu 11.04 64bits.",3
+11031756,06/14/2012 11:04:56,78970,03/17/2009 11:20:18,535,6,Can't route specific subnet thru VPN in ubuntu,"I'm having issues routing traffic thru VPN.
+
+Here's my setup
+
+I have 3 hosts, let's call them A, B and Z
+
+B and Z have a VPN connection in the 10.10.10.x SUBNET
+A and B have a direct connection in the 10.10.12.x SUBNET
+
+I want to be able to route traffic from A to Z, like : 
+
+    A <= 10.10.12.254 [LAN] 10.10.12.111 => B <= 10.10.10.152 [VPN] 10.10.10.10 => Z
+
+On host B, i have set up ip_forwarding : net.ipv4.ip_forward = 1
+
+and routing on host B: 
+
+    [root@hostA: ~]# ip route
+    10.10.10.10 dev ppp0  proto kernel  scope link  src 10.10.10.152 
+    10.10.12.0/24 dev eth1  proto kernel  scope link  src 10.10.12.111 
+    10.10.10.0/24 dev ppp0  scope link 
+    169.254.0.0/16 dev eth1  scope link 
+
+routing on host A:
+
+    [root@hostA: ~]# ip route
+    10.10.10.0 via 10.10.12.111 dev eth1 
+    10.10.12.0/24 dev eth1  proto kernel  scope link  src 10.10.12.254 
+    169.254.0.0/16 dev eth1  scope link 
+    default via 192.168.1.1 dev eth0
+
+But still not able to ping 10.10.10.10 from host A.
+
+Any idea ? I'm pulling my hairs out.",ubuntu,routing,vpn,,,06/18/2012 13:09:46,off topic,1,213,8,"Can't route specific subnet thru VPN in ubuntu I'm having issues routing traffic thru VPN.
+
+Here's my setup
+
+I have 3 hosts, let's call them A, B and Z
+
+B and Z have a VPN connection in the 10.10.10.x SUBNET
+A and B have a direct connection in the 10.10.12.x SUBNET
+
+I want to be able to route traffic from A to Z, like : 
+
+    A <= 10.10.12.254 [LAN] 10.10.12.111 => B <= 10.10.10.152 [VPN] 10.10.10.10 => Z
+
+On host B, i have set up ip_forwarding : net.ipv4.ip_forward = 1
+
+and routing on host B: 
+
+    [root@hostA: ~]# ip route
+    10.10.10.10 dev ppp0  proto kernel  scope link  src 10.10.10.152 
+    10.10.12.0/24 dev eth1  proto kernel  scope link  src 10.10.12.111 
+    10.10.10.0/24 dev ppp0  scope link 
+    169.254.0.0/16 dev eth1  scope link 
+
+routing on host A:
+
+    [root@hostA: ~]# ip route
+    10.10.10.0 via 10.10.12.111 dev eth1 
+    10.10.12.0/24 dev eth1  proto kernel  scope link  src 10.10.12.254 
+    169.254.0.0/16 dev eth1  scope link 
+    default via 192.168.1.1 dev eth0
+
+But still not able to ping 10.10.10.10 from host A.
+
+Any idea ? I'm pulling my hairs out.",3
+7925728,10/28/2011 06:06:34,808257,06/21/2011 10:47:48,23,0,Can't login ubuntu 11.10,"I have accidently removed pm-utils package from ubuntu 11.10 and can't login to the system after rebooting. What should I do now?
+I there any way of system recovery? ",ubuntu,,,,,10/28/2011 06:12:26,off topic,1,29,4,"Can't login ubuntu 11.10 I have accidently removed pm-utils package from ubuntu 11.10 and can't login to the system after rebooting. What should I do now?
+I there any way of system recovery? ",1
+8261344,11/24/2011 18:38:28,846381,07/15/2011 11:44:38,43,0,AWS Ubuntu Instance - User rights,"I am running an instance of Ubuntu on Amazon Web Services, all working pretty dandy. I've got one little snag that i'm trying to find the answer to atm. 
+
+Amazon forces you to have another user other than root. And thus you cannot connect as root. So in I go with my username via ssh and sftp, works v well.
+
+However, I cannot edit anything unless explicitly giving the file chmod 777 rights.
+
+Now I am quite clear as to what the problem is, just not the solution. My user second user, logs into his/her home directory just fine. But my apache install and files are located at /var/www 
+
+Could I solve this by symlinks in the home directory etc or is there a way I can setup the permissions for this user to access and write to the /var/www folder and all files within it, without also giving that right to the general public?
+
+Any help would be much appreciated.",ubuntu,amazon-ec2,amazon-web-services,,,11/25/2011 19:28:22,off topic,1,158,6,"AWS Ubuntu Instance - User rights I am running an instance of Ubuntu on Amazon Web Services, all working pretty dandy. I've got one little snag that i'm trying to find the answer to atm. 
+
+Amazon forces you to have another user other than root. And thus you cannot connect as root. So in I go with my username via ssh and sftp, works v well.
+
+However, I cannot edit anything unless explicitly giving the file chmod 777 rights.
+
+Now I am quite clear as to what the problem is, just not the solution. My user second user, logs into his/her home directory just fine. But my apache install and files are located at /var/www 
+
+Could I solve this by symlinks in the home directory etc or is there a way I can setup the permissions for this user to access and write to the /var/www folder and all files within it, without also giving that right to the general public?
+
+Any help would be much appreciated.",3
+9764832,03/19/2012 03:54:24,1268572,03/14/2012 09:14:39,11,0,Ubuntu quickly text entry observer,"my ubuntu quickly program has two text entries. What I want is, while I'm typing in text entry 1, I want the text entry 2 to show the reversed string of text entry 1. It should happen without pressing any buttons or enter key. In real time it should convert and print on text entry 2 while I'm typing. Thanks :-)",ubuntu,,,,,03/19/2012 12:46:28,not a real question,1,61,5,"Ubuntu quickly text entry observer my ubuntu quickly program has two text entries. What I want is, while I'm typing in text entry 1, I want the text entry 2 to show the reversed string of text entry 1. It should happen without pressing any buttons or enter key. In real time it should convert and print on text entry 2 while I'm typing. Thanks :-)",1
+11380332,07/08/2012 02:57:59,1312478,04/04/2012 09:40:22,165,11,ubuntu how do I install make,"I need to install make on my ubuntu on AWS EC2.
+When I run this command I get error :
+
+    sudo apt-get install build-essential
+    Reading package lists... Done
+    Building dependency tree
+    Reading state information... Done
+    E: Unable to locate package build-essential
+
+Any help please how can I install make on my ubuntu
+",ubuntu,make,,,,07/08/2012 09:16:08,off topic,1,65,6,"ubuntu how do I install make I need to install make on my ubuntu on AWS EC2.
+When I run this command I get error :
+
+    sudo apt-get install build-essential
+    Reading package lists... Done
+    Building dependency tree
+    Reading state information... Done
+    E: Unable to locate package build-essential
+
+Any help please how can I install make on my ubuntu
+",2
+9122488,02/03/2012 01:18:43,1186485,02/03/2012 01:10:58,1,0,How to allow Diaspora to start when server boot up,"To start Diaspora sever need to run these command:
+>cd /home/diaspora
+
+>./script/sever
+ 
+My server(Ubuntu 11.10) everyday restart. I need to configure the server(Ubuntu 11.10) to allow diaspora server start up whenever my server is up. How to do it?
+
+I have tried:
+
+Log in as user which run diaspora as, open crontab editor (crontab -e), scroll to the end and enter:
+
+>@reboot cd /home/diaspora; ./script/sever
+
+then save, but it still does not start up after my server boot up.
+
+And,if crontab -e cannot do this, is it possible to write a init script to do this? If init script is able to do this, how to write the script to do it? ",ubuntu,script,startup,boot,diaspora,02/05/2012 04:06:41,off topic,1,106,10,"How to allow Diaspora to start when server boot up To start Diaspora sever need to run these command:
+>cd /home/diaspora
+
+>./script/sever
+ 
+My server(Ubuntu 11.10) everyday restart. I need to configure the server(Ubuntu 11.10) to allow diaspora server start up whenever my server is up. How to do it?
+
+I have tried:
+
+Log in as user which run diaspora as, open crontab editor (crontab -e), scroll to the end and enter:
+
+>@reboot cd /home/diaspora; ./script/sever
+
+then save, but it still does not start up after my server boot up.
+
+And,if crontab -e cannot do this, is it possible to write a init script to do this? If init script is able to do this, how to write the script to do it? ",5
+9171159,02/07/2012 04:48:54,226001,12/06/2009 23:37:49,234,4,"What is the name of the ubuntu command line software that alters your SSH window to show basic ""top command"" information?","I was using an ubuntu server I found via Alestic a few months ago and it had this great little informative box at the bottom of the SSH screen which told me things like:
+
+ - current bandwidth upload/download
+ - current cpu usage
+ - current memory usage
+ - etc.
+
+For the life of me, I can't remember what it is called?
+
+I liked it because it was always running and giving me instant feedback about any scripts I was testing.",ubuntu,command-line,ssh,,,02/07/2012 17:24:22,off topic,1,77,21,"What is the name of the ubuntu command line software that alters your SSH window to show basic ""top command"" information? I was using an ubuntu server I found via Alestic a few months ago and it had this great little informative box at the bottom of the SSH screen which told me things like:
+
+ - current bandwidth upload/download
+ - current cpu usage
+ - current memory usage
+ - etc.
+
+For the life of me, I can't remember what it is called?
+
+I liked it because it was always running and giving me instant feedback about any scripts I was testing.",3
+8193142,11/19/2011 09:34:52,514310,11/20/2010 08:03:58,78,3,Move top menu bar to bottom,I'm using `ubuntu 11.10` with `gnome-shell`. I want to move `top` menu bar to `bottom`. Is it possible? thanks,ubuntu,gnome,,,,11/19/2011 14:17:26,off topic,1,19,6,Move top menu bar to bottom I'm using `ubuntu 11.10` with `gnome-shell`. I want to move `top` menu bar to `bottom`. Is it possible? thanks,2
+10682375,05/21/2012 09:09:30,506901,11/13/2010 18:23:47,179,0,Wireless problems in Ubuntu Lucid Lynx 10.04,"After one of the updates I made in Ubuntu Lucid Lynx, I started having problems with my wireless connection. Namely, the wireless icon in the top right corner is always with an exclamation mark and no wireless connections are shown (wireless disabled).
+
+I tried following the steps from 
+http://ubuntuforums.org/showthread.php?t=943848
+
+starting with 10), and it worked for a couple of days (even then the wireless icon had the exclamation mark), but the problem is back. The file I opened with 10), as in the above, has =true. Could you please help me with this?",ubuntu,ubuntu-10.04,,,,05/22/2012 12:59:24,off topic,1,91,7,"Wireless problems in Ubuntu Lucid Lynx 10.04 After one of the updates I made in Ubuntu Lucid Lynx, I started having problems with my wireless connection. Namely, the wireless icon in the top right corner is always with an exclamation mark and no wireless connections are shown (wireless disabled).
+
+I tried following the steps from 
+http://ubuntuforums.org/showthread.php?t=943848
+
+starting with 10), and it worked for a couple of days (even then the wireless icon had the exclamation mark), but the problem is back. The file I opened with 10), as in the above, has =true. Could you please help me with this?",2
+8795356,01/09/2012 21:20:43,1139616,01/09/2012 21:04:49,1,0,Rsync permission denied when using --remove-source-files,"My issue is I try to run the following rsync command:
+
+
+$ rsync --remove-source-files -e ""ssh -i /path/to/my/key"" user@server:/files/test* .
+
+The command successfully transfers the files I want, but it fails to remove the source files. The error is: 
+
+rsync: sender failed to remove testfile: Permission denied (13)
+
+1.) I've tried setting the source files to 777, no luck. 
+
+2.) I have changed the source files to be owned by the user running the rsync, no luck.
+
+3.) I have tried making sure both the source and destination folders are owned by the user running the rsync, no luck.
+
+This is an Ubuntu Oneric AWS EC2 machine to another  Ubuntu Oneric AWS EC2 machine rsync transfer using sync  version 3.0.7  protocol version 30.
+
+Again the copies work fine, but the files don't get removed on the sender side, which is a bummer.  I have also noticed that I get a similar error if I simply try to do the removal via ssh:
+
+$ ssh user@server rm /files/test*
+
+I get:
+
+rm: cannot remove `/files/test': Permission denied
+
+I suspect it is related.
+
+I don't ever recall having these types of issues in Redhat. 
+What piece of simplicity am I missing?
+
+
+
+",ubuntu,ssh,rsync,,,01/12/2012 18:26:25,off topic,1,191,6,"Rsync permission denied when using --remove-source-files My issue is I try to run the following rsync command:
+
+
+$ rsync --remove-source-files -e ""ssh -i /path/to/my/key"" user@server:/files/test* .
+
+The command successfully transfers the files I want, but it fails to remove the source files. The error is: 
+
+rsync: sender failed to remove testfile: Permission denied (13)
+
+1.) I've tried setting the source files to 777, no luck. 
+
+2.) I have changed the source files to be owned by the user running the rsync, no luck.
+
+3.) I have tried making sure both the source and destination folders are owned by the user running the rsync, no luck.
+
+This is an Ubuntu Oneric AWS EC2 machine to another  Ubuntu Oneric AWS EC2 machine rsync transfer using sync  version 3.0.7  protocol version 30.
+
+Again the copies work fine, but the files don't get removed on the sender side, which is a bummer.  I have also noticed that I get a similar error if I simply try to do the removal via ssh:
+
+$ ssh user@server rm /files/test*
+
+I get:
+
+rm: cannot remove `/files/test': Permission denied
+
+I suspect it is related.
+
+I don't ever recall having these types of issues in Redhat. 
+What piece of simplicity am I missing?
+
+
+
+",3
+9553439,03/04/2012 08:27:47,476791,10/15/2010 10:59:45,110,16,Upstart library for common programms,"Is there any web-library or wiki-system available, that contains linux/ubuntu Upstart configurations for common tasks?
+
+I had to write my own configurations for a java glassfish application server and for the libre office background task. I would like to share those and in return take configurations for my next tasks.",ubuntu,wiki,configuration-files,upstart,,03/06/2012 00:06:04,not constructive,1,49,5,"Upstart library for common programms Is there any web-library or wiki-system available, that contains linux/ubuntu Upstart configurations for common tasks?
+
+I had to write my own configurations for a java glassfish application server and for the libre office background task. I would like to share those and in return take configurations for my next tasks.",4
+7470229,09/19/2011 11:29:57,165315,08/29/2009 10:15:23,243,28,Setting up E-mail server in Ubuntu,"I am totally messed-up while installing mail server in Ubuntu system. 
+
+My purpose is:
+
+1. To set up a local mail server which will fetch mails from an external server in deliver the same to the local clients like outlook
+2. The mails sent through the outlook clients to other recipients would be forwarded to them, not directly, but through this local server.
+
+For example, there are 5 users having account in **gmail.com**: **user1@gmail.com, 
+user2@gmail.com, user3@gmail.com, user4@gmail.com, user5@gmail.com**. Now, my purpose is to fetch those mails into **my-local server** so that users get access to them. Also, their sent mails would be collected in this mail server, and forwarded to gmail for forwarding (The clients would be configured so).
+
+Please help
+",ubuntu,email-server,,,,09/19/2011 12:21:08,off topic,1,117,6,"Setting up E-mail server in Ubuntu I am totally messed-up while installing mail server in Ubuntu system. 
+
+My purpose is:
+
+1. To set up a local mail server which will fetch mails from an external server in deliver the same to the local clients like outlook
+2. The mails sent through the outlook clients to other recipients would be forwarded to them, not directly, but through this local server.
+
+For example, there are 5 users having account in **gmail.com**: **user1@gmail.com, 
+user2@gmail.com, user3@gmail.com, user4@gmail.com, user5@gmail.com**. Now, my purpose is to fetch those mails into **my-local server** so that users get access to them. Also, their sent mails would be collected in this mail server, and forwarded to gmail for forwarding (The clients would be configured so).
+
+Please help
+",2
+7581140,09/28/2011 09:34:05,304554,03/29/2010 20:06:46,74,1,How can I create a VM of a Ubuntu partition from Windows 7 with VMware 8?,"I have a Ubuntu installation on its own partition on my HDD. I was hoping to turn the whole installation into a VM that I can run from my Windows 7 installation (doesn't matter if the Ubuntu partition is still bootable or not).
+
+Can I do this using VMware Workstation 8? 
+
+Can I do this at all?
+
+Thanks
+",ubuntu,vmware,vm,partition,,09/28/2011 11:18:03,off topic,1,56,16,"How can I create a VM of a Ubuntu partition from Windows 7 with VMware 8? I have a Ubuntu installation on its own partition on my HDD. I was hoping to turn the whole installation into a VM that I can run from my Windows 7 installation (doesn't matter if the Ubuntu partition is still bootable or not).
+
+Can I do this using VMware Workstation 8? 
+
+Can I do this at all?
+
+Thanks
+",4
+9239795,02/11/2012 11:20:33,1131019,01/04/2012 23:12:34,18,0,TortoisHg not working in ubuntu 11.04,I have yesterday upgraded my Ubuntu 11.04 to version 11.10 and suddenly my tortoishg stopped working and be added to menu..i need it to my team work..any suggestions what to do??,ubuntu,mercurial,tortoisehg,ubuntu-11.04,ubuntu-11.10,02/11/2012 15:49:39,not a real question,1,31,6,TortoisHg not working in ubuntu 11.04 I have yesterday upgraded my Ubuntu 11.04 to version 11.10 and suddenly my tortoishg stopped working and be added to menu..i need it to my team work..any suggestions what to do??,5
+9330960,02/17/2012 15:28:55,583507,01/20/2011 19:31:29,142,3,Knownhosts error with SSH but I have no knownhosts file. How can I fix this?,"I'm configuring my SSH server and I keep getting the error that I've seen many people posting.
+
+    WARNING REMOTE HOST IDENTIFICATION HAS CHANGED!
+    blahblahblah
+    Add correct host key in /root/.ssh/known_hosts to get rid of this message.
+    Offending key in /root/.ssh/known_hosts:1
+    RSA host key has changed and you have requested strict checking.
+
+I've read about the numerous fixes for these but they all involve deleting the known_hosts file or doing something to it.  How can I fix this....I don't even have a known_hosts file in that directory....in fact...I don't even have a .ssh directory in /root/.  
+
+Any insight or help?   thank you..
+",ubuntu,ssh,ssh-keys,,,,open,0,119,15,"Knownhosts error with SSH but I have no knownhosts file. How can I fix this? I'm configuring my SSH server and I keep getting the error that I've seen many people posting.
+
+    WARNING REMOTE HOST IDENTIFICATION HAS CHANGED!
+    blahblahblah
+    Add correct host key in /root/.ssh/known_hosts to get rid of this message.
+    Offending key in /root/.ssh/known_hosts:1
+    RSA host key has changed and you have requested strict checking.
+
+I've read about the numerous fixes for these but they all involve deleting the known_hosts file or doing something to it.  How can I fix this....I don't even have a known_hosts file in that directory....in fact...I don't even have a .ssh directory in /root/.  
+
+Any insight or help?   thank you..
+",3
+6383413,06/17/2011 08:48:41,262850,01/31/2010 09:53:22,1,0,NPM install issues Ubuntu 11.04,"installing a fresh node with the following commands
+
+    sudo apt-get install git-core curl build-essential openssl libssl-dev
+    git clone https://github.com/joyent/node.git && cd node
+    ./configure 
+    make
+    make install
+    node -v
+    v0.5.0-pre
+
+works without a glitch. When I try to install NPM i get:
+
+    >/tmp/node$ curl http://npmjs.org/install.sh | sudo sh
+      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                     Dload  Upload   Total   Spent    Left  Speed
+    100  3874  100  3874    0     0   3033      0  0:00:01  0:00:01 --:--:-- 22923
+    fetching: 
+    
+    gzip: stdin: unexpected end of file
+    tar: This does not look like a tar archive
+    tar: Exiting with failure status due to previous errors
+    It failed
+    >
+
+I am using a VirtualBox NAT networking with no special proxy / firewall in the way.
+
+Ralf
+",ubuntu,node,tar,npm,,06/18/2011 01:13:48,off topic,1,253,5,"NPM install issues Ubuntu 11.04 installing a fresh node with the following commands
+
+    sudo apt-get install git-core curl build-essential openssl libssl-dev
+    git clone https://github.com/joyent/node.git && cd node
+    ./configure 
+    make
+    make install
+    node -v
+    v0.5.0-pre
+
+works without a glitch. When I try to install NPM i get:
+
+    >/tmp/node$ curl http://npmjs.org/install.sh | sudo sh
+      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                     Dload  Upload   Total   Spent    Left  Speed
+    100  3874  100  3874    0     0   3033      0  0:00:01  0:00:01 --:--:-- 22923
+    fetching: 
+    
+    gzip: stdin: unexpected end of file
+    tar: This does not look like a tar archive
+    tar: Exiting with failure status due to previous errors
+    It failed
+    >
+
+I am using a VirtualBox NAT networking with no special proxy / firewall in the way.
+
+Ralf
+",4
+7627645,10/02/2011 16:30:38,465465,10/04/2010 01:31:07,159,1,TWiki topic details on each page,"I recently started using `TWiki` on Ubuntu, does anybody know if there is any plugin by which I can have topic information(something like authorname, module name, status, ...etc) on each page. Something similar to infobox at the right side?.
+
+
+Thanks in advance!",ubuntu,wiki,mediawiki,twiki,,10/03/2011 11:10:56,off topic,1,41,6,"TWiki topic details on each page I recently started using `TWiki` on Ubuntu, does anybody know if there is any plugin by which I can have topic information(something like authorname, module name, status, ...etc) on each page. Something similar to infobox at the right side?.
+
+
+Thanks in advance!",4
+5688402,04/16/2011 17:50:19,497121,11/04/2010 11:59:08,24,0,Can't install uwsgi on ubuntu,"`root@ip-10-194-97-94:~# apt-get install uwsgi
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+  uwsgi: Depends: uwsgi-python2.6 (>= 0.9.6.5-0ubuntu1~lucid1) or
+                  uwsgi-python3.1 (>= 0.9.6.5-0ubuntu1~lucid1)
+E: Broken packages
+`",ubuntu,nginx,apt-get,uwsgi,,04/16/2011 19:02:50,off topic,1,96,5,"Can't install uwsgi on ubuntu `root@ip-10-194-97-94:~# apt-get install uwsgi
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+  uwsgi: Depends: uwsgi-python2.6 (>= 0.9.6.5-0ubuntu1~lucid1) or
+                  uwsgi-python3.1 (>= 0.9.6.5-0ubuntu1~lucid1)
+E: Broken packages
+`",4
+11404178,07/09/2012 22:33:29,842544,07/13/2011 11:04:13,1,0,Ubuntu server acting as a two interface router,"I'm trying to set up a squid proxy server using ubuntu server 12.04
+Im very new to ubuntu but I have managed to get some simple things done.
+
+I bought a second PCI interface and have managed to install it on the server.
+
+my goal is to forward all packets from one interface (or subnet) to another.
+I think this is one of the first steps before configuring squid itself.
+
+From my ubuntu server i can ping devices in both subnets. but from my laptop, which is in subnet 192.168.0.0 /24, i cannot ping my router, which is in the other subnet 192.168.1.0/24.
+
+both router and laptop respond to ICMP requests when sent from my ubuntu server.
+
+i have also activated net.ipv4.ip_forward=1 in sysctl.conf
+
+**output of sudo ip route :**
+
+    default via 192.168.1.254 dev eth1 metric 100
+    192.168.0.0/24 dev eth0 proto kernel scope link src 192.168.0.200
+    192.168.1.0/24 dev eth1 proto kernel scope link src 192.168.1.200
+
+do you have any idea why this setup won't work? I'm sure i'm missing something...
+
+i appreciate all the help, be it links, tips or suggestions.",ubuntu,ip,route,router,squid,07/10/2012 04:33:11,off topic,1,180,8,"Ubuntu server acting as a two interface router I'm trying to set up a squid proxy server using ubuntu server 12.04
+Im very new to ubuntu but I have managed to get some simple things done.
+
+I bought a second PCI interface and have managed to install it on the server.
+
+my goal is to forward all packets from one interface (or subnet) to another.
+I think this is one of the first steps before configuring squid itself.
+
+From my ubuntu server i can ping devices in both subnets. but from my laptop, which is in subnet 192.168.0.0 /24, i cannot ping my router, which is in the other subnet 192.168.1.0/24.
+
+both router and laptop respond to ICMP requests when sent from my ubuntu server.
+
+i have also activated net.ipv4.ip_forward=1 in sysctl.conf
+
+**output of sudo ip route :**
+
+    default via 192.168.1.254 dev eth1 metric 100
+    192.168.0.0/24 dev eth0 proto kernel scope link src 192.168.0.200
+    192.168.1.0/24 dev eth1 proto kernel scope link src 192.168.1.200
+
+do you have any idea why this setup won't work? I'm sure i'm missing something...
+
+i appreciate all the help, be it links, tips or suggestions.",5

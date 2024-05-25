@@ -1,0 +1,460 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+1064403,06/30/2009 15:37:46,117658,06/04/2009 21:20:08,246,44,When to rewrite a code base from scratch,"I think back to Joel Spolsky's article about never rewriting code from scratch.  To sum up his argument:  The code doesn't get rusty, and while it may not look pretty after many maintenance releases, if it works, it works.  The end user doens't care how pretty the code is.
+
+You can read the article here: [Things You Should Never Do][1]
+
+I've recently taken over a project and after looking through their code, it's pretty awful.  I immediately thought of prototypes I had built before, and explicitly stated that it should not be used for any production environment.  But of course, people don't listen.
+
+The code is built as a website, has no separation of concerns, no unit testing, and code duplication everywhere. No Data layer, no real business logic, unless you count a bunch of classes in App_Code.
+
+I've made the recommendation to the stake holders that, while we should keep the existing code, and do bug fix releases, and some minor feature releases, we should start rewriting it immediately with Test Driven Development in mind and with clear separation of concerns.  I'm thinking of going the ASP.NET MVC route.
+
+My only concern is of course, the length of time it might take to rewrite from scratch.  It's not entirely complicated, pretty run of the mill web application with membership, etc..
+
+Have any of you come across a similar problem?  Any particular steps you took?
+
+Thanks a bunch!
+
+
+
+  [1]: http://www.joelonsoftware.com/articles/fog0000000069.html",testing,test-driven-development,architecture,,,,open,0,242,8,"When to rewrite a code base from scratch I think back to Joel Spolsky's article about never rewriting code from scratch.  To sum up his argument:  The code doesn't get rusty, and while it may not look pretty after many maintenance releases, if it works, it works.  The end user doens't care how pretty the code is.
+
+You can read the article here: [Things You Should Never Do][1]
+
+I've recently taken over a project and after looking through their code, it's pretty awful.  I immediately thought of prototypes I had built before, and explicitly stated that it should not be used for any production environment.  But of course, people don't listen.
+
+The code is built as a website, has no separation of concerns, no unit testing, and code duplication everywhere. No Data layer, no real business logic, unless you count a bunch of classes in App_Code.
+
+I've made the recommendation to the stake holders that, while we should keep the existing code, and do bug fix releases, and some minor feature releases, we should start rewriting it immediately with Test Driven Development in mind and with clear separation of concerns.  I'm thinking of going the ASP.NET MVC route.
+
+My only concern is of course, the length of time it might take to rewrite from scratch.  It's not entirely complicated, pretty run of the mill web application with membership, etc..
+
+Have any of you come across a similar problem?  Any particular steps you took?
+
+Thanks a bunch!
+
+
+
+  [1]: http://www.joelonsoftware.com/articles/fog0000000069.html",3
+3342205,07/27/2010 09:20:06,358458,06/04/2010 12:53:55,26,3,What Concepts are must learn a Tester ?,"i am new to testing, i don't know which concept i must covers to learn the testing concepts, so please which concepts are more important in Testing. i.e either basic or higher concepts",testing,qtp,,,,07/27/2010 20:23:50,not a real question,1,33,8,"What Concepts are must learn a Tester ? i am new to testing, i don't know which concept i must covers to learn the testing concepts, so please which concepts are more important in Testing. i.e either basic or higher concepts",2
+8391679,12/05/2011 20:50:42,801924,06/16/2011 16:31:48,22,0,Test form errors,"Do you now if we can test form errors in sf2 ?
+like sf1.x:
+
+      with('form')->begin()->
+        hasErrors(3)->
+        isError('description', 'required')->
+        isError('how_to_apply', 'required')->
+        isError('email', 'invalid')->
+      end()",testing,symfony-2.0,,,,,open,0,60,3,"Test form errors Do you now if we can test form errors in sf2 ?
+like sf1.x:
+
+      with('form')->begin()->
+        hasErrors(3)->
+        isError('description', 'required')->
+        isError('how_to_apply', 'required')->
+        isError('email', 'invalid')->
+      end()",2
+57587,09/11/2008 20:46:54,4273,09/02/2008 15:47:30,1,0,How to find (and keep) a tester who is developer,"I work for a software vendor whose market is developer tools and we have been looking for a QA person for our products. Since we are a small shop the position will be a combination of Support and QA however since we make developer tools our support consists in large part of actual development (in that the person must read and understand our customers code and find and point out bugs in it). The QA portion will also consist of writing applications (in a variety of platforms and languages) and testing how they work with our tools. The main issue I am running into is when you tell someone with development experience that the position contains ""QA"" it its title (or even in the job description) they shy away from considering the job. I'm very interested in feedback and suggestions for how I can find a good person to fill this job and ensure that they are happy doing it. Any ideas?",testing,,,,,,open,0,162,10,"How to find (and keep) a tester who is developer I work for a software vendor whose market is developer tools and we have been looking for a QA person for our products. Since we are a small shop the position will be a combination of Support and QA however since we make developer tools our support consists in large part of actual development (in that the person must read and understand our customers code and find and point out bugs in it). The QA portion will also consist of writing applications (in a variety of platforms and languages) and testing how they work with our tools. The main issue I am running into is when you tell someone with development experience that the position contains ""QA"" it its title (or even in the job description) they shy away from considering the job. I'm very interested in feedback and suggestions for how I can find a good person to fill this job and ensure that they are happy doing it. Any ideas?",1
+6185467,05/31/2011 09:20:59,777395,05/31/2011 09:20:59,1,0,how to use selelium ide testing tool?,"I am the beginner to testing, i have to use selelium ide tool in my project.
+can anyone help in gaining the starting stuff, links containing detailed demo on selelium, and how to run test cases using selelium ide tool.
+
+Thanks in advance,
+
+
+Radhika",testing,,,,,,open,0,41,7,"how to use selelium ide testing tool? I am the beginner to testing, i have to use selelium ide tool in my project.
+can anyone help in gaining the starting stuff, links containing detailed demo on selelium, and how to run test cases using selelium ide tool.
+
+Thanks in advance,
+
+
+Radhika",1
+1369414,09/02/2009 18:34:56,158882,08/19/2009 00:20:51,1,0,What does a senior tester do?,"
+Testers suppose to write test plan, write test cases, file bugs, and verify bug fixes. A senior tester should do things beyond that. Here are things I can think of that a senior tester should do:
+
+1. Mentor other testers.
+2. Create the test strategy for the whole team.
+
+What are the other responsibilities of a senior tester that you can think of?
+",testing,,,,,02/08/2012 02:21:19,off topic,1,60,6,"What does a senior tester do? 
+Testers suppose to write test plan, write test cases, file bugs, and verify bug fixes. A senior tester should do things beyond that. Here are things I can think of that a senior tester should do:
+
+1. Mentor other testers.
+2. Create the test strategy for the whole team.
+
+What are the other responsibilities of a senior tester that you can think of?
+",1
+4704649,01/16/2011 09:32:59,577383,01/16/2011 09:19:36,1,0,Can anybody write the test cases for sticky note?,Can anybody write the test cases for sticky note?(Test cases for manual testing.),testing,,,,,01/16/2011 23:31:54,not a real question,1,13,9,Can anybody write the test cases for sticky note? Can anybody write the test cases for sticky note?(Test cases for manual testing.),1
+2982832,06/06/2010 01:56:28,279516,11/06/2009 20:59:46,6,1,Regression Testing and Deployment Strategy,"I'd like some advice on a deployment strategy. If a development team creates an extensive framework, and many (20-30) applications consume it, and the business would like application updates at least every 30 days, what is the best deployment strategy?
+
+The reason I ask is that there seems to be a lot of waste (and risk) in using an agile approach of deploying changes monthly, if 90% of the applications don't change. What I mean by this is that the framework can change during the month, and so can a few applications. Because the framework changed, all applications should be regression-tested. If, say, 10 of the applications don't change at all during the year, then those 10 applications are regression-tested EVERY MONTH, when they didn't have any feature changes or hot fixes. They had to be tested simply because the business is rolling updates every month.
+
+And the risk that is involved... if a mission-critical application is deployed, that takes a few weeks, and multiple departments, to test, is it realistic to expect to have to constantly regression-test this application?
+
+One option is to make any framework updates backward-compatible. While this would mean that applications don't need to change their code, they would still need to be tested because the underlying framework changed. And the risk involved is great; a constantly changing framework (and deploying this framework) means the mission-critical app can never just enjoy the same code base for a long time.
+
+These applications share the same database, hence the need for the constant testing. I'm aware of TDD and automated tests, but that doesn't exist at the moment.
+
+Any advice?",testing,deployment,frameworks,regression,,,open,0,267,5,"Regression Testing and Deployment Strategy I'd like some advice on a deployment strategy. If a development team creates an extensive framework, and many (20-30) applications consume it, and the business would like application updates at least every 30 days, what is the best deployment strategy?
+
+The reason I ask is that there seems to be a lot of waste (and risk) in using an agile approach of deploying changes monthly, if 90% of the applications don't change. What I mean by this is that the framework can change during the month, and so can a few applications. Because the framework changed, all applications should be regression-tested. If, say, 10 of the applications don't change at all during the year, then those 10 applications are regression-tested EVERY MONTH, when they didn't have any feature changes or hot fixes. They had to be tested simply because the business is rolling updates every month.
+
+And the risk that is involved... if a mission-critical application is deployed, that takes a few weeks, and multiple departments, to test, is it realistic to expect to have to constantly regression-test this application?
+
+One option is to make any framework updates backward-compatible. While this would mean that applications don't need to change their code, they would still need to be tested because the underlying framework changed. And the risk involved is great; a constantly changing framework (and deploying this framework) means the mission-critical app can never just enjoy the same code base for a long time.
+
+These applications share the same database, hence the need for the constant testing. I'm aware of TDD and automated tests, but that doesn't exist at the moment.
+
+Any advice?",4
+10101414,04/11/2012 07:07:27,1315883,04/05/2012 17:15:20,7,0,How to assert presence of java applet using selenim?,"Does anyone know how to verify presence of java applet using Selenium IDE. I want to verify the presence of Ephox text editor in a form, so i can verify the element but how do i assert that it is Ephox...
+
+Thanks in advance... ",testing,selenium,automation,,,,open,0,44,9,"How to assert presence of java applet using selenim? Does anyone know how to verify presence of java applet using Selenium IDE. I want to verify the presence of Ephox text editor in a form, so i can verify the element but how do i assert that it is Ephox...
+
+Thanks in advance... ",3
+3379470,07/31/2010 19:15:08,395679,07/19/2010 09:41:29,6,1,Unit Testing .cpp How-To,"Alright. I have done screen scrapping program in c++. Now how do i unit test a .cpp? 
+where do i get started? ",testing,unit,,,,05/14/2012 14:12:57,not a real question,1,23,4,"Unit Testing .cpp How-To Alright. I have done screen scrapping program in c++. Now how do i unit test a .cpp? 
+where do i get started? ",2
+10713236,05/23/2012 03:57:47,1353370,04/24/2012 09:55:00,1,0,"I parameterized the userid and password for webperformance test in vsts, 1st d value was successful while second get failed?","Im Trying to parameterize the userid and password for particular site for performance test using vsts. I used xml file to parameterization. While running the script the 1st value runs successfully but the second value gets failed, throws 202 and 500 error. can anyone help me???",testing,performance-testing,,,,,open,0,46,20,"I parameterized the userid and password for webperformance test in vsts, 1st d value was successful while second get failed? Im Trying to parameterize the userid and password for particular site for performance test using vsts. I used xml file to parameterization. While running the script the 1st value runs successfully but the second value gets failed, throws 202 and 500 error. can anyone help me???",2
+5586946,04/07/2011 20:05:13,284758,03/02/2010 20:52:18,2858,188,Why do we need 'Mock' as a synonym?,"Throughout my long software career, as I passed through many industries (defense, telecom, retail, video games, etc) and many venues (real-time embedded, enterprise applications, etc) the term 'mock' never surfaced.  Instead, the terms I've always heard for ""test-double"" objects were these:
+
+* Dummy object
+* Fake object
+* Stub object
+* Sim(ulation) object
+
+Then, along came code-generated interaction/sequence assertion-testable objects...aka 'Mock' objects.  The progenitors made it clear that [mocks aren't stubs][1].  But that didn't stop half the software development universe from replacing all ""test-double"" terms, with just ""Mock.""  In short, ""Mock"" has become a synonym for all the above test object types.  Case and point is the [Mock article in wikipedia][2], which rather assumes 'Mock' represents any or all the above.  At one point the article deigns to mention `Some authors[1] draw a distinction between fake and mock objects`.  Really? Shouldn't it be the other way around?  Instead I suspect the article should have a sub-section that says ""some mistakenly apply 'mock' to refer to any kind of object substitute.""
+
+I'm quite anal about correct terminology because, with sloppiness in language I believe comes sloppiness in code.  I'm inclined to give that wikipedia article an overhaul.  But I wanted to check here first, to see if there is some reason why the community actually needed or wanted a new synonym for the above terms.
+
+
+  [1]: http://martinfowler.com/articles/mocksArentStubs.html
+  [2]: http://en.wikipedia.org/wiki/Mock_object",testing,mocking,specifications,,,04/08/2011 14:55:54,not constructive,1,234,8,"Why do we need 'Mock' as a synonym? Throughout my long software career, as I passed through many industries (defense, telecom, retail, video games, etc) and many venues (real-time embedded, enterprise applications, etc) the term 'mock' never surfaced.  Instead, the terms I've always heard for ""test-double"" objects were these:
+
+* Dummy object
+* Fake object
+* Stub object
+* Sim(ulation) object
+
+Then, along came code-generated interaction/sequence assertion-testable objects...aka 'Mock' objects.  The progenitors made it clear that [mocks aren't stubs][1].  But that didn't stop half the software development universe from replacing all ""test-double"" terms, with just ""Mock.""  In short, ""Mock"" has become a synonym for all the above test object types.  Case and point is the [Mock article in wikipedia][2], which rather assumes 'Mock' represents any or all the above.  At one point the article deigns to mention `Some authors[1] draw a distinction between fake and mock objects`.  Really? Shouldn't it be the other way around?  Instead I suspect the article should have a sub-section that says ""some mistakenly apply 'mock' to refer to any kind of object substitute.""
+
+I'm quite anal about correct terminology because, with sloppiness in language I believe comes sloppiness in code.  I'm inclined to give that wikipedia article an overhaul.  But I wanted to check here first, to see if there is some reason why the community actually needed or wanted a new synonym for the above terms.
+
+
+  [1]: http://martinfowler.com/articles/mocksArentStubs.html
+  [2]: http://en.wikipedia.org/wiki/Mock_object",3
+9358554,02/20/2012 09:11:52,1220547,02/20/2012 08:34:18,1,0,Which testing framework is better for node.js?,"There are many testing frameworks are suggested in nodejs wiki(https://github.com/joyent/node/wiki/modules#wiki-testing), how to chose one from them?is any of them suitable for beginner?",testing,node.js,,,,02/21/2012 19:10:52,not constructive,1,22,7,"Which testing framework is better for node.js? There are many testing frameworks are suggested in nodejs wiki(https://github.com/joyent/node/wiki/modules#wiki-testing), how to chose one from them?is any of them suitable for beginner?",2
+245791,10/29/2008 04:24:59,191808,09/15/2008 19:01:49,250,1,What are some important interview questions to ask prospective game testers?,"I've been handed the task of interviewing a candidate for a position I don't know much about.  Call it bad management, the fact is I need to do the best I can.  The testing position doesn't require any technical ability besides entering bugs in a very intuitive bug tracker system.  I don't know much about the process, but I'm sure qualities such as creativity and patience are important things to focus on.  I have a whole list of general interview questions to find out if they can zip up their pants and be at work on time, but I'd like to ask some questions specific to the process of testing games for bugs.  Unfortunately, I lack the experience in that area.  Can anybody test a game for bugs?  If not, how would you find out during an interview?
+
+Thanks in advance!",testing,,,,,12/03/2011 03:28:51,not constructive,1,147,11,"What are some important interview questions to ask prospective game testers? I've been handed the task of interviewing a candidate for a position I don't know much about.  Call it bad management, the fact is I need to do the best I can.  The testing position doesn't require any technical ability besides entering bugs in a very intuitive bug tracker system.  I don't know much about the process, but I'm sure qualities such as creativity and patience are important things to focus on.  I have a whole list of general interview questions to find out if they can zip up their pants and be at work on time, but I'd like to ask some questions specific to the process of testing games for bugs.  Unfortunately, I lack the experience in that area.  Can anybody test a game for bugs?  If not, how would you find out during an interview?
+
+Thanks in advance!",1
+10477892,05/07/2012 06:52:33,1285024,03/22/2012 04:35:39,1,0,Which IOmeter version the most stable?,"I used to use IOMeter 2006.7.27 which I can open the configure file. I've changed it to version 1.1.0-rc1 and seeing the result was a little bit higher, hoverever it couldn't load the configre file. I'm using windows 7, please give me a solution for this, I really appreciate it :)",testing,automated-tests,sqa,,,,open,0,51,6,"Which IOmeter version the most stable? I used to use IOMeter 2006.7.27 which I can open the configure file. I've changed it to version 1.1.0-rc1 and seeing the result was a little bit higher, hoverever it couldn't load the configre file. I'm using windows 7, please give me a solution for this, I really appreciate it :)",3
+990568,06/13/2009 11:55:39,21634,09/24/2008 12:16:13,556,25,How to test an API ?,"In an interview, whether for developer positions or white-box qa positions, you are ofter asked to:
+
+ - create test cases for a piece of code / API
+ - categorize each test i.e. functional, stress, load, performance, security etc.
+ - prioritize (assuming low / medium / high priorities)
+
+I want to gather up ideas for such test cases. We can assume a normal application, so if the question is for a shuttle controller, the priority for stress testing would be considerably higher. You can start from a C++ piece of code, like: 
+
+    char* reverseString(char* myString) { //some implementation }
+
+or some modern code (C#, Java)
+
+    string Reverse() { //some implementation }
+
+
+Here are some of my ideas:
+
+ - [functional, high] if testing strings or some other form of a collection, see if the code works for a collection with even number of elements, odd number, special elements within (spaces for strings), single element and a combination of these 
+ - [functional, high] test to fail - empty string, NULL pointer, very large string, non null terminated string
+ - [functional, high] check the documentation 
+ - [functional, high] for the C version, using char means this will work only on ANSII strings - use wchar_t instead.
+
+
+----------
+
+ - [stress, low] pass in a pointer to a protected memory area
+ - [stress, low] big endian vs little endian 
+
+----------
+
+
+ - [security, high] for C++, check the code for buffer overruns
+
+
+----------
+
+
+ - [performance, medium] check that the algorithm's complexity is low
+ - [performance, high] if there are some ""service level agreements"" (e.g. the reverse function should return the value in maximum 5 seconds), test them with a high priority
+ - [performance, low] check for memory leaks by running the code many times and measuring the memory used each time (this is also relevant to C# where we can have event leaks, static data leaks, resource leaks etc. but the testing methodology is a little different because the GC is non-deterministic)
+
+----------
+
+
+ - [usability, low] if stress testing reveals limits, make sure these limits are enforced and proper errors are given (e.g. if you cannot reverse a string larger than 2 Gb of data, the user should be informed)
+ - [usability, high] the code should be consistent with the rest of the API, for example when handling errors (exceptions, error codes)
+ 
+
+----------
+
+ - [localization, high] - random inputs of UTF-8 and ANSII strings 
+ - [localization, low] - should work on a machine with the OS in another language
+ 
+---------
+
+ - [regression , low] - record some data (e.g. time to reverse some words) as baseline and check them every time some changes are made
+
+
+----------
+
+
+- [manageability, medium] - the code is commented, well structured and conforms to the chosen coding standard
+
+Feel free to comment on any and add your own!",testing,api,,,,03/19/2012 15:37:22,not constructive,1,467,6,"How to test an API ? In an interview, whether for developer positions or white-box qa positions, you are ofter asked to:
+
+ - create test cases for a piece of code / API
+ - categorize each test i.e. functional, stress, load, performance, security etc.
+ - prioritize (assuming low / medium / high priorities)
+
+I want to gather up ideas for such test cases. We can assume a normal application, so if the question is for a shuttle controller, the priority for stress testing would be considerably higher. You can start from a C++ piece of code, like: 
+
+    char* reverseString(char* myString) { //some implementation }
+
+or some modern code (C#, Java)
+
+    string Reverse() { //some implementation }
+
+
+Here are some of my ideas:
+
+ - [functional, high] if testing strings or some other form of a collection, see if the code works for a collection with even number of elements, odd number, special elements within (spaces for strings), single element and a combination of these 
+ - [functional, high] test to fail - empty string, NULL pointer, very large string, non null terminated string
+ - [functional, high] check the documentation 
+ - [functional, high] for the C version, using char means this will work only on ANSII strings - use wchar_t instead.
+
+
+----------
+
+ - [stress, low] pass in a pointer to a protected memory area
+ - [stress, low] big endian vs little endian 
+
+----------
+
+
+ - [security, high] for C++, check the code for buffer overruns
+
+
+----------
+
+
+ - [performance, medium] check that the algorithm's complexity is low
+ - [performance, high] if there are some ""service level agreements"" (e.g. the reverse function should return the value in maximum 5 seconds), test them with a high priority
+ - [performance, low] check for memory leaks by running the code many times and measuring the memory used each time (this is also relevant to C# where we can have event leaks, static data leaks, resource leaks etc. but the testing methodology is a little different because the GC is non-deterministic)
+
+----------
+
+
+ - [usability, low] if stress testing reveals limits, make sure these limits are enforced and proper errors are given (e.g. if you cannot reverse a string larger than 2 Gb of data, the user should be informed)
+ - [usability, high] the code should be consistent with the rest of the API, for example when handling errors (exceptions, error codes)
+ 
+
+----------
+
+ - [localization, high] - random inputs of UTF-8 and ANSII strings 
+ - [localization, low] - should work on a machine with the OS in another language
+ 
+---------
+
+ - [regression , low] - record some data (e.g. time to reverse some words) as baseline and check them every time some changes are made
+
+
+----------
+
+
+- [manageability, medium] - the code is commented, well structured and conforms to the chosen coding standard
+
+Feel free to comment on any and add your own!",2
+87957,09/17/2008 21:39:31,17469,09/18/2008 09:44:05,1,4,"If you could recommend only one blog on software testing, which one would it be?","I found a question here about blogs on software development, but I would like to know which blogs on software testing this community reads.
+
+If you just have to recommend more than one blog, post each one in separate answer, so others can vote on specific blog. :)
+
+Thanks!",testing,blogs,,,,02/18/2012 21:54:10,not constructive,1,47,15,"If you could recommend only one blog on software testing, which one would it be? I found a question here about blogs on software development, but I would like to know which blogs on software testing this community reads.
+
+If you just have to recommend more than one blog, post each one in separate answer, so others can vote on specific blog. :)
+
+Thanks!",2
+7071233,08/15/2011 21:50:43,892437,08/12/2011 20:35:47,1,0,Testing strategy: Assert on 'features' of response or assert on full response?,"I've had a ""philosophy"" disagreement with a coworker and I would like to hear community thoughts on the two sides presented (or, an even better third option).
+
+Basically:  We have a JSON API that returns a friends list.  The result looks something like:
+
+    [{""name"":""Bob"", ""uid"":12345, ""level"":4}, {""name"":""George"", ""uid"":23456, ""level"":6}]
+
+There are the normal sort of ""mutual friend"" requirements in place, that influence the response.
+
+The disagreement is basically over which is better,
+
+* Tests that assert on ""features"" of the response:
+
+        def test_results_are_sorted_by_name():
+            .. <setup 2 friends> ..
+
+            response = controller.getFriendsList()
+            assertLessThan(response[0].name, response[1].name)
+
+        def test_blocked_users_are_not_returned():
+            .. <setup some friends and block one, storing the id in blocked_uid> ..
+
+            response = controller.getFriendsList()
+            for friend in response:
+                assertNotEqual(friend.uid, blocked_uid)
+
+
+
+* Tests that assert on a literal response
+
+        def test_results_are_sorted_by_name():
+            .. <setup 2 friends> ..
+
+            response = controller.getFriendsList()
+            expectedResponse = {...}
+            assertEqual(response, expectedResponse)
+
+        def test_blocked_users_are_not_returned():
+            .. <setup some friends and block one, storing the id in blocked_uid> ..
+
+            response = controller.getFriendsList()
+            expectedResponse = {...}
+            assertEqual(response, expectedResponse)
+
+Which is better, and why?
+
+Are there other options which are better than both?
+",testing,,,,,08/15/2011 23:16:27,not constructive,1,372,12,"Testing strategy: Assert on 'features' of response or assert on full response? I've had a ""philosophy"" disagreement with a coworker and I would like to hear community thoughts on the two sides presented (or, an even better third option).
+
+Basically:  We have a JSON API that returns a friends list.  The result looks something like:
+
+    [{""name"":""Bob"", ""uid"":12345, ""level"":4}, {""name"":""George"", ""uid"":23456, ""level"":6}]
+
+There are the normal sort of ""mutual friend"" requirements in place, that influence the response.
+
+The disagreement is basically over which is better,
+
+* Tests that assert on ""features"" of the response:
+
+        def test_results_are_sorted_by_name():
+            .. <setup 2 friends> ..
+
+            response = controller.getFriendsList()
+            assertLessThan(response[0].name, response[1].name)
+
+        def test_blocked_users_are_not_returned():
+            .. <setup some friends and block one, storing the id in blocked_uid> ..
+
+            response = controller.getFriendsList()
+            for friend in response:
+                assertNotEqual(friend.uid, blocked_uid)
+
+
+
+* Tests that assert on a literal response
+
+        def test_results_are_sorted_by_name():
+            .. <setup 2 friends> ..
+
+            response = controller.getFriendsList()
+            expectedResponse = {...}
+            assertEqual(response, expectedResponse)
+
+        def test_blocked_users_are_not_returned():
+            .. <setup some friends and block one, storing the id in blocked_uid> ..
+
+            response = controller.getFriendsList()
+            expectedResponse = {...}
+            assertEqual(response, expectedResponse)
+
+Which is better, and why?
+
+Are there other options which are better than both?
+",1
+8881279,01/16/2012 14:19:32,790156,06/09/2011 02:21:19,46,0,"What is the most important test between unit, integration and system test?","If you have to test all of 3 process , each process take 1 week 
+and you have only 4 weeks , 
+how you will manage it ,which test that you will use 2 weeks to test ? and why?",testing,,,,,01/17/2012 13:29:38,not constructive,1,40,12,"What is the most important test between unit, integration and system test? If you have to test all of 3 process , each process take 1 week 
+and you have only 4 weeks , 
+how you will manage it ,which test that you will use 2 weeks to test ? and why?",1
+428955,01/09/2009 17:31:14,50711,01/01/2009 17:03:09,87,4,What is the value added from a smoke test?,"Or maybe with our implementation of it.  I'm new to the team that wants to go through the process and it seemed to confuse some of our members on the team including me.  We were given what I would consider a user acceptance test or list of manual actions that you would click on through to see if everything was working.  I was thinking it would have just been more simple than that, as we'd just divide up the sections of the application and just generally go across it looking for huge errors.  This would involve no scripting, just clicking each page, maybe filling stuff out, making sure it submits ok.  And that gets me to my other point, it seems to me that smoke testing is basically worthless.  I would think that instead you'd have unit tests or even automated tests that would go through a requirement list to make sure this sort of thing would be happening correctly.  Even if that was not completed at the very least I'd think the developer who checked in the code in the first place would have at least done a mini smoke test that made sure that their functionality worked in the first place.  We brought this up in the meeting so you can imagine the confusion, and it gets me back to my question, what value are we going to get out of this type of smoke testing?",testing,,,,,,open,0,246,9,"What is the value added from a smoke test? Or maybe with our implementation of it.  I'm new to the team that wants to go through the process and it seemed to confuse some of our members on the team including me.  We were given what I would consider a user acceptance test or list of manual actions that you would click on through to see if everything was working.  I was thinking it would have just been more simple than that, as we'd just divide up the sections of the application and just generally go across it looking for huge errors.  This would involve no scripting, just clicking each page, maybe filling stuff out, making sure it submits ok.  And that gets me to my other point, it seems to me that smoke testing is basically worthless.  I would think that instead you'd have unit tests or even automated tests that would go through a requirement list to make sure this sort of thing would be happening correctly.  Even if that was not completed at the very least I'd think the developer who checked in the code in the first place would have at least done a mini smoke test that made sure that their functionality worked in the first place.  We brought this up in the meeting so you can imagine the confusion, and it gets me back to my question, what value are we going to get out of this type of smoke testing?",1
+3940724,10/15/2010 08:44:33,333943,05/05/2010 22:55:46,64,0,Reason why development is better than testing,"I need some reasons why being a professional developer is better than being a professional tester. Any help would be great thanks.
+
+P.S. Also if your opinion is that the reverse is true, it would be good to hear your points as well.",testing,career-development,professional-development,,,10/15/2010 10:26:20,not constructive,1,42,7,"Reason why development is better than testing I need some reasons why being a professional developer is better than being a professional tester. Any help would be great thanks.
+
+P.S. Also if your opinion is that the reverse is true, it would be good to hear your points as well.",3
+9691991,03/13/2012 20:54:33,1046344,11/14/2011 20:39:26,1,0,Website navigation bar breaking?,"Folks, here is a thing.
+I am building a website for client (almost done), but i think that he is trying to trick me into not paying by saying that there are problems with site menu bar ""breaking""
+
+I checked on Win7, 32 and 64 bits, Firefox and Chrome, everyting looks fine...
+Can you please visit this site http://goo.gl/jPkEB, and click few times, and tell me is everything ok...
+
+Also, if you can write your OS and browser you would help me alot ;)",testing,website,menubar,,,03/13/2012 22:02:06,off topic,1,80,4,"Website navigation bar breaking? Folks, here is a thing.
+I am building a website for client (almost done), but i think that he is trying to trick me into not paying by saying that there are problems with site menu bar ""breaking""
+
+I checked on Win7, 32 and 64 bits, Firefox and Chrome, everyting looks fine...
+Can you please visit this site http://goo.gl/jPkEB, and click few times, and tell me is everything ok...
+
+Also, if you can write your OS and browser you would help me alot ;)",3
+11421067,07/10/2012 20:04:42,970696,09/29/2011 08:23:44,672,0,Disadvantages of functional testing,"I have read that functional testing is not that suitable when there is a lot of interrelated inputs. Is my understanding correct that e.g. following program would be really difficult to test using functional testing (test cases):  
+`Car configurator with e.g. 20 fields, each of 20 choices, giving 400 possible 
+ combinations.` 
+
+I would say no one would write 400 test cases for that. But while this is still testing its functionality, we still call it functional testing, correct? But isnt it actually risk-based approach when only some combinations are tested?",testing,terminology,,,,07/10/2012 20:09:00,off topic,1,92,4,"Disadvantages of functional testing I have read that functional testing is not that suitable when there is a lot of interrelated inputs. Is my understanding correct that e.g. following program would be really difficult to test using functional testing (test cases):  
+`Car configurator with e.g. 20 fields, each of 20 choices, giving 400 possible 
+ combinations.` 
+
+I would say no one would write 400 test cases for that. But while this is still testing its functionality, we still call it functional testing, correct? But isnt it actually risk-based approach when only some combinations are tested?",2
+6751062,07/19/2011 17:02:33,208057,11/10/2009 18:47:25,18,3,Organization and Structure of Web Application Testing Framework,"So I'm looking to bring web application testing into our .Net environment with a framework such as Selenium. At first, it'll probably be the developers writing the tests, but later it may be just the QA team. I'm wondering where the tests should actually live. Should they live in the same solution that the web application lives or should they live in a completely separate solution that is just for the tests? Please, note these are regression tests that will be done via automating a web browser so access to the web app's assemblies is not required.  The answer probably is based on the environment and other factors, but I'm curious about what other people have done in this situation.",testing,structure,ui-automation,,,,open,0,121,8,"Organization and Structure of Web Application Testing Framework So I'm looking to bring web application testing into our .Net environment with a framework such as Selenium. At first, it'll probably be the developers writing the tests, but later it may be just the QA team. I'm wondering where the tests should actually live. Should they live in the same solution that the web application lives or should they live in a completely separate solution that is just for the tests? Please, note these are regression tests that will be done via automating a web browser so access to the web app's assemblies is not required.  The answer probably is based on the environment and other factors, but I'm curious about what other people have done in this situation.",3
+4163285,11/12/2010 09:40:52,60956,01/31/2009 10:51:40,2360,96,Recommend Test Case Manager,"I'm looking for recommendations for a Test Case manager. 
+
+Desirable Features:
+
+* svn integration
+* bug tracker integration (JIRA or BugZilla)
+* Web based or self-hosted
+* attach code / images to test cases
+* manage test cases (prioritisation, assignment, completion)
+* track test case results against release versions
+* simple to use / set-up
+
+",testing,,,,,06/12/2012 11:13:39,not constructive,1,48,4,"Recommend Test Case Manager I'm looking for recommendations for a Test Case manager. 
+
+Desirable Features:
+
+* svn integration
+* bug tracker integration (JIRA or BugZilla)
+* Web based or self-hosted
+* attach code / images to test cases
+* manage test cases (prioritisation, assignment, completion)
+* track test case results against release versions
+* simple to use / set-up
+
+",1
+6653002,07/11/2011 15:59:44,839241,07/11/2011 15:59:44,1,0,Test vs. Production,"What are the drawbacks of having developers who work in both test and prodcution environments?
+Logic seems to imply that mistakes can be more easily prevented if some developers work ONLY in test environment, then hand off their finished product to those who work strictly in production ",testing,,,,,07/12/2011 20:34:34,off topic,1,47,3,"Test vs. Production What are the drawbacks of having developers who work in both test and prodcution environments?
+Logic seems to imply that mistakes can be more easily prevented if some developers work ONLY in test environment, then hand off their finished product to those who work strictly in production ",1
+7359722,09/09/2011 09:39:21,400790,07/24/2010 00:42:27,740,22,"In RSpec, what's the difference between a mock and a double?","In rspec you can either create a `mock` or a `double`. These two seem to be almost the same thing and I can't find anything in the documentation that disambiguates them. 
+
+What's the difference?",testing,rspec,,,,,open,0,34,11,"In RSpec, what's the difference between a mock and a double? In rspec you can either create a `mock` or a `double`. These two seem to be almost the same thing and I can't find anything in the documentation that disambiguates them. 
+
+What's the difference?",2
+6563489,07/03/2011 14:31:03,815560,06/25/2011 18:10:38,87,8,How to test a HTTP POST of Spring MVC using a web browser?,"How can I test an HTTP Post using a web browser?
+
+The controller I'm trying to test is an Spring MVC controller.",testing,spring-mvc,webbrowser,http-post,,,open,0,21,13,"How to test a HTTP POST of Spring MVC using a web browser? How can I test an HTTP Post using a web browser?
+
+The controller I'm trying to test is an Spring MVC controller.",4
+6586172,07/05/2011 16:56:57,466056,10/04/2010 17:01:52,349,0,image repository with noise for testing,"I need set of gray scale images with random noise to do some testing.
+
+I have searched and found many images but without noise.
+
+Or maybe some easy way to add a random noise to an image.",testing,image-processing,,,,11/24/2011 22:20:46,not a real question,1,35,6,"image repository with noise for testing I need set of gray scale images with random noise to do some testing.
+
+I have searched and found many images but without noise.
+
+Or maybe some easy way to add a random noise to an image.",2

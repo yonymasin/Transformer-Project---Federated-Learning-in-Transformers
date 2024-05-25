@@ -1,0 +1,821 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+11254859,06/29/2012 00:57:46,788532,06/08/2011 03:20:38,313,4,Lyx Modify Document Class,"I have spent the last few hours trying to modify article.cls to conform to my professor's paper requirements (title above abstract, page numbers don't start until the second page of the introduction), but this LaTex code is wildly unfamiliar to me, and I don't see how I can accomplish what I need to. Can anyone point me towards documentation or code samples which could assist me in understanding this?",latex,lyx,,,,06/29/2012 13:17:12,off topic,1,69,4,"Lyx Modify Document Class I have spent the last few hours trying to modify article.cls to conform to my professor's paper requirements (title above abstract, page numbers don't start until the second page of the introduction), but this LaTex code is wildly unfamiliar to me, and I don't see how I can accomplish what I need to. Can anyone point me towards documentation or code samples which could assist me in understanding this?",2
+11738338,07/31/2012 10:45:20,560464,01/02/2011 17:01:16,67,0,put formulas on the left position in LateX,"As you know the following equation will be in the center:
+
+
+    >$$
+    >\sum_{\substack{a\leq1/2\\0<b\leq T}}\frac{2+a}{2|b|}
+    >$$
+
+and the following is on the left but in small size and decrease the space
+
+    >$
+    >\sum_{\substack{a\leq1/2\\0<b\leq T}}\frac{2+a}{2|b|}
+    >$
+
+but the below formula is similar to the first one, but on the left:
+
+    >$
+    >\displaystyle{\sum_{\substack{a\leq1/2\\0<b\leq T}}\frac{2+a}{2|b|}}
+    >$
+
+does anyone another way such that it works similar to the last one ( put the formula on the left) but with 
+
+    >\begin{xxxx}
+    >*
+    >\end{xxxx}
+     ",latex,latex-environment,,,,07/31/2012 19:50:36,off topic,1,116,8,"put formulas on the left position in LateX As you know the following equation will be in the center:
+
+
+    >$$
+    >\sum_{\substack{a\leq1/2\\0<b\leq T}}\frac{2+a}{2|b|}
+    >$$
+
+and the following is on the left but in small size and decrease the space
+
+    >$
+    >\sum_{\substack{a\leq1/2\\0<b\leq T}}\frac{2+a}{2|b|}
+    >$
+
+but the below formula is similar to the first one, but on the left:
+
+    >$
+    >\displaystyle{\sum_{\substack{a\leq1/2\\0<b\leq T}}\frac{2+a}{2|b|}}
+    >$
+
+does anyone another way such that it works similar to the last one ( put the formula on the left) but with 
+
+    >\begin{xxxx}
+    >*
+    >\end{xxxx}
+     ",2
+7328592,09/07/2011 03:32:08,465447,10/04/2010 00:19:48,35,0,Syntax highlighting for numbers in LaTeX listings,"I would like to define a language for lstlistings using `\lstdefinelanguage` that colors all numbers (e.g., `1`, `0.123`, `1e5`, `-12.01`) that appear in the code in a particular color. Is this possible? Are there examples of predefined language styles for listings that do this?",latex,syntax-highlighting,listings,,,09/08/2011 11:29:48,off topic,1,44,7,"Syntax highlighting for numbers in LaTeX listings I would like to define a language for lstlistings using `\lstdefinelanguage` that colors all numbers (e.g., `1`, `0.123`, `1e5`, `-12.01`) that appear in the code in a particular color. Is this possible? Are there examples of predefined language styles for listings that do this?",3
+2701902,04/23/2010 20:50:38,324594,04/23/2010 20:44:38,1,0,Standalone diagrams with TikZ?,"I'm using TikZ to draw diagrams in LaTeX that I then want to isolate as image files to put online.  My guess is there is a way to extract these diagrams directly without having to tease them out of the finished .pdf file.  How would I go about doing that?  (If it matters, I'm using TeXnicCenter.)",latex,tikz,,,,03/15/2012 12:35:55,off topic,1,59,4,"Standalone diagrams with TikZ? I'm using TikZ to draw diagrams in LaTeX that I then want to isolate as image files to put online.  My guess is there is a way to extract these diagrams directly without having to tease them out of the finished .pdf file.  How would I go about doing that?  (If it matters, I'm using TeXnicCenter.)",2
+10015995,04/04/2012 17:08:15,1013731,10/25/2011 23:42:01,502,48,Symbol size in mimeTex,"There's this situation: I need a row of symbols to have same size, e.g. 20x20 pixels. Is there a way to set the size of a final picture/symbol to be rendered? I've searched through their manual, by found nothing. ",latex,,,,,04/04/2012 18:33:44,off topic,1,40,4,"Symbol size in mimeTex There's this situation: I need a row of symbols to have same size, e.g. 20x20 pixels. Is there a way to set the size of a final picture/symbol to be rendered? I've searched through their manual, by found nothing. ",1
+3345077,07/27/2010 15:13:28,161922,09/15/2008 21:12:35,1395,42,LaTeX - left align a table (ie not centred) from the preamble?,"I'm making a document in LaTeX, but I can only change the preamble of the document. Inside this document I have tables, made with the ``longtable`` environment. By default LaTeX centres each table in the middle of the page. Is there anyway to make the tables be left aligned, given that I can only change the preamble?",latex,formatting,tex,,,,open,0,57,12,"LaTeX - left align a table (ie not centred) from the preamble? I'm making a document in LaTeX, but I can only change the preamble of the document. Inside this document I have tables, made with the ``longtable`` environment. By default LaTeX centres each table in the middle of the page. Is there anyway to make the tables be left aligned, given that I can only change the preamble?",3
+11492198,07/15/2012 13:11:45,1526888,07/15/2012 12:56:45,1,0,Latex - Glossaries - .glo and .acn files are empty,"I have a problem with the package ""**glossaries**"" of Latex. I have written a .tex file according with ""glossaries"" instructions, but after i compile it with pdflatex **.glo** and **.acn** files are **empty**. I have tried to use the command ""**makeglossaries**"" coming with the package but it needs some information from those files. 
+
+OS: Windows 7 professional 64bit
+
+LaTeX: MikTeX 2.9 
+
+GUI: Eclipse with TeXlipse
+
+LateX code:
+
+    \documentclass{article}
+    \usepackage[toc,acronym]{glossaries}
+    \makeglossaries 
+
+    \newglossaryentry{electrolyte}{
+    name=electrolyte, 
+    description={solution able to conduct electric current}
+    }  
+
+    \newacronym{lvm}{LVM}{Logical Volume Manager} 
+
+    \begin{document}
+
+    \newglossaryentry{test}{
+    name=test, 
+    description={test}
+    }   
+
+    \newacronym{HD}{HD}{Hard Disk} 
+
+    \section{Title}
+
+    \printglossary
+
+    \end{document}
+
+",latex,glossaries,,,,07/16/2012 08:39:39,off topic,1,151,10,"Latex - Glossaries - .glo and .acn files are empty I have a problem with the package ""**glossaries**"" of Latex. I have written a .tex file according with ""glossaries"" instructions, but after i compile it with pdflatex **.glo** and **.acn** files are **empty**. I have tried to use the command ""**makeglossaries**"" coming with the package but it needs some information from those files. 
+
+OS: Windows 7 professional 64bit
+
+LaTeX: MikTeX 2.9 
+
+GUI: Eclipse with TeXlipse
+
+LateX code:
+
+    \documentclass{article}
+    \usepackage[toc,acronym]{glossaries}
+    \makeglossaries 
+
+    \newglossaryentry{electrolyte}{
+    name=electrolyte, 
+    description={solution able to conduct electric current}
+    }  
+
+    \newacronym{lvm}{LVM}{Logical Volume Manager} 
+
+    \begin{document}
+
+    \newglossaryentry{test}{
+    name=test, 
+    description={test}
+    }   
+
+    \newacronym{HD}{HD}{Hard Disk} 
+
+    \section{Title}
+
+    \printglossary
+
+    \end{document}
+
+",2
+8104916,11/12/2011 14:04:22,1038219,11/09/2011 17:51:13,1,0,Babel example language,"Why are the language examples of babel always about Danish? I am from Denmark, and i have been wondering.
+
+See for example http://www.tex.ac.uk/cgi-bin/texfaq2html?label=latexwords",latex,babel,,,,11/12/2011 18:08:35,off topic,1,22,3,"Babel example language Why are the language examples of babel always about Danish? I am from Denmark, and i have been wondering.
+
+See for example http://www.tex.ac.uk/cgi-bin/texfaq2html?label=latexwords",2
+2495169,03/22/2010 19:42:11,156458,08/14/2009 12:31:05,1144,3,Special names in Latex,"In my english thesis latex file, how to mention the following non English words: François, École Fédérale? 
+
+Thanks and regards!",latex,,,,,,open,0,20,4,"Special names in Latex In my english thesis latex file, how to mention the following non English words: François, École Fédérale? 
+
+Thanks and regards!",1
+4531012,12/25/2010 17:33:59,545236,12/16/2010 19:24:15,11,0,LaTex linenumbering,"I can't manage to add linenumbers left of the boxes. Can anybody help me?
+
+    \documentclass{article}
+    
+    \begin{document}
+    
+    \fbox{\fbox{
+    
+    \begin{minipage}{0.8\linewidth}
+    
+    \textbf{def} mapper (key, value):
+    
+    \hspace{7mm}\textbf{for} word \textbf{in} value.split():
+    
+    \hspace{14mm}\textbf{yield} word, 1\\
+    
+    \textbf{def} reducer (key , values):
+    
+    \hspace{7mm}\textbf{yield} key, sum(values)\\
+    
+    
+    \textbf{if} name == ""main"":
+    
+    \hspace{7mm}\textbf{import} dumbo
+    
+    \hspace{7mm}dumbo.run (mapper, reducer, combiner=reducer )
+    
+    \end{minipage}
+    
+    }}
+    
+    \end{document}
+
+Thanks",latex,,,,,11/28/2011 14:07:35,off topic,1,156,2,"LaTex linenumbering I can't manage to add linenumbers left of the boxes. Can anybody help me?
+
+    \documentclass{article}
+    
+    \begin{document}
+    
+    \fbox{\fbox{
+    
+    \begin{minipage}{0.8\linewidth}
+    
+    \textbf{def} mapper (key, value):
+    
+    \hspace{7mm}\textbf{for} word \textbf{in} value.split():
+    
+    \hspace{14mm}\textbf{yield} word, 1\\
+    
+    \textbf{def} reducer (key , values):
+    
+    \hspace{7mm}\textbf{yield} key, sum(values)\\
+    
+    
+    \textbf{if} name == ""main"":
+    
+    \hspace{7mm}\textbf{import} dumbo
+    
+    \hspace{7mm}dumbo.run (mapper, reducer, combiner=reducer )
+    
+    \end{minipage}
+    
+    }}
+    
+    \end{document}
+
+Thanks",1
+11424810,07/11/2012 02:43:58,1399765,05/16/2012 22:39:44,264,20,Headers and Footers for Listing Environment?,"What I need to be able to do is apply a header and footer when I use the listings environment.  I have a few requirements:
+
+ - The header and footer should be outside the listing itself, i.e. they are not part of the listing content.
+ - The amount of space between the header and the listing should be the same as the amount of space between the footer and the listing.
+ - The amount of space between the listing and the header/footer should not be rubber, i.e. TeX should not be able adjust the header/footer closer to or farther from the listing.
+ - The header and footer may not be the same for every listing.
+ - Page breaks should not be possible between the header/footer and the listing.
+ - Page breaks should be possible within the listing itself.
+
+As far as I can tell I can get most of the way there if use minipage:
+
+    \usepackage{listings}
+
+    \newcommand{\codeHeaderFooter}{}
+
+    \lstnewenvironment{code}[2][]{
+      \lstset{language=c++,aboveskip=12pt,belowskip=12pt,#1}
+      \renewcommand{\codeHeaderFooter}{#2}
+      \begin{minipage}[c]{\linewidth}
+      \codeHeaderFooter{}
+    } {
+      \end{minipage}
+      \begin{flushright}
+        \codeHeaderFooter{}
+      \end{flushright}
+    }
+
+    \begin{code}{header/footer}
+    std::cout << ""Hello, World!"" << std::endl;
+    \end{code}
+
+The problem is that minipage doesn't allow page breaks, so the listing cannot span multiple pages.  Other solutions I've tried (i.e. a combination of \nopagebreak[4] and \vspace, and raggedbottom) fail to either (a) prevent page breaks between the header/footer and the listing, or (b) prevent TeX from adjusting the space between the header/footer and the listing.  Floats are not an option.
+
+Any ideas about how I can satisfy all of the requirement above?",latex,,,,,07/11/2012 17:43:12,off topic,1,316,6,"Headers and Footers for Listing Environment? What I need to be able to do is apply a header and footer when I use the listings environment.  I have a few requirements:
+
+ - The header and footer should be outside the listing itself, i.e. they are not part of the listing content.
+ - The amount of space between the header and the listing should be the same as the amount of space between the footer and the listing.
+ - The amount of space between the listing and the header/footer should not be rubber, i.e. TeX should not be able adjust the header/footer closer to or farther from the listing.
+ - The header and footer may not be the same for every listing.
+ - Page breaks should not be possible between the header/footer and the listing.
+ - Page breaks should be possible within the listing itself.
+
+As far as I can tell I can get most of the way there if use minipage:
+
+    \usepackage{listings}
+
+    \newcommand{\codeHeaderFooter}{}
+
+    \lstnewenvironment{code}[2][]{
+      \lstset{language=c++,aboveskip=12pt,belowskip=12pt,#1}
+      \renewcommand{\codeHeaderFooter}{#2}
+      \begin{minipage}[c]{\linewidth}
+      \codeHeaderFooter{}
+    } {
+      \end{minipage}
+      \begin{flushright}
+        \codeHeaderFooter{}
+      \end{flushright}
+    }
+
+    \begin{code}{header/footer}
+    std::cout << ""Hello, World!"" << std::endl;
+    \end{code}
+
+The problem is that minipage doesn't allow page breaks, so the listing cannot span multiple pages.  Other solutions I've tried (i.e. a combination of \nopagebreak[4] and \vspace, and raggedbottom) fail to either (a) prevent page breaks between the header/footer and the listing, or (b) prevent TeX from adjusting the space between the header/footer and the listing.  Floats are not an option.
+
+Any ideas about how I can satisfy all of the requirement above?",1
+1240037,08/06/2009 16:26:38,104021,05/09/2009 10:18:32,216,28,Recommended build system for latex?,"I'm trying to figure out the best build system for latex.
+
+Currently, I use [latex-makefile][1], editing in vim, and viewing changes in Okular or gv. The major problem is that it sometimes gets hides errors on me, and I have to run latex manually. The major advantages are that it does all the iteration I need, and offers both pdf and ps simply.
+
+Is there a ""better"" option, and why is it better?
+
+  [1]: http://code.google.com/p/latex-makefile
+",latex,makefile,,,,03/27/2012 16:15:03,not constructive,1,74,5,"Recommended build system for latex? I'm trying to figure out the best build system for latex.
+
+Currently, I use [latex-makefile][1], editing in vim, and viewing changes in Okular or gv. The major problem is that it sometimes gets hides errors on me, and I have to run latex manually. The major advantages are that it does all the iteration I need, and offers both pdf and ps simply.
+
+Is there a ""better"" option, and why is it better?
+
+  [1]: http://code.google.com/p/latex-makefile
+",2
+11551230,07/18/2012 22:19:40,1259201,03/09/2012 11:40:04,11,0,How do write multicol in Lyx on the title page?,"I'm trying to write some text in two columns on the titlepage, but unfortunatly everytime the tabular-part is on a new page with a blank page between. I guess it has something to do with ""\maketitle"", but how do i change that in Lyx?
+Thank you for your answers. 
+
+P.S. Multicols doesnt work too
+
+<code>  
+\begin{document}
+
+\begin{titlepage}
+
+
+\title{randomTitle}
+
+
+\subject{1. bla}
+
+
+\date{vorgelegt am \today}
+
+\begin{doublespace}
+
+\publishers{\noindent Fakultät Wirtschaft \smallskip{}
+\\
+Studiengang Wirtschaftsinformatik\smallskip{}
+\\
+Kurs }
+\end{doublespace}
+
+
+\author{von \smallskip{}
+\\
+user1259201}
+
+\maketitle
+
+\begin{tabular}{ll}
+Verfasser: \\\ Ich 		
+Ausbildungsbetrieb:\\\myCompany 		
+Anschrift:\\\ myCompanyAddressStreet\\ 		
+ 		
+Betreuer:\\\myProf	
+Abgabedatum:\\\myEndDate	
+\end{tabular}
+
+\end{titlepage}
+
+\end{document}</code>",latex,lyx,,,,07/19/2012 11:39:13,off topic,1,71,10,"How do write multicol in Lyx on the title page? I'm trying to write some text in two columns on the titlepage, but unfortunatly everytime the tabular-part is on a new page with a blank page between. I guess it has something to do with ""\maketitle"", but how do i change that in Lyx?
+Thank you for your answers. 
+
+P.S. Multicols doesnt work too
+
+<code>  
+\begin{document}
+
+\begin{titlepage}
+
+
+\title{randomTitle}
+
+
+\subject{1. bla}
+
+
+\date{vorgelegt am \today}
+
+\begin{doublespace}
+
+\publishers{\noindent Fakultät Wirtschaft \smallskip{}
+\\
+Studiengang Wirtschaftsinformatik\smallskip{}
+\\
+Kurs }
+\end{doublespace}
+
+
+\author{von \smallskip{}
+\\
+user1259201}
+
+\maketitle
+
+\begin{tabular}{ll}
+Verfasser: \\\ Ich 		
+Ausbildungsbetrieb:\\\myCompany 		
+Anschrift:\\\ myCompanyAddressStreet\\ 		
+ 		
+Betreuer:\\\myProf	
+Abgabedatum:\\\myEndDate	
+\end{tabular}
+
+\end{titlepage}
+
+\end{document}</code>",2
+10576164,05/13/2012 23:58:52,646629,03/06/2011 04:05:22,44,2,input a figure between title and body in twocolumn latex form,"I'm using a Latex to write a small paper using CVPR template.
+
+I'd like to put a figure between my title+name and body(which consists with two columns) like many CVPR papers do, but I don't find the way to do that.
+
+I tried,
+
+    \begin{figure*}
+    \begin{center}
+    \fbox{\rule{0pt}{2in} \rule{.9\linewidth}{0pt}}
+    \end{center}
+       \caption{some caption..}
+    \label{fig:short}
+    \end{figure*}
+
+but it turned out figure-star only displays it's figure at the top of _next_ page,
+and when I just use figure like `\begin{figure}[htb]`, it's only located one of those two columns. 
+
+Does anyone know how to put a long figure between my title+name and body context?
+Thanks.
+
+    ",latex,,,,,05/14/2012 09:19:54,off topic,1,122,11,"input a figure between title and body in twocolumn latex form I'm using a Latex to write a small paper using CVPR template.
+
+I'd like to put a figure between my title+name and body(which consists with two columns) like many CVPR papers do, but I don't find the way to do that.
+
+I tried,
+
+    \begin{figure*}
+    \begin{center}
+    \fbox{\rule{0pt}{2in} \rule{.9\linewidth}{0pt}}
+    \end{center}
+       \caption{some caption..}
+    \label{fig:short}
+    \end{figure*}
+
+but it turned out figure-star only displays it's figure at the top of _next_ page,
+and when I just use figure like `\begin{figure}[htb]`, it's only located one of those two columns. 
+
+Does anyone know how to put a long figure between my title+name and body context?
+Thanks.
+
+    ",1
+10600499,05/15/2012 12:19:23,1313162,04/04/2012 14:53:57,18,3,Name a section in Latex TOC (add subtitle to contentsline),"I have my Latex document (documentclass is `article`) which consists of several `\section`s and `\subsection`s.
+
+The `\tableofcontents` command generates my TOC as I want (in this case: hyperreffed, with page number, with dots etc.), but for the sections, I would like to add a ""section subtitle"".
+
+As an example: my current TOC looks like
+
+    1 Layout
+        1.1 Main Window
+        1.2 Footer
+    2 Navigation
+        2.1 Basic structure
+        2.2 Overview page
+
+Now I want to add a subtitle to every section, which I expected to work like `\section{Layout}{this section describes the layout}`, which appearently doesn't work.
+
+What I want:
+
+    1 Layout - this section describes the layout
+        1.1 Main Window
+        1.2 Footer
+    2 Navigation - here you will get information on foobar
+        2.1 Basic structure
+        2.2 Overview page
+
+",latex,section,subtitle,toc,,05/15/2012 15:51:21,off topic,1,190,10,"Name a section in Latex TOC (add subtitle to contentsline) I have my Latex document (documentclass is `article`) which consists of several `\section`s and `\subsection`s.
+
+The `\tableofcontents` command generates my TOC as I want (in this case: hyperreffed, with page number, with dots etc.), but for the sections, I would like to add a ""section subtitle"".
+
+As an example: my current TOC looks like
+
+    1 Layout
+        1.1 Main Window
+        1.2 Footer
+    2 Navigation
+        2.1 Basic structure
+        2.2 Overview page
+
+Now I want to add a subtitle to every section, which I expected to work like `\section{Layout}{this section describes the layout}`, which appearently doesn't work.
+
+What I want:
+
+    1 Layout - this section describes the layout
+        1.1 Main Window
+        1.2 Footer
+    2 Navigation - here you will get information on foobar
+        2.1 Basic structure
+        2.2 Overview page
+
+",4
+10484278,05/07/2012 14:55:54,1380016,05/07/2012 14:47:01,1,0,latexdiff error: program refuses to recognize my .tex file,"I have zero background in programming, but I need to use latexdiff to track changes between two documents. I've installed a cygwin terminal and used ""make install"" to install the latexdiff program, but when I execute the following command line:
+
+""latexdiff chienyu.tex chienyuedited.tex > diff.tex""
+
+I get the following error:
+
+""Couldn't open chienyuedited.tex: No such file or directory at /usr/local/bin/latexdiff line 938, <DATA> line 19017.""
+
+I've put all of the tex files in my /user/local/bin directory, but beyond this I am lost. I can't figure out why the program won't open the tex file. Can someone please help me?
+",latex,,,,,05/08/2012 18:04:44,off topic,1,95,9,"latexdiff error: program refuses to recognize my .tex file I have zero background in programming, but I need to use latexdiff to track changes between two documents. I've installed a cygwin terminal and used ""make install"" to install the latexdiff program, but when I execute the following command line:
+
+""latexdiff chienyu.tex chienyuedited.tex > diff.tex""
+
+I get the following error:
+
+""Couldn't open chienyuedited.tex: No such file or directory at /usr/local/bin/latexdiff line 938, <DATA> line 19017.""
+
+I've put all of the tex files in my /user/local/bin directory, but beyond this I am lost. I can't figure out why the program won't open the tex file. Can someone please help me?
+",1
+11490975,07/15/2012 09:51:09,182395,10/01/2009 09:59:01,190,6,How to add Go to the programming languages list in Lyx,I'm adding Go code to my document via 'Insert->Program Listing' in Lyx. The language Go is not available in the language dropdown in the settings. Is there an easy way to add Go syntax highlighting/parsing to Lyx?,latex,syntax-highlighting,go,lyx,,07/16/2012 13:27:26,off topic,1,37,11,How to add Go to the programming languages list in Lyx I'm adding Go code to my document via 'Insert->Program Listing' in Lyx. The language Go is not available in the language dropdown in the settings. Is there an easy way to add Go syntax highlighting/parsing to Lyx?,4
+5958077,05/11/2011 00:55:24,610093,02/09/2011 16:41:14,53,1,Is it possible to define the word stretch in latex ?,"i would like to know if is possible to set the space between the words like i can do with the lines with baselinestretch ?
+
+thx",latex,pdflatex,latex-environment,,,07/28/2012 20:27:20,off topic,1,25,11,"Is it possible to define the word stretch in latex ? i would like to know if is possible to set the space between the words like i can do with the lines with baselinestretch ?
+
+thx",3
+10267277,04/22/2012 10:45:53,780787,06/02/2011 08:26:12,46,0,Lyx 2.0.3 Mac Version unavailable article document class,"I am trying to use Lyx 2.0.3 but for some reason it does not have the Document class article. Is there something else I need to install? I have installed texworks as well but for some reason it still can't find most of the document classes. An example of the error I get is 
+
+    The module enumitem requires a package that is not available 
+    in your laTex installation, or a converter that you have not installed. 
+    LaTex output may not be possible. Missing Prerequisites:
+
+     enumitem.sty
+
+
+So when I navigate to Document -> Settings, in the document class box most things are unavailable. Any advice would be great!",latex,lyx,,,,04/22/2012 17:18:12,off topic,1,122,8,"Lyx 2.0.3 Mac Version unavailable article document class I am trying to use Lyx 2.0.3 but for some reason it does not have the Document class article. Is there something else I need to install? I have installed texworks as well but for some reason it still can't find most of the document classes. An example of the error I get is 
+
+    The module enumitem requires a package that is not available 
+    in your laTex installation, or a converter that you have not installed. 
+    LaTex output may not be possible. Missing Prerequisites:
+
+     enumitem.sty
+
+
+So when I navigate to Document -> Settings, in the document class box most things are unavailable. Any advice would be great!",2
+8898013,01/17/2012 16:18:47,1069771,11/28/2011 16:43:11,20,0,How to write this math equation in Latex,"I want insert this math equation![enter image description here][1] into my paper however, the part in the brackets make me confused. I google math equation in Latex but find no relavent information. This is what I alreadly have now: $MR(e) = \Pi_{(R_{i}.ID, R_{j}.ID)}()$. Could you please help me to fill in the brackets. Many thanks.
+
+
+  [1]: http://i.stack.imgur.com/bd9eD.png",latex,,,,,01/17/2012 18:17:04,off topic,1,58,8,"How to write this math equation in Latex I want insert this math equation![enter image description here][1] into my paper however, the part in the brackets make me confused. I google math equation in Latex but find no relavent information. This is what I alreadly have now: $MR(e) = \Pi_{(R_{i}.ID, R_{j}.ID)}()$. Could you please help me to fill in the brackets. Many thanks.
+
+
+  [1]: http://i.stack.imgur.com/bd9eD.png",1
+11284912,07/01/2012 19:14:12,1494664,07/01/2012 19:06:49,1,0,Can't remove 'unicode' inscription on top of .pdf document compiled from .tex,"http://imm.io/uHea
+
+The inscription appears after adding
+
+\usepackage[russian, english]{babel}
+
+to the .tex. document.",latex,,,,,07/02/2012 19:32:21,off topic,1,9,12,"Can't remove 'unicode' inscription on top of .pdf document compiled from .tex http://imm.io/uHea
+
+The inscription appears after adding
+
+\usepackage[russian, english]{babel}
+
+to the .tex. document.",1
+11711694,07/29/2012 18:08:00,1189762,02/04/2012 19:01:54,156,11,Latex - Code Snippet IN Text,"How do I show a code snippet directly in my text? I dont want to have an extra box for it like lstlisting or verbatim provide it. My example may should look like this:
+
+The class `List.class` is...
+
+Should I make a new command for grey background and code like font? Or is there a simpler way? If not, how to write a new command for that?
+
+",latex,,,,,07/31/2012 02:17:26,off topic,1,65,6,"Latex - Code Snippet IN Text How do I show a code snippet directly in my text? I dont want to have an extra box for it like lstlisting or verbatim provide it. My example may should look like this:
+
+The class `List.class` is...
+
+Should I make a new command for grey background and code like font? Or is there a simpler way? If not, how to write a new command for that?
+
+",1
+2838563,05/15/2010 01:38:04,293009,03/13/2010 15:48:09,38,6,Exclude entry from glossary?,"I'm using the glossaries package in LaTeX.  I've got `\gls{foo}` in my document, but I don't want the entry for ""foo"" to appear in the glossary.  How can I keep a working (i.e. expanding) `\gls{foo}` in the body of my document, but exclude the entry for ""foo"" from the glossary?",latex,glossaries,,,,,open,0,52,4,"Exclude entry from glossary? I'm using the glossaries package in LaTeX.  I've got `\gls{foo}` in my document, but I don't want the entry for ""foo"" to appear in the glossary.  How can I keep a working (i.e. expanding) `\gls{foo}` in the body of my document, but exclude the entry for ""foo"" from the glossary?",2
+8988355,01/24/2012 14:18:42,503866,11/10/2010 22:34:36,31,3,Too long vertical lines in LaTeX table,"Ok, I've looked at this code too long and need some fresh eyes and ideas.
+
+**Question:** Why do I get too long vertical lines on my LaTeX table?
+
+Looks to me like some sort of overflow, but the document is much wider, so I don't think it is the problem. 
+
+*Code:*
+
+    \begin{table}[h]
+        \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|} 
+        \hline
+            ContainsPrize & \multicolumn{3}{|c|}{A} & \multicolumn{3}{|c|}{B} & \multicolumn{3}{|c|}{C} \\ \hline
+            MyChoice      & A   & B & C & A & B   & C & A & B & C   \\ \hline
+            openA         & 0   & 0 & 0 & 0 & 0.5 & 1 & 0 & 1 & 0.5 \\
+            openB         & 0.5 & 0 & 1 & 0 & 0   & 0 & 1 & 0 & 0.5 \\
+            openC         & 0.5 & 1 & 0 & 1 & 0.5 & 0 & 0 & 0 & 0   \\
+        \hline
+        \end{tabular}
+        \caption{A nice caption text here...}
+     \end{table}
+
+**Which generates:**
+
+![The generated table][1]
+
+Any ideas?
+
+  [1]: http://i.stack.imgur.com/9assL.png",latex,tex,,,,01/24/2012 19:13:35,off topic,1,255,7,"Too long vertical lines in LaTeX table Ok, I've looked at this code too long and need some fresh eyes and ideas.
+
+**Question:** Why do I get too long vertical lines on my LaTeX table?
+
+Looks to me like some sort of overflow, but the document is much wider, so I don't think it is the problem. 
+
+*Code:*
+
+    \begin{table}[h]
+        \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|} 
+        \hline
+            ContainsPrize & \multicolumn{3}{|c|}{A} & \multicolumn{3}{|c|}{B} & \multicolumn{3}{|c|}{C} \\ \hline
+            MyChoice      & A   & B & C & A & B   & C & A & B & C   \\ \hline
+            openA         & 0   & 0 & 0 & 0 & 0.5 & 1 & 0 & 1 & 0.5 \\
+            openB         & 0.5 & 0 & 1 & 0 & 0   & 0 & 1 & 0 & 0.5 \\
+            openC         & 0.5 & 1 & 0 & 1 & 0.5 & 0 & 0 & 0 & 0   \\
+        \hline
+        \end{tabular}
+        \caption{A nice caption text here...}
+     \end{table}
+
+**Which generates:**
+
+![The generated table][1]
+
+Any ideas?
+
+  [1]: http://i.stack.imgur.com/9assL.png",2
+6391569,06/17/2011 20:40:15,418832,08/12/2010 19:36:08,335,13,Unable to find certain latex commands,"I have Snow Leopard and MacTex. I cannot find detex and ispell using terminal. Get the error - -bash: ispell: command not found
+
+Other things with TeX and LaTeX work fine. I have searched online, but could not find much help. I need to basically convert a document from PDF to plain text and I need tool for the same.
+
+",latex,,,,,06/18/2011 01:16:41,off topic,1,59,6,"Unable to find certain latex commands I have Snow Leopard and MacTex. I cannot find detex and ispell using terminal. Get the error - -bash: ispell: command not found
+
+Other things with TeX and LaTeX work fine. I have searched online, but could not find much help. I need to basically convert a document from PDF to plain text and I need tool for the same.
+
+",1
+9517473,03/01/2012 13:57:12,1022043,10/31/2011 13:31:42,49,0,latex left align sidewaystable,"Is it possible to left align a sidewaytable to make use of the extra space at the left of it?
+Similar to the \LTleft\fill in longtable? I have not found a way to do this yet. 
+
+Thank you in advance",latex,,,,,03/01/2012 16:45:57,off topic,1,39,4,"latex left align sidewaystable Is it possible to left align a sidewaytable to make use of the extra space at the left of it?
+Similar to the \LTleft\fill in longtable? I have not found a way to do this yet. 
+
+Thank you in advance",1
+11705581,07/28/2012 23:49:56,1560298,07/28/2012 23:37:26,1,0,Can I have a table that cross multiple pages using \ctable (Latex)?,"I'm currently working on a paper and I have a bunch of tables.  Currently I'm using \ctable package on Latex for my tables. One of my tables is rather long and it spans more than 1 page. However currently the table is kinda being cut off. My question is, is there a way to make \ctable behaves like longtable? 
+
+Thank you in advanced",latex,,,,,07/29/2012 21:42:23,off topic,1,64,12,"Can I have a table that cross multiple pages using \ctable (Latex)? I'm currently working on a paper and I have a bunch of tables.  Currently I'm using \ctable package on Latex for my tables. One of my tables is rather long and it spans more than 1 page. However currently the table is kinda being cut off. My question is, is there a way to make \ctable behaves like longtable? 
+
+Thank you in advanced",1
+11245922,06/28/2012 13:37:23,744859,05/09/2011 09:24:46,3728,100,Aligning different and numbered equations in Latex,"I can align different lines of the same equation in **Latex** with this code:
+
+    \begin{equation}
+    \begin{align}
+     \frac{\partial a}{\partial b}(x)&=\frac{\partial a}{\partial c}\times \frac{\partial c}{\partial b} = \\ 
+     &= \frac{\partial a}{\partial c}(x)\times \frac{\partial c}{\partial b}
+    \end{align}
+    \end{equation} 
+
+but I couldn't find any solution for **aligning different numbered equations** like these:
+
+    \begin{equation}
+    p_{new} = p + (v+V)\Delta t
+    \end{equation}
+    
+    \begin{equation}
+    q_{new} = q \times q(\omega + \Omega) \Delta t
+    \end{equation}
+    
+    \begin{equation}
+     v_{new} = v + V 
+    \end{equation}
+    
+    \begin{equation}
+    \omega_{new} = \omega + \Omega 
+    \end{equation}
+
+Which is the right way to proceed?",latex,equations,,,,06/28/2012 14:23:18,off topic,1,159,7,"Aligning different and numbered equations in Latex I can align different lines of the same equation in **Latex** with this code:
+
+    \begin{equation}
+    \begin{align}
+     \frac{\partial a}{\partial b}(x)&=\frac{\partial a}{\partial c}\times \frac{\partial c}{\partial b} = \\ 
+     &= \frac{\partial a}{\partial c}(x)\times \frac{\partial c}{\partial b}
+    \end{align}
+    \end{equation} 
+
+but I couldn't find any solution for **aligning different numbered equations** like these:
+
+    \begin{equation}
+    p_{new} = p + (v+V)\Delta t
+    \end{equation}
+    
+    \begin{equation}
+    q_{new} = q \times q(\omega + \Omega) \Delta t
+    \end{equation}
+    
+    \begin{equation}
+     v_{new} = v + V 
+    \end{equation}
+    
+    \begin{equation}
+    \omega_{new} = \omega + \Omega 
+    \end{equation}
+
+Which is the right way to proceed?",2
+2643338,04/15/2010 07:13:30,154989,08/12/2009 10:52:16,1648,36,Latex editor for windows that works with unicode,"I need to write Hebrew text in Latex.
+I am currently working on Windows with TeXnicCenter. I was pretty happy with this tool, up until the time when I needed to write Hebrew text. My regular alt-shift just won't change the language (I even downloaded the last alpha version, which was supposed to solve the problem, but it didn't).
+
+So I'm looking for another latex editor for windows that will let me write Hebrew.
+
+Please advice.
+
+Note: I know that it is possible with Lyx, but I prefer a real Latex editor.",latex,editor,text-editor,,,,open,0,88,8,"Latex editor for windows that works with unicode I need to write Hebrew text in Latex.
+I am currently working on Windows with TeXnicCenter. I was pretty happy with this tool, up until the time when I needed to write Hebrew text. My regular alt-shift just won't change the language (I even downloaded the last alpha version, which was supposed to solve the problem, but it didn't).
+
+So I'm looking for another latex editor for windows that will let me write Hebrew.
+
+Please advice.
+
+Note: I know that it is possible with Lyx, but I prefer a real Latex editor.",3
+11450678,07/12/2012 11:17:19,1267334,03/13/2012 19:27:04,48,2,How to export a table?,"I defined a table in latex : \begin{tabular}....\end{tabular}.
+
+Now i want to export that table to an image (PNG or something}.
+
+It is possible? How can i do that?
+
+Best regards,
+Ricardo",latex,latex-environment,,,,07/12/2012 18:02:31,off topic,1,28,5,"How to export a table? I defined a table in latex : \begin{tabular}....\end{tabular}.
+
+Now i want to export that table to an image (PNG or something}.
+
+It is possible? How can i do that?
+
+Best regards,
+Ricardo",2
+11260866,06/29/2012 11:20:43,1480237,06/25/2012 14:09:29,16,0,Model of curriculum vitae with Latex,"Please, is there any patterns (model or package) to download to do a cv with latex?
+
+Thank you so much",latex,,,,,06/29/2012 14:29:29,off topic,1,19,6,"Model of curriculum vitae with Latex Please, is there any patterns (model or package) to download to do a cv with latex?
+
+Thank you so much",1
+4355360,12/04/2010 19:24:43,530677,12/04/2010 19:24:43,1,0,Latex: tabular* with rubber spacing and cline,"I'm using a tabular* with rubber spacing to fill the complete width of the page. This works fine, except that when I use cline, the line is not complete. It seems that cline does not cover the spacing. I'm using pdflatex. Below you will find a code example. Any ideas on how to fix this?
+
+     \usepackage{array} % for defining a new column type
+     \usepackage{varwidth} %for the varwidth minipage environment
+     %...
+     \newcolumntype{M}{>{\begin{varwidth}{6cm}}l<{\end{varwidth}}} %M is for Maximal column
+     %...
+     \begin{tabular*}{15.5cm}{@{\extracolsep{\fill}} | M | r | r | r | r |}
+       \hline
+       \bf Omschrijving & \bf Hoeveelheid & \bf Prijs & \bf SubTotaal & \bf BTW\\
+       \hline
+       Armband 2 & 1 & 256.00 & 256.00 & 19.00\% \\
+       \hline
+       \multicolumn{3}{c |}{} & SubTotaal & 256.00\\
+       \multicolumn{3}{c |}{} & BTW (19.0) & 48.64\\
+       \multicolumn{3}{c |}{}  & \bf Totaal & \bf 304.64\\
+       \cline{4-5}
+    \end{tabular*}
+
+",latex,pdflatex,tabular,,,04/28/2012 16:14:48,off topic,1,222,7,"Latex: tabular* with rubber spacing and cline I'm using a tabular* with rubber spacing to fill the complete width of the page. This works fine, except that when I use cline, the line is not complete. It seems that cline does not cover the spacing. I'm using pdflatex. Below you will find a code example. Any ideas on how to fix this?
+
+     \usepackage{array} % for defining a new column type
+     \usepackage{varwidth} %for the varwidth minipage environment
+     %...
+     \newcolumntype{M}{>{\begin{varwidth}{6cm}}l<{\end{varwidth}}} %M is for Maximal column
+     %...
+     \begin{tabular*}{15.5cm}{@{\extracolsep{\fill}} | M | r | r | r | r |}
+       \hline
+       \bf Omschrijving & \bf Hoeveelheid & \bf Prijs & \bf SubTotaal & \bf BTW\\
+       \hline
+       Armband 2 & 1 & 256.00 & 256.00 & 19.00\% \\
+       \hline
+       \multicolumn{3}{c |}{} & SubTotaal & 256.00\\
+       \multicolumn{3}{c |}{} & BTW (19.0) & 48.64\\
+       \multicolumn{3}{c |}{}  & \bf Totaal & \bf 304.64\\
+       \cline{4-5}
+    \end{tabular*}
+
+",3
+1311991,08/21/2009 13:36:22,104021,05/09/2009 10:18:32,704,52,Latex: Avoid new paragraph?,"I use the \todo command from the \todonotes package. I'd like to layout my source to put \todos separately from the previous paragraph:
+
+    Some text.
+    
+    \todo{make note}
+
+But I don't want \todo to start a new paragraph, or it screws up the spacing of the document.
+
+Is there a command to avoid this?
+
+If there were a command/package to consume the whitespace up to it, then I could redefine \todo to use it.",latex,paragraph,spacing,layout,,,open,0,80,4,"Latex: Avoid new paragraph? I use the \todo command from the \todonotes package. I'd like to layout my source to put \todos separately from the previous paragraph:
+
+    Some text.
+    
+    \todo{make note}
+
+But I don't want \todo to start a new paragraph, or it screws up the spacing of the document.
+
+Is there a command to avoid this?
+
+If there were a command/package to consume the whitespace up to it, then I could redefine \todo to use it.",4
+9138822,02/04/2012 06:10:18,981700,10/06/2011 07:09:53,1,0,What's the best combination of LaTex writing in Chinese?,"someone rcommend the xelatex, but others insist on the latex+CJK, which one is prefer? thanks.",latex,xelatex,,,,02/04/2012 07:10:33,off topic,1,15,9,"What's the best combination of LaTex writing in Chinese? someone rcommend the xelatex, but others insist on the latex+CJK, which one is prefer? thanks.",2
+11417190,07/10/2012 15:53:49,1515301,07/10/2012 15:37:40,1,0,dynamic latex display,"Sorry in advance if this is an old topic, but I am new to this so I wasn't sure what to search for:
+
+I am trying to create a dynamic equation displayed in latex on my website, and im not sure what method of rendering will be best for this.
+
+for example, I want to show
+
+$f(x)=2x+5$ and then have the user click a button to change the numbers and have the display show $f(x)=3x+8$ and another click to give $f(x)=5x+1$.  
+
+Of course this isnt all I want to display, but I am having trouble figuring out which renderer will be the right one for what im trying to do here (have dynamic constants in my latex display).
+
+Thanks",latex,,,,,07/11/2012 15:49:09,off topic,1,116,3,"dynamic latex display Sorry in advance if this is an old topic, but I am new to this so I wasn't sure what to search for:
+
+I am trying to create a dynamic equation displayed in latex on my website, and im not sure what method of rendering will be best for this.
+
+for example, I want to show
+
+$f(x)=2x+5$ and then have the user click a button to change the numbers and have the display show $f(x)=3x+8$ and another click to give $f(x)=5x+1$.  
+
+Of course this isnt all I want to display, but I am having trouble figuring out which renderer will be the right one for what im trying to do here (have dynamic constants in my latex display).
+
+Thanks",1
+8415753,12/07/2011 13:04:46,587021,01/24/2011 04:57:23,83,26,{zotero} Simultaneous appearance of two bibliographies with two referencing styles,"Unfortunately I am getting two different bibliographic styles from Zotero.
+
+I was requested to submit my article with (Author, Year) instead of subscript Roman-numeral.
+
+Unfortunately LibreOffice on Windows 8 was crashing regularly, so I moved to an Ubuntu VM. An even greater misfortune awaited when the references in the document weren't recognised by Zotero (same account), so I ended up having two different bibliographic styles in my document.
+
+When I finished writing, I received an error preventing me from inserting the bibliography, since there was already a bibliography for the other style.
+
+(I was able to generate one though after deleting all the alternate references) - Then I cut that bibliography out, Ctrl+Z many times, then put it after the alternate bibliography.
+
+**Now I have two bibliographies, and two referencing styles in my document.**
+
+How do I repair this? (i.e. convert to LaTeX then work from there?)",latex,reference,bibtex,bibliography,libreoffice,04/18/2012 15:15:32,off topic,1,141,10,"{zotero} Simultaneous appearance of two bibliographies with two referencing styles Unfortunately I am getting two different bibliographic styles from Zotero.
+
+I was requested to submit my article with (Author, Year) instead of subscript Roman-numeral.
+
+Unfortunately LibreOffice on Windows 8 was crashing regularly, so I moved to an Ubuntu VM. An even greater misfortune awaited when the references in the document weren't recognised by Zotero (same account), so I ended up having two different bibliographic styles in my document.
+
+When I finished writing, I received an error preventing me from inserting the bibliography, since there was already a bibliography for the other style.
+
+(I was able to generate one though after deleting all the alternate references) - Then I cut that bibliography out, Ctrl+Z many times, then put it after the alternate bibliography.
+
+**Now I have two bibliographies, and two referencing styles in my document.**
+
+How do I repair this? (i.e. convert to LaTeX then work from there?)",5

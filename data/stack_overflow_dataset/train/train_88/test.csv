@@ -1,0 +1,680 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+3249275,07/14/2010 18:35:28,314643,04/12/2010 14:59:57,36,0,VIM - multiple commands on same line,"I've been trying to find something that will let me run multiple commands on the same line in vim, akin to using semicolons to separate commands in *nix systems or `&` in windows.  Is there a way to do this?",vim,command,,,,,open,0,41,7,"VIM - multiple commands on same line I've been trying to find something that will let me run multiple commands on the same line in vim, akin to using semicolons to separate commands in *nix systems or `&` in windows.  Is there a way to do this?",2
+9599351,03/07/2012 10:05:02,674199,03/24/2011 02:40:23,405,20,How to jump to the rightmost window with just one keystroke?,"I found the window manager in vim is quite powerful. We can use it to split the window to whatever we want it to be. But when the numbers of the windows comes to more then 4, it will caused one problem: it's quit hard to jump to the rightmost window. Because the rightmost window is used to display taglist in my vim. I don't like the way that type <kbd>CTRL+w</kbd> for twice or more times to jump to the rightmost window. Is there a more easier way to do it?",vim,ide,editor,,,,open,0,91,11,"How to jump to the rightmost window with just one keystroke? I found the window manager in vim is quite powerful. We can use it to split the window to whatever we want it to be. But when the numbers of the windows comes to more then 4, it will caused one problem: it's quit hard to jump to the rightmost window. Because the rightmost window is used to display taglist in my vim. I don't like the way that type <kbd>CTRL+w</kbd> for twice or more times to jump to the rightmost window. Is there a more easier way to do it?",3
+6995631,08/09/2011 11:43:14,588855,08/06/2010 17:52:56,1067,10,Can I find a similar theme to Vim,"Can I find a similar theme to this theme: [http://idlefingers.co.uk/][1] to `vim`? And, how can I install it?
+
+Thanks.
+
+
+  [1]: http://idlefingers.co.uk/",vim,themes,,,,08/09/2011 11:49:56,off topic,1,21,8,"Can I find a similar theme to Vim Can I find a similar theme to this theme: [http://idlefingers.co.uk/][1] to `vim`? And, how can I install it?
+
+Thanks.
+
+
+  [1]: http://idlefingers.co.uk/",2
+5487338,03/30/2011 13:59:04,662967,03/16/2011 17:14:17,111,2,VIM: set filetype=txt for every new file [No Name],"I tried all possible things to let vim set filetype to 'txt' to all new files I create (in a new tab) but it doesn't work.   
+      
+This is p.e. what I've read on the web a few times:  
+`au BufRead,BufNewFile *.txt setlocal ft=txt`   
+(to put in _vimrc)   
+However it doesn't work.
+
+Can anyone help me?
+
+
+
+
+",vim,default,new-operator,file-type,,,open,0,67,9,"VIM: set filetype=txt for every new file [No Name] I tried all possible things to let vim set filetype to 'txt' to all new files I create (in a new tab) but it doesn't work.   
+      
+This is p.e. what I've read on the web a few times:  
+`au BufRead,BufNewFile *.txt setlocal ft=txt`   
+(to put in _vimrc)   
+However it doesn't work.
+
+Can anyone help me?
+
+
+
+
+",4
+2441795,03/14/2010 10:10:42,233201,12/16/2009 18:39:17,2284,99,Becoming better at Vim,"I've been using Vim for quite a long time, but I'm at a level where I use insert mode most of the time, and I still use the arrow keys to move around(!).
+
+I feel like I'm not getting the best out of my lovely editor, particularly regarding navigating (especially code), copy & pasting, and doing other manipulations of existing code. (though I am quite comfortable with complicated search/replace patterns).
+
+
+
+ * How should I go about learning more?
+ * What resources would people recommend?
+
+
+",vim,,,,,04/11/2012 16:40:59,not constructive,1,83,4,"Becoming better at Vim I've been using Vim for quite a long time, but I'm at a level where I use insert mode most of the time, and I still use the arrow keys to move around(!).
+
+I feel like I'm not getting the best out of my lovely editor, particularly regarding navigating (especially code), copy & pasting, and doing other manipulations of existing code. (though I am quite comfortable with complicated search/replace patterns).
+
+
+
+ * How should I go about learning more?
+ * What resources would people recommend?
+
+
+",1
+6909348,08/02/2011 08:42:38,585795,01/22/2011 17:52:19,519,7,Vim doesn't work properly with cyrillic symbols,"I'm trying to learn vim by its built-in tutorial. It is in russian so all the symbols are cyrillic. The most interesting thing is that vim commands doesn't seem to work with them. For example, I'm trying dw in normal mode with russign symbols, it deletes sometimes 1, sometimes 2 symbols within the word. It doesn't delete the whole word. But it works fine with latin letters. What's the reason?",vim,,,,,,open,0,70,7,"Vim doesn't work properly with cyrillic symbols I'm trying to learn vim by its built-in tutorial. It is in russian so all the symbols are cyrillic. The most interesting thing is that vim commands doesn't seem to work with them. For example, I'm trying dw in normal mode with russign symbols, it deletes sometimes 1, sometimes 2 symbols within the word. It doesn't delete the whole word. But it works fine with latin letters. What's the reason?",1
+6169537,05/29/2011 18:20:24,577057,01/15/2011 21:20:07,161,9,vim movements: going to parent,"how can I in Vim move to parent / cousine tags in xml files ?
+
+I'm looking for something similar to:
+
+    vatat "" create a selection for second parent tag with all child elements
+
+but in normal mode (eg: go to second parent tag).
+
+
+",vim,,,,,,open,0,45,5,"vim movements: going to parent how can I in Vim move to parent / cousine tags in xml files ?
+
+I'm looking for something similar to:
+
+    vatat "" create a selection for second parent tag with all child elements
+
+but in normal mode (eg: go to second parent tag).
+
+
+",1
+10787209,05/28/2012 15:42:37,1115979,12/26/2011 07:04:06,455,10,"Vim option for automatically inserting "">"" at start of line","Suppose I have a file `test.c` containing the following:
+
+    // line 1
+    // line 2
+
+If I open this file in Vim and navigate to the first line in normal mode, then type `o`, I get the following:
+
+    // line 1
+    // 
+    // line 2
+
+Now suppose I have a file `test.lhs` (literate Haskell) containing
+
+    > data X = A | B
+    > data Y = C | D
+
+If I open this file and navigate to the first line in normal mode, then type `o`, I get
+
+    > data X = A | B
+    
+    > data Y = C | D
+
+**Question:** How can I make Vim automatically insert `> ` at the start of the line for the `.lhs` file, similar to how `// ` is automatically inserted for the `.c` file?",vim,,,,,,open,0,162,10,"Vim option for automatically inserting "">"" at start of line Suppose I have a file `test.c` containing the following:
+
+    // line 1
+    // line 2
+
+If I open this file in Vim and navigate to the first line in normal mode, then type `o`, I get the following:
+
+    // line 1
+    // 
+    // line 2
+
+Now suppose I have a file `test.lhs` (literate Haskell) containing
+
+    > data X = A | B
+    > data Y = C | D
+
+If I open this file and navigate to the first line in normal mode, then type `o`, I get
+
+    > data X = A | B
+    
+    > data Y = C | D
+
+**Question:** How can I make Vim automatically insert `> ` at the start of the line for the `.lhs` file, similar to how `// ` is automatically inserted for the `.c` file?",1
+15334,08/18/2008 22:41:10,1670,08/17/2008 21:56:17,1,0,How to create short snippets in VIM?,"I have recently started using VIM as my text editor and am currently working on my own customizations.
+
+I suppose keyboard mappings can do pretty much anything, but for the time being I'm using them as a sort of snippets facility almost exclusively.
+
+So, for example, if I type def{TAB} (<em>:imap def{TAB} def ():<ESC>3ha</em>), it expands to:
+
+    def |(): # '|' represents the caret
+
+This works as expected, but I find it annoying when VIM waits for a full command while I'm typing a word containing ""def"" and am not interested in expanding it.
+
+* Is there a way to avoid this or use this function more effectively to this end?
+* Is any other VIM feature better suited for this?",vim,vimtips,,,,,open,0,119,7,"How to create short snippets in VIM? I have recently started using VIM as my text editor and am currently working on my own customizations.
+
+I suppose keyboard mappings can do pretty much anything, but for the time being I'm using them as a sort of snippets facility almost exclusively.
+
+So, for example, if I type def{TAB} (<em>:imap def{TAB} def ():<ESC>3ha</em>), it expands to:
+
+    def |(): # '|' represents the caret
+
+This works as expected, but I find it annoying when VIM waits for a full command while I'm typing a word containing ""def"" and am not interested in expanding it.
+
+* Is there a way to avoid this or use this function more effectively to this end?
+* Is any other VIM feature better suited for this?",2
+2341456,02/26/2010 12:16:50,275088,02/17/2010 09:15:03,148,0,How do I select a chunk of text and paste it to the current cursor position w/o using mouse in vim?,"I want to give up using mouse for selecting and pasting chunks of text within a buffer. Whats the most efficient way to do this with just kb? I mean locate the substring, copy, return to the previous position and paste.",vim,copy,paste,,,,open,0,41,21,"How do I select a chunk of text and paste it to the current cursor position w/o using mouse in vim? I want to give up using mouse for selecting and pasting chunks of text within a buffer. Whats the most efficient way to do this with just kb? I mean locate the substring, copy, return to the previous position and paste.",3
+1919028,12/17/2009 01:57:35,233454,12/17/2009 01:57:35,1,0,how to show vertical line to wrap the line in vim?,"I'm finding a way to show a vertical line at 80 column in vim(not gvim).
+I've been used ""set wrap"", but I just want to show the line to wrap the long line by myself.
+
+thanks.",vim,wrap,,,,,open,0,34,11,"how to show vertical line to wrap the line in vim? I'm finding a way to show a vertical line at 80 column in vim(not gvim).
+I've been used ""set wrap"", but I just want to show the line to wrap the long line by myself.
+
+thanks.",2
+7456875,09/17/2011 18:18:29,849382,07/18/2011 05:04:43,3,0,Emacs as an editor (as opposed to VIM),"I recently started using emacs as an everyday environment, half because I always wanted to gain the perspective of ""the other side,"" and half because I'm forced to at work :P. Its been a week and I can definitely see the advantages of using emacs and what it means to ""live inside emacs."" The buffers are very convenient and just the ability to search through the buffer as if it is an editor is amazing. Emacs has been my ""shell"" since the day I started it last week.
+
+However, when it comes to editing code, I am still not convinced that I should use emacs as opposed to vim. I don't know if it is because I am too used to vim, but with emacs to move around text I always need an extra key, such as 'M-f' instead of 'w,' or 'C-f' instead of 'l'. Is this just a learning curve that I have to overcome? 
+
+I am not trying to start a flame war, I would just like some perspective. Thanks!",vim,emacs,,,,09/17/2011 18:57:53,not constructive,1,172,8,"Emacs as an editor (as opposed to VIM) I recently started using emacs as an everyday environment, half because I always wanted to gain the perspective of ""the other side,"" and half because I'm forced to at work :P. Its been a week and I can definitely see the advantages of using emacs and what it means to ""live inside emacs."" The buffers are very convenient and just the ability to search through the buffer as if it is an editor is amazing. Emacs has been my ""shell"" since the day I started it last week.
+
+However, when it comes to editing code, I am still not convinced that I should use emacs as opposed to vim. I don't know if it is because I am too used to vim, but with emacs to move around text I always need an extra key, such as 'M-f' instead of 'w,' or 'C-f' instead of 'l'. Is this just a learning curve that I have to overcome? 
+
+I am not trying to start a flame war, I would just like some perspective. Thanks!",2
+7486451,09/20/2011 14:03:23,831790,07/06/2011 14:27:58,120,4,Vim snippets plugin,"I know there is some vim plugins that implements TextMate-like snippets feature. The popular are: <b>snipMate, snippetsEmu, neocomplcache, UltiSnips and xptemplate.</b> <br>
+What is the best and why? Consider using this with others plugins like <b>SuperTab, AutoComplPop and pathogen</b>. Have you ever tried those plugins? What do you prefer? <br>",vim,code-snippets,snipmate,vim-plugin,,09/20/2011 16:04:29,not constructive,1,49,3,"Vim snippets plugin I know there is some vim plugins that implements TextMate-like snippets feature. The popular are: <b>snipMate, snippetsEmu, neocomplcache, UltiSnips and xptemplate.</b> <br>
+What is the best and why? Consider using this with others plugins like <b>SuperTab, AutoComplPop and pathogen</b>. Have you ever tried those plugins? What do you prefer? <br>",4
+9191325,02/08/2012 10:16:38,1196829,02/08/2012 09:57:53,1,0,How to remove space at the end of a cab abbreviation and wait for input in GVim?,"I have created a Vim abbreviation for the start of a file path, i.e.
+
+cab  \x\     M:\xmlexport\Output\
+
+and I want to have this expand, remove the space and wait for further input. I have tried using =Eatchar('s') but don't know what to put before it to make it trigger correctly. All the examples I have seen use <C-R> which adds in a new line. I have tried <left> just to move back one space but this creates M:\xmlexport\Output \
+
+I have googled around on this one but don't seem to be able to find an answer. Can anyone help? Thanks in advance.",vim,abbreviation,,,,,open,0,104,17,"How to remove space at the end of a cab abbreviation and wait for input in GVim? I have created a Vim abbreviation for the start of a file path, i.e.
+
+cab  \x\     M:\xmlexport\Output\
+
+and I want to have this expand, remove the space and wait for further input. I have tried using =Eatchar('s') but don't know what to put before it to make it trigger correctly. All the examples I have seen use <C-R> which adds in a new line. I have tried <left> just to move back one space but this creates M:\xmlexport\Output \
+
+I have googled around on this one but don't seem to be able to find an answer. Can anyone help? Thanks in advance.",2
+4710305,01/17/2011 05:38:44,13564,09/16/2008 19:55:06,5345,112,error when attempting to go back to normal mode in vim command-line window,"When I open the command-line window for editing a complex command-line in vim, I expect to be able to go back and forth in and out of insert / normal mode to edit as I would in any other buffer.  (That's the point of the command-line window, right?  So that I can do that?)  But instead, when I hit ESC to go back to normal mode, I get this:
+
+    Error detected while processing function <SNR>15_CloseStackPop:
+    line    3:
+    E11: Invalid in command-line window; <CR> executes, CTRL-C quits:         pclose
+
+I'm game to try to figure this out, but I don't have a lot to go on.  `vim --noplugin` doesn't seem to have this problem, so it's clearly one of the plugins I have loaded, but which one?  I have quite a few.  ""line 3"" of what file?  What does ""E11"" mean?",vim,macvim,,,,,open,0,165,13,"error when attempting to go back to normal mode in vim command-line window When I open the command-line window for editing a complex command-line in vim, I expect to be able to go back and forth in and out of insert / normal mode to edit as I would in any other buffer.  (That's the point of the command-line window, right?  So that I can do that?)  But instead, when I hit ESC to go back to normal mode, I get this:
+
+    Error detected while processing function <SNR>15_CloseStackPop:
+    line    3:
+    E11: Invalid in command-line window; <CR> executes, CTRL-C quits:         pclose
+
+I'm game to try to figure this out, but I don't have a lot to go on.  `vim --noplugin` doesn't seem to have this problem, so it's clearly one of the plugins I have loaded, but which one?  I have quite a few.  ""line 3"" of what file?  What does ""E11"" mean?",2
+5724968,04/20/2011 02:42:05,284981,10/09/2009 07:20:01,11,6,"Using SLIMV to code Lisp, how do I insert a single "" without disabling paredit.vim?","I need to write the following line of code:
+
+    ((eq item #\"") (do-this...))
+
+But everytime I type "", I get """".  I've read the paredit.vim doc file but it's not clear how to insert a single pair character (be it "", (, or [), and whether doing it breaks paredit for that function.  Any experts have a way around this?",vim,lisp,common-lisp,paredit,vimclojure,,open,0,64,15,"Using SLIMV to code Lisp, how do I insert a single "" without disabling paredit.vim? I need to write the following line of code:
+
+    ((eq item #\"") (do-this...))
+
+But everytime I type "", I get """".  I've read the paredit.vim doc file but it's not clear how to insert a single pair character (be it "", (, or [), and whether doing it breaks paredit for that function.  Any experts have a way around this?",5
+1208256,07/30/2009 17:58:20,93535,04/21/2009 02:12:20,377,1,Would you recommend vim/emacs for beginner programmers?,"For someone just starting to program, would you recommend using vim/emacs, or should you use some IDE? Like are vim/emacs better suited for more advanced users than for beginners? I'm just wondering because I'm trying to get some of my friends to program.",vim,emacs,,,,06/13/2012 13:31:00,not constructive,1,43,7,"Would you recommend vim/emacs for beginner programmers? For someone just starting to program, would you recommend using vim/emacs, or should you use some IDE? Like are vim/emacs better suited for more advanced users than for beginners? I'm just wondering because I'm trying to get some of my friends to program.",2
+7541714,09/24/2011 20:27:45,467379,10/05/2010 22:29:03,634,42,Some questions on .vimrc and vim configuration,"Generally on a unix system, there is a global `vimrc` file in the directory `/etc` or `/etc/vim`.  You can also have a `.vimrc` file in your home directory that can customize your vi session.
+
+Is it possible to have a `.vimrc` elsewhere in your directory tree so you can use different vi properties in different directories?  This would be convenient because the editor properties that help you edit Python most quickly are different from those for editing, say, HTML.
+
+This sort of thing does not seem to work be default on my mac or linux lappies. Is there a way to make it happen?",vim,vimrc,vi,,,,open,0,104,7,"Some questions on .vimrc and vim configuration Generally on a unix system, there is a global `vimrc` file in the directory `/etc` or `/etc/vim`.  You can also have a `.vimrc` file in your home directory that can customize your vi session.
+
+Is it possible to have a `.vimrc` elsewhere in your directory tree so you can use different vi properties in different directories?  This would be convenient because the editor properties that help you edit Python most quickly are different from those for editing, say, HTML.
+
+This sort of thing does not seem to work be default on my mac or linux lappies. Is there a way to make it happen?",3
+6731343,07/18/2011 10:09:52,804202,06/18/2011 03:45:40,6,0,vim autocomplete for symfony,"I like to use vim for editing, and I want to use it to develop symfony application.
+
+I've used several good plugins to help me, but I can't find any autocomplete for symfony.
+
+Anyone can help?
+
+anyway, I use vim 73 and symfony 1.4.2",vim,symfony,,,,07/18/2011 15:48:37,not constructive,1,41,4,"vim autocomplete for symfony I like to use vim for editing, and I want to use it to develop symfony application.
+
+I've used several good plugins to help me, but I can't find any autocomplete for symfony.
+
+Anyone can help?
+
+anyway, I use vim 73 and symfony 1.4.2",2
+4900743,02/04/2011 17:05:30,203708,11/05/2009 16:27:14,182,13,Textmate or Vim... Which is better?,"I love Textmate but I had to see what all the fuss was about Vim so tried it out for a little while; built a whole site in it. In the end I decided I was more productive with Textmate and switched back.
+
+Vim seems a little cumbersome to me. I know it's supposed to be lean but I think the years development and the mass of contributes has left it untidy.
+
+Am I wrong should I stick it out with Vim? What are the advantages of Vim of Textmate or Textamate over Vim?",vim,textmate,debate,,,02/04/2011 17:11:06,not constructive,1,92,6,"Textmate or Vim... Which is better? I love Textmate but I had to see what all the fuss was about Vim so tried it out for a little while; built a whole site in it. In the end I decided I was more productive with Textmate and switched back.
+
+Vim seems a little cumbersome to me. I know it's supposed to be lean but I think the years development and the mass of contributes has left it untidy.
+
+Am I wrong should I stick it out with Vim? What are the advantages of Vim of Textmate or Textamate over Vim?",3
+5315669,03/15/2011 17:34:49,557306,12/29/2010 15:46:30,573,32,Scripting inside a mapping,"Recently I create a mapping to toggle highlight search. That's simple but quite useful, something like `nmap ,m :set hlsearch!`. The only problem I've been facing is that sometimes I just get lost after pressing `,m`.
+
+""Did it work?"", ""Is it now on or off?""… Common question from the panic of not receiving feedback :-)
+
+So I thought that echoing a ""turned on"" or ""off"" would make me calmer. The big question here now arrived: is it possible to include a little script inside the mapping? I know I could create a function, but that's not my intention for this simple script:
+
+
+    if (&hlsearch)
+        echo ""Search Highlight On""
+    else
+        echo ""Search Highlight Off""
+    endif
+
+I guess that I need to ""escape"" the newlines like in a preprocessor directive, maybe:
+
+    nmap ,m :set hlsearch!              \
+        if (&hlsearch)                  \
+            echo ""Search Highlight On""  \
+        else                            \
+            echo ""Search Highlight Off"" \
+        endif
+
+But probably that's not the proper way, doesn't work and I don't even know if it is possible.
+
+Another thing I notice is that typing things like `:if (1) echo ""works""` doesn't work either, even though both `if` and `echo` are ""colon"" commands. It gives an error with `echo`. So do I need to separate each command in some way? Preceding `echo` with another colon didn't solve the problem.
+
+Thanks for any help!",vim,vimscript,,,,,open,0,344,4,"Scripting inside a mapping Recently I create a mapping to toggle highlight search. That's simple but quite useful, something like `nmap ,m :set hlsearch!`. The only problem I've been facing is that sometimes I just get lost after pressing `,m`.
+
+""Did it work?"", ""Is it now on or off?""… Common question from the panic of not receiving feedback :-)
+
+So I thought that echoing a ""turned on"" or ""off"" would make me calmer. The big question here now arrived: is it possible to include a little script inside the mapping? I know I could create a function, but that's not my intention for this simple script:
+
+
+    if (&hlsearch)
+        echo ""Search Highlight On""
+    else
+        echo ""Search Highlight Off""
+    endif
+
+I guess that I need to ""escape"" the newlines like in a preprocessor directive, maybe:
+
+    nmap ,m :set hlsearch!              \
+        if (&hlsearch)                  \
+            echo ""Search Highlight On""  \
+        else                            \
+            echo ""Search Highlight Off"" \
+        endif
+
+But probably that's not the proper way, doesn't work and I don't even know if it is possible.
+
+Another thing I notice is that typing things like `:if (1) echo ""works""` doesn't work either, even though both `if` and `echo` are ""colon"" commands. It gives an error with `echo`. So do I need to separate each command in some way? Preceding `echo` with another colon didn't solve the problem.
+
+Thanks for any help!",2
+5506139,03/31/2011 20:48:35,673965,03/23/2011 22:24:22,1,0,Trouble with hjkl navigation with ViM remotely.,"When I navigate using hjkl over ssh, I notice that I cannot go past an empty line. For eg., if the code were:
+
+    \#include<blah>
+
+    func()  (cursor here) 
+
+the line above func() cannot be reached by pressing **k** as you would expect it to be. Surprisingly this problem doesn't occur when I edit files locally.
+
+Any ideas? I use ViM 7.2 and have :set nocompatible.",vim,,,,,,open,0,70,7,"Trouble with hjkl navigation with ViM remotely. When I navigate using hjkl over ssh, I notice that I cannot go past an empty line. For eg., if the code were:
+
+    \#include<blah>
+
+    func()  (cursor here) 
+
+the line above func() cannot be reached by pressing **k** as you would expect it to be. Surprisingly this problem doesn't occur when I edit files locally.
+
+Any ideas? I use ViM 7.2 and have :set nocompatible.",1
+1601267,10/21/2009 14:38:19,182618,10/01/2009 16:35:22,1,0,vim plugin FuzzyFinderTextMate error,"I installed the vim plugin on many different ways. I try to start it with Ctrl-T but what I get is always that error:
+E492: Not an editor command: FuzzyFinderTextMate
+
+",vim,,,,,,open,0,29,4,"vim plugin FuzzyFinderTextMate error I installed the vim plugin on many different ways. I try to start it with Ctrl-T but what I get is always that error:
+E492: Not an editor command: FuzzyFinderTextMate
+
+",1
+8116728,11/14/2011 02:43:33,303477,03/28/2010 07:19:01,1059,19,Disabling tab space highlight in vim,"I am setting up my new mac book for development. In vim (mac vim), with jellybeans color scheme, all the tab spaces are highlighted. This is annoying as left side of most of the instructions/line is in grey. I read about ""TabLineFill"", but not sure how to use it. Is there  a better way?  
+Thanks,  
+bsr",vim,macvim,,,,,open,0,59,6,"Disabling tab space highlight in vim I am setting up my new mac book for development. In vim (mac vim), with jellybeans color scheme, all the tab spaces are highlighted. This is annoying as left side of most of the instructions/line is in grey. I read about ""TabLineFill"", but not sure how to use it. Is there  a better way?  
+Thanks,  
+bsr",2
+8122819,11/14/2011 14:12:13,1045722,11/14/2011 14:02:31,1,0,GNU screen session dies when I open vim or vi,"Sometimes it dies in the moment a file is opened. Sometimes it allows me to browse the same  file and dies on tenth PageDown, for example. I set ""term xterm"" in .screenrc.",vim,screen,,,,11/14/2011 20:07:27,off topic,1,33,10,"GNU screen session dies when I open vim or vi Sometimes it dies in the moment a file is opened. Sometimes it allows me to browse the same  file and dies on tenth PageDown, for example. I set ""term xterm"" in .screenrc.",2
+6142929,05/26/2011 17:52:18,579689,01/18/2011 09:35:00,88,4,"How to search for line that contain letter ""foo"" above the line.","In vim how to search for line that contain letter ""foo"" above the line.
+
+
+To meet the quality standards of the stack overflow i have to type these line otherwise my question is not accepted, probably the program which is validating is considering this is too short. ",vim,,,,,,open,0,47,12,"How to search for line that contain letter ""foo"" above the line. In vim how to search for line that contain letter ""foo"" above the line.
+
+
+To meet the quality standards of the stack overflow i have to type these line otherwise my question is not accepted, probably the program which is validating is considering this is too short. ",1
+7590366,09/28/2011 22:23:25,302086,03/25/2010 21:06:57,393,21,Keymap/lmap and recursive mapping in vim,"I'm using a keymap to type non-latin characters in vim. Like that: `set keymap=russian-jcukenwin`. E.g. that maps `q` to `й` and `@` to `""`. The problem is that I can neither redefine/remove such mapping with `lmap`/`lunmap` nor define a recursive mapping, e.g. to map `""` to something else (and that breaks all mappings in vim-latexsuite and makes me sad).
+
+The only idea I've got now is not to use `keymap` - and `lmap` all the keys manually.
+
+So, is there any better workaround?
+
+",vim,,,,,,open,0,81,6,"Keymap/lmap and recursive mapping in vim I'm using a keymap to type non-latin characters in vim. Like that: `set keymap=russian-jcukenwin`. E.g. that maps `q` to `й` and `@` to `""`. The problem is that I can neither redefine/remove such mapping with `lmap`/`lunmap` nor define a recursive mapping, e.g. to map `""` to something else (and that breaks all mappings in vim-latexsuite and makes me sad).
+
+The only idea I've got now is not to use `keymap` - and `lmap` all the keys manually.
+
+So, is there any better workaround?
+
+",1
+11068128,06/17/2012 00:50:37,1459782,06/15/2012 21:20:12,13,0,how to disable vim autocomplete popup for plain text files?,"After literally days of tweaking, I think I got vim's autocomplete (omnicomplete + [Acp plugin][1]) to work acceptably. But the annoying thing is that it is still enabled for plain text files so I would have to type :DisableAcp for README or plain text files. How do I add logic to my vimrc so that if it detects an empty filetype it disables the Acp on startup?
+
+here is what I wrote:
+
+    if &filetype == """"
+         let g:acp_enableStartup = 0
+    endif
+
+but this disables Acp on start up for all files.
+
+
+
+
+
+  [1]: http://www.vim.org/scripts/script.php?script_id=1879",vim,plugins,,,,,open,0,106,10,"how to disable vim autocomplete popup for plain text files? After literally days of tweaking, I think I got vim's autocomplete (omnicomplete + [Acp plugin][1]) to work acceptably. But the annoying thing is that it is still enabled for plain text files so I would have to type :DisableAcp for README or plain text files. How do I add logic to my vimrc so that if it detects an empty filetype it disables the Acp on startup?
+
+here is what I wrote:
+
+    if &filetype == """"
+         let g:acp_enableStartup = 0
+    endif
+
+but this disables Acp on start up for all files.
+
+
+
+
+
+  [1]: http://www.vim.org/scripts/script.php?script_id=1879",2
+10010392,04/04/2012 11:43:10,653379,03/10/2011 10:59:08,756,2,Go to the next same word,"Is there a shortcut in *vim* for going to the next word which is the same as the word cursor is on?
+
+It should work without typing the word with search command */*",vim,command,keyboard-shortcuts,,,,open,0,32,6,"Go to the next same word Is there a shortcut in *vim* for going to the next word which is the same as the word cursor is on?
+
+It should work without typing the word with search command */*",3
+8214929,11/21/2011 16:20:31,1007437,10/21/2011 15:39:13,4,0,compiler error in c program about fork function,"      #include<sys/types.h>
+        #include<stdio.h>
+       #include<unistd.h>
+
+        main()
+          {
+         int pid;
+          pid=fork();
+          if (pid==0)
+            {
+           printf(""i am child"");
+           printf(""\nI am the parent %d"", getpid());
+           printf(""\ni am the child %d"",getppid());
+          }
+            else
+            {
+           printf(""\n i am the parent"");
+               printf(""\n  I am the parent's parent %d"", getppid());
+           }
+
+/*prog.c: In function ‘main’: prog.c:19:1: 
+error: expected declaration or statement at end of input*/
+",vim,gcc,compiler-errors,,,11/21/2011 17:03:31,not a real question,1,223,8,"compiler error in c program about fork function       #include<sys/types.h>
+        #include<stdio.h>
+       #include<unistd.h>
+
+        main()
+          {
+         int pid;
+          pid=fork();
+          if (pid==0)
+            {
+           printf(""i am child"");
+           printf(""\nI am the parent %d"", getpid());
+           printf(""\ni am the child %d"",getppid());
+          }
+            else
+            {
+           printf(""\n i am the parent"");
+               printf(""\n  I am the parent's parent %d"", getppid());
+           }
+
+/*prog.c: In function ‘main’: prog.c:19:1: 
+error: expected declaration or statement at end of input*/
+",3
+8303840,11/28/2011 23:24:52,62699,02/05/2009 00:58:41,8481,281,Starting GVim at size and position it was last closed,"Is there a way that GVim could be set up in Windows XP, so that when it starts it has exactly the same size and position as the instance that was last closed?
+
+It is annoying when you're working with a documentation file in the browser in the background, a command prompt window (constantly open) and a Vim instance that keeps jumping all over the place upon starting/closing. Naturally, it always starts over the paragraph you're currently reading :)",vim,windows-xp,,,,11/29/2011 05:35:00,off topic,1,78,10,"Starting GVim at size and position it was last closed Is there a way that GVim could be set up in Windows XP, so that when it starts it has exactly the same size and position as the instance that was last closed?
+
+It is annoying when you're working with a documentation file in the browser in the background, a command prompt window (constantly open) and a Vim instance that keeps jumping all over the place upon starting/closing. Naturally, it always starts over the paragraph you're currently reading :)",2
+3553462,08/24/2010 03:53:37,429088,08/24/2010 03:50:46,1,0,How do I match a range of range combining diacritical marks in Vim?,"I have a file, and some lines contain unicode characters with diacritical marks in them.
+I would like to delete all lines in the file that contain any unicode diacritical accent character (unicode 0x0300 - unicode 0x0362).
+
+I can blow away pretty much any other unicode in the file as range matches like the following function fine:
+
+:g/[{ctrl-v}u0129-{ctrl-v}u0229]/d
+
+But for some reason when the range is in the diacritical range, the diacriticals apply to the range brackets, so I end up with square brackets with accents that dont match anything.
+
+I *can* however match them one at a time like :g/{ctrl-v}u0301/d, but I'd rather not go through 100 or so iterations to make sure I get them all.
+
+Additionally inverse searches are failing me too. :g/[^ -~]/d will delete every line that contains a character other than those in the range of {space} to tilde, *except lines with diacriticals*.
+
+Thanks",vim,unicode,,,,,open,0,143,13,"How do I match a range of range combining diacritical marks in Vim? I have a file, and some lines contain unicode characters with diacritical marks in them.
+I would like to delete all lines in the file that contain any unicode diacritical accent character (unicode 0x0300 - unicode 0x0362).
+
+I can blow away pretty much any other unicode in the file as range matches like the following function fine:
+
+:g/[{ctrl-v}u0129-{ctrl-v}u0229]/d
+
+But for some reason when the range is in the diacritical range, the diacriticals apply to the range brackets, so I end up with square brackets with accents that dont match anything.
+
+I *can* however match them one at a time like :g/{ctrl-v}u0301/d, but I'd rather not go through 100 or so iterations to make sure I get them all.
+
+Additionally inverse searches are failing me too. :g/[^ -~]/d will delete every line that contains a character other than those in the range of {space} to tilde, *except lines with diacriticals*.
+
+Thanks",2
+10177701,04/16/2012 16:06:28,450706,09/17/2010 14:48:03,11,2,Can anyone reccommend a more readable default font for gVIM on Windows?,"I find the default font used in gVim on windows to look primitive and unreadable in comparison with other editors. I am keen to stick with vim, as it is my editor of choice in the *nix world, so can anyone recommend a better font?",vim,fonts,vi,gvimrc,,04/16/2012 16:18:45,off topic,1,45,12,"Can anyone reccommend a more readable default font for gVIM on Windows? I find the default font used in gVim on windows to look primitive and unreadable in comparison with other editors. I am keen to stick with vim, as it is my editor of choice in the *nix world, so can anyone recommend a better font?",4
+8557501,12/19/2011 05:36:58,138292,07/14/2009 19:54:47,192,6,:hardcopy a file in vim with full colorscheme,"I'd like to print some files I edited in MacVIM using full color, ***including the dark background.***
+
+Of course I won't send it to printer, I just want to save it in PDF.
+
+:hardcopy removes the background and applies an ugly scheme.
+
+Is it possible?
+
+Regards",vim,macvim,,,,,open,0,42,8,":hardcopy a file in vim with full colorscheme I'd like to print some files I edited in MacVIM using full color, ***including the dark background.***
+
+Of course I won't send it to printer, I just want to save it in PDF.
+
+:hardcopy removes the background and applies an ugly scheme.
+
+Is it possible?
+
+Regards",2
+390174,12/23/2008 21:51:28,20133,09/21/2008 23:45:52,1215,54,"In VIM, how do I apply a macro to a set of lines?","I have a file with a bunch of lines.  I have recorded a macro that performs an operation on a single line.  I want to repeat that macro on all of the remaining lines in the file.  Is there a quick way to do this?
+
+I tried Ctrl+Q, highlighted a set of lines, and pressed @@, but that didn't seem to do the trick.",vim,,,,,,open,0,66,13,"In VIM, how do I apply a macro to a set of lines? I have a file with a bunch of lines.  I have recorded a macro that performs an operation on a single line.  I want to repeat that macro on all of the remaining lines in the file.  Is there a quick way to do this?
+
+I tried Ctrl+Q, highlighted a set of lines, and pressed @@, but that didn't seem to do the trick.",1
+1472019,09/24/2009 14:20:37,149045,08/01/2009 18:55:03,722,17,What are most usefu/usedl vim commands in C/C++ dev environment,"**Here is the list of mine**
+  
+Unlike me -- as I did it for illustrative purposes -- don't paste too many. *And most importantly, provide an explanation*      
+    
+    gi .....................init insert mode in last insertion position
+    
+    '0 .....................open last edited file
+    
+    gf .....................open file under cursor in same window 
+    
+    Ctrl-w q ...............close current window
+    
+    :setlocal autoread .....Auto reloads the current buffer..especially useful while viewing log files
+    
+    for i in range(1,255) | .put='10.0.0.'.i | endfor....   insert range ip's
+    
+    g; and g, .......................to move (forward, backward) through the changelist
+    
+    fx Move the cursor forward to the next occurrence of the character x on the current line (obviously, x can be any character you like). This is an extremely useful command. You can type ; to repeat the last f command you gave. 
+    
+    tx Same as above, but moves the cursor to right before the character, not all the way to it. (It's very useful, really.) 
+    
+    Fx Move the cursor backward to the next occurrence of the character x on the current line. 
+    w Move the cursor forward by a word. 
+    b Move the cursor backward by a word. 
+    0 Move the cursor to the beginning of the current line. 
+    ^ Move the cursor to the first character on the current line. 
+    $ Move the cursor to the end of the line 
+    
+    
+    Visual search ....... you can simply yank the selected text with y and go to search mode 
+    /, then you can paste the last yanked text with Ctrl+R 0
+    
+    ci"" - cuts the text in current quotes
+    ciw - cuts the current word. This works just like the previous one except that ( is replaced with w.
+    C - cut the rest of the line and switch to Insert mode.
+    zz -- it scrolls the screen to make this line appear in the middle
+    C - cut the rest of the line and switch to Insert mode.
+    de - delete from cursor to the end of the word (you can also do dE to delete until the next space)
+    df[space] -- delete up until and including the next space
+    bye -- copies current word 
+    b and e move the cursor word-by-word
+    capital D (take a deep breath) Deletes the rest of the line to the right 
+    cd %:h change to current directory
+    :r! <command> pastes the output of an external command into the buffer.
+    :%s/foo/bar(&)/g will look for foo, and surround the matched pattern with bar().
+    :s/.*/PREFIX & SUFFIX/ you want to add a prefix and a suffix simultaneously, you can do something like this:
+    
+    gd....... keystroke stands for Goto Declaration
+    gD....... This takes you to the global declaration of the variable under the cursor
+    ------------------
+    :make error
+    [make_error]
+    On pressing RETURN, the cursor moves to line number 6
+    Now, the command :cn will move the cursor to the line number 4. 
+    To move back to the previous error, one can use the command :cN and the cursor will move back to the line 6. 
+    After correcting the error on line 5 and adding ""return 1;"", one can run :make again and the output will be 
+    
+    
+    ---------
+    :%!grep sdf | sort -n -k3
+    
+    1)select the whole content using '%' 
+    2) pipe it to an external command using '!' 
+    3) grep onyl the lines containing 'sdf' 
+    4) sort these lines numerically (-n) on the third field (-k3)
+    
+    
+    d$ will delete from current position to end of line 
+    d^ will delete from current backward to first non-white-space character 
+    d0 will delete from current backward to beginning of line 
+    dw deletes current to end of current word (including trailing space) 
+    db deletes current to beginning of current word 
+    
+    :%s/pattern//gn........... For counting the number of times some pattern occurs, use:
+    
+    CTRL-O   Go to [count] Older cursor position in jump list  
+    CTRL-I   Go to [count] newer cursor position in jump list
+    
+    
+    zz - line that has a cursor is in the middle of the screen
+    zt - line that has a cursor is in the top of the screen
+    zb - line that has a cursor is in the buttom of the screen
+    
+    set printoptions=number:y  ...set numbers in a hardcopy 
+    :hardcopy.... to print the file :w
+    
+    shift d ...... Deleting from current position to end of line
+    vim -o ....... allows you to open two windows, split vertically horizontally
+    vim -O ....... allows you to open two windows, split vertically
+    CTRL+W CTRL-Q ......to close the current windows
+    qall.........How do I quit all windows
+    
+    0 ...First position on line
+    Ctrl g ...where am I
+    :set wrapmargin=70
+    printexpr=system('lpr' . (&printdevice == '' ? '' : ' -P' . &printdevice) . ' ' . v:fname_in) . delete(v:fname_in) + v:shell_error
+    
+    Tab block of code ....select your block of code (with [V]isual line mode normally), then press > or <.
+    If you want to tab more than once, 2> or 3> to repeat it.
+
+",vim,vi,,,,09/24/2009 16:38:52,not a real question,1,1160,10,"What are most usefu/usedl vim commands in C/C++ dev environment **Here is the list of mine**
+  
+Unlike me -- as I did it for illustrative purposes -- don't paste too many. *And most importantly, provide an explanation*      
+    
+    gi .....................init insert mode in last insertion position
+    
+    '0 .....................open last edited file
+    
+    gf .....................open file under cursor in same window 
+    
+    Ctrl-w q ...............close current window
+    
+    :setlocal autoread .....Auto reloads the current buffer..especially useful while viewing log files
+    
+    for i in range(1,255) | .put='10.0.0.'.i | endfor....   insert range ip's
+    
+    g; and g, .......................to move (forward, backward) through the changelist
+    
+    fx Move the cursor forward to the next occurrence of the character x on the current line (obviously, x can be any character you like). This is an extremely useful command. You can type ; to repeat the last f command you gave. 
+    
+    tx Same as above, but moves the cursor to right before the character, not all the way to it. (It's very useful, really.) 
+    
+    Fx Move the cursor backward to the next occurrence of the character x on the current line. 
+    w Move the cursor forward by a word. 
+    b Move the cursor backward by a word. 
+    0 Move the cursor to the beginning of the current line. 
+    ^ Move the cursor to the first character on the current line. 
+    $ Move the cursor to the end of the line 
+    
+    
+    Visual search ....... you can simply yank the selected text with y and go to search mode 
+    /, then you can paste the last yanked text with Ctrl+R 0
+    
+    ci"" - cuts the text in current quotes
+    ciw - cuts the current word. This works just like the previous one except that ( is replaced with w.
+    C - cut the rest of the line and switch to Insert mode.
+    zz -- it scrolls the screen to make this line appear in the middle
+    C - cut the rest of the line and switch to Insert mode.
+    de - delete from cursor to the end of the word (you can also do dE to delete until the next space)
+    df[space] -- delete up until and including the next space
+    bye -- copies current word 
+    b and e move the cursor word-by-word
+    capital D (take a deep breath) Deletes the rest of the line to the right 
+    cd %:h change to current directory
+    :r! <command> pastes the output of an external command into the buffer.
+    :%s/foo/bar(&)/g will look for foo, and surround the matched pattern with bar().
+    :s/.*/PREFIX & SUFFIX/ you want to add a prefix and a suffix simultaneously, you can do something like this:
+    
+    gd....... keystroke stands for Goto Declaration
+    gD....... This takes you to the global declaration of the variable under the cursor
+    ------------------
+    :make error
+    [make_error]
+    On pressing RETURN, the cursor moves to line number 6
+    Now, the command :cn will move the cursor to the line number 4. 
+    To move back to the previous error, one can use the command :cN and the cursor will move back to the line 6. 
+    After correcting the error on line 5 and adding ""return 1;"", one can run :make again and the output will be 
+    
+    
+    ---------
+    :%!grep sdf | sort -n -k3
+    
+    1)select the whole content using '%' 
+    2) pipe it to an external command using '!' 
+    3) grep onyl the lines containing 'sdf' 
+    4) sort these lines numerically (-n) on the third field (-k3)
+    
+    
+    d$ will delete from current position to end of line 
+    d^ will delete from current backward to first non-white-space character 
+    d0 will delete from current backward to beginning of line 
+    dw deletes current to end of current word (including trailing space) 
+    db deletes current to beginning of current word 
+    
+    :%s/pattern//gn........... For counting the number of times some pattern occurs, use:
+    
+    CTRL-O   Go to [count] Older cursor position in jump list  
+    CTRL-I   Go to [count] newer cursor position in jump list
+    
+    
+    zz - line that has a cursor is in the middle of the screen
+    zt - line that has a cursor is in the top of the screen
+    zb - line that has a cursor is in the buttom of the screen
+    
+    set printoptions=number:y  ...set numbers in a hardcopy 
+    :hardcopy.... to print the file :w
+    
+    shift d ...... Deleting from current position to end of line
+    vim -o ....... allows you to open two windows, split vertically horizontally
+    vim -O ....... allows you to open two windows, split vertically
+    CTRL+W CTRL-Q ......to close the current windows
+    qall.........How do I quit all windows
+    
+    0 ...First position on line
+    Ctrl g ...where am I
+    :set wrapmargin=70
+    printexpr=system('lpr' . (&printdevice == '' ? '' : ' -P' . &printdevice) . ' ' . v:fname_in) . delete(v:fname_in) + v:shell_error
+    
+    Tab block of code ....select your block of code (with [V]isual line mode normally), then press > or <.
+    If you want to tab more than once, 2> or 3> to repeat it.
+
+",2
+1219243,08/02/2009 16:46:51,149274,08/02/2009 12:18:31,1,1,"Should i use gVim, or the terminal?","I'm currently starting to learn how to use Vim, and it seems pretty cool. However, I'm kinda wondering if I should use the terminal for my editing, or gVim?
+
+I'm running Linux (Ubuntu).",vim,,,,,08/02/2009 17:29:42,off topic,1,32,7,"Should i use gVim, or the terminal? I'm currently starting to learn how to use Vim, and it seems pretty cool. However, I'm kinda wondering if I should use the terminal for my editing, or gVim?
+
+I'm running Linux (Ubuntu).",1

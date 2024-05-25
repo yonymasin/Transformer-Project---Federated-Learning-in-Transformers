@@ -1,0 +1,1041 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+1705,08/04/2008 23:36:02,52,08/01/2008 13:33:31,243,17,"Found a critical bug, but the company doesn't care","I know several people who were in a situation like this.
+
+Let's say, you were trying out random sites for basic XSS/SQL Injection vulnerabilities, and you've found one that could be easily compromised. You email the admin/webmaster, but they don't reply. 
+
+What would you do?",security,hacking,ethics,,,12/03/2011 15:37:03,not constructive,1,44,9,"Found a critical bug, but the company doesn't care I know several people who were in a situation like this.
+
+Let's say, you were trying out random sites for basic XSS/SQL Injection vulnerabilities, and you've found one that could be easily compromised. You email the admin/webmaster, but they don't reply. 
+
+What would you do?",3
+6103498,05/23/2011 21:52:48,422080,08/16/2010 19:17:35,77,0,"Diagrams for different protocols like PPP, PPTP, IPSec, EAP and so on","There are bunch of security related protocols: like PPP, PPTP, IPSec, different EAP (EAP-TLS and so on).
+
+Did anybody see nice diagram explaining each protocol? Generally, I understand their purpose  and read wiki and other resource. However, it would be really nice to have simple diagram, which shows:
+
+a) They position in stack of protocols
+b) What protocol they need underneath of them? What protocol they expose to higher level?
+c) The main items which this protocol implements.",security,protocols,network-protocols,,,05/24/2011 01:35:58,off topic,1,75,12,"Diagrams for different protocols like PPP, PPTP, IPSec, EAP and so on There are bunch of security related protocols: like PPP, PPTP, IPSec, different EAP (EAP-TLS and so on).
+
+Did anybody see nice diagram explaining each protocol? Generally, I understand their purpose  and read wiki and other resource. However, it would be really nice to have simple diagram, which shows:
+
+a) They position in stack of protocols
+b) What protocol they need underneath of them? What protocol they expose to higher level?
+c) The main items which this protocol implements.",3
+8608138,12/22/2011 18:14:12,304832,03/30/2010 06:18:54,2421,176,What privileges does the SQL Azure Migration Wizard need to copy a SQL Azure database?,"Currently have 2 users in our SQL Azure subscription. One is the god login created when setting up the server, other is very limited account for our www app (has db_datareader and db_datawriter). 
+
+The www user does not have enough privileges to use the [SQL Azure Migration Wizard][1]. Connecting to server shows the db as grayed out / disabled. 
+
+
+  [1]: http://sqlazuremw.codeplex.com/
+
+I want to create a 3rd user with just enough privileges to use the mw for copy / backup. What roles / privileges does this user need? Does anyone have some prepared sql scripts?",security,migration,wizard,sql-azure,,12/23/2011 19:28:58,off topic,1,96,15,"What privileges does the SQL Azure Migration Wizard need to copy a SQL Azure database? Currently have 2 users in our SQL Azure subscription. One is the god login created when setting up the server, other is very limited account for our www app (has db_datareader and db_datawriter). 
+
+The www user does not have enough privileges to use the [SQL Azure Migration Wizard][1]. Connecting to server shows the db as grayed out / disabled. 
+
+
+  [1]: http://sqlazuremw.codeplex.com/
+
+I want to create a 3rd user with just enough privileges to use the mw for copy / backup. What roles / privileges does this user need? Does anyone have some prepared sql scripts?",4
+7005610,08/10/2011 03:37:01,370027,04/09/2010 06:53:29,58,3,Is Winzip encryption strong enough?,"It has been a while since I used winzip, and I remember going to a lecture on IT Security a long time ago, where a winzip password breaker was demonstrated. It was pretty obvious that winzip encryption was a ""shut door"" rather than a ""locked door"".
+
+If you google ""breaking winzip password"", you get a long list of tools which apparently can do this.
+
+In the Winzip docs, it is openly acknowledged that the ""winzip 2"" format, or whatever they call it, had flaws and does not provide any actual protection.
+
+So my question is: Assuming a good password is used, are these ""winzip password crackers"" any good against AES-Encrypted .zip-files?
+
+I need the encryption for actual privacy, like sending confidential docs to a vendor by insecure email.
+",security,encryption,winzip,,,08/10/2011 05:38:22,off topic,1,124,5,"Is Winzip encryption strong enough? It has been a while since I used winzip, and I remember going to a lecture on IT Security a long time ago, where a winzip password breaker was demonstrated. It was pretty obvious that winzip encryption was a ""shut door"" rather than a ""locked door"".
+
+If you google ""breaking winzip password"", you get a long list of tools which apparently can do this.
+
+In the Winzip docs, it is openly acknowledged that the ""winzip 2"" format, or whatever they call it, had flaws and does not provide any actual protection.
+
+So my question is: Assuming a good password is used, are these ""winzip password crackers"" any good against AES-Encrypted .zip-files?
+
+I need the encryption for actual privacy, like sending confidential docs to a vendor by insecure email.
+",3
+2575476,04/04/2010 18:38:07,290129,03/10/2010 01:21:46,1,0,How should my main web application (A) securely retrieve data from my content storage web application (B)?,"I have two web applications (A) and (B). 
+
+(A) is my primary web application. 
+
+(B) is purely for content storage, such as file uploads by users of (A).
+
+What's best way to securely retrieve data from (B) into (A) but in a way that does not expose the data in (B) to potential discovery by third-parties over the public internet or nosy users of (A)?
+
+For example, if I use a HTML form POST from (A) to (B) to retrieve user data, and have a hidden form field called `user_id=1`, then someone could simply change this to `user_id=2` and see the content owned by another user of the application. That would be a problem.",security,web-applications,,,,,open,0,112,17,"How should my main web application (A) securely retrieve data from my content storage web application (B)? I have two web applications (A) and (B). 
+
+(A) is my primary web application. 
+
+(B) is purely for content storage, such as file uploads by users of (A).
+
+What's best way to securely retrieve data from (B) into (A) but in a way that does not expose the data in (B) to potential discovery by third-parties over the public internet or nosy users of (A)?
+
+For example, if I use a HTML form POST from (A) to (B) to retrieve user data, and have a hidden form field called `user_id=1`, then someone could simply change this to `user_id=2` and see the content owned by another user of the application. That would be a problem.",2
+8240862,11/23/2011 10:49:11,820568,06/29/2011 07:17:59,1,1,Is the recently discovered SSL exploit actually a general weakness of all block ciphers?,"I've been reading up on the recently reported SSL weakness which was demonstrated stealing Paypal.com session keys.
+
+Seems to me like they have found a weakness in the encryption protocol any time you can
+both capture the encrypted result as well as have some impact on the traffic being generated.
+
+Or similarly, if you know the data being stored in the majority of the first block, it makes the entire file easier to encrypt.
+
+What wasn't clear to me... is the time it's taking BEAST to complete the decryption of the session key just processing time, or were they hitting the site for some oracle?
+
+If there was no oracle attack, then I'm really worried for AES...
+
+
+
+",security,encryption,ssl,aes,beast,11/23/2011 23:54:43,off topic,1,112,14,"Is the recently discovered SSL exploit actually a general weakness of all block ciphers? I've been reading up on the recently reported SSL weakness which was demonstrated stealing Paypal.com session keys.
+
+Seems to me like they have found a weakness in the encryption protocol any time you can
+both capture the encrypted result as well as have some impact on the traffic being generated.
+
+Or similarly, if you know the data being stored in the majority of the first block, it makes the entire file easier to encrypt.
+
+What wasn't clear to me... is the time it's taking BEAST to complete the decryption of the session key just processing time, or were they hitting the site for some oracle?
+
+If there was no oracle attack, then I'm really worried for AES...
+
+
+
+",5
+7233713,08/29/2011 17:41:40,304774,03/30/2010 03:35:29,362,6,"Random TLD Name, Numbers and Letters, for Added Security?","I have a client app that faces the internet, but only clients will access. The site should never be indexed or crawled or viewed outside of our clients. We always concerned about DDOS and attempts to gain access. If the system can add one more level of being hidden, or harder to find, I don't see the negatives.
+
+Users will *never* have to enter the domain name (think kiosks), and admins can use bookmarks. Yes, security by obscurity is no solution and never relied upon. But if you can add it to an existing and robust secured system, why not?
+
+Is there any downside to having a random domain name like `j398sh3-3nj23j.com`?
+
+I would love to hear some thoughts and opinions.",security,domain,tld,,,08/29/2011 21:31:53,off topic,1,118,9,"Random TLD Name, Numbers and Letters, for Added Security? I have a client app that faces the internet, but only clients will access. The site should never be indexed or crawled or viewed outside of our clients. We always concerned about DDOS and attempts to gain access. If the system can add one more level of being hidden, or harder to find, I don't see the negatives.
+
+Users will *never* have to enter the domain name (think kiosks), and admins can use bookmarks. Yes, security by obscurity is no solution and never relied upon. But if you can add it to an existing and robust secured system, why not?
+
+Is there any downside to having a random domain name like `j398sh3-3nj23j.com`?
+
+I would love to hear some thoughts and opinions.",3
+6401836,06/19/2011 10:25:42,805211,06/19/2011 09:39:41,1,0,Where are the pictures of my jsf page?!,"I have a navigation-rule like this in my jsf 2 application:
+	
+
+    <navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-action>#{myBean.goToMyHome1}</from-action>
+			<from-outcome>myHome1.xhtml</from-outcome>
+			<to-view-id>/myhome1/myHome1.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+
+when I put an h:commandLink in myHome2.xhtml within directory myhome2 that satisfy this rule, the page myHome1.xhtml will display but there are no images on the page! where they go?!
+of course, behind the application is springsecurity 3 with this config:
+
+    <sec:intercept-url pattern=""/myhome1/**"" access=""hasAnyRole('ROLE1','ROLE2')"" />
+<sec:intercept-url pattern=""/myhome2/**"" access=""hasRole('ROLE2')"" />
+
+    <sec:intercept-url pattern=""/myhome2/**"" access=""hasRole('ROLE2')"" />
+    
+
+   
+
+
+
+",security,spring,jsf-2.0,navigation,,,open,0,78,8,"Where are the pictures of my jsf page?! I have a navigation-rule like this in my jsf 2 application:
+	
+
+    <navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-action>#{myBean.goToMyHome1}</from-action>
+			<from-outcome>myHome1.xhtml</from-outcome>
+			<to-view-id>/myhome1/myHome1.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+
+when I put an h:commandLink in myHome2.xhtml within directory myhome2 that satisfy this rule, the page myHome1.xhtml will display but there are no images on the page! where they go?!
+of course, behind the application is springsecurity 3 with this config:
+
+    <sec:intercept-url pattern=""/myhome1/**"" access=""hasAnyRole('ROLE1','ROLE2')"" />
+<sec:intercept-url pattern=""/myhome2/**"" access=""hasRole('ROLE2')"" />
+
+    <sec:intercept-url pattern=""/myhome2/**"" access=""hasRole('ROLE2')"" />
+    
+
+   
+
+
+
+",4
+2095831,01/19/2010 18:10:58,254258,01/19/2010 18:10:58,1,0,"recommendations for masters of science in computer/info security, cybersecurity degree","I am applying to graduate schools for a M.S. in computer security, information assurance, cybersecurity, etc.  (they all have different titles).  
+
+I figure a good place to find schools for this is on the NSA ""Centers for Academic Excellence"" list at http://www.nsa.gov/ia/academic_outreach/nat_cae/institutions.shtml
+
+
+I was wondering if anyone out there has any experience at these or any other programs, and what you could recommend for someone filling out applications this winter.
+
+Thanks in advance!",security,career-development,college,not-programming-related,,09/15/2011 06:57:40,off topic,1,73,10,"recommendations for masters of science in computer/info security, cybersecurity degree I am applying to graduate schools for a M.S. in computer security, information assurance, cybersecurity, etc.  (they all have different titles).  
+
+I figure a good place to find schools for this is on the NSA ""Centers for Academic Excellence"" list at http://www.nsa.gov/ia/academic_outreach/nat_cae/institutions.shtml
+
+
+I was wondering if anyone out there has any experience at these or any other programs, and what you could recommend for someone filling out applications this winter.
+
+Thanks in advance!",4
+1280143,08/14/2009 20:50:23,153574,08/10/2009 08:01:43,276,17,Current Books on web security,"Have you read a book on web application security that could serve as a solid **introduction** to the subject for beginning web programmers?  
+
+So far I've found the following canditates, but none of them seem to be suitable for beginners (I haven't read any of these, this is just my impression from what is available on the web):
+
+
+ - [Stuttard, Pinto (2007): The Web Application Hacker s Handbook][1] 
+ - [Hope, Walther (2009): Web Security Testing Cookbook][2]
+ - [Wells (2007): Securing Ajax Applications][3]
+ - [The OWASP Top 10][4], 2007 version
+
+
+Background:
+I try to teach basic security in my PHP class. I show some examples of SQL Injection and Cross Site Scripting and then spend a lot of time on prepared statements and Escaping.  My [lecture notes][5] are in german only. 
+
+ 
+
+
+
+Question inspired in part by [this one][6]
+
+Similar Questions: [general security][7], [.NET security][8], 
+
+
+  [1]: http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470170778.html
+  [2]: http://oreilly.com/catalog/9780596514839/
+  [3]: http://oreilly.com/catalog/9780596529314/
+  [4]: http://www.owasp.org/index.php/Top_10_2007
+  [5]: http://www.scribd.com/doc/17059764/MMT-Webprogrammierung-2-im-Sommersemester-2009
+  [6]: http://stackoverflow.com/questions/1279325/secure-server-side-language/1279371#1279371
+  [7]: http://stackoverflow.com/questions/1212532/blogs-and-books-on-encryption-and-security
+  [8]: http://stackoverflow.com/questions/265200/what-is-the-best-and-or-most-comprehensive-book-on-net-security-for-developers",security,books,,,,07/30/2012 03:35:41,not constructive,1,169,5,"Current Books on web security Have you read a book on web application security that could serve as a solid **introduction** to the subject for beginning web programmers?  
+
+So far I've found the following canditates, but none of them seem to be suitable for beginners (I haven't read any of these, this is just my impression from what is available on the web):
+
+
+ - [Stuttard, Pinto (2007): The Web Application Hacker s Handbook][1] 
+ - [Hope, Walther (2009): Web Security Testing Cookbook][2]
+ - [Wells (2007): Securing Ajax Applications][3]
+ - [The OWASP Top 10][4], 2007 version
+
+
+Background:
+I try to teach basic security in my PHP class. I show some examples of SQL Injection and Cross Site Scripting and then spend a lot of time on prepared statements and Escaping.  My [lecture notes][5] are in german only. 
+
+ 
+
+
+
+Question inspired in part by [this one][6]
+
+Similar Questions: [general security][7], [.NET security][8], 
+
+
+  [1]: http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470170778.html
+  [2]: http://oreilly.com/catalog/9780596514839/
+  [3]: http://oreilly.com/catalog/9780596529314/
+  [4]: http://www.owasp.org/index.php/Top_10_2007
+  [5]: http://www.scribd.com/doc/17059764/MMT-Webprogrammierung-2-im-Sommersemester-2009
+  [6]: http://stackoverflow.com/questions/1279325/secure-server-side-language/1279371#1279371
+  [7]: http://stackoverflow.com/questions/1212532/blogs-and-books-on-encryption-and-security
+  [8]: http://stackoverflow.com/questions/265200/what-is-the-best-and-or-most-comprehensive-book-on-net-security-for-developers",2
+8412034,12/07/2011 07:55:49,718305,04/21/2011 04:49:00,10,0,Active Directory Security - User Group vs User previleges,"I have denied to a specific user to write on a file. 
+But this user is a member of a User Group which can write on this file. 
+So there is a conflict between User vs. User-Group rights.
+Which one will prevail here?",security,directory,conflict,privileges,active,,open,0,42,9,"Active Directory Security - User Group vs User previleges I have denied to a specific user to write on a file. 
+But this user is a member of a User Group which can write on this file. 
+So there is a conflict between User vs. User-Group rights.
+Which one will prevail here?",5
+8728856,01/04/2012 14:55:38,1088098,12/08/2011 15:59:08,167,2,What information is visibile to an ISP when using a VPN connection?,"If I want to browse the web ""securely"" and am on a guest network somewhere, how secure is my internet browsing if I use a VPN to connect back to a corporate office? What I mean is, can the local ISP or guest network see anything about the traffic I'm generating - ip addresses, web addresses, etc?
+
+From what I understand, connecting in this way would encrypt ALL data sent between my computer  and the corporate network - so none of the web browsing would be visible to the local ISP or guest network administrators - is that correct?
+
+I know one of the CISCO clients has an option to ""allow LAN access"" which I believe will access some things like HTTP / port 80 over the local internet connection, but I'm assuming this is a standard VPN connection (if there is such a thing) where there is **no LAN access**.
+
+For reference, CISCO LAN option:
+
+<img src=""http://img140.imageshack.us/img140/9100/locallanpixasa14.gif"" alt=""local-lan-pix-asa-14.gif"" />
+
+
+I understand that my traffic would be visible on the home network, and I believe that browsing in this way would be very similar to connecting to the internet via the ISP of that home network. But I'd like to know if there is a way that the guest network / remote ISP can intercept or view data being sent via a VPN connection.",security,http,encryption,vpn,,01/04/2012 20:58:06,off topic,1,220,12,"What information is visibile to an ISP when using a VPN connection? If I want to browse the web ""securely"" and am on a guest network somewhere, how secure is my internet browsing if I use a VPN to connect back to a corporate office? What I mean is, can the local ISP or guest network see anything about the traffic I'm generating - ip addresses, web addresses, etc?
+
+From what I understand, connecting in this way would encrypt ALL data sent between my computer  and the corporate network - so none of the web browsing would be visible to the local ISP or guest network administrators - is that correct?
+
+I know one of the CISCO clients has an option to ""allow LAN access"" which I believe will access some things like HTTP / port 80 over the local internet connection, but I'm assuming this is a standard VPN connection (if there is such a thing) where there is **no LAN access**.
+
+For reference, CISCO LAN option:
+
+<img src=""http://img140.imageshack.us/img140/9100/locallanpixasa14.gif"" alt=""local-lan-pix-asa-14.gif"" />
+
+
+I understand that my traffic would be visible on the home network, and I believe that browsing in this way would be very similar to connecting to the internet via the ISP of that home network. But I'd like to know if there is a way that the guest network / remote ISP can intercept or view data being sent via a VPN connection.",4
+153416,09/30/2008 14:55:37,17749,09/18/2008 14:25:45,1,0,Encrypt plain text inside EXE / RAM :: HxD editor,"HxD (hex editor) allows to search/view/edit RAM.
+
+How can I protect a EXE against such editor? Data is encrypted inside INI/registry/DB,
+but is decoded at RAM. 
+
+What is the solution? At runtime decode, use and recode data inside RAM ASAP?
+
+",security,hex-editors,encrypting-code,,,,open,0,38,10,"Encrypt plain text inside EXE / RAM :: HxD editor HxD (hex editor) allows to search/view/edit RAM.
+
+How can I protect a EXE against such editor? Data is encrypted inside INI/registry/DB,
+but is decoded at RAM. 
+
+What is the solution? At runtime decode, use and recode data inside RAM ASAP?
+
+",3
+10350056,04/27/2012 11:45:47,482,08/06/2008 08:54:09,513,23,How to keep our readers safe and anonymous?,"We run a politically sensitive website. Users can submit complaints anonymously. We have done things like
+
+ - No logging of ip in our app
+ - No access log on apache 
+ - No 3rd party javascript 
+ - No third party flash embeds
+
+I am still not very sure. What else can I do keep my users really safe and anonymous.",security,,,,,04/27/2012 13:05:29,off topic,1,60,8,"How to keep our readers safe and anonymous? We run a politically sensitive website. Users can submit complaints anonymously. We have done things like
+
+ - No logging of ip in our app
+ - No access log on apache 
+ - No 3rd party javascript 
+ - No third party flash embeds
+
+I am still not very sure. What else can I do keep my users really safe and anonymous.",1
+8654931,12/28/2011 10:53:23,650237,03/08/2011 17:36:01,118,8,How do the Antivirus Companys find new viruses?,"I could't found any information about Antivirus companys find new viruses?
+My intention is, i would start a opensource Antivirus project for a mobile platform.
+
+But i dont know how to setup a static signature database?
+How can i find new viruses for exactly this mobile platform?
+
+Would be great if someone could explain how big player like Norton, AVG, Kaspersky can find thousand of viruses daily.
+
+Thank you!",security,antivirus,virus,,,12/28/2011 17:37:34,off topic,1,64,8,"How do the Antivirus Companys find new viruses? I could't found any information about Antivirus companys find new viruses?
+My intention is, i would start a opensource Antivirus project for a mobile platform.
+
+But i dont know how to setup a static signature database?
+How can i find new viruses for exactly this mobile platform?
+
+Would be great if someone could explain how big player like Norton, AVG, Kaspersky can find thousand of viruses daily.
+
+Thank you!",3
+7335124,09/07/2011 13:58:32,327607,04/28/2010 07:58:22,21,1,What is the best way to transfer a file via email easyly and securely?,"I went to my tax adviser today and have to send in some more files. I want to send them encrypted by email. GPG comes to mind, but it requires some technical prerequisites on both sides. Is there already a usable, simpler implementation for such a situation?
+
+I would like to sketch out an idea, and hear your opinion on it:
+
+Suppose we created a (cross platform) application, that encrypts a file securely and prints the key to it as a 2D barcode. This barcode can easily be faxed to the receiving party while the file can be send by email. The same application is capable of interpreting the barcode image (e.g. using a webcam snap) and decrypting the file.
+
+This is the simple version. There are many options to extend this application scaffold, e.g. supporting private/public keys, etc.",security,encryption,transfer,gpg,simplicity,09/08/2011 08:00:10,off topic,1,136,14,"What is the best way to transfer a file via email easyly and securely? I went to my tax adviser today and have to send in some more files. I want to send them encrypted by email. GPG comes to mind, but it requires some technical prerequisites on both sides. Is there already a usable, simpler implementation for such a situation?
+
+I would like to sketch out an idea, and hear your opinion on it:
+
+Suppose we created a (cross platform) application, that encrypts a file securely and prints the key to it as a 2D barcode. This barcode can easily be faxed to the receiving party while the file can be send by email. The same application is capable of interpreting the barcode image (e.g. using a webcam snap) and decrypting the file.
+
+This is the simple version. There are many options to extend this application scaffold, e.g. supporting private/public keys, etc.",5
+6800554,07/23/2011 13:05:57,356178,06/02/2010 07:22:37,716,9,Restrict semicolon to prevent SQL injection?,"I've seen that SQL injection strings are often constructed like this:
+
+    ' ; DROP DATABASE db  --
+
+Therefore, if I disallow the use of semicolons in my application's inputs, does this 100% prevent any SQL injection attack?",security,tsql,sql-injection,,,,open,0,40,6,"Restrict semicolon to prevent SQL injection? I've seen that SQL injection strings are often constructed like this:
+
+    ' ; DROP DATABASE db  --
+
+Therefore, if I disallow the use of semicolons in my application's inputs, does this 100% prevent any SQL injection attack?",3
+7039898,08/12/2011 12:13:15,157606,08/17/2009 08:24:40,420,18,Storing account numbers and sort codes online,"There are a lot of questions on storing credit card information, and of how PCI SSC/PA-DSS regulations apply to such activities and systems.  I have read a lot of these, but my question relates to a different question that may or may not have anything to do with PCI compliance.
+
+My question is specifically, what are the implications of storing sort-codes and account numbers online, considering we are not taking any kind of payment.  So, nothing to do with using the information to make payments through the system, but using the information to enable other users who have access to the system to make payments.
+
+I understand that if we did have payment provision on the website we are developing, then the storage of account numbers would affect the level of PCI compliance we would need to adhere to.
+
+Currently we are adhering to what would be considered security 'best practices', so using SSL, encrypting information in the db, dedicated server with hardware firewall etc., but these 'best practices' are from an internal point of view of a development team.  I know the software in PCI compliance is only one part of overall security regulations.  Outside of PCI compliance, is there, for example, a definitive set of rules for storing sensitive information?  Are we for example obligated to adhere to ISO 27001 standards?  Who defines what information is considered 'sensitive'.
+
+The general consensus regarding PCI compliance and the handling of credit cards, is if you need to ask then you shouldn't be doing it.  I'm not necessarily asking whether or how we can do it or not, but whether anyone has experience of this, and whether we need to engage a 3rd party consultant who specialises in such areas.
+
+I know this could be the type of question that gets the Stack Overlow community annoyed as it isn't an outright programming question.  I do understand that this isn't a legal Q&A site, but the roots of this question are in programming, so I do believe it to be relevant.
+",security,database-design,web-security,,,08/12/2011 23:37:31,off topic,1,342,7,"Storing account numbers and sort codes online There are a lot of questions on storing credit card information, and of how PCI SSC/PA-DSS regulations apply to such activities and systems.  I have read a lot of these, but my question relates to a different question that may or may not have anything to do with PCI compliance.
+
+My question is specifically, what are the implications of storing sort-codes and account numbers online, considering we are not taking any kind of payment.  So, nothing to do with using the information to make payments through the system, but using the information to enable other users who have access to the system to make payments.
+
+I understand that if we did have payment provision on the website we are developing, then the storage of account numbers would affect the level of PCI compliance we would need to adhere to.
+
+Currently we are adhering to what would be considered security 'best practices', so using SSL, encrypting information in the db, dedicated server with hardware firewall etc., but these 'best practices' are from an internal point of view of a development team.  I know the software in PCI compliance is only one part of overall security regulations.  Outside of PCI compliance, is there, for example, a definitive set of rules for storing sensitive information?  Are we for example obligated to adhere to ISO 27001 standards?  Who defines what information is considered 'sensitive'.
+
+The general consensus regarding PCI compliance and the handling of credit cards, is if you need to ask then you shouldn't be doing it.  I'm not necessarily asking whether or how we can do it or not, but whether anyone has experience of this, and whether we need to engage a 3rd party consultant who specialises in such areas.
+
+I know this could be the type of question that gets the Stack Overlow community annoyed as it isn't an outright programming question.  I do understand that this isn't a legal Q&A site, but the roots of this question are in programming, so I do believe it to be relevant.
+",3
+11563316,07/19/2012 14:44:07,141220,07/20/2009 07:31:43,143,6,A Method for Preventing Replay Attacks without HTTPS,"A little background:
+
+ - While researching about authentication mechanisms, I realized that plain old SESSIONID Cookie based tokens over HTTP are pretty much broken.
+ - Figuring that it'll be easier if I just figured out what the big boys were doing, I came across Firesheep. _Looks like the Emperor has no clothes, and nobody cares._
+ - The only sureshot way to web security is HTTPS.
+ - Still, for reasons, almost, but not entirely, clear to me, not everybody has switched to HTTPS. Our own Stackoverflow (even security.stackexchange.com) can be Firesheeped, and they are still on Plain Ol' HTTP.
+ - There are actually two threats involved - MITM attacks and Replay attacks. 
+ - AFAIK, there is no way to protect against MITM attacks without resorting to HTTPS (or rolling your own). 
+ - So for the remainder of this question, I wish to focus on protection against Replay attacks (which are much more of a practical problem being really easy to orchestrate, a la Firesheep). The assumption is that we make the initial contact using HTTPS (to set up the initial secrets/nonces etc) and the remainder of the session progresses on HTTP. 
+ - Under such a set-up, people have been using various methods to provide some semblance of security for session-id's: 
+  - Generating a new nonce for every request (i.e. each client-server interaction starts with the client providing a previously decided challenge, and the server invalidating the old challenge code and providing a new one to be used the next time around). This works (remember, I am talking protection only against replay attacks, not MITMs). Rather, it used to work, before the advent of AJAX.
+  - For AJAXey applications, having a single pending challenge is not useful, as it is hard to orchestrate all the XHRs your application is making (The Asynchronous in AJAX). So devs have resorted to new tricks, both of which invalidate the security against Replay attacks that the single pending nonce strategy provided:
+     - Generating a bunch of nonces, any of which can be used for authentication. You can hand over each of your XHR's one of these pending nonces. By itself, this strategy is broken, because every once in a while the client and server will have to sync up and decide on the next set of nonces, and the attacker gain sniff this interaction.
+     - Timestamps. By itself, this is a brittle fix. While on the surface it would seem that setting the timeout to a very short time would prevent Firesheep like attacks, deeper thought reveals that that would be pretty ineffective for automated cookie sniffing attacks. Remember, the attacker has to gain entry only once, because then he would part of the interaction by which the server and client sync up of further nonces.
+ - phew! You made it so far :)
+
+Before proceeding, let me make clear my rationale for asking this question: curiosity. Curiosity as to why people are not using one of the methods (listed below) to provide security in the interim as the web moves towards full on HTTPS (it is moving there, right :?).
+
+So here is my question: Are any/none/both of the following protocols secure -
+
+**Method 1: HTTPS Side Channel**
+
+Assumptions 
+
+  - We have a HTTPS server.
+  - We wish to protect only against Replay Attacks.  
+
+Protocol
+ 
+- Before sending any request, ajax or otherwise, the client requests a nonce from the server over the HTTPS side channel. This it sends alongwith the session cookie when doing the actual request over HTTP.
+
+Pros
+
+ - Minimal change in your existing webapp.
+
+  
+
+**Method 2: Secure ID**
+
+Assumptions
+
+  - We have a initial HTTPS handshake.
+  - We wish to protect only against Replay Attacks.
+
+Method
+  
+- In the initial HTTPS handshake, the client and server exchange a secret that is used to seed a PRG (Pseudo Random Generator). The server maintains a window of the output of the PRG. 
+- For each request, ajax or otherwise, the client picks the next output of the PRG, and attaches it as a nonce to the session cookie, and sends it over HTTP. The server compares the nonce to any of the numbers within the current PRG output window.
+
+Pros
+
+- No need to maintain a dedicated HTTPS sidechannel.",security,https,cryptography,session-cookies,replay,07/20/2012 03:25:39,not a real question,1,719,8,"A Method for Preventing Replay Attacks without HTTPS A little background:
+
+ - While researching about authentication mechanisms, I realized that plain old SESSIONID Cookie based tokens over HTTP are pretty much broken.
+ - Figuring that it'll be easier if I just figured out what the big boys were doing, I came across Firesheep. _Looks like the Emperor has no clothes, and nobody cares._
+ - The only sureshot way to web security is HTTPS.
+ - Still, for reasons, almost, but not entirely, clear to me, not everybody has switched to HTTPS. Our own Stackoverflow (even security.stackexchange.com) can be Firesheeped, and they are still on Plain Ol' HTTP.
+ - There are actually two threats involved - MITM attacks and Replay attacks. 
+ - AFAIK, there is no way to protect against MITM attacks without resorting to HTTPS (or rolling your own). 
+ - So for the remainder of this question, I wish to focus on protection against Replay attacks (which are much more of a practical problem being really easy to orchestrate, a la Firesheep). The assumption is that we make the initial contact using HTTPS (to set up the initial secrets/nonces etc) and the remainder of the session progresses on HTTP. 
+ - Under such a set-up, people have been using various methods to provide some semblance of security for session-id's: 
+  - Generating a new nonce for every request (i.e. each client-server interaction starts with the client providing a previously decided challenge, and the server invalidating the old challenge code and providing a new one to be used the next time around). This works (remember, I am talking protection only against replay attacks, not MITMs). Rather, it used to work, before the advent of AJAX.
+  - For AJAXey applications, having a single pending challenge is not useful, as it is hard to orchestrate all the XHRs your application is making (The Asynchronous in AJAX). So devs have resorted to new tricks, both of which invalidate the security against Replay attacks that the single pending nonce strategy provided:
+     - Generating a bunch of nonces, any of which can be used for authentication. You can hand over each of your XHR's one of these pending nonces. By itself, this strategy is broken, because every once in a while the client and server will have to sync up and decide on the next set of nonces, and the attacker gain sniff this interaction.
+     - Timestamps. By itself, this is a brittle fix. While on the surface it would seem that setting the timeout to a very short time would prevent Firesheep like attacks, deeper thought reveals that that would be pretty ineffective for automated cookie sniffing attacks. Remember, the attacker has to gain entry only once, because then he would part of the interaction by which the server and client sync up of further nonces.
+ - phew! You made it so far :)
+
+Before proceeding, let me make clear my rationale for asking this question: curiosity. Curiosity as to why people are not using one of the methods (listed below) to provide security in the interim as the web moves towards full on HTTPS (it is moving there, right :?).
+
+So here is my question: Are any/none/both of the following protocols secure -
+
+**Method 1: HTTPS Side Channel**
+
+Assumptions 
+
+  - We have a HTTPS server.
+  - We wish to protect only against Replay Attacks.  
+
+Protocol
+ 
+- Before sending any request, ajax or otherwise, the client requests a nonce from the server over the HTTPS side channel. This it sends alongwith the session cookie when doing the actual request over HTTP.
+
+Pros
+
+ - Minimal change in your existing webapp.
+
+  
+
+**Method 2: Secure ID**
+
+Assumptions
+
+  - We have a initial HTTPS handshake.
+  - We wish to protect only against Replay Attacks.
+
+Method
+  
+- In the initial HTTPS handshake, the client and server exchange a secret that is used to seed a PRG (Pseudo Random Generator). The server maintains a window of the output of the PRG. 
+- For each request, ajax or otherwise, the client picks the next output of the PRG, and attaches it as a nonce to the session cookie, and sends it over HTTP. The server compares the nonce to any of the numbers within the current PRG output window.
+
+Pros
+
+- No need to maintain a dedicated HTTPS sidechannel.",5
+2399125,03/08/2010 03:28:54,288462,03/08/2010 02:18:49,1,0,How to Get File security attribute in windows,"I am using c++ MFC<p>
+How can I get the security attribute in windows, is there any handy api?<p>
+Many thanks!",security,c++,windows,mfc,,,open,0,19,8,"How to Get File security attribute in windows I am using c++ MFC<p>
+How can I get the security attribute in windows, is there any handy api?<p>
+Many thanks!",4
+3948181,10/16/2010 08:41:07,77431,03/12/2009 21:12:26,229,7,What programming language would James Bond have programmed in?,"Until the recent [Bond][1] movies James preferred British made gadgets. 
+
+The classic for me is from ""[You Only Live Twice][2]"", as there is **real** British gyro-copter nicknamed *[Little Nellie][3]* which (*in the movie*) shipped in 4 suitcases.  In the action scenes *Little Nellie* took on several helicopters.
+
+This nifty British made gadget got me wondering about what programming language would James (James Bond) have programmed in *way back* when the Brits were *space-aged*?  (Especially if James needed to ""hack something up"" *in situ*)
+
+  [1]: http://en.wikipedia.org/wiki/James_Bond
+  [2]: http://en.wikipedia.org/wiki/You_Only_Live_Twice_%28film%29
+  [3]: http://www.guardian.co.uk/science/2010/aug/10/magnificent-man-in-flying-machine",security,programming-languages,standards,trivia,language-history,10/16/2010 08:52:13,off topic,1,93,9,"What programming language would James Bond have programmed in? Until the recent [Bond][1] movies James preferred British made gadgets. 
+
+The classic for me is from ""[You Only Live Twice][2]"", as there is **real** British gyro-copter nicknamed *[Little Nellie][3]* which (*in the movie*) shipped in 4 suitcases.  In the action scenes *Little Nellie* took on several helicopters.
+
+This nifty British made gadget got me wondering about what programming language would James (James Bond) have programmed in *way back* when the Brits were *space-aged*?  (Especially if James needed to ""hack something up"" *in situ*)
+
+  [1]: http://en.wikipedia.org/wiki/James_Bond
+  [2]: http://en.wikipedia.org/wiki/You_Only_Live_Twice_%28film%29
+  [3]: http://www.guardian.co.uk/science/2010/aug/10/magnificent-man-in-flying-machine",5
+5637702,04/12/2011 15:27:03,626706,02/21/2011 13:54:08,22,1,MeeGo Security Platform and Libraries,"I want to know what cryptographic libs a MeeGo platform uses by default and what else it offers for security.
+
+Can anybody explain/provide me with some links?
+
+Thanks",security,meego,,,,05/29/2011 19:30:24,off topic,1,26,5,"MeeGo Security Platform and Libraries I want to know what cryptographic libs a MeeGo platform uses by default and what else it offers for security.
+
+Can anybody explain/provide me with some links?
+
+Thanks",2
+5272057,03/11/2011 11:00:09,610944,02/10/2011 06:48:23,41,0,certificate authorities for a PKI,"Some people think the certificate authorities for a PKI should be the government, but others think certificate authorities should be private entities, such as banks, corporations, or schools. What are the advantages and disadvantages of each approach?",security,certificate,pki,,,03/11/2011 12:20:56,off topic,1,37,5,"certificate authorities for a PKI Some people think the certificate authorities for a PKI should be the government, but others think certificate authorities should be private entities, such as banks, corporations, or schools. What are the advantages and disadvantages of each approach?",3
+11571987,07/20/2012 02:21:15,1198203,02/08/2012 20:31:31,73,2,is this a secure implementation of password reset email,"I am redesigning a password reset email mechanism because the existing implementation scares the hell out of me. My goal is to generate reset codes that are:
+
+* Expired
+* Tamper Resistant
+* Single Use
+* Resistant to replay attacks
+
+The format of the reset code I have come up with is:
+
+B64(B64(iv)||B64(E(uid||timestamp)))
+
+Where B64 is base64 encoding and E is for symmetric encryption. The iv is the initialization vector used for encryption (randomly generated), and is in the clear. The || indicates concatenation and I actually use the string ""||"" as the separator. The uid is an opaque identifier of the user so I can look them up in the database.
+
+The timestamp allows for a code to be expired.
+
+I am using AES 256 in Galois Counter Mode which should provide protection from modified ciphertext attacks.
+
+The encryption key is stored on the server, and used to perform the encryption.
+
+The iv has a dual use. When the reset code is generated the iv is stored with the user in the database. This is used to enforce single-use of a reset code (it gets cleared when a reset code is processed) as well as prevent use of reset codes generated previously. If the iv in the database does not match the iv used to decrypt the reset code, the request is refused. This may also help with security in the event that the encryption key on the server is somehow compromised, as the attacker has to inject the iv into the database as well to make it work. Of course if the attacker is on the host we are pretty much toast...
+
+Are there any weaknesses in this design I am not seeing, or does it needs additional improvement? I look forward to your comments.
+
+Thanks!",security,email,passwords,reset,encryption-symmetric,07/21/2012 14:35:19,off topic,1,285,9,"is this a secure implementation of password reset email I am redesigning a password reset email mechanism because the existing implementation scares the hell out of me. My goal is to generate reset codes that are:
+
+* Expired
+* Tamper Resistant
+* Single Use
+* Resistant to replay attacks
+
+The format of the reset code I have come up with is:
+
+B64(B64(iv)||B64(E(uid||timestamp)))
+
+Where B64 is base64 encoding and E is for symmetric encryption. The iv is the initialization vector used for encryption (randomly generated), and is in the clear. The || indicates concatenation and I actually use the string ""||"" as the separator. The uid is an opaque identifier of the user so I can look them up in the database.
+
+The timestamp allows for a code to be expired.
+
+I am using AES 256 in Galois Counter Mode which should provide protection from modified ciphertext attacks.
+
+The encryption key is stored on the server, and used to perform the encryption.
+
+The iv has a dual use. When the reset code is generated the iv is stored with the user in the database. This is used to enforce single-use of a reset code (it gets cleared when a reset code is processed) as well as prevent use of reset codes generated previously. If the iv in the database does not match the iv used to decrypt the reset code, the request is refused. This may also help with security in the event that the encryption key on the server is somehow compromised, as the attacker has to inject the iv into the database as well to make it work. Of course if the attacker is on the host we are pretty much toast...
+
+Are there any weaknesses in this design I am not seeing, or does it needs additional improvement? I look forward to your comments.
+
+Thanks!",5
+111576,09/21/2008 18:13:11,17162,09/18/2008 03:28:51,51,1,When the bots attack!,What are some popular spam prevention methods besides CAPTCHA.,security,captcha,spam-prevention,bots,,03/02/2012 03:33:30,not constructive,1,9,4,When the bots attack! What are some popular spam prevention methods besides CAPTCHA.,4
+8196842,11/19/2011 19:55:48,1055125,11/19/2011 09:15:48,1,0,Installed Wordpress on VPS. Did I compromise security doing it like this?,"I've been trying to install wordpress on my VPS and have been running into weird permission and permalink issues. I have everything working now, but **did I compromise anything by using this process?**
+
+1. Did a basic LAMP install (running Debian x86).
+2. Set IP-based virtual host for multiple sites in ""etc/apache2/sites-available/default/""
+3. Installed wordpress in DocumentRoot and added .htaccess in there as well.
+4. ""chown -R www-data:www-data /var/www/wordpress_site/""
+5. created rewrite.load in ""/etc/apache2/mods-enabled/"" and added the line ""LoadModule rewrite_module /usr/lib/apache2/modules/mod_rewrite.so""
+
+I have limited resources on the server, so **would there be a difference in the following?** I have done the latter at the moment and am concerned if anything is a security risk as I've messed with permissions and put my install in the DocumentRoot.
+
+A: Single wordpress install in ""/usr/share/wordpress/"" and creating a symlink to the DocumentRoot of all the sites I would want wordpress on.
+
+B. Putting the contents of the wordpress install in each DocumentRoot of the sites I want wordpress on.
+
+Here's a link to my virtual host file: http://www.heypasteit.com/clip/03C1",security,wordpress,debian,symlink,vps,11/19/2011 22:40:05,off topic,1,166,12,"Installed Wordpress on VPS. Did I compromise security doing it like this? I've been trying to install wordpress on my VPS and have been running into weird permission and permalink issues. I have everything working now, but **did I compromise anything by using this process?**
+
+1. Did a basic LAMP install (running Debian x86).
+2. Set IP-based virtual host for multiple sites in ""etc/apache2/sites-available/default/""
+3. Installed wordpress in DocumentRoot and added .htaccess in there as well.
+4. ""chown -R www-data:www-data /var/www/wordpress_site/""
+5. created rewrite.load in ""/etc/apache2/mods-enabled/"" and added the line ""LoadModule rewrite_module /usr/lib/apache2/modules/mod_rewrite.so""
+
+I have limited resources on the server, so **would there be a difference in the following?** I have done the latter at the moment and am concerned if anything is a security risk as I've messed with permissions and put my install in the DocumentRoot.
+
+A: Single wordpress install in ""/usr/share/wordpress/"" and creating a symlink to the DocumentRoot of all the sites I would want wordpress on.
+
+B. Putting the contents of the wordpress install in each DocumentRoot of the sites I want wordpress on.
+
+Here's a link to my virtual host file: http://www.heypasteit.com/clip/03C1",5
+9072226,01/30/2012 23:14:08,1179164,01/30/2012 22:58:48,1,0,Design of a state machine model to solve conflict of interest in Computer Security,"I need to design a **state machine model** to solve conflict of interest in computer security. [I know Chinese wall model but it is an **information flow model**]
+
+Are there any such existing models?
+
+Any reason as to why we cannot design it as a state machine model? 
+
+",security,,,,,03/14/2012 12:04:39,not a real question,1,47,14,"Design of a state machine model to solve conflict of interest in Computer Security I need to design a **state machine model** to solve conflict of interest in computer security. [I know Chinese wall model but it is an **information flow model**]
+
+Are there any such existing models?
+
+Any reason as to why we cannot design it as a state machine model? 
+
+",1
+3268886,07/16/2010 21:12:25,394320,07/16/2010 21:12:25,1,0,Technical detail on Pirate Bay hack,"Does anyone have any in-depth technical detail on the Pirate Bay SQL injection hack?  I'm very curious.
+
+Where can I find this info?
+
+Thanks!
+
+(Note, I'm looking not for general techniques like tossing single quotes in user inputs, etc.  I know the basics already.  I want to know the actual methods used.  The YouTube video is also lacking in detail.)",security,sql-injection,hack,,,07/16/2010 21:17:34,off topic,1,61,6,"Technical detail on Pirate Bay hack Does anyone have any in-depth technical detail on the Pirate Bay SQL injection hack?  I'm very curious.
+
+Where can I find this info?
+
+Thanks!
+
+(Note, I'm looking not for general techniques like tossing single quotes in user inputs, etc.  I know the basics already.  I want to know the actual methods used.  The YouTube video is also lacking in detail.)",3
+5921052,05/07/2011 12:31:04,388241,07/10/2010 01:54:18,136,17,wiping a disk drive: need for multiple passes?,"I am a bit confused about the technology used in wiping a disk drive. For e.g, ccleaner allows you to choose from Simple Overwrite (one pass), DOD (3 passes), NSA (7 passes), Guttman (35 passes)!
+
+My understanding --- obviously wrong, given the choices above --- is that a disk drive stores info using magnetic properties and you can store either a 0 or 1 in a 'location'. So, if I write zeroes into all the locations and read it back I get back all zeroes. Therefore, unless one can examine the disk using some powerful tools and figure that though a particular location has 0 as its current value, its previous value was 1 (and so on for all other bits), and reconstruct the data before it was wiped with zeroes, a simple overwrite with zeroes or any repeating pattern would do.
+
+So, is it the case that the way the hard drive functions, each bit somehow contains its past history of values? What does a 3 pass or a 7 pass wipe do that a single pass wipe cannot?
+
+Also, does the same thing apply to solid-state drives which use a completely different mechanism for storage?
+",security,file,,,,05/07/2011 12:40:53,off topic,1,194,8,"wiping a disk drive: need for multiple passes? I am a bit confused about the technology used in wiping a disk drive. For e.g, ccleaner allows you to choose from Simple Overwrite (one pass), DOD (3 passes), NSA (7 passes), Guttman (35 passes)!
+
+My understanding --- obviously wrong, given the choices above --- is that a disk drive stores info using magnetic properties and you can store either a 0 or 1 in a 'location'. So, if I write zeroes into all the locations and read it back I get back all zeroes. Therefore, unless one can examine the disk using some powerful tools and figure that though a particular location has 0 as its current value, its previous value was 1 (and so on for all other bits), and reconstruct the data before it was wiped with zeroes, a simple overwrite with zeroes or any repeating pattern would do.
+
+So, is it the case that the way the hard drive functions, each bit somehow contains its past history of values? What does a 3 pass or a 7 pass wipe do that a single pass wipe cannot?
+
+Also, does the same thing apply to solid-state drives which use a completely different mechanism for storage?
+",2
+11183525,06/25/2012 04:28:19,1228429,02/23/2012 13:17:00,62,4,What is the way Tomcat Realm works to authenticate users of webapps,"Can you please explain me the way, how Tomcat Realm works ? How it gets user details like uName , PW  and how it checks it from DB. Because there are so many references available. Those confuses me. ",security,tomcat,web-applications,web-security,realm,,open,0,40,12,"What is the way Tomcat Realm works to authenticate users of webapps Can you please explain me the way, how Tomcat Realm works ? How it gets user details like uName , PW  and how it checks it from DB. Because there are so many references available. Those confuses me. ",5
+10224697,04/19/2012 08:53:05,459537,09/27/2010 13:38:55,1490,44,How is it possible that I can use LastPass from more than one computer?,"Tell me if I'm wrong: LastPass can never see my passwords, because they are encrypted with a key that stays in my own computer?
+
+Then how is it possible that I can use my passwords from another computer?
+
+My only guess is that the key is the password I use to login to LastPass, or at least it is generated based on it, so it is related in some way. So when I login to LastPass from another computer, they key same key is created in that computer.",security,cryptography,,,,05/18/2012 08:57:34,off topic,1,86,14,"How is it possible that I can use LastPass from more than one computer? Tell me if I'm wrong: LastPass can never see my passwords, because they are encrypted with a key that stays in my own computer?
+
+Then how is it possible that I can use my passwords from another computer?
+
+My only guess is that the key is the password I use to login to LastPass, or at least it is generated based on it, so it is related in some way. So when I login to LastPass from another computer, they key same key is created in that computer.",2
+3958816,10/18/2010 11:52:00,395628,07/19/2010 08:37:40,482,30,Security of Exclusive-OR (XOR) encryption,"XOR encryption is known to be quite weak. But how weak is it if I have a key that is made up of multiple keys of different (ideally prime) lengths which are combined to make a longer key. eg I have a text keys of length 5, 9 and 11. If I just apply the first key using XOR encryption then it should be easy to break as the encryption byte will repeat every 5 bytes. However if I 'overlay' the 3 of these keys I get an effective non-repeating length of 5*9*11 = 495. This sounds to me pretty strong. If I use a couple of verses of a poem using each line as a key then my non-repeating length will be way bigger than most files. How strong would this be (providing the key remains secret! `:)` )",security,encryption,privatekey,computability,,,open,0,140,5,"Security of Exclusive-OR (XOR) encryption XOR encryption is known to be quite weak. But how weak is it if I have a key that is made up of multiple keys of different (ideally prime) lengths which are combined to make a longer key. eg I have a text keys of length 5, 9 and 11. If I just apply the first key using XOR encryption then it should be easy to break as the encryption byte will repeat every 5 bytes. However if I 'overlay' the 3 of these keys I get an effective non-repeating length of 5*9*11 = 495. This sounds to me pretty strong. If I use a couple of verses of a poem using each line as a key then my non-repeating length will be way bigger than most files. How strong would this be (providing the key remains secret! `:)` )",4
+11111380,06/20/2012 00:39:10,1467847,06/20/2012 00:25:51,1,0,Isn't Fiddler a security hazard when exposed to untrusted users?,"Fiddler buffers all the uploaded data from the client before sending it to the server. That means that if you try to upload a 2 GB file Fiddler will try to buffer the whole thing in ram before sending it to the server.
+Doesn't that mean is a secury risk to expose this proxy server to untrusted users? All a malicious user has to do is send big requests to consume all the memory from the server and bring it down.",security,proxy,fiddler,,,06/21/2012 13:11:33,off topic,1,80,10,"Isn't Fiddler a security hazard when exposed to untrusted users? Fiddler buffers all the uploaded data from the client before sending it to the server. That means that if you try to upload a 2 GB file Fiddler will try to buffer the whole thing in ram before sending it to the server.
+Doesn't that mean is a secury risk to expose this proxy server to untrusted users? All a malicious user has to do is send big requests to consume all the memory from the server and bring it down.",3
+4751568,01/20/2011 19:26:45,581734,01/19/2011 16:15:13,11,0,dual signature cannot understand ?,can someone please tell me briefly whats the point in signing a document using two signatures ?,security,,,,,01/20/2011 22:31:24,not a real question,1,17,5,dual signature cannot understand ? can someone please tell me briefly whats the point in signing a document using two signatures ?,1
+1699527,11/09/2009 07:10:05,123663,06/16/2009 12:26:25,99,1,Help with finding a course ,"Not sure if this is really a programming question. 
+
+I am looking to do a course based in the UK on cyber security does any one know of any part time courses I can do in my spare time like the open university? 
+
+Also if you could provide me with some tutorials online that would be great.
+
+Thanks very much  ",security,,,,,02/20/2012 17:37:33,off topic,1,61,6,"Help with finding a course  Not sure if this is really a programming question. 
+
+I am looking to do a course based in the UK on cyber security does any one know of any part time courses I can do in my spare time like the open university? 
+
+Also if you could provide me with some tutorials online that would be great.
+
+Thanks very much  ",1
+9464091,02/27/2012 11:17:50,1235364,02/27/2012 10:39:37,1,0,Is it save to store a single symmetric key encrypted with several different RSA public keys?,"For the field based encryption of a database containing sensible information I was thinking of the following design:
+
+- Every user has a smartcard used for client certificate login
+- After login the user gets the symmetric key (AES for example) encrypted with the public key of his smartcard
+- The user decrypts the key and uses it to encrypt/decrypt any sensible data on the client
+
+
+In the database there is a table containing all the public keys of the user smartcards and the encrypted global symmetric key with the public key of every user.
+
+The rest of the sensible data is encrypted with the symmetric key.
+
+=> Is the data safe if the database gets compromised?
+
+Another possible solution would be, to store additionally the same global RSA key on all the smartcards and use this key with RSA-KEM to encrypt all the sensible data. Disadvantage would be that this makes it harder to change the global key in the production setup as all the smardcards would have to be replaced/reprogrammed.
+
+What do you think?",security,encryption,rsa,public-key-encryption,,02/27/2012 20:53:32,off topic,1,168,16,"Is it save to store a single symmetric key encrypted with several different RSA public keys? For the field based encryption of a database containing sensible information I was thinking of the following design:
+
+- Every user has a smartcard used for client certificate login
+- After login the user gets the symmetric key (AES for example) encrypted with the public key of his smartcard
+- The user decrypts the key and uses it to encrypt/decrypt any sensible data on the client
+
+
+In the database there is a table containing all the public keys of the user smartcards and the encrypted global symmetric key with the public key of every user.
+
+The rest of the sensible data is encrypted with the symmetric key.
+
+=> Is the data safe if the database gets compromised?
+
+Another possible solution would be, to store additionally the same global RSA key on all the smartcards and use this key with RSA-KEM to encrypt all the sensible data. Disadvantage would be that this makes it harder to change the global key in the production setup as all the smardcards would have to be replaced/reprogrammed.
+
+What do you think?",4
+8073392,11/09/2011 23:56:41,384892,07/06/2010 19:23:37,1,0,how to find a website vulnerabilities,"Has anyone got the idea how to find a website vulnerabilities issues?
+like:
+
+ - Log in as the user test Find the admin control page as a non adminuser 
+ - Get the website to print out full debug information for an error
+ - Using a diﬀerent method from part (1), log in as user1@gmail.com 
+ - Use an XSS attack to open a pop up window displaying a website of your
+   choice1 
+ - Describe how a similar XSS attack could be used to log in as
+   admin 
+ - Get the store to owe you money Log in as the user admin 
+ - Access the basket of a user, while not logged on as that user 
+ - Describe a    CSRF attack that can be used to change someones password
+
+Many thanks",security,xss,web-security,csrf,,11/10/2011 12:26:29,not a real question,1,140,6,"how to find a website vulnerabilities Has anyone got the idea how to find a website vulnerabilities issues?
+like:
+
+ - Log in as the user test Find the admin control page as a non adminuser 
+ - Get the website to print out full debug information for an error
+ - Using a diﬀerent method from part (1), log in as user1@gmail.com 
+ - Use an XSS attack to open a pop up window displaying a website of your
+   choice1 
+ - Describe how a similar XSS attack could be used to log in as
+   admin 
+ - Get the store to owe you money Log in as the user admin 
+ - Access the basket of a user, while not logged on as that user 
+ - Describe a    CSRF attack that can be used to change someones password
+
+Many thanks",4
+6181248,05/30/2011 22:27:31,508666,11/15/2010 19:35:13,2354,161,Is this site vulnerable to an SQL injection attack?,"I am visiting a site and I mistakenly entered a single quote while I was trying to hit the enter key.
+
+The URL that got sent is: http://www.domain.tld/link.php?id=2603' (censored :) )
+
+Resulting in the following response from the site:
+
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+
+I've tried to do: http://www.domain.tld/link.php?id=2603; SHOW TABLES; But that didn't work :P
+
+So my question is: can this site vulnerable to sql injection?",security,sql-injection,web-security,,,05/30/2011 22:43:53,too localized,1,86,9,"Is this site vulnerable to an SQL injection attack? I am visiting a site and I mistakenly entered a single quote while I was trying to hit the enter key.
+
+The URL that got sent is: http://www.domain.tld/link.php?id=2603' (censored :) )
+
+Resulting in the following response from the site:
+
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+
+I've tried to do: http://www.domain.tld/link.php?id=2603; SHOW TABLES; But that didn't work :P
+
+So my question is: can this site vulnerable to sql injection?",3
+127369,09/24/2008 14:10:03,6833,09/15/2008 12:41:43,67,4,How do you protect code from being physically stolen?,"I've recently purchased an IBM Thinkpad that came with a fingerprint scanner. That got me thinking: are fingerprint scanners a good way to protect your code i.e. if someone takes your laptop or goes on your laptop while you're away, would they still be able to get in?
+
+The question also applies for other biometrics techniques that the new Thinkpads have (iris scans, I believe).
+
+Are there other ways of physically protecting your code? ",security,hardware,ibm,biometrics,thinkpad,09/21/2011 07:22:42,off topic,1,73,9,"How do you protect code from being physically stolen? I've recently purchased an IBM Thinkpad that came with a fingerprint scanner. That got me thinking: are fingerprint scanners a good way to protect your code i.e. if someone takes your laptop or goes on your laptop while you're away, would they still be able to get in?
+
+The question also applies for other biometrics techniques that the new Thinkpads have (iris scans, I believe).
+
+Are there other ways of physically protecting your code? ",5
+8151198,11/16/2011 11:51:08,802814,06/17/2011 07:02:22,21,1,What's the best way to stop site visitors seeing the contents of a folder?,"I have a list of documents here: www.example.com/documents
+
+I want to key the documents folder in the public_html / htdocs folder (not above it). However, I don't want people to be able to navigate to www.example.com/documents or for Google to index the content. But I still need to use links to the documents across the site (mainly within a logged in area).
+
+Any suggestions?
+",security,.htaccess,url,,,,open,0,62,14,"What's the best way to stop site visitors seeing the contents of a folder? I have a list of documents here: www.example.com/documents
+
+I want to key the documents folder in the public_html / htdocs folder (not above it). However, I don't want people to be able to navigate to www.example.com/documents or for Google to index the content. But I still need to use links to the documents across the site (mainly within a logged in area).
+
+Any suggestions?
+",3
+5012333,02/16/2011 03:47:40,325418,05/09/2009 15:50:29,10331,352,Can any account with verified email address be used to merge with an account with unverified email address?,"Say, if using OpenID Selector which is StockOverflow's log in system, or JanRain, which actually allows
+using Facebook or Twitter to log in as well as OpenID, then, some email address are not verified...
+
+On the original website, if an email addresses is not verified, maybe we can merge two accounts (threat them as one user) if
+OpenID or JanRain logs in a user with an email address that is verified, and our current user accounts also has a user with that
+email address (but unverified) -- the real user can take control of the account now...  but, what if a hacker register a celebrity's
+email address, and then just wait months until the celebrity uses OpenID or Facebook with the verified email address to ""merge"" the
+two accounts...  (the website can announce the accounts are merged, but the celebrity may not remember whether he or she previously has sign up in that website... so he or she may not feel security breech)  so the security risk is...
+now whatever the celebrity does -- saving items to a list, etc, the hacker can now silently monitor what is being done...
+
+So is it true that if any account has an unverified email address, no other account should merge with it.  Only if both accounts
+have that same verified email address, then those accounts can be treated as one single account...  is this true, or can the rule
+be more flexible than this?
+   ",security,web-security,hacking,privacy,janrain,,open,0,240,18,"Can any account with verified email address be used to merge with an account with unverified email address? Say, if using OpenID Selector which is StockOverflow's log in system, or JanRain, which actually allows
+using Facebook or Twitter to log in as well as OpenID, then, some email address are not verified...
+
+On the original website, if an email addresses is not verified, maybe we can merge two accounts (threat them as one user) if
+OpenID or JanRain logs in a user with an email address that is verified, and our current user accounts also has a user with that
+email address (but unverified) -- the real user can take control of the account now...  but, what if a hacker register a celebrity's
+email address, and then just wait months until the celebrity uses OpenID or Facebook with the verified email address to ""merge"" the
+two accounts...  (the website can announce the accounts are merged, but the celebrity may not remember whether he or she previously has sign up in that website... so he or she may not feel security breech)  so the security risk is...
+now whatever the celebrity does -- saving items to a list, etc, the hacker can now silently monitor what is being done...
+
+So is it true that if any account has an unverified email address, no other account should merge with it.  Only if both accounts
+have that same verified email address, then those accounts can be treated as one single account...  is this true, or can the rule
+be more flexible than this?
+   ",5
+10876301,06/04/2012 04:23:51,1041508,11/11/2011 10:31:53,36,0,"My website when searched in Google, shows ""hacked by GHoST61""","As stated in the title, when i search for my website in google, along with the listings of my website in the search results, it also shows another listing with the words ""hacked by GHoST61"". I guess it clearly means my website got hacked. There are no transactions been done in my website, but is this something serious for me to panic? what can i do about it? I did check and made sure my directory permissions are set to 0755. My website is hosted by some hosting company. Should i inform them?
+
+Thank You.",security,website,,,,06/04/2012 04:27:02,off topic,1,94,10,"My website when searched in Google, shows ""hacked by GHoST61"" As stated in the title, when i search for my website in google, along with the listings of my website in the search results, it also shows another listing with the words ""hacked by GHoST61"". I guess it clearly means my website got hacked. There are no transactions been done in my website, but is this something serious for me to panic? what can i do about it? I did check and made sure my directory permissions are set to 0755. My website is hosted by some hosting company. Should i inform them?
+
+Thank You.",2
+8902973,01/17/2012 23:08:42,396003,07/19/2010 16:20:43,1,0,After installing SQL Server 2008 on Windows 7 server how do I prohibit non-friendly access via firewall and IP address?,"Looks like somebody in another country has been trying to hack into my test SQL Server 2008 ""SA"" account this morning according to the server log.  Is there a way in the Windows 7 firewall rules or SQL Server 2008 setup to stop access from outside a white-list of IP addresses?  This is just a test setup so there are no production data vulnerabilities here.  ",security,sql-server-2008,windows-7,firewall-access,,01/18/2012 08:06:51,off topic,1,69,20,"After installing SQL Server 2008 on Windows 7 server how do I prohibit non-friendly access via firewall and IP address? Looks like somebody in another country has been trying to hack into my test SQL Server 2008 ""SA"" account this morning according to the server log.  Is there a way in the Windows 7 firewall rules or SQL Server 2008 setup to stop access from outside a white-list of IP addresses?  This is just a test setup so there are no production data vulnerabilities here.  ",4
+3989808,10/21/2010 16:39:26,483299,10/21/2010 16:39:26,1,0,Networks & relative security,"I was wondering which if these networks would you feel most comfortable logging into e.g. your bank account and why
+
+3g mobile phone connection;;
+University campus LAN;;
+university campus wifi, wpa;;
+University campus wifi no encryption. Proxy login;;
+
+does the choice matter if the site uses ssl? Won't that encrypt the login info anyway? 
+
+also for no ssl how would you generally rank the relative security reliability of the networks above? ",security,encryption,wifi,networking,,10/22/2010 01:12:40,off topic,1,67,4,"Networks & relative security I was wondering which if these networks would you feel most comfortable logging into e.g. your bank account and why
+
+3g mobile phone connection;;
+University campus LAN;;
+university campus wifi, wpa;;
+University campus wifi no encryption. Proxy login;;
+
+does the choice matter if the site uses ssl? Won't that encrypt the login info anyway? 
+
+also for no ssl how would you generally rank the relative security reliability of the networks above? ",4
+7696373,10/08/2011 11:05:43,89035,04/09/2009 11:46:52,2752,80,Why is Xcode trying to access 'cs193p.dyndns.org',"Yesterday I installed Xcode 4.2 GM, today connected my iPhone (installed with iOS 5 GM) and clicked the ""Use for Development"" button in Organiser.
+
+I was them confronted with this dialogue. 
+
+![Xcode attempting to connect to the host cs193p.dyndns.org][1]
+
+The site [http://cs193p.dyndns.org][2] hosts some ""Profiles"", clicking on then download a profile and attempts to install it:
+
+![Install profile][3]
+
+(I clicked cancel)
+
+This new System Preference then appears:
+
+![System Preferences: Profiles][4]
+
+I have know idea what this is or even if I should trust it. 
+
+  [1]: http://i.stack.imgur.com/rrJHA.png
+  [2]: http://cs193p.dyndns.org
+  [3]: http://i.stack.imgur.com/oC9aK.png
+  [4]: http://i.stack.imgur.com/mmlpM.png",security,xcode4,ios5,,,,open,0,90,7,"Why is Xcode trying to access 'cs193p.dyndns.org' Yesterday I installed Xcode 4.2 GM, today connected my iPhone (installed with iOS 5 GM) and clicked the ""Use for Development"" button in Organiser.
+
+I was them confronted with this dialogue. 
+
+![Xcode attempting to connect to the host cs193p.dyndns.org][1]
+
+The site [http://cs193p.dyndns.org][2] hosts some ""Profiles"", clicking on then download a profile and attempts to install it:
+
+![Install profile][3]
+
+(I clicked cancel)
+
+This new System Preference then appears:
+
+![System Preferences: Profiles][4]
+
+I have know idea what this is or even if I should trust it. 
+
+  [1]: http://i.stack.imgur.com/rrJHA.png
+  [2]: http://cs193p.dyndns.org
+  [3]: http://i.stack.imgur.com/oC9aK.png
+  [4]: http://i.stack.imgur.com/mmlpM.png",3
+6628106,07/08/2011 17:26:23,835765,07/08/2011 16:59:26,1,0,Top 10 secured websites of the year.,I browsed but could find the correct. I need the World Wide Web's top 10 most secured websites of the year. If updated 2011 else for the year 2010.,security,internet,,,,07/08/2011 17:34:52,not constructive,1,29,7,Top 10 secured websites of the year. I browsed but could find the correct. I need the World Wide Web's top 10 most secured websites of the year. If updated 2011 else for the year 2010.,2
+10895250,06/05/2012 10:00:43,936986,09/09/2011 14:38:45,2009,122,Untraceable voting for registered users,"I want make to a untraceable voting system that would allow registered users to vote on some sensitive issue in a way, that would make it impossible to track user votes in a case a database is compromised (including ""compromised"" by overly curious DB admin).
+
+Detailed setup:
+
+1. Every user is registered, there's no completely anonymous voting.
+2. Sockpuppets, fake accounts, and the like are out-of-scope of this question - this is responsibility of registration system.
+3. Every registred user can only cast one vote (which may be anything: simple yes/no or weight or whatever).
+4. User must be able to change/delete his vote until voting is closed.
+5. Even if somebody have access to user auth database and voting database, they must not be able to track each vote back to user (in a sense that it must not be easier that bruteforce or otherwise hack entire user account's access).
+
+I have some solutions in mind which I post as my own answer after grace period.",security,voting,,,,06/06/2012 10:06:25,off topic,1,160,5,"Untraceable voting for registered users I want make to a untraceable voting system that would allow registered users to vote on some sensitive issue in a way, that would make it impossible to track user votes in a case a database is compromised (including ""compromised"" by overly curious DB admin).
+
+Detailed setup:
+
+1. Every user is registered, there's no completely anonymous voting.
+2. Sockpuppets, fake accounts, and the like are out-of-scope of this question - this is responsibility of registration system.
+3. Every registred user can only cast one vote (which may be anything: simple yes/no or weight or whatever).
+4. User must be able to change/delete his vote until voting is closed.
+5. Even if somebody have access to user auth database and voting database, they must not be able to track each vote back to user (in a sense that it must not be easier that bruteforce or otherwise hack entire user account's access).
+
+I have some solutions in mind which I post as my own answer after grace period.",2
+3788679,09/24/2010 15:40:44,453124,09/20/2010 19:37:59,104,15,CAPTCHA and it's legality?,"I am sourcing some info from the OWASP (open application security community) web site (http://owasp.org) and came across some info in their Authentication section.
+
+> CAPTCHA (Completely automated Turing
+> Tests To Tell Humans and Computers
+> Apart) are illegal in any jurisdiction
+> that prohibits discrimination against
+> disabled citizens. This is essentially
+> the entire world. Although CAPTCHAs
+> seem useful, they are in fact, trivial
+> to break using any of the following
+> methods: 
+><br /><br />• Optical Character
+> Recognition. Most common CAPTCHAs are
+> solvable using specialist CAPTCHA
+> breaking OCR software. 
+><br />• Break a test,
+> get free access to foo, where foo is a
+> desirable resource 
+><br />• Pay someone to
+> solve the CAPTCHAs. The current rate
+> at the time of writing is $12 per 500
+> tests. 
+><br /><br />Therefore implementing CAPTCHAs
+> in your software is most likely to be
+> illegal in at least a few countries,
+> and worse - completely ineffective.
+
+[http://www.owasp.org/index.php/Guide_to_Authentication][1]
+
+They are saying that their useage is illegal due to discrimination laws in place for Disabled Citizens. 
+
+I know OWASP is pretty good for info on security, but I have to question how serious the legality of implementing something like CAPTCHA is.
+
+So. Can anyone reference or point me in the direction of any type of documentation confirming there is an issue of legality with using CAPTCHA? Is it specific to all countries or just U.S.?
+
+Is implmementing speech features for the CAPTCHA enough to overcome the legality?
+
+Extra points if you can find the relevant documents to support this in Canada. As I work in Canada for a large multinational company which uses CAPTCHA extensively. 
+
+Cheers Mates!
+
+
+  [1]: http://www.owasp.org/index.php/Guide_to_Authentication",security,forms,authentication,captcha,,09/24/2010 16:02:56,off topic,1,265,4,"CAPTCHA and it's legality? I am sourcing some info from the OWASP (open application security community) web site (http://owasp.org) and came across some info in their Authentication section.
+
+> CAPTCHA (Completely automated Turing
+> Tests To Tell Humans and Computers
+> Apart) are illegal in any jurisdiction
+> that prohibits discrimination against
+> disabled citizens. This is essentially
+> the entire world. Although CAPTCHAs
+> seem useful, they are in fact, trivial
+> to break using any of the following
+> methods: 
+><br /><br />• Optical Character
+> Recognition. Most common CAPTCHAs are
+> solvable using specialist CAPTCHA
+> breaking OCR software. 
+><br />• Break a test,
+> get free access to foo, where foo is a
+> desirable resource 
+><br />• Pay someone to
+> solve the CAPTCHAs. The current rate
+> at the time of writing is $12 per 500
+> tests. 
+><br /><br />Therefore implementing CAPTCHAs
+> in your software is most likely to be
+> illegal in at least a few countries,
+> and worse - completely ineffective.
+
+[http://www.owasp.org/index.php/Guide_to_Authentication][1]
+
+They are saying that their useage is illegal due to discrimination laws in place for Disabled Citizens. 
+
+I know OWASP is pretty good for info on security, but I have to question how serious the legality of implementing something like CAPTCHA is.
+
+So. Can anyone reference or point me in the direction of any type of documentation confirming there is an issue of legality with using CAPTCHA? Is it specific to all countries or just U.S.?
+
+Is implmementing speech features for the CAPTCHA enough to overcome the legality?
+
+Extra points if you can find the relevant documents to support this in Canada. As I work in Canada for a large multinational company which uses CAPTCHA extensively. 
+
+Cheers Mates!
+
+
+  [1]: http://www.owasp.org/index.php/Guide_to_Authentication",4
+6904674,08/01/2011 21:26:35,501379,11/09/2010 02:15:01,179,2,How can one implement a secure IRC inside a company ? What are the secure IRC servers?," - We are thinking of an IRC server for ops/devs during problem solving.
+ - Makes it easy for folks to see what is going on plus the log acts as
+   future reference. But this need to be inside the company. 
+ - We are a small startup, so VPN et al are out of our reach for now.",security,irc,,,,08/01/2011 21:46:33,off topic,1,61,17,"How can one implement a secure IRC inside a company ? What are the secure IRC servers?  - We are thinking of an IRC server for ops/devs during problem solving.
+ - Makes it easy for folks to see what is going on plus the log acts as
+   future reference. But this need to be inside the company. 
+ - We are a small startup, so VPN et al are out of our reach for now.",2
+9133772,02/03/2012 18:39:18,711543,04/16/2011 20:50:15,3,0,Apache Hacked replace all my webpages </body> tag with a js Virus/Malware,"I think some hacker hit my apache or some modules.
+
+Every page I load contain a virus in the footer of page.
+
+I found a modified .htaccess that exclude the virus appearing if a search engine come and send to  RewriteRule 7291303982418.php [R=404]
+
+Somone know shat kind of virus is ?",security,apache,hacked,,,02/03/2012 19:01:15,off topic,1,49,12,"Apache Hacked replace all my webpages </body> tag with a js Virus/Malware I think some hacker hit my apache or some modules.
+
+Every page I load contain a virus in the footer of page.
+
+I found a modified .htaccess that exclude the virus appearing if a search engine come and send to  RewriteRule 7291303982418.php [R=404]
+
+Somone know shat kind of virus is ?",3
+8782822,01/09/2012 00:45:37,1135553,01/07/2012 04:39:09,1,0,Does flickr support secure links?,"Does anyone know if flickr supports secure links?  
+
+For example I need this be a secure link: http://www.flickr.com/photos/jup3nep/6318336935/?f=hp
+
+When I try to just add an s to the end of http, however, the requested url cannot be found...
+
+Anyone know if this is possible through flickr?
+
+",security,https,links,flickr,,01/09/2012 12:49:51,off topic,1,45,5,"Does flickr support secure links? Does anyone know if flickr supports secure links?  
+
+For example I need this be a secure link: http://www.flickr.com/photos/jup3nep/6318336935/?f=hp
+
+When I try to just add an s to the end of http, however, the requested url cannot be found...
+
+Anyone know if this is possible through flickr?
+
+",4
+4509165,12/22/2010 12:30:01,460139,09/28/2010 03:21:23,9,2,Page not viewable in normal browser,How to make a page that is not viewable in a normal browser. I seen it in a hacking challenge. I have to use telnet command to view that page. I want to create that kind of page.,security,,,,,12/22/2010 15:50:34,not a real question,1,38,6,Page not viewable in normal browser How to make a page that is not viewable in a normal browser. I seen it in a hacking challenge. I have to use telnet command to view that page. I want to create that kind of page.,1
+1527136,10/06/2009 18:00:53,105459,05/12/2009 15:47:36,5502,200,Is Quicksort a potential security risk?,"I just wondered whether (with some serious paranoia and under certain circumstances) the use of the *QuickSort* algorithm can be seen as a security risk in an application.
+
+Both its basic implementation and improved versions like 3-median-quicksort have the peculiarity of behaving deviant for certain input data, which means that their runtime can increase extremely in these cases (having *`O(n^2)`* complexity).
+
+Hence I would see a possibility to do harm by providing pre-sorted data to a programm that causes the algorithm to behave like this, which could have unpredictable consequences for e.g. a multi-client web application.
+
+Is this strange case worth any security consideration (and would therefore force us to use *Intro-* or *Mergesort* instead)?",security,algorithm,,,,,open,0,112,6,"Is Quicksort a potential security risk? I just wondered whether (with some serious paranoia and under certain circumstances) the use of the *QuickSort* algorithm can be seen as a security risk in an application.
+
+Both its basic implementation and improved versions like 3-median-quicksort have the peculiarity of behaving deviant for certain input data, which means that their runtime can increase extremely in these cases (having *`O(n^2)`* complexity).
+
+Hence I would see a possibility to do harm by providing pre-sorted data to a programm that causes the algorithm to behave like this, which could have unpredictable consequences for e.g. a multi-client web application.
+
+Is this strange case worth any security consideration (and would therefore force us to use *Intro-* or *Mergesort* instead)?",2
+9994934,04/03/2012 14:04:38,1300957,03/29/2012 13:46:21,1,0,Equipment Needed to setup up a WAN?,"What equipment is needed to set up a WAN, besides routers? What aspects of setting it up and maintaining it make it so much more expensive than a LAN?",security,networking,lan,wan,,04/05/2012 09:16:35,off topic,1,29,7,"Equipment Needed to setup up a WAN? What equipment is needed to set up a WAN, besides routers? What aspects of setting it up and maintaining it make it so much more expensive than a LAN?",4
+5731838,04/20/2011 14:20:03,708195,04/14/2011 15:02:53,15,0,Is it illegal to write your own encyption,Someone told me it was illegal to write your own encryption is this true?,security,encryption,protection,,,04/20/2011 14:38:28,off topic,1,14,8,Is it illegal to write your own encyption Someone told me it was illegal to write your own encryption is this true?,3
+2045445,01/11/2010 22:35:31,248382,01/11/2010 20:50:45,1,0,How can security in software be made really simple ?,"Often, I am told that Security functions are not available at a level of abstraction that a developer with little security knowledge can use them.  What changes will the developers want in their developement environment say for Java that will make securing their software much easier than today. 
+
+I am looking at new ways like providing configurability at the level where the programmer just has to declare the security function he desires and the level he wants and only really power programmers will need to go and do something really extra.
+
+
+So 2 part question - what services will you want as a developer and how would you like it to be integrated into your IDE (your development environment) so that you can easily use it.
+
+",security,service,api,ide,,01/12/2010 03:25:49,not a real question,1,126,10,"How can security in software be made really simple ? Often, I am told that Security functions are not available at a level of abstraction that a developer with little security knowledge can use them.  What changes will the developers want in their developement environment say for Java that will make securing their software much easier than today. 
+
+I am looking at new ways like providing configurability at the level where the programmer just has to declare the security function he desires and the level he wants and only really power programmers will need to go and do something really extra.
+
+
+So 2 part question - what services will you want as a developer and how would you like it to be integrated into your IDE (your development environment) so that you can easily use it.
+
+",4
+4121826,11/08/2010 06:55:11,500400,11/08/2010 06:55:11,1,0,White hat testing,"Do you guys know of anyone (individual or group) that will take on the role of White Hat testing?   I have a website almost ready to launch and I want to minimize/eliminate its weaknesses/holes before putting it out on the big bad web.  
+
+I have implemented various ""best practices"" for securing the website (ASP.NET based) but I would like to have it as bullet proof as possible.
+
+Any thoughts on this?
+
+Thanks!",security,testing,,,,12/09/2010 13:33:31,off topic,1,73,3,"White hat testing Do you guys know of anyone (individual or group) that will take on the role of White Hat testing?   I have a website almost ready to launch and I want to minimize/eliminate its weaknesses/holes before putting it out on the big bad web.  
+
+I have implemented various ""best practices"" for securing the website (ASP.NET based) but I would like to have it as bullet proof as possible.
+
+Any thoughts on this?
+
+Thanks!",2
+6523387,06/29/2011 15:43:08,432426,08/26/2010 22:54:50,391,26,fine grained authentification in java,"It there a way to scope javax.crypto.Cipher calls within ""trusted"" part of the application? I would like to make sure cipher.init and cipher.doFinal happen only in ""authorized"" part of the program, so perhaps the fingerprint of these calls can be made a part of the key?",security,cryptography,,,,,open,0,46,5,"fine grained authentification in java It there a way to scope javax.crypto.Cipher calls within ""trusted"" part of the application? I would like to make sure cipher.init and cipher.doFinal happen only in ""authorized"" part of the program, so perhaps the fingerprint of these calls can be made a part of the key?",2
+873569,05/16/2009 23:48:01,85095,03/31/2009 13:37:39,506,101,Open Source Gambling Software?,Is there such a thing as open source gambling software? Would making the source code transparent help increase security over the long haul?,security,best-practices,drm,java,,01/03/2012 18:24:49,not constructive,1,23,4,Open Source Gambling Software? Is there such a thing as open source gambling software? Would making the source code transparent help increase security over the long haul?,4
+7188498,08/25/2011 10:04:26,183857,10/04/2009 06:39:56,58,0,Tomcat weird behaviour with Spring security CAS client,"I have have been developing a Spring web application with Single Sign On enabled through Spring Security and Ja-sig CAS Client. We already have a CAS portal that authenticates users, What we are developing is an application that uses our central CAS server as the CAS Server.
+
+The question is we develop the client Spring application on Jetty as the development server. Just for my curiosity I deployed the working application to Tomcat 6.0.32 and it nicely works until user enters the authentication details to CAS server. Upon successful authentication CAS server redirects the client browser to the web application we are developing with Spring Security. It then gives 404 error with **j_spring_cas_security_check**, This works extremely well under Jetty. What wrong am I doing? Do I need to add some additional jars of Spring Security to Tomcat/lib directory?
+
+I am using Spring 3.0.5, Spring Security 3.0.5 and Ja-sig Cas Client 3.1.10.",security,spring,tomcat,cas,jasig,10/10/2011 16:43:43,too localized,1,149,8,"Tomcat weird behaviour with Spring security CAS client I have have been developing a Spring web application with Single Sign On enabled through Spring Security and Ja-sig CAS Client. We already have a CAS portal that authenticates users, What we are developing is an application that uses our central CAS server as the CAS Server.
+
+The question is we develop the client Spring application on Jetty as the development server. Just for my curiosity I deployed the working application to Tomcat 6.0.32 and it nicely works until user enters the authentication details to CAS server. Upon successful authentication CAS server redirects the client browser to the web application we are developing with Spring Security. It then gives 404 error with **j_spring_cas_security_check**, This works extremely well under Jetty. What wrong am I doing? Do I need to add some additional jars of Spring Security to Tomcat/lib directory?
+
+I am using Spring 3.0.5, Spring Security 3.0.5 and Ja-sig Cas Client 3.1.10.",5

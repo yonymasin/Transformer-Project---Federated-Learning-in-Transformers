@@ -1,0 +1,1388 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+10008169,04/04/2012 09:12:31,483660,10/21/2010 23:45:43,116,1,Matlab rgb2hsv dimensions,"I am reading in the matlab documentation that rgb2hsv will return an m-by-n-by-3 image array, yet when I call it, I get a 1-by-3 vector. Am I misunderstanding something?
+Here is an sample code:
+
+    image_hsv = rgb2hsv('filepath')
+and as output
+
+    image_hsv =
+
+            0.7108    0.3696   92.0000
+",matlab,,,,,,open,0,65,3,"Matlab rgb2hsv dimensions I am reading in the matlab documentation that rgb2hsv will return an m-by-n-by-3 image array, yet when I call it, I get a 1-by-3 vector. Am I misunderstanding something?
+Here is an sample code:
+
+    image_hsv = rgb2hsv('filepath')
+and as output
+
+    image_hsv =
+
+            0.7108    0.3696   92.0000
+",1
+1669838,11/03/2009 20:07:18,44330,12/08/2008 16:01:37,10369,530,MATLAB: vectorized assignment from double array to cell array,"I have three arrays, all the same size:
+
+    xout        % cell array
+    xin         % numeric array of doubles
+    b           % logical array
+
+How can I take the elements of xin that correspond to the indices where b is true, and assign them to the corresponding places in xout?
+
+    >> xout = {'foo', 'bar', 'baz', 'quux'};
+    >> xin = [1, 2, 3, 4];
+    >> b = (xin ~= 2);       % yields [1 0 1 1] in this case
+    >> xout{b}=xin(b);
+    ??? The right hand side of this assignment has too few values 
+    to satisfy the left hand side.
+
+    >> xout(b)=xin(b);
+    ??? Conversion to cell from double is not possible.
+    
+    ",matlab,cell,vectorization,,,,open,0,180,9,"MATLAB: vectorized assignment from double array to cell array I have three arrays, all the same size:
+
+    xout        % cell array
+    xin         % numeric array of doubles
+    b           % logical array
+
+How can I take the elements of xin that correspond to the indices where b is true, and assign them to the corresponding places in xout?
+
+    >> xout = {'foo', 'bar', 'baz', 'quux'};
+    >> xin = [1, 2, 3, 4];
+    >> b = (xin ~= 2);       % yields [1 0 1 1] in this case
+    >> xout{b}=xin(b);
+    ??? The right hand side of this assignment has too few values 
+    to satisfy the left hand side.
+
+    >> xout(b)=xin(b);
+    ??? Conversion to cell from double is not possible.
+    
+    ",3
+11381255,07/08/2012 06:51:44,1508708,07/07/2012 12:25:09,1,0,How i can run a script outside from standalone application made in matlab?,"I have a standalone app in matlab. It gets a file name as an input and need to run this file.
+The file is on the same path as the standalone app.
+
+thx, 
+Mike.",matlab,,,,,,open,0,32,13,"How i can run a script outside from standalone application made in matlab? I have a standalone app in matlab. It gets a file name as an input and need to run this file.
+The file is on the same path as the standalone app.
+
+thx, 
+Mike.",1
+5790000,04/26/2011 12:02:36,721113,04/22/2011 20:53:24,1,0,"Problem with 64 bit MALAB R2010A on windows 7, loading library (from Opal Kelly Front Panel) that loads fine on MATLAB R2010a under win XP","Using MATLAB R2010a on 64 bit windows 7 I'm having trouble loading a library that I previously used successfully on Windows XP.
+I followed this advice:
+
+[http://www.mathworks.com/support/solutions/en/data/1-6IJJ3L/index.html?solution=1-6IJJ3L][1]
+
+... to set up Visual Studio and the SDK. 
+In MATLAB's loadlibrary.m it initially failed on line 366:
+
+    [res,ccout]=system(preprocess_command);
+
+Where the preprocess_command was:
+
+    ""%VS90COMNTOOLS%..\..\VC\vcvarsall.bat"" amd64>nul&cl -nologo  -I""C:\Program Files\MATLAB\R2010a\extern\include"" -E ""C:\Program Files\Opal Kelly\FrontPanelUSB\API\Matlab\okFrontPanelDLL.h"" > ""okFrontPanelDLL.i""
+
+... because it couldn't find cl (the c compiler). I got around this by adding its location:
+
+C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\amd64
+
+... to the windows path. Thereafter it failed on line 384:
+
+    [parsemsg, status] = perl(prototypes, preprocfile, ['-outfile=' mfile_name],['-thunkfile=' thunkfilecname], perlopt{:});
+
+With the following messages:
+
+    Warning: Warnings messages were produced while parsing.  Check the functions you intend to use for correctness.  Warning text can be viewed using: [notfound,warnings]=loadlibrary(...) 
+    > In loadlibrary at 399
+      In ...
+    Error loading library intermediate output follows.
+    The actual error is at the end of this output.
+    *********
+    
+    Type 'okDLLEXPORTvoidDLL_ENTRY' was not found.  Defaulting to type error.
+    Found on line 123 of input from line 122 of file C:\\Program Files\\Opal Kelly\\FrontPanelUSB\\API\\Matlab\\okFrontPanelDLL.h
+
+... and so on, with one such error for each definition in the header file. The line of the header file to which the above error refers reads:
+
+    okDLLEXPORT void DLL_ENTRY okFrontPanelDLL_GetVersion(char *date, char *time);
+
+... so without really understanding what it's doing, it looks to me like it's failing to understand the syntax and treating ""okDLLEXPORT void DLL_ENTRY"" without spaces, as a type definition.
+
+I should note that prior to this point, the preprocessing line created a file called:
+
+okFrontPanelDLL.i
+
+... in a temporary directory, and this is the input to the above perl script. Inside that file, the line on which it's failing appears to be unchanged.
+
+Any help would be greatly appreciated.
+Thanks
+Sim
+
+
+  [1]: http://www.mathworks.com/support/solutions/en/data/1-6IJJ3L/index.html?solution=1-6IJJ3L",matlab,windows-7,,,,08/21/2011 16:56:37,too localized,1,329,25,"Problem with 64 bit MALAB R2010A on windows 7, loading library (from Opal Kelly Front Panel) that loads fine on MATLAB R2010a under win XP Using MATLAB R2010a on 64 bit windows 7 I'm having trouble loading a library that I previously used successfully on Windows XP.
+I followed this advice:
+
+[http://www.mathworks.com/support/solutions/en/data/1-6IJJ3L/index.html?solution=1-6IJJ3L][1]
+
+... to set up Visual Studio and the SDK. 
+In MATLAB's loadlibrary.m it initially failed on line 366:
+
+    [res,ccout]=system(preprocess_command);
+
+Where the preprocess_command was:
+
+    ""%VS90COMNTOOLS%..\..\VC\vcvarsall.bat"" amd64>nul&cl -nologo  -I""C:\Program Files\MATLAB\R2010a\extern\include"" -E ""C:\Program Files\Opal Kelly\FrontPanelUSB\API\Matlab\okFrontPanelDLL.h"" > ""okFrontPanelDLL.i""
+
+... because it couldn't find cl (the c compiler). I got around this by adding its location:
+
+C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\amd64
+
+... to the windows path. Thereafter it failed on line 384:
+
+    [parsemsg, status] = perl(prototypes, preprocfile, ['-outfile=' mfile_name],['-thunkfile=' thunkfilecname], perlopt{:});
+
+With the following messages:
+
+    Warning: Warnings messages were produced while parsing.  Check the functions you intend to use for correctness.  Warning text can be viewed using: [notfound,warnings]=loadlibrary(...) 
+    > In loadlibrary at 399
+      In ...
+    Error loading library intermediate output follows.
+    The actual error is at the end of this output.
+    *********
+    
+    Type 'okDLLEXPORTvoidDLL_ENTRY' was not found.  Defaulting to type error.
+    Found on line 123 of input from line 122 of file C:\\Program Files\\Opal Kelly\\FrontPanelUSB\\API\\Matlab\\okFrontPanelDLL.h
+
+... and so on, with one such error for each definition in the header file. The line of the header file to which the above error refers reads:
+
+    okDLLEXPORT void DLL_ENTRY okFrontPanelDLL_GetVersion(char *date, char *time);
+
+... so without really understanding what it's doing, it looks to me like it's failing to understand the syntax and treating ""okDLLEXPORT void DLL_ENTRY"" without spaces, as a type definition.
+
+I should note that prior to this point, the preprocessing line created a file called:
+
+okFrontPanelDLL.i
+
+... in a temporary directory, and this is the input to the above perl script. Inside that file, the line on which it's failing appears to be unchanged.
+
+Any help would be greatly appreciated.
+Thanks
+Sim
+
+
+  [1]: http://www.mathworks.com/support/solutions/en/data/1-6IJJ3L/index.html?solution=1-6IJJ3L",2
+9151273,02/05/2012 17:24:36,809460,06/22/2011 00:17:56,417,19,Pearson correlation between variables,"Given **n** random variables **x1,...,xn** (one-dimensional). 
+The following is known (corr() = Pearson correlation):
+
+    corr(x1,x2) = a
+    corr(x2,x3) = a
+
+The actual values of the random variables are unkown though. Only some of their correlations are known.
+
+From this, is it possible to calculate
+
+    corr(x3,x1) = ?
+
+
+Or more generally, if the set of correlations `corr(x_i, x_i+1)` with `i=[1..c], c<(n-1)` are known, is it possible to estimate or directly calculate `corr(x_1, x_c+1)`?
+",matlab,math,statistics,probability,,02/07/2012 09:45:40,off topic,1,78,4,"Pearson correlation between variables Given **n** random variables **x1,...,xn** (one-dimensional). 
+The following is known (corr() = Pearson correlation):
+
+    corr(x1,x2) = a
+    corr(x2,x3) = a
+
+The actual values of the random variables are unkown though. Only some of their correlations are known.
+
+From this, is it possible to calculate
+
+    corr(x3,x1) = ?
+
+
+Or more generally, if the set of correlations `corr(x_i, x_i+1)` with `i=[1..c], c<(n-1)` are known, is it possible to estimate or directly calculate `corr(x_1, x_c+1)`?
+",4
+11074100,06/17/2012 19:16:32,643469,03/03/2011 18:19:27,14,0,Why does the for loop only read the last element of the matrix - Matlab,"Hi I have the following code
+      
+
+     for j = 1:2,
+    
+    for i = 1:24,
+  
+     for K = 1:3,
+ 
+          for M = 1:3,
+               PV_output(:,:,K) = real(PV_power_output(:,:,K));
+               WT_output(:,:,M) =  WT_power_output(:,:,M);
+              PVenergy = sum(sum(PV_output(:,:,1)));
+              WTenergy = sum(sum(WT_power_output(:,:,1)));
+               f = [((CRF*CC_PV)/PVenergy)+OM_PV; ((CRF*CC_WT)/WTenergy)+OM_WT];
+               A = [-PV_output(j,i,K) -WT_output(j,i,M)];
+               b = -Demand(j,i);
+               lb = zeros(2,1);
+               ub = [max_PV_area/PV_area max_WT_area/WT_area]';
+           end
+       end
+    end
+    end
+
+PV_output, WT_output are 365 x 24 matrices with three different sets of matrices that I am trying to examine individually..Demand is a 365 x 24 matrices.
+
+When I run linprog it seems that it is only reading the last element of the above matrices and also when I check the size of A and b I get a 1x2 and 1x1 whereas I should be getting a 365x24x3 and 365x24
+
+Any help?!",matlab,for-loop,linear,,,,open,0,305,15,"Why does the for loop only read the last element of the matrix - Matlab Hi I have the following code
+      
+
+     for j = 1:2,
+    
+    for i = 1:24,
+  
+     for K = 1:3,
+ 
+          for M = 1:3,
+               PV_output(:,:,K) = real(PV_power_output(:,:,K));
+               WT_output(:,:,M) =  WT_power_output(:,:,M);
+              PVenergy = sum(sum(PV_output(:,:,1)));
+              WTenergy = sum(sum(WT_power_output(:,:,1)));
+               f = [((CRF*CC_PV)/PVenergy)+OM_PV; ((CRF*CC_WT)/WTenergy)+OM_WT];
+               A = [-PV_output(j,i,K) -WT_output(j,i,M)];
+               b = -Demand(j,i);
+               lb = zeros(2,1);
+               ub = [max_PV_area/PV_area max_WT_area/WT_area]';
+           end
+       end
+    end
+    end
+
+PV_output, WT_output are 365 x 24 matrices with three different sets of matrices that I am trying to examine individually..Demand is a 365 x 24 matrices.
+
+When I run linprog it seems that it is only reading the last element of the above matrices and also when I check the size of A and b I get a 1x2 and 1x1 whereas I should be getting a 365x24x3 and 365x24
+
+Any help?!",3
+8408438,12/06/2011 23:33:22,949275,09/16/2011 16:48:20,418,12,matlab code formatter,"Are there any existing free matlab formatters? I know that matlab auto indents code, but I have a mess of code that I've been typing up in a text doc and for some reason my code always become messy even while using matlab.
+
+I can find plenty of C, php, etc formatters out there, why are there none for matlab?",matlab,,,,,12/08/2011 01:14:56,not constructive,1,59,3,"matlab code formatter Are there any existing free matlab formatters? I know that matlab auto indents code, but I have a mess of code that I've been typing up in a text doc and for some reason my code always become messy even while using matlab.
+
+I can find plenty of C, php, etc formatters out there, why are there none for matlab?",1
+5515526,04/01/2011 15:32:23,687844,04/01/2011 15:32:23,1,0,How do you draw a line between points in matlab?,"I'm looking to create a ""web"" between a set of points where the data tells whether there is a link between any two points.
+
+The way I thought of would be by plotting every couple points, and overlaying each couple on top of eachother.
+
+However, if there is a way to just simple draw a line between two points that would be much easier.
+
+Any help would be appreciated!",matlab,graph,matplotlib,plot,,,open,0,66,10,"How do you draw a line between points in matlab? I'm looking to create a ""web"" between a set of points where the data tells whether there is a link between any two points.
+
+The way I thought of would be by plotting every couple points, and overlaying each couple on top of eachother.
+
+However, if there is a way to just simple draw a line between two points that would be much easier.
+
+Any help would be appreciated!",4
+11203774,06/26/2012 08:50:08,1479461,06/25/2012 08:59:12,1,0,How could I eliminate the meter names with an 'x' after them?,"Hi I imported some Excel data into MatLab - it is a list of about 200 meter names with about 28 rows each, but the problem is that for each there is a duplicate for the other direction - with the same meter name with an 'x' after it.
+
+Does anyone have any ideas as to how I can eliminate these ones with an 'x' after wards?  Attached is the part of my code that imports the data, but unfortunately I have not got enough points on this site yet to be allowed to upload data/photos x
+
+    clear all 
+
+
+fid=fopen('sue1.csv'); % Open the file sue1.csv and read it all and put it into an array
+data = textscan(fid,'%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s','Delimiter',',','CollectOutput',1);
+fclose(fid)
+
+j = 1; k = 1; % j - turbine number, k - date number
+
+for i = 1:length(data{1,1}) % Run through all the data
+    if strcmp(data{1,1}(i),'') == 0
+        
+        meterold{j}(k,:) = data{1,1}(i,:);
+%         if strcmp(data{1,1}(i),'MeterName') == 0
+%             nummeter{j}(k,:) = str2num(data{1,1}(i,3:end));
+%         end
+        k = k + 1; 
+        
+    else
+        % These commands are followed in the strings match (empty line)
+        k = 1; % Reset the day counter as we're back to the beginning
+        j = j + 1; % Add one to the meter counter as we're now looking at
+        % a new turbine
+    end
+end
+",matlab,,,,,,open,0,356,12,"How could I eliminate the meter names with an 'x' after them? Hi I imported some Excel data into MatLab - it is a list of about 200 meter names with about 28 rows each, but the problem is that for each there is a duplicate for the other direction - with the same meter name with an 'x' after it.
+
+Does anyone have any ideas as to how I can eliminate these ones with an 'x' after wards?  Attached is the part of my code that imports the data, but unfortunately I have not got enough points on this site yet to be allowed to upload data/photos x
+
+    clear all 
+
+
+fid=fopen('sue1.csv'); % Open the file sue1.csv and read it all and put it into an array
+data = textscan(fid,'%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s','Delimiter',',','CollectOutput',1);
+fclose(fid)
+
+j = 1; k = 1; % j - turbine number, k - date number
+
+for i = 1:length(data{1,1}) % Run through all the data
+    if strcmp(data{1,1}(i),'') == 0
+        
+        meterold{j}(k,:) = data{1,1}(i,:);
+%         if strcmp(data{1,1}(i),'MeterName') == 0
+%             nummeter{j}(k,:) = str2num(data{1,1}(i,3:end));
+%         end
+        k = k + 1; 
+        
+    else
+        % These commands are followed in the strings match (empty line)
+        k = 1; % Reset the day counter as we're back to the beginning
+        j = j + 1; % Add one to the meter counter as we're now looking at
+        % a new turbine
+    end
+end
+",1
+11329978,07/04/2012 13:22:48,1437316,06/05/2012 12:06:28,9,0,"MATLAB, How to filter a discrete signal?","*Signal processing isn't my field of study but I need to use it. I got no idea how to filter a discrete time-domain signal?*
+
+I have a data(fecg`.mat`) that is a `<1x10000 double> matrix` representing the magnitude of a recorded FECG signal.
+
+I ploted it against time(0 to 9999):
+[Image][1]
+
+
+For removing baseline wander I can use a `high-pass filter`.
+
+How can I design a proper filter?
+
+
+  [1]: http://i.stack.imgur.com/5f5Wn.jpg",matlab,filter,signal-processing,,,07/04/2012 15:27:05,off topic,1,65,7,"MATLAB, How to filter a discrete signal? *Signal processing isn't my field of study but I need to use it. I got no idea how to filter a discrete time-domain signal?*
+
+I have a data(fecg`.mat`) that is a `<1x10000 double> matrix` representing the magnitude of a recorded FECG signal.
+
+I ploted it against time(0 to 9999):
+[Image][1]
+
+
+For removing baseline wander I can use a `high-pass filter`.
+
+How can I design a proper filter?
+
+
+  [1]: http://i.stack.imgur.com/5f5Wn.jpg",3
+9683646,03/13/2012 12:03:25,156458,08/14/2009 12:31:05,3455,2,When to use array and when to use cell array in Matlab?,"In Matlab, I was trying to put anonymous functions in an array:
+
+    >> a=[@(k)0.1/(k+1)    @(k)0.1/(k+1)^0.501]
+    ??? Error using ==> horzcat
+    Nonscalar arrays of function handles are not allowed; use cell arrays
+    instead.
+
+So I wonder what kinds of elements are allowed in an array, and in a cell array?
+
+For example, I know that in an array, the elements can be numerical or strings. What else?
+
+Thanks and regards!",matlab,,,,,,open,0,81,12,"When to use array and when to use cell array in Matlab? In Matlab, I was trying to put anonymous functions in an array:
+
+    >> a=[@(k)0.1/(k+1)    @(k)0.1/(k+1)^0.501]
+    ??? Error using ==> horzcat
+    Nonscalar arrays of function handles are not allowed; use cell arrays
+    instead.
+
+So I wonder what kinds of elements are allowed in an array, and in a cell array?
+
+For example, I know that in an array, the elements can be numerical or strings. What else?
+
+Thanks and regards!",1
+11512612,07/16/2012 21:09:30,238469,12/25/2009 03:50:24,1339,21,How to change constants in line 13 from this text file in Matlab?,"I can read line by line the following text file, however, how can I change `150` value to some other value shown in line 13 of the following text file:
+
+                      Parameters for GAM
+                      ******************
+    
+    START OF PARAMETERS:
+    GAM_inputfile_3D_gslib_format.dat   -file with data
+    1   1              		    -   number of variables, column numbers
+    -1.0e21     1.0e21                  -   trimming limits
+    gamSpatiotemporal_gslib.out         -file for variogram output
+    1                     		    -grid or realization number
+    100   1.0   1.0        		    -nx, xmn, xsiz
+    100   1.0   1.0        		    -ny, ymn, ysiz
+     20   1.0   1.0        		    -nz, zmn, zsiz
+    4  150                 		    -number of directions, number of lags
+    1  5  5              		    -ixd(1),iyd(1),izd(1)
+    2  5  5              		    -ixd(2),iyd(2),izd(2)
+    3  5  5              		    -ixd(3),iyd(3),izd(3)
+    4  5  5              		    -ixd(4),iyd(4),izd(4)
+    1                     		    -standardize sill? (0=no, 1=yes)
+    1                     		    -number of variograms
+    1   1   1             		    -tail variable, head variable, variogram type
+    
+    
+    type 1 = traditional semivariogram
+         2 = traditional cross semivariogram
+         3 = covariance
+         4 = correlogram
+         5 = general relative semivariogram
+         6 = pairwise relative semivariogram
+         7 = semivariogram of logarithms
+         8 = semimadogram
+         9 = indicator semivariogram - continuous
+         10= indicator semivariogram - categorical
+
+",matlab,text-files,,,,07/21/2012 23:37:17,not a real question,1,638,13,"How to change constants in line 13 from this text file in Matlab? I can read line by line the following text file, however, how can I change `150` value to some other value shown in line 13 of the following text file:
+
+                      Parameters for GAM
+                      ******************
+    
+    START OF PARAMETERS:
+    GAM_inputfile_3D_gslib_format.dat   -file with data
+    1   1              		    -   number of variables, column numbers
+    -1.0e21     1.0e21                  -   trimming limits
+    gamSpatiotemporal_gslib.out         -file for variogram output
+    1                     		    -grid or realization number
+    100   1.0   1.0        		    -nx, xmn, xsiz
+    100   1.0   1.0        		    -ny, ymn, ysiz
+     20   1.0   1.0        		    -nz, zmn, zsiz
+    4  150                 		    -number of directions, number of lags
+    1  5  5              		    -ixd(1),iyd(1),izd(1)
+    2  5  5              		    -ixd(2),iyd(2),izd(2)
+    3  5  5              		    -ixd(3),iyd(3),izd(3)
+    4  5  5              		    -ixd(4),iyd(4),izd(4)
+    1                     		    -standardize sill? (0=no, 1=yes)
+    1                     		    -number of variograms
+    1   1   1             		    -tail variable, head variable, variogram type
+    
+    
+    type 1 = traditional semivariogram
+         2 = traditional cross semivariogram
+         3 = covariance
+         4 = correlogram
+         5 = general relative semivariogram
+         6 = pairwise relative semivariogram
+         7 = semivariogram of logarithms
+         8 = semimadogram
+         9 = indicator semivariogram - continuous
+         10= indicator semivariogram - categorical
+
+",2
+4638077,01/09/2011 07:02:52,552231,12/23/2010 09:49:59,1,0,display text on screen - matalb,"I am planning a simple experiment in matlab. I need to print a colored text on the screen, inverted. I found the function    
+
+ text(0.6,0.5,'red','rotation',180,'fontsize',50,'color','k')     
+  
+But I want to get rid of the axis (x and y), I want just the text to be presented in the center of the screen..   
+any ideas would be appriciated.   
+ariel
+",matlab,graphics,text,,,,open,0,70,6,"display text on screen - matalb I am planning a simple experiment in matlab. I need to print a colored text on the screen, inverted. I found the function    
+
+ text(0.6,0.5,'red','rotation',180,'fontsize',50,'color','k')     
+  
+But I want to get rid of the axis (x and y), I want just the text to be presented in the center of the screen..   
+any ideas would be appriciated.   
+ariel
+",3
+10278731,04/23/2012 10:21:35,1351047,04/23/2012 10:14:40,1,0,Advice in Understanding this Key generating Algorith for Blowfish Algorithm,"The code is for MATLAB and i want to understand what exactly they are trying to do. I m new to matlab so need some advice. Please Help
+
+    function [key] = keyGen(n)
+    n = n*8;
+    % n = 2048*2048*16;
+    % n = 24 * 24 * 8;
+    bin_x = zeros(n,1,'uint8');
+    r = 3.9999998;
+    bin_x_N_Minus_1 =  0.300001;
+    x_N = 0;
+    tic
+
+    for ind = 2 : n
+         x_N = 1 - 2* bin_x_N_Minus_1 * bin_x_N_Minus_1;    
+          if (x_N > 0.0)
+             bin_x(ind-1) = 1;
+          end 
+            bin_x_N_Minus_1 =  x_N;
+     
+          end
+    toc
+    %save bin_sec bin_x;
+    t = uint8(0);
+    key = zeros(n/8,1,'uint8');
+    for ind1 = 1 : n/8
+    
+        for ind2 = 1 : 8
+        key(ind1) = key(ind1) + bin_x(ind2*ind1)* 2 ^ (ind2-1);
+        end
+      
+    end
+",matlab,encryption,blowfish,,,,open,0,267,10,"Advice in Understanding this Key generating Algorith for Blowfish Algorithm The code is for MATLAB and i want to understand what exactly they are trying to do. I m new to matlab so need some advice. Please Help
+
+    function [key] = keyGen(n)
+    n = n*8;
+    % n = 2048*2048*16;
+    % n = 24 * 24 * 8;
+    bin_x = zeros(n,1,'uint8');
+    r = 3.9999998;
+    bin_x_N_Minus_1 =  0.300001;
+    x_N = 0;
+    tic
+
+    for ind = 2 : n
+         x_N = 1 - 2* bin_x_N_Minus_1 * bin_x_N_Minus_1;    
+          if (x_N > 0.0)
+             bin_x(ind-1) = 1;
+          end 
+            bin_x_N_Minus_1 =  x_N;
+     
+          end
+    toc
+    %save bin_sec bin_x;
+    t = uint8(0);
+    key = zeros(n/8,1,'uint8');
+    for ind1 = 1 : n/8
+    
+        for ind2 = 1 : 8
+        key(ind1) = key(ind1) + bin_x(ind2*ind1)* 2 ^ (ind2-1);
+        end
+      
+    end
+",3
+9873225,03/26/2012 13:40:58,1093795,12/12/2011 13:24:45,76,0,Matlab: multiple Assigment for vectors without Loop,"is there any possibility to assign multiple values for a matrix from an another vector without a loop?
+
+For example:
+
+I have a matrix filled with zeros:
+
+    matrix=zeros(2);
+    matrix =
+
+     0     0      
+     0     0      
+ 
+Now i have an another vector where the first two columns are the positions and the third column are the values wich belongs to the corresponding positions.
+    
+     values=[2 1 4;1 2 2]
+     values =
+
+            Posx PosY   Value
+            2     1     4
+            1     2     2
+
+The result should look like:
+
+    matrix = 
+                 0     2  <-- matrix(values(2,1),values(2,2))=values(2,3) ;     
+                 4     0  <-- matrix(values(1,1),values(1,2))=values(1,3);",matlab,vector,values,,,,open,0,238,7,"Matlab: multiple Assigment for vectors without Loop is there any possibility to assign multiple values for a matrix from an another vector without a loop?
+
+For example:
+
+I have a matrix filled with zeros:
+
+    matrix=zeros(2);
+    matrix =
+
+     0     0      
+     0     0      
+ 
+Now i have an another vector where the first two columns are the positions and the third column are the values wich belongs to the corresponding positions.
+    
+     values=[2 1 4;1 2 2]
+     values =
+
+            Posx PosY   Value
+            2     1     4
+            1     2     2
+
+The result should look like:
+
+    matrix = 
+                 0     2  <-- matrix(values(2,1),values(2,2))=values(2,3) ;     
+                 4     0  <-- matrix(values(1,1),values(1,2))=values(1,3);",3
+5845233,04/30/2011 23:11:19,732837,04/30/2011 23:11:19,1,0,problem related to matlab,"Can we convert the  java matlab code obtained from matlab form(.m)  using Java Matlab Compiler back into Java codes?
+",matlab,,,,,05/01/2011 11:33:09,not a real question,1,21,4,"problem related to matlab Can we convert the  java matlab code obtained from matlab form(.m)  using Java Matlab Compiler back into Java codes?
+",1
+6013139,05/16/2011 04:21:13,755087,05/16/2011 04:21:13,1,0,MATLAB: Algorithm to convert RGB image to Lab Color Space,Pls help me for this conversion as soon as possible,matlab,,,,,05/16/2011 04:27:11,not a real question,1,10,10,MATLAB: Algorithm to convert RGB image to Lab Color Space Pls help me for this conversion as soon as possible,1
+9041753,01/28/2012 00:09:41,836113,07/08/2011 21:23:13,1,0,users svmlib 2011,"
+
+I'm working with libsvm,I must implemented the classification for multiclasses with one versus all  how can i do it? is libsvm version 2011 use this?
+thank you`",matlab,libsvm,,,,02/02/2012 03:30:15,not a real question,1,27,3,"users svmlib 2011 
+
+I'm working with libsvm,I must implemented the classification for multiclasses with one versus all  how can i do it? is libsvm version 2011 use this?
+thank you`",2
+1576876,10/16/2009 08:39:49,156458,08/14/2009 12:31:05,258,1,matlab in C C++ and  C C++ in matlab,"
+It seems that are several ways to call matlab in C C++ and to call C C++ in matlab. While I try to list them here, please point it out If I miss something.
+
+To call C C++ in matlab, there are also two methods. The first one is to call functions in C shared libraries. The second one is to build C C++ code into binary MEX-files, which will be called from the MATLAB command line. For the first method, are the C shared libraries are just general ones, i.e. without change to their C code for matlab and compiled from general C compiler like gcc?
+
+To call matlab code in C C++, there are two methods available. The first one is Matlab engine. The second one is to use MATLAB Compiler mcc to create C or C++ shared libraries from your MATLAB code.
+
+Besides matlab and C C++ can communicate via writing and reading data to and from some file (e.g. mat file, text file).
+
+Having more than one ways to accomplish each of the goals here, could you tell me what cases are best for using which of them? i.e. calling functions in C shared libraries VS building C C++ code into binary MEX-files, Matlab engine VS compiling Matlab code into C C++ shared library.
+
+Thanks and regards! ",matlab,c,c++,,,,open,0,217,10,"matlab in C C++ and  C C++ in matlab 
+It seems that are several ways to call matlab in C C++ and to call C C++ in matlab. While I try to list them here, please point it out If I miss something.
+
+To call C C++ in matlab, there are also two methods. The first one is to call functions in C shared libraries. The second one is to build C C++ code into binary MEX-files, which will be called from the MATLAB command line. For the first method, are the C shared libraries are just general ones, i.e. without change to their C code for matlab and compiled from general C compiler like gcc?
+
+To call matlab code in C C++, there are two methods available. The first one is Matlab engine. The second one is to use MATLAB Compiler mcc to create C or C++ shared libraries from your MATLAB code.
+
+Besides matlab and C C++ can communicate via writing and reading data to and from some file (e.g. mat file, text file).
+
+Having more than one ways to accomplish each of the goals here, could you tell me what cases are best for using which of them? i.e. calling functions in C shared libraries VS building C C++ code into binary MEX-files, Matlab engine VS compiling Matlab code into C C++ shared library.
+
+Thanks and regards! ",3
+1888886,12/11/2009 15:39:14,201130,11/02/2009 18:30:11,103,3,Solving Algebraic Equations Programatically,"I have six parametric equations using 26 different variables, 6 of which are unknown.
+
+I could sit down with a couple of pads of paper and work out what the equations for each of the unknowns are, but is there a simple programatic solution (I'm thinking in Matlab) that will spit out the six equations I'm looking for? ",matlab,algebra,,,,12/11/2009 23:27:23,off topic,1,58,4,"Solving Algebraic Equations Programatically I have six parametric equations using 26 different variables, 6 of which are unknown.
+
+I could sit down with a couple of pads of paper and work out what the equations for each of the unknowns are, but is there a simple programatic solution (I'm thinking in Matlab) that will spit out the six equations I'm looking for? ",2
+9397484,02/22/2012 15:14:44,1131800,01/05/2012 09:53:25,11,2,stop matlab line plots from overlapping,"I plot many lines on top of one another, using `plot` and `hold on`
+however i want one of the lines to be shifted a bit if it falls on another line.
+for example in the following case: 
+   
+    plot(1:100); hold on; plot(-100:100,abs(-100:100))
+i want it to be clear that there are 2 plots here
+i tried to simply increase x values for different plots but this skews the data too much
+
+    for z=1:numberofplots
+    plot((1:size(locations,2))+0.1*z,locations(z,:)','color', altclrz(z,:));
+    end
+",matlab,plot,,,,,open,0,88,6,"stop matlab line plots from overlapping I plot many lines on top of one another, using `plot` and `hold on`
+however i want one of the lines to be shifted a bit if it falls on another line.
+for example in the following case: 
+   
+    plot(1:100); hold on; plot(-100:100,abs(-100:100))
+i want it to be clear that there are 2 plots here
+i tried to simply increase x values for different plots but this skews the data too much
+
+    for z=1:numberofplots
+    plot((1:size(locations,2))+0.1*z,locations(z,:)','color', altclrz(z,:));
+    end
+",2
+7519321,09/22/2011 18:00:53,953467,09/19/2011 20:11:28,5,0,Determine if running x64 or x86 operating system in MATLAB,"How is it possible in MATLAB to determine if the OS is x64 or x86?
+
+NOTE: I have found the `computer` function but it is mentioned that in case a x32 MATLAB is running on a x64 OS then it returns x32 (instead of x64) so this function will not do.",matlab,x86,x64,,,,open,0,50,10,"Determine if running x64 or x86 operating system in MATLAB How is it possible in MATLAB to determine if the OS is x64 or x86?
+
+NOTE: I have found the `computer` function but it is mentioned that in case a x32 MATLAB is running on a x64 OS then it returns x32 (instead of x64) so this function will not do.",3
+11258007,06/29/2012 07:48:14,1135201,01/06/2012 21:17:15,23,0,Noise removal in medical segmented image,"![A segmented Medical Image][1]
+
+
+  [1]: http://i.stack.imgur.com/EW7ED.png
+
+I want to remove the noise(inside square type) from every where in the image, and keep the white lines.please any one suggest some filters.
+thanks in advance",matlab,image-processing,opencv,,,06/29/2012 11:43:10,off topic,1,32,6,"Noise removal in medical segmented image ![A segmented Medical Image][1]
+
+
+  [1]: http://i.stack.imgur.com/EW7ED.png
+
+I want to remove the noise(inside square type) from every where in the image, and keep the white lines.please any one suggest some filters.
+thanks in advance",3
+3546375,08/23/2010 09:46:10,422562,08/17/2010 07:40:49,6,0,I need a Matlab Code for 16QAM and 64QAM with 3x3 and 4x4 for Likelihood,"Heia... 
+
+I Need a Matlab code for 16QAM and 64QAM with 3x3 and 4x4 For Likelihood 
+
+
+
+thanks alot ",matlab,signal-processing,,,,08/25/2010 11:59:54,not a real question,1,19,15,"I need a Matlab Code for 16QAM and 64QAM with 3x3 and 4x4 for Likelihood Heia... 
+
+I Need a Matlab code for 16QAM and 64QAM with 3x3 and 4x4 For Likelihood 
+
+
+
+thanks alot ",2
+4984193,02/13/2011 12:45:31,227776,12/09/2009 07:49:20,18,1,Best MATLAB book for beginners,"I'm about to work for a fingerprint recognition project and i found MATLAB is best for such projects since we have to code only less compared to other programming languages for implementing this project. Can anybody recommend me any good MATLAB book (Image processing in MATLAB) for a beginner like me, i have experience with other progamming languages like C, C++, Java ... ",matlab,books,,,,12/31/2011 17:29:58,not constructive,1,64,5,"Best MATLAB book for beginners I'm about to work for a fingerprint recognition project and i found MATLAB is best for such projects since we have to code only less compared to other programming languages for implementing this project. Can anybody recommend me any good MATLAB book (Image processing in MATLAB) for a beginner like me, i have experience with other progamming languages like C, C++, Java ... ",2
+9947046,03/30/2012 16:37:51,1002272,10/19/2011 01:49:19,15,0,Can Kalman filter reduce node density in a sensor network?,"I studied that Kalman filter can suppress noise present in an indoor environment and can be used to predict the future position of a target. But i want to know whether with the help of Kalman filter, can we make the localization error minimum with less number of nodes?
+
+For example :
+
+I have a sensor network with 10 nodes initially. Without kalman filter, i get some localization error (say 5) from the estimated position and original position of target.
+
+Then i increase the node density to 20 and get the localization error again.. this time its (say 2)
+
+Now i want to know if i use kalman filter, is it possible to get localization error (3 or 4) which is nearer to sensor network with 20 nodes?
+
+please help me on this.
+
+regards,
+Rias
+
+",matlab,filter,sensor,kalman,,,open,0,128,10,"Can Kalman filter reduce node density in a sensor network? I studied that Kalman filter can suppress noise present in an indoor environment and can be used to predict the future position of a target. But i want to know whether with the help of Kalman filter, can we make the localization error minimum with less number of nodes?
+
+For example :
+
+I have a sensor network with 10 nodes initially. Without kalman filter, i get some localization error (say 5) from the estimated position and original position of target.
+
+Then i increase the node density to 20 and get the localization error again.. this time its (say 2)
+
+Now i want to know if i use kalman filter, is it possible to get localization error (3 or 4) which is nearer to sensor network with 20 nodes?
+
+please help me on this.
+
+regards,
+Rias
+
+",4
+9937316,03/30/2012 05:13:03,855528,07/21/2011 08:46:53,5,0,document image binarization,"I'm trying to find effective binarization techniques for document images.I've currently implemented niblack and sauvola thresholding algorithms and tried binarization based on histogram evaluation as well. Could someone please suggest other binarization methods that have proved to be effective??
+here's a sample degraded image I've been working with
+
+ http://spie.org/Images/Graphics/Newsroom/Imported/0681/0681_fig1.jpg
+
+Any suggestions will be much appreciated.",matlab,image-processing,threshold,,,03/31/2012 23:43:06,not a real question,1,53,3,"document image binarization I'm trying to find effective binarization techniques for document images.I've currently implemented niblack and sauvola thresholding algorithms and tried binarization based on histogram evaluation as well. Could someone please suggest other binarization methods that have proved to be effective??
+here's a sample degraded image I've been working with
+
+ http://spie.org/Images/Graphics/Newsroom/Imported/0681/0681_fig1.jpg
+
+Any suggestions will be much appreciated.",3
+8015197,11/04/2011 20:12:37,1030373,11/04/2011 20:04:45,1,0,K means clustering and Matlab,"I need to use the `kmeans` function on a rgb image. Each element of the algorithm need to have 3 dimensions, one for each channel of the image. The number of elements will be the total amount of pixels of the image. I need to use `kmeans` on the cluster #5.
+
+So this is what I tried:
+
+    img = imread('mypic.jpg');
+    red = img(:,:,1);
+    green = img(:,:,2);
+    blue = img(:,:,3);
+    
+    kmeans(red,5)
+
+<br>
+I dont know if I'm doing it correctly or not. I'm having this error:
+<br><br>
+    
+    ??? Error using ==> plus
+    Integers can only be combined with integers of the same class, or scalar doubles.
+    
+    Error in ==> kmeans>distfun at 704
+                D(:,i) = D(:,i) + (X(:,j) - C(i,j)).^2;
+    
+    Error in ==> kmeans at 313
+        D = distfun(X, C, distance, 0);
+    
+    Error in ==> mysegmentation at 9
+    kmeans(R,2)
+
+Can anyone give me a hand? Thanks",matlab,segmentation,image-segmentation,,,,open,0,214,5,"K means clustering and Matlab I need to use the `kmeans` function on a rgb image. Each element of the algorithm need to have 3 dimensions, one for each channel of the image. The number of elements will be the total amount of pixels of the image. I need to use `kmeans` on the cluster #5.
+
+So this is what I tried:
+
+    img = imread('mypic.jpg');
+    red = img(:,:,1);
+    green = img(:,:,2);
+    blue = img(:,:,3);
+    
+    kmeans(red,5)
+
+<br>
+I dont know if I'm doing it correctly or not. I'm having this error:
+<br><br>
+    
+    ??? Error using ==> plus
+    Integers can only be combined with integers of the same class, or scalar doubles.
+    
+    Error in ==> kmeans>distfun at 704
+                D(:,i) = D(:,i) + (X(:,j) - C(i,j)).^2;
+    
+    Error in ==> kmeans at 313
+        D = distfun(X, C, distance, 0);
+    
+    Error in ==> mysegmentation at 9
+    kmeans(R,2)
+
+Can anyone give me a hand? Thanks",3
+11124592,06/20/2012 17:05:42,1469970,06/20/2012 17:01:15,1,0,i wanna a dataset of matlap about thinking by human brain about some words?,"i need this dataset as soon as possible , or any one can help me by some links about datasets of EEG about thinking",matlab,matlab-toolbox,matlab-deployment,,,06/20/2012 19:21:12,not a real question,1,24,14,"i wanna a dataset of matlap about thinking by human brain about some words? i need this dataset as soon as possible , or any one can help me by some links about datasets of EEG about thinking",3
+6570399,07/04/2011 10:44:50,616493,02/14/2011 16:26:00,70,9,my_sim function in matlab,"Hi I have a variable vec :
+
+   vec = double(im2col(im, [30 20], 'distinct'));
+
+and I want to a my_sim function with this prototype 
+   
+   rslt = my_sim(net, vec);
+
+please help me about this function and write it for me ?
+
+Thank you",matlab,sim-card,,,,07/04/2011 19:31:49,not a real question,1,46,4,"my_sim function in matlab Hi I have a variable vec :
+
+   vec = double(im2col(im, [30 20], 'distinct'));
+
+and I want to a my_sim function with this prototype 
+   
+   rslt = my_sim(net, vec);
+
+please help me about this function and write it for me ?
+
+Thank you",2
+5090694,02/23/2011 12:09:22,630141,02/23/2011 12:09:22,1,0,Construct matrix according to the arrangement in another matrix,"I have a matrix 'eff_tot' with dimension (m x n) which I want to rearrange according to a matrix called 'matches' (e.g. `[n2 n3, n4 n5]`) and put all the collumns not specified in 'matches' at the end.
+
+That is, I want to have `[eff_tot(:,n2) eff_tot(:,n3) ; eff_tot(:,n4) eff_tot(:,n5) ; eff_tot(:,n1)]`.
+
+That's all folks!",matlab,matrix,,,,,open,0,52,9,"Construct matrix according to the arrangement in another matrix I have a matrix 'eff_tot' with dimension (m x n) which I want to rearrange according to a matrix called 'matches' (e.g. `[n2 n3, n4 n5]`) and put all the collumns not specified in 'matches' at the end.
+
+That is, I want to have `[eff_tot(:,n2) eff_tot(:,n3) ; eff_tot(:,n4) eff_tot(:,n5) ; eff_tot(:,n1)]`.
+
+That's all folks!",2
+3862530,10/05/2010 09:51:33,435584,08/14/2010 10:45:14,29,2,how to find the corresponding point in other row of an array in matlab?,"i have an array lets say
+
+x =
+
+     1     2     2
+     5     8     7
+
+now i want to get the corresponding values of a number in 2nd row.
+like i have
+ number =2
+
+and i want 
+
+ans= 8 and 7
+
+as 8 and 7 are the corresponding points for 2.",matlab,,,,,,open,0,69,14,"how to find the corresponding point in other row of an array in matlab? i have an array lets say
+
+x =
+
+     1     2     2
+     5     8     7
+
+now i want to get the corresponding values of a number in 2nd row.
+like i have
+ number =2
+
+and i want 
+
+ans= 8 and 7
+
+as 8 and 7 are the corresponding points for 2.",1
+11291377,07/02/2012 09:55:45,1481374,06/26/2012 00:34:37,6,0,define a variable of matrix matlab,"I have two matrices: matrix a (6*6 main matrix) and matrix b (14*2 contains the relations between the elements in matrix a):
+a = [  0 1 0 0 1 1  1 0 1 1 0 0  0 1 0 1 0 0  0 1 1 0 0 1  1 0 0 0 0 0  1 0 0 1 0 0 ]  b= [  1 2  1 5  1 6  2 1  2 3  2 4  3 2  3 4  4 2  4 3  4 6  5 1  6 1  6 4 ] 
+
+I need to define a variable x such that:
+if there is a relation (1 in matrix a means that there is a relation and 0 means no relation) between the elemenet so x will be x=1 else x=0
+example: the element (2,3) in matrix a=1 then x=1.
+         the element (3,5) in matrix a=0 then x=0.
+ ",matlab,,,,,07/03/2012 11:52:14,not a real question,1,176,6,"define a variable of matrix matlab I have two matrices: matrix a (6*6 main matrix) and matrix b (14*2 contains the relations between the elements in matrix a):
+a = [  0 1 0 0 1 1  1 0 1 1 0 0  0 1 0 1 0 0  0 1 1 0 0 1  1 0 0 0 0 0  1 0 0 1 0 0 ]  b= [  1 2  1 5  1 6  2 1  2 3  2 4  3 2  3 4  4 2  4 3  4 6  5 1  6 1  6 4 ] 
+
+I need to define a variable x such that:
+if there is a relation (1 in matrix a means that there is a relation and 0 means no relation) between the elemenet so x will be x=1 else x=0
+example: the element (2,3) in matrix a=1 then x=1.
+         the element (3,5) in matrix a=0 then x=0.
+ ",1
+11594745,07/21/2012 18:19:13,1541990,07/21/2012 00:06:36,1,0,Matlab Plot with Customize color,"does anyone know what's the command or way to plot with different colors besides the preset color, i.e., b,g,r,c,m,y,k? I would prefer to use my own customize colors instead of these....
+
+Cheers",matlab,,,,,,open,0,31,5,"Matlab Plot with Customize color does anyone know what's the command or way to plot with different colors besides the preset color, i.e., b,g,r,c,m,y,k? I would prefer to use my own customize colors instead of these....
+
+Cheers",1
+9976007,04/02/2012 11:59:30,1307351,04/02/2012 06:25:52,1,0,"with a set of sample values N,how to find the random sample values of random variable Z having pdf P(Z = 1) = p, P(Z = 0) = 1 – p, p = 0.3,","n=1000
+x=rand(n,1)
+
+( sample values N)
+
+this is my code for generating ran dom variables to be used in for the above question.",matlab,,,,,04/03/2012 18:48:22,not a real question,1,20,34,"with a set of sample values N,how to find the random sample values of random variable Z having pdf P(Z = 1) = p, P(Z = 0) = 1 – p, p = 0.3, n=1000
+x=rand(n,1)
+
+( sample values N)
+
+this is my code for generating ran dom variables to be used in for the above question.",1
+8102737,11/12/2011 05:24:02,1009265,10/23/2011 06:16:13,1,0,How to generate samples from a distribution (simulation) in matlab?,I have a random generator function. I want to use this function to generate 100 samples for simulation and make a histogram of it. Can anybody tell me how I can do in Matlab?,matlab,,,,,11/13/2011 15:42:29,not a real question,1,34,10,How to generate samples from a distribution (simulation) in matlab? I have a random generator function. I want to use this function to generate 100 samples for simulation and make a histogram of it. Can anybody tell me how I can do in Matlab?,1
+11478520,07/13/2012 21:17:46,1018331,10/28/2011 12:44:16,56,0,charackteristics,"I want to be able to simulate a hyperbolic equation on characteristic curves(lines). I will start with a basic one. u_{t}+2u_{x}=u^{2} with initial data u(x,0)=cos(x). The solution is u(x,t)=cos(x-2t)/(1-t*cos(x-2t)) where the charackteristic curve is x=2*t+x_{0}. So the solution is defined on characteristics(method of characteristics). 
+
+    x=zeros(10,5);
+    u=zeros(10,5);
+    x0=linspace(0,10,10);
+    t=linspace(0,5,5);
+    for i=1:length(x0)
+    for j=1:length(t)
+    x(i,j)=2*t(j)+x0(i);
+    if t(i)*cos(x(i)-2*t(j))==1
+    u(i,j)=0;
+    else
+    u(i,j)=cos(x(i)-2*t(j))/(1-t(i)*cos(x(i)-2*t(j)));
+    end
+    end
+    end
+
+I'll be thankful if anyone can see my mistake.",matlab,math,pde,,,,open,0,112,1,"charackteristics I want to be able to simulate a hyperbolic equation on characteristic curves(lines). I will start with a basic one. u_{t}+2u_{x}=u^{2} with initial data u(x,0)=cos(x). The solution is u(x,t)=cos(x-2t)/(1-t*cos(x-2t)) where the charackteristic curve is x=2*t+x_{0}. So the solution is defined on characteristics(method of characteristics). 
+
+    x=zeros(10,5);
+    u=zeros(10,5);
+    x0=linspace(0,10,10);
+    t=linspace(0,5,5);
+    for i=1:length(x0)
+    for j=1:length(t)
+    x(i,j)=2*t(j)+x0(i);
+    if t(i)*cos(x(i)-2*t(j))==1
+    u(i,j)=0;
+    else
+    u(i,j)=cos(x(i)-2*t(j))/(1-t(i)*cos(x(i)-2*t(j)));
+    end
+    end
+    end
+
+I'll be thankful if anyone can see my mistake.",3
+11453165,07/12/2012 13:43:00,571138,01/11/2011 10:44:39,922,38,Matlab get string containing variable name,"In Matlab, how can i get a String containing `""GRUMPY""` given the following declaration:
+
+      GRUMPY = 500;
+
+This is usually called reflection in other programming languages, but i cannot find an example of it in Matlab.
+
+
+",matlab,,,,,,open,0,40,6,"Matlab get string containing variable name In Matlab, how can i get a String containing `""GRUMPY""` given the following declaration:
+
+      GRUMPY = 500;
+
+This is usually called reflection in other programming languages, but i cannot find an example of it in Matlab.
+
+
+",1
+10126547,04/12/2012 15:16:19,1261869,03/11/2012 04:48:44,3,0,Matlab - Poor video quality,"I was trying to capture frames from the webcam present in my laptop but the output that i get is reddish,greenish. I used the following code.
+
+
+    vid = videoinput('winvideo',1,'YUY2_320x240'); 
+    set(vid,'TriggerRepeat',Inf);
+    vid.FrameGrabInterval = 5;
+    vid_src = getselectedsource(vid);
+    set(vid_src,'Tag','motion detection setup');
+    
+    figure; 
+    
+    start(vid)
+    while(vid.FramesAcquired<=100) 
+        data = getdata(vid,1);
+        imshow(data);
+    end
+    stop(vid)",matlab,,,,,06/11/2012 23:50:44,too localized,1,103,5,"Matlab - Poor video quality I was trying to capture frames from the webcam present in my laptop but the output that i get is reddish,greenish. I used the following code.
+
+
+    vid = videoinput('winvideo',1,'YUY2_320x240'); 
+    set(vid,'TriggerRepeat',Inf);
+    vid.FrameGrabInterval = 5;
+    vid_src = getselectedsource(vid);
+    set(vid_src,'Tag','motion detection setup');
+    
+    figure; 
+    
+    start(vid)
+    while(vid.FramesAcquired<=100) 
+        data = getdata(vid,1);
+        imshow(data);
+    end
+    stop(vid)",1
+6817684,07/25/2011 14:29:49,689779,04/03/2011 12:10:12,39,8,Object recognition using MATLAB,Have you any idea about implementing 2D object recognition with MATLAB? Which characteristics of objects can feed a neural network?,matlab,image-processing,computer-vision,object-recognition,,07/25/2011 20:10:29,not a real question,1,20,4,Object recognition using MATLAB Have you any idea about implementing 2D object recognition with MATLAB? Which characteristics of objects can feed a neural network?,4
+10072709,04/09/2012 11:46:27,1243125,03/01/2012 16:03:27,16,0,Matlab hangs after running for 3 times,My matlab program works completely fine for the first 3 times and hangs the 4th time could you please suggest me a solution so that my code in matlab runs continuously.,matlab,,,,,06/24/2012 06:08:07,not a real question,1,31,7,Matlab hangs after running for 3 times My matlab program works completely fine for the first 3 times and hangs the 4th time could you please suggest me a solution so that my code in matlab runs continuously.,1
+6134101,05/26/2011 05:32:38,652079,02/25/2010 12:01:51,35,0,vector Entry lookup in matlab,"Given a vector _U_ **n x 1** which contains the entries from **0,1,2,3** , I would like to create another vector _V_ in char type such that the entry  
+    0 in _U_ will be '0' in _V_  
+    1 in _U_ will be '1' in _V_  
+    2 in _U_ will be '12' in _V_  
+    3 in _U_ will be '123' in _V_  
+
+What is the optimal way to do in matlab rather scanning each individual entry in the vector and then uses switch case?
+",matlab,,,,,,open,0,104,5,"vector Entry lookup in matlab Given a vector _U_ **n x 1** which contains the entries from **0,1,2,3** , I would like to create another vector _V_ in char type such that the entry  
+    0 in _U_ will be '0' in _V_  
+    1 in _U_ will be '1' in _V_  
+    2 in _U_ will be '12' in _V_  
+    3 in _U_ will be '123' in _V_  
+
+What is the optimal way to do in matlab rather scanning each individual entry in the vector and then uses switch case?
+",1
+9976280,04/02/2012 12:18:35,1307351,04/02/2012 06:25:52,1,0,How do i estimate the pdf of a sample of random values?,"rand(100,10>0.7;
+
+
+This is my code for generating the sample values.",matlab,,,,,04/02/2012 18:07:06,not a real question,1,9,12,"How do i estimate the pdf of a sample of random values? rand(100,10>0.7;
+
+
+This is my code for generating the sample values.",1
+5320677,03/16/2011 03:19:48,265519,02/03/2010 18:06:08,711,27,How to normalize a histogram in MATLAB,"How to normalize a histogram, so it is a probability density 
+(how is that the sum of all bins are equal to 1?). ",matlab,,,,,,open,0,24,7,"How to normalize a histogram in MATLAB How to normalize a histogram, so it is a probability density 
+(how is that the sum of all bins are equal to 1?). ",1
+10393754,05/01/2012 05:01:08,1367161,05/01/2012 04:43:37,1,0,Using fsolve for large system of coupled nonlinear equation,"Pardon me if this is a trivial question. 
+
+I want to solve a nonlinear (square) coupled system of equations, perhaps up to 101 x 101 using fsolve. 
+
+I have tried to methods of this thread to generate the input function:
+http://www.mathworks.com/matlabcentral/newsreader/view_thread/293781
+
+for i = 2:(N-1)
+        g{i} = @(x) -a*x(i) - b*x(i+1) - b*x(i-1) - c*x(i)^3;
+end
+
+g{1} = -e*x(1) - b*x(2) + f;
+g{N} = -e*x(N) - b*x(N-1);
+
+F = @(x) cellfun(@(G) G(x), g);
+
+However I get the following error:
+
+??? Error using ==> cellfun
+Non-scalar in Uniform output, at index 1, output 1.
+Set 'UniformOutput' to false.
+
+Setting 'UniformOutput' to false gives me other error messages. 
+
+I'm not clear as to what the problem is, any help is greatly appreciated.",matlab,,,,,06/09/2012 18:55:41,too localized,1,117,9,"Using fsolve for large system of coupled nonlinear equation Pardon me if this is a trivial question. 
+
+I want to solve a nonlinear (square) coupled system of equations, perhaps up to 101 x 101 using fsolve. 
+
+I have tried to methods of this thread to generate the input function:
+http://www.mathworks.com/matlabcentral/newsreader/view_thread/293781
+
+for i = 2:(N-1)
+        g{i} = @(x) -a*x(i) - b*x(i+1) - b*x(i-1) - c*x(i)^3;
+end
+
+g{1} = -e*x(1) - b*x(2) + f;
+g{N} = -e*x(N) - b*x(N-1);
+
+F = @(x) cellfun(@(G) G(x), g);
+
+However I get the following error:
+
+??? Error using ==> cellfun
+Non-scalar in Uniform output, at index 1, output 1.
+Set 'UniformOutput' to false.
+
+Setting 'UniformOutput' to false gives me other error messages. 
+
+I'm not clear as to what the problem is, any help is greatly appreciated.",1
+6957838,08/05/2011 14:22:31,880743,08/05/2011 14:22:31,1,0,how ca i read this text file to matrix with matlab?,0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  ,matlab,,,,,08/05/2011 14:47:30,not a real question,1,1157,11,how ca i read this text file to matrix with matlab? 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  ,1
+11328443,07/04/2012 11:44:22,962891,09/24/2011 18:10:11,1203,2,GUI frontend for octave on Linux,"I recently installed Octave on my Ubuntu 10.0.4 LTS box. Out of the box, this is a console only app. This makes the learning curve a bit steeper than what I would like it to be, and I am looking for a GUI frontend that looks more like Matlab.
+
+I have seen a few project (QtOctave etc), but most of them seem either discontinued, no longer under active development, or are no longer free.
+
+Can anyone recommend a good open source/free GUI for Octave on Linux? Preferably, one that is as close as possible to Matlab's GUI.",matlab,gui,octave,,,07/04/2012 19:51:24,off topic,1,95,6,"GUI frontend for octave on Linux I recently installed Octave on my Ubuntu 10.0.4 LTS box. Out of the box, this is a console only app. This makes the learning curve a bit steeper than what I would like it to be, and I am looking for a GUI frontend that looks more like Matlab.
+
+I have seen a few project (QtOctave etc), but most of them seem either discontinued, no longer under active development, or are no longer free.
+
+Can anyone recommend a good open source/free GUI for Octave on Linux? Preferably, one that is as close as possible to Matlab's GUI.",3
+10698810,05/22/2012 08:57:57,1409720,05/22/2012 08:36:35,1,0,Matlab plot fails when too many values are the same,"I use Matlabs plot function to create a comparison of two matrices (each 1300x1 double). The values are plotted in hundreds, because every hundred needs its own color and marker type.
+It looks like this:
+
+    Start=1
+    for i=1:1:13
+        plot(ArrayA(Start:Start+99,1),ArrayB(Start:Start+99,1));
+        Start=Start+100;
+    end
+
+I left out the parameters for marker and color for readibility.
+
+It usually works fine, but sometimes, there is a special case where ALL the values in the matrices are equal to a certain scalar value (or at least some 1000 or so are and the rest 300 are equal to some other scalar). In these cases, we can be sure that values in ArrayA are equal to values in ArrayB element-by-element.
+
+When this happens, whole matlab fails and gives me ""Matlab System Error"". If you need details of this error, I am happy to provide it.
+
+I am pretty sure this is linked to the points being equal and hence failing to plot correctly, as in other cases, it works just fine.
+
+I would like to ask you for a suggestion for a workaround, as the solutions does not need to be very neat (as this happens very rarely).
+
+Thank you a lot!",matlab,plot,,,,,open,0,211,10,"Matlab plot fails when too many values are the same I use Matlabs plot function to create a comparison of two matrices (each 1300x1 double). The values are plotted in hundreds, because every hundred needs its own color and marker type.
+It looks like this:
+
+    Start=1
+    for i=1:1:13
+        plot(ArrayA(Start:Start+99,1),ArrayB(Start:Start+99,1));
+        Start=Start+100;
+    end
+
+I left out the parameters for marker and color for readibility.
+
+It usually works fine, but sometimes, there is a special case where ALL the values in the matrices are equal to a certain scalar value (or at least some 1000 or so are and the rest 300 are equal to some other scalar). In these cases, we can be sure that values in ArrayA are equal to values in ArrayB element-by-element.
+
+When this happens, whole matlab fails and gives me ""Matlab System Error"". If you need details of this error, I am happy to provide it.
+
+I am pretty sure this is linked to the points being equal and hence failing to plot correctly, as in other cases, it works just fine.
+
+I would like to ask you for a suggestion for a workaround, as the solutions does not need to be very neat (as this happens very rarely).
+
+Thank you a lot!",2
+9600276,03/07/2012 11:04:45,407141,07/30/2010 21:28:02,51,0,"Which better in production , MATLAB or OpenCV?","I am interested in working in the field of computer vision ,
+
+What is more easier , faster in operation and more productive MATLAB or OpenCV ?",matlab,opencv,,,,03/07/2012 11:13:40,not constructive,1,26,8,"Which better in production , MATLAB or OpenCV? I am interested in working in the field of computer vision ,
+
+What is more easier , faster in operation and more productive MATLAB or OpenCV ?",2
+10506393,05/08/2012 20:57:51,1383057,05/08/2012 20:26:57,1,0,how to detect pupil in matlab?,"![enter image description here][1]
+below is a source code that i download from somewhere, it is able to detect red color objects and display its center coordinate.
+
+
+
+
+
+
+
+
+    a = imaqhwinfo;
+    [camera_name, camera_id, format] = getCameraInfo(a);
+
+
+    % Capture the video frames using the videoinput function
+    % You have to replace the resolution & your installed adaptor name.
+    vid = videoinput(camera_name, camera_id, format);
+
+    % Set the properties of the video object
+    set(vid, 'FramesPerTrigger', Inf);
+    set(vid, 'ReturnedColorspace', 'rgb')
+    vid.FrameGrabInterval = 1;
+
+    %start the video aquisition here
+    start(vid)
+
+    % Set a loop that stop after 100 frames of aquisition
+    while(vid.FramesAcquired<=100)
+    
+    % Get the snapshot of the current frame
+    data = getsnapshot(vid);
+    
+    % Now to track red objects in real time
+    % we have to subtract the red component 
+    % from the grayscale image to extract the red components in the image.
+    diff_im = imsubtract(data(:,:,1), rgb2gray(data));
+    %Use a median filter to filter out noise
+    diff_im = medfilt2(diff_im, [3 3]);
+    % Convert the resulting grayscale image into a binary image.
+    diff_im = im2bw(diff_im,0.17);
+     
+    % Remove all those pixels less than 300px
+    diff_im = bwareaopen(diff_im,300);
+    
+    % Label all the connected components in the image.
+    bw = bwlabel(diff_im, 8);
+    
+    % Here we do the image blob analysis.
+    % We get a set of properties for each labeled region.
+    stats = regionprops(bw, 'BoundingBox', 'Centroid');
+    
+    % Display the image
+    imshow(data)
+    
+    hold on
+    
+    %This is a loop to bound the red objects in a rectangular box.
+    for object = 1:length(stats)
+        bb = stats(object).BoundingBox;
+        bc = stats(object).Centroid;
+        rectangle('Position',bb,'EdgeColor','r','LineWidth',2)
+        plot(bc(1),bc(2), '-m+')
+        a=text(bc(1)+15,bc(2), strcat('X: ', num2str(round(bc(1))), 'Y: ',  num2str(round(bc(2)))));
+        %disp(' X-Coordinate   Y-cordinate')
+        %x=gallery('uniformdata',[5 3],0);
+        %disp(x)
+        set(a, 'FontName', 'Arial', 'FontWeight', 'bold', 'FontSize', 12, 'Color',      'yellow');
+    end
+    
+    hold off
+    end
+    % Both the loops end here.
+
+    % Stop the video aquisition.
+    stop(vid);
+
+    % Flush all the image data stored in the memory buffer.
+    flushdata(vid);
+
+    % Clear all variables
+    % clear all
+    sprintf('%s','That was all about Image tracking, Guess that was pretty easy :) ')
+
+
+
+
+
+
+
+
+the problem is i would like to detect the pupil of the eye, so i need to detect black color in the image, but i have no idea how to modified the code to change it able to detect black color. So, any idea to this? please help me, thanks you all. 
+",matlab,,,,,05/10/2012 09:06:34,too localized,1,616,6,"how to detect pupil in matlab? ![enter image description here][1]
+below is a source code that i download from somewhere, it is able to detect red color objects and display its center coordinate.
+
+
+
+
+
+
+
+
+    a = imaqhwinfo;
+    [camera_name, camera_id, format] = getCameraInfo(a);
+
+
+    % Capture the video frames using the videoinput function
+    % You have to replace the resolution & your installed adaptor name.
+    vid = videoinput(camera_name, camera_id, format);
+
+    % Set the properties of the video object
+    set(vid, 'FramesPerTrigger', Inf);
+    set(vid, 'ReturnedColorspace', 'rgb')
+    vid.FrameGrabInterval = 1;
+
+    %start the video aquisition here
+    start(vid)
+
+    % Set a loop that stop after 100 frames of aquisition
+    while(vid.FramesAcquired<=100)
+    
+    % Get the snapshot of the current frame
+    data = getsnapshot(vid);
+    
+    % Now to track red objects in real time
+    % we have to subtract the red component 
+    % from the grayscale image to extract the red components in the image.
+    diff_im = imsubtract(data(:,:,1), rgb2gray(data));
+    %Use a median filter to filter out noise
+    diff_im = medfilt2(diff_im, [3 3]);
+    % Convert the resulting grayscale image into a binary image.
+    diff_im = im2bw(diff_im,0.17);
+     
+    % Remove all those pixels less than 300px
+    diff_im = bwareaopen(diff_im,300);
+    
+    % Label all the connected components in the image.
+    bw = bwlabel(diff_im, 8);
+    
+    % Here we do the image blob analysis.
+    % We get a set of properties for each labeled region.
+    stats = regionprops(bw, 'BoundingBox', 'Centroid');
+    
+    % Display the image
+    imshow(data)
+    
+    hold on
+    
+    %This is a loop to bound the red objects in a rectangular box.
+    for object = 1:length(stats)
+        bb = stats(object).BoundingBox;
+        bc = stats(object).Centroid;
+        rectangle('Position',bb,'EdgeColor','r','LineWidth',2)
+        plot(bc(1),bc(2), '-m+')
+        a=text(bc(1)+15,bc(2), strcat('X: ', num2str(round(bc(1))), 'Y: ',  num2str(round(bc(2)))));
+        %disp(' X-Coordinate   Y-cordinate')
+        %x=gallery('uniformdata',[5 3],0);
+        %disp(x)
+        set(a, 'FontName', 'Arial', 'FontWeight', 'bold', 'FontSize', 12, 'Color',      'yellow');
+    end
+    
+    hold off
+    end
+    % Both the loops end here.
+
+    % Stop the video aquisition.
+    stop(vid);
+
+    % Flush all the image data stored in the memory buffer.
+    flushdata(vid);
+
+    % Clear all variables
+    % clear all
+    sprintf('%s','That was all about Image tracking, Guess that was pretty easy :) ')
+
+
+
+
+
+
+
+
+the problem is i would like to detect the pupil of the eye, so i need to detect black color in the image, but i have no idea how to modified the code to change it able to detect black color. So, any idea to this? please help me, thanks you all. 
+",1
+10985989,06/11/2012 19:02:28,1442939,06/07/2012 18:16:18,1,0,Using regular expression type things in a MATLAB exist clause?,"I have a variable x with a numeric value, and I want to check if a folder exists in the current directory with that name, and if it doesn't, create it.  I have working code that creates the directory,
+
+but checking exist('%d', x, 'dir') doesn't work because exist only expects 2 arguments.  How do I do something like that correctly?",matlab,,,,,06/11/2012 19:11:58,too localized,1,61,10,"Using regular expression type things in a MATLAB exist clause? I have a variable x with a numeric value, and I want to check if a folder exists in the current directory with that name, and if it doesn't, create it.  I have working code that creates the directory,
+
+but checking exist('%d', x, 'dir') doesn't work because exist only expects 2 arguments.  How do I do something like that correctly?",1
+925555,05/29/2009 11:27:51,78241,03/15/2009 10:37:29,51,1,How to plot a nonlinear system of 3 equations with 3 symbolic variables in matlab?,"I don't have a lot of experience with Matlab. I know that you can plot equations with 2 variables like this:
+
+    ezplot(f1)
+    hold on
+    ezplot(f2)
+    hold off;
+
+How would you plot three equations with three symbolic variables?",matlab,plot,,,,,open,0,48,15,"How to plot a nonlinear system of 3 equations with 3 symbolic variables in matlab? I don't have a lot of experience with Matlab. I know that you can plot equations with 2 variables like this:
+
+    ezplot(f1)
+    hold on
+    ezplot(f2)
+    hold off;
+
+How would you plot three equations with three symbolic variables?",2
+10368721,04/29/2012 00:28:04,148636,07/31/2009 18:05:28,245,2,Running kmeans function on matrix with NaN?,"I have a 161X911 data matrix of 0,1,2's and then there are some NaN's throughout the matrix. I try and run the built in function kmeans on the data and whenever I have a K(number of clusters) value greater than 5 it returns this
+
+    Warning: Ignoring rows of X with missing data. 
+    > In kmeans at 128
+    ??? Error using ==> kmeans at 284
+    X must have more rows than the number of clusters.
+ 
+Is there a way around this? I guess only 5 rows do not have any NaN's in them.",matlab,,k-means,,,,open,0,105,7,"Running kmeans function on matrix with NaN? I have a 161X911 data matrix of 0,1,2's and then there are some NaN's throughout the matrix. I try and run the built in function kmeans on the data and whenever I have a K(number of clusters) value greater than 5 it returns this
+
+    Warning: Ignoring rows of X with missing data. 
+    > In kmeans at 128
+    ??? Error using ==> kmeans at 284
+    X must have more rows than the number of clusters.
+ 
+Is there a way around this? I guess only 5 rows do not have any NaN's in them.",2
+11208798,06/26/2012 13:49:16,1027692,11/03/2011 12:41:44,1,0,How to Install Matlab on a remote server?,"I have a server that I can use and I want to install Matlab on it. Unfortunately, it doesn't have a GUI, so I have to do a CLI install. The server is running Arch Linux and I have a machine which runs Windows and Ubuntu 12.04 Can anybody please let me know how i can go about doing this?",matlab,remote,,,,06/27/2012 16:07:25,off topic,1,60,8,"How to Install Matlab on a remote server? I have a server that I can use and I want to install Matlab on it. Unfortunately, it doesn't have a GUI, so I have to do a CLI install. The server is running Arch Linux and I have a machine which runs Windows and Ubuntu 12.04 Can anybody please let me know how i can go about doing this?",2
+552184,02/16/2009 03:43:33,66797,02/16/2009 03:43:33,1,0,How do I connect a curve of fixed length between two points in space using Matlab?,"We have two points (x1,y1,z1) and (x2,y2,z2) in 3d space. We have a curve of **fixed length** which is to be connected (not with a straight line) between these points. How to proceed with the code in Matlab?",matlab,,,,,,open,0,38,16,"How do I connect a curve of fixed length between two points in space using Matlab? We have two points (x1,y1,z1) and (x2,y2,z2) in 3d space. We have a curve of **fixed length** which is to be connected (not with a straight line) between these points. How to proceed with the code in Matlab?",1
+7837802,10/20/2011 14:52:48,1005417,10/20/2011 14:31:16,1,0,Headers in dataset (Matlab),"I can't find any good documentation about dataset(), so that's why I want to ask you guys, I'll keep the question short:
+
+Can I set headers (column titles) in a dataset, without entering data into the dataset yet? I guess not, so the 2nd part of the question would be:  
+Can I make a one-row dataset, in which I name the headers, with empty data, and overwrite it later?
+
+Let me show you what I was trying, but did not work:
+
+dmsdb = dataset({ 'John','Name'},{'Amsterdam','City'},{10,'number' });  
+produces:  
+    Name    City         number  
+    John    Amsterdam    10 --> Headers are good!  
+
+Problem is, that when I am going to add more data to the dataset, it expects all strings to be of the same length. So I use cellstr():
+
+dmsdb(1,1:3) = dataset({ cellstr('John'),'Name'},{cellstr('Amsterdam'),'City'},{10,'number' });  
+Produces:  
+    Var1          Var2               Var3  
+    'John'        'Amsterdam'        10  
+
+Where did my headers go? How do I solve this issue, and what is causing this?
+
+Thanks in advance for any replies.
+
+Gr. Sven",matlab,dataset,,,,,open,0,234,4,"Headers in dataset (Matlab) I can't find any good documentation about dataset(), so that's why I want to ask you guys, I'll keep the question short:
+
+Can I set headers (column titles) in a dataset, without entering data into the dataset yet? I guess not, so the 2nd part of the question would be:  
+Can I make a one-row dataset, in which I name the headers, with empty data, and overwrite it later?
+
+Let me show you what I was trying, but did not work:
+
+dmsdb = dataset({ 'John','Name'},{'Amsterdam','City'},{10,'number' });  
+produces:  
+    Name    City         number  
+    John    Amsterdam    10 --> Headers are good!  
+
+Problem is, that when I am going to add more data to the dataset, it expects all strings to be of the same length. So I use cellstr():
+
+dmsdb(1,1:3) = dataset({ cellstr('John'),'Name'},{cellstr('Amsterdam'),'City'},{10,'number' });  
+Produces:  
+    Var1          Var2               Var3  
+    'John'        'Amsterdam'        10  
+
+Where did my headers go? How do I solve this issue, and what is causing this?
+
+Thanks in advance for any replies.
+
+Gr. Sven",2
+10257466,04/21/2012 08:32:04,1348051,04/21/2012 08:28:32,1,0,Need help on the physics of angry-birds,"As a school project i have taken up making an angry birds clone in matlab. After working on it a little bit, i have realized that perhaps i bit more then i could chew.
+
+Currently i am working on the physics of it, and while i understand the mechanics behind the game (collisions, inertia and whatnot) i don't know how i will implement it in the game. I am new to programming but i like it and have caught on to it fairly quickly.
+
+In angry birds we are dealing with collisions between several OBB's and i have an algorithm for detecting collisions. I have a function that checks all the corners of every box and looks to see if it is within another box. I realize this is not the best way to do it but since i couldn't visualize the separating axis theorem, i chose not to use it.
+
+When the collision happens, the box is penetrating into another box, when this happens i do a liner interpolation between its previous point and the current point. I do this to all colliding points in one instance (this is my method to resolve multiple collisions). Using the interpolation i detect the first collision that takes place and i implement a collision response. 
+
+My issue currently is that when there is one box sitting on top of another, this method doesnt work so well, because at every instance the top box penetrates into the bottom one very slightly, and i bounce it back. This causes my entire thing to stop, because i go back in time, solve the collision, and then in the next instance the collision is happening again.
+
+My question is, how do i solve this problem of multiple boxes sitting on top of one another. 
+
+I have looked at all of the articles on physics by http://www.wildbunny.co.uk and tried to understand his method but while i understand what he does, i have no clue how he does it. I also do not know any action script so much of his code is gibberish to me.
+
+I have looked through several other guides on the internet but none of them seem to make sense to me.
+
+Here is what would be of great help to me, if someone could tell me what sort of method is commonly used to implement the graphics of a game like angry-birds, specifically the multiple collisions method (is mine good enough or do i need to do speculative contacts like wildbunny talks about in his blog), and the box resting on box problem.
+
+Is this project difficult to do withing two weeks?",matlab,physics,,,,04/21/2012 10:31:07,not a real question,1,432,7,"Need help on the physics of angry-birds As a school project i have taken up making an angry birds clone in matlab. After working on it a little bit, i have realized that perhaps i bit more then i could chew.
+
+Currently i am working on the physics of it, and while i understand the mechanics behind the game (collisions, inertia and whatnot) i don't know how i will implement it in the game. I am new to programming but i like it and have caught on to it fairly quickly.
+
+In angry birds we are dealing with collisions between several OBB's and i have an algorithm for detecting collisions. I have a function that checks all the corners of every box and looks to see if it is within another box. I realize this is not the best way to do it but since i couldn't visualize the separating axis theorem, i chose not to use it.
+
+When the collision happens, the box is penetrating into another box, when this happens i do a liner interpolation between its previous point and the current point. I do this to all colliding points in one instance (this is my method to resolve multiple collisions). Using the interpolation i detect the first collision that takes place and i implement a collision response. 
+
+My issue currently is that when there is one box sitting on top of another, this method doesnt work so well, because at every instance the top box penetrates into the bottom one very slightly, and i bounce it back. This causes my entire thing to stop, because i go back in time, solve the collision, and then in the next instance the collision is happening again.
+
+My question is, how do i solve this problem of multiple boxes sitting on top of one another. 
+
+I have looked at all of the articles on physics by http://www.wildbunny.co.uk and tried to understand his method but while i understand what he does, i have no clue how he does it. I also do not know any action script so much of his code is gibberish to me.
+
+I have looked through several other guides on the internet but none of them seem to make sense to me.
+
+Here is what would be of great help to me, if someone could tell me what sort of method is commonly used to implement the graphics of a game like angry-birds, specifically the multiple collisions method (is mine good enough or do i need to do speculative contacts like wildbunny talks about in his blog), and the box resting on box problem.
+
+Is this project difficult to do withing two weeks?",2
+5926658,05/08/2011 09:36:56,743764,05/08/2011 09:36:56,1,0,matlab - graph plotting,"how to do curve fitting ??
+i tried plot(cfit,x,y) and it didn't work??",matlab,,,,,05/08/2011 13:13:11,not a real question,1,12,4,"matlab - graph plotting how to do curve fitting ??
+i tried plot(cfit,x,y) and it didn't work??",1
+10046331,04/06/2012 16:32:23,1313093,04/04/2012 14:24:33,6,0,Image.jpg processing using MATLAB,"I tried to use line[ ] function to draw tow lines for 3 meter and 6 meter with its starting point[x,y] and end point [x,y] but still the function not working so can any one help me becouse I tried to do my senior project ",matlab,matlab-toolbox,matlab-deployment,,,04/14/2012 13:39:44,not a real question,1,46,4,"Image.jpg processing using MATLAB I tried to use line[ ] function to draw tow lines for 3 meter and 6 meter with its starting point[x,y] and end point [x,y] but still the function not working so can any one help me becouse I tried to do my senior project ",3

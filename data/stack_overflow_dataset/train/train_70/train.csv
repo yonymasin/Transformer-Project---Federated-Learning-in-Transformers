@@ -1,0 +1,2302 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+2929520,05/28/2010 13:48:50,29043,10/17/2008 17:47:39,6248,233,What to consider when designing an online community rep system like SO's?,"I'm designing a website and want a good reputation system like they built into StackOverflow.  
+
+When I started to design my reputation system, I realized the SO Q/A model doesn't quite fit into my app (since mine is not Q/A), and that perhaps I should do some research first.
+
+So my question is; What should I consider when designing a community rep system?
+",language-agnostic,,,,,,open,0,63,12,"What to consider when designing an online community rep system like SO's? I'm designing a website and want a good reputation system like they built into StackOverflow.  
+
+When I started to design my reputation system, I realized the SO Q/A model doesn't quite fit into my app (since mine is not Q/A), and that perhaps I should do some research first.
+
+So my question is; What should I consider when designing a community rep system?
+",1
+4139845,11/09/2010 23:37:01,273503,02/15/2010 12:34:06,16,0,Preferred keyboard layout for programming,"I started out with programming about two months ago I think now, and I'm fooling around in either C# or Clojure (I have serious decision-problems). Anyways; I'm from Norway, and we use a different kind of keyboard layout than the English-speaking countries. I don't know how for example Germany or Frances' keyboard-layouts are compared to ours, but it really is a pain to code in ([Norwegian QWERTY-layout][1] for those interested).
+
+Anyways; reaching for the `()`, `[]` and `{}` really makes my fingers hurt because I have to stretch my fingers really. Also, although this is minor it still makes me quirk, the `<>` is also painful to reach for.
+
+So, I was wondering if anyone have any tips on the layout to use? Is reaching for `()`, `[]` and `{}` much better on the English QWERTY-layout or is it nearly the same? And lastly; is DVORAK actually a good layout for programming?
+
+Thanks in advance :)
+
+
+  [1]: http://en.wikipedia.org/wiki/Keyboard_layout#Norwegian ""Norwegian QWERTY-layout""",language-agnostic,keyboard,typing,keyboard-layout,,,open,0,158,5,"Preferred keyboard layout for programming I started out with programming about two months ago I think now, and I'm fooling around in either C# or Clojure (I have serious decision-problems). Anyways; I'm from Norway, and we use a different kind of keyboard layout than the English-speaking countries. I don't know how for example Germany or Frances' keyboard-layouts are compared to ours, but it really is a pain to code in ([Norwegian QWERTY-layout][1] for those interested).
+
+Anyways; reaching for the `()`, `[]` and `{}` really makes my fingers hurt because I have to stretch my fingers really. Also, although this is minor it still makes me quirk, the `<>` is also painful to reach for.
+
+So, I was wondering if anyone have any tips on the layout to use? Is reaching for `()`, `[]` and `{}` much better on the English QWERTY-layout or is it nearly the same? And lastly; is DVORAK actually a good layout for programming?
+
+Thanks in advance :)
+
+
+  [1]: http://en.wikipedia.org/wiki/Keyboard_layout#Norwegian ""Norwegian QWERTY-layout""",4
+3226692,07/12/2010 07:54:16,227426,12/08/2009 19:57:25,1859,102,What is Global data (Has the term become stretched)?,"What exactly is global data?
+
+This may seem like a very rudimentary question but the reason I'm asking is because I'm wondering has the term become stretched over time - i.e it dosn't just apply to data in the ""Global"" namespace (in c++) or a variable that is available in every scope.
+
+So, what do you consider to be global data?",language-agnostic,global-variables,,,,,open,0,59,9,"What is Global data (Has the term become stretched)? What exactly is global data?
+
+This may seem like a very rudimentary question but the reason I'm asking is because I'm wondering has the term become stretched over time - i.e it dosn't just apply to data in the ""Global"" namespace (in c++) or a variable that is available in every scope.
+
+So, what do you consider to be global data?",2
+1995113,01/03/2010 14:27:05,95135,04/23/2009 19:04:52,2818,150,Strangest language feature,"What is in your opinion the most surprising, weird, strange or really ""WTF"" language feature you have encountered?
+
+Not limited to a particular programming language.",language-agnostic,programming-languages,,,,04/26/2011 14:27:22,not constructive,1,24,3,"Strangest language feature What is in your opinion the most surprising, weird, strange or really ""WTF"" language feature you have encountered?
+
+Not limited to a particular programming language.",2
+9688343,03/13/2012 16:46:04,546661,12/17/2010 23:59:54,9019,217,Why doesn't the bitwise & operator short-circuit?,"We all know that the logical `&&` operator short circuits if the left operand is `false`, because we know that if one operand is `false`, then the result is also `false`.
+
+Why doesn't the bitwise `&` operator also short-circuit? If the left operand is `0`, then we know that the result is also `0`. Every language I've tested this in (C, Javascript, C#) evaluates both operands instead of stopping after the first.
+
+Is there any reason why it would be a bad idea the let the `&` operator short-circuit? If not, why don't most languages make it short-cicuit? It seems like an obvious optimization.",language-agnostic,bitwise,,,,,open,0,102,7,"Why doesn't the bitwise & operator short-circuit? We all know that the logical `&&` operator short circuits if the left operand is `false`, because we know that if one operand is `false`, then the result is also `false`.
+
+Why doesn't the bitwise `&` operator also short-circuit? If the left operand is `0`, then we know that the result is also `0`. Every language I've tested this in (C, Javascript, C#) evaluates both operands instead of stopping after the first.
+
+Is there any reason why it would be a bad idea the let the `&` operator short-circuit? If not, why don't most languages make it short-cicuit? It seems like an obvious optimization.",2
+3241968,07/13/2010 22:11:24,47086,12/17/2008 15:24:53,351,36,Charateristics and features of every software framework,"I was trying to find an answer for my question today using google and StackOverflow search engines... but no luck :)
+
+I was wondering what are the key features of every framework for end user, and how can you characterize every framework from the end-user point of view (I've looked into Framework Design Guidelines by K. Cwalina, but I've found only concepts and guidelines for framework architects), for me:
+
+ - it should be extensible
+ - should let build extensible and reusable component
+
+I think there is much more out there.
+ 
+Please share your knowledge.",language-agnostic,frameworks,framework,features,characteristics,,open,0,92,7,"Charateristics and features of every software framework I was trying to find an answer for my question today using google and StackOverflow search engines... but no luck :)
+
+I was wondering what are the key features of every framework for end user, and how can you characterize every framework from the end-user point of view (I've looked into Framework Design Guidelines by K. Cwalina, but I've found only concepts and guidelines for framework architects), for me:
+
+ - it should be extensible
+ - should let build extensible and reusable component
+
+I think there is much more out there.
+ 
+Please share your knowledge.",5
+2450365,03/15/2010 20:46:26,69742,02/23/2009 04:34:53,3452,182,What's the best platform for a static-website?,"I am building a static-website (as in, to change a page, we change the HTML and there is no DB or anything). Well, it will have a number of pages and I don't want to copy and paste the HTML navigation and layout code around everywhere.
+
+So what would be the best platform to use in this situation so I can have all my layout and ""common"" HTML markup all in one place? ",language-agnostic,html,dry,,,08/12/2011 11:37:34,not constructive,1,73,7,"What's the best platform for a static-website? I am building a static-website (as in, to change a page, we change the HTML and there is no DB or anything). Well, it will have a number of pages and I don't want to copy and paste the HTML navigation and layout code around everywhere.
+
+So what would be the best platform to use in this situation so I can have all my layout and ""common"" HTML markup all in one place? ",3
+1293315,08/18/2009 11:35:04,120917,06/10/2009 21:48:35,834,38,How to do true==false or true!=true in your language?,"Booleans seem to be the most primitive building blocks of programming languages, because they can actually take only two (or in some cases three) ""singleton"" values: true, false (and sometimes undeterminded/null)
+
+But it seems that sometimes language design might allow someone to write code where actually ""true is false"" or ""true is not true"". I usually thought that this only applies to weakly typed languages, where (inconsistent) implicit conversions will result in ""true==false"", like [in this case][1]. But actually this problem might arise in more strong typed languages, [like in C++][2].
+
+The question is how can you do this kind of anomaly in your programming language? I'm more interested in languages that have strong typing, because there it should be harder to do this (if it's not impossible). I'd actually be surprised, if this anomaly could be reproduced in logical programming languages, like Prolog.
+
+
+  [1]: http://www.otton.org/2008/08/06/stupid-php-tricks-true-false-comparison/
+  [2]: http://stackoverflow.com/questions/1252134/strange-c-boolean-casting-behaviour-truetrue",language-agnostic,language-design,boolean,boolean-logic,,08/18/2009 11:51:02,not a real question,1,148,9,"How to do true==false or true!=true in your language? Booleans seem to be the most primitive building blocks of programming languages, because they can actually take only two (or in some cases three) ""singleton"" values: true, false (and sometimes undeterminded/null)
+
+But it seems that sometimes language design might allow someone to write code where actually ""true is false"" or ""true is not true"". I usually thought that this only applies to weakly typed languages, where (inconsistent) implicit conversions will result in ""true==false"", like [in this case][1]. But actually this problem might arise in more strong typed languages, [like in C++][2].
+
+The question is how can you do this kind of anomaly in your programming language? I'm more interested in languages that have strong typing, because there it should be harder to do this (if it's not impossible). I'd actually be surprised, if this anomaly could be reproduced in logical programming languages, like Prolog.
+
+
+  [1]: http://www.otton.org/2008/08/06/stupid-php-tricks-true-false-comparison/
+  [2]: http://stackoverflow.com/questions/1252134/strange-c-boolean-casting-behaviour-truetrue",4
+6966998,08/06/2011 13:11:01,881944,08/06/2011 13:11:01,1,0,How should I name my category with web-design works?,"I was wondering how should I name my category on my web-design/programming page with my works?
+
+Portfolio or References?
+
+What do you suggest?
+
+What is more common?
+
+Thank you.",language-agnostic,,,,,07/21/2012 06:25:31,off topic,1,25,9,"How should I name my category with web-design works? I was wondering how should I name my category on my web-design/programming page with my works?
+
+Portfolio or References?
+
+What do you suggest?
+
+What is more common?
+
+Thank you.",1
+115353,09/22/2008 15:05:07,338,08/04/2008 18:34:44,2207,111,What is a good reference for how calculation engines such as Excel work?,"I am interested in learning how dependency-based calculation engines work in practice. Of course, I can make up my own algorithm, but I was curious if there were any well explained algorithms that are used in practice.
+
+I have tried Google, but most articles are < ""good"".",language-agnostic,algorithm,excel,dependencies,calculation,06/21/2012 15:21:48,not constructive,1,46,13,"What is a good reference for how calculation engines such as Excel work? I am interested in learning how dependency-based calculation engines work in practice. Of course, I can make up my own algorithm, but I was curious if there were any well explained algorithms that are used in practice.
+
+I have tried Google, but most articles are < ""good"".",5
+640700,03/12/2009 22:11:04,26699,10/10/2008 01:44:32,244,3,What coding style for error checking is better and why?,"What coding style for error checking is better and why?
+(leave Exceptions away, imagine we do not have them)
+
+    int foo()
+    {
+        int errCode = some_system_call();
+        if (errCode != OK)
+        {
+            return myErrCode;
+        }
+        // continue doing foo stuff
+        return myOK;
+    }
+
+Or:
+
+    int foo()
+    {
+        int errCode = some_system_call();
+        if (errCode != sysOK)
+        {
+            return myErrCode;
+        }
+        else
+        {
+            // continue doing foo stuff
+            return myOK;
+        }
+        // code never reached
+        return myOK; //or else the compiler may complain
+    }
+    
+
+
+",language-agnostic,discussion,,,,04/05/2012 14:03:05,not constructive,1,250,10,"What coding style for error checking is better and why? What coding style for error checking is better and why?
+(leave Exceptions away, imagine we do not have them)
+
+    int foo()
+    {
+        int errCode = some_system_call();
+        if (errCode != OK)
+        {
+            return myErrCode;
+        }
+        // continue doing foo stuff
+        return myOK;
+    }
+
+Or:
+
+    int foo()
+    {
+        int errCode = some_system_call();
+        if (errCode != sysOK)
+        {
+            return myErrCode;
+        }
+        else
+        {
+            // continue doing foo stuff
+            return myOK;
+        }
+        // code never reached
+        return myOK; //or else the compiler may complain
+    }
+    
+
+
+",2
+3487167,08/15/2010 11:30:45,113124,05/27/2009 12:28:44,3134,24,Can a programming language itself be copyrighted?,"  - I know that softwares can be copyrighted, and then you cannot copy them (as in copy the source), so you need to buy them. For example - [Microsoft Visual Studio][1] is a copyrighted IDE. But, that doesn't make C++, for example copyrighted. So, Microsoft does not own C++. Anybody can use C++, write compilers for C++, and sell applications commercially even if they are written in C++.
+
+  - Things are different with { C# and Microsoft } and { Java and Oracle/Sun }. These two are in some ways owned by these companies. The latter one has recently led to a dispute between Oracle and Google.
+
+  - Some of the languages like C++ are so essential that copyrighting them makes no sense for the programming community as a whole. On the other hand, I should be able to build and use a personal programming language, if I desire to do so ([Sawzall][2] falls into this category. Does a personal programming language boil down to not making the language grammar public?).
+
+
+**What are the different ways in which a language can be ""owned""?**
+
+
+
+  [1]: http://www.microsoft.com/visualstudio/en-us
+  [2]: http://en.wikipedia.org/wiki/Sawzall_(programming_language)",language-agnostic,programming-languages,copyright,,,08/15/2010 15:31:02,off topic,1,192,7,"Can a programming language itself be copyrighted?   - I know that softwares can be copyrighted, and then you cannot copy them (as in copy the source), so you need to buy them. For example - [Microsoft Visual Studio][1] is a copyrighted IDE. But, that doesn't make C++, for example copyrighted. So, Microsoft does not own C++. Anybody can use C++, write compilers for C++, and sell applications commercially even if they are written in C++.
+
+  - Things are different with { C# and Microsoft } and { Java and Oracle/Sun }. These two are in some ways owned by these companies. The latter one has recently led to a dispute between Oracle and Google.
+
+  - Some of the languages like C++ are so essential that copyrighting them makes no sense for the programming community as a whole. On the other hand, I should be able to build and use a personal programming language, if I desire to do so ([Sawzall][2] falls into this category. Does a personal programming language boil down to not making the language grammar public?).
+
+
+**What are the different ways in which a language can be ""owned""?**
+
+
+
+  [1]: http://www.microsoft.com/visualstudio/en-us
+  [2]: http://en.wikipedia.org/wiki/Sawzall_(programming_language)",3
+4924093,02/07/2011 17:03:57,200145,10/31/2009 13:19:36,1920,17,Position of commented out code,"I'm rewriting a function from the scratch. I comment out the old version of the function and I'm ready to write the new one.
+
+Should I write the new version of the function above or below the commented out old version?",language-agnostic,coding-style,comments,,,02/08/2011 01:56:25,not a real question,1,40,5,"Position of commented out code I'm rewriting a function from the scratch. I comment out the old version of the function and I'm ready to write the new one.
+
+Should I write the new version of the function above or below the commented out old version?",3
+8145894,11/16/2011 02:27:51,1048771,11/16/2011 01:49:39,1,0,Is there such a thing as short circuit multiplication?,"We all know about short circuiting in logical expressions, i.e. when
+
+    if ( False AND myFunc(a) ) then
+    ...
+
+doesn't bother executing `myFunc()` because there's no way the `if` condition can be true.
+
+I was curious as to whether there is an equivalent for your everyday algebraic equation, say
+
+    result = C*x/y + z
+
+If `C=0` there is no point in evaluating the first term. It wouldn't matter much performance-wise if `x` and `y` were scalars, but if we pretend they are large matrices and the operations are costly (and applicable to matrices) then surely it would make a difference. Of course you could avoid such an extreme case by throwing in an `if C!=0` statement.
+
+So my question is whether such a feature exists and if it is useful. I'm not much of a programmer so it probably does under some name that I haven't come across; if so please enlighten me :)",language-agnostic,short-circuiting,arithmetic-expressions,,,,open,0,159,9,"Is there such a thing as short circuit multiplication? We all know about short circuiting in logical expressions, i.e. when
+
+    if ( False AND myFunc(a) ) then
+    ...
+
+doesn't bother executing `myFunc()` because there's no way the `if` condition can be true.
+
+I was curious as to whether there is an equivalent for your everyday algebraic equation, say
+
+    result = C*x/y + z
+
+If `C=0` there is no point in evaluating the first term. It wouldn't matter much performance-wise if `x` and `y` were scalars, but if we pretend they are large matrices and the operations are costly (and applicable to matrices) then surely it would make a difference. Of course you could avoid such an extreme case by throwing in an `if C!=0` statement.
+
+So my question is whether such a feature exists and if it is useful. I'm not much of a programmer so it probably does under some name that I haven't come across; if so please enlighten me :)",3
+624425,03/08/2009 22:19:07,16587,09/17/2008 18:43:55,6083,182,Easy Sounding (but Hard to Crack) Passwords,"###Background
+
+While at the Gym the other day, I was working with my combination lock, and realized something that would be useful to me as a programmer.  To wit, my combination is three seperate sets of numbers that either sound alike, or have some other relation that makes them easy to remember. For instance, 5-15-25, 7-17-2, 6-24-5.  These examples *seem* easy to remember. 
+
+
+###Question
+
+How would I implement something similar for passwords?  Yes, they ought to be hard to crack, but they also should be easy for the end user to remember.  Combination Locks do that with a mix of numbers that have similar sounds, and with numbers that have similar properties (7-17-23: All Prime, 17 rolls right off the tongue after 7, and 23 is another prime, and is (out of that set), the 'hard' one to remember).
+
+This question is language-agnostic, but if there's a specific implementation for C#, I'd be glad to hear of it.
+
+###Criteria
+
+ - The Password should be easy to remember. `Dog!Wolf` is easy to remember, but once an attacker knows that your website gives out that combination, it makes it infinitely easier to check.
+ - The words or letters should mostly follow the same sounds (for the most part).
+ - At least 8 letters
+",language-agnostic,algorithm,,,,,open,0,211,7,"Easy Sounding (but Hard to Crack) Passwords ###Background
+
+While at the Gym the other day, I was working with my combination lock, and realized something that would be useful to me as a programmer.  To wit, my combination is three seperate sets of numbers that either sound alike, or have some other relation that makes them easy to remember. For instance, 5-15-25, 7-17-2, 6-24-5.  These examples *seem* easy to remember. 
+
+
+###Question
+
+How would I implement something similar for passwords?  Yes, they ought to be hard to crack, but they also should be easy for the end user to remember.  Combination Locks do that with a mix of numbers that have similar sounds, and with numbers that have similar properties (7-17-23: All Prime, 17 rolls right off the tongue after 7, and 23 is another prime, and is (out of that set), the 'hard' one to remember).
+
+This question is language-agnostic, but if there's a specific implementation for C#, I'd be glad to hear of it.
+
+###Criteria
+
+ - The Password should be easy to remember. `Dog!Wolf` is easy to remember, but once an attacker knows that your website gives out that combination, it makes it infinitely easier to check.
+ - The words or letters should mostly follow the same sounds (for the most part).
+ - At least 8 letters
+",2
+6559705,07/02/2011 21:26:43,82368,03/25/2009 04:27:50,1535,34,Books with interesting Projects,"Can you guys recommend books that contain interesting non trivial projects to improve coding skills?
+
+I know these books have excellent tutorial to the some amazing programming projects. 
+
+1. Paradigms of AI Programming : General Problem Solver, Eliza, Student, Mycin etc. 
+
+2. Programming Collective Intelligence : Recommendation Softwares...
+
+3. Real World Haskell
+
+4. Invent With Python
+
+5. Developing Applications in ML",language-agnostic,books,projects,,,07/02/2011 22:57:21,off topic,1,57,4,"Books with interesting Projects Can you guys recommend books that contain interesting non trivial projects to improve coding skills?
+
+I know these books have excellent tutorial to the some amazing programming projects. 
+
+1. Paradigms of AI Programming : General Problem Solver, Eliza, Student, Mycin etc. 
+
+2. Programming Collective Intelligence : Recommendation Softwares...
+
+3. Real World Haskell
+
+4. Invent With Python
+
+5. Developing Applications in ML",3
+4364150,12/06/2010 07:32:22,142299,07/21/2009 20:09:33,2924,47,How to find pixel co-ordinates of corners of a square pattern?,"This may not be a programming related but possibly programmers would be in the best position to answer it.
+  
+For camera calibration I have a 8 x 8 square pattern printed on sheet of paper. I have to manually enter these co-ordinates into a text file. The software would then pick it up from there and compute the calibration parameters.  
+
+Is there a script or some software that I can run on these images and get the pixel co-ordinates of the 4 corners of each of the 64 squares?
+
+![alt text][1]
+
+
+  [1]: http://i.stack.imgur.com/wQ1D3.jpg",language-agnostic,image-processing,camera-calibration,,,,open,0,95,11,"How to find pixel co-ordinates of corners of a square pattern? This may not be a programming related but possibly programmers would be in the best position to answer it.
+  
+For camera calibration I have a 8 x 8 square pattern printed on sheet of paper. I have to manually enter these co-ordinates into a text file. The software would then pick it up from there and compute the calibration parameters.  
+
+Is there a script or some software that I can run on these images and get the pixel co-ordinates of the 4 corners of each of the 64 squares?
+
+![alt text][1]
+
+
+  [1]: http://i.stack.imgur.com/wQ1D3.jpg",3
+8716657,01/03/2012 18:04:40,248959,01/12/2010 14:34:00,1806,23,Any way to know the absolute path of a resource in a web site when I load it in the browser?,"Any way to know the absolute path of a resource (an image for example) in a web site when I load it in the browser?
+
+For example, if an image is in /var/www/project/web/images/foo.jgp I want to get that path.
+
+In localhost I mean.
+
+Regards
+
+Javier",language-agnostic,,,,,,open,0,41,21,"Any way to know the absolute path of a resource in a web site when I load it in the browser? Any way to know the absolute path of a resource (an image for example) in a web site when I load it in the browser?
+
+For example, if an image is in /var/www/project/web/images/foo.jgp I want to get that path.
+
+In localhost I mean.
+
+Regards
+
+Javier",1
+8969987,01/23/2012 10:10:08,915751,08/27/2011 18:14:48,1223,58,How to really really test one's programming skills?,"For people, particularly students who are about to graduate, or are in university and have completed their initial programming courses, what is the best way (or ways) to test their programming skills, and evaluate one's knowledge and understanding? Or more simply, how to really test the programming and coding skills and find where one stands and what are the areas one should improve?
+
+One way is programming challenges, and i know a book, it is [Programming Challenges (by Steven S. Skiena and Miguel Revilla)](http://www.amazon.com/Programming-Challenges-Steven-S-Skiena/dp/0387001638/ref=sr_1_1?ie=UTF8&qid=1327313114&sr=8-1), it is a good book to test understanding and face interesting challenges related on a wide variety of subjects and areas.
+
+Please recommend other ways to know where one stands.",language-agnostic,challenge,programmer-skills,,,01/23/2012 15:40:34,off topic,1,112,8,"How to really really test one's programming skills? For people, particularly students who are about to graduate, or are in university and have completed their initial programming courses, what is the best way (or ways) to test their programming skills, and evaluate one's knowledge and understanding? Or more simply, how to really test the programming and coding skills and find where one stands and what are the areas one should improve?
+
+One way is programming challenges, and i know a book, it is [Programming Challenges (by Steven S. Skiena and Miguel Revilla)](http://www.amazon.com/Programming-Challenges-Steven-S-Skiena/dp/0387001638/ref=sr_1_1?ie=UTF8&qid=1327313114&sr=8-1), it is a good book to test understanding and face interesting challenges related on a wide variety of subjects and areas.
+
+Please recommend other ways to know where one stands.",3
+1732182,11/13/2009 22:00:42,58394,01/23/2009 18:51:59,872,18,Regexp for chroot-like path building in a Linux environment,"Consider the following security problem:
+
+I have a static base path (`/home/username/`) to which I append a user-controlled sub-path (say `foo/bar.txt`). The content of this file is then read and presented to the user.
+
+In the case described the full path would be: `/home/username/foo/bar.txt`
+
+Now to the problem. I want to control so that the full path is always a subdirectory of the static base path. In other words I don't want the user to supply a path such that the base path is escaped.
+
+The following full path is OK:
+
+    /home/username/foo/bar.txt
+
+Whereas this one is one is clearly not safe:
+
+    /home/username/foo/../../../etc/passwd
+
+To complicate matters further the proper solution of chroot:ing to the base path is not available. Due to various reasons the only available solution is to use a regexp to differentiate between safe and unsafe paths.
+
+<b>Given the problem outlined above, what is regexp?</b>
+
+Please note:
+
+* The code will run under Linux. The path separator is hence `/`.
+* The question is totally language agnostic.
+* Please do not suggest other ways to solve the problem. I know that there are alternative better ways to solve it (such as chroot:ing), but this question is restricted to the regexp solution only.
+
+",language-agnostic,regex,security,linux,,,open,0,198,9,"Regexp for chroot-like path building in a Linux environment Consider the following security problem:
+
+I have a static base path (`/home/username/`) to which I append a user-controlled sub-path (say `foo/bar.txt`). The content of this file is then read and presented to the user.
+
+In the case described the full path would be: `/home/username/foo/bar.txt`
+
+Now to the problem. I want to control so that the full path is always a subdirectory of the static base path. In other words I don't want the user to supply a path such that the base path is escaped.
+
+The following full path is OK:
+
+    /home/username/foo/bar.txt
+
+Whereas this one is one is clearly not safe:
+
+    /home/username/foo/../../../etc/passwd
+
+To complicate matters further the proper solution of chroot:ing to the base path is not available. Due to various reasons the only available solution is to use a regexp to differentiate between safe and unsafe paths.
+
+<b>Given the problem outlined above, what is regexp?</b>
+
+Please note:
+
+* The code will run under Linux. The path separator is hence `/`.
+* The question is totally language agnostic.
+* Please do not suggest other ways to solve the problem. I know that there are alternative better ways to solve it (such as chroot:ing), but this question is restricted to the regexp solution only.
+
+",4
+235613,10/24/2008 23:43:34,22291,09/25/2008 17:35:20,70,2,How do you handle one-off requests from customers?,"Often, customers will request specific functionality that doesn't really fit into the existing system and probably will only get used by the specific customer. 
+
+For example, there is a web application that functions as a portal for many different organizations. Say there are 15 organizations that all use the same underlying code, but have different accounts that display a customized logo and css template for each organization. A 16th organization wants a new portal, but they have a few requests for their home page that don't fit with the existing system. Say it's an extra legal disclaimer or a picture of their founder on the left side of the page. Something specific to that organization that probably won't be reused by any other organizations. 
+
+How do you handle those kinds of situations without creating a huge mess of conditionals or specific code for one customer?",language-agnostic,architecture,customer-relationship,,,05/04/2012 13:29:16,off topic,1,145,8,"How do you handle one-off requests from customers? Often, customers will request specific functionality that doesn't really fit into the existing system and probably will only get used by the specific customer. 
+
+For example, there is a web application that functions as a portal for many different organizations. Say there are 15 organizations that all use the same underlying code, but have different accounts that display a customized logo and css template for each organization. A 16th organization wants a new portal, but they have a few requests for their home page that don't fit with the existing system. Say it's an extra legal disclaimer or a picture of their founder on the left side of the page. Something specific to that organization that probably won't be reused by any other organizations. 
+
+How do you handle those kinds of situations without creating a huge mess of conditionals or specific code for one customer?",3
+818844,05/04/2009 05:17:16,88493,04/08/2009 09:26:30,41,1,Who is Front End Developer?,"This is the New term I heard now a days in some Designer Portfolio.
+What is the Role of Front End Developer. Is the role is the same as the Web Designer.?",language-agnostic,,,,,07/20/2012 13:32:05,off topic,1,31,5,"Who is Front End Developer? This is the New term I heard now a days in some Designer Portfolio.
+What is the Role of Front End Developer. Is the role is the same as the Web Designer.?",1
+76467,09/16/2008 20:16:50,10136,09/15/2008 21:22:50,11,1,What programming screencasts/podcast resources do you know?,"Just as the title says, if you know any resource, answer here.
+
+Personally I'm more0interested in screencasts more than podcasts, because english is not my mother tonge, so visual clues help a lot:
+
+[NetBeans TV Screencasts][1]
+
+[DimeCasts.NET][2]
+
+[Apple Developer Connection (iTunes)][3]
+
+
+  [1]: http://www.netbeans.tv/screencasts/
+  [2]: http://dimecasts.net/
+  [3]: http://developer.apple.com/adconitunes/overview.html",language-agnostic,,,,,09/18/2011 02:58:59,not constructive,1,46,7,"What programming screencasts/podcast resources do you know? Just as the title says, if you know any resource, answer here.
+
+Personally I'm more0interested in screencasts more than podcasts, because english is not my mother tonge, so visual clues help a lot:
+
+[NetBeans TV Screencasts][1]
+
+[DimeCasts.NET][2]
+
+[Apple Developer Connection (iTunes)][3]
+
+
+  [1]: http://www.netbeans.tv/screencasts/
+  [2]: http://dimecasts.net/
+  [3]: http://developer.apple.com/adconitunes/overview.html",1
+75529,09/16/2008 18:36:18,11889,09/16/2008 12:05:22,1,4,What are the best anti-code sites?,"What are the best anti-code sites that people have found? What I mean by ""anti-code"" is websites, books, blogs, etc. that describe or explain bad code with the tongue-in-cheek goal of showing us what we should not do. (I made up the phase anti-code for lack of a better term.)
+
+These are the sites I'm familiar with:
+
+  - [How to write unmaintainable code](http://mindprod.com/jgloss/unmain.html)
+  - [Refuctoring](http://www.waterfall2006.com/gorman.html)
+  - [Anti-patterns](http://www.antipatterns.com/)
+  - [The Daily WTF](http://thedailywtf.com/)
+
+I'm sure there are others? I'm not asking just to get laughs; I often find that seeing ""just how far down the rabbit hole goes"" is a better instructor and stronger argument for good development.",language-agnostic,fun,,,,08/01/2012 02:38:48,not constructive,1,108,6,"What are the best anti-code sites? What are the best anti-code sites that people have found? What I mean by ""anti-code"" is websites, books, blogs, etc. that describe or explain bad code with the tongue-in-cheek goal of showing us what we should not do. (I made up the phase anti-code for lack of a better term.)
+
+These are the sites I'm familiar with:
+
+  - [How to write unmaintainable code](http://mindprod.com/jgloss/unmain.html)
+  - [Refuctoring](http://www.waterfall2006.com/gorman.html)
+  - [Anti-patterns](http://www.antipatterns.com/)
+  - [The Daily WTF](http://thedailywtf.com/)
+
+I'm sure there are others? I'm not asking just to get laughs; I often find that seeing ""just how far down the rabbit hole goes"" is a better instructor and stronger argument for good development.",2
+10982348,06/11/2012 14:42:53,1449132,06/11/2012 14:17:52,1,0,Which tools can plot these beautiful scientific bar charts,"I found some beautiful bar charts in papers. They're really good.
+I'm wondering what tools are used to plot such charts?
+
+I'd appreciate your help or any clue.  Thank you!
+
+Here's an example:
+http://i.imgur.com/dmvUV.gif
+
+
+",language-agnostic,charts,plot,graphing,,06/15/2012 14:53:00,not constructive,1,31,9,"Which tools can plot these beautiful scientific bar charts I found some beautiful bar charts in papers. They're really good.
+I'm wondering what tools are used to plot such charts?
+
+I'd appreciate your help or any clue.  Thank you!
+
+Here's an example:
+http://i.imgur.com/dmvUV.gif
+
+
+",4
+5873601,05/03/2011 17:54:23,731279,04/29/2011 14:50:51,83,9,Multilingual spell checking with language detection,"I'm working on spell checking of mixed language webpages, and haven't been able to find any existing research on the subject.
+
+The aim is to automatically detect language _at a sentence level_ within mixed language webpages and spell check each against their appropriate language automatically. Assume that we can ignore sentences which mix multiple languages together (e.g. ""He has a certain je ne sais quoi""), and assume webpages can't contain more than 2 or 3 languages. 
+
+Trivial example (Welsh + English): http://wales.gov.uk/
+
+I'm currently using a mix of:
+
+ - Character distribution (e.g. 0600-06FF = Arabic etc)
+ - n-Grams to discern languages with similar characters
+ - Dictionary lookup to discern locale, i.e. en-US, en-GB 
+
+I have working code but am concerned it may be naive or needlessly re-inventing a wheel. Has anyone else done this before?",language-agnostic,nlp,multilingual,spellchecking,,,open,0,133,6,"Multilingual spell checking with language detection I'm working on spell checking of mixed language webpages, and haven't been able to find any existing research on the subject.
+
+The aim is to automatically detect language _at a sentence level_ within mixed language webpages and spell check each against their appropriate language automatically. Assume that we can ignore sentences which mix multiple languages together (e.g. ""He has a certain je ne sais quoi""), and assume webpages can't contain more than 2 or 3 languages. 
+
+Trivial example (Welsh + English): http://wales.gov.uk/
+
+I'm currently using a mix of:
+
+ - Character distribution (e.g. 0600-06FF = Arabic etc)
+ - n-Grams to discern languages with similar characters
+ - Dictionary lookup to discern locale, i.e. en-US, en-GB 
+
+I have working code but am concerned it may be naive or needlessly re-inventing a wheel. Has anyone else done this before?",4
+3672530,09/08/2010 22:56:41,59351,01/27/2009 14:30:25,317,10,"Possible to intercept ""unminimize"" event on windows?","Is it programmatically possible to intercept the maximize/restore event on Windows such that when you click on a minimized button on the taskbar, it asks you for a password?",language-agnostic,,,,,,open,0,29,7,"Possible to intercept ""unminimize"" event on windows? Is it programmatically possible to intercept the maximize/restore event on Windows such that when you click on a minimized button on the taskbar, it asks you for a password?",1
+996179,06/15/2009 13:42:24,20774,09/22/2008 22:01:32,1557,103,"Allen Holub wrote ""You should never use get/set functions"", is he correct?","Allen Holub wrote the following,
+>You can't have a program without some coupling. Nonetheless, you can minimize coupling considerably by slavishly following OO (object-oriented) precepts (the most important is that the implementation of an object should be completely hidden from the objects that use it). For example, an object's instance variables (member fields that aren't constants), should always be private. Period. No exceptions. Ever. I mean it. (You can occasionally use protected methods effectively, but protected instance variables are an abomination.)
+
+Which sounds reasonable, but he then goes on to say,
+>You should <b>never use get/set functions</b> for the same reason—they're just overly complicated ways to make a field public (though access functions that return full-blown objects rather than a basic-type value are reasonable in situations where the returned object's class is a key abstraction in the design).
+
+Which, frankly, just sounds insane to me.
+
+I understand the principal of information hiding, but without accessors and mutators you couldn't use Java beans at all. I don't know how you would follow a MVC design without accessors in the model, since the model *can not* be responsible for rendering the view.
+
+However, I am a younger programmer and I learn more about Object Oriented Design everyday. Perhaps someone with more experience can weigh in on this issue.
+
+----------
+
+Allen Holub's articles for reference
+-----------------------------------
+
+ - [Why Extends Is Evil][1]
+ - [Why Getter And Setter Methods Are Evil][2]
+
+
+  [1]: http://www.javaworld.com/javaworld/jw-08-2003/jw-0801-toolbox.html?page=1
+  [2]: http://www.javaworld.com/javaworld/jw-09-2003/jw-0905-toolbox.html",language-agnostic,oop,accessors,immutable,,07/02/2012 15:22:25,not constructive,1,233,12,"Allen Holub wrote ""You should never use get/set functions"", is he correct? Allen Holub wrote the following,
+>You can't have a program without some coupling. Nonetheless, you can minimize coupling considerably by slavishly following OO (object-oriented) precepts (the most important is that the implementation of an object should be completely hidden from the objects that use it). For example, an object's instance variables (member fields that aren't constants), should always be private. Period. No exceptions. Ever. I mean it. (You can occasionally use protected methods effectively, but protected instance variables are an abomination.)
+
+Which sounds reasonable, but he then goes on to say,
+>You should <b>never use get/set functions</b> for the same reason—they're just overly complicated ways to make a field public (though access functions that return full-blown objects rather than a basic-type value are reasonable in situations where the returned object's class is a key abstraction in the design).
+
+Which, frankly, just sounds insane to me.
+
+I understand the principal of information hiding, but without accessors and mutators you couldn't use Java beans at all. I don't know how you would follow a MVC design without accessors in the model, since the model *can not* be responsible for rendering the view.
+
+However, I am a younger programmer and I learn more about Object Oriented Design everyday. Perhaps someone with more experience can weigh in on this issue.
+
+----------
+
+Allen Holub's articles for reference
+-----------------------------------
+
+ - [Why Extends Is Evil][1]
+ - [Why Getter And Setter Methods Are Evil][2]
+
+
+  [1]: http://www.javaworld.com/javaworld/jw-08-2003/jw-0801-toolbox.html?page=1
+  [2]: http://www.javaworld.com/javaworld/jw-09-2003/jw-0905-toolbox.html",4
+305458,11/20/2008 14:34:43,19731,09/20/2008 18:35:15,32,1,creating a site map/list,"I need to create a site map/list,but I need the link-name to show up as well.
+
+
+What I mean by that is given , say , www.google.com , I need the following list to be created.
+
+
+
+    Google - www.google.com
+    Images - http://images.google.com/imghp?hl=en&tab=wi
+    ...
+    My Account - http://images.google.com/imghp?hl=en&tab=wi
+        Personal Information Edit - https://www.google.com/accounts/EditUserInfo
+        ...
+        My Products - https://www.google.com/accounts/EditServices
+    ...
+    Privacy - http://www.google.com/intl/en/privacy.html
+    ...
+
+The list needs to be bound to a domain , say us.example.com.
+
+I have tried a depth first search using a python script, with Beautiful Soup to parse the links. Not happening.
+
+Anybody have any ideas?
+    
+
+",language-agnostic,sitemap,dfs,,,,open,0,140,4,"creating a site map/list I need to create a site map/list,but I need the link-name to show up as well.
+
+
+What I mean by that is given , say , www.google.com , I need the following list to be created.
+
+
+
+    Google - www.google.com
+    Images - http://images.google.com/imghp?hl=en&tab=wi
+    ...
+    My Account - http://images.google.com/imghp?hl=en&tab=wi
+        Personal Information Edit - https://www.google.com/accounts/EditUserInfo
+        ...
+        My Products - https://www.google.com/accounts/EditServices
+    ...
+    Privacy - http://www.google.com/intl/en/privacy.html
+    ...
+
+The list needs to be bound to a domain , say us.example.com.
+
+I have tried a depth first search using a python script, with Beautiful Soup to parse the links. Not happening.
+
+Anybody have any ideas?
+    
+
+",3
+3420264,08/06/2010 00:52:51,322900,04/22/2010 04:02:52,279,11,Convoluted hello world program,"What's the most convoluted hello world program you can think of without any bogus lines? That means every single statement has to contribute to the overall program so you can't simply bloat it with useless declarations and the such. 
+
+Any language is ok, but using the esoteric nature of a language by itself does not count as convolution! 
+
+",language-agnostic,hello-world,,,,08/06/2010 16:36:20,not a real question,1,59,4,"Convoluted hello world program What's the most convoluted hello world program you can think of without any bogus lines? That means every single statement has to contribute to the overall program so you can't simply bloat it with useless declarations and the such. 
+
+Any language is ok, but using the esoteric nature of a language by itself does not count as convolution! 
+
+",2
+3592764,08/28/2010 22:36:41,23903,09/16/2008 16:05:24,13773,336,Language Simplicity:  Spec vs. Code?,"I often see people commenting that what they want is a simple language, with a simple specification and not too many excess features, odd rules and multiple ways of doing things.  I've never understood this except when the opposite is taken to the extreme.  Isn't a more meaningful measure of language complexity the complexity of the code needed to do common programming tasks?  For example, if a language has a huge specification, a lot of different abstractions and complexity management tools and tons of features for library writers, it might be regarded as a complicated language.  However, if those features are useful and allow code to be written that is terser, more straightforward, more readable, less syntactically noisy and DRYer than other languages, and allows libraries with simpler, more user-friendly APIs to be written, doesn't that count towards the simplicity of the language in a practical sense?
+
+As a concrete example (please treat this only as an example and don't let this question evolve into a flamewar about delegates), let's use delegates.  Of course, noone really **needs** delegates.  They can be emulated with more general features like classes/interfaces or function pointers.  They also add bloat to the language specification.  However, they allow code written in the language to be terser, more straightforward and less syntactically noisy, in other words simpler, than if delegates are Greenspunned using other language features.  Shouldn't that count as a net simplicity win?",language-agnostic,programming-languages,language-design,,,08/29/2010 16:02:23,not a real question,1,245,6,"Language Simplicity:  Spec vs. Code? I often see people commenting that what they want is a simple language, with a simple specification and not too many excess features, odd rules and multiple ways of doing things.  I've never understood this except when the opposite is taken to the extreme.  Isn't a more meaningful measure of language complexity the complexity of the code needed to do common programming tasks?  For example, if a language has a huge specification, a lot of different abstractions and complexity management tools and tons of features for library writers, it might be regarded as a complicated language.  However, if those features are useful and allow code to be written that is terser, more straightforward, more readable, less syntactically noisy and DRYer than other languages, and allows libraries with simpler, more user-friendly APIs to be written, doesn't that count towards the simplicity of the language in a practical sense?
+
+As a concrete example (please treat this only as an example and don't let this question evolve into a flamewar about delegates), let's use delegates.  Of course, noone really **needs** delegates.  They can be emulated with more general features like classes/interfaces or function pointers.  They also add bloat to the language specification.  However, they allow code written in the language to be terser, more straightforward and less syntactically noisy, in other words simpler, than if delegates are Greenspunned using other language features.  Shouldn't that count as a net simplicity win?",3
+1372600,09/03/2009 10:16:34,63051,02/05/2009 20:53:34,2502,66,why can't conditional operator be used as a statement,"Why can't the conditional operator be used as a statement?
+
+I would like to do something like:
+
+    
+    boolean isXyz = ...;
+    ...
+    isXyz ? doXyz() : doAbc();
+
+where `doXyz` and `doAbc` are return void.
+
+Note that this is not the same as other operators, for example doXyz() + doAbc() intrinsically needs that doXyz and doAbc return a number-like something to operate (or strings to concatenate, or whatever, but the point is that + actually needs values to operate on).
+
+Is there something deep or is it just an arbitrary decision.
+
+**Note**: I come from the Java world, but I would like to know if this is possible in your favourite programming language.",language-agnostic,conditional-operator,condition,types,,,open,0,120,9,"why can't conditional operator be used as a statement Why can't the conditional operator be used as a statement?
+
+I would like to do something like:
+
+    
+    boolean isXyz = ...;
+    ...
+    isXyz ? doXyz() : doAbc();
+
+where `doXyz` and `doAbc` are return void.
+
+Note that this is not the same as other operators, for example doXyz() + doAbc() intrinsically needs that doXyz and doAbc return a number-like something to operate (or strings to concatenate, or whatever, but the point is that + actually needs values to operate on).
+
+Is there something deep or is it just an arbitrary decision.
+
+**Note**: I come from the Java world, but I would like to know if this is possible in your favourite programming language.",4
+5042232,02/18/2011 14:05:04,106615,05/13/2009 20:13:18,812,9,programming book series to make a bad programmer good,"I studied lots of programming topics inefficiently, so I program badly, so I want to finish learning those topics, so what programming book series would be good for this and why?
+
+Can I skip paragraphs I already know by reading just the introduction? Does it have exercises? Does it have answers by the end of the book?",language-agnostic,,,,,02/18/2011 14:43:38,not constructive,1,56,9,"programming book series to make a bad programmer good I studied lots of programming topics inefficiently, so I program badly, so I want to finish learning those topics, so what programming book series would be good for this and why?
+
+Can I skip paragraphs I already know by reading just the introduction? Does it have exercises? Does it have answers by the end of the book?",1
+3807298,09/27/2010 19:53:14,251931,01/15/2010 23:16:56,402,8,Unusual code bugs,"I've been reading wikipedia article about [unusual bugs][1]. I'm particularly intereted in:
+
+    Schrödinbug
+
+A schrödinbug is a bug that manifests only after someone reading source code or using the program in an unusual way notices that it never should have worked in the first place, at which point the program promptly stops working for everybody until fixed. The Jargon File adds: ""Though... this sounds impossible, it happens; some programs have harbored latent schrödinbugs for years.""
+
+and in 
+
+    Heisenbug
+    
+A heisenbug (named after the Heisenberg Uncertainty Principle) is a computer bug that disappears or alters its characteristics when an attempt is made to study it.
+
+
+
+Does anyone encountered such a tricky bugs in his code? Can you provide with some real life examples?
+
+  [1]: http://en.wikipedia.org/wiki/Unusual_software_bug",language-agnostic,,,,,09/27/2010 20:19:48,off topic,1,132,3,"Unusual code bugs I've been reading wikipedia article about [unusual bugs][1]. I'm particularly intereted in:
+
+    Schrödinbug
+
+A schrödinbug is a bug that manifests only after someone reading source code or using the program in an unusual way notices that it never should have worked in the first place, at which point the program promptly stops working for everybody until fixed. The Jargon File adds: ""Though... this sounds impossible, it happens; some programs have harbored latent schrödinbugs for years.""
+
+and in 
+
+    Heisenbug
+    
+A heisenbug (named after the Heisenberg Uncertainty Principle) is a computer bug that disappears or alters its characteristics when an attempt is made to study it.
+
+
+
+Does anyone encountered such a tricky bugs in his code? Can you provide with some real life examples?
+
+  [1]: http://en.wikipedia.org/wiki/Unusual_software_bug",1
+1892260,12/12/2009 04:14:26,27328,10/13/2008 06:22:10,719,16,Looking for novice book on combinatorics,"I am looking for books on the math & computing applications of [Combinatorics][1].
+Let me know your favorite books on this topic. Thanks.
+
+
+  [1]: http://en.wikipedia.org/wiki/Combinatorics",language-agnostic,theory,combinatorics,computer-science,math,11/03/2011 04:54:07,not constructive,1,25,6,"Looking for novice book on combinatorics I am looking for books on the math & computing applications of [Combinatorics][1].
+Let me know your favorite books on this topic. Thanks.
+
+
+  [1]: http://en.wikipedia.org/wiki/Combinatorics",5
+5759396,04/22/2011 19:47:37,233306,12/16/2009 21:25:19,37,1,what other language would be a good compliment to java,"I know only Java and I intend to be a Java programmer, but lately I have been hearing a lot about Polyglots. 
+
+What would be a good language for a Java programmer to know?
+
+I have read some groovy... but the fact everything ends running as Java classes, doesn't make it seem that attractive. It will reduce my development effort in some cases, but I don't think I will get any advantages in 'runtime'. The code will end up behaving the same way when it's executing, whether its written in java or groovy.
+
+Any ideas what language would be a good 'skillset' to have for a Java programmer? (for the purpose of being job-worthy for the next 5-10 years).",language-agnostic,programming-languages,,,,04/22/2011 22:04:32,not constructive,1,117,10,"what other language would be a good compliment to java I know only Java and I intend to be a Java programmer, but lately I have been hearing a lot about Polyglots. 
+
+What would be a good language for a Java programmer to know?
+
+I have read some groovy... but the fact everything ends running as Java classes, doesn't make it seem that attractive. It will reduce my development effort in some cases, but I don't think I will get any advantages in 'runtime'. The code will end up behaving the same way when it's executing, whether its written in java or groovy.
+
+Any ideas what language would be a good 'skillset' to have for a Java programmer? (for the purpose of being job-worthy for the next 5-10 years).",2
+6621798,07/08/2011 08:19:43,115880,06/02/2009 09:17:02,342,21,"First write code using API, then actual API - does this approach have a name and is valid for API design process?","Standard way of working on new API (library, class, whatever) usually looks like this:
+
+ - you think about what methods would API user need
+ - you implement API that you suspect user will need
+
+So basically you trying to guess what your API should look like. It very often leads to over engineering stuff, huge APIs that you **think** user will need and it is very possible that great part of your code won't be used at all.
+
+Some time ago, maybe few years even, I read some article that promoted writing client code first. I don't remember where I found it but author pointed out several advantages like better understanding how API will be used, what it should provide and what is basically obsolete. I think idea was that it goes along with SCRUM methodology and user stories but on implementation level. 
+
+Just out of curiosity for my latest private project I started not with actual API (some kind of toolkit library) but with client code that would use this API. Of course my code is all in red because classes, methods and properties does not exist and I can forget about help from intellisense but what I noticed is that after few days of coding my application ""has"" all basic functionalities and my library API ""is"" a lot smaller than I imagined when starting a project.
+
+I don't say that if somebody took my library and started using it it wouldn't lack some features but I think it helped me to realize that my idea of this API was somewhat flawed because I usually try to cover all bases and provide methods ""just in case"". And sometimes it bites me badly because I made some stupid mistake in basic functions being more focused on code that somebody maybe would need.
+
+So what I would like to ask you do you ever tried this approach when needed to create a new API and did it helped you? Is it some recognized technique that has a name?
+",language-agnostic,api-design,,,,,open,0,333,22,"First write code using API, then actual API - does this approach have a name and is valid for API design process? Standard way of working on new API (library, class, whatever) usually looks like this:
+
+ - you think about what methods would API user need
+ - you implement API that you suspect user will need
+
+So basically you trying to guess what your API should look like. It very often leads to over engineering stuff, huge APIs that you **think** user will need and it is very possible that great part of your code won't be used at all.
+
+Some time ago, maybe few years even, I read some article that promoted writing client code first. I don't remember where I found it but author pointed out several advantages like better understanding how API will be used, what it should provide and what is basically obsolete. I think idea was that it goes along with SCRUM methodology and user stories but on implementation level. 
+
+Just out of curiosity for my latest private project I started not with actual API (some kind of toolkit library) but with client code that would use this API. Of course my code is all in red because classes, methods and properties does not exist and I can forget about help from intellisense but what I noticed is that after few days of coding my application ""has"" all basic functionalities and my library API ""is"" a lot smaller than I imagined when starting a project.
+
+I don't say that if somebody took my library and started using it it wouldn't lack some features but I think it helped me to realize that my idea of this API was somewhat flawed because I usually try to cover all bases and provide methods ""just in case"". And sometimes it bites me badly because I made some stupid mistake in basic functions being more focused on code that somebody maybe would need.
+
+So what I would like to ask you do you ever tried this approach when needed to create a new API and did it helped you? Is it some recognized technique that has a name?
+",2
+4193873,11/16/2010 12:00:13,295264,03/17/2010 00:16:39,3790,216,Can you explain the reason of the popularity of 'e' to refer Events?,"Whenever there is something related to event or event handling the probably most widely used keyword is **e**. Even I don't have a particular reason to tell to explain exactly. Why? 
+
+It is definately not time saving for me, I mean how much will few more letters hurt? It is definately not representive, because `e` can also refer to errors.
+
+What is it? What you think?",language-agnostic,,,,,11/17/2010 04:49:11,not constructive,1,65,13,"Can you explain the reason of the popularity of 'e' to refer Events? Whenever there is something related to event or event handling the probably most widely used keyword is **e**. Even I don't have a particular reason to tell to explain exactly. Why? 
+
+It is definately not time saving for me, I mean how much will few more letters hurt? It is definately not representive, because `e` can also refer to errors.
+
+What is it? What you think?",1
+487735,01/28/2009 14:08:52,41021,11/26/2008 13:16:39,847,54,How do you rate programmers?,"Does any rating system exist to **rate** the capabilities of a person as a programmer, much like an **Intelligence Quotient** Test, where specific insights on **predefined aspects** are rated based on answers / multiple-choice questions.
+
+Ideally in a **language-independent manner** because the core programmer understandings are usually similar from platform-to-platform.
+
+Also, capabilities we take for granted which actually make us more efficient / intellegent like **visualization** of data structures and processes, **spatial-reasoning**, in-mind **simulation** of code by just glancing, etc.
+
+Typically there might be two categories of programmer **solution** design, functional-oriented and object-oriented, so if the balance of design style can be calculated.
+
+*Programmer-quotient? or **Software-quotient?** Any such rating system?*",language-agnostic,programmer-skills,,,,08/08/2011 14:22:25,off topic,1,106,5,"How do you rate programmers? Does any rating system exist to **rate** the capabilities of a person as a programmer, much like an **Intelligence Quotient** Test, where specific insights on **predefined aspects** are rated based on answers / multiple-choice questions.
+
+Ideally in a **language-independent manner** because the core programmer understandings are usually similar from platform-to-platform.
+
+Also, capabilities we take for granted which actually make us more efficient / intellegent like **visualization** of data structures and processes, **spatial-reasoning**, in-mind **simulation** of code by just glancing, etc.
+
+Typically there might be two categories of programmer **solution** design, functional-oriented and object-oriented, so if the balance of design style can be calculated.
+
+*Programmer-quotient? or **Software-quotient?** Any such rating system?*",2
+11303599,07/03/2012 02:09:58,1279820,03/20/2012 00:50:44,519,20,What is the purpose of the .exe file type? Does it mean anything if a compiler outputs .exe?,"How did the .exe file extension arrise? Languages such as C# produce code that is run on a virtual machine yet the file extionsion is .exe. On the other hand languages such as PHP and Perl produce scripts that are executed but they don't have .exe extension (is that because they are interpreted?).  
+
+Why is it that Java compiles to .class and C# compiles to .exe when both run on a virtual machine?",language-agnostic,exe,virtual-machine,file-extension,,07/04/2012 03:23:21,off topic,1,74,18,"What is the purpose of the .exe file type? Does it mean anything if a compiler outputs .exe? How did the .exe file extension arrise? Languages such as C# produce code that is run on a virtual machine yet the file extionsion is .exe. On the other hand languages such as PHP and Perl produce scripts that are executed but they don't have .exe extension (is that because they are interpreted?).  
+
+Why is it that Java compiles to .class and C# compiles to .exe when both run on a virtual machine?",4
+3683885,09/10/2010 10:30:31,294642,03/16/2010 10:29:58,1107,41,DAL: Is it ok to incapsulate several data sources access in one module? ,"Application I develop requires several data sources (2 RDBMS and one file storage) to operate. I'm going to incapsulate datasources with DAL library & Business Logic layer. 
+
+Would you personally create several DAL libraries (each per data source) and cooperate several DAL instances in Business Logic Layer or create monolith DAL library, that incapsulates all datasources application uses? 
+
+",language-agnostic,architecture,data-access-layer,,,,open,0,59,14,"DAL: Is it ok to incapsulate several data sources access in one module?  Application I develop requires several data sources (2 RDBMS and one file storage) to operate. I'm going to incapsulate datasources with DAL library & Business Logic layer. 
+
+Would you personally create several DAL libraries (each per data source) and cooperate several DAL instances in Business Logic Layer or create monolith DAL library, that incapsulates all datasources application uses? 
+
+",3
+89132,09/18/2008 01:15:03,5725,09/11/2008 04:44:21,1,0,"Pursue carrer as ""Software Engineer"" or a ""Lang/Framework-X Developer""?","I am currently a Software Engineering undergrad and recently begun my senior year. I see on the horizon a choice that must be made: choosing a career path.
+
+For the past several months, I have been of the mindset that I should:
+
+  - Find a language and maybe a web app framework that I like
+  - Learn it
+  - Build some web apps to learn it better
+  - Try to learn as much as possible about the Lang-X/Framework
+  - Start job searches on Monster for ""Lang-X/Framework Developer"" and applying.
+
+So for several months I have been trying out and playing with several different language / framework combinations to get a sense of them and decide which one I like best. 
+
+Recently though, I have begun to think that maybe I'm going about this all wrong. When I do a search for ""Lang-X Developer"", regardless of the language/framework I generally get between 150-300 hits. 
+
+But if I do a search for ""Software Engineer,"" I get 2-3 thousand hits. I understand, I'm getting the hits for ""Software Engineer"" for all lang/framework combinations and much more, but that's the root of my concern. 
+
+My questions:
+
+ 1. Am I severely limiting my career choices by focusing on solely web development? If so, is that bad?
+
+ 2. Is focusing on one language/framework a good idea, in your opinion? Or should I spread my time/energy around and always be trying new languages/frameworks?
+
+ 3. When hiring junior developers that are fresh-out-college CS / SE majors, what are you looking for?
+
+If you can, please elaborate. Feel free to answer any one or all of them, as you see fit. Thanks
+
+ 
+
+  
+
+
+ 
+",language-agnostic,self-improvement,,,,01/18/2012 16:35:13,off topic,1,279,9,"Pursue carrer as ""Software Engineer"" or a ""Lang/Framework-X Developer""? I am currently a Software Engineering undergrad and recently begun my senior year. I see on the horizon a choice that must be made: choosing a career path.
+
+For the past several months, I have been of the mindset that I should:
+
+  - Find a language and maybe a web app framework that I like
+  - Learn it
+  - Build some web apps to learn it better
+  - Try to learn as much as possible about the Lang-X/Framework
+  - Start job searches on Monster for ""Lang-X/Framework Developer"" and applying.
+
+So for several months I have been trying out and playing with several different language / framework combinations to get a sense of them and decide which one I like best. 
+
+Recently though, I have begun to think that maybe I'm going about this all wrong. When I do a search for ""Lang-X Developer"", regardless of the language/framework I generally get between 150-300 hits. 
+
+But if I do a search for ""Software Engineer,"" I get 2-3 thousand hits. I understand, I'm getting the hits for ""Software Engineer"" for all lang/framework combinations and much more, but that's the root of my concern. 
+
+My questions:
+
+ 1. Am I severely limiting my career choices by focusing on solely web development? If so, is that bad?
+
+ 2. Is focusing on one language/framework a good idea, in your opinion? Or should I spread my time/energy around and always be trying new languages/frameworks?
+
+ 3. When hiring junior developers that are fresh-out-college CS / SE majors, what are you looking for?
+
+If you can, please elaborate. Feel free to answer any one or all of them, as you see fit. Thanks
+
+ 
+
+  
+
+
+ 
+",2
+107148,09/20/2008 04:51:27,11829,09/16/2008 11:37:33,51,3,The quick hack you are most proud of,What crazily awesome (or crazily bad) stuff have you hacked together to meet a tight deadline? What are you most proud of?,language-agnostic,,,,,08/27/2011 17:30:43,not constructive,1,22,8,The quick hack you are most proud of What crazily awesome (or crazily bad) stuff have you hacked together to meet a tight deadline? What are you most proud of?,1
+7427448,09/15/2011 07:46:26,94305,04/22/2009 12:08:22,440,6,"Where to find Gfx, Music, Sounds to be distributed with my (commercial) Application?","I'd like to include a media pool in a slideshow application. Application users should use those media to mix them with their own photos and create anything they like. The users should be able to distribute their slideshows even commercially.
+
+There are tons of stock music/photo/sound sites but they have one thing in common: all royalty free licenses prohibit redistribution. Does anybody know a source where to get/buy those media which is allowed to be redistributed?",language-agnostic,photos,sounds,background-music,,09/15/2011 13:29:58,off topic,1,75,13,"Where to find Gfx, Music, Sounds to be distributed with my (commercial) Application? I'd like to include a media pool in a slideshow application. Application users should use those media to mix them with their own photos and create anything they like. The users should be able to distribute their slideshows even commercially.
+
+There are tons of stock music/photo/sound sites but they have one thing in common: all royalty free licenses prohibit redistribution. Does anybody know a source where to get/buy those media which is allowed to be redistributed?",4
+2284887,02/17/2010 22:27:26,16398,09/17/2008 16:52:11,830,31,"When searching for a tutorial site, where should I AVOID?",Note that this is the opposite of most questions. Which sites tend to be the worst for promoting poor practices?,language-agnostic,,,,,02/18/2010 00:09:26,not a real question,1,20,10,"When searching for a tutorial site, where should I AVOID? Note that this is the opposite of most questions. Which sites tend to be the worst for promoting poor practices?",1
+272863,11/07/2008 17:30:56,30529,10/22/2008 20:43:04,86,3,Use of else after a return or break from a function or loop,"This is a matter of style I've considered for a while, and I'm curious of others thoughts.  The two pieces of code below are logically equivalent, which in your opinion is better style and why?:
+
+     // no else
+    some_function():
+       if ( my_var == 0 ) then:
+           return true
+
+       print ""hello: "" + my_var
+       return false
+
+---
+
+    // with else
+    some_function():
+        if ( my_var == 0 ) then:
+            return true
+        else:
+            print ""hello: "" + my_var
+            return false
+     
+
+",language-agnostic,coding-style,,,,05/08/2012 14:07:19,not constructive,1,170,13,"Use of else after a return or break from a function or loop This is a matter of style I've considered for a while, and I'm curious of others thoughts.  The two pieces of code below are logically equivalent, which in your opinion is better style and why?:
+
+     // no else
+    some_function():
+       if ( my_var == 0 ) then:
+           return true
+
+       print ""hello: "" + my_var
+       return false
+
+---
+
+    // with else
+    some_function():
+        if ( my_var == 0 ) then:
+            return true
+        else:
+            print ""hello: "" + my_var
+            return false
+     
+
+",2
+2085834,01/18/2010 12:07:46,249618,01/13/2010 08:43:46,291,17,How did you practically use recursion?,"How did you practically use recursion? I mean practical problems you had to solve in day to day programming, be that for work or for pleasure. Not school tasks/homeworks but something you did for yourself or others. The ones where I used it myself are:
+
+ - drawing some fractals
+ - traversing directory tree to search for a file
+ - traversing the DOM tree of a HTML form, which corresponded to the tree structure of the data collected and could adapt to changing form of the structure on the fly.
+ - nasty fork bomb that grew its own subdirectory tree infinitely on top of forking.
+
+Specifically, I mean first-hand experiences, not thought up examples.",language-agnostic,recursion,real-world,,,01/31/2012 10:14:36,not constructive,1,112,6,"How did you practically use recursion? How did you practically use recursion? I mean practical problems you had to solve in day to day programming, be that for work or for pleasure. Not school tasks/homeworks but something you did for yourself or others. The ones where I used it myself are:
+
+ - drawing some fractals
+ - traversing directory tree to search for a file
+ - traversing the DOM tree of a HTML form, which corresponded to the tree structure of the data collected and could adapt to changing form of the structure on the fly.
+ - nasty fork bomb that grew its own subdirectory tree infinitely on top of forking.
+
+Specifically, I mean first-hand experiences, not thought up examples.",3
+5255916,03/10/2011 05:38:19,310662,04/07/2010 05:52:50,334,16,How to start project without having web design first?,"I need an advice. Offen we have projects which still doesn't have web design ready..
+
+how should we start this project? Is there's any generic UI which can be used for web application ? some kind text web templates or kind of monotonic design css'es..?
+
+Do you following me =)?
+
+I really don't wanna start naked page, without any piece of css in it..",language-agnostic,,,,,07/21/2012 12:23:25,not constructive,1,61,9,"How to start project without having web design first? I need an advice. Offen we have projects which still doesn't have web design ready..
+
+how should we start this project? Is there's any generic UI which can be used for web application ? some kind text web templates or kind of monotonic design css'es..?
+
+Do you following me =)?
+
+I really don't wanna start naked page, without any piece of css in it..",1
+4980095,02/12/2011 19:24:52,518901,11/24/2010 14:08:56,46,2,State machines with temporal events,"If I have finite state machine 
+<pre>
+Q = {Σ, S, s0, δ, F}
+
+where 
+
+Σ = {'[r]equest', '[o]ut', '[i]n', '[e]nd'}
+
+S = {'[R]eady', '[I]nitiating', '[W]aiting', 'Re[C]eived', 'Re[S]etting'}
+
+s0 = R,
+
+F = {R}
+
+δ =  (q ∈ S and x ∈ Σ)
+
+ q      x      q
+-------------------
+ R      r      I
+ I      o      W
+ W      i      C
+ C      e      S
+ S      ∈      R
+</pre>
+
+However, I have a transition from  W to S via a temporal event. How would I handle it?",language-agnostic,,,,,02/14/2011 01:44:49,off topic,1,134,5,"State machines with temporal events If I have finite state machine 
+<pre>
+Q = {Σ, S, s0, δ, F}
+
+where 
+
+Σ = {'[r]equest', '[o]ut', '[i]n', '[e]nd'}
+
+S = {'[R]eady', '[I]nitiating', '[W]aiting', 'Re[C]eived', 'Re[S]etting'}
+
+s0 = R,
+
+F = {R}
+
+δ =  (q ∈ S and x ∈ Σ)
+
+ q      x      q
+-------------------
+ R      r      I
+ I      o      W
+ W      i      C
+ C      e      S
+ S      ∈      R
+</pre>
+
+However, I have a transition from  W to S via a temporal event. How would I handle it?",1
+11064861,06/16/2012 15:42:56,1180508,01/31/2012 14:14:53,233,24,What is the best way to implement a diff (file/string comparison) that benefits productivity?,"I understand there are many options out there from various desktop applications to enterprise services that examine data on the wire.  What method/means/application for comparison has proven most productive for programmers?
+
+I am hoping for answers that come from personal experience or empirical productivity research.  Please list any applicable tools and how those tools are accessed.  If the most productive diff tool is not your favorite diff tool then indicate your favorite diff tool as well and why it is your favorite.",language-agnostic,comparison,diff,string-comparison,file-comparison,06/18/2012 03:25:32,not constructive,1,84,14,"What is the best way to implement a diff (file/string comparison) that benefits productivity? I understand there are many options out there from various desktop applications to enterprise services that examine data on the wire.  What method/means/application for comparison has proven most productive for programmers?
+
+I am hoping for answers that come from personal experience or empirical productivity research.  Please list any applicable tools and how those tools are accessed.  If the most productive diff tool is not your favorite diff tool then indicate your favorite diff tool as well and why it is your favorite.",5
+2311072,02/22/2010 13:22:41,271007,02/11/2010 10:55:07,284,24,How to create endless stories for telenovela or tv-series programmatically?,"Do you know any (web) sources that describe ways to continually produce
+stories from an initial base of parameters/objects and some given relationships?
+
+I'm interested in  
+- theory and algorithms  
+- real projects where it was done  
+- how to measure redundance in such a system  
+- (fun) sites with examples of something comparable  
+",language-agnostic,nlp,algorithm,methodology,,02/22/2010 17:15:12,not a real question,1,58,10,"How to create endless stories for telenovela or tv-series programmatically? Do you know any (web) sources that describe ways to continually produce
+stories from an initial base of parameters/objects and some given relationships?
+
+I'm interested in  
+- theory and algorithms  
+- real projects where it was done  
+- how to measure redundance in such a system  
+- (fun) sites with examples of something comparable  
+",4
+10583,08/14/2008 02:20:10,784,08/08/2008 22:02:14,153,7,What do you do when you're learning a new programming language?,"When you decide to learn a new language what do you do?
+
+I tend to do a small amount of reading about said language then write a few simple ""standard"" programs -- typically raytracers and parsers because they're what i'm conceptually familiar with -- so that a can get a feel for the language and learn to use it without having to think about how to do the task at hand.
+
+Once I've got to that point it just degenerates into the more boring process of just using it on a regular basis for whatever I need to do.",language-agnostic,,,,,10/29/2010 21:43:01,not constructive,1,97,11,"What do you do when you're learning a new programming language? When you decide to learn a new language what do you do?
+
+I tend to do a small amount of reading about said language then write a few simple ""standard"" programs -- typically raytracers and parsers because they're what i'm conceptually familiar with -- so that a can get a feel for the language and learn to use it without having to think about how to do the task at hand.
+
+Once I've got to that point it just degenerates into the more boring process of just using it on a regular basis for whatever I need to do.",1
+3288459,07/20/2010 09:08:29,350605,05/26/2010 06:57:49,1970,70,Great tools which help in development?,"Apart from all the IDE's and their features or plugins (and lets skip version control systems too), what tools do you use which help you with development? This can be almost anything, but please keep it computer related. Not that i have something against your dog being very helpful with bug-fixing, but i do like cats more ;)",language-agnostic,,,,,10/11/2011 23:50:49,not constructive,1,58,6,"Great tools which help in development? Apart from all the IDE's and their features or plugins (and lets skip version control systems too), what tools do you use which help you with development? This can be almost anything, but please keep it computer related. Not that i have something against your dog being very helpful with bug-fixing, but i do like cats more ;)",1
+3784198,09/24/2010 04:30:10,456891,09/24/2010 04:27:48,1,0,how can i see all the tweets in my website,"I m using twitter home page in my local website in which tweets send by own is shown but all the tweets are not visible...
+how can i see all the tweets in my website in local machine...",language-agnostic,,,,,,open,0,37,10,"how can i see all the tweets in my website I m using twitter home page in my local website in which tweets send by own is shown but all the tweets are not visible...
+how can i see all the tweets in my website in local machine...",1
+61400,09/14/2008 15:20:44,3713,08/30/2008 09:06:27,173,25,What Makes a Good Unit Test?,"I'm sure most of you Stackoverflowians are writing lots of automated tests and that you also have run into some common pitfalls when unit testing. My question is if you follow any test rules in order to avoid problems in the future. What are the properties of good unit tests or how do you write your tests?
+
+Language agnostic suggestions are encouraged.",language-agnostic,unit-testing,integration-testing,testing-strategies,,10/07/2011 13:02:25,not constructive,1,61,6,"What Makes a Good Unit Test? I'm sure most of you Stackoverflowians are writing lots of automated tests and that you also have run into some common pitfalls when unit testing. My question is if you follow any test rules in order to avoid problems in the future. What are the properties of good unit tests or how do you write your tests?
+
+Language agnostic suggestions are encouraged.",4
+2818509,05/12/2010 11:55:57,47339,12/18/2008 09:47:05,3821,150,Why use buffers to read/write Streams,"Following reading various questions on reading and writing Streams, all the various answers define something like this as the correct way to do it:
+
+
+    private void CopyStream(Stream input, Stream output)
+    {
+       byte[] buffer = new byte[16 * 1024];
+       int read;
+       while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
+       {
+          output.Write(buffer, 0, read);
+       } 
+    }
+
+Two questions:
+
+Why read and write in these smaller chunks?
+
+What is the significance of the buffer size used?
+
+",language-agnostic,stream,,,,,open,0,119,6,"Why use buffers to read/write Streams Following reading various questions on reading and writing Streams, all the various answers define something like this as the correct way to do it:
+
+
+    private void CopyStream(Stream input, Stream output)
+    {
+       byte[] buffer = new byte[16 * 1024];
+       int read;
+       while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
+       {
+          output.Write(buffer, 0, read);
+       } 
+    }
+
+Two questions:
+
+Why read and write in these smaller chunks?
+
+What is the significance of the buffer size used?
+
+",2
+2002589,01/04/2010 22:03:27,108234,05/16/2009 19:28:54,657,31,Boundary representation data structure,"I've been reading about using the [winged-edge data structure][1] for storing a boundary representation. However, the linked site says that this is one of the oldest data structres for storing b-reps, are there newer better ones?
+
+Secondly, is there an implementation of this in C#?
+
+
+  [1]: http://www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/model/winged-e.html",language-agnostic,data-structures,c#,geometry,,,open,0,47,4,"Boundary representation data structure I've been reading about using the [winged-edge data structure][1] for storing a boundary representation. However, the linked site says that this is one of the oldest data structres for storing b-reps, are there newer better ones?
+
+Secondly, is there an implementation of this in C#?
+
+
+  [1]: http://www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/model/winged-e.html",4
+3079723,06/20/2010 15:15:31,105570,05/12/2009 18:49:17,10520,314,"What is the term for exposing field of fields (of fields, of...) in a class with composition?","I'm pretty sure there's a term for this and I'm just having trouble thinking of it.
+
+If I have some code that looks like this:
+
+    public class Person
+    {
+        public Person Child;
+        // ...
+    }
+    
+    Person p = new Person(""Philip J. Fry"");
+    
+    // what is the term for this?
+    Person greatGrandchild = p.Child.Child.Child;
+
+I'm pretty sure I've heard this (exposing a member object directly so that all its properties/methods are publicly accessible) described as a bad thing due to [insert name of principle here]. What is the word I'm looking for?
+
+(Note that I'm not asking *why* this is/isn't a bad thing; I'm **just** looking for the term, which for the life of me I can't remember.)",language-agnostic,oop,composition,,,,open,0,154,17,"What is the term for exposing field of fields (of fields, of...) in a class with composition? I'm pretty sure there's a term for this and I'm just having trouble thinking of it.
+
+If I have some code that looks like this:
+
+    public class Person
+    {
+        public Person Child;
+        // ...
+    }
+    
+    Person p = new Person(""Philip J. Fry"");
+    
+    // what is the term for this?
+    Person greatGrandchild = p.Child.Child.Child;
+
+I'm pretty sure I've heard this (exposing a member object directly so that all its properties/methods are publicly accessible) described as a bad thing due to [insert name of principle here]. What is the word I'm looking for?
+
+(Note that I'm not asking *why* this is/isn't a bad thing; I'm **just** looking for the term, which for the life of me I can't remember.)",3
+7494069,09/21/2011 02:54:31,724689,04/14/2011 01:51:58,1740,96,Advantages and Disadvantages of WOCA and WORA,"""Write once, run anywhere"" and ""Write once, compile anywhere"". What are the advantages and disadvantages of both? ",language-agnostic,,,,,09/21/2011 07:22:58,not constructive,1,18,7,"Advantages and Disadvantages of WOCA and WORA ""Write once, run anywhere"" and ""Write once, compile anywhere"". What are the advantages and disadvantages of both? ",1
+605000,03/03/2009 03:33:01,66063,02/13/2009 13:16:42,11,0,Programming exercises to learn a new language ,"I can not seem to find this exactly as a post, but what I am looking for is a list of exercises to help me get better a programming.  Like Fibonacci sequences, temperature conversions, etc.  A website would be great. Thanks for any help. ",language-agnostic,homework,,,,12/10/2011 06:00:17,not constructive,1,47,8,"Programming exercises to learn a new language  I can not seem to find this exactly as a post, but what I am looking for is a list of exercises to help me get better a programming.  Like Fibonacci sequences, temperature conversions, etc.  A website would be great. Thanks for any help. ",2
+2079441,01/16/2010 23:57:44,90678,04/14/2009 14:08:02,1157,71,Software that thinks about its self,"What concepts are important to learn when considering writing a program that can ""think"" about its self?
+
+By ""think"", I mean software that can look at its self and improve its self over time.
+
+How easy is it to write a program that can introspect at a basic level?
+
+",language-agnostic,artificial-intelligence,,,,01/18/2010 18:42:42,not a real question,1,47,6,"Software that thinks about its self What concepts are important to learn when considering writing a program that can ""think"" about its self?
+
+By ""think"", I mean software that can look at its self and improve its self over time.
+
+How easy is it to write a program that can introspect at a basic level?
+
+",2
+1151678,07/20/2009 04:16:07,18529,09/19/2008 04:32:41,2957,91,how did female pronouns become so common as gender-neutral in programming books?,"**NOTE: I think this is a good thing.**
+
+I've read a lot of computer books, as I'm sure many of you have, and I've noticed that many (far more than half) of these books use ""she"" and ""her"" to refer to unnamed programmers/users/etc, rather than ""he"" or ""him"". I don't read a lot of other nonfiction, so I can't comment on other subject areas, but I've been surprised at how consistent this seems to be in programming literature, given that ""he"" and ""him"" are much more common in general. Really I think it's a pretty cool thing, especially given that programming is such a male-dominated field; I wouldn't be at all surprised if the literature reinforced this, but instead it seems to be pushing the other way.
+
+Anyway, assuming I'm not imagining this, does anybody know how it came to pass? Was there a group of publishers and authors that got together one day and decided to make it happen? Did some publisher start doing it and become a trend-setter? Has it been this way since day one? I haven't been able to locate any discussion of this on the web, but I've been wondering about it for years.
+
+By the way, this clearly doesn't relate to getting Java code to compile or diagnosing obscure C++ linker errors, but I still think it's programming-related, as much so as any other question about programming books.",language-agnostic,books,,,,07/20/2009 05:19:19,off topic,1,231,12,"how did female pronouns become so common as gender-neutral in programming books? **NOTE: I think this is a good thing.**
+
+I've read a lot of computer books, as I'm sure many of you have, and I've noticed that many (far more than half) of these books use ""she"" and ""her"" to refer to unnamed programmers/users/etc, rather than ""he"" or ""him"". I don't read a lot of other nonfiction, so I can't comment on other subject areas, but I've been surprised at how consistent this seems to be in programming literature, given that ""he"" and ""him"" are much more common in general. Really I think it's a pretty cool thing, especially given that programming is such a male-dominated field; I wouldn't be at all surprised if the literature reinforced this, but instead it seems to be pushing the other way.
+
+Anyway, assuming I'm not imagining this, does anybody know how it came to pass? Was there a group of publishers and authors that got together one day and decided to make it happen? Did some publisher start doing it and become a trend-setter? Has it been this way since day one? I haven't been able to locate any discussion of this on the web, but I've been wondering about it for years.
+
+By the way, this clearly doesn't relate to getting Java code to compile or diagnosing obscure C++ linker errors, but I still think it's programming-related, as much so as any other question about programming books.",2
+4175226,11/13/2010 23:13:30,105570,05/12/2009 18:49:17,22332,629,"What is the correct way to phrase a statement involving the word ""assign""?","Forgive me for such a basic question; this is (I suppose) more of an English question than a programming question; but I think as software developers we make such statements on a fairly regular basis.
+
+If I have this code:
+
+    int x = 0;
+
+...does the above ""assign `x` to `0`"", or does it ""assign `0` to `x`""?
+
+It's just been bugging me. Feel free to close if you know of a better place to be asking (though if someone provides a cogent answer before this question is closed, I will be happy).",language-agnostic,variable-assignment,,,,,open,0,93,13,"What is the correct way to phrase a statement involving the word ""assign""? Forgive me for such a basic question; this is (I suppose) more of an English question than a programming question; but I think as software developers we make such statements on a fairly regular basis.
+
+If I have this code:
+
+    int x = 0;
+
+...does the above ""assign `x` to `0`"", or does it ""assign `0` to `x`""?
+
+It's just been bugging me. Feel free to close if you know of a better place to be asking (though if someone provides a cogent answer before this question is closed, I will be happy).",2
+5527210,04/03/2011 02:38:43,518537,11/24/2010 09:21:54,115,1,What laguage should i prefer to make game ?,"I want to make one simple game.On game screen there will be one circle object and one triangle object.Circle object will move randomly on screen and triangle object movement will be controlled by key operation.If circle object will be collide with trianle object the collision detection will be occur.
+
+This is simple game but i have very less time and i have to use c++.I m familiar with all basic concept of c++.I don't know from where i should start it.Plz give me idea what will be perfect for me to develop this game fastly.
+
+Thanks",language-agnostic,,,,,07/21/2012 12:22:53,not a real question,1,94,9,"What laguage should i prefer to make game ? I want to make one simple game.On game screen there will be one circle object and one triangle object.Circle object will move randomly on screen and triangle object movement will be controlled by key operation.If circle object will be collide with trianle object the collision detection will be occur.
+
+This is simple game but i have very less time and i have to use c++.I m familiar with all basic concept of c++.I don't know from where i should start it.Plz give me idea what will be perfect for me to develop this game fastly.
+
+Thanks",1
+269496,11/06/2008 17:16:46,3488,08/28/2008 18:28:18,517,25,Inheritance vs. Aggregation,"There are two schools of thought on how to best extend, enhance, and reuse code in an object-oriented system:
+
+1. Inheritance: extend the functionality of a class by creating a subclass. Override superclass members in the subclasses to provide new functionality. Make methods abstract/virtual to force subclasses to ""fill-in-the-blanks"" when the superclass wants a particular interface but is agnostic about its implementation.
+
+2. Aggregation: create new functionality by taking other classes and combining them into a new class. Attach an common interface to this new class for interoperability with other code.
+
+What are the benefits, costs, and consequences of each? Are there other alternatives?
+
+I see this debate come up on a regular basis, but I don't think it's been asked on 
+Stack Overflow yet (though there is some related discussion). There's also a surprising lack of good Google results for it. ",language-agnostic,oop,inheritance,,,07/23/2012 20:52:03,not constructive,1,139,3,"Inheritance vs. Aggregation There are two schools of thought on how to best extend, enhance, and reuse code in an object-oriented system:
+
+1. Inheritance: extend the functionality of a class by creating a subclass. Override superclass members in the subclasses to provide new functionality. Make methods abstract/virtual to force subclasses to ""fill-in-the-blanks"" when the superclass wants a particular interface but is agnostic about its implementation.
+
+2. Aggregation: create new functionality by taking other classes and combining them into a new class. Attach an common interface to this new class for interoperability with other code.
+
+What are the benefits, costs, and consequences of each? Are there other alternatives?
+
+I see this debate come up on a regular basis, but I don't think it's been asked on 
+Stack Overflow yet (though there is some related discussion). There's also a surprising lack of good Google results for it. ",3
+1215917,08/01/2009 05:46:37,106009,05/13/2009 06:24:34,99,4,Taking Over Incomplete Software,"A friend of mine wants to buy a nearly bankrupt software company and is interested in one of their incomplete software. What should he get from them besides the source code as the company is willing to provide any kind of documentation he wants.
+
+And he wants to get the most essential kind of documentation to minimize the duration of the transition period. Note that the development team will not be the same. What do you recommend?",language-agnostic,software-engineering,documentation,,,08/03/2009 04:03:58,off topic,1,76,4,"Taking Over Incomplete Software A friend of mine wants to buy a nearly bankrupt software company and is interested in one of their incomplete software. What should he get from them besides the source code as the company is willing to provide any kind of documentation he wants.
+
+And he wants to get the most essential kind of documentation to minimize the duration of the transition period. Note that the development team will not be the same. What do you recommend?",3
+3117607,06/25/2010 11:31:18,358458,06/04/2010 12:53:55,16,3,what is transaction language 1?,hi every i want learn tranaction language1 please provide information on that one.,language-agnostic,language,,,,06/25/2010 15:35:56,not a real question,1,13,5,what is transaction language 1? hi every i want learn tranaction language1 please provide information on that one.,2
+4038487,10/27/2010 23:15:55,489480,10/27/2010 23:15:55,1,0,Tutorial or Framework for a Very Simple Chatbot?,"I've been doing some research into writing my own chatbot, and I've read quite a few posts on stackoverflow about them. However, none really seem to answer my somewhat basic question - is there a pre-built framework where I can simply type in something like ""if user enters 'mother', respond with 'tell me more about your family'"". My question is not in how to make a _good_ chatbot, but really in how to make one at all. I don't care whether it works on AIM or Gmail.
+
+Basically my goal is to write up a file containing a week's events, and then have this chatbot be able to read from this file. If someone IM's them and says ""Events today"" or ""Events this week"", it will respond with the corresponding contents of the file. I am not trying to make it do anything more complicated than that for now.
+
+What is the fastest way to get a simple chatbot up and running, where if you say ""hello"", it responds with ""hello world""? I can come up with the rest if I can figure out what framework is best for this type of thing",language-agnostic,chatbot,,,,05/27/2012 14:25:18,not a real question,1,191,8,"Tutorial or Framework for a Very Simple Chatbot? I've been doing some research into writing my own chatbot, and I've read quite a few posts on stackoverflow about them. However, none really seem to answer my somewhat basic question - is there a pre-built framework where I can simply type in something like ""if user enters 'mother', respond with 'tell me more about your family'"". My question is not in how to make a _good_ chatbot, but really in how to make one at all. I don't care whether it works on AIM or Gmail.
+
+Basically my goal is to write up a file containing a week's events, and then have this chatbot be able to read from this file. If someone IM's them and says ""Events today"" or ""Events this week"", it will respond with the corresponding contents of the file. I am not trying to make it do anything more complicated than that for now.
+
+What is the fastest way to get a simple chatbot up and running, where if you say ""hello"", it responds with ""hello world""? I can come up with the rest if I can figure out what framework is best for this type of thing",2
+7562387,09/26/2011 23:06:00,108207,05/16/2009 17:51:55,1237,149,What is the correct test to know whether some code is a polyglot?,"For instance I'd like to see what this code ""is"" - javascript or python. It seems to be JSON so it it therefore valid both python and javascript and therefore a so-called polyglot?
+
+    {
+      ""name"": ""Rio de Janeiro"",
+      ""Status"": {
+        ""code"": 200,
+        ""request"": ""geocode""
+      },
+      ""Placemark"": [ {
+        ""id"": ""p1"",
+        ""address"": ""Rio de Janeiro, Brazil"",
+        ""AddressDetails"": {
+       ""Accuracy"" : 4,
+       ""Country"" : {
+          ""AdministrativeArea"" : {
+             ""AdministrativeAreaName"" : ""RJ"",
+             ""Locality"" : {
+                ""LocalityName"" : ""Rio de Janeiro""
+             }
+          },
+          ""CountryName"" : ""Brasil"",
+          ""CountryNameCode"" : ""BR""
+       }
+    },
+        ""ExtendedData"": {
+          ""LatLonBox"": {
+            ""north"": -22.5742361,
+            ""south"": -23.2320449,
+            ""east"": -42.6973493,
+            ""west"": -43.7218245
+          }
+        },
+        ""Point"": {
+          ""coordinates"": [ -43.2095869, -22.9035393, 0 ]
+        }
+      } ]
+    }
+
+The tag ""language-agnostic"" was mentioned in this case (http://meta.stackoverflow.com/questions/107527/could-polyglot-be-a-new-tag) so I try it. ",language-agnostic,programming-languages,,,,09/26/2011 23:38:46,not a real question,1,399,13,"What is the correct test to know whether some code is a polyglot? For instance I'd like to see what this code ""is"" - javascript or python. It seems to be JSON so it it therefore valid both python and javascript and therefore a so-called polyglot?
+
+    {
+      ""name"": ""Rio de Janeiro"",
+      ""Status"": {
+        ""code"": 200,
+        ""request"": ""geocode""
+      },
+      ""Placemark"": [ {
+        ""id"": ""p1"",
+        ""address"": ""Rio de Janeiro, Brazil"",
+        ""AddressDetails"": {
+       ""Accuracy"" : 4,
+       ""Country"" : {
+          ""AdministrativeArea"" : {
+             ""AdministrativeAreaName"" : ""RJ"",
+             ""Locality"" : {
+                ""LocalityName"" : ""Rio de Janeiro""
+             }
+          },
+          ""CountryName"" : ""Brasil"",
+          ""CountryNameCode"" : ""BR""
+       }
+    },
+        ""ExtendedData"": {
+          ""LatLonBox"": {
+            ""north"": -22.5742361,
+            ""south"": -23.2320449,
+            ""east"": -42.6973493,
+            ""west"": -43.7218245
+          }
+        },
+        ""Point"": {
+          ""coordinates"": [ -43.2095869, -22.9035393, 0 ]
+        }
+      } ]
+    }
+
+The tag ""language-agnostic"" was mentioned in this case (http://meta.stackoverflow.com/questions/107527/could-polyglot-be-a-new-tag) so I try it. ",2
+4786174,01/24/2011 19:26:03,1311500,09/21/2008 14:15:11,5960,205,What's a good UML reference and why?,"What I really wanted to ask was ""What's **THE BEST** UML reference and why"", but I didn't wanna upset SO with a ""subjective blah blah"" title.
+
+So can any of you guys (in particular people who have read more than one) help me out?
+
+Thanks in advance!",language-agnostic,reference,uml,,,,open,0,45,7,"What's a good UML reference and why? What I really wanted to ask was ""What's **THE BEST** UML reference and why"", but I didn't wanna upset SO with a ""subjective blah blah"" title.
+
+So can any of you guys (in particular people who have read more than one) help me out?
+
+Thanks in advance!",3
+7854757,10/21/2011 20:12:45,987777,10/10/2011 13:28:25,166,44,"Trying to get into a college, how can programming help?","I am trying to get into a college that has (from what I've heard) good programming courses, and I plan on taking them. The only problem is, the average gpa acceptance rate is 3.5. Mine is... well.. lower than that because I would study programming in class instead of doing pointless, redundant schoolwork.
+
+So my question is...
+
+ 1. How can I use programming to increase my chances of getting into this school? I have heard from multiple sources that you can get into a school with low grades if you can prove you excel in the subject you plan on taking, like being a good programmer...
+ 2. If this is the case, then what would be the best category of programming to get better at so that I can prove that I'm not a useless lazy highschool kid. Like, should I get really good at Java and web design? Should I stick with c and c++ to better understand how programming works, and maybe get into assembly? Please give me advice. ",language-agnostic,coding-style,programming-languages,college,trade-study,10/21/2011 20:21:03,off topic,1,171,10,"Trying to get into a college, how can programming help? I am trying to get into a college that has (from what I've heard) good programming courses, and I plan on taking them. The only problem is, the average gpa acceptance rate is 3.5. Mine is... well.. lower than that because I would study programming in class instead of doing pointless, redundant schoolwork.
+
+So my question is...
+
+ 1. How can I use programming to increase my chances of getting into this school? I have heard from multiple sources that you can get into a school with low grades if you can prove you excel in the subject you plan on taking, like being a good programmer...
+ 2. If this is the case, then what would be the best category of programming to get better at so that I can prove that I'm not a useless lazy highschool kid. Like, should I get really good at Java and web design? Should I stick with c and c++ to better understand how programming works, and maybe get into assembly? Please give me advice. ",5
+7394530,09/12/2011 21:56:20,868235,07/28/2011 20:06:22,19,0,What is a Very high-level programming language?,"I came across this article: http://en.wikipedia.org/wiki/Very_high-level_programming_language and I couldn't understand anything. 
+
+The references are rather useless, at least to me. 
+And the discussion page leads nowhere too. 
+
+So. 
+
+Is there such thing as a very high level programming language? For example?",language-agnostic,,,,,09/12/2011 22:15:29,off topic,1,41,7,"What is a Very high-level programming language? I came across this article: http://en.wikipedia.org/wiki/Very_high-level_programming_language and I couldn't understand anything. 
+
+The references are rather useless, at least to me. 
+And the discussion page leads nowhere too. 
+
+So. 
+
+Is there such thing as a very high level programming language? For example?",1
+239062,10/27/2008 04:12:43,15055,09/17/2008 05:31:28,1820,72,Most Unpleasant Programming Task You've Had to Do,"What is the most <b>unpleasant</b> programming task you've ever had to do? This could be an assignment from a <b>job</b>, or a <b>project</b> or <b>homework assignment</b> for a class. Dimensions of unpleasantness can include <b>annoying</b>, <b>boring</b>, <b>tedious</b>, being <b>uncreative</b>, requiring no thought but lots of menial coding. ",language-agnostic,jobs,variable-assignment,,,03/20/2012 18:09:46,not constructive,1,48,8,"Most Unpleasant Programming Task You've Had to Do What is the most <b>unpleasant</b> programming task you've ever had to do? This could be an assignment from a <b>job</b>, or a <b>project</b> or <b>homework assignment</b> for a class. Dimensions of unpleasantness can include <b>annoying</b>, <b>boring</b>, <b>tedious</b>, being <b>uncreative</b>, requiring no thought but lots of menial coding. ",3
+423878,01/08/2009 11:00:52,39709,11/21/2008 16:22:36,600,47,"When coding, what do you worry about?","When you're coding are there certain things that you fret and worry about, specific topics that preoccupy your mind as you type (both new code and when maintaining/bugfixing existing code)?
+
+These need not be bad things, more like voices in our heads that help us with the quality of our code, and prevent us from just hacking things out.
+
+The list that I have is something like this:
+
+  - Should I be refactoring this?
+  - Is this code generic enough / too generic?
+  - Is this variable/function/class name sensible?
+  - This code seems a bit complex, am I missing something obvious here?
+  - Have I condidered the edge cases?
+
+",language-agnostic,self-improvement,,,,12/21/2011 18:56:27,not constructive,1,112,7,"When coding, what do you worry about? When you're coding are there certain things that you fret and worry about, specific topics that preoccupy your mind as you type (both new code and when maintaining/bugfixing existing code)?
+
+These need not be bad things, more like voices in our heads that help us with the quality of our code, and prevent us from just hacking things out.
+
+The list that I have is something like this:
+
+  - Should I be refactoring this?
+  - Is this code generic enough / too generic?
+  - Is this variable/function/class name sensible?
+  - This code seems a bit complex, am I missing something obvious here?
+  - Have I condidered the edge cases?
+
+",2
+9413652,02/23/2012 13:04:47,280693,02/24/2010 20:53:53,3367,218,Should DRY be prioritized over readability?,"When writing code, are there any good guidelines for what should have the highest priority; DRY or readability.
+
+I prefer to apply DRY over readability because if I have a more abstract and general piece of code that I only have in one place I only have a single point of failure. 
+
+I'm not 100 % sure if this question belongs to SO, maybe programmers is a better fit?",language-agnostic,,,,,02/23/2012 16:52:59,not constructive,1,68,6,"Should DRY be prioritized over readability? When writing code, are there any good guidelines for what should have the highest priority; DRY or readability.
+
+I prefer to apply DRY over readability because if I have a more abstract and general piece of code that I only have in one place I only have a single point of failure. 
+
+I'm not 100 % sure if this question belongs to SO, maybe programmers is a better fit?",1
+3476636,08/13/2010 12:11:09,279521,02/23/2010 14:04:21,918,31,Pros and Cons related to Pair Programming,"Our company has gone through some changes and the new CIO wants to present a case to the other boss about pair programming.  
+I do not have any experience (zip, zero, zilch, nada) with pair programming (which makes this presentation much more FUN).  What parts would you highlight in a presentation to upper management?
+If you have done pair programming, what are the pro's and con's of such an environment?  
+Any personal preferances?",language-agnostic,pair-programming,,,,10/31/2011 14:32:13,not constructive,1,75,7,"Pros and Cons related to Pair Programming Our company has gone through some changes and the new CIO wants to present a case to the other boss about pair programming.  
+I do not have any experience (zip, zero, zilch, nada) with pair programming (which makes this presentation much more FUN).  What parts would you highlight in a presentation to upper management?
+If you have done pair programming, what are the pro's and con's of such an environment?  
+Any personal preferances?",2
+486028,01/28/2009 00:52:17,1438,08/15/2008 15:44:20,3018,141,What exactly is programming?,"I'm not looking for an outsider's _definition_ of programming (which is easy enough to [find](http://en.wikipedia.org/wiki/Computer_programming)).  Rather I'm asking for an [inside baseball](http://en.wiktionary.org/wiki/inside_baseball) answer.  When you sit down in front of keyboard and screen and start working, what are you doing?  
+
+To put the question another way, when the World Wide Web began to be mainstream, you'd sometimes run into ""programmers"" whose language of choice was HTML.  At the time, I thought the idea was mockable.  Now, I'm not so sure working with HTML is fundamentally different than working with Java or C++.  It seems more a matter of degree of sophistication rather than something radically different.  What separates programmers from other computer workers?
+
+---
+
+This question was inspired by: <http://stackoverflow.com/questions/475072/how-exactly-do-you-judge-how-well-a-programmer-performs>.
+
+",language-agnostic,,,,,01/28/2009 12:27:00,not constructive,1,125,4,"What exactly is programming? I'm not looking for an outsider's _definition_ of programming (which is easy enough to [find](http://en.wikipedia.org/wiki/Computer_programming)).  Rather I'm asking for an [inside baseball](http://en.wiktionary.org/wiki/inside_baseball) answer.  When you sit down in front of keyboard and screen and start working, what are you doing?  
+
+To put the question another way, when the World Wide Web began to be mainstream, you'd sometimes run into ""programmers"" whose language of choice was HTML.  At the time, I thought the idea was mockable.  Now, I'm not so sure working with HTML is fundamentally different than working with Java or C++.  It seems more a matter of degree of sophistication rather than something radically different.  What separates programmers from other computer workers?
+
+---
+
+This question was inspired by: <http://stackoverflow.com/questions/475072/how-exactly-do-you-judge-how-well-a-programmer-performs>.
+
+",1
+759532,04/17/2009 08:30:35,3137,08/26/2008 23:31:53,501,37,What do you say to express the first succesful running of a program?,"Yesterday, I had a moment of excitement when my LDAP client (pure C Win32) module successful retrieved data from Active Directory for the very first time.
+
+It was more than a smoke test -- I had all ready run a few of those, and it was well less than even feature complete code.  Some data was mangled - so it wasn't even code I would show someone else.
+
+But it ran!  It worked! (mostly) And now, I just have to massage it into shape.  Saying ""First data"" sounds lame.  
+
+An astronomer might refer to 'First light'. A shipbuilder might 'launch'. An ancient Greek philosopher might have had a bathtub moment.
+
+Is there such an expression for coding?  What would you say?
+
+",language-agnostic,polls,,,,10/26/2011 11:24:30,not constructive,1,123,13,"What do you say to express the first succesful running of a program? Yesterday, I had a moment of excitement when my LDAP client (pure C Win32) module successful retrieved data from Active Directory for the very first time.
+
+It was more than a smoke test -- I had all ready run a few of those, and it was well less than even feature complete code.  Some data was mangled - so it wasn't even code I would show someone else.
+
+But it ran!  It worked! (mostly) And now, I just have to massage it into shape.  Saying ""First data"" sounds lame.  
+
+An astronomer might refer to 'First light'. A shipbuilder might 'launch'. An ancient Greek philosopher might have had a bathtub moment.
+
+Is there such an expression for coding?  What would you say?
+
+",2
+4382871,12/07/2010 23:45:54,337522,05/10/2010 17:39:44,2237,218,How does your web development toolkit looks like?,What are the web development tools you are using. Like firebox and firebug help me a lot with DOM. CVS for managing the code base. debugbar for IE. Can you suggest few of the open source tools that you have been using.,language-agnostic,,,,,,open,0,42,8,How does your web development toolkit looks like? What are the web development tools you are using. Like firebox and firebug help me a lot with DOM. CVS for managing the code base. debugbar for IE. Can you suggest few of the open source tools that you have been using.,1
+2639,08/05/2008 18:07:26,434,08/05/2008 17:42:54,1,0,What are some web-based knowledge-base solutions?,"I've used a WordPress blog and a Screwturn Wiki (at two separate jobs) to store private, company-specific KB info, but I'm looking for something that was created to be a knowledge base.  Specifically, I'd like to see:
+
+  - Free/low cost
+  - Simple method for users to subscribe to KB (or just sections) to get updates
+  - Ability to do page versioning/audit changes
+  - Limit access to certain pages for certain users
+  - Very simple method of posting/editing articles
+  - Very simple method of adding images to articles
+  - Excellent (fast, accurate) searching abilities
+  - Ability to rate and comment on articles
+
+I liked using the Wordpress blog because it allowed me to use [Live Writer][1] to add/edit articles and images, but it didn't have page versioning (that I could see).
+
+I like using Screwturn wiki because of it's ability to track article versions, and I like it's clean look, but some non-technical people balk at the input and editing.
+
+  [1]: http://get.live.com/",language-agnostic,planning,,,,,open,0,169,6,"What are some web-based knowledge-base solutions? I've used a WordPress blog and a Screwturn Wiki (at two separate jobs) to store private, company-specific KB info, but I'm looking for something that was created to be a knowledge base.  Specifically, I'd like to see:
+
+  - Free/low cost
+  - Simple method for users to subscribe to KB (or just sections) to get updates
+  - Ability to do page versioning/audit changes
+  - Limit access to certain pages for certain users
+  - Very simple method of posting/editing articles
+  - Very simple method of adding images to articles
+  - Excellent (fast, accurate) searching abilities
+  - Ability to rate and comment on articles
+
+I liked using the Wordpress blog because it allowed me to use [Live Writer][1] to add/edit articles and images, but it didn't have page versioning (that I could see).
+
+I like using Screwturn wiki because of it's ability to track article versions, and I like it's clean look, but some non-technical people balk at the input and editing.
+
+  [1]: http://get.live.com/",2
+3654986,09/07/2010 00:13:00,239036,12/27/2009 02:32:36,230,16,"Of all the major languages used in academia and business, which one is the most productive, and why?","As the question says, which language is easiest and most productive for you, and importantly why?
+
+Given that the reason why should be convincing it could have a definitive conclusion, and is therefore a valid question. I am looking for suggestions with regard to learning languages generally, and whether to pick up one language over another.
+
+Thanks, be great to hear what you have to say.",language-agnostic,productivity,suggestions,,,09/07/2010 02:57:30,not constructive,1,64,18,"Of all the major languages used in academia and business, which one is the most productive, and why? As the question says, which language is easiest and most productive for you, and importantly why?
+
+Given that the reason why should be convincing it could have a definitive conclusion, and is therefore a valid question. I am looking for suggestions with regard to learning languages generally, and whether to pick up one language over another.
+
+Thanks, be great to hear what you have to say.",3
+119672,09/23/2008 07:51:07,17389,09/18/2008 08:14:35,297,15,How would you organize a timezone dropdown?,"I'm trying to present the (web) user with a useful subset of Olson timezones, though with a friendlier naming convention.
+
+Any recommendations for how to sort and label them for maximum usefulness?  By country?  Continent?  GMT offset?
+
+I'm not very concerned about inaccuracy for past dates, so some of the timezones that are only historically different could be winnowed out, but I'm not sure it's worth the effort of identifying which.  If someone else already has done so, please let me know.",language-agnostic,user-interface,timezone,user-input,,12/29/2011 03:24:21,not constructive,1,84,7,"How would you organize a timezone dropdown? I'm trying to present the (web) user with a useful subset of Olson timezones, though with a friendlier naming convention.
+
+Any recommendations for how to sort and label them for maximum usefulness?  By country?  Continent?  GMT offset?
+
+I'm not very concerned about inaccuracy for past dates, so some of the timezones that are only historically different could be winnowed out, but I'm not sure it's worth the effort of identifying which.  If someone else already has done so, please let me know.",4
+4419483,12/11/2010 23:10:52,539226,12/11/2010 23:10:52,1,0,What is the best field for a commercial programmer?,"What is the best field for a commercial programmer, with a good income and low stress / high sanity? I can do all sorts of different things, but I want to pick a good niche and stick to it. Sorry if I'm vague, but I don't want to limit the responses, you could offer specific jobs, languages, etc. Also, I know this question could be interpreted as subjective, but I am looking for objective responses, answers backed up by reasoning (or even evidence).",language-agnostic,career-development,jobs,,,12/12/2010 02:41:40,not constructive,1,83,9,"What is the best field for a commercial programmer? What is the best field for a commercial programmer, with a good income and low stress / high sanity? I can do all sorts of different things, but I want to pick a good niche and stick to it. Sorry if I'm vague, but I don't want to limit the responses, you could offer specific jobs, languages, etc. Also, I know this question could be interpreted as subjective, but I am looking for objective responses, answers backed up by reasoning (or even evidence).",3
+8191461,11/19/2011 02:37:25,636333,02/27/2011 09:54:44,149,1,Pass objects or values to functions,Is it preferable to pass an object to a function/method (creating yet another dependency) or pass the parameters in simple/value types (eg. ints and strings) which frees the function from being coupled to the class that holds the data?,language-agnostic,,,,,11/19/2011 05:12:24,not a real question,1,39,6,Pass objects or values to functions Is it preferable to pass an object to a function/method (creating yet another dependency) or pass the parameters in simple/value types (eg. ints and strings) which frees the function from being coupled to the class that holds the data?,1
+2775297,05/05/2010 17:09:27,326541,04/27/2010 03:58:46,77,0,"When is a webapp called Beta, alpha, pre-alpha, or none","I've come across many apps on the web that call themselves Beta. I've come across other apps that had an alpha designation. I've even come across some that called themselves pre-alpha, whatever that means (if you know please clarify). Then I've come across some really bad webapps that shouldn't have left the developer's computer and they didn't have any beta designations. I've also seen some well built apps that called themselves Beta, including Stack Exchange (the mother site of SO) which I believe is very full featured to be called a Beta. 
+
+I'm a little confused. It seems people are doing it at their whims. Is there an established rule or a checklist that can help decide what stage an app is in (beta, alpha, pre-alpha, or none)?
+
+P.S. Please feel free to retag as appropriate.",language-agnostic,ria,,,,12/10/2011 22:07:39,not constructive,1,135,10,"When is a webapp called Beta, alpha, pre-alpha, or none I've come across many apps on the web that call themselves Beta. I've come across other apps that had an alpha designation. I've even come across some that called themselves pre-alpha, whatever that means (if you know please clarify). Then I've come across some really bad webapps that shouldn't have left the developer's computer and they didn't have any beta designations. I've also seen some well built apps that called themselves Beta, including Stack Exchange (the mother site of SO) which I believe is very full featured to be called a Beta. 
+
+I'm a little confused. It seems people are doing it at their whims. Is there an established rule or a checklist that can help decide what stage an app is in (beta, alpha, pre-alpha, or none)?
+
+P.S. Please feel free to retag as appropriate.",2
+7831862,10/20/2011 06:18:18,434177,08/29/2010 10:53:09,43,2,Enforcing time-limit on the client,"Suppose you have a web application and you want to user to execute a particular action (e.g., answering a quiz question) within a specific time limit. What is the best way to enforce the time limit? I can think of two, with pros and cons:
+
+- client-side enforcement: works but susceptible to tampering
+- server-side enforcement: cannot be tampered with but may cause problems due to latency between server and client
+
+any thoughts?",language-agnostic,,,,,,open,0,70,5,"Enforcing time-limit on the client Suppose you have a web application and you want to user to execute a particular action (e.g., answering a quiz question) within a specific time limit. What is the best way to enforce the time limit? I can think of two, with pros and cons:
+
+- client-side enforcement: works but susceptible to tampering
+- server-side enforcement: cannot be tampered with but may cause problems due to latency between server and client
+
+any thoughts?",1
+7208937,08/26/2011 18:17:03,399268,02/20/2010 16:23:30,1908,75,"Technically, why choose ASP.NET for StackOverflow?","Recently I've been in a few situations where I would pick the technologies that would be used for projects. I look at current needs, possible future needs and other factors like team's familiarity with the technologies (given everything else equal) possibly cost when it may be the only differentiating factor.
+
+To learn by example if I look at a real world situation, Stack Overflow, I see they use ASP.NET. To me that means it will always only be hosted on Windows servers and paying for tool; counter-parts of which are available for free in the open-source realm. To reaffirm what's possible with these free tools I may look at Facebook, Google et. al.
+
+I'm sure there was good reasoning done before deciding upon ASP.NET. But I'm missing why ASP.NET was chosen over other alternatives, technically speaking.",language-agnostic,technologies,technology-choice,technology-stack,,08/26/2011 21:50:32,off topic,1,134,6,"Technically, why choose ASP.NET for StackOverflow? Recently I've been in a few situations where I would pick the technologies that would be used for projects. I look at current needs, possible future needs and other factors like team's familiarity with the technologies (given everything else equal) possibly cost when it may be the only differentiating factor.
+
+To learn by example if I look at a real world situation, Stack Overflow, I see they use ASP.NET. To me that means it will always only be hosted on Windows servers and paying for tool; counter-parts of which are available for free in the open-source realm. To reaffirm what's possible with these free tools I may look at Facebook, Google et. al.
+
+I'm sure there was good reasoning done before deciding upon ASP.NET. But I'm missing why ASP.NET was chosen over other alternatives, technically speaking.",4
+137048,09/26/2008 00:11:54,13132,09/16/2008 17:16:45,28,3,How do I tell if I can re-use a 'free' software library in a commercial app?,"Whats the easiest way, of telling if I can redistribute it in a piece of commercial software?
+
+In license agreements I often read the terms GPL, OpenSource, Freeware, Artistic License but have never got a definitive answer on what the differences are.",language-agnostic,open-source,licensing,freeware,gpl,09/08/2011 20:55:59,off topic,1,41,16,"How do I tell if I can re-use a 'free' software library in a commercial app? Whats the easiest way, of telling if I can redistribute it in a piece of commercial software?
+
+In license agreements I often read the terms GPL, OpenSource, Freeware, Artistic License but have never got a definitive answer on what the differences are.",5
+6435390,06/22/2011 05:39:11,610846,02/10/2011 05:06:28,149,1,How to creat a web site step by step,"This is a naive question. I want to create a web site where user could log in, post some ideas, etc.
+Very basic.
+
+But I only know TCP/IP. Today there are many many web tools and choices. I don't know which one should I choose. To save the time, so I post this question here.
+
+I want my web to be based on open source toolkit. Not C#, ASPX...
+
+I need a book list where I can construct the web from basic mode to high user customized way. Any suggestions?
+
+Could you provide me a book list from basic to advanced?
+",language-agnostic,,,,,07/21/2012 06:30:57,not a real question,1,96,9,"How to creat a web site step by step This is a naive question. I want to create a web site where user could log in, post some ideas, etc.
+Very basic.
+
+But I only know TCP/IP. Today there are many many web tools and choices. I don't know which one should I choose. To save the time, so I post this question here.
+
+I want my web to be based on open source toolkit. Not C#, ASPX...
+
+I need a book list where I can construct the web from basic mode to high user customized way. Any suggestions?
+
+Could you provide me a book list from basic to advanced?
+",1
+3562272,08/25/2010 01:40:06,430175,08/25/2010 01:17:24,11,0,What is the difference between message-passing and method-invocation?,"Is there a difference between message-passing and method-invocation, or can they be considered equivalent? This is probably specific to the language; many languages don't support message-passing (though all the ones I can think of support methods) and the ones that do can have entirely different implementations. Also, there are big differences in method-invocation depending on the language (C vs. Java vs Lisp vs your favorite language). I believe this is language-agnostic. What can you do with a passed-method that you can't do with an invoked-method, and vice-versa (in your favorite language)?",language-agnostic,message-passing,method-invocation,,,,open,0,91,8,"What is the difference between message-passing and method-invocation? Is there a difference between message-passing and method-invocation, or can they be considered equivalent? This is probably specific to the language; many languages don't support message-passing (though all the ones I can think of support methods) and the ones that do can have entirely different implementations. Also, there are big differences in method-invocation depending on the language (C vs. Java vs Lisp vs your favorite language). I believe this is language-agnostic. What can you do with a passed-method that you can't do with an invoked-method, and vice-versa (in your favorite language)?",3
+236737,10/25/2008 17:44:53,4234,09/02/2008 13:28:31,77,23,"How to make a system call that returns the stdout output as a string (ie, open a pipe from a command) in various languages.","Perl does this with backticks.  For example, this
+
+    $output = `ls`;
+
+returns a directory listing.  (That's just an example; there are of course much better ways to get the list of files in a directory.)
+
+The similar function, `system(""foo"")`, returns the operating system return code for the command `foo`.  I'm talking about the similar function that returns whatever `foo` prints to stdout.
+
+How do other languages do this?  Whichever languages does this most concisely/cleanly wins!  (I'll add the perl backtick answer.)
+
+PS: I'm mainly asking because I'm looking for the canonical name for such a function.
+",language-agnostic,filesystems,operating-system,scripting,perl,,open,0,100,24,"How to make a system call that returns the stdout output as a string (ie, open a pipe from a command) in various languages. Perl does this with backticks.  For example, this
+
+    $output = `ls`;
+
+returns a directory listing.  (That's just an example; there are of course much better ways to get the list of files in a directory.)
+
+The similar function, `system(""foo"")`, returns the operating system return code for the command `foo`.  I'm talking about the similar function that returns whatever `foo` prints to stdout.
+
+How do other languages do this?  Whichever languages does this most concisely/cleanly wins!  (I'll add the perl backtick answer.)
+
+PS: I'm mainly asking because I'm looking for the canonical name for such a function.
+",5
+7137308,08/21/2011 08:55:06,257583,01/23/2010 22:28:23,1380,4,How verbose should my variable names be?,"How would you recommend setting the balance between easily and clearly understood variable/function/etc names and not having names be too long?
+
+For example, is something like `actualFullDefinitionLabel` too verbose?",language-agnostic,readability,code-readability,,,08/21/2011 09:08:02,not constructive,1,28,7,"How verbose should my variable names be? How would you recommend setting the balance between easily and clearly understood variable/function/etc names and not having names be too long?
+
+For example, is something like `actualFullDefinitionLabel` too verbose?",3
+4157393,11/11/2010 17:36:29,300805,03/24/2010 12:46:19,467,20,Most interesting Computer Programming Paradigms,"The first language I truly studied and understood has been C. After a couple of years on it, I moved to Object Oriented languages (mostly C++, that I think I understood quite well), and got into a variety of other languages (from Assembly to Python), but cannot say to be skilled with them.
+
+Any time I get into a C piece of code I can't help thinking how much Object Oriented Programming changed my way of thinking. For this reason I'd like to study other programming paradigms, hoping this will improve again my mind the way I think programs.
+
+What Paradigm do you suggest? Which one is going to revolutionate the most the way I see programming?",language-agnostic,programming-languages,paradigms,programming-paradigms,,11/12/2010 01:54:24,not constructive,1,115,5,"Most interesting Computer Programming Paradigms The first language I truly studied and understood has been C. After a couple of years on it, I moved to Object Oriented languages (mostly C++, that I think I understood quite well), and got into a variety of other languages (from Assembly to Python), but cannot say to be skilled with them.
+
+Any time I get into a C piece of code I can't help thinking how much Object Oriented Programming changed my way of thinking. For this reason I'd like to study other programming paradigms, hoping this will improve again my mind the way I think programs.
+
+What Paradigm do you suggest? Which one is going to revolutionate the most the way I see programming?",4
+1823,08/05/2008 02:17:45,145,08/02/2008 14:40:17,93,5,"Writing A ""Conway's Game of Life"" Program","Alright, so I've always wanted to write myself a nice little **Game of Life** program where you could play with the rules and adjust the number of cells and such; I've just never really had the time to mess around to do this (until recently).  I understand the basic algorithm and such (if you don't, go to the [Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) Wikipedia page to check it out.) but only have a little experience with GUI programming.  I'm considering doing this in python, but I was really wanting to figure out how to go about doing this in general, so feel free to give code snippets in your language of choice.
+
+To summarise:
+
+  - **How would you go about programming a ""Conway's Game of Life"" simulation in your language of choice?**",language-agnostic,gui,simulation,,,05/21/2012 17:07:23,not constructive,1,132,7,"Writing A ""Conway's Game of Life"" Program Alright, so I've always wanted to write myself a nice little **Game of Life** program where you could play with the rules and adjust the number of cells and such; I've just never really had the time to mess around to do this (until recently).  I understand the basic algorithm and such (if you don't, go to the [Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) Wikipedia page to check it out.) but only have a little experience with GUI programming.  I'm considering doing this in python, but I was really wanting to figure out how to go about doing this in general, so feel free to give code snippets in your language of choice.
+
+To summarise:
+
+  - **How would you go about programming a ""Conway's Game of Life"" simulation in your language of choice?**",3
+3481096,08/13/2010 22:30:29,298661,03/21/2010 22:56:02,5564,494,Class Diagrams - questionably useful?,"How is a class diagram actually any different to just looking at the class definition with all the functions collapsed? I've been asked to write some and realized that this is all just .. read the source .. it has comments. What's the point of a class diagram, how is it different to even minorly commented definitions, and what makes a good class diagram better than others?",language-agnostic,class,diagram,,,,open,0,67,5,"Class Diagrams - questionably useful? How is a class diagram actually any different to just looking at the class definition with all the functions collapsed? I've been asked to write some and realized that this is all just .. read the source .. it has comments. What's the point of a class diagram, how is it different to even minorly commented definitions, and what makes a good class diagram better than others?",3
+15747,08/19/2008 05:17:05,1588,08/17/2008 01:05:22,11,2,"What are your favorite ""learning"" projects, and why?","When learning a new language/framework, are there any projects you find particularly useful to get to know it in depth? How do the different language paradigms affect your choice of project? Maybe you have a pet project which is '10 lines in functional language x"" that you like to implement as a much larger imperative language project just to get a feel for the new environment?",language-agnostic,language,,,,10/26/2011 12:35:58,not constructive,1,66,8,"What are your favorite ""learning"" projects, and why? When learning a new language/framework, are there any projects you find particularly useful to get to know it in depth? How do the different language paradigms affect your choice of project? Maybe you have a pet project which is '10 lines in functional language x"" that you like to implement as a much larger imperative language project just to get a feel for the new environment?",2
+4002777,10/23/2010 06:16:08,336455,05/09/2010 01:16:54,2473,76,Is there such a thing as a super programmer?,"Have you come across a super programmer? What identifies him or her as such?
+
+Also. how do you deal with a person in your team who believes he is a super programmer? Both in case he actually is or if he isn't?",language-agnostic,,,,,10/23/2010 06:25:05,off topic,1,41,9,"Is there such a thing as a super programmer? Have you come across a super programmer? What identifies him or her as such?
+
+Also. how do you deal with a person in your team who believes he is a super programmer? Both in case he actually is or if he isn't?",1
+1350343,08/29/2009 03:20:43,4296,09/02/2008 18:13:04,556,24,Pattern for Managing IDs and Persisting User Input for an Entire HTML Table at once,"...meaning *pattern* in its general English usage, not specific to OO design patterns. Given a table like the following (using <% %> as generic server-side script tags):
+
+    <form action=""someUri"" method=""post"">
+    <table>
+        <thead>
+            <tr>
+                <td>Widget ID</td>
+                <td>Description</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+        <% foreach widget in widgets %>
+            <tr>
+                <td>
+                    <!-- input ids need to be mangled
+                            to preserve uniqueness -->
+                    <input type=""hidden"" id=""[Some_Mangled_Input_Id]"" 
+                        value=""<%= widget.Id %>"" />
+                    <%= widget.Id %>
+                </td>
+                <td>
+                    <!-- prefill if exists for widget -->
+                    <input type=""text"" id=""[Some_Mangled_Input_Id]""
+                        value=""<%= widget.Description %>"" />
+                </td>
+                <td>
+                    <!-- prefill if exists for widget -->
+                    <input type=""text"" id=""[Some_Mangled_Input_Id]""
+                        value=""<%= widget.Price %>"" />
+                </td>
+            </tr>
+        <% end foreach %>
+        </tbody>
+    </table>
+    
+    <input type=""submit"" value=""Save Changes"" />
+    </form>
+
+And on the server at post:
+
+<pre>
+    var widgetIdKeys = all keys in forms collection matching
+        pattern of mangled input Id for Widget.Id hidden input
+    
+    foreach widgetIdKey in widgetIdKeys
+    
+        find matching mangled input Id for Widget.Description text input
+    
+        find matching mangled input Id for Widget.Price text input
+        
+        if input changed per comparison to some original
+            
+            persist Description and Price input for current widget Id
+        
+        end if
+        
+    end foreach
+</pre>
+
+This problem has no doubt been solved for a long time but this is the only approach I can think of and it seems hacky. So my question is: is there a better pattern and if so what does it look like? If this is the only or preferred way to do this, are there right and wrong ways to handle the input Id mangling and parsing? What about the comparison to identify which inputs have changed? I can think of ways to solve this on a per row or per cell level, and maybe those ways exist because there is no good way to solve it on a per table level, but I can also think of downsides to those ways.
+
+Or am I missing the appropiate paradigm altogether? Thanks for any insights.",language-agnostic,,,,,,open,0,886,15,"Pattern for Managing IDs and Persisting User Input for an Entire HTML Table at once ...meaning *pattern* in its general English usage, not specific to OO design patterns. Given a table like the following (using <% %> as generic server-side script tags):
+
+    <form action=""someUri"" method=""post"">
+    <table>
+        <thead>
+            <tr>
+                <td>Widget ID</td>
+                <td>Description</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+        <% foreach widget in widgets %>
+            <tr>
+                <td>
+                    <!-- input ids need to be mangled
+                            to preserve uniqueness -->
+                    <input type=""hidden"" id=""[Some_Mangled_Input_Id]"" 
+                        value=""<%= widget.Id %>"" />
+                    <%= widget.Id %>
+                </td>
+                <td>
+                    <!-- prefill if exists for widget -->
+                    <input type=""text"" id=""[Some_Mangled_Input_Id]""
+                        value=""<%= widget.Description %>"" />
+                </td>
+                <td>
+                    <!-- prefill if exists for widget -->
+                    <input type=""text"" id=""[Some_Mangled_Input_Id]""
+                        value=""<%= widget.Price %>"" />
+                </td>
+            </tr>
+        <% end foreach %>
+        </tbody>
+    </table>
+    
+    <input type=""submit"" value=""Save Changes"" />
+    </form>
+
+And on the server at post:
+
+<pre>
+    var widgetIdKeys = all keys in forms collection matching
+        pattern of mangled input Id for Widget.Id hidden input
+    
+    foreach widgetIdKey in widgetIdKeys
+    
+        find matching mangled input Id for Widget.Description text input
+    
+        find matching mangled input Id for Widget.Price text input
+        
+        if input changed per comparison to some original
+            
+            persist Description and Price input for current widget Id
+        
+        end if
+        
+    end foreach
+</pre>
+
+This problem has no doubt been solved for a long time but this is the only approach I can think of and it seems hacky. So my question is: is there a better pattern and if so what does it look like? If this is the only or preferred way to do this, are there right and wrong ways to handle the input Id mangling and parsing? What about the comparison to identify which inputs have changed? I can think of ways to solve this on a per row or per cell level, and maybe those ways exist because there is no good way to solve it on a per table level, but I can also think of downsides to those ways.
+
+Or am I missing the appropiate paradigm altogether? Thanks for any insights.",1
+687213,03/26/2009 19:29:13,33226,10/31/2008 21:53:12,3227,158,What websites do you use to post temporary code snippets?,"Following on the heels of [What is your preferred site for code snippets][1], I'm looking for a website to post a short blurb of formatted code.  
+
+I **don't** want to create a login. I'm looking for a simple: paste, use and forget.  I know it exists, I've used it before, but my google skills are failing me!
+
+
+  [1]: http://stackoverflow.com/questions/53881/what-is-your-preferred-site-for-code-snippets",language-agnostic,code-snippets,website,,,07/31/2012 19:16:46,not constructive,1,62,10,"What websites do you use to post temporary code snippets? Following on the heels of [What is your preferred site for code snippets][1], I'm looking for a website to post a short blurb of formatted code.  
+
+I **don't** want to create a login. I'm looking for a simple: paste, use and forget.  I know it exists, I've used it before, but my google skills are failing me!
+
+
+  [1]: http://stackoverflow.com/questions/53881/what-is-your-preferred-site-for-code-snippets",3
+3021523,06/11/2010 09:02:28,24545,10/02/2008 15:44:37,17177,454,Beautiful examples of bit manipulation,"What are the most elegant or useful examples of bit manipulation you have encountered or used?
+
+Examples in all languages are welcome.",language-agnostic,bit-manipulation,,,,04/09/2012 13:48:08,not constructive,1,21,5,"Beautiful examples of bit manipulation What are the most elegant or useful examples of bit manipulation you have encountered or used?
+
+Examples in all languages are welcome.",2
+4405815,12/10/2010 04:59:18,527623,12/02/2010 07:05:47,385,25,What would make a programming language easier for a blind person?,"As I was eyeballing some beautifully indented code earlier today, it struck me:
+
+>Programming is a primarily mental task, but it must be *catastrophically* difficult if one were blind.
+
+If you were blind, what would you want in a programming language? Would verbosity help, or would it actually make it more difficult to keep your place in the code?
+
+Would a language closely resembling your native tongue be the easiest, or would a specialized language designed specifically to be easy to remember and ""keep in your head"" ultimately be the better choice?
+
+I imagine that a good IDE would be vital. For example, if I were *listening* to my code, I would want the ability to ""jump back"" to the beginning of the current scope and recite everything up to my cursor's position.
+
+
+----------
+
+
+What traits would make make a programming language easier for a blind person?",language-agnostic,blindness,,,,09/17/2011 15:18:40,not constructive,1,141,11,"What would make a programming language easier for a blind person? As I was eyeballing some beautifully indented code earlier today, it struck me:
+
+>Programming is a primarily mental task, but it must be *catastrophically* difficult if one were blind.
+
+If you were blind, what would you want in a programming language? Would verbosity help, or would it actually make it more difficult to keep your place in the code?
+
+Would a language closely resembling your native tongue be the easiest, or would a specialized language designed specifically to be easy to remember and ""keep in your head"" ultimately be the better choice?
+
+I imagine that a good IDE would be vital. For example, if I were *listening* to my code, I would want the ability to ""jump back"" to the beginning of the current scope and recite everything up to my cursor's position.
+
+
+----------
+
+
+What traits would make make a programming language easier for a blind person?",2
+3030207,06/12/2010 21:44:52,328323,04/28/2010 21:31:42,161,4,Which language is most powerful,Has there been studies on the most powerful language?,language-agnostic,,,,,06/12/2010 21:59:36,not constructive,1,9,5,Which language is most powerful Has there been studies on the most powerful language?,1
+10160224,04/15/2012 07:13:13,700195,04/09/2011 18:28:05,171,7,"What do you code first to learn a new language, library, or framework?","Every language, framework, and library has its own syntax, quirks, and pitfalls.
+
+
+----------
+
+**What Program, Game, etc. do you code in order to learn these unique characteristics?  
+How do you decide on what previous programming experience is applicable?**
+
+
+----------
+
+
+I'd imagine that the task would have to be complicated enough to force you to use applicable programming techniques and idioms, but simple enough that it wouldn't take a ton of time. ",language-agnostic,frameworks,programming-languages,self-improvement,,04/15/2012 08:19:49,not constructive,1,69,13,"What do you code first to learn a new language, library, or framework? Every language, framework, and library has its own syntax, quirks, and pitfalls.
+
+
+----------
+
+**What Program, Game, etc. do you code in order to learn these unique characteristics?  
+How do you decide on what previous programming experience is applicable?**
+
+
+----------
+
+
+I'd imagine that the task would have to be complicated enough to force you to use applicable programming techniques and idioms, but simple enough that it wouldn't take a ton of time. ",4
+2454552,03/16/2010 13:15:50,153632,08/10/2009 10:06:13,665,5,what's an option strict and explicit?,"I saw this post:
+
+""Typos…  Just use option strict and explicit please..  during one software development project, which I was on as a consultant, they were getting ridiculous amounts of errors everywhere… turned out the developer couldn’t spell and would declare variables with incorrect spelling.. no big deal, until you use the correct spelling when you’re assigning a value to it…  and  you had option explicit off.  Ouch to them…""
+
+what is an option strict and explicit anyway? I have googled it up but can't get the idea (because mostly it's Visual Basic, I'm doing PHP)",language-agnostic,php,programming,,,,open,0,99,6,"what's an option strict and explicit? I saw this post:
+
+""Typos…  Just use option strict and explicit please..  during one software development project, which I was on as a consultant, they were getting ridiculous amounts of errors everywhere… turned out the developer couldn’t spell and would declare variables with incorrect spelling.. no big deal, until you use the correct spelling when you’re assigning a value to it…  and  you had option explicit off.  Ouch to them…""
+
+what is an option strict and explicit anyway? I have googled it up but can't get the idea (because mostly it's Visual Basic, I'm doing PHP)",3
+3039816,06/14/2010 18:27:16,147141,07/29/2009 14:06:10,7008,426,What hash function yields the shortest output?,"What is the shortest hash that can be obtained and why? What happens if you try to achieve a shorter one, is there a fixed limit or does it depend on the length of the hashed data and why?",language-agnostic,hash,theory,,,06/14/2010 18:38:45,not a real question,1,39,7,"What hash function yields the shortest output? What is the shortest hash that can be obtained and why? What happens if you try to achieve a shorter one, is there a fixed limit or does it depend on the length of the hashed data and why?",3
+1438806,09/17/2009 13:12:48,169786,09/07/2009 16:25:57,8,0,What are the top three most important skills companies tend to ignore?,"Inspired by [""What are the top three most important skills new software development graduates tend to be missing?][1], here's a similar question but with a twist.
+
+What are the top three most important skills companies tend to ignore? As in, what qualities and skills, related to software development mind you, that you've noticed some companies ignore?
+
+
+  [1]: http://stackoverflow.com/questions/1437909/what-are-the-top-three-most-important-skills-new-software-development-graduates-t",language-agnostic,self-improvement,jobs,,,03/04/2012 05:34:53,not constructive,1,58,12,"What are the top three most important skills companies tend to ignore? Inspired by [""What are the top three most important skills new software development graduates tend to be missing?][1], here's a similar question but with a twist.
+
+What are the top three most important skills companies tend to ignore? As in, what qualities and skills, related to software development mind you, that you've noticed some companies ignore?
+
+
+  [1]: http://stackoverflow.com/questions/1437909/what-are-the-top-three-most-important-skills-new-software-development-graduates-t",3
+10326373,04/26/2012 02:18:36,1357494,04/26/2012 00:22:46,1,0,Cliché Detection,"I was recently reading a pretty bad book that contained many clichés when the thought occurred to me that it might be fun, after learning more about NLP and provided with the right data, to write a program to scan a document and return likely cliché phrases found within it.
+
+I've never done anything like this before and am wondering if I could be pointed in the direction of texts, algorithms, data sets, and/or approaches that might help me to solve this problem.
+
+I came across a [Google Books Ngrams data set][1] that looks possibly useful, but it left me with questions about how to best tokenize a digital work of fiction, how to compare it against the provided n-grams, score possible clichés, etc.
+
+Any help at all would be greatly appreciated, and my apologies in advance for the rather abstract question.
+
+Thanks!
+
+
+  [1]: http://aws.amazon.com/datasets/8172056142375670",language-agnostic,nlp,text-processing,,,04/27/2012 14:05:04,not constructive,1,142,2,"Cliché Detection I was recently reading a pretty bad book that contained many clichés when the thought occurred to me that it might be fun, after learning more about NLP and provided with the right data, to write a program to scan a document and return likely cliché phrases found within it.
+
+I've never done anything like this before and am wondering if I could be pointed in the direction of texts, algorithms, data sets, and/or approaches that might help me to solve this problem.
+
+I came across a [Google Books Ngrams data set][1] that looks possibly useful, but it left me with questions about how to best tokenize a digital work of fiction, how to compare it against the provided n-grams, score possible clichés, etc.
+
+Any help at all would be greatly appreciated, and my apologies in advance for the rather abstract question.
+
+Thanks!
+
+
+  [1]: http://aws.amazon.com/datasets/8172056142375670",3
+5635601,04/12/2011 13:02:18,392572,07/15/2010 10:27:05,765,21,legal issues with cufon,"I need to use cufon on my site to make some text in helvetica neue editable via a cms....is there a legal implication to this...is it legal to use Helvetica neue in this way?
+
+Thanks",language-agnostic,fonts,,,,04/12/2011 19:32:24,off topic,1,34,4,"legal issues with cufon I need to use cufon on my site to make some text in helvetica neue editable via a cms....is there a legal implication to this...is it legal to use Helvetica neue in this way?
+
+Thanks",2
+4210415,11/17/2010 23:51:55,479989,10/19/2010 02:36:06,4049,135,Automatically sum numeric columns and print total,"Given the output of `git ... --stat`:
+
+     3 files changed, 72 insertions(+), 21 deletions(-)
+     3 files changed, 27 insertions(+), 4 deletions(-)
+     4 files changed, 164 insertions(+), 0 deletions(-)
+     9 files changed, 395 insertions(+), 0 deletions(-)
+     1 files changed, 3 insertions(+), 2 deletions(-)
+     1 files changed, 1 insertions(+), 1 deletions(-)
+     2 files changed, 57 insertions(+), 0 deletions(-)
+     10 files changed, 189 insertions(+), 230 deletions(-)
+     3 files changed, 111 insertions(+), 0 deletions(-)
+     8 files changed, 61 insertions(+), 80 deletions(-)
+
+I wanted to produce the sum of the numeric columns but preserve the formatting of the line.  __In the interest of generality, I produced this awk script that automatically sums any numeric columns and produces a summary line:__
+
+    {
+        for (i = 1; i <= NF; ++i) {
+            if ($i + 0 != 0) {
+                numeric[i] = 1;
+                total[i] += $i;
+            }
+        }
+    }
+    END {
+        # re-use non-numeric columns of last line
+        for (i = 1; i <= NF; ++i) {
+            if (numeric[i])
+                $i = total[i]
+        }
+        print
+    }
+
+Yielding:
+
+     44 files changed, 1080 insertions(+), 338 deletions(-)
+
+Awk has several features that simplify the problem, like automatic string->number conversion, all arrays as associative arrays, and the ability to overwrite auto-split positional parameters and then print the equivalent lines.
+
+Is there a better language for this hack?",language-agnostic,awk,code-golf,,,,open,0,387,7,"Automatically sum numeric columns and print total Given the output of `git ... --stat`:
+
+     3 files changed, 72 insertions(+), 21 deletions(-)
+     3 files changed, 27 insertions(+), 4 deletions(-)
+     4 files changed, 164 insertions(+), 0 deletions(-)
+     9 files changed, 395 insertions(+), 0 deletions(-)
+     1 files changed, 3 insertions(+), 2 deletions(-)
+     1 files changed, 1 insertions(+), 1 deletions(-)
+     2 files changed, 57 insertions(+), 0 deletions(-)
+     10 files changed, 189 insertions(+), 230 deletions(-)
+     3 files changed, 111 insertions(+), 0 deletions(-)
+     8 files changed, 61 insertions(+), 80 deletions(-)
+
+I wanted to produce the sum of the numeric columns but preserve the formatting of the line.  __In the interest of generality, I produced this awk script that automatically sums any numeric columns and produces a summary line:__
+
+    {
+        for (i = 1; i <= NF; ++i) {
+            if ($i + 0 != 0) {
+                numeric[i] = 1;
+                total[i] += $i;
+            }
+        }
+    }
+    END {
+        # re-use non-numeric columns of last line
+        for (i = 1; i <= NF; ++i) {
+            if (numeric[i])
+                $i = total[i]
+        }
+        print
+    }
+
+Yielding:
+
+     44 files changed, 1080 insertions(+), 338 deletions(-)
+
+Awk has several features that simplify the problem, like automatic string->number conversion, all arrays as associative arrays, and the ability to overwrite auto-split positional parameters and then print the equivalent lines.
+
+Is there a better language for this hack?",3
+20059,08/21/2008 14:23:53,269,08/04/2008 10:13:44,962,79,Suggestions on starting a child programming.,"What languages and tools do you consider a youngster starting out in programming should use in the modern era?
+
+Lot's of us started with proprietary Basics and they didn't do all of us long term harm :) but given the experiences you have had since then and your knowledge of the domain now are there better options?
+
+There are related queries to this one such as ""[Best ways to teach a beginner to program?][1]"" and ""[One piece of advice][2]"" about starting adults programming both of which I submitted answers to but children might require a different tool.
+
+Disclosure:  it's bloody hard choosing a 'correct' answer to a question like this so who ever has the best score in a few days will get the 'best answer' mark from me based on the communities choice.
+
+
+  [1]: http://stackoverflow.com/questions/3088/best-ways-to-teach-a-beginner-to-program
+  [2]: http://stackoverflow.com/questions/3553/one-piece-of-advice",language-agnostic,language,teaching,children,,03/04/2011 02:27:51,not constructive,1,138,6,"Suggestions on starting a child programming. What languages and tools do you consider a youngster starting out in programming should use in the modern era?
+
+Lot's of us started with proprietary Basics and they didn't do all of us long term harm :) but given the experiences you have had since then and your knowledge of the domain now are there better options?
+
+There are related queries to this one such as ""[Best ways to teach a beginner to program?][1]"" and ""[One piece of advice][2]"" about starting adults programming both of which I submitted answers to but children might require a different tool.
+
+Disclosure:  it's bloody hard choosing a 'correct' answer to a question like this so who ever has the best score in a few days will get the 'best answer' mark from me based on the communities choice.
+
+
+  [1]: http://stackoverflow.com/questions/3088/best-ways-to-teach-a-beginner-to-program
+  [2]: http://stackoverflow.com/questions/3553/one-piece-of-advice",4
+343863,12/05/2008 13:41:20,15108,09/17/2008 06:08:24,294,34,What kind of working agreements do you have in your team?,"In [this book][1] I've read a lot about working agreements. But since we don't have any in our team, or at least none that are plain for everyone to see, I'd like to ask you if you have such agreements in your team. And of course what kind of agreements?
+
+
+  [1]: http://www.amazon.com/Agile-Retrospectives-Making-Teams-Great/dp/0977616649/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1228484281&sr=8-1",language-agnostic,teamwork,project-management,,,05/08/2012 17:49:23,off topic,1,53,11,"What kind of working agreements do you have in your team? In [this book][1] I've read a lot about working agreements. But since we don't have any in our team, or at least none that are plain for everyone to see, I'd like to ask you if you have such agreements in your team. And of course what kind of agreements?
+
+
+  [1]: http://www.amazon.com/Agile-Retrospectives-Making-Teams-Great/dp/0977616649/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1228484281&sr=8-1",3
+240465,10/27/2008 16:17:55,13281,09/16/2008 18:02:24,818,45,What are the best uses for each programming language?,"I come from a web developer background, so I'm fairly familiar with PHP and JavaScript, but I'd eventually like to branch out into other languages. At this point, I don't have a particular direction or platform that I'm leaning toward as far as learning a new language or what I would use it for, but I would like to learn a little bit more about programming languages in general and what each one is used for. I've often heard (and I agree) that you should use the right tool for the job, so what jobs are each programming language best suited for?",language-agnostic,programming-languages,polls,,,06/25/2012 03:33:18,not constructive,1,102,9,"What are the best uses for each programming language? I come from a web developer background, so I'm fairly familiar with PHP and JavaScript, but I'd eventually like to branch out into other languages. At this point, I don't have a particular direction or platform that I'm leaning toward as far as learning a new language or what I would use it for, but I would like to learn a little bit more about programming languages in general and what each one is used for. I've often heard (and I agree) that you should use the right tool for the job, so what jobs are each programming language best suited for?",3
+7621018,10/01/2011 15:07:25,433392,08/27/2010 21:52:37,1530,127,Write algorithmic code in a language-neutral way,"Anybody who uses different languages eventually finds out, that he writes certain **algorithmic parts** of applications in different applications **multiple times**. The amount of code depends on the complexity of the applications.
+
+For example, if you write a client-server application, the client and the server code probably operate on similar or identical data structures. Operations on these structures are likely to be written using the server-side [e.g. JAVA] **and** the client-side language [e.g. JavaScript].
+
+**Why not write algorithmic code in a language-neutral way?**
+
+Wouldn't it be nice to write algorithmic code - up to a certain point - in a **language neutral way** and finally **compile it to your target-language**?
+
+While the topic might have certain similarities to [model-driven-design][1], I in fact imagine a simpler solution. Model-Driven-Design tends to solve 'everything'. I'm just in search of a simple well-defined meta-language, with good tooling and simple usage.
+
+Please **provide pointers to languages or systems**, which provide this functionality.
+
+
+  [1]: http://en.wikipedia.org/wiki/Model-driven_architecture",language-agnostic,compiler,,,,10/02/2011 15:26:03,not constructive,1,155,7,"Write algorithmic code in a language-neutral way Anybody who uses different languages eventually finds out, that he writes certain **algorithmic parts** of applications in different applications **multiple times**. The amount of code depends on the complexity of the applications.
+
+For example, if you write a client-server application, the client and the server code probably operate on similar or identical data structures. Operations on these structures are likely to be written using the server-side [e.g. JAVA] **and** the client-side language [e.g. JavaScript].
+
+**Why not write algorithmic code in a language-neutral way?**
+
+Wouldn't it be nice to write algorithmic code - up to a certain point - in a **language neutral way** and finally **compile it to your target-language**?
+
+While the topic might have certain similarities to [model-driven-design][1], I in fact imagine a simpler solution. Model-Driven-Design tends to solve 'everything'. I'm just in search of a simple well-defined meta-language, with good tooling and simple usage.
+
+Please **provide pointers to languages or systems**, which provide this functionality.
+
+
+  [1]: http://en.wikipedia.org/wiki/Model-driven_architecture",2
+4105010,11/05/2010 10:20:08,158263,08/18/2009 08:16:09,257,7,"What are video journals similar to ""Coders at Work""?","There is a lot of material in the internet about computer science, software development, hardware etc. This usually comes in a form of a [blogs][1], [rss's][2]
+ or [books][3]. 
+
+What about **journal videos interviews** similar to [sixty-symbols][5] in physics or to [""Coders at Work""][6] and [""Founders at Work""][7] books?
+
+What do you watch?
+
+  [1]: http://stackoverflow.com/questions/78955/what-are-the-best-programming-and-development-related-blogs-closed
+  [2]: http://stackoverflow.com/questions/5119/what-are-the-best-rss-feeds-for-programmers-developers
+  [3]: http://stackoverflow.com/questions/1711/what-is-the-single-most-influential-book-every-programmer-should-read
+  [4]: http://channel9.msdn.com/
+  [5]: http://www.youtube.com/user/sixtysymbols
+  [6]: http://www.codersatwork.com/
+  [7]: http://www.foundersatwork.com/",language-agnostic,video,resources,,,11/08/2010 01:56:25,off topic,1,72,9,"What are video journals similar to ""Coders at Work""? There is a lot of material in the internet about computer science, software development, hardware etc. This usually comes in a form of a [blogs][1], [rss's][2]
+ or [books][3]. 
+
+What about **journal videos interviews** similar to [sixty-symbols][5] in physics or to [""Coders at Work""][6] and [""Founders at Work""][7] books?
+
+What do you watch?
+
+  [1]: http://stackoverflow.com/questions/78955/what-are-the-best-programming-and-development-related-blogs-closed
+  [2]: http://stackoverflow.com/questions/5119/what-are-the-best-rss-feeds-for-programmers-developers
+  [3]: http://stackoverflow.com/questions/1711/what-is-the-single-most-influential-book-every-programmer-should-read
+  [4]: http://channel9.msdn.com/
+  [5]: http://www.youtube.com/user/sixtysymbols
+  [6]: http://www.codersatwork.com/
+  [7]: http://www.foundersatwork.com/",3
+8068122,11/09/2011 16:28:08,296446,03/18/2010 11:26:32,1331,59,Does there exist OOP languages without Inheritance?,"I have come to the opinion that inheritance is a bit of a [code smell][1].
+
+Here are some disadvantages that I have encountered.
+
+ * Strong coupling between base and derived classes.  Chaining the base can break the derived class.  [We should program to interfaces no implementations][2].
+
+ * [Diamond of doom][3] (from multiple inheritance) OR single inheritance limitations - we want to pull methods in from multiple base classes that we dont own, but we cant.
+
+ * Lack of clarity.  Where is this method implemented? / Where is this variable declared? In the current class or one of the base classes?
+
+ * [Breaks encapsulation][4].  We can subclass and access protected variables.  We hack code in to methods by overriding and calling super.
+
+ * Long inheritance chains are particularly troublesome as the above problems are amplified.  
+
+
+I can think of alternatives to the majority of use cases for inheritance:
+
+*We have a set of base methods that we want our derived calsses to implement.* - Use interfaces.  
+
+*We have some common functionality we want to share with the derived classes.* - Use static methods or create a helper class.
+
+*We want to add a bit of functionally to a class.* Use composition / Write a wrapper around the object.  
+
+
+**So my questions are as follows:**
+
+ * Does there exist a legitimate use for inheritance that justifies its existence?
+ * Does there exist a Object orientated programming language that does not include (or discourages) inheritance?
+
+
+  [1]: http://en.wikipedia.org/wiki/Code_smell
+  [2]: http://en.wikipedia.org/wiki/Dependency_inversion_principle
+  [3]: http://en.wikipedia.org/wiki/Diamond_problem
+  [4]: http://en.wikipedia.org/wiki/Gang_of_Four_%28software%29",language-agnostic,coding-style,programming-languages,language-design,,11/09/2011 17:17:01,not constructive,1,259,7,"Does there exist OOP languages without Inheritance? I have come to the opinion that inheritance is a bit of a [code smell][1].
+
+Here are some disadvantages that I have encountered.
+
+ * Strong coupling between base and derived classes.  Chaining the base can break the derived class.  [We should program to interfaces no implementations][2].
+
+ * [Diamond of doom][3] (from multiple inheritance) OR single inheritance limitations - we want to pull methods in from multiple base classes that we dont own, but we cant.
+
+ * Lack of clarity.  Where is this method implemented? / Where is this variable declared? In the current class or one of the base classes?
+
+ * [Breaks encapsulation][4].  We can subclass and access protected variables.  We hack code in to methods by overriding and calling super.
+
+ * Long inheritance chains are particularly troublesome as the above problems are amplified.  
+
+
+I can think of alternatives to the majority of use cases for inheritance:
+
+*We have a set of base methods that we want our derived calsses to implement.* - Use interfaces.  
+
+*We have some common functionality we want to share with the derived classes.* - Use static methods or create a helper class.
+
+*We want to add a bit of functionally to a class.* Use composition / Write a wrapper around the object.  
+
+
+**So my questions are as follows:**
+
+ * Does there exist a legitimate use for inheritance that justifies its existence?
+ * Does there exist a Object orientated programming language that does not include (or discourages) inheritance?
+
+
+  [1]: http://en.wikipedia.org/wiki/Code_smell
+  [2]: http://en.wikipedia.org/wiki/Dependency_inversion_principle
+  [3]: http://en.wikipedia.org/wiki/Diamond_problem
+  [4]: http://en.wikipedia.org/wiki/Gang_of_Four_%28software%29",4
+145991,09/28/2008 14:47:38,13227,09/16/2008 17:43:51,296,9,How many lines of debugged code do you produce in a day's work?,"How many lines of debugged code do you produce in a day's work and what language would that be?
+
+I know some languages are a little more difficult to work with but on average, how many?",language-agnostic,source-code,,,,04/11/2012 19:11:06,not constructive,1,35,13,"How many lines of debugged code do you produce in a day's work? How many lines of debugged code do you produce in a day's work and what language would that be?
+
+I know some languages are a little more difficult to work with but on average, how many?",2
+221207,10/21/2008 08:54:35,6508,09/15/2008 11:38:58,4986,173,How do you collect programming knowledge,"Everyday we are faced with programming problems ranging from easy to complex. For me it is important to record that knowledge so that I can find it in the future. The features that I consider that most important is recording ease of use (WYSIWIG would be good), good search capabilities and perhaps hierarchical organization or tags enabled.
+
+**What tools do you use to collect programming knowledge?**
+
+Try to give one solution per answer. Perhaps something like a short one liner clear description followed by a blank line and a paragraph explaining the rationale for your solution. You can include what you consider the strong and weak points of your choice.",language-agnostic,knowledge-management,knowlege,knowledge-capture,,09/27/2011 17:58:46,not constructive,1,108,6,"How do you collect programming knowledge Everyday we are faced with programming problems ranging from easy to complex. For me it is important to record that knowledge so that I can find it in the future. The features that I consider that most important is recording ease of use (WYSIWIG would be good), good search capabilities and perhaps hierarchical organization or tags enabled.
+
+**What tools do you use to collect programming knowledge?**
+
+Try to give one solution per answer. Perhaps something like a short one liner clear description followed by a blank line and a paragraph explaining the rationale for your solution. You can include what you consider the strong and weak points of your choice.",4
+3051307,06/16/2010 07:14:35,44532,12/09/2008 08:28:26,1829,140,How would you name...,"Since naming is a so important thing in programming, I would like to start a thread for giving help to all those that have same problems as I sometimes.
+
+Rules: Set a post with the description of the form||control||class or whatever you need to find a good name for. Get name hints in the answers.",language-agnostic,naming,,,,06/16/2010 07:33:03,not a real question,1,54,4,"How would you name... Since naming is a so important thing in programming, I would like to start a thread for giving help to all those that have same problems as I sometimes.
+
+Rules: Set a post with the description of the form||control||class or whatever you need to find a good name for. Get name hints in the answers.",2
+7754149,10/13/2011 12:31:16,985482,10/08/2011 15:19:54,12,0,Designing cool looking layouts,"Hi for the passed 6 months I have been learning to create website.I have become prety fluent with HTML , CSS ,Javascript ,jQuery and I am also planing on learning PHP and MySql in the neer future.
+
+My only problem is that my websites dont have that professional look that they should.I have learned to create layouts with photoshop but i don't have the ability of creating cool looking  
+designs.
+
+Are there any books or websites that could help me on this part?
+",language-agnostic,,,,,07/21/2012 06:30:45,off topic,1,82,4,"Designing cool looking layouts Hi for the passed 6 months I have been learning to create website.I have become prety fluent with HTML , CSS ,Javascript ,jQuery and I am also planing on learning PHP and MySql in the neer future.
+
+My only problem is that my websites dont have that professional look that they should.I have learned to create layouts with photoshop but i don't have the ability of creating cool looking  
+designs.
+
+Are there any books or websites that could help me on this part?
+",1
+2028982,01/08/2010 16:23:38,83741,03/27/2009 18:11:34,1019,61,Drawing abstract canvas,"I'm planning to write a diagram editor-style application, where you organize objects on a canvas. This application will need to support setting viewport, zooming, cropping and a lot of other standard features of such a graph style application. I'm looking for toolkits or frameworks which could supports drawing in a standard mathematical coordinate space (0,0 as center point, extendable in all directions), and will scale, crop and zoom this according to (user) commands. Language doesn't really matter, but the more geared it is towards standard GUI applications the better. I would namely like to be able to reuse standard controls and buttons on the canvas if possible. ",language-agnostic,drawing,zooming,transform,,,open,0,108,3,"Drawing abstract canvas I'm planning to write a diagram editor-style application, where you organize objects on a canvas. This application will need to support setting viewport, zooming, cropping and a lot of other standard features of such a graph style application. I'm looking for toolkits or frameworks which could supports drawing in a standard mathematical coordinate space (0,0 as center point, extendable in all directions), and will scale, crop and zoom this according to (user) commands. Language doesn't really matter, but the more geared it is towards standard GUI applications the better. I would namely like to be able to reuse standard controls and buttons on the canvas if possible. ",4
+229983,10/23/2008 14:34:15,23368,09/29/2008 07:10:57,92,8,Where can I find information about business logic patterns?,"What I am looking for is some overview of ""design patterns"", but not on the coding level (factory, singleton, mvc, ...) but on the business logic level.
+
+I don't know if that is understandable, so here are some typical business logic pattern questions for an ERP application:
+
+- When two or more users are working on the same order, do I lock it? How can I avoid concurrent writes which might destroy the other users' work?
+- How to I create a unique complex order number, which follows certain rules? Do I use a central server/service or are there better de-centralized methods?
+- How do I create reports? Is it better to use a reporting server (Crystal Reports 2008 for example) or is it better to let every workstation create its own reports?
+- During accounting, what rules do I have to follow to avoid rounding problems?
+- For statistics, do I always recalculate all values (total value of *all* orders, for example) or do I make 'rolling' statistics, which are just updated whenever one of the base values changes (value of a *single* order)?
+- ...
+
+
+Just for clarification: I don't need quick answers for these questions, but I rather want to know a good source of information, where questions *like these* are answered and/or discussed. (Books, Internet, ...)",language-agnostic,business,resources,,,05/06/2012 23:21:46,not constructive,1,212,9,"Where can I find information about business logic patterns? What I am looking for is some overview of ""design patterns"", but not on the coding level (factory, singleton, mvc, ...) but on the business logic level.
+
+I don't know if that is understandable, so here are some typical business logic pattern questions for an ERP application:
+
+- When two or more users are working on the same order, do I lock it? How can I avoid concurrent writes which might destroy the other users' work?
+- How to I create a unique complex order number, which follows certain rules? Do I use a central server/service or are there better de-centralized methods?
+- How do I create reports? Is it better to use a reporting server (Crystal Reports 2008 for example) or is it better to let every workstation create its own reports?
+- During accounting, what rules do I have to follow to avoid rounding problems?
+- For statistics, do I always recalculate all values (total value of *all* orders, for example) or do I make 'rolling' statistics, which are just updated whenever one of the base values changes (value of a *single* order)?
+- ...
+
+
+Just for clarification: I don't need quick answers for these questions, but I rather want to know a good source of information, where questions *like these* are answered and/or discussed. (Books, Internet, ...)",3
+22795,08/22/2008 16:28:55,2509,08/22/2008 15:36:54,1,2,"When to ""Build your own compiler""","What is your decision procedure for ""roll my own"" versus ""introduce a new dependency""?
+
+The value of code reuse is widely touted, and for good reason, but it does not come for free. Joel's <A href=""http://www.joelonsoftware.com/articles/fog0000000007.html"">In Defense of Not-Invented-Here Syndrome</a> makes the point that you don't always want to be at the mercy of outside entities.
+
+I work in big science. Most projects have a few custom software tools (DAQ systems, analyzers, simulations, etc.) which are generally built using pretty well organized processes and decent coding practices.  They also come with a raft of little tools, which are often banged up by one scientist, and put into productions with little of no processes at all.
+
+Each of these tools need to do some of:
+
+ * Process options
+ * Read configuration files
+ * Extract metadata from other files
+ * ...etc...etc...etc...
+
+This is a diverse and non-standardized hardware and software environment, and a coder can't make many assumptions about what tool/libraries/compilers a colleague will have (much less what version of each), so adding a dependency is fraught with danger and portability costs.
+
+But rolling your own takes time, risks introducing untold numbers of bugs, and guarantees no one else will understand the tool.
+
+So what goes into this decision?
+",language-agnostic,design,bestpractices,,,07/20/2012 14:14:03,off topic,1,202,6,"When to ""Build your own compiler"" What is your decision procedure for ""roll my own"" versus ""introduce a new dependency""?
+
+The value of code reuse is widely touted, and for good reason, but it does not come for free. Joel's <A href=""http://www.joelonsoftware.com/articles/fog0000000007.html"">In Defense of Not-Invented-Here Syndrome</a> makes the point that you don't always want to be at the mercy of outside entities.
+
+I work in big science. Most projects have a few custom software tools (DAQ systems, analyzers, simulations, etc.) which are generally built using pretty well organized processes and decent coding practices.  They also come with a raft of little tools, which are often banged up by one scientist, and put into productions with little of no processes at all.
+
+Each of these tools need to do some of:
+
+ * Process options
+ * Read configuration files
+ * Extract metadata from other files
+ * ...etc...etc...etc...
+
+This is a diverse and non-standardized hardware and software environment, and a coder can't make many assumptions about what tool/libraries/compilers a colleague will have (much less what version of each), so adding a dependency is fraught with danger and portability costs.
+
+But rolling your own takes time, risks introducing untold numbers of bugs, and guarantees no one else will understand the tool.
+
+So what goes into this decision?
+",3
+5729608,04/20/2011 11:41:04,618677,02/15/2011 22:26:28,1,0,Which language to learn and the best step?,"If one is to pick a new Programming Language, what would you suggest (give a convincing reason for your choice)? And If the person is already proficient in one Language, what steps do you think he should take?
+
+
+
+*Please note that I do not intend to start off a religious war here*",language-agnostic,,,,,04/20/2011 11:47:13,not constructive,1,51,8,"Which language to learn and the best step? If one is to pick a new Programming Language, what would you suggest (give a convincing reason for your choice)? And If the person is already proficient in one Language, what steps do you think he should take?
+
+
+
+*Please note that I do not intend to start off a religious war here*",1
+4295453,11/28/2010 04:58:23,522740,11/28/2010 04:58:23,1,0,"I randomly select text with my mouse while reading, what kind of habit is it?","I have a habbit to randomly select some text while reading near the place where my eyes are looking at that moment, usually it happens when the paragraph is not very interesting but I need to read it. Is it common behavior between developers and does it tell something about you?  ",language-agnostic,text,readonly,text-processing,text-parsing,11/28/2010 05:49:25,off topic,1,53,15,"I randomly select text with my mouse while reading, what kind of habit is it? I have a habbit to randomly select some text while reading near the place where my eyes are looking at that moment, usually it happens when the paragraph is not very interesting but I need to read it. Is it common behavior between developers and does it tell something about you?  ",5
+315997,11/25/2008 00:34:03,2147,08/20/2008 15:14:13,5953,205,When is overengineering desirable?,"I just got my copy of Code Complete by Steve McConnell, and there's one area I'm a bit confused about.  On page 51, he says:
+
+ > Robustness is the ability of a system to continue to run after it detects an error.  Often an architecture specifies a more robust system than that specified by the requirements.  One reason is that a system composed of many parts that are minimally robust might be less robust than is required overall.  In software, the chain isn't as strong as its weakest link; it's as weak as all the weak links multiplied together.  The architecture should clearly indicate whether programmers should err on the side of overengineering or on the side of doing the simplest thing that works.
+
+(note that the text above should be covered under fair use and thus not break any copyrights)
+
+I'm a bit confused as to what McConnell means here as he doesn't ever elaborate on the subject (as far as I can tell).  Is he trying to say that overengineering is good in the context of handling errors or is he saying something else?
+
+Steve McConnell (2004).  *Code Complete*. Redmond: Microsoft Press.",language-agnostic,code-complete,overengineering,,,04/05/2012 13:34:58,not constructive,1,198,4,"When is overengineering desirable? I just got my copy of Code Complete by Steve McConnell, and there's one area I'm a bit confused about.  On page 51, he says:
+
+ > Robustness is the ability of a system to continue to run after it detects an error.  Often an architecture specifies a more robust system than that specified by the requirements.  One reason is that a system composed of many parts that are minimally robust might be less robust than is required overall.  In software, the chain isn't as strong as its weakest link; it's as weak as all the weak links multiplied together.  The architecture should clearly indicate whether programmers should err on the side of overengineering or on the side of doing the simplest thing that works.
+
+(note that the text above should be covered under fair use and thus not break any copyrights)
+
+I'm a bit confused as to what McConnell means here as he doesn't ever elaborate on the subject (as far as I can tell).  Is he trying to say that overengineering is good in the context of handling errors or is he saying something else?
+
+Steve McConnell (2004).  *Code Complete*. Redmond: Microsoft Press.",3
+10850406,06/01/2012 12:36:49,367985,06/16/2010 07:25:01,1198,35,Multiple if statements vs if-else block?,"Consider this pseudo code, Form 1:
+
+    if a == b
+      return true
+    elsif a > b
+     return false
+    else
+      return ""oops""
+    end
+I can write the same as, separate if statement. Form 2:
+
+    if a == b
+      return true
+    end
+    
+    if a > b
+      return false
+    end
+    
+    return ""oops""
+
+And both work the same. So which one should be preferred?",language-agnostic,,,,,06/01/2012 14:09:19,not constructive,1,117,6,"Multiple if statements vs if-else block? Consider this pseudo code, Form 1:
+
+    if a == b
+      return true
+    elsif a > b
+     return false
+    else
+      return ""oops""
+    end
+I can write the same as, separate if statement. Form 2:
+
+    if a == b
+      return true
+    end
+    
+    if a > b
+      return false
+    end
+    
+    return ""oops""
+
+And both work the same. So which one should be preferred?",1
+5439186,03/25/2011 23:31:54,156458,08/14/2009 12:31:05,2112,2,Relation between programming languages,"I was wondering about the following questions:
+
+ 1. What does it mean ""some language is
+    a subset/superset of another""? Can
+    it be defined in mathematics? Is it
+    related to the subset/superset
+    concept in elementary set theory?
+ 2. Are almost all existing languages
+    implemented/written in some small
+    number of low-level languages? For
+    example, are most languages written
+    in C? Is C++ written in C?
+    
+    Is there some relation between the
+    implementation relation and the
+    concept of subset/superset of
+    languages?
+ 3. In terms of language features, some
+    languages have more than some other.
+    In some cases, some has all the
+    features of some other, for example,
+    does C++ have all the features of C?
+    
+    
+    Is there some relation between the
+    subset/superset relation in terms of
+    the set of features and the
+    subset/superset relation between
+    languages?
+ 4. Are there other aspects that
+    characterize relation between
+    languages?
+
+Thanks and regards!",language-agnostic,,,,,,open,0,226,4,"Relation between programming languages I was wondering about the following questions:
+
+ 1. What does it mean ""some language is
+    a subset/superset of another""? Can
+    it be defined in mathematics? Is it
+    related to the subset/superset
+    concept in elementary set theory?
+ 2. Are almost all existing languages
+    implemented/written in some small
+    number of low-level languages? For
+    example, are most languages written
+    in C? Is C++ written in C?
+    
+    Is there some relation between the
+    implementation relation and the
+    concept of subset/superset of
+    languages?
+ 3. In terms of language features, some
+    languages have more than some other.
+    In some cases, some has all the
+    features of some other, for example,
+    does C++ have all the features of C?
+    
+    
+    Is there some relation between the
+    subset/superset relation in terms of
+    the set of features and the
+    subset/superset relation between
+    languages?
+ 4. Are there other aspects that
+    characterize relation between
+    languages?
+
+Thanks and regards!",1
+4471283,12/17/2010 14:16:26,163142,08/25/2009 23:02:57,60,2,Evil programming practices,"Like anyone who's spent some time getting to know the languages their using, I've come across some lengthy articles concerning some programming practices that some consider bad, dangerous or downright evil.
+
+In particular I know of two practices, `eval()` and `goto`, which are frowned upon. I understand that they should not be used except by those with a specific need and knowledge of the inherent dangers.
+
+My question is simple: what other programming practices are considered evil?",language-agnostic,eval,goto,,,12/17/2010 14:21:48,not constructive,1,75,3,"Evil programming practices Like anyone who's spent some time getting to know the languages their using, I've come across some lengthy articles concerning some programming practices that some consider bad, dangerous or downright evil.
+
+In particular I know of two practices, `eval()` and `goto`, which are frowned upon. I understand that they should not be used except by those with a specific need and knowledge of the inherent dangers.
+
+My question is simple: what other programming practices are considered evil?",3
+5420032,03/24/2011 13:34:32,663456,03/16/2011 23:52:28,163,9,What is the worst piece of code that you've ever seen?,"SO already knows about the <a href=""http://stackoverflow.com/questions/226469/what-is-the-most-clever-code-youve-ever-seen"">most clever piece of code we've ever seen</a>, but for educational purposes, it might be more useful to see some examples of awfully bad code, so:
+
+**What is the worst piece of code that you've ever came across?**
+
+Point in case: a few weeks ago, I stumbled across a piece of code where one of my fellow colleagues tried to store boolean values in a database. The database consisted of a large XML file with about 1.000.000 items. In a loop over the database items, he repeatedly
+<ul>
+<li>read the whole XML file</li>
+<li>parsed the XML, storing the result in a map</li>
+<li>modified exactly one element of the map</li>
+<li>converted the map back to XML</li>
+<li>wrote the whole thing back to disc</li>
+</ul>
+
+In C#, this was about 4 lines of code, using only standard C# libraries.
+
+I'm still having nightmares occasionally where I am supposed to port these 4 lines to plain C, using only the Standard C Library.
+",language-agnostic,programming-languages,programmer-skills,programming-habits,,03/24/2011 13:37:07,not constructive,1,155,11,"What is the worst piece of code that you've ever seen? SO already knows about the <a href=""http://stackoverflow.com/questions/226469/what-is-the-most-clever-code-youve-ever-seen"">most clever piece of code we've ever seen</a>, but for educational purposes, it might be more useful to see some examples of awfully bad code, so:
+
+**What is the worst piece of code that you've ever came across?**
+
+Point in case: a few weeks ago, I stumbled across a piece of code where one of my fellow colleagues tried to store boolean values in a database. The database consisted of a large XML file with about 1.000.000 items. In a loop over the database items, he repeatedly
+<ul>
+<li>read the whole XML file</li>
+<li>parsed the XML, storing the result in a map</li>
+<li>modified exactly one element of the map</li>
+<li>converted the map back to XML</li>
+<li>wrote the whole thing back to disc</li>
+</ul>
+
+In C#, this was about 4 lines of code, using only standard C# libraries.
+
+I'm still having nightmares occasionally where I am supposed to port these 4 lines to plain C, using only the Standard C Library.
+",4
+287764,11/13/2008 18:21:08,4140,09/02/2008 01:10:54,1424,72,I am speaking to a group of 9-10 year olds about how awesome it is to be a developer,"I am putting a presentation together. I thought about illustrating with websites like facebook, and myspace. 
+
+Does anyone have children around that age that could tell me what they are into? how to hold their attention? Ways to illustrate what we do? Get them interested?
+
+
+Your ideas are greatly appreciated, I really want to be able to convey how fun this is :). 
+
+I don't have access to a projector... which really stinks. I do have access to an old school one though, with those see through slides?",language-agnostic,teaching,children,presentations,,03/08/2012 08:53:09,not constructive,1,87,19,"I am speaking to a group of 9-10 year olds about how awesome it is to be a developer I am putting a presentation together. I thought about illustrating with websites like facebook, and myspace. 
+
+Does anyone have children around that age that could tell me what they are into? how to hold their attention? Ways to illustrate what we do? Get them interested?
+
+
+Your ideas are greatly appreciated, I really want to be able to convey how fun this is :). 
+
+I don't have access to a projector... which really stinks. I do have access to an old school one though, with those see through slides?",4
+211234,10/17/2008 06:39:47,15055,09/17/2008 05:31:28,685,39,Best Time of Day to Code,"So far I've heard two answers to this question - <b>early in the morning</b>, after you shower and get to work, before you go to any mind-numbing meetings. You can actually get some work done now.
+
+<b>Late at night</b>, when everything is taken care of, and you can just spend one to three hours working on something that interests you personally.
+
+What have you found is the best time to get work done? ",language-agnostic,,,,,04/15/2012 21:15:20,not constructive,1,72,6,"Best Time of Day to Code So far I've heard two answers to this question - <b>early in the morning</b>, after you shower and get to work, before you go to any mind-numbing meetings. You can actually get some work done now.
+
+<b>Late at night</b>, when everything is taken care of, and you can just spend one to three hours working on something that interests you personally.
+
+What have you found is the best time to get work done? ",1

@@ -1,0 +1,1156 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9989262,04/03/2012 07:55:11,617461,06/26/2010 11:30:55,492,23,Express.js socket timeout not increasing through req.connection.setTimeout,"I have this node.js server that acts as a client through the http.request method. I set a socket timeout to all my requests like so:
+
+    //some code
+	var req = http.request(options, function(res) {
+		//do something
+	});
+
+	req.on('error', function(e) {
+		console.log('problem with request: ' + e.message);
+	});
+	
+	req.setTimeout(SOCKET_TIMEOUT);
+    //rest of the code
+
+where `SOCKET_TIMEOUT` is 1200000 (1200 seconds, 20 minutes). The same happens on the server I'm calling (express.js framework):
+
+    app.post('/my/:path', function(req, res){
+	    req.connection.setTimeout(SOCKET_TIMEOUT);
+        //do something
+    });
+
+again, `SOCKET_TIMEOUT` is 1200000. My problem is: much before the expiry of the timeout, I get the error `problem with request: connect ETIMEDOUT` which is the case where my server that acts as a client falls into the `req.on('error', ...)` case. 
+I have to specify that I'm stress testing the server, that means I'm trying to do simultaneously 100000 connections more or less, and some of them complete correctly, while others have this problem.
+
+Of course I set the timeout in every path I'm testing (in the server) and in every request I do (in the client).
+
+Do you have an idea on what's going on?
+Thanks,",node.js,express,connection-timeout,,,,open,0,193,7,"Express.js socket timeout not increasing through req.connection.setTimeout I have this node.js server that acts as a client through the http.request method. I set a socket timeout to all my requests like so:
+
+    //some code
+	var req = http.request(options, function(res) {
+		//do something
+	});
+
+	req.on('error', function(e) {
+		console.log('problem with request: ' + e.message);
+	});
+	
+	req.setTimeout(SOCKET_TIMEOUT);
+    //rest of the code
+
+where `SOCKET_TIMEOUT` is 1200000 (1200 seconds, 20 minutes). The same happens on the server I'm calling (express.js framework):
+
+    app.post('/my/:path', function(req, res){
+	    req.connection.setTimeout(SOCKET_TIMEOUT);
+        //do something
+    });
+
+again, `SOCKET_TIMEOUT` is 1200000. My problem is: much before the expiry of the timeout, I get the error `problem with request: connect ETIMEDOUT` which is the case where my server that acts as a client falls into the `req.on('error', ...)` case. 
+I have to specify that I'm stress testing the server, that means I'm trying to do simultaneously 100000 connections more or less, and some of them complete correctly, while others have this problem.
+
+Of course I set the timeout in every path I'm testing (in the server) and in every request I do (in the client).
+
+Do you have an idea on what's going on?
+Thanks,",3
+9396606,02/22/2012 14:21:25,69636,02/22/2009 18:35:54,1207,13,can't install my node package in npm,"I've uploaded my project to npm. I can install it on windows, but on ubunto I get the bellow error. There isn't any fancy installation, it's really simple. I am able to install other packages though. Any idea?
+
+    yaron@yaron-VirtualBox:~/Projects/wsjstester$ npm install ws-js
+    npm WARN publish-everything ws-js@0.0.2 Adding entire directory to tarball. Please add a
+    npm WARN publish-everything ws-js@0.0.2 .npmignore or specify a 'files' array in the package.json
+    npm ERR! Failed creating the tarball.
+    npm ERR! This is very rare. Perhaps the 'gzip' or 'tar' configs
+    npm ERR! are set improperly?
+    npm ERR!
+    npm ERR! couldn't pack /tmp/npm-1329920081367/1329920081367-0.4881570250727236/contents/package to /home/yaron/.node_libraries/.npm/.cache/ws-js/0.0.2/package.tgz
+    npm ERR! Error installing ws-js@0.0.2
+    npm ERR! Error: Failed /bin/tar ""-cvf"" ""-"" ""--exclude"" "".git"" ""-X"" ""/usr/share/npm/lib/utils/default.npmignore"" ""package/""
+    npm ERR! exited with 2
+    npm ERR!     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/exec.js:42:19)
+    npm ERR!     at ChildProcess.emit (events.js:67:17)
+    npm ERR!     at Socket.<anonymous> (child_process.js:172:12)
+    npm ERR!     at Socket.emit (events.js:64:17)
+    npm ERR!     at Array.2 (net.js:831:12)
+    npm ERR!     at EventEmitter._tickCallback (node.js:126:26)
+    npm ERR! Report this *entire* log at <http://github.com/isaacs/npm/issues>
+    npm ERR! or email it to <npm-@googlegroups.com>
+    npm ERR! Just tweeting a tiny part of the error will not be helpful.
+    npm not ok
+    yaron@yaron-VirtualBox:~/Projects/wsjstester$ 
+
+",node.js,ubuntu,npm,,,02/23/2012 19:15:55,too localized,1,275,7,"can't install my node package in npm I've uploaded my project to npm. I can install it on windows, but on ubunto I get the bellow error. There isn't any fancy installation, it's really simple. I am able to install other packages though. Any idea?
+
+    yaron@yaron-VirtualBox:~/Projects/wsjstester$ npm install ws-js
+    npm WARN publish-everything ws-js@0.0.2 Adding entire directory to tarball. Please add a
+    npm WARN publish-everything ws-js@0.0.2 .npmignore or specify a 'files' array in the package.json
+    npm ERR! Failed creating the tarball.
+    npm ERR! This is very rare. Perhaps the 'gzip' or 'tar' configs
+    npm ERR! are set improperly?
+    npm ERR!
+    npm ERR! couldn't pack /tmp/npm-1329920081367/1329920081367-0.4881570250727236/contents/package to /home/yaron/.node_libraries/.npm/.cache/ws-js/0.0.2/package.tgz
+    npm ERR! Error installing ws-js@0.0.2
+    npm ERR! Error: Failed /bin/tar ""-cvf"" ""-"" ""--exclude"" "".git"" ""-X"" ""/usr/share/npm/lib/utils/default.npmignore"" ""package/""
+    npm ERR! exited with 2
+    npm ERR!     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/exec.js:42:19)
+    npm ERR!     at ChildProcess.emit (events.js:67:17)
+    npm ERR!     at Socket.<anonymous> (child_process.js:172:12)
+    npm ERR!     at Socket.emit (events.js:64:17)
+    npm ERR!     at Array.2 (net.js:831:12)
+    npm ERR!     at EventEmitter._tickCallback (node.js:126:26)
+    npm ERR! Report this *entire* log at <http://github.com/isaacs/npm/issues>
+    npm ERR! or email it to <npm-@googlegroups.com>
+    npm ERR! Just tweeting a tiny part of the error will not be helpful.
+    npm not ok
+    yaron@yaron-VirtualBox:~/Projects/wsjstester$ 
+
+",3
+9382078,02/21/2012 17:21:33,198128,10/28/2009 14:05:36,3012,42,Errorhandling in node.js,"I want to create a `mongoID` using an URI fragment as source. However, unless the URI really contains a properly formatted mongoId, I get the below error thrown.
+
+What should I change to allow _id creation without throwing errors as wrapping it in a `try/catch` block doesn't do it?
+
+Error:
+> 500 Error: Argument passed in must be a single String of 12 bytes or a
+> string of 24 hex characters in hex format
+
+
+The code:
+
+    var _id = db.bson_serializer.ObjectID.createFromHexString(req.params.id);
+
+    this.db.users.findById(_id, function(err, doc) {
+        if (!err && !!doc) { res.send(JSON.stringify(doc)); } else {res.send(JSON.stringify({error: ""Not found""));}
+    });
+
+
+I use the [`mongoskin`][1] driver.
+
+
+  [1]: https://github.com/guileen/node-mongoskin#inherit-inserting",node.js,mongodb,,,,,open,0,115,3,"Errorhandling in node.js I want to create a `mongoID` using an URI fragment as source. However, unless the URI really contains a properly formatted mongoId, I get the below error thrown.
+
+What should I change to allow _id creation without throwing errors as wrapping it in a `try/catch` block doesn't do it?
+
+Error:
+> 500 Error: Argument passed in must be a single String of 12 bytes or a
+> string of 24 hex characters in hex format
+
+
+The code:
+
+    var _id = db.bson_serializer.ObjectID.createFromHexString(req.params.id);
+
+    this.db.users.findById(_id, function(err, doc) {
+        if (!err && !!doc) { res.send(JSON.stringify(doc)); } else {res.send(JSON.stringify({error: ""Not found""));}
+    });
+
+
+I use the [`mongoskin`][1] driver.
+
+
+  [1]: https://github.com/guileen/node-mongoskin#inherit-inserting",2
+10891509,06/05/2012 04:20:09,978734,10/04/2011 15:08:53,12,0,Web App technologies choice,"I am currently writing user interface in ember.js and need some help in server-side decision concerning transfer technologi and server-side script.
+
+App is planned to simply wrap calling of few server-side script with adding some database suggar for handling users permissions and storing inputs-outputs.
+
+Users has to be logged-in for proper work with application.
+
+I am expecting high concurrency of working users and since I can use more paralel threads on server I am not entirely sure if I have to go with Node.js+socket.io.
+
+Half of requests will be simple ask to database requests and other half will need little more computation time of another server-side script (up to 5s).
+
+I will most probably use MongrelDB as database.
+
+My biggest questions:
+
+ - Is today technologicaly safe to go with pure websockets or is better to have gracefull degradation of Socket.io?
+ - Will node.js scale nicely on multi-core box or should I use something like Mongrel2 with python backend?
+ - Will python backend handle big concurency giving that some responses are really long?
+ - How do I handle logged-in users with node.js+socket.io?
+ ",node.js,web-applications,websocket,socket.io,mongrel2,06/05/2012 06:33:31,not a real question,1,176,4,"Web App technologies choice I am currently writing user interface in ember.js and need some help in server-side decision concerning transfer technologi and server-side script.
+
+App is planned to simply wrap calling of few server-side script with adding some database suggar for handling users permissions and storing inputs-outputs.
+
+Users has to be logged-in for proper work with application.
+
+I am expecting high concurrency of working users and since I can use more paralel threads on server I am not entirely sure if I have to go with Node.js+socket.io.
+
+Half of requests will be simple ask to database requests and other half will need little more computation time of another server-side script (up to 5s).
+
+I will most probably use MongrelDB as database.
+
+My biggest questions:
+
+ - Is today technologicaly safe to go with pure websockets or is better to have gracefull degradation of Socket.io?
+ - Will node.js scale nicely on multi-core box or should I use something like Mongrel2 with python backend?
+ - Will python backend handle big concurency giving that some responses are really long?
+ - How do I handle logged-in users with node.js+socket.io?
+ ",5
+11720370,07/30/2012 11:15:33,568280,01/08/2011 19:49:20,3,0,node mongo TypeError: boolean is not a function,"db.open(... throws the following error
+
+    TypeError: boolean is not a function
+
+The res function returns a function so not sure what I'm doing wrong here...
+
+
+	var db = new Db('test', new Server('localhost', 27017, {auto_reconnect: true}, {}));
+
+	function res(win) {
+	  return function(err,result){
+		if( err ) {
+		  util.debug('mongo:err='+err);
+		  db.close();
+		}
+		else {
+		  util.debug('mongo:ok, about to call function');
+		  win(result);
+		}
+	  }
+	}
+
+	exports.saveCreditCheck = function(req, res){
+	  util.debug('*** in saveCreditCheck ***');
+	  
+	  db.open(res(function(){
+		util.debug('mongo:ok');
+	  }));
+
+	};
+
+BTW, this works fine..
+    
+    db.open(function(){
+       util.debug('mongo:ok');
+    });
+
+",node.js,mongodb,,,,07/31/2012 14:20:10,too localized,1,96,8,"node mongo TypeError: boolean is not a function db.open(... throws the following error
+
+    TypeError: boolean is not a function
+
+The res function returns a function so not sure what I'm doing wrong here...
+
+
+	var db = new Db('test', new Server('localhost', 27017, {auto_reconnect: true}, {}));
+
+	function res(win) {
+	  return function(err,result){
+		if( err ) {
+		  util.debug('mongo:err='+err);
+		  db.close();
+		}
+		else {
+		  util.debug('mongo:ok, about to call function');
+		  win(result);
+		}
+	  }
+	}
+
+	exports.saveCreditCheck = function(req, res){
+	  util.debug('*** in saveCreditCheck ***');
+	  
+	  db.open(res(function(){
+		util.debug('mongo:ok');
+	  }));
+
+	};
+
+BTW, this works fine..
+    
+    db.open(function(){
+       util.debug('mongo:ok');
+    });
+
+",2
+11645375,07/25/2012 08:12:15,506712,11/13/2010 12:59:55,132,2,Is it time form node.js 0.8?,"It's been a while since 0.8 version was launched. I've seen that heroku now has support (I'm deploying on it, so it's very important for me)
+
+Do you recommend to update from node.js 0.6.x to 0.8.x? Was it very painfull?
+
+Thanks!",node.js,heroku,,,,07/26/2012 01:07:15,not constructive,1,39,6,"Is it time form node.js 0.8? It's been a while since 0.8 version was launched. I've seen that heroku now has support (I'm deploying on it, so it's very important for me)
+
+Do you recommend to update from node.js 0.6.x to 0.8.x? Was it very painfull?
+
+Thanks!",2
+10749005,05/25/2012 05:38:39,1203556,02/11/2012 09:06:27,316,2,"Node.js, Protocol buffers - how to get the post payload so I can parse?","Clients post protocol buffers to my url.  I need to get the payload to I can parse.  I am using express but I will take anything that works.
+
+    app.post('/n/bidder', function(req, res){
+    
+        var payload = ??????;
+    
+        var mypb_schema  = schema['Feeds'];
+        var brr_fu = mypb_schema.parse(payload); 
+    });
+
+Thanks",node.js,protocol-buffers,,,,,open,0,83,14,"Node.js, Protocol buffers - how to get the post payload so I can parse? Clients post protocol buffers to my url.  I need to get the payload to I can parse.  I am using express but I will take anything that works.
+
+    app.post('/n/bidder', function(req, res){
+    
+        var payload = ??????;
+    
+        var mypb_schema  = schema['Feeds'];
+        var brr_fu = mypb_schema.parse(payload); 
+    });
+
+Thanks",2
+9472293,02/27/2012 21:07:09,1200834,02/09/2012 22:35:35,13,0,NodeJS and Data Syncing,I am developing a mobile app with a lot of tabular data views.  I am interested if NodeJS is suitable for this.  What server side data syncing can u do with NodeJS?,node.js,,,,,02/27/2012 22:43:01,not a real question,1,34,4,NodeJS and Data Syncing I am developing a mobile app with a lot of tabular data views.  I am interested if NodeJS is suitable for this.  What server side data syncing can u do with NodeJS?,1
+11606535,07/23/2012 04:33:21,1418747,05/26/2012 07:16:36,1,0,Is Node.js with Express.js is good option for my Startup?,"i m PHP developer, but i always ignored Javascript which i made a mistake, so i decided to launch my own startup with node.js and express.js. I m completely new to javascript, and have time period till december 2012 to launch my startup, so people guide, to stick with node or just see around for alternative like Rails, Django, web2py etc.
+
+is Node is the answer then guide me for learning Node with express.js
+
+and also tell me what are Node.js advantages over other framework listed above
+
+Thanks in Advance.",node.js,express,,,,07/23/2012 14:57:31,not a real question,1,87,10,"Is Node.js with Express.js is good option for my Startup? i m PHP developer, but i always ignored Javascript which i made a mistake, so i decided to launch my own startup with node.js and express.js. I m completely new to javascript, and have time period till december 2012 to launch my startup, so people guide, to stick with node or just see around for alternative like Rails, Django, web2py etc.
+
+is Node is the answer then guide me for learning Node with express.js
+
+and also tell me what are Node.js advantages over other framework listed above
+
+Thanks in Advance.",2
+10390658,04/30/2012 21:12:50,1293127,03/26/2012 13:26:22,80,2,How to handle code exceptions innode.js?,"I went through the documentation of Express, and [the part describing error handling][1] is completely opaque to me.
+
+I figured the `app` they're referring to is an instance `createServer()`, right? But I have no clue how to stop node.js from blowing up the application process when an exception occurs during handling a request.
+
+I don't need anything fancy really; I just want to return a status of 500, plus an otherwise empty response, whenever there's an exception. The node process **must not** terminate just because there was an uncaught exception somewhere.
+
+Is there a simple example of how to achieve this?
+
+  [1]: http://expressjs.com/guide.html#error-handling
+",node.js,express,,,,,open,0,101,6,"How to handle code exceptions innode.js? I went through the documentation of Express, and [the part describing error handling][1] is completely opaque to me.
+
+I figured the `app` they're referring to is an instance `createServer()`, right? But I have no clue how to stop node.js from blowing up the application process when an exception occurs during handling a request.
+
+I don't need anything fancy really; I just want to return a status of 500, plus an otherwise empty response, whenever there's an exception. The node process **must not** terminate just because there was an uncaught exception somewhere.
+
+Is there a simple example of how to achieve this?
+
+  [1]: http://expressjs.com/guide.html#error-handling
+",2
+11502258,07/16/2012 10:12:19,1477101,06/23/2012 17:10:09,8,0,node.js cross domain and chrme extension,"I plan to build an service for price following. etc. user come to my web service type email address and get a browser extension bookmarklet. With that bookmarketlt when shopping online he mark the price from some product... so after that every day we see if there any changes with price (up,down, when is the best time to buy)
+
+-user click,save xpath to database,check every day for chaneges,send email if there any changes
+
+
+So my questuon is:
+
+1. Is this a good idea?
+
+2. Can I use node.js to automaticly show me the price changes or I need to use some other tehnologies?
+
+
+really sorry for my ebglish is not very well
+
+THANKS",node.js,xpath,google-chrome-extension,bookmarklet,,07/17/2012 02:07:16,not constructive,1,107,6,"node.js cross domain and chrme extension I plan to build an service for price following. etc. user come to my web service type email address and get a browser extension bookmarklet. With that bookmarketlt when shopping online he mark the price from some product... so after that every day we see if there any changes with price (up,down, when is the best time to buy)
+
+-user click,save xpath to database,check every day for chaneges,send email if there any changes
+
+
+So my questuon is:
+
+1. Is this a good idea?
+
+2. Can I use node.js to automaticly show me the price changes or I need to use some other tehnologies?
+
+
+really sorry for my ebglish is not very well
+
+THANKS",4
+8632996,12/26/2011 04:52:56,139548,07/16/2009 14:38:04,251,16,"nodejs + cluster + express has a gateway timeout, but nodejs + express is fine","I'm interested in using Cluster for its worker features and Express for my app.. but when I tie the two together I get a gateway timeout. What am I missing here?! Help, please?
+
+I use Nginx, when app.js is listening on port 3000 everything seems to work fine but when server.js(Cluster) is listening on port 3000 I get Gateway Timeouts;
+
+    upstream app_yourdomain {
+      server 127.0.0.1:3000;
+    }    
+    ...
+    location ^~ /api/ {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+      proxy_pass http://app_yourdomain;
+      proxy_redirect off;
+    }
+
+app.js is an express application;
+
+    var express = require('express');
+    var app = express.createServer();
+    app.use(express.bodyParser());
+    ...
+    app.get('/api/camps', function(req, res){
+        Camp.find({}, function(err, docs){
+                console.log(""found "" + docs.length + "" camps."");
+                console.log(res);
+                res.json({'camps': docs});
+        });
+    });
+
+
+
+server.js;
+
+    var cluster = require('cluster')
+    , app = require('./app');
+
+    cluster(app)
+    .use(cluster.logger('logs'))
+    .use(cluster.stats())
+    .use(cluster.pidfiles('pids'))
+    .use(cluster.cli())
+    .use(cluster.repl(8888))
+    .listen(3000);
+
+
+ Nginx error.log has;
+
+    2011/12/26 04:21:07 [error] 23385#0: *60 upstream timed out (110: Connection timed out) while reading response header from upstream,.....
+
+",node.js,nginx,cluster-computing,,,,open,0,316,15,"nodejs + cluster + express has a gateway timeout, but nodejs + express is fine I'm interested in using Cluster for its worker features and Express for my app.. but when I tie the two together I get a gateway timeout. What am I missing here?! Help, please?
+
+I use Nginx, when app.js is listening on port 3000 everything seems to work fine but when server.js(Cluster) is listening on port 3000 I get Gateway Timeouts;
+
+    upstream app_yourdomain {
+      server 127.0.0.1:3000;
+    }    
+    ...
+    location ^~ /api/ {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+      proxy_pass http://app_yourdomain;
+      proxy_redirect off;
+    }
+
+app.js is an express application;
+
+    var express = require('express');
+    var app = express.createServer();
+    app.use(express.bodyParser());
+    ...
+    app.get('/api/camps', function(req, res){
+        Camp.find({}, function(err, docs){
+                console.log(""found "" + docs.length + "" camps."");
+                console.log(res);
+                res.json({'camps': docs});
+        });
+    });
+
+
+
+server.js;
+
+    var cluster = require('cluster')
+    , app = require('./app');
+
+    cluster(app)
+    .use(cluster.logger('logs'))
+    .use(cluster.stats())
+    .use(cluster.pidfiles('pids'))
+    .use(cluster.cli())
+    .use(cluster.repl(8888))
+    .listen(3000);
+
+
+ Nginx error.log has;
+
+    2011/12/26 04:21:07 [error] 23385#0: *60 upstream timed out (110: Connection timed out) while reading response header from upstream,.....
+
+",3
+7825918,10/19/2011 18:04:45,1003760,10/19/2011 17:59:28,1,0,NodeJS stops responding after 11 requests,"    http.createServer(function(request, response) {
+	console.log(""New request :""+request.url);
+	var found = false;
+	for(var i= 0; i < requests.length; i++){
+		match = requests[i];
+		if(match.method == request.method && request.url.match(match.regexp))
+		{
+			console.log(""Matched request: ""+match.url);
+			pg.connect(databaseUrl, function(error, client) {
+				if(error)
+					processError(response, error);
+				else
+					match.action(client, request, response);
+			});
+			found = true;
+			break;
+		}
+	}
+	if(!found)
+		processError(response, ""Request url does not exist: ""+request.url);
+    }).listen(3000);
+    sys.puts(""Server running... waiting for requests"");
+
+Hi everyone. I'm stuck with this code. Whenever I call 11 times the same request, nodejs stops responding and does not even logs ""New request: ""+request.url.
+Anyone has an idea of what's going on ?
+
+Thanks a lot.",node.js,,,,,,open,0,87,6,"NodeJS stops responding after 11 requests     http.createServer(function(request, response) {
+	console.log(""New request :""+request.url);
+	var found = false;
+	for(var i= 0; i < requests.length; i++){
+		match = requests[i];
+		if(match.method == request.method && request.url.match(match.regexp))
+		{
+			console.log(""Matched request: ""+match.url);
+			pg.connect(databaseUrl, function(error, client) {
+				if(error)
+					processError(response, error);
+				else
+					match.action(client, request, response);
+			});
+			found = true;
+			break;
+		}
+	}
+	if(!found)
+		processError(response, ""Request url does not exist: ""+request.url);
+    }).listen(3000);
+    sys.puts(""Server running... waiting for requests"");
+
+Hi everyone. I'm stuck with this code. Whenever I call 11 times the same request, nodejs stops responding and does not even logs ""New request: ""+request.url.
+Anyone has an idea of what's going on ?
+
+Thanks a lot.",1
+11160867,06/22/2012 17:03:18,1251768,03/06/2012 09:10:30,18,0,Manifest file for Panda-docs,"docs in order to convert some md files into html files. I'm having a problem with the **manifest file json** that panda.make method uses to scan files and folders.
+
+I have 3 folders listed inside the manifest json, where 2 contain other folders and md files and just one contains only one md file. I was thinking that panda-docs would scan all the folders and subfolders automatically but it seems it doesn't and it is genereting only the html file corrisponding to the md file inside the folder that has not subfolders.
+
+Do you have any ideas or examples to help me?
+
+Does panda-docs just need the folders path to scan them and then it will go deep inside all subfolders taking the md files recursively?
+
+This is my manifest json:
+
+    {
+	""files"": [ ""./index.md"", ""./overview"", ""./reference"", ""./tutorial""]
+}
+
+where overview and tutorial contain both md files and folders, and reference just contains one md file.
+
+This is how I use the panda.make method:
+
+`panda.make([manifestFile, ""--template"", ""./resources/nodejs_dev_guide/layout.jade"", ""--assets"", ""./resources/nodejs_dev_guide/skins"", ""-o"", outDir, ""--outputAssets"", ""./out/assets""], function(err) {
+        if (err) {
+            console.error(err);
+            process.exit(-1);
+        }
+    });`
+
+
+Thanks.
+
+
+  [1]: https://github.com/gjtorikian/panda-docs",node.js,manifest,jade,,,,open,0,218,4,"Manifest file for Panda-docs docs in order to convert some md files into html files. I'm having a problem with the **manifest file json** that panda.make method uses to scan files and folders.
+
+I have 3 folders listed inside the manifest json, where 2 contain other folders and md files and just one contains only one md file. I was thinking that panda-docs would scan all the folders and subfolders automatically but it seems it doesn't and it is genereting only the html file corrisponding to the md file inside the folder that has not subfolders.
+
+Do you have any ideas or examples to help me?
+
+Does panda-docs just need the folders path to scan them and then it will go deep inside all subfolders taking the md files recursively?
+
+This is my manifest json:
+
+    {
+	""files"": [ ""./index.md"", ""./overview"", ""./reference"", ""./tutorial""]
+}
+
+where overview and tutorial contain both md files and folders, and reference just contains one md file.
+
+This is how I use the panda.make method:
+
+`panda.make([manifestFile, ""--template"", ""./resources/nodejs_dev_guide/layout.jade"", ""--assets"", ""./resources/nodejs_dev_guide/skins"", ""-o"", outDir, ""--outputAssets"", ""./out/assets""], function(err) {
+        if (err) {
+            console.error(err);
+            process.exit(-1);
+        }
+    });`
+
+
+Thanks.
+
+
+  [1]: https://github.com/gjtorikian/panda-docs",3
+10603848,05/15/2012 15:19:17,1180313,01/31/2012 12:28:45,6,0,Send notification to perticular client in a room in nodeJS,"I want to send a notification to a selected client among all users in a particular room. Is there anyway that i can set the client Id to the user id and later search for the user id in a particular room and send the notification.
+Thanks in advance",node.js,push-notification,socket.io,,,05/16/2012 20:56:34,too localized,1,48,10,"Send notification to perticular client in a room in nodeJS I want to send a notification to a selected client among all users in a particular room. Is there anyway that i can set the client Id to the user id and later search for the user id in a particular room and send the notification.
+Thanks in advance",3
+11097640,06/19/2012 08:55:50,1465833,06/19/2012 08:31:24,1,0,yii +node.js + nginx,"I need to create web application with module of instant messaging. And according to my task I should use Yii for my web application and node.js for creating notification about new incoming message.
+As web-server nginx is used, database - MySQL.
+Can you help me with some documentation or examples how to configure and use these correctly (Yii + node.js + nginx)?
+What database you recommend to me use for this module? (mongodb, mysql)
+Thank you!",node.js,nginx,yii,,,06/19/2012 11:57:56,not constructive,1,72,4,"yii +node.js + nginx I need to create web application with module of instant messaging. And according to my task I should use Yii for my web application and node.js for creating notification about new incoming message.
+As web-server nginx is used, database - MySQL.
+Can you help me with some documentation or examples how to configure and use these correctly (Yii + node.js + nginx)?
+What database you recommend to me use for this module? (mongodb, mysql)
+Thank you!",3
+8104844,11/12/2011 13:51:33,455137,09/22/2010 14:27:40,1696,84,Different results from asynchronous and synchronous reading,"I have a fairly simple script that attempts to read and then parse a JSON file. The JSON is very simple and I am pretty sure it is valid.
+
+    {
+        ""foo"": ""bar""
+    }
+
+Now, I have been trying to read it with `fs.readFile`. When read no errors occur and the returned data is a string. The only problem is that the string is empty.
+
+I repeated my code but used `fs.readFileSync`, this returned the file perfectly using the same path. Both had a `utf-8` encoding specified.
+
+It is very simple code, as you can see.
+
+    fs.readFile('./some/path/file.json', function(err, data) {
+        if(!err) {
+            console.log(data); // Empty string...
+        }
+    });
+    
+    console.log(fs.readFileSync('./some/path/file.json')); // Displays JSON file
+
+Could it be permissions or ownership? I have tried a permission set of `755` and `777` to no avail.
+
+I am running node v0.4.10. Any suggestions to point me in the right direction will be much appreciated. Thanks.",node.js,readfile,fs,,,,open,0,196,7,"Different results from asynchronous and synchronous reading I have a fairly simple script that attempts to read and then parse a JSON file. The JSON is very simple and I am pretty sure it is valid.
+
+    {
+        ""foo"": ""bar""
+    }
+
+Now, I have been trying to read it with `fs.readFile`. When read no errors occur and the returned data is a string. The only problem is that the string is empty.
+
+I repeated my code but used `fs.readFileSync`, this returned the file perfectly using the same path. Both had a `utf-8` encoding specified.
+
+It is very simple code, as you can see.
+
+    fs.readFile('./some/path/file.json', function(err, data) {
+        if(!err) {
+            console.log(data); // Empty string...
+        }
+    });
+    
+    console.log(fs.readFileSync('./some/path/file.json')); // Displays JSON file
+
+Could it be permissions or ownership? I have tried a permission set of `755` and `777` to no avail.
+
+I am running node v0.4.10. Any suggestions to point me in the right direction will be much appreciated. Thanks.",3
+9232717,02/10/2012 18:18:05,139361,07/16/2009 10:08:16,1064,46,Is node.js runnning on it's own web server or does it use apache/nginx?,I'm interested in choosing a best web server for node.js,node.js,,,,,02/11/2012 13:04:57,not constructive,1,10,13,Is node.js runnning on it's own web server or does it use apache/nginx? I'm interested in choosing a best web server for node.js,1
+5594032,04/08/2011 10:53:32,387613,07/09/2010 10:19:15,468,12,npm module installed but not available?,"I implemented a npm module (called wrench) in an application which I always tested locally. That worked always without problems. Then I was trying to install wrench on my server.
+
+""npm install wrench"" did work as expected but as soon as it comes to 'require(""wrench"")', I get the following error:
+
+    > require(""wrench"")
+    Error: Cannot find module 'wrench'
+        at Function._resolveFilename (module.js:320:11)
+        at Function._load (module.js:266:25)
+        at require (module.js:348:19)
+        at [object Context]:1:1
+        at Interface.<anonymous> (repl.js:171:22)
+        at Interface.emit (events.js:64:17)
+        at Interface._onLine (readline.js:153:10)
+        at Interface._line (readline.js:408:8)
+        at Interface._ttyWrite (readline.js:585:14)
+        at ReadStream.<anonymous> (readline.js:73:12)
+
+
+If I run ""npm ls"" I can see
+
+    wrench@0.1.0
+
+
+Is there something I am missing here?
+
+
+
+
+Thanks,
+
+Elias",node.js,npm,,,,,open,0,179,6,"npm module installed but not available? I implemented a npm module (called wrench) in an application which I always tested locally. That worked always without problems. Then I was trying to install wrench on my server.
+
+""npm install wrench"" did work as expected but as soon as it comes to 'require(""wrench"")', I get the following error:
+
+    > require(""wrench"")
+    Error: Cannot find module 'wrench'
+        at Function._resolveFilename (module.js:320:11)
+        at Function._load (module.js:266:25)
+        at require (module.js:348:19)
+        at [object Context]:1:1
+        at Interface.<anonymous> (repl.js:171:22)
+        at Interface.emit (events.js:64:17)
+        at Interface._onLine (readline.js:153:10)
+        at Interface._line (readline.js:408:8)
+        at Interface._ttyWrite (readline.js:585:14)
+        at ReadStream.<anonymous> (readline.js:73:12)
+
+
+If I run ""npm ls"" I can see
+
+    wrench@0.1.0
+
+
+Is there something I am missing here?
+
+
+
+
+Thanks,
+
+Elias",2
+10004441,04/04/2012 03:12:36,910182,08/24/2011 17:46:11,37,0,Error: Connection refused issue when trying to connect to a mqtt enabled node server hosted on heroku,"So I basically wanted to host a mqtt pub/sub-enabled node server on Heroku. These are 2 guides I refer to:
+https://github.com/adamvr/MQTT.js and https://gist.github.com/1826931
+
+The mqtt pub/sub worked well when tested on localhost, deployment on heroku was fine, but when I tried testing on Heroku it didn't work
+
+I tried 2 commands to subscribe, both showed the same errors.
+
+Command 1:
+    
+    mosquitto_sub -p <port> -h <host> -t <topic>
+
+Error 1:
+
+    Error: Connection refused
+    Unable to connect (13).
+
+Command 2:
+
+    mqtt_sub <port> <host> <topic>
+
+Error 2:
+
+    node.js:201
+        throw e; // process.nextTick error, or 'error' event on first tick
+              ^
+    Error: connect ECONNREFUSED
+        at errnoException (net.js:670:11)
+        at Object.afterConnect [as oncomplete] (net.js:661:19)
+
+My main.js (server) code is similar to this one - https://gist.github.com/1826931. The error seems more like a node problem than a mqtt pub/sub problem, and I am new to node, so not quite sure how to debug it. I put in some console.log lines but as expected it didn't print since it's not connected. There is a dyno running `node main.js` on Heroku fine.
+
+    Process  State       Command       
+    -------  ----------  ------------  
+    web.1    up for 35m  node main.js
+
+Appreciate any advice on this issue.",node.js,heroku,mqtt,,,,open,0,268,17,"Error: Connection refused issue when trying to connect to a mqtt enabled node server hosted on heroku So I basically wanted to host a mqtt pub/sub-enabled node server on Heroku. These are 2 guides I refer to:
+https://github.com/adamvr/MQTT.js and https://gist.github.com/1826931
+
+The mqtt pub/sub worked well when tested on localhost, deployment on heroku was fine, but when I tried testing on Heroku it didn't work
+
+I tried 2 commands to subscribe, both showed the same errors.
+
+Command 1:
+    
+    mosquitto_sub -p <port> -h <host> -t <topic>
+
+Error 1:
+
+    Error: Connection refused
+    Unable to connect (13).
+
+Command 2:
+
+    mqtt_sub <port> <host> <topic>
+
+Error 2:
+
+    node.js:201
+        throw e; // process.nextTick error, or 'error' event on first tick
+              ^
+    Error: connect ECONNREFUSED
+        at errnoException (net.js:670:11)
+        at Object.afterConnect [as oncomplete] (net.js:661:19)
+
+My main.js (server) code is similar to this one - https://gist.github.com/1826931. The error seems more like a node problem than a mqtt pub/sub problem, and I am new to node, so not quite sure how to debug it. I put in some console.log lines but as expected it didn't print since it's not connected. There is a dyno running `node main.js` on Heroku fine.
+
+    Process  State       Command       
+    -------  ----------  ------------  
+    web.1    up for 35m  node main.js
+
+Appreciate any advice on this issue.",3
+8631582,12/25/2011 21:07:02,709635,04/15/2011 10:21:53,488,17,best way to build an image service in node.js,"So I've got this server application running on Google AppEngine that I want to migrate to node.js.
+
+My main concern is building an API similar to the powerfull GAE's blobstore/imageservice combinaison to host and serve the users uploaded pictures.
+
+I'm really new to node.js and I've only read some documentations, viewed some video and fiddle with node so far. I'd like to have some insight on what would be the best solutions to:
+
+ - host the pictures
+ - serve them through an efficient cache system
+
+At the moment, I'm leaning toward redis to store the pictures, I haven't looked at all the node modules yet (there are quite a lot!).
+
+What would be your architecture of choice for such an application?",node.js,,,,,12/26/2011 22:11:31,not a real question,1,117,9,"best way to build an image service in node.js So I've got this server application running on Google AppEngine that I want to migrate to node.js.
+
+My main concern is building an API similar to the powerfull GAE's blobstore/imageservice combinaison to host and serve the users uploaded pictures.
+
+I'm really new to node.js and I've only read some documentations, viewed some video and fiddle with node so far. I'd like to have some insight on what would be the best solutions to:
+
+ - host the pictures
+ - serve them through an efficient cache system
+
+At the moment, I'm leaning toward redis to store the pictures, I haven't looked at all the node modules yet (there are quite a lot!).
+
+What would be your architecture of choice for such an application?",1
+7890497,10/25/2011 14:03:53,1009236,10/23/2011 05:35:30,1,0,Invoke the process.addListener() and Node tell me: No such module,"I am newbie and I am writing a simple program based Node.js.
+everything is fine until I added this line: 
+
+    process.addListener('SIGINT', function(){ console.log( 'Sigint test.' ); } );
+
+Run: Node sample.js 
+
+I got following message:
+
+    node.js:203
+            throw e; // process.nextTick error, or 'error' event on first tick
+                  ^
+    Error: No such module
+        at EventEmitter.<anonymous> (node.js:361:27)
+        at Object.<anonymous> (D:\Nodejs\MySample\sample.js:13:9)
+        at Module._compile (module.js:432:26)
+        at Object..js (module.js:450:10)
+        at Module.load (module.js:351:31)
+        at Function._load (module.js:310:12)
+        at Array.<anonymous> (module.js:470:10)
+        at EventEmitter._tickCallback (node.js:195:26)
+
+
+Environment:
+
+Windows XP sp2
+Node.js 0.5.9 for Windows
+
+help me please... 
+
+
+",node.js,,,,,,open,0,176,10,"Invoke the process.addListener() and Node tell me: No such module I am newbie and I am writing a simple program based Node.js.
+everything is fine until I added this line: 
+
+    process.addListener('SIGINT', function(){ console.log( 'Sigint test.' ); } );
+
+Run: Node sample.js 
+
+I got following message:
+
+    node.js:203
+            throw e; // process.nextTick error, or 'error' event on first tick
+                  ^
+    Error: No such module
+        at EventEmitter.<anonymous> (node.js:361:27)
+        at Object.<anonymous> (D:\Nodejs\MySample\sample.js:13:9)
+        at Module._compile (module.js:432:26)
+        at Object..js (module.js:450:10)
+        at Module.load (module.js:351:31)
+        at Function._load (module.js:310:12)
+        at Array.<anonymous> (module.js:470:10)
+        at EventEmitter._tickCallback (node.js:195:26)
+
+
+Environment:
+
+Windows XP sp2
+Node.js 0.5.9 for Windows
+
+help me please... 
+
+
+",1
+8115076,11/13/2011 21:59:10,19521,09/20/2008 06:45:17,1819,42,Can I perform many asynchronous database requests without deeply nesting my code?,"I'm sort of new to programming asynchronously. I've run into a situation where I need to perform 8 database lookups in a loop. I'm not sure how to accomplish this-- my database library returns the data in a callback function, and I cannot continue with my code until I have all 8 rows, so I need to halt until all 8 lookups have completed.
+
+This is sort of what I picture right now:
+
+    db.world.Queue.find(@user.kingdom.troops_queue).on 'success', (troops_queue) ->
+        db.world.Queue.find(@user.kingdom.tanks_queue).on 'success', (tanks_queue) ->
+            #etc etc
+
+This is horrible and gross of course, but I can't think of a way to roll it up into a loop that will allow my code to pause and only continue when the last item has been filled. I was looking into things like jQuery's .each() function, but what is the behavior of that function? Does the code after it immediately continue, or does it wait for the loop to finish?",node.js,asynchronous,coffeescript,sequelize,,,open,0,173,12,"Can I perform many asynchronous database requests without deeply nesting my code? I'm sort of new to programming asynchronously. I've run into a situation where I need to perform 8 database lookups in a loop. I'm not sure how to accomplish this-- my database library returns the data in a callback function, and I cannot continue with my code until I have all 8 rows, so I need to halt until all 8 lookups have completed.
+
+This is sort of what I picture right now:
+
+    db.world.Queue.find(@user.kingdom.troops_queue).on 'success', (troops_queue) ->
+        db.world.Queue.find(@user.kingdom.tanks_queue).on 'success', (tanks_queue) ->
+            #etc etc
+
+This is horrible and gross of course, but I can't think of a way to roll it up into a loop that will allow my code to pause and only continue when the last item has been filled. I was looking into things like jQuery's .each() function, but what is the behavior of that function? Does the code after it immediately continue, or does it wait for the loop to finish?",4
+8319107,11/29/2011 23:14:50,51795,01/05/2009 20:38:34,704,14,Cannot require local modules in node,"See this (javascript is the dir I am in):
+
+    ➜  javascript  mkdir tmp
+    ➜  javascript  cd tmp 
+    ➜  tmp  mkdir node_modules
+    ➜  tmp  node --version
+    v0.6.3
+    ➜  tmp  npm --version
+    1.1.0-alpha-2
+    ➜  tmp  npm install plates
+    plates@0.2.1 ./node_modules/plates 
+    ➜  tmp  node
+    > p = require('plates')
+    {}
+    > p
+    {}
+    > p.bind
+    undefined
+    ➜  tmp  npm uninstall plates
+    ➜  tmp  sudo npm install plates -g 
+    Password:
+    plates@0.2.1 /usr/local/lib/node_modules/plates 
+    ➜  tmp  node
+    > p = require('plates')
+    Error: Cannot find module 'plates'
+        at Function._resolveFilename (module.js:334:11)
+        at Function._load (module.js:279:25)
+        at Module.require (module.js:357:17)
+        at require (module.js:368:17)
+        at repl:1:6
+        at REPLServer.eval (repl.js:80:21)
+        at Interface.<anonymous> (repl.js:182:12)
+        at Interface.emit (events.js:67:17)
+        at Interface._onLine (readline.js:162:10)
+        at Interface._line (readline.js:426:8)
+
+What am I missing here?
+
+
+",node.js,npm,,,,,open,0,275,6,"Cannot require local modules in node See this (javascript is the dir I am in):
+
+    ➜  javascript  mkdir tmp
+    ➜  javascript  cd tmp 
+    ➜  tmp  mkdir node_modules
+    ➜  tmp  node --version
+    v0.6.3
+    ➜  tmp  npm --version
+    1.1.0-alpha-2
+    ➜  tmp  npm install plates
+    plates@0.2.1 ./node_modules/plates 
+    ➜  tmp  node
+    > p = require('plates')
+    {}
+    > p
+    {}
+    > p.bind
+    undefined
+    ➜  tmp  npm uninstall plates
+    ➜  tmp  sudo npm install plates -g 
+    Password:
+    plates@0.2.1 /usr/local/lib/node_modules/plates 
+    ➜  tmp  node
+    > p = require('plates')
+    Error: Cannot find module 'plates'
+        at Function._resolveFilename (module.js:334:11)
+        at Function._load (module.js:279:25)
+        at Module.require (module.js:357:17)
+        at require (module.js:368:17)
+        at repl:1:6
+        at REPLServer.eval (repl.js:80:21)
+        at Interface.<anonymous> (repl.js:182:12)
+        at Interface.emit (events.js:67:17)
+        at Interface._onLine (readline.js:162:10)
+        at Interface._line (readline.js:426:8)
+
+What am I missing here?
+
+
+",2
+7592677,09/29/2011 05:06:34,434893,08/30/2010 11:25:42,1151,84,how to define callback in eval script,"I am passing a script in the eval 
+
+Here is my script which m passing in eval .
+
+    var query={};
+    query.command=""execute"";
+    query.filename=""lily/addkb.scr"";
+    query.paraminput=""id=USER.33"";
+    execscript(query,  function(data){
+       console.log(data);
+       _callback(data);  
+    });
+
+In this script m calling a _callback on complete of this eval .
+
+Here is my eval code .
+
+
+                function donodescript(script, _callback) {
+    			eval(request.script);
+    		}
+    		donodescript(script, function(result) {
+    			callback(result);
+    		});
+
+
+but when i run this code it says **_callback is not defined** why so Please suggest.
+
+
+
+
+
+
+
+",node.js,callback,eval,,,09/29/2011 15:16:49,not a real question,1,134,7,"how to define callback in eval script I am passing a script in the eval 
+
+Here is my script which m passing in eval .
+
+    var query={};
+    query.command=""execute"";
+    query.filename=""lily/addkb.scr"";
+    query.paraminput=""id=USER.33"";
+    execscript(query,  function(data){
+       console.log(data);
+       _callback(data);  
+    });
+
+In this script m calling a _callback on complete of this eval .
+
+Here is my eval code .
+
+
+                function donodescript(script, _callback) {
+    			eval(request.script);
+    		}
+    		donodescript(script, function(result) {
+    			callback(result);
+    		});
+
+
+but when i run this code it says **_callback is not defined** why so Please suggest.
+
+
+
+
+
+
+
+",3
+10854193,06/01/2012 16:36:56,352477,05/28/2010 00:40:54,714,3,Is this method of static file serving safe in node.js? (potential security hole?),"I want to create the simplest node.js server to serve static files.
+
+Here's what I came up with:
+
+    fs = require('fs');
+    server = require('http').createServer(function(req, res) {
+        res.end(fs.readFileSync(__dirname + '/public/' + req.url));
+    });
+    server.listen(8080);
+
+Clearly this would map `http://localhost:8080/index.html` to `project_dir/public/index.html`, and similarly so for all other files.
+
+My one concern is that someone could abuse this to access files outside of `project_dir/public`.  Something like this, for example:
+
+    http://localhost:8080/../../sensitive_file.txt
+
+I tried this a little bit, and it wasn't working.  But, it seems like my browser was removing the "".."" itself.  Which leads me to believe that someone could abuse my poor little node.js server.
+
+I know there are npm packages that do static file serving.  But I'm actually curious to write my own here.  So my questions are:
+
+1.  Is this safe?
+
+2.  If so, why?  If not, why not?
+
+3.  And, if further, if not, what is the ""right"" way to do this?  My one constraint is I don't want to have to have an if clause for each possible file, I want the server to serve whatever files I throw in a directory. ",node.js,,,,,,open,0,209,13,"Is this method of static file serving safe in node.js? (potential security hole?) I want to create the simplest node.js server to serve static files.
+
+Here's what I came up with:
+
+    fs = require('fs');
+    server = require('http').createServer(function(req, res) {
+        res.end(fs.readFileSync(__dirname + '/public/' + req.url));
+    });
+    server.listen(8080);
+
+Clearly this would map `http://localhost:8080/index.html` to `project_dir/public/index.html`, and similarly so for all other files.
+
+My one concern is that someone could abuse this to access files outside of `project_dir/public`.  Something like this, for example:
+
+    http://localhost:8080/../../sensitive_file.txt
+
+I tried this a little bit, and it wasn't working.  But, it seems like my browser was removing the "".."" itself.  Which leads me to believe that someone could abuse my poor little node.js server.
+
+I know there are npm packages that do static file serving.  But I'm actually curious to write my own here.  So my questions are:
+
+1.  Is this safe?
+
+2.  If so, why?  If not, why not?
+
+3.  And, if further, if not, what is the ""right"" way to do this?  My one constraint is I don't want to have to have an if clause for each possible file, I want the server to serve whatever files I throw in a directory. ",1
+10711114,05/22/2012 22:36:15,409840,08/03/2010 15:36:35,63,1,"Jade renders unexpected values in templates for ""populated"" mongoose properties","I have a jade template where I'm printing out properties from a mongoose object. The object has properties that were populated via mongoose's dbref-like populate feature. When The template renders I get nonsense. 
+
+simplified example:
+
+in the route
+
+    User.findById(req.params.user, function(err, user){
+      res.render('training', {training:user.training});
+    }).populate('training');
+
+in the template:
+
+    a.training-link(href='/training/#{training.details.id}') ...
+
+in the browser:
+
+    <a href=""/training/O &gt;°Cm5�"" class=""training-link"">...</a>
+
+The first time the page is loaded, where I would expect a regular mongo hexadecimal string (4fac4e5f379cb0a68100015d) I get something like ""O &gt;°Cm5�"". This only happens on the first page load after a server restart. All subsequent page loads render as expected. 
+
+What's happening here and how can I fix it?
+
+Thanks.",node.js,express,mongoose,jade,,,open,0,118,10,"Jade renders unexpected values in templates for ""populated"" mongoose properties I have a jade template where I'm printing out properties from a mongoose object. The object has properties that were populated via mongoose's dbref-like populate feature. When The template renders I get nonsense. 
+
+simplified example:
+
+in the route
+
+    User.findById(req.params.user, function(err, user){
+      res.render('training', {training:user.training});
+    }).populate('training');
+
+in the template:
+
+    a.training-link(href='/training/#{training.details.id}') ...
+
+in the browser:
+
+    <a href=""/training/O &gt;°Cm5�"" class=""training-link"">...</a>
+
+The first time the page is loaded, where I would expect a regular mongo hexadecimal string (4fac4e5f379cb0a68100015d) I get something like ""O &gt;°Cm5�"". This only happens on the first page load after a server restart. All subsequent page loads render as expected. 
+
+What's happening here and how can I fix it?
+
+Thanks.",4
+10043177,04/06/2012 11:57:59,1272205,03/15/2012 17:34:48,33,0,Node.js Cygwin not supported,"I am trying to install node.js. I followed [this][1] tutorial and i am stuck in the middle.
+When i write ./configure in my cygwin terminal it says ""cygwin not supported"". Please help me out 
+Thanks in advance.
+
+
+  [1]: http://howtonode.org/how-to-install-nodejs",node.js,cygwin,install,,,,open,0,39,4,"Node.js Cygwin not supported I am trying to install node.js. I followed [this][1] tutorial and i am stuck in the middle.
+When i write ./configure in my cygwin terminal it says ""cygwin not supported"". Please help me out 
+Thanks in advance.
+
+
+  [1]: http://howtonode.org/how-to-install-nodejs",3
+10716513,05/23/2012 08:47:47,460472,09/28/2010 10:33:49,23,6,How to use ScriptSharp with NodeJS?,"I tried to use a Javascript file generated by Script# in NodeJS, but it won't work due to dependencies to certain libraries that aren't available in NodeJS.
+
+Has anyone tried using Script# generated JS files in NodeJS? 
+
+If not, can this feature be made available? Thanks!",node.js,script#,,,,05/24/2012 14:44:40,not a real question,1,45,6,"How to use ScriptSharp with NodeJS? I tried to use a Javascript file generated by Script# in NodeJS, but it won't work due to dependencies to certain libraries that aren't available in NodeJS.
+
+Has anyone tried using Script# generated JS files in NodeJS? 
+
+If not, can this feature be made available? Thanks!",2
+8356028,12/02/2011 12:00:19,904490,08/21/2011 10:39:07,56,6,node.js vs uwsgi,"I had been working with uwsgi+ nginx , but heard that node.js is the upcoming technology , but wanted to know the performance, scalability wise whether i should go ahead with node.js or nginx+uwsgi combination.
+
+""Coding made easy"" doesnt bothers me , my concern is which is the best technology to go ahead with .
+
+The target is to make a application server , with some database integrations etc,
+
+so wanted to know the following aspects.
+
+1. Scalability 
+2. Load Handling and Load Balancing 
+3. Overheads associated 
+4. Concurrency etc
+
+basically wanted to know the best of it either **uwsgi+nginx or node.js** 
+
+",node.js,nginx,uwsgi,,,12/02/2011 17:15:38,not constructive,1,98,3,"node.js vs uwsgi I had been working with uwsgi+ nginx , but heard that node.js is the upcoming technology , but wanted to know the performance, scalability wise whether i should go ahead with node.js or nginx+uwsgi combination.
+
+""Coding made easy"" doesnt bothers me , my concern is which is the best technology to go ahead with .
+
+The target is to make a application server , with some database integrations etc,
+
+so wanted to know the following aspects.
+
+1. Scalability 
+2. Load Handling and Load Balancing 
+3. Overheads associated 
+4. Concurrency etc
+
+basically wanted to know the best of it either **uwsgi+nginx or node.js** 
+
+",3
+8393491,12/05/2011 23:39:40,707381,04/14/2011 06:23:33,1542,11,Why does the Buffer object have a capital B?,The only global object in Node that has a capitalised first letter is `Buffer`. It does not seem to be a constructor. Why the capital `B`?,node.js,,,,,,open,0,26,9,Why does the Buffer object have a capital B? The only global object in Node that has a capitalised first letter is `Buffer`. It does not seem to be a constructor. Why the capital `B`?,1

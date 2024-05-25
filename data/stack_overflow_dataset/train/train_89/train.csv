@@ -1,0 +1,2440 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+10961532,06/09/2012 13:44:20,781076,06/02/2011 12:02:02,1,0,Web services / SOA and QA,"My company is planning to launch a project consisting only of web services. There won't be any user interface. My question is how to organize a QA and what are best practices for testing web services?
+
+1. We can use SoapUI and analyze all requests and responses. Can we do this only automatically?
+2. Of course base our work on unit tests. We will run them autmatically.
+3. More ideas? How to organize acceptance testing?
+
+We will have a team of software developers but what with QA team? We can have one QA who will start creating all testing scenarios and scripts at the beginning of iteration. 
+
+Do you have any suggestions, best practices, interesting articles or books?
+
+Thank you very much for your help.
+
+Regards",testing,service,web,soa,qa,06/10/2012 15:47:21,not a real question,1,120,6,"Web services / SOA and QA My company is planning to launch a project consisting only of web services. There won't be any user interface. My question is how to organize a QA and what are best practices for testing web services?
+
+1. We can use SoapUI and analyze all requests and responses. Can we do this only automatically?
+2. Of course base our work on unit tests. We will run them autmatically.
+3. More ideas? How to organize acceptance testing?
+
+We will have a team of software developers but what with QA team? We can have one QA who will start creating all testing scenarios and scripts at the beginning of iteration. 
+
+Do you have any suggestions, best practices, interesting articles or books?
+
+Thank you very much for your help.
+
+Regards",5
+11429801,07/11/2012 09:40:50,1448837,06/11/2012 11:31:25,46,2,How to test your own project in Asp.net in C#?,"Once I finish developing my project, my manager tells me to test. I test it and finds no problem. But when my boss tests it, she finds one or the other bug or finds some modifications to be made. I really get frustrated. She keeps on telling me test until I find no modifications to be done. I don't know what to test after developing according to the requirement. Could you help me?
+
+Thanks in Advance.",testing,,,,,07/11/2012 10:44:04,too localized,1,75,10,"How to test your own project in Asp.net in C#? Once I finish developing my project, my manager tells me to test. I test it and finds no problem. But when my boss tests it, she finds one or the other bug or finds some modifications to be made. I really get frustrated. She keeps on telling me test until I find no modifications to be done. I don't know what to test after developing according to the requirement. Could you help me?
+
+Thanks in Advance.",1
+4280371,11/25/2010 19:38:46,380038,04/26/2010 11:40:00,367,3,How do you test a implementation of k-means?,"how do you test your own k-means implementation for multidimensional data sets?
+
+I was thinking of running an already existing implementation (i.e. Matlab) on the data and compare the results with my algorithm. But this would require both algorithms to work more than roughly the same and the mapping between the two results probably is no piece of cake. 
+
+Do you have a better idea?",testing,cluster-analysis,k-means,,,07/04/2011 19:50:25,not constructive,1,64,8,"How do you test a implementation of k-means? how do you test your own k-means implementation for multidimensional data sets?
+
+I was thinking of running an already existing implementation (i.e. Matlab) on the data and compare the results with my algorithm. But this would require both algorithms to work more than roughly the same and the mapping between the two results probably is no piece of cake. 
+
+Do you have a better idea?",3
+4139095,11/09/2010 21:57:45,487006,10/25/2010 22:31:27,24,2,Unit Tests vs. Acceptance Tests,"Are you for one or the other?  Or both?
+
+My understanding is unit tests:
+
+- validate the system from the developer's point of view
+- help developers practice TDD
+- keep code modular
+- assist in detecting errors at low levels of granularity
+
+
+Acceptance tests:
+
+
+- validate the system from the business and QC / QA points of view
+- tend to be high level as they're often written by people not familiar with the inner workings of the code
+
+
+I feel both are necessary.  However, for minimization of redundant work, is it a good idea to try to incorporate unit tests into acceptance tests?  In other words, have the latter call the former.  Does going in the opposite direction make any sense?
+
+What are your thoughts in general on unit tests vs. acceptance tests, and how to manage them in relation to each other?",testing,tdd,unit,acceptance,,,open,0,139,5,"Unit Tests vs. Acceptance Tests Are you for one or the other?  Or both?
+
+My understanding is unit tests:
+
+- validate the system from the developer's point of view
+- help developers practice TDD
+- keep code modular
+- assist in detecting errors at low levels of granularity
+
+
+Acceptance tests:
+
+
+- validate the system from the business and QC / QA points of view
+- tend to be high level as they're often written by people not familiar with the inner workings of the code
+
+
+I feel both are necessary.  However, for minimization of redundant work, is it a good idea to try to incorporate unit tests into acceptance tests?  In other words, have the latter call the former.  Does going in the opposite direction make any sense?
+
+What are your thoughts in general on unit tests vs. acceptance tests, and how to manage them in relation to each other?",4
+133264,09/25/2008 13:18:59,11702,09/16/2008 10:27:00,1054,27,What would you like to see in a TDD demo?,"I am going to be giving a presentation on TDD and I always struggle with what to put in the demo when giving this presentation. I usually only have about an hour to do the actual coding portion of the demo so it can't be too extravagant. However, using a ""classic"" example (stack,queue) is a bit simplistic for most developers. It leaves them feeling as though this won't work in a real world solution.
+
+There are a lot of concepts one needs to make TDD work well on their project besides understanding the core testing cycle *(Test, Code, Refactor)*.
+
+  - IoC / Dependency Injection / Dependency Inversion
+  - MVP / MVC (in order to handle testing of user interfaces)
+  - Mocking
+
+So the question is...
+
+As a developer what kind of **real world** example would you like to see that incorporates these aspects and:
+
+  - Fits into an hour or so
+  - Doesn't overwhelm you
+  - Isn't so simple that you can't apply it to your current project",testing,polls,tdd,presentations,,05/05/2012 13:52:19,not constructive,1,171,10,"What would you like to see in a TDD demo? I am going to be giving a presentation on TDD and I always struggle with what to put in the demo when giving this presentation. I usually only have about an hour to do the actual coding portion of the demo so it can't be too extravagant. However, using a ""classic"" example (stack,queue) is a bit simplistic for most developers. It leaves them feeling as though this won't work in a real world solution.
+
+There are a lot of concepts one needs to make TDD work well on their project besides understanding the core testing cycle *(Test, Code, Refactor)*.
+
+  - IoC / Dependency Injection / Dependency Inversion
+  - MVP / MVC (in order to handle testing of user interfaces)
+  - Mocking
+
+So the question is...
+
+As a developer what kind of **real world** example would you like to see that incorporates these aspects and:
+
+  - Fits into an hour or so
+  - Doesn't overwhelm you
+  - Isn't so simple that you can't apply it to your current project",4
+7864916,10/23/2011 07:28:23,283318,03/01/2010 00:54:09,62,2,Active Directory - Test users and groups,I am wanting to test a tool which synchronises with Active Directory.  I want a decent number of users and groups to give the utility a reasonably rigorous test.  Does any know a way of populating AD with fake users and groups?,testing,active-directory,test-data,,,,open,0,44,7,Active Directory - Test users and groups I am wanting to test a tool which synchronises with Active Directory.  I want a decent number of users and groups to give the utility a reasonably rigorous test.  Does any know a way of populating AD with fake users and groups?,3
+479649,01/26/2009 12:34:30,23368,09/29/2008 07:10:57,548,27,What are your experiences with AutomatedQA's TestComplete?,"At my workplace we are thinking about buying TestComplete but after using the evaluation version, I'm unsure if it will do us any good.
+
+Creating tests seems to be a lot of work and my boss is not entirely convinced that it's worth it. 
+
+On the other hand, we don't have any unit tests, so we desperatly need some automated testing.
+
+* What are your experiences with TestComplete?
+* Is it realistic, that non-developers can create tests? (Without help of a developer)
+* Can TestComplete replace unit tests?
+",testing,,,,,06/19/2012 21:48:31,not constructive,1,84,7,"What are your experiences with AutomatedQA's TestComplete? At my workplace we are thinking about buying TestComplete but after using the evaluation version, I'm unsure if it will do us any good.
+
+Creating tests seems to be a lot of work and my boss is not entirely convinced that it's worth it. 
+
+On the other hand, we don't have any unit tests, so we desperatly need some automated testing.
+
+* What are your experiences with TestComplete?
+* Is it realistic, that non-developers can create tests? (Without help of a developer)
+* Can TestComplete replace unit tests?
+",1
+3914178,10/12/2010 11:34:44,709306,09/27/2010 06:27:10,1,0,Questions regarding manual testing,"Q1. If tester have no requirement, how he will test?
+
+Q2. Please give the example of ""Not a bug"".? ",testing,manual,,,,10/12/2010 16:22:28,not a real question,1,19,4,"Questions regarding manual testing Q1. If tester have no requirement, how he will test?
+
+Q2. Please give the example of ""Not a bug"".? ",2
+1175752,07/24/2009 04:29:13,96262,04/26/2009 18:19:27,51,0,Open source tool to detect Qt controls - Automation,"Is there any open source tool for detecting Qt controls?
+
+It can be used as part of automation the testing",testing,automation,,,,,open,0,19,9,"Open source tool to detect Qt controls - Automation Is there any open source tool for detecting Qt controls?
+
+It can be used as part of automation the testing",2
+10530140,05/10/2012 08:26:09,1223428,02/21/2012 13:08:01,1,0,Dynamically change connection string for UI tests,I'm using WebAii library for UI testing - I want to test whether my component displays the same records as there are in database therefore I need to switch my application's connection string to point to the test database just for the time of running tests. What is the best way to do it? How to dynamically change the connection string prior to running the app? Thanks,testing,database-connection,ui-testing,webaii,,,open,0,67,7,Dynamically change connection string for UI tests I'm using WebAii library for UI testing - I want to test whether my component displays the same records as there are in database therefore I need to switch my application's connection string to point to the test database just for the time of running tests. What is the best way to do it? How to dynamically change the connection string prior to running the app? Thanks,4
+7695071,10/08/2011 05:53:29,439219,09/03/2010 18:16:54,365,0,what are the Testing Procedures Before Releasing a software?,"i just finished my Networking Software (Client and Server), i wanna know what procedures i should take before releasing? what i got so far is:
+
+  - Test Functionality of Software (see if it's doing what it should be doing)
+  - Fuzzing Test for both Sides (I dunno good software so a recommendation would be nice)
+
+what else should i test for before releasing?
+i'm just so excited to release my first application, and wanna see make it perfect (almost) :D
+
+thanks.",testing,qa,,,,10/08/2011 12:24:50,off topic,1,80,9,"what are the Testing Procedures Before Releasing a software? i just finished my Networking Software (Client and Server), i wanna know what procedures i should take before releasing? what i got so far is:
+
+  - Test Functionality of Software (see if it's doing what it should be doing)
+  - Fuzzing Test for both Sides (I dunno good software so a recommendation would be nice)
+
+what else should i test for before releasing?
+i'm just so excited to release my first application, and wanna see make it perfect (almost) :D
+
+thanks.",2
+3045553,06/15/2010 13:27:00,272398,02/13/2010 13:16:01,150,3,Manual testing Vs Automated testing,"Respected all,
+
+As many know testing can be mainly classified into manual and automated testing. With regard to this certain questions come to mind. Hope you can help... 
+
+They include:
+
+ - What is the basic difference between the two types of testing?
+
+ - What are the elements of **challenges** involved in both manual and automated testing?
+
+ - What are the different **skill sets** required by a software tester for manual and automated testing respectively?
+ - What are the different **job prospects** and **growth opportunities** among software testers who do manual testing automated testing respectively?
+
+ - Is manual testing **under rated** to automated testing in anyway(s)? If yes, kindly specify the way. 
+
+ - How differently are the manual testers treated in comparison to automated testers in the corporate world?( If they truly are differentiated in any terms as such )
+
+ 
+
+I hope you can share your knowledge in answering these questions..
+
+Thank you for your time..:)",testing,software-quality,career-advice,automated-testing,manual-testing,01/27/2012 22:30:03,not constructive,1,154,5,"Manual testing Vs Automated testing Respected all,
+
+As many know testing can be mainly classified into manual and automated testing. With regard to this certain questions come to mind. Hope you can help... 
+
+They include:
+
+ - What is the basic difference between the two types of testing?
+
+ - What are the elements of **challenges** involved in both manual and automated testing?
+
+ - What are the different **skill sets** required by a software tester for manual and automated testing respectively?
+ - What are the different **job prospects** and **growth opportunities** among software testers who do manual testing automated testing respectively?
+
+ - Is manual testing **under rated** to automated testing in anyway(s)? If yes, kindly specify the way. 
+
+ - How differently are the manual testers treated in comparison to automated testers in the corporate world?( If they truly are differentiated in any terms as such )
+
+ 
+
+I hope you can share your knowledge in answering these questions..
+
+Thank you for your time..:)",5
+4619033,01/06/2011 19:37:57,47868,12/19/2008 19:25:16,112,40,Software model from Black box tests!,Does anyone know... how to generate a software model from black-box tests?,testing,qa,,,,04/08/2011 02:42:16,not a real question,1,12,6,Software model from Black box tests! Does anyone know... how to generate a software model from black-box tests?,2
+3712909,09/14/2010 21:05:29,296427,03/18/2010 11:01:55,409,12,It is worth moving from tester to business analyst?,"I don't know if it's worth to change profession from tester into business analyst. Do you have some experiences with such transition? What are ups and downs of such move? Is business analyst more profitable?
+
+I would be grateful for any help.",testing,career-development,jobs,professional-experience,business-analysis,09/15/2010 02:38:53,off topic,1,41,9,"It is worth moving from tester to business analyst? I don't know if it's worth to change profession from tester into business analyst. Do you have some experiences with such transition? What are ups and downs of such move? Is business analyst more profitable?
+
+I would be grateful for any help.",5
+6806989,07/24/2011 13:15:49,360455,06/07/2010 13:19:14,107,0,Video Contents for Testing,"Is there any repository of free video clips with technical details for testing? E.g. MPEG2 with closed captions, H264 with registered\ unregistered user data, etc.
+
+Thanks.",testing,video,free,clip,,07/24/2011 16:24:07,off topic,1,25,4,"Video Contents for Testing Is there any repository of free video clips with technical details for testing? E.g. MPEG2 with closed captions, H264 with registered\ unregistered user data, etc.
+
+Thanks.",4
+7878702,10/24/2011 16:22:14,1011237,10/24/2011 16:07:48,1,0,which tool is good for load testing please help me as per our requirements,"as per these rquirements please help me which load testing is best .
+
+it is a .net application.
+
+1) makng sure that the webserver can holsd peek 27,000 mails in the server for or in  24 hours duration.
+2)making sure the mail meter is keeping up.
+3)as of 7,500 users can able to send atleast 1 to 2 mails for 10 to 20 minutes.
+
+please help me with these.
+
+Thank You. ",testing,load,,,,10/24/2011 18:01:21,not constructive,1,67,14,"which tool is good for load testing please help me as per our requirements as per these rquirements please help me which load testing is best .
+
+it is a .net application.
+
+1) makng sure that the webserver can holsd peek 27,000 mails in the server for or in  24 hours duration.
+2)making sure the mail meter is keeping up.
+3)as of 7,500 users can able to send atleast 1 to 2 mails for 10 to 20 minutes.
+
+please help me with these.
+
+Thank You. ",2
+9362447,02/20/2012 14:05:29,1221231,02/20/2012 13:59:42,1,0,Is it feasible to test microprocessor/microcontroller?,"I am working on some microcontroller based portable devices (embedded system). 
+Sometimes microcontroller becomes reset due to noise. 
+What I can do if I want to test the microcontroller?",testing,microcontroller,,,,02/20/2012 18:39:08,off topic,1,29,6,"Is it feasible to test microprocessor/microcontroller? I am working on some microcontroller based portable devices (embedded system). 
+Sometimes microcontroller becomes reset due to noise. 
+What I can do if I want to test the microcontroller?",2
+62542,09/15/2008 12:54:08,6751,09/15/2008 12:35:36,1,0,What is the best free test tracking software?,"I'm not talking about bug tracking software (like Bugzilla or Jira). I'm looking for something that will let me:
+
+ 1. Store test specifications in text format
+ 2. Combine test specs into test coverage scenarios
+ 3. Keep track of the progress through testing scenarios 
+ 4. Link test specs with bug reports stored in Bugzilla
+ 5. Generate progress reports",testing,progress,,,,05/01/2012 02:25:01,not constructive,1,58,8,"What is the best free test tracking software? I'm not talking about bug tracking software (like Bugzilla or Jira). I'm looking for something that will let me:
+
+ 1. Store test specifications in text format
+ 2. Combine test specs into test coverage scenarios
+ 3. Keep track of the progress through testing scenarios 
+ 4. Link test specs with bug reports stored in Bugzilla
+ 5. Generate progress reports",2
+4460038,12/16/2010 11:00:31,544649,12/16/2010 11:00:31,1,0,Code coverage without instrumentation,"We have an automated regression test setup for Functional tests and 
+are interested in measuring the test coverage/code coverage for our 
+project which is based on Linux. 
+
+
+I would like to know if there are any tools which can be used for test 
+coverage/code coverage measurement without instrumenting the code. 
+
+
+Please suggest any tool or method that can do this. 
+
+
+I am aware that instrumentation provides the best method to measure 
+the code coverage, but it would suffice for us if the tool can just 
+measure the functions that were executed for the test coverage 
+measurement. 
+
+
+Thanks and Regards, 
+Prashnk 
+
+
+
+",testing,code-coverage,,,,,open,0,101,4,"Code coverage without instrumentation We have an automated regression test setup for Functional tests and 
+are interested in measuring the test coverage/code coverage for our 
+project which is based on Linux. 
+
+
+I would like to know if there are any tools which can be used for test 
+coverage/code coverage measurement without instrumenting the code. 
+
+
+Please suggest any tool or method that can do this. 
+
+
+I am aware that instrumentation provides the best method to measure 
+the code coverage, but it would suffice for us if the tool can just 
+measure the functions that were executed for the test coverage 
+measurement. 
+
+
+Thanks and Regards, 
+Prashnk 
+
+
+
+",2
+7132192,08/20/2011 13:55:44,896472,08/16/2011 10:32:59,6,1,Minimize test case churn on design change,"How do we minimize test case churn if the design changes?  How can we reduce our re-work and still provide confidence and quality?
+How do we limit the number of tests we must execute in regression while providing a high level of confidence and quality?  How do we prove our regression is solid?
+How/what role should developers play with verification?  How much testing should they do?  What should they help with?  What relationship should exist between developer and testers?",testing,regression,,,,08/20/2011 14:04:56,not constructive,1,82,7,"Minimize test case churn on design change How do we minimize test case churn if the design changes?  How can we reduce our re-work and still provide confidence and quality?
+How do we limit the number of tests we must execute in regression while providing a high level of confidence and quality?  How do we prove our regression is solid?
+How/what role should developers play with verification?  How much testing should they do?  What should they help with?  What relationship should exist between developer and testers?",2
+6812218,07/25/2011 05:52:51,577383,01/16/2011 09:19:36,29,2,In which type of testing software reviews fall?(white box/black box),Interviewer asked this question. Really reviews are part of any type of testing or they seperate.,testing,,,,,07/25/2011 09:02:33,not a real question,1,16,10,In which type of testing software reviews fall?(white box/black box) Interviewer asked this question. Really reviews are part of any type of testing or they seperate.,1
+10846060,06/01/2012 07:19:45,1430084,06/01/2012 07:05:15,1,0,"""Cannot obtain the window with the window class 'IEFrame'..."" (Test Complete automation issue.)","I have one repeated random error in run result of the Test complete automation .
+        Issue Information follows,
+
+         ""Cannot obtain the window with the window class 'IEFrame' ""application url"" - Windows  Internet Explorer...........
+         Object does not exist. (It displays more than 500 lines)
+         Cannot get a Picture Object the input Parameter""
+
+I am using TestComplete 8.70 Version
+I am using LLP, C# scripts not a keyword test.
+I am using web based application. Browser is IE 9.0
+I have 100 test cases in my one project file.
+These issues appeared randomly any test case or cases when I am running all test cases at one time.
+If i run issued test case separately, it got success. I cannot identify what is the problem.
+
+If anyone have any idea please share with me.
+
+Thanks.",testing,testcomplete,,,,,open,0,157,13,"""Cannot obtain the window with the window class 'IEFrame'..."" (Test Complete automation issue.) I have one repeated random error in run result of the Test complete automation .
+        Issue Information follows,
+
+         ""Cannot obtain the window with the window class 'IEFrame' ""application url"" - Windows  Internet Explorer...........
+         Object does not exist. (It displays more than 500 lines)
+         Cannot get a Picture Object the input Parameter""
+
+I am using TestComplete 8.70 Version
+I am using LLP, C# scripts not a keyword test.
+I am using web based application. Browser is IE 9.0
+I have 100 test cases in my one project file.
+These issues appeared randomly any test case or cases when I am running all test cases at one time.
+If i run issued test case separately, it got success. I cannot identify what is the problem.
+
+If anyone have any idea please share with me.
+
+Thanks.",2
+4349916,12/03/2010 21:11:50,120067,06/09/2009 19:15:46,1,1,Automatically run gem tasks in test environment,"I have a Rails 3 gem which has some rake tasks that should only be run in the test environment. Running in other environments doesn't really make sense.
+
+My problem is Rake loads the Rails system in order to find my tasks in my gem. So by the time it gets to my tasks Rails is already loaded in the ""development"" environment (or whatever environment the user specified). This means in order to run my rake tasks properly the user must do:
+
+    RAILS_ENV=test rake mytask
+
+Since my task only make sense in the ""test"" environment this is annoying as I would much rather the user be able to just type:
+
+    rake mytask
+
+This is similar to how test:units and test:functionals automatically assume the test environment and the user doesn't need to specify RAILS_ENV=test at the command line. So the question is how do I modify my test so that Rails switches to the test environment?
+
+My current workaround is:
+
+    Rails.env = 'test'
+    ActionMailer::Base.delivery_method = :test
+    require Rails.root.join('test/test_helper')
+
+This seems to somewhat work but it is still logging to log/development.log and I think it is still actually running the ""development"" config. Anybody have any ideas? Looking at how the test tasks are defined in Rails itself doesn't reveal how to do it that I can see.
+
+https://github.com/rails/rails/blob/master/railties/lib/rails/test_unit/testing.rake",testing,ruby-on-rails-3,rake,gem,environment,,open,0,225,7,"Automatically run gem tasks in test environment I have a Rails 3 gem which has some rake tasks that should only be run in the test environment. Running in other environments doesn't really make sense.
+
+My problem is Rake loads the Rails system in order to find my tasks in my gem. So by the time it gets to my tasks Rails is already loaded in the ""development"" environment (or whatever environment the user specified). This means in order to run my rake tasks properly the user must do:
+
+    RAILS_ENV=test rake mytask
+
+Since my task only make sense in the ""test"" environment this is annoying as I would much rather the user be able to just type:
+
+    rake mytask
+
+This is similar to how test:units and test:functionals automatically assume the test environment and the user doesn't need to specify RAILS_ENV=test at the command line. So the question is how do I modify my test so that Rails switches to the test environment?
+
+My current workaround is:
+
+    Rails.env = 'test'
+    ActionMailer::Base.delivery_method = :test
+    require Rails.root.join('test/test_helper')
+
+This seems to somewhat work but it is still logging to log/development.log and I think it is still actually running the ""development"" config. Anybody have any ideas? Looking at how the test tasks are defined in Rails itself doesn't reveal how to do it that I can see.
+
+https://github.com/rails/rails/blob/master/railties/lib/rails/test_unit/testing.rake",5
+4318634,11/30/2010 21:04:58,360739,06/07/2010 19:02:53,70,5,Mobile application testing,"Let's say I have a mobile application that is to be offered on many different mobile platforms like Blackberry, iOS, Android etc.
+
+Is there any easy way to test across all platforms in many languages, something like a virtualization platform like VMWare Workstation on Windows?
+
+Do any of these platforms have standalone emulators?
+
+Thanks!",testing,internationalization,mobile-development,,,06/18/2012 03:16:26,not constructive,1,51,3,"Mobile application testing Let's say I have a mobile application that is to be offered on many different mobile platforms like Blackberry, iOS, Android etc.
+
+Is there any easy way to test across all platforms in many languages, something like a virtualization platform like VMWare Workstation on Windows?
+
+Do any of these platforms have standalone emulators?
+
+Thanks!",3
+4972456,02/11/2011 18:03:49,613458,02/11/2011 18:03:49,1,0,crystal report: crosstab,"How can i embed text object inside my crosstab row section? 
+
+Another work around:
+how can i add subreport embedded inside the crosstab?
+
+my goal is, i used the crosstab to generate dynamic columns. 
+but the detail section, i need more control.
+Tommy
+",testing,,,,,,open,0,40,3,"crystal report: crosstab How can i embed text object inside my crosstab row section? 
+
+Another work around:
+how can i add subreport embedded inside the crosstab?
+
+my goal is, i used the crosstab to generate dynamic columns. 
+but the detail section, i need more control.
+Tommy
+",1
+1792331,11/24/2009 19:22:02,147141,07/29/2009 14:06:10,3773,339,Testing the functionality of already compiled binaries,"Is there a library for testing the functionality of already compiled binaries? Something like unit tests but for already compiled executables, that should allow me to specify and verify rules regarding the behavior of the program for specific inputs and scenarios. I'm specifically interested in something targgetting the .NET platform, but I'd also like to know if there are platform-agnostic tools for this.",testing,executable,platform-agnostic,,,,open,0,63,7,"Testing the functionality of already compiled binaries Is there a library for testing the functionality of already compiled binaries? Something like unit tests but for already compiled executables, that should allow me to specify and verify rules regarding the behavior of the program for specific inputs and scenarios. I'm specifically interested in something targgetting the .NET platform, but I'd also like to know if there are platform-agnostic tools for this.",3
+10321085,04/25/2012 17:54:34,942746,09/13/2011 14:23:50,715,38,Where to get a large list of safe-for-work domain names?,"Does anyone know where I could find a list of safe-for-work (i.e. no porn, piracy sites, etc) domain names that I can use to stress test software that performs asynchronous DNS lookups without raising questions if my network admin happens to be watching?
+
+At least several thousand would be ideal.  Most lists I've found have not been filtered at all.  So far, using ""raw"" lists for DNS queries have not raised any questions, but my next step is to create TCP connections.",testing,networking,dns,,,07/11/2012 22:24:57,off topic,1,83,10,"Where to get a large list of safe-for-work domain names? Does anyone know where I could find a list of safe-for-work (i.e. no porn, piracy sites, etc) domain names that I can use to stress test software that performs asynchronous DNS lookups without raising questions if my network admin happens to be watching?
+
+At least several thousand would be ideal.  Most lists I've found have not been filtered at all.  So far, using ""raw"" lists for DNS queries have not raised any questions, but my next step is to create TCP connections.",3
+1973204,12/29/2009 06:21:39,177553,09/23/2009 03:26:11,20,1,Load testing comet based application,"We have developed a comet based application for chat (using streaming approach). The application has been developed in ASP .Net 3.5 sp1. 
+The browser has two connections with the server. One for posting and another for receiving chat messages. While load testing with Jmeter or VSTS the posting is getting recorded and load tested but not the receiving portion. Can some one please suggest any load testing tool which can address this issue.",testing,,,,,,open,0,73,5,"Load testing comet based application We have developed a comet based application for chat (using streaming approach). The application has been developed in ASP .Net 3.5 sp1. 
+The browser has two connections with the server. One for posting and another for receiving chat messages. While load testing with Jmeter or VSTS the posting is getting recorded and load tested but not the receiving portion. Can some one please suggest any load testing tool which can address this issue.",1
+8931252,01/19/2012 18:22:30,41065,11/26/2008 15:26:52,368,28,Detective unit tests on historical versions in source control,"Is there a tool to run unit tests on previous versions of software that's in source control?
+The idea would be a bug surfaced and I want to know when it was introduced so I write a new test and the software checks out each back version from source control, running the test on each one, until the test doesn't fail anymore or we reach the beginning. 
+
+We use subversion but I'm curious of if anything like this exists in general.",testing,version-control,,,,,open,0,80,9,"Detective unit tests on historical versions in source control Is there a tool to run unit tests on previous versions of software that's in source control?
+The idea would be a bug surfaced and I want to know when it was introduced so I write a new test and the software checks out each back version from source control, running the test on each one, until the test doesn't fail anymore or we reach the beginning. 
+
+We use subversion but I'm curious of if anything like this exists in general.",2
+9739836,03/16/2012 15:14:05,843542,07/13/2011 21:17:55,42,0,What does it mean to break tests?,"Disclaimer: I am new to development.
+
+What does it mean when a developer says ""When I write new code, if it has errors, it should break the tests"".
+
+I believe that this developer (that I work with) said this because the code he was maintaining had poorly written tests (from someone before him).
+
+How can tests be written so that they break when new code is added? How can someone write a bad test?",testing,,,,,03/18/2012 21:48:29,not constructive,1,71,7,"What does it mean to break tests? Disclaimer: I am new to development.
+
+What does it mean when a developer says ""When I write new code, if it has errors, it should break the tests"".
+
+I believe that this developer (that I work with) said this because the code he was maintaining had poorly written tests (from someone before him).
+
+How can tests be written so that they break when new code is added? How can someone write a bad test?",1
+11650612,07/25/2012 13:18:13,518708,02/22/2010 10:18:21,140,0,product display as mind map,"I have the following requirement in the project.I need to have a feature to show the related products for a product.The view of the related products should be like mind map view.When a user clicks on a product i need to show the other related products expanded like a mindmap view.enter image description here
+
+So the related products will expand or collapse when clicked on the parent product.Is it possible to accomplish this using javascript/jquery.
+
+I am using asp.net mvc 3 for development purpose.
+
+Also we should design this without a requirement for plugin like flash or Silverlight, if possible.
+
+Thanks.
+",testing,,,,,07/26/2012 04:17:56,not a real question,1,97,5,"product display as mind map I have the following requirement in the project.I need to have a feature to show the related products for a product.The view of the related products should be like mind map view.When a user clicks on a product i need to show the other related products expanded like a mindmap view.enter image description here
+
+So the related products will expand or collapse when clicked on the parent product.Is it possible to accomplish this using javascript/jquery.
+
+I am using asp.net mvc 3 for development purpose.
+
+Also we should design this without a requirement for plugin like flash or Silverlight, if possible.
+
+Thanks.
+",1
+10557615,05/11/2012 19:43:23,1293653,03/26/2012 17:51:28,131,1,script to run a certain program with input from a given directory,"So I need to run a bunch of (maven) tests with testfiles being supplied as an argument to a maven task.
+
+Something like this:
+
+`mvn clean test -Dtest=<filename>`
+
+And the test files are usually organized into different directories. So I'm trying to write a script which would execute the above 'command' and automatically feed the name of all files in a given dir to the `-Dtest`.
+
+So I started out with a shellscript called 'run_test':
+
+    #!/bin/sh
+    if test $# -lt 2; then
+        echo ""$0: insufficient arguments on the command line."" >&1
+        echo ""usage: $0 run_test dirctory"" >&1
+        exit 1
+    fi
+    for file in allFiles <<<<<<< what should I put here? Can I somehow iterate thru the list of all files' name in the given directory put the file name here?
+         do mvn clean test -Dtest= $file  
+    
+    exit $?
+
+
+The part where I got stuck is how to get a list of filenames. 
+Thanks,
+
+",testing,maven,script,for-loop,,,open,0,198,12,"script to run a certain program with input from a given directory So I need to run a bunch of (maven) tests with testfiles being supplied as an argument to a maven task.
+
+Something like this:
+
+`mvn clean test -Dtest=<filename>`
+
+And the test files are usually organized into different directories. So I'm trying to write a script which would execute the above 'command' and automatically feed the name of all files in a given dir to the `-Dtest`.
+
+So I started out with a shellscript called 'run_test':
+
+    #!/bin/sh
+    if test $# -lt 2; then
+        echo ""$0: insufficient arguments on the command line."" >&1
+        echo ""usage: $0 run_test dirctory"" >&1
+        exit 1
+    fi
+    for file in allFiles <<<<<<< what should I put here? Can I somehow iterate thru the list of all files' name in the given directory put the file name here?
+         do mvn clean test -Dtest= $file  
+    
+    exit $?
+
+
+The part where I got stuck is how to get a list of filenames. 
+Thanks,
+
+",4
+4746617,01/20/2011 11:37:35,201863,11/03/2009 16:29:08,387,39,Reasons not to develop Apps with a jailbreak iPhone as the only testing device,"I'm looking for reasons developers ought to consider before developing and testing applications and games on a jailbreak device. My conviction is that if you want to publish your App to the App Store, you better make sure you always test on a non-jailbreak device. Eg. if you are a serious developer, what do you have to consider before jailbreaking your only development device respectively buying a second untampered device just for development.
+
+The legal implications are fairly well known but it doesn't hurt to reiterate them. What I'm more interested in are all the technical reasons why development on a jailbroken iPhone will make your life harder (or sometimes easier if that exists, too).
+
+For example, I've read that jailbreak devices can cause adverse behavior, bugs and crashes which will not appear on a non-jailbreak device. But what those issues are remains in the dark. I'm looking for concrete evidence of bugs and misbehavior that is relatively common (eg occured to you, or someone who blogged about it) when you do test on a jailbreak device.
+",testing,ios,jailbreak,,,07/09/2011 18:14:21,not constructive,1,175,14,"Reasons not to develop Apps with a jailbreak iPhone as the only testing device I'm looking for reasons developers ought to consider before developing and testing applications and games on a jailbreak device. My conviction is that if you want to publish your App to the App Store, you better make sure you always test on a non-jailbreak device. Eg. if you are a serious developer, what do you have to consider before jailbreaking your only development device respectively buying a second untampered device just for development.
+
+The legal implications are fairly well known but it doesn't hurt to reiterate them. What I'm more interested in are all the technical reasons why development on a jailbroken iPhone will make your life harder (or sometimes easier if that exists, too).
+
+For example, I've read that jailbreak devices can cause adverse behavior, bugs and crashes which will not appear on a non-jailbreak device. But what those issues are remains in the dark. I'm looking for concrete evidence of bugs and misbehavior that is relatively common (eg occured to you, or someone who blogged about it) when you do test on a jailbreak device.
+",3
+5335574,03/17/2011 06:16:58,601236,02/03/2011 09:28:12,16,0,Test Case Preparation,"I am a newbie to testing field. I know that test cases are the conditions to fulfil any client requirements i.e. the test conditions we need to fulfil the requirements. 
+I need some idea how to formally write a test case. Can anyone give me any idea of writing the test cases.
+
+Assume an example of login page. i want to write the test case for a login screen. Please provide a pattern to do so.
+
+Any other example is also favourable.",testing,testcase,,,,,open,0,80,3,"Test Case Preparation I am a newbie to testing field. I know that test cases are the conditions to fulfil any client requirements i.e. the test conditions we need to fulfil the requirements. 
+I need some idea how to formally write a test case. Can anyone give me any idea of writing the test cases.
+
+Assume an example of login page. i want to write the test case for a login screen. Please provide a pattern to do so.
+
+Any other example is also favourable.",2
+9189916,02/08/2012 08:34:02,1194304,02/07/2012 09:32:36,1,0,Selenium-rc using grails unable to open url,"my selenium-rc code is launching the browser but it taking me to C:\Users\Kanishka\AppData\Local\Temp\customProfileDir3e16427300054effa807e843dd1a332f\core\Blank.html
+instead of the intended url. 
+
+the code i have written is very simple
+i am using all default selenium settings.
+
+package automation
+
+    import grails.plugins.selenium.*
+    import org.junit.*
+    import static org.junit.Assert.*
+    import static org.hamcrest.Matchers.*
+    
+    @Mixin(SeleniumAware)
+    class NewTests extends GroovyTestCase 
+    {
+        
+    	void testHomepageLoads() 
+    	{
+    		selenium.start()
+    		selenium.open(""http://www.google.co.in/"")
+    		assertTrue selenium.isTextPresent(""Welcome to Grails"")
+    	}
+    }
+
+
+",testing,selenium,automation,automated-tests,,,open,0,115,7,"Selenium-rc using grails unable to open url my selenium-rc code is launching the browser but it taking me to C:\Users\Kanishka\AppData\Local\Temp\customProfileDir3e16427300054effa807e843dd1a332f\core\Blank.html
+instead of the intended url. 
+
+the code i have written is very simple
+i am using all default selenium settings.
+
+package automation
+
+    import grails.plugins.selenium.*
+    import org.junit.*
+    import static org.junit.Assert.*
+    import static org.hamcrest.Matchers.*
+    
+    @Mixin(SeleniumAware)
+    class NewTests extends GroovyTestCase 
+    {
+        
+    	void testHomepageLoads() 
+    	{
+    		selenium.start()
+    		selenium.open(""http://www.google.co.in/"")
+    		assertTrue selenium.isTextPresent(""Welcome to Grails"")
+    	}
+    }
+
+
+",4
+10487643,05/07/2012 19:08:53,237153,12/22/2009 20:26:35,387,6,Recommendation for tools for testing various elements on my site,I have been asked to test a different navigation menu and I wanted to know what tools would be easy to implement and preferably a free solution. I don't think Google optimizer is the way to go. I say that because the navigation menu is always visible throughout the site.,testing,optimization,,,,05/08/2012 19:46:52,not constructive,1,50,10,Recommendation for tools for testing various elements on my site I have been asked to test a different navigation menu and I wanted to know what tools would be easy to implement and preferably a free solution. I don't think Google optimizer is the way to go. I say that because the navigation menu is always visible throughout the site.,2
+7166605,08/23/2011 19:40:24,908409,08/23/2011 19:40:24,1,0,Agile Automated Functional Test versus Manual Functional Testing,"For Agile team what is really best and works for testing automated or manual? I am looking for answers from folks who really have done alot of agile based projects. Seems like agile automated testing would be costly and take too much time in real life. But maybe there is a tool out there that really makes it quick to build tests even when the code is constantly changeing and breaking the automated test code?
+
+Thanks for responses,
+-Tony",testing,functional-programming,agile,,,08/23/2011 20:28:25,not constructive,1,77,8,"Agile Automated Functional Test versus Manual Functional Testing For Agile team what is really best and works for testing automated or manual? I am looking for answers from folks who really have done alot of agile based projects. Seems like agile automated testing would be costly and take too much time in real life. But maybe there is a tool out there that really makes it quick to build tests even when the code is constantly changeing and breaking the automated test code?
+
+Thanks for responses,
+-Tony",3
+990620,06/13/2009 12:49:24,21634,09/24/2008 12:16:13,556,25,How to do black box testing?,"Opposed to white-box / API testing, which is covered [here][1]
+
+There are many interviews, both for developers and qa, where you are asked to test smth out. A classic is to test the save dialog from notepad. 
+
+Here is a list of tests I can come up with, categorized and prioritized: 
+
+[functional, high] - dialog performes its use cases - comes up when the user does a ""save as"", the buttons on the left work, the file is saved with the given name and encoding, top buttons work, cancel button works.
+
+
+----------
+
+
+[functional, medium] - save to a Read Only medium - does a fair error pop up?
+
+[functional, medium] - save an empty file
+
+[functional, low] - save a file as .txt but delete the extension from the name
+
+[functional, high] - make sure the dialog is modal
+
+[functional, high] - make sure the dir navigation & dir features work
+
+[functional, high] - context menu options work
+
+
+----------
+
+
+[load, low] - navigate to a directory where there are a very large (aproaching the system limit) number of .txt files; save the file there
+
+[load, low] - navigate to a directory with a large number of sub-directories. save the file there.
+
+
+----------
+
+
+[stress, low] - navigate to a directory with a maximum number of files allowed and try to save the file
+
+[stress, low] - saturate the system with file handles (to simulate apps that have very rich interfaces or handle leaks, like Yahoo Messenger); does the dialog pop ?
+
+[stress, medium] - try to save a files when there isn't space on the disk.
+
+[stress, low] - check how deep the ""navigate to last folder"" button goes with this
+
+[stress, low] - navigate to a directory with a very large number of directories
+
+----------
+
+
+[performance, low] - measure the time needed to display the dialog 
+
+[performance, low] - measure the resources used by the dialog (memory, window handles, I/O); make sure the resources are dealocated
+
+
+----------
+
+
+[accessibility, high] - is the dialog compatible with the accesability tools win provides? (magnifier, narrator); for example that the menu items scale well when choosing large fonts
+
+[accessibility & compatibility, medium] - is the dialog compatible with famous 3rd party programs that provide accessibility features?
+
+
+----------
+
+[localization, high] - the dialog works on other locales
+
+[localization, high] - random inputs of UTF-8 and ANSII letters as the file name
+
+[localization, medium] - right to left locales
+
+----------
+
+
+[compatibility] - make sure that the file saved can be opened by other editing tools, no matter what the encoding is
+
+
+----------
+
+[usability, high] - user is asked if he is sure he wants to overwrite a file
+
+
+Can you add some more? Or comment on these ones?
+
+  [1]: http://stackoverflow.com/questions/990568/how-to-test-an-api",testing,black-box,,,,12/26/2009 20:38:28,not a real question,1,424,6,"How to do black box testing? Opposed to white-box / API testing, which is covered [here][1]
+
+There are many interviews, both for developers and qa, where you are asked to test smth out. A classic is to test the save dialog from notepad. 
+
+Here is a list of tests I can come up with, categorized and prioritized: 
+
+[functional, high] - dialog performes its use cases - comes up when the user does a ""save as"", the buttons on the left work, the file is saved with the given name and encoding, top buttons work, cancel button works.
+
+
+----------
+
+
+[functional, medium] - save to a Read Only medium - does a fair error pop up?
+
+[functional, medium] - save an empty file
+
+[functional, low] - save a file as .txt but delete the extension from the name
+
+[functional, high] - make sure the dialog is modal
+
+[functional, high] - make sure the dir navigation & dir features work
+
+[functional, high] - context menu options work
+
+
+----------
+
+
+[load, low] - navigate to a directory where there are a very large (aproaching the system limit) number of .txt files; save the file there
+
+[load, low] - navigate to a directory with a large number of sub-directories. save the file there.
+
+
+----------
+
+
+[stress, low] - navigate to a directory with a maximum number of files allowed and try to save the file
+
+[stress, low] - saturate the system with file handles (to simulate apps that have very rich interfaces or handle leaks, like Yahoo Messenger); does the dialog pop ?
+
+[stress, medium] - try to save a files when there isn't space on the disk.
+
+[stress, low] - check how deep the ""navigate to last folder"" button goes with this
+
+[stress, low] - navigate to a directory with a very large number of directories
+
+----------
+
+
+[performance, low] - measure the time needed to display the dialog 
+
+[performance, low] - measure the resources used by the dialog (memory, window handles, I/O); make sure the resources are dealocated
+
+
+----------
+
+
+[accessibility, high] - is the dialog compatible with the accesability tools win provides? (magnifier, narrator); for example that the menu items scale well when choosing large fonts
+
+[accessibility & compatibility, medium] - is the dialog compatible with famous 3rd party programs that provide accessibility features?
+
+
+----------
+
+[localization, high] - the dialog works on other locales
+
+[localization, high] - random inputs of UTF-8 and ANSII letters as the file name
+
+[localization, medium] - right to left locales
+
+----------
+
+
+[compatibility] - make sure that the file saved can be opened by other editing tools, no matter what the encoding is
+
+
+----------
+
+[usability, high] - user is asked if he is sure he wants to overwrite a file
+
+
+Can you add some more? Or comment on these ones?
+
+  [1]: http://stackoverflow.com/questions/990568/how-to-test-an-api",2
+6477678,06/25/2011 12:19:53,283055,05/11/2009 14:24:50,3754,75,Are there free Mac or Windows distributions for only dev/testing purposes?,"I wish to test/debug/dev my software on all three popular platforms. I am wondering that am I allowed to gain an access to a free copy (e.g. a virtual OS) to test my software on Windows and Mac?
+
+I wonder what most developers do to test their software. You obviously need the actual Win/Mac to be sure your software works as is, but you don't want to be paying for all OSes especially because you don't use them, other than test your software on them.
+
+I am working on something that requires extensive testing. It's made for developers, so, even if I happen to have extra cash to waste on OSes I don't use or like, I can't demand that for every developer using my product.
+
+What are my options here?",testing,operating-system,cross-platform,,,06/25/2011 23:47:51,off topic,1,128,11,"Are there free Mac or Windows distributions for only dev/testing purposes? I wish to test/debug/dev my software on all three popular platforms. I am wondering that am I allowed to gain an access to a free copy (e.g. a virtual OS) to test my software on Windows and Mac?
+
+I wonder what most developers do to test their software. You obviously need the actual Win/Mac to be sure your software works as is, but you don't want to be paying for all OSes especially because you don't use them, other than test your software on them.
+
+I am working on something that requires extensive testing. It's made for developers, so, even if I happen to have extra cash to waste on OSes I don't use or like, I can't demand that for every developer using my product.
+
+What are my options here?",3
+6022069,05/16/2011 19:04:13,756197,05/16/2011 19:04:13,1,0,Is AgileUnit the next unit test generation?,"I found a very innovative project at sourceforge called **AgileUnit**. It seems to me an alternative or supplement to junit. Very exciting for me is the approach to combine the synergy from development with Requirements. Has anyone experience with it and what you think about it? http://sourceforge.net/projects/agileunit/
+
+Thanks!",testing,junit,agile,unit,,05/16/2011 19:31:41,off topic,1,47,7,"Is AgileUnit the next unit test generation? I found a very innovative project at sourceforge called **AgileUnit**. It seems to me an alternative or supplement to junit. Very exciting for me is the approach to combine the synergy from development with Requirements. Has anyone experience with it and what you think about it? http://sourceforge.net/projects/agileunit/
+
+Thanks!",4
+6047955,05/18/2011 16:29:37,759592,05/18/2011 16:29:37,1,0,How do I test software in a really good way?,"It's hard. I don't know where to start, do I use JUnit or a library for PHP?
+
+The problem is I keep testing things and it works out really bad. Shall I give you a code example?",testing,,,,,05/18/2011 21:06:38,not a real question,1,36,10,"How do I test software in a really good way? It's hard. I don't know where to start, do I use JUnit or a library for PHP?
+
+The problem is I keep testing things and it works out really bad. Shall I give you a code example?",1
+3308031,07/22/2010 10:52:17,28855,10/17/2008 09:16:08,1064,37,Blogs about software QA and/or testing?,"There are [lots of well known programming and development blogs][1], but could someone recommend some refference blogs about software quality assurance and/or testing?
+
+
+  [1]: http://stackoverflow.com/questions/78955/what-are-the-best-programming-and-development-related-blogs",testing,blogs,recommendation,qa,software-quality,06/26/2012 15:32:13,not constructive,1,26,6,"Blogs about software QA and/or testing? There are [lots of well known programming and development blogs][1], but could someone recommend some refference blogs about software quality assurance and/or testing?
+
+
+  [1]: http://stackoverflow.com/questions/78955/what-are-the-best-programming-and-development-related-blogs",5
+9291107,02/15/2012 09:49:58,610799,02/10/2011 04:05:19,907,106,On which aspects i should put more emphasis for Security Testing of the Desktop Based Application?,"I am testing one Desktop based client server application. I want to perform a Security test of that application.
+
+Can anybody explain me which points i can consider while performing Security Test of the Desktop application?",testing,desktop-application,black-box,black-box-testing,security-testing,,open,0,35,16,"On which aspects i should put more emphasis for Security Testing of the Desktop Based Application? I am testing one Desktop based client server application. I want to perform a Security test of that application.
+
+Can anybody explain me which points i can consider while performing Security Test of the Desktop application?",5
+1484687,09/27/2009 22:48:54,174096,09/16/2009 04:19:02,126,7,Self Testing Tips?,"Basically I'm wondering if anyone has any tips for ensuring your code is well tested without getting any help from anyone else in a limited time frame?
+
+In the past I've always been able to find someone else to do testing on my code or had a dedicated quality assurance team go over everything and find all the errors.
+
+I'm usually pretty careful but I always find there a things I miss and when I test them I just don't see them.
+
+However in my current job I've been given two PHP web applications to write in a very limited time frame and I've been told I need to do all the testing myself despite my feedback that this wasn't a good idea.
+
+I was wondering if anyone else had this problem before and could offer some insight?
+
+I was thinking perhaps it would be good to write a quick test plan before coding each area and also to double check the requirements before doing testing.",testing,testing-strategies,,,,09/21/2011 06:48:49,off topic,1,161,3,"Self Testing Tips? Basically I'm wondering if anyone has any tips for ensuring your code is well tested without getting any help from anyone else in a limited time frame?
+
+In the past I've always been able to find someone else to do testing on my code or had a dedicated quality assurance team go over everything and find all the errors.
+
+I'm usually pretty careful but I always find there a things I miss and when I test them I just don't see them.
+
+However in my current job I've been given two PHP web applications to write in a very limited time frame and I've been told I need to do all the testing myself despite my feedback that this wasn't a good idea.
+
+I was wondering if anyone else had this problem before and could offer some insight?
+
+I was thinking perhaps it would be good to write a quick test plan before coding each area and also to double check the requirements before doing testing.",2
+6201480,06/01/2011 12:56:11,690051,04/03/2011 17:23:16,16,0,Development testing guest accounts - SSH CLI access / Remote Desktop Sharing website ?,"Anyone know of or would be interested in a website that allows people to share
+development test guest user accounts ?
+Like : 
+I need to access for testing purposes :
+  1. a website via a remote desktop on a windows machine (any) 
+  2. ssh access to a guest account on any ia64, ppc64/32 or s390 linux ssh
+     account
+I can offer:
+  test SSH access and remote desktop to variuous flavors of linux on x86_64 -
+  Latest GNU / Vanilla , Fedora Core 14, RHEL5
+  and on Solaris 2.10 on UltraSPARC/ii
+
+The guest accounts need provide only the most basic, limited  facilities
+such as the ability to run a ""C"" compiler and to browse a website with the 
+system desktop browser .
+
+Participants would need to have set up in advance participating computers 
+with some form of direct connections to the internet (eg. I created a DNS
+record pointing to the WAN IP address of my ADSL router which is configured 
+to do ""IP passthrough"" and ""Full NAT"", and set its firewall setting to ""Low"").
+Another way of doing it is to set up firewall exceptions for RDP and SSH .
+
+Anyone know of any website out there that does this ?
+If not I may consider setting one up .
+
+",testing,ssh,remote-desktop,,,06/01/2011 13:52:01,off topic,1,212,14,"Development testing guest accounts - SSH CLI access / Remote Desktop Sharing website ? Anyone know of or would be interested in a website that allows people to share
+development test guest user accounts ?
+Like : 
+I need to access for testing purposes :
+  1. a website via a remote desktop on a windows machine (any) 
+  2. ssh access to a guest account on any ia64, ppc64/32 or s390 linux ssh
+     account
+I can offer:
+  test SSH access and remote desktop to variuous flavors of linux on x86_64 -
+  Latest GNU / Vanilla , Fedora Core 14, RHEL5
+  and on Solaris 2.10 on UltraSPARC/ii
+
+The guest accounts need provide only the most basic, limited  facilities
+such as the ability to run a ""C"" compiler and to browse a website with the 
+system desktop browser .
+
+Participants would need to have set up in advance participating computers 
+with some form of direct connections to the internet (eg. I created a DNS
+record pointing to the WAN IP address of my ADSL router which is configured 
+to do ""IP passthrough"" and ""Full NAT"", and set its firewall setting to ""Low"").
+Another way of doing it is to set up firewall exceptions for RDP and SSH .
+
+Anyone know of any website out there that does this ?
+If not I may consider setting one up .
+
+",3
+5141739,02/28/2011 12:05:21,363503,06/10/2010 13:34:37,1240,81,Are there any tools are available to check cross browser compatibility ?,Any tools are available to check cross browser compatibility instead of checking on every browser ? ,testing,cross-browser,cross-platform,,,,open,0,17,12,Are there any tools are available to check cross browser compatibility ? Any tools are available to check cross browser compatibility instead of checking on every browser ? ,3
+3329008,07/25/2010 11:31:37,99033,04/30/2009 23:05:56,537,22,No factories configured while using Jetty 7 + Myfaces 1.2,"I am using an embedded version of jetty 7 to load a web application using Apache MyFaces 1.2 in a junit 4 test class on the advice from [another thread][1].
+
+While running the test i get this error.
+
+    java.lang.IllegalStateException: No Factories configured for this Application. This happens if the faces-initialization does not work at all - make sure that you properly include all configuration settings necessary for a basic faces application and that all the necessary libs are included. Also check the logging output of your web application and your container for any exceptions!
+    If you did that and find nothing, the mistake might be due to the fact that you use some special web-containers which do not support registering context-listeners via TLD files and a context listener is not setup in your web.xml.
+    A typical config looks like this;
+
+    <listener>
+      <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+    </listener>
+
+This application works fine with tomcat, weblogic and even oc4j! 
+
+How can i get this to work with jetty?
+
+
+  [1]: http://stackoverflow.com/questions/284774/can-we-use-junit-for-automated-integration-testing",testing,jetty,myfaces,embedded-jetty,,,open,0,183,10,"No factories configured while using Jetty 7 + Myfaces 1.2 I am using an embedded version of jetty 7 to load a web application using Apache MyFaces 1.2 in a junit 4 test class on the advice from [another thread][1].
+
+While running the test i get this error.
+
+    java.lang.IllegalStateException: No Factories configured for this Application. This happens if the faces-initialization does not work at all - make sure that you properly include all configuration settings necessary for a basic faces application and that all the necessary libs are included. Also check the logging output of your web application and your container for any exceptions!
+    If you did that and find nothing, the mistake might be due to the fact that you use some special web-containers which do not support registering context-listeners via TLD files and a context listener is not setup in your web.xml.
+    A typical config looks like this;
+
+    <listener>
+      <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+    </listener>
+
+This application works fine with tomcat, weblogic and even oc4j! 
+
+How can i get this to work with jetty?
+
+
+  [1]: http://stackoverflow.com/questions/284774/can-we-use-junit-for-automated-integration-testing",4
+5487570,03/30/2011 14:19:28,684097,03/30/2011 14:19:28,1,0,InPerson Interview for Jr Quality Assurance,"I Have an Inperson interview for JR quality assurance . After the phone interview , they called for a Inperson Interview. 
+I have some questions...
+what kind of inter view it will be, pls help me with some tips. ",testing,manual,,,,03/30/2011 14:36:25,off topic,1,39,6,"InPerson Interview for Jr Quality Assurance I Have an Inperson interview for JR quality assurance . After the phone interview , they called for a Inperson Interview. 
+I have some questions...
+what kind of inter view it will be, pls help me with some tips. ",2
+7510519,09/22/2011 06:33:28,855322,07/21/2011 06:38:43,35,0,Time for maintaining my project - what to do?,"I am in a pretty rare situation. The project my team is working on is going to release a new version soon and there`s little work to do after that before the client sends bug reports in.
+
+**What do you think is the best way to use this time to maintain the
+project?**
+
+Short overview of the state our software is in:
+
+  - Spring MVC web application involving Spring, Hibernate and ExtJS.
+  - good development Infrastructure including continous integration and good bug tracking system
+  - average test coverage (65% lines, 75% methods)
+  - stable and fast enough for our client
+  - some ugly corners like code that doesn`t belong in this class and tier
+
+So there are no huge fires to put out. Today I started to raise test coverage but I am not sure if that`s the best use of my time. What do you think?
+",testing,maintaining-code,,,,09/22/2011 17:34:47,not constructive,1,148,9,"Time for maintaining my project - what to do? I am in a pretty rare situation. The project my team is working on is going to release a new version soon and there`s little work to do after that before the client sends bug reports in.
+
+**What do you think is the best way to use this time to maintain the
+project?**
+
+Short overview of the state our software is in:
+
+  - Spring MVC web application involving Spring, Hibernate and ExtJS.
+  - good development Infrastructure including continous integration and good bug tracking system
+  - average test coverage (65% lines, 75% methods)
+  - stable and fast enough for our client
+  - some ugly corners like code that doesn`t belong in this class and tier
+
+So there are no huge fires to put out. Today I started to raise test coverage but I am not sure if that`s the best use of my time. What do you think?
+",2
+11564324,07/19/2012 15:37:33,1339799,04/17/2012 21:07:37,3,0,Capybara - Is it possible to click by xpath in the iframe?,"all ! I use capybara. 
+
+ Is it possible to click by xpath in the iframe ? 
+
+I mean, that I want to press Facebook Login button. ",testing,capybara,,,,07/20/2012 17:12:02,not a real question,1,28,12,"Capybara - Is it possible to click by xpath in the iframe? all ! I use capybara. 
+
+ Is it possible to click by xpath in the iframe ? 
+
+I mean, that I want to press Facebook Login button. ",2
+6896656,08/01/2011 09:45:28,872322,08/01/2011 06:57:30,1,0,How to load test a new PHP web application?,Within two months were are going live with a web system coded from scratch. We expect that the current user registration rate (1000/day) will maintain and that the system will present extremely low …,testing,,,,,08/01/2011 18:47:43,not a real question,1,34,9,How to load test a new PHP web application? Within two months were are going live with a web system coded from scratch. We expect that the current user registration rate (1000/day) will maintain and that the system will present extremely low …,1
+7042560,08/12/2011 15:36:38,103377,05/08/2009 08:05:36,371,16,How can I test client side coffeescript/js using node with expresso/jasmine/<other>,"I have a web app where the client side stuff is written with coffeescript and loaded with require.js.
+
+I would like to be able to isolate and test this stuff using a node based test runner such as expresso (although other suggestions are welcome) so that I can integrate the client side testing with our CI server - which is currently Team City.
+
+Here's my directory set up:
+
+    .
+    ├── coffee
+    │   ├── models
+    │   ├── node_modules
+    │   │   └── expresso
+    │   ├── spec
+    │   ├── tests
+    │   └── views
+    ├── static
+    │   └── js
+    │       ├── lib
+    │       ├── models
+    │       ├── tests
+    │       └── views
+
+
+These are hooked up using require.js like so:
+
+    deps = [
+       ""lib/backbone"", ""models/websocket_collection"", ""/static/js/lib/date.js""
+    ]
+    
+    define(deps, (Backbone, ws) ->
+        # module code and exports here
+
+And loaded into the browser like so:
+
+    <script type=""text/javascript"" charset=""utf-8"" async="""" data-requirecontext=""_"" data-requiremodule=""my_mod"" src=""/static/js/my_mod.js""></script>
+
+In an idea world now I'd like to be able to have a test module that looks like:
+
+    {Model1, Model2} = require ""models/some_module""
+    
+    exports.test_a = ->
+        assert.equal # etc etc
+
+I have several problems (having not really used node server side except when I played with zombie.js)
+
+ 1. How do I tell node where all of my plain javascript dependencies are (in static/js/lib) some of these are as downloaded, but backbone.js has been marked up with require.js define stuff like so:
+  
+
+    define(function(require, exports, module) {
+        (function(){
+ 2. How do I actually run the tests? I've tried r.js (which as I understand it is supposed to be a bridge between browser side require and node's require)
+
+the problem I'm getting is:
+
+    ReferenceError: define is not defined
+
+I've also tried to require(""allplugins-require"") which is the script I load browser side to collect all of my client code, but that seems to break node's require.
+
+ - Is anybody doing this?
+ - If you're not doing this how are you testing your code (bonus points for integration with CI)?
+ - Any alternatives to require.js for managing client side dependencies that might play a bit better on the server side?
+
+I'd be very happy to hear alternative approaches that people are using.
+
+Thanks,
+Ben
+
+
+",testing,backbone.js,coffeescript,requirejs,,,open,0,463,11,"How can I test client side coffeescript/js using node with expresso/jasmine/<other> I have a web app where the client side stuff is written with coffeescript and loaded with require.js.
+
+I would like to be able to isolate and test this stuff using a node based test runner such as expresso (although other suggestions are welcome) so that I can integrate the client side testing with our CI server - which is currently Team City.
+
+Here's my directory set up:
+
+    .
+    ├── coffee
+    │   ├── models
+    │   ├── node_modules
+    │   │   └── expresso
+    │   ├── spec
+    │   ├── tests
+    │   └── views
+    ├── static
+    │   └── js
+    │       ├── lib
+    │       ├── models
+    │       ├── tests
+    │       └── views
+
+
+These are hooked up using require.js like so:
+
+    deps = [
+       ""lib/backbone"", ""models/websocket_collection"", ""/static/js/lib/date.js""
+    ]
+    
+    define(deps, (Backbone, ws) ->
+        # module code and exports here
+
+And loaded into the browser like so:
+
+    <script type=""text/javascript"" charset=""utf-8"" async="""" data-requirecontext=""_"" data-requiremodule=""my_mod"" src=""/static/js/my_mod.js""></script>
+
+In an idea world now I'd like to be able to have a test module that looks like:
+
+    {Model1, Model2} = require ""models/some_module""
+    
+    exports.test_a = ->
+        assert.equal # etc etc
+
+I have several problems (having not really used node server side except when I played with zombie.js)
+
+ 1. How do I tell node where all of my plain javascript dependencies are (in static/js/lib) some of these are as downloaded, but backbone.js has been marked up with require.js define stuff like so:
+  
+
+    define(function(require, exports, module) {
+        (function(){
+ 2. How do I actually run the tests? I've tried r.js (which as I understand it is supposed to be a bridge between browser side require and node's require)
+
+the problem I'm getting is:
+
+    ReferenceError: define is not defined
+
+I've also tried to require(""allplugins-require"") which is the script I load browser side to collect all of my client code, but that seems to break node's require.
+
+ - Is anybody doing this?
+ - If you're not doing this how are you testing your code (bonus points for integration with CI)?
+ - Any alternatives to require.js for managing client side dependencies that might play a bit better on the server side?
+
+I'd be very happy to hear alternative approaches that people are using.
+
+Thanks,
+Ben
+
+
+",4
+8096982,11/11/2011 16:28:16,1042029,11/11/2011 16:06:54,1,0,Selenium Framework,"If interviewer asks: explain about Selenium Framework. What points we need to focus?
+We need to explain about JUNIT or testNG(which ever we are using on project) or the process we are following in our test automation.",testing,,,,,11/12/2011 03:43:41,not constructive,1,36,2,"Selenium Framework If interviewer asks: explain about Selenium Framework. What points we need to focus?
+We need to explain about JUNIT or testNG(which ever we are using on project) or the process we are following in our test automation.",1
+3478192,08/13/2010 15:09:55,24109,10/01/2008 12:21:09,134,16,The value of test code coverage tools..,"We've started using Part Cover to track test code coverage of our application. IMO its a great tool for getting an overall score for your tests and for highlighting test areas where you might have been a bit lazy with tests, but today I wrote a test and realised that it didn't really test anything useful, it just increased my coverage!
+
+If you are TDD, then you only write code to pass a test, and the tests are richly describing all the functionality required by the application. So in this scenario is it still very valuable to have coverage analysis? 
+
+For those of you that have coverage tools, how religiously do you adhere to keeping the coverage at 100% and do you ever find yourself writing tests that don't *really* test anything, but just to keep your coverage up? Isn't this a **bad thing** ?
+",testing,tdd,code-coverage,,,,open,0,144,7,"The value of test code coverage tools.. We've started using Part Cover to track test code coverage of our application. IMO its a great tool for getting an overall score for your tests and for highlighting test areas where you might have been a bit lazy with tests, but today I wrote a test and realised that it didn't really test anything useful, it just increased my coverage!
+
+If you are TDD, then you only write code to pass a test, and the tests are richly describing all the functionality required by the application. So in this scenario is it still very valuable to have coverage analysis? 
+
+For those of you that have coverage tools, how religiously do you adhere to keeping the coverage at 100% and do you ever find yourself writing tests that don't *really* test anything, but just to keep your coverage up? Isn't this a **bad thing** ?
+",3
+441243,01/13/2009 23:05:53,54815,01/13/2009 23:04:23,1,0,Anyone used Zephyr test management system?,"Anyone used Zephyr test management system? See their site at http://www.getzephyr.com/.
+
+Interested in experience with integrating it with PHPUnit based testing environments.",testing,management,,,,02/28/2012 23:51:19,not constructive,1,21,6,"Anyone used Zephyr test management system? Anyone used Zephyr test management system? See their site at http://www.getzephyr.com/.
+
+Interested in experience with integrating it with PHPUnit based testing environments.",2
+9808024,03/21/2012 15:43:49,748888,05/11/2011 14:29:41,21,1,Can Facebook test users come pre-populated with photos?,"I'd like to create a whole bunch of test users of my app, and my app relies heavily upon photos. It would be nice to not have to login as each test user and manually upload photos.",testing,facebook-test-users,,,,03/23/2012 11:57:51,off topic,1,37,8,"Can Facebook test users come pre-populated with photos? I'd like to create a whole bunch of test users of my app, and my app relies heavily upon photos. It would be nice to not have to login as each test user and manually upload photos.",2
+4943451,02/09/2011 10:16:23,609536,02/09/2011 10:16:23,1,0,Test data in Testing ,How to prepare the test data which can be effectively used across all the cycles and managed for small changes with minimal rework ?,testing,,,,,02/09/2011 10:24:16,not a real question,1,24,5,Test data in Testing  How to prepare the test data which can be effectively used across all the cycles and managed for small changes with minimal rework ?,1
+8409888,12/07/2011 03:01:52,696156,04/07/2011 05:44:28,27,0,Automated testing toll for ASP.Net Web Site,"Can Somebody know the **FREE** Automated Testing Tool for testing asp.net website 
+which tests the security , connection pooling etc. i used netsparker community edition but it has very limited features",testing,tools,website,,,02/16/2012 10:28:03,not constructive,1,31,7,"Automated testing toll for ASP.Net Web Site Can Somebody know the **FREE** Automated Testing Tool for testing asp.net website 
+which tests the security , connection pooling etc. i used netsparker community edition but it has very limited features",3
+11599562,07/22/2012 10:38:54,1535561,07/18/2012 16:54:58,1,0,How can i do the requirement analysis of my project?,"I want to make a b.tech project of ""collaborative question-answer"" like ""yahoo answers"".So how do i do requirement analysis for that project?",testing,,,,,07/22/2012 10:43:36,not constructive,1,22,10,"How can i do the requirement analysis of my project? I want to make a b.tech project of ""collaborative question-answer"" like ""yahoo answers"".So how do i do requirement analysis for that project?",1
+1258919,08/11/2009 07:41:33,9659,09/15/2008 19:30:05,44,2,Justifications for a test/development server,"At my current workplace, the production SQL server and web servers are also used as development and test servers. I've asked for dedicated servers, but been refused as I can't justify it to satisfaction (the reasons against being cost of software, software licences and hardware resoureces).
+
+So, what justifications are there for a dedicated test/development server (a combined server at the moment - I don't want to push my luck and ask for 6 servers!)?",testing,justification,,,,,open,0,74,5,"Justifications for a test/development server At my current workplace, the production SQL server and web servers are also used as development and test servers. I've asked for dedicated servers, but been refused as I can't justify it to satisfaction (the reasons against being cost of software, software licences and hardware resoureces).
+
+So, what justifications are there for a dedicated test/development server (a combined server at the moment - I don't want to push my luck and ask for 6 servers!)?",2
+3899056,10/10/2010 04:38:56,279691,12/24/2009 13:21:33,1696,36,Open Source Project,"I am looking for an **open source** project with size about **2000-4000** line which is still **under development** in order to contibute to it (not neccessary officially)...
+
+I mainly want to write its testing units and testing code...
+
+I have found [Atan][1]
+
+So any other ideas??
+
+Thanks
+
+
+  [1]: http://atan1.sourceforge.net/",testing,open-source,,,,10/10/2010 05:04:36,not a real question,1,46,3,"Open Source Project I am looking for an **open source** project with size about **2000-4000** line which is still **under development** in order to contibute to it (not neccessary officially)...
+
+I mainly want to write its testing units and testing code...
+
+I have found [Atan][1]
+
+So any other ideas??
+
+Thanks
+
+
+  [1]: http://atan1.sourceforge.net/",2
+1866844,12/08/2009 13:03:49,53183,01/09/2009 01:31:06,214,16,Any good resource (non-people) management libraries?,"As our automated test infrastructure grows, we have a need to automatically manage the test resources (servers, etc). Not manage updates to the systems but have an automatic (programmatic) way to reserve resources for use in the automated test runs and release resources when finished. I need to be able to to add items to the system, store meta data about them, reserve them, and release the resources when finished. Are there any such existing systems that manage resources this way that could be integrated with other programs? Target languages to interface with such as system are Java, or C# but if something else good exists in another language (or had some way to interface with it from other languages) I'd take a look at it too.",testing,automated-tests,resources,,,,open,0,127,6,"Any good resource (non-people) management libraries? As our automated test infrastructure grows, we have a need to automatically manage the test resources (servers, etc). Not manage updates to the systems but have an automatic (programmatic) way to reserve resources for use in the automated test runs and release resources when finished. I need to be able to to add items to the system, store meta data about them, reserve them, and release the resources when finished. Are there any such existing systems that manage resources this way that could be integrated with other programs? Target languages to interface with such as system are Java, or C# but if something else good exists in another language (or had some way to interface with it from other languages) I'd take a look at it too.",3
+3907940,10/11/2010 16:08:55,229636,12/11/2009 13:17:35,25,3,Testing RESTful services which is better?,"We have bunch of WebServices to test and am looking for automating them which scripting is better and easy way( with SSL support)
+
+ - 1) Groovy - HTTP builder      2)
+ - 2)Perl -  Which module to use ?  
+ - 3) Python -urllib ?   
+ - 4) SOAPUI - I'm already using this for SOAP/HTTP services and happy with this, however, I
+        didn't get WADL file to test REST services.
+
+I'm NOT fully convinced with fiddler,POSTER and Rest-client from google code...
+
+
+
+",testing,rest,,,,,open,0,96,6,"Testing RESTful services which is better? We have bunch of WebServices to test and am looking for automating them which scripting is better and easy way( with SSL support)
+
+ - 1) Groovy - HTTP builder      2)
+ - 2)Perl -  Which module to use ?  
+ - 3) Python -urllib ?   
+ - 4) SOAPUI - I'm already using this for SOAP/HTTP services and happy with this, however, I
+        didn't get WADL file to test REST services.
+
+I'm NOT fully convinced with fiddler,POSTER and Rest-client from google code...
+
+
+
+",2
+1272867,08/13/2009 15:54:13,245644,09/10/2008 14:12:03,26,3,Software task/project planning books?,"I'm looking for a book that tells you how to split up a software (or anything; doesn't have to be software-specific) task or project into discrete chunks, and helps elucidate all the issues and nuances that aren't apparent when you just start programming.
+
+Should I get a book on use cases? If so, what?
+
+What I'm looking for is a book that can help me go from a simple story like ""The user wants to be able to specify an email address for themselves, or specify that they don't have an email address"" to a UI diagram, along with a list of coding tasks, and testing requirements (so writing unit tests becomes very straightforward).
+
+I'm tired of starting on a task only to be flummoxed in the middle of it because it wasn't thought through properly.
+
+Thanks!",testing,unit-testing,project-management,project-planning,use-case,09/29/2011 22:13:27,not constructive,1,133,4,"Software task/project planning books? I'm looking for a book that tells you how to split up a software (or anything; doesn't have to be software-specific) task or project into discrete chunks, and helps elucidate all the issues and nuances that aren't apparent when you just start programming.
+
+Should I get a book on use cases? If so, what?
+
+What I'm looking for is a book that can help me go from a simple story like ""The user wants to be able to specify an email address for themselves, or specify that they don't have an email address"" to a UI diagram, along with a list of coding tasks, and testing requirements (so writing unit tests becomes very straightforward).
+
+I'm tired of starting on a task only to be flummoxed in the middle of it because it wasn't thought through properly.
+
+Thanks!",5
+6800164,07/23/2011 11:54:16,859247,07/23/2011 11:24:03,1,0,[Java]Sudoku- Region testing,"I read through about 10 or so links about sudoku's before I even posted this, so I hope that there isn't some blatant answer to this lurking right around here waiting to make me look silly...
+
+So the last few days I've taken it upon myself to create a sudoku generator, using a 'brute-force' randomity approach.   I have been able to check the x / y axis for duplicate numbers just fine using the code:
+
+    for(l=0; l<9; l++){//Makes all vertical work.
+                       if(sudoku[l][j] == temp){
+                           isUsed=true;
+                       }
+                    }                  
+                    for(m=0; m<9; m++){//makes all horizontal work
+                       if(sudoku[i][m] == temp){
+                           isUsed=true;
+                       }
+                    }
+
+I then decided to implement the 'box' or 'region' checking (where you check every 3x3 square from the origin) and I just can't seem to wrap my head around the code.   Here's what I've done so far... fair warning it's a mess; I just can't quite figure out where my logic error lie (for the record the program will run with this code, but will not check regions properly)
+
+    rowbase = i-(i%3);
+                    if(i==2  || i==5 || i==8 ){
+                        if(rowbase == 0 || rowbase == 3 || rowbase == 6){
+                           isUsed= RegionCheck.RegCheck(rowbase, sudoku);
+                        }
+                    }
+                    
+
+Contents of regionCheck.java:
+
+           boolean okay = false;
+        int[] regionUsed = new int[9];
+        int i=0, j=0, regionTester=0, counter=0, numcount;
+        for (i=regionTester; i<regionTester+3; i++){
+            for (; j<3; j++){
+               regionUsed[counter]=sudoku[i][j];
+               counter++;
+            }
+        }
+        for(i=0; i<9; i++){
+            numcount=regionUsed[i];
+            for(j=0; j<9; j++){
+                if(j==i){
+                    //null
+                }
+                else if(numcount == regionUsed[j]){
+                    okay=false;
+                }
+            }
+        }
+        
+        return okay;
+
+Somewhere along the way I'm just getting lost and not understanding how to 'select' a region and iterate through regions.  
+
+Full source here:  http://ideone.com/FYLwm
+
+Any help on simply how to 'select' a region for testing and then iterate through it would be greatly appreciated as I'm really out of ideas.
+
+Sorry about being so prolix.
+--HunderingThooves.",testing,generator,region,sudoku,,,open,0,898,3,"[Java]Sudoku- Region testing I read through about 10 or so links about sudoku's before I even posted this, so I hope that there isn't some blatant answer to this lurking right around here waiting to make me look silly...
+
+So the last few days I've taken it upon myself to create a sudoku generator, using a 'brute-force' randomity approach.   I have been able to check the x / y axis for duplicate numbers just fine using the code:
+
+    for(l=0; l<9; l++){//Makes all vertical work.
+                       if(sudoku[l][j] == temp){
+                           isUsed=true;
+                       }
+                    }                  
+                    for(m=0; m<9; m++){//makes all horizontal work
+                       if(sudoku[i][m] == temp){
+                           isUsed=true;
+                       }
+                    }
+
+I then decided to implement the 'box' or 'region' checking (where you check every 3x3 square from the origin) and I just can't seem to wrap my head around the code.   Here's what I've done so far... fair warning it's a mess; I just can't quite figure out where my logic error lie (for the record the program will run with this code, but will not check regions properly)
+
+    rowbase = i-(i%3);
+                    if(i==2  || i==5 || i==8 ){
+                        if(rowbase == 0 || rowbase == 3 || rowbase == 6){
+                           isUsed= RegionCheck.RegCheck(rowbase, sudoku);
+                        }
+                    }
+                    
+
+Contents of regionCheck.java:
+
+           boolean okay = false;
+        int[] regionUsed = new int[9];
+        int i=0, j=0, regionTester=0, counter=0, numcount;
+        for (i=regionTester; i<regionTester+3; i++){
+            for (; j<3; j++){
+               regionUsed[counter]=sudoku[i][j];
+               counter++;
+            }
+        }
+        for(i=0; i<9; i++){
+            numcount=regionUsed[i];
+            for(j=0; j<9; j++){
+                if(j==i){
+                    //null
+                }
+                else if(numcount == regionUsed[j]){
+                    okay=false;
+                }
+            }
+        }
+        
+        return okay;
+
+Somewhere along the way I'm just getting lost and not understanding how to 'select' a region and iterate through regions.  
+
+Full source here:  http://ideone.com/FYLwm
+
+Any help on simply how to 'select' a region for testing and then iterate through it would be greatly appreciated as I'm really out of ideas.
+
+Sorry about being so prolix.
+--HunderingThooves.",4
+8830768,01/12/2012 05:58:28,173634,09/15/2009 10:21:27,1589,2,Turning on test mode in OmniAuth does not redirect requests when using Cucumber,"I am trying to test my [OmniAuth][1] login process by providing a faked authentication hash when a request is made to `/auth/facebook`, as described [here][2] and [here][3]. The problem is, when I turn test mode on, the request returns as an error, which is the same behaviour as when test mode is not turned on.
+
+user_management.feature
+
+    Feature: User management
+        @omniauth_test
+        Scenario: Login
+            Given a user exists
+            And that user is signed in
+
+web_steps.rb
+
+    ...
+    And /^that user is signed in$/ do
+      visit ""/auth/facebook""
+    end
+    ...
+
+omniauth.rb
+
+    Before('@omniauth_test') do
+      OmniAuth.config.test_mode = true
+      p ""OmniAuth.config.test_mode is #{OmniAuth.config.test_mode}""
+      # the symbol passed to mock_auth is the same as the name of the provider set up in the initializer
+      OmniAuth.config.mock_auth[:facebook] = {
+          ""provider""=>""facebook"",
+          ""uid""=>""uid"",
+          ""user_info""=>{""email""=>""test@xxxx.com"", ""first_name""=>""Test"", ""last_name""=>""User"", ""name""=>""Test User""}
+      }
+    end
+    
+    After('@omniauth_test') do
+      OmniAuth.config.test_mode = false
+    end
+
+Outcome
+
+    Feature: User management
+    
+      @omniauth_test
+      Scenario: Login                # features/user_management.feature:3
+    ""OmniAuth.config.test_mode is true""
+        Given a user exists     # features/step_definitions/pickle_steps.rb:4
+        And that user is signed in # features/step_definitions/web_steps.rb:40
+          No route matches [GET] ""/auth/facebook"" (ActionController::RoutingError)
+          ./features/step_definitions/web_steps.rb:41:in `/^that user is signed in$/'
+          features/testing.feature:5:in `And that user is signed in'
+
+
+  [1]: https://github.com/intridea/omniauth
+  [2]: https://github.com/intridea/omniauth/wiki/Integration-Testing
+  [3]: http://pivotallabs.com/users/mgehard/blog/articles/1595-testing-omniauth-based-login-via-cucumber",testing,cucumber,omniauth,,,,open,0,392,13,"Turning on test mode in OmniAuth does not redirect requests when using Cucumber I am trying to test my [OmniAuth][1] login process by providing a faked authentication hash when a request is made to `/auth/facebook`, as described [here][2] and [here][3]. The problem is, when I turn test mode on, the request returns as an error, which is the same behaviour as when test mode is not turned on.
+
+user_management.feature
+
+    Feature: User management
+        @omniauth_test
+        Scenario: Login
+            Given a user exists
+            And that user is signed in
+
+web_steps.rb
+
+    ...
+    And /^that user is signed in$/ do
+      visit ""/auth/facebook""
+    end
+    ...
+
+omniauth.rb
+
+    Before('@omniauth_test') do
+      OmniAuth.config.test_mode = true
+      p ""OmniAuth.config.test_mode is #{OmniAuth.config.test_mode}""
+      # the symbol passed to mock_auth is the same as the name of the provider set up in the initializer
+      OmniAuth.config.mock_auth[:facebook] = {
+          ""provider""=>""facebook"",
+          ""uid""=>""uid"",
+          ""user_info""=>{""email""=>""test@xxxx.com"", ""first_name""=>""Test"", ""last_name""=>""User"", ""name""=>""Test User""}
+      }
+    end
+    
+    After('@omniauth_test') do
+      OmniAuth.config.test_mode = false
+    end
+
+Outcome
+
+    Feature: User management
+    
+      @omniauth_test
+      Scenario: Login                # features/user_management.feature:3
+    ""OmniAuth.config.test_mode is true""
+        Given a user exists     # features/step_definitions/pickle_steps.rb:4
+        And that user is signed in # features/step_definitions/web_steps.rb:40
+          No route matches [GET] ""/auth/facebook"" (ActionController::RoutingError)
+          ./features/step_definitions/web_steps.rb:41:in `/^that user is signed in$/'
+          features/testing.feature:5:in `And that user is signed in'
+
+
+  [1]: https://github.com/intridea/omniauth
+  [2]: https://github.com/intridea/omniauth/wiki/Integration-Testing
+  [3]: http://pivotallabs.com/users/mgehard/blog/articles/1595-testing-omniauth-based-login-via-cucumber",3
+11690956,07/27/2012 15:27:57,970696,09/29/2011 08:23:44,681,0,"Is functional spec a ""design document""?","So I have been a bit lost in the terms, so first of all I present you what I have learned so far:
+System requirements specification - what users want, what the system should do
+Functional requirement - how the things, which users want, will actually work in the application
+
+Also I would say that the latter is a design document. Is that right or is there another document in addition to these?",testing,documentation,,,,07/27/2012 15:39:01,off topic,1,70,6,"Is functional spec a ""design document""? So I have been a bit lost in the terms, so first of all I present you what I have learned so far:
+System requirements specification - what users want, what the system should do
+Functional requirement - how the things, which users want, will actually work in the application
+
+Also I would say that the latter is a design document. Is that right or is there another document in addition to these?",2
+8029400,11/06/2011 18:40:39,700471,04/10/2011 01:14:10,51,0,Outlook 2007 Offline Testing,"I am developing a plugin for Outlook 2007 that I want to install on my company's email server.  Unfortunately I don't have administrative rights (yet) on that server, so I will be developing the plugin on my laptop.  I would like to configure Outlook to run without an internet connection, on my laptop (Vista) and be able to send and receive test emails to myself.
+
+Google yields nothing--is there a way to do it?  I thought perhaps setting up an email server on my laptop and having Outlook point to that with some kind of dummy email address, but my knowledge in the area isn't sufficient.  Any help is appreciated.",testing,outlook,offline,development,,,open,0,113,4,"Outlook 2007 Offline Testing I am developing a plugin for Outlook 2007 that I want to install on my company's email server.  Unfortunately I don't have administrative rights (yet) on that server, so I will be developing the plugin on my laptop.  I would like to configure Outlook to run without an internet connection, on my laptop (Vista) and be able to send and receive test emails to myself.
+
+Google yields nothing--is there a way to do it?  I thought perhaps setting up an email server on my laptop and having Outlook point to that with some kind of dummy email address, but my knowledge in the area isn't sufficient.  Any help is appreciated.",4
+4273047,11/25/2010 01:32:09,519570,11/25/2010 01:32:09,1,0,Creating grammar based XMl Documents using Awk/jawk?,"I need to create a series of XML files using a grammar specified in AWK and subsequently JAWK. Is this possible? If so, what is the basic structure of a recursive grammar?
+
+Thanks in advance",testing,awk,grammar,gawk,,12/23/2011 08:11:48,too localized,1,34,7,"Creating grammar based XMl Documents using Awk/jawk? I need to create a series of XML files using a grammar specified in AWK and subsequently JAWK. Is this possible? If so, what is the basic structure of a recursive grammar?
+
+Thanks in advance",4
+3231127,07/12/2010 18:30:01,389749,07/12/2010 18:30:01,1,0,how do you test a calculator?,"How will you test a calculator? Any thoughts?
+
+thanks,",testing,interview-questions,,,,07/12/2010 23:50:36,not a real question,1,8,6,"how do you test a calculator? How will you test a calculator? Any thoughts?
+
+thanks,",2
+4034694,10/27/2010 15:04:57,489007,10/27/2010 15:04:57,1,0,After having 2 years experience in Software Testing is it worth taking risk to move to Development,"I have 2 years of experience in Software Testing. I have worked on both Manual as well as Automation forms of testing. But, this time I have a got a chance in my company to become a Software Developer. I know opportunities like these rarely come in life and I want to make use of it. I could not get any job early in my career in the field of Development that's why I moved into Software Testing. 
+
+The risk involved with this is that I don't have any experience in Development and chances are I would be treated as fresher. I am not much aware as to what kind of impact it will have on my Profile. I'm getting confused as the whole 2 years I have spent in Software Testing could go waste.",testing,career-development,,,,10/27/2010 16:10:19,off topic,1,135,17,"After having 2 years experience in Software Testing is it worth taking risk to move to Development I have 2 years of experience in Software Testing. I have worked on both Manual as well as Automation forms of testing. But, this time I have a got a chance in my company to become a Software Developer. I know opportunities like these rarely come in life and I want to make use of it. I could not get any job early in my career in the field of Development that's why I moved into Software Testing. 
+
+The risk involved with this is that I don't have any experience in Development and chances are I would be treated as fresher. I am not much aware as to what kind of impact it will have on my Profile. I'm getting confused as the whole 2 years I have spent in Software Testing could go waste.",2
+6982123,08/08/2011 12:29:08,884050,08/08/2011 12:20:09,1,0,Requirements coverage without tracebabilty matrix,How to check whether the test case has covered all the requirements other than tracebaility matrix.,testing,requirements,traceability,,,,open,0,16,5,Requirements coverage without tracebabilty matrix How to check whether the test case has covered all the requirements other than tracebaility matrix.,3
+1446094,09/18/2009 18:12:36,77784,03/13/2009 16:03:33,208,36,"What is the best, sexiest book on software testing that is also useful? ","
+I've read a number of great books on software design, software management. In these books, you can find authors with passion and readers who get excited about the latest thing, whether it's agile, patterns, BDD. A typical engineering team is constantly buzzing about these things and arguing in the halls about whether buzzword X is a load of hooey or the greatest thing ever. Where are the exciting books on testing software? Software testing could be so much more exciting. I'm looking sexy testing books.  
+
+ * Are for the role of black-box and system integration testers who, in the end, make sure we don't ship a turd.
+ * Not a dry book like ""Best practices in formal software quality assurance."" 
+ * They give the reader a paradigm or meme to get fired up about. Something like the agile manifesto from the perspective of the tester, not management. 
+",testing,books,,,,,open,0,151,14,"What is the best, sexiest book on software testing that is also useful?  
+I've read a number of great books on software design, software management. In these books, you can find authors with passion and readers who get excited about the latest thing, whether it's agile, patterns, BDD. A typical engineering team is constantly buzzing about these things and arguing in the halls about whether buzzword X is a load of hooey or the greatest thing ever. Where are the exciting books on testing software? Software testing could be so much more exciting. I'm looking sexy testing books.  
+
+ * Are for the role of black-box and system integration testers who, in the end, make sure we don't ship a turd.
+ * Not a dry book like ""Best practices in formal software quality assurance."" 
+ * They give the reader a paradigm or meme to get fired up about. Something like the agile manifesto from the perspective of the tester, not management. 
+",2
+9146543,02/05/2012 02:52:14,579783,01/18/2011 10:53:19,71,0,Testing a new compiler,"This was a question asked in one of the recent interviews I faced.
+
+What test cases should you execute to qualify a new compiler?
+
+Probably the question is a little vague. Feel free to make assumptions if you must.",testing,compiler,interview-questions,,,02/05/2012 03:32:13,not a real question,1,37,4,"Testing a new compiler This was a question asked in one of the recent interviews I faced.
+
+What test cases should you execute to qualify a new compiler?
+
+Probably the question is a little vague. Feel free to make assumptions if you must.",3
+3702604,09/13/2010 16:53:22,75642,03/09/2009 14:09:11,6758,324,Systematic software testing in professional development environment,"**I have a few questions about software testing in professional development environment on real-client projects.** Projects developed by professional software companies that are actually going to be sold.
+
+Over the years of my professional career I've seen very little systematic testing done on real life projects. Especially bespoke projects. Even though projects were very complex, no actual testing was done. At least not properly as we've learned.
+
+I estimate that **only about 10%** of projects are actually methodically tested where there are dedicated testers part of the team and developers write automated tests (unit, integration, regression etc. tests).
+
+I would like to ask some questions about your estimates and experience:
+
+1. What percentage of projects (estimated) you've been working on have been systematically tested - using a dedicated tester testing stuff while it's being written; writing unit/integration/regression/other automated tests; test coverage tracking; test result measurement etc.
+2. Which type of projects are normally methodically tested:
+    * projects for particular clients (bespoke)
+    * general projects that will be sold afterwards
+3. Which industry aimed projects are normally methodically tested? (Finance, IT, etc.)
+4. What's the minimum project size (in terms of team size) when projects start being methodically tested.
+
+There are even more questions I'd like to ask and are collected in a nice [Google questionnaire](https://spreadsheets.google.com/viewform?formkey=dHhUU2xIRERwSklhU3FfQnJzdnlPcXc6MQ). I'd also be very grateful if you'd take the time (3-5 minutes) to complete the questionnaire.
+
+What's your experience?
+--",testing,,,,,09/15/2010 04:51:45,not a real question,1,231,7,"Systematic software testing in professional development environment **I have a few questions about software testing in professional development environment on real-client projects.** Projects developed by professional software companies that are actually going to be sold.
+
+Over the years of my professional career I've seen very little systematic testing done on real life projects. Especially bespoke projects. Even though projects were very complex, no actual testing was done. At least not properly as we've learned.
+
+I estimate that **only about 10%** of projects are actually methodically tested where there are dedicated testers part of the team and developers write automated tests (unit, integration, regression etc. tests).
+
+I would like to ask some questions about your estimates and experience:
+
+1. What percentage of projects (estimated) you've been working on have been systematically tested - using a dedicated tester testing stuff while it's being written; writing unit/integration/regression/other automated tests; test coverage tracking; test result measurement etc.
+2. Which type of projects are normally methodically tested:
+    * projects for particular clients (bespoke)
+    * general projects that will be sold afterwards
+3. Which industry aimed projects are normally methodically tested? (Finance, IT, etc.)
+4. What's the minimum project size (in terms of team size) when projects start being methodically tested.
+
+There are even more questions I'd like to ask and are collected in a nice [Google questionnaire](https://spreadsheets.google.com/viewform?formkey=dHhUU2xIRERwSklhU3FfQnJzdnlPcXc6MQ). I'd also be very grateful if you'd take the time (3-5 minutes) to complete the questionnaire.
+
+What's your experience?
+--",1
+6853406,07/28/2011 02:10:31,866589,07/28/2011 02:10:31,1,0,Testing App Error,"I am completely new to this, and I know the answer to my question is probably very simple; however, I just cant find it.  I get through the whole helloworld tutorial, and when I try to run the app, I get the following message: 
+
+invalid command-line parameter: Files.
+Hint: use '@foo' to launch a virtual device named 'foo'.
+please use -help for more information
+
+Note - I've tried to run this on API 11, 12, and 13.  I know the recommended API is 7, but I can't seem to access 2.0.  I apologize if this question is vague.  If so, I would appreciate any suggestions and try to narrow down what I mean.  Thank you.",testing,application,,,,,open,0,117,3,"Testing App Error I am completely new to this, and I know the answer to my question is probably very simple; however, I just cant find it.  I get through the whole helloworld tutorial, and when I try to run the app, I get the following message: 
+
+invalid command-line parameter: Files.
+Hint: use '@foo' to launch a virtual device named 'foo'.
+please use -help for more information
+
+Note - I've tried to run this on API 11, 12, and 13.  I know the recommended API is 7, but I can't seem to access 2.0.  I apologize if this question is vague.  If so, I would appreciate any suggestions and try to narrow down what I mean.  Thank you.",2
+9705063,03/14/2012 15:37:48,84143,03/29/2009 00:34:54,77,5,Approach to web application testing?,"Is there a documented reference for approaches to web application testing?
+There are a lot of aspects to web application testing like
+
+ - Functional Tests
+ - Non functional tests
+ - Unit tests
+ - Static Pages
+ - Login / Logout
+ - Application functionality
+ - Integration testing
+ - Test tools like Selenium, XUnit
+ - Continuous Integration, ...
+ - etc etc.
+
+How do we structure our tests in a web based application development? Any online reference?",testing,,,,,03/15/2012 18:05:45,not constructive,1,71,5,"Approach to web application testing? Is there a documented reference for approaches to web application testing?
+There are a lot of aspects to web application testing like
+
+ - Functional Tests
+ - Non functional tests
+ - Unit tests
+ - Static Pages
+ - Login / Logout
+ - Application functionality
+ - Integration testing
+ - Test tools like Selenium, XUnit
+ - Continuous Integration, ...
+ - etc etc.
+
+How do we structure our tests in a web based application development? Any online reference?",1
+30311,08/27/2008 14:42:27,3208,08/27/2008 13:12:45,1,1,Good QA / Testing Podcast,"Can anyone recommend a good Podcast for Quality Assurance / Tester folks. I find there is a wide variety on development but yet to find a good one for QA/Testing ( not from the developer point of view ).
+
+",testing,podcast,qa,,,09/18/2011 02:59:13,not constructive,1,39,5,"Good QA / Testing Podcast Can anyone recommend a good Podcast for Quality Assurance / Tester folks. I find there is a wide variety on development but yet to find a good one for QA/Testing ( not from the developer point of view ).
+
+",3
+96349,09/18/2008 20:04:54,1946,08/19/2008 14:53:06,218,12,Automatically verify my website's links are pointing to urls that exist?,Is there a tool to automatically search through my site and test all the links? I hate running across bad urls.,testing,,,,,07/17/2012 01:36:55,not constructive,1,21,11,Automatically verify my website's links are pointing to urls that exist? Is there a tool to automatically search through my site and test all the links? I hate running across bad urls.,1
+8892676,01/17/2012 10:01:11,1153616,01/17/2012 09:52:11,1,0,VPN including the most countries possible,"I'm looking for a VPN software that includes the most countries possible for remote testing purposes, as I'm not able to travel to each location to make sure everything works.  I have used OverPlay VPN so far, but they lack quite a big number of countries, especially in Asia. 
+
+If there's no proper VPN software including i.e. Asia, is the best way to use more than one software or do you know any alternative solutions?
+
+Thanks in advance!",testing,vpn,countries,,,01/19/2012 03:55:57,off topic,1,78,6,"VPN including the most countries possible I'm looking for a VPN software that includes the most countries possible for remote testing purposes, as I'm not able to travel to each location to make sure everything works.  I have used OverPlay VPN so far, but they lack quite a big number of countries, especially in Asia. 
+
+If there's no proper VPN software including i.e. Asia, is the best way to use more than one software or do you know any alternative solutions?
+
+Thanks in advance!",3
+7141882,08/21/2011 23:38:25,892682,08/13/2011 02:32:33,1,0,Trouble Installing Autotest,"I'm a beginner programmer and am trying to install autotest for Rails development. I enter this in my command line:
+
+    sudo gem install autotest -v 4.4.6
+
+and get this error:
+
+    Error installing autotest:
+	ZenTest requires RubyGems version ~> 1.8. Try 'gem update --system' to update RubyGems itself.
+
+So I run:
+
+    gem update --system
+
+and get this error:
+
+    ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions into the /Library/Ruby/Gems/1.8 directory.
+
+What do you think are possible solutions to both of these problems? Thanks!",testing,,,,,,open,0,96,3,"Trouble Installing Autotest I'm a beginner programmer and am trying to install autotest for Rails development. I enter this in my command line:
+
+    sudo gem install autotest -v 4.4.6
+
+and get this error:
+
+    Error installing autotest:
+	ZenTest requires RubyGems version ~> 1.8. Try 'gem update --system' to update RubyGems itself.
+
+So I run:
+
+    gem update --system
+
+and get this error:
+
+    ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions into the /Library/Ruby/Gems/1.8 directory.
+
+What do you think are possible solutions to both of these problems? Thanks!",1
+7314068,09/06/2011 01:15:43,929762,09/06/2011 01:15:43,1,0,Awaitility for testing Async messages,"I read some documentation that Awaitility framework can help testing Async messages. Does any one has implemented it or is there any feedack on Awaitility implementation.
+
+Thanks
+Devautomater",testing,asynchronous,messages,,,09/06/2011 23:33:12,not constructive,1,26,5,"Awaitility for testing Async messages I read some documentation that Awaitility framework can help testing Async messages. Does any one has implemented it or is there any feedack on Awaitility implementation.
+
+Thanks
+Devautomater",3
+5270057,03/11/2011 07:16:20,208513,11/11/2009 08:46:16,192,14,Testing interview question,When is it okay to ship a product with a bug,testing,interview-questions,,,,03/11/2011 07:28:09,not constructive,1,11,3,Testing interview question When is it okay to ship a product with a bug,2
+3809640,09/28/2010 04:13:45,460171,09/28/2010 04:13:45,1,0,Clarifying questions in testing interview,"Should I ask questions to interviewer to fully understand the functional and non-funtional requirements of a product if interviewer asks me to test that product and does not specify any other detail?
+
+For example, if interviwer asks me to test a Search Button – should I ask the following questions:
+
+How fast the user should be able to get the results?
+What is the max size of text box which is associated with Search Button?
+
+etc.
+
+",testing,interview-questions,qa,,,09/29/2010 18:04:25,off topic,1,72,5,"Clarifying questions in testing interview Should I ask questions to interviewer to fully understand the functional and non-funtional requirements of a product if interviewer asks me to test that product and does not specify any other detail?
+
+For example, if interviwer asks me to test a Search Button – should I ask the following questions:
+
+How fast the user should be able to get the results?
+What is the max size of text box which is associated with Search Button?
+
+etc.
+
+",3
+6015601,05/16/2011 09:48:15,445600,11/14/2009 14:59:51,546,3,Pairwise testing: How to create the table?,"Hello I have doubt regarding how to create the table for the pairwise testing.
+For example if I have three parameter which can each attain two different values. How do I create a table of input with all possible combination then? Would it look something like this?
+
+
+
+	    | 1 2 3
+     -----------
+      1 | 1 1 1
+      2 | 1 2 2
+      3 | 1 1 2
+      4 | 1 2 1
+
+Does each parameter corresponds to each column?",testing,,,,,,open,0,104,7,"Pairwise testing: How to create the table? Hello I have doubt regarding how to create the table for the pairwise testing.
+For example if I have three parameter which can each attain two different values. How do I create a table of input with all possible combination then? Would it look something like this?
+
+
+
+	    | 1 2 3
+     -----------
+      1 | 1 1 1
+      2 | 1 2 2
+      3 | 1 1 2
+      4 | 1 2 1
+
+Does each parameter corresponds to each column?",1
+10203381,04/18/2012 05:34:29,1315883,04/05/2012 17:15:20,11,3,How to export Sikuli scripts to java?,"I am new to automation and have to use Sikuli, can you all tell me how to export Sikuli script in java also is it possible to integrate those scripts with Selenium....
+
+Thanks in advance.....",testing,selenium,automation,automated-tests,sikuli,,open,0,34,7,"How to export Sikuli scripts to java? I am new to automation and have to use Sikuli, can you all tell me how to export Sikuli script in java also is it possible to integrate those scripts with Selenium....
+
+Thanks in advance.....",5
+3660765,09/07/2010 16:49:44,341293,05/14/2010 13:57:57,128,5,Load Test software,"I know nothing about Load Test Software. 
+
+Is Visual Studio Load Test Virtual User Pack 2010 any good?
+
+
+
+",testing,load,,,,09/08/2010 00:45:22,not constructive,1,18,3,"Load Test software I know nothing about Load Test Software. 
+
+Is Visual Studio Load Test Virtual User Pack 2010 any good?
+
+
+
+",2
+4366008,12/06/2010 11:40:42,532211,12/06/2010 11:36:18,1,0,how software testing is actually done in software companies? what tools and techniques are used?,I want to take up software testing job in software company in future so i want information about how its done.,testing,software-tools,,,,11/28/2011 03:46:57,not constructive,1,21,15,how software testing is actually done in software companies? what tools and techniques are used? I want to take up software testing job in software company in future so i want information about how its done.,2
+6754265,07/19/2011 21:16:46,719781,04/21/2011 22:42:01,8,0,Best Test Case Management Tool. Ability to Migrate from TestLink. Integration with JIRA.,"I'm evaluating a change of Test Management Tool. Currently we are using TestLink and have 3000 TCs on it. My main issues with it are; the lack of field customization in TC creation, not possible to call reusable TCs, HTML tags needed to format text... I have the possibility of request budget for a paid tool, but it should be worth it and affordable (Not like HP Quality Center). Of course I will need to migrate my current suite to the new tool and it will be great if the tool could be integrated with JIRA as we use it for Bug/Req tracking. I would greatly appreciate if somebody could give me feedback and advice on this subject.",testing,integration,test-management,,,07/26/2012 12:50:20,not constructive,1,118,13,"Best Test Case Management Tool. Ability to Migrate from TestLink. Integration with JIRA. I'm evaluating a change of Test Management Tool. Currently we are using TestLink and have 3000 TCs on it. My main issues with it are; the lack of field customization in TC creation, not possible to call reusable TCs, HTML tags needed to format text... I have the possibility of request budget for a paid tool, but it should be worth it and affordable (Not like HP Quality Center). Of course I will need to migrate my current suite to the new tool and it will be great if the tool could be integrated with JIRA as we use it for Bug/Req tracking. I would greatly appreciate if somebody could give me feedback and advice on this subject.",3
+1105620,07/09/2009 18:12:33,76535,03/11/2009 07:38:48,256,11,Tools for regression testing / test automation of database centric java application?,"I'm looking for a good, preferably free tool for automating tests of a java (EJB3) application without any kind of GUI.
+
+Tool should be capable of at least:
+
+* Inserting / updating / deleting data on database
+* Querying and comparing data on database
+* Reading and writing to FTP server
+* Initializing test environment, launching EJB3 bean, cleaning up test environment after the test
+* Reporting
+* Some kind of scripting interface is enough, no GUI required
+
+Naturally this could be done using Java & JUnit but it would be pretty tedious. I would appreciate any hints of such tools.
+",testing,java,,,,06/24/2012 12:48:53,not constructive,1,93,12,"Tools for regression testing / test automation of database centric java application? I'm looking for a good, preferably free tool for automating tests of a java (EJB3) application without any kind of GUI.
+
+Tool should be capable of at least:
+
+* Inserting / updating / deleting data on database
+* Querying and comparing data on database
+* Reading and writing to FTP server
+* Initializing test environment, launching EJB3 bean, cleaning up test environment after the test
+* Reporting
+* Some kind of scripting interface is enough, no GUI required
+
+Naturally this could be done using Java & JUnit but it would be pretty tedious. I would appreciate any hints of such tools.
+",2
+3657267,09/07/2010 09:07:15,419000,08/12/2010 23:02:11,1,0,What a tester need to do when he found a bug and the dev does not want to fix it – and it is important.,Interview question. Please help what the tester need to do?,testing,interview-questions,,,,12/06/2011 01:03:40,off topic,1,10,25,What a tester need to do when he found a bug and the dev does not want to fix it – and it is important. Interview question. Please help what the tester need to do?,2
+2811141,05/11/2010 13:40:04,329637,04/30/2010 09:27:00,504,24,Is it bad practice to use Reflection in Unit testing?,"During the last years I always thought that in Java, Reflection is widely used during Unit testing. Since some of the variables/methods which have to be checked are private, it is somehow necessary to read the values of them. I always thought that the Reflection API is also used for this purpose.
+
+Last week i had to test some packages and therefore write some JUnit tests. As always i used Reflection to access private fields and methods. But my supervisor who checked the code wasn't really happy with that and told me that the Reflection API wasn't meant to use for such ""hacking"". Instead he suggested to modifiy the visibility in the production code.
+
+Is it really bad practice to use Reflection? I can't really believe that",testing,java,unit,reflection,,,open,0,125,10,"Is it bad practice to use Reflection in Unit testing? During the last years I always thought that in Java, Reflection is widely used during Unit testing. Since some of the variables/methods which have to be checked are private, it is somehow necessary to read the values of them. I always thought that the Reflection API is also used for this purpose.
+
+Last week i had to test some packages and therefore write some JUnit tests. As always i used Reflection to access private fields and methods. But my supervisor who checked the code wasn't really happy with that and told me that the Reflection API wasn't meant to use for such ""hacking"". Instead he suggested to modifiy the visibility in the production code.
+
+Is it really bad practice to use Reflection? I can't really believe that",4
+5044881,02/18/2011 18:04:18,263004,01/31/2010 17:46:21,10380,394,How does testing connection to a third-party API fit into continuous integration?,"I wrote a test sometime ago that tests an integration I wrote between my code and a third-party API. The test makes sure that the integration works properly and that we get back the expected results.
+
+The formal build failed today because the test received a 500 error while trying to connect to the third-party API.
+
+Does it make sense to test a situation like this?",testing,continuous-integration,integration-testing,regression-testing,,,open,0,64,12,"How does testing connection to a third-party API fit into continuous integration? I wrote a test sometime ago that tests an integration I wrote between my code and a third-party API. The test makes sure that the integration works properly and that we get back the expected results.
+
+The formal build failed today because the test received a 500 error while trying to connect to the third-party API.
+
+Does it make sense to test a situation like this?",4
+9314113,02/16/2012 15:33:56,914053,08/26/2011 12:26:59,76,1,JUnit: how to test a list of samples?,"There was a clever way to provide a list of test-data to a JUnit test that tests a single method. E.g. I have the following test-data:
+
+    HashMap<InputParameterType,ExpectedResultType> testdata;
+
+    foreach (e : testdata) {
+      assertEquals(methodUnderTest(e.getKey()),e.getValue())
+    }
+
+This is available somehow, but I dont remember any keyword for google. Please help ;-)",testing,junit,,,,,open,0,63,8,"JUnit: how to test a list of samples? There was a clever way to provide a list of test-data to a JUnit test that tests a single method. E.g. I have the following test-data:
+
+    HashMap<InputParameterType,ExpectedResultType> testdata;
+
+    foreach (e : testdata) {
+      assertEquals(methodUnderTest(e.getKey()),e.getValue())
+    }
+
+This is available somehow, but I dont remember any keyword for google. Please help ;-)",2
+44159,09/04/2008 16:48:54,39040,11/19/2008 17:53:34,20,4,Software Testing Books,"So I've recently read [Test Driven Development][1] by Kent Beck, which I found interesting (although it felt a bit light on details) and I've started using unit tests in my programming which I'm really enjoying the added peace of mind about code quality versus ad hoc testing, although I'm not at the stage of doing full fledged TDD (yet).  
+
+I'd like a more in depth text on software testing specifically on writing useful tests and how to make sure that as much of the code as possible is being exercised by the automated tests.  
+
+  [1]: http://www.amazon.com/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530/ref=sr_1_1?ie=UTF8&s=books&qid=1220546554&sr=1-1",testing,book,,,,09/30/2011 00:51:06,not constructive,1,100,3,"Software Testing Books So I've recently read [Test Driven Development][1] by Kent Beck, which I found interesting (although it felt a bit light on details) and I've started using unit tests in my programming which I'm really enjoying the added peace of mind about code quality versus ad hoc testing, although I'm not at the stage of doing full fledged TDD (yet).  
+
+I'd like a more in depth text on software testing specifically on writing useful tests and how to make sure that as much of the code as possible is being exercised by the automated tests.  
+
+  [1]: http://www.amazon.com/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530/ref=sr_1_1?ie=UTF8&s=books&qid=1220546554&sr=1-1",2
+4307757,11/29/2010 20:24:36,286629,03/04/2010 21:18:03,11,1,INTERVIEW QUESTION : VIRTUALIZATION AND SOFTWARE QUALITY ASSURANCE,"Interview Question: How do you automate(in testing) the process of making your system fail and recover from the failure and also you must make sure time stamp is maintained each time the system recovers. 
+
+I know this question is little vague, i guess interviewer was trying to test my virtualization skills.
+",testing,interview-questions,virtualization,job-interview,telephone-interview,12/01/2010 07:20:31,not a real question,1,51,8,"INTERVIEW QUESTION : VIRTUALIZATION AND SOFTWARE QUALITY ASSURANCE Interview Question: How do you automate(in testing) the process of making your system fail and recover from the failure and also you must make sure time stamp is maintained each time the system recovers. 
+
+I know this question is little vague, i guess interviewer was trying to test my virtualization skills.
+",5
+6975688,08/07/2011 20:46:42,93468,02/03/2009 22:24:01,3241,23,Definitions of Unit testing,"Ok I know Unit testing only to be that, Unit testing.  Code Unit testing using NUnit or whatever tool it may be.
+
+But I'm working on a team that's really not very good at development.  They have developers review functionality to see if it's working right both technically and functionallyl.  So yea we're basically doing QA even though we have a QA team.
+
+So is there another term ""Unit Testing"" that just means really doing QA type of testing?  Isn't that called ""Black Box"" testing?
+
+I think this team is using the word Unit Testing wrong.  We're not doing code unit testing in the sense such as writing code to test code (TDD, etc.)
+
+So are they stupid to call it ""Unit Testing"" when you have other devs going over the functionality?  A code review is soemthing else, not what we're doing here.",testing,,,,,08/09/2011 10:11:17,not constructive,1,145,4,"Definitions of Unit testing Ok I know Unit testing only to be that, Unit testing.  Code Unit testing using NUnit or whatever tool it may be.
+
+But I'm working on a team that's really not very good at development.  They have developers review functionality to see if it's working right both technically and functionallyl.  So yea we're basically doing QA even though we have a QA team.
+
+So is there another term ""Unit Testing"" that just means really doing QA type of testing?  Isn't that called ""Black Box"" testing?
+
+I think this team is using the word Unit Testing wrong.  We're not doing code unit testing in the sense such as writing code to test code (TDD, etc.)
+
+So are they stupid to call it ""Unit Testing"" when you have other devs going over the functionality?  A code review is soemthing else, not what we're doing here.",1
+5755806,04/22/2011 13:15:34,720541,04/22/2011 12:48:12,8,0,mock.record exception,"I am using mock.record() and I am checking the length of a filename..
+The test code is:
+ MockRepository mock = new MockRepository();
+            IExtension ext = mock.StrictMock<IExtension>();
+
+            using (mock.Record())
+            {
+                ext.LogError(""filename not valid"");
+            }
+
+            LogAnalyser log = new LogAnalyser(ext);
+            string shortfilename = ""jjh.df"";
+            log.IsValid(shortfilename);
+            mock.Verify(ext);
+
+and the production code is:
+  public void IsValid(string filename)
+        {
+            if(filename.Length<8)
+            {
+                extension.LogError(""filename is short:"" + filename);
+            }
+        }
+
+On debugging, the extension.logerror in production gives an exception:
+
+IExtension.LogError(""filename is short:jjh.df""); Expected #0, Actual #1.
+IExtension.LogError(""filename not valid""); Expected #1, Actual #0.
+
+please provide some solution..
+
+thanks..",testing,mocking,unit,,,,open,0,250,2,"mock.record exception I am using mock.record() and I am checking the length of a filename..
+The test code is:
+ MockRepository mock = new MockRepository();
+            IExtension ext = mock.StrictMock<IExtension>();
+
+            using (mock.Record())
+            {
+                ext.LogError(""filename not valid"");
+            }
+
+            LogAnalyser log = new LogAnalyser(ext);
+            string shortfilename = ""jjh.df"";
+            log.IsValid(shortfilename);
+            mock.Verify(ext);
+
+and the production code is:
+  public void IsValid(string filename)
+        {
+            if(filename.Length<8)
+            {
+                extension.LogError(""filename is short:"" + filename);
+            }
+        }
+
+On debugging, the extension.logerror in production gives an exception:
+
+IExtension.LogError(""filename is short:jjh.df""); Expected #0, Actual #1.
+IExtension.LogError(""filename not valid""); Expected #1, Actual #0.
+
+please provide some solution..
+
+thanks..",3
+8739988,01/05/2012 09:10:33,1103189,02/10/2011 04:02:19,1,0,how to capture editor data with help of selenium?,"i am working on one application which have third party editor (ck editor).
+I am  not able to record action perform on editor.
+Please suggest me solution so that i can able to record those action.
+",testing,selenium,automation,ckeditor,selenium-ide,01/11/2012 14:29:25,not a real question,1,35,9,"how to capture editor data with help of selenium? i am working on one application which have third party editor (ck editor).
+I am  not able to record action perform on editor.
+Please suggest me solution so that i can able to record those action.
+",5
+7324324,09/06/2011 18:16:35,115462,06/01/2009 14:14:06,367,6,functional testing routes with a https constraint,"If I wrap my SSL required routes in a block like this: 
+
+    scope :protocol => ""https://"", :constraints => { :protocol => 
+    ""https://"" } do 
+      resources :users, :only => [:new, :create, :edit, :update] 
+    end 
+
+then all my functional tests that reference those routes are now 
+spitting out RoutingErrors.  Something like this: 
+
+    put :update, :id => 123 
+    ActionController::RoutingError: No route matches 
+    {:id=>""123"", :controller=>""users"", :action=>""update""} 
+
+FWIW:
+
+    rake routes | grep update 
+    user PUT    /users/:id(.:format) 
+    {:protocol=>""http://"", :action=>""update"", :controller=>""users""} 
+
+So, what, I'm supposed to specify the protocol in my functional tests 
+now?
+
+
+",testing,ssl,ruby-on-rails-3.1,,,,open,0,132,7,"functional testing routes with a https constraint If I wrap my SSL required routes in a block like this: 
+
+    scope :protocol => ""https://"", :constraints => { :protocol => 
+    ""https://"" } do 
+      resources :users, :only => [:new, :create, :edit, :update] 
+    end 
+
+then all my functional tests that reference those routes are now 
+spitting out RoutingErrors.  Something like this: 
+
+    put :update, :id => 123 
+    ActionController::RoutingError: No route matches 
+    {:id=>""123"", :controller=>""users"", :action=>""update""} 
+
+FWIW:
+
+    rake routes | grep update 
+    user PUT    /users/:id(.:format) 
+    {:protocol=>""http://"", :action=>""update"", :controller=>""users""} 
+
+So, what, I'm supposed to specify the protocol in my functional tests 
+now?
+
+
+",3
+3323635,07/24/2010 03:02:49,292291,03/12/2010 10:53:07,515,8,How can i test my site on iPad without having 1?,"i recieved comments that one of my [web sites (tumblr theme)][1] is crashing on iPad. i dont have an iPad so i wonder how will you test your site on iPad, iPhone or any other smart phone for that matter? 
+
+
+  [1]: http://www.tumblr.com/theme/11037",testing,,,,,,open,0,44,11,"How can i test my site on iPad without having 1? i recieved comments that one of my [web sites (tumblr theme)][1] is crashing on iPad. i dont have an iPad so i wonder how will you test your site on iPad, iPhone or any other smart phone for that matter? 
+
+
+  [1]: http://www.tumblr.com/theme/11037",1
+2508257,03/24/2010 14:07:37,300608,03/24/2010 07:57:31,11,0,Example of test plan,"I have done some research and found test plan over 40 pages. It includes so many elements that it is difficult to keep track. Additionally, it is not provided any examples, just a description of the different tests such as acceptance test, system test, etc. If anyone have made some good and simple test plan for the development of a product and could share, so that I can gain inspiration with example would be very helpful.
+
+",testing,plan,,,,07/25/2011 17:01:17,not constructive,1,76,4,"Example of test plan I have done some research and found test plan over 40 pages. It includes so many elements that it is difficult to keep track. Additionally, it is not provided any examples, just a description of the different tests such as acceptance test, system test, etc. If anyone have made some good and simple test plan for the development of a product and could share, so that I can gain inspiration with example would be very helpful.
+
+",2
+3778310,09/23/2010 12:25:43,455873,09/23/2010 07:07:05,20,0,Which is write to say about bug?,"bug is:
+
+error;
+failure;
+defect;
+fault",testing,,,,,09/23/2010 13:16:44,not a real question,1,2,7,"Which is write to say about bug? bug is:
+
+error;
+failure;
+defect;
+fault",1
+4789456,01/25/2011 02:33:44,541005,12/13/2010 20:02:14,758,78,"The Oracle Problem, as it relates to testing","I'm brushing up on my software testing theory and came across an interesting phenomenon called the Oracle problem. I've picked up bits and pieces as to what the problem alludes to but haven't yet pieced it all together. 
+
+One rather dark version of the problem goes a little something like this:
+An island has 100 inhabitants. Each of the inhabitants has either green or blue eyes. None of the inhabitants are allowed to communicate with each other to let them know what color eyes they have, nor are there any reflective surfaces in which the inhabitants can see their own eye colors. Basically everyone knows what color eyes everyone has but none of them know what color eyes they themselves have. The rule on the island is that if you find out that you have blue eyes you must kill yourself. The island's population remains stable until one day an oracle arrives and tells the inhabitants that two people on the island have blue eyes.
+
+The question is what happens to the people?
+
+An answer I found is that 1000 days later the last person on the island kills themselves.
+
+I have no clue how this makes sense and I was hoping that someone could help relate this problem back to software testing. Thanks for coming on the journey and I look forward to some interesting responses.
+
+I have",testing,math,logic,,,01/25/2011 13:54:36,off topic,1,224,8,"The Oracle Problem, as it relates to testing I'm brushing up on my software testing theory and came across an interesting phenomenon called the Oracle problem. I've picked up bits and pieces as to what the problem alludes to but haven't yet pieced it all together. 
+
+One rather dark version of the problem goes a little something like this:
+An island has 100 inhabitants. Each of the inhabitants has either green or blue eyes. None of the inhabitants are allowed to communicate with each other to let them know what color eyes they have, nor are there any reflective surfaces in which the inhabitants can see their own eye colors. Basically everyone knows what color eyes everyone has but none of them know what color eyes they themselves have. The rule on the island is that if you find out that you have blue eyes you must kill yourself. The island's population remains stable until one day an oracle arrives and tells the inhabitants that two people on the island have blue eyes.
+
+The question is what happens to the people?
+
+An answer I found is that 1000 days later the last person on the island kills themselves.
+
+I have no clue how this makes sense and I was hoping that someone could help relate this problem back to software testing. Thanks for coming on the journey and I look forward to some interesting responses.
+
+I have",3
+5064214,02/21/2011 09:26:10,458666,09/26/2010 11:17:58,11,0,Free web based bug tracker/logging and reporting tools?,"Can any one suggest me the free tools available for defect tracking and Reporting. The reporting sholud be in that tool. It shold be have the following features.
+Reporting
+1. Email notifications
+2. Report the bug.
+3. User can subscribe to get e-mail notification on specific bug.
+4. can add new bugs and can give reports, search the bugs using ID number.
+5. Capture the images 
+6. Can create projects, sub projects and users.
+7. Can customize the work flow and can find the status
+I have find the Bug Tracker .net and Mantis. In Bug tracker .net, only we can view the report but we can not report the issue to development team. I have find out the ""Track"" tool, in that also same like Bug tracker .Net tool like no option for ""Report an issue"". 
+In these three which one is good for defect logging/tracking and for reporting.
+Thanks in advance.",testing,bug-tracking,,,,,open,0,144,8,"Free web based bug tracker/logging and reporting tools? Can any one suggest me the free tools available for defect tracking and Reporting. The reporting sholud be in that tool. It shold be have the following features.
+Reporting
+1. Email notifications
+2. Report the bug.
+3. User can subscribe to get e-mail notification on specific bug.
+4. can add new bugs and can give reports, search the bugs using ID number.
+5. Capture the images 
+6. Can create projects, sub projects and users.
+7. Can customize the work flow and can find the status
+I have find the Bug Tracker .net and Mantis. In Bug tracker .net, only we can view the report but we can not report the issue to development team. I have find out the ""Track"" tool, in that also same like Bug tracker .Net tool like no option for ""Report an issue"". 
+In these three which one is good for defect logging/tracking and for reporting.
+Thanks in advance.",2
+5536707,04/04/2011 09:30:03,690847,04/04/2011 09:30:03,1,0,Jmeter software tester,"which box method is used in Jmeter tester(black box/ white box)?
+
+what are the future enhancement of this tester?
+
+give me methodes and techniques of JMeter tester?
+
+how it is better than any other software tester??
+
+",testing,powerpoint,jmeter,detailsview,,04/04/2011 23:52:32,not a real question,1,33,3,"Jmeter software tester which box method is used in Jmeter tester(black box/ white box)?
+
+what are the future enhancement of this tester?
+
+give me methodes and techniques of JMeter tester?
+
+how it is better than any other software tester??
+
+",4
+9168685,02/06/2012 23:05:03,169,08/02/2008 22:51:03,2307,71,Software for virtualised dev environment,"I want to set up my dev machine to run multiple VMs in parallel for development and testing purposes.
+
+Of course there are constraints:
+
+- Virtualisation software should have an API with support for basic operations:
+ - clone VM
+ - start/stop/reset
+- Must have configurable virtual hardware
+- Must be free or at least reasonably priced (<1000USD)
+
+Based on what I have read, Windows 8 will be shipping with most (if not all) of the features I need, but I would like a system I can use in the short term.
+
+*Note:* I understand the subject of this question has overlap with ServerFault, but I am specifically interested in a solution to run on *my* machine, *not* in a corporate environment.",testing,virtualization,development,,,05/04/2012 13:27:21,off topic,1,115,5,"Software for virtualised dev environment I want to set up my dev machine to run multiple VMs in parallel for development and testing purposes.
+
+Of course there are constraints:
+
+- Virtualisation software should have an API with support for basic operations:
+ - clone VM
+ - start/stop/reset
+- Must have configurable virtual hardware
+- Must be free or at least reasonably priced (<1000USD)
+
+Based on what I have read, Windows 8 will be shipping with most (if not all) of the features I need, but I would like a system I can use in the short term.
+
+*Note:* I understand the subject of this question has overlap with ServerFault, but I am specifically interested in a solution to run on *my* machine, *not* in a corporate environment.",3
+331191,12/01/2008 15:36:47,13842,09/16/2008 21:01:16,679,16,What interesting/novel/surprising uses have you found for automated tests?,"I am working on JUnitMax, a project to increase the utility of automated tests. I'm looking for novel, unexpected ways tests prove valuable. For example, I use tests in responding to defects--one at the system level that fails, reproducing the defect and another at the unit level so I know what code to change (perhaps derived using the <a href=""http://www.threeriversinstitute.org/HitEmHighHitEmLow.html"">Saff Squeeze</a>). What other uses have you found for tests?",testing,automated-tests,,,,04/05/2012 13:38:09,not constructive,1,69,9,"What interesting/novel/surprising uses have you found for automated tests? I am working on JUnitMax, a project to increase the utility of automated tests. I'm looking for novel, unexpected ways tests prove valuable. For example, I use tests in responding to defects--one at the system level that fails, reproducing the defect and another at the unit level so I know what code to change (perhaps derived using the <a href=""http://www.threeriversinstitute.org/HitEmHighHitEmLow.html"">Saff Squeeze</a>). What other uses have you found for tests?",2
+1914066,12/16/2009 11:27:14,214348,11/19/2009 05:48:57,124,0,can someone suggest the most active software testing forum ?,can someone suggest the most active software testing forum ?,testing,,,,,12/17/2009 01:21:18,off topic,1,10,10,can someone suggest the most active software testing forum ? can someone suggest the most active software testing forum ?,1
+9921867,03/29/2012 08:39:43,1299651,03/29/2012 02:13:56,1,1,"Grails 2.0.1: Spock test fail with ""No bean named 'grailsLinkGenerator' is defined"" where redirect is called","I recently upgraded from Grails 1.3.7 to Grails 2.0.1. The application runs normal, but I get into this trouble when cleaning up tests.
+
+All my tests are spock tests. And I updated spock from 0.5-groovy-1.7 to 0.6 when upgrading.
+
+All controller tests that will reach a line of redirect() fail in that line with the same error:
+
+    No bean named 'grailsLinkGenerator' is defined
+    org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'grailsLinkGenerator' is defined
+
+Any idea what cause this and how I could fix them?",testing,grails-2.0,spock,,,,open,0,84,16,"Grails 2.0.1: Spock test fail with ""No bean named 'grailsLinkGenerator' is defined"" where redirect is called I recently upgraded from Grails 1.3.7 to Grails 2.0.1. The application runs normal, but I get into this trouble when cleaning up tests.
+
+All my tests are spock tests. And I updated spock from 0.5-groovy-1.7 to 0.6 when upgrading.
+
+All controller tests that will reach a line of redirect() fail in that line with the same error:
+
+    No bean named 'grailsLinkGenerator' is defined
+    org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'grailsLinkGenerator' is defined
+
+Any idea what cause this and how I could fix them?",3
+145657,09/28/2008 11:02:13,12631,09/16/2008 15:02:20,279,41,How to compare two PDF files?,"I need to compare large count of PDF files for it optical content. Because the PDF files was created on different platforms and with different versions of the software there are structural differences. For example:
+
+  - the chunking of text can be different
+  - the write order can be different
+  - the position can be differ some pixels
+
+It should compare the content like a human people and not the internal structure. I want test for regressions between different versions of the PDF generator that we used. ",testing,pdf,compare,,,02/17/2012 19:46:29,not constructive,1,90,6,"How to compare two PDF files? I need to compare large count of PDF files for it optical content. Because the PDF files was created on different platforms and with different versions of the software there are structural differences. For example:
+
+  - the chunking of text can be different
+  - the write order can be different
+  - the position can be differ some pixels
+
+It should compare the content like a human people and not the internal structure. I want test for regressions between different versions of the PDF generator that we used. ",3
+8778016,01/08/2012 13:40:59,1088557,12/08/2011 20:54:34,1,0,junit test with Eclipse,"Hi i am trying to use junit and it does not work s well.
+
+Here is my code.
+
+    package safe;
+
+
+    import java.lang.reflect.*;
+    import java.util.Collections;
+    import java.util.Comparator;
+    import java.util.List;
+    import safe.SafetyException;
+
+    public class SafetyInspector {
+	
+	public static boolean isSafe(Class<?> clazz) throws SafetyException{
+		
+		
+		if (clazz.equals(Object.class)) return true;
+		if (clazz == null ) {
+			throw new SafetyException();
+		}
+		
+		Field fields[] = clazz.getDeclaredFields();
+		for(Field f: fields){
+			f.setAccessible(true);
+			int mod = f.getModifiers();
+			if (Modifier.isFinal(mod)){
+				continue;
+			}
+			else if (Modifier.isPrivate(mod)){
+				Class<?> typeArray[] = new Class<?>[1] ;
+				typeArray[0] = f.getType();
+				try {
+					Method mSet = clazz.getMethod(""set"" + f.getName().substring(0, 0).toUpperCase() + f.getName().substring(1),typeArray );
+					int modMet = mSet.getModifiers();
+					if(!Modifier.isPublic(modMet)) return false;
+					if(!mSet.getReturnType().equals(void.class)) return false;
+				} 
+				catch (SecurityException e) {
+					
+					throw new SafetyException();
+					
+				} 
+				catch (NoSuchMethodException e) {
+					
+					return false;
+				}
+				
+				try {
+					Class<?> typeArray2[] = new Class<?>[1] ;
+					Method mGet = clazz.getMethod(""get"" + f.getName().substring(0, 0).toUpperCase() + f.getName().substring(1),typeArray2);
+					int modMet2 = mGet.getModifiers();
+					if(!Modifier.isPublic(modMet2)) return false;
+
+					if(!mGet.getReturnType().equals(f.getType())) return false;
+				} 
+				catch (SecurityException e) {
+				
+					throw new SafetyException() ;
+				}
+				catch (NoSuchMethodException e) {
+				
+					return false;
+				}
+				
+				
+				
+				
+				
+			}
+			
+			
+			
+		}
+		
+		
+		return isSafe(clazz.getSuperclass());
+		
+	}
+	
+	public static void sort(List<Class<?>> classes) throws SafetyException{	
+	
+		for (int i = 1; i < classes.size(); i++) {
+            for (int j = 0; j < classes.size() - i; j++) {
+                if (compare(classes.get(j), classes.get(j + 1)) > 0) {
+                    swap(classes, j);
+                }
+            }
+        }		
+		
+	}
+	
+	public static void reset(Object object) throws SafetyException{
+		
+			Class c = object.getClass();
+			Field fields[] = c.getDeclaredFields();
+			for(Field f :fields ){
+				if (!isSafe(f.getClass()))
+				{
+					f.setAccessible(true);
+					try{
+						if(!f.getClass().isPrimitive()){
+										
+						}
+						else if(f.getClass().equals(boolean.class)){
+							f.setBoolean(object, false);
+						
+						}
+						else{
+							f.set(object, 0);
+						}
+					}
+						
+					catch(Exception e)
+					{
+						throw new SafetyException();
+					}
+					
+					
+				}
+			}
+			
+		
+		
+	}
+	
+
+
+
+	private static int compare(Class<?> o1, Class<?> o2) throws SafetyException {
+			
+			Field[] fields1 = o1.getDeclaredFields();
+			int count1 = 0; 
+			for (Field f : fields1){
+				if (isSafe(f.getClass())) count1++;
+						
+			}
+			Field[] fields2 = o2.getDeclaredFields();
+			int count2 = 0; 
+			for (Field f : fields2){
+				if (isSafe(f.getClass())) count2++;
+					
+			}
+			
+			if (count1 == count2)
+				return o1.getName().compareTo(o2.getName());
+			
+			else return count1- count2;
+
+		}
+	
+    private static void swap(List<Class<?>> list, int j) {
+    	Class<?> temp = list.get(j);
+        list.set(j, list.get(j+1));
+        list.set(j + 1, temp);
+    }
+
+	
+
+    };
+
+and here is the code junit test that they gave me.
+
+    package test;
+
+    import static org.junit.Assert.assertEquals;
+
+
+    import java.util.Collections;
+    import java.util.LinkedList;
+    import java.util.List;
+
+    import org.junit.Test;
+
+    import safe.SafetyException;
+    import safe.SafetyInspector;
+
+
+    public class SafetyInspectorTest {
+	@Test
+	public void testIsSafeEmployee() throws SafetyException {
+		assertEquals(false, SafetyInspector.isSafe(Employee.class));
+	}
+	
+	@Test
+	public void testResetEmployee() throws SafetyException {
+		Employee e = new Employee(123,3000);
+		SafetyInspector.reset(e);
+		assertEquals(0, e.id);
+		assertEquals(3000, e.getSalary());
+	}
+	
+	@Test
+	public void testSort() throws SafetyException {
+		List<Class<?>> sortedClasses = new LinkedList<Class<?>>();
+		sortedClasses.add(Employee.class);
+		List<Class<?>> classes = new LinkedList<Class<?>>(sortedClasses);
+		Collections.shuffle(classes);
+		SafetyInspector.sort(classes);
+		assertEquals(sortedClasses, classes);
+	}	
+    }
+
+
+and when I run the safetyInspectorTest as a junitTESTCLASS i get an initialization error. I work with eclipse if it helps and I put Junit as a library of the project.
+
+
+
+
+    
+
+
+
+
+
+
+",testing,junit,,,,,open,0,504,4,"junit test with Eclipse Hi i am trying to use junit and it does not work s well.
+
+Here is my code.
+
+    package safe;
+
+
+    import java.lang.reflect.*;
+    import java.util.Collections;
+    import java.util.Comparator;
+    import java.util.List;
+    import safe.SafetyException;
+
+    public class SafetyInspector {
+	
+	public static boolean isSafe(Class<?> clazz) throws SafetyException{
+		
+		
+		if (clazz.equals(Object.class)) return true;
+		if (clazz == null ) {
+			throw new SafetyException();
+		}
+		
+		Field fields[] = clazz.getDeclaredFields();
+		for(Field f: fields){
+			f.setAccessible(true);
+			int mod = f.getModifiers();
+			if (Modifier.isFinal(mod)){
+				continue;
+			}
+			else if (Modifier.isPrivate(mod)){
+				Class<?> typeArray[] = new Class<?>[1] ;
+				typeArray[0] = f.getType();
+				try {
+					Method mSet = clazz.getMethod(""set"" + f.getName().substring(0, 0).toUpperCase() + f.getName().substring(1),typeArray );
+					int modMet = mSet.getModifiers();
+					if(!Modifier.isPublic(modMet)) return false;
+					if(!mSet.getReturnType().equals(void.class)) return false;
+				} 
+				catch (SecurityException e) {
+					
+					throw new SafetyException();
+					
+				} 
+				catch (NoSuchMethodException e) {
+					
+					return false;
+				}
+				
+				try {
+					Class<?> typeArray2[] = new Class<?>[1] ;
+					Method mGet = clazz.getMethod(""get"" + f.getName().substring(0, 0).toUpperCase() + f.getName().substring(1),typeArray2);
+					int modMet2 = mGet.getModifiers();
+					if(!Modifier.isPublic(modMet2)) return false;
+
+					if(!mGet.getReturnType().equals(f.getType())) return false;
+				} 
+				catch (SecurityException e) {
+				
+					throw new SafetyException() ;
+				}
+				catch (NoSuchMethodException e) {
+				
+					return false;
+				}
+				
+				
+				
+				
+				
+			}
+			
+			
+			
+		}
+		
+		
+		return isSafe(clazz.getSuperclass());
+		
+	}
+	
+	public static void sort(List<Class<?>> classes) throws SafetyException{	
+	
+		for (int i = 1; i < classes.size(); i++) {
+            for (int j = 0; j < classes.size() - i; j++) {
+                if (compare(classes.get(j), classes.get(j + 1)) > 0) {
+                    swap(classes, j);
+                }
+            }
+        }		
+		
+	}
+	
+	public static void reset(Object object) throws SafetyException{
+		
+			Class c = object.getClass();
+			Field fields[] = c.getDeclaredFields();
+			for(Field f :fields ){
+				if (!isSafe(f.getClass()))
+				{
+					f.setAccessible(true);
+					try{
+						if(!f.getClass().isPrimitive()){
+										
+						}
+						else if(f.getClass().equals(boolean.class)){
+							f.setBoolean(object, false);
+						
+						}
+						else{
+							f.set(object, 0);
+						}
+					}
+						
+					catch(Exception e)
+					{
+						throw new SafetyException();
+					}
+					
+					
+				}
+			}
+			
+		
+		
+	}
+	
+
+
+
+	private static int compare(Class<?> o1, Class<?> o2) throws SafetyException {
+			
+			Field[] fields1 = o1.getDeclaredFields();
+			int count1 = 0; 
+			for (Field f : fields1){
+				if (isSafe(f.getClass())) count1++;
+						
+			}
+			Field[] fields2 = o2.getDeclaredFields();
+			int count2 = 0; 
+			for (Field f : fields2){
+				if (isSafe(f.getClass())) count2++;
+					
+			}
+			
+			if (count1 == count2)
+				return o1.getName().compareTo(o2.getName());
+			
+			else return count1- count2;
+
+		}
+	
+    private static void swap(List<Class<?>> list, int j) {
+    	Class<?> temp = list.get(j);
+        list.set(j, list.get(j+1));
+        list.set(j + 1, temp);
+    }
+
+	
+
+    };
+
+and here is the code junit test that they gave me.
+
+    package test;
+
+    import static org.junit.Assert.assertEquals;
+
+
+    import java.util.Collections;
+    import java.util.LinkedList;
+    import java.util.List;
+
+    import org.junit.Test;
+
+    import safe.SafetyException;
+    import safe.SafetyInspector;
+
+
+    public class SafetyInspectorTest {
+	@Test
+	public void testIsSafeEmployee() throws SafetyException {
+		assertEquals(false, SafetyInspector.isSafe(Employee.class));
+	}
+	
+	@Test
+	public void testResetEmployee() throws SafetyException {
+		Employee e = new Employee(123,3000);
+		SafetyInspector.reset(e);
+		assertEquals(0, e.id);
+		assertEquals(3000, e.getSalary());
+	}
+	
+	@Test
+	public void testSort() throws SafetyException {
+		List<Class<?>> sortedClasses = new LinkedList<Class<?>>();
+		sortedClasses.add(Employee.class);
+		List<Class<?>> classes = new LinkedList<Class<?>>(sortedClasses);
+		Collections.shuffle(classes);
+		SafetyInspector.sort(classes);
+		assertEquals(sortedClasses, classes);
+	}	
+    }
+
+
+and when I run the safetyInspectorTest as a junitTESTCLASS i get an initialization error. I work with eclipse if it helps and I put Junit as a library of the project.
+
+
+
+
+    
+
+
+
+
+
+
+",2
+7817540,10/19/2011 06:48:40,1000281,10/18/2011 02:33:36,1,0,alternative certification programs/exams for java programmers/developers,I would like to get proofs that I am a efficient and knowledgeable java programmer but the services/exams offered by oracle is just too expensive for me. are there any online test or exams that is recognized by companies to help me show my skills in java? thanks ,testing,proof,,,,10/19/2011 20:13:22,off topic,1,49,6,alternative certification programs/exams for java programmers/developers I would like to get proofs that I am a efficient and knowledgeable java programmer but the services/exams offered by oracle is just too expensive for me. are there any online test or exams that is recognized by companies to help me show my skills in java? thanks ,2

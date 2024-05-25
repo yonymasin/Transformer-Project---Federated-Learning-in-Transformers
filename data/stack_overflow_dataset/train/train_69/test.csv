@@ -1,0 +1,576 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+10973765,06/11/2012 01:38:54,1372693,05/03/2012 14:05:29,1,1,How to show powerpoint file on qt widget?,"I'm try to open a powerpoint file  by qt,and show the sliders 
+on a qt widget.Is there anyone know how to do this? Thanks. ",qt,,,,,06/11/2012 06:05:06,not a real question,1,26,8,"How to show powerpoint file on qt widget? I'm try to open a powerpoint file  by qt,and show the sliders 
+on a qt widget.Is there anyone know how to do this? Thanks. ",1
+3561618,08/24/2010 22:48:43,134569,07/07/2009 22:03:49,59,1,How to set accessible name of QActions contained in a QMenu,"I'm trying to set the accessible properties of a QMenu's sub items. I can set the accessible property of the parent menu using setAccessibleName() since it inherits QWidget. Unfortunately, the QActions that you add to the menu aren't widgets child classes, they inherit QObject directly. 
+
+Is there a way to set the menu items accessible name?
+
+Thanks",qt,qt4,,,,,open,0,56,11,"How to set accessible name of QActions contained in a QMenu I'm trying to set the accessible properties of a QMenu's sub items. I can set the accessible property of the parent menu using setAccessibleName() since it inherits QWidget. Unfortunately, the QActions that you add to the menu aren't widgets child classes, they inherit QObject directly. 
+
+Is there a way to set the menu items accessible name?
+
+Thanks",2
+7929957,10/28/2011 13:32:29,943899,09/14/2011 05:23:43,21,0,How to move the text inside a Qlabel?,"I need to move the text inside a label from right to left.
+
+
+Please help me.",qt,,,,,10/29/2011 12:05:15,not a real question,1,15,8,"How to move the text inside a Qlabel? I need to move the text inside a label from right to left.
+
+
+Please help me.",1
+11261111,06/29/2012 11:40:14,1490547,06/29/2012 07:18:34,1,0,attach a QDockWidget to top left of the parent widget,"I am faced with this problem and being a Qt noob am not able t fix it. Basically, I instantiated a QToolButton and parented it to QTreeWidget. The QTreeWidget is inside a vertical layout and when i try to change the position of the tool button inside the QTreeWidget using QTreeWidget.size() it gives me very unexpected and wrong results. Can anyone help me with this?
+
+Will deeply appreciate the help. Thanks!",qt,pyqt,,,,,open,0,70,10,"attach a QDockWidget to top left of the parent widget I am faced with this problem and being a Qt noob am not able t fix it. Basically, I instantiated a QToolButton and parented it to QTreeWidget. The QTreeWidget is inside a vertical layout and when i try to change the position of the tool button inside the QTreeWidget using QTreeWidget.size() it gives me very unexpected and wrong results. Can anyone help me with this?
+
+Will deeply appreciate the help. Thanks!",2
+9634616,03/09/2012 13:11:33,1259363,03/09/2012 13:08:51,1,1,Qt Svg file on graphicsview,"How to load SVG file on graphicsview.
+using menubar signal (.ui file).
+What code to be written in On_actionOpen_Triggered..??  
+Please help me out..!",qt,,,,,03/13/2012 20:07:21,not a real question,1,22,5,"Qt Svg file on graphicsview How to load SVG file on graphicsview.
+using menubar signal (.ui file).
+What code to be written in On_actionOpen_Triggered..??  
+Please help me out..!",1
+5350482,03/18/2011 10:09:40,659960,03/15/2011 04:51:41,6,0,i create the simple gui using qtcreator,             hai give me a simple step for insatll the qtcreator on ubunthu. give ur own follow steps.,qt,,,,,03/18/2011 11:11:45,not a real question,1,30,7,i create the simple gui using qtcreator              hai give me a simple step for insatll the qtcreator on ubunthu. give ur own follow steps.,1
+7979986,11/02/2011 12:04:43,969305,09/28/2011 14:37:55,153,10,Inclusion of Qt Mobility classes slows project build to a crawl,"We've just started using Qt Mobility in our project. I've built the Qt Mobility libraries we need and am trying to come up with a solid procedure to distribute them to other developers ( we'd rather not have to build the libs on each machine). I had some initial problems getting the Qt to acknowledge the existence of the Mobility APIs but got around that by including <QtSDK>/mkspecs/features/mobility.prf and mobilityconfig.prf in the distribution.
+
+The state I'm at now is that I have a procedure to get developers up and running with the parts of QtMobility that we need. They can build with no problems and everything behaves as it ought to except in one respect: our builds are MUCH slower (~10x slower for a build from scratch). The weird thing is that builds from identical source on Ubuntu with Qt 4.7.4 / GCC have not been affected - it's just the building on Windows with Qt 4.7.4 / MinGW 4.4 which is noticeably slower.
+
+Is anyone else experiencing massive slowdowns when including QtMobility and building with MinGW? Have I missed some important dependency and am causing Qt to be searching through a wider area than it should be? Give me your craziest ideas!
+
+Cheers,
+
+Sam",qt,mingw,qt-mobility,,,12/09/2011 15:16:28,too localized,1,201,11,"Inclusion of Qt Mobility classes slows project build to a crawl We've just started using Qt Mobility in our project. I've built the Qt Mobility libraries we need and am trying to come up with a solid procedure to distribute them to other developers ( we'd rather not have to build the libs on each machine). I had some initial problems getting the Qt to acknowledge the existence of the Mobility APIs but got around that by including <QtSDK>/mkspecs/features/mobility.prf and mobilityconfig.prf in the distribution.
+
+The state I'm at now is that I have a procedure to get developers up and running with the parts of QtMobility that we need. They can build with no problems and everything behaves as it ought to except in one respect: our builds are MUCH slower (~10x slower for a build from scratch). The weird thing is that builds from identical source on Ubuntu with Qt 4.7.4 / GCC have not been affected - it's just the building on Windows with Qt 4.7.4 / MinGW 4.4 which is noticeably slower.
+
+Is anyone else experiencing massive slowdowns when including QtMobility and building with MinGW? Have I missed some important dependency and am causing Qt to be searching through a wider area than it should be? Give me your craziest ideas!
+
+Cheers,
+
+Sam",3
+7429077,09/15/2011 10:01:07,946505,09/15/2011 09:51:56,1,0,Use QuickLook API with Qt4.6/C++,"I am working on Qt4.6 on mac os 10.5.8(Leopard), I want to merge QuickLook API with my qt code to view Previews via  QuickLook. I found APIS(http://ciaranwal.sh/2007/12/07/quick-look-apis) to use QuickLook but they are in Cocoa. How can i use it with my Qt Application to preview files.
+
+",qt,quicklook,,,,,open,0,48,5,"Use QuickLook API with Qt4.6/C++ I am working on Qt4.6 on mac os 10.5.8(Leopard), I want to merge QuickLook API with my qt code to view Previews via  QuickLook. I found APIS(http://ciaranwal.sh/2007/12/07/quick-look-apis) to use QuickLook but they are in Cocoa. How can i use it with my Qt Application to preview files.
+
+",2
+8477979,12/12/2011 17:05:14,336635,05/09/2010 13:09:39,95,0,What signal QListView sends when is about to hide,"In my code I do have to do manually:  
+
+ 
+
+       /*This works but there must be a better way*/
+        
+            listView->hide();//INSTEAD OF THIS I'D RATHER SEND A SIGNAL CAUSING    
+    LISTVIEW TO UPDATE -  
+     update(), viewport()->update, repaint() doesn't work, 
+
+  
+Basically I have a listView in which I'm displaying selection of files. After pressing ok this dialog closes. When I open this dialog again and pick another set of files the old ones are shown, and I have to hide and show listView in order to see newly selected files.  
+        ",qt,listview,,,,,open,0,139,9,"What signal QListView sends when is about to hide In my code I do have to do manually:  
+
+ 
+
+       /*This works but there must be a better way*/
+        
+            listView->hide();//INSTEAD OF THIS I'D RATHER SEND A SIGNAL CAUSING    
+    LISTVIEW TO UPDATE -  
+     update(), viewport()->update, repaint() doesn't work, 
+
+  
+Basically I have a listView in which I'm displaying selection of files. After pressing ok this dialog closes. When I open this dialog again and pick another set of files the old ones are shown, and I have to hide and show listView in order to see newly selected files.  
+        ",2
+9886151,03/27/2012 08:50:19,379732,06/30/2010 06:52:25,103,0,How to show an item with given index number in QComboBox?,"I have add some items in QComboBox and now I am trying to show the item on QComboBox  with given index. 
+
+For example,
+In my QComboBox  I have three items; firstItem, secondItem, thirdItem when I got an index number two, I want to see secondItem shown on QComboBox.
+
+I hope I was clear while asking the question.
+
+Thank you all ",qt,gui,qcombobox,,,,open,0,60,11,"How to show an item with given index number in QComboBox? I have add some items in QComboBox and now I am trying to show the item on QComboBox  with given index. 
+
+For example,
+In my QComboBox  I have three items; firstItem, secondItem, thirdItem when I got an index number two, I want to see secondItem shown on QComboBox.
+
+I hope I was clear while asking the question.
+
+Thank you all ",3
+7726506,10/11/2011 13:07:14,932510,09/07/2011 10:39:50,3,0,How do i install my app developed in Qt to mobile device,I ran the *.sis file after connecting the device but the app wouldnt run on my device. Please help me.,qt,application,mobile,nokia,,02/06/2012 09:17:19,not a real question,1,20,12,How do i install my app developed in Qt to mobile device I ran the *.sis file after connecting the device but the app wouldnt run on my device. Please help me.,4
+8749642,01/05/2012 20:53:47,1133050,01/05/2012 20:40:31,1,0,"QT: Could not decode ""filename.cpp"" with""System""-encoding","So i'm working on a personal project using QT 4.7. In the middle of one of my builds, ubuntu 11.10 decided to crash. This version of ubuntu has crashed on me a couple of times in the past, but never has it done so in the middle of a QT- build. 
+
+Upon rebooting my system and opening my project in Qt again, I have found that my ""mainwindow.cpp"" file cannot be decoded, and my mainwindow.ui file ""cannot be opened"". The rest of my files (main.cpp, and mainwindow.h) are perfectly fine. I also have a couple of other classes that are perfectly in tact. 
+
+I have tried all of the different encoding options that QT provides, but none of them work. All I get is a big wash of incomprehensible characters. I go to the command line and I type:
+
+    file -i mainwindow.cpp 
+and get
+    mainwindow.cpp: application/octet-stream; charset=binary
+I do the same with mainwindow.ui and I get the same thing
+    mainwindow.ui: application/octet-stream; charset=binary
+
+for more info, the normal .cpp files return this:
+    file -i main.cpp
+    main.cpp: text/x-c; charset=us-ascii
+
+I am assuming this means my files are in binary for some reason and I have no idea how to get them restored. Any help is greatly appreciated!",qt,encoding,decode,,,,open,0,217,6,"QT: Could not decode ""filename.cpp"" with""System""-encoding So i'm working on a personal project using QT 4.7. In the middle of one of my builds, ubuntu 11.10 decided to crash. This version of ubuntu has crashed on me a couple of times in the past, but never has it done so in the middle of a QT- build. 
+
+Upon rebooting my system and opening my project in Qt again, I have found that my ""mainwindow.cpp"" file cannot be decoded, and my mainwindow.ui file ""cannot be opened"". The rest of my files (main.cpp, and mainwindow.h) are perfectly fine. I also have a couple of other classes that are perfectly in tact. 
+
+I have tried all of the different encoding options that QT provides, but none of them work. All I get is a big wash of incomprehensible characters. I go to the command line and I type:
+
+    file -i mainwindow.cpp 
+and get
+    mainwindow.cpp: application/octet-stream; charset=binary
+I do the same with mainwindow.ui and I get the same thing
+    mainwindow.ui: application/octet-stream; charset=binary
+
+for more info, the normal .cpp files return this:
+    file -i main.cpp
+    main.cpp: text/x-c; charset=us-ascii
+
+I am assuming this means my files are in binary for some reason and I have no idea how to get them restored. Any help is greatly appreciated!",3
+4333185,12/02/2010 08:52:03,443259,09/09/2010 09:31:55,76,0,"In Qt, how to determine if the webpage's email or print icon has been clicked using QWebView ?",I am loading a page using QWebView. How can I found out if the webpage's email icon or the print icon has been clicked ? The pageAction() function doesn't return any such constant.,qt,email,printing,,,,open,0,33,18,"In Qt, how to determine if the webpage's email or print icon has been clicked using QWebView ? I am loading a page using QWebView. How can I found out if the webpage's email icon or the print icon has been clicked ? The pageAction() function doesn't return any such constant.",3
+2445866,03/15/2010 08:40:29,164683,08/28/2009 06:36:27,266,31,text is exceeding the listview bounds in Qt,"I need to customize the listview,I am placing an icon and a text at the center of the listview.
+
+If the text length is bigger then the list rectangle length.. the text is coming over the icon first letter of the string is not visible..
+
+How to avoid this situation? Is it possible to give marique effect for the string?
+
+Thanks in advance.
+",qt,qt4,listview,symbian,nokia,,open,0,60,8,"text is exceeding the listview bounds in Qt I need to customize the listview,I am placing an icon and a text at the center of the listview.
+
+If the text length is bigger then the list rectangle length.. the text is coming over the icon first letter of the string is not visible..
+
+How to avoid this situation? Is it possible to give marique effect for the string?
+
+Thanks in advance.
+",5
+4460872,12/16/2010 12:44:26,544765,12/16/2010 12:44:26,1,0,Qt - Using newline in QPushButton.setText() causes unexpected increase in memory usage,"I have several QPushButtons with very long text labels, so I used '\n' to make the text fit the buttons, but it caused my apps memory usage to go from 10M to 14M after just that one change.
+
+Destination architecture is ARM with 64 MB of RAM so such an increase is unacceptable for me. What is causing this and is there some workaround?",qt,qt4,,,,,open,0,63,12,"Qt - Using newline in QPushButton.setText() causes unexpected increase in memory usage I have several QPushButtons with very long text labels, so I used '\n' to make the text fit the buttons, but it caused my apps memory usage to go from 10M to 14M after just that one change.
+
+Destination architecture is ARM with 64 MB of RAM so such an increase is unacceptable for me. What is causing this and is there some workaround?",2
+1711104,11/10/2009 20:52:57,131981,07/01/2009 21:39:30,113,17,How do I determine if the item is selected or not in the paint() function of QItemDelegate?,"I am making a table using QItemDelegate.  I use the paint(..) method to draw delegated items to look the same when they go out of edit mode but I also need to draw the items differently when they are selected or not and the paint method is also called during those events. My question is how do I know when to draw which? 
+
+
+thank you.",qt,qitemdelegate,,,,,open,0,66,17,"How do I determine if the item is selected or not in the paint() function of QItemDelegate? I am making a table using QItemDelegate.  I use the paint(..) method to draw delegated items to look the same when they go out of edit mode but I also need to draw the items differently when they are selected or not and the paint method is also called during those events. My question is how do I know when to draw which? 
+
+
+thank you.",2
+2262189,02/14/2010 18:18:23,272990,02/14/2010 18:18:23,1,0,"QSize ( int width, int height )","how can i get dynamic size?
+
+const size its work "" static const QSize resultSize(470, 470); // Bildgröße"" but not dynamic
+",qt,qt4,,,,02/25/2011 12:05:49,not a real question,1,20,7,"QSize ( int width, int height ) how can i get dynamic size?
+
+const size its work "" static const QSize resultSize(470, 470); // Bildgröße"" but not dynamic
+",2
+7016779,08/10/2011 19:42:24,9611,09/15/2008 19:21:17,23220,765,Qt: layout direction changes with locale?,"It appears that starting with Qt 4.7 the layout direction of all GUI elements is now controlled by the locale. When my locale is a right-to-left one, all menus, dialogs, message boxes etc' appear from right to left. This is **horrible**.
+
+The default locale in my computer is Hebrew because it is convenient to see dates and numbers in the local format but I most certainly don't want all my GUI to now be Right-To-Left.
+
+Why did they do this all-encompassing change? Is there any way to turn it off globally?
+",qt,locale,right-to-left,regional,,,open,0,89,6,"Qt: layout direction changes with locale? It appears that starting with Qt 4.7 the layout direction of all GUI elements is now controlled by the locale. When my locale is a right-to-left one, all menus, dialogs, message boxes etc' appear from right to left. This is **horrible**.
+
+The default locale in my computer is Hebrew because it is convenient to see dates and numbers in the local format but I most certainly don't want all my GUI to now be Right-To-Left.
+
+Why did they do this all-encompassing change? Is there any way to turn it off globally?
+",4
+1038689,06/24/2009 14:22:15,124944,06/18/2009 08:31:08,7,7,What features in Qt do you like the most?,"As for me, functions like QString::section and QRegExp bring Qt closer to scripting languages and that is very appreciated.
+For example, given a CSV file, in order to find out necessary columns we process the header as follows:
+
+int AmountInd = (line.left(line.indexOf(""Amount"")).count(',');
+
+to get the index of that column. Then, for forthcoming lines extracting that column's substring is easy:
+
+QString AmountStr = (line.section(',', AmountInd, AmountInd);
+double Amount = AmountStr.toDouble();
+
+",qt,qt4,gui,regex,,06/24/2009 14:27:47,not a real question,1,64,9,"What features in Qt do you like the most? As for me, functions like QString::section and QRegExp bring Qt closer to scripting languages and that is very appreciated.
+For example, given a CSV file, in order to find out necessary columns we process the header as follows:
+
+int AmountInd = (line.left(line.indexOf(""Amount"")).count(',');
+
+to get the index of that column. Then, for forthcoming lines extracting that column's substring is easy:
+
+QString AmountStr = (line.section(',', AmountInd, AmountInd);
+double Amount = AmountStr.toDouble();
+
+",4
+5955222,05/10/2011 19:15:22,678993,03/27/2011 14:23:14,16,0,Qt Gestures Programming,I would like to know how can we define new gesture and new gesture recognizer classes like QPinchGesture and QPanGesture already defined in Qt as examples. I have gone through the samples and I am not able to understand the proper flow. Please provide sample code if possible.(Apart from classes already defined in Qt),qt,gesture-recognition,,,,05/10/2011 22:18:50,not a real question,1,54,3,Qt Gestures Programming I would like to know how can we define new gesture and new gesture recognizer classes like QPinchGesture and QPanGesture already defined in Qt as examples. I have gone through the samples and I am not able to understand the proper flow. Please provide sample code if possible.(Apart from classes already defined in Qt),2
+7544456,09/25/2011 08:29:51,869029,01/07/2010 01:31:47,18,0,How can I save the windows I have opened in Nokia?,How can i save the windows I have opened so when I Press back button I can show the exact prev. window.,qt,nokia,,,,09/25/2011 11:00:53,not a real question,1,22,11,How can I save the windows I have opened in Nokia? How can i save the windows I have opened so when I Press back button I can show the exact prev. window.,2
+2869620,05/19/2010 21:38:43,345529,05/19/2010 21:38:43,1,0,Qt QListView - context menus?,"I'm trying to add a context (right click) menu to a Qt QListView. I see in Qt 3.3 there is ""contextMenuRequested"" (which I could use) -  http://doc.trolltech.com/3.3/qlistview.html#contextMenuRequested. However, I can't see such a method in Qt4. Does anyone know how to add a context menu to a QListView?",qt,qlistview,,,,,open,0,49,5,"Qt QListView - context menus? I'm trying to add a context (right click) menu to a Qt QListView. I see in Qt 3.3 there is ""contextMenuRequested"" (which I could use) -  http://doc.trolltech.com/3.3/qlistview.html#contextMenuRequested. However, I can't see such a method in Qt4. Does anyone know how to add a context menu to a QListView?",2
+6643752,07/10/2011 21:16:15,580606,01/18/2011 21:51:49,239,14,Options for multi-platform single exe,"What are my ideal application framework/library options for building a multi-platform application with the following:
+
+ - FREE or at least super cheap (< $100)
+ - licensing for proprietary software distribution (not open-source)
+ - cross-platform for desktops (windows, mac osx, linux/x11)
+ - single .exe to deploy (static-linked library OK)
+ - solid following of users
+ - high performance
+
+Note the above requirements rule out QT because static linking is forbidden to be completely closed source under LGPL.
+
+Am I asking for too much?",qt,gui,cross-platform,gtk,,07/18/2011 03:46:02,not constructive,1,79,5,"Options for multi-platform single exe What are my ideal application framework/library options for building a multi-platform application with the following:
+
+ - FREE or at least super cheap (< $100)
+ - licensing for proprietary software distribution (not open-source)
+ - cross-platform for desktops (windows, mac osx, linux/x11)
+ - single .exe to deploy (static-linked library OK)
+ - solid following of users
+ - high performance
+
+Note the above requirements rule out QT because static linking is forbidden to be completely closed source under LGPL.
+
+Am I asking for too much?",4
+2823351,05/12/2010 22:54:22,115751,06/02/2009 03:26:38,515,15,How to automate detection of out of order tab navigation in Qt dialogs?,"Typically, a dialog wishes to have tab navigation proceed in an orderly fashion through a dialog that roughly corresponds to the order of reading a book.
+
+When new fields are added to a dialog by engineers on a team, the new widgets can often not be inserted in tab correct order.
+
+Can anyone think of a way to automate the detection of out of tab navigation order widgets within a dialog?",qt,dialog,navigation,tab-ordering,,,open,0,69,13,"How to automate detection of out of order tab navigation in Qt dialogs? Typically, a dialog wishes to have tab navigation proceed in an orderly fashion through a dialog that roughly corresponds to the order of reading a book.
+
+When new fields are added to a dialog by engineers on a team, the new widgets can often not be inserted in tab correct order.
+
+Can anyone think of a way to automate the detection of out of tab navigation order widgets within a dialog?",4
+8570894,12/20/2011 04:42:14,814984,06/25/2011 03:32:45,1,0,drawForeground on QGraphicsRectItem,"I need a way for a QGraphicsRectItem to draw on top of its children. I have a item that contains several children items. At a specific height I need to draw a line over the child items. Is there a way to implement a drawForeground in a QGraphicsItems similar to the drawForeground in QGraphicsScene?
+
+If at all possible I would prefer to not have to draw the line for each child item
+",qt,pyqt,qgraphicsitem,custom-painting,,,open,0,71,3,"drawForeground on QGraphicsRectItem I need a way for a QGraphicsRectItem to draw on top of its children. I have a item that contains several children items. At a specific height I need to draw a line over the child items. Is there a way to implement a drawForeground in a QGraphicsItems similar to the drawForeground in QGraphicsScene?
+
+If at all possible I would prefer to not have to draw the line for each child item
+",4
+9315543,02/16/2012 16:59:43,282918,02/28/2010 01:54:23,575,26,"Build Qt 4.7.4, on OSX Lion Machine, with MacOS10.5 SDK - 32 bit target","This is what I'm doing:
+
+    ./configure -platform macx-llvm -arch i386 -sdk /developer/SDKs/MacOSX10.5.sdk
+
+It succeeds
+
+    make
+
+Builds for a while and then errors:
+
+
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.tcc:185: error: invalid use of incomplete type ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/stringfwd.h:49: error: declaration of ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.tcc:185: error: invalid use of incomplete type ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/stringfwd.h:49: error: declaration of ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.tcc:185: error: invalid use of incomplete type ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/stringfwd.h:49: error: declaration of ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.tcc:185: error: invalid use of incomplete type ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/stringfwd.h:49: error: declaration of ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.h: In member function ‘_Alloc std::basic_string<_CharT, _Traits, _Alloc>::get_allocator() const [with _CharT = wchar_t, _Traits = std::char_traits<wchar_t>, _Alloc = std::allocator<wchar_t>]’:
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.h:472:   instantiated from ‘std::basic_string<_CharT, _Traits, _Alloc>::~basic_string() [with _CharT = wchar_t, _Traits = std::char_traits<wchar_t>, _Alloc = std::allocator<wchar_t>]’
+    ../../include/QtCore/../../src/corelib/tools/qstring.h:1056:   instantiated from here
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.h:1525: error: return type ‘class std::allocator<wchar_t>’ is incomplete
+    make[2]: *** [.pch/debug-shared/QtCore_debug.gch/c++] Error 1
+    make[1]: *** [debug-all] Error 2
+    make: *** [sub-corelib-make_default-ordered] Error 2
+
+
+Am I trying the impossible? Or perhaps I should use a different compiler? ",qt,,,,,,open,0,210,14,"Build Qt 4.7.4, on OSX Lion Machine, with MacOS10.5 SDK - 32 bit target This is what I'm doing:
+
+    ./configure -platform macx-llvm -arch i386 -sdk /developer/SDKs/MacOSX10.5.sdk
+
+It succeeds
+
+    make
+
+Builds for a while and then errors:
+
+
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.tcc:185: error: invalid use of incomplete type ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/stringfwd.h:49: error: declaration of ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.tcc:185: error: invalid use of incomplete type ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/stringfwd.h:49: error: declaration of ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.tcc:185: error: invalid use of incomplete type ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/stringfwd.h:49: error: declaration of ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.tcc:185: error: invalid use of incomplete type ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/stringfwd.h:49: error: declaration of ‘class std::allocator<wchar_t>’
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.h: In member function ‘_Alloc std::basic_string<_CharT, _Traits, _Alloc>::get_allocator() const [with _CharT = wchar_t, _Traits = std::char_traits<wchar_t>, _Alloc = std::allocator<wchar_t>]’:
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.h:472:   instantiated from ‘std::basic_string<_CharT, _Traits, _Alloc>::~basic_string() [with _CharT = wchar_t, _Traits = std::char_traits<wchar_t>, _Alloc = std::allocator<wchar_t>]’
+    ../../include/QtCore/../../src/corelib/tools/qstring.h:1056:   instantiated from here
+    /developer/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/basic_string.h:1525: error: return type ‘class std::allocator<wchar_t>’ is incomplete
+    make[2]: *** [.pch/debug-shared/QtCore_debug.gch/c++] Error 1
+    make[1]: *** [debug-all] Error 2
+    make: *** [sub-corelib-make_default-ordered] Error 2
+
+
+Am I trying the impossible? Or perhaps I should use a different compiler? ",1
+7176951,08/24/2011 14:15:42,148869,08/01/2009 06:52:54,717,22,How to get multiple key presses in single event?,"I am creating an application, where ""Left Arrow + Down Arrow"" press has different behavior ( It is not same as first left arrow and then left arrow ),  currently in keyPressEvent event I am getting them one by one in two separate calls. 
+
+Is there any way by which I can get multiple keypress in one keyboard event?",qt,,,,,,open,0,60,9,"How to get multiple key presses in single event? I am creating an application, where ""Left Arrow + Down Arrow"" press has different behavior ( It is not same as first left arrow and then left arrow ),  currently in keyPressEvent event I am getting them one by one in two separate calls. 
+
+Is there any way by which I can get multiple keypress in one keyboard event?",1
+10678815,05/21/2012 02:11:00,267416,02/05/2010 21:31:18,432,6,CMake recompilation,"Is cmake recompiles the whole project source code if I changesd a name of directory of source files?
+
+P.S. I tried that and unfortunately QtCreator re compiles the whole source code, is it specific to QtCreator?",qt,cmake,qt-creator,,,,open,0,35,2,"CMake recompilation Is cmake recompiles the whole project source code if I changesd a name of directory of source files?
+
+P.S. I tried that and unfortunately QtCreator re compiles the whole source code, is it specific to QtCreator?",3
+5680047,04/15/2011 17:03:37,147226,07/29/2009 15:47:05,50,5,QLabel sizehint is too small,"I have a QAbstractItemDelegate and in the paint method, I am trying to paint the text from a label. But the problem I am seeing is that the size hint of the QLabel is always too small for the text it contains. How can I fix this? For example:
+
+    QLabel *testlabel = new QLabel();
+    testlabel->setText(""This is some test text that doesnt fit:"");
+    testlabel->adjustSize();
+
+    QRect rect(testlabel->geometry());
+    Qt::Alignment alignFlags = testlabel->alignment();
+
+    painter->setFont(testlabel->font());
+    painter->drawRect(rect);
+    painter->drawText(rect, alignFlags, testlabel->text());
+
+And then it looks like:
+
+![Screenshot][1]
+
+Any ideas why the bounding rectangle is too small?
+Thanks
+Stephen
+
+
+
+  [1]: http://i.stack.imgur.com/w4cel.png",qt,qt4,,,,,open,0,113,5,"QLabel sizehint is too small I have a QAbstractItemDelegate and in the paint method, I am trying to paint the text from a label. But the problem I am seeing is that the size hint of the QLabel is always too small for the text it contains. How can I fix this? For example:
+
+    QLabel *testlabel = new QLabel();
+    testlabel->setText(""This is some test text that doesnt fit:"");
+    testlabel->adjustSize();
+
+    QRect rect(testlabel->geometry());
+    Qt::Alignment alignFlags = testlabel->alignment();
+
+    painter->setFont(testlabel->font());
+    painter->drawRect(rect);
+    painter->drawText(rect, alignFlags, testlabel->text());
+
+And then it looks like:
+
+![Screenshot][1]
+
+Any ideas why the bounding rectangle is too small?
+Thanks
+Stephen
+
+
+
+  [1]: http://i.stack.imgur.com/w4cel.png",2
+353082,12/09/2008 15:17:52,39339,11/20/2008 14:50:42,140,16,Getting data from a QTreeWidgetItem inherited class,"I have a class which inherits from QTreeWidgetItem and I intercept the click event.
+
+I need to get another object from inside MY QTreeWidgetItem when I click the tree row, how can I do that??",qt,kde,treewidget,linux,developing,,open,0,34,7,"Getting data from a QTreeWidgetItem inherited class I have a class which inherits from QTreeWidgetItem and I intercept the click event.
+
+I need to get another object from inside MY QTreeWidgetItem when I click the tree row, how can I do that??",5
+9174156,02/07/2012 09:54:56,1015967,10/27/2011 06:44:41,112,0,How to improve Qt + Microsoft compile ? (W7 ),"I have a QT (MSVC10 libs) + MSVC10 express + ms sdl 7.1.
+Now I spent a lot of time .... my old XP environment was faster (MSVC10 also). And my MINGW enviro. faster than the last. 
+Any Idea ? 
+Any trick or tip ?
+Thanks",qt,compiler,,,,,open,0,44,10,"How to improve Qt + Microsoft compile ? (W7 ) I have a QT (MSVC10 libs) + MSVC10 express + ms sdl 7.1.
+Now I spent a lot of time .... my old XP environment was faster (MSVC10 also). And my MINGW enviro. faster than the last. 
+Any Idea ? 
+Any trick or tip ?
+Thanks",2
+10548924,05/11/2012 09:37:14,907810,08/23/2011 13:38:35,11,0,starting with GTK+ on Ubuntu,"I am just beginning with GTK+.
+
+I have an Ubuntu 11.04. How should I install the GTK and which stable version?
+
+The GTK website offers packages for download. However there are 4 other supporting packages. I was wondering if I can us sudo apt-get or synaptic to download them. When I typed GTK on Synaptic there is a long list though.
+
+Please suggest a stable GTK version available for download using sudo apt-get.
+
+Also, what IDE should I use for development and simulation?
+
+I have been programming with Qt till now which had the QtCreator, QtDesigner for this purpose. My Application has to now be ported on GTK. I googled to find out no translator engine for Qt to GTK.
+
+Did any of you have this experience?
+
+Thanks",qt,ubuntu,gtk,apt-get,,05/14/2012 18:00:44,not constructive,1,121,5,"starting with GTK+ on Ubuntu I am just beginning with GTK+.
+
+I have an Ubuntu 11.04. How should I install the GTK and which stable version?
+
+The GTK website offers packages for download. However there are 4 other supporting packages. I was wondering if I can us sudo apt-get or synaptic to download them. When I typed GTK on Synaptic there is a long list though.
+
+Please suggest a stable GTK version available for download using sudo apt-get.
+
+Also, what IDE should I use for development and simulation?
+
+I have been programming with Qt till now which had the QtCreator, QtDesigner for this purpose. My Application has to now be ported on GTK. I googled to find out no translator engine for Qt to GTK.
+
+Did any of you have this experience?
+
+Thanks",4
+9864032,03/25/2012 21:01:59,1026102,11/02/2011 16:54:30,1,1,QtMobility Several QMediaplyers in one applications,"In my program I have to start 5 different videos simultaneously in different QGraphicsVideoitem and loop them. Everything works fine for one player, but if I create two or more then my application doesnt respond after 3 or 2 loops. How can I manage this problem?
+Is this problem from API or should I change the code?",qt,,,,,,open,0,56,6,"QtMobility Several QMediaplyers in one applications In my program I have to start 5 different videos simultaneously in different QGraphicsVideoitem and loop them. Everything works fine for one player, but if I create two or more then my application doesnt respond after 3 or 2 loops. How can I manage this problem?
+Is this problem from API or should I change the code?",1
+6757895,07/20/2011 06:34:41,853346,07/20/2011 06:34:41,1,0,error :template with c linkage error in qt," template<typename _Key, typename _Compare, typename _Alloc>
+    
+inline bool
+
+    operator<(const multiset<_Key, _Compare, _Alloc>& __x,
+	      const multiset<_Key, _Compare, _Alloc>& __y)
+
+    {
+ return __x._M_t < __y._M_t;
+
+ }",qt,,,,,07/20/2011 11:53:45,not a real question,1,39,8,"error :template with c linkage error in qt  template<typename _Key, typename _Compare, typename _Alloc>
+    
+inline bool
+
+    operator<(const multiset<_Key, _Compare, _Alloc>& __x,
+	      const multiset<_Key, _Compare, _Alloc>& __y)
+
+    {
+ return __x._M_t < __y._M_t;
+
+ }",1
+6280041,06/08/2011 14:09:19,699854,04/09/2011 10:34:38,77,6,Convert double array to QByteArray,"What is the best way to convert a double array (double*) to a QByteArray ? 
+
+I have the size of the array.
+I thought of converting each double to a QByteArray and then append all the arrays to a big QByteArray.
+
+For the other way, well maybe parse the data to many QByteArrays (one for each double) and convert them to double.
+
+I don't know which method to use for an efficient parsing ?
+
+Thanks
+
+",qt,serialization,bytearray,,,,open,0,71,5,"Convert double array to QByteArray What is the best way to convert a double array (double*) to a QByteArray ? 
+
+I have the size of the array.
+I thought of converting each double to a QByteArray and then append all the arrays to a big QByteArray.
+
+For the other way, well maybe parse the data to many QByteArrays (one for each double) and convert them to double.
+
+I don't know which method to use for an efficient parsing ?
+
+Thanks
+
+",3
+8657377,12/28/2011 14:52:46,1056003,11/20/2011 03:55:05,165,10,Plotting a graph with given double coordinates,"I receive an array of coordinates (`double` coordinates with `-infinity < x < +infinity` and `0 <= y <= 10`) and want to draw a polyline using those points. I want the graph to always begin on the left border of my image, and end at the right. The bottom border of my image always represents a 0 `y`-value, and the top border always a  10 `y`-value. The width and height of the image that is created are decided by the user at runtime.
+
+I want to realize this using Qt, and `QImage` in combination with `QPainter` seem to be my primary weapons of choice. The problem I am currently trying to solve is:
+
+**How to convert my coordinates to pixels in my image?**
+
+The `y`-values seem to be fairly simple, since I know the minimum and maximum of the graph beforehand, but I am struggling with the `x`-values. My approach so far is to find the min- and max-`x`-value and scale each point respectively.
+
+**Is there a more native approach?**
+
+Since one set of coordinates serves for several images with different widths and heights, I wondered whether a vector graphic (svg) may be a more suitable approach, but I couldn't find material on creating svg-files within Qt yet, just working with existing files. I would be looking for something comparable to the Windows  metafiles.
+
+**Is there a close match to metafiles in Qt?**",qt,graph,plot,vector-graphics,,,open,0,230,7,"Plotting a graph with given double coordinates I receive an array of coordinates (`double` coordinates with `-infinity < x < +infinity` and `0 <= y <= 10`) and want to draw a polyline using those points. I want the graph to always begin on the left border of my image, and end at the right. The bottom border of my image always represents a 0 `y`-value, and the top border always a  10 `y`-value. The width and height of the image that is created are decided by the user at runtime.
+
+I want to realize this using Qt, and `QImage` in combination with `QPainter` seem to be my primary weapons of choice. The problem I am currently trying to solve is:
+
+**How to convert my coordinates to pixels in my image?**
+
+The `y`-values seem to be fairly simple, since I know the minimum and maximum of the graph beforehand, but I am struggling with the `x`-values. My approach so far is to find the min- and max-`x`-value and scale each point respectively.
+
+**Is there a more native approach?**
+
+Since one set of coordinates serves for several images with different widths and heights, I wondered whether a vector graphic (svg) may be a more suitable approach, but I couldn't find material on creating svg-files within Qt yet, just working with existing files. I would be looking for something comparable to the Windows  metafiles.
+
+**Is there a close match to metafiles in Qt?**",4
+9599591,03/07/2012 10:19:54,1254356,03/07/2012 10:05:47,1,0,Query in calling Web Service Call,"I am new to Qt and i have tried following code for calling the web service but i am not able to get the reply.I have used following code
+
+    QNetworkAccessManager* manager = new QNetworkAccessManager;
+    QUrl url(""http://informer.gismeteo.ru/xml/88436_1.xml"");
+
+    connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(ReplyFinished(QNetworkReply*)));
+
+    manager->get(QNetworkRequest(url));
+
+    void ReplyFinished(QNetworkReply* reply)
+    {
+      QLabel* l1 = new QLabel(this);
+      l1->setVisible(true);
+      l1->setFixedSize(150,150);
+      if(reply->error()==QNetworkReply::NoError)
+      {
+         QString s = QString :: fromUtf8(reply->readAll());
+         s+= ""end"";
+         l1->setText(s);
+      }
+      else
+      {
+         l1->setText(""error"");
+      }
+    }
+
+The main problem is that it is not going into ReplyFinished().So can anyone suggest me what i am doing wrong?",qt,symbian,qnetworkaccessmanager,,,03/07/2012 18:20:18,not a real question,1,186,6,"Query in calling Web Service Call I am new to Qt and i have tried following code for calling the web service but i am not able to get the reply.I have used following code
+
+    QNetworkAccessManager* manager = new QNetworkAccessManager;
+    QUrl url(""http://informer.gismeteo.ru/xml/88436_1.xml"");
+
+    connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(ReplyFinished(QNetworkReply*)));
+
+    manager->get(QNetworkRequest(url));
+
+    void ReplyFinished(QNetworkReply* reply)
+    {
+      QLabel* l1 = new QLabel(this);
+      l1->setVisible(true);
+      l1->setFixedSize(150,150);
+      if(reply->error()==QNetworkReply::NoError)
+      {
+         QString s = QString :: fromUtf8(reply->readAll());
+         s+= ""end"";
+         l1->setText(s);
+      }
+      else
+      {
+         l1->setText(""error"");
+      }
+    }
+
+The main problem is that it is not going into ReplyFinished().So can anyone suggest me what i am doing wrong?",3
+3037239,06/14/2010 12:39:13,293138,10/08/2009 10:57:54,136,10,Qt training tips and tricks,"I have just arrived at new company and have never worked with Qt before, but my task is to learn Qt in 2 weeks, so i can give training to others. So i got 2 weeks to learn Qt and prepare for 2 weeks long Qt training.
+I am so dead!
+Please point out some common mistakes, tricks, styles so i can make that training a bit better!
+
+Thank you!",qt,,,,,11/28/2011 01:36:09,not constructive,1,67,5,"Qt training tips and tricks I have just arrived at new company and have never worked with Qt before, but my task is to learn Qt in 2 weeks, so i can give training to others. So i got 2 weeks to learn Qt and prepare for 2 weeks long Qt training.
+I am so dead!
+Please point out some common mistakes, tricks, styles so i can make that training a bit better!
+
+Thank you!",1
+10160232,04/15/2012 07:14:29,968243,09/28/2011 02:54:20,329,1,Qt Designer Shortcut to another tab,"I was wondering if it were possible to create my own shortcut key to a QTabWidget.  So if I put an ampersand infront of the letter, that means that ALT+'letter' will display that tab; however, I want it so that CTRL+'letter' will display that tab (not ALT).
+
+Is there an easy way to do this in Qt Designer?  If not, is there a simple way to do it in code?  QTabWidget doesn't seem to have any direct methods for setting shortcuts.",qt,qt4,qt-designer,,,,open,0,83,6,"Qt Designer Shortcut to another tab I was wondering if it were possible to create my own shortcut key to a QTabWidget.  So if I put an ampersand infront of the letter, that means that ALT+'letter' will display that tab; however, I want it so that CTRL+'letter' will display that tab (not ALT).
+
+Is there an easy way to do this in Qt Designer?  If not, is there a simple way to do it in code?  QTabWidget doesn't seem to have any direct methods for setting shortcuts.",3
+1519291,10/05/2009 10:28:56,5542,09/10/2008 11:35:17,6015,199,"Qt: Should I use Visual Studio, Qt Creator or something else?","I realize that there have been similar questions, but they seem to have been from when Qt Creator was still in beta, so the answer might have changed since then:
+
+We are going to start a project with a small amount of GUI that needs to work on Windows, OS X and Linux. So choosing Qt was a no-brainer, even though we have little experience with Qt.
+
+What is currently the best option for IDE?
+
+All the developers will be using Windows machines, so the IDE does not need to be cross-platform.
+
+We use Visual Studio for most things, but most of us are also comfortable with Eclipse.
+
+If we should use Visual Studio, which version works best? Should we use the Visual Studio add-in or the Visual Studio Integration? Does Visual Studio Integration work with VS2008?
+
+How are the refactoring tools in Qt Creator? I like Visual Assist when using Visual Studio for C++. Have anyone tried using that with Qt-projects?
+
+I realize that was a lot of different questions. Please answer even if you can't answer all of them.
+
+",qt,ide,visual-studio,qt-creator,,09/03/2011 23:24:32,not constructive,1,174,11,"Qt: Should I use Visual Studio, Qt Creator or something else? I realize that there have been similar questions, but they seem to have been from when Qt Creator was still in beta, so the answer might have changed since then:
+
+We are going to start a project with a small amount of GUI that needs to work on Windows, OS X and Linux. So choosing Qt was a no-brainer, even though we have little experience with Qt.
+
+What is currently the best option for IDE?
+
+All the developers will be using Windows machines, so the IDE does not need to be cross-platform.
+
+We use Visual Studio for most things, but most of us are also comfortable with Eclipse.
+
+If we should use Visual Studio, which version works best? Should we use the Visual Studio add-in or the Visual Studio Integration? Does Visual Studio Integration work with VS2008?
+
+How are the refactoring tools in Qt Creator? I like Visual Assist when using Visual Studio for C++. Have anyone tried using that with Qt-projects?
+
+I realize that was a lot of different questions. Please answer even if you can't answer all of them.
+
+",4
+1339121,08/27/2009 06:07:14,65387,02/12/2009 03:01:00,1444,83,How to reverse a QList?,"I see [qCopy][1], and [qCopybackward][2] but neither seems to let me make a copy in reverse order. `qCopybackward` only copies it in reverse order, but keeps the darn elements in the same order! All I want to do is return a copy of the list in reverse order. There **has** to be a function for that, right?
+
+
+  [1]: http://doc.trolltech.com/4.5/qtalgorithms.html#qCopy
+  [2]: http://doc.trolltech.com/4.5/qtalgorithms.html#qCopyBackward",qt,,,,,,open,0,63,5,"How to reverse a QList? I see [qCopy][1], and [qCopybackward][2] but neither seems to let me make a copy in reverse order. `qCopybackward` only copies it in reverse order, but keeps the darn elements in the same order! All I want to do is return a copy of the list in reverse order. There **has** to be a function for that, right?
+
+
+  [1]: http://doc.trolltech.com/4.5/qtalgorithms.html#qCopy
+  [2]: http://doc.trolltech.com/4.5/qtalgorithms.html#qCopyBackward",1

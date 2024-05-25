@@ -1,0 +1,1734 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+6587242,07/05/2011 18:34:32,706261,04/13/2011 14:46:32,30,0,How to swap textfield and it's label in drupal,I'm using drupal_render to render form. By default it renders label and then a textfield. How can I change this?,drupal,,,,,,open,0,20,9,How to swap textfield and it's label in drupal I'm using drupal_render to render form. By default it renders label and then a textfield. How can I change this?,1
+6555883,07/02/2011 08:12:16,395959,07/19/2010 15:27:21,746,14,How to get the field values of a content type in drupal,"How can I get the field value of a custom content type. I have created a custom content type using the CCK module. Is there any function to get the array of the fields of a particular content type.
+
+For example: I can get the profile details using content_profile_load() function. Is there any function similar to this.
+
+",drupal,content-type,cck,,,,open,0,56,12,"How to get the field values of a content type in drupal How can I get the field value of a custom content type. I have created a custom content type using the CCK module. Is there any function to get the array of the fields of a particular content type.
+
+For example: I can get the profile details using content_profile_load() function. Is there any function similar to this.
+
+",3
+2410506,03/09/2010 16:13:39,99816,05/02/2009 10:59:10,32,10,Drupal: Sharing content across Multisite,"I have 2 websites with similar content types.
+
+Let's say an event-content type with some cck fields in it.
+
+site1: events ( title, body, image )
+site2: events ( title, body, image, onsite1)
+
+by the extra field at site2-events i want to give the possibility to the user to post his event on the ( main ) site1. 
+
+Site1 and site2 are both on 1 database, although tables from site2 are prefixed.
+
+How can i add content made from site2 to site1?
+( Is there an easy way to do this without resorting to sql? I am using the nodeapi at this time to do some extra when an event is submitted. )",drupal,content,,,,,open,0,107,5,"Drupal: Sharing content across Multisite I have 2 websites with similar content types.
+
+Let's say an event-content type with some cck fields in it.
+
+site1: events ( title, body, image )
+site2: events ( title, body, image, onsite1)
+
+by the extra field at site2-events i want to give the possibility to the user to post his event on the ( main ) site1. 
+
+Site1 and site2 are both on 1 database, although tables from site2 are prefixed.
+
+How can i add content made from site2 to site1?
+( Is there an easy way to do this without resorting to sql? I am using the nodeapi at this time to do some extra when an event is submitted. )",2
+9890415,03/27/2012 13:25:29,913844,08/26/2011 10:08:08,1,0,In drupal how to redirect users from registration page to paypal,"Only users with a ‘Sign Up Code’ are allowed to sign up to the website.If the user provides a valid signup code users will be directed to a Sign Up Page were they can provide user information and PayPal processing is used to process the fee. On completion of payment an account is created.
+1) How we will redirect user to paypal?
+2) How we will check the payment is paid by user and now we can create the account?",drupal,drupal-6,paypal,drupal-modules,user-registration,03/27/2012 18:00:42,off topic,1,78,11,"In drupal how to redirect users from registration page to paypal Only users with a ‘Sign Up Code’ are allowed to sign up to the website.If the user provides a valid signup code users will be directed to a Sign Up Page were they can provide user information and PayPal processing is used to process the fee. On completion of payment an account is created.
+1) How we will redirect user to paypal?
+2) How we will check the payment is paid by user and now we can create the account?",5
+7920276,10/27/2011 18:04:41,938188,09/10/2011 12:59:12,32,6,drupal call ajax function,"> $delete_commant = l(t('X'), $url, array('attributes' =>
+> array('onclick' => 'return call_ajax(123)')));
+
+when i put alert in call_ajax function definition, it is alerted, so i proceed to write the ajax post method, but when i click the link page getting refresh,
+
+How to implement ajax in drupal
+
+    function call_ajax(str){alert(str);
+    	var url = ""post.php"";
+    	var params = ""lorem=ipsum&name=binny"";
+    	http.open(""POST"", url, true);
+    
+    	//Send the proper header information along with the request
+    	http.setRequestHeader(""Content-type"", ""application/x-www-form-urlencoded"");
+    	http.setRequestHeader(""Content-length"", params.length);
+    	http.setRequestHeader(""Connection"", ""close"");
+    
+    	http.onreadystatechange = function() {//Call a function when the state changes.
+    		if(http.readyState == 4 && http.status == 200) {
+    			alert(http.responseText);
+    		}
+    	}
+    	http.send(params);	
+         }",drupal,drupal-6,,,,,open,0,153,4,"drupal call ajax function > $delete_commant = l(t('X'), $url, array('attributes' =>
+> array('onclick' => 'return call_ajax(123)')));
+
+when i put alert in call_ajax function definition, it is alerted, so i proceed to write the ajax post method, but when i click the link page getting refresh,
+
+How to implement ajax in drupal
+
+    function call_ajax(str){alert(str);
+    	var url = ""post.php"";
+    	var params = ""lorem=ipsum&name=binny"";
+    	http.open(""POST"", url, true);
+    
+    	//Send the proper header information along with the request
+    	http.setRequestHeader(""Content-type"", ""application/x-www-form-urlencoded"");
+    	http.setRequestHeader(""Content-length"", params.length);
+    	http.setRequestHeader(""Connection"", ""close"");
+    
+    	http.onreadystatechange = function() {//Call a function when the state changes.
+    		if(http.readyState == 4 && http.status == 200) {
+    			alert(http.responseText);
+    		}
+    	}
+    	http.send(params);	
+         }",2
+11036073,06/14/2012 15:09:11,1394341,05/14/2012 17:44:33,6,0,Drupal View block's exposed filters don't work in node,"I have a view block with three exposed filters that work fine within the view, but not when called within a node. It worked fine when I first called it in the node, but has since stopped working. I've tried recreating the view block, recreating it in an entirely new view, and calling it from a new node. The exposed filters do absolutely nothing when clicked.
+
+I have AJAX enabled (when disabled, the exposed filters disappear).
+
+Any ideas why this isn't working?
+
+Drupal version: 7.12
+
+PHP code used in the node to call the view block:
+
+    <?php $block = block_load('views', 'content_list_primary4-view_block_list_ftactivities');
+    	print (drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))))); 
+    ?>
+
+
+Live Preview Query:
+
+    Query	
+    
+    SELECT field_data_field_list_order.field_list_order_value AS field_data_field_list_order_field_list_order_value, node.nid AS nid, 'content_list_primary4:view_block_list_ftactivities' AS view_name
+    FROM 
+    {node} node
+    INNER JOIN {field_data_field_audience} field_data_field_audience ON node.nid = field_data_field_audience.entity_id AND (field_data_field_audience.entity_type = 'node' AND field_data_field_audience.deleted = '0')
+    LEFT JOIN {field_data_field_list_order} field_data_field_list_order ON node.nid = field_data_field_list_order.entity_id AND (field_data_field_list_order.entity_type = 'node' AND field_data_field_list_order.deleted = '0')
+    WHERE (( (field_data_field_audience.field_audience_tid = '125') ))
+    ORDER BY field_data_field_list_order_field_list_order_value ASC
+    
+    Title	
+    Path	This display has no path.
+
+Exported View Code:
+
+    $view = new view;
+    $view->name = 'content_list_primary4';
+    $view->description = 'Blk of Washburn Award Winners, Walker Price Winners, Upcoming Events, Field Trip Activities';
+    $view->tag = 'default';
+    $view->base_table = 'node';
+    $view->human_name = 'Content List - Primary4';
+    $view->core = 7;
+    $view->api_version = '3.0';
+    $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+    
+    /* Display: Master */
+    $handler = $view->new_display('default', 'Master', 'default');
+    $handler->display->display_options['title'] = 'Events';
+    $handler->display->display_options['access']['type'] = 'perm';
+    $handler->display->display_options['cache']['type'] = 'none';
+    $handler->display->display_options['query']['type'] = 'views_query';
+    $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+    $handler->display->display_options['exposed_form']['type'] = 'basic';
+    $handler->display->display_options['pager']['type'] = 'none';
+    $handler->display->display_options['style_plugin'] = 'list';
+    $handler->display->display_options['style_options']['row_class'] = 'offering-preview_primary';
+    $handler->display->display_options['style_options']['wrapper_class'] = '';
+    $handler->display->display_options['row_plugin'] = 'node';
+    $handler->display->display_options['row_options']['links'] = 1;
+    $handler->display->display_options['row_options']['comments'] = 0;
+    /* Field: Content: Title */
+    $handler->display->display_options['fields']['title']['id'] = 'title';
+    $handler->display->display_options['fields']['title']['table'] = 'node';
+    $handler->display->display_options['fields']['title']['field'] = 'title';
+    $handler->display->display_options['fields']['title']['label'] = '';
+    $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+    $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['title']['element_default_classes'] = 0;
+    $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['title']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['title']['link_to_node'] = 0;
+    /* Field: Content: Show Subtitle */
+    $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+    $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
+    $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+    $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+    $handler->display->display_options['fields']['field_subtitle']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['external'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['word_boundary'] = 1;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['ellipsis'] = 1;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_subtitle']['element_default_classes'] = 1;
+    $handler->display->display_options['fields']['field_subtitle']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['field_api_classes'] = 0;
+    /* Field: Content: Snippet Description */
+    $handler->display->display_options['fields']['field_snippet_desc']['id'] = 'field_snippet_desc';
+    $handler->display->display_options['fields']['field_snippet_desc']['table'] = 'field_data_field_snippet_desc';
+    $handler->display->display_options['fields']['field_snippet_desc']['field'] = 'field_snippet_desc';
+    $handler->display->display_options['fields']['field_snippet_desc']['label'] = '';
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['external'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['word_boundary'] = 1;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['ellipsis'] = 1;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_snippet_desc']['element_default_classes'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['field_api_classes'] = 0;
+    /* Field: Content: Date(s) */
+    $handler->display->display_options['fields']['field_dates_singles']['id'] = 'field_dates_singles';
+    $handler->display->display_options['fields']['field_dates_singles']['table'] = 'field_data_field_dates_singles';
+    $handler->display->display_options['fields']['field_dates_singles']['field'] = 'field_dates_singles';
+    $handler->display->display_options['fields']['field_dates_singles']['label'] = '';
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['external'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['word_boundary'] = 1;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['ellipsis'] = 1;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_dates_singles']['element_default_classes'] = 1;
+    $handler->display->display_options['fields']['field_dates_singles']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['settings'] = array(
+      'format_type' => 'custom_full_pipe',
+      'fromto' => 'both',
+      'multiple_number' => '1',
+      'multiple_from' => '',
+      'multiple_to' => '',
+      'show_repeat_rule' => 'hide',
+    );
+    $handler->display->display_options['fields']['field_dates_singles']['group_rows'] = 1;
+    $handler->display->display_options['fields']['field_dates_singles']['delta_offset'] = '0';
+    $handler->display->display_options['fields']['field_dates_singles']['delta_reversed'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['delta_first_last'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['field_api_classes'] = 0;
+    /* Field: Content: Link */
+    $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+    $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+    $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+    $handler->display->display_options['fields']['view_node']['label'] = '';
+    $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['word_boundary'] = 1;
+    $handler->display->display_options['fields']['view_node']['alter']['ellipsis'] = 1;
+    $handler->display->display_options['fields']['view_node']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['view_node']['element_default_classes'] = 1;
+    $handler->display->display_options['fields']['view_node']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['view_node']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['view_node']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['view_node']['text'] = 'Learn more about this offering';
+    /* Sort criterion: Content: Order in List (field_list_order) */
+    $handler->display->display_options['sorts']['field_list_order_value']['id'] = 'field_list_order_value';
+    $handler->display->display_options['sorts']['field_list_order_value']['table'] = 'field_data_field_list_order';
+    $handler->display->display_options['sorts']['field_list_order_value']['field'] = 'field_list_order_value';
+    $handler->display->display_options['filter_groups']['groups'] = array(
+      0 => 'AND',
+      1 => 'AND',
+      2 => 'AND',
+    );
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'event_desc' => 'event_desc',
+    );
+    $handler->display->display_options['filters']['type']['group'] = 1;
+    $handler->display->display_options['filters']['type']['exposed'] = TRUE;
+    $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+    $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+    $handler->display->display_options['filters']['type']['expose']['use_operator'] = FALSE;
+    $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+    $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+    $handler->display->display_options['filters']['type']['expose']['required'] = FALSE;
+    $handler->display->display_options['filters']['type']['expose']['remember'] = FALSE;
+    $handler->display->display_options['filters']['type']['expose']['multiple'] = FALSE;
+    /* Filter criterion: Content: Audience (field_audience) */
+    $handler->display->display_options['filters']['field_audience_tid']['id'] = 'field_audience_tid';
+    $handler->display->display_options['filters']['field_audience_tid']['table'] = 'field_data_field_audience';
+    $handler->display->display_options['filters']['field_audience_tid']['field'] = 'field_audience_tid';
+    $handler->display->display_options['filters']['field_audience_tid']['type'] = 'select';
+    $handler->display->display_options['filters']['field_audience_tid']['vocabulary'] = 'audience';
+    
+    /* Display: Blk - List - Washburn Award Winners */
+    $handler = $view->new_display('block', 'Blk - List - Washburn Award Winners', 'view_block_list_washburn_award_winners');
+    $handler->display->display_options['defaults']['title'] = FALSE;
+    $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+    $handler->display->display_options['use_ajax'] = TRUE;
+    $handler->display->display_options['defaults']['sorts'] = FALSE;
+    /* Sort criterion: Content: Title */
+    $handler->display->display_options['sorts']['title']['id'] = 'title';
+    $handler->display->display_options['sorts']['title']['table'] = 'node';
+    $handler->display->display_options['sorts']['title']['field'] = 'title';
+    $handler->display->display_options['sorts']['title']['order'] = 'DESC';
+    $handler->display->display_options['filter_groups']['groups'] = array(
+      0 => 'AND',
+      1 => 'AND',
+      2 => 'OR',
+    );
+    $handler->display->display_options['defaults']['filters'] = FALSE;
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'washburn_award_winner' => 'washburn_award_winner',
+    );
+    $handler->display->display_options['filters']['type']['group'] = 1;
+    $handler->display->display_options['block_description'] = 'Content List of Washburn Award Winners';
+    
+    /* Display: Blk - List - Walker Prize Winners */
+    $handler = $view->new_display('block', 'Blk - List - Walker Prize Winners', 'view_block_list_walker_prize_winners');
+    $handler->display->display_options['defaults']['title'] = FALSE;
+    $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+    $handler->display->display_options['use_ajax'] = TRUE;
+    $handler->display->display_options['defaults']['sorts'] = FALSE;
+    /* Sort criterion: Content: Title */
+    $handler->display->display_options['sorts']['title']['id'] = 'title';
+    $handler->display->display_options['sorts']['title']['table'] = 'node';
+    $handler->display->display_options['sorts']['title']['field'] = 'title';
+    $handler->display->display_options['sorts']['title']['order'] = 'DESC';
+    $handler->display->display_options['filter_groups']['groups'] = array(
+      0 => 'AND',
+      1 => 'AND',
+      2 => 'OR',
+    );
+    $handler->display->display_options['defaults']['filters'] = FALSE;
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'walker_prize_winner' => 'walker_prize_winner',
+    );
+    $handler->display->display_options['filters']['type']['group'] = 1;
+    $handler->display->display_options['block_description'] = 'Content List of Walker Prize Winners';
+    
+    /* Display: Upcoming Events */
+    $handler = $view->new_display('block', 'Upcoming Events', 'view_block_list_upcoming_events');
+    $handler->display->display_options['defaults']['title'] = FALSE;
+    $handler->display->display_options['defaults']['query'] = FALSE;
+    $handler->display->display_options['query']['type'] = 'views_query';
+    $handler->display->display_options['query']['options']['distinct'] = TRUE;
+    $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+    $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+    $handler->display->display_options['style_plugin'] = 'list';
+    $handler->display->display_options['style_options']['row_class'] = 'offering-preview_primary';
+    $handler->display->display_options['style_options']['wrapper_class'] = '';
+    $handler->display->display_options['defaults']['style_options'] = FALSE;
+    $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+    $handler->display->display_options['row_plugin'] = 'node';
+    $handler->display->display_options['row_options']['links'] = 1;
+    $handler->display->display_options['row_options']['comments'] = 0;
+    $handler->display->display_options['defaults']['row_options'] = FALSE;
+    $handler->display->display_options['defaults']['sorts'] = FALSE;
+    /* Sort criterion: Content: Order in List (field_list_order) */
+    $handler->display->display_options['sorts']['field_list_order_value']['id'] = 'field_list_order_value';
+    $handler->display->display_options['sorts']['field_list_order_value']['table'] = 'field_data_field_list_order';
+    $handler->display->display_options['sorts']['field_list_order_value']['field'] = 'field_list_order_value';
+    $handler->display->display_options['sorts']['field_list_order_value']['order'] = 'DESC';
+    /* Sort criterion: Content: Post date */
+    $handler->display->display_options['sorts']['created']['id'] = 'created';
+    $handler->display->display_options['sorts']['created']['table'] = 'node';
+    $handler->display->display_options['sorts']['created']['field'] = 'created';
+    $handler->display->display_options['sorts']['created']['granularity'] = 'day';
+    $handler->display->display_options['filter_groups']['operator'] = 'OR';
+    $handler->display->display_options['filter_groups']['groups'] = array(
+      0 => 'AND',
+      1 => 'AND',
+    );
+    $handler->display->display_options['defaults']['filters'] = FALSE;
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'event_desc' => 'event_desc',
+    );
+    $handler->display->display_options['filters']['type']['group'] = 0;
+    /* Filter criterion: Content: Date(s) -  start date (field_dates_singles) */
+    $handler->display->display_options['filters']['field_dates_singles_value']['id'] = 'field_dates_singles_value';
+    $handler->display->display_options['filters']['field_dates_singles_value']['table'] = 'field_data_field_dates_singles';
+    $handler->display->display_options['filters']['field_dates_singles_value']['field'] = 'field_dates_singles_value';
+    $handler->display->display_options['filters']['field_dates_singles_value']['operator'] = 'between';
+    $handler->display->display_options['filters']['field_dates_singles_value']['group'] = 0;
+    $handler->display->display_options['filters']['field_dates_singles_value']['expose']['use_operator'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_singles_value']['expose']['required'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_singles_value']['expose']['remember'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_singles_value']['expose']['multiple'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_singles_value']['default_date'] = 'now';
+    $handler->display->display_options['filters']['field_dates_singles_value']['default_to_date'] = 'now +90 days';
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+    $handler->display->display_options['filters']['type_1']['table'] = 'node';
+    $handler->display->display_options['filters']['type_1']['field'] = 'type';
+    $handler->display->display_options['filters']['type_1']['value'] = array(
+      '3d_desc' => '3d_desc',
+      'exhibit_desc' => 'exhibit_desc',
+      'lp_desc' => 'lp_desc',
+      'omni_desc' => 'omni_desc',
+      'planet_desc' => 'planet_desc',
+    );
+    $handler->display->display_options['filters']['type_1']['group'] = 1;
+    $handler->display->display_options['filters']['type_1']['expose']['use_operator'] = FALSE;
+    $handler->display->display_options['filters']['type_1']['expose']['required'] = FALSE;
+    $handler->display->display_options['filters']['type_1']['expose']['remember'] = FALSE;
+    $handler->display->display_options['filters']['type_1']['expose']['multiple'] = FALSE;
+    /* Filter criterion: Content: Run Dates -  start date (field_dates_run) */
+    $handler->display->display_options['filters']['field_dates_run_value']['id'] = 'field_dates_run_value';
+    $handler->display->display_options['filters']['field_dates_run_value']['table'] = 'field_data_field_dates_run';
+    $handler->display->display_options['filters']['field_dates_run_value']['field'] = 'field_dates_run_value';
+    $handler->display->display_options['filters']['field_dates_run_value']['operator'] = 'between';
+    $handler->display->display_options['filters']['field_dates_run_value']['group'] = 1;
+    $handler->display->display_options['filters']['field_dates_run_value']['expose']['use_operator'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_run_value']['expose']['required'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_run_value']['expose']['remember'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_run_value']['expose']['multiple'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_run_value']['default_date'] = 'now';
+    $handler->display->display_options['filters']['field_dates_run_value']['default_to_date'] = 'now +90 days';
+    /* Filter criterion: Content: Has taxonomy terms (with depth) */
+    $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+    $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+    $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+    $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+      2175 => '2175',
+      109 => '109',
+      2176 => '2176',
+      110 => '110',
+      2177 => '2177',
+      112 => '112',
+      2179 => '2179',
+      2180 => '2180',
+      2167 => '2167',
+      2178 => '2178',
+      488 => '488',
+      2160 => '2160',
+    );
+    $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+    $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+    $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'event_types';
+    $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '1';
+    
+    /* Display: Field Trip Activities */
+    $handler = $view->new_display('block', 'Field Trip Activities', 'view_block_list_ftactivities');
+    $handler->display->display_options['defaults']['title'] = FALSE;
+    $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+    $handler->display->display_options['use_ajax'] = TRUE;
+    $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+    $handler->display->display_options['exposed_form']['type'] = 'basic';
+    $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+    $handler->display->display_options['exposed_form']['options']['autosubmit'] = 0;
+    $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = 1;
+    $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+    $handler->display->display_options['style_plugin'] = 'list';
+    $handler->display->display_options['defaults']['style_options'] = FALSE;
+    $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+    $handler->display->display_options['row_plugin'] = 'node';
+    $handler->display->display_options['row_options']['links'] = 1;
+    $handler->display->display_options['row_options']['comments'] = 0;
+    $handler->display->display_options['defaults']['row_options'] = FALSE;
+    $handler->display->display_options['defaults']['filters'] = FALSE;
+    /* Filter criterion: Content: Audience (field_audience) */
+    $handler->display->display_options['filters']['field_audience_tid']['id'] = 'field_audience_tid';
+    $handler->display->display_options['filters']['field_audience_tid']['table'] = 'field_data_field_audience';
+    $handler->display->display_options['filters']['field_audience_tid']['field'] = 'field_audience_tid';
+    $handler->display->display_options['filters']['field_audience_tid']['value'] = array(
+      125 => '125',
+    );
+    $handler->display->display_options['filters']['field_audience_tid']['group'] = 0;
+    $handler->display->display_options['filters']['field_audience_tid']['reduce_duplicates'] = 0;
+    $handler->display->display_options['filters']['field_audience_tid']['type'] = 'select';
+    $handler->display->display_options['filters']['field_audience_tid']['vocabulary'] = 'audience';
+
+",drupal,drupal-7,drupal-views,drupal-forms,drupal-ajax,06/14/2012 15:10:59,not a real question,1,2676,9,"Drupal View block's exposed filters don't work in node I have a view block with three exposed filters that work fine within the view, but not when called within a node. It worked fine when I first called it in the node, but has since stopped working. I've tried recreating the view block, recreating it in an entirely new view, and calling it from a new node. The exposed filters do absolutely nothing when clicked.
+
+I have AJAX enabled (when disabled, the exposed filters disappear).
+
+Any ideas why this isn't working?
+
+Drupal version: 7.12
+
+PHP code used in the node to call the view block:
+
+    <?php $block = block_load('views', 'content_list_primary4-view_block_list_ftactivities');
+    	print (drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))))); 
+    ?>
+
+
+Live Preview Query:
+
+    Query	
+    
+    SELECT field_data_field_list_order.field_list_order_value AS field_data_field_list_order_field_list_order_value, node.nid AS nid, 'content_list_primary4:view_block_list_ftactivities' AS view_name
+    FROM 
+    {node} node
+    INNER JOIN {field_data_field_audience} field_data_field_audience ON node.nid = field_data_field_audience.entity_id AND (field_data_field_audience.entity_type = 'node' AND field_data_field_audience.deleted = '0')
+    LEFT JOIN {field_data_field_list_order} field_data_field_list_order ON node.nid = field_data_field_list_order.entity_id AND (field_data_field_list_order.entity_type = 'node' AND field_data_field_list_order.deleted = '0')
+    WHERE (( (field_data_field_audience.field_audience_tid = '125') ))
+    ORDER BY field_data_field_list_order_field_list_order_value ASC
+    
+    Title	
+    Path	This display has no path.
+
+Exported View Code:
+
+    $view = new view;
+    $view->name = 'content_list_primary4';
+    $view->description = 'Blk of Washburn Award Winners, Walker Price Winners, Upcoming Events, Field Trip Activities';
+    $view->tag = 'default';
+    $view->base_table = 'node';
+    $view->human_name = 'Content List - Primary4';
+    $view->core = 7;
+    $view->api_version = '3.0';
+    $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+    
+    /* Display: Master */
+    $handler = $view->new_display('default', 'Master', 'default');
+    $handler->display->display_options['title'] = 'Events';
+    $handler->display->display_options['access']['type'] = 'perm';
+    $handler->display->display_options['cache']['type'] = 'none';
+    $handler->display->display_options['query']['type'] = 'views_query';
+    $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+    $handler->display->display_options['exposed_form']['type'] = 'basic';
+    $handler->display->display_options['pager']['type'] = 'none';
+    $handler->display->display_options['style_plugin'] = 'list';
+    $handler->display->display_options['style_options']['row_class'] = 'offering-preview_primary';
+    $handler->display->display_options['style_options']['wrapper_class'] = '';
+    $handler->display->display_options['row_plugin'] = 'node';
+    $handler->display->display_options['row_options']['links'] = 1;
+    $handler->display->display_options['row_options']['comments'] = 0;
+    /* Field: Content: Title */
+    $handler->display->display_options['fields']['title']['id'] = 'title';
+    $handler->display->display_options['fields']['title']['table'] = 'node';
+    $handler->display->display_options['fields']['title']['field'] = 'title';
+    $handler->display->display_options['fields']['title']['label'] = '';
+    $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+    $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['title']['element_default_classes'] = 0;
+    $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['title']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['title']['link_to_node'] = 0;
+    /* Field: Content: Show Subtitle */
+    $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+    $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
+    $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+    $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+    $handler->display->display_options['fields']['field_subtitle']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['external'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['word_boundary'] = 1;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['ellipsis'] = 1;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_subtitle']['element_default_classes'] = 1;
+    $handler->display->display_options['fields']['field_subtitle']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['field_subtitle']['field_api_classes'] = 0;
+    /* Field: Content: Snippet Description */
+    $handler->display->display_options['fields']['field_snippet_desc']['id'] = 'field_snippet_desc';
+    $handler->display->display_options['fields']['field_snippet_desc']['table'] = 'field_data_field_snippet_desc';
+    $handler->display->display_options['fields']['field_snippet_desc']['field'] = 'field_snippet_desc';
+    $handler->display->display_options['fields']['field_snippet_desc']['label'] = '';
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['external'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['word_boundary'] = 1;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['ellipsis'] = 1;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_snippet_desc']['element_default_classes'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['field_snippet_desc']['field_api_classes'] = 0;
+    /* Field: Content: Date(s) */
+    $handler->display->display_options['fields']['field_dates_singles']['id'] = 'field_dates_singles';
+    $handler->display->display_options['fields']['field_dates_singles']['table'] = 'field_data_field_dates_singles';
+    $handler->display->display_options['fields']['field_dates_singles']['field'] = 'field_dates_singles';
+    $handler->display->display_options['fields']['field_dates_singles']['label'] = '';
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['external'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['word_boundary'] = 1;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['ellipsis'] = 1;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_dates_singles']['element_default_classes'] = 1;
+    $handler->display->display_options['fields']['field_dates_singles']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['settings'] = array(
+      'format_type' => 'custom_full_pipe',
+      'fromto' => 'both',
+      'multiple_number' => '1',
+      'multiple_from' => '',
+      'multiple_to' => '',
+      'show_repeat_rule' => 'hide',
+    );
+    $handler->display->display_options['fields']['field_dates_singles']['group_rows'] = 1;
+    $handler->display->display_options['fields']['field_dates_singles']['delta_offset'] = '0';
+    $handler->display->display_options['fields']['field_dates_singles']['delta_reversed'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['delta_first_last'] = 0;
+    $handler->display->display_options['fields']['field_dates_singles']['field_api_classes'] = 0;
+    /* Field: Content: Link */
+    $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+    $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+    $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+    $handler->display->display_options['fields']['view_node']['label'] = '';
+    $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['make_link'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['absolute'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['replace_spaces'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['trim_whitespace'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['nl2br'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['word_boundary'] = 1;
+    $handler->display->display_options['fields']['view_node']['alter']['ellipsis'] = 1;
+    $handler->display->display_options['fields']['view_node']['alter']['strip_tags'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['trim'] = 0;
+    $handler->display->display_options['fields']['view_node']['alter']['html'] = 0;
+    $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['view_node']['element_default_classes'] = 1;
+    $handler->display->display_options['fields']['view_node']['hide_empty'] = 0;
+    $handler->display->display_options['fields']['view_node']['empty_zero'] = 0;
+    $handler->display->display_options['fields']['view_node']['hide_alter_empty'] = 0;
+    $handler->display->display_options['fields']['view_node']['text'] = 'Learn more about this offering';
+    /* Sort criterion: Content: Order in List (field_list_order) */
+    $handler->display->display_options['sorts']['field_list_order_value']['id'] = 'field_list_order_value';
+    $handler->display->display_options['sorts']['field_list_order_value']['table'] = 'field_data_field_list_order';
+    $handler->display->display_options['sorts']['field_list_order_value']['field'] = 'field_list_order_value';
+    $handler->display->display_options['filter_groups']['groups'] = array(
+      0 => 'AND',
+      1 => 'AND',
+      2 => 'AND',
+    );
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'event_desc' => 'event_desc',
+    );
+    $handler->display->display_options['filters']['type']['group'] = 1;
+    $handler->display->display_options['filters']['type']['exposed'] = TRUE;
+    $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+    $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+    $handler->display->display_options['filters']['type']['expose']['use_operator'] = FALSE;
+    $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+    $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+    $handler->display->display_options['filters']['type']['expose']['required'] = FALSE;
+    $handler->display->display_options['filters']['type']['expose']['remember'] = FALSE;
+    $handler->display->display_options['filters']['type']['expose']['multiple'] = FALSE;
+    /* Filter criterion: Content: Audience (field_audience) */
+    $handler->display->display_options['filters']['field_audience_tid']['id'] = 'field_audience_tid';
+    $handler->display->display_options['filters']['field_audience_tid']['table'] = 'field_data_field_audience';
+    $handler->display->display_options['filters']['field_audience_tid']['field'] = 'field_audience_tid';
+    $handler->display->display_options['filters']['field_audience_tid']['type'] = 'select';
+    $handler->display->display_options['filters']['field_audience_tid']['vocabulary'] = 'audience';
+    
+    /* Display: Blk - List - Washburn Award Winners */
+    $handler = $view->new_display('block', 'Blk - List - Washburn Award Winners', 'view_block_list_washburn_award_winners');
+    $handler->display->display_options['defaults']['title'] = FALSE;
+    $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+    $handler->display->display_options['use_ajax'] = TRUE;
+    $handler->display->display_options['defaults']['sorts'] = FALSE;
+    /* Sort criterion: Content: Title */
+    $handler->display->display_options['sorts']['title']['id'] = 'title';
+    $handler->display->display_options['sorts']['title']['table'] = 'node';
+    $handler->display->display_options['sorts']['title']['field'] = 'title';
+    $handler->display->display_options['sorts']['title']['order'] = 'DESC';
+    $handler->display->display_options['filter_groups']['groups'] = array(
+      0 => 'AND',
+      1 => 'AND',
+      2 => 'OR',
+    );
+    $handler->display->display_options['defaults']['filters'] = FALSE;
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'washburn_award_winner' => 'washburn_award_winner',
+    );
+    $handler->display->display_options['filters']['type']['group'] = 1;
+    $handler->display->display_options['block_description'] = 'Content List of Washburn Award Winners';
+    
+    /* Display: Blk - List - Walker Prize Winners */
+    $handler = $view->new_display('block', 'Blk - List - Walker Prize Winners', 'view_block_list_walker_prize_winners');
+    $handler->display->display_options['defaults']['title'] = FALSE;
+    $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+    $handler->display->display_options['use_ajax'] = TRUE;
+    $handler->display->display_options['defaults']['sorts'] = FALSE;
+    /* Sort criterion: Content: Title */
+    $handler->display->display_options['sorts']['title']['id'] = 'title';
+    $handler->display->display_options['sorts']['title']['table'] = 'node';
+    $handler->display->display_options['sorts']['title']['field'] = 'title';
+    $handler->display->display_options['sorts']['title']['order'] = 'DESC';
+    $handler->display->display_options['filter_groups']['groups'] = array(
+      0 => 'AND',
+      1 => 'AND',
+      2 => 'OR',
+    );
+    $handler->display->display_options['defaults']['filters'] = FALSE;
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'walker_prize_winner' => 'walker_prize_winner',
+    );
+    $handler->display->display_options['filters']['type']['group'] = 1;
+    $handler->display->display_options['block_description'] = 'Content List of Walker Prize Winners';
+    
+    /* Display: Upcoming Events */
+    $handler = $view->new_display('block', 'Upcoming Events', 'view_block_list_upcoming_events');
+    $handler->display->display_options['defaults']['title'] = FALSE;
+    $handler->display->display_options['defaults']['query'] = FALSE;
+    $handler->display->display_options['query']['type'] = 'views_query';
+    $handler->display->display_options['query']['options']['distinct'] = TRUE;
+    $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+    $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+    $handler->display->display_options['style_plugin'] = 'list';
+    $handler->display->display_options['style_options']['row_class'] = 'offering-preview_primary';
+    $handler->display->display_options['style_options']['wrapper_class'] = '';
+    $handler->display->display_options['defaults']['style_options'] = FALSE;
+    $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+    $handler->display->display_options['row_plugin'] = 'node';
+    $handler->display->display_options['row_options']['links'] = 1;
+    $handler->display->display_options['row_options']['comments'] = 0;
+    $handler->display->display_options['defaults']['row_options'] = FALSE;
+    $handler->display->display_options['defaults']['sorts'] = FALSE;
+    /* Sort criterion: Content: Order in List (field_list_order) */
+    $handler->display->display_options['sorts']['field_list_order_value']['id'] = 'field_list_order_value';
+    $handler->display->display_options['sorts']['field_list_order_value']['table'] = 'field_data_field_list_order';
+    $handler->display->display_options['sorts']['field_list_order_value']['field'] = 'field_list_order_value';
+    $handler->display->display_options['sorts']['field_list_order_value']['order'] = 'DESC';
+    /* Sort criterion: Content: Post date */
+    $handler->display->display_options['sorts']['created']['id'] = 'created';
+    $handler->display->display_options['sorts']['created']['table'] = 'node';
+    $handler->display->display_options['sorts']['created']['field'] = 'created';
+    $handler->display->display_options['sorts']['created']['granularity'] = 'day';
+    $handler->display->display_options['filter_groups']['operator'] = 'OR';
+    $handler->display->display_options['filter_groups']['groups'] = array(
+      0 => 'AND',
+      1 => 'AND',
+    );
+    $handler->display->display_options['defaults']['filters'] = FALSE;
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'event_desc' => 'event_desc',
+    );
+    $handler->display->display_options['filters']['type']['group'] = 0;
+    /* Filter criterion: Content: Date(s) -  start date (field_dates_singles) */
+    $handler->display->display_options['filters']['field_dates_singles_value']['id'] = 'field_dates_singles_value';
+    $handler->display->display_options['filters']['field_dates_singles_value']['table'] = 'field_data_field_dates_singles';
+    $handler->display->display_options['filters']['field_dates_singles_value']['field'] = 'field_dates_singles_value';
+    $handler->display->display_options['filters']['field_dates_singles_value']['operator'] = 'between';
+    $handler->display->display_options['filters']['field_dates_singles_value']['group'] = 0;
+    $handler->display->display_options['filters']['field_dates_singles_value']['expose']['use_operator'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_singles_value']['expose']['required'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_singles_value']['expose']['remember'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_singles_value']['expose']['multiple'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_singles_value']['default_date'] = 'now';
+    $handler->display->display_options['filters']['field_dates_singles_value']['default_to_date'] = 'now +90 days';
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+    $handler->display->display_options['filters']['type_1']['table'] = 'node';
+    $handler->display->display_options['filters']['type_1']['field'] = 'type';
+    $handler->display->display_options['filters']['type_1']['value'] = array(
+      '3d_desc' => '3d_desc',
+      'exhibit_desc' => 'exhibit_desc',
+      'lp_desc' => 'lp_desc',
+      'omni_desc' => 'omni_desc',
+      'planet_desc' => 'planet_desc',
+    );
+    $handler->display->display_options['filters']['type_1']['group'] = 1;
+    $handler->display->display_options['filters']['type_1']['expose']['use_operator'] = FALSE;
+    $handler->display->display_options['filters']['type_1']['expose']['required'] = FALSE;
+    $handler->display->display_options['filters']['type_1']['expose']['remember'] = FALSE;
+    $handler->display->display_options['filters']['type_1']['expose']['multiple'] = FALSE;
+    /* Filter criterion: Content: Run Dates -  start date (field_dates_run) */
+    $handler->display->display_options['filters']['field_dates_run_value']['id'] = 'field_dates_run_value';
+    $handler->display->display_options['filters']['field_dates_run_value']['table'] = 'field_data_field_dates_run';
+    $handler->display->display_options['filters']['field_dates_run_value']['field'] = 'field_dates_run_value';
+    $handler->display->display_options['filters']['field_dates_run_value']['operator'] = 'between';
+    $handler->display->display_options['filters']['field_dates_run_value']['group'] = 1;
+    $handler->display->display_options['filters']['field_dates_run_value']['expose']['use_operator'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_run_value']['expose']['required'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_run_value']['expose']['remember'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_run_value']['expose']['multiple'] = FALSE;
+    $handler->display->display_options['filters']['field_dates_run_value']['default_date'] = 'now';
+    $handler->display->display_options['filters']['field_dates_run_value']['default_to_date'] = 'now +90 days';
+    /* Filter criterion: Content: Has taxonomy terms (with depth) */
+    $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+    $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+    $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+    $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+      2175 => '2175',
+      109 => '109',
+      2176 => '2176',
+      110 => '110',
+      2177 => '2177',
+      112 => '112',
+      2179 => '2179',
+      2180 => '2180',
+      2167 => '2167',
+      2178 => '2178',
+      488 => '488',
+      2160 => '2160',
+    );
+    $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+    $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+    $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'event_types';
+    $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '1';
+    
+    /* Display: Field Trip Activities */
+    $handler = $view->new_display('block', 'Field Trip Activities', 'view_block_list_ftactivities');
+    $handler->display->display_options['defaults']['title'] = FALSE;
+    $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+    $handler->display->display_options['use_ajax'] = TRUE;
+    $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+    $handler->display->display_options['exposed_form']['type'] = 'basic';
+    $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+    $handler->display->display_options['exposed_form']['options']['autosubmit'] = 0;
+    $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = 1;
+    $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+    $handler->display->display_options['style_plugin'] = 'list';
+    $handler->display->display_options['defaults']['style_options'] = FALSE;
+    $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+    $handler->display->display_options['row_plugin'] = 'node';
+    $handler->display->display_options['row_options']['links'] = 1;
+    $handler->display->display_options['row_options']['comments'] = 0;
+    $handler->display->display_options['defaults']['row_options'] = FALSE;
+    $handler->display->display_options['defaults']['filters'] = FALSE;
+    /* Filter criterion: Content: Audience (field_audience) */
+    $handler->display->display_options['filters']['field_audience_tid']['id'] = 'field_audience_tid';
+    $handler->display->display_options['filters']['field_audience_tid']['table'] = 'field_data_field_audience';
+    $handler->display->display_options['filters']['field_audience_tid']['field'] = 'field_audience_tid';
+    $handler->display->display_options['filters']['field_audience_tid']['value'] = array(
+      125 => '125',
+    );
+    $handler->display->display_options['filters']['field_audience_tid']['group'] = 0;
+    $handler->display->display_options['filters']['field_audience_tid']['reduce_duplicates'] = 0;
+    $handler->display->display_options['filters']['field_audience_tid']['type'] = 'select';
+    $handler->display->display_options['filters']['field_audience_tid']['vocabulary'] = 'audience';
+
+",5
+7731740,10/11/2011 19:57:27,990232,10/11/2011 19:50:01,1,0,Firewall blocks outgoing connections from my site,"I have a website at my University. The site is built on Drupal 7, and runs quite well, however, the University firewall only allows incoming connections to the site. Thus, drupal update information, newsfeeds, anything outside the university firewall is inaccessible from my site. Is there a way I can set up drupal to connect to these site via my laptop or pc? Or a way to open a connection to these sites from outside? The newsfeeds aren't that big a deal, but I would very much like to be able to get update information to it.
+
+Any help would be most appreciated.",drupal,proxy,drupal-7,firewall,,10/12/2011 02:11:46,off topic,1,102,7,"Firewall blocks outgoing connections from my site I have a website at my University. The site is built on Drupal 7, and runs quite well, however, the University firewall only allows incoming connections to the site. Thus, drupal update information, newsfeeds, anything outside the university firewall is inaccessible from my site. Is there a way I can set up drupal to connect to these site via my laptop or pc? Or a way to open a connection to these sites from outside? The newsfeeds aren't that big a deal, but I would very much like to be able to get update information to it.
+
+Any help would be most appreciated.",4
+11470597,07/13/2012 12:32:56,377541,06/27/2010 19:35:31,90,1,Build a social networking site in Drupal 7?,"I'm using Drupal 7 for several months. It is great CMS but there is to many modules that do something but not the full thing. 
+
+I DECIDE TO ASK DRUPAL COMMUNITY TO HELP ME FIND GOOD DRUPAL MODULES that will allow me to build Social Network site like facebook, tweeter. Where people would can have friends, followers profiles etc.
+
+I search on net and find several modules that alow that functionality but don't know if they are good: 
+
+ - http://drupal.org/project/heartbeat
+ - http://drupal.org/project/statuses 
+ - https://drupal.org/project/fbsmp
+ - http://drupal.org/project/message 
+ - http://drupal.org/project/activity/
+ - http://drupal.org/project/user_relationships
+
+
+FINALY THE QUESTION: 
+
+Is there any good up to date moudule/modules that will allow me to build a social network site? If anyone has some experience with this please help. 
+
+",drupal,drupal-7,drupal-modules,social-networking,,07/13/2012 15:07:44,not a real question,1,122,8,"Build a social networking site in Drupal 7? I'm using Drupal 7 for several months. It is great CMS but there is to many modules that do something but not the full thing. 
+
+I DECIDE TO ASK DRUPAL COMMUNITY TO HELP ME FIND GOOD DRUPAL MODULES that will allow me to build Social Network site like facebook, tweeter. Where people would can have friends, followers profiles etc.
+
+I search on net and find several modules that alow that functionality but don't know if they are good: 
+
+ - http://drupal.org/project/heartbeat
+ - http://drupal.org/project/statuses 
+ - https://drupal.org/project/fbsmp
+ - http://drupal.org/project/message 
+ - http://drupal.org/project/activity/
+ - http://drupal.org/project/user_relationships
+
+
+FINALY THE QUESTION: 
+
+Is there any good up to date moudule/modules that will allow me to build a social network site? If anyone has some experience with this please help. 
+
+",4
+4624202,01/07/2011 09:41:57,328671,04/29/2010 08:45:25,1,1,how to include live chat application in drupal site?,"I need to work on drupal site which includes the live chat application for clarification online.So, i have used chatroom module in drupal but it is not working perfect as per my requirement., can anyone suggest me how to proceed with from this situation? If it is free module then it more preferable.
+
+
+Thank you in advance,
+
+Anil Kumar Panigrahi,
+ 
+http://www.anil2u.info ",drupal,application,chat,livechat,,10/13/2011 08:50:27,not a real question,1,60,9,"how to include live chat application in drupal site? I need to work on drupal site which includes the live chat application for clarification online.So, i have used chatroom module in drupal but it is not working perfect as per my requirement., can anyone suggest me how to proceed with from this situation? If it is free module then it more preferable.
+
+
+Thank you in advance,
+
+Anil Kumar Panigrahi,
+ 
+http://www.anil2u.info ",4
+2085684,01/18/2010 11:38:08,234632,12/18/2009 15:30:35,34,3,can drupal support wordpress themes for blog in php?,"is it possible to add wordpress theme in drupal? i'm new to drupal and i want to have a blog of mine,
+i'm doing it as a free and can't buy wordpress theme, so can i do everything in drupal as wordpress?",drupal,wordpress,website,,,,open,0,41,9,"can drupal support wordpress themes for blog in php? is it possible to add wordpress theme in drupal? i'm new to drupal and i want to have a blog of mine,
+i'm doing it as a free and can't buy wordpress theme, so can i do everything in drupal as wordpress?",3
+11175763,06/24/2012 07:31:46,313389,04/10/2010 08:52:41,1298,14,what are the frameworks of Drupal and Joomla?,"what php frameworks do Drupal and Joomla CMS use?
+
+Are the use a famous php frameworks or they have their own ones?",drupal,joomla,php-frameworks,,,06/24/2012 21:48:04,not a real question,1,21,8,"what are the frameworks of Drupal and Joomla? what php frameworks do Drupal and Joomla CMS use?
+
+Are the use a famous php frameworks or they have their own ones?",3
+8502703,12/14/2011 10:09:14,827189,07/03/2011 19:21:31,100,18,Paypal wants me to manually accept payment made through Ubercart?,"I have a PayPal Premier account, setup with IPN and with Ubercart's IPN return URL (since you can't leave it blank anymore)
+
+I'm using the ""PayPal Website Payments Standard"" in Ubercart. ""Complete Sale"" is selected so that it captures/authorizes the funds on payment submission.
+
+It appears that everything is running fine, however, I have found users not getting their digital product immediately as promised, and the transaction in my PayPal account is waiting for ""action"" (Accept or Deny)
+
+Did I miss a setting in PayPal?",drupal,paypal,ubercart,,,12/15/2011 22:25:35,off topic,1,82,10,"Paypal wants me to manually accept payment made through Ubercart? I have a PayPal Premier account, setup with IPN and with Ubercart's IPN return URL (since you can't leave it blank anymore)
+
+I'm using the ""PayPal Website Payments Standard"" in Ubercart. ""Complete Sale"" is selected so that it captures/authorizes the funds on payment submission.
+
+It appears that everything is running fine, however, I have found users not getting their digital product immediately as promised, and the transaction in my PayPal account is waiting for ""action"" (Accept or Deny)
+
+Did I miss a setting in PayPal?",3
+2086674,01/18/2010 14:35:04,87274,04/05/2009 12:08:55,33,3,Drupal: how to rate node filefields?,"I have a node type called 'movie' which may contain several subtitle files using the CCK FileField module. Now I'm dealing with FiveStars module, I need to rate each subtitle separately! so the user should rate for subtitles associated with a movie, not the movie itself.  
+confused enough! any idea?",drupal,cck,rating,,,01/18/2010 15:03:20,off topic,1,51,6,"Drupal: how to rate node filefields? I have a node type called 'movie' which may contain several subtitle files using the CCK FileField module. Now I'm dealing with FiveStars module, I need to rate each subtitle separately! so the user should rate for subtitles associated with a movie, not the movie itself.  
+confused enough! any idea?",3
+10489123,05/07/2012 21:05:04,1151944,01/16/2012 13:31:53,16,0,Why use/create Drupal 7 module?,"When do you actually use/create a module for Drupal 7? Because like i see it, you can pretty much use templates.",drupal,,,,,05/08/2012 19:09:44,off topic,1,21,5,"Why use/create Drupal 7 module? When do you actually use/create a module for Drupal 7? Because like i see it, you can pretty much use templates.",1
+7753015,10/13/2011 10:53:35,452421,09/20/2010 07:19:34,320,28,Login-in using SOAP in Drupal,"I would like to create a login page on my D6 website using a SOAP Webservice.
+I've got a SOAP server up and running on my website, but don't manage to create a login using the SOAP webservice.
+Any hints or advice?",drupal,soap,login,,,,open,0,40,5,"Login-in using SOAP in Drupal I would like to create a login page on my D6 website using a SOAP Webservice.
+I've got a SOAP server up and running on my website, but don't manage to create a login using the SOAP webservice.
+Any hints or advice?",3
+6328361,06/13/2011 08:52:46,777417,05/31/2011 09:38:48,1,0,Drupal OAuth service,"I need a module on drupal to make this service OAuth (FaceBook, Twitter, Google and Yahoo).
+
+can any one help me for one module to make this.
+
+  ",drupal,oauth,,,,06/14/2011 02:49:53,off topic,1,28,3,"Drupal OAuth service I need a module on drupal to make this service OAuth (FaceBook, Twitter, Google and Yahoo).
+
+can any one help me for one module to make this.
+
+  ",2
+2050810,01/12/2010 17:11:05,183002,10/02/2009 09:43:10,90,3,Drupal gallery with thumbnail made of first picture ,"I have drupal6,cck,views,imagecache.
+
+category_type **gallery** contain a CCK node reference to a category_type **images**
+and In this Images there is a cck file (image) field. 
+
+I know how to create a view which will display a list of galleries.
+BUT question is .. HOW can I display a list of galleries with a THUMBNAIL that is made of first image available inside that gallery. 
+And I don't want to add a extra field for gallery (in category_type) like ""preview pic""
+Just want then to be displayed by reference. 
+
+
+Example: 
+If I create a gallery with one picture inside... I want this picture to be my gallery thumbnail. 
+
+If I create a gallery without image, there will be no thumbnail ... or default ""notavailable"" picture. 
+
+IF I create a galleyr with many images / remove them /etc.. wanna make sure that first available picture in gallery is gonna be it's thumbnail. 
+
+
+please help ;)",drupal,gallery,views,image,thumbnail,,open,0,149,9,"Drupal gallery with thumbnail made of first picture  I have drupal6,cck,views,imagecache.
+
+category_type **gallery** contain a CCK node reference to a category_type **images**
+and In this Images there is a cck file (image) field. 
+
+I know how to create a view which will display a list of galleries.
+BUT question is .. HOW can I display a list of galleries with a THUMBNAIL that is made of first image available inside that gallery. 
+And I don't want to add a extra field for gallery (in category_type) like ""preview pic""
+Just want then to be displayed by reference. 
+
+
+Example: 
+If I create a gallery with one picture inside... I want this picture to be my gallery thumbnail. 
+
+If I create a gallery without image, there will be no thumbnail ... or default ""notavailable"" picture. 
+
+IF I create a galleyr with many images / remove them /etc.. wanna make sure that first available picture in gallery is gonna be it's thumbnail. 
+
+
+please help ;)",5
+10350268,04/27/2012 12:01:51,1361032,04/27/2012 11:51:48,1,0,Drupal IIS taking high Proccesor load,"We've developed a website in Drupal 7.12 (current version) on an apache server (CentOs).
+
+Now we are trying to move this site to a live server (IIS 7.5 with plesk) but the performance from the website is ... very bad. It takes 10-15 seconds to load a page.
+
+If we watch the processes it's the w3wp.exe taking a high amount processor load.
+
+if we check the processes with a watcher application we see that the website (the container) is trying to write to the root of the d:\. Maybe this is the problem but we cant seem to find the source of this write request.",drupal,iis,drupal-7,iis-7.5,plesk,04/30/2012 15:33:18,not a real question,1,102,6,"Drupal IIS taking high Proccesor load We've developed a website in Drupal 7.12 (current version) on an apache server (CentOs).
+
+Now we are trying to move this site to a live server (IIS 7.5 with plesk) but the performance from the website is ... very bad. It takes 10-15 seconds to load a page.
+
+If we watch the processes it's the w3wp.exe taking a high amount processor load.
+
+if we check the processes with a watcher application we see that the website (the container) is trying to write to the root of the d:\. Maybe this is the problem but we cant seem to find the source of this write request.",5
+7975957,11/02/2011 04:54:21,956622,06/26/2011 21:07:43,31,2,Drupal 7: Create a page filter with the last article of each category,"My articles are grouped in 6 categories (created by taxonomy)
+
+I need to output a view page that contains 6 sections each one displays in a block or div the latest article of the category it belongs.
+
+Maybe there is way I can do this with preprocess function in a loop logic
+
+I have a solution how to do that by creating 6 views for each category filtered desc and displaying the last article and a 7th view to hold all the 6 view blocks. The only thing I don't like it about this is if the editor enters a new category I need to manually update the view.
+
+Another solution that won't work due to a Views bug, is by creating a taxonomy view with a Representative node but it crashes due to an ajax error.
+
+Is there a way to display the 6 cell grid with the categories as I mentioned before?",drupal,,,,,,open,0,149,13,"Drupal 7: Create a page filter with the last article of each category My articles are grouped in 6 categories (created by taxonomy)
+
+I need to output a view page that contains 6 sections each one displays in a block or div the latest article of the category it belongs.
+
+Maybe there is way I can do this with preprocess function in a loop logic
+
+I have a solution how to do that by creating 6 views for each category filtered desc and displaying the last article and a 7th view to hold all the 6 view blocks. The only thing I don't like it about this is if the editor enters a new category I need to manually update the view.
+
+Another solution that won't work due to a Views bug, is by creating a taxonomy view with a Representative node but it crashes due to an ajax error.
+
+Is there a way to display the 6 cell grid with the categories as I mentioned before?",1
+4557683,12/29/2010 20:41:39,550265,12/19/2010 08:34:27,11,0,hook_schema() not getting uninstalled when module is disabled,"I have installed a schema for a custom module which creates the table when I enable the module. But when I disable the module, the table still remains. I am using the following for uninstall
+
+<code>function sample2_install(){
+    if(!db_table_exists('contact')){
+    drupal_install_schema('sample2');
+    }
+}
+function sample2_uninstall()
+{
+  drupal_uninstall_schema('sample2');
+}
+</code>
+
+why is the table not getting uninstalled?",drupal,,,,,,open,0,57,8,"hook_schema() not getting uninstalled when module is disabled I have installed a schema for a custom module which creates the table when I enable the module. But when I disable the module, the table still remains. I am using the following for uninstall
+
+<code>function sample2_install(){
+    if(!db_table_exists('contact')){
+    drupal_install_schema('sample2');
+    }
+}
+function sample2_uninstall()
+{
+  drupal_uninstall_schema('sample2');
+}
+</code>
+
+why is the table not getting uninstalled?",1
+11543215,07/18/2012 14:03:10,925927,09/02/2011 19:55:15,191,4,Insert into List(Text) Field,"I have a Drupal content type that includes Zip Codes (Postal Codes).  An unlimited number of Zip Codes is allowed, and the Zip Codes are defined in the ""**Allowed Values List**"" in the field definition.  I have many Zip Codes that I need to insert, and have them staged them and their relationship to nodes in a temporary database table.
+
+I do the following insert to both ""**field_data_field_zip_codes**"" and ""**field_revision_field_zip_codes**"", but I still do not see the values in the online Content.  
+
+Has someone done this type of thing before, and know what I am missing?  I looked at using ""Feeds"" but that module doesn't seem to support multi-value fields, just flat tables.
+
+    INSERT INTO  field_revision_field_wp_zip_codes
+    SELECT c.entity_type                     AS entity_type
+          ,'wp_content_component'            AS bundle
+          ,0                                 AS deleted
+          ,c.entity_id                       AS entity_id
+          ,c.entity_id                       AS revision_id
+          ,'und'                             AS language
+          ,(@rownum:=@rownum+1) - 1          AS delta
+          ,z.zip                             AS field_wp_zip_codes_value
+    FROM field_data_field_wp_cc_id c 
+      INNER JOIN cc_zips z 
+         ON z.cc = c.field_wp_cc_id_value,
+         (SELECT @rownum:=0) r
+     WHERE z.cc = '1039'
+     AND c.entity_id = '3699';
+",drupal,drupal-7,,,,07/18/2012 15:34:09,off topic,1,444,4,"Insert into List(Text) Field I have a Drupal content type that includes Zip Codes (Postal Codes).  An unlimited number of Zip Codes is allowed, and the Zip Codes are defined in the ""**Allowed Values List**"" in the field definition.  I have many Zip Codes that I need to insert, and have them staged them and their relationship to nodes in a temporary database table.
+
+I do the following insert to both ""**field_data_field_zip_codes**"" and ""**field_revision_field_zip_codes**"", but I still do not see the values in the online Content.  
+
+Has someone done this type of thing before, and know what I am missing?  I looked at using ""Feeds"" but that module doesn't seem to support multi-value fields, just flat tables.
+
+    INSERT INTO  field_revision_field_wp_zip_codes
+    SELECT c.entity_type                     AS entity_type
+          ,'wp_content_component'            AS bundle
+          ,0                                 AS deleted
+          ,c.entity_id                       AS entity_id
+          ,c.entity_id                       AS revision_id
+          ,'und'                             AS language
+          ,(@rownum:=@rownum+1) - 1          AS delta
+          ,z.zip                             AS field_wp_zip_codes_value
+    FROM field_data_field_wp_cc_id c 
+      INNER JOIN cc_zips z 
+         ON z.cc = c.field_wp_cc_id_value,
+         (SELECT @rownum:=0) r
+     WHERE z.cc = '1039'
+     AND c.entity_id = '3699';
+",2
+8206620,11/21/2011 02:24:25,1050039,11/16/2011 16:02:01,39,17,What are the differences between Drupal 7 and 8?,"What will be the main differences/enhancements between Drupal 7 and 8? 
+I've found some articles on Drupal 8 (Some by Dries himself) but haven't exactly found a consolidated list on the main enhancements of what's to come. Even though Drupal 8 hasn't been released, it should be released anytime soon since Drupal 7 is already on version 7.9. This should help newcomers to expert Drupal users and developers.",drupal,drupal-7,drupal-8,,,11/21/2011 05:21:57,off topic,1,68,9,"What are the differences between Drupal 7 and 8? What will be the main differences/enhancements between Drupal 7 and 8? 
+I've found some articles on Drupal 8 (Some by Dries himself) but haven't exactly found a consolidated list on the main enhancements of what's to come. Even though Drupal 8 hasn't been released, it should be released anytime soon since Drupal 7 is already on version 7.9. This should help newcomers to expert Drupal users and developers.",3
+4501113,12/21/2010 15:52:34,503198,11/10/2010 12:45:41,20,0,Drupal redirect / hide page content in form_alter,"In a certain case I do not wish to display a the content of a form when you get to the form_alter stage of my module. I have tried drupal_goto() and unset($form) . In the first case an error is thrown:
+
+    Warning: Got a packet bigger than 'max_allowed_packet' bytes query: INSERT INTO watchdog...
+
+&the second case the form is rendered. What else can I do?",drupal,drupal-6,,,,,open,0,67,8,"Drupal redirect / hide page content in form_alter In a certain case I do not wish to display a the content of a form when you get to the form_alter stage of my module. I have tried drupal_goto() and unset($form) . In the first case an error is thrown:
+
+    Warning: Got a packet bigger than 'max_allowed_packet' bytes query: INSERT INTO watchdog...
+
+&the second case the form is rendered. What else can I do?",2
+10032763,04/05/2012 16:54:24,1279210,03/19/2012 17:45:59,7,1,How to localize months and week days in Drupal 7 througn API?,"I have a Drupal 7 site and need to output a small calendar control written in PHP.
+It outputs a month name and table with days. Table has a header with week day names: 
+'Mon', 'Tue',...
+
+I need to output this with the current site language selected in Drupal. What's the best way of doing this?
+
+Thanks in advance.",drupal,localization,drupal-7,,,,open,0,56,12,"How to localize months and week days in Drupal 7 througn API? I have a Drupal 7 site and need to output a small calendar control written in PHP.
+It outputs a month name and table with days. Table has a header with week day names: 
+'Mon', 'Tue',...
+
+I need to output this with the current site language selected in Drupal. What's the best way of doing this?
+
+Thanks in advance.",3
+2241450,02/11/2010 00:36:26,5296,09/08/2008 22:13:27,1277,42,How can I control the placement of the comments region in Drupal 6?,"I'm developing a theme for a Drupal blog; the [mock-up][1] I created requires the post content, trackbacks block and comments block to appear in a central column, with borders running either side.  
+
+I've got the CSS and HTML working correctly, so that's not the issue here.  My problem is that the comments block as generated by Drupal is placed outside of the div defining the central column, and so it appears out-of-place.  As such, I think the solution is to stick a line into my theme saying ""print column block here"", but having scoured the Drupal docs I can't see any way to do so.  Based on the HTML output by Drupal, I'm not sure a CSS/HTML fix is going to work.
+
+I'm sure other Drupal theme developers must have come up against this before...
+
+  [1]: http://www.reelcritic.co.uk/post.htm",drupal,drupal-6,php,themes,,,open,0,141,13,"How can I control the placement of the comments region in Drupal 6? I'm developing a theme for a Drupal blog; the [mock-up][1] I created requires the post content, trackbacks block and comments block to appear in a central column, with borders running either side.  
+
+I've got the CSS and HTML working correctly, so that's not the issue here.  My problem is that the comments block as generated by Drupal is placed outside of the div defining the central column, and so it appears out-of-place.  As such, I think the solution is to stick a line into my theme saying ""print column block here"", but having scoured the Drupal docs I can't see any way to do so.  Based on the HTML output by Drupal, I'm not sure a CSS/HTML fix is going to work.
+
+I'm sure other Drupal theme developers must have come up against this before...
+
+  [1]: http://www.reelcritic.co.uk/post.htm",4
+5237776,03/08/2011 20:13:14,158837,08/18/2009 22:29:26,1,0,"In Drupal 7, I've created a subtheme, how do I assign that theme to a particular page?","So I have my parent theme and my subtheme both enabled in Drupal 7. 
+
+I've specified in the .info of the subtheme that the base theme is the parent theme.
+
+Once I create a page, how do I tell that page to inherit my subtheme?
+
+Any help would be greatly appreciated. ",drupal,themes,drupal-7,,,,open,0,50,17,"In Drupal 7, I've created a subtheme, how do I assign that theme to a particular page? So I have my parent theme and my subtheme both enabled in Drupal 7. 
+
+I've specified in the .info of the subtheme that the base theme is the parent theme.
+
+Once I create a page, how do I tell that page to inherit my subtheme?
+
+Any help would be greatly appreciated. ",3
+2506230,03/24/2010 08:28:45,257022,01/22/2010 19:15:38,221,9,Drupal: installing it in a subfolder...,"this is a question about drupal installation on server.
+
+I usually upload my drupal into a subfolder ""drupal"" and I ask my customers to check the website in such subfolders until when it is ready. Then I asl to change the default folder in Apache to the ""drupal"" one.
+
+Sometimes my customer cannot change Apache configuration, so I was wondering if I can use a php script to forward users from root folder to the drupal one, or I should move the website to the root folder (which I would prefer to avoid, because is time consuming).
+
+thanks",drupal,,,,,,open,0,95,6,"Drupal: installing it in a subfolder... this is a question about drupal installation on server.
+
+I usually upload my drupal into a subfolder ""drupal"" and I ask my customers to check the website in such subfolders until when it is ready. Then I asl to change the default folder in Apache to the ""drupal"" one.
+
+Sometimes my customer cannot change Apache configuration, so I was wondering if I can use a php script to forward users from root folder to the drupal one, or I should move the website to the root folder (which I would prefer to avoid, because is time consuming).
+
+thanks",1
+2867728,05/19/2010 17:02:57,170418,09/08/2009 20:20:54,155,7,Mysql query in drupal database - groupwise maximum with duplicate data,"I'm working on a mysql query in a Drupal database that pulls together users and two different cck content types. I know people ask for help with groupwise maximum queries all the time... I've done my best but I need help.
+
+**This is what I have so far:**
+
+    # the artists
+    SELECT
+        users.uid,
+        users.name AS username,
+        n1.title AS artist_name
+    FROM users
+    LEFT JOIN users_roles ur 
+        ON users.uid=ur.uid
+    INNER JOIN role r 
+        ON ur.rid=r.rid 
+        AND r.name='artist'
+    LEFT JOIN node n1 
+        ON n1.uid = users.uid 
+        AND n1.type = 'submission'
+    WHERE users.status = 1
+    ORDER BY users.name;
+
+This gives me data that looks like:
+
+    uid username artist_name
+    1   foo      Joe the Plumber
+    2   bar      Jane Doe
+    3   baz      The Tooth Fairy
+
+Also, I've got this query:
+
+    # artwork
+    SELECT
+        n.nid, 
+        n.uid,
+        a.field_order_value
+    FROM node n
+    LEFT JOIN content_type_artwork a 
+        ON n.nid = a.nid
+    WHERE n.type = 'artwork' 
+    ORDER BY n.uid, a.field_order_value;
+
+Which gives me data like this:
+
+    nid uid field_order_value
+    1   1   1
+    2   1   3
+    3   1   2
+    4   2   NULL
+    5   3   1
+    6   3   1
+
+Additional relevant info:
+
+ * `nid` is the primary key for an Artwork
+ * every Artist has one or more Artworks
+ * valid data for `field_order_value` is NULL, 1, 2, 3, or 4
+ * `field_order_value` is not necessarily unique per Artist - an Artist could have 4 Artworks all with `field_order_value` = 1.
+
+What I want is the row with the minimum `field_order_value` from my second query joined with the artist information from the first query. In cases where the `field_order_value` is not valuable information (either because the Artist has used duplicate values among their Artworks or left that field NULL), I would like the row with the minimum `nid` from the second query.
+",drupal,mysql,query,,,,open,0,494,11,"Mysql query in drupal database - groupwise maximum with duplicate data I'm working on a mysql query in a Drupal database that pulls together users and two different cck content types. I know people ask for help with groupwise maximum queries all the time... I've done my best but I need help.
+
+**This is what I have so far:**
+
+    # the artists
+    SELECT
+        users.uid,
+        users.name AS username,
+        n1.title AS artist_name
+    FROM users
+    LEFT JOIN users_roles ur 
+        ON users.uid=ur.uid
+    INNER JOIN role r 
+        ON ur.rid=r.rid 
+        AND r.name='artist'
+    LEFT JOIN node n1 
+        ON n1.uid = users.uid 
+        AND n1.type = 'submission'
+    WHERE users.status = 1
+    ORDER BY users.name;
+
+This gives me data that looks like:
+
+    uid username artist_name
+    1   foo      Joe the Plumber
+    2   bar      Jane Doe
+    3   baz      The Tooth Fairy
+
+Also, I've got this query:
+
+    # artwork
+    SELECT
+        n.nid, 
+        n.uid,
+        a.field_order_value
+    FROM node n
+    LEFT JOIN content_type_artwork a 
+        ON n.nid = a.nid
+    WHERE n.type = 'artwork' 
+    ORDER BY n.uid, a.field_order_value;
+
+Which gives me data like this:
+
+    nid uid field_order_value
+    1   1   1
+    2   1   3
+    3   1   2
+    4   2   NULL
+    5   3   1
+    6   3   1
+
+Additional relevant info:
+
+ * `nid` is the primary key for an Artwork
+ * every Artist has one or more Artworks
+ * valid data for `field_order_value` is NULL, 1, 2, 3, or 4
+ * `field_order_value` is not necessarily unique per Artist - an Artist could have 4 Artworks all with `field_order_value` = 1.
+
+What I want is the row with the minimum `field_order_value` from my second query joined with the artist information from the first query. In cases where the `field_order_value` is not valuable information (either because the Artist has used duplicate values among their Artworks or left that field NULL), I would like the row with the minimum `nid` from the second query.
+",3
+9508670,03/01/2012 00:00:17,606696,02/07/2011 15:43:35,154,9,"Given $form, how to programmatically generate its corresponding $form_state?","The media_mover module contains this function, which builds a form and pre-populates default values:
+
+    (step 1) $form = media_mover_api_configuration_base_form($configuration); 
+
+It also contains this function, which submits the form:
+
+    (step 2) function media_mover_api_add_config_form_submit($form, &$form_state)
+
+I would like to programmatically generate the form (step 1), and then programmatically submit the form (step 2).  Step (1) is no problem.  I am able to generate $form.  
+
+But for step (2), I need $form_state.  Given $form, is there a way to programmatically generate its corresponding $form_state?
+
+Thanks very much
+
+
+",drupal,drupal-6,drupal-fapi,,,03/01/2012 16:47:29,off topic,1,92,9,"Given $form, how to programmatically generate its corresponding $form_state? The media_mover module contains this function, which builds a form and pre-populates default values:
+
+    (step 1) $form = media_mover_api_configuration_base_form($configuration); 
+
+It also contains this function, which submits the form:
+
+    (step 2) function media_mover_api_add_config_form_submit($form, &$form_state)
+
+I would like to programmatically generate the form (step 1), and then programmatically submit the form (step 2).  Step (1) is no problem.  I am able to generate $form.  
+
+But for step (2), I need $form_state.  Given $form, is there a way to programmatically generate its corresponding $form_state?
+
+Thanks very much
+
+
+",3
+10189304,04/17/2012 10:16:35,1151944,01/16/2012 13:31:53,14,0,Drupal Or not to Drupal?,"I'm creating a diving community, but I don't know if I should use Drupal or to create my community all on myself in PHP. I've never used Drupal and so I don't know how to create a theme. I have a design already. I also need a forum.
+
+Any ideas?
+
+Kind Regards",drupal,,,,,04/18/2012 13:14:21,off topic,1,50,5,"Drupal Or not to Drupal? I'm creating a diving community, but I don't know if I should use Drupal or to create my community all on myself in PHP. I've never used Drupal and so I don't know how to create a theme. I have a design already. I also need a forum.
+
+Any ideas?
+
+Kind Regards",1
+10891360,06/05/2012 03:57:35,1402479,05/18/2012 04:23:49,3,2,Drupal : Upgrading a portal from D6 to D7..!,"I have a portal in Drupal 6 & now I want to upgrade that to Drupal 7.
+
+Can you please what can be the checklist for it or is there any following steps you have seen on somebody's blog ?
+
+I would appreciate your help. ",drupal,drupal-6,drupal-7,,,06/06/2012 14:11:19,not constructive,1,44,9,"Drupal : Upgrading a portal from D6 to D7..! I have a portal in Drupal 6 & now I want to upgrade that to Drupal 7.
+
+Can you please what can be the checklist for it or is there any following steps you have seen on somebody's blog ?
+
+I would appreciate your help. ",3
+6983164,08/08/2011 13:52:48,883649,08/08/2011 08:24:45,3,0,How to create ordered list of results in views using drupal 6?,"Hi I would like to know how to create an oredered list of results in my block views in Drupal 6.
+
+I think this is something basic, but I am unable to resolve this problem.
+
+Ok, I have 5 results(article titles; for simplicity I will be using just field Title) something like this:
+
+    NATO is killing people in Libya
+    Who are the ""rebels""?
+    NATO War Against Libya's Khaddafi is meeting resistance
+    People of Libya will not surrender
+    Libya's rebel army chief killed - video
+
+And I want it to look like this:
+
+    1. NATO is killing people in Libya
+    2. Who are the ""rebels""?
+    3. NATO War Against Libya's Khaddafi is meeting resistance
+    4. People of Libya will not surrender
+    5. Libya's rebel army chief killed - video
+
+How to achieve this orederd list?
+
+Thanks in advance.
+",drupal,views,,,,,open,0,162,12,"How to create ordered list of results in views using drupal 6? Hi I would like to know how to create an oredered list of results in my block views in Drupal 6.
+
+I think this is something basic, but I am unable to resolve this problem.
+
+Ok, I have 5 results(article titles; for simplicity I will be using just field Title) something like this:
+
+    NATO is killing people in Libya
+    Who are the ""rebels""?
+    NATO War Against Libya's Khaddafi is meeting resistance
+    People of Libya will not surrender
+    Libya's rebel army chief killed - video
+
+And I want it to look like this:
+
+    1. NATO is killing people in Libya
+    2. Who are the ""rebels""?
+    3. NATO War Against Libya's Khaddafi is meeting resistance
+    4. People of Libya will not surrender
+    5. Libya's rebel army chief killed - video
+
+How to achieve this orederd list?
+
+Thanks in advance.
+",2
+7139463,08/21/2011 16:16:58,904719,08/21/2011 16:16:58,1,0,Drupal Views argument menu - sending %! to end of URL,"Im building this project managment site that uses organic groups to sort and name projects. 
+
+So I have example.com/project/6. Where 6 is the organic groups views argument of %1. 
+
+What I am stuggling to do is be able to create links that send for example 'gallery' to the end of the URL so example.com/project/6/gallery would show the gallery for project 6.
+
+I am trying to create global menu that where all items would work for any organic group you may be witin. So if you were within project 5 (http://example.com/project/5) the same menu item of 'Gallery' could be used to display example.com/project/5/gallery.
+
+I have tried with all normal drupal menu methods but %1 is never accepted. 
+The main thing is to be able to send for example '/gallery' to the end of the URL, or use any other method to achieve this.
+
+Hope I have explained myself correctly.
+
+Many thanks in advance.
+
+
+
+
+
+",drupal,view,arguments,links,,,open,0,148,11,"Drupal Views argument menu - sending %! to end of URL Im building this project managment site that uses organic groups to sort and name projects. 
+
+So I have example.com/project/6. Where 6 is the organic groups views argument of %1. 
+
+What I am stuggling to do is be able to create links that send for example 'gallery' to the end of the URL so example.com/project/6/gallery would show the gallery for project 6.
+
+I am trying to create global menu that where all items would work for any organic group you may be witin. So if you were within project 5 (http://example.com/project/5) the same menu item of 'Gallery' could be used to display example.com/project/5/gallery.
+
+I have tried with all normal drupal menu methods but %1 is never accepted. 
+The main thing is to be able to send for example '/gallery' to the end of the URL, or use any other method to achieve this.
+
+Hope I have explained myself correctly.
+
+Many thanks in advance.
+
+
+
+
+
+",4
+6487226,06/26/2011 22:47:02,295084,03/16/2010 19:40:25,171,2,How to speedup webpage loading? main issue is queue time,"Ive been working on my personal page which is based on drupal.
+Ive noticed that it takes forever to load 6-10 seconds often.
+
+After looking into some performance tests, specifically from site-perf.com, 
+I noticed that the load time is 80% queue time.
+![enter image description here][1]
+
+It seems lightbox2 and my theme contribute about 2/3 of the queue time.
+
+Any suggestions on speeding this up?
+
+  [1]: http://i.stack.imgur.com/z4rAx.jpg",drupal,optimization,website,,,,open,0,63,10,"How to speedup webpage loading? main issue is queue time Ive been working on my personal page which is based on drupal.
+Ive noticed that it takes forever to load 6-10 seconds often.
+
+After looking into some performance tests, specifically from site-perf.com, 
+I noticed that the load time is 80% queue time.
+![enter image description here][1]
+
+It seems lightbox2 and my theme contribute about 2/3 of the queue time.
+
+Any suggestions on speeding this up?
+
+  [1]: http://i.stack.imgur.com/z4rAx.jpg",3
+2614054,04/10/2010 16:23:42,295153,03/16/2010 20:55:58,29,3,Hide blocks on page not found in Drupal,"I have google adsense in a block, and I want to hide the block when the page is a ""Page not found"" error page. It's against adsenses TOS to show their ads on error pages.
+I figure there must be a way to write a php script to put in the Page specific visibility options. Does anyone know how to do this?",drupal,,,,,,open,0,61,8,"Hide blocks on page not found in Drupal I have google adsense in a block, and I want to hide the block when the page is a ""Page not found"" error page. It's against adsenses TOS to show their ads on error pages.
+I figure there must be a way to write a php script to put in the Page specific visibility options. Does anyone know how to do this?",1
+9277940,02/14/2012 13:44:36,1209126,02/14/2012 13:05:05,1,0,"In drupal webform, %email_values are sent ,but I want field key values instead of it","for example,in the following component,
+
+---------------------------------------
+label:select your favorite area
+
+1|asia
+2|africa
+
+---------------------------------------
+
+I have e-mail notification as following.
+
+""select your favorite area"" ""asia""
+
+but i want to have just like following format.
+
+""select your favorite area"" ""1
+
+Please show me How can i do it.
+
+
+
+",drupal,webforms,,,,,open,0,36,15,"In drupal webform, %email_values are sent ,but I want field key values instead of it for example,in the following component,
+
+---------------------------------------
+label:select your favorite area
+
+1|asia
+2|africa
+
+---------------------------------------
+
+I have e-mail notification as following.
+
+""select your favorite area"" ""asia""
+
+but i want to have just like following format.
+
+""select your favorite area"" ""1
+
+Please show me How can i do it.
+
+
+
+",2
+2280500,02/17/2010 12:25:52,255274,01/20/2010 21:27:10,13,0,"Multiple environment (Development, Staging, Live) in Drupal","I am sure the title is pretty much the question but I would like to explain a bit more...
+
+Drupal is great CMS but it lacks of process to achieve multiple environment (Development -> Staging -> Live)
+
+Why I need multiple environment?<br/>
+For example, the site live and you want to add functionality or amend something, of course u do not want to directly go live so what you will do is actually go development first then if u have client then u go to staging then at last go to live...
+
+So is there any way to achieve this?<br/>
+Of course the option to overwrite the database completely is not an answer that I look for... Since the live has user-data in the database...
+
+
+Thanks",drupal,php,staging,live,,,open,0,120,7,"Multiple environment (Development, Staging, Live) in Drupal I am sure the title is pretty much the question but I would like to explain a bit more...
+
+Drupal is great CMS but it lacks of process to achieve multiple environment (Development -> Staging -> Live)
+
+Why I need multiple environment?<br/>
+For example, the site live and you want to add functionality or amend something, of course u do not want to directly go live so what you will do is actually go development first then if u have client then u go to staging then at last go to live...
+
+So is there any way to achieve this?<br/>
+Of course the option to overwrite the database completely is not an answer that I look for... Since the live has user-data in the database...
+
+
+Thanks",4
+6238549,06/04/2011 18:17:07,693642,04/05/2011 19:33:28,68,1,Show all nested links in Drupal 7,"I have a nested Drupal menu:
+
+    -Fruits
+    ---Apples
+    ---Oranges
+    ---Lemons
+    -Cars
+    ---Big car
+    ---Small car
+    ---Fucked up car
+    -Whatever
+
+What code do I add to my `page.tpl.php` file so it will display it in `<ul><li>` format? The code I use only displays the 1st level links:
+
+    <?php if ($main_menu): ?>
+    <div id=""mainmenu""> <?php print theme( 'links__system_main_menu', array('links' => $main_menu) ); ?> </div>
+    <?php endif; ?>
+
+",drupal,menu,nested,,,06/26/2011 19:29:10,off topic,1,100,7,"Show all nested links in Drupal 7 I have a nested Drupal menu:
+
+    -Fruits
+    ---Apples
+    ---Oranges
+    ---Lemons
+    -Cars
+    ---Big car
+    ---Small car
+    ---Fucked up car
+    -Whatever
+
+What code do I add to my `page.tpl.php` file so it will display it in `<ul><li>` format? The code I use only displays the 1st level links:
+
+    <?php if ($main_menu): ?>
+    <div id=""mainmenu""> <?php print theme( 'links__system_main_menu', array('links' => $main_menu) ); ?> </div>
+    <?php endif; ?>
+
+",3
+11400859,07/09/2012 18:23:15,1299272,03/28/2012 21:09:38,1,0,Drupal Multisite with shared users -- not shared permissions,"I'm supporting a Drupal multisite installation --
+
+We have a shared user table; however, due to the multiple sites having different modules activated, the Permissions aren't shared.
+
+Can anyone suggest a module (or set of modules) or other solution where I can easily manage user permissions across multiple domains, where those permissions could change from site to site?
+
+",drupal,,,,,07/10/2012 18:32:37,off topic,1,56,9,"Drupal Multisite with shared users -- not shared permissions I'm supporting a Drupal multisite installation --
+
+We have a shared user table; however, due to the multiple sites having different modules activated, the Permissions aren't shared.
+
+Can anyone suggest a module (or set of modules) or other solution where I can easily manage user permissions across multiple domains, where those permissions could change from site to site?
+
+",1
+1536484,10/08/2009 08:44:40,87921,04/07/2009 03:37:56,114,1,Drupal 6 forms and optgroup arrays,"The following array is produced by converting xml to a array (using xml2array). However its not the exactly the right format I need for a optgroup in a Drupal 6 form.
+
+    Array (
+       [root] => Array ([attr] => Array ([id] => 1) [label] => Array ([value] => My Root)
+          [node] => Array (
+             [0] => Array ([attr] => Array([id] => 2) [label] => Array([value] => Category 1)
+                [node] => Array(
+                   [0] => Array ([attr] => Array ([id] => 14) [label] => Array ([value] => Sub-Category 1))
+                   [1] => Array([attr] => Array ([id] => 15) [label] => Array([value] => Sub-Category2))
+
+
+I think the array has too be reduced to this format with id values intact for the sub-categories. However I can't confirm this with the drupal docs as they don't mention anything about assigning values to a option.
+
+    Array (
+       [Category 1] => Array(
+          [14] => Sub-Category 1
+          [15] => Sub-Category 2
+       )
+    )
+
+So my questions are 1) is what is the correct array format for Drupal optgroups with my specified values and 2) how do I reduce my array to match?",drupal,php,arrays,,,,open,0,297,6,"Drupal 6 forms and optgroup arrays The following array is produced by converting xml to a array (using xml2array). However its not the exactly the right format I need for a optgroup in a Drupal 6 form.
+
+    Array (
+       [root] => Array ([attr] => Array ([id] => 1) [label] => Array ([value] => My Root)
+          [node] => Array (
+             [0] => Array ([attr] => Array([id] => 2) [label] => Array([value] => Category 1)
+                [node] => Array(
+                   [0] => Array ([attr] => Array ([id] => 14) [label] => Array ([value] => Sub-Category 1))
+                   [1] => Array([attr] => Array ([id] => 15) [label] => Array([value] => Sub-Category2))
+
+
+I think the array has too be reduced to this format with id values intact for the sub-categories. However I can't confirm this with the drupal docs as they don't mention anything about assigning values to a option.
+
+    Array (
+       [Category 1] => Array(
+          [14] => Sub-Category 1
+          [15] => Sub-Category 2
+       )
+    )
+
+So my questions are 1) is what is the correct array format for Drupal optgroups with my specified values and 2) how do I reduce my array to match?",3
+6847775,07/27/2011 16:17:57,865844,07/27/2011 16:05:59,1,0,"Ways to share a ""Top X"" list between two Drupal websites?","I'm trying to come up with some easy methods to share data between two Drupal websites. Here's my situation: Two websites both want a Top X Music listing with images, audio and data. One website is already creating and updating this list, and since they both use the same list the other website wants to straight up ""steal"" the first list, content, style and all. They want to take advantage of the work done to create the list on the other website. Their websites are structurally similar, and we control both sites. Audio is made playable using SWF tools.
+
+Domain isn't really an appropriate solution here as the two sites share nothing besides the Top X Music list. I am able to create a view on the original site to feed the data in any format I want.
+
+Some solutions I've been considering are: 
+
+ - Feed the data from one site to the other, hard link back to the other
+   site for audio/images.
+ - iFrame the data on the site that is ""stealing""
+   the list. (easy but seems too crude!)
+ - jQuery AJAX load the data on the ""stealing"" site. 
+
+Basically I'm looking for suggestions of how you might handle this if they were your Drupal websites. I am familiar with Feeds, but would need to write a parser specifically for this feed, which seems like overkill for something so simple. Thanks! :)",drupal,,,,,,open,0,236,11,"Ways to share a ""Top X"" list between two Drupal websites? I'm trying to come up with some easy methods to share data between two Drupal websites. Here's my situation: Two websites both want a Top X Music listing with images, audio and data. One website is already creating and updating this list, and since they both use the same list the other website wants to straight up ""steal"" the first list, content, style and all. They want to take advantage of the work done to create the list on the other website. Their websites are structurally similar, and we control both sites. Audio is made playable using SWF tools.
+
+Domain isn't really an appropriate solution here as the two sites share nothing besides the Top X Music list. I am able to create a view on the original site to feed the data in any format I want.
+
+Some solutions I've been considering are: 
+
+ - Feed the data from one site to the other, hard link back to the other
+   site for audio/images.
+ - iFrame the data on the site that is ""stealing""
+   the list. (easy but seems too crude!)
+ - jQuery AJAX load the data on the ""stealing"" site. 
+
+Basically I'm looking for suggestions of how you might handle this if they were your Drupal websites. I am familiar with Feeds, but would need to write a parser specifically for this feed, which seems like overkill for something so simple. Thanks! :)",1
+4028351,10/26/2010 21:54:35,324189,04/23/2010 12:46:56,44,4,Interenet shop. Ubercart on Drupal 6 or Drupal 7? ,I plan to start creating tomorrow interenet shop (Ubercart). I'd like to take the 7 version - lots of nice things. Can you tell me now start to create on drupal 7 or can only work with Drupal 6?,drupal,,,,,06/24/2011 01:26:06,off topic,1,39,10,Interenet shop. Ubercart on Drupal 6 or Drupal 7?  I plan to start creating tomorrow interenet shop (Ubercart). I'd like to take the 7 version - lots of nice things. Can you tell me now start to create on drupal 7 or can only work with Drupal 6?,1
+11295493,07/02/2012 14:17:08,1361316,04/27/2012 14:12:40,13,1,Drupal 7 - values added in hook_node_load not making its way to webform,"I'm using hook_node_load to try and add some fields to a webform node.  Here's the code:
+
+    function custom_node_load($nodes, $types)
+    {
+    	foreach ($nodes as $node) {
+    		if ($node->nid == '37') {
+    			if (isset($_GET['departure'])) {
+    				$node->departure_base_price = 'myValue';
+                     drupal_set_message('Departure Base Price: ' . $node->departure_base_price);
+                    //Have also tried $nodes[$node->nid]->departure_base_price
+    			}
+    		}
+    	}
+    }
+
+The drupal_set_message sets the message with the value properly.  However, trying to access the value $node->departure_base_price in webform-form-37.tpl.php, it's not there (trying to access both in the tpl.php file and looking at Devel).  
+
+I've also tried setting $node->departure_base_price=NULL at the start of the function, thinking it might be a scope issue.  In this case, the field made it to the tpl.php file, but it remained null (even though I had updated the value in hook_node_load).
+
+
+What am I missing?",drupal,drupal-7,,,,,open,0,200,13,"Drupal 7 - values added in hook_node_load not making its way to webform I'm using hook_node_load to try and add some fields to a webform node.  Here's the code:
+
+    function custom_node_load($nodes, $types)
+    {
+    	foreach ($nodes as $node) {
+    		if ($node->nid == '37') {
+    			if (isset($_GET['departure'])) {
+    				$node->departure_base_price = 'myValue';
+                     drupal_set_message('Departure Base Price: ' . $node->departure_base_price);
+                    //Have also tried $nodes[$node->nid]->departure_base_price
+    			}
+    		}
+    	}
+    }
+
+The drupal_set_message sets the message with the value properly.  However, trying to access the value $node->departure_base_price in webform-form-37.tpl.php, it's not there (trying to access both in the tpl.php file and looking at Devel).  
+
+I've also tried setting $node->departure_base_price=NULL at the start of the function, thinking it might be a scope issue.  In this case, the field made it to the tpl.php file, but it remained null (even though I had updated the value in hook_node_load).
+
+
+What am I missing?",2
+10864326,06/02/2012 17:09:27,883659,08/08/2011 08:28:30,28,1,drupal node update permission once a week,"is there such a module already made, where let's say a user has access on a page only one time or only once a week, really been looking for this a long time now.
+
+",drupal,permissions,,,,,open,0,34,7,"drupal node update permission once a week is there such a module already made, where let's say a user has access on a page only one time or only once a week, really been looking for this a long time now.
+
+",2
+6979091,08/08/2011 07:45:34,581444,01/19/2011 12:54:28,43,2,upgrading a feature from drupal 6 to drupal 7,I need to use features created by me on a drupal 6 website over a new drupal 7 instance. Is there a way to port drupal 6 features to drupal 7.Or will upgrading the website give me d7 version of the features..??,drupal,drupal-7,upgrade,features,,,open,0,42,9,upgrading a feature from drupal 6 to drupal 7 I need to use features created by me on a drupal 6 website over a new drupal 7 instance. Is there a way to port drupal 6 features to drupal 7.Or will upgrading the website give me d7 version of the features..??,4
+8629011,12/25/2011 09:32:22,1115205,12/25/2011 09:23:15,1,0,Change Drupal Comment Form Titles,"I want to change ""Your name"" and ""Comment""",drupal,drupal-7,drupal-theming,,,12/25/2011 15:43:16,not a real question,1,8,5,"Change Drupal Comment Form Titles I want to change ""Your name"" and ""Comment""",3
+8314959,11/29/2011 17:21:27,276056,02/18/2010 12:33:48,94,2,Create a page to edit all fields from a custom content type (D7),"I have a custom content type that has a custom field called [stock]
+
+I would like to have a single page that shows me ALL nodes [stock] values in a list and allows me to change the value. Is this possible?
+
+Any advice would be much appreciated
+
+Regards C
+",drupal,drupal-7,cck,,,,open,0,46,13,"Create a page to edit all fields from a custom content type (D7) I have a custom content type that has a custom field called [stock]
+
+I would like to have a single page that shows me ALL nodes [stock] values in a list and allows me to change the value. Is this possible?
+
+Any advice would be much appreciated
+
+Regards C
+",3

@@ -1,0 +1,1256 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+1526956,10/06/2009 17:25:30,43365,12/04/2008 21:03:43,249,22,Change user agent in Eclipse 3.5 for new software installations,"How can the user-agent be changed in Eclipse 3.5? I tried adding the property **-Dhttp.agent=my user agent** to the eclipse.ini file, but using WireShark I can see that the user agent is still **Jakarta Commons-HttpClient/3.1**. I need to change this so that I can get through the company's filter to download plug-ins and updates. Here is my eclipse.ini file:
+
+    -startup
+    plugins/org.eclipse.equinox.launcher_1.0.200.v20090520.jar
+    --launcher.library
+    plugins/org.eclipse.equinox.launcher.win32.win32.x86_1.0.200.v20090519
+    -product
+    org.eclipse.epp.package.jee.product
+    --launcher.XXMaxPermSize
+    256M
+    -showsplash
+    org.eclipse.platform
+    -vm
+    C:/Progra~1/Java/jdk1.6.0_14/jre/bin/javaw.exe
+    -vmargs
+    -Xms1024m
+    -Xmx1024m
+    -Dhttp.agent=my agent
+    -Djava.net.preferIPv4Stack=true
+    -Dosgi.requiredJavaVersion=1.5",eclipse,user-agent,,,,,open,0,132,10,"Change user agent in Eclipse 3.5 for new software installations How can the user-agent be changed in Eclipse 3.5? I tried adding the property **-Dhttp.agent=my user agent** to the eclipse.ini file, but using WireShark I can see that the user agent is still **Jakarta Commons-HttpClient/3.1**. I need to change this so that I can get through the company's filter to download plug-ins and updates. Here is my eclipse.ini file:
+
+    -startup
+    plugins/org.eclipse.equinox.launcher_1.0.200.v20090520.jar
+    --launcher.library
+    plugins/org.eclipse.equinox.launcher.win32.win32.x86_1.0.200.v20090519
+    -product
+    org.eclipse.epp.package.jee.product
+    --launcher.XXMaxPermSize
+    256M
+    -showsplash
+    org.eclipse.platform
+    -vm
+    C:/Progra~1/Java/jdk1.6.0_14/jre/bin/javaw.exe
+    -vmargs
+    -Xms1024m
+    -Xmx1024m
+    -Dhttp.agent=my agent
+    -Djava.net.preferIPv4Stack=true
+    -Dosgi.requiredJavaVersion=1.5",2
+11098885,06/19/2012 10:14:03,1266066,03/13/2012 09:12:35,9,0,Eclipse IDE slows the system performance,"When ever I opened eclipse in my computer, it slows it and unable to work for certain time. Is there anything I need to configure?
+
+Kindly help me on this. Thanks.",eclipse,pc,,,,06/19/2012 17:38:19,not a real question,1,30,6,"Eclipse IDE slows the system performance When ever I opened eclipse in my computer, it slows it and unable to work for certain time. Is there anything I need to configure?
+
+Kindly help me on this. Thanks.",2
+10854832,06/01/2012 17:29:25,489160,10/27/2010 17:29:18,572,20,Eclipse fix same error in many files,I recently imported a large number of source files into an eclipse project. Unfortunately they all have the wrong package declaration. Is there a way to fix errors en masse across all of the files (1 error per file)?,eclipse,,,,,,open,0,39,7,Eclipse fix same error in many files I recently imported a large number of source files into an eclipse project. Unfortunately they all have the wrong package declaration. Is there a way to fix errors en masse across all of the files (1 error per file)?,1
+8454743,12/10/2011 05:51:50,949931,09/17/2011 06:02:53,127,4,"For java, which is more usefull Eclipse OR Netbeans?","I am new to java and I listen about net beans and eclipse IDE both, But i am confused about which one I should use. Can anyone tell me why net beans use and why eclipse use. and which is better to use.
+I want to know about which is user friendly and easy to use.",eclipse,netbeans,,,,12/10/2011 06:28:02,not constructive,1,55,9,"For java, which is more usefull Eclipse OR Netbeans? I am new to java and I listen about net beans and eclipse IDE both, But i am confused about which one I should use. Can anyone tell me why net beans use and why eclipse use. and which is better to use.
+I want to know about which is user friendly and easy to use.",2
+11616111,07/23/2012 15:57:04,579646,01/18/2011 08:58:36,269,111,"eclipse stop popup ""Web launch already running""","I am developing in PHP with Xdebug and for some reason every now and then the debug session stops working, so i click again the debug button but it gives me this error all the time ""**Web launch already running**"", so i have to go to Debug Perspective and click ""**Terminate and Relaunch**"".
+
+Is there a way to make eclipse automatically terminate and relaunch or launch two sessions or don't show this popup, for 2 years this popup has been bugging me xD",eclipse,,,,,,open,0,82,7,"eclipse stop popup ""Web launch already running"" I am developing in PHP with Xdebug and for some reason every now and then the debug session stops working, so i click again the debug button but it gives me this error all the time ""**Web launch already running**"", so i have to go to Debug Perspective and click ""**Terminate and Relaunch**"".
+
+Is there a way to make eclipse automatically terminate and relaunch or launch two sessions or don't show this popup, for 2 years this popup has been bugging me xD",1
+4325655,12/01/2010 15:00:42,523653,11/29/2010 08:32:53,1,0,Programmatically adding a library to an Eclipse project,"How can I create a new build path entry for any *.jar file and add this classpath entry to the build path of an Eclipse project.
+
+I have a plugin that should automatically setup my target project. So this project needs to have some library imports and I want to add this imports automatically using a wizard. The user just selects the location of a certain SDK and then some libraries have to be linked with the target project.
+
+However, I found some references:
+
+http://stackoverflow.com/questions/2531277/importing-libraries-in-eclipse-programmatically
+
+http://stackoverflow.com/questions/1284482
+
+Unfortunately, I failed to implement the second solution as I cannot find the classes IClasspathContainer, JavaCore and IJavaProject.
+
+I'm using Eclipse Helios and JDK. Do I need any additional libraries to make changes to the build path or is there a simpler solution to import a jar library programmatically?
+
+Regards,
+Florian ",eclipse,import,eclipse-plugin,buildpath,,,open,0,130,8,"Programmatically adding a library to an Eclipse project How can I create a new build path entry for any *.jar file and add this classpath entry to the build path of an Eclipse project.
+
+I have a plugin that should automatically setup my target project. So this project needs to have some library imports and I want to add this imports automatically using a wizard. The user just selects the location of a certain SDK and then some libraries have to be linked with the target project.
+
+However, I found some references:
+
+http://stackoverflow.com/questions/2531277/importing-libraries-in-eclipse-programmatically
+
+http://stackoverflow.com/questions/1284482
+
+Unfortunately, I failed to implement the second solution as I cannot find the classes IClasspathContainer, JavaCore and IJavaProject.
+
+I'm using Eclipse Helios and JDK. Do I need any additional libraries to make changes to the build path or is there a simpler solution to import a jar library programmatically?
+
+Regards,
+Florian ",4
+8384204,12/05/2011 10:54:00,776967,05/31/2011 02:02:20,40,2,Aptana FTP plugin notification like SVN or Git,Can I configure Aptana's FTP connections in such a way that it shows some type of symbols like * or + for those files which are not yet uploaded? Just like it shows for files when not committed to Git or SVN repositories. If yes how?,eclipse,plugins,ftp,aptana,,,open,0,46,8,Aptana FTP plugin notification like SVN or Git Can I configure Aptana's FTP connections in such a way that it shows some type of symbols like * or + for those files which are not yet uploaded? Just like it shows for files when not committed to Git or SVN repositories. If yes how?,4
+10143352,04/13/2012 15:04:39,613631,02/11/2011 20:53:56,135,7,Eclipse: multiple project from single source,"at first i have to say that i'm not very good with english, so i'm sorry if i can explain very well what i mean :)
+
+I have one project that i need to replicate n times; every new project must have the same source code, but different resources (ex: images, html files, sounds, pdf, etc) and different class/packages names.
+
+Is it possible? The best is to have also a system to commit source changes form the main project to the childs, but it's not mandatory.
+
+Sorry again for my english.",eclipse,,,,,,open,0,88,6,"Eclipse: multiple project from single source at first i have to say that i'm not very good with english, so i'm sorry if i can explain very well what i mean :)
+
+I have one project that i need to replicate n times; every new project must have the same source code, but different resources (ex: images, html files, sounds, pdf, etc) and different class/packages names.
+
+Is it possible? The best is to have also a system to commit source changes form the main project to the childs, but it's not mandatory.
+
+Sorry again for my english.",1
+8554559,12/18/2011 20:27:16,1091534,12/10/2011 18:33:52,11,0,SWT Java placing/receiving stuff from clipboard,"I am trying to write some strings to the clipboard in my Eclipse plugin and I have some strange behavior ...
+
+I am using the predefined TextTransfer Transfer-class which should be sufficient for strings?!
+My Problem is, that regardless of the number of strings I put in the clipboard only the very last is actually accessible afterwards - I cannot figure out why.
+
+Placing my stuff in the clipboard seems to work, no exceptions. I doing it this way:
+
+            Clipboard cb = new Clipboard(Display.getCurrent());
+            Object[] data = transferObjects.toArray(); //My strings, looks good in debug
+            Transfer[] transfer = transferHandles.toArray(new Transfer[0]); //as many TextTransfer instances as objects in the data-array
+            cb.setContents(data, transfer, DND.CLIPBOARD);
+            cb.dispose();
+
+I receive it this way:
+
+    TextTransfer textTransfer = TextTransfer.getInstance();
+    		Object o = cb.getContents(textTransfer); // ""o"" contains the value of the above array at position n-1, so only the very last is actually returned
+
+I don't get what I am doing wrong? Does anyone see my error?",eclipse,swt,clipboard,,,,open,0,214,6,"SWT Java placing/receiving stuff from clipboard I am trying to write some strings to the clipboard in my Eclipse plugin and I have some strange behavior ...
+
+I am using the predefined TextTransfer Transfer-class which should be sufficient for strings?!
+My Problem is, that regardless of the number of strings I put in the clipboard only the very last is actually accessible afterwards - I cannot figure out why.
+
+Placing my stuff in the clipboard seems to work, no exceptions. I doing it this way:
+
+            Clipboard cb = new Clipboard(Display.getCurrent());
+            Object[] data = transferObjects.toArray(); //My strings, looks good in debug
+            Transfer[] transfer = transferHandles.toArray(new Transfer[0]); //as many TextTransfer instances as objects in the data-array
+            cb.setContents(data, transfer, DND.CLIPBOARD);
+            cb.dispose();
+
+I receive it this way:
+
+    TextTransfer textTransfer = TextTransfer.getInstance();
+    		Object o = cb.getContents(textTransfer); // ""o"" contains the value of the above array at position n-1, so only the very last is actually returned
+
+I don't get what I am doing wrong? Does anyone see my error?",3
+7253556,08/31/2011 06:56:46,644437,03/04/2011 09:28:55,32,0,No valid application descriptor defined in eclipse pular(J2ME),"when i try to run my j2me application in emulator i get error ""no valid application descriptor defined "" . this is happening after i shifted my workstation to a new system.
+the application descriptor is there in that project. still shows this error. been trying to resolve this since yesterday.",eclipse,java-me,,,,,open,0,50,8,"No valid application descriptor defined in eclipse pular(J2ME) when i try to run my j2me application in emulator i get error ""no valid application descriptor defined "" . this is happening after i shifted my workstation to a new system.
+the application descriptor is there in that project. still shows this error. been trying to resolve this since yesterday.",2
+11573190,07/20/2012 05:05:10,1539760,07/20/2012 04:59:40,1,0,CONNECT SQLITE DATABASE TO ECLIPSE,"How can I connect my SQLITE database in ECLIPSE? My sqlite is 2.o version, while the eclipse has 3.5.9 version of sqlite. Is there something to do with it?",eclipse,sqlite,,,,07/20/2012 17:13:56,not a real question,1,29,5,"CONNECT SQLITE DATABASE TO ECLIPSE How can I connect my SQLITE database in ECLIPSE? My sqlite is 2.o version, while the eclipse has 3.5.9 version of sqlite. Is there something to do with it?",2
+11105377,06/19/2012 16:33:26,1338688,04/17/2012 12:05:11,11,1,OFBIZ and eclipse integration,can any one help me with ofbiz tutorials and plugin to integrate with eclipse IDE,eclipse,eclipse-plugin,ofbiz,,,06/20/2012 03:06:05,not a real question,1,15,4,OFBIZ and eclipse integration can any one help me with ofbiz tutorials and plugin to integrate with eclipse IDE,3
+11488143,07/14/2012 23:21:01,1336972,04/16/2012 18:06:17,30,1,What is the ARGB color for the purple in default java eclipse?,I am making a code parser to parse code like eclipse. I would like to know what is the ARGB color (purplish) for the restricted java words and the lightblue color of the words in quotes/ instance. Thanks alot.,eclipse,,,,,07/16/2012 16:33:42,off topic,1,39,12,What is the ARGB color for the purple in default java eclipse? I am making a code parser to parse code like eclipse. I would like to know what is the ARGB color (purplish) for the restricted java words and the lightblue color of the words in quotes/ instance. Thanks alot.,1
+11613425,07/23/2012 13:24:03,1525450,07/14/2012 10:51:03,3,0,Eclipse Android plugin installation error,"Iam trying to install android development tool into eclipse but it showing the following error
+can anyone help me please?
+
+    An error occurred while collecting items to be installed
+    session context was:(profile=SDKProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+    Unable to read repository at jar:file:/F:/UTILITIES/ADT-20.0.1(1).zip!/plugins/com.android.ide.eclipse.adt_20.0.1.v201207132230-403220.jar.
+    invalid code lengths set
+    No repository found containing: osgi.bundle,org.eclipse.equinox.p2.discovery.compatibility,1.0.1.v20110502-1955",eclipse,adt,,,,07/24/2012 14:55:27,off topic,1,64,5,"Eclipse Android plugin installation error Iam trying to install android development tool into eclipse but it showing the following error
+can anyone help me please?
+
+    An error occurred while collecting items to be installed
+    session context was:(profile=SDKProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+    Unable to read repository at jar:file:/F:/UTILITIES/ADT-20.0.1(1).zip!/plugins/com.android.ide.eclipse.adt_20.0.1.v201207132230-403220.jar.
+    invalid code lengths set
+    No repository found containing: osgi.bundle,org.eclipse.equinox.p2.discovery.compatibility,1.0.1.v20110502-1955",2
+7451136,09/16/2011 22:50:32,949680,09/16/2011 22:50:32,1,0,What is the most stable version of Eclipse PDT,"I'd like to ask for opinions from those who've used Eclipse PDT.  Basically,
+I've started using Eclipse since Europa, but recently I've noticed that the
+more I upgrade, the more bugs I run into. ( The latest was Indigo, which
+starts running a validation endlessly, this being initiated when i type in <?php
+and the characters delay appearance for a few seconds, only reappearing but not in
+appropriate order ) when I save the file, I get that endless validation at 25%.
+with Helios, I grew a beard whenever it loaded / closed.  
+
+I'd really appreciate if anyone with similar experiences can perhaps point out a
+particular version that worked best for them.  ( note : I could not use Netbeans
+as there are some features I needed that is not present in Netbeans )
+",eclipse,eclipse-pdt,pdt,,,09/17/2011 14:52:17,off topic,1,130,9,"What is the most stable version of Eclipse PDT I'd like to ask for opinions from those who've used Eclipse PDT.  Basically,
+I've started using Eclipse since Europa, but recently I've noticed that the
+more I upgrade, the more bugs I run into. ( The latest was Indigo, which
+starts running a validation endlessly, this being initiated when i type in <?php
+and the characters delay appearance for a few seconds, only reappearing but not in
+appropriate order ) when I save the file, I get that endless validation at 25%.
+with Helios, I grew a beard whenever it loaded / closed.  
+
+I'd really appreciate if anyone with similar experiences can perhaps point out a
+particular version that worked best for them.  ( note : I could not use Netbeans
+as there are some features I needed that is not present in Netbeans )
+",3
+8878872,01/16/2012 10:46:16,1126833,01/02/2012 21:35:31,3,0,Error in publishing the configuration in Eclipse Tomcat," encounter a problem "" 'publishing to tomcat v7.0 server at localhost' has encountered a problem"" while starting my tomcat server from eclipse. This problem arised after i tried to solve the 404 error by selecting the 'use tomcat installation' option in the setting of the server. The server seems to be running but it actually isn't.
+
+Publishing the configuration... Error copying file to /usr/share/tomcat7/backup/catalina.policy: /usr/share/tomcat7/backup/catalina.policy (No such file or directory) /usr/share/tomcat7/backup/catalina.policy (No such file or directory) Error copying file to /usr/share/tomcat7/backup/catalina.properties: /usr/share/tomcat7/backup/catalina.properties (No such file or directory) /usr/share/tomcat7/backup/catalina.properties (No such file or directory) Error copying file to /usr/share/tomcat7/backup/context.xml: /usr/share/tomcat7/backup/context.xml (No such file or directory) /usr/share/tomcat7/backup/context.xml (No such file or directory) Error copying file to /usr/share/tomcat7/backup/server.xml: /usr/share/tomcat7/backup/server.xml (No such file or directory) /usr/share/tomcat7/backup/server.xml (No such file or directory) Error copying file to /usr/share/tomcat7/backup/tomcat-users.xml: /usr/share/tomcat7/backup/tomcat-users.xml (No such file or directory) /usr/share/tomcat7/backup/tomcat-users.xml (No such file or directory) Error copying file to /usr/share/tomcat7/backup/web.xml: /usr/share/tomcat7/backup/web.xml (No such file or directory) /usr/share/tomcat7/backup/web.xml (No such file or directory)",eclipse,tomcat,publishing,,,01/17/2012 12:56:10,off topic,1,161,8,"Error in publishing the configuration in Eclipse Tomcat  encounter a problem "" 'publishing to tomcat v7.0 server at localhost' has encountered a problem"" while starting my tomcat server from eclipse. This problem arised after i tried to solve the 404 error by selecting the 'use tomcat installation' option in the setting of the server. The server seems to be running but it actually isn't.
+
+Publishing the configuration... Error copying file to /usr/share/tomcat7/backup/catalina.policy: /usr/share/tomcat7/backup/catalina.policy (No such file or directory) /usr/share/tomcat7/backup/catalina.policy (No such file or directory) Error copying file to /usr/share/tomcat7/backup/catalina.properties: /usr/share/tomcat7/backup/catalina.properties (No such file or directory) /usr/share/tomcat7/backup/catalina.properties (No such file or directory) Error copying file to /usr/share/tomcat7/backup/context.xml: /usr/share/tomcat7/backup/context.xml (No such file or directory) /usr/share/tomcat7/backup/context.xml (No such file or directory) Error copying file to /usr/share/tomcat7/backup/server.xml: /usr/share/tomcat7/backup/server.xml (No such file or directory) /usr/share/tomcat7/backup/server.xml (No such file or directory) Error copying file to /usr/share/tomcat7/backup/tomcat-users.xml: /usr/share/tomcat7/backup/tomcat-users.xml (No such file or directory) /usr/share/tomcat7/backup/tomcat-users.xml (No such file or directory) Error copying file to /usr/share/tomcat7/backup/web.xml: /usr/share/tomcat7/backup/web.xml (No such file or directory) /usr/share/tomcat7/backup/web.xml (No such file or directory)",3
+7334512,09/07/2011 13:17:00,593808,11/02/2010 09:01:03,161,18,Delete cvs tag from deleted file (Eclipse CVS)?,"I tagged some files in a CVS project. Files were deleted and the project was retagged to the same version, with ""move existing tag"" option checked.
+
+I expected that the deleted files would no longer be a part of this tag version, but they are. Is there a way to untag files that are no longer in project? Also, is there a way to do this automatically, so that when I choose to delete a file that's tagged, it gets both removed and untagged?",eclipse,cvs,,,,,open,0,83,8,"Delete cvs tag from deleted file (Eclipse CVS)? I tagged some files in a CVS project. Files were deleted and the project was retagged to the same version, with ""move existing tag"" option checked.
+
+I expected that the deleted files would no longer be a part of this tag version, but they are. Is there a way to untag files that are no longer in project? Also, is there a way to do this automatically, so that when I choose to delete a file that's tagged, it gets both removed and untagged?",2
+6685551,07/13/2011 20:55:51,843510,07/13/2011 20:55:51,1,0,Selenium RC launches Firefox5 and IE8 browser but does not go to the specified url,"I'm a beginner at selenium, trying to follow a tutorial using eclipse and testng. However, it appears that the actual test does not get carried out because it doesn't navigate to the url in my code. 
+
+This is my input:
+
+    package script;
+    
+    import com.thoughtworks.selenium.*;
+    
+    import org.junit.AfterClass;
+    import org.testng.annotations.*;
+    import org.openqa.selenium.server.SeleniumServer;
+    
+    
+    public class Baseline extends SeleneseTestCase {
+    	
+    	@BeforeClass 
+    	public void setUp() throws Exception {
+    		SeleniumServer seleniumserver = new SeleniumServer();
+    		seleniumserver.boot();
+    		seleniumserver.start();
+    		setUp(""http://www.google.com"", ""*iexplore"");
+    		
+    	}
+    	
+    	@Test 
+    	public void testBaseline(){
+    		selenium.open(""/"");
+    		selenium.windowMaximize();
+    		selenium.windowFocus();
+    		selenium.type(""q"", ""selenium rc"");
+    		selenium.click(""btnG"");
+    		selenium.waitForPageToLoad(""30000"");
+    		assertTrue(selenium.isTextPresent(""Results * for selenium rc""));
+    	}
+    	
+    	@AfterClass 
+    	public void tearDown(){
+    		selenium.close();
+    		selenium.stop();
+    		
+    	}
+    }
+
+testng's ouput:
+
+    16:44:10.326 INFO - Java: Sun Microsystems Inc. 20.1-b02
+    16:44:10.328 INFO - OS: Windows 7 6.1 x86
+    16:44:10.339 INFO - v2.0 [a2], with Core v2.0 [a2]
+    16:44:10.459 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+    16:44:10.461 INFO - Version Jetty/5.1.x
+    16:44:10.461 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+    16:44:10.462 INFO - Started HttpContext[/selenium-server,/selenium-server]
+    16:44:10.462 INFO - Started HttpContext[/,/]
+    16:44:10.503 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@1be2d65
+    16:44:10.503 INFO - Started HttpContext[/wd,/wd]
+    16:44:10.506 INFO - Started SocketListener on 0.0.0.0:4444
+    16:44:10.506 INFO - Started org.openqa.jetty.jetty.Server@32fb4f
+    16:44:10.563 INFO - Checking Resource aliases
+    16:44:10.570 INFO - Command request: getNewBrowserSession[*iexplore, http://www.google.com, ] on session null
+    16:44:10.572 INFO - creating new remote session
+    16:44:10.695 INFO - Allocated session 4a50ca969de04033b77cdb88dfd8af1a for http://www.google.com, launching...
+    16:44:11.106 INFO - Launching Embedded Internet Explorer...
+    16:44:12.126 INFO - Launching Internet Explorer HTA...
+
+the program does not terminate.
+
+For firefox the browser opens a blank url. For IE8, it navigates to a local temporary folder. 
+
+How do I get it to navigate to the url as specified?
+
+",eclipse,selenium,testng,rc,,,open,0,435,15,"Selenium RC launches Firefox5 and IE8 browser but does not go to the specified url I'm a beginner at selenium, trying to follow a tutorial using eclipse and testng. However, it appears that the actual test does not get carried out because it doesn't navigate to the url in my code. 
+
+This is my input:
+
+    package script;
+    
+    import com.thoughtworks.selenium.*;
+    
+    import org.junit.AfterClass;
+    import org.testng.annotations.*;
+    import org.openqa.selenium.server.SeleniumServer;
+    
+    
+    public class Baseline extends SeleneseTestCase {
+    	
+    	@BeforeClass 
+    	public void setUp() throws Exception {
+    		SeleniumServer seleniumserver = new SeleniumServer();
+    		seleniumserver.boot();
+    		seleniumserver.start();
+    		setUp(""http://www.google.com"", ""*iexplore"");
+    		
+    	}
+    	
+    	@Test 
+    	public void testBaseline(){
+    		selenium.open(""/"");
+    		selenium.windowMaximize();
+    		selenium.windowFocus();
+    		selenium.type(""q"", ""selenium rc"");
+    		selenium.click(""btnG"");
+    		selenium.waitForPageToLoad(""30000"");
+    		assertTrue(selenium.isTextPresent(""Results * for selenium rc""));
+    	}
+    	
+    	@AfterClass 
+    	public void tearDown(){
+    		selenium.close();
+    		selenium.stop();
+    		
+    	}
+    }
+
+testng's ouput:
+
+    16:44:10.326 INFO - Java: Sun Microsystems Inc. 20.1-b02
+    16:44:10.328 INFO - OS: Windows 7 6.1 x86
+    16:44:10.339 INFO - v2.0 [a2], with Core v2.0 [a2]
+    16:44:10.459 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+    16:44:10.461 INFO - Version Jetty/5.1.x
+    16:44:10.461 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+    16:44:10.462 INFO - Started HttpContext[/selenium-server,/selenium-server]
+    16:44:10.462 INFO - Started HttpContext[/,/]
+    16:44:10.503 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@1be2d65
+    16:44:10.503 INFO - Started HttpContext[/wd,/wd]
+    16:44:10.506 INFO - Started SocketListener on 0.0.0.0:4444
+    16:44:10.506 INFO - Started org.openqa.jetty.jetty.Server@32fb4f
+    16:44:10.563 INFO - Checking Resource aliases
+    16:44:10.570 INFO - Command request: getNewBrowserSession[*iexplore, http://www.google.com, ] on session null
+    16:44:10.572 INFO - creating new remote session
+    16:44:10.695 INFO - Allocated session 4a50ca969de04033b77cdb88dfd8af1a for http://www.google.com, launching...
+    16:44:11.106 INFO - Launching Embedded Internet Explorer...
+    16:44:12.126 INFO - Launching Internet Explorer HTA...
+
+the program does not terminate.
+
+For firefox the browser opens a blank url. For IE8, it navigates to a local temporary folder. 
+
+How do I get it to navigate to the url as specified?
+
+",4
+4713078,01/17/2011 12:21:46,484290,10/22/2010 14:06:21,366,19,Install Eclipse 3.6 on Ubuntu,"I am new to linux, I have download the eclipse 3.6 linux version fron eclipse web site. can someone explains me how to install it on Ubuntu 10.10",eclipse,ide,installation,ubuntu-10.10,,08/31/2011 02:12:49,off topic,1,28,5,"Install Eclipse 3.6 on Ubuntu I am new to linux, I have download the eclipse 3.6 linux version fron eclipse web site. can someone explains me how to install it on Ubuntu 10.10",4
+3717051,09/15/2010 11:14:33,448317,02/16/2010 12:09:59,60,1,How do I make a (minimal) runnable jar file from a scala eclipse project,"I have made a runnable jar using this process: http://garyboone.com/2009/06/creating-single-file-runnable-jars-in-scala-and-eclipse/?wscr=1366x768
+editing the ant build.xml to include scala-library.jar (5.9 MB)
+
+Isn't i possible somehow to get eclipse to extract the needed parts of scala-library.jar?
+So I can get a smaller, less bloated jar file?
+
+BR Troels",eclipse,scala,build,jar,,,open,0,41,14,"How do I make a (minimal) runnable jar file from a scala eclipse project I have made a runnable jar using this process: http://garyboone.com/2009/06/creating-single-file-runnable-jars-in-scala-and-eclipse/?wscr=1366x768
+editing the ant build.xml to include scala-library.jar (5.9 MB)
+
+Isn't i possible somehow to get eclipse to extract the needed parts of scala-library.jar?
+So I can get a smaller, less bloated jar file?
+
+BR Troels",4
+7577737,09/28/2011 02:38:22,351410,05/26/2010 21:30:26,26,0,How can I make the Eclipse content assist case-sensitive?,"Does anyone know of an easy way to configure the Eclipse content assist to respond to the case of the first letter in a fragment? When I start a token with a lowercase letter, I'd prefer not to have suggestions for classes, since I am always referring to a member or variable. It would also be nice for a method name fragment to auto-complete when selection of any suggestion would result in the same text (e.g., multiple methods having the same name with different parameters, and no other suggestions offered).  
+
+The preferences for content assist don't mention either of these options, and I'm hoping to avoid writing (and maintaining) a plugin just for small conveniences. Thanks for your help.
+
+Byron",eclipse,plugins,editor,content-assist,,,open,0,120,9,"How can I make the Eclipse content assist case-sensitive? Does anyone know of an easy way to configure the Eclipse content assist to respond to the case of the first letter in a fragment? When I start a token with a lowercase letter, I'd prefer not to have suggestions for classes, since I am always referring to a member or variable. It would also be nice for a method name fragment to auto-complete when selection of any suggestion would result in the same text (e.g., multiple methods having the same name with different parameters, and no other suggestions offered).  
+
+The preferences for content assist don't mention either of these options, and I'm hoping to avoid writing (and maintaining) a plugin just for small conveniences. Thanks for your help.
+
+Byron",4
+4810447,01/26/2011 21:51:50,174474,09/16/2009 16:52:48,15,3,Can I create an Eclipse Product without an RCP Application?,"We develop plug-ins and a feature, and want to deliver a running application to our customer (so they don't have to get Eclipse on their own).  Basically, I want to put my plug-ins in a minimal Eclipse instance (minus jdt, junit, and other plug-ins that we don't need).
+
+I created a product configuration, but it wants me to specify a **Product** and **Application** in the **Product Definition** definition section (of the Product Configuration editor).  How to I know what to specify for these?  Choosing willy-nilly gives me the following error when I click the *Launch an Eclipse application* from the Product Configuration editor:
+
+    java.lang.RuntimeException: No application id has been found.
+
+I've created products successfully from an RCP application before, but in this case I just want to deliver the bulk of Eclipse with our plug-ins installed.  Am I doing this right?",eclipse,product,,,,,open,0,146,10,"Can I create an Eclipse Product without an RCP Application? We develop plug-ins and a feature, and want to deliver a running application to our customer (so they don't have to get Eclipse on their own).  Basically, I want to put my plug-ins in a minimal Eclipse instance (minus jdt, junit, and other plug-ins that we don't need).
+
+I created a product configuration, but it wants me to specify a **Product** and **Application** in the **Product Definition** definition section (of the Product Configuration editor).  How to I know what to specify for these?  Choosing willy-nilly gives me the following error when I click the *Launch an Eclipse application* from the Product Configuration editor:
+
+    java.lang.RuntimeException: No application id has been found.
+
+I've created products successfully from an RCP application before, but in this case I just want to deliver the bulk of Eclipse with our plug-ins installed.  Am I doing this right?",2
+8953179,01/21/2012 13:06:13,1107903,12/20/2011 13:12:52,1,0,Create our own property page for project explorer eclipse plugin,I have created a custom project in project explorer. I have various folders in the project explorer and also images in one of the folder. I want to create my own property page and want to customize the same on clicking any resource in the project explorer. I have gone through all possible articles on web but not able to solve the problem. Can anyone please help me or provide me some code to create my own property page. Thanks,eclipse,eclipse-plugin,eclipse-rcp,,,,open,0,80,10,Create our own property page for project explorer eclipse plugin I have created a custom project in project explorer. I have various folders in the project explorer and also images in one of the folder. I want to create my own property page and want to customize the same on clicking any resource in the project explorer. I have gone through all possible articles on web but not able to solve the problem. Can anyone please help me or provide me some code to create my own property page. Thanks,3
+5652796,04/13/2011 16:52:26,105707,05/12/2009 20:35:44,545,32,CSS colors beside line numbers in Eclipse,"I really like how JetBrains in their apps (IntelliJ IDEA, PyCharm, WebStorm etc.) show colors in the area next to line numbers for css element color declarations.
+
+Is there such a plugin for Eclipse?",eclipse,eclipse-plugin,,,,,open,0,33,7,"CSS colors beside line numbers in Eclipse I really like how JetBrains in their apps (IntelliJ IDEA, PyCharm, WebStorm etc.) show colors in the area next to line numbers for css element color declarations.
+
+Is there such a plugin for Eclipse?",2
+2587076,04/06/2010 17:50:25,186338,10/08/2009 12:29:36,1085,54,"Eclipse warning: ""<methodName> has non-API return type <parameterizedType>""","My co-worker and I have come across this warning message a couple times recently.  For the below code:
+
+    package com.mycompany.product.data;
+    
+    import com.mycompany.product.dao.GenericDAO;
+    
+    public abstract class EntityBean {
+    	public abstract GenericDAO<Object, Long> getDAO();
+        //                                       ^^^^^^      <-- WARNING OCCURS HERE
+    }
+
+the warning appears in the listed spot as
+
+    EntityBean.getDAO() has non-API return type GenericDAO<T, ID>
+
+A Google search for ""has non-API return type"" only shows instances where this message appears in problem lists.  I.e., there's no public explanation for it.
+
+What does this mean?  We can create a usage problem filter in Eclipse to make the message go away, but we don't want to do this if our usage is a legitimate problem.
+
+Thanks!",eclipse,eclipse-rcp,java,warnings,,,open,0,188,8,"Eclipse warning: ""<methodName> has non-API return type <parameterizedType>"" My co-worker and I have come across this warning message a couple times recently.  For the below code:
+
+    package com.mycompany.product.data;
+    
+    import com.mycompany.product.dao.GenericDAO;
+    
+    public abstract class EntityBean {
+    	public abstract GenericDAO<Object, Long> getDAO();
+        //                                       ^^^^^^      <-- WARNING OCCURS HERE
+    }
+
+the warning appears in the listed spot as
+
+    EntityBean.getDAO() has non-API return type GenericDAO<T, ID>
+
+A Google search for ""has non-API return type"" only shows instances where this message appears in problem lists.  I.e., there's no public explanation for it.
+
+What does this mean?  We can create a usage problem filter in Eclipse to make the message go away, but we don't want to do this if our usage is a legitimate problem.
+
+Thanks!",4
+8253668,11/24/2011 07:49:25,674699,03/24/2011 10:19:45,66,4,How to Build and deploy jasperserver code using Eclipse?,"I am customizing Jasperserver. I am trying to edit source code using eclipse. However I did not find any document to refer. Is there any document to refer?
+If anyone would have customized jasperserver-CE Please help me with this issue..
+
+Thanks.",eclipse,jasperserver,,,,11/25/2011 07:48:17,not a real question,1,39,9,"How to Build and deploy jasperserver code using Eclipse? I am customizing Jasperserver. I am trying to edit source code using eclipse. However I did not find any document to refer. Is there any document to refer?
+If anyone would have customized jasperserver-CE Please help me with this issue..
+
+Thanks.",2
+8522896,12/15/2011 15:58:12,801625,06/16/2011 14:08:07,76,1,Using vim commands in Eclipse,"
+I am very hesitant to ask this question, at the risk of being downvoted & flamed, but I searched & searched, & the most recent thread I can find is from almost 2 yrs ago, so I figure the answer might be different now as technologies have progressed...
+
+That said, the question is the same as it was 2 yrs ago when someone else asked it: I'm a C/C++ developer trying to migrate from vim to Eclipse (in Linux) but really miss the vim commands! It looks like the best choices are Vimplugin, Vrapper, Eclim, Viplugin.
+
+Can anyone share their experiences using these (pros/cons, great features/bad features)? Then perhaps after a couple of people have shared their experiences, anyone who agrees can upvote to demonstrate agreement.
+
+(I realize these types of questions are often frowned upon by experienced users, but they can be immensely helpful to us newbies, so it is much appreciated :-)
+
+thanks!
+",eclipse,vim,,,,12/16/2011 16:15:17,not constructive,1,151,5,"Using vim commands in Eclipse 
+I am very hesitant to ask this question, at the risk of being downvoted & flamed, but I searched & searched, & the most recent thread I can find is from almost 2 yrs ago, so I figure the answer might be different now as technologies have progressed...
+
+That said, the question is the same as it was 2 yrs ago when someone else asked it: I'm a C/C++ developer trying to migrate from vim to Eclipse (in Linux) but really miss the vim commands! It looks like the best choices are Vimplugin, Vrapper, Eclim, Viplugin.
+
+Can anyone share their experiences using these (pros/cons, great features/bad features)? Then perhaps after a couple of people have shared their experiences, anyone who agrees can upvote to demonstrate agreement.
+
+(I realize these types of questions are often frowned upon by experienced users, but they can be immensely helpful to us newbies, so it is much appreciated :-)
+
+thanks!
+",2
+8037000,11/07/2011 13:17:27,538339,12/10/2010 20:19:40,406,3,How to make .java files to Tomcat/Axis WS,"I'm using Axis2 and Tomcat 7 in Eclipse Indigo to deploy a Web Service, which is a POJO. Until now I've only developed in localhost but I want to put it running on the production server.
+
+As far as I can see, the generated folders (for Tomcat) doesn't have the .class ou .aar that I need in order to run the service, but they run on locahost either way.
+
+In order to solve this in a non-IDE-dependant way, is there some kind of tools that I can call using ANT or even Maven in order to ""transform"" my WS Pojos in a folder that, when copied inside Tomcat webapps folder, create me the service? Not only on localhost, but on every Tomcat7 Server.
+",eclipse,web-services,tomcat,axis2,tomcat7,,open,0,121,8,"How to make .java files to Tomcat/Axis WS I'm using Axis2 and Tomcat 7 in Eclipse Indigo to deploy a Web Service, which is a POJO. Until now I've only developed in localhost but I want to put it running on the production server.
+
+As far as I can see, the generated folders (for Tomcat) doesn't have the .class ou .aar that I need in order to run the service, but they run on locahost either way.
+
+In order to solve this in a non-IDE-dependant way, is there some kind of tools that I can call using ANT or even Maven in order to ""transform"" my WS Pojos in a folder that, when copied inside Tomcat webapps folder, create me the service? Not only on localhost, but on every Tomcat7 Server.
+",5
+7389898,09/12/2011 15:00:50,730039,04/28/2011 20:12:35,23,2,Eclipse: All my projects disappeared from Project Explorer,"It seems like all my projects (except one) disappeared from the view Project Explorer
+
+I'm using **Eclipse Java EE IDE** for Web Developers.
+
+Version: **Helios Service Release 2**
+
+Build id: 20110218-0911
+
+
+note: all the projects are available on filesystem
+
+any ideas?",eclipse,,,,,,open,0,36,8,"Eclipse: All my projects disappeared from Project Explorer It seems like all my projects (except one) disappeared from the view Project Explorer
+
+I'm using **Eclipse Java EE IDE** for Web Developers.
+
+Version: **Helios Service Release 2**
+
+Build id: 20110218-0911
+
+
+note: all the projects are available on filesystem
+
+any ideas?",1
+2827235,05/13/2010 13:43:26,340317,05/13/2010 13:43:26,1,0,Android Eclipse OSX Creating AVD using Terminal launches AVD Manager,"I'm new to programming and working with Eclipse on a Mac. I'm trying to create a new AVD with Google Maps Support and when launch 'android' (in the SDK tools folder) I get ""No command line parameters provided, launching UI"". This launches the Eclipse Android SDK and AVD manager.
+
+My question is how do I create a new AVD with Google Maps support? All of the information I've found seems to use commands from terminal. My issue is when I try to use terminal it launches the AVD manage? 
+
+Any help is appreciated as I'm very new at this. 
+",eclipse,osx,avd,,,,open,0,99,10,"Android Eclipse OSX Creating AVD using Terminal launches AVD Manager I'm new to programming and working with Eclipse on a Mac. I'm trying to create a new AVD with Google Maps Support and when launch 'android' (in the SDK tools folder) I get ""No command line parameters provided, launching UI"". This launches the Eclipse Android SDK and AVD manager.
+
+My question is how do I create a new AVD with Google Maps support? All of the information I've found seems to use commands from terminal. My issue is when I try to use terminal it launches the AVD manage? 
+
+Any help is appreciated as I'm very new at this. 
+",3
+11244136,06/28/2012 11:58:40,1457104,06/14/2012 19:16:26,11,0,Why did my sd card unmount?,"I set up a virtual sd card for my project yesterday and my application was working fine. Today when I started my computer back up I found that my project was no longer targeting the sd card, so I had to reassign it, repush the file I had on it and remount it. It works fine again, but I need to know why it did this, is this just an issue with a virtual sd card or is this going to happen when I go to publish the application? Any and all advice is appreciated, thank you!",eclipse,android-sdcard,mount,,,06/29/2012 13:13:01,off topic,1,97,6,"Why did my sd card unmount? I set up a virtual sd card for my project yesterday and my application was working fine. Today when I started my computer back up I found that my project was no longer targeting the sd card, so I had to reassign it, repush the file I had on it and remount it. It works fine again, but I need to know why it did this, is this just an issue with a virtual sd card or is this going to happen when I go to publish the application? Any and all advice is appreciated, thank you!",3
+9528630,03/02/2012 05:48:33,1021507,10/31/2011 06:52:00,10,0,IDE for CodeIgniter Development,When i use some text editor to develop CI too hard to find error. Which IDE support debug feature for CodeIgniter. When i surf in internet they refer Eclipse. Is that support my requirement?,eclipse,codeigniter,,,,03/04/2012 16:14:32,not constructive,1,34,4,IDE for CodeIgniter Development When i use some text editor to develop CI too hard to find error. Which IDE support debug feature for CodeIgniter. When i surf in internet they refer Eclipse. Is that support my requirement?,2
+11194344,06/25/2012 17:34:49,1459583,06/15/2012 19:05:52,17,1,Installing JavaFX 2.0 in Eclipse Juno for Mac,"I'm running Mac OS X 10.6.x (Snow Leopard) right now, so I'm pretty sure that there could be some issues with supported systems, but I'm trying to install JavaFX 2.0 (or 2.1.x) in Eclipse Juno for Java EE (version 3.8). 
+
+I have already installed the e(fx)clipse plugin, but I'm not sure if I'm downloading the right JavaFX .zip file from the Oracle website. I downloaded the JavaFX 2.2 beta release because it seemed to be the only release available for OS X, but I could be wrong. Once I download this archive, I'm not exactly what to do with it/where to place it so that Eclipse recognizes it as the JavaFX 2.2 SDK. I know that I have to go into preferences and set the location of the SDK file, but there doesn't seem to be any selectable .jar file or folder to set it to. Am I doing something wrong here? Any help is appreciated.",eclipse,eclipse-plugin,javafx-2,eclipse-juno,,,open,0,156,8,"Installing JavaFX 2.0 in Eclipse Juno for Mac I'm running Mac OS X 10.6.x (Snow Leopard) right now, so I'm pretty sure that there could be some issues with supported systems, but I'm trying to install JavaFX 2.0 (or 2.1.x) in Eclipse Juno for Java EE (version 3.8). 
+
+I have already installed the e(fx)clipse plugin, but I'm not sure if I'm downloading the right JavaFX .zip file from the Oracle website. I downloaded the JavaFX 2.2 beta release because it seemed to be the only release available for OS X, but I could be wrong. Once I download this archive, I'm not exactly what to do with it/where to place it so that Eclipse recognizes it as the JavaFX 2.2 SDK. I know that I have to go into preferences and set the location of the SDK file, but there doesn't seem to be any selectable .jar file or folder to set it to. Am I doing something wrong here? Any help is appreciated.",4
+2875910,05/20/2010 16:41:30,334526,05/06/2010 14:39:33,356,33,Is it feasible to do .NET development using Eclipse?,"How feasible is it to use Eclipse to develop .NET applications? Is it best just to go with Visual Studio?
+",eclipse,.net,,,,,open,0,20,9,"Is it feasible to do .NET development using Eclipse? How feasible is it to use Eclipse to develop .NET applications? Is it best just to go with Visual Studio?
+",2
+6081647,05/21/2011 12:15:33,185433,10/07/2009 07:12:41,58,0,Can't detect Torch 9800 in blackberry eclipse plugin for macos,"Im trying to put my Hello World application on my Torch 9800 using the blackberry plugin for macos. But it seems like eclipse cannot find my phone even though its plugged in because the options are greyed out (Blackberry->Load projects(s) on device) .. see the image below.
+
+I have installed the BlackBerry desktop software and that works fine.
+
+Any idea what is wrong? I cant find much documentation about this?
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/ElGOi.png",eclipse,osx,blackberry,detection,blackberry-torch,05/23/2011 08:59:29,too localized,1,74,10,"Can't detect Torch 9800 in blackberry eclipse plugin for macos Im trying to put my Hello World application on my Torch 9800 using the blackberry plugin for macos. But it seems like eclipse cannot find my phone even though its plugged in because the options are greyed out (Blackberry->Load projects(s) on device) .. see the image below.
+
+I have installed the BlackBerry desktop software and that works fine.
+
+Any idea what is wrong? I cant find much documentation about this?
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/ElGOi.png",5
+6665736,07/12/2011 14:24:43,840914,07/12/2011 14:20:09,1,0,Developing an eclipse plugin to deploy on my server,"How can we create an eclipse popmenu plugin (which is similar to Google App engine SDK). i.e. If I have created a project, when I clicked on the plugin menu, it should be able to deploy to my tomcat/webapps folder.",eclipse,plugins,project,deploying,,,open,0,40,9,"Developing an eclipse plugin to deploy on my server How can we create an eclipse popmenu plugin (which is similar to Google App engine SDK). i.e. If I have created a project, when I clicked on the plugin menu, it should be able to deploy to my tomcat/webapps folder.",4
+9269529,02/13/2012 23:18:52,607195,02/07/2011 21:52:42,3,0,How to run GWT RequestFactory Validation Tool on Eclipse project,"I've got a Android AppEngine Connected Project I'm trying to build using GWT2.4 RequestFactory and Objectify on my Eclipse IDE.
+
+Apparently I need to run the RequestFactory Validation Tool because I'm using ServiceName and ProxyForName annotations (these are required especially when working on the Android client side).  My problem is the Eclipse can't validate it and the solution provided at http://code.google.com/p/google-web-toolkit/wiki/RequestFactoryInterfaceValidation#IDE_configuration is enough to make me rip my eyes out.
+
+Since I'm working on a Windows machine, the shell script provided is not very useful.  Trying to run Validation Tool from a cmd propt returns the error message:""This tool must be run with a JDK, not a JRE""
+
+Can someone explain how this Tool is supposed to be run?  Is there a way to use it as an External Tool in eclipse?
+",eclipse,gwt,requestfactory,,,,open,0,132,10,"How to run GWT RequestFactory Validation Tool on Eclipse project I've got a Android AppEngine Connected Project I'm trying to build using GWT2.4 RequestFactory and Objectify on my Eclipse IDE.
+
+Apparently I need to run the RequestFactory Validation Tool because I'm using ServiceName and ProxyForName annotations (these are required especially when working on the Android client side).  My problem is the Eclipse can't validate it and the solution provided at http://code.google.com/p/google-web-toolkit/wiki/RequestFactoryInterfaceValidation#IDE_configuration is enough to make me rip my eyes out.
+
+Since I'm working on a Windows machine, the shell script provided is not very useful.  Trying to run Validation Tool from a cmd propt returns the error message:""This tool must be run with a JDK, not a JRE""
+
+Can someone explain how this Tool is supposed to be run?  Is there a way to use it as an External Tool in eclipse?
+",3
+8902254,01/17/2012 21:54:22,734507,05/02/2011 13:27:30,6,2,"What is the best platform for developing J2ee apps using Eclipse 3.7.1 (Indigo), Windows XP, Windows 7 , Ubuntu 11?","**What is the best platform for developing J2ee apps using Eclipse 3.7.1 (Indigo) ?
+Is it  Windows XP, Windows 7 or Ubuntu 11 ??**
+",eclipse,windows-7,ubuntu,windows-xp,,01/17/2012 22:08:10,not constructive,1,24,20,"What is the best platform for developing J2ee apps using Eclipse 3.7.1 (Indigo), Windows XP, Windows 7 , Ubuntu 11? **What is the best platform for developing J2ee apps using Eclipse 3.7.1 (Indigo) ?
+Is it  Windows XP, Windows 7 or Ubuntu 11 ??**
+",4
+1569884,10/15/2009 01:41:05,81108,03/22/2009 16:46:48,160,5,Properties file in Eclipse,"I have an application that uses a properties file that was added by hand at the /project/bin folder (Eclipse project). The application locates the file using:
+
+    this.getClass().getClassLoader().getResourceAsStream(""filename.properties"")
+
+Now I want to add this file in Eclipse, so it's actually part of the project. In which directory should I create the file and how can I make sure the application will find it?
+
+Thanks.",eclipse,java,properties,file,,,open,0,64,4,"Properties file in Eclipse I have an application that uses a properties file that was added by hand at the /project/bin folder (Eclipse project). The application locates the file using:
+
+    this.getClass().getClassLoader().getResourceAsStream(""filename.properties"")
+
+Now I want to add this file in Eclipse, so it's actually part of the project. In which directory should I create the file and how can I make sure the application will find it?
+
+Thanks.",4
+11178616,06/24/2012 15:19:13,755000,05/16/2011 01:56:59,107,1,VLC compilation error in Eclipse (in Ubuntu),"I am trying to export VLC to Eclipse and compile it from there (in Ubuntu).
+There have been a number of errors mostly related to the location of some of the header files that I could fix. But now I am getting two errors that I don't know how to fix. The errors are:
+
+**unknown type name ‘pthread_rwlock_t’**  
+**unknown type name ‘pthread_spinlock_t’**   
+
+both of these are used in **""vlc_threads.h""**
+
+Any help is highly appreciated.
+
+Thank you very much,
+
+TJ",eclipse,ubuntu,compilation,error-message,vlc,06/27/2012 11:54:46,off topic,1,77,7,"VLC compilation error in Eclipse (in Ubuntu) I am trying to export VLC to Eclipse and compile it from there (in Ubuntu).
+There have been a number of errors mostly related to the location of some of the header files that I could fix. But now I am getting two errors that I don't know how to fix. The errors are:
+
+**unknown type name ‘pthread_rwlock_t’**  
+**unknown type name ‘pthread_spinlock_t’**   
+
+both of these are used in **""vlc_threads.h""**
+
+Any help is highly appreciated.
+
+Thank you very much,
+
+TJ",5
+3062528,06/17/2010 14:26:33,359862,06/06/2010 19:55:32,118,1,How to see .class content in Eclipse?,"Sometimes, in Eclipse , i press a combination of keys which take me to the editor page that shows contents of my .class file. I never seem to be able to remember what that key combination is. 
+
+Can someone please let me know?",eclipse,file,class,editor,,,open,0,43,7,"How to see .class content in Eclipse? Sometimes, in Eclipse , i press a combination of keys which take me to the editor page that shows contents of my .class file. I never seem to be able to remember what that key combination is. 
+
+Can someone please let me know?",4
+3459993,08/11/2010 15:23:41,417352,08/11/2010 14:31:20,1,1,Compiling C++/GTK within Eclipse,"I'm fiddling around with the C/C++ version of Eclipse to build a simple GTK app. However, I can't seem to be able to compile a GTK sample from within Eclipse.
+
+I think gtk is installed properly, used the ubuntu Package manager.
+
+the code is:
+
+#include <gtk-2.0/gtk/gtk.h>
+
+int main( int argc, char *argv[] )
+{
+    GtkWidget *window;
+
+    gtk_init (&argc, &argv);
+
+    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+    gtk_widget_show  (window);
+
+    gtk_main ();
+
+    return 0;
+}
+
+and I have followed the instructions here ""http://stackoverflow.com/questions/1315091/compiling-c-gtk-within-eclipse/3459414#3459414"" to set up the Command line patterns ""pkg-config --cflags --libs gtk+-2.0""
+
+but I get these error:
+
+Building file: ../src/GTKtestC.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF""src/GTKtestC.d"" -MT""src/GTKtestC.d"" -o""src/GTKtestC.o"" ""../src/GTKtestC.c"" pkg-config --cflags --libs gtk+-2.0
+gcc: pkg-config: No such file or directory
+gcc: gtk+-2.0: No such file or directory
+cc1: error: unrecognized command line option ""-fcflags""
+cc1: error: unrecognized command line option ""-flibs""
+make: *** [src/GTKtestC.o] Error 1
+
+
+Getting a little frustrated, any help much appreciated
+
+",eclipse,gcc,gtk,gtk+,,,open,0,161,4,"Compiling C++/GTK within Eclipse I'm fiddling around with the C/C++ version of Eclipse to build a simple GTK app. However, I can't seem to be able to compile a GTK sample from within Eclipse.
+
+I think gtk is installed properly, used the ubuntu Package manager.
+
+the code is:
+
+#include <gtk-2.0/gtk/gtk.h>
+
+int main( int argc, char *argv[] )
+{
+    GtkWidget *window;
+
+    gtk_init (&argc, &argv);
+
+    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+    gtk_widget_show  (window);
+
+    gtk_main ();
+
+    return 0;
+}
+
+and I have followed the instructions here ""http://stackoverflow.com/questions/1315091/compiling-c-gtk-within-eclipse/3459414#3459414"" to set up the Command line patterns ""pkg-config --cflags --libs gtk+-2.0""
+
+but I get these error:
+
+Building file: ../src/GTKtestC.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF""src/GTKtestC.d"" -MT""src/GTKtestC.d"" -o""src/GTKtestC.o"" ""../src/GTKtestC.c"" pkg-config --cflags --libs gtk+-2.0
+gcc: pkg-config: No such file or directory
+gcc: gtk+-2.0: No such file or directory
+cc1: error: unrecognized command line option ""-fcflags""
+cc1: error: unrecognized command line option ""-flibs""
+make: *** [src/GTKtestC.o] Error 1
+
+
+Getting a little frustrated, any help much appreciated
+
+",4
+1356849,08/31/2009 10:37:12,63051,02/05/2009 20:53:34,2259,59,best resources to start programming eclipse plug-ins,"Either books (free or not), online tutorials, articles, etc.",eclipse,eclipse-plugin,java,swt,,,open,0,9,7,"best resources to start programming eclipse plug-ins Either books (free or not), online tutorials, articles, etc.",4
+4227226,11/19/2010 16:41:16,263714,02/01/2010 17:09:59,36,0,What is the state of GIT IDE plugins in 2010 (old question was in 2008)?,"My firm is switching to GIT and I'm curious as to the state of IDE plug ins for GIT. The old question was answered in 2008, and I'm hoping the answer no longer applies.",eclipse,git,emacs,ide,,,open,0,34,15,"What is the state of GIT IDE plugins in 2010 (old question was in 2008)? My firm is switching to GIT and I'm curious as to the state of IDE plug ins for GIT. The old question was answered in 2008, and I'm hoping the answer no longer applies.",4
+159227,10/01/2008 19:11:53,24263,10/01/2008 18:44:24,1,1,Can anyone recommend a good reference for setting up Hibernate3 with Eclipse?,"I've looked at some of the Eclipse and Hibernate tutorials and the ones for Hibernate2 are pretty good, pretty intuitive.  Recently I tried to setup Hibernate3, using the Eclipse plugin, and failed to get the Hibernate tools to work, outside of physically moving the jar files from the plugins directory to my lib directory (I should have to do this!)",eclipse,hibernate,,,,,open,0,61,12,"Can anyone recommend a good reference for setting up Hibernate3 with Eclipse? I've looked at some of the Eclipse and Hibernate tutorials and the ones for Hibernate2 are pretty good, pretty intuitive.  Recently I tried to setup Hibernate3, using the Eclipse plugin, and failed to get the Hibernate tools to work, outside of physically moving the jar files from the plugins directory to my lib directory (I should have to do this!)",2
+6731640,07/18/2011 10:36:59,280244,02/24/2010 10:52:22,9363,518,Is there a shortcut to close an View in Eclispe?,Is there a shortcut to Close an View in Eclipse (not CTRL+W to close the editor)?,eclipse,keyboard-shortcuts,,,,,open,0,16,10,Is there a shortcut to close an View in Eclispe? Is there a shortcut to Close an View in Eclipse (not CTRL+W to close the editor)?,2
+8223874,11/22/2011 08:26:42,463751,10/01/2010 10:18:29,114,3,Google App Engine Plugin Installation Issues with Eclipse,"Hi Everyone I am trying to configure app engine to eclipse i ve tried installing both 3.6 and 3.7 yet no success all I get are the following errors below during the installation of the updates. I ve followed exactly the same procedure written on google app engine installation guide plus i ve tried to install MyLyn SDK(as solution) for the fix but the installation gets stuck during  the download of MyLyn too.
+
+An error occurred while collecting items to be installed
+session context was:(profile=SDKProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.appengine.eclipse.sdkbundle_1.6.0.v201111171704r36.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.appsmarketplace_2.4.2.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer_2.4.2.r36x201110201842.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.UiBinder_2.4.2.r36x201110201842.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.hosted.2_0.webkit_win32_2.4.2.r36x201110201837.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.hosted.2_2_2.4.2.r36x201110201837.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.hosted.2_2.webkit_2.4.2.r36x201110201837.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.hosted.lib_2.4.2.r36x201110201837.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.login_2.4.2.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.managedapis_2.4.2.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gwt.eclipse.core_2.4.2.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.core_1.2.0.r36x201110191514.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.core.lib_1.2.0.r36x201110191514.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.core.xml_1.2.0.r36x201110191535.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.css_1.2.0.r36x201110191525.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.runtime.lib_1.2.0.r36x201110191514.jar.
+Read timed out",eclipse,google-app-engine,google,eclipse-plugin,,11/23/2011 19:42:36,too localized,1,206,8,"Google App Engine Plugin Installation Issues with Eclipse Hi Everyone I am trying to configure app engine to eclipse i ve tried installing both 3.6 and 3.7 yet no success all I get are the following errors below during the installation of the updates. I ve followed exactly the same procedure written on google app engine installation guide plus i ve tried to install MyLyn SDK(as solution) for the fix but the installation gets stuck during  the download of MyLyn too.
+
+An error occurred while collecting items to be installed
+session context was:(profile=SDKProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.appengine.eclipse.sdkbundle_1.6.0.v201111171704r36.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.appsmarketplace_2.4.2.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer_2.4.2.r36x201110201842.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.UiBinder_2.4.2.r36x201110201842.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.hosted.2_0.webkit_win32_2.4.2.r36x201110201837.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.hosted.2_2_2.4.2.r36x201110201837.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.hosted.2_2.webkit_2.4.2.r36x201110201837.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.designer.hosted.lib_2.4.2.r36x201110201837.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.login_2.4.2.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gdt.eclipse.managedapis_2.4.2.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gwt.eclipse.core_2.4.2.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.relr36v201110112027.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.core_1.2.0.r36x201110191514.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.core.lib_1.2.0.r36x201110191514.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.core.xml_1.2.0.r36x201110191535.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.css_1.2.0.r36x201110191525.jar.
+Read timed out
+Unable to read repository at http://dl.google.com/eclipse/plugin/3.6/plugins/org.eclipse.wb.runtime.lib_1.2.0.r36x201110191514.jar.
+Read timed out",4
+5749855,04/21/2011 21:14:15,1113,08/12/2008 12:53:12,505,21,How do I enable MercurialEclipse plugin for a project?,"I have a project using mercurial for version control, and I'm trying to set it up in Eclipse. I cloned the project from the command line and then opened the project in eclipse by importing it as a maven project.
+
+This works except for that eclipse/MercurialEclipse doesn't seem to pick up that this is an merurial repo.
+
+If I go to project properties, the Mercurial option shows only the message ""This project doesn't use MercurialEclipse as a Team provider.""
+
+In the ""Team Synchronizing"" perspective, Synchronize... just gives me a ""clone repository wizard"" saying ""There are no Mercurial resources to syncrhonize"".
+
+Does anyone know how to get MercurialEclipse to pick up the existing repository for the project.",eclipse,mercurial,,,,,open,0,112,9,"How do I enable MercurialEclipse plugin for a project? I have a project using mercurial for version control, and I'm trying to set it up in Eclipse. I cloned the project from the command line and then opened the project in eclipse by importing it as a maven project.
+
+This works except for that eclipse/MercurialEclipse doesn't seem to pick up that this is an merurial repo.
+
+If I go to project properties, the Mercurial option shows only the message ""This project doesn't use MercurialEclipse as a Team provider.""
+
+In the ""Team Synchronizing"" perspective, Synchronize... just gives me a ""clone repository wizard"" saying ""There are no Mercurial resources to syncrhonize"".
+
+Does anyone know how to get MercurialEclipse to pick up the existing repository for the project.",2
+10809708,05/30/2012 03:40:56,431992,08/26/2010 15:04:02,11,0,xdebug Codeigniter in Eclipse,"I have Eclipse Indigo installed with Xdebug running a Codeigniter application.
+
+The application runs correctly, but all variables (in the debugger) show up as Uninitialized
+
+Anyone know if I need to configure something to get this to work?
+
+Plain old PHP files work correctly.
+
+Thanks !
+
+",eclipse,codeigniter,xdebug,,,,open,0,42,4,"xdebug Codeigniter in Eclipse I have Eclipse Indigo installed with Xdebug running a Codeigniter application.
+
+The application runs correctly, but all variables (in the debugger) show up as Uninitialized
+
+Anyone know if I need to configure something to get this to work?
+
+Plain old PHP files work correctly.
+
+Thanks !
+
+",3
+6336562,06/13/2011 21:25:16,4903,09/06/2008 14:16:54,2971,92,Are there disadvantages to setting up unit or integration tests in Eclipse as a separate project?,"I'm currently working on a project using Eclipse where the unit and integration tests are in one project that also contains the DAO and service layer, and there is another project that includes the Web interface. The Web interface contains the Spring configuration files, and instead of duplicating them for the tests in the DAO project, I want to reference the ones that already exist. However, as I started thinking about it, if this is possible, why not just move them into their own project completely and setup project dependencies. Has anyone done this, and do you have an example of this setup, or can you provide some roadblocks you encountered?",eclipse,unit-testing,,,,,open,0,111,16,"Are there disadvantages to setting up unit or integration tests in Eclipse as a separate project? I'm currently working on a project using Eclipse where the unit and integration tests are in one project that also contains the DAO and service layer, and there is another project that includes the Web interface. The Web interface contains the Spring configuration files, and instead of duplicating them for the tests in the DAO project, I want to reference the ones that already exist. However, as I started thinking about it, if this is possible, why not just move them into their own project completely and setup project dependencies. Has anyone done this, and do you have an example of this setup, or can you provide some roadblocks you encountered?",2
+4129320,11/09/2010 00:12:09,363603,06/10/2010 15:18:52,63,3,How to read an installed feature (eclipse PDE)?,"Is it possible to read a feature like its possible to read a plugin use the eclipse PDE API? Currently I read plugins using:
+
+		    Bundle[] bundles = Platform.getBundles(name, version);
+		    if (bundles == null) {
+		      throw new NullPointerException(""No bundle found with ID: "" + name
+		          + "" and version: "" + version);
+
+		    } else {
+		      for (Bundle bundle : bundles) {
+		        System.out.println(bundle.getSymbolicName());
+
+		      }
+
+		    }
+
+But if I specify the name of an installed feature I just get null. Is there some other way that features should be read?
+
+And when I have read the feature I would like to iterate all the plugins that it reference.",eclipse,features,pde,,,,open,0,146,8,"How to read an installed feature (eclipse PDE)? Is it possible to read a feature like its possible to read a plugin use the eclipse PDE API? Currently I read plugins using:
+
+		    Bundle[] bundles = Platform.getBundles(name, version);
+		    if (bundles == null) {
+		      throw new NullPointerException(""No bundle found with ID: "" + name
+		          + "" and version: "" + version);
+
+		    } else {
+		      for (Bundle bundle : bundles) {
+		        System.out.println(bundle.getSymbolicName());
+
+		      }
+
+		    }
+
+But if I specify the name of an installed feature I just get null. Is there some other way that features should be read?
+
+And when I have read the feature I would like to iterate all the plugins that it reference.",3
+2713940,04/26/2010 13:49:12,121993,06/12/2009 13:11:22,3001,115,Eclipse Java Profiler,"I know this has been asked before, but I have not found anything recent that really gives a good answer. I'm trying to find a free profiler for eclipse that works well. I would like a graphical breakdown of execution time in particular. I've tried TPTP but have had no luck at all with GUI apps (it took almost a minute for a GUI app to start and was virtually unusable on screen - it uses a lot of Java OpenGL, so I'm not sure if it has to do with that). I liked YourKit, but unfortunately it's not free. I even tried switching to NetBeans since they have a built in profiler.
+
+If anyone has had success with particular profilers (even if it was TPTP), I'd like to hear about it. Any recommendations would be greatly appreciated.
+
+thanks,
+Jeff",eclipse,java,profiler,,,,open,0,137,3,"Eclipse Java Profiler I know this has been asked before, but I have not found anything recent that really gives a good answer. I'm trying to find a free profiler for eclipse that works well. I would like a graphical breakdown of execution time in particular. I've tried TPTP but have had no luck at all with GUI apps (it took almost a minute for a GUI app to start and was virtually unusable on screen - it uses a lot of Java OpenGL, so I'm not sure if it has to do with that). I liked YourKit, but unfortunately it's not free. I even tried switching to NetBeans since they have a built in profiler.
+
+If anyone has had success with particular profilers (even if it was TPTP), I'd like to hear about it. Any recommendations would be greatly appreciated.
+
+thanks,
+Jeff",3
+10945457,06/08/2012 08:31:10,1266464,03/13/2012 12:34:53,15,0,Eclipse JSF editor not finding beans when multiple faces-config files are declared,"I've a JSF projects which declares 2 faces-config files in web.xml: `faces-config.xml` and `abc-faces-config.xml`.
+At runtime the application works correctly, the app-server finds managed beans declared in both faces-config files. Instead, when I edit jsf pages in eclipse, only managed beans declared in the first configuration file are found and shown by code completion, and for beans declared in the second eclipse gives warnings.
+
+Is there a way to make eclipse find beans from both faces-config files?
+
+I'm using eclipse 3.5.0 (Galileo).",eclipse,configuration,,,,,open,0,79,12,"Eclipse JSF editor not finding beans when multiple faces-config files are declared I've a JSF projects which declares 2 faces-config files in web.xml: `faces-config.xml` and `abc-faces-config.xml`.
+At runtime the application works correctly, the app-server finds managed beans declared in both faces-config files. Instead, when I edit jsf pages in eclipse, only managed beans declared in the first configuration file are found and shown by code completion, and for beans declared in the second eclipse gives warnings.
+
+Is there a way to make eclipse find beans from both faces-config files?
+
+I'm using eclipse 3.5.0 (Galileo).",2
+7462749,09/18/2011 16:20:04,951407,09/18/2011 16:20:04,1,0,Using Ants Scripts/Deployment tool within the Eclipse UI for Salesforce.com deployments,"We are using Salesforce.com with a large # of sandboxes.  We currently using Eclipse with the Force.com plugin for deployment. 
+Problem
+I can deploy using the Ants in the CLI mode - however, it would be great if we can add Ants to Eclipse so that we can have an integrated UI for both. 
+I would appreciate if anyone who has done this before can provide some pointers. Here is what I have installed on my PC: Win7, Ants, Eclipse, Force.com IDE plugin, SubClipse plugin",eclipse,deployment,salesforce,ants,,,open,0,85,11,"Using Ants Scripts/Deployment tool within the Eclipse UI for Salesforce.com deployments We are using Salesforce.com with a large # of sandboxes.  We currently using Eclipse with the Force.com plugin for deployment. 
+Problem
+I can deploy using the Ants in the CLI mode - however, it would be great if we can add Ants to Eclipse so that we can have an integrated UI for both. 
+I would appreciate if anyone who has done this before can provide some pointers. Here is what I have installed on my PC: Win7, Ants, Eclipse, Force.com IDE plugin, SubClipse plugin",4
+2891859,05/23/2010 13:20:36,348267,05/23/2010 12:50:04,1,0,"Deploying project, created with Eclipse and Maven, to Tomcat","I'm using Eclipse 3.5, Maven 2, m2eclipse and Tomcat 6. So i create Maven project for archetype webapp. 
+This is pom.xml:
+<code>
+<project xmlns=""http://maven.apache.org/POM/4.0.0"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+    xsi:schemaLocation=""http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.itransition</groupId>
+    <artifactId>hello</artifactId>
+    <packaging>war</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>hello Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <!-- tools.jar dependency -->
+    <profiles>
+        <profile>
+            <id>default-tools.jar</id>
+            <activation>
+                <property>
+                    <name>java.vendor</name>
+                    <value>Sun Microsystems Inc.</value>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.sun</groupId>
+                    <artifactId>tools</artifactId>
+                    <version>1.5.0</version>
+                    <scope>system</scope>
+                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>2.1.8.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>hello</finalName>
+    </build>
+
+
+</project>
+
+</code>
+
+So then i want to deploy my web application to Tomcat. What I need to do? Maven install don't help. But if I create war by Maven install, i can import it to eclipse and deploy it to Tomcat by ""Add and remove..."" in server popup.",eclipse,tomcat,maven,,,,open,0,540,9,"Deploying project, created with Eclipse and Maven, to Tomcat I'm using Eclipse 3.5, Maven 2, m2eclipse and Tomcat 6. So i create Maven project for archetype webapp. 
+This is pom.xml:
+<code>
+<project xmlns=""http://maven.apache.org/POM/4.0.0"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+    xsi:schemaLocation=""http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.itransition</groupId>
+    <artifactId>hello</artifactId>
+    <packaging>war</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>hello Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <!-- tools.jar dependency -->
+    <profiles>
+        <profile>
+            <id>default-tools.jar</id>
+            <activation>
+                <property>
+                    <name>java.vendor</name>
+                    <value>Sun Microsystems Inc.</value>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.sun</groupId>
+                    <artifactId>tools</artifactId>
+                    <version>1.5.0</version>
+                    <scope>system</scope>
+                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>2.1.8.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>hello</finalName>
+    </build>
+
+
+</project>
+
+</code>
+
+So then i want to deploy my web application to Tomcat. What I need to do? Maven install don't help. But if I create war by Maven install, i can import it to eclipse and deploy it to Tomcat by ""Add and remove..."" in server popup.",3
+8153416,11/16/2011 14:39:24,197979,10/28/2009 10:32:47,79,7,Eclipse 3.7 runs auto build before executing ant task,"My Project -> Builders list looks like this:
+
+ - Ant
+ - Android resource manager
+ - Android pre compiler
+ - Java builder
+ - Android Package manager
+
+""Build Automatically"" option is turned off
+
+If I run ant target from Ant view or as external tool then Eclipse makes this:
+
+ 1. It builds my project (it runs all builders from the builders list)
+ 2. Executes selected target
+
+If I remove Ant from builders list it executes only selected ant target (that's what I want).
+
+How can I make Eclipse launch only selected ant target without running other builders and without removing ant builder from the builders list?",eclipse,ant,adt,,,,open,0,100,9,"Eclipse 3.7 runs auto build before executing ant task My Project -> Builders list looks like this:
+
+ - Ant
+ - Android resource manager
+ - Android pre compiler
+ - Java builder
+ - Android Package manager
+
+""Build Automatically"" option is turned off
+
+If I run ant target from Ant view or as external tool then Eclipse makes this:
+
+ 1. It builds my project (it runs all builders from the builders list)
+ 2. Executes selected target
+
+If I remove Ant from builders list it executes only selected ant target (that's what I want).
+
+How can I make Eclipse launch only selected ant target without running other builders and without removing ant builder from the builders list?",3
+859318,05/13/2009 17:34:18,23309,09/29/2008 01:11:34,940,23,Where does Eclipse store SSL keys?,"I'm trying to use the JIRA dashboard plugin from tigris.org to connect to our in-house JIRA server, which has an invalid SSL certificate.  I'd like to import the certificate into the keystore used by this plugin, whether that's the Eclipse keystore (which is where?) or its own.
+
+If it helps, here's the error message:
+>sun.security.validator.ValidatorException: PKIX path building failed:
+>sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+
+How can I go about finding the keystore?",eclipse,jira,,,,,open,0,74,6,"Where does Eclipse store SSL keys? I'm trying to use the JIRA dashboard plugin from tigris.org to connect to our in-house JIRA server, which has an invalid SSL certificate.  I'd like to import the certificate into the keystore used by this plugin, whether that's the Eclipse keystore (which is where?) or its own.
+
+If it helps, here's the error message:
+>sun.security.validator.ValidatorException: PKIX path building failed:
+>sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+
+How can I go about finding the keystore?",2
+10297711,04/24/2012 12:21:30,1286723,03/22/2012 18:42:38,3458,402,Eclipse is not opening when click on eclipse.exe,"When i am trying to open eclipse exe file by double clicking, eclipse window is not opened.
+Previously it is working fine but today it is not opened?
+It will help full if any one gave quick fix .",eclipse,,,,,04/25/2012 12:32:17,too localized,1,37,8,"Eclipse is not opening when click on eclipse.exe When i am trying to open eclipse exe file by double clicking, eclipse window is not opened.
+Previously it is working fine but today it is not opened?
+It will help full if any one gave quick fix .",1
+9331508,02/17/2012 16:02:31,364123,06/11/2010 01:32:17,633,24,Batch adding Subversion repositories to Eclipse,"I've found myself in the odd position of being a TA for a software engineering class wherein I routinely have to check out each student's project from a Subversion repository. What this currently entails is manually adding around 100 repositories to Eclipse every two weeks.
+
+All of the repository URLs are of the same form, something along the lines of `domain/svn/teamXprojectY` where X and Y are numbers in a given range.  It would be trivial to output these URLs to a text file or something along those lines, but is there any way to automate adding these repositories to Subclipse?  I've searched online as well as in the Preferences and menu options for Subclipse and can't find anything that might help me.
+
+If anybody has any idea how to do this, it would be much appreciated.  Thanks!",eclipse,svn,subclipse,,,,open,0,138,6,"Batch adding Subversion repositories to Eclipse I've found myself in the odd position of being a TA for a software engineering class wherein I routinely have to check out each student's project from a Subversion repository. What this currently entails is manually adding around 100 repositories to Eclipse every two weeks.
+
+All of the repository URLs are of the same form, something along the lines of `domain/svn/teamXprojectY` where X and Y are numbers in a given range.  It would be trivial to output these URLs to a text file or something along those lines, but is there any way to automate adding these repositories to Subclipse?  I've searched online as well as in the Preferences and menu options for Subclipse and can't find anything that might help me.
+
+If anybody has any idea how to do this, it would be much appreciated.  Thanks!",3
+1313186,08/21/2009 17:16:56,139010,07/15/2009 20:56:00,589,46,"In the Eclipse Debugger (for Java), is there a way to inspect arbitrary values?","I'm wondering if there is a way to look at the values of non-declared variables as they get passed into a function, *after that function has been executed*. For example, if I am debugging and the line
+
+    foo.setBar(baz.getBar());
+
+has already been passed (but is still within scope), how can I see the value of what got passed in to `setBar()`? I know that I can see this many other ways, for instance by stepping into the `setBar()` call, or by assigning `baz.getBar()` to a temporary variable - but that's not what I'm asking.",eclipse,debugging,java,,,,open,0,95,14,"In the Eclipse Debugger (for Java), is there a way to inspect arbitrary values? I'm wondering if there is a way to look at the values of non-declared variables as they get passed into a function, *after that function has been executed*. For example, if I am debugging and the line
+
+    foo.setBar(baz.getBar());
+
+has already been passed (but is still within scope), how can I see the value of what got passed in to `setBar()`? I know that I can see this many other ways, for instance by stepping into the `setBar()` call, or by assigning `baz.getBar()` to a temporary variable - but that's not what I'm asking.",3
+8004795,11/04/2011 04:10:21,656925,08/12/2010 02:22:36,1310,33,Setting break points for Eclipse IDE using MinGW GDB,"I installed Eclipse/CDT.  I linked to GDB from my MinGW installation.  This allowed my to run in debug mode however I can not set break points.  My guess is that I am missing some other Eclipse module.
+
+The error given is:
+
+An internal error ocurred durring ""Clear Break Point Status""
+
+whenever I try to set a break point.
+
+",eclipse,ide,,,,11/04/2011 11:13:10,off topic,1,58,9,"Setting break points for Eclipse IDE using MinGW GDB I installed Eclipse/CDT.  I linked to GDB from my MinGW installation.  This allowed my to run in debug mode however I can not set break points.  My guess is that I am missing some other Eclipse module.
+
+The error given is:
+
+An internal error ocurred durring ""Clear Break Point Status""
+
+whenever I try to set a break point.
+
+",2
+6777607,07/21/2011 14:23:44,660833,03/15/2011 15:05:38,182,1,project directory structure related issue,"I already posted one question earlier
+<http://stackoverflow.com/questions/5718878/project-directory-structure-problem-in-eclipse>
+[foo](http://stackoverflow.com/questions/5718878/project-directory-structure-problem-in-eclipse)
+<a href=""http://stackoverflow.com/questions/5718878/project-directory-structure-problem-in-eclipse"">foo</a> 
+but couldn't get satisfactory answer.
+So posting the question again with image and making myself more clear 
+
+![enter image description here][1]
+
+
+  [1]: http://i.imgur.com/9kp4G.png
+I am trying to import the maven project in eclipse.. can any one please help",eclipse,maven,project,directory-structure,,,open,0,44,5,"project directory structure related issue I already posted one question earlier
+<http://stackoverflow.com/questions/5718878/project-directory-structure-problem-in-eclipse>
+[foo](http://stackoverflow.com/questions/5718878/project-directory-structure-problem-in-eclipse)
+<a href=""http://stackoverflow.com/questions/5718878/project-directory-structure-problem-in-eclipse"">foo</a> 
+but couldn't get satisfactory answer.
+So posting the question again with image and making myself more clear 
+
+![enter image description here][1]
+
+
+  [1]: http://i.imgur.com/9kp4G.png
+I am trying to import the maven project in eclipse.. can any one please help",4
+7317403,09/06/2011 09:03:41,916638,08/28/2011 17:08:28,13,0,J2EE exercises?,"Are you familiar with any good J2EE exercises for beginners available online?
+
+I'm interested mostly in exercises for EJB, JPA, JTA, JMS.
+I would also prefer exercises specifically for Weblogic App Server using Eclipse as IDE.
+
+Thanks.",eclipse,java-ee,weblogic,exercise,,12/10/2011 05:54:45,not constructive,1,34,2,"J2EE exercises? Are you familiar with any good J2EE exercises for beginners available online?
+
+I'm interested mostly in exercises for EJB, JPA, JTA, JMS.
+I would also prefer exercises specifically for Weblogic App Server using Eclipse as IDE.
+
+Thanks.",4
+5050149,02/19/2011 10:09:43,196697,10/26/2009 15:07:59,1164,33,Eclim Strange Error,"I have installed Eclim to use Eclipse functionality in Vim. But from time to time I see this error with some files:
+
+![enter image description here][1]
+
+Has any body experienced the same error?
+
+By the way, the error hide disappear quickly, that I had to print the screen to be able to see it.
+
+
+  [1]: http://i.stack.imgur.com/NsZIy.png",eclipse,vim,eclim,,,,open,0,54,3,"Eclim Strange Error I have installed Eclim to use Eclipse functionality in Vim. But from time to time I see this error with some files:
+
+![enter image description here][1]
+
+Has any body experienced the same error?
+
+By the way, the error hide disappear quickly, that I had to print the screen to be able to see it.
+
+
+  [1]: http://i.stack.imgur.com/NsZIy.png",3
+10518337,05/09/2012 14:39:43,973493,09/30/2011 16:51:57,4,0,Playframework source code changes,Hello I m new in play framwork and someone told me to make some changes in a web application. After importing it to eclipse and making some changes I tried to play run project but I wasnot able to see the changes I made. What shoud I do after the source code changes?,eclipse,playframework,,,,05/14/2012 13:00:48,not a real question,1,53,4,Playframework source code changes Hello I m new in play framwork and someone told me to make some changes in a web application. After importing it to eclipse and making some changes I tried to play run project but I wasnot able to see the changes I made. What shoud I do after the source code changes?,2
+6343379,06/14/2011 12:21:58,389447,07/12/2010 11:45:08,50,1,Customize the Mylyn Context UI ?,"I'm using Mylyn for a long time but since the very beginning there is one issue I don't like and I wondering if there is any way to change this behaviour: if you activate a task and using the context UI feature, the package explorer shows the classes belonging to this tasks context AND the method you are within. Is it possible to customize/configure the Mylyn Context UI to show only the class name and NOT going deeper into the class and also showing the methods ? For me it's not convinient if the filtered package explorer view contains also the methods and it would be enough if the context visible in the package explorer shows the packages and class names only.
+
+Kind regards
+DOminik",eclipse,mylyn,,,,,open,0,123,6,"Customize the Mylyn Context UI ? I'm using Mylyn for a long time but since the very beginning there is one issue I don't like and I wondering if there is any way to change this behaviour: if you activate a task and using the context UI feature, the package explorer shows the classes belonging to this tasks context AND the method you are within. Is it possible to customize/configure the Mylyn Context UI to show only the class name and NOT going deeper into the class and also showing the methods ? For me it's not convinient if the filtered package explorer view contains also the methods and it would be enough if the context visible in the package explorer shows the packages and class names only.
+
+Kind regards
+DOminik",2
+8317957,11/29/2011 21:26:16,80002,03/19/2009 12:22:39,2048,22,How to instruct Eclipse to record relative paths of the external jars?,"Here is my .classpath file, after I have added two more external jars (org.restlet.ext.simple.jar and org.simpleframework.jar):
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <classpath>
+    	<classpathentry kind=""src"" path=""src""/>
+    	<classpathentry kind=""con"" path=""org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.restlet.ext.jackson.jar"" sourcepath=""C:/Program Files/Java/restlet-jse-2.0.10/src"">
+    		<attributes>
+    			<attribute name=""javadoc_location"" value=""file:/C:/Program Files/Java/restlet-jse-2.0.10/docs/ext/""/>
+    		</attributes>
+    	</classpathentry>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.restlet.ext.ssl.jar"" sourcepath=""C:/Program Files/Java/restlet-jse-2.0.10/src"">
+    		<attributes>
+    			<attribute name=""javadoc_location"" value=""file:/C:/Program Files/Java/restlet-jse-2.0.10/docs/ext/""/>
+    		</attributes>
+    	</classpathentry>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.restlet.jar"" sourcepath=""C:/Program Files/Java/restlet-jse-2.0.10/src"">
+    		<attributes>
+    			<attribute name=""javadoc_location"" value=""file:/C:/Program Files/Java/restlet-jse-2.0.10/docs/api""/>
+    		</attributes>
+    	</classpathentry>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.jsslutils_1.0/org.jsslutils.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.codehaus.jackson_1.4/org.codehaus.jackson.core.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.codehaus.jackson_1.4/org.codehaus.jackson.mapper.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/guice-3.0/aopalliance.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/guice-3.0/guice-3.0.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/guice-3.0/javax.inject.jar""/>
+    	<classpathentry kind=""lib"" path=""C:/dev/poc/3rd_party/restlet-jse-2.0.10/lib/org.restlet.ext.simple.jar"" sourcepath=""C:/Program Files/Java/restlet-jse-2.0.10/src"">
+    		<attributes>
+    			<attribute name=""javadoc_location"" value=""file:/C:/Program Files/Java/restlet-jse-2.0.10/docs/ext/""/>
+    		</attributes>
+    	</classpathentry>
+    	<classpathentry kind=""lib"" path=""C:/dev/poc/3rd_party/restlet-jse-2.0.10/lib/org.simpleframework_4.1/org.simpleframework.jar""/>
+    	<classpathentry kind=""output"" path=""bin""/>
+    </classpath>
+
+Notice that they have been added with absolute paths, unlike other entries which are with relative ones, but only because I manually edit this file each time new external jars are added.
+
+My question is can I somehow tell Eclipse to use relative paths of newly added external jars?
+
+Thanks.",eclipse,,,,,,open,0,245,12,"How to instruct Eclipse to record relative paths of the external jars? Here is my .classpath file, after I have added two more external jars (org.restlet.ext.simple.jar and org.simpleframework.jar):
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <classpath>
+    	<classpathentry kind=""src"" path=""src""/>
+    	<classpathentry kind=""con"" path=""org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.restlet.ext.jackson.jar"" sourcepath=""C:/Program Files/Java/restlet-jse-2.0.10/src"">
+    		<attributes>
+    			<attribute name=""javadoc_location"" value=""file:/C:/Program Files/Java/restlet-jse-2.0.10/docs/ext/""/>
+    		</attributes>
+    	</classpathentry>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.restlet.ext.ssl.jar"" sourcepath=""C:/Program Files/Java/restlet-jse-2.0.10/src"">
+    		<attributes>
+    			<attribute name=""javadoc_location"" value=""file:/C:/Program Files/Java/restlet-jse-2.0.10/docs/ext/""/>
+    		</attributes>
+    	</classpathentry>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.restlet.jar"" sourcepath=""C:/Program Files/Java/restlet-jse-2.0.10/src"">
+    		<attributes>
+    			<attribute name=""javadoc_location"" value=""file:/C:/Program Files/Java/restlet-jse-2.0.10/docs/api""/>
+    		</attributes>
+    	</classpathentry>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.jsslutils_1.0/org.jsslutils.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.codehaus.jackson_1.4/org.codehaus.jackson.core.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/restlet-jse-2.0.10/lib/org.codehaus.jackson_1.4/org.codehaus.jackson.mapper.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/guice-3.0/aopalliance.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/guice-3.0/guice-3.0.jar""/>
+    	<classpathentry kind=""lib"" path=""../3rd_party/guice-3.0/javax.inject.jar""/>
+    	<classpathentry kind=""lib"" path=""C:/dev/poc/3rd_party/restlet-jse-2.0.10/lib/org.restlet.ext.simple.jar"" sourcepath=""C:/Program Files/Java/restlet-jse-2.0.10/src"">
+    		<attributes>
+    			<attribute name=""javadoc_location"" value=""file:/C:/Program Files/Java/restlet-jse-2.0.10/docs/ext/""/>
+    		</attributes>
+    	</classpathentry>
+    	<classpathentry kind=""lib"" path=""C:/dev/poc/3rd_party/restlet-jse-2.0.10/lib/org.simpleframework_4.1/org.simpleframework.jar""/>
+    	<classpathentry kind=""output"" path=""bin""/>
+    </classpath>
+
+Notice that they have been added with absolute paths, unlike other entries which are with relative ones, but only because I manually edit this file each time new external jars are added.
+
+My question is can I somehow tell Eclipse to use relative paths of newly added external jars?
+
+Thanks.",1
+9980452,04/02/2012 16:50:53,587052,01/24/2011 05:38:08,348,13,Github force removal of bad file with backslashes,"I recently began using github and started playing with eclipse's git abilities, using some plugin (not sure which one added the functionality, might be aptana or git plugin). Somehow, the file's path got mixed up and posted to github as
+src\com\XXXX\XXXX\SomeClass.java
+instead of properly foldering into 
+src/com/XXXX/XXXX/SomeClass.java
+There is no src\com\XXXX\XXXX\SomeClass.java in my local repo, and when I do a fetch it doesn't grab that file. How can I force it out of the listing on github?
+I've tried removing src/com/XXXX/XXXX/SomeClass.java, committing/push, re-adding, and then committing/push again.",eclipse,git,github,,,,open,0,83,8,"Github force removal of bad file with backslashes I recently began using github and started playing with eclipse's git abilities, using some plugin (not sure which one added the functionality, might be aptana or git plugin). Somehow, the file's path got mixed up and posted to github as
+src\com\XXXX\XXXX\SomeClass.java
+instead of properly foldering into 
+src/com/XXXX/XXXX/SomeClass.java
+There is no src\com\XXXX\XXXX\SomeClass.java in my local repo, and when I do a fetch it doesn't grab that file. How can I force it out of the listing on github?
+I've tried removing src/com/XXXX/XXXX/SomeClass.java, committing/push, re-adding, and then committing/push again.",3
+11065948,06/16/2012 18:20:18,392271,07/15/2010 03:45:41,510,24,Eclipse won't update or install software,"I recently installed subversion on my machine. So I decided to get Subversive for eclipse so that I could check my Android projects in. The problem is, it will get to a certain percentage, say 49%, and just sit there. I give it hours and hours of time and it doesn't move. I figured I'd try to update Eclipse to see if that would help, but I can't even update it. The exact same thing happens. I've tried running it as administrator, changing network settings, but no luck. Any help is greatly appreciated on this.",eclipse,eclipse-plugin,subversive,,,,open,0,95,6,"Eclipse won't update or install software I recently installed subversion on my machine. So I decided to get Subversive for eclipse so that I could check my Android projects in. The problem is, it will get to a certain percentage, say 49%, and just sit there. I give it hours and hours of time and it doesn't move. I figured I'd try to update Eclipse to see if that would help, but I can't even update it. The exact same thing happens. I've tried running it as administrator, changing network settings, but no luck. Any help is greatly appreciated on this.",3
+4582998,01/03/2011 08:23:55,499795,11/07/2010 11:23:45,87,0,Will Eclipse 4 have color schemes?,"I've heard that Eclipse 4 has a completely redone UI, so I'm wondering whether it will (finally!) support color schemes.
+
+Does anybody know?",eclipse,color-scheme,,,,01/03/2011 09:26:48,not a real question,1,22,6,"Will Eclipse 4 have color schemes? I've heard that Eclipse 4 has a completely redone UI, so I'm wondering whether it will (finally!) support color schemes.
+
+Does anybody know?",2
+1752851,11/18/2009 00:30:26,1311500,09/21/2008 14:15:11,3464,136,How to setup tomcat with Eclipse?,"I've been spoiled by .NET development and this is driving me **NUTS**.
+
+I am on Galileo.
+
+Installed the [WTP][1].
+
+Installed [tomcat 6][2] through the windows installer.
+
+If I go (in eclipse) to **Window --> Preferences --> Server --> Runtime Environment** I get no tomcat option at all, as in a number of [tutorials][3] - only a basic folder with the useless J2EE Runtime Library.
+
+What am doing wrong?
+
+Any help appreciated!
+
+
+  [1]: http://download.eclipse.org/webtools/updates/
+  [2]: http://tomcat.apache.org/download-60.cgi
+  [3]: http://www.eclipse.org/webtools/jst/components/ws/M3/tutorials/InstallTomcat.html",eclipse,tomcat,eclipse-wtp,going-nuts,,,open,0,74,6,"How to setup tomcat with Eclipse? I've been spoiled by .NET development and this is driving me **NUTS**.
+
+I am on Galileo.
+
+Installed the [WTP][1].
+
+Installed [tomcat 6][2] through the windows installer.
+
+If I go (in eclipse) to **Window --> Preferences --> Server --> Runtime Environment** I get no tomcat option at all, as in a number of [tutorials][3] - only a basic folder with the useless J2EE Runtime Library.
+
+What am doing wrong?
+
+Any help appreciated!
+
+
+  [1]: http://download.eclipse.org/webtools/updates/
+  [2]: http://tomcat.apache.org/download-60.cgi
+  [3]: http://www.eclipse.org/webtools/jst/components/ws/M3/tutorials/InstallTomcat.html",4
+8008407,11/04/2011 11:15:08,471149,08/01/2010 10:11:33,732,18,good pl sql editor,"I have rather big amount of pl/sql code which I need to refactor. Eclipse java editor is pretty good, I look for something like that but for pl/sql. I want pl/sql editor which has refactoring features, ability to search references, build call hierarchies, check syntax without committing code to oracle server, etc.",eclipse,oracle,ide,plsql,editor,11/06/2011 09:10:51,not constructive,1,52,4,"good pl sql editor I have rather big amount of pl/sql code which I need to refactor. Eclipse java editor is pretty good, I look for something like that but for pl/sql. I want pl/sql editor which has refactoring features, ability to search references, build call hierarchies, check syntax without committing code to oracle server, etc.",5
+2220653,02/08/2010 09:50:24,24108,10/01/2008 12:19:43,583,15,What is the best Vim plugin for Eclipse,"I have found 3 and would like to know other people's ideas:
+
+* [Vimplugin][1]
+* [Vrapper][2]
+* [Eclim][3]
+
+Eclim is sort of the ""wrong"" way around.  It takes eclipse to vim.  I want to take vim to eclipse.  I've put it there cos its just cool!
+
+
+  [1]: http://www.vimplugin.org/ ""Vimplugin""
+  [2]: http://vrapper.sourceforge.net/home/
+  [3]: http://eclim.org/",eclipse,ide,vim,,,09/03/2011 23:23:11,not constructive,1,55,8,"What is the best Vim plugin for Eclipse I have found 3 and would like to know other people's ideas:
+
+* [Vimplugin][1]
+* [Vrapper][2]
+* [Eclim][3]
+
+Eclim is sort of the ""wrong"" way around.  It takes eclipse to vim.  I want to take vim to eclipse.  I've put it there cos its just cool!
+
+
+  [1]: http://www.vimplugin.org/ ""Vimplugin""
+  [2]: http://vrapper.sourceforge.net/home/
+  [3]: http://eclim.org/",3

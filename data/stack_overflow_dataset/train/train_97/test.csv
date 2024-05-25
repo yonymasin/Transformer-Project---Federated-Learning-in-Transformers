@@ -1,0 +1,1339 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+946396,06/03/2009 18:33:58,2648,08/23/2008 22:40:47,4294,139,compile-time checking in Groovy,"In Groovy types are optional so you can use either:
+
+    String foo = ""foo""
+    foo.noSuchMethod()
+or
+
+    def foo = ""foo""
+    foo.noSuchMethod()
+
+I assumed that the first example would generate a compile-time error, whereas the second would only fail at runtime. However, this doesn't appear to be the case. In my experience, a compile-time error is generated in neither case.
+
+Am I right in assuming then that the only benefit of declaring the type of a reference is as a form of documentation, i.e. to communicate intentions to other programmers. For example, if I write a method such as:
+
+    def capitalize(String arg) {
+        return arg.toUpperCase()
+    }
+
+This communicates the type of arguments that should be passed to the function much more effectively than:
+
+    def capitalize(def arg) {
+        return arg.toUpperCase()
+    }
+
+Does the Groovy compiler perform any type-checking when types are specified?
+
+Thanks,
+Don
+",grails,types,,,,,open,0,173,4,"compile-time checking in Groovy In Groovy types are optional so you can use either:
+
+    String foo = ""foo""
+    foo.noSuchMethod()
+or
+
+    def foo = ""foo""
+    foo.noSuchMethod()
+
+I assumed that the first example would generate a compile-time error, whereas the second would only fail at runtime. However, this doesn't appear to be the case. In my experience, a compile-time error is generated in neither case.
+
+Am I right in assuming then that the only benefit of declaring the type of a reference is as a form of documentation, i.e. to communicate intentions to other programmers. For example, if I write a method such as:
+
+    def capitalize(String arg) {
+        return arg.toUpperCase()
+    }
+
+This communicates the type of arguments that should be passed to the function much more effectively than:
+
+    def capitalize(def arg) {
+        return arg.toUpperCase()
+    }
+
+Does the Groovy compiler perform any type-checking when types are specified?
+
+Thanks,
+Don
+",2
+10961950,06/09/2012 14:49:15,1376493,05/05/2012 08:41:53,1,0,grails and spring source,"            
+
+i have problem when excuting this code  org.hibernate.QueryException: could not resolve property
+
+
+
+
+
+                  def show = {
+		
+		def results =PM.createCriteria().list(){
+	//	def results = c.list {
+			eq(""id_car_info"",params.id.toLong())
+		//}
+		}
+        def vehicleInfoInstance = VehicleInfo.get(params.id)
+        if (!vehicleInfoInstance) {
+            flash.message = ""${message(code: 'default.not.found.message', args: [message(code: 'vehicleInfo.label', default: 'VehicleInfo'), params.id])}""
+            redirect(action: ""list"")
+        }
+        else {
+            [vehicleInfoInstance: vehicleInfoInstance,results:results]
+        }
+    }",grails,,,,,,open,0,149,4,"grails and spring source             
+
+i have problem when excuting this code  org.hibernate.QueryException: could not resolve property
+
+
+
+
+
+                  def show = {
+		
+		def results =PM.createCriteria().list(){
+	//	def results = c.list {
+			eq(""id_car_info"",params.id.toLong())
+		//}
+		}
+        def vehicleInfoInstance = VehicleInfo.get(params.id)
+        if (!vehicleInfoInstance) {
+            flash.message = ""${message(code: 'default.not.found.message', args: [message(code: 'vehicleInfo.label', default: 'VehicleInfo'), params.id])}""
+            redirect(action: ""list"")
+        }
+        else {
+            [vehicleInfoInstance: vehicleInfoInstance,results:results]
+        }
+    }",1
+4810574,01/26/2011 22:04:34,591398,01/26/2011 22:04:34,1,0,Grails Gorm : Object references an unsaved transient instance,"I get the following Exception when saving an instance of Trip in Grails:
+
+> 2011-01-26 22:37:42,801 [http-8090-5]
+> ERROR errors.GrailsExceptionResolver 
+> - object references an unsaved transient instance - save the
+> transient instance before flushing: Rower
+> org.hibernate.TransientObjectException:
+> object references an unsaved transient
+> instance - save the transient instance
+> before flushing: Rower
+
+The concept is simple: For a boattrip you need some rowers, a coxwain (is also a rower) and a boat:
+
+Trip looks like (shortened):
+
+    class Trip {
+    	Boat boat;
+    	Rower coxwain;
+    	
+    	static belongsTo = [Rower,Boat]
+    	static hasMany = [rowers:Rower]
+    }
+
+and Rower (shortened)
+
+    class Rower { 
+    	String firstname;
+    	String name;
+    	Rower reference;
+    	
+    	static hasMany = [trips:Trip];
+    	static mappedBy = [trips:""rowers""]
+    }
+
+The trip then is saved in the controller like:
+
+    def save = {
+            def trip = new Trip(params)
+    
+            // adding Rowers to Trip
+            if (params.rower instanceof String) {
+                def r = Rower.get(params?.rower)
+                
+                if (r != null) {
+                    trip.addToRowers(r)
+                }
+            } else {
+                params?.rower?.each{
+                    rowerid ->
+                    def r = Rower.get(rowerid)
+                    log.info(""rowerid (asList): "" + rowerid)
+                    if (r != null) {
+                        trip.addToRowers(r)
+                    }
+                }
+            } 
+            
+            // saving the new Trip -> EXCEPTION IN NEXT LINE
+            if(!trip.hasErrors() && trip.save(flush:true)) {
+              // ...
+            }
+            // ...
+    }
+
+I think I have set the relations between the domains correct.
+The Rower is not changed while it is added to the Trip. Why does Grails want it to save? why is it a transient instance?
+
+",grails,gorm,,,,,open,0,634,9,"Grails Gorm : Object references an unsaved transient instance I get the following Exception when saving an instance of Trip in Grails:
+
+> 2011-01-26 22:37:42,801 [http-8090-5]
+> ERROR errors.GrailsExceptionResolver 
+> - object references an unsaved transient instance - save the
+> transient instance before flushing: Rower
+> org.hibernate.TransientObjectException:
+> object references an unsaved transient
+> instance - save the transient instance
+> before flushing: Rower
+
+The concept is simple: For a boattrip you need some rowers, a coxwain (is also a rower) and a boat:
+
+Trip looks like (shortened):
+
+    class Trip {
+    	Boat boat;
+    	Rower coxwain;
+    	
+    	static belongsTo = [Rower,Boat]
+    	static hasMany = [rowers:Rower]
+    }
+
+and Rower (shortened)
+
+    class Rower { 
+    	String firstname;
+    	String name;
+    	Rower reference;
+    	
+    	static hasMany = [trips:Trip];
+    	static mappedBy = [trips:""rowers""]
+    }
+
+The trip then is saved in the controller like:
+
+    def save = {
+            def trip = new Trip(params)
+    
+            // adding Rowers to Trip
+            if (params.rower instanceof String) {
+                def r = Rower.get(params?.rower)
+                
+                if (r != null) {
+                    trip.addToRowers(r)
+                }
+            } else {
+                params?.rower?.each{
+                    rowerid ->
+                    def r = Rower.get(rowerid)
+                    log.info(""rowerid (asList): "" + rowerid)
+                    if (r != null) {
+                        trip.addToRowers(r)
+                    }
+                }
+            } 
+            
+            // saving the new Trip -> EXCEPTION IN NEXT LINE
+            if(!trip.hasErrors() && trip.save(flush:true)) {
+              // ...
+            }
+            // ...
+    }
+
+I think I have set the relations between the domains correct.
+The Rower is not changed while it is added to the Trip. Why does Grails want it to save? why is it a transient instance?
+
+",2
+10896341,06/05/2012 11:17:31,122457,06/13/2009 13:27:37,1085,17,Resources for Grails Best Practices,"This question is too general for answers directly in stackoverflow (see [this closed question][1]) however I think the community would beneift from having starting points for high quality external articles which can dive into the topic in more detail.
+
+I'd specifically like to see articles which concentrate on:
+
+ - how to split tasks between controllers/views/services/domain objects
+ - testing 
+ - security
+ - when to use plugins
+ - database design considerations
+ - topics specific to Groovy or Grails that would not be part of general best practice guides
+
+**Please answer with links to external articles adding just a short summary. Please do NOT comment too much** on whether you think individual ideas/patterns are good otherwise this question will be closed for 'soliciting debate and discussions'
+
+  [1]: http://stackoverflow.com/questions/6226759/best-practices-to-be-followed-while-developing-grails-application",grails,groovy,,,,06/06/2012 03:22:12,not constructive,1,125,5,"Resources for Grails Best Practices This question is too general for answers directly in stackoverflow (see [this closed question][1]) however I think the community would beneift from having starting points for high quality external articles which can dive into the topic in more detail.
+
+I'd specifically like to see articles which concentrate on:
+
+ - how to split tasks between controllers/views/services/domain objects
+ - testing 
+ - security
+ - when to use plugins
+ - database design considerations
+ - topics specific to Groovy or Grails that would not be part of general best practice guides
+
+**Please answer with links to external articles adding just a short summary. Please do NOT comment too much** on whether you think individual ideas/patterns are good otherwise this question will be closed for 'soliciting debate and discussions'
+
+  [1]: http://stackoverflow.com/questions/6226759/best-practices-to-be-followed-while-developing-grails-application",2
+3652294,09/06/2010 14:41:10,440724,09/06/2010 14:27:47,1,0,Grails: use domain method in named query,"in my domain model, I have a method that does something with my data.
+
+e.g.
+<pre>
+class Person {
+
+	String lastname
+	String firstname
+	
+	String bigname() {
+		return lastname.toUpperCase()
+	}
+	
+	static namedQueries = {
+		withBigname { name ->
+			eq(this.bigname(), name)
+		}
+	}
+}
+</pre>
+
+I want to use this method like a property in the named query, but <pre>this.bigname()</pre> only throws a <pre>java.lang.IncompatibleClassChangeError</pre>-Exception.
+
+Does anyone know how to use domain methods in criteria and named queries?
+
+
+----------
+",grails,,,,,,open,0,58,7,"Grails: use domain method in named query in my domain model, I have a method that does something with my data.
+
+e.g.
+<pre>
+class Person {
+
+	String lastname
+	String firstname
+	
+	String bigname() {
+		return lastname.toUpperCase()
+	}
+	
+	static namedQueries = {
+		withBigname { name ->
+			eq(this.bigname(), name)
+		}
+	}
+}
+</pre>
+
+I want to use this method like a property in the named query, but <pre>this.bigname()</pre> only throws a <pre>java.lang.IncompatibleClassChangeError</pre>-Exception.
+
+Does anyone know how to use domain methods in criteria and named queries?
+
+
+----------
+",1
+10650179,05/18/2012 09:37:06,1041345,11/11/2011 08:49:24,76,2,Google Visualization Plugin - Grails - Dashboards,"We are creating a web application using Grails. We require to render a data table as well a string filter to search through the data.
+
+We are using [google visualization api plugin][1] in order to display tables and charts. Wanted to know if this plug-in supports dashboards? And also if it does, how?
+
+
+  [1]: http://grails.org/plugin/google-visualization",grails,grails-plugin,,,,05/22/2012 13:56:41,not constructive,1,55,7,"Google Visualization Plugin - Grails - Dashboards We are creating a web application using Grails. We require to render a data table as well a string filter to search through the data.
+
+We are using [google visualization api plugin][1] in order to display tables and charts. Wanted to know if this plug-in supports dashboards? And also if it does, how?
+
+
+  [1]: http://grails.org/plugin/google-visualization",2
+8940941,01/20/2012 11:45:48,2648,08/23/2008 22:40:47,27456,712,grails spring security login page display,"I'm using the spring security plugin in a Grails app. There are two reasons why the login page gets displayed
+
+ 1. The user navigated to it directly
+ 2. The user tried to access a page that is only available to logged-in users
+
+In the case of (2) only, I want to display a message like ""you attempted to access a page that requires login"", but in the GSP code of the login page I can't find a way to distinguish between (1) and (2), is this possible?",grails,spring-security,grails-plugin,,,,open,0,86,6,"grails spring security login page display I'm using the spring security plugin in a Grails app. There are two reasons why the login page gets displayed
+
+ 1. The user navigated to it directly
+ 2. The user tried to access a page that is only available to logged-in users
+
+In the case of (2) only, I want to display a message like ""you attempted to access a page that requires login"", but in the GSP code of the login page I can't find a way to distinguish between (1) and (2), is this possible?",3
+7341243,09/07/2011 22:27:35,933709,09/07/2011 22:19:33,1,0,Best way to build a wizard driven order capture app in grails,"I am building an order capture system that uses a wizard approach to capture customer orders and add them to a shopping basket. Data for the products available will come from external systems via web service calls. There will also be a need for some kind of manual workflow features for when a customer needs a sales assistant to review an order and apply a discount
+
+I am planning to implement this in grails (is this a good choice)...can anybody recommend any plugins/approaches to implement the wizard and workflow capabilities in grails?
+
+cheers
+",grails,,,,,09/08/2011 06:04:14,not constructive,1,91,12,"Best way to build a wizard driven order capture app in grails I am building an order capture system that uses a wizard approach to capture customer orders and add them to a shopping basket. Data for the products available will come from external systems via web service calls. There will also be a need for some kind of manual workflow features for when a customer needs a sales assistant to review an order and apply a discount
+
+I am planning to implement this in grails (is this a good choice)...can anybody recommend any plugins/approaches to implement the wizard and workflow capabilities in grails?
+
+cheers
+",1
+6402287,06/19/2011 12:14:10,805311,06/19/2011 12:14:10,1,0,Grails get year from Date,"    startDate(nullable:false, blank:false,
+            validator: { sd, conf ->
+                                    
+                if(sd.getAt(Calendar.YEAR) == conf.year)
+                return true
+                
+                return false
+                })
+
+I have a view with a 'Year' field and a 'datePicker' field. I want to make sure the year introduced in the 'datepicker' is the same as the one introduced in the 'Year' (integer). For some reason this isnt working, i appreciate some help,
+",grails,date,constraints,,,11/26/2011 19:59:46,too localized,1,185,5,"Grails get year from Date     startDate(nullable:false, blank:false,
+            validator: { sd, conf ->
+                                    
+                if(sd.getAt(Calendar.YEAR) == conf.year)
+                return true
+                
+                return false
+                })
+
+I have a view with a 'Year' field and a 'datePicker' field. I want to make sure the year introduced in the 'datepicker' is the same as the one introduced in the 'Year' (integer). For some reason this isnt working, i appreciate some help,
+",3
+10150370,04/14/2012 01:58:57,121993,06/12/2009 13:11:22,8447,222,grails asynchronous file upload,"Is there true asynchronous/ajax file uploading in grails that hooks into the default ""busy"" spinner (the one that shows on other ajax calls)?
+
+Or if I wanted to show that spinner during a file upload would I need to call is explicitly?",grails,asyncfileupload,,,,,open,0,41,4,"grails asynchronous file upload Is there true asynchronous/ajax file uploading in grails that hooks into the default ""busy"" spinner (the one that shows on other ajax calls)?
+
+Or if I wanted to show that spinner during a file upload would I need to call is explicitly?",2
+3554689,08/24/2010 08:28:02,410810,08/04/2010 13:08:59,146,13,Grails filterPane plugin to fit page layout,"I would like to have the filterPane to be inserted in my own div in order to fit my page layout. Basically I want to get rid of the default pop-up behavior and harmonize filterPane with the other elements of the application. 
+
+this is my gsp
+
+ 
+
+    <div class=""filter"">
+    
+                <p>
+                  <filterpane:isFiltered>
+                      <filterpane:currentCriteria  domainBean=""demoracer.Pilot"" />
+                  </filterpane:isFiltered>
+                </p>
+           
+    <g:formRemote method=""post"" name=""form_search"" url=""${[action:'list']}"" update=""listContainer"" >
+    
+        <filterpane:filterPane customForm=""true"" formName=""form_search"" domainBean=""demoracer.Pilot""  
+    filterProperties=""name,"" id=""filterpaneContainer""  />
+    
+      <g:actionSubmit value=""Apply Filter From Outside Filter Pane"" action=""list"" />
+    
+    </g:formRemote>
+    
+              </div>
+
+but the pane do not show up.
+
+Thanks",grails,grails-plugin,,,,,open,0,243,7,"Grails filterPane plugin to fit page layout I would like to have the filterPane to be inserted in my own div in order to fit my page layout. Basically I want to get rid of the default pop-up behavior and harmonize filterPane with the other elements of the application. 
+
+this is my gsp
+
+ 
+
+    <div class=""filter"">
+    
+                <p>
+                  <filterpane:isFiltered>
+                      <filterpane:currentCriteria  domainBean=""demoracer.Pilot"" />
+                  </filterpane:isFiltered>
+                </p>
+           
+    <g:formRemote method=""post"" name=""form_search"" url=""${[action:'list']}"" update=""listContainer"" >
+    
+        <filterpane:filterPane customForm=""true"" formName=""form_search"" domainBean=""demoracer.Pilot""  
+    filterProperties=""name,"" id=""filterpaneContainer""  />
+    
+      <g:actionSubmit value=""Apply Filter From Outside Filter Pane"" action=""list"" />
+    
+    </g:formRemote>
+    
+              </div>
+
+but the pane do not show up.
+
+Thanks",2
+6935720,08/04/2011 02:59:38,647558,03/07/2011 03:19:16,300,26,"What kind of web application good for each framework like Strut, Grail, Play?","I am on the beginning stage of developing a Java based Web Application. I can use Strut, Grail, and Play equally well. Can you point me out what framework is the best for long-term develop web application among these three or just use normal MVC (M-java bean, V-jsp,jstl, C-servlet)?
+
+Thank you.",grails,struct,playframework,,,08/04/2011 08:24:31,not constructive,1,50,13,"What kind of web application good for each framework like Strut, Grail, Play? I am on the beginning stage of developing a Java based Web Application. I can use Strut, Grail, and Play equally well. Can you point me out what framework is the best for long-term develop web application among these three or just use normal MVC (M-java bean, V-jsp,jstl, C-servlet)?
+
+Thank you.",3
+7186420,08/25/2011 07:13:31,800875,06/16/2011 05:45:10,64,1,Groovy On Grails examples and sample code snippets,"Hi i am new to Groovy on Grails and i want it to study myself... so please suggest me good websites and blogs which has groovy exapmles and sample code snippets and cookbook examples
+i have found some.
+
+http://mrhaki.blogspot.com/2009/12/groovy-goodness-getting-all_25.html 
+http://www.groovyexamples.org
+",grails,groovy,,,,08/25/2011 18:08:52,not constructive,1,38,8,"Groovy On Grails examples and sample code snippets Hi i am new to Groovy on Grails and i want it to study myself... so please suggest me good websites and blogs which has groovy exapmles and sample code snippets and cookbook examples
+i have found some.
+
+http://mrhaki.blogspot.com/2009/12/groovy-goodness-getting-all_25.html 
+http://www.groovyexamples.org
+",2
+6801138,07/23/2011 14:47:58,436584,09/01/2010 03:52:30,80,8,Grails domain version value as part of JSON,"In a edit page, I am passing the domain object as JSON object to be manipulated at client side using jQuery.
+
+render domainClassObject as JSON
+
+When I see the response in client side (in firebug for e.g.), there is no ""version"" property. Only ""version"" is missing, all other values are available. What is the reason for this and what should I do to get the ""version"" value also as part of response from server when using ""as JSON""
+
+Thank You.
+Jay Chandran.",grails,grails-domain-class,,,,,open,0,78,8,"Grails domain version value as part of JSON In a edit page, I am passing the domain object as JSON object to be manipulated at client side using jQuery.
+
+render domainClassObject as JSON
+
+When I see the response in client side (in firebug for e.g.), there is no ""version"" property. Only ""version"" is missing, all other values are available. What is the reason for this and what should I do to get the ""version"" value also as part of response from server when using ""as JSON""
+
+Thank You.
+Jay Chandran.",2
+5881462,05/04/2011 09:41:49,563718,01/05/2011 09:50:05,545,34,Grails environments,"I couldn't find an answer in the documentation so I'm asking here.
+
+In Grails when you create an app you get the Production, Development etc environments by default.
+
+If you want to build a WAR for Production you can run either of these commands:
+
+    grails war
+OR
+
+    grails -Dgrails.env=prod war
+
+If you want to create a WAR for the development environment you use the command:
+
+    grails -Dgrails.env=dev war
+
+My questions;
+
+1) Can I use the word 'production' instead of 'prod' and use 'development' instead of 'dev'? I assume that 'prod' and 'dev' are just shorthand for 'production' and 'development', so I should be able to use either?
+
+2) If so, if I introduce my own environment called 'Stage' can I create a shorthand for use in setting -Dgrails.env? Something like 'stg' for example.
+
+Thanks.",grails,,,,,,open,0,135,2,"Grails environments I couldn't find an answer in the documentation so I'm asking here.
+
+In Grails when you create an app you get the Production, Development etc environments by default.
+
+If you want to build a WAR for Production you can run either of these commands:
+
+    grails war
+OR
+
+    grails -Dgrails.env=prod war
+
+If you want to create a WAR for the development environment you use the command:
+
+    grails -Dgrails.env=dev war
+
+My questions;
+
+1) Can I use the word 'production' instead of 'prod' and use 'development' instead of 'dev'? I assume that 'prod' and 'dev' are just shorthand for 'production' and 'development', so I should be able to use either?
+
+2) If so, if I introduce my own environment called 'Stage' can I create a shorthand for use in setting -Dgrails.env? Something like 'stg' for example.
+
+Thanks.",1
+2222672,02/08/2010 15:37:29,2648,08/23/2008 22:40:47,8358,262,Grails datePicker,"I'm looking for a calendar component for my Grails app. I'm aware that Grails already has the `g:datePicker`, but it's a bit primitive and not very visually appealing.
+
+I've had a look on the [contribute-a-tag][1] page and in the grails plugin portals and there's a wide range of options. Rather than trying them all out, I'd be very grateful if anyone could recommend one in particular. My requirements are:
+
+ - Must allow selection of a date and time, e.g. 9AM on 24 March 2010
+ - Should be easy to bind to a domain object property of type Date and display any validation errors in UI
+ - I'd prefer something based on JQuery, but I'm open to alternatives.
+
+Cheers,
+Don
+
+  [1]: http://www.grails.org/Contribute+a+Tag",grails,grails-plugin,datepicker,calendar,,,open,0,119,2,"Grails datePicker I'm looking for a calendar component for my Grails app. I'm aware that Grails already has the `g:datePicker`, but it's a bit primitive and not very visually appealing.
+
+I've had a look on the [contribute-a-tag][1] page and in the grails plugin portals and there's a wide range of options. Rather than trying them all out, I'd be very grateful if anyone could recommend one in particular. My requirements are:
+
+ - Must allow selection of a date and time, e.g. 9AM on 24 March 2010
+ - Should be easy to bind to a domain object property of type Date and display any validation errors in UI
+ - I'd prefer something based on JQuery, but I'm open to alternatives.
+
+Cheers,
+Don
+
+  [1]: http://www.grails.org/Contribute+a+Tag",4
+2786518,05/07/2010 06:03:42,298938,03/22/2010 10:52:19,16,1,How to get search results in grails if you have the domain (model) name stored in a string,"I have a method which has domain name as a String parameter.
+
+    def modelName=""Equity""
+
+I want to use it like
+
+    def results=modelName.findAll()
+
+Please guide me!",grails,domain,model,hibernate,gorm,,open,0,29,18,"How to get search results in grails if you have the domain (model) name stored in a string I have a method which has domain name as a String parameter.
+
+    def modelName=""Equity""
+
+I want to use it like
+
+    def results=modelName.findAll()
+
+Please guide me!",5
+6613072,07/07/2011 15:27:23,514061,11/19/2010 22:47:42,65,10,Run command on last item in each() in Grails,"I have an array of 'tasks' that I am getting back from a JSON response that I am iterating through, and doing some processing on each task.  Here is some psudocode:
+
+    def tasks = grails.converters.JSON.parse(json response)
+    tasks.each() {task ->
+      //do some processing here
+    }
+
+On the very last task in the list, I want to run an additional operation.  I'm looking for a built in way to do this in grails/groovy.  My searches have thus far yielded no results.
+",grails,groovy,each,,,,open,0,95,9,"Run command on last item in each() in Grails I have an array of 'tasks' that I am getting back from a JSON response that I am iterating through, and doing some processing on each task.  Here is some psudocode:
+
+    def tasks = grails.converters.JSON.parse(json response)
+    tasks.each() {task ->
+      //do some processing here
+    }
+
+On the very last task in the list, I want to run an additional operation.  I'm looking for a built in way to do this in grails/groovy.  My searches have thus far yielded no results.
+",3
+1969448,12/28/2009 13:23:50,278124,11/20/2009 16:03:34,1,1,Grails GORM & Enums,"I've a problem using Enumeration in Grails:
+I try to use an enumeraion in a grails domain object
+
+code:
+
+        package it.xxx.tools.kanban
+    
+        import java.util.Date;
+    
+        class Task {
+         
+            String name
+            String description
+    
+            Priority priority
+      
+     static belongsTo = [user:User, project:Project]
+     
+            static constraints = {
+               name(nullable:false, maxSize:25)
+               description(nullable:false, maxSize:1500)
+               priority(nullable:true)
+            }
+        }
+    
+    package it.xxx.tools.kanban;
+    
+    public enum Priority {
+     
+     VERY_LOW(""Very Low""),
+     LOW(""Low""),
+     MEDIUM(""Medium""),
+     HIGH(""High""),
+     VERY_HIGH(""Very High"")
+     
+     private final String value
+     
+     Priority(String value){
+      this.value = value;
+     }
+     
+     String toString() {
+      value
+     }
+     
+     String getKey() {
+      name()
+     }
+     
+     static list(){
+      [VERY_LOW, LOW, MEDIUM, HIGH, VERY_HIGH]
+     }
+    }
+
+I use the grails generate-all command
+
+
+When I try to save via the web application the Task object I have the following error:
+
+    Failed to convert property value of type [java.lang.String] to required type [it.weservice.tools.kanban.Priority] for property priority; nested exception is java.lang.IllegalArgumentException: Cannot convert value of type [java.lang.String] to required type [it.weservice.tools.kanban.Priority] for property priority: no matching editors or conversion strategy found
+
+",grails,groovy,enums,,,,open,0,435,4,"Grails GORM & Enums I've a problem using Enumeration in Grails:
+I try to use an enumeraion in a grails domain object
+
+code:
+
+        package it.xxx.tools.kanban
+    
+        import java.util.Date;
+    
+        class Task {
+         
+            String name
+            String description
+    
+            Priority priority
+      
+     static belongsTo = [user:User, project:Project]
+     
+            static constraints = {
+               name(nullable:false, maxSize:25)
+               description(nullable:false, maxSize:1500)
+               priority(nullable:true)
+            }
+        }
+    
+    package it.xxx.tools.kanban;
+    
+    public enum Priority {
+     
+     VERY_LOW(""Very Low""),
+     LOW(""Low""),
+     MEDIUM(""Medium""),
+     HIGH(""High""),
+     VERY_HIGH(""Very High"")
+     
+     private final String value
+     
+     Priority(String value){
+      this.value = value;
+     }
+     
+     String toString() {
+      value
+     }
+     
+     String getKey() {
+      name()
+     }
+     
+     static list(){
+      [VERY_LOW, LOW, MEDIUM, HIGH, VERY_HIGH]
+     }
+    }
+
+I use the grails generate-all command
+
+
+When I try to save via the web application the Task object I have the following error:
+
+    Failed to convert property value of type [java.lang.String] to required type [it.weservice.tools.kanban.Priority] for property priority; nested exception is java.lang.IllegalArgumentException: Cannot convert value of type [java.lang.String] to required type [it.weservice.tools.kanban.Priority] for property priority: no matching editors or conversion strategy found
+
+",3
+6466844,06/24/2011 11:01:40,576682,01/15/2011 11:48:12,549,12,"Whats the best Book for Grails,for the person who haven't read any other frameworks before?","Hi i have finished reading Groovy in Action book and now i'm planning to start reading Grails. But there is a point to note, I haven't read or worked with **any** frameworks before. So I need a book that help me to start reading Grails from Scratch. 
+
+Thanks in advance. ",grails,books,groovy,,,07/10/2011 12:03:17,not constructive,1,51,15,"Whats the best Book for Grails,for the person who haven't read any other frameworks before? Hi i have finished reading Groovy in Action book and now i'm planning to start reading Grails. But there is a point to note, I haven't read or worked with **any** frameworks before. So I need a book that help me to start reading Grails from Scratch. 
+
+Thanks in advance. ",3
+3703436,09/13/2010 18:52:04,446658,09/13/2010 18:52:03,1,0,Removing commas from Grails' Scaffolds for Longs,"I'm completely new to grails and I'm trying to deploy some simple applications using grails' scaffolding. I have a field in a domain class that stores barcodes as Longs. The default display in Grails' scaffolding is to display these Longs with commas separating every third numeral (e.g. 1,234,567). My searching of the documentation is getting me nowhere, is there a way of easily turning off this formatting until I can get a proper layout set up.
+
+Thanks. ",grails,scaffolding,,,,,open,0,77,7,"Removing commas from Grails' Scaffolds for Longs I'm completely new to grails and I'm trying to deploy some simple applications using grails' scaffolding. I have a field in a domain class that stores barcodes as Longs. The default display in Grails' scaffolding is to display these Longs with commas separating every third numeral (e.g. 1,234,567). My searching of the documentation is getting me nowhere, is there a way of easily turning off this formatting until I can get a proper layout set up.
+
+Thanks. ",2
+9946401,03/30/2012 15:52:59,1303575,03/30/2012 15:11:36,1,0,I can't create Grails project in Intellij 11,"I can't find the way to create Grails project. When i choose New Project --> Create project from scratch, I don't see anywhere to choose Grails project, how can i configure this issue? And how can i run Grails app?",grails,,,,,,open,0,40,8,"I can't create Grails project in Intellij 11 I can't find the way to create Grails project. When i choose New Project --> Create project from scratch, I don't see anywhere to choose Grails project, how can i configure this issue? And how can i run Grails app?",1
+3758347,09/21/2010 08:01:36,387454,07/09/2010 06:45:48,277,34,"Grails: No signature of method findAll() is applicable for argument types: String, ArrayList","I'm new to grails and receive the following error:  
+`No signature of method: Something.findAll() is applicable for argument types: (java.lang.String, java.util.ArrayList) values: [from Something AS s WHERE s.some_number LIKE ?, [%asdf%]]""`
+
+The error occurs when I run `test-app`.  It occurs in the following place:  
+
+    SomethingVO[] findBySomeNumber(String searchString) {
+         searchString = ""%""+searchString+""%""
+         return Something.findAll(""from Something AS s WHERE s.some_number LIKE ?"",[searchString]).collect { 
+              new SomethingVO(it);    
+         }
+    }  
+
+The class `Something` is a domain object:  
+
+    package some.project.domain
+    
+        class Something{
+        
+            static belongsTo = [product:Product, productVersion:ProductVersion]
+            
+            Long id
+            String name
+            String someNumber
+            
+            static constraints = {
+                product (nullable:true)
+                productVersion (nullable:true)
+            }
+        }  
+
+
+Where is the mistake?
+
+(I use Grails 1.2.4)
+",grails,groovy,gorm,findall,,,open,0,308,13,"Grails: No signature of method findAll() is applicable for argument types: String, ArrayList I'm new to grails and receive the following error:  
+`No signature of method: Something.findAll() is applicable for argument types: (java.lang.String, java.util.ArrayList) values: [from Something AS s WHERE s.some_number LIKE ?, [%asdf%]]""`
+
+The error occurs when I run `test-app`.  It occurs in the following place:  
+
+    SomethingVO[] findBySomeNumber(String searchString) {
+         searchString = ""%""+searchString+""%""
+         return Something.findAll(""from Something AS s WHERE s.some_number LIKE ?"",[searchString]).collect { 
+              new SomethingVO(it);    
+         }
+    }  
+
+The class `Something` is a domain object:  
+
+    package some.project.domain
+    
+        class Something{
+        
+            static belongsTo = [product:Product, productVersion:ProductVersion]
+            
+            Long id
+            String name
+            String someNumber
+            
+            static constraints = {
+                product (nullable:true)
+                productVersion (nullable:true)
+            }
+        }  
+
+
+Where is the mistake?
+
+(I use Grails 1.2.4)
+",4
+10022336,04/05/2012 03:33:57,1309828,04/03/2012 07:50:06,1,0,when i am trying to run grails project..it is showing error in opening zip file error..plz help me,"the error message comes  when i am trying to run grails project for the first time after installing grails..it is showing error in opening zip file error
+
+
+
+    Plugin [functional-test-1.2.7] not installed, resolving..
+    java.util.zip.ZipException: error in opening zip file
+            at java.util.zip.ZipFile.open(Native Method)
+            at java.util.zip.ZipFile.<init>(ZipFile.java:127)
+            at java.util.zip.ZipFile.<init>(ZipFile.java:88)
+            at _PluginDependencies_groovy.readMetadataFromZip(_PluginDependencies_groovy:917)
+            at _PluginDependencies_groovy.this$4$readMetadataFromZip(_PluginDependencies_groovy)
+            at _PluginDependencies_groovy$_run_closure24.doCall(_PluginDependencies_groovy:911)
+            at _PluginDependencies_groovy$_run_closure33_closure89.doCall(_PluginDependencies_groovy:123
+    9)
+            at _PluginDependencies_groovy$_run_closure33_closure89.doCall(_PluginDependencies_groovy)
+            at _PluginDependencies_groovy.withPluginInstall(_PluginDependencies_groovy:1253)
+            at _PluginDependencies_groovy.this$4$withPluginInstall(_PluginDependencies_groovy)
+            at _PluginDependencies_groovy$_run_closure33.doCall(_PluginDependencies_groovy:1219)
+            at _PluginDependencies_groovy$_run_closure33.call(_PluginDependencies_groovy)
+            at _PluginDependencies_groovy$_run_closure4.doCall(_PluginDependencies_groovy:323)
+            at _PackagePlugins_groovy$_run_closure2.doCall(_PackagePlugins_groovy:69)
+            at _GrailsPackage_groovy$_run_closure2.doCall(_GrailsPackage_groovy:75)
+            at RunApp$_run_closure1.doCall(RunApp.groovy:28)
+            at gant.Gant$_dispatch_closure4.doCall(Gant.groovy:324)
+            at gant.Gant$_dispatch_closure6.doCall(Gant.groovy:334)
+            at gant.Gant$_dispatch_closure6.doCall(Gant.groovy)
+            at gant.Gant.withBuildListeners(Gant.groovy:344)
+            at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+            at gant.Gant$this$2$withBuildListeners.callCurrent(Unknown Source)
+            at gant.Gant.dispatch(Gant.groovy:334)
+            at gant.Gant.this$2$dispatch(Gant.groovy)
+            at gant.Gant.invokeMethod(Gant.groovy)
+            at gant.Gant.processTargets(Gant.groovy:495)
+            at gant.Gant.processTargets(Gant.groovy:480)
+    Error installing plugin: error in opening zip file: error in opening zip file",grails,,,,,05/09/2012 14:15:27,too localized,1,418,18,"when i am trying to run grails project..it is showing error in opening zip file error..plz help me the error message comes  when i am trying to run grails project for the first time after installing grails..it is showing error in opening zip file error
+
+
+
+    Plugin [functional-test-1.2.7] not installed, resolving..
+    java.util.zip.ZipException: error in opening zip file
+            at java.util.zip.ZipFile.open(Native Method)
+            at java.util.zip.ZipFile.<init>(ZipFile.java:127)
+            at java.util.zip.ZipFile.<init>(ZipFile.java:88)
+            at _PluginDependencies_groovy.readMetadataFromZip(_PluginDependencies_groovy:917)
+            at _PluginDependencies_groovy.this$4$readMetadataFromZip(_PluginDependencies_groovy)
+            at _PluginDependencies_groovy$_run_closure24.doCall(_PluginDependencies_groovy:911)
+            at _PluginDependencies_groovy$_run_closure33_closure89.doCall(_PluginDependencies_groovy:123
+    9)
+            at _PluginDependencies_groovy$_run_closure33_closure89.doCall(_PluginDependencies_groovy)
+            at _PluginDependencies_groovy.withPluginInstall(_PluginDependencies_groovy:1253)
+            at _PluginDependencies_groovy.this$4$withPluginInstall(_PluginDependencies_groovy)
+            at _PluginDependencies_groovy$_run_closure33.doCall(_PluginDependencies_groovy:1219)
+            at _PluginDependencies_groovy$_run_closure33.call(_PluginDependencies_groovy)
+            at _PluginDependencies_groovy$_run_closure4.doCall(_PluginDependencies_groovy:323)
+            at _PackagePlugins_groovy$_run_closure2.doCall(_PackagePlugins_groovy:69)
+            at _GrailsPackage_groovy$_run_closure2.doCall(_GrailsPackage_groovy:75)
+            at RunApp$_run_closure1.doCall(RunApp.groovy:28)
+            at gant.Gant$_dispatch_closure4.doCall(Gant.groovy:324)
+            at gant.Gant$_dispatch_closure6.doCall(Gant.groovy:334)
+            at gant.Gant$_dispatch_closure6.doCall(Gant.groovy)
+            at gant.Gant.withBuildListeners(Gant.groovy:344)
+            at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+            at gant.Gant$this$2$withBuildListeners.callCurrent(Unknown Source)
+            at gant.Gant.dispatch(Gant.groovy:334)
+            at gant.Gant.this$2$dispatch(Gant.groovy)
+            at gant.Gant.invokeMethod(Gant.groovy)
+            at gant.Gant.processTargets(Gant.groovy:495)
+            at gant.Gant.processTargets(Gant.groovy:480)
+    Error installing plugin: error in opening zip file: error in opening zip file",1
+4947266,02/09/2011 15:59:03,606153,02/07/2011 09:01:10,1,0,Grails/GORM saves in the wrong order,"I am using Grails 1.3.6 and I am having problems getting saves to cascade properly.  The problem is specifically with classes that have two parent classes.  A simplified version of what I am attempting is this:
+
+    class Location {
+    	String city
+    	static hasMany = [authors: Author, publishers: Publisher]
+    }
+    
+    class Author {
+    	String name
+    	static belongsTo = [location: Location]
+    	static hasMany = [books: Book]
+    }
+    
+    class Publisher {
+    	String name
+    	static belongsTo = [location: Location]
+    	static hasMany = [books: Book]
+    }
+    
+    class Book {
+    	String title
+    	static belongsTo = [author: Author, publisher: Publisher]
+    }
+    
+    class Srv1Service {
+    
+        static transactional = true
+    
+        def loadData() {
+    		def l1 = new Location(city: ""London"")
+    
+    		def a1 = new Author(name: ""Graham Greene"")
+    		l1.addToAuthors(a1)
+    		
+    		def p1 = new Publisher(name: ""Some Press"")
+    		l1.addToPublishers(p1)
+    
+    		def b1 = new Book(title: ""The Comedians"")
+    		a1.addToBooks(b1)
+    		p1.addToBooks(b1)
+    
+    		l1.save()
+        } 
+    }
+
+If I run the above loadData, the Book instance is saved before the Publisher instance, resulting in the error ""not-null property references a null or transient value: adhoc.Book.publisher"".
+
+I have tried various different ways of defining the relationships with little success.  I have tried interim saves, and this does work, but I can see that parent tables are updated as I save the child data - ie Location, Author and Publisher all get updated to version 1.  (And also I would like to keep the code as simple as I can.)  I would like to avoid linking tables.
+
+Any advice is gratefully received!",grails,gorm,,,,,open,0,392,6,"Grails/GORM saves in the wrong order I am using Grails 1.3.6 and I am having problems getting saves to cascade properly.  The problem is specifically with classes that have two parent classes.  A simplified version of what I am attempting is this:
+
+    class Location {
+    	String city
+    	static hasMany = [authors: Author, publishers: Publisher]
+    }
+    
+    class Author {
+    	String name
+    	static belongsTo = [location: Location]
+    	static hasMany = [books: Book]
+    }
+    
+    class Publisher {
+    	String name
+    	static belongsTo = [location: Location]
+    	static hasMany = [books: Book]
+    }
+    
+    class Book {
+    	String title
+    	static belongsTo = [author: Author, publisher: Publisher]
+    }
+    
+    class Srv1Service {
+    
+        static transactional = true
+    
+        def loadData() {
+    		def l1 = new Location(city: ""London"")
+    
+    		def a1 = new Author(name: ""Graham Greene"")
+    		l1.addToAuthors(a1)
+    		
+    		def p1 = new Publisher(name: ""Some Press"")
+    		l1.addToPublishers(p1)
+    
+    		def b1 = new Book(title: ""The Comedians"")
+    		a1.addToBooks(b1)
+    		p1.addToBooks(b1)
+    
+    		l1.save()
+        } 
+    }
+
+If I run the above loadData, the Book instance is saved before the Publisher instance, resulting in the error ""not-null property references a null or transient value: adhoc.Book.publisher"".
+
+I have tried various different ways of defining the relationships with little success.  I have tried interim saves, and this does work, but I can see that parent tables are updated as I save the child data - ie Location, Author and Publisher all get updated to version 1.  (And also I would like to keep the code as simple as I can.)  I would like to avoid linking tables.
+
+Any advice is gratefully received!",2
+2901883,05/25/2010 03:48:39,237807,12/23/2009 18:08:33,26,0,"Grails beginner problem ""Failed to invoke Servlet 2.5""","I'm trying to get Groovy on Grails set up on a Snow Leopard machine.  I followed all the grails.com install directions and am trying to start the application from Grails: A Quick-Start Guide by Dave Klein.  I ran <code>grails create-app TekDays</code> with no apparent problems and was able to cd to the TekDays folder, but when I try to run <code>grails run-app</code> I get the following: 
+
+<pre>
+Welcome to Grails 1.3.1 - http://grails.org/
+Licensed under Apache Standard License 2.0
+Grails home is set to: /grails
+
+Base Directory: /apps/TekDays
+Resolving dependencies...
+Dependencies resolved in 4469ms.
+Running script /grails/scripts/RunApp.groovy
+Environment set to development
+   [delete] Deleting directory /Users/name/.grails/1.3.1/projects/TekDays/tomcat
+Running Grails application..
+2010-05-24 21:42:39,559 [main] ERROR context.GrailsContextLoader  - Error executing bootstraps: Failed to invoke Servlet 2.5 getContextPath method
+java.lang.IllegalStateException: Failed to invoke Servlet 2.5 getContextPath method
+	at org.grails.tomcat.TomcatServer.start(TomcatServer.groovy:164)
+	at grails.web.container.EmbeddableServer$start.call(Unknown Source)
+	at _GrailsRun_groovy$_run_closure5_closure12.doCall(_GrailsRun_groovy:159)
+	at _GrailsRun_groovy$_run_closure5_closure12.doCall(_GrailsRun_groovy)
+	at _GrailsSettings_groovy$_run_closure10.doCall(_GrailsSettings_groovy:282)
+	at _GrailsSettings_groovy$_run_closure10.call(_GrailsSettings_groovy)
+	at _GrailsRun_groovy$_run_closure5.doCall(_GrailsRun_groovy:150)
+	at _GrailsRun_groovy$_run_closure5.call(_GrailsRun_groovy)
+	at _GrailsRun_groovy.runInline(_GrailsRun_groovy:116)
+	at _GrailsRun_groovy.this$4$runInline(_GrailsRun_groovy)
+	at _GrailsRun_groovy$_run_closure1.doCall(_GrailsRun_groovy:59)
+	at RunApp$_run_closure1.doCall(RunApp.groovy:33)
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+	at gant.Gant.withBuildListeners(Gant.groovy:427)
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+	at gant.Gant$this$2$withBuildListeners.callCurrent(Unknown Source)
+	at gant.Gant.dispatch(Gant.groovy:415)
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+	at gant.Gant.invokeMethod(Gant.groovy)
+	at gant.Gant.executeTargets(Gant.groovy:590)
+	at gant.Gant.executeTargets(Gant.groovy:589)
+Caused by: java.lang.NoSuchMethodException: javax.servlet.ServletContext.getContextPath()
+	at java.lang.Class.getMethod(Class.java:1605)
+	... 23 more
+</pre>
+
+I've googled every derivative of ""Failed to invoke Servlet 2.5"" that I can think of, but have thus far been unable to find anything that helps me understand, yet alone resolve, the error.  
+
+Any advice to help me resolve this would be very much appreciated!",grails,setup,osx-snow-leopard,,,,open,0,202,8,"Grails beginner problem ""Failed to invoke Servlet 2.5"" I'm trying to get Groovy on Grails set up on a Snow Leopard machine.  I followed all the grails.com install directions and am trying to start the application from Grails: A Quick-Start Guide by Dave Klein.  I ran <code>grails create-app TekDays</code> with no apparent problems and was able to cd to the TekDays folder, but when I try to run <code>grails run-app</code> I get the following: 
+
+<pre>
+Welcome to Grails 1.3.1 - http://grails.org/
+Licensed under Apache Standard License 2.0
+Grails home is set to: /grails
+
+Base Directory: /apps/TekDays
+Resolving dependencies...
+Dependencies resolved in 4469ms.
+Running script /grails/scripts/RunApp.groovy
+Environment set to development
+   [delete] Deleting directory /Users/name/.grails/1.3.1/projects/TekDays/tomcat
+Running Grails application..
+2010-05-24 21:42:39,559 [main] ERROR context.GrailsContextLoader  - Error executing bootstraps: Failed to invoke Servlet 2.5 getContextPath method
+java.lang.IllegalStateException: Failed to invoke Servlet 2.5 getContextPath method
+	at org.grails.tomcat.TomcatServer.start(TomcatServer.groovy:164)
+	at grails.web.container.EmbeddableServer$start.call(Unknown Source)
+	at _GrailsRun_groovy$_run_closure5_closure12.doCall(_GrailsRun_groovy:159)
+	at _GrailsRun_groovy$_run_closure5_closure12.doCall(_GrailsRun_groovy)
+	at _GrailsSettings_groovy$_run_closure10.doCall(_GrailsSettings_groovy:282)
+	at _GrailsSettings_groovy$_run_closure10.call(_GrailsSettings_groovy)
+	at _GrailsRun_groovy$_run_closure5.doCall(_GrailsRun_groovy:150)
+	at _GrailsRun_groovy$_run_closure5.call(_GrailsRun_groovy)
+	at _GrailsRun_groovy.runInline(_GrailsRun_groovy:116)
+	at _GrailsRun_groovy.this$4$runInline(_GrailsRun_groovy)
+	at _GrailsRun_groovy$_run_closure1.doCall(_GrailsRun_groovy:59)
+	at RunApp$_run_closure1.doCall(RunApp.groovy:33)
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+	at gant.Gant.withBuildListeners(Gant.groovy:427)
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+	at gant.Gant$this$2$withBuildListeners.callCurrent(Unknown Source)
+	at gant.Gant.dispatch(Gant.groovy:415)
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+	at gant.Gant.invokeMethod(Gant.groovy)
+	at gant.Gant.executeTargets(Gant.groovy:590)
+	at gant.Gant.executeTargets(Gant.groovy:589)
+Caused by: java.lang.NoSuchMethodException: javax.servlet.ServletContext.getContextPath()
+	at java.lang.Class.getMethod(Class.java:1605)
+	... 23 more
+</pre>
+
+I've googled every derivative of ""Failed to invoke Servlet 2.5"" that I can think of, but have thus far been unable to find anything that helps me understand, yet alone resolve, the error.  
+
+Any advice to help me resolve this would be very much appreciated!",3
+10694052,05/21/2012 23:45:41,1255978,03/08/2012 00:21:59,20,0,Grails springSecurityService.getCurrentUser() is Null when using custom AuthenticationProvider,"One controller in my app needs to be accessible by users authenticated against an external database.
+
+I have set up a custom user object, 
+   
+    class CustomUserDetails extends GrailsUser {
+    
+    	final String externalId
+    	
+    	CustomUserDetails(String username, String password, boolean enabled,
+    		boolean accountNonExpired, boolean credentialsNonExpired,
+    		boolean accountNonLocked,
+    		Collection<GrantedAuthority> authorities,
+    		long id, String externalId) {
+    		
+    		super(username, password, enabled, accountNonExpired,
+    		credentialsNonExpired, accountNonLocked, authorities, id)
+    		
+    		this.externalId = externalId 
+    	}		
+    }
+
+and a custom AuthenticationProvider
+
+    class CustomAuthenticationProvider implements AuthenticationProvider {
+    	def springSecurityService
+
+    	Authentication authenticate(Authentication customAuth) {
+    	
+	    /* Do stuff to validate the user's credentials here */
+    		
+    	    def userDetails = new CustomUserDetails(customAuth.getPrincipal(), customAuth.getCredentials(), true, true, true, true, 
+    				[new GrantedAuthorityImpl('ROLE_SPECIAL_USER')], 9999999, ""externalDatabaseIdString"")
+    
+    	    def token = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.authorities)
+    			
+    	    return token
+    	}
+    
+    	boolean supports(Class authentication) {
+    		return true
+    	}
+    }
+
+
+I've made entries in Config.groovy to add this to the springsecurity.providerNames list, and added the following to conf/spring/resources.groovy
+
+    beans = {
+	customAuthenticationProvider(info.proadvisors.auth.CustomAuthenticationProvider){ bean ->	bean.autowire = ""byName"" }
+
+	userDetailsService(org.codehaus.groovy.grails.plugins.springsecurity.GormUserDetailsService){ bean -> bean.autowire = ""byName"" }
+    }
+
+
+Here's the problem - in my controller, springSecurityService is being injected but springSecurityService.getCurrentUser() is null, and returns a null pointer exception when I try to access the externalId property that should be on the authenticated user object.
+
+If, in my CustomAuthenticationProvider, instead of creating an instance of CustomUserDetails I use GormUserDetailsService to give me a GrailsUser object and use that to build the token, the controller works properly and getCurrentUser() works.
+
+Any ideas on why this isn't working?
+
+
+",grails,spring-security,,,,,open,0,361,8,"Grails springSecurityService.getCurrentUser() is Null when using custom AuthenticationProvider One controller in my app needs to be accessible by users authenticated against an external database.
+
+I have set up a custom user object, 
+   
+    class CustomUserDetails extends GrailsUser {
+    
+    	final String externalId
+    	
+    	CustomUserDetails(String username, String password, boolean enabled,
+    		boolean accountNonExpired, boolean credentialsNonExpired,
+    		boolean accountNonLocked,
+    		Collection<GrantedAuthority> authorities,
+    		long id, String externalId) {
+    		
+    		super(username, password, enabled, accountNonExpired,
+    		credentialsNonExpired, accountNonLocked, authorities, id)
+    		
+    		this.externalId = externalId 
+    	}		
+    }
+
+and a custom AuthenticationProvider
+
+    class CustomAuthenticationProvider implements AuthenticationProvider {
+    	def springSecurityService
+
+    	Authentication authenticate(Authentication customAuth) {
+    	
+	    /* Do stuff to validate the user's credentials here */
+    		
+    	    def userDetails = new CustomUserDetails(customAuth.getPrincipal(), customAuth.getCredentials(), true, true, true, true, 
+    				[new GrantedAuthorityImpl('ROLE_SPECIAL_USER')], 9999999, ""externalDatabaseIdString"")
+    
+    	    def token = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.authorities)
+    			
+    	    return token
+    	}
+    
+    	boolean supports(Class authentication) {
+    		return true
+    	}
+    }
+
+
+I've made entries in Config.groovy to add this to the springsecurity.providerNames list, and added the following to conf/spring/resources.groovy
+
+    beans = {
+	customAuthenticationProvider(info.proadvisors.auth.CustomAuthenticationProvider){ bean ->	bean.autowire = ""byName"" }
+
+	userDetailsService(org.codehaus.groovy.grails.plugins.springsecurity.GormUserDetailsService){ bean -> bean.autowire = ""byName"" }
+    }
+
+
+Here's the problem - in my controller, springSecurityService is being injected but springSecurityService.getCurrentUser() is null, and returns a null pointer exception when I try to access the externalId property that should be on the authenticated user object.
+
+If, in my CustomAuthenticationProvider, instead of creating an instance of CustomUserDetails I use GormUserDetailsService to give me a GrailsUser object and use that to build the token, the controller works properly and getCurrentUser() works.
+
+Any ideas on why this isn't working?
+
+
+",2
+9852228,03/24/2012 13:43:39,865900,07/27/2011 16:38:25,1,0,Which framework for a web portal accessing a couchDB?,"I'll soon have to develop a web portal accessing a couchDB. Of course, I have done some research already, however I'm not sure if my ideas will work out.
+
+I will have an existent couchDB. There will probably only be one user available which gets read-access via the GET-method. The web portal will have to filter and display data for different users from that couchDB, so I'll need some kind of extra user-management.
+
+So far I have only basic knowledge about web frameworks and technologies, however I am quite experienced in Java. So from my research so far, I was seriously thinking about using Grails, ExtJS or both. However, will I be able to easily access the couchDB from within those frameworks? I've found some concerning info about necessary patches for ExtJS that are not in active development anymore.
+
+I did have a very brief look at couchApps, however I'm not sure if those are sufficient enough (especially because of the user-management layer, I will only have this one couchDB user for accessing the DB). Also I found Django, however I'm not at all familiar with Python yet. :/
+
+I'd be very thankful if someone could help me out a little in finding a suitable framework.
+
+Thanks so far!",grails,extjs,couchdb,web-frameworks,couchapp,03/27/2012 15:50:30,not constructive,1,204,9,"Which framework for a web portal accessing a couchDB? I'll soon have to develop a web portal accessing a couchDB. Of course, I have done some research already, however I'm not sure if my ideas will work out.
+
+I will have an existent couchDB. There will probably only be one user available which gets read-access via the GET-method. The web portal will have to filter and display data for different users from that couchDB, so I'll need some kind of extra user-management.
+
+So far I have only basic knowledge about web frameworks and technologies, however I am quite experienced in Java. So from my research so far, I was seriously thinking about using Grails, ExtJS or both. However, will I be able to easily access the couchDB from within those frameworks? I've found some concerning info about necessary patches for ExtJS that are not in active development anymore.
+
+I did have a very brief look at couchApps, however I'm not sure if those are sufficient enough (especially because of the user-management layer, I will only have this one couchDB user for accessing the DB). Also I found Django, however I'm not at all familiar with Python yet. :/
+
+I'd be very thankful if someone could help me out a little in finding a suitable framework.
+
+Thanks so far!",5
+6748383,07/19/2011 14:00:29,411247,08/04/2010 20:26:08,2835,154,Is there a groovyws.jar with all his dependences?,"I'm using Grails and want to use groovyws to call an web-service.
+
+But my groovyws.jar (0.5.2) have MANY dependences that I can't solve.
+
+Is there any jar with all dependences included?
+
+Note: I tried put in `BuildConfig.groovy`, this
+
+    dependencies {
+    'org.codehaus.groovy.modules:groovyws:0.5.2'
+    }
+
+but I'm getting error:
+
+> Error executing script Compile: loader constraint violation: when
+> resolving overridden method
+> ""org.apache.xerces.jaxp.SAXParserImpl.getParser()Lorg/xml/sax/Parser;""
+> the class loader (instance of
+> org/codehaus/groovy/grails/cli/support/GrailsRootLoader) of the
+> current class, org/apache/xerces/jaxp/SAXParserImpl, and its
+> superclass loader (instance of <bootloader>), have different Class
+> objects for the type org/xml/sax/Parser used in the signature
+
+",grails,groovy,groovyws,,,,open,0,93,8,"Is there a groovyws.jar with all his dependences? I'm using Grails and want to use groovyws to call an web-service.
+
+But my groovyws.jar (0.5.2) have MANY dependences that I can't solve.
+
+Is there any jar with all dependences included?
+
+Note: I tried put in `BuildConfig.groovy`, this
+
+    dependencies {
+    'org.codehaus.groovy.modules:groovyws:0.5.2'
+    }
+
+but I'm getting error:
+
+> Error executing script Compile: loader constraint violation: when
+> resolving overridden method
+> ""org.apache.xerces.jaxp.SAXParserImpl.getParser()Lorg/xml/sax/Parser;""
+> the class loader (instance of
+> org/codehaus/groovy/grails/cli/support/GrailsRootLoader) of the
+> current class, org/apache/xerces/jaxp/SAXParserImpl, and its
+> superclass loader (instance of <bootloader>), have different Class
+> objects for the type org/xml/sax/Parser used in the signature
+
+",3
+1855490,12/06/2009 14:10:52,144012,07/23/2009 19:49:55,140,9,"How to configure grails classpath in order to add ""src/groovy"" folder ( in Linux environment)?","I am currently porting my development environment from Windows to Linux. 
+
+Under Linux, I noticed a ""No class found"" compilation error related to my classes in the directory `<PROJECT_HOME>/src/groovy`. Under windows, it works fine.
+
+Is this ""src/groovy"" directory included in the `CLASSPATH` when running ""grails run-app"" ? Why does it behave differently under Windows and under Linux? (`GRAILS_HOME` and `GROOVY_HOME` are defined in both environments)
+
+Is there a way to display the current CLASSPATH in the logs? 
+
+And most important, how do I solve my problem? (except by setting the global `CLASSPATH=<PROJECT_HOME>/src/groovy`) 
+
+Thank you for your help, 
+
+Regards, 
+
+Fabien.",grails,classpath,linux,groovy,,,open,0,97,15,"How to configure grails classpath in order to add ""src/groovy"" folder ( in Linux environment)? I am currently porting my development environment from Windows to Linux. 
+
+Under Linux, I noticed a ""No class found"" compilation error related to my classes in the directory `<PROJECT_HOME>/src/groovy`. Under windows, it works fine.
+
+Is this ""src/groovy"" directory included in the `CLASSPATH` when running ""grails run-app"" ? Why does it behave differently under Windows and under Linux? (`GRAILS_HOME` and `GROOVY_HOME` are defined in both environments)
+
+Is there a way to display the current CLASSPATH in the logs? 
+
+And most important, how do I solve my problem? (except by setting the global `CLASSPATH=<PROJECT_HOME>/src/groovy`) 
+
+Thank you for your help, 
+
+Regards, 
+
+Fabien.",4
+1598442,10/21/2009 02:32:14,109246,05/19/2009 08:47:45,130,8,Watermarking images on upload,"I'm creating a website which requires the images in the site's Gallery to be watermarked. I'd prefer the watermark to get added programatically when the image gets uploaded to the application (via it's web interface) than to manually add it before we do the upload.
+
+Are there any simple ways (perhaps an image library?) that will allow me to do this?
+
+I'm building the site in Grails, so a Groovy or Java solution would be great.",grails,java,image-manipulation,watermark,,,open,0,74,4,"Watermarking images on upload I'm creating a website which requires the images in the site's Gallery to be watermarked. I'd prefer the watermark to get added programatically when the image gets uploaded to the application (via it's web interface) than to manually add it before we do the upload.
+
+Are there any simple ways (perhaps an image library?) that will allow me to do this?
+
+I'm building the site in Grails, so a Groovy or Java solution would be great.",4
+9443911,02/25/2012 12:17:52,1216981,02/17/2012 19:16:22,3,0,Groovy on Grails login doesn't work,"I'm new to grails, and having a problem that is no doubt trivial, but I cannot find anything online!
+
+I have a class:
+
+    package lib
+
+    class Login {
+
+      String name
+      String email
+      String password
+      String phonenumber
+
+      static constraints = {
+      }
+
+    }
+
+In my Bootstrap file I create two instances of this class:
+
+    new Login(email:""tom"", password:""password1"")
+    new Login(email:""ian"", password:""password2"")
+
+Now I have set up a Login form and I am trying to loop over these values and do something if they match:
+
+    def submit() {
+
+      def result = Login.findAll { email == params.email && password == params.password }
+      if (result.size() > 0) {
+        println ""good login""
+      }
+      else {
+        println ""bad login""
+      }
+
+      // some other stuff
+    }
+
+The problem is that it is printing ""bad login"" every time, every when the entered email and password match those declared in the Bootstrap file. It's probably just a misunderstanding on my end, but I can't figure it out!
+
+Thanks.
+",grails,groovy,closures,,,,open,0,248,6,"Groovy on Grails login doesn't work I'm new to grails, and having a problem that is no doubt trivial, but I cannot find anything online!
+
+I have a class:
+
+    package lib
+
+    class Login {
+
+      String name
+      String email
+      String password
+      String phonenumber
+
+      static constraints = {
+      }
+
+    }
+
+In my Bootstrap file I create two instances of this class:
+
+    new Login(email:""tom"", password:""password1"")
+    new Login(email:""ian"", password:""password2"")
+
+Now I have set up a Login form and I am trying to loop over these values and do something if they match:
+
+    def submit() {
+
+      def result = Login.findAll { email == params.email && password == params.password }
+      if (result.size() > 0) {
+        println ""good login""
+      }
+      else {
+        println ""bad login""
+      }
+
+      // some other stuff
+    }
+
+The problem is that it is printing ""bad login"" every time, every when the entered email and password match those declared in the Bootstrap file. It's probably just a misunderstanding on my end, but I can't figure it out!
+
+Thanks.
+",3

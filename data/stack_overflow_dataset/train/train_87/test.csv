@@ -1,0 +1,2720 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+8093949,11/11/2011 12:24:30,886783,08/09/2011 21:08:36,333,7,Getting popup to go away,"See link below (yes this is a ""similar question"" but tried to ask for clarification in the other thread but it was deleted):
+
+http://stackoverflow.com/questions/1188905/delphi-tray-icon-notifyicon-context-menu-does-not-disappear-when-clicking-ou
+
+How do you accomplish the subject of this thread without the taskbar popup coming up along with your own?",delphi,trayicon,,,,,open,0,41,5,"Getting popup to go away See link below (yes this is a ""similar question"" but tried to ask for clarification in the other thread but it was deleted):
+
+http://stackoverflow.com/questions/1188905/delphi-tray-icon-notifyicon-context-menu-does-not-disappear-when-clicking-ou
+
+How do you accomplish the subject of this thread without the taskbar popup coming up along with your own?",2
+11365018,07/06/2012 15:17:41,840688,07/12/2011 12:27:57,130,0,DevExpress component history or Delphi,"I am using the Delphi 5.0 version. I have installed the DevExpress VCL for Delphi components. Build no is 27. After installation there is one older creted Developer Express.VCl. This folder contains 3 different folders 1. dx3 2. dx2005 and 3. dx2006. All these folders contains some pas,project files. I want to use ExpressBars component. But as dx3,dx2005 and dx2006 all contains ExpressBars files I am unable to decide which components should i use. What are these dx3,dx2005 and dx2006? It is the diff versions? And if my modules were build using dx3 and I use dx2006 for my current development then it will cause any error after building module? Thanks for help and please let me know i anyone used the DevExpress for VCL Delphi. 
+Regards-- Naren",delphi,devexpress,,,,07/27/2012 00:28:44,not a real question,1,128,5,"DevExpress component history or Delphi I am using the Delphi 5.0 version. I have installed the DevExpress VCL for Delphi components. Build no is 27. After installation there is one older creted Developer Express.VCl. This folder contains 3 different folders 1. dx3 2. dx2005 and 3. dx2006. All these folders contains some pas,project files. I want to use ExpressBars component. But as dx3,dx2005 and dx2006 all contains ExpressBars files I am unable to decide which components should i use. What are these dx3,dx2005 and dx2006? It is the diff versions? And if my modules were build using dx3 and I use dx2006 for my current development then it will cause any error after building module? Thanks for help and please let me know i anyone used the DevExpress for VCL Delphi. 
+Regards-- Naren",2
+9143907,02/04/2012 19:39:44,990167,10/11/2011 19:04:59,58,2,Delphi thread [Review my code],"So my code does this:
+1.Download page in thread
+2.Parse the page
+3.Send it to main thread
+
+All that is done over critical section and postmessage .
+IF anyone could review it fix it change it , or anything else that could make it better.
+
+    Main VCL form :
+    
+        unit Unit1;
+    
+    interface
+    
+    uses
+      Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+      Dialogs, OverbyteIcsWndControl, OverbyteIcsHttpProt, StdCtrls,Unit2;
+    const
+      WM_DATA_IN_BUF = WM_APP + 1000;
+    
+    type
+      TForm1 = class(TForm)
+        HttpCli1: THttpCli;
+        Button1: TButton;
+        ListBox1: TListBox;
+        Memo1: TMemo;
+        Button2: TButton;
+        procedure Button1Click(Sender: TObject);
+        procedure Button2Click(Sender: TObject);
+      private
+        FStringSectInit: boolean;
+        FGoogle: TGoogle;
+        FStringBuf: TStringList;
+        procedure HandleNewData(var Message: TMessage); message WM_DATA_IN_BUF;
+      public
+         StringSection: TRTLCriticalSection;
+        property StringBuf: TStringList read FStringBuf write FStringBuf;
+      end;
+    
+    var
+      Form1: TForm1;
+    
+    implementation
+    
+    {$R *.dfm}
+    
+    procedure TForm1.Button1Click(Sender: TObject);
+    begin
+      if not FStringSectInit then
+      begin
+        InitializeCriticalSection(StringSection);
+        FStringBuf := TStringList.Create;
+        FStringSectInit := true;
+        FGoogle := TGoogle.Create(true);
+        SetThreadPriority(FGoogle.Handle, THREAD_PRIORITY_BELOW_NORMAL);
+        try
+          FGoogle.StartNum := 8;
+        except
+          on EConvertError do FGoogle.StartNum := 2;
+        end;
+        FGoogle.Resume;
+      end;
+    end;
+    
+    procedure TForm1.HandleNewData(var Message: TMessage);
+    var i:integer;
+    begin
+      if FStringSectInit then
+      if listbox1.Items.Count<10 then
+      begin
+        EnterCriticalSection(StringSection);
+        for i:=0 to 5 do
+        if length(fstringbuf.Text)>10 then
+        begin
+        listbox1.Items.Add(FStringBuf.Strings[i]);
+        end
+        else
+        FStringBuf.Clear;
+        LeaveCriticalSection(StringSection);
+        {Now trim the Result Memo.}
+      end
+      else
+      begin
+        with FGoogle do
+        begin
+          Terminate;
+          WaitFor;
+          Free;
+        end;
+       FGoogle := nil;
+        FStringBuf.Free;
+        FStringBuf := nil;
+        DeleteCriticalSection(StringSection);
+        FStringSectInit := false;
+      end;
+    end;
+    procedure TForm1.Button2Click(Sender: TObject);
+    begin
+    if listbox1.Items.Count>80 then
+    end;
+    
+    end.
+
+And the Thread :
+
+    unit Unit2;
+    
+    interface
+    
+    uses
+      Classes,Windows,IDHTTP, OverbyteIcsWndControl, StdCtrls,OverbyteIcsHttpProt,SysUtils,Dialogs;
+    
+    type
+      TGoogle = class(TThread)
+      private
+    google:TStringList;
+        Upit:string;
+        Broj:integer;
+        Buffer : TStringList;
+      protected
+        procedure parsegoogleapi;
+        procedure SkiniSors;
+        procedure Execute; override;
+      public
+        property StartNum: integer read Broj write Broj;
+      end;
+    
+    implementation
+    uses unit1,StrUtils;
+    
+    function ExtractText(const Str, Delim1, Delim2: string; PosStart: integer; var PosEnd: integer): string;
+    var
+     pos1, pos2: integer;
+    begin
+        Result := '';
+        pos1 := PosEx(Delim1, Str, PosStart);
+        if pos1 > 0 then
+        begin
+        pos2 := PosEx(Delim2, Str, pos1 + Length(Delim1));
+        if pos2 > 0 then
+        begin
+          PosEnd := pos2 + Length(Delim2);
+          Result := Copy(Str, pos1 + Length(Delim1), pos2 - (pos1 + Length(Delim1)));
+    end;
+    end;
+    end;
+    function ChangeString(const Value: string; replace:string): string;
+    var i: Integer;
+    begin
+        Result := '';
+        for i := 1 to Length(Value) do
+        if Value[i] = ' ' then
+        Result := Result + replace
+        else
+        Result := Result + Value[i]
+    end;
+    
+    (*Ovo je procedura za skidanje sorsa*)
+    
+    procedure TGoogle.SkiniSors;
+    var
+    HttpCli1 : THttpCli;
+    criter:string;
+    
+    begin
+    
+    HttpCli1:=THttpCli.Create(nil);
+    google:=TStringList.Create;
+    criter:= ChangeString(Upit,'%20');
+    
+    With HttpCli1 do begin
+        URL            := 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&start=' + inttostr(broj) + '&rsz=large&q=index.php';
+        RequestVer     := '1.1';
+        RcvdStream := TMemoryStream.Create;
+        try
+            Get;
+        except
+            ShowMessage('There has been an error , check your internet connection !');
+            RcvdStream.Free;
+            Exit;
+        end;
+    
+    RcvdStream.Seek(0,0);
+    google.LoadFromStream(RcvdStream);
+    RcvdStream.Free;
+     broj:=broj+8;
+    ParseGoogleApi;
+    end;
+    end;
+    
+    procedure TGoogle.ParseGoogleApi;
+    var Pos: integer;
+        sText: string;
+    begin
+    Buffer:= TStringList.Create;
+      sText := ExtractText(google.Text, '""url"":""', '"",""visibleUrl""', 1, Pos);
+      while sText <> '' do
+      begin
+        buffer.Add(sText);
+    
+        sText := ExtractText(google.Text, '""url"":""', '"",""visibleUrl""', Pos, Pos);
+      end;
+    end;
+    
+    
+    procedure TGoogle.Execute;
+    var
+      CurrentNum: integer;
+      i:integer;
+    
+    begin
+    
+      CurrentNum := Broj;
+      while not terminated do
+      begin
+      skinisors;
+          EnterCriticalSection(Form1.StringSection);
+          for i:=0 to 5 do                        begin
+          Form1.StringBuf.Add(buffer.strings[i]);
+          end;
+          LeaveCriticalSection(Form1.StringSection);
+          PostMessage(Form1.Handle, WM_DATA_IN_BUF, 0, 0);
+    
+        end;
+    
+    
+    end;
+    end.
+
+
+So I want to know how can I stop the thread when page timeouts or if user gets disconnected etc..  so that thread can be terminated properly.
+
+
+I want to start 3 instances of this thread and every instance should access critical section take one link ex link[i] where i is integer value that is incremented by thread which has ownership over critical section at that moment. Thanks  ",delphi,,,,,02/05/2012 09:12:39,off topic,1,1738,5,"Delphi thread [Review my code] So my code does this:
+1.Download page in thread
+2.Parse the page
+3.Send it to main thread
+
+All that is done over critical section and postmessage .
+IF anyone could review it fix it change it , or anything else that could make it better.
+
+    Main VCL form :
+    
+        unit Unit1;
+    
+    interface
+    
+    uses
+      Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+      Dialogs, OverbyteIcsWndControl, OverbyteIcsHttpProt, StdCtrls,Unit2;
+    const
+      WM_DATA_IN_BUF = WM_APP + 1000;
+    
+    type
+      TForm1 = class(TForm)
+        HttpCli1: THttpCli;
+        Button1: TButton;
+        ListBox1: TListBox;
+        Memo1: TMemo;
+        Button2: TButton;
+        procedure Button1Click(Sender: TObject);
+        procedure Button2Click(Sender: TObject);
+      private
+        FStringSectInit: boolean;
+        FGoogle: TGoogle;
+        FStringBuf: TStringList;
+        procedure HandleNewData(var Message: TMessage); message WM_DATA_IN_BUF;
+      public
+         StringSection: TRTLCriticalSection;
+        property StringBuf: TStringList read FStringBuf write FStringBuf;
+      end;
+    
+    var
+      Form1: TForm1;
+    
+    implementation
+    
+    {$R *.dfm}
+    
+    procedure TForm1.Button1Click(Sender: TObject);
+    begin
+      if not FStringSectInit then
+      begin
+        InitializeCriticalSection(StringSection);
+        FStringBuf := TStringList.Create;
+        FStringSectInit := true;
+        FGoogle := TGoogle.Create(true);
+        SetThreadPriority(FGoogle.Handle, THREAD_PRIORITY_BELOW_NORMAL);
+        try
+          FGoogle.StartNum := 8;
+        except
+          on EConvertError do FGoogle.StartNum := 2;
+        end;
+        FGoogle.Resume;
+      end;
+    end;
+    
+    procedure TForm1.HandleNewData(var Message: TMessage);
+    var i:integer;
+    begin
+      if FStringSectInit then
+      if listbox1.Items.Count<10 then
+      begin
+        EnterCriticalSection(StringSection);
+        for i:=0 to 5 do
+        if length(fstringbuf.Text)>10 then
+        begin
+        listbox1.Items.Add(FStringBuf.Strings[i]);
+        end
+        else
+        FStringBuf.Clear;
+        LeaveCriticalSection(StringSection);
+        {Now trim the Result Memo.}
+      end
+      else
+      begin
+        with FGoogle do
+        begin
+          Terminate;
+          WaitFor;
+          Free;
+        end;
+       FGoogle := nil;
+        FStringBuf.Free;
+        FStringBuf := nil;
+        DeleteCriticalSection(StringSection);
+        FStringSectInit := false;
+      end;
+    end;
+    procedure TForm1.Button2Click(Sender: TObject);
+    begin
+    if listbox1.Items.Count>80 then
+    end;
+    
+    end.
+
+And the Thread :
+
+    unit Unit2;
+    
+    interface
+    
+    uses
+      Classes,Windows,IDHTTP, OverbyteIcsWndControl, StdCtrls,OverbyteIcsHttpProt,SysUtils,Dialogs;
+    
+    type
+      TGoogle = class(TThread)
+      private
+    google:TStringList;
+        Upit:string;
+        Broj:integer;
+        Buffer : TStringList;
+      protected
+        procedure parsegoogleapi;
+        procedure SkiniSors;
+        procedure Execute; override;
+      public
+        property StartNum: integer read Broj write Broj;
+      end;
+    
+    implementation
+    uses unit1,StrUtils;
+    
+    function ExtractText(const Str, Delim1, Delim2: string; PosStart: integer; var PosEnd: integer): string;
+    var
+     pos1, pos2: integer;
+    begin
+        Result := '';
+        pos1 := PosEx(Delim1, Str, PosStart);
+        if pos1 > 0 then
+        begin
+        pos2 := PosEx(Delim2, Str, pos1 + Length(Delim1));
+        if pos2 > 0 then
+        begin
+          PosEnd := pos2 + Length(Delim2);
+          Result := Copy(Str, pos1 + Length(Delim1), pos2 - (pos1 + Length(Delim1)));
+    end;
+    end;
+    end;
+    function ChangeString(const Value: string; replace:string): string;
+    var i: Integer;
+    begin
+        Result := '';
+        for i := 1 to Length(Value) do
+        if Value[i] = ' ' then
+        Result := Result + replace
+        else
+        Result := Result + Value[i]
+    end;
+    
+    (*Ovo je procedura za skidanje sorsa*)
+    
+    procedure TGoogle.SkiniSors;
+    var
+    HttpCli1 : THttpCli;
+    criter:string;
+    
+    begin
+    
+    HttpCli1:=THttpCli.Create(nil);
+    google:=TStringList.Create;
+    criter:= ChangeString(Upit,'%20');
+    
+    With HttpCli1 do begin
+        URL            := 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&start=' + inttostr(broj) + '&rsz=large&q=index.php';
+        RequestVer     := '1.1';
+        RcvdStream := TMemoryStream.Create;
+        try
+            Get;
+        except
+            ShowMessage('There has been an error , check your internet connection !');
+            RcvdStream.Free;
+            Exit;
+        end;
+    
+    RcvdStream.Seek(0,0);
+    google.LoadFromStream(RcvdStream);
+    RcvdStream.Free;
+     broj:=broj+8;
+    ParseGoogleApi;
+    end;
+    end;
+    
+    procedure TGoogle.ParseGoogleApi;
+    var Pos: integer;
+        sText: string;
+    begin
+    Buffer:= TStringList.Create;
+      sText := ExtractText(google.Text, '""url"":""', '"",""visibleUrl""', 1, Pos);
+      while sText <> '' do
+      begin
+        buffer.Add(sText);
+    
+        sText := ExtractText(google.Text, '""url"":""', '"",""visibleUrl""', Pos, Pos);
+      end;
+    end;
+    
+    
+    procedure TGoogle.Execute;
+    var
+      CurrentNum: integer;
+      i:integer;
+    
+    begin
+    
+      CurrentNum := Broj;
+      while not terminated do
+      begin
+      skinisors;
+          EnterCriticalSection(Form1.StringSection);
+          for i:=0 to 5 do                        begin
+          Form1.StringBuf.Add(buffer.strings[i]);
+          end;
+          LeaveCriticalSection(Form1.StringSection);
+          PostMessage(Form1.Handle, WM_DATA_IN_BUF, 0, 0);
+    
+        end;
+    
+    
+    end;
+    end.
+
+
+So I want to know how can I stop the thread when page timeouts or if user gets disconnected etc..  so that thread can be terminated properly.
+
+
+I want to start 3 instances of this thread and every instance should access critical section take one link ex link[i] where i is integer value that is incremented by thread which has ownership over critical section at that moment. Thanks  ",1
+4942083,02/09/2011 06:51:33,512305,11/18/2010 15:16:49,42,1,App staying behind taskbar when starting in fullscreen!,"Hey, this is the code i'm using
+
+    r:TRect;    
+    BorderStyle := bsNone;
+    SystemParametersInfo(SPI_GETWORKAREA, 0, @r,0) ;
+    SetBounds(r.Left,r.Top,r.Right-r.Left, r.Bottom- r.Top);
+
+What i get:
+r.Left = 0
+r.Top = 0
+r.Right = 1366
+r.Bottom = 728
+
+My resolution is 1366x768. Also it seems like top would be -xx when i run the application.
+Another problem is that the application won't cover taskbar, but goes behind it.
+
+Also what i've tried:
+
+    BorderStyle := bsNone;
+    WindowState := wsMaximized;
+
+It works fine when switching fullscreen at runtime, but it wont work when starting the app at startup. I get the same problem.
+
+Any help would be appreciated.
+",delphi,,,,,02/10/2011 06:14:33,too localized,1,113,8,"App staying behind taskbar when starting in fullscreen! Hey, this is the code i'm using
+
+    r:TRect;    
+    BorderStyle := bsNone;
+    SystemParametersInfo(SPI_GETWORKAREA, 0, @r,0) ;
+    SetBounds(r.Left,r.Top,r.Right-r.Left, r.Bottom- r.Top);
+
+What i get:
+r.Left = 0
+r.Top = 0
+r.Right = 1366
+r.Bottom = 728
+
+My resolution is 1366x768. Also it seems like top would be -xx when i run the application.
+Another problem is that the application won't cover taskbar, but goes behind it.
+
+Also what i've tried:
+
+    BorderStyle := bsNone;
+    WindowState := wsMaximized;
+
+It works fine when switching fullscreen at runtime, but it wont work when starting the app at startup. I get the same problem.
+
+Any help would be appreciated.
+",1
+10084043,04/10/2012 06:22:47,55007,10/25/2008 16:25:43,1350,30,Is Result variable defined from first line in a function?,"I need a clarification of this case.
+
+According my tests the Result variable is defined to:
+Boolean=False, Integer=0, String='', Object=nil etc from the first line.
+But I have never seen an official reference for this.
+It also make sense as this gives the hint.
+
+[DCC Warning] Unit1.pas(35): H2077 Value assigned to 'TForm1.Test' never used
+
+    function TForm1.Test: Boolean;
+    begin
+      Result := False;
+      // Some arbitrary code here
+    
+      Result := True;
+    end;
+
+But what happens if I comment out the first line and there is an exception somewhere before last line? Is Result = False ?
+
+If Result is undefined this means that I **always** have to start every function by defining Result in case of exception later. And this make no sense for me.",delphi,,,,,,open,0,144,10,"Is Result variable defined from first line in a function? I need a clarification of this case.
+
+According my tests the Result variable is defined to:
+Boolean=False, Integer=0, String='', Object=nil etc from the first line.
+But I have never seen an official reference for this.
+It also make sense as this gives the hint.
+
+[DCC Warning] Unit1.pas(35): H2077 Value assigned to 'TForm1.Test' never used
+
+    function TForm1.Test: Boolean;
+    begin
+      Result := False;
+      // Some arbitrary code here
+    
+      Result := True;
+    end;
+
+But what happens if I comment out the first line and there is an exception somewhere before last line? Is Result = False ?
+
+If Result is undefined this means that I **always** have to start every function by defining Result in case of exception later. And this make no sense for me.",1
+4200282,11/16/2010 23:58:06,334690,05/06/2010 17:32:40,79,4,"Trying to convert from Delphi to Qt, best practises?","Although it is comparatively hard to write in C++ than in Pascal I'm really attracted by multi-platform support of Qt. I can connect to an MSSQL server running on Win2003 server from Linux or I can connect to a PostGreSQL server running on Linux. That made a plus when comparing with Delphi. 
+
+I'm trying to write sample programs to get used to the Qt and C++. So far I'm comfortable with the layouts and signals-and-slots mechanism (still double clicking the buttons to write event code though :) ). I wish I was using the SQL data in my programs as easily as in Delphi. 
+
+Is there any way that I can put some connection object, a DataSource, a DBGrid and a DBNavigator on to a form and go on without writing code? (For some forms it is really a time saver, a project with 300+ forms can be made faster)
+
+I would like to hear from people using Qt with data from SQL servers. ",delphi,qt,data-aware,,,,open,0,164,9,"Trying to convert from Delphi to Qt, best practises? Although it is comparatively hard to write in C++ than in Pascal I'm really attracted by multi-platform support of Qt. I can connect to an MSSQL server running on Win2003 server from Linux or I can connect to a PostGreSQL server running on Linux. That made a plus when comparing with Delphi. 
+
+I'm trying to write sample programs to get used to the Qt and C++. So far I'm comfortable with the layouts and signals-and-slots mechanism (still double clicking the buttons to write event code though :) ). I wish I was using the SQL data in my programs as easily as in Delphi. 
+
+Is there any way that I can put some connection object, a DataSource, a DBGrid and a DBNavigator on to a form and go on without writing code? (For some forms it is really a time saver, a project with 300+ forms can be made faster)
+
+I would like to hear from people using Qt with data from SQL servers. ",3
+882230,05/19/2009 11:39:08,96435,04/27/2009 08:27:38,90,4,How to call API with PUCHAR?,"I'm trying to use an API under Delphi. Here's the API documentation
+
+    OKERR ENTRY SCardCLMifareStdAuthent 
+    	(IN SCARDHANDLE ulHandleCard,IN ULONG ulMifareBlockNr,
+    	IN UCHAR ucMifareAuthMode,IN UCHAR ucMifareAccessType,IN UCHAR ucMifareKeyNr,
+    	IN PUCHAR pucMifareKey,IN ULONG ulMifareKeyLen);
+
+Whereas pucMifareKey: `A pointer to the six byte Mifare key`.
+The code i've been trying so far;
+
+    function Auth():Integer;
+    type
+      TSCardCLMifareStdAuthent = function(SCARDHANDLE: cardinal; ulMifareBlockNr: ULONG;
+       ucMifareAuthMode, ucMifareAccessType, ucMifareKeyNr: byte; pucMifareKey: puchar;
+       ulMifareKeyLen: cardinal):LONG;
+    var
+      SCardCLMifareStdAuthent: TSCardCLMifareStdAuthent;
+      hDLL: Integer;
+      CardHandle: cardinal;
+      i: integer;
+      Key: array of UCHAR;
+    begin
+      Result:=1;
+      //CardHandle is defined here
+      SetLength(Key, 6);
+      for i := low(key) to high(key) do
+        Key[i] := $FF;
+      hDLL := LoadLibrary('scardsyn.dll');
+      @SCardCLMifareStdAuthent := GetProcAddress(hDLL, 'SCardCLMifareStdAuthent');
+      if @SCardCLMifareStdAuthent <> nil then
+        Result:=SCardCLMifareStdAuthent(CardHandle, $00, 96, 0, ^Key, 6);
+      FreeLibrary(hDLL);
+    end;
+
+The error i'm getting is `Incompatible types: 'Byte' and 'Char'`. Any ideas?",delphi,api,,,,,open,0,250,6,"How to call API with PUCHAR? I'm trying to use an API under Delphi. Here's the API documentation
+
+    OKERR ENTRY SCardCLMifareStdAuthent 
+    	(IN SCARDHANDLE ulHandleCard,IN ULONG ulMifareBlockNr,
+    	IN UCHAR ucMifareAuthMode,IN UCHAR ucMifareAccessType,IN UCHAR ucMifareKeyNr,
+    	IN PUCHAR pucMifareKey,IN ULONG ulMifareKeyLen);
+
+Whereas pucMifareKey: `A pointer to the six byte Mifare key`.
+The code i've been trying so far;
+
+    function Auth():Integer;
+    type
+      TSCardCLMifareStdAuthent = function(SCARDHANDLE: cardinal; ulMifareBlockNr: ULONG;
+       ucMifareAuthMode, ucMifareAccessType, ucMifareKeyNr: byte; pucMifareKey: puchar;
+       ulMifareKeyLen: cardinal):LONG;
+    var
+      SCardCLMifareStdAuthent: TSCardCLMifareStdAuthent;
+      hDLL: Integer;
+      CardHandle: cardinal;
+      i: integer;
+      Key: array of UCHAR;
+    begin
+      Result:=1;
+      //CardHandle is defined here
+      SetLength(Key, 6);
+      for i := low(key) to high(key) do
+        Key[i] := $FF;
+      hDLL := LoadLibrary('scardsyn.dll');
+      @SCardCLMifareStdAuthent := GetProcAddress(hDLL, 'SCardCLMifareStdAuthent');
+      if @SCardCLMifareStdAuthent <> nil then
+        Result:=SCardCLMifareStdAuthent(CardHandle, $00, 96, 0, ^Key, 6);
+      FreeLibrary(hDLL);
+    end;
+
+The error i'm getting is `Incompatible types: 'Byte' and 'Char'`. Any ideas?",2
+7056098,08/14/2011 09:40:31,418198,08/12/2010 09:06:38,635,19,delphi translation tool,"looking for delphi 2009 translation tools.
+
+tired so far the dxGetText, and the wischnewski.tv tool. both i could not setup.
+
+the deman is a tool to translate from my current language, which is not English, to any other language, and to allow non programmers to translate the software.
+
+could you suggest a component that does that, with example source code?
+
+thanks.",delphi,localization,delphi-2009,,,09/15/2011 13:22:34,too localized,1,57,3,"delphi translation tool looking for delphi 2009 translation tools.
+
+tired so far the dxGetText, and the wischnewski.tv tool. both i could not setup.
+
+the deman is a tool to translate from my current language, which is not English, to any other language, and to allow non programmers to translate the software.
+
+could you suggest a component that does that, with example source code?
+
+thanks.",3
+238741,10/26/2008 22:47:25,31658,10/26/2008 22:47:25,1,0,How do I put GIF/PNG/... image on a BitBtn in Delphi?,I'm using Delphi 2007. How can I put a GIF/PNG image on a BitBtn component?,delphi,,,,,,open,0,15,11,How do I put GIF/PNG/... image on a BitBtn in Delphi? I'm using Delphi 2007. How can I put a GIF/PNG image on a BitBtn component?,1
+8773179,01/07/2012 21:15:02,69358,02/21/2009 16:53:13,1143,35,What is the best way to suggest a new feature for Delphi?,"So far I have been suggesting new features to [http://delphi.uservoice.com][1]
+
+Since it is managed by Nick Hodges (who is no longer an employee of Embarcadero) I decided to report my future improvements requests to [http://qc.embarcadero.com][2]
+
+Is QC this the right way to go or is there a dedecated Idea Share solution I am not aware of?
+
+Just as a reference I will point one of my suggestions [Add Patterns.pas to allow easily document code][3]
+
+Please advise which is best place to submit such stuff to?
+
+  [1]: http://delphi.uservoice.com
+  [2]: http://qc.embarcadero.com
+  [3]: http://qc.embarcadero.com/wc/qcmain.aspx?d=102417",delphi,bug-tracking,delphi-xe2,project-ideas,suggestions,01/07/2012 22:51:53,off topic,1,90,12,"What is the best way to suggest a new feature for Delphi? So far I have been suggesting new features to [http://delphi.uservoice.com][1]
+
+Since it is managed by Nick Hodges (who is no longer an employee of Embarcadero) I decided to report my future improvements requests to [http://qc.embarcadero.com][2]
+
+Is QC this the right way to go or is there a dedecated Idea Share solution I am not aware of?
+
+Just as a reference I will point one of my suggestions [Add Patterns.pas to allow easily document code][3]
+
+Please advise which is best place to submit such stuff to?
+
+  [1]: http://delphi.uservoice.com
+  [2]: http://qc.embarcadero.com
+  [3]: http://qc.embarcadero.com/wc/qcmain.aspx?d=102417",5
+1238122,08/06/2009 10:34:55,100846,04/24/2009 13:19:47,1348,85,Create an exact copy of TPanel on Delphi5,"I have a TPanel pnlMain, where several dynamic TPanels are created (and pnlMain is their Parent) according to user actions, data validations, etc. Every panel contains one colored grid full of strings. Apart from panels, there are some open source arrows components and a picture. Whole bunch of stuff.
+
+Now I want user to be able to print this panel (I asked how to do it [on this question][1]), but before printing, user must be presented with a new form, containing copy of pnlMain. On this form user has to do some changes, add few components and then print his customized copy of pnlMain. After printing user will close this form and return to original form with original pnlMain. And – as you can guess – original pnlMain must remain intact.
+
+So is there any clever way to copy whole TPanel and it’s contents? I know I can make it manually iterating through pnlMain.Controls list.
+
+
+  [1]: http://stackoverflow.com/questions/929589/how-to-print-tpanel-contents",delphi,delphi5,dynamic-controls,tpanel,,,open,0,156,8,"Create an exact copy of TPanel on Delphi5 I have a TPanel pnlMain, where several dynamic TPanels are created (and pnlMain is their Parent) according to user actions, data validations, etc. Every panel contains one colored grid full of strings. Apart from panels, there are some open source arrows components and a picture. Whole bunch of stuff.
+
+Now I want user to be able to print this panel (I asked how to do it [on this question][1]), but before printing, user must be presented with a new form, containing copy of pnlMain. On this form user has to do some changes, add few components and then print his customized copy of pnlMain. After printing user will close this form and return to original form with original pnlMain. And – as you can guess – original pnlMain must remain intact.
+
+So is there any clever way to copy whole TPanel and it’s contents? I know I can make it manually iterating through pnlMain.Controls list.
+
+
+  [1]: http://stackoverflow.com/questions/929589/how-to-print-tpanel-contents",4
+6081841,05/21/2011 12:49:18,381979,07/02/2010 11:01:52,551,12,ProgressBar for TResourceStream (Delphi),How to use ProgressBar for `SaveToFile` method ?,delphi,stream,progress-bar,,,05/22/2011 08:03:19,not a real question,1,8,4,ProgressBar for TResourceStream (Delphi) How to use ProgressBar for `SaveToFile` method ?,3
+9887255,03/27/2012 09:58:17,1295141,03/27/2012 09:45:10,1,0,Delphi 6 : showmodal on onAccept of TTCPServer cuses to hang the application?,"I'm programing one network application in delphi 6 using TTCPServer. At OnAccept event of this component I call showmodal for another form. This cause to hang the main form. I think that it is because of threads but I do not know how to showmodal the form at this event. I really have to call that.
+I appreciate any answer. thanks.
+
+
+    var
+      s: array[0..10000] of byte;
+      i, j: integer;
+      Str : String;
+      Request, UN, Pass: WideString;
+      StartItemNode : IXMLNode;
+      st: TStringStream;
+    begin
+      CoInitialize(nil);
+    
+      i := ClientSocket.ReceiveBuf(s, 10000, 0);
+    
+      Str := '';
+      for j := 0 to i - 1 do
+        Str := Str + AnsiChar(s[j]);
+    
+      XMLDoc.XML.Text := Str;
+      XMLDoc.Active := true;
+      StartItemNode := XMLDoc.ChildNodes.FindNode('r');
+      Request := StartItemNode.ChildNodes['request'].Text;
+    
+      if(Request = 'Order')then
+      begin
+        Memo1.Lines.Text := Str;
+        ClientSocket.Sendln('<?xml version=""1.0"" encoding=""utf-8""?><r><answer result=""OK""></answer></r>');
+    
+        **Form2.ShowModal;**
+      end;
+
+",delphi,hang,ttcpserver,,,,open,0,268,13,"Delphi 6 : showmodal on onAccept of TTCPServer cuses to hang the application? I'm programing one network application in delphi 6 using TTCPServer. At OnAccept event of this component I call showmodal for another form. This cause to hang the main form. I think that it is because of threads but I do not know how to showmodal the form at this event. I really have to call that.
+I appreciate any answer. thanks.
+
+
+    var
+      s: array[0..10000] of byte;
+      i, j: integer;
+      Str : String;
+      Request, UN, Pass: WideString;
+      StartItemNode : IXMLNode;
+      st: TStringStream;
+    begin
+      CoInitialize(nil);
+    
+      i := ClientSocket.ReceiveBuf(s, 10000, 0);
+    
+      Str := '';
+      for j := 0 to i - 1 do
+        Str := Str + AnsiChar(s[j]);
+    
+      XMLDoc.XML.Text := Str;
+      XMLDoc.Active := true;
+      StartItemNode := XMLDoc.ChildNodes.FindNode('r');
+      Request := StartItemNode.ChildNodes['request'].Text;
+    
+      if(Request = 'Order')then
+      begin
+        Memo1.Lines.Text := Str;
+        ClientSocket.Sendln('<?xml version=""1.0"" encoding=""utf-8""?><r><answer result=""OK""></answer></r>');
+    
+        **Form2.ShowModal;**
+      end;
+
+",3
+7338478,09/07/2011 18:07:07,872578,08/01/2011 10:04:30,24,1,Opinion on TMS and DEVEXPRESS component,"i want know your opinion about TMS and DEVEXPRESS component; when is prefer use TMS and when DEVEXPRESS component? Pro/Contro of this? I want buy one of these two, and not know that choose, what is better and why? Thanks very much.",delphi,devexpress,delphi-xe2,tms,,09/07/2011 18:39:19,not constructive,1,42,6,"Opinion on TMS and DEVEXPRESS component i want know your opinion about TMS and DEVEXPRESS component; when is prefer use TMS and when DEVEXPRESS component? Pro/Contro of this? I want buy one of these two, and not know that choose, what is better and why? Thanks very much.",4
+1991587,01/02/2010 13:24:04,36544,11/11/2008 12:29:04,391,10,Help me fix a Delphi function that counts Registry items,"I have a function that counts registry items and added a new option to also retrieve the registry items names and values. Unfortunately I can't seem to understand why only the first item for each registry key is retrieved and why the values all have the same name.
+
+Anyone see any apparent problem with the code below?
+
+    function CountRegistryItems(Root: HKEY; SubKey: string; var KeysCount: Integer;
+      var ValuesCount: Integer; GetValues: Boolean; const List: TStrings): Boolean;
+    type
+      TRegKeyInfo = record
+        NumSubKeys: Integer;
+        MaxSubKeyLen: Integer;
+        NumValues: Integer;
+        MaxValueLen: Integer;
+        MaxDataLen: Integer;
+        FileTime: TFileTime;
+      end;
+    
+    var
+      Info: TRegKeyInfo;
+      i: integer;
+      SL: TStringList;
+      Status: Integer;
+      Key: HKEY;
+      Len: DWORD;
+      S: string;
+    
+      PartialKeysCount: Integer;
+      PartialValuesCount: Integer;
+    
+      KeyType, MaxValLen, MaxValNameLen, ValNameLen, ValLen: Cardinal;
+      ValName, Val: PChar;
+    
+      Size: DWORD;
+      ValueName: string;
+    begin
+      KeysCount := 0;
+      ValuesCount := 0;
+      Result := False;
+    
+      if GetValues and (List <> nil) then
+        List.BeginUpdate;
+    
+      SL := TStringList.Create;
+      Try
+        // open current key
+        Status := RegOpenKeyEx(Root, PChar(SubKey), 0, KEY_READ or KEY_ENUMERATE_SUB_KEYS, Key);
+        if Status = ERROR_SUCCESS then
+        Try
+          // get key info
+          FillChar(Info, SizeOf(TRegKeyInfo), 0);
+          Status := RegQueryInfoKey(Key, nil, nil, nil, @Info.NumSubKeys,
+                    @Info.MaxSubKeyLen, nil, @Info.NumValues, @Info.MaxValueLen,
+                    @Info.MaxDataLen, nil, @Info.FileTime);
+          if Status  = ERROR_SUCCESS then
+          begin
+            Result := True;
+    
+            // NEW CODE
+            if GetValues and (List <> nil) then
+            begin
+              MaxValNameLen := Info.MaxValueLen*2+3;
+              MaxValLen := Info.MaxDataLen+1;
+              // Get values
+              GetMem(ValName, MaxValNameLen);
+              GetMem(Val, MaxValLen);
+    
+              //if Info.NumValues <> 0 then
+              for i := 0 to Info.NumValues-1 do
+              begin
+                // Clear buffers
+                ValName^ := #0;
+                ValNameLen := MaxValNameLen;
+                if Val <> nil then
+                begin
+                  Val^ := #0;
+                  ValLen := MaxValLen;
+                end;
+    
+                // Get value information
+                if RegEnumValue(Root, i, ValName, ValNameLen, nil, @KeyType,
+                  PByte(Val), @ValLen) = ERROR_SUCCESS then
+                begin
+                  //if ((KeyType = REG_SZ) or (KeyType = REG_MULTI_SZ)
+                  //or (KeyType = REG_EXPAND_SZ)) then
+                  begin
+                    if ValName^ <> #0 then
+                      List.Add(ValName + '=' + Val)
+                    else
+                      List.Add('Default' + '=' + Val);
+                  end;
+                end;
+              end;
+              // Free buffers
+              //FreeMem(ValName);
+              //if Val <> nil then FreeMem(Val);
+            end;
+            // END NEW CODE
+
+            // enum subkeys
+            SetString(S, nil, Info.MaxSubKeyLen + 1);
+            for i := 0 to Info.NumSubKeys - 1 do
+            begin
+              Len := Info.MaxSubKeyLen + 1;
+              Status := RegEnumKeyEx(Key, i, PChar(S), Len, nil, nil, nil, nil);
+              if Status <> ERROR_SUCCESS then Continue;
+              SL.Add(PChar(S));
+            end;
+          end;
+    
+          if Info.NumSubKeys > 0 then Inc(KeysCount, Info.NumSubKeys);
+          if Info.NumValues > 0 then Inc(ValuesCount, Info.NumValues);
+    
+        Finally
+          RegCloseKey(Key);
+        End;
+    
+        // search subkeys
+        if SL.Count > 0 then
+        begin
+          for i := 0 to SL.Count - 1 do
+          begin
+            Application.ProcessMessages;
+            PartialKeysCount := 0;
+            PartialValuesCount := 0;
+            CountRegistryItems(Root, SubKey + '\' + SL[i], PartialKeysCount,
+              PartialValuesCount, GetValues, List);
+            KeysCount := KeysCount + PartialKeysCount;
+            ValuesCount := ValuesCount + PartialValuesCount;
+          end;
+        end;
+    
+      Finally
+        SL.Free;
+    
+        if GetValues and (List <> nil) then
+          List.EndUpdate;
+      End;
+    end;
+
+",delphi,,,,,,open,0,1673,10,"Help me fix a Delphi function that counts Registry items I have a function that counts registry items and added a new option to also retrieve the registry items names and values. Unfortunately I can't seem to understand why only the first item for each registry key is retrieved and why the values all have the same name.
+
+Anyone see any apparent problem with the code below?
+
+    function CountRegistryItems(Root: HKEY; SubKey: string; var KeysCount: Integer;
+      var ValuesCount: Integer; GetValues: Boolean; const List: TStrings): Boolean;
+    type
+      TRegKeyInfo = record
+        NumSubKeys: Integer;
+        MaxSubKeyLen: Integer;
+        NumValues: Integer;
+        MaxValueLen: Integer;
+        MaxDataLen: Integer;
+        FileTime: TFileTime;
+      end;
+    
+    var
+      Info: TRegKeyInfo;
+      i: integer;
+      SL: TStringList;
+      Status: Integer;
+      Key: HKEY;
+      Len: DWORD;
+      S: string;
+    
+      PartialKeysCount: Integer;
+      PartialValuesCount: Integer;
+    
+      KeyType, MaxValLen, MaxValNameLen, ValNameLen, ValLen: Cardinal;
+      ValName, Val: PChar;
+    
+      Size: DWORD;
+      ValueName: string;
+    begin
+      KeysCount := 0;
+      ValuesCount := 0;
+      Result := False;
+    
+      if GetValues and (List <> nil) then
+        List.BeginUpdate;
+    
+      SL := TStringList.Create;
+      Try
+        // open current key
+        Status := RegOpenKeyEx(Root, PChar(SubKey), 0, KEY_READ or KEY_ENUMERATE_SUB_KEYS, Key);
+        if Status = ERROR_SUCCESS then
+        Try
+          // get key info
+          FillChar(Info, SizeOf(TRegKeyInfo), 0);
+          Status := RegQueryInfoKey(Key, nil, nil, nil, @Info.NumSubKeys,
+                    @Info.MaxSubKeyLen, nil, @Info.NumValues, @Info.MaxValueLen,
+                    @Info.MaxDataLen, nil, @Info.FileTime);
+          if Status  = ERROR_SUCCESS then
+          begin
+            Result := True;
+    
+            // NEW CODE
+            if GetValues and (List <> nil) then
+            begin
+              MaxValNameLen := Info.MaxValueLen*2+3;
+              MaxValLen := Info.MaxDataLen+1;
+              // Get values
+              GetMem(ValName, MaxValNameLen);
+              GetMem(Val, MaxValLen);
+    
+              //if Info.NumValues <> 0 then
+              for i := 0 to Info.NumValues-1 do
+              begin
+                // Clear buffers
+                ValName^ := #0;
+                ValNameLen := MaxValNameLen;
+                if Val <> nil then
+                begin
+                  Val^ := #0;
+                  ValLen := MaxValLen;
+                end;
+    
+                // Get value information
+                if RegEnumValue(Root, i, ValName, ValNameLen, nil, @KeyType,
+                  PByte(Val), @ValLen) = ERROR_SUCCESS then
+                begin
+                  //if ((KeyType = REG_SZ) or (KeyType = REG_MULTI_SZ)
+                  //or (KeyType = REG_EXPAND_SZ)) then
+                  begin
+                    if ValName^ <> #0 then
+                      List.Add(ValName + '=' + Val)
+                    else
+                      List.Add('Default' + '=' + Val);
+                  end;
+                end;
+              end;
+              // Free buffers
+              //FreeMem(ValName);
+              //if Val <> nil then FreeMem(Val);
+            end;
+            // END NEW CODE
+
+            // enum subkeys
+            SetString(S, nil, Info.MaxSubKeyLen + 1);
+            for i := 0 to Info.NumSubKeys - 1 do
+            begin
+              Len := Info.MaxSubKeyLen + 1;
+              Status := RegEnumKeyEx(Key, i, PChar(S), Len, nil, nil, nil, nil);
+              if Status <> ERROR_SUCCESS then Continue;
+              SL.Add(PChar(S));
+            end;
+          end;
+    
+          if Info.NumSubKeys > 0 then Inc(KeysCount, Info.NumSubKeys);
+          if Info.NumValues > 0 then Inc(ValuesCount, Info.NumValues);
+    
+        Finally
+          RegCloseKey(Key);
+        End;
+    
+        // search subkeys
+        if SL.Count > 0 then
+        begin
+          for i := 0 to SL.Count - 1 do
+          begin
+            Application.ProcessMessages;
+            PartialKeysCount := 0;
+            PartialValuesCount := 0;
+            CountRegistryItems(Root, SubKey + '\' + SL[i], PartialKeysCount,
+              PartialValuesCount, GetValues, List);
+            KeysCount := KeysCount + PartialKeysCount;
+            ValuesCount := ValuesCount + PartialValuesCount;
+          end;
+        end;
+    
+      Finally
+        SL.Free;
+    
+        if GetValues and (List <> nil) then
+          List.EndUpdate;
+      End;
+    end;
+
+",1
+5313756,03/15/2011 15:10:20,35696,11/08/2008 03:38:52,1919,120,Using Generic containers in Delphi XE - always?,"Generic containers can be a time saver when having a item, and a strongly typed list of those items. It saves the repetitive coding of creating a new class with perhaps a TList internal variable, and typed Add/Delete type methods, among other benefits (such as all the new functionality provided by the Generic container classes.)
+
+However, is it recommended to always use generic containers for strongly typed lists going forward?  What are the specific downsides of doing so?  (If not worried about backwards compatibility of code.)  I was writing a server application yesterday and had a list of items that I created 'the old way' and was going to replace it with a generic list but decided to keep it lean, but mostly out of habit. (Should we break the habit and start a new one by always using generics?)",delphi,generics,,,,,open,0,142,8,"Using Generic containers in Delphi XE - always? Generic containers can be a time saver when having a item, and a strongly typed list of those items. It saves the repetitive coding of creating a new class with perhaps a TList internal variable, and typed Add/Delete type methods, among other benefits (such as all the new functionality provided by the Generic container classes.)
+
+However, is it recommended to always use generic containers for strongly typed lists going forward?  What are the specific downsides of doing so?  (If not worried about backwards compatibility of code.)  I was writing a server application yesterday and had a list of items that I created 'the old way' and was going to replace it with a generic list but decided to keep it lean, but mostly out of habit. (Should we break the habit and start a new one by always using generics?)",2
+4571496,12/31/2010 17:45:56,80901,03/21/2009 17:12:22,4206,307,Indy 11 - What feature do you want to see?,"If you could suggest only one new (or enhanced) feature for the Internet Direct (Indy) version 11, which one would it be?
+
+
+A new installer is already mentioned in http://stackoverflow.com/questions/3204601/step-by-step-upgrade-of-indy-10-in-delphi-2009",delphi,features,,,,01/01/2011 19:46:57,off topic,1,29,10,"Indy 11 - What feature do you want to see? If you could suggest only one new (or enhanced) feature for the Internet Direct (Indy) version 11, which one would it be?
+
+
+A new installer is already mentioned in http://stackoverflow.com/questions/3204601/step-by-step-upgrade-of-indy-10-in-delphi-2009",2
+4994167,02/14/2011 15:50:23,616129,02/14/2011 11:45:19,1,0,Saving vcl objects references in dephi with Tcollection.,"I am using delphi 2009 and VCL components. I have created a collection called
+TStreets made of items TStreet which has just two private fields. Now I need to add
+to Tstreet class another field/property to keep track (by using reference) of 
+other objects of class TMyObject. 
+
+An example: let's assume that TStreet collection contains five elements and ten objects 
+(TMyObject) exists in my application at run-time.  Each objects of TMyObject can belong 
+to only one  TStreet so I need to save for each TStreet all reference of objects and
+then be able to move one or more object reference from one TStreet to another.
+Should I create another colletion under TStreet where saving object references?
+
+Is it correct the way to go?
+
+
+",delphi,reference,tcollection,,,,open,0,120,8,"Saving vcl objects references in dephi with Tcollection. I am using delphi 2009 and VCL components. I have created a collection called
+TStreets made of items TStreet which has just two private fields. Now I need to add
+to Tstreet class another field/property to keep track (by using reference) of 
+other objects of class TMyObject. 
+
+An example: let's assume that TStreet collection contains five elements and ten objects 
+(TMyObject) exists in my application at run-time.  Each objects of TMyObject can belong 
+to only one  TStreet so I need to save for each TStreet all reference of objects and
+then be able to move one or more object reference from one TStreet to another.
+Should I create another colletion under TStreet where saving object references?
+
+Is it correct the way to go?
+
+
+",3
+5883188,05/04/2011 12:15:30,624113,02/19/2011 05:47:44,49,0,how to clean the ACE to file or folder ?,how to  clean the ACE /dacl  to file or folder ?,delphi,,,,,05/04/2011 13:55:50,not a real question,1,13,10,how to clean the ACE to file or folder ? how to  clean the ACE /dacl  to file or folder ?,1
+8595800,12/21/2011 20:18:05,80901,03/21/2009 17:12:22,8867,446,WebSocket implementations for Delphi,"As mentioned on the [Aquarium][1], the [WebSocket][2] protocol, often described as one of the key elements of HTML5, has finally [been blessed][3] ([RFC 6455][4]).
+
+Which **WebSocket server** implementations are available for Delphi?
+
+* [delphiws][5] (Google Code, based on Indy 9, [New BSD License][6])
+
+
+*community wiki*
+
+  [1]: http://blogs.oracle.com/theaquarium/entry/grizzly_2_2_is_here
+  [2]: http://en.wikipedia.org/wiki/WebSocket
+  [3]: http://www.rfc-editor.org/rfc/rfc6455.txt
+  [4]: http://www.rfc-editor.org/rfc/rfc6455.txt
+  [5]: http://code.google.com/p/delphiws/
+  [6]: http://www.opensource.org/licenses/bsd-license.php",delphi,http,websocket,,,,open,0,60,4,"WebSocket implementations for Delphi As mentioned on the [Aquarium][1], the [WebSocket][2] protocol, often described as one of the key elements of HTML5, has finally [been blessed][3] ([RFC 6455][4]).
+
+Which **WebSocket server** implementations are available for Delphi?
+
+* [delphiws][5] (Google Code, based on Indy 9, [New BSD License][6])
+
+
+*community wiki*
+
+  [1]: http://blogs.oracle.com/theaquarium/entry/grizzly_2_2_is_here
+  [2]: http://en.wikipedia.org/wiki/WebSocket
+  [3]: http://www.rfc-editor.org/rfc/rfc6455.txt
+  [4]: http://www.rfc-editor.org/rfc/rfc6455.txt
+  [5]: http://code.google.com/p/delphiws/
+  [6]: http://www.opensource.org/licenses/bsd-license.php",3
+2437714,03/13/2010 08:08:40,292861,03/13/2010 08:04:32,1,0,Resize PNG image,HI! Could you please tell me how to resize a .png image. Or better give an example. I've been searching for the answer for a long time and it seems that nobody knows how to resize a .png image and keep its transparency. :(,delphi,resize,png,image,graphics,,open,0,44,3,Resize PNG image HI! Could you please tell me how to resize a .png image. Or better give an example. I've been searching for the answer for a long time and it seems that nobody knows how to resize a .png image and keep its transparency. :(,5
+9833471,03/23/2012 02:43:21,207391,11/09/2009 23:39:38,793,44,What are the essential skills for advanced programming with Delphi 2010?,"I'm an intermediate level programmer who's interested in lifting my game as far as Delphi programming is concerned. I need to hear from the experts out there.
+
+If I'm about to undertake a Win32 app project using Delphi 2010, what are the essential skills I need to be proficient in (I'd appreciate a list of topics that's neither too brief nor as exhaustive as a TOC in a book)? You can assume that there will be reading from and writing to separate databases and perhaps communications with other system components using web services. Please leave out Unicode compliance as I'm aware of that. Also, is there a good source on the internet for ""best practice"" programming using Delphi, or is it always a case of ""it depends what you're trying to do"" (ie. ask individual questions here on SO)? Thanks.",delphi,delphi-2010,,,,03/23/2012 13:18:29,not a real question,1,139,11,"What are the essential skills for advanced programming with Delphi 2010? I'm an intermediate level programmer who's interested in lifting my game as far as Delphi programming is concerned. I need to hear from the experts out there.
+
+If I'm about to undertake a Win32 app project using Delphi 2010, what are the essential skills I need to be proficient in (I'd appreciate a list of topics that's neither too brief nor as exhaustive as a TOC in a book)? You can assume that there will be reading from and writing to separate databases and perhaps communications with other system components using web services. Please leave out Unicode compliance as I'm aware of that. Also, is there a good source on the internet for ""best practice"" programming using Delphi, or is it always a case of ""it depends what you're trying to do"" (ie. ask individual questions here on SO)? Thanks.",2
+107617,09/20/2008 08:27:22,13219,09/16/2008 17:41:49,1,3,What is the best or cheapest library for creating PDF files i Delphi?,"As the title states:
+What is the best or cheapest library for creating PDF files i Delphi?",delphi,pdf,,,,09/19/2011 12:14:48,not constructive,1,16,13,"What is the best or cheapest library for creating PDF files i Delphi? As the title states:
+What is the best or cheapest library for creating PDF files i Delphi?",2
+11160680,06/22/2012 16:50:32,528211,12/02/2010 15:51:48,2555,92,Spell checker and dictionary licences,"We are planning to use a spell checker component by [DevExpress][1]. That component use dictionaries files, such as:
+
+1 - Hunspell  
+2 - ISpell  
+3 - OpenOffice  
+
+Our software is commercial with closed source code. Those are the licences used by the mentioned dictionaries:
+
+1 - Hunspell uses GPL, LGPL and MPL tri-license (I dont really understand it)  
+2 - iSpell uses GNU Free Documentation License  
+3 - I dont know what licence OpenOffice's dictionaries use
+
+I am not an expert, but I think those licences cannot be used in a commercial software, or if we do, we have to provide the full source code of the application. 
+
+Is that true? Which one of those dictionaries can be used safely in a commercial product? 
+
+
+  [1]: http://www.devexpress.com/Products/VCL/ExSpellChecker/",delphi,dictionary,licensing,gpl,spellchecking,,open,0,130,5,"Spell checker and dictionary licences We are planning to use a spell checker component by [DevExpress][1]. That component use dictionaries files, such as:
+
+1 - Hunspell  
+2 - ISpell  
+3 - OpenOffice  
+
+Our software is commercial with closed source code. Those are the licences used by the mentioned dictionaries:
+
+1 - Hunspell uses GPL, LGPL and MPL tri-license (I dont really understand it)  
+2 - iSpell uses GNU Free Documentation License  
+3 - I dont know what licence OpenOffice's dictionaries use
+
+I am not an expert, but I think those licences cannot be used in a commercial software, or if we do, we have to provide the full source code of the application. 
+
+Is that true? Which one of those dictionaries can be used safely in a commercial product? 
+
+
+  [1]: http://www.devexpress.com/Products/VCL/ExSpellChecker/",5
+4665943,01/12/2011 06:28:22,369240,06/17/2010 09:44:10,346,3,Is there anyway to stop TWebBrowser from clearing?,"Is there anyway to stop TWebBrowser from clearing when I set `Self.Parent := nil;`?
+When it gets to that line (which is necessary for a maximizing function), all the TWebBrowsers in my form clears. Why does it do that and what can I do to avoid this?
+
+
+
+
+
+",delphi,,,,,,open,0,46,8,"Is there anyway to stop TWebBrowser from clearing? Is there anyway to stop TWebBrowser from clearing when I set `Self.Parent := nil;`?
+When it gets to that line (which is necessary for a maximizing function), all the TWebBrowsers in my form clears. Why does it do that and what can I do to avoid this?
+
+
+
+
+
+",1
+6363954,06/15/2011 20:29:43,544838,12/16/2010 13:49:49,419,15,"Best way to do non-flickering, segemented graphics updates in Delphi?","I thought I could just throw this out there and just ask: I have seen Delphi controls that are flawless in terms of graphical effects. Meaning: no flickering, sectioned updates (only redraw the section of a control that is marked as dirty) and smooth scrolling.
+
+I have coded a lot of graphical controls over the years, so I know about double buffering, dibs, bitblts and all the ""common"" stuff (I always use dibs to draw everything if possible, but there is an overhead). Also know about InvalidateRect and checking TCanvas.ClipRect for the actual rect that needs to be updated. Despite all these typical solutions, I find it very difficult to create the same quality components as say - Developer Express or Razed Components. If the graphics is smooth you can bet the scrollbars (native) flicker, and if the scrollbars and frame is smooth you can swear the background flickers during scrolling. 
+
+Is there a standard setup of code to handle this? A sort of best practises that ensures smooth redraws of the entire control -- including the non-client area of a control?",delphi,winapi,graphics,,,,open,0,181,10,"Best way to do non-flickering, segemented graphics updates in Delphi? I thought I could just throw this out there and just ask: I have seen Delphi controls that are flawless in terms of graphical effects. Meaning: no flickering, sectioned updates (only redraw the section of a control that is marked as dirty) and smooth scrolling.
+
+I have coded a lot of graphical controls over the years, so I know about double buffering, dibs, bitblts and all the ""common"" stuff (I always use dibs to draw everything if possible, but there is an overhead). Also know about InvalidateRect and checking TCanvas.ClipRect for the actual rect that needs to be updated. Despite all these typical solutions, I find it very difficult to create the same quality components as say - Developer Express or Razed Components. If the graphics is smooth you can bet the scrollbars (native) flicker, and if the scrollbars and frame is smooth you can swear the background flickers during scrolling. 
+
+Is there a standard setup of code to handle this? A sort of best practises that ensures smooth redraws of the entire control -- including the non-client area of a control?",3
+10824252,05/30/2012 21:04:56,1176008,01/29/2012 03:27:08,78,1,Synchronized deletion in TListView?,"I have a listview with lots of items.
+I would like to delete some items synchronized.
+Is that possible?
+I have about a 100 threads that access the ListView at the same time to delete items of it.
+
+for example:
+
+     procedure Thread1 ; stdcall;
+     var
+      item : TlistItem;
+     begin
+      //...
+      item.delete;
+      //...
+     end;
+
+     procedure Thread2 ; stdcall;
+     var
+      item : TlistItem;
+     begin
+      //...
+      item.delete;
+      //...
+     end;
+
+     /.... and so on
+
+The threads get fired at the same time (maybe 1ms difference between them).
+Then I get lots of errors and AccessViolations.
+Please help. Thank you :)",delphi,delphi-7,,,,06/01/2012 08:17:34,not a real question,1,165,4,"Synchronized deletion in TListView? I have a listview with lots of items.
+I would like to delete some items synchronized.
+Is that possible?
+I have about a 100 threads that access the ListView at the same time to delete items of it.
+
+for example:
+
+     procedure Thread1 ; stdcall;
+     var
+      item : TlistItem;
+     begin
+      //...
+      item.delete;
+      //...
+     end;
+
+     procedure Thread2 ; stdcall;
+     var
+      item : TlistItem;
+     begin
+      //...
+      item.delete;
+      //...
+     end;
+
+     /.... and so on
+
+The threads get fired at the same time (maybe 1ms difference between them).
+Then I get lots of errors and AccessViolations.
+Please help. Thank you :)",2
+9796952,03/21/2012 00:24:45,374833,06/24/2010 02:45:11,62,1,WM_COPYDATA: Can the receiver modify the COPYDATASTRUCT contents?,"I am trying to communicate between two Windows applications in Delphi. Sender sends commands via SendMessage using WM_COPYDATA. That part is working fine. Is it possible for the receiver to reply back some result strings in the same call? It is failing for me and following is what is happening now.
+
+1. Sender uses WM_COPYDATA to send a command to the Receiver using the blocking call SendMessge.
+
+2. Receiver processes the command and modify the COPYDATASTRUCT with some result strings that must be sent back to the sender and exit out of the event handler
+
+3. Receiver's ""SendMessage"" function returns but the contents of the COPYDATASTRUCT are still unchanged.
+
+Apparently Windows' messaging mechanism is not sharing the COPYDATASTRUCT memory between two applications. Instead it is making a copy.",delphi,inter-process-communicat,wm-copydata,,,,open,0,124,8,"WM_COPYDATA: Can the receiver modify the COPYDATASTRUCT contents? I am trying to communicate between two Windows applications in Delphi. Sender sends commands via SendMessage using WM_COPYDATA. That part is working fine. Is it possible for the receiver to reply back some result strings in the same call? It is failing for me and following is what is happening now.
+
+1. Sender uses WM_COPYDATA to send a command to the Receiver using the blocking call SendMessge.
+
+2. Receiver processes the command and modify the COPYDATASTRUCT with some result strings that must be sent back to the sender and exit out of the event handler
+
+3. Receiver's ""SendMessage"" function returns but the contents of the COPYDATASTRUCT are still unchanged.
+
+Apparently Windows' messaging mechanism is not sharing the COPYDATASTRUCT memory between two applications. Instead it is making a copy.",3
+4085461,11/03/2010 09:03:55,476609,10/15/2010 07:25:02,196,11,Future Delphi with QT,"Is the next version of delphi will be released with cross platform support and QT based components , If so do we have to distribute with QT (i don't know anything about QT) 
+How can QT Help the Delphi world and why many programmers using c++ started using QT with them
+and what will happen for VCL",delphi,qt,vcl,future,,10/25/2011 05:00:57,not constructive,1,56,4,"Future Delphi with QT Is the next version of delphi will be released with cross platform support and QT based components , If so do we have to distribute with QT (i don't know anything about QT) 
+How can QT Help the Delphi world and why many programmers using c++ started using QT with them
+and what will happen for VCL",4
+7281856,09/02/2011 10:00:02,925025,09/02/2011 10:00:02,1,0,Convert Array to String?,"How do I convert an array to string?
+
+I have a normal array of string and want to convert its values to string.
+How can I do this?
+
+Thanks",delphi,,,,,09/02/2011 21:12:54,not a real question,1,26,4,"Convert Array to String? How do I convert an array to string?
+
+I have a normal array of string and want to convert its values to string.
+How can I do this?
+
+Thanks",1
+8464567,12/11/2011 14:10:25,1008646,10/22/2011 14:50:17,69,0,Remove box from Firemonkey Text3d,"I've create a little Hello World Firemonkey application with a spinning tText3d object.
+How do I get rid of the wireframe box that surrounds the text? ",delphi,firemonkey,,,,03/20/2012 19:20:36,too localized,1,26,5,"Remove box from Firemonkey Text3d I've create a little Hello World Firemonkey application with a spinning tText3d object.
+How do I get rid of the wireframe box that surrounds the text? ",2
+5198771,03/04/2011 20:15:03,205110,11/06/2009 18:24:07,8,0,"ActiveX vs Delphi, which is better ?","I'm making a program and I need to use another program's API.
+
+Which then let me pick between their activeX or Delphi.
+
+Wondering which one I should utilize or focus more on.
+
+Not sure if I'm being too broad here.
+
+Edit: I'm more familiar with visual studio if that is of any concern.",delphi,activex,,,,03/05/2011 05:18:56,not a real question,1,49,7,"ActiveX vs Delphi, which is better ? I'm making a program and I need to use another program's API.
+
+Which then let me pick between their activeX or Delphi.
+
+Wondering which one I should utilize or focus more on.
+
+Not sure if I'm being too broad here.
+
+Edit: I'm more familiar with visual studio if that is of any concern.",2
+1157902,07/21/2009 08:14:08,140155,07/17/2009 13:01:49,48,6,Using ClearType in Graphics32 library (Delphi),"I'm using [Graphics32][1] library in Delphi 2009. Is it possible to render a font using TBitmap32.TextOut method with MS' ClearType technology? I'm aware about GR32's built-in antialiasing (TBitmap32.RenderText) but the overall quality and performance is not gratifying.
+
+
+----------
+
+
+  [1]: http://www.graphics32.org/wiki/",delphi,delphi-2009,graphics32,cleartype,,09/01/2009 12:55:59,not a real question,1,40,6,"Using ClearType in Graphics32 library (Delphi) I'm using [Graphics32][1] library in Delphi 2009. Is it possible to render a font using TBitmap32.TextOut method with MS' ClearType technology? I'm aware about GR32's built-in antialiasing (TBitmap32.RenderText) but the overall quality and performance is not gratifying.
+
+
+----------
+
+
+  [1]: http://www.graphics32.org/wiki/",4
+10635677,05/17/2012 12:22:33,1359375,04/26/2012 17:41:13,17,0,Does anyone know a good program,"I want to learn Delphi, does anyone know of a good free program that would let me write code with Delphi?
+
+I want to learn as many languages as I can, I already kinda know C#, some LUA, some VB and Java, but I want to know more, for the sake of knowing I guess.",delphi,,,,,05/18/2012 15:03:25,not constructive,1,54,6,"Does anyone know a good program I want to learn Delphi, does anyone know of a good free program that would let me write code with Delphi?
+
+I want to learn as many languages as I can, I already kinda know C#, some LUA, some VB and Java, but I want to know more, for the sake of knowing I guess.",1
+63957,09/15/2008 15:29:32,7947,09/15/2008 14:45:21,1,2,What is the best set of tools to develop Win32 Delphi applications?,What is the best set of development tools to develop Win32 Delphi applications?,delphi,,,,,06/17/2012 05:22:49,not constructive,1,13,12,What is the best set of tools to develop Win32 Delphi applications? What is the best set of development tools to develop Win32 Delphi applications?,1
+962512,06/07/2009 18:40:16,105768,05/12/2009 21:53:28,45,4,How to use two TSplitter with different aligns (Horizontal and Vertical) ?,"I have a form with three sections, and I want to allow the users to resize them as they please
+
+There is one section on the left (which take the whole height) and one on the right that is again cut in two vertically. See below:
+
+11|22<br />
+11|---<br />
+11|33<br />
+
+Using one splitter is quite easy:
+<pre>Component1.align := alLeft
+Splitter1.align := alLeft
+Component2.align := alClient</pre>
+
+Now, starting with that I have absolutely no idea how to get a vertical splitter working. If I set my second splitter to alTop or alBottom, it does all the way to the top/bottom and not only in the right half.
+
+One possible solution is to use a panel as my right side and then use a splitter INSIDE this pannel for vertical splitting but it doesn't really feels like the right way.
+
+Thanks",delphi,splitter,,,,,open,0,130,12,"How to use two TSplitter with different aligns (Horizontal and Vertical) ? I have a form with three sections, and I want to allow the users to resize them as they please
+
+There is one section on the left (which take the whole height) and one on the right that is again cut in two vertically. See below:
+
+11|22<br />
+11|---<br />
+11|33<br />
+
+Using one splitter is quite easy:
+<pre>Component1.align := alLeft
+Splitter1.align := alLeft
+Component2.align := alClient</pre>
+
+Now, starting with that I have absolutely no idea how to get a vertical splitter working. If I set my second splitter to alTop or alBottom, it does all the way to the top/bottom and not only in the right half.
+
+One possible solution is to use a panel as my right side and then use a splitter INSIDE this pannel for vertical splitting but it doesn't really feels like the right way.
+
+Thanks",2
+881778,05/19/2009 09:24:13,18681,09/19/2008 09:24:14,1373,34,"How can I identify and get rid of unused units in the ""uses clause"" in Delphi 7 ?",This should reduce the executable size quite a bit in some of my very large projects. I am sure there would be other benefits too.,delphi,uses-clause,remove,,,,open,0,25,18,"How can I identify and get rid of unused units in the ""uses clause"" in Delphi 7 ? This should reduce the executable size quite a bit in some of my very large projects. I am sure there would be other benefits too.",3
+10151677,04/14/2012 06:49:27,879153,08/04/2011 17:32:12,607,10,Why is the taskbar button context menu of my Delphi 2006 application incomplete?,"When I create a new VCL application in Delphi 2006 and run it (without adding any of my own code or refernce any of my own units), the application won't have all of menu items one would expect in the context menu of it's taskbar button. The application's system menu (the menu you get when left-clicking the form's icon), however, has all the regular menu items. As you can see in the following screenshots, `Move` (`Verschieben`), `Size`(`Größe ändern`) and `Maximize`(`Maximieren`) are missing from the former
+
+![enter image description here][1] ![enter image description here][2]
+
+I could not reproduce this in Delphi XE (the only other vesion of Delphi I have access to) and I haven't found anybody else reporting this behavior, either.
+
+I have also looked through the properties of `TForm` and `TApplication` whether there was one to control these menus, but haven't found one.
+
+All applications I know of have the same set of menu items in those two menus and I would like my application to do, too. How do I get these two menus to show the same set of items?
+
+  [1]: http://i.stack.imgur.com/EmcTE.png
+  [2]: http://i.stack.imgur.com/H4xkM.png",delphi,vcl,taskbar,,,,open,0,185,13,"Why is the taskbar button context menu of my Delphi 2006 application incomplete? When I create a new VCL application in Delphi 2006 and run it (without adding any of my own code or refernce any of my own units), the application won't have all of menu items one would expect in the context menu of it's taskbar button. The application's system menu (the menu you get when left-clicking the form's icon), however, has all the regular menu items. As you can see in the following screenshots, `Move` (`Verschieben`), `Size`(`Größe ändern`) and `Maximize`(`Maximieren`) are missing from the former
+
+![enter image description here][1] ![enter image description here][2]
+
+I could not reproduce this in Delphi XE (the only other vesion of Delphi I have access to) and I haven't found anybody else reporting this behavior, either.
+
+I have also looked through the properties of `TForm` and `TApplication` whether there was one to control these menus, but haven't found one.
+
+All applications I know of have the same set of menu items in those two menus and I would like my application to do, too. How do I get these two menus to show the same set of items?
+
+  [1]: http://i.stack.imgur.com/EmcTE.png
+  [2]: http://i.stack.imgur.com/H4xkM.png",3
+6060528,05/19/2011 14:49:32,12458,09/16/2008 14:26:50,4705,103,Is it possible to use animated icons with VirtualTreeView nodes?,"I am using the awesome [VirtualTreeView component][1] with Delphi 2010. Currently, my nodes are setup with a standard image in a TImageList. What I'd like to do is to be able to show some type of spinning animated icon to show visually that a node is ""busy"".
+
+Obviously the node won't be busy, but what the node represents to the user will actually be busy. Is there an easy way to do this?
+
+The only way I can think of is to create add 8-10 images represent a spinning wheel to my current TImageList and then cycle through them for that node.
+
+Does anyone have any suggestions?
+
+
+  [1]: http://www.delphi-gems.com/index.php?option=com_content&task=view&id=12&Itemid=38",delphi,,,,,,open,0,107,10,"Is it possible to use animated icons with VirtualTreeView nodes? I am using the awesome [VirtualTreeView component][1] with Delphi 2010. Currently, my nodes are setup with a standard image in a TImageList. What I'd like to do is to be able to show some type of spinning animated icon to show visually that a node is ""busy"".
+
+Obviously the node won't be busy, but what the node represents to the user will actually be busy. Is there an easy way to do this?
+
+The only way I can think of is to create add 8-10 images represent a spinning wheel to my current TImageList and then cycle through them for that node.
+
+Does anyone have any suggestions?
+
+
+  [1]: http://www.delphi-gems.com/index.php?option=com_content&task=view&id=12&Itemid=38",1
+4037957,10/27/2010 21:42:47,65886,02/13/2009 04:16:03,378,2,[Delphi] What code would let me find the compiled executable's directory?,"...Even when a user opens an application by double-clicking an associated file in a directory that's different from the executable. I've always used ExtractFilePath(Application.EXEName), but this function doesn't work as hoped in this circumstance.",delphi,,,,,10/28/2010 15:21:52,not a real question,1,34,11,"[Delphi] What code would let me find the compiled executable's directory? ...Even when a user opens an application by double-clicking an associated file in a directory that's different from the executable. I've always used ExtractFilePath(Application.EXEName), but this function doesn't work as hoped in this circumstance.",1
+6205010,06/01/2011 17:05:57,4916,09/06/2008 15:33:03,4865,123,TThemeServices::DrawText unresolved link error,"I'm creating a custom component (derived from TCustomCategoryPanelGroup) and performing some custom draw operations. I want to handle when Themes are enabled and draw text appropriately. 
+
+Here is a snippet of some code I have in a draw function:
+
+	int theBaseDrawFlags = DT_EXPANDTABS | DT_SINGLELINE | DT_VCENTER | DT_LEFT;
+	theBaseDrawFlags = DrawTextBiDiModeFlags( theBaseDrawFlags );
+
+	if ( TCustomCategoryPanelGroup::hsThemed == PanelGroup->HeaderStyle && ThemeServices()->ThemesEnabled )
+	{
+		ThemeServices()->DrawText( ACanvas->Handle, ThemeServices()->GetElementDetails( tebNormalGroupHead ), m_CaptionTopLeft, m_TextRect, theBaseDrawFlags, 0 );
+	}
+	else
+	{
+		// Draw without themes
+	}
+
+When I attempt to build this I receive the error:
+
+    Unresolved external __fastcall Themes::TThemeServices::DrawTextA(HDC__ *, Themes::TThemedElementDetails&, const System::WideString, Types::TRect&, unsigned int, unsigned int)' referenced from  ....
+
+As you can see it's looking for `DrawTextA`. I've looked at the Themes.hpp header and there is only a `ThemeServices::DrawText` function defined.
+
+I'm not sure what's going on here. I thought perhaps that I was missing an import library, but all of the other ThemeServices functions that I use don't get link errors.
+
+Anyone know what's going on here?
+
+",delphi,c++builder,vcl,,,,open,0,156,4,"TThemeServices::DrawText unresolved link error I'm creating a custom component (derived from TCustomCategoryPanelGroup) and performing some custom draw operations. I want to handle when Themes are enabled and draw text appropriately. 
+
+Here is a snippet of some code I have in a draw function:
+
+	int theBaseDrawFlags = DT_EXPANDTABS | DT_SINGLELINE | DT_VCENTER | DT_LEFT;
+	theBaseDrawFlags = DrawTextBiDiModeFlags( theBaseDrawFlags );
+
+	if ( TCustomCategoryPanelGroup::hsThemed == PanelGroup->HeaderStyle && ThemeServices()->ThemesEnabled )
+	{
+		ThemeServices()->DrawText( ACanvas->Handle, ThemeServices()->GetElementDetails( tebNormalGroupHead ), m_CaptionTopLeft, m_TextRect, theBaseDrawFlags, 0 );
+	}
+	else
+	{
+		// Draw without themes
+	}
+
+When I attempt to build this I receive the error:
+
+    Unresolved external __fastcall Themes::TThemeServices::DrawTextA(HDC__ *, Themes::TThemedElementDetails&, const System::WideString, Types::TRect&, unsigned int, unsigned int)' referenced from  ....
+
+As you can see it's looking for `DrawTextA`. I've looked at the Themes.hpp header and there is only a `ThemeServices::DrawText` function defined.
+
+I'm not sure what's going on here. I thought perhaps that I was missing an import library, but all of the other ThemeServices functions that I use don't get link errors.
+
+Anyone know what's going on here?
+
+",3
+7198646,08/26/2011 00:05:19,791316,06/09/2011 16:11:22,848,2,"Delphi: AV - impossible (check it, unbelievable...)","Delphi XE.
+
+There is a function (please see a code below) that causes an AV error in a big project. There is no the error with the same function in a new project!!! I deleted everything from the big project, and I left only a button and that function. It still causes the error...
+
+Why does it work in a new project but not in mine?
+Thanks!
+
+Please check a whole project: http://www.2shared.com/file/UP22Om4j/Bug.html
+
+Thanks
+
+A code:
+
+    unit MainFormModule;
+    
+    interface
+    
+    uses
+      Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+      StdCtrls;
+    type
+      TMainForm = class(TForm)
+        Button1: TButton;
+        procedure Button1Click(Sender: TObject);
+      private
+        { Private declarations }
+      public
+    
+        { Public declarations }
+      end;
+    
+    var
+         mainform:tmainform;
+    implementation
+    {$R *.dfm}
+    
+    function  ISAeroEnabled: Boolean;
+    type
+      _DwmIsCompositionEnabledFunc = function(IsEnabled: PBoolean): HRESULT; stdcall;
+    var
+      Flag                       : Boolean;
+      DllHandle                  : THandle;
+      OsVersion                  : TOSVersionInfo;
+      DwmIsCompositionEnabledFunc: _DwmIsCompositionEnabledFunc;
+    begin
+      Result:=False;
+      ZeroMemory(@OsVersion, SizeOf(OsVersion));
+      OsVersion.dwOSVersionInfoSize := SizeOf(TOSVERSIONINFO);
+    
+      if ((GetVersionEx(OsVersion)) and (OsVersion.dwPlatformId = VER_PLATFORM_WIN32_NT) and (OsVersion.dwMajorVersion >= 6)) then //is Vista or Win7?
+      begin
+        DllHandle := LoadLibrary('dwmapi.dll');
+        if DllHandle <> 0 then
+        begin
+          @DwmIsCompositionEnabledFunc := GetProcAddress(DllHandle, 'DwmIsCompositionEnabled');
+          if (@DwmIsCompositionEnabledFunc <> nil) then
+          begin
+            DwmIsCompositionEnabledFunc(@Flag);
+            Result:=Flag;
+          end;
+        end;
+          FreeLibrary(DllHandle);
+      end;
+    end;
+    
+    procedure Tmainform.Button1Click(Sender: TObject);
+    var i:integer;
+    begin
+        if ISAeroEnabled then // AV !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+           i:=0;
+    end;
+    end.",delphi,error-handling,access-violation,av,,,open,0,563,7,"Delphi: AV - impossible (check it, unbelievable...) Delphi XE.
+
+There is a function (please see a code below) that causes an AV error in a big project. There is no the error with the same function in a new project!!! I deleted everything from the big project, and I left only a button and that function. It still causes the error...
+
+Why does it work in a new project but not in mine?
+Thanks!
+
+Please check a whole project: http://www.2shared.com/file/UP22Om4j/Bug.html
+
+Thanks
+
+A code:
+
+    unit MainFormModule;
+    
+    interface
+    
+    uses
+      Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+      StdCtrls;
+    type
+      TMainForm = class(TForm)
+        Button1: TButton;
+        procedure Button1Click(Sender: TObject);
+      private
+        { Private declarations }
+      public
+    
+        { Public declarations }
+      end;
+    
+    var
+         mainform:tmainform;
+    implementation
+    {$R *.dfm}
+    
+    function  ISAeroEnabled: Boolean;
+    type
+      _DwmIsCompositionEnabledFunc = function(IsEnabled: PBoolean): HRESULT; stdcall;
+    var
+      Flag                       : Boolean;
+      DllHandle                  : THandle;
+      OsVersion                  : TOSVersionInfo;
+      DwmIsCompositionEnabledFunc: _DwmIsCompositionEnabledFunc;
+    begin
+      Result:=False;
+      ZeroMemory(@OsVersion, SizeOf(OsVersion));
+      OsVersion.dwOSVersionInfoSize := SizeOf(TOSVERSIONINFO);
+    
+      if ((GetVersionEx(OsVersion)) and (OsVersion.dwPlatformId = VER_PLATFORM_WIN32_NT) and (OsVersion.dwMajorVersion >= 6)) then //is Vista or Win7?
+      begin
+        DllHandle := LoadLibrary('dwmapi.dll');
+        if DllHandle <> 0 then
+        begin
+          @DwmIsCompositionEnabledFunc := GetProcAddress(DllHandle, 'DwmIsCompositionEnabled');
+          if (@DwmIsCompositionEnabledFunc <> nil) then
+          begin
+            DwmIsCompositionEnabledFunc(@Flag);
+            Result:=Flag;
+          end;
+        end;
+          FreeLibrary(DllHandle);
+      end;
+    end;
+    
+    procedure Tmainform.Button1Click(Sender: TObject);
+    var i:integer;
+    begin
+        if ISAeroEnabled then // AV !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+           i:=0;
+    end;
+    end.",4
+9842859,03/23/2012 16:25:36,15908,09/17/2008 13:27:36,1023,29,Is Delphi Exit statement dangerous?,"Reading about Delphi's `Exit` statement (see [here][1] for instance), I cannot ignore that writing about it every author feels the duty to give a piece of advice, for example: 
+
+> Warning : use with caution - jumping is a concept at odds with structured coding - it makes code maintenance difficult.
+
+Now, I'm coming from C and C++ in Unix and I'm familiar with re-entrancy issues, but honestly I cannot figure out why in Delphi returning from a function before it reaches its natural end should be evil.
+
+Unless every function and procedure in Delphi is considered as re-entrant.
+
+What am I missing?
+
+
+  [1]: http://www.delphibasics.co.uk/RTL.asp?Name=Exit",delphi,language,,,,03/23/2012 18:27:01,not constructive,1,103,5,"Is Delphi Exit statement dangerous? Reading about Delphi's `Exit` statement (see [here][1] for instance), I cannot ignore that writing about it every author feels the duty to give a piece of advice, for example: 
+
+> Warning : use with caution - jumping is a concept at odds with structured coding - it makes code maintenance difficult.
+
+Now, I'm coming from C and C++ in Unix and I'm familiar with re-entrancy issues, but honestly I cannot figure out why in Delphi returning from a function before it reaches its natural end should be evil.
+
+Unless every function and procedure in Delphi is considered as re-entrant.
+
+What am I missing?
+
+
+  [1]: http://www.delphibasics.co.uk/RTL.asp?Name=Exit",2
+5302364,03/14/2011 17:52:56,367433,06/15/2010 15:20:47,53,2,WSDL importer for enumerated types with negative numbers,"I consume a web service that uses positive and negative numbers to indicate if the web service call was successful, and if it wasn't, the numbers indicate the type of error. Using the WSDL importer (in Delphi 2007, Delphi 2010, and Delphi XE), I get this type definition:
+
+PCRUpdateCodes = (_7, _6, _5, _4, _3, _2, _1, _1, _2, _3, _4);
+
+In the WSDL, the last four entries on the right are negative numbers. The Delphi compiler gives me an error ""Identifier redeclared"" for the last four entries. How can I make the last four entries negative numbers?
+
+Here is the relevant portion of the WSDL.
+
+
+     <xs:simpleType name=""PCRUpdateCodes"">
+        <xs:annotation>
+           <xs:documentation>Codes to describe return codes for an attempted PCR import web service operation</xs:documentation>
+    
+        </xs:annotation>
+        <xs:restriction base=""xs:integer"">
+           <xs:enumeration value=""-7"">
+              <xs:annotation>
+                 <xs:documentation>Permission denied to the client for that organization</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""-6"">
+    
+              <xs:annotation>
+                 <xs:documentation>Permission denied to the client for the operation</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""-5"">
+              <xs:annotation>
+                 <xs:documentation>Invalid username and/or password</xs:documentation>
+              </xs:annotation>
+    
+           </xs:enumeration>
+           <xs:enumeration value=""-4"">
+              <xs:annotation>
+                 <xs:documentation>Failed update of PCR, because no PCR exists with the same agency # and PCR #</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""-3"">
+              <xs:annotation>
+    
+                 <xs:documentation>Failed update of PCR marked incomplete, because PCR was previously marked complete</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""-2"">
+              <xs:annotation>
+                 <xs:documentation>Failed update of PCR, because of failing NEMSIS XML validation</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+    
+           <xs:enumeration value=""-1"">
+              <xs:annotation>
+                 <xs:documentation>Failed update of PCR marked complete, because of failing logical validation</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""1"">
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked incomplete, but failing logical validation</xs:documentation>
+    
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""2"">
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked incomplete</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""3"">
+    
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked complete, previously marked incomplete</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""4"">
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked complete, previously marked complete, now marked amended</xs:documentation>
+              </xs:annotation>
+    
+           </xs:enumeration>
+           <xs:enumeration value=""5"">
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked complete, previously marked incomplete, but with validation warnings</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""6"">
+              <xs:annotation>
+    
+                 <xs:documentation>Successful update of PCR marked complete, previously marked complete, now marked amended, but with validation warnings</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+        </xs:restriction>
+     </xs:simpleType>",delphi,,,,,,open,0,1212,8,"WSDL importer for enumerated types with negative numbers I consume a web service that uses positive and negative numbers to indicate if the web service call was successful, and if it wasn't, the numbers indicate the type of error. Using the WSDL importer (in Delphi 2007, Delphi 2010, and Delphi XE), I get this type definition:
+
+PCRUpdateCodes = (_7, _6, _5, _4, _3, _2, _1, _1, _2, _3, _4);
+
+In the WSDL, the last four entries on the right are negative numbers. The Delphi compiler gives me an error ""Identifier redeclared"" for the last four entries. How can I make the last four entries negative numbers?
+
+Here is the relevant portion of the WSDL.
+
+
+     <xs:simpleType name=""PCRUpdateCodes"">
+        <xs:annotation>
+           <xs:documentation>Codes to describe return codes for an attempted PCR import web service operation</xs:documentation>
+    
+        </xs:annotation>
+        <xs:restriction base=""xs:integer"">
+           <xs:enumeration value=""-7"">
+              <xs:annotation>
+                 <xs:documentation>Permission denied to the client for that organization</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""-6"">
+    
+              <xs:annotation>
+                 <xs:documentation>Permission denied to the client for the operation</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""-5"">
+              <xs:annotation>
+                 <xs:documentation>Invalid username and/or password</xs:documentation>
+              </xs:annotation>
+    
+           </xs:enumeration>
+           <xs:enumeration value=""-4"">
+              <xs:annotation>
+                 <xs:documentation>Failed update of PCR, because no PCR exists with the same agency # and PCR #</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""-3"">
+              <xs:annotation>
+    
+                 <xs:documentation>Failed update of PCR marked incomplete, because PCR was previously marked complete</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""-2"">
+              <xs:annotation>
+                 <xs:documentation>Failed update of PCR, because of failing NEMSIS XML validation</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+    
+           <xs:enumeration value=""-1"">
+              <xs:annotation>
+                 <xs:documentation>Failed update of PCR marked complete, because of failing logical validation</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""1"">
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked incomplete, but failing logical validation</xs:documentation>
+    
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""2"">
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked incomplete</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""3"">
+    
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked complete, previously marked incomplete</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""4"">
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked complete, previously marked complete, now marked amended</xs:documentation>
+              </xs:annotation>
+    
+           </xs:enumeration>
+           <xs:enumeration value=""5"">
+              <xs:annotation>
+                 <xs:documentation>Successful update of PCR marked complete, previously marked incomplete, but with validation warnings</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+           <xs:enumeration value=""6"">
+              <xs:annotation>
+    
+                 <xs:documentation>Successful update of PCR marked complete, previously marked complete, now marked amended, but with validation warnings</xs:documentation>
+              </xs:annotation>
+           </xs:enumeration>
+        </xs:restriction>
+     </xs:simpleType>",1
+6462902,06/24/2011 03:08:58,784156,06/04/2011 18:11:08,29,1,Alphalite Skins problem,"I download the new beta version of alphalite 7.44 
+Uninstall the older version that i have problems...
+Open the acntD7_R.dpk and compile it ok here
+Open the acntD7.dpk when i compilte it i get this error message...
+
+[Fatal Error] acntD7.dpk(47): Unit sInternalSkins was compiled with a different version of sButton.TsButton 
+
+Then i try to erese the bpl manually... erase the two bpls try again...
+Get the same massage again....
+
+Please what i am doing wrong?
+
+Delphi 7.... ",delphi,delphi-7,skins,,,,open,0,72,3,"Alphalite Skins problem I download the new beta version of alphalite 7.44 
+Uninstall the older version that i have problems...
+Open the acntD7_R.dpk and compile it ok here
+Open the acntD7.dpk when i compilte it i get this error message...
+
+[Fatal Error] acntD7.dpk(47): Unit sInternalSkins was compiled with a different version of sButton.TsButton 
+
+Then i try to erese the bpl manually... erase the two bpls try again...
+Get the same massage again....
+
+Please what i am doing wrong?
+
+Delphi 7.... ",3
+3457472,08/11/2010 10:43:41,291496,03/11/2010 13:26:33,120,12,Open source component or unit to export Delphi TDataSet to native XLS without Excel installed,"Do you possibly know about the existence of a free and open sourced Delphi code to export TDataSet to native XLS format? The question was previously asked [here][1], yet I am looking for a free solution.
+
+As observed in for example TeeChart.TeeStore.TSeriesDataXLS.SaveToStream writing a native XLS export function is not a rocket science, yet I struggle to find an existing solution, which would definitely save some time and money (for commercial component which would be used in 10-20%).
+
+It would be beneficial if such export code would allow color and text style changes, but for me personally it is not crucial.
+
+  [1]: http://stackoverflow.com/questions/2493071/exporting-to-excel-from-delphi-without-having-excel",delphi,excel,export,components,export-to-excel,03/14/2012 12:54:10,not constructive,1,102,15,"Open source component or unit to export Delphi TDataSet to native XLS without Excel installed Do you possibly know about the existence of a free and open sourced Delphi code to export TDataSet to native XLS format? The question was previously asked [here][1], yet I am looking for a free solution.
+
+As observed in for example TeeChart.TeeStore.TSeriesDataXLS.SaveToStream writing a native XLS export function is not a rocket science, yet I struggle to find an existing solution, which would definitely save some time and money (for commercial component which would be used in 10-20%).
+
+It would be beneficial if such export code would allow color and text style changes, but for me personally it is not crucial.
+
+  [1]: http://stackoverflow.com/questions/2493071/exporting-to-excel-from-delphi-without-having-excel",5
+7113796,08/18/2011 20:35:00,899396,08/17/2011 20:13:54,1,0,Delphi 5 TOpenDialog Options Wont Work,"    begin
+      opendialog := TFileOpenDialog.Create(this);
+      opendialog.options := (ofAllowMultiSelect);
+
+      // Display the open file dialog
+      if not opendialog.Execute then
+  	    begin
+  		    ShowMessage('Open file was cancelled');
+          path := '';
+        end
+      else
+  	    begin
+	        for i := 0 to openpic.Files.Count-1 do
+	          ShowMessage(openpic.Files[i]);
+	      end;
+      opendialog.free;
+
+Everywhere I look it says to set the options as opendialog.options := [ofAllowMultiSelect]; The platform i'm on won't let me use the [] however there are no errors when I do (). For some reason this option never works for me. I feel like I've tried everything I searched all over the net but I havent found anyone running into a similar problem.
+
+It's also weird, sometimes I found setting the option (ofEnableSizing) or like (ofHideReadOnly) would actually take and work SOMETIMES (wierd) , but ofAllowMultiSelect has never worked for me and its the only one I need. I tried doing like opendialog.ofallowmultiselect := true like other platforms but this errors out as well.
+
+Any ideas would be much apprec.",delphi,options,topendialog,,,08/19/2011 07:23:24,not a real question,1,241,6,"Delphi 5 TOpenDialog Options Wont Work     begin
+      opendialog := TFileOpenDialog.Create(this);
+      opendialog.options := (ofAllowMultiSelect);
+
+      // Display the open file dialog
+      if not opendialog.Execute then
+  	    begin
+  		    ShowMessage('Open file was cancelled');
+          path := '';
+        end
+      else
+  	    begin
+	        for i := 0 to openpic.Files.Count-1 do
+	          ShowMessage(openpic.Files[i]);
+	      end;
+      opendialog.free;
+
+Everywhere I look it says to set the options as opendialog.options := [ofAllowMultiSelect]; The platform i'm on won't let me use the [] however there are no errors when I do (). For some reason this option never works for me. I feel like I've tried everything I searched all over the net but I havent found anyone running into a similar problem.
+
+It's also weird, sometimes I found setting the option (ofEnableSizing) or like (ofHideReadOnly) would actually take and work SOMETIMES (wierd) , but ofAllowMultiSelect has never worked for me and its the only one I need. I tried doing like opendialog.ofallowmultiselect := true like other platforms but this errors out as well.
+
+Any ideas would be much apprec.",3
+8947141,01/20/2012 19:57:55,1161354,01/20/2012 19:45:07,1,0,How can I change runtime language in Delphi (language files created with ITE)?,"I'm developing a multilingual application in Delphi 2007. I've created needed language files in ITE and I would like to change the application language in runtime.
+
+I just took a look into RichEdit Demo, where user can change the language, but I can't reproduce it in my application.
+
+How can I do it?
+
+Gettext for Delphi sounds great, but I can't udederstand the line below:
+>Q: How do I switch language at runtime?
+>
+>A: See the source of the TntSample application that is included in the download for Delphi.
+I must find additional manuals :).",delphi,runtime,multilingual,,,01/21/2012 03:43:39,not a real question,1,89,13,"How can I change runtime language in Delphi (language files created with ITE)? I'm developing a multilingual application in Delphi 2007. I've created needed language files in ITE and I would like to change the application language in runtime.
+
+I just took a look into RichEdit Demo, where user can change the language, but I can't reproduce it in my application.
+
+How can I do it?
+
+Gettext for Delphi sounds great, but I can't udederstand the line below:
+>Q: How do I switch language at runtime?
+>
+>A: See the source of the TntSample application that is included in the download for Delphi.
+I must find additional manuals :).",3
+150032,09/29/2008 18:36:52,727,08/08/2008 12:16:17,290,17,Ideas to replace Stored Procedure in Cash Flow report,"We have a Cash flow report which is basically in this structure:
+
+    Date |Credit|Debit|balance|
+    09/29| 20   | 10  | 10    |
+    09/30| 0    | 10  | 0     |
+
+The main problem is the balance, and as we are using a DataSet for the Data, it's kinda hard to calculate the balance on the DataSet, because we always need the balance from the previous day.
+
+Also this data comes from several tables and it's been hard to maintain this procedure, because the database metadata is changing frequently.
+
+Anyone could give me some possible different solutions? for the problem?
+
+This report is being displayed on a DataGrid.
+",delphi,stored-procedures,report,,,12/04/2008 01:50:05,off topic,1,124,9,"Ideas to replace Stored Procedure in Cash Flow report We have a Cash flow report which is basically in this structure:
+
+    Date |Credit|Debit|balance|
+    09/29| 20   | 10  | 10    |
+    09/30| 0    | 10  | 0     |
+
+The main problem is the balance, and as we are using a DataSet for the Data, it's kinda hard to calculate the balance on the DataSet, because we always need the balance from the previous day.
+
+Also this data comes from several tables and it's been hard to maintain this procedure, because the database metadata is changing frequently.
+
+Anyone could give me some possible different solutions? for the problem?
+
+This report is being displayed on a DataGrid.
+",3
+5363287,03/19/2011 16:25:53,667460,03/19/2011 16:25:53,1,0,How do i goto to a procedure when inside another procedure [Pascal],"procedure questiontype;  
+ begin  
+  writeln ('Enter the type of question you would like...');  
+  writeln ('1. Add');  
+  writeln ('2. Multiply');  
+  writeln ('3. Subtraction');  
+  writeln ('4. Division');  
+  readln (typeofquestion);  
+   if typeofquestion = 1 then add;  
+   if typeofquestion = 2 then multiply;  
+   if typeofquestion = 3 then subtraction;  
+   if typeofquestion = 4 then division  
+  else writeln ('Choose again');  
+end;  
+
+The add, multiply, subtraction and division are all procedures. If i put this in the main program, it will work fine, but when i make this as a procedure itself, i get the error, undeclared identifier. I've looked on many websites for an example that is like this but i can't find any.  
+     How do make add, multiply, subtraction, division go to their procedures from inside this one?
+
+",delphi,pascal,procedure,,,,open,0,170,12,"How do i goto to a procedure when inside another procedure [Pascal] procedure questiontype;  
+ begin  
+  writeln ('Enter the type of question you would like...');  
+  writeln ('1. Add');  
+  writeln ('2. Multiply');  
+  writeln ('3. Subtraction');  
+  writeln ('4. Division');  
+  readln (typeofquestion);  
+   if typeofquestion = 1 then add;  
+   if typeofquestion = 2 then multiply;  
+   if typeofquestion = 3 then subtraction;  
+   if typeofquestion = 4 then division  
+  else writeln ('Choose again');  
+end;  
+
+The add, multiply, subtraction and division are all procedures. If i put this in the main program, it will work fine, but when i make this as a procedure itself, i get the error, undeclared identifier. I've looked on many websites for an example that is like this but i can't find any.  
+     How do make add, multiply, subtraction, division go to their procedures from inside this one?
+
+",3
+1591030,10/19/2009 20:42:39,29290,10/18/2008 20:38:12,2007,76,Delphi - unmangle names in BPL's,"Is it possible to unmangle names like these in Delphi?
+If so, where do I get more information?
+
+Example of an error message where it cannot find a certain entry in the dbrtl100.bpl
+I want to know which exact function it cannot find (unit, class, name, parameters, etc).
+
+    ---------------------------
+    myApp.exe - Entry Point Not Found
+    ---------------------------
+    The procedure entry point @Dbcommon@GetTableNameFromSQLEx$qqrx17System@WideString25Dbcommon@IDENTIFIEROption could not be located in the dynamic link library dbrtl100.bpl. 
+    ---------------------------
+    OK   
+    ---------------------------
+
+I guess it is the method GetTableNameFromSQLEx in the Dbcommon unit.
+
+But what parameters does it have (i.e. which potential overload)?
+What return type does it have?
+
+Is this mangling the same for any Delphi version?
+
+--jeroen",delphi,bpl,name-mangling,,,,open,0,128,6,"Delphi - unmangle names in BPL's Is it possible to unmangle names like these in Delphi?
+If so, where do I get more information?
+
+Example of an error message where it cannot find a certain entry in the dbrtl100.bpl
+I want to know which exact function it cannot find (unit, class, name, parameters, etc).
+
+    ---------------------------
+    myApp.exe - Entry Point Not Found
+    ---------------------------
+    The procedure entry point @Dbcommon@GetTableNameFromSQLEx$qqrx17System@WideString25Dbcommon@IDENTIFIEROption could not be located in the dynamic link library dbrtl100.bpl. 
+    ---------------------------
+    OK   
+    ---------------------------
+
+I guess it is the method GetTableNameFromSQLEx in the Dbcommon unit.
+
+But what parameters does it have (i.e. which potential overload)?
+What return type does it have?
+
+Is this mangling the same for any Delphi version?
+
+--jeroen",3
+8135409,11/15/2011 11:10:50,767942,05/24/2011 14:43:50,648,25,IP*Works! or Indy - which is more stable as FTP client/server architecture?,"- I am really wonder which is more stable in building FTP client/server architecture.
+",delphi,,,,,11/15/2011 13:37:41,not constructive,1,14,12,"IP*Works! or Indy - which is more stable as FTP client/server architecture? - I am really wonder which is more stable in building FTP client/server architecture.
+",1
+3725033,09/16/2010 08:39:52,46207,12/14/2008 23:38:56,713,27,"How to remove duplicate resources (RES, DFM) while using Delphi with non specific Library paths?","I followed the advice received in a previous discussion ( http://stackoverflow.com/questions/3666292/should-library-path-point-to-the-source-files-of-packages/3686542#3686542 ) and now my Library Path points to folders containing the compiled code (DCU) and NOT to the source code of my controls.
+The problem is that I have to duplicate the RES and DFM files and copy them from the 'source code' folder to the 'compiled' folder. It is not a elegant solution at all since, every time I change something (and I do often) to my controls I have to remember to copy the new resource files to the compiled folder. 
+
+There must be an *elegant* way to solve the mystery of the paths! All I want is to push the compile button and to have my program compiled. It doesn't seem so complicated. Right? Well, actually it work with my previous setup (point Delphi to source code of all controls). I just changed it to do it the way the 'good people' are doing it.
+
+----------------------
+
+Delphi 7, Win 7 (32), simple Delphi setup (single developer with no versioning system installed).",delphi,,,,,,open,0,172,15,"How to remove duplicate resources (RES, DFM) while using Delphi with non specific Library paths? I followed the advice received in a previous discussion ( http://stackoverflow.com/questions/3666292/should-library-path-point-to-the-source-files-of-packages/3686542#3686542 ) and now my Library Path points to folders containing the compiled code (DCU) and NOT to the source code of my controls.
+The problem is that I have to duplicate the RES and DFM files and copy them from the 'source code' folder to the 'compiled' folder. It is not a elegant solution at all since, every time I change something (and I do often) to my controls I have to remember to copy the new resource files to the compiled folder. 
+
+There must be an *elegant* way to solve the mystery of the paths! All I want is to push the compile button and to have my program compiled. It doesn't seem so complicated. Right? Well, actually it work with my previous setup (point Delphi to source code of all controls). I just changed it to do it the way the 'good people' are doing it.
+
+----------------------
+
+Delphi 7, Win 7 (32), simple Delphi setup (single developer with no versioning system installed).",1
+9284109,02/14/2012 21:00:26,1209980,02/14/2012 20:48:36,1,0,my class doesnt work when defined as a global variable in delphi,"i created a simple class to explain my problem:
+
+    ttest =class
+    private
+       val:boolean;
+    published
+       function get:boolean;
+    end;
+    
+    ...
+
+    function ttest.get: boolean;
+    begin
+       val:=not val;
+       result:=val;
+    end;
+
+now if i declare a local ttest variable and call my_var.get; then everything works, but if i declare it as a global variable then it cant access the val field anymore,it shows an error message which says ""Access violation..."".
+I read some articles about classes in Delphi but still cant find my mistake.",delphi,class,,,,,open,0,129,12,"my class doesnt work when defined as a global variable in delphi i created a simple class to explain my problem:
+
+    ttest =class
+    private
+       val:boolean;
+    published
+       function get:boolean;
+    end;
+    
+    ...
+
+    function ttest.get: boolean;
+    begin
+       val:=not val;
+       result:=val;
+    end;
+
+now if i declare a local ttest variable and call my_var.get; then everything works, but if i declare it as a global variable then it cant access the val field anymore,it shows an error message which says ""Access violation..."".
+I read some articles about classes in Delphi but still cant find my mistake.",2
+11719454,07/30/2012 10:16:10,988445,10/10/2011 21:32:09,3091,41,Unable to click checkboxes in string grid,"I am placing check boxes (`TCheckBox`) in a string grid (`TStringGrid`) in the first column (0). The checkboxes show fine, positioned correctly, and even respond to the mouse by glowing when hovering over them. When I click them, however, they do not toggle. They react to the click, and highlight, but finally, the actual `Checked` property does not change. What makes it more puzzling is I don't have any code changing these values once they're there, nor do I even have an `OnClick` event assigned to these checkboxes. Also, I'm defaulting these checkboxes to be *unchecked*, but when displayed, they are *checked*.
+
+The checkboxes are created along with each record which is added to the list, and is referenced inside a record pointer which is assigned to the object in the cell where the checkbox is to be placed.
+
+String grid hack for cell highlighting:
+
+    type
+      THackStringGrid = class(TStringGrid); //used later...
+
+Record containing checkbox:
+
+      PImageLink = ^TImageLink;
+      TImageLink = record
+        ...other stuff...
+        Checkbox: TCheckbox;
+        ShowCheckbox: Bool;
+      end;
+
+Creation/Destruction of checkbox:
+
+    function NewImageLink(const AFilename: String): PImageLink;
+    begin
+      Result:= New(PImageLink);
+      ...other stuff...
+      Result.Checkbox:= TCheckbox.Create(nil);
+      Result.Checkbox.Caption:= '';
+    end;
+    
+    procedure DestroyImageLink(AImageLink: PImageLink);
+    begin
+      AImageLink.Checkbox.Free;
+      Dispose(AImageLink);
+    end;
+
+Adding rows to list:
+
+    //...after clearing list...
+    //L = TStringList of original filenames
+    if L.Count > 0 then
+      lstFiles.RowCount:= L.Count + 1
+    else
+      lstFiles.RowCount:= 2; //in case there are no records
+    for X := 0 to L.Count - 1 do begin
+      S:= L[X];
+      Link:= NewImageLink(S); //also creates checkbox
+      Link.Checkbox.Parent:= lstFiles;
+      Link.Checkbox.Visible:= Link.ShowCheckbox;
+      Link.Checkbox.Checked:= False;
+      Link.Checkbox.BringToFront;
+      lstFiles.Objects[0,X+1]:= Pointer(Link);
+      lstFiles.Cells[1, X+1]:= S;
+    end;
+
+Grid's OnDrawCell Event Handler:
+
+    procedure TfrmMain.lstFilesDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
+    var
+      Link: PImageLink;
+      CR: TRect;
+    begin
+      if (ARow > 0) and (ACol = 0) then begin
+        Link:= PImageLink(lstFiles.Objects[0,ARow]); //Get record pointer
+        CR:= lstFiles.CellRect(0, ARow); //Get cell rect
+        Link.Checkbox.Width:= Link.Checkbox.Height;
+        Link.Checkbox.Left:= CR.Left + (CR.Width div 2) - (Link.Checkbox.Width div 2);
+        Link.Checkbox.Top:= CR.Top;
+        if not Link.Checkbox.Visible then begin
+          lstFiles.Canvas.Brush.Color:= lstFiles.Color;
+          lstFiles.Canvas.Brush.Style:= bsSolid;
+          lstFiles.Canvas.Pen.Style:= psClear;
+          lstFiles.Canvas.FillRect(CR);
+          if lstFiles.Row = ARow then
+            THackStringGrid(lstFiles).DrawCellHighlight(CR, State, ACol, ARow);
+        end;
+      end;
+    end;
+
+Here's how it looks when clicking...
+
+![Reacts to Mouse Click but Doesn't Change][1]
+
+What could be causing this? It's definitely not changing the `Checked` property anywhere in my code. There must be some strange behavior coming from the checkboxes themselves when placed in a grid.
+
+**EDIT**
+
+I did a brief test, I placed a regular `TCheckBox` on the form. Check/unchecks fine. Then, in my form's `OnShow` event, I changed the Checkbox's `Parent` to this grid. This time, it reacts the same, not changing when clicked. Therefore, it seems that a `TCheckBox` doesn't react properly when it has another control as its parent. How to overcome this?
+
+  [1]: http://i.stack.imgur.com/zMgyk.png",delphi,checkbox,mouseevent,delphi-xe2,tstringgrid,,open,0,736,7,"Unable to click checkboxes in string grid I am placing check boxes (`TCheckBox`) in a string grid (`TStringGrid`) in the first column (0). The checkboxes show fine, positioned correctly, and even respond to the mouse by glowing when hovering over them. When I click them, however, they do not toggle. They react to the click, and highlight, but finally, the actual `Checked` property does not change. What makes it more puzzling is I don't have any code changing these values once they're there, nor do I even have an `OnClick` event assigned to these checkboxes. Also, I'm defaulting these checkboxes to be *unchecked*, but when displayed, they are *checked*.
+
+The checkboxes are created along with each record which is added to the list, and is referenced inside a record pointer which is assigned to the object in the cell where the checkbox is to be placed.
+
+String grid hack for cell highlighting:
+
+    type
+      THackStringGrid = class(TStringGrid); //used later...
+
+Record containing checkbox:
+
+      PImageLink = ^TImageLink;
+      TImageLink = record
+        ...other stuff...
+        Checkbox: TCheckbox;
+        ShowCheckbox: Bool;
+      end;
+
+Creation/Destruction of checkbox:
+
+    function NewImageLink(const AFilename: String): PImageLink;
+    begin
+      Result:= New(PImageLink);
+      ...other stuff...
+      Result.Checkbox:= TCheckbox.Create(nil);
+      Result.Checkbox.Caption:= '';
+    end;
+    
+    procedure DestroyImageLink(AImageLink: PImageLink);
+    begin
+      AImageLink.Checkbox.Free;
+      Dispose(AImageLink);
+    end;
+
+Adding rows to list:
+
+    //...after clearing list...
+    //L = TStringList of original filenames
+    if L.Count > 0 then
+      lstFiles.RowCount:= L.Count + 1
+    else
+      lstFiles.RowCount:= 2; //in case there are no records
+    for X := 0 to L.Count - 1 do begin
+      S:= L[X];
+      Link:= NewImageLink(S); //also creates checkbox
+      Link.Checkbox.Parent:= lstFiles;
+      Link.Checkbox.Visible:= Link.ShowCheckbox;
+      Link.Checkbox.Checked:= False;
+      Link.Checkbox.BringToFront;
+      lstFiles.Objects[0,X+1]:= Pointer(Link);
+      lstFiles.Cells[1, X+1]:= S;
+    end;
+
+Grid's OnDrawCell Event Handler:
+
+    procedure TfrmMain.lstFilesDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
+    var
+      Link: PImageLink;
+      CR: TRect;
+    begin
+      if (ARow > 0) and (ACol = 0) then begin
+        Link:= PImageLink(lstFiles.Objects[0,ARow]); //Get record pointer
+        CR:= lstFiles.CellRect(0, ARow); //Get cell rect
+        Link.Checkbox.Width:= Link.Checkbox.Height;
+        Link.Checkbox.Left:= CR.Left + (CR.Width div 2) - (Link.Checkbox.Width div 2);
+        Link.Checkbox.Top:= CR.Top;
+        if not Link.Checkbox.Visible then begin
+          lstFiles.Canvas.Brush.Color:= lstFiles.Color;
+          lstFiles.Canvas.Brush.Style:= bsSolid;
+          lstFiles.Canvas.Pen.Style:= psClear;
+          lstFiles.Canvas.FillRect(CR);
+          if lstFiles.Row = ARow then
+            THackStringGrid(lstFiles).DrawCellHighlight(CR, State, ACol, ARow);
+        end;
+      end;
+    end;
+
+Here's how it looks when clicking...
+
+![Reacts to Mouse Click but Doesn't Change][1]
+
+What could be causing this? It's definitely not changing the `Checked` property anywhere in my code. There must be some strange behavior coming from the checkboxes themselves when placed in a grid.
+
+**EDIT**
+
+I did a brief test, I placed a regular `TCheckBox` on the form. Check/unchecks fine. Then, in my form's `OnShow` event, I changed the Checkbox's `Parent` to this grid. This time, it reacts the same, not changing when clicked. Therefore, it seems that a `TCheckBox` doesn't react properly when it has another control as its parent. How to overcome this?
+
+  [1]: http://i.stack.imgur.com/zMgyk.png",5
+3536911,08/21/2010 08:16:43,118460,06/06/2009 08:05:20,1652,66,What are csClickEvents and csCaptureMouse exactly?,"I'm trying to understand the `ControlStyle` property in Delphi 2007, but I'm having trouble grasping the `csClickEvents` and `csCaptureMouse` attributes.
+
+According to specifications, `csCaptureMouse` makes the control capture mouse events when it is clicked, whereas `csClickEvents` enables the control to receive and answer to mouse clicks. It also mentions explicitly that `TButton` does not inherit this attribute (I've checked the source code: this is indeed the case).
+
+What exactly do `csCaptureMouse` and `csClickEvents` do, and what is the difference? Thanks for any answer.
+
+",delphi,vcl,,,,,open,0,81,6,"What are csClickEvents and csCaptureMouse exactly? I'm trying to understand the `ControlStyle` property in Delphi 2007, but I'm having trouble grasping the `csClickEvents` and `csCaptureMouse` attributes.
+
+According to specifications, `csCaptureMouse` makes the control capture mouse events when it is clicked, whereas `csClickEvents` enables the control to receive and answer to mouse clicks. It also mentions explicitly that `TButton` does not inherit this attribute (I've checked the source code: this is indeed the case).
+
+What exactly do `csCaptureMouse` and `csClickEvents` do, and what is the difference? Thanks for any answer.
+
+",2
+5419901,03/24/2011 13:25:39,125435,06/18/2009 22:06:46,1076,65,Passing nil as a parameter in place of a TComponent,"I've come across some code that's throwing an exception (EIntfCasterror Cast not supported) when it passes nil to a constructor expecting a TComponent, like so:
+
+    SomeObject obj := SomeClass(nil);
+
+The unit this is in does not contain a form and even TForm requires a TComponent be passed to it when you call its constructor.  What should I pass in place of nil if anything exists or is there a way to get it to accept nil.
+
+Thank you.
+
+Also, I don't have the source code which calls the method this is in, or I would just have it pass the form it has access to.",delphi,components,nil,delphi-6,,,open,0,106,10,"Passing nil as a parameter in place of a TComponent I've come across some code that's throwing an exception (EIntfCasterror Cast not supported) when it passes nil to a constructor expecting a TComponent, like so:
+
+    SomeObject obj := SomeClass(nil);
+
+The unit this is in does not contain a form and even TForm requires a TComponent be passed to it when you call its constructor.  What should I pass in place of nil if anything exists or is there a way to get it to accept nil.
+
+Thank you.
+
+Also, I don't have the source code which calls the method this is in, or I would just have it pass the form it has access to.",4
+3115937,06/25/2010 06:11:52,150046,08/03/2009 23:31:41,905,23,"Passing a reference to a TObjectDictionary<TKey, TValue>.TValueEnumerator","I am trying to use Delphi 2010's TObjectDictionary<TKey, TValue> generic.
+
+I would like to pass an enumerator of the `Values` property of that generic class, and the compiler doesn't seem to want to let me... Example:
+
+
+	  TAttributeStates = class(TInterfacedObject, IAttributeStates)
+	  private
+	    FStates: TObjectDictionary<TPatchAttribute, TAttributeState>;
+
+	  public
+
+	    constructor Create;
+	    destructor Destroy; override;
+
+	    function GetEnumerator: TObjectDictionary<TPatchAttribute, TAttributeState>.TValueEnumerator;
+
+	  end;
+
+	  implementation
+
+		function TAttributeStates.GetEnumerator: TObjectDictionary<TPatchAttribute, TAttributeState>.TValueEnumerator;
+		begin
+		  result := FStates.Values.GetEnumerator;
+		end;
+
+This fails to compile with the error:
+
+    [DCC Error] ChannelStates.pas(249): E2010 Incompatible types: 'TDictionary<Generics.Collections.TObjectDictionary<TKey,TValue>.TKey,Generics.Collections.TObjectDictionary<TKey,TValue>.TValue>.TValueEnumerator' and 'TDictionary<ChannelPatch.TPatchAttribute,ChannelStates.TAttributeState>.TValueEnumerator'
+
+It seems that the compiler isn't resolving the sub-type properly...
+
+Anyone have any ideas?
+
+N@",delphi,generics,delphi-2010,nested-generics,,,open,0,109,7,"Passing a reference to a TObjectDictionary<TKey, TValue>.TValueEnumerator I am trying to use Delphi 2010's TObjectDictionary<TKey, TValue> generic.
+
+I would like to pass an enumerator of the `Values` property of that generic class, and the compiler doesn't seem to want to let me... Example:
+
+
+	  TAttributeStates = class(TInterfacedObject, IAttributeStates)
+	  private
+	    FStates: TObjectDictionary<TPatchAttribute, TAttributeState>;
+
+	  public
+
+	    constructor Create;
+	    destructor Destroy; override;
+
+	    function GetEnumerator: TObjectDictionary<TPatchAttribute, TAttributeState>.TValueEnumerator;
+
+	  end;
+
+	  implementation
+
+		function TAttributeStates.GetEnumerator: TObjectDictionary<TPatchAttribute, TAttributeState>.TValueEnumerator;
+		begin
+		  result := FStates.Values.GetEnumerator;
+		end;
+
+This fails to compile with the error:
+
+    [DCC Error] ChannelStates.pas(249): E2010 Incompatible types: 'TDictionary<Generics.Collections.TObjectDictionary<TKey,TValue>.TKey,Generics.Collections.TObjectDictionary<TKey,TValue>.TValue>.TValueEnumerator' and 'TDictionary<ChannelPatch.TPatchAttribute,ChannelStates.TAttributeState>.TValueEnumerator'
+
+It seems that the compiler isn't resolving the sub-type properly...
+
+Anyone have any ideas?
+
+N@",4
+160106,10/01/2008 22:45:22,16120,09/17/2008 14:49:56,98,9,How to implement find as you type on a TComboBox descendant,"What is the correct way to implement the ""find as you type"" behavior on a TComboBox descendant component whose style is csOwnerDrawFixed?",delphi,vlc,gui,custom-component,,01/26/2012 21:23:35,not a real question,1,22,11,"How to implement find as you type on a TComboBox descendant What is the correct way to implement the ""find as you type"" behavior on a TComboBox descendant component whose style is csOwnerDrawFixed?",4
+5089633,02/23/2011 10:28:18,497849,11/04/2010 23:58:21,960,46,Array_Of_Int in SOAP client,"I have a very interesting issue when I call a SOAP method with my client, I must pass a parameter which is of type Array_Of_Int(Array_Of_Int = array of Integer), the problem is that when the array is being generated in the request, it generates the following
+
+    <ArrayParam>
+      <item>12345</item>
+      <item>23456</item>
+      <item>34567</item>
+    </ArrayParam>
+
+but I believe the server expects
+
+    <ArrayParam>12345</ArrayParam>
+    <ArrayParam>23456</ArrayParam>
+    <ArrayParam>34567</ArrayParam>
+
+I'm pretty sure that Delphi has a workaround for this issue somehow in the RegisterSerializeOptions or RegisterInvokeOptions however I can't seem to find the issue, thoughts?!
+
+Thank you all for your time, I'm using Delphi 2010.",delphi,soap,,,,,open,0,123,4,"Array_Of_Int in SOAP client I have a very interesting issue when I call a SOAP method with my client, I must pass a parameter which is of type Array_Of_Int(Array_Of_Int = array of Integer), the problem is that when the array is being generated in the request, it generates the following
+
+    <ArrayParam>
+      <item>12345</item>
+      <item>23456</item>
+      <item>34567</item>
+    </ArrayParam>
+
+but I believe the server expects
+
+    <ArrayParam>12345</ArrayParam>
+    <ArrayParam>23456</ArrayParam>
+    <ArrayParam>34567</ArrayParam>
+
+I'm pretty sure that Delphi has a workaround for this issue somehow in the RegisterSerializeOptions or RegisterInvokeOptions however I can't seem to find the issue, thoughts?!
+
+Thank you all for your time, I'm using Delphi 2010.",2
+8323602,11/30/2011 09:22:42,1073000,11/30/2011 09:15:41,1,0,Program to search for specific news,"Help with a program in Delphi. It is necessary to fulfill the program on the Internet searching for information (news) introduced by request (for example: Moscow traffic accident, or Yaroslavl - Robbery, there are several criteria for the search), will be able to specify the date or dates for the period of search. Well if you could find apart from the general to ask a specific list of news sites to search. Search results deduced in the form of a list - links to on them could go.
+  In general I do not know how to implement it. I was advised to look at SEO and go from the back, but honestly I do not know how.",delphi,search,news,,,12/01/2011 08:09:37,not a real question,1,118,6,"Program to search for specific news Help with a program in Delphi. It is necessary to fulfill the program on the Internet searching for information (news) introduced by request (for example: Moscow traffic accident, or Yaroslavl - Robbery, there are several criteria for the search), will be able to specify the date or dates for the period of search. Well if you could find apart from the general to ask a specific list of news sites to search. Search results deduced in the form of a list - links to on them could go.
+  In general I do not know how to implement it. I was advised to look at SEO and go from the back, but honestly I do not know how.",3
+5046279,02/18/2011 20:35:33,599928,02/02/2011 11:44:18,73,1,saving strings that are 'connected' and reading them and their 'connected',"This is something I am not at all familiar with. I want to try to make a simple form with 4 edit boxes. 2 at the top and 2 at the bottom. and a button. Basically what I want to do is type a couple of things in the top two boxes that are related to each other. when I have them both filled in I click on the button and it saves this information in a database, preferable an external file (doesnt have to be text, i think it would be better if not). So i can do that a couple of times. Saving from the edit fields into a database. Then when I type one of the words saved in one of the edit fields at the bottom it automatically types the other word in the last edit field. The form should remember to connect to the database everytime its opened so that when i open it another time i can still work the edit fields. can anyone advice me on how to do this? thanks",delphi,saving,,,,02/19/2011 04:54:27,not a real question,1,178,11,"saving strings that are 'connected' and reading them and their 'connected' This is something I am not at all familiar with. I want to try to make a simple form with 4 edit boxes. 2 at the top and 2 at the bottom. and a button. Basically what I want to do is type a couple of things in the top two boxes that are related to each other. when I have them both filled in I click on the button and it saves this information in a database, preferable an external file (doesnt have to be text, i think it would be better if not). So i can do that a couple of times. Saving from the edit fields into a database. Then when I type one of the words saved in one of the edit fields at the bottom it automatically types the other word in the last edit field. The form should remember to connect to the database everytime its opened so that when i open it another time i can still work the edit fields. can anyone advice me on how to do this? thanks",2
+1656921,11/01/2009 11:21:13,178614,09/24/2009 17:48:56,11,0,"What librairies exists to create ""moving/living"" UI in delphi ?","While reading delphifeeds yesterday I discovered [delQuery][1], which allows one to get some nice animation on his form very simply.
+
+I would like to know if there are any other librariries of that kind out there and what experience you had with them ?
+
+(i'm trying to find a way to make my application more alive in terms of gui; buttons that grow when you hover them, that kind of animations but with a nice programmatic interface)
+
+
+  [1]: http://bitbucket.org/utku/delquery/wiki/Home",delphi,gui,,,,,open,0,78,10,"What librairies exists to create ""moving/living"" UI in delphi ? While reading delphifeeds yesterday I discovered [delQuery][1], which allows one to get some nice animation on his form very simply.
+
+I would like to know if there are any other librariries of that kind out there and what experience you had with them ?
+
+(i'm trying to find a way to make my application more alive in terms of gui; buttons that grow when you hover them, that kind of animations but with a nice programmatic interface)
+
+
+  [1]: http://bitbucket.org/utku/delquery/wiki/Home",2
+10622700,05/16/2012 16:25:49,318249,04/16/2010 06:52:58,1133,22,Generate barcode,"hi is there any known Delphi library to generate/decode [QR Code Generator from the ZXing][1] Project?
+
+thanx in advance..
+
+
+  [1]: http://zxing.appspot.com/generator/",delphi,barcode,zxing,,,05/17/2012 12:16:56,not constructive,1,21,2,"Generate barcode hi is there any known Delphi library to generate/decode [QR Code Generator from the ZXing][1] Project?
+
+thanx in advance..
+
+
+  [1]: http://zxing.appspot.com/generator/",3
+8570607,12/20/2011 03:56:02,1107052,12/20/2011 02:55:08,1,0,Delphi XE2 future,"I am an independent consultant and I have developed a product which is liked by my customer that I am trying to port from Java to Delphi. Delphi satisfies couple of my important needs: Native code compilation that gives speed and obfuscation and the language is highly productive as I tried.
+
+Question that I have is:
+
+1.  Would you invest in Delphi, given its turbulent past?
+2.  Is there any alternative to Delphi if I want to chose a platform that compiles to native code and is portable to MAC and highly productive?
+
+Thanks.",delphi,native,,,,12/20/2011 12:06:29,not constructive,1,92,3,"Delphi XE2 future I am an independent consultant and I have developed a product which is liked by my customer that I am trying to port from Java to Delphi. Delphi satisfies couple of my important needs: Native code compilation that gives speed and obfuscation and the language is highly productive as I tried.
+
+Question that I have is:
+
+1.  Would you invest in Delphi, given its turbulent past?
+2.  Is there any alternative to Delphi if I want to chose a platform that compiles to native code and is portable to MAC and highly productive?
+
+Thanks.",2
+6212795,06/02/2011 09:41:01,638471,02/28/2011 22:29:20,6017,321,The free Delphi 2006 compiler,"On wikipedia i read:
+
+> **Borland Delphi 2006** [...] Each version is available in two editions:
+> Explorer—a free downloadable
+> version—and Professional
+
+Is this edition still available? Or are people who grabbed it in 2006 lucky and the others not that much?",delphi,borland,embarcadero,,,,open,0,39,5,"The free Delphi 2006 compiler On wikipedia i read:
+
+> **Borland Delphi 2006** [...] Each version is available in two editions:
+> Explorer—a free downloadable
+> version—and Professional
+
+Is this edition still available? Or are people who grabbed it in 2006 lucky and the others not that much?",3
+9333423,02/17/2012 18:25:46,887651,08/10/2011 10:03:05,540,0,How to start with Delphi?,"I have installed Delphi XE2, I don't know Delphi, I don't know the IDE, I'm looking for a tutorial/guide to learn Delphi and the IDE, can I find these information online? (free)
+
+Thanks",delphi,,,,,02/17/2012 18:47:06,not constructive,1,32,5,"How to start with Delphi? I have installed Delphi XE2, I don't know Delphi, I don't know the IDE, I'm looking for a tutorial/guide to learn Delphi and the IDE, can I find these information online? (free)
+
+Thanks",1
+10872899,06/03/2012 18:41:53,390446,07/13/2010 12:46:21,21,0,Delphi FindFirst FindNext not finding files,"Using Delphi 5...
+
+FindFirst and FindNext lists only directories when using a path like \\\192.168.0.1\Files\ instead of \\\TestServer1\Files\
+
+    if (FindFirst(SearchName+'*.*', faAnyFile, Sr) = 0) then
+        AddElement(sr,SearchName);
+    while (FindNext(sr) = 0) do
+        AddElement(sr,SearchName);
+
+How can I list the files and directories when the user enters the IP address instead of the server name.
+
+Thanks! ",delphi,,,,,06/04/2012 16:00:44,too localized,1,71,6,"Delphi FindFirst FindNext not finding files Using Delphi 5...
+
+FindFirst and FindNext lists only directories when using a path like \\\192.168.0.1\Files\ instead of \\\TestServer1\Files\
+
+    if (FindFirst(SearchName+'*.*', faAnyFile, Sr) = 0) then
+        AddElement(sr,SearchName);
+    while (FindNext(sr) = 0) do
+        AddElement(sr,SearchName);
+
+How can I list the files and directories when the user enters the IP address instead of the server name.
+
+Thanks! ",1
+3944367,10/15/2010 16:53:34,71200,02/26/2009 04:12:24,3284,125,Component Streaming and automatic source file updating,"I'll start by saying my previous experience with component design was limited to fixing minor bugs in a pretty standard collection of visual controls.
+
+I  am currently working on a project which uses a tree of TPersistent descendants to define, store and retrieve data. The top of this tree is a descendant of TComponent. It has a published property which is a descendant of TCollection. Here's a simplification of the structure:
+
+    TMyComponent = class(TComponent)
+    private
+      FMyCollection: TMyCollection;
+    published
+      property Items: TMyCollection read FMyCollection write FMyCollection;
+    end;
+
+    TMyCollection = class(TCollection)
+    protected
+      procedure SetItem(index: integer; val: TCompositeItem);
+      function GetItem(index: integer): TCompositeItem;
+    public
+      property Items[index: integer]: TCompositeItem read GetItem write SetItem; default;
+    end;
+
+    TCompositeItem = class(TCollectionItem)
+    private
+      FMyCollection: TMyCollection;
+    published
+      property Items: TMyCollection read FMyCollection write FMyCollection;
+    end;
+
+There are at least a dozen descendants of TCompositeItem. When you want to add a new item to the collection of one of the nodes in the tree you bring up the context menu and click ""Add Item"". This creates a new item which you must then further define as one one of the numerous descendants of TCompositeItem using the Object Inspector.
+
+This works relatively well. The problem is that changes to the tree in the designer are not reflected in the associated source file. To get around this my predecessor added some synchronization code that recreates declarations in the .pas file from the tree in the .dfm. To properly synchronize everything you have to save your changes in the dfm, then double-click the component on the form (which triggers the synchronization code), then save again. Additionally you can only do one synchronization per editing session otherwise you get a prompt telling you to close the form, reopen it, then do the synchronization. If you forget to follow this procedure all kinds of strange behaviors occur at run time. Its kind of awkward but it works.
+
+What I would like to do is have changes in the designer automatically updated in the cached source file then saved as normal when the developer clicks save, eliminating the need for the awkward three step synchronization.
+
+This is how normal controls work so I'm not really sure why it doesn't work with this one. I have a gut feeling that the reason may be related to the ultimate class for each item in a collection not being determined until after it is created in the designer. Any suggestions?",delphi,,,,,,open,0,467,7,"Component Streaming and automatic source file updating I'll start by saying my previous experience with component design was limited to fixing minor bugs in a pretty standard collection of visual controls.
+
+I  am currently working on a project which uses a tree of TPersistent descendants to define, store and retrieve data. The top of this tree is a descendant of TComponent. It has a published property which is a descendant of TCollection. Here's a simplification of the structure:
+
+    TMyComponent = class(TComponent)
+    private
+      FMyCollection: TMyCollection;
+    published
+      property Items: TMyCollection read FMyCollection write FMyCollection;
+    end;
+
+    TMyCollection = class(TCollection)
+    protected
+      procedure SetItem(index: integer; val: TCompositeItem);
+      function GetItem(index: integer): TCompositeItem;
+    public
+      property Items[index: integer]: TCompositeItem read GetItem write SetItem; default;
+    end;
+
+    TCompositeItem = class(TCollectionItem)
+    private
+      FMyCollection: TMyCollection;
+    published
+      property Items: TMyCollection read FMyCollection write FMyCollection;
+    end;
+
+There are at least a dozen descendants of TCompositeItem. When you want to add a new item to the collection of one of the nodes in the tree you bring up the context menu and click ""Add Item"". This creates a new item which you must then further define as one one of the numerous descendants of TCompositeItem using the Object Inspector.
+
+This works relatively well. The problem is that changes to the tree in the designer are not reflected in the associated source file. To get around this my predecessor added some synchronization code that recreates declarations in the .pas file from the tree in the .dfm. To properly synchronize everything you have to save your changes in the dfm, then double-click the component on the form (which triggers the synchronization code), then save again. Additionally you can only do one synchronization per editing session otherwise you get a prompt telling you to close the form, reopen it, then do the synchronization. If you forget to follow this procedure all kinds of strange behaviors occur at run time. Its kind of awkward but it works.
+
+What I would like to do is have changes in the designer automatically updated in the cached source file then saved as normal when the developer clicks save, eliminating the need for the awkward three step synchronization.
+
+This is how normal controls work so I'm not really sure why it doesn't work with this one. I have a gut feeling that the reason may be related to the ultimate class for each item in a collection not being determined until after it is created in the designer. Any suggestions?",1
+8839322,01/12/2012 17:19:28,879153,08/04/2011 17:32:12,460,8,Why does the Delphi compiler allow a comma after the final parameter in a method call?,"Say I had a function such as this one
+
+    procedure TMyObject.DoSomething(text: string);
+    begin
+        // do something important with the text
+    end;
+
+When I call the method like so
+
+    DoSomething('some text', );
+
+the code editor displays a red squiggly at the comma after the last parameter, just as I would have expected. The compiler, however, accepts this code and everything works as if the comma wasn't there.
+
+Why does this appear to be legal syntax? Is there some historical reason this is still supported today (I have tried this in Delphi 2006)?",delphi,compiler,history,,,,open,0,107,16,"Why does the Delphi compiler allow a comma after the final parameter in a method call? Say I had a function such as this one
+
+    procedure TMyObject.DoSomething(text: string);
+    begin
+        // do something important with the text
+    end;
+
+When I call the method like so
+
+    DoSomething('some text', );
+
+the code editor displays a red squiggly at the comma after the last parameter, just as I would have expected. The compiler, however, accepts this code and everything works as if the comma wasn't there.
+
+Why does this appear to be legal syntax? Is there some historical reason this is still supported today (I have tried this in Delphi 2006)?",3
+5470199,03/29/2011 09:09:52,666705,03/18/2011 21:02:14,34,2,FastMM: Total Allocated Memory,"How could I get the total amount of memory, that allocated by FastMM?
+
+I've tried that:
+
+    function GetTotalAllocatedMemory: Cardinal;
+    var
+      MMState: TMemoryManagerState;
+    begin
+      GetMemoryManagerState(MMState);
+      Result := MMState.TotalAllocatedMediumBlockSize + MMState.TotalAllocatedLargeBlockSize;
+    end;
+
+Is it correct?
+
+Anyways it returns something strange. It 5 times less than a value which I can see in Windows task manager. I believe that the amount of memory allocated by a Delphi application equals FastMM allocated memory plus some system overhead. Am I wrong?",delphi,memory-management,fastmm,,,,open,0,100,4,"FastMM: Total Allocated Memory How could I get the total amount of memory, that allocated by FastMM?
+
+I've tried that:
+
+    function GetTotalAllocatedMemory: Cardinal;
+    var
+      MMState: TMemoryManagerState;
+    begin
+      GetMemoryManagerState(MMState);
+      Result := MMState.TotalAllocatedMediumBlockSize + MMState.TotalAllocatedLargeBlockSize;
+    end;
+
+Is it correct?
+
+Anyways it returns something strange. It 5 times less than a value which I can see in Windows task manager. I believe that the amount of memory allocated by a Delphi application equals FastMM allocated memory plus some system overhead. Am I wrong?",3
+102254,09/19/2008 14:27:14,672,08/07/2008 16:18:07,1092,77,Hidden Features of Delphi,"The ""Hidden Features"" series here on StackOverflow has generated some really interesting feedback.  So what about my favorite IDE, Delphi?  What are some hidden features there?
+
+I'll start with one of my own:
+
+You can invoke inline find by typing Ctrl+E, then typing your search term.",delphi,hidden-features,,,,05/06/2012 16:50:57,not constructive,1,46,4,"Hidden Features of Delphi The ""Hidden Features"" series here on StackOverflow has generated some really interesting feedback.  So what about my favorite IDE, Delphi?  What are some hidden features there?
+
+I'll start with one of my own:
+
+You can invoke inline find by typing Ctrl+E, then typing your search term.",2
+9326305,02/17/2012 10:08:40,881389,08/05/2011 21:56:40,29,0,How to inform Free Pascal Compiler to set Locale ID for teh compiled application to some value,"In Delphi there is an option **VersionInfo->Language->Locale ID** when viewing project properties. I was wandering how to set such property for a program being compiled under Free Pascal, any solution is welcome: *command line argument* or *preprocessor directive* such as **{$key value}**; equivalent to Delphi.
+
+Thank you in advance.
+
+",delphi,pascal,lang,,,,open,0,48,17,"How to inform Free Pascal Compiler to set Locale ID for teh compiled application to some value In Delphi there is an option **VersionInfo->Language->Locale ID** when viewing project properties. I was wandering how to set such property for a program being compiled under Free Pascal, any solution is welcome: *command line argument* or *preprocessor directive* such as **{$key value}**; equivalent to Delphi.
+
+Thank you in advance.
+
+",3
+11544812,07/18/2012 15:23:18,934988,09/08/2011 14:12:32,104,0,Bug in VarToDateAsString,"Delphi has next function:
+
+    function VarToDateAsString(const V: TVarData): TDateTime;
+    ....
+    LResult := VarDateFromStr(S, VAR_LOCALE_USER_DEFAULT, 0, Result);
+
+it will be
+
+       VarDateFromStr('07;12;18', VAR_LOCALE_USER_DEFAULT, 0, Result);
+
+then Result will be equal
+   
+
+    Result = '07;18;12'
+
+**How cat It fix if possible ?**
+
+",delphi,datetime,variants,,,07/19/2012 01:17:03,not a real question,1,56,3,"Bug in VarToDateAsString Delphi has next function:
+
+    function VarToDateAsString(const V: TVarData): TDateTime;
+    ....
+    LResult := VarDateFromStr(S, VAR_LOCALE_USER_DEFAULT, 0, Result);
+
+it will be
+
+       VarDateFromStr('07;12;18', VAR_LOCALE_USER_DEFAULT, 0, Result);
+
+then Result will be equal
+   
+
+    Result = '07;18;12'
+
+**How cat It fix if possible ?**
+
+",3
+2766777,05/04/2010 15:42:20,332547,05/04/2010 15:42:20,1,0,Delphi : Restore a pre-design tabsheet after user has closed it...,"I have a tPageControl on a form, and have made a nice 'welcome page' as a new ttabsheet at design time for the user to start off with. However, if the user closes this tab, I would like the option to bring it back, as it was in originally (much like the welcome page in the Delphi IDE). This seems like a simple problem...
+
+When the tab closes, the original sheet is freed and set nil. I tried creating the sheet again by name (e.g. tabsheet1 := ttabsheet.create) and assigning it to the pagecontrol, but none of the original components from the sheet are there anymore...
+
+I know designing the welcome page as a separate form, creating it when I need it and slapping it into a new tabsheet would work... but I was just wondering if there was a way to do it with the design time tabsheet.
+
+Thanks all!
+
+Rusty",delphi,delphi-2010,delphi-2009,,,,open,0,148,11,"Delphi : Restore a pre-design tabsheet after user has closed it... I have a tPageControl on a form, and have made a nice 'welcome page' as a new ttabsheet at design time for the user to start off with. However, if the user closes this tab, I would like the option to bring it back, as it was in originally (much like the welcome page in the Delphi IDE). This seems like a simple problem...
+
+When the tab closes, the original sheet is freed and set nil. I tried creating the sheet again by name (e.g. tabsheet1 := ttabsheet.create) and assigning it to the pagecontrol, but none of the original components from the sheet are there anymore...
+
+I know designing the welcome page as a separate form, creating it when I need it and slapping it into a new tabsheet would work... but I was just wondering if there was a way to do it with the design time tabsheet.
+
+Thanks all!
+
+Rusty",3
+8475351,12/12/2011 13:51:11,1042721,11/12/2011 02:08:51,51,5,TDebugInterfacedObject in which unit?,I need to find TDebugInterfacedObject defined in which unit ? Do you know where it is ?,delphi,,,,,12/12/2011 18:22:40,too localized,1,17,4,TDebugInterfacedObject in which unit? I need to find TDebugInterfacedObject defined in which unit ? Do you know where it is ?,1
+8093036,11/11/2011 11:03:44,426242,08/20/2010 10:42:39,2587,74,How to make manual docking seamless / invisible?,"I am trying to use docking as an alternative to embedding ([related question][1]) a `TForm` into a `TWinControl` (in this case a `TTabSheet`).
+
+The user shouldn't notice that there are two different forms at all.
+
+How do I avoid the close button and ""drag bar"" at the top of the docked form?
+
+A simplified version of my code:
+
+    var
+      TabSheet: TTabSheet;
+      Form: TSubForm;
+    begin
+      TabSheet             := TTabSheet.Create(Self);
+      TabSheet.DockSite    := True;
+      TabSheet.PageControl := MainPageControl;
+    
+      Form := TSubForm.Create(TabSheet);
+      Form.ManualDock(TabSheet);
+      Form.Show;
+    end;
+
+PS: I don't want to use a `TFrame` which would of course be another alternative.
+
+  [1]: http://stackoverflow.com/questions/4385948/how-to-avoid-issues-when-embedding-a-tform-in-another-tform",delphi,delphi-2007,docking,,,11/11/2011 17:53:09,not a real question,1,161,8,"How to make manual docking seamless / invisible? I am trying to use docking as an alternative to embedding ([related question][1]) a `TForm` into a `TWinControl` (in this case a `TTabSheet`).
+
+The user shouldn't notice that there are two different forms at all.
+
+How do I avoid the close button and ""drag bar"" at the top of the docked form?
+
+A simplified version of my code:
+
+    var
+      TabSheet: TTabSheet;
+      Form: TSubForm;
+    begin
+      TabSheet             := TTabSheet.Create(Self);
+      TabSheet.DockSite    := True;
+      TabSheet.PageControl := MainPageControl;
+    
+      Form := TSubForm.Create(TabSheet);
+      Form.ManualDock(TabSheet);
+      Form.Show;
+    end;
+
+PS: I don't want to use a `TFrame` which would of course be another alternative.
+
+  [1]: http://stackoverflow.com/questions/4385948/how-to-avoid-issues-when-embedding-a-tform-in-another-tform",3
+2037527,01/10/2010 15:58:08,1724,08/18/2008 10:56:42,160,4,How to get a delphi application (that's running) to do something at a particular time/date,"My application sits in the system tray when it's not being used.
+
+The user can configure events to occur at particular schedule.  For example they may way the task performed mon-fri at 5pm or every wednesday at 3pm or on the 16th of every month at 10am.
+
+Assuming my delphi program is always running, it starts at boot-up, what is the best way in delphi to support the triggering of these scheduled events.
+
+Obviously a TTimer can be used to schedule events based on elapsed time but they don't seem suited to this problem.
+
+Cheers",delphi,,,,,,open,0,92,15,"How to get a delphi application (that's running) to do something at a particular time/date My application sits in the system tray when it's not being used.
+
+The user can configure events to occur at particular schedule.  For example they may way the task performed mon-fri at 5pm or every wednesday at 3pm or on the 16th of every month at 10am.
+
+Assuming my delphi program is always running, it starts at boot-up, what is the best way in delphi to support the triggering of these scheduled events.
+
+Obviously a TTimer can be used to schedule events based on elapsed time but they don't seem suited to this problem.
+
+Cheers",1
+764000,04/18/2009 19:24:41,32914,10/30/2008 22:10:38,1685,50,Delphi: Required package not found,"I'm trying to build 3 packages, A, B and C.  A defines some base classes that are used in B and C.  I've got all 3 of them in the same project group, all set up to output to the same custom BPL output folder.  This folder is in the search path for B and C.  But when I go to build B and C, the compiler chokes on the Requires list. ""Required package 'A' not found.""
+
+How do I tell B and C where to find A so they'll build correctly?",delphi,delphi-2009,packages,path,,,open,0,95,5,"Delphi: Required package not found I'm trying to build 3 packages, A, B and C.  A defines some base classes that are used in B and C.  I've got all 3 of them in the same project group, all set up to output to the same custom BPL output folder.  This folder is in the search path for B and C.  But when I go to build B and C, the compiler chokes on the Requires list. ""Required package 'A' not found.""
+
+How do I tell B and C where to find A so they'll build correctly?",4

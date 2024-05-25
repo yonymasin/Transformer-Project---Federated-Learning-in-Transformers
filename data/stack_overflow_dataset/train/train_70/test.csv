@@ -1,0 +1,506 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+2399,08/05/2008 14:41:32,307,08/04/2008 14:26:05,100,15,How to transition to Functional Programming,It seems that the next major transition / fad will be towards Functional Programming.  What resources / experiences are you finding necessary to grok functional programming?,language-agnostic,functional,education,self-improvement,,03/02/2012 17:28:28,not constructive,1,27,6,How to transition to Functional Programming It seems that the next major transition / fad will be towards Functional Programming.  What resources / experiences are you finding necessary to grok functional programming?,4
+10781953,05/28/2012 09:01:34,717214,04/20/2011 13:22:15,8197,469,Determine RGBA colour received by combining two colours,"I have two colours defined as RGBA (in my specific examples, one of the set is [white with alpha 0.85] and [57, 40, 28 with alpha 0.25].  The second colour is drawn over the first one (i.e. white with alpha is the background and the second colour is used for drawing).  How can I figure out what the RGBA colour of the combination is going to be?  I need to do this one-off - so any tools is fine (e.g. I'm happy to draw something in photoshop and see what comes out).
+
+I have several sets to combine, but not too many.  Any pointers?  Thanks.",language-agnostic,rgba,colours,combine-colours,,,open,0,109,8,"Determine RGBA colour received by combining two colours I have two colours defined as RGBA (in my specific examples, one of the set is [white with alpha 0.85] and [57, 40, 28 with alpha 0.25].  The second colour is drawn over the first one (i.e. white with alpha is the background and the second colour is used for drawing).  How can I figure out what the RGBA colour of the combination is going to be?  I need to do this one-off - so any tools is fine (e.g. I'm happy to draw something in photoshop and see what comes out).
+
+I have several sets to combine, but not too many.  Any pointers?  Thanks.",4
+1089327,07/06/2009 21:36:48,91671,04/16/2009 14:52:25,1672,86,What programming practice that you once liked have you since changed your mind about?,"As we program, we all develop practices and patterns that we use and rely on. However, over time, as our understanding, maturity, and even technology usage changes, we come to realize that some practices that we once thought were great are not (or no longer apply).
+
+An example of a practice I once used quite often, but have in recent years changed, is the use of the [Singleton object pattern][1]. 
+
+Through my own experience and long debates with colleagues, I've come to realize that [singletons are not always desirable][2] - they can make testing more difficult (by inhibiting techniques like mocking) and can create undesirable coupling between parts of a system. Instead, I now use object factories (typically with a IoC container) that hide the nature and existence of singletons from parts of the system that don't care - or need to know. Instead, they rely on a factory (or service locator) to acquire access to such objects.
+
+My questions to the community, in the spirit of self-improvement, are:
+
+ - What programming patterns or practices have you reconsidered recently, and now try to avoid? 
+ - What did you decide to replace them with?**
+
+
+  [1]: http://en.wikipedia.org/wiki/Singleton_pattern
+  [2]: http://stackoverflow.com/questions/162042/are-there-any-viable-alternatives-to-the-gof-singleton-pattern",language-agnostic,self-improvement,,,,09/22/2011 23:56:44,not constructive,1,198,14,"What programming practice that you once liked have you since changed your mind about? As we program, we all develop practices and patterns that we use and rely on. However, over time, as our understanding, maturity, and even technology usage changes, we come to realize that some practices that we once thought were great are not (or no longer apply).
+
+An example of a practice I once used quite often, but have in recent years changed, is the use of the [Singleton object pattern][1]. 
+
+Through my own experience and long debates with colleagues, I've come to realize that [singletons are not always desirable][2] - they can make testing more difficult (by inhibiting techniques like mocking) and can create undesirable coupling between parts of a system. Instead, I now use object factories (typically with a IoC container) that hide the nature and existence of singletons from parts of the system that don't care - or need to know. Instead, they rely on a factory (or service locator) to acquire access to such objects.
+
+My questions to the community, in the spirit of self-improvement, are:
+
+ - What programming patterns or practices have you reconsidered recently, and now try to avoid? 
+ - What did you decide to replace them with?**
+
+
+  [1]: http://en.wikipedia.org/wiki/Singleton_pattern
+  [2]: http://stackoverflow.com/questions/162042/are-there-any-viable-alternatives-to-the-gof-singleton-pattern",2
+4918454,02/07/2011 05:59:50,605992,02/07/2011 05:59:50,1,0,Performance vs Efficency,"In programming, what is the difference between performance and efficency of a program?",language-agnostic,programming-languages,,,,02/07/2011 06:19:36,not a real question,1,13,3,"Performance vs Efficency In programming, what is the difference between performance and efficency of a program?",2
+96898,09/18/2008 20:59:45,25868,10/07/2008 16:15:29,6,2,What is the hardest technical question you have had to answer in an interview?,"Different companies use different technical questions to try and figure out who the good programmers are.
+
+What is the hardest technical question or problem you have ever had to solve in an interview?",language-agnostic,interview-questions,,,,12/04/2011 02:19:21,off topic,1,32,14,"What is the hardest technical question you have had to answer in an interview? Different companies use different technical questions to try and figure out who the good programmers are.
+
+What is the hardest technical question or problem you have ever had to solve in an interview?",2
+8071360,11/09/2011 20:40:19,1026213,11/02/2011 18:00:14,15,0,Compilers in brand new operating systems?,"If I were to write a new operating system, clearly I would need a compiler that would run on that system. How would you go about writing that compiler, as you have no compiler already on that operating system. Just for clarity hear is a condensed view of the scenario:
+
+ - Frank writes an OS, which he then compiles and uses
+ - He then wants to write a C application for that OS
+ - How would he get a compiler for that operating system, and what would it be written in?
+
+(This question is purely academic: I possess neither the skill nor the dedication required to write an OS or a compiler) 
+
+",language-agnostic,compiler,operating-system,,,11/10/2011 19:49:37,off topic,1,112,6,"Compilers in brand new operating systems? If I were to write a new operating system, clearly I would need a compiler that would run on that system. How would you go about writing that compiler, as you have no compiler already on that operating system. Just for clarity hear is a condensed view of the scenario:
+
+ - Frank writes an OS, which he then compiles and uses
+ - He then wants to write a C application for that OS
+ - How would he get a compiler for that operating system, and what would it be written in?
+
+(This question is purely academic: I possess neither the skill nor the dedication required to write an OS or a compiler) 
+
+",3
+184310,10/08/2008 18:56:41,13227,09/16/2008 17:43:51,538,19,Do you ever feel confident in your skills?,"As a self taught developer i always find myself questioning my skill and knowledge and always feel like i am falling behind in using new technology. Over a period of nearly 9 years i've studied most mainstream languages (especially C based ones), used lots of different OSes, read and absorbed many books and even written one myself. But i still feel i'm usless!
+
+Do professional developers ever get to the stage where they feel confident that they know what they are doing and are confident when submitting solutions/code?
+
+When do you know your *good* enough?",language-agnostic,programmer-skills,,,,03/24/2011 12:43:34,off topic,1,93,8,"Do you ever feel confident in your skills? As a self taught developer i always find myself questioning my skill and knowledge and always feel like i am falling behind in using new technology. Over a period of nearly 9 years i've studied most mainstream languages (especially C based ones), used lots of different OSes, read and absorbed many books and even written one myself. But i still feel i'm usless!
+
+Do professional developers ever get to the stage where they feel confident that they know what they are doing and are confident when submitting solutions/code?
+
+When do you know your *good* enough?",2
+6797653,07/23/2011 01:22:29,372434,06/21/2010 18:06:56,128,3,"How does ""watermarking"" in applications work?","By watermark I mean:
+A byte array that is somehow integrated into a .exe / .dll file, which can be searched for.
+Many anti-piracy / anti-reverse-engineer programs include a system called ""watermarks"" as a featuer. For example VMProtect.
+
+How does this work?
+If someone was to crack and / or copy the protected binary, what exactly prevents him from just removing the watermark.
+The idea is that you, as the creator of your software, can download a pirated copy of your own program, then you can see who exactly leaked / uploaded this copy.
+What exactly prevents an attacker to just scan for the watermarks and remove them??
+
+Second part of this question:
+It is said that a watermark is (or should be) included many times at different, random positions in the binary.
+Obviously they are not completely random. Because that would damage the binary in the same way a defective hard drive would.
+The program cannot just overwrite code in the binary with the watermark, that's for sure.
+How can the protection program include a watermark in different (and random) locations in the binary?
+How are these locations choosen?
+
+Third part:
+Assuming I have a watermarked binary.
+How would the protecting program later scan for the watermarks. How does it find the watermarks again?
+
+Also how can there be information included with the watermark (a small string, identifying the original owner of the copy) ? Is the information somehow encrypted into the watermark?",language-agnostic,protection,watermark,piracy-prevention,,,open,0,228,6,"How does ""watermarking"" in applications work? By watermark I mean:
+A byte array that is somehow integrated into a .exe / .dll file, which can be searched for.
+Many anti-piracy / anti-reverse-engineer programs include a system called ""watermarks"" as a featuer. For example VMProtect.
+
+How does this work?
+If someone was to crack and / or copy the protected binary, what exactly prevents him from just removing the watermark.
+The idea is that you, as the creator of your software, can download a pirated copy of your own program, then you can see who exactly leaked / uploaded this copy.
+What exactly prevents an attacker to just scan for the watermarks and remove them??
+
+Second part of this question:
+It is said that a watermark is (or should be) included many times at different, random positions in the binary.
+Obviously they are not completely random. Because that would damage the binary in the same way a defective hard drive would.
+The program cannot just overwrite code in the binary with the watermark, that's for sure.
+How can the protection program include a watermark in different (and random) locations in the binary?
+How are these locations choosen?
+
+Third part:
+Assuming I have a watermarked binary.
+How would the protecting program later scan for the watermarks. How does it find the watermarks again?
+
+Also how can there be information included with the watermark (a small string, identifying the original owner of the copy) ? Is the information somehow encrypted into the watermark?",4
+3986811,10/21/2010 11:14:55,399268,02/20/2010 16:23:30,1506,70,How do you decide to learn a new language? And how do you begin with it?,"This is a poll.
+
+How did you decide to learn a new language? I have always been in a situation which required me to use a particular language and that's how I got introduced to the language I now code in.
+
+Secondly, whenever I start with a new language I get stuck with a *slow* introduction to `if`, `while`, `for` et al. in the beginning. It is stuff which seems to be designed keeping in mind people who are not familiar with programming at all. I'm sure there must be an alternative way for people with whom that is not the case. I just don't what that is. Hence, how do you begin learning a new language?",language-agnostic,,,,,10/27/2010 10:13:33,off topic,1,115,16,"How do you decide to learn a new language? And how do you begin with it? This is a poll.
+
+How did you decide to learn a new language? I have always been in a situation which required me to use a particular language and that's how I got introduced to the language I now code in.
+
+Secondly, whenever I start with a new language I get stuck with a *slow* introduction to `if`, `while`, `for` et al. in the beginning. It is stuff which seems to be designed keeping in mind people who are not familiar with programming at all. I'm sure there must be an alternative way for people with whom that is not the case. I just don't what that is. Hence, how do you begin learning a new language?",1
+1923109,12/17/2009 16:54:25,201306,11/02/2009 23:51:25,304,35,devaluation of knowledge ,"I read somewhere the following ""theorem"":
+
+> In Information Technology related  jobs 60% of learned knowledge is not useful after 1.5 half year
+
+I'm not sure if I remember numbers correctly (but I think they are close to original) and the author of this theorem. Also I'm not sure if this was about general IT knowledge or domain knowledge. I was googling a lot for it, but unfortunately I can't find it.
+
+So my firs question is: where can I find the correct version of this statement?
+
+I have also same open questions related this subject.
+
+I talked about this with my colleagues from university and one of them said that this is theorem about stupid person that can't find out what is important to learn. I disagree with him. He is good mobile applications developer. But would be he so good after spending years on a desert island (of course with out his Android based phone ;) or other Internet enabled device)?
+However I think he has right about one important thing - devaluation comes faster or slower depand on knowledge type. And this is my last question: What programming ralated skils doesn't lose value over time?
+
+Some interesting links:
+
+ - http://www.slideshare.net/Al.Simard/knowledge-management-value-chains
+ - http://www.slideshare.net/BillHall/time-value-of-knowledge-timebased-frameworks-for-valuing-knowledge
+ - http://c2.com/cgi/wiki?WhyIsDomainKnowledgeNotValued - ""DomainKnowledge should be maintained the same way a codebase is maintained""
+ -http://www.tinbergen.nl/cost/cost/gustavsson.pdf this studies show that 5% of  skills are lost after one year of unemployment.",language-agnostic,self-improvement,career-development,,,02/06/2012 01:15:24,off topic,1,229,4,"devaluation of knowledge  I read somewhere the following ""theorem"":
+
+> In Information Technology related  jobs 60% of learned knowledge is not useful after 1.5 half year
+
+I'm not sure if I remember numbers correctly (but I think they are close to original) and the author of this theorem. Also I'm not sure if this was about general IT knowledge or domain knowledge. I was googling a lot for it, but unfortunately I can't find it.
+
+So my firs question is: where can I find the correct version of this statement?
+
+I have also same open questions related this subject.
+
+I talked about this with my colleagues from university and one of them said that this is theorem about stupid person that can't find out what is important to learn. I disagree with him. He is good mobile applications developer. But would be he so good after spending years on a desert island (of course with out his Android based phone ;) or other Internet enabled device)?
+However I think he has right about one important thing - devaluation comes faster or slower depand on knowledge type. And this is my last question: What programming ralated skils doesn't lose value over time?
+
+Some interesting links:
+
+ - http://www.slideshare.net/Al.Simard/knowledge-management-value-chains
+ - http://www.slideshare.net/BillHall/time-value-of-knowledge-timebased-frameworks-for-valuing-knowledge
+ - http://c2.com/cgi/wiki?WhyIsDomainKnowledgeNotValued - ""DomainKnowledge should be maintained the same way a codebase is maintained""
+ -http://www.tinbergen.nl/cost/cost/gustavsson.pdf this studies show that 5% of  skills are lost after one year of unemployment.",3
+4403804,12/09/2010 22:31:03,507387,11/14/2010 14:04:38,129,0,Sound related libraries,"I'm getting into programming for audio and sound and I thought a list of open-source libraries that add audio related functionality would be nice to have, even as a learning resource for us newbies to know what is there and what can be done with audio. So if you know of a library (preferably open source), please add it here. Basically anything that could be useful in audio applications.",language-agnostic,audio,,,,12/11/2010 01:34:10,not a real question,1,69,3,"Sound related libraries I'm getting into programming for audio and sound and I thought a list of open-source libraries that add audio related functionality would be nice to have, even as a learning resource for us newbies to know what is there and what can be done with audio. So if you know of a library (preferably open source), please add it here. Basically anything that could be useful in audio applications.",2
+3902389,10/10/2010 22:01:20,15609,09/17/2008 11:07:50,3133,126,What are the crucial key items in recording technical debt?,"I'm setting up a technical debt register at The Office and want to make it a fairly comprehensive tool.
+
+What are the key pieces of information that we should be recording?",language-agnostic,capacity-planning,technical-debt,,,,open,0,30,10,"What are the crucial key items in recording technical debt? I'm setting up a technical debt register at The Office and want to make it a fairly comprehensive tool.
+
+What are the key pieces of information that we should be recording?",3
+263343,11/04/2008 20:40:30,6434,09/15/2008 09:54:47,68,2,As a programmer how broad does your knowledge have to be ?,"I am pretty focused on software, I try to keep up with all the new stuff that comes out and like a lot of other people I have a hard (but fun :) ) time keeping up. Still I believe you need to keep up so you know the best possible solutions for many problems.
+
+Lately I have gotten more and more into discussions on levels I just don't know enough. Discussions on Infrastructure, do I use a failover here or do I cluster my sql servers over there.
+Discussions on Security about ADFS, Threat modeling and counter measures
+Discussions on Business processes and how they are modeled and how the software is aligned with the business goals.
+
+So the question is : 
+Where do you draw the line ? Is there stuff we really don't need to know anything about ? Or can we identify areas and a level in those areas we need to try to reach.
+",language-agnostic,,,,,01/23/2012 03:49:00,not constructive,1,155,12,"As a programmer how broad does your knowledge have to be ? I am pretty focused on software, I try to keep up with all the new stuff that comes out and like a lot of other people I have a hard (but fun :) ) time keeping up. Still I believe you need to keep up so you know the best possible solutions for many problems.
+
+Lately I have gotten more and more into discussions on levels I just don't know enough. Discussions on Infrastructure, do I use a failover here or do I cluster my sql servers over there.
+Discussions on Security about ADFS, Threat modeling and counter measures
+Discussions on Business processes and how they are modeled and how the software is aligned with the business goals.
+
+So the question is : 
+Where do you draw the line ? Is there stuff we really don't need to know anything about ? Or can we identify areas and a level in those areas we need to try to reach.
+",1
+74852,09/16/2008 17:33:43,1384652,08/01/2008 12:01:23,2179,88,How good are you at a given language?,"I get asked ""how good are you at {a programming language goes here}"" and quite honestly, I'm not sure how to answer them.
+
+I can judge if I am beyond beginner when I know the key structures and could make a basic web page in that language (assuming it's web based) but the line between intermediate and expert is somewhat blurred.",language-agnostic,,,,,01/23/2012 03:46:16,not constructive,1,60,8,"How good are you at a given language? I get asked ""how good are you at {a programming language goes here}"" and quite honestly, I'm not sure how to answer them.
+
+I can judge if I am beyond beginner when I know the key structures and could make a basic web page in that language (assuming it's web based) but the line between intermediate and expert is somewhat blurred.",1
+9182617,02/07/2012 19:33:06,1123502,12/30/2011 20:24:23,28,0,my definition of thread-safety for stackoverflow tag wiki,"Wikipedia has the following definition:
+
+> Thread safety is a computer programming concept applicable in the
+> context of multi-threaded programs. A piece of code is thread-safe if
+> it only manipulates shared data structures in a manner that guarantees
+> safe execution by multiple threads at the same time. There are various strategies for making thread-safe data structures.[1][2] ... and so on ( http://en.wikipedia.org/wiki/Thread-safety )
+
+Great! Code is thread-safe if it operates in thread-safe manner! It's a very, very informative definition!
+
+My proposition -- specifically for stackoverflow tag wiki -- is the following:
+
+**Basically, thread-safety means that program's observable behavior does not depend on eligible thread scheduling order.**
+
+Still, it is a very basic definition. Say, threads may log  messages into log file, and reodering of log messages may be OK. So program observable behavior may vary, but the program may be considered thread-safe.  
+
+Probably, we need to specify allowed types of different program observable behaviors while being thread-safe. Yet another complication: there may be  thread-safe (or thread-unsafe) code, not the whole program.
+
+Note, that tag wiki definition is limited in size. So it may be possible that my concise definition is OK, despite its minor imprecision.
+
+So, the question is: how to precisely define thread-safety for tag wiki?
+
+// Note: I do know about meta.*.stackoverflow, but this question seems not for meta.",language-agnostic,thread-safety,definition,thread-safe,,05/01/2012 17:38:01,off topic,1,216,8,"my definition of thread-safety for stackoverflow tag wiki Wikipedia has the following definition:
+
+> Thread safety is a computer programming concept applicable in the
+> context of multi-threaded programs. A piece of code is thread-safe if
+> it only manipulates shared data structures in a manner that guarantees
+> safe execution by multiple threads at the same time. There are various strategies for making thread-safe data structures.[1][2] ... and so on ( http://en.wikipedia.org/wiki/Thread-safety )
+
+Great! Code is thread-safe if it operates in thread-safe manner! It's a very, very informative definition!
+
+My proposition -- specifically for stackoverflow tag wiki -- is the following:
+
+**Basically, thread-safety means that program's observable behavior does not depend on eligible thread scheduling order.**
+
+Still, it is a very basic definition. Say, threads may log  messages into log file, and reodering of log messages may be OK. So program observable behavior may vary, but the program may be considered thread-safe.  
+
+Probably, we need to specify allowed types of different program observable behaviors while being thread-safe. Yet another complication: there may be  thread-safe (or thread-unsafe) code, not the whole program.
+
+Note, that tag wiki definition is limited in size. So it may be possible that my concise definition is OK, despite its minor imprecision.
+
+So, the question is: how to precisely define thread-safety for tag wiki?
+
+// Note: I do know about meta.*.stackoverflow, but this question seems not for meta.",4
+205281,10/15/2008 15:54:44,4916,09/06/2008 15:33:03,602,29,How does one go about starting a user group for the local community?,"There are many user groups out there for different technologies/platforms/etc. These groups seem to be very prevalent in the bigger cities. For smaller cities, maybe where the technology companies are scarce, finding a local *geek community* can be hard to come by. These groups can be a good source for networking, continued learning, etc. 
+
+If anybody out there has been a part of starting a user group:  
+
+ * How did you go about it? 
+ * How have you kept it alive? 
+ * If it failed, what did you learn that you could pass along to anyone else?
+ * Any other tips for an endeavor?
+
+I wouldn't even know where to begin on this so any help would be greatly appreciated.
+
+",language-agnostic,community,,,,09/30/2011 12:53:04,off topic,1,123,13,"How does one go about starting a user group for the local community? There are many user groups out there for different technologies/platforms/etc. These groups seem to be very prevalent in the bigger cities. For smaller cities, maybe where the technology companies are scarce, finding a local *geek community* can be hard to come by. These groups can be a good source for networking, continued learning, etc. 
+
+If anybody out there has been a part of starting a user group:  
+
+ * How did you go about it? 
+ * How have you kept it alive? 
+ * If it failed, what did you learn that you could pass along to anyone else?
+ * Any other tips for an endeavor?
+
+I wouldn't even know where to begin on this so any help would be greatly appreciated.
+
+",2
+7225447,08/29/2011 02:10:49,871490,07/31/2011 11:30:01,162,0,if(true) Is it pointless?,"I have seen a javascript condition on a web page which was `if(true){//...}` condition. At first i thought it is totally pointless. Then i thought there can be some cases where it is not totally pointless. 
+
+For example
+ 
+We can determine condition parameter on server side which will produce javascript code if(true) or if(false) and this code will look pointless on client side who read that javascript code. 
+
+Is it totally pointless to produce such a code ? 
+What do you think about my example ? Can it be ok in that case ?",language-agnostic,if-statement,condition,,,08/29/2011 06:57:14,not constructive,1,94,4,"if(true) Is it pointless? I have seen a javascript condition on a web page which was `if(true){//...}` condition. At first i thought it is totally pointless. Then i thought there can be some cases where it is not totally pointless. 
+
+For example
+ 
+We can determine condition parameter on server side which will produce javascript code if(true) or if(false) and this code will look pointless on client side who read that javascript code. 
+
+Is it totally pointless to produce such a code ? 
+What do you think about my example ? Can it be ok in that case ?",3
+10618442,05/16/2012 12:23:47,403401,07/27/2010 12:58:25,507,13,Can you really characterize a language as Interpreted or Compiled?,"The distinction between an interpreter and a compiler is largely understood. However I feel that this distinction should be more implementation specific than it is a defining feature of the language itself.
+
+Wikipedia describes [C++ as a *compiled* language][1] and [Perl as *interpreted*][2]. It is not the only place I've come across which makes similar definitions.
+
+
+The distinction becomes much more obscure, when considering the following points:
+
+ - C [can be interpreted][3] 
+
+ - The main implementations of common general-purpose programming languages (Python, C#, Java, ...) will compile source to bytecode targeted at a virtual machine. I understand Clang+LLVM tries to do the same for C code.
+
+ - Some modern languages like Go or Lua, will include both an interpreter and a compiler in their official distribution.
+
+
+Therefore, I am tempted to believe that every programming language can be either interpreted or compiled. On the other hand, I know virtually nothing about writing a compiler so I thought best to ask here:
+
+**Are there any features or characteristics preventing a programming language from being interpreted (and vice-versa) or is it safe to assume that the distinction is only bound to the implementation of the language?** 
+
+
+  [1]: http://en.wikipedia.org/wiki/C++
+  [2]: http://en.wikipedia.org/wiki/Perl
+  [3]: http://root.cern.ch/drupal/content/cint",language-agnostic,compiler,programming-languages,interpreted-language,,05/17/2012 17:20:28,off topic,1,201,10,"Can you really characterize a language as Interpreted or Compiled? The distinction between an interpreter and a compiler is largely understood. However I feel that this distinction should be more implementation specific than it is a defining feature of the language itself.
+
+Wikipedia describes [C++ as a *compiled* language][1] and [Perl as *interpreted*][2]. It is not the only place I've come across which makes similar definitions.
+
+
+The distinction becomes much more obscure, when considering the following points:
+
+ - C [can be interpreted][3] 
+
+ - The main implementations of common general-purpose programming languages (Python, C#, Java, ...) will compile source to bytecode targeted at a virtual machine. I understand Clang+LLVM tries to do the same for C code.
+
+ - Some modern languages like Go or Lua, will include both an interpreter and a compiler in their official distribution.
+
+
+Therefore, I am tempted to believe that every programming language can be either interpreted or compiled. On the other hand, I know virtually nothing about writing a compiler so I thought best to ask here:
+
+**Are there any features or characteristics preventing a programming language from being interpreted (and vice-versa) or is it safe to assume that the distinction is only bound to the implementation of the language?** 
+
+
+  [1]: http://en.wikipedia.org/wiki/C++
+  [2]: http://en.wikipedia.org/wiki/Perl
+  [3]: http://root.cern.ch/drupal/content/cint",4
+3769728,09/22/2010 13:31:12,378783,06/29/2010 08:10:19,170,17,Programing language concise and systematic description,"Can you describe in few sentences or bullets program language you know best? It should be concise, not too long, lets say for one or two slides in presentation, but that contains important classifications of that language. Some details about usage and spread, supported platforms and available libraries. Some strengths and weaknesses. Most important concepts that language offers. Maybe some future expectations or plans in development. You can give score 1-10 if it helps you to grade things like speed or portability.",language-agnostic,programming-languages,language-features,classification,programming-paradigms,09/22/2010 14:16:24,not a real question,1,82,6,"Programing language concise and systematic description Can you describe in few sentences or bullets program language you know best? It should be concise, not too long, lets say for one or two slides in presentation, but that contains important classifications of that language. Some details about usage and spread, supported platforms and available libraries. Some strengths and weaknesses. Most important concepts that language offers. Maybe some future expectations or plans in development. You can give score 1-10 if it helps you to grade things like speed or portability.",5
+11280675,07/01/2012 08:48:25,692456,04/05/2011 08:07:52,1686,60,"Run and interact with a desktop application programmatically, without taking up physical screen space","I need to run an application and interact with it programmatically, without it taking up physical space on my desktop.
+
+I would like run the application 'virtually' and have programmatic access to what would normally be shown on the screen (i.e. each pixel). I also want to be able to send mouse and keyboard events to the program.
+
+The application is web-based but _I don't want to interact with the server directly_ - I need to have a (virtual) browser render the screen and have my code read pixels and send mouse/keyboard events.
+
+What is the most straightforward way to achieve this (Windows or linux, any language)? Any ideas appreciated.
+",language-agnostic,automation,,,,,open,0,107,14,"Run and interact with a desktop application programmatically, without taking up physical screen space I need to run an application and interact with it programmatically, without it taking up physical space on my desktop.
+
+I would like run the application 'virtually' and have programmatic access to what would normally be shown on the screen (i.e. each pixel). I also want to be able to send mouse and keyboard events to the program.
+
+The application is web-based but _I don't want to interact with the server directly_ - I need to have a (virtual) browser render the screen and have my code read pixels and send mouse/keyboard events.
+
+What is the most straightforward way to achieve this (Windows or linux, any language)? Any ideas appreciated.
+",2
+3340171,07/27/2010 01:32:10,38803,11/19/2008 03:23:42,3318,71,"Data structure for when key and value are equally ""important""","So, this is probably a stupid question, but I have a mapping of unique IDs to unique values. Sometimes I want the value for a certain ID, sometimes I want to know the ID of a certain value. I search more than I modify the collection. I'm wondering if there's a special datastructure that makes sense here, or if I should just maintain two copies of the collection (which is never super large)--one keyed by ID, and one keyed by value.
+
+Thanks!",language-agnostic,data-structures,performance,mapping,,,open,0,81,10,"Data structure for when key and value are equally ""important"" So, this is probably a stupid question, but I have a mapping of unique IDs to unique values. Sometimes I want the value for a certain ID, sometimes I want to know the ID of a certain value. I search more than I modify the collection. I'm wondering if there's a special datastructure that makes sense here, or if I should just maintain two copies of the collection (which is never super large)--one keyed by ID, and one keyed by value.
+
+Thanks!",4
+233346,10/24/2008 12:39:06,12862,09/16/2008 16:01:19,714,35,To Buy or To Build That is The Question,"We've been speccing out a rather large app for inventory management and customer sales.  The scope is pretty large and the cost of development is making the suits nervous.  I've been contending that it'll be just as painful to buy an app and try to customize it or worse yet, change our business to fit the software's capabilities.
+
+What are your experiences with this? How can you pitch that building the app in house is better than buying a more inflexable solution?",language-agnostic,business,,,,05/06/2012 23:21:40,off topic,1,83,9,"To Buy or To Build That is The Question We've been speccing out a rather large app for inventory management and customer sales.  The scope is pretty large and the cost of development is making the suits nervous.  I've been contending that it'll be just as painful to buy an app and try to customize it or worse yet, change our business to fit the software's capabilities.
+
+What are your experiences with this? How can you pitch that building the app in house is better than buying a more inflexable solution?",2
+3299985,07/21/2010 13:55:34,397987,07/21/2010 13:09:39,1,0,Idea for final year project,"i hv an idea of making a website using PHP and MYSQL which will maintain a list of all shops and services like plumbers, carpenters, interior decorators etc.(from now on referred to as workers) in an area. Just like ebay sells products, i intend to help the forementioned people (workers) ""sell"" their services.
+I am planning to do this using a website in which the user can put up a notice that he needs people mentioned above for some work. This notice can be forwarded to such people on their mobiles through sms and they can respond if interested. This way a person won't hv to go searching for such people, and these workers would get jobs to do.
+I also plan on letting the user's comment on their work, so people would know who the right person is... I also intend to show the shop locations using gmaps.. i am putting in more thought on new features as well.. This can be extended to practically every city in the world... 
+
+is this good enough for final year project..
+i could use your valuable suggestions and views on this.....
+any recommendations for some other topic are most welcome..
+",language-agnostic,,,,,07/22/2012 02:54:48,not constructive,1,194,5,"Idea for final year project i hv an idea of making a website using PHP and MYSQL which will maintain a list of all shops and services like plumbers, carpenters, interior decorators etc.(from now on referred to as workers) in an area. Just like ebay sells products, i intend to help the forementioned people (workers) ""sell"" their services.
+I am planning to do this using a website in which the user can put up a notice that he needs people mentioned above for some work. This notice can be forwarded to such people on their mobiles through sms and they can respond if interested. This way a person won't hv to go searching for such people, and these workers would get jobs to do.
+I also plan on letting the user's comment on their work, so people would know who the right person is... I also intend to show the shop locations using gmaps.. i am putting in more thought on new features as well.. This can be extended to practically every city in the world... 
+
+is this good enough for final year project..
+i could use your valuable suggestions and views on this.....
+any recommendations for some other topic are most welcome..
+",1
+7577174,09/28/2011 00:42:31,108207,05/16/2009 17:51:55,1223,149,What are the benefits of polyglot programming?,"Wikipedia says that there is ""polyglot programming"" that defines a program that runs both ""in C and PHP"". What does it mean in practice? Theory? Is there a proof that there is or is not an equivalent program for PHP as relating to C and other languages?
+
+What are the benefits of polyglot programming?
+
+THank you",language-agnostic,,,,,09/28/2011 11:42:35,not constructive,1,54,7,"What are the benefits of polyglot programming? Wikipedia says that there is ""polyglot programming"" that defines a program that runs both ""in C and PHP"". What does it mean in practice? Theory? Is there a proof that there is or is not an equivalent program for PHP as relating to C and other languages?
+
+What are the benefits of polyglot programming?
+
+THank you",1
+3137350,06/29/2010 01:55:51,197402,10/27/2009 14:47:05,102,7,What are some pieces of code that exemplify the power/functionality/style of their language of implementation?,"I don't mean to say that any turing-complete programming language can be less powerful than another in terms of computation, but using ""terseness"" instead would not fufill the entire meaning of my question. Power in my mind is a combination of terseness and clarity.",language-agnostic,rosetta-stone,,,,07/01/2010 01:10:40,not a real question,1,44,15,"What are some pieces of code that exemplify the power/functionality/style of their language of implementation? I don't mean to say that any turing-complete programming language can be less powerful than another in terms of computation, but using ""terseness"" instead would not fufill the entire meaning of my question. Power in my mind is a combination of terseness and clarity.",2
+1290655,08/17/2009 21:47:02,135960,07/09/2009 22:49:09,634,42,Books/articles that inspired you,"Some time ago I found a book [""Fatal Defect: Chasing Killer Computer Bugs""][1] by Ivars Peterson. Those who read the book, most probably was impressed by thrilling stories of real live bugs around us. 
+
+Later I come across of well known [Death march][2] by Edward Yourdon. This book was describing so many things happing in my day by day job life.
+
+And what books/articles ""changed"" your live? :)
+
+
+  [1]: http://www.amazon.com/Fatal-Defect-Chasing-Killer-Computer/dp/0679740279
+  [2]: http://books.google.co.il/books?id=FdAZUX9H_gAC&dq=%22Death+March%22+by+Edward+Yourdon&printsec=frontcover&source=bl&ots=5DXg7x9L9m&sig=68dR39q-Y6ItZXuLYoPdvmh9xOE&hl=en&ei=nM6JSobZDoSAnQOX1oXoBA&sa=X&oi=book_result&ct=result&resnum=3#v=onepage&q=&f=false",language-agnostic,books,,,,07/30/2012 03:35:37,not constructive,1,73,4,"Books/articles that inspired you Some time ago I found a book [""Fatal Defect: Chasing Killer Computer Bugs""][1] by Ivars Peterson. Those who read the book, most probably was impressed by thrilling stories of real live bugs around us. 
+
+Later I come across of well known [Death march][2] by Edward Yourdon. This book was describing so many things happing in my day by day job life.
+
+And what books/articles ""changed"" your live? :)
+
+
+  [1]: http://www.amazon.com/Fatal-Defect-Chasing-Killer-Computer/dp/0679740279
+  [2]: http://books.google.co.il/books?id=FdAZUX9H_gAC&dq=%22Death+March%22+by+Edward+Yourdon&printsec=frontcover&source=bl&ots=5DXg7x9L9m&sig=68dR39q-Y6ItZXuLYoPdvmh9xOE&hl=en&ei=nM6JSobZDoSAnQOX1oXoBA&sa=X&oi=book_result&ct=result&resnum=3#v=onepage&q=&f=false",2
+4005677,10/23/2010 19:25:02,385897,07/07/2010 19:28:22,1672,65,Surprising Software Engineering Metrics,"What's the most interesting/surprising Software Engineering metric you know? For example, I find that ""50% of all projects are considered failures"" is quite frightening.",language-agnostic,software-engineering,metrics,,,10/23/2010 20:10:12,not a real question,1,24,4,"Surprising Software Engineering Metrics What's the most interesting/surprising Software Engineering metric you know? For example, I find that ""50% of all projects are considered failures"" is quite frightening.",3
+6908040,08/02/2011 06:23:25,851277,07/19/2011 05:05:42,89,0,What's the best candidate for a comment free programing language?,"The final target is that the code itself serves as document in a natural manner, without using any comment inside `/**/` etc... (should ensure this at language level, not up to the programer)
+
+It should be concise and literal.
+
+So that one who understands English understands the programe.
+
+Many languages like `c/c++/php/java/perl` doesn't hold in this. 
+
+And I even come across some functional programing languages:
+
+	liftIO . return = return
+	liftIO (m >>= f) = liftIO m >>= (liftIO . f)
+
+
+But it doesn't seem to qualify as a comment free language(as you won't understand what it does without document) either.
+
+
+Is there such a language?
+",language-agnostic,language-design,language-features,,,09/10/2011 19:17:33,off topic,1,99,10,"What's the best candidate for a comment free programing language? The final target is that the code itself serves as document in a natural manner, without using any comment inside `/**/` etc... (should ensure this at language level, not up to the programer)
+
+It should be concise and literal.
+
+So that one who understands English understands the programe.
+
+Many languages like `c/c++/php/java/perl` doesn't hold in this. 
+
+And I even come across some functional programing languages:
+
+	liftIO . return = return
+	liftIO (m >>= f) = liftIO m >>= (liftIO . f)
+
+
+But it doesn't seem to qualify as a comment free language(as you won't understand what it does without document) either.
+
+
+Is there such a language?
+",3
+166899,10/03/2008 13:38:45,11545,09/16/2008 09:04:00,72,2,Language showdown: Convert string of digits to array of integers,"I was trying to convert a string containing only base 10 digits (e.g. ""124890"") to an array of corresponding integers (for given example: [1, 2, 4, 8, 9, 0]), in Ruby .
+
+I'm curious about how easily this can be accomplished in Ruby and in other languages.",language-agnostic,string,arrays,ruby,,01/11/2012 23:49:32,not constructive,1,46,10,"Language showdown: Convert string of digits to array of integers I was trying to convert a string containing only base 10 digits (e.g. ""124890"") to an array of corresponding integers (for given example: [1, 2, 4, 8, 9, 0]), in Ruby .
+
+I'm curious about how easily this can be accomplished in Ruby and in other languages.",4
+1242051,08/06/2009 23:22:16,74513,03/06/2009 02:01:08,82,0,Best language for a personal code library?,"I'd like to begin a personal code library to contain all the small utility functions I use on a daily basis but can't find elsewhere on the 'net (I work in a specialized field). In my work, I switch pretty often between different products, so I want something flexible enough that I won't need to recode it over and over again.
+
+My parameters: I work solely in Windows, and I do it remotely with very little in the way of integrated communication. I send little programs, graphics, charts, etc. off to colleagues by email.
+
+
+Here's what I've come up with so far:
+
+ - **.NET**: This seems like a good default choice, but several of the tools I use (MATLAB, MS Office VBA) don't integrate with it, so I couldn't use my library with those tools.
+ - **MATLAB/Python/interpreted language**: Very flexible, easy to write new tools, but bad in integration. Can't call programs directly from any other tool without going through the OS.
+ - **Java**: Better integrated than above, but still not great.
+ - **Compiled language (C++?)**: Maybe the best option, if written with COM interoperability. I haven't seen anything yet that can't call a COM routine, but the ease-of-use isn't great.
+
+And one interesting idea I might need to give more though to:
+
+ - **Shell scripts**: Dead simple, can stuff everything into a directory, pull out the ones you need for a specific project; but inflexible on Windows (.bat files?), if any helper tools are used they require system-level changes (installing things, changing %PATH%)
+
+So if you were creating your own personal utility library that you hope will last for years and would like to remain as flexible as possible, what would you choose?",language-agnostic,utilities,code-snippets,,,09/13/2011 12:48:48,not constructive,1,280,7,"Best language for a personal code library? I'd like to begin a personal code library to contain all the small utility functions I use on a daily basis but can't find elsewhere on the 'net (I work in a specialized field). In my work, I switch pretty often between different products, so I want something flexible enough that I won't need to recode it over and over again.
+
+My parameters: I work solely in Windows, and I do it remotely with very little in the way of integrated communication. I send little programs, graphics, charts, etc. off to colleagues by email.
+
+
+Here's what I've come up with so far:
+
+ - **.NET**: This seems like a good default choice, but several of the tools I use (MATLAB, MS Office VBA) don't integrate with it, so I couldn't use my library with those tools.
+ - **MATLAB/Python/interpreted language**: Very flexible, easy to write new tools, but bad in integration. Can't call programs directly from any other tool without going through the OS.
+ - **Java**: Better integrated than above, but still not great.
+ - **Compiled language (C++?)**: Maybe the best option, if written with COM interoperability. I haven't seen anything yet that can't call a COM routine, but the ease-of-use isn't great.
+
+And one interesting idea I might need to give more though to:
+
+ - **Shell scripts**: Dead simple, can stuff everything into a directory, pull out the ones you need for a specific project; but inflexible on Windows (.bat files?), if any helper tools are used they require system-level changes (installing things, changing %PATH%)
+
+So if you were creating your own personal utility library that you hope will last for years and would like to remain as flexible as possible, what would you choose?",3
+2502631,03/23/2010 18:37:13,6827,09/15/2008 12:41:25,1300,50,How are a session identifiers generated?,"Most web applications depend on some kind of session with the user (for instance, to retain login status). The session id is kept as a cookie in the user's browser and sent with every request. 
+
+To make it hard to guess the *next user's* session these session-ids need to be sparse and somewhat random. The also have to be unique.
+
+The question is - **how to efficiently generate session ids that are sparse and unique?**
+
+[This][1] question has a good answer for unique random numbers, but it seems not scalable for a large range of numbers, simply because the array will end up taking a lot of memory.
+
+
+  [1]: http://stackoverflow.com/questions/196017/unique-random-numbers-in-o1",language-agnostic,random,math,numbers,,,open,0,109,6,"How are a session identifiers generated? Most web applications depend on some kind of session with the user (for instance, to retain login status). The session id is kept as a cookie in the user's browser and sent with every request. 
+
+To make it hard to guess the *next user's* session these session-ids need to be sparse and somewhat random. The also have to be unique.
+
+The question is - **how to efficiently generate session ids that are sparse and unique?**
+
+[This][1] question has a good answer for unique random numbers, but it seems not scalable for a large range of numbers, simply because the array will end up taking a lot of memory.
+
+
+  [1]: http://stackoverflow.com/questions/196017/unique-random-numbers-in-o1",4
+52176,09/09/2008 15:33:58,5413,09/09/2008 13:34:06,1,0,What are the core mathematical concepts a good developer should know?,"Since Graduating from a very small school in 2006 with a badly shaped & outdated program (I'm a foreigner & didnt know any better school at the time) i've come to realize that i missed a lot of basic concepts from a mathematical & software perspective that are mostly the foundations of other higher concepts.
+
+i.e. i tried to listen/watch the open courseware from MIT on [Introduction to Algorithms](http://ocw.mit.edu/OcwWeb/Electrical-Engineering-and-Computer-Science/6-046JFall-2005/CourseHome/) but quickly realized i was missing several mathematical concepts to better understand to course.
+
+So what are the core mathematical concepts a good software engineer should know? and what are the possible books/sites you will recommend me?",language-agnostic,algorithm,books,math,,01/24/2012 07:58:58,not constructive,1,104,11,"What are the core mathematical concepts a good developer should know? Since Graduating from a very small school in 2006 with a badly shaped & outdated program (I'm a foreigner & didnt know any better school at the time) i've come to realize that i missed a lot of basic concepts from a mathematical & software perspective that are mostly the foundations of other higher concepts.
+
+i.e. i tried to listen/watch the open courseware from MIT on [Introduction to Algorithms](http://ocw.mit.edu/OcwWeb/Electrical-Engineering-and-Computer-Science/6-046JFall-2005/CourseHome/) but quickly realized i was missing several mathematical concepts to better understand to course.
+
+So what are the core mathematical concepts a good software engineer should know? and what are the possible books/sites you will recommend me?",4
+9168168,02/06/2012 22:17:39,963546,09/25/2011 11:36:52,127,6,"Talk to my programming language, Interpreter creates code","Are there any programming language where a human would talk into a microphone and some kind of interpreter would understand the ""talking"" and transform it in code.
+
+talk: Computer, make 2 variables. The first one is from type string with name **x** and the second is type double with name **y**. Make variable **y** private.
+
+    String x;
+    private Double y;
+Insere here(where courser is) a loop from 0 to 10 and print the counter to console
+ 
+    for(int counter =0;counter<10;counter++)
+    {
+         print counter;
+    }
+
+If something is not clear enough, the computer could propose more solutions or ask to specify request.
+Of course there is no point in talking to an interpreter to get ""simple"" code like 2 variables or a loop. But you know, sometimes it gets complex. And yes, one should also learn the interpreter language to communicate and become more specific.",language-agnostic,programming-languages,,,,02/07/2012 01:52:36,off topic,1,163,8,"Talk to my programming language, Interpreter creates code Are there any programming language where a human would talk into a microphone and some kind of interpreter would understand the ""talking"" and transform it in code.
+
+talk: Computer, make 2 variables. The first one is from type string with name **x** and the second is type double with name **y**. Make variable **y** private.
+
+    String x;
+    private Double y;
+Insere here(where courser is) a loop from 0 to 10 and print the counter to console
+ 
+    for(int counter =0;counter<10;counter++)
+    {
+         print counter;
+    }
+
+If something is not clear enough, the computer could propose more solutions or ask to specify request.
+Of course there is no point in talking to an interpreter to get ""simple"" code like 2 variables or a loop. But you know, sometimes it gets complex. And yes, one should also learn the interpreter language to communicate and become more specific.",2

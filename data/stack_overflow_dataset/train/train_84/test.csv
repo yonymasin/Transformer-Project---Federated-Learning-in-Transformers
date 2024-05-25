@@ -1,0 +1,1146 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9152219,02/05/2012 19:23:24,215883,11/20/2009 23:42:01,201,10,"With Quartz in Cocoa OSX and iOS, how do you draw lines and ""connect"" shapes?","Using Objective C and some mix of Cocoa and Quartz, I'd like to see some code that gives me a capability something like visio: draw a line from one object to another object, then have it connect and ""lock on"" to the second object, with a colored square to arrow at either end of the line; then, for bonus, have the line stay connected if you drag the objects.  I was thinking, this has to have been done a thousand times already. Anything generic out there, or any code anyone would care to share?
+
+",cocoa,line,draw,quartz,shape,02/06/2012 08:52:36,not a real question,1,95,15,"With Quartz in Cocoa OSX and iOS, how do you draw lines and ""connect"" shapes? Using Objective C and some mix of Cocoa and Quartz, I'd like to see some code that gives me a capability something like visio: draw a line from one object to another object, then have it connect and ""lock on"" to the second object, with a colored square to arrow at either end of the line; then, for bonus, have the line stay connected if you drag the objects.  I was thinking, this has to have been done a thousand times already. Anything generic out there, or any code anyone would care to share?
+
+",5
+5459116,03/28/2011 12:40:43,674698,03/24/2011 10:19:36,3,0,Create cocoa borderless window using nib design,"I am trying a full screen borderless full screen window. I can show it but it appears empty because I don't know how to tell it to use one of my NIB files. I am using following code to create the window:
+
+    int windowLevel = CGShieldingWindowLevel();   
+    NSRect screenRect;
+    screenRect = [[NSScreen mainScreen] frame];
+    ventanaBloqueo = [[Escucha alloc] 
+               initWithContentRect:screenRect
+               styleMask:NSBorderlessWindowMask
+               backing:NSBackingStoreBuffered
+               defer:NO 
+               screen:[NSScreen mainScreen]];
+
+where 'Escucha' is a NSWindow subclass. How could I tell the window use one of my NIB designs?
+
+Regards
+
+
+",cocoa,xcode,,,,,open,0,167,7,"Create cocoa borderless window using nib design I am trying a full screen borderless full screen window. I can show it but it appears empty because I don't know how to tell it to use one of my NIB files. I am using following code to create the window:
+
+    int windowLevel = CGShieldingWindowLevel();   
+    NSRect screenRect;
+    screenRect = [[NSScreen mainScreen] frame];
+    ventanaBloqueo = [[Escucha alloc] 
+               initWithContentRect:screenRect
+               styleMask:NSBorderlessWindowMask
+               backing:NSBackingStoreBuffered
+               defer:NO 
+               screen:[NSScreen mainScreen]];
+
+where 'Escucha' is a NSWindow subclass. How could I tell the window use one of my NIB designs?
+
+Regards
+
+
+",2
+8029132,11/06/2011 18:02:03,471678,10/10/2010 18:39:22,718,55,"Can set either alignment or font, but not both, for NSTextField","I have a panel nib with an outlet for one of its textfields, which is set in the nib to have centered alignment. When I display the panel, I would like this textfield to be bolded.
+Since NSTextField is a subclass of NSControl, it can use the setAttributedStringValue method and take an attributed string. So I incorporated a bold font like this: 
+
+    NSFont *fontBolded = [NSFont fontWithName:@""Baskerville Bold"" size:12.0f];
+    NSDictionary *dictBoldAttr = [NSDictionary dictionaryWithObject:fontBolded forKey:NSFontAttributeName];   
+    NSString *sHelloUser = NSLocalizedString(@""Hello User"", @""Hello User"");
+    NSAttributedString *attrsHelloUser = [[NSAttributedString alloc] initWithString: sHelloUser attributes:dictBoldAttr];
+	[self.fooController.tfPanelCenteredField setAttributedStringValue:attrsHelloUser];  
+    [attrsHelloUser release];
+
+The bolding shows up OK, but the field is now left-aligned.
+
+I tried adding a setAlignment, but it had no effect:
+
+    [self.fooController.tfPanelCenteredField setAlignment:NSCenterTextAlignment];
+
+So I tried adding a centered parapraph style to the attributed string’s attributes:
+
+    NSFont *fontBolded = [NSFont fontWithName:@""Baskerville Bold"" size:12.0f];
+	NSMutableParagraphStyle *paragStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];	
+	[paragStyle setAlignment:NSCenterTextAlignment]; 
+    NSDictionary *dictBoldAttr = [NSDictionary dictionaryWithObjectsAndKeys:paragStyle, NSParagraphStyleAttributeName, fontBolded, NSFontNameAttribute, nil];
+    NSString *sHelloUser = NSLocalizedString(@""Hello User"", @""Hello User"");
+    NSAttributedString *attrsHelloUser = [[NSAttributedString alloc] initWithString: sHelloUser attributes:dictBoldAttr];
+	[self.fooController.tfPanelCenteredField setAttributedStringValue:attrsHelloUser];  
+    [attrsHelloUser release];
+    [paragStyle release];
+
+Now the textfield is centered again, but the bolding is gone. It’s as though the attributed string can accept one *and only one* attribute setting. Am I missing something simple?",cocoa,nstextfield,nsattributedstring,,,,open,0,241,11,"Can set either alignment or font, but not both, for NSTextField I have a panel nib with an outlet for one of its textfields, which is set in the nib to have centered alignment. When I display the panel, I would like this textfield to be bolded.
+Since NSTextField is a subclass of NSControl, it can use the setAttributedStringValue method and take an attributed string. So I incorporated a bold font like this: 
+
+    NSFont *fontBolded = [NSFont fontWithName:@""Baskerville Bold"" size:12.0f];
+    NSDictionary *dictBoldAttr = [NSDictionary dictionaryWithObject:fontBolded forKey:NSFontAttributeName];   
+    NSString *sHelloUser = NSLocalizedString(@""Hello User"", @""Hello User"");
+    NSAttributedString *attrsHelloUser = [[NSAttributedString alloc] initWithString: sHelloUser attributes:dictBoldAttr];
+	[self.fooController.tfPanelCenteredField setAttributedStringValue:attrsHelloUser];  
+    [attrsHelloUser release];
+
+The bolding shows up OK, but the field is now left-aligned.
+
+I tried adding a setAlignment, but it had no effect:
+
+    [self.fooController.tfPanelCenteredField setAlignment:NSCenterTextAlignment];
+
+So I tried adding a centered parapraph style to the attributed string’s attributes:
+
+    NSFont *fontBolded = [NSFont fontWithName:@""Baskerville Bold"" size:12.0f];
+	NSMutableParagraphStyle *paragStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];	
+	[paragStyle setAlignment:NSCenterTextAlignment]; 
+    NSDictionary *dictBoldAttr = [NSDictionary dictionaryWithObjectsAndKeys:paragStyle, NSParagraphStyleAttributeName, fontBolded, NSFontNameAttribute, nil];
+    NSString *sHelloUser = NSLocalizedString(@""Hello User"", @""Hello User"");
+    NSAttributedString *attrsHelloUser = [[NSAttributedString alloc] initWithString: sHelloUser attributes:dictBoldAttr];
+	[self.fooController.tfPanelCenteredField setAttributedStringValue:attrsHelloUser];  
+    [attrsHelloUser release];
+    [paragStyle release];
+
+Now the textfield is centered again, but the bolding is gone. It’s as though the attributed string can accept one *and only one* attribute setting. Am I missing something simple?",3
+6093682,05/23/2011 06:39:29,707238,04/14/2011 03:55:28,1,0,What is a HILO server?,    What is HILO severs? How can we setup HILO server on Mac?,cocoa,,,,,05/24/2011 10:19:27,not a real question,1,16,5,What is a HILO server?     What is HILO severs? How can we setup HILO server on Mac?,1
+3391766,08/02/2010 21:07:47,241978,01/01/2010 16:27:47,71,9,"NSButton in NSToolbarItem (setView) when clicked in ""Text only"" forces mode to ""Icon and Label""","I am trying to recreate the nice textured buttons like Finder, Safari and Transmission have in  their toolbar. First I started by just dragging in a ""Texture button"" in the IB and such. All works well except for when a user sets the toolbar to ""Text only"" mode. When he then clicks the button the toolbar will enable ""Icon and Label"" on it's own. I have remove alles code and delegates from the toolbar to make sure it is not a code issue.
+
+Then, just to make sure, I created a new project (no code at all) and I can reproduce the issue with a clean NSWindow with a NSToolbar with one NSToolbarItem with a NSButton in it.
+
+Adding the NSButtons via code like:
+
+    - (NSArray*)toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar {
+        return [NSArray arrayWithObject:@""myToolbarMenu""];
+    }
+    
+    - (NSArray*)toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar {
+        return [self toolbarAllowedItemIdentifiers:toolbar];
+    }
+    
+    - (NSToolbarItem*)toolbar:(NSToolbar*)toolbar
+        itemForItemIdentifier:(NSString*)str
+    willBeInsertedIntoToolbar:(BOOL)flag
+    {
+        if ([str isEqualToString:@""myToolbarItem""] == YES) {
+            NSToolbarItem* item = [[NSToolbarItem alloc] initWithItemIdentifier:str];
+            [item setView:[[NSButton alloc] init]];
+             [item setMinSize:NSMakeSize(50,50)];
+            [item setMaxSize:NSMakeSize(50,50)];
+            [item setLabel:@""Text""];
+            return [item autorelease];  
+        }
+        return nil;
+    }
+
+But this also has the same effect: when I press a NSToolbarItem with a NSButton in it in ""Text only mode"" the toolbar itself forces it's mode to ""Icon and Text"".
+
+Do you have any idea how I can make it work correctly or perhaps have an alternative to creating the nice looking toolbaritems like Safari etc have?",cocoa,interface-builder,nstoolbar,nstoolbaritem,,,open,0,370,15,"NSButton in NSToolbarItem (setView) when clicked in ""Text only"" forces mode to ""Icon and Label"" I am trying to recreate the nice textured buttons like Finder, Safari and Transmission have in  their toolbar. First I started by just dragging in a ""Texture button"" in the IB and such. All works well except for when a user sets the toolbar to ""Text only"" mode. When he then clicks the button the toolbar will enable ""Icon and Label"" on it's own. I have remove alles code and delegates from the toolbar to make sure it is not a code issue.
+
+Then, just to make sure, I created a new project (no code at all) and I can reproduce the issue with a clean NSWindow with a NSToolbar with one NSToolbarItem with a NSButton in it.
+
+Adding the NSButtons via code like:
+
+    - (NSArray*)toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar {
+        return [NSArray arrayWithObject:@""myToolbarMenu""];
+    }
+    
+    - (NSArray*)toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar {
+        return [self toolbarAllowedItemIdentifiers:toolbar];
+    }
+    
+    - (NSToolbarItem*)toolbar:(NSToolbar*)toolbar
+        itemForItemIdentifier:(NSString*)str
+    willBeInsertedIntoToolbar:(BOOL)flag
+    {
+        if ([str isEqualToString:@""myToolbarItem""] == YES) {
+            NSToolbarItem* item = [[NSToolbarItem alloc] initWithItemIdentifier:str];
+            [item setView:[[NSButton alloc] init]];
+             [item setMinSize:NSMakeSize(50,50)];
+            [item setMaxSize:NSMakeSize(50,50)];
+            [item setLabel:@""Text""];
+            return [item autorelease];  
+        }
+        return nil;
+    }
+
+But this also has the same effect: when I press a NSToolbarItem with a NSButton in it in ""Text only mode"" the toolbar itself forces it's mode to ""Icon and Text"".
+
+Do you have any idea how I can make it work correctly or perhaps have an alternative to creating the nice looking toolbaritems like Safari etc have?",4
+2783241,05/06/2010 17:50:12,274405,02/16/2010 13:50:44,66,1,[Cocoa] Core Animation with an NSView and subviews,"I've subclassed NSView to create a 'container' view (which I've called TRTransitionView) where I will display a subview and animate its replacement for another subview at the click of a button. This all works as you'd expect, except for two issues which both relate to resizing my window.
+
+The first issue relates to resizing my window and toggling between my two views. After resizing a window, my TRTransitionViews subview will appear at seemingly random locations within my TRTransitionView. Additionally, it appears as if the TRTransitionView hasn't stretched correctly and is clipping the contents of its subviews. Ideally, I would like subviews anchored to the top-left of their parent view at all times, and to also grow to expand the size of the parent view.
+
+The second issue relates to an NSTableView I've placed in *viewOne*. When my window is resized, and my TRTransitionView resizes to match its new dimensions, my TableView seems to resize its content quite awkwardly (the entire table seems to jolt around) and the newly expanded space that the table now occupies seems to 'flash' (as if in the process of being animated). Extremely difficult to describe, but is there any way to stop this?
+
+Here's how my TRTransitionView has been configured in Interface Builder's View Size pane.
+![alt text][1]
+
+And for reference, here's my TRTransitionView class:
+
+    -(void) awakeFromNib
+    {
+        [self setWantsLayer:YES];
+    	[self addSubview:[self currentView]];
+    	
+    	transition = [CATransition animation];
+        [transition setType:kCATransitionPush];
+        [transition setSubtype:kCATransitionFromLeft];
+    	
+        [self setAnimations: [NSDictionary dictionaryWithObject:transition forKey:@""subviews""]];
+    }
+    - (void)setCurrentView:(NSView*)newView
+    {
+        if (!currentView) {
+            currentView = newView;
+            return;
+        }
+        [[self animator] replaceSubview:currentView with:newView];
+    	
+        currentView = newView;
+    }
+    
+    -(IBAction) switchToViewOne:(id)sender
+    {
+        [transition setSubtype:kCATransitionFromLeft];
+        [self setCurrentView:viewOne];
+    }
+    -(IBAction) switchToViewTwo:(id)sender
+    {
+        [transition setSubtype:kCATransitionFromRight];
+        [self setCurrentView:viewTwo];
+    }
+
+
+  [1]: http://img146.imageshack.us/img146/8876/screenshot20100506at184.png",cocoa,core,animation,,,,open,0,439,8,"[Cocoa] Core Animation with an NSView and subviews I've subclassed NSView to create a 'container' view (which I've called TRTransitionView) where I will display a subview and animate its replacement for another subview at the click of a button. This all works as you'd expect, except for two issues which both relate to resizing my window.
+
+The first issue relates to resizing my window and toggling between my two views. After resizing a window, my TRTransitionViews subview will appear at seemingly random locations within my TRTransitionView. Additionally, it appears as if the TRTransitionView hasn't stretched correctly and is clipping the contents of its subviews. Ideally, I would like subviews anchored to the top-left of their parent view at all times, and to also grow to expand the size of the parent view.
+
+The second issue relates to an NSTableView I've placed in *viewOne*. When my window is resized, and my TRTransitionView resizes to match its new dimensions, my TableView seems to resize its content quite awkwardly (the entire table seems to jolt around) and the newly expanded space that the table now occupies seems to 'flash' (as if in the process of being animated). Extremely difficult to describe, but is there any way to stop this?
+
+Here's how my TRTransitionView has been configured in Interface Builder's View Size pane.
+![alt text][1]
+
+And for reference, here's my TRTransitionView class:
+
+    -(void) awakeFromNib
+    {
+        [self setWantsLayer:YES];
+    	[self addSubview:[self currentView]];
+    	
+    	transition = [CATransition animation];
+        [transition setType:kCATransitionPush];
+        [transition setSubtype:kCATransitionFromLeft];
+    	
+        [self setAnimations: [NSDictionary dictionaryWithObject:transition forKey:@""subviews""]];
+    }
+    - (void)setCurrentView:(NSView*)newView
+    {
+        if (!currentView) {
+            currentView = newView;
+            return;
+        }
+        [[self animator] replaceSubview:currentView with:newView];
+    	
+        currentView = newView;
+    }
+    
+    -(IBAction) switchToViewOne:(id)sender
+    {
+        [transition setSubtype:kCATransitionFromLeft];
+        [self setCurrentView:viewOne];
+    }
+    -(IBAction) switchToViewTwo:(id)sender
+    {
+        [transition setSubtype:kCATransitionFromRight];
+        [self setCurrentView:viewTwo];
+    }
+
+
+  [1]: http://img146.imageshack.us/img146/8876/screenshot20100506at184.png",3
+4516068,12/23/2010 05:19:46,534677,12/08/2010 07:27:29,1,0,date selected from datepicker ,"Sir,i want to pass the selected date from datepicker to the textbox.
+Can anyone help me?
+Thanks in advance!",cocoa,,,,,,open,0,17,5,"date selected from datepicker  Sir,i want to pass the selected date from datepicker to the textbox.
+Can anyone help me?
+Thanks in advance!",1
+6013787,05/16/2011 06:16:59,732150,04/30/2011 06:52:14,6,0,How to know which slider is selected,"I have multiple sliders in my application,how to know which slider is selected. And how to set the slider values to integer type where double is default type;",cocoa,slider,,,,,open,0,28,7,"How to know which slider is selected I have multiple sliders in my application,how to know which slider is selected. And how to set the slider values to integer type where double is default type;",2
+7194586,08/25/2011 17:24:59,433950,08/28/2010 21:42:02,1126,11,Help with crash log,"My app is crashing on Lion when it awakes from sleep. 
+The problem seems to be with a background thread that is looking for weather info. 
+I'm not sure but I think the crash log is telling me that the autorelease pool is popping objects that are no longer there, can someone help me confirm this?
+
+Here is the relevant details for the Crash log:
+
+
+> Process:         myApp [14187] Identifier:      myApp Version:        
+> ??? (???) Code Type:       X86-64 (Native) Parent Process:  launchd
+> [224]
+> 
+> Date/Time:       2011-08-24 18:58:00.581 -0400 OS Version:      Mac OS
+> X 10.7.1 (11B26) Report Version:  9
+> 
+> Crashed Thread:  7
+> 
+> Exception Type:  EXC_BAD_ACCESS (SIGSEGV) Exception Codes:
+> KERN_INVALID_ADDRESS at 0x0000000000000010
+> 
+> 
+> Application Specific Information: objc[14187]: garbage collection is
+> OFF
+> 
+> 
+> Thread 7 Crashed: 0   libobjc.A.dylib              
+> 	0x00007fff9321700b (anonymous
+> namespace)::AutoreleasePoolPage::pop(void*) + 385 1  
+> com.apple.CoreFoundation      	0x00007fff961306a5
+> _CFAutoreleasePoolPop + 37 2   com.apple.Foundation         
+> 	0x00007fff969350d7 -[NSAutoreleasePool drain] + 154 3  
+> com.piso13.opusDomini         	0x00000001000acb91 -[Weather
+> internalStart] + 417 4   com.apple.Foundation         
+> 	0x00007fff9698b1ea -[NSThread main] + 68 5   com.apple.Foundation    
+> 	0x00007fff9698b162 __NSThread__main__ + 1575 6   libsystem_c.dylib   
+> 	0x00007fff90b068bf _pthread_start + 335 7   libsystem_c.dylib        
+> 	0x00007fff90b09b75 thread_start + 13
+
+
+
+Here is my code for Weather Internal Start:
+
+    -(void)internalStart{
+    	pool = [[NSAutoreleasePool alloc] init];
+    	
+    	forecast = FALSE;
+    	liveweather = FALSE;
+    	
+    	NSString *query = [self generateQuery];
+    	if (query == nil) {
+            [pool drain];
+    		return;
+    	}
+    	
+    	
+    	XmlWrapper * xmlWrapper = [[XmlWrapper alloc] initWithQuery:query delegate:self name:@""liveweather""];
+    	[xmlWrapper release];
+    	
+    	query = [self generateForecastQuery];
+    	xmlWrapper = [[XmlWrapper alloc] initWithQuery:query delegate:self name:@""forecast""];
+    	[xmlWrapper release];
+        
+        [pool drain];
+    
+    }
+
+Should I even be calling [pool drain] ?
+",cocoa,nsthread,nsautoreleasepool,crash-log,,,open,0,453,4,"Help with crash log My app is crashing on Lion when it awakes from sleep. 
+The problem seems to be with a background thread that is looking for weather info. 
+I'm not sure but I think the crash log is telling me that the autorelease pool is popping objects that are no longer there, can someone help me confirm this?
+
+Here is the relevant details for the Crash log:
+
+
+> Process:         myApp [14187] Identifier:      myApp Version:        
+> ??? (???) Code Type:       X86-64 (Native) Parent Process:  launchd
+> [224]
+> 
+> Date/Time:       2011-08-24 18:58:00.581 -0400 OS Version:      Mac OS
+> X 10.7.1 (11B26) Report Version:  9
+> 
+> Crashed Thread:  7
+> 
+> Exception Type:  EXC_BAD_ACCESS (SIGSEGV) Exception Codes:
+> KERN_INVALID_ADDRESS at 0x0000000000000010
+> 
+> 
+> Application Specific Information: objc[14187]: garbage collection is
+> OFF
+> 
+> 
+> Thread 7 Crashed: 0   libobjc.A.dylib              
+> 	0x00007fff9321700b (anonymous
+> namespace)::AutoreleasePoolPage::pop(void*) + 385 1  
+> com.apple.CoreFoundation      	0x00007fff961306a5
+> _CFAutoreleasePoolPop + 37 2   com.apple.Foundation         
+> 	0x00007fff969350d7 -[NSAutoreleasePool drain] + 154 3  
+> com.piso13.opusDomini         	0x00000001000acb91 -[Weather
+> internalStart] + 417 4   com.apple.Foundation         
+> 	0x00007fff9698b1ea -[NSThread main] + 68 5   com.apple.Foundation    
+> 	0x00007fff9698b162 __NSThread__main__ + 1575 6   libsystem_c.dylib   
+> 	0x00007fff90b068bf _pthread_start + 335 7   libsystem_c.dylib        
+> 	0x00007fff90b09b75 thread_start + 13
+
+
+
+Here is my code for Weather Internal Start:
+
+    -(void)internalStart{
+    	pool = [[NSAutoreleasePool alloc] init];
+    	
+    	forecast = FALSE;
+    	liveweather = FALSE;
+    	
+    	NSString *query = [self generateQuery];
+    	if (query == nil) {
+            [pool drain];
+    		return;
+    	}
+    	
+    	
+    	XmlWrapper * xmlWrapper = [[XmlWrapper alloc] initWithQuery:query delegate:self name:@""liveweather""];
+    	[xmlWrapper release];
+    	
+    	query = [self generateForecastQuery];
+    	xmlWrapper = [[XmlWrapper alloc] initWithQuery:query delegate:self name:@""forecast""];
+    	[xmlWrapper release];
+        
+        [pool drain];
+    
+    }
+
+Should I even be calling [pool drain] ?
+",4
+5603748,04/09/2011 08:12:03,24044,10/01/2008 08:08:51,850,12,How to implement zoom/scale in a Cocoa AppKit-application,"How do you implement zoom/scale in a Cocoa AppKit-application (i.e. not maximizing the window but scaling the window and all its subviews)? I think it's called zoomScale in iOS. Can it be done using Core Animations or Quartz 2D (e.g. `CGContextScaleCTM`) or am I forced to implement it manually in all my NSViews, NSCells, etc?",cocoa,osx,zoom,appkit,,,open,0,55,8,"How to implement zoom/scale in a Cocoa AppKit-application How do you implement zoom/scale in a Cocoa AppKit-application (i.e. not maximizing the window but scaling the window and all its subviews)? I think it's called zoomScale in iOS. Can it be done using Core Animations or Quartz 2D (e.g. `CGContextScaleCTM`) or am I forced to implement it manually in all my NSViews, NSCells, etc?",4
+559168,02/17/2009 23:17:31,1200,08/13/2008 12:48:18,3521,76,Creating a Quartz Composer Style interface ,"I'm wanting to add a Quartz Composer ""patch editor"" style interface element to my Cocoa/Objective C(++) application. For those unfamiliar with QC, the patch editor is a visual representation of the patch graph: effectively showing each node and it's properties, and providing a mouse driven select/click/drag interface. It looks like...
+![Quartz Composer Example][1]
+
+I'll be using it to render a specific type of multi-rooted tree, where each node has some associated text and an arc joining it to its children. Users will be clicking on the tree nodes to select them, as well as dragging them around.
+
+At the moment, I'm using a custom NSView inside a scroll view that Quartz draws each node, the arcs etc at each render, and processes mouse and keyboard input by hand (including hit testing, movement and so forth). This seems brutally wheel reinventive, and doesn't interact all that well with Core Animation. I'm hoping someone has some general alternative advice. I'm pondering along the lines of...
+
+- An existing control/3rd party library I've overlooked
+- Make each node in the tree an NSView, and use the normal view structure to handle the input, whilst drawing the graphics in the same way. But then, the inter-node arc rendering doesn't seem to fit naturally into the design
+- Something using a single NSView still, but making each tree node and arc an individual layer
+- Something else
+
+Thanks kindly,
+
+adamw
+
+  [1]: http://files.me.com/archgrove/ya1xhh",cocoa,objective-c,,,,,open,0,229,7,"Creating a Quartz Composer Style interface  I'm wanting to add a Quartz Composer ""patch editor"" style interface element to my Cocoa/Objective C(++) application. For those unfamiliar with QC, the patch editor is a visual representation of the patch graph: effectively showing each node and it's properties, and providing a mouse driven select/click/drag interface. It looks like...
+![Quartz Composer Example][1]
+
+I'll be using it to render a specific type of multi-rooted tree, where each node has some associated text and an arc joining it to its children. Users will be clicking on the tree nodes to select them, as well as dragging them around.
+
+At the moment, I'm using a custom NSView inside a scroll view that Quartz draws each node, the arcs etc at each render, and processes mouse and keyboard input by hand (including hit testing, movement and so forth). This seems brutally wheel reinventive, and doesn't interact all that well with Core Animation. I'm hoping someone has some general alternative advice. I'm pondering along the lines of...
+
+- An existing control/3rd party library I've overlooked
+- Make each node in the tree an NSView, and use the normal view structure to handle the input, whilst drawing the graphics in the same way. But then, the inter-node arc rendering doesn't seem to fit naturally into the design
+- Something using a single NSView still, but making each tree node and arc an individual layer
+- Something else
+
+Thanks kindly,
+
+adamw
+
+  [1]: http://files.me.com/archgrove/ya1xhh",2
+7254709,08/31/2011 08:57:16,499990,11/07/2010 17:44:22,498,18,NSApplicationDelegate class design,"I create my first complex OSX application, working on it i get some doubts about how i use the class that implement NSApplicationDelegate (the class Xcode create by default for Cocoa application ... I.e. MyApplicationAppDelegate.m/h) 
+
+In many tutorials (and books) i see that people create an AppController to manage main or generic  application tasks, i prefer to add my generic task directly into MyApplicationAppDelegate and create specific controllers depending on modules i need to manage. 
+
+For example i add into MyApplicationAppDelegate every IBAction used to open other windows (I.e. open preference panel), every function that are not strictly connected with a specify module/controller and Outlet for the main interface. In MyApplicationDelegate i also add every references of controllers used in my application in a few word this's the core of my application.
+
+I'm really confused because i'm not sure that this's a good design.
+Has MyApplicationAppDelegate been designed for other purposes ? 
+
+I need suggestions and if possible some article about design pattern for cocoa i think...  
+ ",cocoa,design,,,,,open,0,169,3,"NSApplicationDelegate class design I create my first complex OSX application, working on it i get some doubts about how i use the class that implement NSApplicationDelegate (the class Xcode create by default for Cocoa application ... I.e. MyApplicationAppDelegate.m/h) 
+
+In many tutorials (and books) i see that people create an AppController to manage main or generic  application tasks, i prefer to add my generic task directly into MyApplicationAppDelegate and create specific controllers depending on modules i need to manage. 
+
+For example i add into MyApplicationAppDelegate every IBAction used to open other windows (I.e. open preference panel), every function that are not strictly connected with a specify module/controller and Outlet for the main interface. In MyApplicationDelegate i also add every references of controllers used in my application in a few word this's the core of my application.
+
+I'm really confused because i'm not sure that this's a good design.
+Has MyApplicationAppDelegate been designed for other purposes ? 
+
+I need suggestions and if possible some article about design pattern for cocoa i think...  
+ ",2
+9059667,01/30/2012 05:16:51,246604,01/08/2010 17:52:29,277,13,Cocoa WebView navigation white flash,"I'm getting a white flash whenever my WebView navigates between URLs.
+
+In other words, the WebView is in an unrendered state between navigation, and just shows the application's background color.
+
+Any ideas on how to get round this?",cocoa,webview,,,,,open,0,36,5,"Cocoa WebView navigation white flash I'm getting a white flash whenever my WebView navigates between URLs.
+
+In other words, the WebView is in an unrendered state between navigation, and just shows the application's background color.
+
+Any ideas on how to get round this?",2
+4013213,10/25/2010 09:18:40,421174,08/13/2010 18:47:22,6,0,Convert NSPoint in screen coordinates to window coordinates,"I am implementing drag and drop in a cocoa application and I am using the following method from the NSDraggingSource Protocol:
+
+    - (void)draggedImage:(NSImage *)draggedImage movedTo:(NSPoint)screenPoint{
+
+The NSPoint is given in screen coordinates and I need it in window or view coordinates. If the method was called with an NSEvent I could do the following:
+
+        -(void)mouseDown:(NSEvent *)pTheEvent {
+    
+     NSPoint tvarMouseInWindow = [pTheEvent locationInWindow];
+     NSPoint tvarMouseInView   = [self convertPoint:tvarMouseInWindow fromView:nil]; }
+
+But I cannot figure out how to do it with just an NSPoint. Thanks in advance!
+",cocoa,drag-and-drop,,,,,open,0,107,8,"Convert NSPoint in screen coordinates to window coordinates I am implementing drag and drop in a cocoa application and I am using the following method from the NSDraggingSource Protocol:
+
+    - (void)draggedImage:(NSImage *)draggedImage movedTo:(NSPoint)screenPoint{
+
+The NSPoint is given in screen coordinates and I need it in window or view coordinates. If the method was called with an NSEvent I could do the following:
+
+        -(void)mouseDown:(NSEvent *)pTheEvent {
+    
+     NSPoint tvarMouseInWindow = [pTheEvent locationInWindow];
+     NSPoint tvarMouseInView   = [self convertPoint:tvarMouseInWindow fromView:nil]; }
+
+But I cannot figure out how to do it with just an NSPoint. Thanks in advance!
+",2
+2756360,05/03/2010 06:02:43,308405,04/03/2010 18:36:59,171,6,How to find NSOutlineView row index when using NSTreeController,"I'm using an NSTreeController to manage nodes for an NSOutlineView. When the user adds a new item, I create a new object and insert it:
+
+    EntityViewEntityNode *newNode = [EntityViewEntityNode nodeWithName:@""New entity"" entity:newObject];
+    
+    // Insert at end of group
+    //
+    NSIndexPath *insertAt = [pathOfGroupNode indexPathByAddingIndex:[selected.children count]];
+    [entityCollectionTreeController insertObject:newNode atArrangedObjectIndexPath:insertAt];
+
+Now I'd like to open the table column for edit so the user can name the new item. This seems logical:
+
+    NSInteger row = [entityCollectionOutlineView rowForItem:newNode];
+    [entityCollectionOutlineView editColumn:0 row:row withEvent:nil select:YES];
+
+However, row is always -1 indicating the object isn't found. Poking around reveals that the tree controller is not actually putting my objects directly in the tree, but is wrapping them in a node object of its own.
+
+Anyone have insight into how I would go about getting a row index relative to the outline view, so I can do this (without, hopefully, enumerating everything in the outline view and figuring out the mapping back to my node?)
+
+
+",cocoa,,,,,,open,0,179,9,"How to find NSOutlineView row index when using NSTreeController I'm using an NSTreeController to manage nodes for an NSOutlineView. When the user adds a new item, I create a new object and insert it:
+
+    EntityViewEntityNode *newNode = [EntityViewEntityNode nodeWithName:@""New entity"" entity:newObject];
+    
+    // Insert at end of group
+    //
+    NSIndexPath *insertAt = [pathOfGroupNode indexPathByAddingIndex:[selected.children count]];
+    [entityCollectionTreeController insertObject:newNode atArrangedObjectIndexPath:insertAt];
+
+Now I'd like to open the table column for edit so the user can name the new item. This seems logical:
+
+    NSInteger row = [entityCollectionOutlineView rowForItem:newNode];
+    [entityCollectionOutlineView editColumn:0 row:row withEvent:nil select:YES];
+
+However, row is always -1 indicating the object isn't found. Poking around reveals that the tree controller is not actually putting my objects directly in the tree, but is wrapping them in a node object of its own.
+
+Anyone have insight into how I would go about getting a row index relative to the outline view, so I can do this (without, hopefully, enumerating everything in the outline view and figuring out the mapping back to my node?)
+
+
+",1
+2226897,02/09/2010 05:13:48,264843,02/02/2010 23:58:44,173,0,Open panel appears then disappears immediately,"I am using this code:
+
+    	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+	    [openPanel beginForDirectory:nil file:nil types:[NSImage imageFileTypes] modelessDelegate:self didEndSelector:NULL contextInfo:NULL];
+
+This is the only code in the method. When the method is called, the open panel appears on-screen for a second then disappears. How do I prevent this?
+
+Thanks.
+
+",cocoa,objective-c,appkit,xcode,,,open,0,51,6,"Open panel appears then disappears immediately I am using this code:
+
+    	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+	    [openPanel beginForDirectory:nil file:nil types:[NSImage imageFileTypes] modelessDelegate:self didEndSelector:NULL contextInfo:NULL];
+
+This is the only code in the method. When the method is called, the open panel appears on-screen for a second then disappears. How do I prevent this?
+
+Thanks.
+
+",4
+4076069,11/02/2010 08:44:23,494252,11/02/2010 02:54:36,1,0,How to switch language dynamically? ,"I want to change language of my app then a Button is clicked, but without exit the app, i kown a mothed but is not adapt that is thought creating a new nib and *.strings files, and set the prefenence. I want to change the language dynamically, anybody have the experience, please give me a hand. Thanks very much, best wishes.
+----
+thanks for Chils' suggestion.",cocoa,osx-leopard,,,,,open,0,64,6,"How to switch language dynamically?  I want to change language of my app then a Button is clicked, but without exit the app, i kown a mothed but is not adapt that is thought creating a new nib and *.strings files, and set the prefenence. I want to change the language dynamically, anybody have the experience, please give me a hand. Thanks very much, best wishes.
+----
+thanks for Chils' suggestion.",2
+1392880,09/08/2009 09:11:51,126785,06/22/2009 08:37:28,52,2,How to have an NSMenu with dynamic actions,"I want to create an NSMenu with an option similar to the Send To option you'd find in Windows Explorer where it will list the devices attached that you can send the file to.
+
+From my research it seems that it's not possible to define a selector that sends a parameter to the function as well, so it's not a case of having `@selector(@""sendToVolume:1"")`. So how else could I have the menu perform a different task based on which item is clicked when the number of items is unknown?",cocoa,nsmenu,,,,,open,0,88,8,"How to have an NSMenu with dynamic actions I want to create an NSMenu with an option similar to the Send To option you'd find in Windows Explorer where it will list the devices attached that you can send the file to.
+
+From my research it seems that it's not possible to define a selector that sends a parameter to the function as well, so it's not a case of having `@selector(@""sendToVolume:1"")`. So how else could I have the menu perform a different task based on which item is clicked when the number of items is unknown?",2
+5422066,03/24/2011 16:05:07,524481,11/29/2010 23:18:37,33,0,Unable to build using XCode 4 - The selected run destination is not valid for this action,"So I'm horribly confused by this error, other threads on Stack Overflow mention I should set the SDK, but I see no option to do this.  I'm trying to build:http://wafflesoftware.net/shortcut/
+
+And I get no options, and I can only choose My Mac 64-bit, and I want it in 32-bit.  Really beginning to hate XCode 4.
+
+Here is the screenshot when I try to edit my scheme: http://groovyape.com/scheme.png
+
+Thoughts?",cocoa,xcode,xcode4,,,,open,0,67,17,"Unable to build using XCode 4 - The selected run destination is not valid for this action So I'm horribly confused by this error, other threads on Stack Overflow mention I should set the SDK, but I see no option to do this.  I'm trying to build:http://wafflesoftware.net/shortcut/
+
+And I get no options, and I can only choose My Mac 64-bit, and I want it in 32-bit.  Really beginning to hate XCode 4.
+
+Here is the screenshot when I try to edit my scheme: http://groovyape.com/scheme.png
+
+Thoughts?",3
+3132373,06/28/2010 12:35:09,278816,02/22/2010 15:53:21,194,3,The release of Xcode 4,"I'm a paid up iPhone developer. I've really enjoyed the WWDC iTunesU videos and am eagerly awaiting Xcode 4.
+
+My question is simple. When do you think Xcode 4 beta will be released to non-WWDC attending developers? I've been scouring the 'net for days and can't find any decent suggestions at all.",cocoa,xcode,apple,development-environment,,06/29/2010 16:46:56,off topic,1,51,5,"The release of Xcode 4 I'm a paid up iPhone developer. I've really enjoyed the WWDC iTunesU videos and am eagerly awaiting Xcode 4.
+
+My question is simple. When do you think Xcode 4 beta will be released to non-WWDC attending developers? I've been scouring the 'net for days and can't find any decent suggestions at all.",4
+7067575,08/15/2011 16:17:43,895251,08/15/2011 16:17:43,1,0,why does deltaY in scrollWheel method of NSView report often 0.0 when using multitouch pad?,"I have an NSWindow containing a subclassed NSOpenGLView. When using the wheel of a mouse, then every wheel step yields 0.1 if turning the wheel slowly. When using the multitouch pad of a macbook and scrolling slowly, then I get many events with deltaY of 0.0 and sporadically one with 0.3 or 0.4. Does anybody know where this comes from and how it can be switched off? When scrolling in a text editor with the multitouch pad it seems to work.
+
+Thanks for any hints.",cocoa,osx,,,,,open,0,84,15,"why does deltaY in scrollWheel method of NSView report often 0.0 when using multitouch pad? I have an NSWindow containing a subclassed NSOpenGLView. When using the wheel of a mouse, then every wheel step yields 0.1 if turning the wheel slowly. When using the multitouch pad of a macbook and scrolling slowly, then I get many events with deltaY of 0.0 and sporadically one with 0.3 or 0.4. Does anybody know where this comes from and how it can be switched off? When scrolling in a text editor with the multitouch pad it seems to work.
+
+Thanks for any hints.",2
+6877659,07/29/2011 18:52:08,221023,11/29/2009 23:35:32,2902,10,How to get an array of sentences using CFStringTokenizer?,"I've created an string tokenizer like this:
+
+    stringTokenizer = CFStringTokenizerCreate(NULL, (CFStringRef)str, CFRangeMake(0, [str length]), kCFStringTokenizerUnitSentence, userLocale);
+
+But how do I obtain those sentences now from the tokenizer? The CF String Programming Guide doesn't mention CFStringTokenizer or tokens (did a full-text search in the PDF).",cocoa,nsstring,cfstring,,,,open,0,46,9,"How to get an array of sentences using CFStringTokenizer? I've created an string tokenizer like this:
+
+    stringTokenizer = CFStringTokenizerCreate(NULL, (CFStringRef)str, CFRangeMake(0, [str length]), kCFStringTokenizerUnitSentence, userLocale);
+
+But how do I obtain those sentences now from the tokenizer? The CF String Programming Guide doesn't mention CFStringTokenizer or tokens (did a full-text search in the PDF).",3
+894093,05/21/2009 17:25:39,110644,05/21/2009 17:13:34,1,0,"Idiomatic, classy, open-source examples of Cocoa Interfaces?","Greetings, I'm currently learning Cocoa and Objective-C. I've run through ""all"" the tutorials and I'm fairly comfortable with the ObjC language. What I'm looking for now is to learn Cocoa idioms and see real code used in nice-looking Cocoa apps. 
+
+It seems like serious apps (iTunes, etc.) don't just drop in the IB elements. They do a lot more with code to tweak them to look good. (Example: the iTunes playlist drawer. How does one go about getting that styling?)
+
+Here are some examples of nice UI's that are open source that I've found:
+
+ - Smultron http: //tuppis.com/smultron/
+ - Transmission http:// www.transmissionbt.com/
+ - Vienna http:// www.vienna-rss.org/
+ - Gitnub http:// wiki.github.com/Caged/gitnub
+
+Any other suggestions on Open-Source apps that have great Cocoa user interfaces?
+",cocoa,objective-c,,,,,open,0,120,7,"Idiomatic, classy, open-source examples of Cocoa Interfaces? Greetings, I'm currently learning Cocoa and Objective-C. I've run through ""all"" the tutorials and I'm fairly comfortable with the ObjC language. What I'm looking for now is to learn Cocoa idioms and see real code used in nice-looking Cocoa apps. 
+
+It seems like serious apps (iTunes, etc.) don't just drop in the IB elements. They do a lot more with code to tweak them to look good. (Example: the iTunes playlist drawer. How does one go about getting that styling?)
+
+Here are some examples of nice UI's that are open source that I've found:
+
+ - Smultron http: //tuppis.com/smultron/
+ - Transmission http:// www.transmissionbt.com/
+ - Vienna http:// www.vienna-rss.org/
+ - Gitnub http:// wiki.github.com/Caged/gitnub
+
+Any other suggestions on Open-Source apps that have great Cocoa user interfaces?
+",2
+9196109,02/08/2012 15:18:15,778396,05/31/2011 21:31:51,88,4,NSButton with delayed NSMenu - Objective-C/Cocoa,"I want to create an NSButton that sends an action when it is clicked, but when it is pressed for 1 or two seconds it show a NSMenu. Exactly the same as this question [here][1], but since that answer doesn't solve my problem, I decided to ask again.
+
+As an example, go to Finder, open a new window, navigate through some folders and then click the back button: you go to the previous folder. Now click and hold the back button: a menu is displayed. I don't know how to do this with a NSPopUpButton.
+
+
+  [1]: http://stackoverflow.com/questions/3309030/how-to-create-nsbutton-with-delayed-nsmenu",cocoa,delay,show,nsbutton,nsmenu,,open,0,97,6,"NSButton with delayed NSMenu - Objective-C/Cocoa I want to create an NSButton that sends an action when it is clicked, but when it is pressed for 1 or two seconds it show a NSMenu. Exactly the same as this question [here][1], but since that answer doesn't solve my problem, I decided to ask again.
+
+As an example, go to Finder, open a new window, navigate through some folders and then click the back button: you go to the previous folder. Now click and hold the back button: a menu is displayed. I don't know how to do this with a NSPopUpButton.
+
+
+  [1]: http://stackoverflow.com/questions/3309030/how-to-create-nsbutton-with-delayed-nsmenu",5
+2603622,04/08/2010 21:35:05,279565,02/23/2010 14:48:58,1,0,NSCollectionView subclass doesn't call drawRect during drag session despite setNeedsDisplay,"Greetings,
+
+I am puzzled as to how and when **drawRect** is supposed to be called in a **NSCollectionView** subclass.
+
+I implement **drag and drop** operation in order to move **NSCollectionViewItems** within the collection, and would like to draw a visual indication of where the drop would end.
+
+The subclass does not call drawRect during the drag session. (It does during scroll)
+
+Is this the intended operation ?
+Any hint on how to implement this behavior properly are welcome.
+
+A full xcode project of the following code is available at:
+http://babouk.ovh.org/dload/MyCollectionView.zip
+
+Best regards
+
+Code sample:
+
+    @interface CollectionViewAppDelegate : NSObject <NSApplicationDelegate> 
+    {
+        NSWindow            *window;
+        NSMutableArray      *collectionContent;
+    }
+    /* properties declaration */
+    /* KVC compliance declarations */
+    @end
+    
+    @interface MyCollectionView : NSCollectionView
+    @end
+    
+    @interface ItemModel
+    {
+        NSString *name;
+    }
+    @property (copy)  NSString *name;
+    @end
+    
+    @implementation MyCollectionView
+    
+    - (void)drawRect:(NSRect)rect {
+        NSLog(@""DrawRect"");
+    }
+    
+    - (void)mouseDragged:(NSEvent *)aEvent {
+        NSPoint     localPoint = [self convertPoint:[aEvent locationInWindow] fromView:nil];
+        [self dragImage:[NSImage imageNamed:@""Move.png""] 
+                     at:localPoint
+                 offset:NSZeroSize
+                  event:aEvent 
+             pasteboard:nil 
+                 source:self 
+              slideBack:NO];
+    }
+    
+    - (BOOL)prepareForDragOperation:(id < NSDraggingInfo >)sender {
+        return YES;
+    }
+    
+    - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
+        return NSDragOperationEvery;
+    }
+    
+    - (NSDragOperation)draggingUpdated:(id <NSDraggingInfo>)sender {
+        [self setNeedsDisplay:YES];
+     	return NSDragOperationEvery;
+    }
+    
+    - (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal {    
+        return NSDragOperationEvery;
+    }
+    
+    - (void)mouseDown:(NSEvent *)theEvent {
+    }
+    
+    @end
+    
+    @implementation CollectionViewAppDelegate
+    
+    @synthesize window, collectionContent, collectionView;
+    
+    - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+        NSMutableArray *data = [[NSMutableArray alloc] init];
+      /* Fill in data */
+        [self setCollectionContent:data];
+        [data release];
+    }
+    
+    /* dealloc */
+    
+    /* KVC implementation */
+    @end
+    
+    @implementation ItemModel
+    @synthesize name;
+    /* dealloc */
+    @end",cocoa,nscollectionview,drag-and-drop,objective-c,,,open,0,641,10,"NSCollectionView subclass doesn't call drawRect during drag session despite setNeedsDisplay Greetings,
+
+I am puzzled as to how and when **drawRect** is supposed to be called in a **NSCollectionView** subclass.
+
+I implement **drag and drop** operation in order to move **NSCollectionViewItems** within the collection, and would like to draw a visual indication of where the drop would end.
+
+The subclass does not call drawRect during the drag session. (It does during scroll)
+
+Is this the intended operation ?
+Any hint on how to implement this behavior properly are welcome.
+
+A full xcode project of the following code is available at:
+http://babouk.ovh.org/dload/MyCollectionView.zip
+
+Best regards
+
+Code sample:
+
+    @interface CollectionViewAppDelegate : NSObject <NSApplicationDelegate> 
+    {
+        NSWindow            *window;
+        NSMutableArray      *collectionContent;
+    }
+    /* properties declaration */
+    /* KVC compliance declarations */
+    @end
+    
+    @interface MyCollectionView : NSCollectionView
+    @end
+    
+    @interface ItemModel
+    {
+        NSString *name;
+    }
+    @property (copy)  NSString *name;
+    @end
+    
+    @implementation MyCollectionView
+    
+    - (void)drawRect:(NSRect)rect {
+        NSLog(@""DrawRect"");
+    }
+    
+    - (void)mouseDragged:(NSEvent *)aEvent {
+        NSPoint     localPoint = [self convertPoint:[aEvent locationInWindow] fromView:nil];
+        [self dragImage:[NSImage imageNamed:@""Move.png""] 
+                     at:localPoint
+                 offset:NSZeroSize
+                  event:aEvent 
+             pasteboard:nil 
+                 source:self 
+              slideBack:NO];
+    }
+    
+    - (BOOL)prepareForDragOperation:(id < NSDraggingInfo >)sender {
+        return YES;
+    }
+    
+    - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
+        return NSDragOperationEvery;
+    }
+    
+    - (NSDragOperation)draggingUpdated:(id <NSDraggingInfo>)sender {
+        [self setNeedsDisplay:YES];
+     	return NSDragOperationEvery;
+    }
+    
+    - (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal {    
+        return NSDragOperationEvery;
+    }
+    
+    - (void)mouseDown:(NSEvent *)theEvent {
+    }
+    
+    @end
+    
+    @implementation CollectionViewAppDelegate
+    
+    @synthesize window, collectionContent, collectionView;
+    
+    - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+        NSMutableArray *data = [[NSMutableArray alloc] init];
+      /* Fill in data */
+        [self setCollectionContent:data];
+        [data release];
+    }
+    
+    /* dealloc */
+    
+    /* KVC implementation */
+    @end
+    
+    @implementation ItemModel
+    @synthesize name;
+    /* dealloc */
+    @end",4
+1847715,12/04/2009 15:30:57,169459,09/07/2009 02:01:31,36,5,"From Xcode, how do I read data from a text file that is constantly being updated?","I'm working with a GPS module that is transferring data to my mac over a serial RS232-to-USB interface. I've written a objC program that takes the raw data and converts it into meaningful information.
+
+Using a program called goSerial, I'm able to log all incoming data into a text file. I have been able to make my program read the text file and process data line by line.
+
+I would like this procedure to happen in real time i.e. as soon as the data is received, it gets logged into the text file and my program reads it. The first part of this happens automatically that is the text file is being constantly appended (when not open). Is it possible to monitor a text file for appended data and only read new lines? Also, will doing this affect the ability of new incoming data to be saved?
+
+Thanks!!!
+
+(Also, if anyone knows how I may send serial data directly to Xcode, please let me know!)",cocoa,objective-c,file,xcode,serial-port,,open,0,161,16,"From Xcode, how do I read data from a text file that is constantly being updated? I'm working with a GPS module that is transferring data to my mac over a serial RS232-to-USB interface. I've written a objC program that takes the raw data and converts it into meaningful information.
+
+Using a program called goSerial, I'm able to log all incoming data into a text file. I have been able to make my program read the text file and process data line by line.
+
+I would like this procedure to happen in real time i.e. as soon as the data is received, it gets logged into the text file and my program reads it. The first part of this happens automatically that is the text file is being constantly appended (when not open). Is it possible to monitor a text file for appended data and only read new lines? Also, will doing this affect the ability of new incoming data to be saved?
+
+Thanks!!!
+
+(Also, if anyone knows how I may send serial data directly to Xcode, please let me know!)",5
+4780211,01/24/2011 09:04:15,583003,01/12/2011 12:25:50,1,0,[subview setWantsLayer:YES] will bring the subview to the front?,"i have this little cocoa snippet
+
+    [subView setWantsLayer:YES];
+thus,the subView covers all the other subview suppose to be on top of it.How to put it to the back as it should be?",cocoa,calayer,,,,,open,0,34,9,"[subview setWantsLayer:YES] will bring the subview to the front? i have this little cocoa snippet
+
+    [subView setWantsLayer:YES];
+thus,the subView covers all the other subview suppose to be on top of it.How to put it to the back as it should be?",2
+1932991,12/19/2009 14:04:23,166164,08/31/2009 18:40:52,130,10,NSRuleEditor: Criteria for new row,"When I hit the ""+"" button on a row in NSRuleEditor, a new row is created. How can I take influence on the criteria used for that row.
+
+It seems NSRuleEditor defaults to selecting the first criterion sequentially from the list of possible values. I would much rather have the new row match the row where the ""+"" was clicked.",cocoa,,,,,,open,0,59,5,"NSRuleEditor: Criteria for new row When I hit the ""+"" button on a row in NSRuleEditor, a new row is created. How can I take influence on the criteria used for that row.
+
+It seems NSRuleEditor defaults to selecting the first criterion sequentially from the list of possible values. I would much rather have the new row match the row where the ""+"" was clicked.",1
+6146791,05/27/2011 01:10:08,180862,09/29/2009 03:40:19,205,3,Cocoa/Mac - external config settings for running app,"On windows, we use registry or .ini or xml config etc for settings that apps can pull in at run time w/o making code changes. 
+
+On Mac/Cocoa, what're the best approaches to do that and what are the corresponding APIs?",cocoa,registry,application-settings,,,,open,0,40,8,"Cocoa/Mac - external config settings for running app On windows, we use registry or .ini or xml config etc for settings that apps can pull in at run time w/o making code changes. 
+
+On Mac/Cocoa, what're the best approaches to do that and what are the corresponding APIs?",3
+5088935,02/23/2011 09:17:31,619174,02/16/2011 07:02:30,6,0,how to present modal view,"I want to develop an app for iPad where I would like to present a modal view on launch of the app. Please let me know how can I do this?
+
+Regards,
+Dipanjan",cocoa,,,,,10/02/2011 11:43:48,not a real question,1,31,5,"how to present modal view I want to develop an app for iPad where I would like to present a modal view on launch of the app. Please let me know how can I do this?
+
+Regards,
+Dipanjan",1
+6549551,07/01/2011 14:49:27,686184,03/31/2011 16:47:20,65,5,Implementing NSTextInputClient without NSView,"I have an application with custom widgets and custom event handling model (I'm rendering in OpenGL). I would like to implement a text edit view taking advantage of Cocoa text input structures, but I don't know how to generate NSEvent objects to pass to NSTextInputContext. In particular, I'm having problems providing a window number, graphic context and mouse cursor coordinates (since i have to provide them in the window's coordinate system). Probably graphic context isn't needed but mouse coordinates are necessary to handle mouse selection events.
+
+Is there any way I can solve this?",cocoa,osx,,,,,open,0,93,4,"Implementing NSTextInputClient without NSView I have an application with custom widgets and custom event handling model (I'm rendering in OpenGL). I would like to implement a text edit view taking advantage of Cocoa text input structures, but I don't know how to generate NSEvent objects to pass to NSTextInputContext. In particular, I'm having problems providing a window number, graphic context and mouse cursor coordinates (since i have to provide them in the window's coordinate system). Probably graphic context isn't needed but mouse coordinates are necessary to handle mouse selection events.
+
+Is there any way I can solve this?",2
+9939756,03/30/2012 08:50:41,682412,03/29/2011 16:00:41,66,3,Rotation on UILabel causes weird clipping problems,"I have UIButtons, for which I want to rotate the title labels like this:
+
+    button.titleLabel.transform = CGAffineTransformRotate(button.titleLabel.transform, 12*M_PI/180)
+
+The result looks like this: http://imgur.com/LD6q6 (Layer borders for clarification)
+
+clipsToBounds is off for both the button and its label and I have tinkered with pretty much any combination of Autoresizing, Autoresize-masks, enlarging the frame, etc. but literally nothing changes about the way that label is drawn.
+
+Any idea on how I can enlarge the label enough?",cocoa,uikit,uilabel,cgaffinetransform,,,open,0,75,7,"Rotation on UILabel causes weird clipping problems I have UIButtons, for which I want to rotate the title labels like this:
+
+    button.titleLabel.transform = CGAffineTransformRotate(button.titleLabel.transform, 12*M_PI/180)
+
+The result looks like this: http://imgur.com/LD6q6 (Layer borders for clarification)
+
+clipsToBounds is off for both the button and its label and I have tinkered with pretty much any combination of Autoresizing, Autoresize-masks, enlarging the frame, etc. but literally nothing changes about the way that label is drawn.
+
+Any idea on how I can enlarge the label enough?",4
+3876473,10/06/2010 20:14:04,70414,02/24/2009 15:08:15,1484,67,How to type a square character in Xcode ?,"How do I type a square character in Xcode? Not as program code but in a string.
+
+I tried to copy a character but its not working. I am still stuck with:
+
+    aCounty.area = @""301.338 km2"";",cocoa,xcode,,,,,open,0,38,9,"How to type a square character in Xcode ? How do I type a square character in Xcode? Not as program code but in a string.
+
+I tried to copy a character but its not working. I am still stuck with:
+
+    aCounty.area = @""301.338 km2"";",2
+7365609,09/09/2011 18:00:59,886832,08/09/2011 21:53:33,12,0,NSPopupButton not clickable after ValueTransform,"I have an app with an NSPopupButton allowing to specify an option defined as an integer in the entity attributes. For example: ""1,2,3"" where ""2"" is the default value. In Interface builder, I've put an NSObject and an NSArrayController with all required bindings. Entity records are presented in an NSTableView. The popup button is next to the table.
+
+It works fine. When I select a record, I can modify its option using the popup button. When I add a record, the default value ""2"" correctly appears on the popup button.
+
+Of course, using only numbers is not clear for the user, so I created a value transformer to replace numbers by words on the popup button: 1=""Red"", 2=""Green"", 3=""Blue"".
+
+Again, it works well as the correct color name is displayed on the button when I select a record or add a new one. BUT... there is a problem: after implementing this value transformer, the popup button is not clickable anymore and looks as if it were disabled.
+
+I don't understand why. Thank you for your help.
+
+Here is the code of the header file ""ColorOption.h"":
+
+    #import <Foundation/Foundation.h>
+
+    @interface ColorOption : NSArrayController {
+        IBOutlet NSPopUpButton *colorPopup;
+        NSArray *theNumbers;
+    }
+    @property (retain) NSPopUpButton *colorPopup;
+    @property (readwrite, copy) NSArray *theNumbers;
+    @end
+
+    @interface StatusTransformer : NSValueTransformer {
+    }
+    @end
+
+Here is the code of the implementation file ""ColorOption.m"":
+
+    #import ""ColorOption.h""
+
+    @implementation ColorOption
+    @synthesize colorPopup;
+    @synthesize theNumbers;
+
+    -(void)awakeFromNib {
+        [self setTheNumbers:[NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],nil]];
+        StatusTransformer *statusTrans = [[[StatusTransformer alloc] init] autorelease];
+        [NSValueTransformer setValueTransformer:statusTrans forName:@""StatusTransformer""];
+    }
+    @end
+
+    @implementation StatusTransformer
+    + (Class)transformedValueClass { return [NSString class]; }
+    + (BOOL)allowsReverseTransformation { return NO; }
+    - (id)transformedValue:(id)value {
+        switch ([value intValue]) {
+            case 1:
+            return @""Red"";
+            break;
+            case 2:
+            return @""Green"";
+            break;
+            case 3:
+            return @""Blue"";
+            break;
+            default:
+            return @"""";
+            break;
+        }
+    }
+    @end",cocoa,core-data,nspopupbutton,nsvaluetransformer,,,open,0,537,5,"NSPopupButton not clickable after ValueTransform I have an app with an NSPopupButton allowing to specify an option defined as an integer in the entity attributes. For example: ""1,2,3"" where ""2"" is the default value. In Interface builder, I've put an NSObject and an NSArrayController with all required bindings. Entity records are presented in an NSTableView. The popup button is next to the table.
+
+It works fine. When I select a record, I can modify its option using the popup button. When I add a record, the default value ""2"" correctly appears on the popup button.
+
+Of course, using only numbers is not clear for the user, so I created a value transformer to replace numbers by words on the popup button: 1=""Red"", 2=""Green"", 3=""Blue"".
+
+Again, it works well as the correct color name is displayed on the button when I select a record or add a new one. BUT... there is a problem: after implementing this value transformer, the popup button is not clickable anymore and looks as if it were disabled.
+
+I don't understand why. Thank you for your help.
+
+Here is the code of the header file ""ColorOption.h"":
+
+    #import <Foundation/Foundation.h>
+
+    @interface ColorOption : NSArrayController {
+        IBOutlet NSPopUpButton *colorPopup;
+        NSArray *theNumbers;
+    }
+    @property (retain) NSPopUpButton *colorPopup;
+    @property (readwrite, copy) NSArray *theNumbers;
+    @end
+
+    @interface StatusTransformer : NSValueTransformer {
+    }
+    @end
+
+Here is the code of the implementation file ""ColorOption.m"":
+
+    #import ""ColorOption.h""
+
+    @implementation ColorOption
+    @synthesize colorPopup;
+    @synthesize theNumbers;
+
+    -(void)awakeFromNib {
+        [self setTheNumbers:[NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],nil]];
+        StatusTransformer *statusTrans = [[[StatusTransformer alloc] init] autorelease];
+        [NSValueTransformer setValueTransformer:statusTrans forName:@""StatusTransformer""];
+    }
+    @end
+
+    @implementation StatusTransformer
+    + (Class)transformedValueClass { return [NSString class]; }
+    + (BOOL)allowsReverseTransformation { return NO; }
+    - (id)transformedValue:(id)value {
+        switch ([value intValue]) {
+            case 1:
+            return @""Red"";
+            break;
+            case 2:
+            return @""Green"";
+            break;
+            case 3:
+            return @""Blue"";
+            break;
+            default:
+            return @"""";
+            break;
+        }
+    }
+    @end",4
+4278856,11/25/2010 16:00:06,449879,09/16/2010 18:44:21,11,0,NSTextView Chinese/Unicode Characters,"I have a piece of text drawn in my cocoa app but I also need to draw it in a NSTextField and a NSTextView and look exactly the same, they all usually draw fine but if there are unicode or Chinese characters in the text then the NSTextView has large line spaces between the lines, it works perfectly in the nstextfield and when drawing normally.
+
+I have tried every setting that I can find but none affect this issue, has anyone run into this issue before and know of a fix?
+
+You can see the issue in a screenshot at http://cl.ly/3e0U1T2U2G2z341j3O3T
+
+Here is my test code to show the issue
+
+    NSTextField *textField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 50, 100, 100)];
+	[textField setStringValue:@""え？移転！？ TESTTestTer 友達の旦那の店 THIS IS A TEST THIS IS A TEST""];
+	[textField setBordered:NO];
+	[textField setBezeled:NO];
+	[textField setAllowsEditingTextAttributes:YES];
+	[textField setDelegate:self];
+	[textField setFont:[NSFont fontWithName:@""LucidaGrande"" size:12.0]];
+	[textField setTextColor:[NSColor colorWithDeviceRed:(74.0/255.0) green:(74.0/255.0) blue:(74.0/255.0) alpha:1.0]];
+	[[window contentView] addSubview: textField];
+	
+	NSTextView *textView = [[NSTextView alloc] initWithFrame:NSMakeRect(200, 50, 100, 100)];
+	[textView setString:@""え？移転！？ TEST TestTer 友達の旦那の店 THIS IS A TEST THIS IS A TEST""];
+	[textView setDelegate:self];
+	[textView setFont:[NSFont fontWithName:@""LucidaGrande"" size:12.0]];
+	[textView setTextColor:[NSColor colorWithDeviceRed:(74.0/255.0) green:(74.0/255.0) blue:(74.0/255.0) alpha:1.0]];
+	[[textView layoutManager] setTypesetterBehavior:NSTypesetterBehavior_10_2_WithCompatibility];
+	[[textView textContainer] setLineFragmentPadding:0.0];
+	[[window contentView] addSubview: textView];",cocoa,nstextfield,nstextview,,,,open,0,181,3,"NSTextView Chinese/Unicode Characters I have a piece of text drawn in my cocoa app but I also need to draw it in a NSTextField and a NSTextView and look exactly the same, they all usually draw fine but if there are unicode or Chinese characters in the text then the NSTextView has large line spaces between the lines, it works perfectly in the nstextfield and when drawing normally.
+
+I have tried every setting that I can find but none affect this issue, has anyone run into this issue before and know of a fix?
+
+You can see the issue in a screenshot at http://cl.ly/3e0U1T2U2G2z341j3O3T
+
+Here is my test code to show the issue
+
+    NSTextField *textField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 50, 100, 100)];
+	[textField setStringValue:@""え？移転！？ TESTTestTer 友達の旦那の店 THIS IS A TEST THIS IS A TEST""];
+	[textField setBordered:NO];
+	[textField setBezeled:NO];
+	[textField setAllowsEditingTextAttributes:YES];
+	[textField setDelegate:self];
+	[textField setFont:[NSFont fontWithName:@""LucidaGrande"" size:12.0]];
+	[textField setTextColor:[NSColor colorWithDeviceRed:(74.0/255.0) green:(74.0/255.0) blue:(74.0/255.0) alpha:1.0]];
+	[[window contentView] addSubview: textField];
+	
+	NSTextView *textView = [[NSTextView alloc] initWithFrame:NSMakeRect(200, 50, 100, 100)];
+	[textView setString:@""え？移転！？ TEST TestTer 友達の旦那の店 THIS IS A TEST THIS IS A TEST""];
+	[textView setDelegate:self];
+	[textView setFont:[NSFont fontWithName:@""LucidaGrande"" size:12.0]];
+	[textView setTextColor:[NSColor colorWithDeviceRed:(74.0/255.0) green:(74.0/255.0) blue:(74.0/255.0) alpha:1.0]];
+	[[textView layoutManager] setTypesetterBehavior:NSTypesetterBehavior_10_2_WithCompatibility];
+	[[textView textContainer] setLineFragmentPadding:0.0];
+	[[window contentView] addSubview: textView];",3
+523482,02/07/2009 09:05:09,19255,09/19/2008 20:05:33,56,4,Core Data vs sqlite3,"I am already quite familiar with rational databases and have used sqlite (and other databases) in the past. However, Core Data has a certain allure, so I am considering spending some time to learn it for use in my next app.
+
+Is there much benefit to using Core Data over sqlite, or vice versa? What are the pros/cons of each?
+
+I find it hard to justify the cost of learning Core Data when Apple doesn't use it for many of its flagship applications like Mail.app or iPhoto.app - instead opting for sqlite databases. sqlite is also used extensively on the iPhone.
+
+Can those familiar with using both comment on their experience? Perhaps, as with most things, the question is deeper than just one using one over the other?",cocoa,sqlite,core-data,mac,,02/23/2012 23:25:09,not constructive,1,125,4,"Core Data vs sqlite3 I am already quite familiar with rational databases and have used sqlite (and other databases) in the past. However, Core Data has a certain allure, so I am considering spending some time to learn it for use in my next app.
+
+Is there much benefit to using Core Data over sqlite, or vice versa? What are the pros/cons of each?
+
+I find it hard to justify the cost of learning Core Data when Apple doesn't use it for many of its flagship applications like Mail.app or iPhoto.app - instead opting for sqlite databases. sqlite is also used extensively on the iPhone.
+
+Can those familiar with using both comment on their experience? Perhaps, as with most things, the question is deeper than just one using one over the other?",4
+5620234,04/11/2011 10:50:50,688436,04/02/2011 00:02:49,13,1,Prompting the user to logon for encrypted documents,"I have encrypted documents. After unarchiving each document, I need to prompt the user to enter the document password from a logon sheet. I have means to validate password entry against file contents (this part is done). If the password is incorrect the document shall be closed. If the password is correct the document window shall be presented with document contents.
+
+When I attempt to load the logon sheet (via its controller) in the document's `windowControllerDidLoadNib` method I have unrecognized selector error as shown below:
+
+ 
+
+    - (void)windowControllerDidLoadNib:(NSWindowController *)aController
+    {
+        [super windowControllerDidLoadNib:aController];
+        
+        if (!newPasswordController){
+            newPasswordController = [[NewPasswordController alloc] init];
+            newPasswordSheet = [newPasswordController window];
+        }
+        [NSApp beginSheet:newPasswordSheet modalForWindow:[self window]
+            modalDelegate:self
+           didEndSelector:@selector(didNewPasswordEnd:returnCode:contextInfo:) 
+              contextInfo:nil];
+        
+    }
+
+    [_NSControllerObjectProxy copyWithZone:]: unrecognized selector sent to instance 
+
+The method `[NewPasswordController init]` is implemented as follows:
+
+    -(id)init
+    {
+        self = [super initWithWindowNibName:@""NewPassword""];
+        if (self) {
+        }
+        return self;
+    }
+
+where the logon sheet nib file is called `NewPassword`. 
+
+I wonder what went wrong. What is the best way to solve this problem?
+
+
+
+
+",cocoa,,,,,,open,0,311,8,"Prompting the user to logon for encrypted documents I have encrypted documents. After unarchiving each document, I need to prompt the user to enter the document password from a logon sheet. I have means to validate password entry against file contents (this part is done). If the password is incorrect the document shall be closed. If the password is correct the document window shall be presented with document contents.
+
+When I attempt to load the logon sheet (via its controller) in the document's `windowControllerDidLoadNib` method I have unrecognized selector error as shown below:
+
+ 
+
+    - (void)windowControllerDidLoadNib:(NSWindowController *)aController
+    {
+        [super windowControllerDidLoadNib:aController];
+        
+        if (!newPasswordController){
+            newPasswordController = [[NewPasswordController alloc] init];
+            newPasswordSheet = [newPasswordController window];
+        }
+        [NSApp beginSheet:newPasswordSheet modalForWindow:[self window]
+            modalDelegate:self
+           didEndSelector:@selector(didNewPasswordEnd:returnCode:contextInfo:) 
+              contextInfo:nil];
+        
+    }
+
+    [_NSControllerObjectProxy copyWithZone:]: unrecognized selector sent to instance 
+
+The method `[NewPasswordController init]` is implemented as follows:
+
+    -(id)init
+    {
+        self = [super initWithWindowNibName:@""NewPassword""];
+        if (self) {
+        }
+        return self;
+    }
+
+where the logon sheet nib file is called `NewPassword`. 
+
+I wonder what went wrong. What is the best way to solve this problem?
+
+
+
+
+",1

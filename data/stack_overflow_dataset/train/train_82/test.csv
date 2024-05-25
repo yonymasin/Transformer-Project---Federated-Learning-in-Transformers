@@ -1,0 +1,3466 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9355173,02/20/2012 01:37:23,1135677,01/07/2012 07:06:50,18,0,Information retrieval with Perl,"I am working on developing an information retrieval system using Perl.
+I have read some resources online that talks about tagging terms of interest in the corpus with XML following some reference data.Even I have a reference list which i will be using to query the corpus, my question is why are XML tags and indexes needed for the retrieval.
+I mean even using regular expression we could try to find terms in the corpus considering the reference data. 
+Can anybody explain me why is XML actually needed? ",perl,,,,,02/20/2012 12:29:36,not constructive,1,87,4,"Information retrieval with Perl I am working on developing an information retrieval system using Perl.
+I have read some resources online that talks about tagging terms of interest in the corpus with XML following some reference data.Even I have a reference list which i will be using to query the corpus, my question is why are XML tags and indexes needed for the retrieval.
+I mean even using regular expression we could try to find terms in the corpus considering the reference data. 
+Can anybody explain me why is XML actually needed? ",1
+2960488,06/02/2010 18:36:04,58615,01/24/2009 16:21:13,1381,53,"Sorting a directory in perl, taking numbers into account","I think I need some sort of [Schwartzian Transform][1] to get this working, but I'm having trouble figuring it out, as perl isn't my strongest language.
+
+I have a directory with contents as such:
+
+    album1.htm
+    album2.htm
+    album3.htm
+    ....
+    album99.htm
+    album100.htm
+
+I'm trying to get the album with the highest number from this directory (in this case, album100.htm).  Note that timestamps on the files are not a reliable means of determining things, as people are adding old ""missing"" albums after the fact.
+
+The previous developer simply used the code snippet below, but this clearly breaks down once there are more than 9 albums in a directory.
+
+    opendir(DIR, PATH) || print $!;
+    @files = readdir(DIR);
+    foreach $file ( sort(@files) ) {
+        if ( $file =~ /album/ ) {
+            $last_file = $file;
+        }
+    }
+
+  [1]: http://en.wikipedia.org/wiki/Schwartzian_transform ""Schwartzian Transform""",perl,sorting,readdir,,,,open,0,189,9,"Sorting a directory in perl, taking numbers into account I think I need some sort of [Schwartzian Transform][1] to get this working, but I'm having trouble figuring it out, as perl isn't my strongest language.
+
+I have a directory with contents as such:
+
+    album1.htm
+    album2.htm
+    album3.htm
+    ....
+    album99.htm
+    album100.htm
+
+I'm trying to get the album with the highest number from this directory (in this case, album100.htm).  Note that timestamps on the files are not a reliable means of determining things, as people are adding old ""missing"" albums after the fact.
+
+The previous developer simply used the code snippet below, but this clearly breaks down once there are more than 9 albums in a directory.
+
+    opendir(DIR, PATH) || print $!;
+    @files = readdir(DIR);
+    foreach $file ( sort(@files) ) {
+        if ( $file =~ /album/ ) {
+            $last_file = $file;
+        }
+    }
+
+  [1]: http://en.wikipedia.org/wiki/Schwartzian_transform ""Schwartzian Transform""",3
+4241129,11/21/2010 23:49:02,525865,10/15/2010 23:31:26,1,2,tiny runable www::Mechanize examples for the beginner ,"i am very new to Programming and i am just reading the documents.
+For the little project i have read some Perl books and a PHP-Cookbook. 
+But i have choosen some recipes and believe it or not: it looks pretty awful on the screen. I guess that i now need some assistance - 
+
+With my little knowledge is  is hard to do the work...i need some Recipes in Mechanize that work, since some of the following examples are outdated:
+
+[see the cpan-site for the mechanize examples ][1]
+
+i would love to learn more - with real live examples - do you have more .... 
+
+i love to hear from you 
+
+
+  [1]: http://search.cpan.org/~petdance/WWW-Mechanize-1.66/lib/WWW/Mechanize/Examples.pod",perl,mechanize,,,,11/22/2010 19:37:35,not a real question,1,112,8,"tiny runable www::Mechanize examples for the beginner  i am very new to Programming and i am just reading the documents.
+For the little project i have read some Perl books and a PHP-Cookbook. 
+But i have choosen some recipes and believe it or not: it looks pretty awful on the screen. I guess that i now need some assistance - 
+
+With my little knowledge is  is hard to do the work...i need some Recipes in Mechanize that work, since some of the following examples are outdated:
+
+[see the cpan-site for the mechanize examples ][1]
+
+i would love to learn more - with real live examples - do you have more .... 
+
+i love to hear from you 
+
+
+  [1]: http://search.cpan.org/~petdance/WWW-Mechanize-1.66/lib/WWW/Mechanize/Examples.pod",2
+2999137,06/08/2010 16:10:13,314536,04/12/2010 13:17:51,19,0,casting udp streams in perl,"my Perl scripts gets a udp response that is built out of 2 integers + float numbers.
+the problem is that the udp streams is one long stream of bytes.
+how do i cast the stream into parameters using Perl ? ",perl,udp,,,,,open,0,40,5,"casting udp streams in perl my Perl scripts gets a udp response that is built out of 2 integers + float numbers.
+the problem is that the udp streams is one long stream of bytes.
+how do i cast the stream into parameters using Perl ? ",2
+7429215,09/15/2011 10:13:29,946538,09/15/2011 10:13:29,1,0,I need to sort follwing array of hash by account_id. Please give me solution with explanation,"@account_details = ({'account_name' => 'John','account_id' => '4'},{ 'account_name' => 'Tom','account_id' => '2'},{'account_name' => 'Joseph','account_id' => '18'}{'account_name' => 'Rahul','account_id' => '25'});
+Please explain the steps if use Schwartzian Transform.
+",perl,,,,,09/16/2011 03:51:53,not a real question,1,27,16,"I need to sort follwing array of hash by account_id. Please give me solution with explanation @account_details = ({'account_name' => 'John','account_id' => '4'},{ 'account_name' => 'Tom','account_id' => '2'},{'account_name' => 'Joseph','account_id' => '18'}{'account_name' => 'Rahul','account_id' => '25'});
+Please explain the steps if use Schwartzian Transform.
+",1
+5955181,05/10/2011 19:12:54,747100,05/10/2011 15:09:34,1,0,regex_replace to replace certain html tags,"Is there a way to convert BR tags and/or DIV tags to new lines so it will format correctly when I use an <mt:EntryBody$> in a mailto? I was thinking I should look for any P, DIV, and BR tags and replace them with a new line character. So anywhere there is a closing tag put the new line character and remove the opening tag. After I do the above I will remove the rest of the html with remove_html=""1"" but I want to keep the paragraph format.
+
+I thought it can be done using regex_replace but I'm not sure how to write it. Anyone know?",perl,content-management-system,movabletype,,,,open,0,105,6,"regex_replace to replace certain html tags Is there a way to convert BR tags and/or DIV tags to new lines so it will format correctly when I use an <mt:EntryBody$> in a mailto? I was thinking I should look for any P, DIV, and BR tags and replace them with a new line character. So anywhere there is a closing tag put the new line character and remove the opening tag. After I do the above I will remove the rest of the html with remove_html=""1"" but I want to keep the paragraph format.
+
+I thought it can be done using regex_replace but I'm not sure how to write it. Anyone know?",3
+807855,04/30/2009 16:34:07,63950,02/08/2009 20:24:56,3,2,UDP Server listening to broadcast,"Given that:<br />
+The server is on windows xp running ActiveState Perl<br />
+The server is connected to an internal network and an external network<br />
+A computer on the internal network is broadcasting in udp to 10.4.255.255 on port 9722<br />
+
+I need to:<br />
+listen to the broadcast and pass the messages to a function
+
+This is the code I am using:
+<pre><code>
+do {
+  eval {
+    $sock = IO::Socket::INET->new(LocalPort => 9722, Proto => 'udp')
+            or die(""Couldn't open the socket: $@"");
+    1;
+  };
+  warn($@) and sleep(5) if($@);
+} while ($@);
+
+for(my $i = 0;$i `< 20;$i++) {
+  my $string = 'a';
+  $sock-`>recv($string,1024);
+  print &parseInput($string);
+}
+</code></pre>
+
+note that &parseInput returns the original string it was passed.
+
+My problem: <br />
+after calling $sock->recv(), $string becomes empty.  Using another application I can see that without a doubt there is information being broadcast across 10.4.255.255, but I cannot access it.<br />
+if at all possible, I would like to remain using IO::Socket::INET.",perl,activeperl,udp,windows,,,open,0,170,5,"UDP Server listening to broadcast Given that:<br />
+The server is on windows xp running ActiveState Perl<br />
+The server is connected to an internal network and an external network<br />
+A computer on the internal network is broadcasting in udp to 10.4.255.255 on port 9722<br />
+
+I need to:<br />
+listen to the broadcast and pass the messages to a function
+
+This is the code I am using:
+<pre><code>
+do {
+  eval {
+    $sock = IO::Socket::INET->new(LocalPort => 9722, Proto => 'udp')
+            or die(""Couldn't open the socket: $@"");
+    1;
+  };
+  warn($@) and sleep(5) if($@);
+} while ($@);
+
+for(my $i = 0;$i `< 20;$i++) {
+  my $string = 'a';
+  $sock-`>recv($string,1024);
+  print &parseInput($string);
+}
+</code></pre>
+
+note that &parseInput returns the original string it was passed.
+
+My problem: <br />
+after calling $sock->recv(), $string becomes empty.  Using another application I can see that without a doubt there is information being broadcast across 10.4.255.255, but I cannot access it.<br />
+if at all possible, I would like to remain using IO::Socket::INET.",4
+1571737,10/15/2009 11:19:43,45284,12/11/2008 09:46:54,121,1,How to convert spaces to required tabs?,"Hi this is the sample text file with values , i need to remove the  spaces and add the tabs  could any one guide me the process?
+
+Alpha : 12  13   14   15
+Beta  : 14  45   56   67
+Gama  : 89  98   00   00
+
+Thanks in advance.",perl,,,,,01/23/2012 04:06:29,not a real question,1,63,7,"How to convert spaces to required tabs? Hi this is the sample text file with values , i need to remove the  spaces and add the tabs  could any one guide me the process?
+
+Alpha : 12  13   14   15
+Beta  : 14  45   56   67
+Gama  : 89  98   00   00
+
+Thanks in advance.",1
+11598761,07/22/2012 08:25:22,752901,05/13/2011 19:01:18,1013,90,Parse::RecDescent grammar not working as expected,"All i managed to get working is STRING,PARAMS,VARIABLE and FUNCNAME
+There seems to be a problem with FUNCTION, but i just can't see it.
+
+    use strict;
+    use Parse::RecDescent;
+        
+    $::RD_ERRORS = 1; # Make sure the parser dies when it encounters an error
+    $::RD_WARN   = 1; # Enable warnings. This will warn on unused rules &c.
+    $::RD_HINT   = 1; # Give out hints to help fix problems.
+          
+    my $grammar = <<'_GRAMMAR_';
+          		SCRIPT : INSTRUCTION(s /;/)
+        
+          		INSTRUCTION: FUNCTION | VARIABLE ""="" FUNCTION
+        		
+        		FUNCTION : FUNCNAME ""["" PARAMETERS ""]""
+        
+        		FUNCNAME : ""print"" | ""add2"" | ""save"" # ok
+        
+        		PARAMETERS : STRING | STRING /\s*\,\s*/ PARAMETERS # ok
+          		
+        		VARIABLE : /\w[A-Za-z-0-9]{0,10}/i # ok
+        
+        		STRING : /'(?:[^'\\]|\\.)*'/ # ok
+        _GRAMMAR_
+    my $parser2 = Parse::RecDescent->new($grammar);
+    #i test every rule here
+    print ""STRING OK\n"" if $parser2->STRING(""'asd'"");
+    print ""PARAMS OK\n"" if $parser2->PARAMETERS(""'asd','XCV','vfgdg'"");
+    print ""SCRIPT OK\n"" if $parser2->SCRIPT(q(print['hola','asd'];save['hello'];));
+    print ""VARIABLE OK \n"" if $parser2->VARIABLE(""a1"");
+    print ""FUNCTION OK\n"" if $parser2->FUNCTION(q(print['hola','asd']));
+    print ""FUNCNAME OK\n"" if $parser2->FUNCNAME(q(print));
+    print ""INSTRUCTION OK\n"" if $parser2->FUNCTION(q(a0=print['hola','asd'];));
+
+Any help?
+btw my target is this:
+variable=functioname['param1','param2','paramN'];
+function2['param1'];
+etc etc",perl,parsing,grammar,parse-recdescent,,,open,0,342,6,"Parse::RecDescent grammar not working as expected All i managed to get working is STRING,PARAMS,VARIABLE and FUNCNAME
+There seems to be a problem with FUNCTION, but i just can't see it.
+
+    use strict;
+    use Parse::RecDescent;
+        
+    $::RD_ERRORS = 1; # Make sure the parser dies when it encounters an error
+    $::RD_WARN   = 1; # Enable warnings. This will warn on unused rules &c.
+    $::RD_HINT   = 1; # Give out hints to help fix problems.
+          
+    my $grammar = <<'_GRAMMAR_';
+          		SCRIPT : INSTRUCTION(s /;/)
+        
+          		INSTRUCTION: FUNCTION | VARIABLE ""="" FUNCTION
+        		
+        		FUNCTION : FUNCNAME ""["" PARAMETERS ""]""
+        
+        		FUNCNAME : ""print"" | ""add2"" | ""save"" # ok
+        
+        		PARAMETERS : STRING | STRING /\s*\,\s*/ PARAMETERS # ok
+          		
+        		VARIABLE : /\w[A-Za-z-0-9]{0,10}/i # ok
+        
+        		STRING : /'(?:[^'\\]|\\.)*'/ # ok
+        _GRAMMAR_
+    my $parser2 = Parse::RecDescent->new($grammar);
+    #i test every rule here
+    print ""STRING OK\n"" if $parser2->STRING(""'asd'"");
+    print ""PARAMS OK\n"" if $parser2->PARAMETERS(""'asd','XCV','vfgdg'"");
+    print ""SCRIPT OK\n"" if $parser2->SCRIPT(q(print['hola','asd'];save['hello'];));
+    print ""VARIABLE OK \n"" if $parser2->VARIABLE(""a1"");
+    print ""FUNCTION OK\n"" if $parser2->FUNCTION(q(print['hola','asd']));
+    print ""FUNCNAME OK\n"" if $parser2->FUNCNAME(q(print));
+    print ""INSTRUCTION OK\n"" if $parser2->FUNCTION(q(a0=print['hola','asd'];));
+
+Any help?
+btw my target is this:
+variable=functioname['param1','param2','paramN'];
+function2['param1'];
+etc etc",4
+5056862,02/20/2011 11:55:08,525865,10/15/2010 23:31:26,78,2,How to make LWP and HTML::TableExtract spitting out CSV with Text::CSV,"first of all: sorry for being the novice. I am just beginning with Perl. So  don´t be rude with me if i ask beginner-questions. 
+
+This all is a great learning curve for me.
+
+first of all - this is a great community and a very very nice place to be! I love this great place. Today, one last question regarding a parser... I am currently working on a  little parser.
+
+i have had very good results with the first script! This was able to run great! 
+It fetches the data from the page: http://192.68.214.70/km/asps/schulsuche.asp?q=n&a=20
+(note 6142 records) - But note - the data are not separated, so the subequent work with the data is a bit difficult. 
+
+it spits out the data like this: 
+
+    lfd. Nr. Schul- nummer Schulname Straße PLZ Ort Telefon Fax Schulart Webseite
+    1 0401 Mädchenrealschule Marienburg, Abenberg, der Diözese Eichstätt Marienburg 1 91183  Abenberg   09178/509210  Realschulen  mrs-marienburg.homepage.t-online.de 
+    2 6581 Volksschule Abenberg (Grundschule) Güssübelstr. 2 91183  Abenberg   09178/215 09178/905060 Volksschulen  home.t-online.de/home/vs-abenberg 
+    3 6913 Mittelschule Abenberg  Güssübelstr. 2 91183  Abenberg   09178/215 09178/905060 Volksschulen  home.t-online.de/home/vs-abenberg 
+    4 0402 Johann-Turmair-Realschule Staatliche Realschule Abensberg Stadionstraße 46 93326  Abensberg   09443/9143-0,12,13 09443/914330 Realschulen  www.rs-abensberg.de 
+
+But i need to separate the data: with Commas or someting like that! 
+
+And i have a second script. This part can do the CSV-formate. i want to ombine it with the spider-logic. But first lets have a look at the first script: with the great spider-logic. 
+
+see the code that is appropiate: 
+
+     #!/usr/bin/perl
+        use strict;
+        use warnings;
+        use HTML::TableExtract;
+        use LWP::Simple;
+        use Cwd;
+        use POSIX qw(strftime);
+        my $te = HTML::TableExtract->new;
+        my $total_records = 0;
+        my $suchbegriffe = ""e"";
+        my $treffer = 50;
+        my $range = 0;
+        my $url_to_process = ""http://192.68.214.70/km/asps/schulsuche.asp?q="";
+        my $processdir = ""processing"";
+        my $counter = 50;
+        my $displaydate = """";
+        my $percent = 0;
+    
+        &workDir();
+        chdir $processdir;
+        &processURL();
+        print ""\nPress <enter> to continue\n"";
+        <>;
+        $displaydate = strftime('%Y%m%d%H%M%S', localtime);
+        open OUTFILE, "">webdata_for_$suchbegriffe\_$displaydate.txt"";
+        &processData();
+        close OUTFILE;
+        print ""Finished processing $total_records records...\n"";
+        print ""Processed data saved to $ENV{HOME}/$processdir/webdata_for_$suchbegriffe\_$displaydate.txt\n"";
+        unlink 'processing.html';
+        die ""\n"";
+    
+        sub processURL() {
+        print ""\nProcessing $url_to_process$suchbegriffe&a=$treffer&s=$range\n"";
+        getstore(""$url_to_process$suchbegriffe&a=$treffer&s=$range"", 'tempfile.html') or die 'Unable to get page';
+    
+           while( <tempfile.html> ) {
+              open( FH, ""$_"" ) or die;
+              while( <FH> ) {
+                 if( $_ =~ /^.*?(Treffer <b>)(d+)( - )(d+)(</b> w+ w+ <b>)(d+).*/ ) {
+                    $total_records = $6;
+                    print ""Total records to process is $total_records\n"";
+                    }
+                 }
+                 close FH;
+           }
+           unlink 'tempfile.html';
+        }
+    
+        sub processData() {
+           while ( $range <= $total_records) {
+              getstore(""$url_to_process$suchbegriffe&a=$treffer&s=$range"", 'processing.html') or die 'Unable to get page';
+              $te->parse_file('processing.html');
+              my ($table) = $te->tables;
+              for my $row ( $table->rows ) {
+                 cleanup(@$row);
+                 print OUTFILE ""@$row\n"";
+              }
+              $| = 1; 
+              print ""Processed records $range to $counter"";
+              print ""\r"";
+              $counter = $counter + 50;
+              $range = $range + 50;
+              $te = HTML::TableExtract->new;
+           }
+        }
+    
+        sub cleanup() {
+           for ( @_ ) {
+              s/s+/ /g;
+           }
+        }
+    
+        sub workDir() {
+        # Use home directory to process data
+        chdir or die ""$!"";
+        if ( ! -d $processdir ) {
+           mkdir (""$ENV{HOME}/$processdir"", 0755) or die ""Cannot make directory $processdir: $!"";
+           }
+        }  
+
+
+
+But as this-above script-unfortunatley does not take care for the separators i have had to take care for a method, that does look for separators. In order to get the data (output) separated. 
+
+So with the separation i am able to work with the data - and store it in a mysql-table.. or do something else...So here [below] are the bits - that work out the csv-formate Note - i want to put the code below into the code above - to combine the spider-logic of the above mentioned code with the logic of outputting the data in CSV-formate.
+where to set in the code Question: can we identify this point to migrate the one into the other... !? 
+That would be amazing... I hope i could make clear what i have in mind...!? Are we able to use the benefits of the both parts (/scripts ) migrating them into one? 
+
+So the question is: where to set in with the CSV-Script into the script (above)
+
+
+    #!/usr/bin/perl
+    use warnings;
+    use strict;
+    use LWP::Simple;
+    use HTML::TableExtract;
+    use Text::CSV;
+    
+    my $html= get 'http://192.68.214.70/km/asps/schulsuche.asp?q=a&a=20';
+    $html =~ tr/\r//d;     # strip carriage returns
+    $html =~ s/&nbsp;/ /g; # expand spaces
+    
+    my $te = new HTML::TableExtract();
+    $te->parse($html);
+    
+    my @cols = qw(
+        rownum
+        number
+        name
+        phone
+        type
+        website
+    );
+    
+    my @fields = qw(
+        rownum
+        number
+        name
+        street
+        postal
+        town
+        phone
+        fax
+        type
+        website
+    );
+    
+    my $csv = Text::CSV->new({ binary => 1 });
+    
+    foreach my $ts ($te->table_states) {
+        foreach my $row ($ts->rows) {
+    
+            #  trim leading/trailing whitespace from base fields
+            s/^\s+//, s/\s+$// for @$row;
+    
+            # load the fields into the hash using a ""hash slice""
+            my %h;
+            @h{@cols} = @$row;
+    
+            # derive some fields from base fields, again using a hash slice
+            @h{qw/name street postal town/} = split /\n+/, $h{name};
+            @h{qw/phone fax/} = split /\n+/, $h{phone};
+    
+            #  trim leading/trailing whitespace from derived fields
+            s/^\s+//, s/\s+$// for @h{qw/name street postal town/};
+    
+            $csv->combine(@h{@fields});
+            print $csv->string, ""\n"";
+        }
+    }
+
+
+
+The thing is that i have had very good results with the first script! It fetches the data from the page: http://192.68.214.70/km/asps/schulsuche.asp?q=n&a=20
+(note 6142 records) - But note - the data are not separated...!
+
+And i have a second script. This part can do the CSV-formate. i want to combine it with the spider-logic.
+
+where is the part to insert?  I look forward to any and all help.
+
+if i have to be more precice - just let me know... 
+
+
+zero
+
+
+",perl,csv,extract,separator,lwp,,open,0,2009,11,"How to make LWP and HTML::TableExtract spitting out CSV with Text::CSV first of all: sorry for being the novice. I am just beginning with Perl. So  don´t be rude with me if i ask beginner-questions. 
+
+This all is a great learning curve for me.
+
+first of all - this is a great community and a very very nice place to be! I love this great place. Today, one last question regarding a parser... I am currently working on a  little parser.
+
+i have had very good results with the first script! This was able to run great! 
+It fetches the data from the page: http://192.68.214.70/km/asps/schulsuche.asp?q=n&a=20
+(note 6142 records) - But note - the data are not separated, so the subequent work with the data is a bit difficult. 
+
+it spits out the data like this: 
+
+    lfd. Nr. Schul- nummer Schulname Straße PLZ Ort Telefon Fax Schulart Webseite
+    1 0401 Mädchenrealschule Marienburg, Abenberg, der Diözese Eichstätt Marienburg 1 91183  Abenberg   09178/509210  Realschulen  mrs-marienburg.homepage.t-online.de 
+    2 6581 Volksschule Abenberg (Grundschule) Güssübelstr. 2 91183  Abenberg   09178/215 09178/905060 Volksschulen  home.t-online.de/home/vs-abenberg 
+    3 6913 Mittelschule Abenberg  Güssübelstr. 2 91183  Abenberg   09178/215 09178/905060 Volksschulen  home.t-online.de/home/vs-abenberg 
+    4 0402 Johann-Turmair-Realschule Staatliche Realschule Abensberg Stadionstraße 46 93326  Abensberg   09443/9143-0,12,13 09443/914330 Realschulen  www.rs-abensberg.de 
+
+But i need to separate the data: with Commas or someting like that! 
+
+And i have a second script. This part can do the CSV-formate. i want to ombine it with the spider-logic. But first lets have a look at the first script: with the great spider-logic. 
+
+see the code that is appropiate: 
+
+     #!/usr/bin/perl
+        use strict;
+        use warnings;
+        use HTML::TableExtract;
+        use LWP::Simple;
+        use Cwd;
+        use POSIX qw(strftime);
+        my $te = HTML::TableExtract->new;
+        my $total_records = 0;
+        my $suchbegriffe = ""e"";
+        my $treffer = 50;
+        my $range = 0;
+        my $url_to_process = ""http://192.68.214.70/km/asps/schulsuche.asp?q="";
+        my $processdir = ""processing"";
+        my $counter = 50;
+        my $displaydate = """";
+        my $percent = 0;
+    
+        &workDir();
+        chdir $processdir;
+        &processURL();
+        print ""\nPress <enter> to continue\n"";
+        <>;
+        $displaydate = strftime('%Y%m%d%H%M%S', localtime);
+        open OUTFILE, "">webdata_for_$suchbegriffe\_$displaydate.txt"";
+        &processData();
+        close OUTFILE;
+        print ""Finished processing $total_records records...\n"";
+        print ""Processed data saved to $ENV{HOME}/$processdir/webdata_for_$suchbegriffe\_$displaydate.txt\n"";
+        unlink 'processing.html';
+        die ""\n"";
+    
+        sub processURL() {
+        print ""\nProcessing $url_to_process$suchbegriffe&a=$treffer&s=$range\n"";
+        getstore(""$url_to_process$suchbegriffe&a=$treffer&s=$range"", 'tempfile.html') or die 'Unable to get page';
+    
+           while( <tempfile.html> ) {
+              open( FH, ""$_"" ) or die;
+              while( <FH> ) {
+                 if( $_ =~ /^.*?(Treffer <b>)(d+)( - )(d+)(</b> w+ w+ <b>)(d+).*/ ) {
+                    $total_records = $6;
+                    print ""Total records to process is $total_records\n"";
+                    }
+                 }
+                 close FH;
+           }
+           unlink 'tempfile.html';
+        }
+    
+        sub processData() {
+           while ( $range <= $total_records) {
+              getstore(""$url_to_process$suchbegriffe&a=$treffer&s=$range"", 'processing.html') or die 'Unable to get page';
+              $te->parse_file('processing.html');
+              my ($table) = $te->tables;
+              for my $row ( $table->rows ) {
+                 cleanup(@$row);
+                 print OUTFILE ""@$row\n"";
+              }
+              $| = 1; 
+              print ""Processed records $range to $counter"";
+              print ""\r"";
+              $counter = $counter + 50;
+              $range = $range + 50;
+              $te = HTML::TableExtract->new;
+           }
+        }
+    
+        sub cleanup() {
+           for ( @_ ) {
+              s/s+/ /g;
+           }
+        }
+    
+        sub workDir() {
+        # Use home directory to process data
+        chdir or die ""$!"";
+        if ( ! -d $processdir ) {
+           mkdir (""$ENV{HOME}/$processdir"", 0755) or die ""Cannot make directory $processdir: $!"";
+           }
+        }  
+
+
+
+But as this-above script-unfortunatley does not take care for the separators i have had to take care for a method, that does look for separators. In order to get the data (output) separated. 
+
+So with the separation i am able to work with the data - and store it in a mysql-table.. or do something else...So here [below] are the bits - that work out the csv-formate Note - i want to put the code below into the code above - to combine the spider-logic of the above mentioned code with the logic of outputting the data in CSV-formate.
+where to set in the code Question: can we identify this point to migrate the one into the other... !? 
+That would be amazing... I hope i could make clear what i have in mind...!? Are we able to use the benefits of the both parts (/scripts ) migrating them into one? 
+
+So the question is: where to set in with the CSV-Script into the script (above)
+
+
+    #!/usr/bin/perl
+    use warnings;
+    use strict;
+    use LWP::Simple;
+    use HTML::TableExtract;
+    use Text::CSV;
+    
+    my $html= get 'http://192.68.214.70/km/asps/schulsuche.asp?q=a&a=20';
+    $html =~ tr/\r//d;     # strip carriage returns
+    $html =~ s/&nbsp;/ /g; # expand spaces
+    
+    my $te = new HTML::TableExtract();
+    $te->parse($html);
+    
+    my @cols = qw(
+        rownum
+        number
+        name
+        phone
+        type
+        website
+    );
+    
+    my @fields = qw(
+        rownum
+        number
+        name
+        street
+        postal
+        town
+        phone
+        fax
+        type
+        website
+    );
+    
+    my $csv = Text::CSV->new({ binary => 1 });
+    
+    foreach my $ts ($te->table_states) {
+        foreach my $row ($ts->rows) {
+    
+            #  trim leading/trailing whitespace from base fields
+            s/^\s+//, s/\s+$// for @$row;
+    
+            # load the fields into the hash using a ""hash slice""
+            my %h;
+            @h{@cols} = @$row;
+    
+            # derive some fields from base fields, again using a hash slice
+            @h{qw/name street postal town/} = split /\n+/, $h{name};
+            @h{qw/phone fax/} = split /\n+/, $h{phone};
+    
+            #  trim leading/trailing whitespace from derived fields
+            s/^\s+//, s/\s+$// for @h{qw/name street postal town/};
+    
+            $csv->combine(@h{@fields});
+            print $csv->string, ""\n"";
+        }
+    }
+
+
+
+The thing is that i have had very good results with the first script! It fetches the data from the page: http://192.68.214.70/km/asps/schulsuche.asp?q=n&a=20
+(note 6142 records) - But note - the data are not separated...!
+
+And i have a second script. This part can do the CSV-formate. i want to combine it with the spider-logic.
+
+where is the part to insert?  I look forward to any and all help.
+
+if i have to be more precice - just let me know... 
+
+
+zero
+
+
+",5
+6103196,05/23/2011 21:22:34,684088,03/30/2011 14:15:06,1,0,Options Profit and loss formula,"I'm looking for a formula that I can plug in to a perl script to graph an options profit/loss chart. I would appreciate it if anyone has any information on how I can do this, thanks for any help.",perl,,,,,05/24/2011 15:49:40,not a real question,1,39,5,"Options Profit and loss formula I'm looking for a formula that I can plug in to a perl script to graph an options profit/loss chart. I would appreciate it if anyone has any information on how I can do this, thanks for any help.",1
+8662670,12/28/2011 23:57:32,352740,05/28/2010 09:20:53,357,2,Handling Perl critical DBD::ODBC errors gracefully,"I've got a simple Perl script that listens on a network port, accepts data and writes things to a databse using DBD::ODBC. It looks a little bit like this:
+
+    #!/usr/bin/perl
+    my $dbh = DBI->connect('dbi:ODBC:SqlProd',""yay"",""ooo"",{AutoCommit => 0}) || die ""Couldn't connect to db"";
+    my $sth = $dbh->prepare(""insert into table some stuff"");
+
+    $sock = IO::Socket::INET->new(LocalPort => '1234', Proto => 'udp')||die(""Socket: $@"");
+    do {
+        $sock->recv($buf, $MAXLEN);
+        
+        /*parse some data here*/
+        /*bind some parameters to $sth here*/
+
+        my $rv = $sth->execute() || warn logit('warning', ""Error inserting to db: $! $msg"");
+        $dbh->commit() || warn logit('err',""Error committing db transaction: $! $msg"");
+
+    }while(1);
+
+
+This, while being a little crude, works fairly well. However, for reasons unknown, the database goes down and the script crashes saying things like:
+
+
+    DBD::ODBC::st execute failed: [unixODBC][FreeTDS][SQL Server]Write to the server failed     (SQL-08S01) at /usr/local/bin/haproxy-syslog line 117.
+    0 at /usr/local/bin/haproxy-syslog line 117.
+    DBD::ODBC::db commit failed: [unixODBC][FreeTDS][SQL Server]Could not perform COMMIT or     ROLLBACK (SQL-HY000) at /usr/local/bin/haproxy-syslog line 118.
+    Error committing db transaction: Connection reset by peer 
+    DBD::ODBC::db DESTROY failed: [unixODBC][FreeTDS][SQL Server]Could not perform COMMIT or ROLLBACK (SQL-HY000) during global destruction.
+
+If I wanted the script to be resiliant to this sort of failure, either by just waiting for a set amount of time and seeing if the database was awake again, or dropping the data received and pulling more data in from the socket, what would be the best way of going about it? Does the above error mean that $dbh ends up being junk and needing to be re-initialized?",perl,exception-handling,odbc,,,,open,0,329,6,"Handling Perl critical DBD::ODBC errors gracefully I've got a simple Perl script that listens on a network port, accepts data and writes things to a databse using DBD::ODBC. It looks a little bit like this:
+
+    #!/usr/bin/perl
+    my $dbh = DBI->connect('dbi:ODBC:SqlProd',""yay"",""ooo"",{AutoCommit => 0}) || die ""Couldn't connect to db"";
+    my $sth = $dbh->prepare(""insert into table some stuff"");
+
+    $sock = IO::Socket::INET->new(LocalPort => '1234', Proto => 'udp')||die(""Socket: $@"");
+    do {
+        $sock->recv($buf, $MAXLEN);
+        
+        /*parse some data here*/
+        /*bind some parameters to $sth here*/
+
+        my $rv = $sth->execute() || warn logit('warning', ""Error inserting to db: $! $msg"");
+        $dbh->commit() || warn logit('err',""Error committing db transaction: $! $msg"");
+
+    }while(1);
+
+
+This, while being a little crude, works fairly well. However, for reasons unknown, the database goes down and the script crashes saying things like:
+
+
+    DBD::ODBC::st execute failed: [unixODBC][FreeTDS][SQL Server]Write to the server failed     (SQL-08S01) at /usr/local/bin/haproxy-syslog line 117.
+    0 at /usr/local/bin/haproxy-syslog line 117.
+    DBD::ODBC::db commit failed: [unixODBC][FreeTDS][SQL Server]Could not perform COMMIT or     ROLLBACK (SQL-HY000) at /usr/local/bin/haproxy-syslog line 118.
+    Error committing db transaction: Connection reset by peer 
+    DBD::ODBC::db DESTROY failed: [unixODBC][FreeTDS][SQL Server]Could not perform COMMIT or ROLLBACK (SQL-HY000) during global destruction.
+
+If I wanted the script to be resiliant to this sort of failure, either by just waiting for a set amount of time and seeing if the database was awake again, or dropping the data received and pulling more data in from the socket, what would be the best way of going about it? Does the above error mean that $dbh ends up being junk and needing to be re-initialized?",3
+1365876,09/02/2009 04:50:46,154587,08/11/2009 19:18:33,11,0,"For a C++\Java Programmer, what scripting language should I learn first?","*Background:*  Standard RIT computer engineering student.  Took computer science courses (Java, then C++).  I spend a lot of time on tech sites, so I constantly hear about scripting languages like Python, Perl, and Ruby.  Besides them being scripting languages, I basically don't know anything else about them.
+
+I have a lot of experience in ""real"" programming languages, but I recently rediscovered the joy of Bash scripts on my Ubuntu computer (my main computer is a Vista laptop).
+
+*Question:*
+**For a Java\C++ programmer, which scripting language should I learn first or focus on?**
+
+*Reasons:*
+
+1) I need more co-ops, so I need to flesh out my resume.  Does this mean I should work on becoming familiar with all the main scripting languages (and master of none), or would that be redundant?
+
+2) I would like like to use the power of scripting languages to enhance my regular programming.  Which language is best suited for what tasks and what can I do with scripting languages?
+
+3) Lastly, as a small hobby.  I have some ideas for personal projects to make my web browsing more efficient (which I guess would require web/data scraping) and automate certain tasks.  Also, Google App Engine looks interesting, but I'm lazy and I would like to avoid the hard work I associate with Java.",perl,ruby,python,education,,07/25/2012 22:11:14,not constructive,1,217,11,"For a C++\Java Programmer, what scripting language should I learn first? *Background:*  Standard RIT computer engineering student.  Took computer science courses (Java, then C++).  I spend a lot of time on tech sites, so I constantly hear about scripting languages like Python, Perl, and Ruby.  Besides them being scripting languages, I basically don't know anything else about them.
+
+I have a lot of experience in ""real"" programming languages, but I recently rediscovered the joy of Bash scripts on my Ubuntu computer (my main computer is a Vista laptop).
+
+*Question:*
+**For a Java\C++ programmer, which scripting language should I learn first or focus on?**
+
+*Reasons:*
+
+1) I need more co-ops, so I need to flesh out my resume.  Does this mean I should work on becoming familiar with all the main scripting languages (and master of none), or would that be redundant?
+
+2) I would like like to use the power of scripting languages to enhance my regular programming.  Which language is best suited for what tasks and what can I do with scripting languages?
+
+3) Lastly, as a small hobby.  I have some ideas for personal projects to make my web browsing more efficient (which I guess would require web/data scraping) and automate certain tasks.  Also, Google App Engine looks interesting, but I'm lazy and I would like to avoid the hard work I associate with Java.",4
+3006768,06/09/2010 14:28:35,216142,11/21/2009 17:11:41,630,24,Which tool should I use for finding out my memory allocation in Perl?,"I've slurped in a big file using File::Slurp but given the size of the file I can see that I must have it in memory twice or perhaps it's getting inflated by being turned into 16 bit unicode.  How can I best diagnose that sort of a problem in Perl?
+
+The file I pulled in is 800mb in size and my perl process that's analysing that data has roughly 1.6gb allocated at runtime.
+
+I realise that I may be wrong about my reason for the problem but I'm not sure the most efficient way to prove/disprove my theory.",perl,memory-leaks,memory-allocation,,,,open,0,97,13,"Which tool should I use for finding out my memory allocation in Perl? I've slurped in a big file using File::Slurp but given the size of the file I can see that I must have it in memory twice or perhaps it's getting inflated by being turned into 16 bit unicode.  How can I best diagnose that sort of a problem in Perl?
+
+The file I pulled in is 800mb in size and my perl process that's analysing that data has roughly 1.6gb allocated at runtime.
+
+I realise that I may be wrong about my reason for the problem but I'm not sure the most efficient way to prove/disprove my theory.",3
+9983397,04/02/2012 20:31:31,1295706,03/27/2012 13:51:31,19,0,Perl script to make last 4 characters of file name all caps,What would the line be that makes the last 4 characters of a file name all caps?,perl,,,,,04/03/2012 00:40:59,not a real question,1,17,12,Perl script to make last 4 characters of file name all caps What would the line be that makes the last 4 characters of a file name all caps?,1
+9467794,02/27/2012 15:42:31,1235200,02/27/2012 09:22:18,1,0,"Perl program for generating a random ""A, T, G, C"" sequence and mutate it using subroutine?","Perl program for generating a random ""A, T, G, C"" sequence, mutate it by either substitution,deletion,insertion randomly  using subroutine and print the sequence along with no of mutations using subroutine(Bioperl and regular expression modules cannot be used?be used)?",perl,,,,,02/27/2012 20:56:56,not a real question,1,39,16,"Perl program for generating a random ""A, T, G, C"" sequence and mutate it using subroutine? Perl program for generating a random ""A, T, G, C"" sequence, mutate it by either substitution,deletion,insertion randomly  using subroutine and print the sequence along with no of mutations using subroutine(Bioperl and regular expression modules cannot be used?be used)?",1
+3735034,09/17/2010 11:49:53,411883,08/05/2010 11:15:39,64,2,file handlers in perl,"#!/usr/bin/perl 
+open(SARAN,""first.txt"") or die ""Can't Open: $!\n"";
+while($line=<SARAN>)
+{ 
+print ""$line\n"";
+} 
+close SARAN;
+
+Hi,
+In the above perl script, i need one functionality...
+in first.txt, each line starts with some space in front..
+I need to print the lines without space in front...
+What to do.
+
+thanks..",perl,,,,,,open,0,39,4,"file handlers in perl #!/usr/bin/perl 
+open(SARAN,""first.txt"") or die ""Can't Open: $!\n"";
+while($line=<SARAN>)
+{ 
+print ""$line\n"";
+} 
+close SARAN;
+
+Hi,
+In the above perl script, i need one functionality...
+in first.txt, each line starts with some space in front..
+I need to print the lines without space in front...
+What to do.
+
+thanks..",1
+8824873,01/11/2012 18:46:29,1143883,01/11/2012 18:35:38,1,0,Adding HEX character in a file using perl code,"I have to write perl code to enter hex character in file before ""END OF REPORT"" comtent in a file. I want to add 0D 0A 0C.
+
+I am using following command to print this:
+
+print""\x0c"";
+
+this is printing :0D 0A 0D 0A 0C
+
+Kindly help.
+",perl,,,,,01/12/2012 01:02:58,not a real question,1,42,9,"Adding HEX character in a file using perl code I have to write perl code to enter hex character in file before ""END OF REPORT"" comtent in a file. I want to add 0D 0A 0C.
+
+I am using following command to print this:
+
+print""\x0c"";
+
+this is printing :0D 0A 0D 0A 0C
+
+Kindly help.
+",1
+9993478,04/03/2012 12:40:23,970553,09/29/2011 07:01:30,24,1,how to import multiple custom modules in our own perl script?,"I have say 100 custom packages like (file1.pm, file2.pm, file3.pm, file4.pm, file5.pm, file6.pm )
+
+Each file contains one function.
+ 
+ i want to import all in my every simple perl script.
+ How to import them in easy way.  Please suggest any easiest way?",perl,perl-module,,,,,open,0,43,11,"how to import multiple custom modules in our own perl script? I have say 100 custom packages like (file1.pm, file2.pm, file3.pm, file4.pm, file5.pm, file6.pm )
+
+Each file contains one function.
+ 
+ i want to import all in my every simple perl script.
+ How to import them in easy way.  Please suggest any easiest way?",2
+3380507,08/01/2010 02:30:56,1114639,01/28/2010 02:56:52,1,3,Why I can't run perl from Textmate?,"#!/usr/bin/perl -w
+use WWW::Mechanize;
+   print $WWW::Mechanize::VERSION.""\n"";
+
+1) run from Textmate :
+
+Can't locate WWW/Mechanize.pm in @INC (@INC contains: /Applications/TextMate.app/Contents/SharedSupport/Bundles/Perl.tmbundle/Support /Library/Perl/Updates/5.10.0 /System/Library/Perl/5.10.0/darwin-thread-multi-2level /System/Library/Perl/5.10.0 /Library/Perl/5.10.0/darwin-thread-multi-2level /Library/Perl/5.10.0 /Network/Library/Perl/5.10.0/darwin-thread-multi-2level /Network/Library/Perl/5.10.0 /Network/Library/Perl /System/Library/Perl/Extras/5.10.0/darwin-thread-multi-2level /System/Library/Perl/Extras/5.10.0 .) at /Users/xxx/Development/test.pl line 2.
+BEGIN failed--compilation aborted at /Users/xxx/Development/test.pl line 2.
+
+2) run from terminal
+sh-3.2# perl test.pl
+1.64
+
+What should I do?
+Help me please.
+",perl,textmate,,,,,open,0,49,7,"Why I can't run perl from Textmate? #!/usr/bin/perl -w
+use WWW::Mechanize;
+   print $WWW::Mechanize::VERSION.""\n"";
+
+1) run from Textmate :
+
+Can't locate WWW/Mechanize.pm in @INC (@INC contains: /Applications/TextMate.app/Contents/SharedSupport/Bundles/Perl.tmbundle/Support /Library/Perl/Updates/5.10.0 /System/Library/Perl/5.10.0/darwin-thread-multi-2level /System/Library/Perl/5.10.0 /Library/Perl/5.10.0/darwin-thread-multi-2level /Library/Perl/5.10.0 /Network/Library/Perl/5.10.0/darwin-thread-multi-2level /Network/Library/Perl/5.10.0 /Network/Library/Perl /System/Library/Perl/Extras/5.10.0/darwin-thread-multi-2level /System/Library/Perl/Extras/5.10.0 .) at /Users/xxx/Development/test.pl line 2.
+BEGIN failed--compilation aborted at /Users/xxx/Development/test.pl line 2.
+
+2) run from terminal
+sh-3.2# perl test.pl
+1.64
+
+What should I do?
+Help me please.
+",2
+7271418,09/01/2011 13:59:28,120050,06/09/2009 18:57:28,1597,45,Mbox parsing in Perl,"There's a large number of mbox parser modules on CPAN -- Mail::Box, Mail::Util, Mail::Mbox::MessageParser, Mail::POP3::Folder::mbox, Mail::Folder::Mbox, etc etc etc. Does anyone have experience with these and have recommendations for a preferred module?",perl,parsing,email,mbox,,09/01/2011 19:13:17,not a real question,1,32,4,"Mbox parsing in Perl There's a large number of mbox parser modules on CPAN -- Mail::Box, Mail::Util, Mail::Mbox::MessageParser, Mail::POP3::Folder::mbox, Mail::Folder::Mbox, etc etc etc. Does anyone have experience with these and have recommendations for a preferred module?",4
+989243,06/12/2009 21:52:00,121606,06/11/2009 20:52:49,6,0,Perl: Print multiple lines into file after pattern matching,"I need to search for a pattern and write that line as well as the next 3 lines into a file (FILE). Is this a correct way to do it? Thanks.
+
+print FILE if /^abc/;
+$n=3 if /^abc/;
+print FILE if ($n-->0);
+
+Thanks,
+bi",perl,pattern,,,,,open,0,39,9,"Perl: Print multiple lines into file after pattern matching I need to search for a pattern and write that line as well as the next 3 lines into a file (FILE). Is this a correct way to do it? Thanks.
+
+print FILE if /^abc/;
+$n=3 if /^abc/;
+print FILE if ($n-->0);
+
+Thanks,
+bi",2
+5057627,02/20/2011 14:33:53,625291,02/20/2011 14:33:53,1,0,Looking for a way to launch a batch file if a particular string exists in a text file,I am looking for a way to launch a batch file if a particular string exists in a text file. For example - i want to check file.txt for the string 'working'. if it exists - i would like to launch a batch file. ,perl,batch-file,,,,,open,0,45,18,Looking for a way to launch a batch file if a particular string exists in a text file I am looking for a way to launch a batch file if a particular string exists in a text file. For example - i want to check file.txt for the string 'working'. if it exists - i would like to launch a batch file. ,2
+4229562,11/19/2010 21:33:06,296076,03/17/2010 22:03:43,62,5,How to take code reference to constructor?,"I have following code:
+<pre>
+my $coderef = ${MyModule::MyTool->new};
+</pre>
+
+but when I try
+<pre>
+$coderef->();
+</pre>
+
+i got error:
+<pre>
+Not a CODE reference
+</pre>
+
+How can I take reference to constructor (without calling it) and run referenced code late?",perl,,,,,,open,0,29,7,"How to take code reference to constructor? I have following code:
+<pre>
+my $coderef = ${MyModule::MyTool->new};
+</pre>
+
+but when I try
+<pre>
+$coderef->();
+</pre>
+
+i got error:
+<pre>
+Not a CODE reference
+</pre>
+
+How can I take reference to constructor (without calling it) and run referenced code late?",1
+6475343,06/25/2011 02:10:16,413403,08/06/2010 19:07:52,1,0,How I can retrive both the created process output and it's return value,"I created a script, which starts a program, for example the _ls_. I want to get the new program's output and it's return status, **without starting it again**.  I can grab the output, like this:
+
+    my $out = `ls`
+
+So, how I can get the status?
+
+Thanks!",perl,,,,,,open,0,49,13,"How I can retrive both the created process output and it's return value I created a script, which starts a program, for example the _ls_. I want to get the new program's output and it's return status, **without starting it again**.  I can grab the output, like this:
+
+    my $out = `ls`
+
+So, how I can get the status?
+
+Thanks!",1
+7963834,11/01/2011 08:03:52,493892,11/01/2010 17:59:22,17,0,Optamization of perl code for one of the problems?,"Which one of the code will be faster?
+I have been trying some of the community website with problems.
+For a problem I have submitted two solution. 
+My first solution got accepted yet the other one was rejected.
+
+
+
+
+    #INPUT consist of two integer ie 5 10 
+    # 23 200
+    # Solution 1 (accepted)
+
+    @_ = split(/\s/,<>);
+
+    if ( $_[0]%5 != 0 ) {
+    	$_[1] =  sprintf(""%.2f"",$_[1]);
+    	print $_[1];
+    	exit;
+    } 
+    if ( $_[0]+0.5 > $_[1]  ) {
+    	$_[1] =  sprintf(""%.2f"",$_[1]);
+        	print $_[1];
+        	exit;
+    }
+
+    $_[1] = sprintf(""%.2f"",($_[1] - ($_[0]+.5) ) );
+    print $_[1]; 
+    
+Or
+ 
+    #Solution 2 (rejected)
+
+    @_ = split(/\s/,<>);
+
+    if ( $_[0]%5 != 0 ) {
+    	print (sprintf(""%.2f"",$_[1]));
+    	exit;
+    } 
+    if ( $_[0]+0.5 > $_[1]  ) {
+    	print (sprintf(""%.2f"",$_[1]));
+   	exit;
+    }
+
+    print (sprintf(""%.2f"",$_[1]));
+
+
+",perl,,,,,11/01/2011 15:14:03,too localized,1,222,9,"Optamization of perl code for one of the problems? Which one of the code will be faster?
+I have been trying some of the community website with problems.
+For a problem I have submitted two solution. 
+My first solution got accepted yet the other one was rejected.
+
+
+
+
+    #INPUT consist of two integer ie 5 10 
+    # 23 200
+    # Solution 1 (accepted)
+
+    @_ = split(/\s/,<>);
+
+    if ( $_[0]%5 != 0 ) {
+    	$_[1] =  sprintf(""%.2f"",$_[1]);
+    	print $_[1];
+    	exit;
+    } 
+    if ( $_[0]+0.5 > $_[1]  ) {
+    	$_[1] =  sprintf(""%.2f"",$_[1]);
+        	print $_[1];
+        	exit;
+    }
+
+    $_[1] = sprintf(""%.2f"",($_[1] - ($_[0]+.5) ) );
+    print $_[1]; 
+    
+Or
+ 
+    #Solution 2 (rejected)
+
+    @_ = split(/\s/,<>);
+
+    if ( $_[0]%5 != 0 ) {
+    	print (sprintf(""%.2f"",$_[1]));
+    	exit;
+    } 
+    if ( $_[0]+0.5 > $_[1]  ) {
+    	print (sprintf(""%.2f"",$_[1]));
+   	exit;
+    }
+
+    print (sprintf(""%.2f"",$_[1]));
+
+
+",1
+10842629,05/31/2012 23:30:37,1351343,04/23/2012 12:53:02,1,0,perl: undefined symbol: Perl_Gthr_key_ptr,"[root@sherinpc progs]# perl microPred.pl seq.fasta
+
+-microPred started...
+-calculating features-------------
+	-folding original sequences...
+	-calculating miPred sequential and structural features...
+perl: symbol lookup error: ./miPred/ViennaRNA-1.6.4/Perl/blib/arch/auto/RNA/RNA.so: undefined symbol: Perl_Gthr_key_ptr
+	-calculating z-features...(this might take some time as 1,000 random sequences are generated for each original sequence)
+perl: symbol lookup error: ./miPred/ViennaRNA-1.6.4/Perl/blib/arch/auto/RNA/RNA.so: undefined symbol: Perl_Gthr_key_ptr
+	-calculating MFEI1, MFEI2, MFEI3, MFEI4..... 
+	-calculating basepair-related features...
+	-calculating RNAfold-related features...
+	-calculating mfold-related features...
+---------------------------
+	-filtering all features...
+java.io.FileNotFoundException: ../data/seq.fasta.zdata (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:137)
+	at java.io.FileInputStream.<init>(FileInputStream.java:96)
+	at filter_all.main(filter_all.java:16)
+	-formating features...
+java.io.FileNotFoundException: ../data/selected.seq.fasta.-21.features (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:137)
+	at java.io.FileInputStream.<init>(FileInputStream.java:96)
+	at format1.main(format1.java:12)
+	-scaling features into [-1,+1]...
+can't open file ../SVM/seq.fasta.formatted
+	-predicting...
+---------------------------------
+-Results...
+	-Prediction results are written to the file /data/seq.fasta.predict 
+	  (+1 indicates a pre-miRNA candidate, -1 indicates a negative candidate)
+	-All features extracted are written to the file /data/all.seq.fasta.-48.features
+	-Best 21 features used for the prediction are written to the file /data/selected.seq.fasta.-21.features
+-microPred completed successfully...",perl,,,,,06/04/2012 07:58:42,not a real question,1,126,4,"perl: undefined symbol: Perl_Gthr_key_ptr [root@sherinpc progs]# perl microPred.pl seq.fasta
+
+-microPred started...
+-calculating features-------------
+	-folding original sequences...
+	-calculating miPred sequential and structural features...
+perl: symbol lookup error: ./miPred/ViennaRNA-1.6.4/Perl/blib/arch/auto/RNA/RNA.so: undefined symbol: Perl_Gthr_key_ptr
+	-calculating z-features...(this might take some time as 1,000 random sequences are generated for each original sequence)
+perl: symbol lookup error: ./miPred/ViennaRNA-1.6.4/Perl/blib/arch/auto/RNA/RNA.so: undefined symbol: Perl_Gthr_key_ptr
+	-calculating MFEI1, MFEI2, MFEI3, MFEI4..... 
+	-calculating basepair-related features...
+	-calculating RNAfold-related features...
+	-calculating mfold-related features...
+---------------------------
+	-filtering all features...
+java.io.FileNotFoundException: ../data/seq.fasta.zdata (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:137)
+	at java.io.FileInputStream.<init>(FileInputStream.java:96)
+	at filter_all.main(filter_all.java:16)
+	-formating features...
+java.io.FileNotFoundException: ../data/selected.seq.fasta.-21.features (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:137)
+	at java.io.FileInputStream.<init>(FileInputStream.java:96)
+	at format1.main(format1.java:12)
+	-scaling features into [-1,+1]...
+can't open file ../SVM/seq.fasta.formatted
+	-predicting...
+---------------------------------
+-Results...
+	-Prediction results are written to the file /data/seq.fasta.predict 
+	  (+1 indicates a pre-miRNA candidate, -1 indicates a negative candidate)
+	-All features extracted are written to the file /data/all.seq.fasta.-48.features
+	-Best 21 features used for the prediction are written to the file /data/selected.seq.fasta.-21.features
+-microPred completed successfully...",1
+8276,08/11/2008 22:12:04,923,08/10/2008 14:25:39,11,1,Class::DBI-like library for php?,"I have inherited an old crusty PHP application, and I'd like to refactor it into something a little nicer to deal with, but in a gradual manner. In perl's CPAN, there is a series of classes around Class::DBI that allow you to use database rows as the basis for objects in your code, with the library generating accessor methods etc as appropriate, but also allowing you to add additional methods.
+
+Does anyone know of something like this for PHP? Especially something that doesn't require wholesale adoption of a ""framework""... bonus points if it works in PHP4 too, but to be honest, I'd love to have another reason to ditch that. :-)",perl,php,,,,,open,0,110,4,"Class::DBI-like library for php? I have inherited an old crusty PHP application, and I'd like to refactor it into something a little nicer to deal with, but in a gradual manner. In perl's CPAN, there is a series of classes around Class::DBI that allow you to use database rows as the basis for objects in your code, with the library generating accessor methods etc as appropriate, but also allowing you to add additional methods.
+
+Does anyone know of something like this for PHP? Especially something that doesn't require wholesale adoption of a ""framework""... bonus points if it works in PHP4 too, but to be honest, I'd love to have another reason to ditch that. :-)",2
+1888577,12/11/2009 14:53:20,113247,05/27/2009 15:31:29,249,0,Perl and text parsing,What do people mean when they say “Perl is very good in parsing”? By parsing how is Perl different from other scripting languages like python or ruby. How is it more powerful?   ,perl,scripting,scripting-language,parsing,text-parsing,12/12/2009 01:33:20,not constructive,1,35,4,Perl and text parsing What do people mean when they say “Perl is very good in parsing”? By parsing how is Perl different from other scripting languages like python or ruby. How is it more powerful?   ,5
+10511805,05/09/2012 07:42:12,1170839,01/26/2012 08:10:59,1095,50,Convert bit vector to binary in Perl,"I'm not sure of the best way to describe this.
+
+Essentially I am attempting to write to a buffer which requires a certain protocol. The first two bytes I would like to are ""10000001"" and ""11111110"" (bit by bit). How can I write these two bytes to a file handle in Perl?",perl,binary,,,,,open,0,51,7,"Convert bit vector to binary in Perl I'm not sure of the best way to describe this.
+
+Essentially I am attempting to write to a buffer which requires a certain protocol. The first two bytes I would like to are ""10000001"" and ""11111110"" (bit by bit). How can I write these two bytes to a file handle in Perl?",2
+8836701,01/12/2012 14:28:37,1145631,01/12/2012 13:44:23,1,0,"Nagios - ESX monitoring plugins, VMware SDK cpu usage","Does anyone have any experience in monitoring ESX 4.x servers with Nagios? <br>
+I have tried these standard plugins: <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_connect <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_cpu <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_dell_temp_sensor <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_memory <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_sensors <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_storage <br>
+
+to monitor a pool of ESX servers but each script uses 100% of the CPU during runtime just to monitor one single machine.  <br>
+I have shorten the script in order to identify which statement causes this overload and I found out that the Util::connect() function takes ~5-20 sec to execute + overload the CPU. 
+
+Can anyone recommend which alternative plugin can be used instead? <br>
+Any help very much appreciated...  <br>
+
+    Sys INFO:
+    [root@nagios1]# uname -a 
+    Linux hostname 2.6.9-55.0.2.ELsmp #1 SMP Tue Jun 12 17:59:08 EDT 2007 i686 i686 i386 GNU/Linux
+
+    PERL version = 5.8
+    VMware ESX version = 4.1 (Kandinsky)
+    VMware SDK version = 1.6
+    VI Perl Toolkit version: 1.6
+    Script 'check_3i_storage' version: 1.5",perl,nagios,vmware-tools,,,01/14/2012 05:56:29,off topic,1,189,9,"Nagios - ESX monitoring plugins, VMware SDK cpu usage Does anyone have any experience in monitoring ESX 4.x servers with Nagios? <br>
+I have tried these standard plugins: <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_connect <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_cpu <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_dell_temp_sensor <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_memory <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_sensors <br>
+    /usr/lib/nagios/plugins/esx3i/check_3i_storage <br>
+
+to monitor a pool of ESX servers but each script uses 100% of the CPU during runtime just to monitor one single machine.  <br>
+I have shorten the script in order to identify which statement causes this overload and I found out that the Util::connect() function takes ~5-20 sec to execute + overload the CPU. 
+
+Can anyone recommend which alternative plugin can be used instead? <br>
+Any help very much appreciated...  <br>
+
+    Sys INFO:
+    [root@nagios1]# uname -a 
+    Linux hostname 2.6.9-55.0.2.ELsmp #1 SMP Tue Jun 12 17:59:08 EDT 2007 i686 i686 i386 GNU/Linux
+
+    PERL version = 5.8
+    VMware ESX version = 4.1 (Kandinsky)
+    VMware SDK version = 1.6
+    VI Perl Toolkit version: 1.6
+    Script 'check_3i_storage' version: 1.5",3
+9664989,03/12/2012 10:01:39,502937,11/10/2010 08:33:50,374,16,Implementing a fallback mechanism over Connection Interface,"
+Specialized Server provides four interfaces to connect - HTTP, HTTPS, Telnet and SSH. We have a specific priority to connect with the server. e.g. Following sequence to be followed to connect to the server - HTTPS, HTTP, Telnet and SSH. It means that first the client will try to connect with HTTPS. If it fails then it will retry it again with HTTPS. If this fails again then it will try with HTTP and so on. I will get the respective connection object one's it will success. e.g. if connection with HTTP get success then it will return an HTTP connection object. 
+
+Can you please help me to findout any pattern which can be helpful here?
+
+Currently I am thinking to implement it using proxy. I will have a ConnectionProxy Class and this class will find the first successful connection protocol.
+",perl,,,,,03/13/2012 13:41:40,not a real question,1,140,7,"Implementing a fallback mechanism over Connection Interface 
+Specialized Server provides four interfaces to connect - HTTP, HTTPS, Telnet and SSH. We have a specific priority to connect with the server. e.g. Following sequence to be followed to connect to the server - HTTPS, HTTP, Telnet and SSH. It means that first the client will try to connect with HTTPS. If it fails then it will retry it again with HTTPS. If this fails again then it will try with HTTP and so on. I will get the respective connection object one's it will success. e.g. if connection with HTTP get success then it will return an HTTP connection object. 
+
+Can you please help me to findout any pattern which can be helpful here?
+
+Currently I am thinking to implement it using proxy. I will have a ConnectionProxy Class and this class will find the first successful connection protocol.
+",1
+9135878,02/03/2012 21:40:01,1174492,01/27/2012 22:14:36,1,0,"CGI Table programming with Perl, specifically can I use if statements or loops within the format","For example could I use and if statement in the middle of the perl code in order to make a number of rows?
+
+Thanks for your help
+",perl,cgi,,,,02/04/2012 16:24:47,not a real question,1,26,16,"CGI Table programming with Perl, specifically can I use if statements or loops within the format For example could I use and if statement in the middle of the perl code in order to make a number of rows?
+
+Thanks for your help
+",2
+3197881,07/07/2010 18:54:11,34820,11/05/2008 20:04:52,1245,55,How to configure MAMP to serve perl CGI scripts (NOT localhost!),"I'm using MAMP-pro to serve my domain to the outside world.
+
+I'm not a very experienced sys-admin, though I've slogged my way through a few basic things.  I know what apache is, and I can read-most-of but not generate-without-guide related .conf files.
+
+I've got a perl script which I've tested from the command line and it works (outputs as desired.)
+
+When I try to access said script from the browser, I get 404.
+
+I've tried placing the script at:
+
+* /Users/me/Sites/mydomain.com/htdocs/mycgi.pl
+* /Users/me/Sites/mydomain.com/cgi-bin/mycgi.pl
+* /Users/me/Sites/mydomain.com/htdocs/cgi-bin/mycgi.pl
+
+and accessing it as:
+
+* http://www.mydomain.com/mycgi.pl
+* http://www.mydomain.com/cgi-bin/mycgi.pl
+
+and all the various combinations, all to no avail (404.)
+
+The script and its container directory have permissions 755.
+
+So, what other steps am I missing?  Are there any good set-up guides?  I tried the MAMP-Pro manual, but it is filled with such information as ""the cancel button cancels the current operation"" and not really anything useful.  Google turned up several hits that all seem to talk about how to make this work on localhost, but I'm trying to serve this to the outside world.
+
+Any hints?
+
+Thanks!
+",perl,cgi,mamp,,,,open,0,170,11,"How to configure MAMP to serve perl CGI scripts (NOT localhost!) I'm using MAMP-pro to serve my domain to the outside world.
+
+I'm not a very experienced sys-admin, though I've slogged my way through a few basic things.  I know what apache is, and I can read-most-of but not generate-without-guide related .conf files.
+
+I've got a perl script which I've tested from the command line and it works (outputs as desired.)
+
+When I try to access said script from the browser, I get 404.
+
+I've tried placing the script at:
+
+* /Users/me/Sites/mydomain.com/htdocs/mycgi.pl
+* /Users/me/Sites/mydomain.com/cgi-bin/mycgi.pl
+* /Users/me/Sites/mydomain.com/htdocs/cgi-bin/mycgi.pl
+
+and accessing it as:
+
+* http://www.mydomain.com/mycgi.pl
+* http://www.mydomain.com/cgi-bin/mycgi.pl
+
+and all the various combinations, all to no avail (404.)
+
+The script and its container directory have permissions 755.
+
+So, what other steps am I missing?  Are there any good set-up guides?  I tried the MAMP-Pro manual, but it is filled with such information as ""the cancel button cancels the current operation"" and not really anything useful.  Google turned up several hits that all seem to talk about how to make this work on localhost, but I'm trying to serve this to the outside world.
+
+Any hints?
+
+Thanks!
+",3
+6382143,06/17/2011 06:30:51,198183,10/28/2009 14:55:35,2424,42,Excel::Writer::XLSX::Chart::Line - Question,"Is there a way to colorize the space between the to lines (Max. Temp and Min. Temp.) in the chart?
+
+    #!/usr/local/bin/perl
+    use warnings;
+    use 5.014;
+    use utf8;
+    use Excel::Writer::XLSX;
+    my $workbook = Excel::Writer::XLSX->new( 'spreadsheet.xlsx' ) or die $!;
+    my $worksheet = $workbook->add_worksheet( 'One' );
+    my $ref = [
+    [ 'Day', 'Max. Temp.', 'Min. Temp' ],
+    [ 1, -3.1, -6.4 ],
+    [ 2, -2.3, -7.2 ],
+    [ 3, -4.7, -6.8 ],
+    [ 4, -3.1, -9.5 ],
+    [ 5, 1.1, -11.4 ],
+    [ 6, 1.2, 0.3 ],
+    [ 7, 5.3, 0.7 ],
+    [ 8, 7.7, 1.5 ],
+    [ 9, 1.5, -2 ],
+    [ 10, 1, -1.1 ] ];
+    $worksheet->write_col( 0, 0, $ref );
+
+    my $chart = $workbook->add_chart( type => 'line' );
+    $chart->set_x_axis( name => 'Day' );
+    $chart->set_y_axis( name => 'Temperature (° Celsius)' );
+    $chart->set_style( 11 );
+
+    $chart->add_series(
+	    values => [ 'One', 1, $#$ref, 1, 1 ],
+	    name => '=One!$B$1',
+    );
+
+    $chart->add_series(
+	    values => [ 'One', 1, $#$ref, 2, 2 ],
+	    name => '=One!$C$1',
+    );
+
+",perl,excel,colors,charts,spreadsheet,,open,0,258,3,"Excel::Writer::XLSX::Chart::Line - Question Is there a way to colorize the space between the to lines (Max. Temp and Min. Temp.) in the chart?
+
+    #!/usr/local/bin/perl
+    use warnings;
+    use 5.014;
+    use utf8;
+    use Excel::Writer::XLSX;
+    my $workbook = Excel::Writer::XLSX->new( 'spreadsheet.xlsx' ) or die $!;
+    my $worksheet = $workbook->add_worksheet( 'One' );
+    my $ref = [
+    [ 'Day', 'Max. Temp.', 'Min. Temp' ],
+    [ 1, -3.1, -6.4 ],
+    [ 2, -2.3, -7.2 ],
+    [ 3, -4.7, -6.8 ],
+    [ 4, -3.1, -9.5 ],
+    [ 5, 1.1, -11.4 ],
+    [ 6, 1.2, 0.3 ],
+    [ 7, 5.3, 0.7 ],
+    [ 8, 7.7, 1.5 ],
+    [ 9, 1.5, -2 ],
+    [ 10, 1, -1.1 ] ];
+    $worksheet->write_col( 0, 0, $ref );
+
+    my $chart = $workbook->add_chart( type => 'line' );
+    $chart->set_x_axis( name => 'Day' );
+    $chart->set_y_axis( name => 'Temperature (° Celsius)' );
+    $chart->set_style( 11 );
+
+    $chart->add_series(
+	    values => [ 'One', 1, $#$ref, 1, 1 ],
+	    name => '=One!$B$1',
+    );
+
+    $chart->add_series(
+	    values => [ 'One', 1, $#$ref, 2, 2 ],
+	    name => '=One!$C$1',
+    );
+
+",5
+5308543,03/15/2011 07:10:11,60628,01/30/2009 14:28:28,6138,136,How to replace a long input-processing pipe by a script?,"I have a long shell command, something like this:
+
+    cat file \
+      | perl -pe 's/...//g' \
+      | grep -v ""hehe"" \
+      | $HOME/scripts/foo.pl \
+      | sort | uniq -c
+
+Now I'd like to put the whole pipe into a script `script.sh`, so that the command becomes:
+
+    cat file | ./script.sh
+
+Ideally, the script should then also be callable like that:
+
+    ./script.sh file
+
+But how do I write that script? It seems not straightforward at all to me. Any suggestions?
+",perl,bash,script,,,,open,0,106,10,"How to replace a long input-processing pipe by a script? I have a long shell command, something like this:
+
+    cat file \
+      | perl -pe 's/...//g' \
+      | grep -v ""hehe"" \
+      | $HOME/scripts/foo.pl \
+      | sort | uniq -c
+
+Now I'd like to put the whole pipe into a script `script.sh`, so that the command becomes:
+
+    cat file | ./script.sh
+
+Ideally, the script should then also be callable like that:
+
+    ./script.sh file
+
+But how do I write that script? It seems not straightforward at all to me. Any suggestions?
+",3
+6323080,06/12/2011 16:28:59,673018,03/23/2011 12:33:25,82,7,Unable to parse text in PDF file using CAM::PDF ?,"Not able to parse text in PDF file, using CAM::PDF.
+I have attached the screenshot of PDF page, While parsing this page,i am able to parse all the words except ""mount_vxfs"" as it's encoding style and/or font is different than normal plain text.
+I am parsing the PDF files present @ ""http://sfdoccentral.symantec.com/"".
+Please let me know, if you need nay more information !
+
+Regards,
+Mandy.![image][1]
+
+
+  [1]: http://i.stack.imgur.com/vLcRp.png",perl,adobe,,,,,open,0,63,10,"Unable to parse text in PDF file using CAM::PDF ? Not able to parse text in PDF file, using CAM::PDF.
+I have attached the screenshot of PDF page, While parsing this page,i am able to parse all the words except ""mount_vxfs"" as it's encoding style and/or font is different than normal plain text.
+I am parsing the PDF files present @ ""http://sfdoccentral.symantec.com/"".
+Please let me know, if you need nay more information !
+
+Regards,
+Mandy.![image][1]
+
+
+  [1]: http://i.stack.imgur.com/vLcRp.png",2
+11532369,07/17/2012 23:39:08,1533198,07/17/2012 23:12:41,1,0,perl system call won't recognize paths,"I'm trying to execute a system command from a perl program. 
+
+It works fine unless I provide a path, when it says "" The system cannot find the path specified.""
+
+I get the same results with exec(), system(), or backticks.
+
+I get the same results with the command string directly as the argument, or putting it in a single or double-quoted string and passing the string as the argument.
+
+If I copy a non-working command from the perl script and paste it into the DOS box, it works, and vice versa.
+
+eg: print `cd`; works fine, but print `cd \` or print `cd ..`; give me the same error message.
+
+$cmd = 'foo.htm'; $ret=`$cmd`; starts the browser, but $cmd = '\foo.htm'; $ret=`$cmd`; does not.
+
+Does anyone have any suggestions as to what the problem might be?
+
+
+
+",perl,backticks,,,,,open,0,130,6,"perl system call won't recognize paths I'm trying to execute a system command from a perl program. 
+
+It works fine unless I provide a path, when it says "" The system cannot find the path specified.""
+
+I get the same results with exec(), system(), or backticks.
+
+I get the same results with the command string directly as the argument, or putting it in a single or double-quoted string and passing the string as the argument.
+
+If I copy a non-working command from the perl script and paste it into the DOS box, it works, and vice versa.
+
+eg: print `cd`; works fine, but print `cd \` or print `cd ..`; give me the same error message.
+
+$cmd = 'foo.htm'; $ret=`$cmd`; starts the browser, but $cmd = '\foo.htm'; $ret=`$cmd`; does not.
+
+Does anyone have any suggestions as to what the problem might be?
+
+
+
+",2
+4126108,11/08/2010 17:02:08,500931,11/08/2010 17:02:08,1,0,"Perl: Given an arbitrary string, how do you extract the first N bits?","Given a string $old_str, I am trying to extract the first N bits (not bytes) into $new_str. I have been reading the pack documentation and perlpacktut, but am hopelessly confused. This is where I currently stand:
+
+    my $old_str = ""9876543210"";                                                     
+    # Extract the first 5 bits
+    my $new_str = pack(""B5"", unpack(""B*"", $old_str));
+    printf ""%#b | %#b\n"", $new_str, $old_str;
+
+This produces:
+
+    0b1000 | 0b1001001100101100000001011011101010
+
+But I want this:
+
+    0b10010 | 0b1001001100101100000001011011101010
+",perl,,,,,,open,0,139,13,"Perl: Given an arbitrary string, how do you extract the first N bits? Given a string $old_str, I am trying to extract the first N bits (not bytes) into $new_str. I have been reading the pack documentation and perlpacktut, but am hopelessly confused. This is where I currently stand:
+
+    my $old_str = ""9876543210"";                                                     
+    # Extract the first 5 bits
+    my $new_str = pack(""B5"", unpack(""B*"", $old_str));
+    printf ""%#b | %#b\n"", $new_str, $old_str;
+
+This produces:
+
+    0b1000 | 0b1001001100101100000001011011101010
+
+But I want this:
+
+    0b10010 | 0b1001001100101100000001011011101010
+",1
+6076060,05/20/2011 18:15:59,762944,05/20/2011 14:57:27,1,0,Website log-in with Perl and Mechanize,"So this is driving me crazy. Basically, when I hard-code my user name and password, I can log-in no problem.  But I want to prompt the user to enter the username and password, as I would like to share this program with others.  (the program is supposed to log into our courses site and download all of our course work info - lectures, hw, etc)
+
+This code works:
+    
+    use WWW::Mechanize;
+    use LWP;
+
+    my $username = 'user'; 
+    my $password = 'pass';
+
+    my $mech = WWW::Mechanize->new();
+    $mech -> cookie_jar(HTTP::Cookies->new());
+    $mech -> get('log-in url');
+    $mech -> form_name('theform');
+    $mech -> field ('username' => $username);
+    $mech -> field ('password' => $password);
+    $mech -> click ('log in');
+    print $mech-> content();
+
+however, when I try and prompt the user to enter log-in info, it does now work.  printing content returns the html of the log-in page, not the following page (courses page for said user)
+
+    use LWP;
+    use WWW::Mechanize;
+
+    my $login_url = 'log-in url';
+    print ""\nUser name: "";
+    my $username = <>;
+    print ""Password: "";
+    my $password = <>;
+
+    my $mech = WWW::Mechanize->new();
+    $mech -> cookie_jar(HTTP::Cookies->new());
+    $mech -> get($login_url);
+    $mech -> form_name('theform');
+    $mech -> field ('username' => $username);
+    $mech -> field ('password' => $password);
+    $mech -> click ('log in');
+    print $mech-> content();
+
+this really makes no sense since they are essentially the same thing.  I even typed in the username/password in quotes in the prompt and still no avail..... (i realize also that it wont be very easy to check without a website and log-in info, sorry about that)",perl,login,www-mechanize,,,,open,0,339,6,"Website log-in with Perl and Mechanize So this is driving me crazy. Basically, when I hard-code my user name and password, I can log-in no problem.  But I want to prompt the user to enter the username and password, as I would like to share this program with others.  (the program is supposed to log into our courses site and download all of our course work info - lectures, hw, etc)
+
+This code works:
+    
+    use WWW::Mechanize;
+    use LWP;
+
+    my $username = 'user'; 
+    my $password = 'pass';
+
+    my $mech = WWW::Mechanize->new();
+    $mech -> cookie_jar(HTTP::Cookies->new());
+    $mech -> get('log-in url');
+    $mech -> form_name('theform');
+    $mech -> field ('username' => $username);
+    $mech -> field ('password' => $password);
+    $mech -> click ('log in');
+    print $mech-> content();
+
+however, when I try and prompt the user to enter log-in info, it does now work.  printing content returns the html of the log-in page, not the following page (courses page for said user)
+
+    use LWP;
+    use WWW::Mechanize;
+
+    my $login_url = 'log-in url';
+    print ""\nUser name: "";
+    my $username = <>;
+    print ""Password: "";
+    my $password = <>;
+
+    my $mech = WWW::Mechanize->new();
+    $mech -> cookie_jar(HTTP::Cookies->new());
+    $mech -> get($login_url);
+    $mech -> form_name('theform');
+    $mech -> field ('username' => $username);
+    $mech -> field ('password' => $password);
+    $mech -> click ('log in');
+    print $mech-> content();
+
+this really makes no sense since they are essentially the same thing.  I even typed in the username/password in quotes in the prompt and still no avail..... (i realize also that it wont be very easy to check without a website and log-in info, sorry about that)",3
+3020779,06/11/2010 06:59:14,92568,04/18/2009 18:45:13,179,2,Perl and Multimap,Is there way to implement multimap in perl.,perl,,,,,,open,0,8,3,Perl and Multimap Is there way to implement multimap in perl.,1
+11548342,07/18/2012 18:51:32,606769,02/07/2011 16:31:23,77,1,Transform rows into columns in VIM,"I have a data file like the following:
+
+    ----------------------------
+    a b c d e .............
+    A B C D E .............
+    ----------------------------
+But I want it to be in the following format
+
+    ----------------------------
+    a A
+    b B
+    c C
+    d D
+    e E
+    ...
+    ...
+    ----------------------------
+What's the quickest way to do the transformation in VIM?
+Thanks.
+",perl,vim,,,,,open,0,93,6,"Transform rows into columns in VIM I have a data file like the following:
+
+    ----------------------------
+    a b c d e .............
+    A B C D E .............
+    ----------------------------
+But I want it to be in the following format
+
+    ----------------------------
+    a A
+    b B
+    c C
+    d D
+    e E
+    ...
+    ...
+    ----------------------------
+What's the quickest way to do the transformation in VIM?
+Thanks.
+",2
+11707144,07/29/2012 06:19:21,1368949,05/02/2012 01:10:30,15,0,How to search for a folder in directory using perl,"I am new to perl script. I want to search for a each folder named ""abc"" in directory ""pqr"" and write path of each ""abc"" folder to a separate file (n.txt where n is an integer) in the form filename = pathOfABC. Can anyone please give me some hint on this?",perl,,,,,07/29/2012 13:18:52,not a real question,1,51,10,"How to search for a folder in directory using perl I am new to perl script. I want to search for a each folder named ""abc"" in directory ""pqr"" and write path of each ""abc"" folder to a separate file (n.txt where n is an integer) in the form filename = pathOfABC. Can anyone please give me some hint on this?",1
+5120520,02/25/2011 17:28:10,419946,08/13/2010 19:30:24,136,1,help using perl dbi and creating unique output files,"I am having a problem printing out the correct number of records for a given file. My test script simply does a perl dbi connection to a mysql database and given a list of tables, extracts (1) record per table.
+
+For every table I list, I also want to print that (1) record out to its **own** file. For example if I have a list of 100 tables, I should expect 100 uniques files with (1) record each.
+
+So far, I am able to generate the 100 files, but there is more than (1) record. There are up to 280 records in the file. Ironically, I am generating a unique key for each record and the keys are unique.
+
+If I print out the `$data` to a single file (outside the foreach loop), I get the expected results, but in one single file. So one file with 100 records for example, but I want to create a file for each.
+
+I seem to have a problem opening up a file handle and outputting this correctly? or something else is wrong with my code.
+
+Can someone show me how to set this up properly? Show me some best practices for achieving this? 
+Thank you.
+
+Here is my test code:
+
+    use strict;
+    use Getopt::Std;
+    use DBI;
+    use POSIX;
+    
+    my %opt;
+    getopts ('n:s:h', \%opt);
+    
+    $opt{h} and &Usage;
+    
+    my $node  = $opt{n};
+    my $dbsrc = $opt{s};
+    
+    # Get date
+    my $dt  = strftime('%Y%m%d', localtime(time));
+    
+    # Command line query to get list of table names
+    my @tblist = qx(mysql -u foo-bar -ppassw0rd --database $dbsrc -h $node --port 3306 -ss -e ""show tables"");
+    
+    #Create data output
+    my $data = '';
+    foreach my $tblist (@tblist)
+    {
+       chomp $tblist;
+    
+       #Testing to create file
+       my $out_file = ""/home/$node-$tblist.$dt.dat"";
+       open (my $out_fh, '>', $out_file) or die ""cannot create $out_file: $!"";
+    
+       my $dbh = DBI->connect(""DBI:mysql:database=$dbsrc;host=$node;port=3306"",'foo-bar','passw0rd');
+       my $sth = $dbh->prepare(""SELECT UUID(), '$node', ab, cd, ef, gh, hi FROM $tblist limit 1"");
+       $sth->execute();
+             while (my($id, $nd,$ab,$cd,$ef,$gh,$hi) = $sth->fetchrow_array() ) {
+             $data = $data. ""__pk__^A$id^E1^A$nd^E2^A$ab^E3^A$cd^E4^A$ef^E5^A$gh^E6^A$hi^E7^D"";
+             }
+             $sth->finish;
+             $dbh->disconnect;
+    
+       #Testing to create file
+       print $out_fh $data;
+       close $out_fh or die ""Failed to close file: $!"";
+    };
+    #print $data; #Here if I uncomment and output to a single file, I can see the correct number of record, but its in (1) file
+
+
+ ",perl,,,,,,open,0,586,9,"help using perl dbi and creating unique output files I am having a problem printing out the correct number of records for a given file. My test script simply does a perl dbi connection to a mysql database and given a list of tables, extracts (1) record per table.
+
+For every table I list, I also want to print that (1) record out to its **own** file. For example if I have a list of 100 tables, I should expect 100 uniques files with (1) record each.
+
+So far, I am able to generate the 100 files, but there is more than (1) record. There are up to 280 records in the file. Ironically, I am generating a unique key for each record and the keys are unique.
+
+If I print out the `$data` to a single file (outside the foreach loop), I get the expected results, but in one single file. So one file with 100 records for example, but I want to create a file for each.
+
+I seem to have a problem opening up a file handle and outputting this correctly? or something else is wrong with my code.
+
+Can someone show me how to set this up properly? Show me some best practices for achieving this? 
+Thank you.
+
+Here is my test code:
+
+    use strict;
+    use Getopt::Std;
+    use DBI;
+    use POSIX;
+    
+    my %opt;
+    getopts ('n:s:h', \%opt);
+    
+    $opt{h} and &Usage;
+    
+    my $node  = $opt{n};
+    my $dbsrc = $opt{s};
+    
+    # Get date
+    my $dt  = strftime('%Y%m%d', localtime(time));
+    
+    # Command line query to get list of table names
+    my @tblist = qx(mysql -u foo-bar -ppassw0rd --database $dbsrc -h $node --port 3306 -ss -e ""show tables"");
+    
+    #Create data output
+    my $data = '';
+    foreach my $tblist (@tblist)
+    {
+       chomp $tblist;
+    
+       #Testing to create file
+       my $out_file = ""/home/$node-$tblist.$dt.dat"";
+       open (my $out_fh, '>', $out_file) or die ""cannot create $out_file: $!"";
+    
+       my $dbh = DBI->connect(""DBI:mysql:database=$dbsrc;host=$node;port=3306"",'foo-bar','passw0rd');
+       my $sth = $dbh->prepare(""SELECT UUID(), '$node', ab, cd, ef, gh, hi FROM $tblist limit 1"");
+       $sth->execute();
+             while (my($id, $nd,$ab,$cd,$ef,$gh,$hi) = $sth->fetchrow_array() ) {
+             $data = $data. ""__pk__^A$id^E1^A$nd^E2^A$ab^E3^A$cd^E4^A$ef^E5^A$gh^E6^A$hi^E7^D"";
+             }
+             $sth->finish;
+             $dbh->disconnect;
+    
+       #Testing to create file
+       print $out_fh $data;
+       close $out_fh or die ""Failed to close file: $!"";
+    };
+    #print $data; #Here if I uncomment and output to a single file, I can see the correct number of record, but its in (1) file
+
+
+ ",1
+7243678,08/30/2011 13:12:16,280449,02/24/2010 15:35:44,2692,92,Operation hmset() takes forever,"I'm trying to use `Redis` module from CPAN. It works OK when setting/getting scalar keys, however, I can't get hashes to work. 
+
+Here's my sample program:  
+
+    #!/usr/bin/perl -w
+
+    use strict;
+    use Redis;
+
+    my $red = Redis->new();
+    print ""use\n"";
+    $red->hmset(foo=>bar=>1, baz=>2);
+    print ""set\n"";
+    print ""$_\n"" for $red->hmget(""foo"", ""bar"", ""baz"");
+
+And it hangs after printing ""use"".
+
+Just using hmset/get from `redis-cli` works fine. 
+
+What's wrong with this code, and how should I deal with redis hashes from perl? ",perl,redis,,,,09/01/2011 13:18:46,too localized,1,101,4,"Operation hmset() takes forever I'm trying to use `Redis` module from CPAN. It works OK when setting/getting scalar keys, however, I can't get hashes to work. 
+
+Here's my sample program:  
+
+    #!/usr/bin/perl -w
+
+    use strict;
+    use Redis;
+
+    my $red = Redis->new();
+    print ""use\n"";
+    $red->hmset(foo=>bar=>1, baz=>2);
+    print ""set\n"";
+    print ""$_\n"" for $red->hmget(""foo"", ""bar"", ""baz"");
+
+And it hangs after printing ""use"".
+
+Just using hmset/get from `redis-cli` works fine. 
+
+What's wrong with this code, and how should I deal with redis hashes from perl? ",2
+3462173,08/11/2010 19:41:19,417661,08/11/2010 19:41:19,1,0,"Calling perl from shell script, how do I pass return value from perl to shell?","I'm successfully calling a perl script from a shell script. Now I want to pass a return value from the perl script indicating whether it was successful or not to the shell script. How would I go about doing this?
+
+Thanks!",perl,,,,,,open,0,40,15,"Calling perl from shell script, how do I pass return value from perl to shell? I'm successfully calling a perl script from a shell script. Now I want to pass a return value from the perl script indicating whether it was successful or not to the shell script. How would I go about doing this?
+
+Thanks!",1
+4336569,12/02/2010 15:23:56,51681,01/05/2009 15:11:40,115,5,"Perl, check if pair exists in hash of hashes","In Perl, I have a hash of hashes created with a loop similar to the following
+
+        my %HoH
+        for my $i (1..10) {
+          $HoH{$a}{$b} = $times; 
+        }
+
+$a and $b are variables that do have some value when the HoH gets filled in. After creating the HoH, how can I check if a particular pair ($c, $d) exists in the HoH? The following does not work
+
+    if (defined $HoH{$c}{$d}) {...}
+
+because if $c does not exist in HoH already, it will be created as a key without a value.",perl,hash,,,,,open,0,121,9,"Perl, check if pair exists in hash of hashes In Perl, I have a hash of hashes created with a loop similar to the following
+
+        my %HoH
+        for my $i (1..10) {
+          $HoH{$a}{$b} = $times; 
+        }
+
+$a and $b are variables that do have some value when the HoH gets filled in. After creating the HoH, how can I check if a particular pair ($c, $d) exists in the HoH? The following does not work
+
+    if (defined $HoH{$c}{$d}) {...}
+
+because if $c does not exist in HoH already, it will be created as a key without a value.",2
+336715,12/03/2008 10:07:24,13440,09/16/2008 19:07:33,222,16,Good books for Perl,I am moving into a project which has lots of Perl coding in it. Can somebody suggest me a good book which I can use to learn Perl. Online tutorials would also be helpful.,perl,book,,,,09/30/2011 14:47:11,not constructive,1,34,4,Good books for Perl I am moving into a project which has lots of Perl coding in it. Can somebody suggest me a good book which I can use to learn Perl. Online tutorials would also be helpful.,2
+7580129,09/28/2011 08:08:48,638529,02/28/2011 23:42:31,652,23,Perl iterate through each match,"Let's say I'm scanning through a page of raw html looking for this regex. (The quote mark on the end is intentional).
+ 
+    m/(https?:\/\/.*?(?:'|""))/
+
+This pattern is likely to match ~ 100 times. What is a common perl idiom/a quick way to iterate through a list of all capture group matches?",perl,,,,,,open,0,53,5,"Perl iterate through each match Let's say I'm scanning through a page of raw html looking for this regex. (The quote mark on the end is intentional).
+ 
+    m/(https?:\/\/.*?(?:'|""))/
+
+This pattern is likely to match ~ 100 times. What is a common perl idiom/a quick way to iterate through a list of all capture group matches?",1
+1366166,09/02/2009 06:51:10,80368,03/20/2009 07:46:45,463,40,perl character encoding,"I have a perl script that takes text values from a mysql table and writes it to a text file. The problem is, when I open the text file for viewing I am getting a lot of hex characters like \x92 and \x93 which stands for single and double quotes...I guess.
+
+I am using DBI->quote function to escape the special chars before writing the values to the text file.
+
+
+I have tried using Encode::Encoder, but with no luck. The character set on both the tables is latin1 
+
+How do I get rid of those hex characters and get the character to show in the text file.
+
+Many Thanks ",perl,mysql,character,encoding,,,open,0,106,3,"perl character encoding I have a perl script that takes text values from a mysql table and writes it to a text file. The problem is, when I open the text file for viewing I am getting a lot of hex characters like \x92 and \x93 which stands for single and double quotes...I guess.
+
+I am using DBI->quote function to escape the special chars before writing the values to the text file.
+
+
+I have tried using Encode::Encoder, but with no luck. The character set on both the tables is latin1 
+
+How do I get rid of those hex characters and get the character to show in the text file.
+
+Many Thanks ",4
+7176112,08/24/2011 13:20:30,502937,11/10/2010 08:33:50,127,2,Perl - SSH daemon package,"Do we have any Server module like HTTP::Daemon for SSH?
+
+I tried searching CPAN but no luck. ",perl,sshd,,,,08/27/2011 06:56:03,off topic,1,17,5,"Perl - SSH daemon package Do we have any Server module like HTTP::Daemon for SSH?
+
+I tried searching CPAN but no luck. ",2
+3954722,10/17/2010 18:51:22,26848,10/10/2008 15:02:32,648,12,Should I use an alternative from CPAN to replace Frontier::RPC2?,"I have been using Frontier::RPC2 for my XML-RPC server, with Frontier::Client on the client side... but have noticed these modules have not been maintained recently.
+
+Discussion at the bottom of [this page][1] mentions some fresher alternatives on CPAN.  What would the pros and cons of these be?  I honesty don't have an immediate need to switch, but there are some annoying ""uninitialized"" variable warnings produced by Frontier::RPC2 which I'd love to rid myself of... they are clogging up and making it difficult to find more salient warnings in my webserver log.
+
+Any recommendations for upgrading my web service?
+
+
+  [1]: https://rt.cpan.org/Public/Bug/Display.html?id=36220",perl,xml-rpc,cpan,,,,open,0,101,10,"Should I use an alternative from CPAN to replace Frontier::RPC2? I have been using Frontier::RPC2 for my XML-RPC server, with Frontier::Client on the client side... but have noticed these modules have not been maintained recently.
+
+Discussion at the bottom of [this page][1] mentions some fresher alternatives on CPAN.  What would the pros and cons of these be?  I honesty don't have an immediate need to switch, but there are some annoying ""uninitialized"" variable warnings produced by Frontier::RPC2 which I'd love to rid myself of... they are clogging up and making it difficult to find more salient warnings in my webserver log.
+
+Any recommendations for upgrading my web service?
+
+
+  [1]: https://rt.cpan.org/Public/Bug/Display.html?id=36220",3
+10197690,04/17/2012 19:18:59,183181,10/02/2009 15:03:39,5382,351,"Perl: Shebang (space?) ""#! ""?","I've seen both: 
+ 
+    #!/path/...
+    #! /path/...
+
+What's right? Does it matter? Is there a history?
+
+I've heard that an ancient version of Unix required there not be a space.  But then I heard that was just a rumor.  Does anyone know for certain?",perl,unix,sh,,,04/19/2012 02:37:15,off topic,1,51,5,"Perl: Shebang (space?) ""#! ""? I've seen both: 
+ 
+    #!/path/...
+    #! /path/...
+
+What's right? Does it matter? Is there a history?
+
+I've heard that an ancient version of Unix required there not be a space.  But then I heard that was just a rumor.  Does anyone know for certain?",3
+7109941,08/18/2011 15:23:43,900897,08/18/2011 15:23:08,1,0,"Use a Perl Script to read a line of data from a file, and dislay?","I need some help with a script I am trying to create. Basically I have about 4000 txt files, each with a email address field. for example:
+
+    To: example@hotmail.com
+
+I want to be able to use a Perl script to read all of the 4000 txt files, returning a list of each unique email address, and the number of emails sent to that user. I think this is simple in concept, but could do with some help!
+
+Each txt file is located in the same location, and is named like this:
+msg00003.txt,
+msg00004.txt,
+msg00005.txt etc etc.
+
+Any help is much appreciated.",perl,script,,,,08/19/2011 16:19:01,not a real question,1,98,15,"Use a Perl Script to read a line of data from a file, and dislay? I need some help with a script I am trying to create. Basically I have about 4000 txt files, each with a email address field. for example:
+
+    To: example@hotmail.com
+
+I want to be able to use a Perl script to read all of the 4000 txt files, returning a list of each unique email address, and the number of emails sent to that user. I think this is simple in concept, but could do with some help!
+
+Each txt file is located in the same location, and is named like this:
+msg00003.txt,
+msg00004.txt,
+msg00005.txt etc etc.
+
+Any help is much appreciated.",2
+7882966,10/24/2011 23:01:49,985179,10/08/2011 08:32:52,14,0,Substitute Array Elements with Hash Values,"I am trying to code a Perl Script which will take the date in Pattern, October 24, 2011 and convert this to 10,24,2011.
+
+In order to do this I have prepared a Hash which will have the Month Name as a Key and a Numerical value representing Month's position as a Value.
+
+I will read the input string, use a regular expression to extract the month name from above format.
+
+Replace this month name with a value which corresponds to the month as a key.
+
+Here's the script I have coded so far, but it's not working for me.
+
+@dates array will have every element in this format -> October 24, 2011.
+
+    %days=(""January"",01,""February"",02,""March"",03,""April"",04,""May"",05,""June"",06,""July"",07,""August"",08,""September"",09,""October"",10,""November"",11,""December"",12);
+
+    @output = map{
+    $pattern=$_;
+    $pattern =~ s/(.*)\s/$days{$1};
+    } @dates;
+
+    foreach $output (@output)
+    {
+	print $output.""\n"";
+    }
+
+Here's a little explanation of what I am trying to do with this code.
+
+@output will have the new formatted array with the Month Name replaced by the corresponding Numerical representing it as defined in the Hash.
+
+map function is used to transform the elements of the array on the fly.
+
+a sequence of characters followed by space is the regular expression used to extract the Month Name from pattern, October 24, 2011.
+
+This will be referenced by $1.
+
+I look up the corresponding value for $1 in the hash using, $days{$1} ",perl,date,hash,map,,,open,0,234,6,"Substitute Array Elements with Hash Values I am trying to code a Perl Script which will take the date in Pattern, October 24, 2011 and convert this to 10,24,2011.
+
+In order to do this I have prepared a Hash which will have the Month Name as a Key and a Numerical value representing Month's position as a Value.
+
+I will read the input string, use a regular expression to extract the month name from above format.
+
+Replace this month name with a value which corresponds to the month as a key.
+
+Here's the script I have coded so far, but it's not working for me.
+
+@dates array will have every element in this format -> October 24, 2011.
+
+    %days=(""January"",01,""February"",02,""March"",03,""April"",04,""May"",05,""June"",06,""July"",07,""August"",08,""September"",09,""October"",10,""November"",11,""December"",12);
+
+    @output = map{
+    $pattern=$_;
+    $pattern =~ s/(.*)\s/$days{$1};
+    } @dates;
+
+    foreach $output (@output)
+    {
+	print $output.""\n"";
+    }
+
+Here's a little explanation of what I am trying to do with this code.
+
+@output will have the new formatted array with the Month Name replaced by the corresponding Numerical representing it as defined in the Hash.
+
+map function is used to transform the elements of the array on the fly.
+
+a sequence of characters followed by space is the regular expression used to extract the Month Name from pattern, October 24, 2011.
+
+This will be referenced by $1.
+
+I look up the corresponding value for $1 in the hash using, $days{$1} ",4
+7094454,08/17/2011 14:23:53,831790,07/06/2011 14:27:58,91,4,Upgrading Perl in Ubuntu,"Since May 14th the current version of Perl is 5.14. In Ubuntu repository the current version of Perl is 5.10 which is no longer supported. So Im trying to manually upgrading Perl.
+What is the recommended way to upgrade perl 5.10 to perl 5.14 in Ubuntu?
+I found the perlbrew tool, but it seems to install just in the users home.
+",perl,ubuntu,,,,08/17/2011 14:53:27,off topic,1,59,4,"Upgrading Perl in Ubuntu Since May 14th the current version of Perl is 5.14. In Ubuntu repository the current version of Perl is 5.10 which is no longer supported. So Im trying to manually upgrading Perl.
+What is the recommended way to upgrade perl 5.10 to perl 5.14 in Ubuntu?
+I found the perlbrew tool, but it seems to install just in the users home.
+",2
+10850169,06/01/2012 12:21:46,1430590,06/01/2012 11:35:53,1,0,How can i get to match the pattern as follows using (?:regex) in perl,"            `$string = ""hello/welcome"";`
+## i want ""welcome"" only.
+            `$string = ""hello-welcome-to-the-world"";`
+## i want ""hello-welcome"" 
+
+## i try this
+
+            `print $1 if($string =~ m#(?:/|)(.*)(?:-to-)#);`  ## got hello-welcome
+            `print $1 if($string =~ m#(?:/)(.*)(?:-to-|)#);`   ## got welcome
+
+
+## but i cant able to get the required output from single regexp  .
+## please solve and explain ...
+
+",perl,,,,,06/04/2012 07:58:01,not a real question,1,100,14,"How can i get to match the pattern as follows using (?:regex) in perl             `$string = ""hello/welcome"";`
+## i want ""welcome"" only.
+            `$string = ""hello-welcome-to-the-world"";`
+## i want ""hello-welcome"" 
+
+## i try this
+
+            `print $1 if($string =~ m#(?:/|)(.*)(?:-to-)#);`  ## got hello-welcome
+            `print $1 if($string =~ m#(?:/)(.*)(?:-to-|)#);`   ## got welcome
+
+
+## but i cant able to get the required output from single regexp  .
+## please solve and explain ...
+
+",1
+7651,08/11/2008 10:04:32,381,08/05/2008 10:39:26,504,10,Perl - how do I remove duplicate items from an array ?,"I have an array in Perl:
+
+@my_array = (""one"",""two"",""three"",""two"",""three"")
+
+How do I remove the duplicates from the array ?",perl,beginner,,,,,open,0,17,12,"Perl - how do I remove duplicate items from an array ? I have an array in Perl:
+
+@my_array = (""one"",""two"",""three"",""two"",""three"")
+
+How do I remove the duplicates from the array ?",2
+10281757,04/23/2012 13:43:17,198183,10/28/2009 14:55:35,3623,56,Is it somehow possible to catch with Term::TermKey the cursor position?,"Is it possible to get hold of the cursor position with [Term::TermKey](http://search.cpan.org/perldoc?Term::TermKey) in a similar way [Term::ReadKey](http://search.cpan.org/perldoc?Term::ReadKey) can do it:
+
+
+    #!/usr/bin/env perl
+    use warnings;
+    use 5.12.0;
+    use Term::ReadKey;
+
+    ReadMode 4;
+
+    system( 'clear' ) == 0 or die $?;
+    print ""Hello world\n"" x 4;
+    print ""go to column 21 -> |"";
+
+    print ""\e[6n"";
+    my ( $x, $y ) = getch();
+    say ""Col: $x  -  Row: $y"";
+
+    ReadMode 0;
+
+    sub getch {
+        my $c = ReadKey 0;
+        if ( $c eq ""\e"" ) {
+            my $c = ReadKey 0.10;
+            if ( $c eq '[' ) {
+                my $c = ReadKey 0;
+                if ( $c =~ /\A\d/ ) { 
+                    my $c1 = ReadKey 0;
+                    if ( $c1 ne '~' ) {
+                        my $y = 0 + $c;
+                        while ( 1 ) {
+                            last if $c1 eq ';';
+                            $y = 10 * $y + $c1;
+                            $c1 = ReadKey 0;
+                        }
+                        my $x = 0;
+                        while ( 1 ) {
+                            $c1 = ReadKey 0;
+                            last if $c1 eq 'R';
+                            $x = 10 * $x + $c1;
+                        }
+                        return $x, $y;
+                    }
+                }
+            }
+        } 
+    }
+",perl,terminal,cursor-position,,,,open,0,705,11,"Is it somehow possible to catch with Term::TermKey the cursor position? Is it possible to get hold of the cursor position with [Term::TermKey](http://search.cpan.org/perldoc?Term::TermKey) in a similar way [Term::ReadKey](http://search.cpan.org/perldoc?Term::ReadKey) can do it:
+
+
+    #!/usr/bin/env perl
+    use warnings;
+    use 5.12.0;
+    use Term::ReadKey;
+
+    ReadMode 4;
+
+    system( 'clear' ) == 0 or die $?;
+    print ""Hello world\n"" x 4;
+    print ""go to column 21 -> |"";
+
+    print ""\e[6n"";
+    my ( $x, $y ) = getch();
+    say ""Col: $x  -  Row: $y"";
+
+    ReadMode 0;
+
+    sub getch {
+        my $c = ReadKey 0;
+        if ( $c eq ""\e"" ) {
+            my $c = ReadKey 0.10;
+            if ( $c eq '[' ) {
+                my $c = ReadKey 0;
+                if ( $c =~ /\A\d/ ) { 
+                    my $c1 = ReadKey 0;
+                    if ( $c1 ne '~' ) {
+                        my $y = 0 + $c;
+                        while ( 1 ) {
+                            last if $c1 eq ';';
+                            $y = 10 * $y + $c1;
+                            $c1 = ReadKey 0;
+                        }
+                        my $x = 0;
+                        while ( 1 ) {
+                            $c1 = ReadKey 0;
+                            last if $c1 eq 'R';
+                            $x = 10 * $x + $c1;
+                        }
+                        return $x, $y;
+                    }
+                }
+            }
+        } 
+    }
+",3
+4215796,11/18/2010 14:28:53,512235,11/18/2010 14:28:53,1,0,How to reduce download time,"Our application has to download 800 images within 30 secs, but even if we increase time for 1 min, our application is still not able to download all the images.
+
+How can we increase the download speed? so that we can download 800 images within 30 secs?
+Is it possible?
+
+Could someone please suggest.
+
+",perl,,,,,11/20/2010 08:51:24,not a real question,1,51,5,"How to reduce download time Our application has to download 800 images within 30 secs, but even if we increase time for 1 min, our application is still not able to download all the images.
+
+How can we increase the download speed? so that we can download 800 images within 30 secs?
+Is it possible?
+
+Could someone please suggest.
+
+",1
+3807761,09/27/2010 20:51:04,371814,06/21/2010 02:59:24,1,0,Run `head` on a text file inside a zipped archive without unpacking the archive,"Greetings,
+
+I've taken over from a prior team and writing ETL jobs which process csv files. I use a combination of shell scripts and perl on ubuntu. The csv files are huge; they arrive as zipped archives. Unzipped, many are more than 30Gb - yes, that's a G
+
+Legacy process is a batch job running on cron that unzips each file entirely, reads and copies the first line of it into a config file, then re-zips the entire file. Some days this takes many many hours of processing time, for no benefit.
+
+Can you suggest a method to only extract the first line (or first few lines) from each file inside a zipped archive, without fully unpacking the archives?
+
+
+
+
+",perl,parsing,shell,zip,etl,,open,0,116,14,"Run `head` on a text file inside a zipped archive without unpacking the archive Greetings,
+
+I've taken over from a prior team and writing ETL jobs which process csv files. I use a combination of shell scripts and perl on ubuntu. The csv files are huge; they arrive as zipped archives. Unzipped, many are more than 30Gb - yes, that's a G
+
+Legacy process is a batch job running on cron that unzips each file entirely, reads and copies the first line of it into a config file, then re-zips the entire file. Some days this takes many many hours of processing time, for no benefit.
+
+Can you suggest a method to only extract the first line (or first few lines) from each file inside a zipped archive, without fully unpacking the archives?
+
+
+
+
+",5
+2945127,05/31/2010 17:41:49,354788,05/31/2010 17:41:49,1,0,Matching elements from 2 arrays in perl,Right now I am attempting to synchronize two data files that are listed by date so that i can make comparisons later on. However I can not seem to print out only the lines where the dates match. At this point I have separated out the data for each file into 2 arrays. I need to find only the dates that are in both arrays and print them out. Any suggestions would be much appreciated.,perl,,,,,,open,0,75,7,Matching elements from 2 arrays in perl Right now I am attempting to synchronize two data files that are listed by date so that i can make comparisons later on. However I can not seem to print out only the lines where the dates match. At this point I have separated out the data for each file into 2 arrays. I need to find only the dates that are in both arrays and print them out. Any suggestions would be much appreciated.,1
+11066380,06/16/2012 19:25:56,462642,09/30/2010 08:51:30,747,22,Using 'sfdp' to plot large graphs with perl-GraphViz2,"My Perl scripts generates a very large graph with the module `GraphViz2`
+
+    use GraphViz2;
+
+    my($graph) = GraphViz2 -> new
+    (
+        edge   => {color => 'grey'},
+        global => {directed => 0},
+        node   => {shape => 'oval'},
+    );
+    add_very_many_nodes_and_edges();
+    $graph -> run(format => 'png', output_file => 'ptg.png');
+
+`ps` tells me, that this script now runs `dot` to plot the PNG, but this takes several hours. `sfdp` is made for handling large graphs. How can I tell `GraphViz2` to use `sfdp`? I could not find anything in the documentation. The old `GraphViz` module has had the attribute `layout` to switch between `dot`, `neato`, `fdp` and `sfdp`. 
+
+Or is there any way to get a .dot file as output, as some kind of workaround? ",perl,graphviz,,,,,open,0,163,8,"Using 'sfdp' to plot large graphs with perl-GraphViz2 My Perl scripts generates a very large graph with the module `GraphViz2`
+
+    use GraphViz2;
+
+    my($graph) = GraphViz2 -> new
+    (
+        edge   => {color => 'grey'},
+        global => {directed => 0},
+        node   => {shape => 'oval'},
+    );
+    add_very_many_nodes_and_edges();
+    $graph -> run(format => 'png', output_file => 'ptg.png');
+
+`ps` tells me, that this script now runs `dot` to plot the PNG, but this takes several hours. `sfdp` is made for handling large graphs. How can I tell `GraphViz2` to use `sfdp`? I could not find anything in the documentation. The old `GraphViz` module has had the attribute `layout` to switch between `dot`, `neato`, `fdp` and `sfdp`. 
+
+Or is there any way to get a .dot file as output, as some kind of workaround? ",2
+3570440,08/25/2010 21:38:45,336312,05/08/2010 18:04:10,1,0,Perl: How to get IO::Socket::INET timeout after X seconds ?,"I'm trying to connect to some host, using invalid port, and i want to get timeout after X seconds, How to do that ?
+
+My code:
+
+ $sock = new IO::Socket::INET(
+                  PeerAddr => $_[0],
+    PeerPort => $_[1],
+    Proto => 'tcp',
+    Timeout => 2
+    );",perl,sockets,networking,inet,,,open,0,71,10,"Perl: How to get IO::Socket::INET timeout after X seconds ? I'm trying to connect to some host, using invalid port, and i want to get timeout after X seconds, How to do that ?
+
+My code:
+
+ $sock = new IO::Socket::INET(
+                  PeerAddr => $_[0],
+    PeerPort => $_[1],
+    Proto => 'tcp',
+    Timeout => 2
+    );",4
+5175392,03/03/2011 00:55:15,636790,02/27/2011 20:07:44,113,2,A CPAN module to parse google-style search query terms?,"I want to turn a query string of the style:
+
+    my $query = q{recipe ""with sauce"" +eggs -pastrami};
+
+Into a programmatic, [SQL::Abstract](http://search.cpan.org/perldoc?SQL::Abstract) query, to be used in [DBIx::Class](http://search.cpan.org/perldoc?DBIx::Class).
+
+    $where = { -and=>[ 
+         'ingredients' =>[ { -like=>'%recipe%' }, { -like=>'%with sauce%' } ],
+         'ingredients' =>{ -like=>'%eggs%' },
+         -not => { 'ingredients => { -like => '%pastrami%' } }
+    ]}; 
+
+The above representation is just approximate. It's written by ear, untested and by no means syntactically nor conceptually correct.
+
+What I'm looking for is some prior art on the subject, basic stuff. A CPAN module perhaps, or a C library that could be turned into a CPAN module. Is there a standard for such thing? ",perl,search,full-text-search,standards,cpan,,open,0,146,9,"A CPAN module to parse google-style search query terms? I want to turn a query string of the style:
+
+    my $query = q{recipe ""with sauce"" +eggs -pastrami};
+
+Into a programmatic, [SQL::Abstract](http://search.cpan.org/perldoc?SQL::Abstract) query, to be used in [DBIx::Class](http://search.cpan.org/perldoc?DBIx::Class).
+
+    $where = { -and=>[ 
+         'ingredients' =>[ { -like=>'%recipe%' }, { -like=>'%with sauce%' } ],
+         'ingredients' =>{ -like=>'%eggs%' },
+         -not => { 'ingredients => { -like => '%pastrami%' } }
+    ]}; 
+
+The above representation is just approximate. It's written by ear, untested and by no means syntactically nor conceptually correct.
+
+What I'm looking for is some prior art on the subject, basic stuff. A CPAN module perhaps, or a C library that could be turned into a CPAN module. Is there a standard for such thing? ",5
+10815865,05/30/2012 12:01:04,534908,12/08/2010 11:21:30,301,8,manipulating Excel file in PERL,"I have an excel spreadsheet which have columns
+column1:Emp_ID
+Column2:Emp_name
+Column3:Project
+Column4:Cost Center
+Column5:rate/hour
+Column6:Hours Worked
+Column7:Start date
+Column8: Null
+
+I have to generate rate which is column5 x Column6 and write into column8 if hours worked > 40 hours
+Is there any package/functions available. I tried to use Spreadsheet::ParseExcel but I am not quite sure of the functions involved.",perl,excel,,,,05/30/2012 20:06:33,not a real question,1,50,5,"manipulating Excel file in PERL I have an excel spreadsheet which have columns
+column1:Emp_ID
+Column2:Emp_name
+Column3:Project
+Column4:Cost Center
+Column5:rate/hour
+Column6:Hours Worked
+Column7:Start date
+Column8: Null
+
+I have to generate rate which is column5 x Column6 and write into column8 if hours worked > 40 hours
+Is there any package/functions available. I tried to use Spreadsheet::ParseExcel but I am not quite sure of the functions involved.",2
+9491445,02/28/2012 23:30:37,169947,08/11/2009 21:48:18,1982,48,Cygwin wants to downgrade my Perl,"I'm using Cygwin 2.769.  I used `setup.exe` to upgrade Perl to version 5.14.1-2, which works fine.  But now whenever I open `setup.exe` to upgrade/install some other package, it by default wants to downgrade Perl back to 5.10.1-5.  If I don't remember to manually cycle that box over to my current version each time, Perl gets downgraded without my noticing.
+
+Is this expected behavior, or have I hosed something up?  It seems like using the ""Curr"" setting should not by default downgrade things.",perl,cygwin,downgrade,,,02/29/2012 05:34:22,off topic,1,85,6,"Cygwin wants to downgrade my Perl I'm using Cygwin 2.769.  I used `setup.exe` to upgrade Perl to version 5.14.1-2, which works fine.  But now whenever I open `setup.exe` to upgrade/install some other package, it by default wants to downgrade Perl back to 5.10.1-5.  If I don't remember to manually cycle that box over to my current version each time, Perl gets downgraded without my noticing.
+
+Is this expected behavior, or have I hosed something up?  It seems like using the ""Curr"" setting should not by default downgrade things.",3
+9837096,03/23/2012 09:54:41,1287953,03/23/2012 09:44:40,1,0,Its a perlscript to grep the pattern entered from docx files pls anybody pls point out my mistakes tomake it work?,"#!usr/bin/perl
+#script: patternsearch.pl : Program to search for specific pattern inside the file.
+print (""Prgramme name: $0 \n"");
+
+print (""Enter pattern: \n"");
+chop ($pattern = <STDIN>);
+
+print (""Enter the absolute folder path: \n"");
+chop ($folder = <STDIN>);
+
+print (""Enter file type: \n"");
+chop ($filetype = <STDIN>);
+
+die (""pattern not entered??? \n"") if ($pattern eq "" "");
+
+if ($filetype eq ""txt"") {
+				foreach $search (`find $folder -type f -name ""*.$filetype""`) {
+				do `grep -H $pattern $search>> patternsearch.txt`;
+				}			
+			}
+else {
+	foreach $search (`find $folder -type f -name ""*.$filetype""`) {
+	do `antiword $search | grep -H $pattern >> patternsearch.txt`;
+	}
+     }
+print (""Taskcompleted \n"");
+",perl,,,,,,open,0,88,21,"Its a perlscript to grep the pattern entered from docx files pls anybody pls point out my mistakes tomake it work? #!usr/bin/perl
+#script: patternsearch.pl : Program to search for specific pattern inside the file.
+print (""Prgramme name: $0 \n"");
+
+print (""Enter pattern: \n"");
+chop ($pattern = <STDIN>);
+
+print (""Enter the absolute folder path: \n"");
+chop ($folder = <STDIN>);
+
+print (""Enter file type: \n"");
+chop ($filetype = <STDIN>);
+
+die (""pattern not entered??? \n"") if ($pattern eq "" "");
+
+if ($filetype eq ""txt"") {
+				foreach $search (`find $folder -type f -name ""*.$filetype""`) {
+				do `grep -H $pattern $search>> patternsearch.txt`;
+				}			
+			}
+else {
+	foreach $search (`find $folder -type f -name ""*.$filetype""`) {
+	do `antiword $search | grep -H $pattern >> patternsearch.txt`;
+	}
+     }
+print (""Taskcompleted \n"");
+",1
+3081818,06/21/2010 02:32:50,157300,08/16/2009 13:35:45,918,1,looking for light-weight data persistence solution in perl,"In my app I need to store some simple data both in memroy and in disk. A real database will be overkill in my case, so I need lighter one to handle the simple data persistence requirement. I do some google search by myself, and found something interesting like DBM and DBI CVS, etc. but since there are too many options there so it is difficult for  me to make the actuaaly choice, so I'd like ask you here for the ""best-practice"" like  light-weight data perisistence solution in perl.",perl,,,,,,open,0,91,8,"looking for light-weight data persistence solution in perl In my app I need to store some simple data both in memroy and in disk. A real database will be overkill in my case, so I need lighter one to handle the simple data persistence requirement. I do some google search by myself, and found something interesting like DBM and DBI CVS, etc. but since there are too many options there so it is difficult for  me to make the actuaaly choice, so I'd like ask you here for the ""best-practice"" like  light-weight data perisistence solution in perl.",1
+7173845,08/24/2011 10:19:46,496934,11/04/2010 08:35:25,199,2,Question on expect perl,"I am new in expect perl programming and have to write some scripts to automate some tasks. Basically I need to telnet to a unix machine, issue some unix commands and check some outputs. 
+I have written a small script to telnet but I have a doubt on how to check the status of the unix commands. 
+
+#!/usr/bin/perl
+use Expect;
+$timeout=10;
+my $exp = Expect->spawn(""telnet test-b -l regress"")
+    or die ""Cannot spawn telnet: $!\n"";;
+my $spawn_ok;
+
+$foo1=$exp->expect($timeout, 'Password:');
+print ""######Received Password prompt\n"";
+
+$exp->send(""MaRtInI\n"");
+print ""######Sent password\n"";
+
+$foo1=$exp->expect($timeout, '%');
+print ""######Received root prompt\n"";
+$exp->send(""cd /var/tmp"");
+
+I have doubt here on how to check whether the cd command is actually successful, because instead of cd /var/tmp if I give cd /var/temp12 (which does-not exist), I am seeing the same result. How can I check whether to unix command which I have sent through cd is actually successful ?",perl,expect,,,,,open,0,137,4,"Question on expect perl I am new in expect perl programming and have to write some scripts to automate some tasks. Basically I need to telnet to a unix machine, issue some unix commands and check some outputs. 
+I have written a small script to telnet but I have a doubt on how to check the status of the unix commands. 
+
+#!/usr/bin/perl
+use Expect;
+$timeout=10;
+my $exp = Expect->spawn(""telnet test-b -l regress"")
+    or die ""Cannot spawn telnet: $!\n"";;
+my $spawn_ok;
+
+$foo1=$exp->expect($timeout, 'Password:');
+print ""######Received Password prompt\n"";
+
+$exp->send(""MaRtInI\n"");
+print ""######Sent password\n"";
+
+$foo1=$exp->expect($timeout, '%');
+print ""######Received root prompt\n"";
+$exp->send(""cd /var/tmp"");
+
+I have doubt here on how to check whether the cd command is actually successful, because instead of cd /var/tmp if I give cd /var/temp12 (which does-not exist), I am seeing the same result. How can I check whether to unix command which I have sent through cd is actually successful ?",2
+4432852,12/13/2010 19:48:11,368630,06/16/2010 20:11:58,804,50,For Loop and Lexically Scoped Variables,"###Version #1###
+
+    use warnings;
+    use strict;
+
+    my $count = 4;
+
+    for $count (1..8) {
+        print ""Count = $count\n"";
+        last if ($count == 6);
+    }
+
+    if (not defined($count)) {
+        print ""Count not defined\n"";
+    }
+    else {
+        print ""Count = $count\n"";
+    }
+
+This prints:
+
+    1
+    2
+    3
+    4
+    5
+    6
+    4
+
+Why? Because the `for` loop creates its own lexically scoped version of `$count` inside its block. 
+
+###Version #2####
+
+    use warnings;
+    use strict;
+
+    my $count;
+    for $count (1..8) {
+        print ""Count = $count\n"";
+        last if ($count == 6);
+    }
+
+    if (not defined($count)) {
+        print ""Count not defined\n"";
+    }
+    else {
+        print ""Count = $count\n"";
+    }
+
+    1
+    2
+    3
+    4
+    5
+    6
+    Count not defined
+
+Whoops! I wanted to capture the exit value of `$count`, but the `for` loop had it's own lexically scoped version of `$count`!. I just had someone spend two hours trying to track down this bug.
+
+### Version #3 ###
+    use warnings;
+    use strict;
+
+    for $count (1..8) {
+        print ""Count = $count\n"";
+        last if ($count == 6);
+    }
+
+    print ""That's all folks!\n"";
+
+This gives me the error `Global symbol ""$count"" requires explicit package name at line 5.` But, I thought `$count` was automatically lexically scoped inside the `for` block. It seems like that only occurs when I've already declared a lexically scoped version of this variable elsewhere.
+
+What was the reason for this behavior? Yes, I know about Conway's dictate that you should always use `my` for the `for` loop variable, but the question is why was the Perl interpretor designed this way.",perl,,,,,,open,0,429,6,"For Loop and Lexically Scoped Variables ###Version #1###
+
+    use warnings;
+    use strict;
+
+    my $count = 4;
+
+    for $count (1..8) {
+        print ""Count = $count\n"";
+        last if ($count == 6);
+    }
+
+    if (not defined($count)) {
+        print ""Count not defined\n"";
+    }
+    else {
+        print ""Count = $count\n"";
+    }
+
+This prints:
+
+    1
+    2
+    3
+    4
+    5
+    6
+    4
+
+Why? Because the `for` loop creates its own lexically scoped version of `$count` inside its block. 
+
+###Version #2####
+
+    use warnings;
+    use strict;
+
+    my $count;
+    for $count (1..8) {
+        print ""Count = $count\n"";
+        last if ($count == 6);
+    }
+
+    if (not defined($count)) {
+        print ""Count not defined\n"";
+    }
+    else {
+        print ""Count = $count\n"";
+    }
+
+    1
+    2
+    3
+    4
+    5
+    6
+    Count not defined
+
+Whoops! I wanted to capture the exit value of `$count`, but the `for` loop had it's own lexically scoped version of `$count`!. I just had someone spend two hours trying to track down this bug.
+
+### Version #3 ###
+    use warnings;
+    use strict;
+
+    for $count (1..8) {
+        print ""Count = $count\n"";
+        last if ($count == 6);
+    }
+
+    print ""That's all folks!\n"";
+
+This gives me the error `Global symbol ""$count"" requires explicit package name at line 5.` But, I thought `$count` was automatically lexically scoped inside the `for` block. It seems like that only occurs when I've already declared a lexically scoped version of this variable elsewhere.
+
+What was the reason for this behavior? Yes, I know about Conway's dictate that you should always use `my` for the `for` loop variable, but the question is why was the Perl interpretor designed this way.",1
+11524340,07/17/2012 14:11:02,1411254,05/22/2012 21:30:21,21,0,how to perform math operations against slected fields in perl,"i'am in basic stage of learning PERL, i have a task to perform a substract a number in a field by another numbers in other fields with in a file and have the difference result replaced in the numbers i'am substracting from. i could depict the same as below
+
+    03,12682559,USD,010,11398,,,015,11398,,,030,11398,,,
+    16,698,416667,V,110729,,1354409,2011060411/
+    88,XX:XXXX XXX
+    88,TE:56745745
+    88,VBDS:4564574
+    16,195,416667,V,110729,,3134046323,SD06546700S1DA01/
+    88,ED:BMG RECD
+    88,ED:2097675
+    88,DRGF:D5674D6756
+    88,CV:O/O XXXXX XXXX XXX XX
+    88,AB:XXXX
+    88,BO:ABCL VSSFRDE SERV WESF 12700 Wdftgs 
+    88,OA:USD*416667*
+    88,BO:5676476 BO1:gfhdghj fhfjhjdd SERV TKDF 
+    49,*2151723*,15/
+    98,*2151723*,3,21/
+
+First, I need to search for the Account No which in this case is **12682559** (since i have to perform operation for this account no only) on line **03**.
+Next I need to take the values from the lines **49** and **98** and substract the number(416667) from line **88** which looks like **88,OA:USD416667** in the file and have the difference result replaced in the numbers from lines **49** and **98** without disturbing the other elements of the line. 
+
+Thanks for the Help..",perl,,,,,07/17/2012 15:17:50,too localized,1,210,10,"how to perform math operations against slected fields in perl i'am in basic stage of learning PERL, i have a task to perform a substract a number in a field by another numbers in other fields with in a file and have the difference result replaced in the numbers i'am substracting from. i could depict the same as below
+
+    03,12682559,USD,010,11398,,,015,11398,,,030,11398,,,
+    16,698,416667,V,110729,,1354409,2011060411/
+    88,XX:XXXX XXX
+    88,TE:56745745
+    88,VBDS:4564574
+    16,195,416667,V,110729,,3134046323,SD06546700S1DA01/
+    88,ED:BMG RECD
+    88,ED:2097675
+    88,DRGF:D5674D6756
+    88,CV:O/O XXXXX XXXX XXX XX
+    88,AB:XXXX
+    88,BO:ABCL VSSFRDE SERV WESF 12700 Wdftgs 
+    88,OA:USD*416667*
+    88,BO:5676476 BO1:gfhdghj fhfjhjdd SERV TKDF 
+    49,*2151723*,15/
+    98,*2151723*,3,21/
+
+First, I need to search for the Account No which in this case is **12682559** (since i have to perform operation for this account no only) on line **03**.
+Next I need to take the values from the lines **49** and **98** and substract the number(416667) from line **88** which looks like **88,OA:USD416667** in the file and have the difference result replaced in the numbers from lines **49** and **98** without disturbing the other elements of the line. 
+
+Thanks for the Help..",1
+479218,01/26/2009 09:26:59,52751,01/08/2009 03:06:09,231,9,How to compress small strings,"I have an sqlite database full of huge number of URLs and it's taking huge amount of diskspace, and accessing it causes many disk seeks and is slow. Average URL path length is 97 bytes (host names repeat a lot so I moved them to a foreign-keyed table). Is there any good way of compressing them? Most compression algorithms work well with big documents, not ""documents"" of less that 100 bytes on average, but even 20% reduction would be very useful. Any compression algorithms that would work? Doesn't have to be anything standard.",perl,sqlite,compression,,,,open,0,93,5,"How to compress small strings I have an sqlite database full of huge number of URLs and it's taking huge amount of diskspace, and accessing it causes many disk seeks and is slow. Average URL path length is 97 bytes (host names repeat a lot so I moved them to a foreign-keyed table). Is there any good way of compressing them? Most compression algorithms work well with big documents, not ""documents"" of less that 100 bytes on average, but even 20% reduction would be very useful. Any compression algorithms that would work? Doesn't have to be anything standard.",3
+5403645,03/23/2011 10:14:59,579907,01/18/2011 12:12:32,6,0,How to match the pattern between a specified characters..,"I have a fix message delimeted by ""|""... tag=value is the pair between the delimeter;
+
+> (8=FIX.4.2|9=0360|35=8|49=BLPFT|56=ESP|34=8415|52=20110201-15:59:59|50=MBA|143=LN|115=MSET|57=2457172|30=CHIX|60=20110201-15:59:59.121|150=1|31=56.3100|151=71785|32=137|6=56.4058|37=9D9ZIhgu4BGU9sBtfHcYeQA|38=97370|39=1|40=1|11=20110201-05529|12=0.0012|13=2|14=25585|15=EUR|76=CHIXCCP|17=272674|47=A|167=CS|18=1|48=FR0000131104|20=0|21=1|22=4|113=N|54=1|55=BNP|207=FP|29=1|59=0|10=205|)
+
+How to extract a data between ""11="" and a first occurance of ""|"" after a match... 
+
+For example i want a data 
+
+> 20110201-05529 
+
+which is between ""|11="" and ""|"" 
+
+Can you please tell me the regular expression
+
+",perl,,,,,,open,0,53,9,"How to match the pattern between a specified characters.. I have a fix message delimeted by ""|""... tag=value is the pair between the delimeter;
+
+> (8=FIX.4.2|9=0360|35=8|49=BLPFT|56=ESP|34=8415|52=20110201-15:59:59|50=MBA|143=LN|115=MSET|57=2457172|30=CHIX|60=20110201-15:59:59.121|150=1|31=56.3100|151=71785|32=137|6=56.4058|37=9D9ZIhgu4BGU9sBtfHcYeQA|38=97370|39=1|40=1|11=20110201-05529|12=0.0012|13=2|14=25585|15=EUR|76=CHIXCCP|17=272674|47=A|167=CS|18=1|48=FR0000131104|20=0|21=1|22=4|113=N|54=1|55=BNP|207=FP|29=1|59=0|10=205|)
+
+How to extract a data between ""11="" and a first occurance of ""|"" after a match... 
+
+For example i want a data 
+
+> 20110201-05529 
+
+which is between ""|11="" and ""|"" 
+
+Can you please tell me the regular expression
+
+",1
+10137638,04/13/2012 08:33:20,1331062,04/13/2012 08:19:49,1,0,Perl - Need a script read two different columns in two CSV files and output lines that match to a new file,"I have two text files:
+
+File1.txt is:
+
+a, b, c, d, e, f1234567890qwertyuiopasdfghjkldfdf
+
+a, b, c, c, e, fopasdfghjklfdhdkjdffgfksofbfkdndkfbfbfkf
+
+a, b, c, d, e, fdsffdsqwertyuiopasdfghjklfdcfdfd
+
+a, b, c, d, e, fqwertyuiopasdfghjkl90reyuebvcd
+
+File2.txt is:
+
+d,90
+
+k,70
+
+p,450
+
+I would like a perl script to read file2.txt (column[0] and column[1]) and find where it matches in File1.txt(where matches are in column[3] and column[5]), for each line that occurs.  The filenames/filepaths need to be hardcoded, as I don't want user to input the files.
+
+
+For example, the expected result would be-
+
+I would like the output to be written to another file like this:
+
+Output.txt is:
+
+a, b, c, d, e, f1234567890qwertyuiopasdfghjkldfdf
+
+a, b, c, d, e, fqwertyuiopasdfghjkl90reyuebvcd
+
+Thanks in advance
+
+",perl,csv,comparison,,,04/15/2012 17:02:57,not a real question,1,103,22,"Perl - Need a script read two different columns in two CSV files and output lines that match to a new file I have two text files:
+
+File1.txt is:
+
+a, b, c, d, e, f1234567890qwertyuiopasdfghjkldfdf
+
+a, b, c, c, e, fopasdfghjklfdhdkjdffgfksofbfkdndkfbfbfkf
+
+a, b, c, d, e, fdsffdsqwertyuiopasdfghjklfdcfdfd
+
+a, b, c, d, e, fqwertyuiopasdfghjkl90reyuebvcd
+
+File2.txt is:
+
+d,90
+
+k,70
+
+p,450
+
+I would like a perl script to read file2.txt (column[0] and column[1]) and find where it matches in File1.txt(where matches are in column[3] and column[5]), for each line that occurs.  The filenames/filepaths need to be hardcoded, as I don't want user to input the files.
+
+
+For example, the expected result would be-
+
+I would like the output to be written to another file like this:
+
+Output.txt is:
+
+a, b, c, d, e, f1234567890qwertyuiopasdfghjkldfdf
+
+a, b, c, d, e, fqwertyuiopasdfghjkl90reyuebvcd
+
+Thanks in advance
+
+",3
+9268647,02/13/2012 21:57:10,1207830,02/13/2012 21:48:45,1,0,Whay is the most elegant way to turn a hash inside out?,"Whay is the most elegant way to turn a hash inside out?
+
+By that I mean replace keys with values and vice versa (assuming that all the values are 100% unique).
+
+E.g.
+
+Start with
+
+    %start = (1=>""a"", 2=>""b"", 3=>""c"");
+    
+    # ...
+
+    # PROFIT: 
+    %finish = (""c"" => 3, ""b"" => 2, ""a"" => 1);
+
+I know I can do it the brute force way:
+
+    foreach my $key (%start) {
+        $value = $start{$key};
+        $finish{ $value } = $key;
+    }
+
+But this can't be the most Perly-elegant way of doing so!
+",perl,hash,,,,,open,0,121,12,"Whay is the most elegant way to turn a hash inside out? Whay is the most elegant way to turn a hash inside out?
+
+By that I mean replace keys with values and vice versa (assuming that all the values are 100% unique).
+
+E.g.
+
+Start with
+
+    %start = (1=>""a"", 2=>""b"", 3=>""c"");
+    
+    # ...
+
+    # PROFIT: 
+    %finish = (""c"" => 3, ""b"" => 2, ""a"" => 1);
+
+I know I can do it the brute force way:
+
+    foreach my $key (%start) {
+        $value = $start{$key};
+        $finish{ $value } = $key;
+    }
+
+But this can't be the most Perly-elegant way of doing so!
+",2
+10519520,05/09/2012 15:47:19,1385055,05/09/2012 15:43:10,1,0,How do I get substring of multiple array elements using substr function in perl?,"
+I am trying to get the substring of array elements 0 to 410 of an array simultaneously in perl.Is there a way to do this without iterating over an array using substr function alone??
+Thanks.
+",perl,substring,,,,05/10/2012 04:00:51,not a real question,1,34,14,"How do I get substring of multiple array elements using substr function in perl? 
+I am trying to get the substring of array elements 0 to 410 of an array simultaneously in perl.Is there a way to do this without iterating over an array using substr function alone??
+Thanks.
+",2
+8701761,01/02/2012 14:02:40,45284,12/11/2008 09:46:54,428,5,Whether PERL is a scripting language or programing language?,"The same question has been asked many times, whether PERL is a programing language or scripting language?
+
+Can any one let me know the exact meaning.",perl,,,,,01/02/2012 14:16:47,not constructive,1,25,9,"Whether PERL is a scripting language or programing language? The same question has been asked many times, whether PERL is a programing language or scripting language?
+
+Can any one let me know the exact meaning.",1
+3115888,06/25/2010 06:00:19,273212,02/11/2010 02:04:56,182,4,Perl basic questions,"1.  In Unix shell script we check the exit of the previous command by checking the whether the value of $! equal to zero.  How can i do it in perl.
+
+2.  when i do a perl -V i am able to see some paths listed in @INC.  How do i add new paths to @INC.
+
+3. In GetOptions function how can i set the order of argument.  If i want -email to be in first argument. If it's given as second argument it should fail.
+             GetOptions( 'nemail'             => sub { $ENV{EMAIL} = ""Y"" }
+                    , 'arg'            => \$help );
+
+4. What is the difference between .pl and .pm extension? When i need to use .pm extension?
+
+5. when i use use File::Copy; where does the code is located. which enviromental variable does it when i have ""use""",perl,,,,,06/27/2010 05:34:55,not a real question,1,193,3,"Perl basic questions 1.  In Unix shell script we check the exit of the previous command by checking the whether the value of $! equal to zero.  How can i do it in perl.
+
+2.  when i do a perl -V i am able to see some paths listed in @INC.  How do i add new paths to @INC.
+
+3. In GetOptions function how can i set the order of argument.  If i want -email to be in first argument. If it's given as second argument it should fail.
+             GetOptions( 'nemail'             => sub { $ENV{EMAIL} = ""Y"" }
+                    , 'arg'            => \$help );
+
+4. What is the difference between .pl and .pm extension? When i need to use .pm extension?
+
+5. when i use use File::Copy; where does the code is located. which enviromental variable does it when i have ""use""",1
+7694938,10/08/2011 05:05:27,349418,05/24/2010 23:01:20,91,0,Deleting a line in Perl,"I'm using the following perl script to find comparisons on each line (and print them out). I'm trying to understand how to have it delete one of the dubes lines (either save the current file or output to a new one). Full script: http://pastebin.com/Vn1V0Uq2
+
+    while (@lines) {
+     my ($line, @found) = shift @lines;
+     my $re = qr/\Q$$line{data}\E$/;              # search token
+     @lines = grep {                              # extract matches from @lines
+         not $$_{data} =~ $re && push @found, $_
+     } @lines;
+     if (@found) {                                # write the report
+         print ""line $$_{line}: $$_{data}\n"" for $line, @found;
+         print ""\n"";
+     }
+    }",perl,,,,,,open,0,224,5,"Deleting a line in Perl I'm using the following perl script to find comparisons on each line (and print them out). I'm trying to understand how to have it delete one of the dubes lines (either save the current file or output to a new one). Full script: http://pastebin.com/Vn1V0Uq2
+
+    while (@lines) {
+     my ($line, @found) = shift @lines;
+     my $re = qr/\Q$$line{data}\E$/;              # search token
+     @lines = grep {                              # extract matches from @lines
+         not $$_{data} =~ $re && push @found, $_
+     } @lines;
+     if (@found) {                                # write the report
+         print ""line $$_{line}: $$_{data}\n"" for $line, @found;
+         print ""\n"";
+     }
+    }",1
+10301749,04/24/2012 16:09:02,1354176,04/24/2012 15:51:11,1,0,running a perl script at specific times,"Is it possible to write a Perl script which runs another Perl script at specific times? 
+In fact I want to run my script at specific times forever using another Perl script, i.e. at XX:XX O'clock (for example 12:00) the script runs **automatically** and x-minutes (for example 15 min or 60 min) later it runs again and this procedure continues forever.",perl,,,,,04/25/2012 02:34:08,off topic,1,61,7,"running a perl script at specific times Is it possible to write a Perl script which runs another Perl script at specific times? 
+In fact I want to run my script at specific times forever using another Perl script, i.e. at XX:XX O'clock (for example 12:00) the script runs **automatically** and x-minutes (for example 15 min or 60 min) later it runs again and this procedure continues forever.",1
+8242615,11/23/2011 13:01:20,471436,10/10/2010 09:09:48,1056,16,Unicode Juggling with Perl,"I have a problem I thought to be trivial. I have to deal with Umlauts from the German alphabet (`äöü`). In Unicode, there seem to be several ways to display them, one of them is combining characters. I need to normalise these different ways, replace them all by the one-character code.
+
+Such a deviant umlaut is easily found: It is a letter `aou`, followed by the UTF-8 char `\uCC88`. So I thought a regex would suffice.
+
+This is my conversion function, employing the [`Encoding`](http://perldoc.perl.org/Encode.html) package.
+
+    # This sub can be extended to include more conversions
+    sub convert {
+    	local $_;
+    	$_ = shift;
+	
+    	$_ = encode( ""utf-8"", $_ );
+	
+    	s/u\xcc\x88/ü/g;
+    	s/a\xcc\x88/ä/g;
+    	s/o\xcc\x88/ö/g;
+    	s/U\xcc\x88/Ü/g;
+    	s/A\xcc\x88/Ä/g;
+    	s/O\xcc\x88/Ö/g;
+
+    	return $_;
+    }
+
+But the resulting printed umlaut is some even more devious character (now taking 4 bytes), instead of the one on this [list](http://www.utf8-chartable.de/unicode-utf8-table.pl).
+
+I guess the problem is this juggling with Perl's internal format, actual UTF-8 and this Encoding format.
+
+Even changing the substitution lines to
+
+	s/u\xcc\x88/\xc3\xbc/g;
+	s/a\xcc\x88/\xc3\xa4/g;
+	s/o\xcc\x88/\xc3\xb6/g;
+	s/U\xcc\x88/\xc3\x9c/g;
+	s/A\xcc\x88/\xc3\x84/g;
+	s/O\xcc\x88/\xc3\x96/g;
+
+did not help, they're converted correctly but then followed by ""\xC2\xA4"" in the bytes.
+
+Any help?",perl,utf-8,utf8-decode,,,,open,0,211,4,"Unicode Juggling with Perl I have a problem I thought to be trivial. I have to deal with Umlauts from the German alphabet (`äöü`). In Unicode, there seem to be several ways to display them, one of them is combining characters. I need to normalise these different ways, replace them all by the one-character code.
+
+Such a deviant umlaut is easily found: It is a letter `aou`, followed by the UTF-8 char `\uCC88`. So I thought a regex would suffice.
+
+This is my conversion function, employing the [`Encoding`](http://perldoc.perl.org/Encode.html) package.
+
+    # This sub can be extended to include more conversions
+    sub convert {
+    	local $_;
+    	$_ = shift;
+	
+    	$_ = encode( ""utf-8"", $_ );
+	
+    	s/u\xcc\x88/ü/g;
+    	s/a\xcc\x88/ä/g;
+    	s/o\xcc\x88/ö/g;
+    	s/U\xcc\x88/Ü/g;
+    	s/A\xcc\x88/Ä/g;
+    	s/O\xcc\x88/Ö/g;
+
+    	return $_;
+    }
+
+But the resulting printed umlaut is some even more devious character (now taking 4 bytes), instead of the one on this [list](http://www.utf8-chartable.de/unicode-utf8-table.pl).
+
+I guess the problem is this juggling with Perl's internal format, actual UTF-8 and this Encoding format.
+
+Even changing the substitution lines to
+
+	s/u\xcc\x88/\xc3\xbc/g;
+	s/a\xcc\x88/\xc3\xa4/g;
+	s/o\xcc\x88/\xc3\xb6/g;
+	s/U\xcc\x88/\xc3\x9c/g;
+	s/A\xcc\x88/\xc3\x84/g;
+	s/O\xcc\x88/\xc3\x96/g;
+
+did not help, they're converted correctly but then followed by ""\xC2\xA4"" in the bytes.
+
+Any help?",3
+5083561,02/22/2011 20:27:57,507120,11/14/2010 02:21:03,3,3,Perl Unpack bits issue,"I've been trying to figure out the unpack function in Perl and can't quite figure out the whole thing.
+
+What I have:
+A string and a 16-bit hex checksum
+eg. ""this is my string"",""1234"" (1234 is not the real checksum)
+
+So I know unpack('H*', $string) will give me the whole hex value, but I need the 16-bit representation. I know this is an easy one so please forgive my ignorance.",perl,syntax,unpack,,,,open,0,66,4,"Perl Unpack bits issue I've been trying to figure out the unpack function in Perl and can't quite figure out the whole thing.
+
+What I have:
+A string and a 16-bit hex checksum
+eg. ""this is my string"",""1234"" (1234 is not the real checksum)
+
+So I know unpack('H*', $string) will give me the whole hex value, but I need the 16-bit representation. I know this is an easy one so please forgive my ignorance.",3
+2192155,02/03/2010 13:28:34,237600,12/23/2009 13:13:56,1,0,"DBIx::Class $resultset->update failing on complex search queries, help?!","I have a perl dbix::Class search the looks like this...
+
+my $rs = shift->search( {
+      -and => [
+            { 'for_revocation' => 1 },
+            [
+                { 
+                     status => { 
+                        'not_in' => [ 'revoked', 'revoking'] 
+                    },
+                },
+                {   
+                    status => 'revoking',
+                    updated => { 
+                        '<' => \'now() - interval 1 hour' 
+                    }
+                },
+            ]
+        ]
+    });
+
+
+and then I do ..
+
+$rs->update({ status => 'revoked' });
+
+But I get the error ...
+DBI Exception: DBD::mysql::st execute failed: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOR REVOCATION '1' )' at line 1 [for Statement ""UPDATE wmv_attempt SET status = ? WHERE ( ARRAY(0xadf93a8) FOR REVOCATION ? )"" with ParamValues: 0='revoking', 1=1] at (eval 20938) line 1
+
+
+If I use $rs->as_query() to get the SQL used to do the search it looks like this: 
+
+SELECT .... FROM wmv_attempt me WHERE ( ( ( status NOT IN ( ?, ? ) OR ( status = ? AND updated < now() - interval 1 hour ) ) AND for_revocation = ? ) )
+
+Which works fine.
+
+It seems that when it does the update() on the resultset it fails to be able to create the WHERE clause correctly.
+
+I suspect this is a bug.
+
+Can anyone suggest something I might be doing wrong or an alternative approach? 
+
+Thanks, Tom
+
+
+",perl,dbix-class,sql,,,03/04/2010 05:16:31,not a real question,1,479,8,"DBIx::Class $resultset->update failing on complex search queries, help?! I have a perl dbix::Class search the looks like this...
+
+my $rs = shift->search( {
+      -and => [
+            { 'for_revocation' => 1 },
+            [
+                { 
+                     status => { 
+                        'not_in' => [ 'revoked', 'revoking'] 
+                    },
+                },
+                {   
+                    status => 'revoking',
+                    updated => { 
+                        '<' => \'now() - interval 1 hour' 
+                    }
+                },
+            ]
+        ]
+    });
+
+
+and then I do ..
+
+$rs->update({ status => 'revoked' });
+
+But I get the error ...
+DBI Exception: DBD::mysql::st execute failed: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOR REVOCATION '1' )' at line 1 [for Statement ""UPDATE wmv_attempt SET status = ? WHERE ( ARRAY(0xadf93a8) FOR REVOCATION ? )"" with ParamValues: 0='revoking', 1=1] at (eval 20938) line 1
+
+
+If I use $rs->as_query() to get the SQL used to do the search it looks like this: 
+
+SELECT .... FROM wmv_attempt me WHERE ( ( ( status NOT IN ( ?, ? ) OR ( status = ? AND updated < now() - interval 1 hour ) ) AND for_revocation = ? ) )
+
+Which works fine.
+
+It seems that when it does the update() on the resultset it fails to be able to create the WHERE clause correctly.
+
+I suspect this is a bug.
+
+Can anyone suggest something I might be doing wrong or an alternative approach? 
+
+Thanks, Tom
+
+
+",3
+5328621,03/16/2011 16:42:42,498180,11/05/2010 09:51:01,44,1,Perl Backup Script Advice and Examples Please,"I am trying to create some backup scripts written in perl.
+
+I am just after some examples best practises etc..
+
+Problem:
+
+Backup files and directories from various locations on a system, is it better to move to a temp location then tar and zip them? or just do it from where they are?
+
+Hope someone can help.
+
+Thanks!",perl,backup,,,,,open,0,53,7,"Perl Backup Script Advice and Examples Please I am trying to create some backup scripts written in perl.
+
+I am just after some examples best practises etc..
+
+Problem:
+
+Backup files and directories from various locations on a system, is it better to move to a temp location then tar and zip them? or just do it from where they are?
+
+Hope someone can help.
+
+Thanks!",2
+4345789,12/03/2010 13:06:21,418507,08/12/2010 14:15:38,66,0,How to add null-character to string  in Perl ?,"I want to create string in perl with length, for example 7, but ""visible"" contents, for example ""a"".
+
+my $test = ...;
+
+print $test result: ""a""
+print length($test) result: 7
+",perl,,,,,,open,0,27,10,"How to add null-character to string  in Perl ? I want to create string in perl with length, for example 7, but ""visible"" contents, for example ""a"".
+
+my $test = ...;
+
+print $test result: ""a""
+print length($test) result: 7
+",1
+10135685,04/13/2012 05:28:33,1330779,04/13/2012 05:22:13,1,0,No of lines in a perl file,"Wanted to know the number of lines most programmers don't want their perl source file to exceed.
+
+Its a subjective question, and the question is more in the spirit of good programming practice.",perl,coding-style,,,,04/13/2012 10:20:45,not constructive,1,32,7,"No of lines in a perl file Wanted to know the number of lines most programmers don't want their perl source file to exceed.
+
+Its a subjective question, and the question is more in the spirit of good programming practice.",2
+11354667,07/06/2012 01:15:39,813182,06/23/2011 22:03:58,44,4,Get sublime text 2 (sublimecodeintel) to parse mason,"So Sublime Text 2 seems to getting a lot of love lately. I am using the Sublime Code intel plugin, https://github.com/Kronuz/SublimeCodeIntel for auto completion. The problem is, it does not recognize .mi files as MASON files. I looked into the lexer and it does have the keywords in place. How do I force it to be parsed as MASON?
+
+Running ""Set Syntax: "" on ctrl+shift+p, does not show a MASON option.",perl,sublimetext2,mason,,,07/10/2012 02:01:39,off topic,1,70,8,"Get sublime text 2 (sublimecodeintel) to parse mason So Sublime Text 2 seems to getting a lot of love lately. I am using the Sublime Code intel plugin, https://github.com/Kronuz/SublimeCodeIntel for auto completion. The problem is, it does not recognize .mi files as MASON files. I looked into the lexer and it does have the keywords in place. How do I force it to be parsed as MASON?
+
+Running ""Set Syntax: "" on ctrl+shift+p, does not show a MASON option.",3
+11305312,07/03/2012 06:04:59,1497787,07/03/2012 05:26:27,1,0,replace multisentence file into seprate columns,"I have a file which has many sentences in which each word is tagged with a field.I would like to replace my sentences into columns in which one column contains the words and the other column has the tags.ie
+
+{MCL}hospitality_NN is_BEZ an_AT excellent_JJ virtue_NN.{/MCL} is the input file.  
+output:hospitality NN {MCL}  and it continues throughout the other words in the sentence.The file is a mutli sentence file.
+I have created a code using splitfunction 
+	
+
+    @arr=split(/\s+\{}\<>/,$_);`",perl,,,,,07/09/2012 01:47:16,not a real question,1,79,6,"replace multisentence file into seprate columns I have a file which has many sentences in which each word is tagged with a field.I would like to replace my sentences into columns in which one column contains the words and the other column has the tags.ie
+
+{MCL}hospitality_NN is_BEZ an_AT excellent_JJ virtue_NN.{/MCL} is the input file.  
+output:hospitality NN {MCL}  and it continues throughout the other words in the sentence.The file is a mutli sentence file.
+I have created a code using splitfunction 
+	
+
+    @arr=split(/\s+\{}\<>/,$_);`",1
+11664477,07/26/2012 07:33:13,1503119,07/05/2012 06:41:58,1,0,How to use POST method in perl?,"
+I have to get all the links in a webpage but all the links are loaded using post method.
+
+Please provide any solution to get all the links.",perl,,,,,07/27/2012 02:25:54,too localized,1,27,7,"How to use POST method in perl? 
+I have to get all the links in a webpage but all the links are loaded using post method.
+
+Please provide any solution to get all the links.",1
+6687716,07/14/2011 02:07:26,78259,03/15/2009 12:51:33,27817,609,Is File::Spec really necessary?,"I know all about the history of different OSes having different path formats, but at this point in time there seems to be a general agreement (with one sorta irrelevant holdout*) about how paths work.  I find the whole `File::Spec` route of path management to be clunky and a useless pain.
+
+Is it really worth having this baroque set of functions to manipulate paths?  Please convince me I am being shortsighted.
+
+\* Irrelevant because even MS Windows allows forward slashes in paths, which means the only funky thing is the volume at the start and that has never really been a problem for me.",perl,,,,,,open,0,104,4,"Is File::Spec really necessary? I know all about the history of different OSes having different path formats, but at this point in time there seems to be a general agreement (with one sorta irrelevant holdout*) about how paths work.  I find the whole `File::Spec` route of path management to be clunky and a useless pain.
+
+Is it really worth having this baroque set of functions to manipulate paths?  Please convince me I am being shortsighted.
+
+\* Irrelevant because even MS Windows allows forward slashes in paths, which means the only funky thing is the volume at the start and that has never really been a problem for me.",1
+7048919,08/13/2011 06:03:41,892804,08/13/2011 06:00:33,1,0,PERL is freezed in MacOS X Lion,"I've upgraded to MacOS X Lion. After that, I've updated MacPorts to the newest version (2.0.1) and updated Perl as the following:
+
+    [Khang-Le-Nguyens-MacBook-Pro:~] khanglenguyen% perl -V
+    Summary of my perl5 (revision 5 version 12 subversion 3) configuration:
+   
+      Platform:
+    osname=darwin, osvers=11.0.0, archname=darwin-multi-2level
+    uname='darwin khang-le-nguyens-macbook-pro.local 11.0.0 darwin kernel version 11.0.0: sat jun 18 12:56:35 pdt 2011; root:xnu-1699.22.73~1release_x86_64 x86_64 '
+    config_args='-D inc_version_list=5.12.2/darwin-multi-2level 5.12.2 5.12.1/darwin-multi-2level 5.12.1 5.12.0/darwin-multi-2level 5.12.0 -des -Dprefix=/opt/local -Dscriptdir=/opt/local/bin -Dcppflags=-I/opt/local/include -Dccflags=-pipe -O2 -arch x86_64 -Dldflags=-L/opt/local/lib -arch x86_64 -Dvendorprefix=/opt/local -Dusemultiplicity=y -D cc=/Developer/usr/bin/llvm-gcc-4.2 -D ld=/Developer/usr/bin/llvm-gcc-4.2 -D man1ext=1pm -D man3ext=3pm -D man1dir=/opt/local/share/man/man1p -D man3dir=/opt/local/share/man/man3p -D siteman1dir=/opt/local/share/man/man1 -D siteman3dir=/opt/local/share/man/man3 -D vendorman1dir=/opt/local/share/man/man1 -D vendorman3dir=/opt/local/share/man/man3 -D pager=/usr/bin/less -sR'
+    hint=recommended, useposix=true, d_sigaction=define
+    useithreads=undef, usemultiplicity=define
+    useperlio=define, d_sfio=undef, uselargefiles=define, usesocks=undef
+    use64bitint=define, use64bitall=define, uselongdouble=undef
+    usemymalloc=n, bincompat5005=undef
+      Compiler:
+    cc='/Developer/usr/bin/llvm-gcc-4.2', ccflags ='-pipe -O2 -arch x86_64 -fno-common -DPERL_DARWIN -I/opt/local/include -no-cpp-precomp -fno-strict-aliasing -fstack-protector -I/opt/local/include',
+    optimize='-O3',
+    cppflags='-I/opt/local/include -no-cpp-precomp -pipe -O2 -arch x86_64 -fno-common -DPERL_DARWIN -I/opt/local/include -no-cpp-precomp -fno-strict-aliasing -fstack-protector -I/opt/local/include'
+    ccversion='', gccversion='4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.15.00)', gccosandvers=''
+    intsize=4, longsize=8, ptrsize=8, doublesize=8, byteorder=12345678
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    ivtype='long', ivsize=8, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8
+    alignbytes=8, prototype=define
+      Linker and Libraries:
+    ld='env MACOSX_DEPLOYMENT_TARGET=10.3 /Developer/usr/bin/llvm-gcc-4.2', ldflags ='-L/opt/local/lib -arch x86_64 -fstack-protector'
+    libpth=/opt/local/lib /usr/lib
+    libs=-ldbm -ldl -lm -lutil -lc
+    perllibs=-ldl -lm -lutil -lc
+    libc=, so=dylib, useshrplib=false, libperl=libperl.a
+    gnulibc_version=''
+      Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=bundle, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags=' ', lddlflags='-L/opt/local/lib -arch x86_64 -bundle -undefined dynamic_lookup -fstack-protector'
+
+
+    Characteristics of this binary (from libperl): 
+      Compile-time options: MULTIPLICITY PERL_DONT_CREATE_GVSV
+                        PERL_IMPLICIT_CONTEXT PERL_MALLOC_WRAP USE_64_BIT_ALL
+                        USE_64_BIT_INT USE_LARGE_FILES USE_PERLIO
+                        USE_PERL_ATOF
+      Built under darwin
+      Compiled at Aug 10 2011 22:28:59
+      @INC:
+        /opt/local/lib/perl5/site_perl/5.12.3/darwin-multi-2level
+        /opt/local/lib/perl5/site_perl/5.12.3
+        /opt/local/lib/perl5/vendor_perl/5.12.3/darwin-multi-2level
+        /opt/local/lib/perl5/vendor_perl/5.12.3
+        /opt/local/lib/perl5/5.12.3/darwin-multi-2level
+        /opt/local/lib/perl5/5.12.3
+        /opt/local/lib/perl5/site_perl
+        /opt/local/lib/perl5/vendor_perl
+
+However, PERL is freezed now and I cannot understand the reasons:
+    
+    [Khang-Le-Nguyens-MacBook-Pro] khanglenguyen% perl matchtopic.pl
+
+I've been waiting for a long while but nothing happens.
+
+Do you have any ideas?
+
+Thanks
+
+
+
+
+
+
+
+
+
+
+",perl,,,,,08/13/2011 11:54:52,too localized,1,533,7,"PERL is freezed in MacOS X Lion I've upgraded to MacOS X Lion. After that, I've updated MacPorts to the newest version (2.0.1) and updated Perl as the following:
+
+    [Khang-Le-Nguyens-MacBook-Pro:~] khanglenguyen% perl -V
+    Summary of my perl5 (revision 5 version 12 subversion 3) configuration:
+   
+      Platform:
+    osname=darwin, osvers=11.0.0, archname=darwin-multi-2level
+    uname='darwin khang-le-nguyens-macbook-pro.local 11.0.0 darwin kernel version 11.0.0: sat jun 18 12:56:35 pdt 2011; root:xnu-1699.22.73~1release_x86_64 x86_64 '
+    config_args='-D inc_version_list=5.12.2/darwin-multi-2level 5.12.2 5.12.1/darwin-multi-2level 5.12.1 5.12.0/darwin-multi-2level 5.12.0 -des -Dprefix=/opt/local -Dscriptdir=/opt/local/bin -Dcppflags=-I/opt/local/include -Dccflags=-pipe -O2 -arch x86_64 -Dldflags=-L/opt/local/lib -arch x86_64 -Dvendorprefix=/opt/local -Dusemultiplicity=y -D cc=/Developer/usr/bin/llvm-gcc-4.2 -D ld=/Developer/usr/bin/llvm-gcc-4.2 -D man1ext=1pm -D man3ext=3pm -D man1dir=/opt/local/share/man/man1p -D man3dir=/opt/local/share/man/man3p -D siteman1dir=/opt/local/share/man/man1 -D siteman3dir=/opt/local/share/man/man3 -D vendorman1dir=/opt/local/share/man/man1 -D vendorman3dir=/opt/local/share/man/man3 -D pager=/usr/bin/less -sR'
+    hint=recommended, useposix=true, d_sigaction=define
+    useithreads=undef, usemultiplicity=define
+    useperlio=define, d_sfio=undef, uselargefiles=define, usesocks=undef
+    use64bitint=define, use64bitall=define, uselongdouble=undef
+    usemymalloc=n, bincompat5005=undef
+      Compiler:
+    cc='/Developer/usr/bin/llvm-gcc-4.2', ccflags ='-pipe -O2 -arch x86_64 -fno-common -DPERL_DARWIN -I/opt/local/include -no-cpp-precomp -fno-strict-aliasing -fstack-protector -I/opt/local/include',
+    optimize='-O3',
+    cppflags='-I/opt/local/include -no-cpp-precomp -pipe -O2 -arch x86_64 -fno-common -DPERL_DARWIN -I/opt/local/include -no-cpp-precomp -fno-strict-aliasing -fstack-protector -I/opt/local/include'
+    ccversion='', gccversion='4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.15.00)', gccosandvers=''
+    intsize=4, longsize=8, ptrsize=8, doublesize=8, byteorder=12345678
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    ivtype='long', ivsize=8, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8
+    alignbytes=8, prototype=define
+      Linker and Libraries:
+    ld='env MACOSX_DEPLOYMENT_TARGET=10.3 /Developer/usr/bin/llvm-gcc-4.2', ldflags ='-L/opt/local/lib -arch x86_64 -fstack-protector'
+    libpth=/opt/local/lib /usr/lib
+    libs=-ldbm -ldl -lm -lutil -lc
+    perllibs=-ldl -lm -lutil -lc
+    libc=, so=dylib, useshrplib=false, libperl=libperl.a
+    gnulibc_version=''
+      Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=bundle, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags=' ', lddlflags='-L/opt/local/lib -arch x86_64 -bundle -undefined dynamic_lookup -fstack-protector'
+
+
+    Characteristics of this binary (from libperl): 
+      Compile-time options: MULTIPLICITY PERL_DONT_CREATE_GVSV
+                        PERL_IMPLICIT_CONTEXT PERL_MALLOC_WRAP USE_64_BIT_ALL
+                        USE_64_BIT_INT USE_LARGE_FILES USE_PERLIO
+                        USE_PERL_ATOF
+      Built under darwin
+      Compiled at Aug 10 2011 22:28:59
+      @INC:
+        /opt/local/lib/perl5/site_perl/5.12.3/darwin-multi-2level
+        /opt/local/lib/perl5/site_perl/5.12.3
+        /opt/local/lib/perl5/vendor_perl/5.12.3/darwin-multi-2level
+        /opt/local/lib/perl5/vendor_perl/5.12.3
+        /opt/local/lib/perl5/5.12.3/darwin-multi-2level
+        /opt/local/lib/perl5/5.12.3
+        /opt/local/lib/perl5/site_perl
+        /opt/local/lib/perl5/vendor_perl
+
+However, PERL is freezed now and I cannot understand the reasons:
+    
+    [Khang-Le-Nguyens-MacBook-Pro] khanglenguyen% perl matchtopic.pl
+
+I've been waiting for a long while but nothing happens.
+
+Do you have any ideas?
+
+Thanks
+
+
+
+
+
+
+
+
+
+
+",1
+2485380,03/21/2010 00:52:24,298228,03/21/2010 00:52:24,1,0,Want to improve my simple site/db backup script with auto removal of old backups.,"I have the following simple script for backing up my website files and db. The script is run each day via a cron job.
+
+
+    #!/bin/sh
+    
+    NOW=$(date +""%Y-%m-%d"")
+    
+    mysqldump --opt -h localhost -u username -p'password' dbname > /path/to/folder/backup/db-backup-$NOW.sql
+     
+    gzip -f /path/to/folder/backup/db-backup-$NOW.sql
+     
+    tar czf /path/to/folder/backup/web-backup-$NOW.tgz /path/to/folder/web/content/
+
+It works great, but I don't want loads of old backups clogging my system. How can I modify the script to remove any backups older than a week when the script is run?",perl,shell,scripting,cron,date,,open,0,109,14,"Want to improve my simple site/db backup script with auto removal of old backups. I have the following simple script for backing up my website files and db. The script is run each day via a cron job.
+
+
+    #!/bin/sh
+    
+    NOW=$(date +""%Y-%m-%d"")
+    
+    mysqldump --opt -h localhost -u username -p'password' dbname > /path/to/folder/backup/db-backup-$NOW.sql
+     
+    gzip -f /path/to/folder/backup/db-backup-$NOW.sql
+     
+    tar czf /path/to/folder/backup/web-backup-$NOW.tgz /path/to/folder/web/content/
+
+It works great, but I don't want loads of old backups clogging my system. How can I modify the script to remove any backups older than a week when the script is run?",5
+8937749,01/20/2012 06:51:07,1160075,01/20/2012 06:33:18,1,0,Read and print mean for columns' values in rows,"I would like to read and print mean for columns' values in every row (there may be 75,000 rows) for different groups (6 groups consisting of 5 or 10 columns). Could you please help in writing the script. I would be glad and highly appreciate for your kindness.
+
+Regards,
+Momocha
+
+",perl,,,,,01/20/2012 16:27:57,not a real question,1,48,9,"Read and print mean for columns' values in rows I would like to read and print mean for columns' values in every row (there may be 75,000 rows) for different groups (6 groups consisting of 5 or 10 columns). Could you please help in writing the script. I would be glad and highly appreciate for your kindness.
+
+Regards,
+Momocha
+
+",1
+8522152,12/15/2011 15:06:33,584950,01/21/2011 19:28:53,127,9,Perl subroutine return an empty value,"I'm fairly new to perl so sorry if this is a newbie question.
+
+As far as I understand perl, I can do this: 
+
+    sub BuildAndroidRessourceArgument()
+    {
+    	my @xmlResFiles = @_;
+    	my $fileCnt = @_;
+    	my $index = 0;
+    	my $aaptResArg = ""-F "";
+    
+    	foreach( @xmlResFiles )
+    	{
+    		$index = $index + 1;
+    		if( $index == $fileCnt )
+    		{
+    			$aaptResArg = $aaptResArg.$_;
+    		}
+    		else
+    		{
+    			$aaptResArg = $aaptResArg.$_."" -F "";
+    		}
+    		
+    	}
+    	print ""$aaptResArg\n"";
+    	return( $apptResArg );
+    }
+
+When I print my aaptResArg in here I have the correct value but then:
+
+    my ( $aaptResArg ) = BuildAndroidRessourceArgument( @xmlResFiles );
+    print ""$aaptResArg\n"";
+
+When I print after returning the value it prints nothing.
+
+So as far as I know this code should work, if it prints in the function their's no reason why it shouldn't print when returning the value right ?",perl,,,,,,open,0,214,6,"Perl subroutine return an empty value I'm fairly new to perl so sorry if this is a newbie question.
+
+As far as I understand perl, I can do this: 
+
+    sub BuildAndroidRessourceArgument()
+    {
+    	my @xmlResFiles = @_;
+    	my $fileCnt = @_;
+    	my $index = 0;
+    	my $aaptResArg = ""-F "";
+    
+    	foreach( @xmlResFiles )
+    	{
+    		$index = $index + 1;
+    		if( $index == $fileCnt )
+    		{
+    			$aaptResArg = $aaptResArg.$_;
+    		}
+    		else
+    		{
+    			$aaptResArg = $aaptResArg.$_."" -F "";
+    		}
+    		
+    	}
+    	print ""$aaptResArg\n"";
+    	return( $apptResArg );
+    }
+
+When I print my aaptResArg in here I have the correct value but then:
+
+    my ( $aaptResArg ) = BuildAndroidRessourceArgument( @xmlResFiles );
+    print ""$aaptResArg\n"";
+
+When I print after returning the value it prints nothing.
+
+So as far as I know this code should work, if it prints in the function their's no reason why it shouldn't print when returning the value right ?",1
+6134777,05/26/2011 06:50:49,134713,07/08/2009 05:51:58,3660,130,Learning Perl having the shell script knowledge-need help,"I have shell scripting knowledge.
+I have written a small shell script which will take a single argument.
+with the help of that argument.
+
+the file name format is `axeA10_<date_time_stamp>_<sequence_number>.DAT`
+my script just takes all the files in the current directory and changes the sequence number.
+so that i have the files with sequence numbers.
+the need to write this script is that i dont have the files with the sequence number as some of the sequences are missing.
+
+I know that `perl` can be more fast in doing this kind of tasks.And so i want to learn the same.
+Can anyone convert this small shell script to `perl`.this would really boost my confidence in learning `perl`.Thanks in advance.Below is the script which works fine.
+
+    #!/bin/ksh
+    
+    counter=1
+    for i in ${1}*.DAT
+    do
+    if [ $counter -lt 10 ]
+    then
+    new_name=`echo ""$i""|awk -vcount=$counter 'BEGIN{FS=""_"";OFS=""_""}{$3=count}{print $1""_""$2""_0""$3"".DAT""}'`
+    else
+    new_name=`echo ""$i""|awk -vcount=$counter 'BEGIN{FS=""_"";OFS=""_""}{$3=count}{print $0"".DAT""}'`
+    fi
+    mv $i $new_name
+    counter=$(($counter+1))
+    done
+    
+    exit 
+
+",perl,bash,shell,unix,ksh,05/26/2011 15:02:44,not a real question,1,200,8,"Learning Perl having the shell script knowledge-need help I have shell scripting knowledge.
+I have written a small shell script which will take a single argument.
+with the help of that argument.
+
+the file name format is `axeA10_<date_time_stamp>_<sequence_number>.DAT`
+my script just takes all the files in the current directory and changes the sequence number.
+so that i have the files with sequence numbers.
+the need to write this script is that i dont have the files with the sequence number as some of the sequences are missing.
+
+I know that `perl` can be more fast in doing this kind of tasks.And so i want to learn the same.
+Can anyone convert this small shell script to `perl`.this would really boost my confidence in learning `perl`.Thanks in advance.Below is the script which works fine.
+
+    #!/bin/ksh
+    
+    counter=1
+    for i in ${1}*.DAT
+    do
+    if [ $counter -lt 10 ]
+    then
+    new_name=`echo ""$i""|awk -vcount=$counter 'BEGIN{FS=""_"";OFS=""_""}{$3=count}{print $1""_""$2""_0""$3"".DAT""}'`
+    else
+    new_name=`echo ""$i""|awk -vcount=$counter 'BEGIN{FS=""_"";OFS=""_""}{$3=count}{print $0"".DAT""}'`
+    fi
+    mv $i $new_name
+    counter=$(($counter+1))
+    done
+    
+    exit 
+
+",5
+3319126,07/23/2010 14:32:26,322537,04/21/2010 17:28:57,75,9,Perl hash key determined by array,"I have an array and i am making a hash instance from it.<br>
+<br>
+For instance, if array is:<br>
+@folders=[temp,usr,bin];<br>
+then i want to fill in hash:<br>
+$the_path{$folders[0]}{$folders[1]}{$folders[2]}=""somevalue"";<br>
+<br>
+But if the array is only: @folders=[bin],<br>
+then i want the path to be:<br>
+$the_path{$folders[0]}=""somevalue"";<br>
+<br>
+The problem is i dont know beforehand how long the array is,
+and i would really like not to make x if statements for that solution scales terribly.
+
+How do I do this?
+",perl,array,hash,,,,open,0,65,6,"Perl hash key determined by array I have an array and i am making a hash instance from it.<br>
+<br>
+For instance, if array is:<br>
+@folders=[temp,usr,bin];<br>
+then i want to fill in hash:<br>
+$the_path{$folders[0]}{$folders[1]}{$folders[2]}=""somevalue"";<br>
+<br>
+But if the array is only: @folders=[bin],<br>
+then i want the path to be:<br>
+$the_path{$folders[0]}=""somevalue"";<br>
+<br>
+The problem is i dont know beforehand how long the array is,
+and i would really like not to make x if statements for that solution scales terribly.
+
+How do I do this?
+",3
+7189294,08/25/2011 11:06:14,911836,08/25/2011 10:34:41,3,0,What does the following do?,"could someone tell me what this does?
+
+    my ($pkg, @elements) = @_;
+    my $me = ""${pkg}::new()"";
+
+Thanks in advance",perl,,,,,08/26/2011 07:38:16,too localized,1,24,5,"What does the following do? could someone tell me what this does?
+
+    my ($pkg, @elements) = @_;
+    my $me = ""${pkg}::new()"";
+
+Thanks in advance",1
+4410212,12/10/2010 15:11:42,537993,12/10/2010 15:11:42,1,0,Email does not send with perl MIME::Lite using smtp. ,"I am trying to send an email using MIME::Lite but the email will not send and I am not getting any errors. 
+Code:
+
+        my $subject = $Config->{email}->{subject};
+        my $from_email = $Config->{email}->{from_email};
+        my $message = $Config->{email}->{message};
+        my $smtp_server = $Config->{email}->{smtp_server};
+        my $msg = MIME::Lite->new
+        (
+        Subject => $subject,
+        From    => $from_email,
+        To      => $email,
+        Type    => 'text/html',
+        Data    => $message
+        );
+        
+        $msg->send('smtp' ,$smtp_server );",perl,email,smtp,,,,open,0,176,10,"Email does not send with perl MIME::Lite using smtp.  I am trying to send an email using MIME::Lite but the email will not send and I am not getting any errors. 
+Code:
+
+        my $subject = $Config->{email}->{subject};
+        my $from_email = $Config->{email}->{from_email};
+        my $message = $Config->{email}->{message};
+        my $smtp_server = $Config->{email}->{smtp_server};
+        my $msg = MIME::Lite->new
+        (
+        Subject => $subject,
+        From    => $from_email,
+        To      => $email,
+        Type    => 'text/html',
+        Data    => $message
+        );
+        
+        $msg->send('smtp' ,$smtp_server );",3
+2135900,01/25/2010 21:45:55,244297,01/05/2010 22:09:22,21,0,Is hungarian notation applicable to perl ?,"In perl, reference to anything is a simple scalar, and has the '$' sigil. It's sometimes hard to say what kind of reference it is. 
+I personally prefix variable names for references with a letter, which indicates ref type. Examples:    
+
+    my $aValues; # reference to array
+    my $hValue;  # reference to hash
+    my $oValue;  # object
+    ...
+
+Some coders seem to be almost allergic to this notation. Do you use such notation ? Does it have any disadvantages ?  ",perl,,,,,01/27/2010 02:35:48,not constructive,1,98,7,"Is hungarian notation applicable to perl ? In perl, reference to anything is a simple scalar, and has the '$' sigil. It's sometimes hard to say what kind of reference it is. 
+I personally prefix variable names for references with a letter, which indicates ref type. Examples:    
+
+    my $aValues; # reference to array
+    my $hValue;  # reference to hash
+    my $oValue;  # object
+    ...
+
+Some coders seem to be almost allergic to this notation. Do you use such notation ? Does it have any disadvantages ?  ",1
+1568400,10/14/2009 19:16:46,92568,04/18/2009 18:45:13,46,2,Perl JSON QUESTION,"Following code always print paths with double slash
+
+OUTPUT of this script is 
+
+===> {""JOB"":{""PATH"":""C:\\Program Files (x86)\\bin\\sample""}}
+
+Any solution to remove those double \\ slashes
+
+    use JSON;
+    use File::Spec;
+    
+    my $installdir   = $ENV{""ProgramFiles""};
+    my $xptrlc = File::Spec->catfile($installdir,""bin"",""sample"");
+    
+    my $jobhash;
+    my $return_packet;
+    $jobhash->{'PATH'} = $xptrlc;
+    $return_packet->{'JOB'} = $jobhash;
+    
+    my $js = new JSON;
+    my $str = $js->objToJson($return_packet);
+    
+    print STDERR ""===> $str \n"";",perl,,,,,,open,0,110,3,"Perl JSON QUESTION Following code always print paths with double slash
+
+OUTPUT of this script is 
+
+===> {""JOB"":{""PATH"":""C:\\Program Files (x86)\\bin\\sample""}}
+
+Any solution to remove those double \\ slashes
+
+    use JSON;
+    use File::Spec;
+    
+    my $installdir   = $ENV{""ProgramFiles""};
+    my $xptrlc = File::Spec->catfile($installdir,""bin"",""sample"");
+    
+    my $jobhash;
+    my $return_packet;
+    $jobhash->{'PATH'} = $xptrlc;
+    $return_packet->{'JOB'} = $jobhash;
+    
+    my $js = new JSON;
+    my $str = $js->objToJson($return_packet);
+    
+    print STDERR ""===> $str \n"";",1
+6342074,06/14/2011 10:14:51,466844,10/05/2010 13:05:05,103,2,File manipulation in Perl.,"I have a simple .csv file that has that I want to extract data out of a write to a new file.
+
+I to write a script that reads in a file, reads each line, then splits and structures the columns in a different order, and if the line in the .csv contains 'xxx' - dont output the line to output file.
+
+I have already managed to read in a file, and create a secondary file, however am new to Perl and still trying to work out the commands, the following is a test script I wrote to get to grips with Perl and was wondering if I could aulter this to to what I need?- 
+
+    open (FILE, ""c1.csv"") || die ""couldn't open the file!"";
+    open (F1, "">c2.csv"") || die ""couldn't open the file!"";
+
+    #print ""start\n"";
+
+    sub trim($);
+
+    sub trim($)
+    {
+	my $string = shift;
+	$string =~ s/^\s+//;
+	$string =~ s/\s+$//;
+	return $string;
+    }
+
+    $a = 0;
+    $b = 0;
+    while ($line=<FILE>)
+    {
+
+    chop($line);
+  
+    if ($line =~ /xxx/)
+    {
+
+	$addr = $line;
+	
+	$post = substr($line, length($line)-18,8);
+
+    }
+ 
+    $a = $a + 1;
+
+    }
+
+    print $b;
+    print "" end\n"";
+
+Any help is much appreciated.",perl,text,csv,manipulation,,,open,0,245,4,"File manipulation in Perl. I have a simple .csv file that has that I want to extract data out of a write to a new file.
+
+I to write a script that reads in a file, reads each line, then splits and structures the columns in a different order, and if the line in the .csv contains 'xxx' - dont output the line to output file.
+
+I have already managed to read in a file, and create a secondary file, however am new to Perl and still trying to work out the commands, the following is a test script I wrote to get to grips with Perl and was wondering if I could aulter this to to what I need?- 
+
+    open (FILE, ""c1.csv"") || die ""couldn't open the file!"";
+    open (F1, "">c2.csv"") || die ""couldn't open the file!"";
+
+    #print ""start\n"";
+
+    sub trim($);
+
+    sub trim($)
+    {
+	my $string = shift;
+	$string =~ s/^\s+//;
+	$string =~ s/\s+$//;
+	return $string;
+    }
+
+    $a = 0;
+    $b = 0;
+    while ($line=<FILE>)
+    {
+
+    chop($line);
+  
+    if ($line =~ /xxx/)
+    {
+
+	$addr = $line;
+	
+	$post = substr($line, length($line)-18,8);
+
+    }
+ 
+    $a = $a + 1;
+
+    }
+
+    print $b;
+    print "" end\n"";
+
+Any help is much appreciated.",4
+8323867,11/30/2011 09:43:32,1073041,11/30/2011 09:38:41,1,0,How to generate the dll from the perl file?,"I have one .pl file(perl file) I need to generate the .dll for that perl file,I don't know how to generate can any one help me ?",perl,dll,script,,,12/01/2011 02:59:22,not a real question,1,27,9,"How to generate the dll from the perl file? I have one .pl file(perl file) I need to generate the .dll for that perl file,I don't know how to generate can any one help me ?",3
+10053846,04/07/2012 10:53:41,1133770,01/06/2012 06:34:55,12,1,perl global variable calculation,"using two scripts with global variable;
+
+    first.pl
+    our(@a);
+    @a=5000;
+    
+    second.pl
+    use first.pl;
+    our(@a);
+    print @a;
+    my $cal=@a*2;
+    print $cal;
+
+when I run second.pl it picks value from first.pl's @a variable & prints 5000-- good
+
+but when I calculate it's value in cal variable it prints only 2.. it should print 10000, I could not understand this . ",perl,,,,,04/08/2012 16:08:45,too localized,1,87,4,"perl global variable calculation using two scripts with global variable;
+
+    first.pl
+    our(@a);
+    @a=5000;
+    
+    second.pl
+    use first.pl;
+    our(@a);
+    print @a;
+    my $cal=@a*2;
+    print $cal;
+
+when I run second.pl it picks value from first.pl's @a variable & prints 5000-- good
+
+but when I calculate it's value in cal variable it prints only 2.. it should print 10000, I could not understand this . ",1
+5347462,03/18/2011 02:36:48,627517,02/22/2011 00:54:56,34,0,"Bash alias for ls that prints multiple columns by ""type""","I'm listing just the file basenames with an ls command like this, which I got from [here](http://superuser.com/questions/97905/tell-ls-to-print-only-the-base-filename):
+
+    ls --color -1 . | tr '\n' '\0' | xargs -0 -n 1 basename
+
+I would like to list all the directories in the first column, all the executables in the next, all the regular files last (perhaps also with a column for each extension).
+
+So the first (and main) ""challenge"" is to print multiple columns of different lengths.
+
+Do you have any suggestions what commands I should be using to write that script? Should I switch to `find`? Or should I just write the script all in Perl?
+
+I want to be able to optionally sort the columns by size too ;-) I'm not necessarily looking for a script to do the above, but perhaps some advice on ways to approach writing such a script.",perl,bash,find,echo,ls,,open,0,142,10,"Bash alias for ls that prints multiple columns by ""type"" I'm listing just the file basenames with an ls command like this, which I got from [here](http://superuser.com/questions/97905/tell-ls-to-print-only-the-base-filename):
+
+    ls --color -1 . | tr '\n' '\0' | xargs -0 -n 1 basename
+
+I would like to list all the directories in the first column, all the executables in the next, all the regular files last (perhaps also with a column for each extension).
+
+So the first (and main) ""challenge"" is to print multiple columns of different lengths.
+
+Do you have any suggestions what commands I should be using to write that script? Should I switch to `find`? Or should I just write the script all in Perl?
+
+I want to be able to optionally sort the columns by size too ;-) I'm not necessarily looking for a script to do the above, but perhaps some advice on ways to approach writing such a script.",5

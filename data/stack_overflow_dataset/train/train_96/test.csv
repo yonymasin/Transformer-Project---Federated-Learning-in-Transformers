@@ -1,0 +1,2912 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+10073891,04/09/2012 13:25:46,20358,09/22/2008 10:58:53,1435,20,MVC using viewmodel derived from base viewmodel used in another view,"This is for an asp.net mvc3 project. I have two views and their own corresponding viewmodels.
+
+Home.aspx has a viewmodel HomeVM
+
+HomeChild.aspx has a viewmodel as HomeChildVM.
+
+Now HomeChildVM is derived from HomeVM and has a few properties more that are used in its own view. My controller has one action method that returns the Home view and another action method that returns the HomeChild view. Both these action methods call one business method that returns a type as HomeVM. Then my action methods return the same to the aspx view.
+
+    return View(objHomeVM);
+
+Now, instead of writing another business method and repeating all the code all over again just to return another viewmodel type ie HomeChildVM, I am assigning the properties of objHomeVM to objHomeChildVM one by one like so:
+
+     objHomeChildVM.prop1 = objHomeVM.prop1;
+     objHomeChildVM.prop2 = objHomeVM.prop2;
+
+and then returning it:
+
+     return View(objHomeChildVM);
+Is there a better way to do this than by assigning properties one by one? I feel this is too primitive a way, unless this is the only way to do it.
+
+HomeChild.aspx currently has this page directive 
+
+    <%@ Page Title="""" Language=""C#"" MasterPageFile=""~/Views/Shared/Site.Master"" Inherits=""System.Web.Mvc.ViewPage<HomeChildVM>"" %>
+
+If I change that to HomeVM then I wont be able to use the extra properties that HomeChildVM has which are only specific to HomeChild.aspx page.
+
+Any thoughts on this? 
+
+Thanks for your time...",asp.net-mvc-3,,,,,,open,0,231,11,"MVC using viewmodel derived from base viewmodel used in another view This is for an asp.net mvc3 project. I have two views and their own corresponding viewmodels.
+
+Home.aspx has a viewmodel HomeVM
+
+HomeChild.aspx has a viewmodel as HomeChildVM.
+
+Now HomeChildVM is derived from HomeVM and has a few properties more that are used in its own view. My controller has one action method that returns the Home view and another action method that returns the HomeChild view. Both these action methods call one business method that returns a type as HomeVM. Then my action methods return the same to the aspx view.
+
+    return View(objHomeVM);
+
+Now, instead of writing another business method and repeating all the code all over again just to return another viewmodel type ie HomeChildVM, I am assigning the properties of objHomeVM to objHomeChildVM one by one like so:
+
+     objHomeChildVM.prop1 = objHomeVM.prop1;
+     objHomeChildVM.prop2 = objHomeVM.prop2;
+
+and then returning it:
+
+     return View(objHomeChildVM);
+Is there a better way to do this than by assigning properties one by one? I feel this is too primitive a way, unless this is the only way to do it.
+
+HomeChild.aspx currently has this page directive 
+
+    <%@ Page Title="""" Language=""C#"" MasterPageFile=""~/Views/Shared/Site.Master"" Inherits=""System.Web.Mvc.ViewPage<HomeChildVM>"" %>
+
+If I change that to HomeVM then I wont be able to use the extra properties that HomeChildVM has which are only specific to HomeChild.aspx page.
+
+Any thoughts on this? 
+
+Thanks for your time...",1
+8059433,11/09/2011 01:40:05,962741,09/24/2011 15:20:19,17,0,"""Cannot create an instance of an Interface"" (an MvC 3 Wizard inside Orchard CMS)","Based on the great answer at http://stackoverflow.com/questions/6402628/multi-step-registration-process-issues-in-asp-net-mvc-splitted-viewmodels-sing?answertab=votes#tab-top, I used the example Darin Dimitrov provided to test out an ASP.net MVC3 wizard. It works standalone, but not inside Orchard CMS v1.3.
+
+I am getting the following error:
+
+----------
+
+> Server Error in '/' Application.
+> 
+> Cannot create an instance of an interface.
+> 
+> Description: An unhandled exception occurred during the execution of
+> the current web request. Please review the stack trace for more
+> information about the error and where it originated in the code. 
+> 
+> Exception Details: System.MissingMethodException: Cannot create an
+> instance of an interface.
+> 
+> Source Error: 
+> 
+> An unhandled exception was generated during the execution of the
+> current web request. Information regarding the origin and location of
+> the exception can be identified using the exception stack trace below.
+> 
+> Stack Trace: 
+> 
+> 
+> [MissingMethodException: Cannot create an instance of an interface.]  
+> System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean
+> publicOnly, Boolean noCheck, Boolean& canBeCached,
+> RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck) +0   
+> System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean
+> skipCheckThis, Boolean fillCache) +98   
+> System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly,
+> Boolean skipVisibilityChecks, Boolean skipCheckThis, Boolean
+> fillCache) +241    System.Activator.CreateInstance(Type type, Boolean
+> nonPublic) +69   
+> System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext
+> controllerContext, ModelBindingContext bindingContext, Type modelType)
+> +199    System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext
+> controllerContext, ModelBindingContext bindingContext) +572   
+> System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext
+> controllerContext, ModelBindingContext bindingContext) +449   
+> System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext
+> controllerContext, ParameterDescriptor parameterDescriptor) +317   
+> System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext
+> controllerContext, ActionDescriptor actionDescriptor) +117   
+> System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext
+> controllerContext, String actionName) +343   
+> System.Web.Mvc.Controller.ExecuteCore() +116   
+> System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+> +97    System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext
+> requestContext) +10   
+> System.Web.Mvc.<>c__DisplayClassb.<BeginProcessRequest>b__5() +37   
+> System.Web.Mvc.Async.<>c__DisplayClass1.<MakeVoidDelegate>b__0() +21  
+> System.Web.Mvc.Async.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult
+> _) +12    System.Web.Mvc.Async.WrappedAsyncResult`1.End() +62    System.Web.Mvc.<>c__DisplayClasse.<EndProcessRequest>b__d() +50   
+> System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f) +7 
+> System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+> +22    System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult) +60   
+> System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult
+> result) +9   
+> Orchard.Mvc.Routes.HttpAsyncHandler.EndProcessRequest(IAsyncResult
+> result) in
+> d:\Builds\OrchardFull\src\Orchard\Mvc\Routes\ShellRoute.cs:148   
+> System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+> +8963149    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +184
+> 
+> Version Information: Microsoft .NET Framework Version:4.0.30319;
+> ASP.NET Version:4.0.30319.237
+
+----------
+
+I am venturing a guess that it's the controller that's causing a fuss.  Here is the code:
+
+
+ 
+
+    [Themed]
+        public class WizardController : Controller
+        {
+            public ActionResult Index()
+            {
+                var wizard = new WizardViewModel();
+                wizard.Initialize();
+                return View(wizard);
+            }
+    
+            [HttpPost]
+            public ActionResult Index([Deserialize] WizardViewModel wizard, IStepViewModel step)
+            {
+                wizard.Steps[wizard.CurrentStepIndex] = step;
+                if (ModelState.IsValid)
+                {
+                    if (!string.IsNullOrEmpty(Request[""next""]))
+                    {
+                        wizard.CurrentStepIndex++;
+                    }
+                    else if (!string.IsNullOrEmpty(Request[""prev""]))
+                    {
+                        wizard.CurrentStepIndex--;
+                    }
+                    else
+                    {
+                        // TODO: we have finished: all the step partial
+                        // view models have passed validation => map them
+                        // back to the domain model and do some processing with
+                        // the results
+    
+                        return Content(""thanks for filling this form"", ""text/plain"");
+                    }
+                }
+                else if (!string.IsNullOrEmpty(Request[""prev""]))
+                {
+                    // Even if validation failed we allow the user to
+                    // navigate to previous steps
+                    wizard.CurrentStepIndex--;
+                }
+                return View(wizard);
+            }
+        }
+
+But I am not 100% sure, and the other culprit could be the WizardViewModel:
+
+    [Serializable]
+    public class WizardViewModel
+    {
+        public int CurrentStepIndex { get; set; }
+        public IList<IStepViewModel> Steps { get; set; }
+    
+        public void Initialize()
+        {
+            Steps = new IStepViewModel[]
+            {
+                new Step1ViewModel(),
+                new Step2ViewModel(),
+                new Step3ViewModel()
+            };
+        }
+    }
+
+That last part is a manual insertion of the steps and alters the code originally posted (direct from author).  Any help is greatly appreciated.",asp.net-mvc-3,orchardcms,,,,,open,0,1328,14,"""Cannot create an instance of an Interface"" (an MvC 3 Wizard inside Orchard CMS) Based on the great answer at http://stackoverflow.com/questions/6402628/multi-step-registration-process-issues-in-asp-net-mvc-splitted-viewmodels-sing?answertab=votes#tab-top, I used the example Darin Dimitrov provided to test out an ASP.net MVC3 wizard. It works standalone, but not inside Orchard CMS v1.3.
+
+I am getting the following error:
+
+----------
+
+> Server Error in '/' Application.
+> 
+> Cannot create an instance of an interface.
+> 
+> Description: An unhandled exception occurred during the execution of
+> the current web request. Please review the stack trace for more
+> information about the error and where it originated in the code. 
+> 
+> Exception Details: System.MissingMethodException: Cannot create an
+> instance of an interface.
+> 
+> Source Error: 
+> 
+> An unhandled exception was generated during the execution of the
+> current web request. Information regarding the origin and location of
+> the exception can be identified using the exception stack trace below.
+> 
+> Stack Trace: 
+> 
+> 
+> [MissingMethodException: Cannot create an instance of an interface.]  
+> System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean
+> publicOnly, Boolean noCheck, Boolean& canBeCached,
+> RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck) +0   
+> System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean
+> skipCheckThis, Boolean fillCache) +98   
+> System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly,
+> Boolean skipVisibilityChecks, Boolean skipCheckThis, Boolean
+> fillCache) +241    System.Activator.CreateInstance(Type type, Boolean
+> nonPublic) +69   
+> System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext
+> controllerContext, ModelBindingContext bindingContext, Type modelType)
+> +199    System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext
+> controllerContext, ModelBindingContext bindingContext) +572   
+> System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext
+> controllerContext, ModelBindingContext bindingContext) +449   
+> System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext
+> controllerContext, ParameterDescriptor parameterDescriptor) +317   
+> System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext
+> controllerContext, ActionDescriptor actionDescriptor) +117   
+> System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext
+> controllerContext, String actionName) +343   
+> System.Web.Mvc.Controller.ExecuteCore() +116   
+> System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+> +97    System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext
+> requestContext) +10   
+> System.Web.Mvc.<>c__DisplayClassb.<BeginProcessRequest>b__5() +37   
+> System.Web.Mvc.Async.<>c__DisplayClass1.<MakeVoidDelegate>b__0() +21  
+> System.Web.Mvc.Async.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult
+> _) +12    System.Web.Mvc.Async.WrappedAsyncResult`1.End() +62    System.Web.Mvc.<>c__DisplayClasse.<EndProcessRequest>b__d() +50   
+> System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f) +7 
+> System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+> +22    System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult) +60   
+> System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult
+> result) +9   
+> Orchard.Mvc.Routes.HttpAsyncHandler.EndProcessRequest(IAsyncResult
+> result) in
+> d:\Builds\OrchardFull\src\Orchard\Mvc\Routes\ShellRoute.cs:148   
+> System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+> +8963149    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +184
+> 
+> Version Information: Microsoft .NET Framework Version:4.0.30319;
+> ASP.NET Version:4.0.30319.237
+
+----------
+
+I am venturing a guess that it's the controller that's causing a fuss.  Here is the code:
+
+
+ 
+
+    [Themed]
+        public class WizardController : Controller
+        {
+            public ActionResult Index()
+            {
+                var wizard = new WizardViewModel();
+                wizard.Initialize();
+                return View(wizard);
+            }
+    
+            [HttpPost]
+            public ActionResult Index([Deserialize] WizardViewModel wizard, IStepViewModel step)
+            {
+                wizard.Steps[wizard.CurrentStepIndex] = step;
+                if (ModelState.IsValid)
+                {
+                    if (!string.IsNullOrEmpty(Request[""next""]))
+                    {
+                        wizard.CurrentStepIndex++;
+                    }
+                    else if (!string.IsNullOrEmpty(Request[""prev""]))
+                    {
+                        wizard.CurrentStepIndex--;
+                    }
+                    else
+                    {
+                        // TODO: we have finished: all the step partial
+                        // view models have passed validation => map them
+                        // back to the domain model and do some processing with
+                        // the results
+    
+                        return Content(""thanks for filling this form"", ""text/plain"");
+                    }
+                }
+                else if (!string.IsNullOrEmpty(Request[""prev""]))
+                {
+                    // Even if validation failed we allow the user to
+                    // navigate to previous steps
+                    wizard.CurrentStepIndex--;
+                }
+                return View(wizard);
+            }
+        }
+
+But I am not 100% sure, and the other culprit could be the WizardViewModel:
+
+    [Serializable]
+    public class WizardViewModel
+    {
+        public int CurrentStepIndex { get; set; }
+        public IList<IStepViewModel> Steps { get; set; }
+    
+        public void Initialize()
+        {
+            Steps = new IStepViewModel[]
+            {
+                new Step1ViewModel(),
+                new Step2ViewModel(),
+                new Step3ViewModel()
+            };
+        }
+    }
+
+That last part is a manual insertion of the steps and alters the code originally posted (direct from author).  Any help is greatly appreciated.",2
+7010973,08/10/2011 12:44:30,95272,04/24/2009 02:30:58,289,2,ViewModel and Model in ASP.NET MVC 3 in regards to DDD - Advice,"Going through the tutorial here: http://www.asp.net/mvc/tutorials/iteration-4-make-the-application-loosely-coupled-cs 
+
+I've noticed that they are passing the EF generated entity from the controller to the service layer. Should they be passing the viewmodel instead and then do the mapping in the service layer or is what they are doing correct?
+
+I'm trying to understand the translation of the view model into the actual domain model passed from the service layer to the persistence layer.
+
+Thanks ",asp.net-mvc-3,domain-driven-design,,,,,open,0,70,13,"ViewModel and Model in ASP.NET MVC 3 in regards to DDD - Advice Going through the tutorial here: http://www.asp.net/mvc/tutorials/iteration-4-make-the-application-loosely-coupled-cs 
+
+I've noticed that they are passing the EF generated entity from the controller to the service layer. Should they be passing the viewmodel instead and then do the mapping in the service layer or is what they are doing correct?
+
+I'm trying to understand the translation of the view model into the actual domain model passed from the service layer to the persistence layer.
+
+Thanks ",2
+7501084,09/21/2011 14:00:14,212977,11/17/2009 15:31:50,23,0,How to handle server side errors in MVC3 with ajax.beginform,"I am using Ajax.BeginForm for my page. The client side validation does its work and displays any errors in the validation summary area. Now I want same behaivor when a server side error occurs in the controller.
+
+In a standard form you would AddModelError to the ModelState and return to the form and the fields and validation summary are updated. But with Ajax I can't get this to work.
+
+My controller returns a JsonResult (this may not be the correct way, but I can get my update information back to the form easily) and the first thing I do is check for the ModelState.IsValid. If this is false, how do you get those errors to display on the page in the validation summary?
+
+One would think this is really simple, but .....",asp.net-mvc-3,validation,razor,,,,open,0,129,10,"How to handle server side errors in MVC3 with ajax.beginform I am using Ajax.BeginForm for my page. The client side validation does its work and displays any errors in the validation summary area. Now I want same behaivor when a server side error occurs in the controller.
+
+In a standard form you would AddModelError to the ModelState and return to the form and the fields and validation summary are updated. But with Ajax I can't get this to work.
+
+My controller returns a JsonResult (this may not be the correct way, but I can get my update information back to the form easily) and the first thing I do is check for the ModelState.IsValid. If this is false, how do you get those errors to display on the page in the validation summary?
+
+One would think this is really simple, but .....",3
+8937171,01/20/2012 05:35:21,1091946,12/11/2011 05:19:07,32,0,ASP.NET MVC 3 Razor sintax,"Please anyone can tell what is the meaning of => operator in Razor sintax.
+
+Eg: `@Html.TextBoxFor(m => m.UserName)`",asp.net-mvc-3,razor,,,,,open,0,17,5,"ASP.NET MVC 3 Razor sintax Please anyone can tell what is the meaning of => operator in Razor sintax.
+
+Eg: `@Html.TextBoxFor(m => m.UserName)`",2
+5797312,04/26/2011 22:39:13,692151,04/05/2011 03:21:54,15,1,EF Model First or Code First Approach?,"I know this question has been asked numerous times before as I’ve read quite a few posts on the topic about the pros and cons etc but I still can’t decide which approach is right for me. I’m very new to web programming and come from a SQL DB Admin / report writing background. I’ve decided to try build my own website which may end up having 30 -40 tables maybe more in the future.
+
+I’ve looked at both approaches and I do favour Entity Model approach only because I like simplicity of the designer and I like seeing the whole model in front me, it shows the overall picture in one snapshot. Also, me not being a strong programmer I am impressed with the way it generates the POCO’s using the DbContext generator template and does all the linking between the classes.
+
+However, although I like the Model First Approach I feel there are some draw backs, I’m not sure if they are actual drawbacks or I just don’t know enough about the model first approach and code first approach as I’m still very new to this.
+
+**The Reasons that I am hesitant to use the Model First approach are:**
+
+-Mainly because I am struggling to find tutorials on the Model first approach using MVC 3. The best tutorial I’ve found using the DbContext is  by Julie Lerman but she doesn’t cover buddy classes which are  important for using data annotations and making other changes that aren’t lost when  you regenerate the POCOs . Most tutorials MVC 3 related seem to use the Code first approach. Most people say this is because the tutor doesn’t want to focus on EF but rather show more MVC in the tuts. I personally think it’s because Microsoft is championing the Code First methodology over the others :)
+
+-If it’s good practice to create buddy classes why can’t I find many tutorials showing this for MVC 3?  Are Buddy Classes another name for View Models? And why can’t I find any tutorials by Microsoft showing these buddy/view models in use with MVC 3?
+
+-I was trying to do a basic 1 to 1 relationship between 2 tables. In model first you have to set the identity keys of each table to the same field rather than using a FK in one of the tables, which may get a little confusing when you have 3 or more tables linked to each other by 1 to 1 relationships.  In code first a way around this is use the model builder and set it up manually. I think in MF you can change the relationship by going into the XML which I am not keen on doing at all.
+
+-More support/help on code first problems
+
+**The reasons I am hesitant to use the Code First approach are:**
+
+-I’m a novice coder. 
+
+-I see it getting quite difficult to keep track of tables and relationships as the   project expands.
+
+-There is no Model diagram and I have to say I really do like this idea.
+
+-Mapping entities to the database via configuration classes I find impossible :).
+
+-Updating a table will require a change to the code and the DB. In Model first only one change to the model which will automatically update the DB and Code having said that if you’re using buddy classes you may have to update these as well.
+
+Also now I see people are somewhat combining Code First and Database first approaches, in that you don’t let Code First generate your database but manually create a database and use code first API to EF to get to it. 
+
+My head is spinning with all the options and drawbacks and pros and cons. I just want to get on with creating my website and not ponder on which approach to take. 
+Can anyone give me some insight on which approach they think is best based on what I’ve said and/or what they think will be more main stream in the future?
+
+
+Many thanks dave",asp.net-mvc-3,ef-code-first,entity-framework-4.1,model-first,,,open,0,664,7,"EF Model First or Code First Approach? I know this question has been asked numerous times before as I’ve read quite a few posts on the topic about the pros and cons etc but I still can’t decide which approach is right for me. I’m very new to web programming and come from a SQL DB Admin / report writing background. I’ve decided to try build my own website which may end up having 30 -40 tables maybe more in the future.
+
+I’ve looked at both approaches and I do favour Entity Model approach only because I like simplicity of the designer and I like seeing the whole model in front me, it shows the overall picture in one snapshot. Also, me not being a strong programmer I am impressed with the way it generates the POCO’s using the DbContext generator template and does all the linking between the classes.
+
+However, although I like the Model First Approach I feel there are some draw backs, I’m not sure if they are actual drawbacks or I just don’t know enough about the model first approach and code first approach as I’m still very new to this.
+
+**The Reasons that I am hesitant to use the Model First approach are:**
+
+-Mainly because I am struggling to find tutorials on the Model first approach using MVC 3. The best tutorial I’ve found using the DbContext is  by Julie Lerman but she doesn’t cover buddy classes which are  important for using data annotations and making other changes that aren’t lost when  you regenerate the POCOs . Most tutorials MVC 3 related seem to use the Code first approach. Most people say this is because the tutor doesn’t want to focus on EF but rather show more MVC in the tuts. I personally think it’s because Microsoft is championing the Code First methodology over the others :)
+
+-If it’s good practice to create buddy classes why can’t I find many tutorials showing this for MVC 3?  Are Buddy Classes another name for View Models? And why can’t I find any tutorials by Microsoft showing these buddy/view models in use with MVC 3?
+
+-I was trying to do a basic 1 to 1 relationship between 2 tables. In model first you have to set the identity keys of each table to the same field rather than using a FK in one of the tables, which may get a little confusing when you have 3 or more tables linked to each other by 1 to 1 relationships.  In code first a way around this is use the model builder and set it up manually. I think in MF you can change the relationship by going into the XML which I am not keen on doing at all.
+
+-More support/help on code first problems
+
+**The reasons I am hesitant to use the Code First approach are:**
+
+-I’m a novice coder. 
+
+-I see it getting quite difficult to keep track of tables and relationships as the   project expands.
+
+-There is no Model diagram and I have to say I really do like this idea.
+
+-Mapping entities to the database via configuration classes I find impossible :).
+
+-Updating a table will require a change to the code and the DB. In Model first only one change to the model which will automatically update the DB and Code having said that if you’re using buddy classes you may have to update these as well.
+
+Also now I see people are somewhat combining Code First and Database first approaches, in that you don’t let Code First generate your database but manually create a database and use code first API to EF to get to it. 
+
+My head is spinning with all the options and drawbacks and pros and cons. I just want to get on with creating my website and not ponder on which approach to take. 
+Can anyone give me some insight on which approach they think is best based on what I’ve said and/or what they think will be more main stream in the future?
+
+
+Many thanks dave",4
+10027344,04/05/2012 11:01:50,1310708,04/03/2012 14:39:21,1,0,How to get entities from context before saving the unitofwork Pattern to calculate a field via previously added entities?,"Im a new user in stackoverflow and this is my first question hope i wont be breaking any rules :)...
+
+In my MVC3 project with EF4 and UnitOfWork Pattern,
+
+When adding a new entity i have to check freshly added entities and the ones already stored in the database and calculate a column in new entity.
+
+The problem is if i get the values from database newly added entities will not taken into consideration.
+
+I overcome the problem via saving the unitofwork after each entity insert. But this means saving the current state of the context every time that specific entity is inserted.
+
+I would like to know if this will bring some performance issues in the future. if so is there any other way to solve the issue?
+
+
+Here is the relative code about the issue (simplified)
+
+Model : 
+
+    public class Group
+        {
+            public Guid GroupId { get; set; }
+            public int Code { get; set; }
+    
+        }
+
+
+Controller :
+
+            UserGroup Group1 = new Group()
+            {
+                UserGroupId = Guid.NewGuid(),
+                Code = (int)Math.Pow(2, (unitOfWork.GroupRepository.Get().Count()));
+            };
+            unitOfWork.GroupRepository.Insert(Group1);
+
+
+            UserGroup Group2 = new Group()
+            {
+                UserGroupId = Guid.NewGuid(),
+                Code = (int)Math.Pow(2, (unitOfWork.GroupRepository.Get().Count()));
+            };
+            unitOfWork.GroupRepository.Insert(Group2);
+
+Insert Method : (derived from generic repository not to send all the repository pattern)
+
+
+        public virtual void Insert(Group grouptoadd)
+        {
+            UnitOfWork unitOfWork = new UnitOfWork(Context);
+            dbSet.Add(grouptoadd);
+            unitOfWork.Save();
+        }
+
+
+
+If i won't save UnitOfWork inside the Insert Method of GroupRepository class, When the Code of Group2 is calculated it wont get the Group1 into consideration.
+
+Saving the unitOfWork inside the insert Method doesnt seem right. Tried to get the values from Context 
+
+
+    (int)Math.Pow(2, (Context.Groups.Count()));
+
+
+
+this code always returns 1. I could see the Entities inside the Context in debug mode but Count returns 0.
+
+
+In the end i need : (newly added entities + entities stored in the database).Count()
+",asp.net-mvc-3,entity-framework-4,unit-of-work,dbcontext,,,open,0,536,19,"How to get entities from context before saving the unitofwork Pattern to calculate a field via previously added entities? Im a new user in stackoverflow and this is my first question hope i wont be breaking any rules :)...
+
+In my MVC3 project with EF4 and UnitOfWork Pattern,
+
+When adding a new entity i have to check freshly added entities and the ones already stored in the database and calculate a column in new entity.
+
+The problem is if i get the values from database newly added entities will not taken into consideration.
+
+I overcome the problem via saving the unitofwork after each entity insert. But this means saving the current state of the context every time that specific entity is inserted.
+
+I would like to know if this will bring some performance issues in the future. if so is there any other way to solve the issue?
+
+
+Here is the relative code about the issue (simplified)
+
+Model : 
+
+    public class Group
+        {
+            public Guid GroupId { get; set; }
+            public int Code { get; set; }
+    
+        }
+
+
+Controller :
+
+            UserGroup Group1 = new Group()
+            {
+                UserGroupId = Guid.NewGuid(),
+                Code = (int)Math.Pow(2, (unitOfWork.GroupRepository.Get().Count()));
+            };
+            unitOfWork.GroupRepository.Insert(Group1);
+
+
+            UserGroup Group2 = new Group()
+            {
+                UserGroupId = Guid.NewGuid(),
+                Code = (int)Math.Pow(2, (unitOfWork.GroupRepository.Get().Count()));
+            };
+            unitOfWork.GroupRepository.Insert(Group2);
+
+Insert Method : (derived from generic repository not to send all the repository pattern)
+
+
+        public virtual void Insert(Group grouptoadd)
+        {
+            UnitOfWork unitOfWork = new UnitOfWork(Context);
+            dbSet.Add(grouptoadd);
+            unitOfWork.Save();
+        }
+
+
+
+If i won't save UnitOfWork inside the Insert Method of GroupRepository class, When the Code of Group2 is calculated it wont get the Group1 into consideration.
+
+Saving the unitOfWork inside the insert Method doesnt seem right. Tried to get the values from Context 
+
+
+    (int)Math.Pow(2, (Context.Groups.Count()));
+
+
+
+this code always returns 1. I could see the Entities inside the Context in debug mode but Count returns 0.
+
+
+In the end i need : (newly added entities + entities stored in the database).Count()
+",4
+9236972,02/11/2012 01:21:19,598531,02/01/2011 14:29:19,447,22,Will my client need to distribute the source code I provide if they resell the app I built if it includes GPLv2 modules?,"I have a client which I'm building an MVC 3 app for but who plans to market and sell the MVC3 application sometime down the road. I will be including assemblies built from open source GPL v2 source code. I will also provide the MVC3 application source code but just the assemblies of the open source code (I mean it's free so they can download it on their own). My question is, will my client have to distribute the code I give him if he intends to resell the mvc3 app? I hate how I can't understand any of the wordings in these license. It's like not knowing that someone is breaking up with you.",asp.net-mvc-3,licensing,gpl,,,02/11/2012 20:27:55,off topic,1,115,23,"Will my client need to distribute the source code I provide if they resell the app I built if it includes GPLv2 modules? I have a client which I'm building an MVC 3 app for but who plans to market and sell the MVC3 application sometime down the road. I will be including assemblies built from open source GPL v2 source code. I will also provide the MVC3 application source code but just the assemblies of the open source code (I mean it's free so they can download it on their own). My question is, will my client have to distribute the code I give him if he intends to resell the mvc3 app? I hate how I can't understand any of the wordings in these license. It's like not knowing that someone is breaking up with you.",3
+8370734,12/03/2011 20:25:10,86191,04/02/2009 13:21:01,1976,127,Using StructureMap to add registries in 2 assemblies,"In my ASP.NET MVC project, I have 2 projects - UI and Core. I have StructureMap set up in my Core project like so:
+
+    ObjectFactory.Initialize(cfg => cfg.Scan(scanner =>
+    {
+        scanner.TheCallingAssembly();
+        scanner.LookForRegistries();
+    }));
+
+and I have a Registry set up which which allows me to use IoC on my repositories:
+
+    public class CoreRegistry : Registry
+    {
+        public CoreRegistry()
+        {
+            Scan(cfg =>
+            {
+                cfg.TheCallingAssembly();
+                cfg.WithDefaultConventions();
+            });
+        }
+    }
+
+I am initializing this in global.asax. All of this configuration is black-boxed away in Core and everything works great.
+
+However, now I'd like to use StructureMap for IoC in my UI project. Is it possible to add more to the configuration after it's already been configured? I'd hate to have to unravel everything to get my UI elements to register.",asp.net-mvc-3,structuremap,,,,,open,0,239,8,"Using StructureMap to add registries in 2 assemblies In my ASP.NET MVC project, I have 2 projects - UI and Core. I have StructureMap set up in my Core project like so:
+
+    ObjectFactory.Initialize(cfg => cfg.Scan(scanner =>
+    {
+        scanner.TheCallingAssembly();
+        scanner.LookForRegistries();
+    }));
+
+and I have a Registry set up which which allows me to use IoC on my repositories:
+
+    public class CoreRegistry : Registry
+    {
+        public CoreRegistry()
+        {
+            Scan(cfg =>
+            {
+                cfg.TheCallingAssembly();
+                cfg.WithDefaultConventions();
+            });
+        }
+    }
+
+I am initializing this in global.asax. All of this configuration is black-boxed away in Core and everything works great.
+
+However, now I'd like to use StructureMap for IoC in my UI project. Is it possible to add more to the configuration after it's already been configured? I'd hate to have to unravel everything to get my UI elements to register.",2
+9968459,04/01/2012 21:21:26,970114,09/28/2011 23:18:02,15,0,Is it manageable to make newsletter in asp.net mvc 3?,"Is it manageable to make a newsletter in asp.net mvc 3 ... with templates, tracking (bouncing, views, clicks) and mass emailing? I can't find much information about it, maybe you can suggest a book or links?
+
+Thanks!",asp.net-mvc-3,email,newsletter,,,04/03/2012 05:20:35,not a real question,1,36,10,"Is it manageable to make newsletter in asp.net mvc 3? Is it manageable to make a newsletter in asp.net mvc 3 ... with templates, tracking (bouncing, views, clicks) and mass emailing? I can't find much information about it, maybe you can suggest a book or links?
+
+Thanks!",3
+9757591,03/18/2012 10:29:58,1026502,11/02/2011 20:46:43,269,21,MVC mini profiler - manually adding step,"I have lots of little actions (10-30 per page) and they're part of a recursive call, so I can't easily count them as a single step in the profiler. I get 30 short and distinct counters when I only need the total.
+
+Is there a simple and straightforward way of manually adding a step to the mini profiler? or get it to sum up steps with the same name?
+
+Also, is it possible to somehow put textual information there, not just timings? ",asp.net-mvc-3,mini-profiler,,,,,open,0,81,7,"MVC mini profiler - manually adding step I have lots of little actions (10-30 per page) and they're part of a recursive call, so I can't easily count them as a single step in the profiler. I get 30 short and distinct counters when I only need the total.
+
+Is there a simple and straightforward way of manually adding a step to the mini profiler? or get it to sum up steps with the same name?
+
+Also, is it possible to somehow put textual information there, not just timings? ",2
+10069387,04/09/2012 05:41:29,1321238,04/09/2012 05:30:42,1,0,How To display HTML Content in MVC 3 using Extenson Methods,"**How To display HTML Content in MVC 3 using Extenson Methods**
+
+**.cs(HTML Helper)**
+public static IHtmlString GetContentDetails(this HtmlHelper html,Int32 Id)
+        {
+            dbGymEntities _reposotory = new dbGymEntities();
+            var details = _reposotory.tbl_StaticPages.SingleOrDefault(p=>p.StaticPageID == Id);
+            var output = new System.Text.StringBuilder();           
+
+            output.Append(details.StaticPageContent);           
+          
+            return html.Raw(output.ToString());          
+ 
+        }
+
+
+**View(.csHtml Page)**
+
+@Html.GetContentDetails(13)
+
+****Tell me where I am wrong...Its simply display Html text.****
+
+<div id=""footer_wraper"">
+            <ul>
+                <li><a href=""/home/"">Home</a></li>
+                <li><a href=""#>View profile</a></li>
+               
+               
+
+   
+            </ul>
+           
+            <div class=""clear"">
+            </div>
+           
+        </div>
+
+
+",asp.net-mvc-3,,,,,04/16/2012 15:46:26,not a real question,1,309,11,"How To display HTML Content in MVC 3 using Extenson Methods **How To display HTML Content in MVC 3 using Extenson Methods**
+
+**.cs(HTML Helper)**
+public static IHtmlString GetContentDetails(this HtmlHelper html,Int32 Id)
+        {
+            dbGymEntities _reposotory = new dbGymEntities();
+            var details = _reposotory.tbl_StaticPages.SingleOrDefault(p=>p.StaticPageID == Id);
+            var output = new System.Text.StringBuilder();           
+
+            output.Append(details.StaticPageContent);           
+          
+            return html.Raw(output.ToString());          
+ 
+        }
+
+
+**View(.csHtml Page)**
+
+@Html.GetContentDetails(13)
+
+****Tell me where I am wrong...Its simply display Html text.****
+
+<div id=""footer_wraper"">
+            <ul>
+                <li><a href=""/home/"">Home</a></li>
+                <li><a href=""#>View profile</a></li>
+               
+               
+
+   
+            </ul>
+           
+            <div class=""clear"">
+            </div>
+           
+        </div>
+
+
+",1
+7936150,10/29/2011 00:25:10,163124,08/25/2009 22:37:48,381,10,Create ViewBag properties based on strings,"Is there any way to create and use dynamic properties for ViewBag, based on strings?
+
+Something like 
+
+    ViewBag.CreateProperty(""MyProperty"");
+    ViewBag.Property(""MyProperty"") = ""Myvalue"";
+
+Thank you",asp.net-mvc-3,viewbag,,,,,open,0,28,6,"Create ViewBag properties based on strings Is there any way to create and use dynamic properties for ViewBag, based on strings?
+
+Something like 
+
+    ViewBag.CreateProperty(""MyProperty"");
+    ViewBag.Property(""MyProperty"") = ""Myvalue"";
+
+Thank you",2
+9739474,03/16/2012 14:50:30,32120,10/28/2008 16:24:07,604,29,Cucumber and Waitn for Acceptance testing in Asp.Net MVC,"If the buisness owner/QA are writing/running the Acceptance test against the front end of a Asp.Net Mvc Application, is there a benefit to using SpecFlow/Waitn or SpecFlow/Selenium over Cucumber/Waitr, besides the ""all on one platform"" benefit?",asp.net-mvc-3,cucumber,specflow,,,03/18/2012 12:52:51,off topic,1,36,9,"Cucumber and Waitn for Acceptance testing in Asp.Net MVC If the buisness owner/QA are writing/running the Acceptance test against the front end of a Asp.Net Mvc Application, is there a benefit to using SpecFlow/Waitn or SpecFlow/Selenium over Cucumber/Waitr, besides the ""all on one platform"" benefit?",3
+6992923,08/09/2011 07:42:16,709543,04/15/2011 09:18:15,1,1,Problem Creating Custom Validator on Collection properties,"Net MVC 3 for development.
+Now there is a scenario where i need to create to a custom validator on a collection property.
+Now the problem I am facing is that this custom validator works well when the length of the collection is 1 but when there are more than one elements in the collection i face a problem is the custom validation pushes errors but the problem occurs that when checked in ModelState the error is not found plugged. So in this case what should i do ? I am pasting in the code as below.
+
+This is the Model i want to validate:
+
+    public class CreateTestModel
+    {
+        [Required]
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        public RadioButtonListViewModel<GoalTypes> Goals { get; set; }
+
+        public IEnumerable<TestEntityModel> IncludedEntities { get; set; }
+
+        public IEnumerable<TestEntityModel> ExcludedEntities { get; set; }
+
+        public IEnumerable<TestFilterModel> IncludedFilters { get; set; }
+
+        public IEnumerable<TestFilterModel> ExcludedFilters { get; set; }
+
+        public IEnumerable<BucketModel> Buckets { get; set; }
+
+        public bool AutoDecision { get; set; }
+
+        public DateTime StartDate { get; set; }
+
+        public DateTime EndDate { get; set; }
+
+        public int AdminId { get; set; }
+
+        [DefaultValue(true)]
+        public bool IsEnabled { get; set; }
+      }
+
+This is the Custom Validator i have written :
+    
+        [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
+    public class TotalValidator : ValidationAttribute
+    {
+        public string PropertyName { get; set; }
+        public int TotalValue { get; set; }
+        //private const string DefaultErrorMessageFormatString = ""Bucket traffic percentage should add up to 100 % chutia"";
+        public override string FormatErrorMessage(string name)
+        {
+            return string.Format(ErrorMessageString, name);
+        }
+        public TotalValidator()
+        {
+
+        }
+
+        public TotalValidator(string PropertyName,int TotalValue)
+        {
+            this.PropertyName = PropertyName;
+            this.TotalValue = TotalValue;
+        }
+
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            
+            if(value!=null)
+            {
+                int trafficCount=0;
+                
+                foreach (object obj in((IEnumerable)value))
+                {
+                     trafficCount +=     Convert.ToInt32(obj.GetType().GetProperty(PropertyName).GetValue(obj, null));
+                }
+               if(trafficCount!=TotalValue)
+               {
+                   return  new ValidationResult(ErrorMessage);
+               }
+            }
+            
+            return ValidationResult.Success;
+        }
+    }
+
+
+Please help me out... 
+",asp.net-mvc-3,validation,,,,,open,0,816,7,"Problem Creating Custom Validator on Collection properties Net MVC 3 for development.
+Now there is a scenario where i need to create to a custom validator on a collection property.
+Now the problem I am facing is that this custom validator works well when the length of the collection is 1 but when there are more than one elements in the collection i face a problem is the custom validation pushes errors but the problem occurs that when checked in ModelState the error is not found plugged. So in this case what should i do ? I am pasting in the code as below.
+
+This is the Model i want to validate:
+
+    public class CreateTestModel
+    {
+        [Required]
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        public RadioButtonListViewModel<GoalTypes> Goals { get; set; }
+
+        public IEnumerable<TestEntityModel> IncludedEntities { get; set; }
+
+        public IEnumerable<TestEntityModel> ExcludedEntities { get; set; }
+
+        public IEnumerable<TestFilterModel> IncludedFilters { get; set; }
+
+        public IEnumerable<TestFilterModel> ExcludedFilters { get; set; }
+
+        public IEnumerable<BucketModel> Buckets { get; set; }
+
+        public bool AutoDecision { get; set; }
+
+        public DateTime StartDate { get; set; }
+
+        public DateTime EndDate { get; set; }
+
+        public int AdminId { get; set; }
+
+        [DefaultValue(true)]
+        public bool IsEnabled { get; set; }
+      }
+
+This is the Custom Validator i have written :
+    
+        [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
+    public class TotalValidator : ValidationAttribute
+    {
+        public string PropertyName { get; set; }
+        public int TotalValue { get; set; }
+        //private const string DefaultErrorMessageFormatString = ""Bucket traffic percentage should add up to 100 % chutia"";
+        public override string FormatErrorMessage(string name)
+        {
+            return string.Format(ErrorMessageString, name);
+        }
+        public TotalValidator()
+        {
+
+        }
+
+        public TotalValidator(string PropertyName,int TotalValue)
+        {
+            this.PropertyName = PropertyName;
+            this.TotalValue = TotalValue;
+        }
+
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            
+            if(value!=null)
+            {
+                int trafficCount=0;
+                
+                foreach (object obj in((IEnumerable)value))
+                {
+                     trafficCount +=     Convert.ToInt32(obj.GetType().GetProperty(PropertyName).GetValue(obj, null));
+                }
+               if(trafficCount!=TotalValue)
+               {
+                   return  new ValidationResult(ErrorMessage);
+               }
+            }
+            
+            return ValidationResult.Success;
+        }
+    }
+
+
+Please help me out... 
+",2
+7260638,08/31/2011 16:58:52,202382,11/04/2009 06:36:53,1311,13,ASP.NET MVC3: upload image and save it to database,"I am working on Steven Sanderson's book (Pro ASP.NET MVC 3). I am on p. 294. I've copied word per word what's in the book but it is not working.
+
+This is the action method
+
+    public ActionResult Edit(Product product, HttpPostedFileBase image)
+    {
+      if(ModelState.IsValid)
+      {
+        if(image != null)
+        {
+          product.ImageMimeType = image.ContentType;
+          product.ImageData = new byte[image.ContentLength];
+          image.InputStream.Read(product.ImageData, 0, image.ContentLength); 
+        }
+
+        //...Save product in the database using Entity Framework
+      }
+    }
+
+This is how to display the image on the razor page
+
+    <img width=""150"" height=""150""
+      src = ""@Url.Action(""GetImage"", ""Home"", new { Model.ProductID })"" /> 
+
+And finally, the GetImage
+
+    public FileContentResult GetImage(int productID)
+        {
+            Product prod = repository.Products.FirstOrDefault(p => p.ProductID == productID);
+            if (prod != null)
+            {
+                return File(img.ImageData, img.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+  Thanks for helping 
+
+",asp.net-mvc-3,file-upload,,,,,open,0,339,9,"ASP.NET MVC3: upload image and save it to database I am working on Steven Sanderson's book (Pro ASP.NET MVC 3). I am on p. 294. I've copied word per word what's in the book but it is not working.
+
+This is the action method
+
+    public ActionResult Edit(Product product, HttpPostedFileBase image)
+    {
+      if(ModelState.IsValid)
+      {
+        if(image != null)
+        {
+          product.ImageMimeType = image.ContentType;
+          product.ImageData = new byte[image.ContentLength];
+          image.InputStream.Read(product.ImageData, 0, image.ContentLength); 
+        }
+
+        //...Save product in the database using Entity Framework
+      }
+    }
+
+This is how to display the image on the razor page
+
+    <img width=""150"" height=""150""
+      src = ""@Url.Action(""GetImage"", ""Home"", new { Model.ProductID })"" /> 
+
+And finally, the GetImage
+
+    public FileContentResult GetImage(int productID)
+        {
+            Product prod = repository.Products.FirstOrDefault(p => p.ProductID == productID);
+            if (prod != null)
+            {
+                return File(img.ImageData, img.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+  Thanks for helping 
+
+",2
+8028245,11/06/2011 15:55:22,1032354,11/06/2011 15:23:04,1,0,newbie - Best patterns and tools for a real asp.net mvc3 application,"I'm studing how to build a mvc 3 web application and I am very confused. 
+I spent the last few days reading about DDD, DI, IoC, TDD, EF (and tools like castle mapper, automapper, windsor, ecc) but I need your experience to make up my mind and choose a path to follow.
+
+What I know:<br>
+ - I want to use MVC 3.0<br>
+ - I want to use EF 4.1 or 4.2<br>
+ - I don't want to use Unit Tests for the moment but I want the structure of my project to support them in the future with few modification.<br>
+ - I want to heavily use jQuery (the application need to be ""very ajax"")<br>
+ - I obviously don't want my controllers and views to directly use EF objects<br>
+ - I don't want to write duplicate code (ie: if I have a ""person"" db table with a ""FirstName"" property, I don't want to create a class for each layer of the software [dal, bll, ui, ...] with the same ""person"" data. Adding a field to the database should not need to add a property to way to many classes)<br><br>
+
+What I'd like to know:<br>
+ - Which pattern(s) would you use?<br>
+ - Best way of organizing projects inside the vs2010 solution?<br>
+ - Code first or database first?<br>
+Last but not least: Is it possible to use all the cool features of mvc (data annotation, validation, ecc) with a heavily ajaxed site?
+
+
+Of course I don't expect a fully detailed answer: I just need some pointers/help/link to go in the right direction and study what I need.
+
+Thanks in advance.
+
+",asp.net-mvc-3,design-patterns,entity-framework-4.1,,,11/07/2011 03:19:10,not constructive,1,261,12,"newbie - Best patterns and tools for a real asp.net mvc3 application I'm studing how to build a mvc 3 web application and I am very confused. 
+I spent the last few days reading about DDD, DI, IoC, TDD, EF (and tools like castle mapper, automapper, windsor, ecc) but I need your experience to make up my mind and choose a path to follow.
+
+What I know:<br>
+ - I want to use MVC 3.0<br>
+ - I want to use EF 4.1 or 4.2<br>
+ - I don't want to use Unit Tests for the moment but I want the structure of my project to support them in the future with few modification.<br>
+ - I want to heavily use jQuery (the application need to be ""very ajax"")<br>
+ - I obviously don't want my controllers and views to directly use EF objects<br>
+ - I don't want to write duplicate code (ie: if I have a ""person"" db table with a ""FirstName"" property, I don't want to create a class for each layer of the software [dal, bll, ui, ...] with the same ""person"" data. Adding a field to the database should not need to add a property to way to many classes)<br><br>
+
+What I'd like to know:<br>
+ - Which pattern(s) would you use?<br>
+ - Best way of organizing projects inside the vs2010 solution?<br>
+ - Code first or database first?<br>
+Last but not least: Is it possible to use all the cool features of mvc (data annotation, validation, ecc) with a heavily ajaxed site?
+
+
+Of course I don't expect a fully detailed answer: I just need some pointers/help/link to go in the right direction and study what I need.
+
+Thanks in advance.
+
+",3
+10563606,05/12/2012 12:11:34,191220,10/16/2009 13:50:10,122,7,Get route values in ajax action + Asp.net MVC 3,"I'm into the `Post` Controller , URL is like this :
+
+    http://127.0.0.1/post/5006/some-text-for-seo-friendly
+    {contoller}/{id}/{seo}
+
+I used `Ajax.BeginForm` in index view and mapped it to `AddComment` action in the same controller. 
+
+my question is how can I get the `{id} [5006]` in `AddComment` action.
+
+note : the hard way is using `Request.UrlReferrer` and split by `'/'` and select form array .
+
+
+
+",asp.net-mvc-3,c#-4.0,routing,,,,open,0,63,10,"Get route values in ajax action + Asp.net MVC 3 I'm into the `Post` Controller , URL is like this :
+
+    http://127.0.0.1/post/5006/some-text-for-seo-friendly
+    {contoller}/{id}/{seo}
+
+I used `Ajax.BeginForm` in index view and mapped it to `AddComment` action in the same controller. 
+
+my question is how can I get the `{id} [5006]` in `AddComment` action.
+
+note : the hard way is using `Request.UrlReferrer` and split by `'/'` and select form array .
+
+
+
+",3
+8097834,11/11/2011 17:39:54,942855,09/13/2011 15:25:15,94,6,ASP.Net MVC 3.0 Ajax Action Link OnBegin Function Collect return Value and Append to URL,"     new AjaxOptions
+           {
+               OnBegin = ""MyFunction"",
+               Url=""/Controller/JSONAction/""+OnbeginRetunrValue,
+               HttpMethod=""GET""
+           }
+
+In my Ajax properties, I have On Begin function which returns a value.
+I wan tot append that return value to the URl.
+
+How can I do that?",asp.net-mvc-3,,,,,,open,0,101,15,"ASP.Net MVC 3.0 Ajax Action Link OnBegin Function Collect return Value and Append to URL      new AjaxOptions
+           {
+               OnBegin = ""MyFunction"",
+               Url=""/Controller/JSONAction/""+OnbeginRetunrValue,
+               HttpMethod=""GET""
+           }
+
+In my Ajax properties, I have On Begin function which returns a value.
+I wan tot append that return value to the URl.
+
+How can I do that?",1
+7656481,10/05/2011 03:43:58,781253,06/02/2011 14:00:35,31,1,MVC3 view not updating using EF 4.1,"I am having a problem updating a record.  For some reason it is not even hitting the post action in the controller and just returning:
+""An item with the same key has already been added.""
+
+It seems to be behaving as if it is doing an insert rather than an update. I would appreciate a new set of eyes on this. It is probably something very simple that I have missed.
+
+Controller:
+
+    // GET: /Manage/Regions/Edit/5
+ 
+        public ActionResult Edit(int id)
+        {
+            Region_CU regionEdit = (from r in db.Venues_Regions
+                                    where r.RegionsID == id
+                                    select new Region_CU
+                                    {
+                                            RegionsID = r.RegionsID,
+                                            Name = r.Name,
+                                            CalendarLink = r.CalendarLink,
+                                            MapIcon = r.MapIcon,
+                                            QtrStart = r.QtrStart,
+                                            QtrEnd = r.QtrEnd,
+                                            FacebookLikeBox = r.FacebookLikeBox,
+                                            FacebookId = r.FacebookId
+                                        //  region = r 
+                                    }).Single();
+            return View(regionEdit);
+        }
+
+        //
+        // POST: /Manage/Regions/Edit/5
+
+        [HttpPost]
+        public ActionResult Edit(Region_CU r)
+        {
+            if (ModelState.IsValid)
+            {
+                var v = db.Venues_Regions.First(i => i.RegionsID == r.RegionsID);
+                    //v.RegionsID = r.RegionsID;
+                    v.Name = r.Name;
+                    v.CalendarLink = r.CalendarLink;
+                    v.MapIcon = r.MapIcon;
+                    v.QtrStart = r.QtrStart;
+                    v.QtrEnd = r.QtrEnd;
+                    v.FacebookLikeBox = r.FacebookLikeBox;
+                    v.FacebookId = r.FacebookId;
+                //Venues_Regions v = new Venues_Regions
+                //{
+                //    RegionsID = r.RegionsID,
+                //    Name = r.Name,
+                //    CalendarLink = r.CalendarLink,
+                //    MapIcon = r.MapIcon,
+                //    QtrStart = r.QtrStart,
+                //    QtrEnd = r.QtrEnd,
+                //    FacebookLikeBox = r.FacebookLikeBox,
+                //    FacebookId = r.FacebookId
+                //};
+                //db.Venues_Regions.Attach(v);
+                //db.ObjectStateManager.ChangeObjectState(v, EntityState.Modified);
+                db.SaveChanges();
+                return RedirectToAction(""Index"");
+            }
+            return View(r);
+        }
+
+View :
+
+    @model THPT_Razor.Areas.Manage.Models.Region_CU
+
+    @{
+    ViewBag.Title = ""Edit Region"";
+    }
+
+    <h2>Edit</h2>
+    <link href=""@Url.Content(""~/Content/themes/base/jquery.ui.all.css"")"" rel=""stylesheet"" type=""text/css"" />
+    <script src=""@Url.Content(""~/Scripts/jquery.validate.min.js"")"" type=""text/javascript"">   </script>
+<script src=""@Url.Content(""~/Scripts/jquery.validate.unobtrusive.min.js"")"" type=""text/javascript""></script>
+    <script>
+       $(document).ready(function () { $('.date').datepicker({ dateFormat: ""mm/dd/yy""   });    });
+    </script>
+    @using (Html.BeginForm()) {
+      @* @Html.ValidationSummary(true)*@
+    <fieldset>
+        <legend>@Html.DisplayFor(model => model.Name)</legend>
+
+        @Html.HiddenFor(model => model.RegionsID)
+        @Html.HiddenFor(model => model.Name)
+        @Html.HiddenFor(model => model.CalendarLink)
+        <div class=""editor-label"">
+            @Html.Label(""Map Icon"")
+        </div>
+        <div class=""editor-field"">
+            @Html.DropDownListFor(model => model.MapIcon, new SelectList(Model.mapicons,""id"",""Description""))
+        </div>
+        <div class=""editor-label"">
+            @Html.Label(""Quarter Start"")
+        </div>
+        <div class=""editor-field"">
+            @Html.TextBoxFor(model => model.QtrStart, new { @class = ""date"" })
+            @Html.ValidationMessageFor(model => model.QtrStart)
+        </div>
+
+        <div class=""editor-label"">
+            @Html.Label(""Quarter End"")
+        </div>
+        <div class=""editor-field"">
+            @Html.TextBoxFor(model => model.QtrEnd, new { @class = ""date"" })
+            @Html.ValidationMessageFor(model => model.QtrEnd)
+        </div>
+
+        <div class=""editor-label"">
+            @Html.Label(""Region Facebook ID"")
+        </div>
+        <div class=""editor-field"">
+            @Html.EditorFor(model => model.FacebookId)
+            @Html.ValidationMessageFor(model => model.FacebookId)
+        </div>
+        <div class=""editor-label"">
+           @Html.Label(""Region Facebook LikeBox Code"")
+        </div>
+        <div class=""editor-field"">
+            @Html.EditorFor(model => model.FacebookLikeBox)
+            @Html.ValidationMessageFor(model => model.FacebookLikeBox)
+        </div>
+        <p>
+            <input type=""submit"" value=""Update"" />
+        </p>
+    </fieldset>
+
+
+
+Thanks in advance for the help,
+Chris
+
+",asp.net-mvc-3,entity-framework-4,razor,,,,open,0,1838,7,"MVC3 view not updating using EF 4.1 I am having a problem updating a record.  For some reason it is not even hitting the post action in the controller and just returning:
+""An item with the same key has already been added.""
+
+It seems to be behaving as if it is doing an insert rather than an update. I would appreciate a new set of eyes on this. It is probably something very simple that I have missed.
+
+Controller:
+
+    // GET: /Manage/Regions/Edit/5
+ 
+        public ActionResult Edit(int id)
+        {
+            Region_CU regionEdit = (from r in db.Venues_Regions
+                                    where r.RegionsID == id
+                                    select new Region_CU
+                                    {
+                                            RegionsID = r.RegionsID,
+                                            Name = r.Name,
+                                            CalendarLink = r.CalendarLink,
+                                            MapIcon = r.MapIcon,
+                                            QtrStart = r.QtrStart,
+                                            QtrEnd = r.QtrEnd,
+                                            FacebookLikeBox = r.FacebookLikeBox,
+                                            FacebookId = r.FacebookId
+                                        //  region = r 
+                                    }).Single();
+            return View(regionEdit);
+        }
+
+        //
+        // POST: /Manage/Regions/Edit/5
+
+        [HttpPost]
+        public ActionResult Edit(Region_CU r)
+        {
+            if (ModelState.IsValid)
+            {
+                var v = db.Venues_Regions.First(i => i.RegionsID == r.RegionsID);
+                    //v.RegionsID = r.RegionsID;
+                    v.Name = r.Name;
+                    v.CalendarLink = r.CalendarLink;
+                    v.MapIcon = r.MapIcon;
+                    v.QtrStart = r.QtrStart;
+                    v.QtrEnd = r.QtrEnd;
+                    v.FacebookLikeBox = r.FacebookLikeBox;
+                    v.FacebookId = r.FacebookId;
+                //Venues_Regions v = new Venues_Regions
+                //{
+                //    RegionsID = r.RegionsID,
+                //    Name = r.Name,
+                //    CalendarLink = r.CalendarLink,
+                //    MapIcon = r.MapIcon,
+                //    QtrStart = r.QtrStart,
+                //    QtrEnd = r.QtrEnd,
+                //    FacebookLikeBox = r.FacebookLikeBox,
+                //    FacebookId = r.FacebookId
+                //};
+                //db.Venues_Regions.Attach(v);
+                //db.ObjectStateManager.ChangeObjectState(v, EntityState.Modified);
+                db.SaveChanges();
+                return RedirectToAction(""Index"");
+            }
+            return View(r);
+        }
+
+View :
+
+    @model THPT_Razor.Areas.Manage.Models.Region_CU
+
+    @{
+    ViewBag.Title = ""Edit Region"";
+    }
+
+    <h2>Edit</h2>
+    <link href=""@Url.Content(""~/Content/themes/base/jquery.ui.all.css"")"" rel=""stylesheet"" type=""text/css"" />
+    <script src=""@Url.Content(""~/Scripts/jquery.validate.min.js"")"" type=""text/javascript"">   </script>
+<script src=""@Url.Content(""~/Scripts/jquery.validate.unobtrusive.min.js"")"" type=""text/javascript""></script>
+    <script>
+       $(document).ready(function () { $('.date').datepicker({ dateFormat: ""mm/dd/yy""   });    });
+    </script>
+    @using (Html.BeginForm()) {
+      @* @Html.ValidationSummary(true)*@
+    <fieldset>
+        <legend>@Html.DisplayFor(model => model.Name)</legend>
+
+        @Html.HiddenFor(model => model.RegionsID)
+        @Html.HiddenFor(model => model.Name)
+        @Html.HiddenFor(model => model.CalendarLink)
+        <div class=""editor-label"">
+            @Html.Label(""Map Icon"")
+        </div>
+        <div class=""editor-field"">
+            @Html.DropDownListFor(model => model.MapIcon, new SelectList(Model.mapicons,""id"",""Description""))
+        </div>
+        <div class=""editor-label"">
+            @Html.Label(""Quarter Start"")
+        </div>
+        <div class=""editor-field"">
+            @Html.TextBoxFor(model => model.QtrStart, new { @class = ""date"" })
+            @Html.ValidationMessageFor(model => model.QtrStart)
+        </div>
+
+        <div class=""editor-label"">
+            @Html.Label(""Quarter End"")
+        </div>
+        <div class=""editor-field"">
+            @Html.TextBoxFor(model => model.QtrEnd, new { @class = ""date"" })
+            @Html.ValidationMessageFor(model => model.QtrEnd)
+        </div>
+
+        <div class=""editor-label"">
+            @Html.Label(""Region Facebook ID"")
+        </div>
+        <div class=""editor-field"">
+            @Html.EditorFor(model => model.FacebookId)
+            @Html.ValidationMessageFor(model => model.FacebookId)
+        </div>
+        <div class=""editor-label"">
+           @Html.Label(""Region Facebook LikeBox Code"")
+        </div>
+        <div class=""editor-field"">
+            @Html.EditorFor(model => model.FacebookLikeBox)
+            @Html.ValidationMessageFor(model => model.FacebookLikeBox)
+        </div>
+        <p>
+            <input type=""submit"" value=""Update"" />
+        </p>
+    </fieldset>
+
+
+
+Thanks in advance for the help,
+Chris
+
+",3
+10067837,04/09/2012 00:56:01,1258671,03/09/2012 06:26:04,33,0,Set textbox width with @FileUpload.GetHtml helper,"How can the width of the textbox rendered by the @FileUpload helper be set?  What would be the proper syntax?  The default width is about 20 characters, if there is a long file path the file name cannot be seen in the textbox.  Or if anyone knew how to have the textbox content scrolled fully to the right by default, that would be a acceptable solution.
+
+Thanks,
+
+Joe
+
+    @using (Html.BeginForm(""Upload"", ""FileUpload"", FormMethod.Post,
+                          new { @encType = ""multipart/form-data"" }))
+    { <br/>
+        @FileUpload.GetHtml(allowMoreFilesToBeAdded: false, initialNumberOfFiles: 1,
+              includeFormTag: false, uploadText: ""Upload File"")<br/>
+        <input type=""submit"" name=""submit""  value=""Upload"" />
+    }
+",asp.net-mvc-3,razor,,,,,open,0,158,6,"Set textbox width with @FileUpload.GetHtml helper How can the width of the textbox rendered by the @FileUpload helper be set?  What would be the proper syntax?  The default width is about 20 characters, if there is a long file path the file name cannot be seen in the textbox.  Or if anyone knew how to have the textbox content scrolled fully to the right by default, that would be a acceptable solution.
+
+Thanks,
+
+Joe
+
+    @using (Html.BeginForm(""Upload"", ""FileUpload"", FormMethod.Post,
+                          new { @encType = ""multipart/form-data"" }))
+    { <br/>
+        @FileUpload.GetHtml(allowMoreFilesToBeAdded: false, initialNumberOfFiles: 1,
+              includeFormTag: false, uploadText: ""Upload File"")<br/>
+        <input type=""submit"" name=""submit""  value=""Upload"" />
+    }
+",2
+10791778,05/29/2012 00:28:40,985811,10/08/2011 21:06:01,64,4,ASP.NET MVC 3 Routing Multiple parameters without query string,"I have the below route setup but it is not coming out the way I am expecting. Yes I am still new to MVC.
+
+The way it is coming out is like this. 
+
+    http://localhost:29998/Home/States?make=Chrysler
+
+the way I want it to come out is like this 
+
+    http://localhost:29998/Home/Chrysler/States
+
+Then of course once you click on your state it would look like this.
+
+    http://localhost:29998/Home/Chrysler/Florida
+
+I would realy love to be able to remove ""home from that altogether and just leave it as 
+
+    http://localhost:29998/Chrysler/States
+
+    routes.MapRoute(
+                    ""States"", // Route name
+                    ""{controller}/{action}/{make}"", // URL with parameters
+                    new { controller = ""Home"", action = ""States"", Make = """" } // Parameter defaults
+                );",asp.net-mvc-3,razor,asp.net-mvc-routing,,,,open,0,192,9,"ASP.NET MVC 3 Routing Multiple parameters without query string I have the below route setup but it is not coming out the way I am expecting. Yes I am still new to MVC.
+
+The way it is coming out is like this. 
+
+    http://localhost:29998/Home/States?make=Chrysler
+
+the way I want it to come out is like this 
+
+    http://localhost:29998/Home/Chrysler/States
+
+Then of course once you click on your state it would look like this.
+
+    http://localhost:29998/Home/Chrysler/Florida
+
+I would realy love to be able to remove ""home from that altogether and just leave it as 
+
+    http://localhost:29998/Chrysler/States
+
+    routes.MapRoute(
+                    ""States"", // Route name
+                    ""{controller}/{action}/{make}"", // URL with parameters
+                    new { controller = ""Home"", action = ""States"", Make = """" } // Parameter defaults
+                );",3
+9089024,02/01/2012 00:16:49,645460,03/04/2011 21:38:53,2254,120,Global redirect based on logic in ASP.NET MVC3,"I am building an ASP.NET MVC3 computer support ticketing portal.
+
+There is a maintenance state, where it is best to forbid the users from interacting with EF/Database, to avoid ""collisions"" I am currently getting.
+
+I have an `IMaintenanceDispatcher` that has a boolean property `IsOnMaintenance` set to true but the business logic, whenever a background task put the portal in that state.
+
+I need to redirect client requests to a parking page for the time on maintenance.
+
+Where do I place the logic that will check if the `IsOnMaintenance` true, and if so, do a redirect to a URL?   ",asp.net-mvc-3,,,,,,open,0,97,8,"Global redirect based on logic in ASP.NET MVC3 I am building an ASP.NET MVC3 computer support ticketing portal.
+
+There is a maintenance state, where it is best to forbid the users from interacting with EF/Database, to avoid ""collisions"" I am currently getting.
+
+I have an `IMaintenanceDispatcher` that has a boolean property `IsOnMaintenance` set to true but the business logic, whenever a background task put the portal in that state.
+
+I need to redirect client requests to a parking page for the time on maintenance.
+
+Where do I place the logic that will check if the `IsOnMaintenance` true, and if so, do a redirect to a URL?   ",1
+9635492,03/09/2012 14:16:56,766282,05/23/2011 15:30:05,8,0,MVC Razor Forms Authentication with custom logic,"I'm developing an app that utilizes forms authentication. The _layout has a header DIV, within it I render the _Login partial view.
+
+The _Login partial view displays a ""Log In"" link or the full name if logged in. The ""Log In"" link points to a LogOn action within the AccountController if not logged. If logged in, I have a @Html.Action to a GetUserInfo() child action that gets information out of Active Directory (ie first name, last name, permissions). In LogOn(Creds model, string returnUrl) action, I authenticate the user against Active Directory. If successful, I currently call SetAuthCookie(model.id, model.RememberMe) and redirect to returnUrl if set or the home page.
+
+I would like to call GetUserInfo in LogOn() if authentication is successful to get additional info out of Active Directory and store it in a session variable. But User.Identity is not set until I do a redirect and the library I'm using throws an exception.
+
+The other issue is that if i'm on a page (say Stock/MSFT) that has basic data if not logged in, the user clicks the log in link and logs in successfully, the redirect takes me back to my Stock/MSFT and still shows my basic data since I'm looking for the UserInfo session variable that is not set when rendering the Stock view as the UserInfo is retrieved in the _Layout->_Login partial view which is rendered after the view. Doing a manual refresh then displays the additional data.
+
+Is there a way to create a temporary Identity and set it in HttpContext.User so I can call GetUserInfo() right after authenticating? I tried to do this but it didn't work:
+
+    GenericIdentity identity = new GenericIdentity(model.UserName, ""Forms"");
+    HttpContext.User = new GenericPrincipal(identity, null);
+
+Or is there a better place to call GetUserInfo() on every request before the view is rendered?
+
+I'm using Ninject with C# MVC 3 Razor engine.
+
+Thanks.",asp.net-mvc-3,session,authentication,,,,open,0,308,7,"MVC Razor Forms Authentication with custom logic I'm developing an app that utilizes forms authentication. The _layout has a header DIV, within it I render the _Login partial view.
+
+The _Login partial view displays a ""Log In"" link or the full name if logged in. The ""Log In"" link points to a LogOn action within the AccountController if not logged. If logged in, I have a @Html.Action to a GetUserInfo() child action that gets information out of Active Directory (ie first name, last name, permissions). In LogOn(Creds model, string returnUrl) action, I authenticate the user against Active Directory. If successful, I currently call SetAuthCookie(model.id, model.RememberMe) and redirect to returnUrl if set or the home page.
+
+I would like to call GetUserInfo in LogOn() if authentication is successful to get additional info out of Active Directory and store it in a session variable. But User.Identity is not set until I do a redirect and the library I'm using throws an exception.
+
+The other issue is that if i'm on a page (say Stock/MSFT) that has basic data if not logged in, the user clicks the log in link and logs in successfully, the redirect takes me back to my Stock/MSFT and still shows my basic data since I'm looking for the UserInfo session variable that is not set when rendering the Stock view as the UserInfo is retrieved in the _Layout->_Login partial view which is rendered after the view. Doing a manual refresh then displays the additional data.
+
+Is there a way to create a temporary Identity and set it in HttpContext.User so I can call GetUserInfo() right after authenticating? I tried to do this but it didn't work:
+
+    GenericIdentity identity = new GenericIdentity(model.UserName, ""Forms"");
+    HttpContext.User = new GenericPrincipal(identity, null);
+
+Or is there a better place to call GetUserInfo() on every request before the view is rendered?
+
+I'm using Ninject with C# MVC 3 Razor engine.
+
+Thanks.",3
+6628325,07/08/2011 17:47:52,795764,06/13/2011 10:34:36,6,1,actionlink param passing to a different view,"I have a lot of tables. Each table has an incremental int ID and a company guid id.
+I made an  with the company guid as id param. Like this:
+
+    @Html.(@item.Bedrijfsnaam.ToString(), ""Edit"", ""BedrijfsGegevens"", new { id = (Guid)item.Bedrijfsnummer }, null)
+
+When I click on this actionlink I want to fill a readonly textboxfor on a different view from a different model.
+
+The guid is passed properly but then.......what to do?
+
+Thanks in advance.
+
+Cheers",asp.net-mvc-3,actionlink,,,,11/11/2011 09:38:07,not a real question,1,73,7,"actionlink param passing to a different view I have a lot of tables. Each table has an incremental int ID and a company guid id.
+I made an  with the company guid as id param. Like this:
+
+    @Html.(@item.Bedrijfsnaam.ToString(), ""Edit"", ""BedrijfsGegevens"", new { id = (Guid)item.Bedrijfsnummer }, null)
+
+When I click on this actionlink I want to fill a readonly textboxfor on a different view from a different model.
+
+The guid is passed properly but then.......what to do?
+
+Thanks in advance.
+
+Cheers",2
+5989787,05/13/2011 09:19:27,662589,03/16/2011 13:38:52,8,0,mvc3 unobtrusive validation - edit html table row,"I display some data in html table.
+Html form is around html table.
+I'm using unobtrusive validation.
+
+In each row I have edit button going to EditRow(int id) action that returns html table row in edit mode. Partial view contains html table row with form fields in table columns and save cancel buttons. When edit button is clicked jquery makes the ajax call to the EditRow method and replaces current table row ( display mode ) with new table row ( edit mode ).
+
+When save button is clicked jquery disables all form fields from all other table rows then current and submits the form to SaveRow(RowModel m) action. 
+
+I also have a Save button above the html table. This button submits all table rows that were edited. So user can edit few table rows and save each row individually or save all of edited rows all toghether.
+
+**Problem 1**
+EditRow(int id) action returns table row with form fields. Those fields do not have html id prefixed with any array index. How do I achieve that? Do I need to write custom model binder? 
+
+Example : if row with id 3 is edited I want the view to produce form fields prefixed with row[3]. This is to keep html ids unique. Otherwise unobtrusive validation gets confused.
+
+**Problem 2**
+Before table row is saved I disable all other table rows and use javascript form.valid() method to validate the form. Problem is when :
+
+ - user tries to save table row 1 but validation fails ( error messages are displayed )
+ - user tries to save table row 2. Table row 2 is valid but table row 1 is still invalid ( disabled but invalid ). 
+
+So invalid and disabled row 1 prevents valid and enabled row 2 from being saved. 
+How do I disable validation on row 1 for submitting row 2?
+
+",asp.net-mvc-3,unobtrusive-validation,,,,12/15/2011 16:18:23,too localized,1,303,8,"mvc3 unobtrusive validation - edit html table row I display some data in html table.
+Html form is around html table.
+I'm using unobtrusive validation.
+
+In each row I have edit button going to EditRow(int id) action that returns html table row in edit mode. Partial view contains html table row with form fields in table columns and save cancel buttons. When edit button is clicked jquery makes the ajax call to the EditRow method and replaces current table row ( display mode ) with new table row ( edit mode ).
+
+When save button is clicked jquery disables all form fields from all other table rows then current and submits the form to SaveRow(RowModel m) action. 
+
+I also have a Save button above the html table. This button submits all table rows that were edited. So user can edit few table rows and save each row individually or save all of edited rows all toghether.
+
+**Problem 1**
+EditRow(int id) action returns table row with form fields. Those fields do not have html id prefixed with any array index. How do I achieve that? Do I need to write custom model binder? 
+
+Example : if row with id 3 is edited I want the view to produce form fields prefixed with row[3]. This is to keep html ids unique. Otherwise unobtrusive validation gets confused.
+
+**Problem 2**
+Before table row is saved I disable all other table rows and use javascript form.valid() method to validate the form. Problem is when :
+
+ - user tries to save table row 1 but validation fails ( error messages are displayed )
+ - user tries to save table row 2. Table row 2 is valid but table row 1 is still invalid ( disabled but invalid ). 
+
+So invalid and disabled row 1 prevents valid and enabled row 2 from being saved. 
+How do I disable validation on row 1 for submitting row 2?
+
+",2
+7401121,09/13/2011 11:30:00,655293,03/11/2011 11:59:08,17,1,asp MVC3 Wizard,"I'm building an application with MVC3. This application shold contain a 4-step wizard. The user should be able to navigate to the next page and back without loosing the datas the user enterd.
+I've seen something about creating a class for each step an just changing the display style. 
+Is that realy the best way? 
+And what about the people who do not have Javascript?
+
+lot of thanks,
+HW",asp.net-mvc-3,,,,,09/13/2011 14:09:34,not constructive,1,66,3,"asp MVC3 Wizard I'm building an application with MVC3. This application shold contain a 4-step wizard. The user should be able to navigate to the next page and back without loosing the datas the user enterd.
+I've seen something about creating a class for each step an just changing the display style. 
+Is that realy the best way? 
+And what about the people who do not have Javascript?
+
+lot of thanks,
+HW",1
+9629874,03/09/2012 06:31:04,1258674,03/09/2012 06:27:02,1,0,Partial View and View to be display on master pages,"im new here.
+i would like to ask about partial view.
+I created 2 partial view( 1 for Link to another pages, and another 1 is pages)
+i call those 2 partial view in to 1 view and put it into my master page.
+now i want to click the link in partial view and show it in master page. how to do this? 
+
+
+sorry for my bad english. 
+hope u guys understand..
+
+Best Regards,
+
+Sen",asp.net-mvc-3,,,,,,open,0,70,10,"Partial View and View to be display on master pages im new here.
+i would like to ask about partial view.
+I created 2 partial view( 1 for Link to another pages, and another 1 is pages)
+i call those 2 partial view in to 1 view and put it into my master page.
+now i want to click the link in partial view and show it in master page. how to do this? 
+
+
+sorry for my bad english. 
+hope u guys understand..
+
+Best Regards,
+
+Sen",1
+5163773,03/02/2011 05:33:09,332224,05/04/2010 10:15:10,11,0,Upgrade MVC2 to MVC3 - Problem only on Server,"I have upgrade my MVC2 project to MVC3 using this tool: http://blogs.msdn.com/b/marcinon/archive/2011/01/13/mvc-3-project-upgrade-tool.aspx
+
+Which is working fine and my Project is also runnig fine on my local pc, but when i deploy it to the server, which is also has MVC3 installed, it just return this error:
+
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\a8d37933\32de45bd\assembly\dl3\b1e279bf\0dc3e090_ffd7cb01\BaseUtility.DLL: error CS1705: Assembly 'BaseUtility, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' uses 'System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' which has a higher version than referenced assembly 'System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+c:\Windows\assembly\GAC_MSIL\System.Web.Mvc\2.0.0.0__31bf3856ad364e35\System.Web.Mvc.dll: (Location of symbol related to previous error)
+
+And my webconfig also contain this part:
+
+...
+    <compilation debug=""true"" targetFramework=""4.0"">
+      <assemblies>
+        <add assembly=""System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"" />
+        <add assembly=""System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"" />
+        <add assembly=""System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"" />
+        <add assembly=""System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"" />
+        <add assembly=""System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"" />
+        <add assembly=""System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"" />
+      </assemblies>
+    </compilation>
+...
+
+  <runtime>
+    <assemblyBinding xmlns=""urn:schemas-microsoft-com:asm.v1"">
+      <dependentAssembly>
+        <assemblyIdentity name=""System.Web.Mvc"" publicKeyToken=""31bf3856ad364e35"" />
+        <bindingRedirect oldVersion=""1.0.0.0-2.0.0.0"" newVersion=""3.0.0.0"" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+
+Anyone have a idea how do i fix this problem,
+Thanks in advance
+Jack",asp.net-mvc-3,upgrade,,,,11/11/2011 05:10:34,too localized,1,242,9,"Upgrade MVC2 to MVC3 - Problem only on Server I have upgrade my MVC2 project to MVC3 using this tool: http://blogs.msdn.com/b/marcinon/archive/2011/01/13/mvc-3-project-upgrade-tool.aspx
+
+Which is working fine and my Project is also runnig fine on my local pc, but when i deploy it to the server, which is also has MVC3 installed, it just return this error:
+
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\a8d37933\32de45bd\assembly\dl3\b1e279bf\0dc3e090_ffd7cb01\BaseUtility.DLL: error CS1705: Assembly 'BaseUtility, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' uses 'System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' which has a higher version than referenced assembly 'System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+c:\Windows\assembly\GAC_MSIL\System.Web.Mvc\2.0.0.0__31bf3856ad364e35\System.Web.Mvc.dll: (Location of symbol related to previous error)
+
+And my webconfig also contain this part:
+
+...
+    <compilation debug=""true"" targetFramework=""4.0"">
+      <assemblies>
+        <add assembly=""System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"" />
+        <add assembly=""System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"" />
+        <add assembly=""System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"" />
+        <add assembly=""System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"" />
+        <add assembly=""System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"" />
+        <add assembly=""System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"" />
+      </assemblies>
+    </compilation>
+...
+
+  <runtime>
+    <assemblyBinding xmlns=""urn:schemas-microsoft-com:asm.v1"">
+      <dependentAssembly>
+        <assemblyIdentity name=""System.Web.Mvc"" publicKeyToken=""31bf3856ad364e35"" />
+        <bindingRedirect oldVersion=""1.0.0.0-2.0.0.0"" newVersion=""3.0.0.0"" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+
+Anyone have a idea how do i fix this problem,
+Thanks in advance
+Jack",2
+8786815,01/09/2012 10:14:30,1108143,12/20/2011 15:18:18,3,0,DropDownList get SelectedItem,"I'm trying to get the selected item out of a DropDownList, this is what I have so far:
+
+Controller:
+
+        // GET: /User/Register
+        public ActionResult Register()
+        {
+            var db = new DBEntities();
+            var items = new List<SelectListItem>();
+
+            foreach (var nation in db.nation )
+            { 
+                var item = new SelectListItem {Value = nation.NationId.ToString(), Text = nation.Name};
+                items.Add(item);
+            }
+
+            var model = new RegisterModel { NationsList = items.AsEnumerable() };
+
+            return View(model);
+        }
+
+Model:
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = ""Nation"")]
+        public int Nation { get; set; }
+
+        public IEnumerable<SelectListItem> NationsList { get; set; }
+
+View:
+
+        @Html.DropDownListFor(x => x.Nation, Model.NationsList)
+        @Html.ValidationMessageFor(model => model.Nation)
+
+Problem I get here when I post the form is that it throws an exception: 
+
+""The ViewData item that has the key 'Nation' is of type 'System.Int32' but must be of type 'IEnumerable<SelectListItem>'.""
+
+I did follow a couple of examples and they all explain I should do it this way, am I missing something out?",asp.net-mvc-3,,,,,01/09/2012 14:18:49,too localized,1,332,3,"DropDownList get SelectedItem I'm trying to get the selected item out of a DropDownList, this is what I have so far:
+
+Controller:
+
+        // GET: /User/Register
+        public ActionResult Register()
+        {
+            var db = new DBEntities();
+            var items = new List<SelectListItem>();
+
+            foreach (var nation in db.nation )
+            { 
+                var item = new SelectListItem {Value = nation.NationId.ToString(), Text = nation.Name};
+                items.Add(item);
+            }
+
+            var model = new RegisterModel { NationsList = items.AsEnumerable() };
+
+            return View(model);
+        }
+
+Model:
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = ""Nation"")]
+        public int Nation { get; set; }
+
+        public IEnumerable<SelectListItem> NationsList { get; set; }
+
+View:
+
+        @Html.DropDownListFor(x => x.Nation, Model.NationsList)
+        @Html.ValidationMessageFor(model => model.Nation)
+
+Problem I get here when I post the form is that it throws an exception: 
+
+""The ViewData item that has the key 'Nation' is of type 'System.Int32' but must be of type 'IEnumerable<SelectListItem>'.""
+
+I did follow a couple of examples and they all explain I should do it this way, am I missing something out?",1
+6459306,06/23/2011 19:03:22,812904,06/23/2011 19:03:22,1,0,Structuremap - multiple interface implementations,"I am totally new to Structuremap and am confused on how to wire an interface that has multiple implementations. 
+
+Lets say I have Controller1 and Controller2. I have Interface1 that is implemented by two seperate classes, Class1ForInterface1 and Class2ForInterface1. In Controller1 I want Class1ForInterFace1 injected and in Controller2 I want Class2ForInterface1 injected.
+
+How do I wire this with structuremap? It seems that I can only have one mapping of Interface to concretetype?
+
+Thanks!  ",asp.net-mvc-3,structuremap,,,,,open,0,73,5,"Structuremap - multiple interface implementations I am totally new to Structuremap and am confused on how to wire an interface that has multiple implementations. 
+
+Lets say I have Controller1 and Controller2. I have Interface1 that is implemented by two seperate classes, Class1ForInterface1 and Class2ForInterface1. In Controller1 I want Class1ForInterFace1 injected and in Controller2 I want Class2ForInterface1 injected.
+
+How do I wire this with structuremap? It seems that I can only have one mapping of Interface to concretetype?
+
+Thanks!  ",2
+5338906,03/17/2011 12:19:33,351709,05/27/2010 07:56:47,71,4,FindView not working properly,"I have a helper class that I use to create and send ""HTML Emails"". this class is in my web/Infrastructure/Communication folder. I create a view in my project and I use FindView to find this view.
+
+    public Stream GetViewStream(string viewName, object model, ControllerContext context, ViewDataDictionary viewData, TempDataDictionary tempData)
+            {
+                var view = ViewEngines.Engines.FindView(context, viewName,"""");
+                if (view == null)
+                {
+                    throw new InvalidOperationException(string.Format(""Could not find a view named '{0}'"", viewName));
+                }
+
+                var sb = new StringBuilder();
+                using (var writer = new StringWriter(sb))
+                {
+                    var viewContext = new ViewContext(context, view.View, viewData, tempData, writer);
+                    view.Render(viewContext, writer);
+
+                    writer.Flush();
+                }
+                return new MemoryStream(Encoding.UTF8.GetBytes(sb.ToString()));
+            }
+In my project I have an areas folder and each system has a folder and within these folders I have Models,Views and controllers.
+
+now 
+
+my problem is when I use this method from my MailController it searches in web/Areas/Mail/Views for the view which is right but when I use this from my AdvisoryController it searches for the view in web/Views.
+
+how can I fix this and why is this happening?",asp.net-mvc-3,,,,,,open,0,402,4,"FindView not working properly I have a helper class that I use to create and send ""HTML Emails"". this class is in my web/Infrastructure/Communication folder. I create a view in my project and I use FindView to find this view.
+
+    public Stream GetViewStream(string viewName, object model, ControllerContext context, ViewDataDictionary viewData, TempDataDictionary tempData)
+            {
+                var view = ViewEngines.Engines.FindView(context, viewName,"""");
+                if (view == null)
+                {
+                    throw new InvalidOperationException(string.Format(""Could not find a view named '{0}'"", viewName));
+                }
+
+                var sb = new StringBuilder();
+                using (var writer = new StringWriter(sb))
+                {
+                    var viewContext = new ViewContext(context, view.View, viewData, tempData, writer);
+                    view.Render(viewContext, writer);
+
+                    writer.Flush();
+                }
+                return new MemoryStream(Encoding.UTF8.GetBytes(sb.ToString()));
+            }
+In my project I have an areas folder and each system has a folder and within these folders I have Models,Views and controllers.
+
+now 
+
+my problem is when I use this method from my MailController it searches in web/Areas/Mail/Views for the view which is right but when I use this from my AdvisoryController it searches for the view in web/Views.
+
+how can I fix this and why is this happening?",1
+9693123,03/13/2012 22:22:02,604920,02/06/2011 01:51:40,136,6,"Unable to see images, css files or use javascript in MVC 3 website deployed on IIS 7 in classic mode","I have an ASP.NET MVC 3 website that works perfectly in IIS7 integrated mode. However, I need to deploy this in classic mode. 
+
+In order to do so, we manually inserted the handler mappings in IIS to handle urls for .mvc extensions as suggested in the link in the global.asax file. 
+
+But in classic mode, none of the static files (css, images, javascript) are getting loaded. Is there some other setting that I need to do to get these working.
+
+When I tried to see these in fiddler, I can see an HTTP error 500 for all of them. I have already tried the following approaches:
+
+ - Added the following line of code in the web.config httpHandlers section 
+    
+    add verb=""*"" path=""*.png"" type=""System.Web.StaticFileHandler""
+ - Checked the 'Static Content' in Common HTTP features on IIS.
+
+I am not sure what to try next.",asp.net-mvc-3,deployment,iis7,,,,open,0,147,20,"Unable to see images, css files or use javascript in MVC 3 website deployed on IIS 7 in classic mode I have an ASP.NET MVC 3 website that works perfectly in IIS7 integrated mode. However, I need to deploy this in classic mode. 
+
+In order to do so, we manually inserted the handler mappings in IIS to handle urls for .mvc extensions as suggested in the link in the global.asax file. 
+
+But in classic mode, none of the static files (css, images, javascript) are getting loaded. Is there some other setting that I need to do to get these working.
+
+When I tried to see these in fiddler, I can see an HTTP error 500 for all of them. I have already tried the following approaches:
+
+ - Added the following line of code in the web.config httpHandlers section 
+    
+    add verb=""*"" path=""*.png"" type=""System.Web.StaticFileHandler""
+ - Checked the 'Static Content' in Common HTTP features on IIS.
+
+I am not sure what to try next.",3
+11122065,06/20/2012 14:43:59,1061291,11/23/2011 06:27:51,11,1,Select menu are not working/opening on a single tap event in the ipad in jquery mobile,"I have created a jquery mobile application in jquery.mobile-1.1.0.min.js version where there are three select menus on a page each opens in new window using data-native-menu=""false"" and 
+
+> $(document).bind('mobileinit',function(){
+   $.mobile.selectmenu.prototype.options.nativeMenu = false;
+});
+
+
+
+Here is the code i am using to create the Select menu :
+
+    <div data-role=""fieldcontain"" style=""white-space: normal;"">
+     @Html.DropDownList(""a"", (IEnumerable<SelectListItem>)ViewData[""b""], ""c"",new  Dictionary<string, object>{{""id"", ""a""},{""data-shadow"",""false""},{""data-iconshadow"",""false""},""data-native-menu"",""false""},{""data-theme"",""a""}})
+</div>
+
+This drop down menu responds after two-three taps on it on ipad.
+
+Please suggest possible solution for this.
+
+Thanks in advance.
+
+
+
+",asp.net-mvc-3,jquery-mobile,jquery-selectors,drop-down-menu,,,open,0,82,16,"Select menu are not working/opening on a single tap event in the ipad in jquery mobile I have created a jquery mobile application in jquery.mobile-1.1.0.min.js version where there are three select menus on a page each opens in new window using data-native-menu=""false"" and 
+
+> $(document).bind('mobileinit',function(){
+   $.mobile.selectmenu.prototype.options.nativeMenu = false;
+});
+
+
+
+Here is the code i am using to create the Select menu :
+
+    <div data-role=""fieldcontain"" style=""white-space: normal;"">
+     @Html.DropDownList(""a"", (IEnumerable<SelectListItem>)ViewData[""b""], ""c"",new  Dictionary<string, object>{{""id"", ""a""},{""data-shadow"",""false""},{""data-iconshadow"",""false""},""data-native-menu"",""false""},{""data-theme"",""a""}})
+</div>
+
+This drop down menu responds after two-three taps on it on ipad.
+
+Please suggest possible solution for this.
+
+Thanks in advance.
+
+
+
+",4
+10549288,05/11/2012 10:01:52,1278124,03/19/2012 08:19:04,19,0,checkbox values back to controller using htmlhelpers,"I have the below code in my VIEW, and thereafter a submit button. I do have many of these checkboxes in my view, so that the user can click on as many as he wishes.
+
+    @Html.CheckBox(""code"" + l_code, false, new { Value = @item.expertiseCode })
+
+In my controller i have the fll., which is the HTTPPost method
+
+    public ActionResult RegisterSP(RegisterModel model, FormCollection collection)
+
+However, when debugging, i see that ALL the checkboxes are being passed back to the controller, and not just the ones that were clicked on. I just want the ones that were clicked on and ignore the rest for i need to add these to the DB. Also, the checbox values passed in contains TRUE/FALSE. Because of this the false value is also being added to the DB. If i use the below method (not using the htmlHelper), i dont have the above problem. But i wud like to use the htmlHelper:
+
+    <input type=""checkbox"" name=""code@(l_code)"" value=""@item.expertiseCode"" />",asp.net-mvc-3,,,,,,open,0,167,7,"checkbox values back to controller using htmlhelpers I have the below code in my VIEW, and thereafter a submit button. I do have many of these checkboxes in my view, so that the user can click on as many as he wishes.
+
+    @Html.CheckBox(""code"" + l_code, false, new { Value = @item.expertiseCode })
+
+In my controller i have the fll., which is the HTTPPost method
+
+    public ActionResult RegisterSP(RegisterModel model, FormCollection collection)
+
+However, when debugging, i see that ALL the checkboxes are being passed back to the controller, and not just the ones that were clicked on. I just want the ones that were clicked on and ignore the rest for i need to add these to the DB. Also, the checbox values passed in contains TRUE/FALSE. Because of this the false value is also being added to the DB. If i use the below method (not using the htmlHelper), i dont have the above problem. But i wud like to use the htmlHelper:
+
+    <input type=""checkbox"" name=""code@(l_code)"" value=""@item.expertiseCode"" />",1
+10120870,04/12/2012 09:25:49,586439,01/23/2011 15:40:07,630,51,How to build a highload multithreaded web application in MVC3 or MVC4?,"I need to build a highload multithreaded web application in ASP.NET MVC3 or MVC4,
+My question is how to design an architecture of an application?
+How to choose a DomainModel , use or not to use an ORM in this application?
+How to build a system that would be safe and if some error will happen, how to raise up a second level safety mechanism?
+
+Any examples with sources would be greatly appreciated.
+
+
+
+    PS: don't kill the question if it's should be in any other SO places.
+    Just tell me and i will place it there.
+
+Thank you very much in advance.
+",asp.net-mvc-3,c#-4.0,architecture,high-load,,04/12/2012 10:29:33,off topic,1,103,12,"How to build a highload multithreaded web application in MVC3 or MVC4? I need to build a highload multithreaded web application in ASP.NET MVC3 or MVC4,
+My question is how to design an architecture of an application?
+How to choose a DomainModel , use or not to use an ORM in this application?
+How to build a system that would be safe and if some error will happen, how to raise up a second level safety mechanism?
+
+Any examples with sources would be greatly appreciated.
+
+
+
+    PS: don't kill the question if it's should be in any other SO places.
+    Just tell me and i will place it there.
+
+Thank you very much in advance.
+",4
+7495020,09/21/2011 05:32:42,862934,07/26/2011 07:17:03,1,0,MVC 3 using the same model in two similar views with non-nullable types,"I am using the same model on two similar views. One is a users profile view, and the other is the Administrator view for that same page. The administrator's view uses a couple more flags that the user profile view does not have. The issue arises when using non-nullable types. ie. if we do not use a boolean from the model, when the model is posted back to a controller after a ""submit"", that boolean will default to false and not null, leading to false data if we persist the model.
+
+Apart from having two extremely similar models, what is the MVC 3 proper way of dealing with this?
+
+Thanks!",asp.net-mvc-3,asp.net-mvc-views,,,,,open,0,108,13,"MVC 3 using the same model in two similar views with non-nullable types I am using the same model on two similar views. One is a users profile view, and the other is the Administrator view for that same page. The administrator's view uses a couple more flags that the user profile view does not have. The issue arises when using non-nullable types. ie. if we do not use a boolean from the model, when the model is posted back to a controller after a ""submit"", that boolean will default to false and not null, leading to false data if we persist the model.
+
+Apart from having two extremely similar models, what is the MVC 3 proper way of dealing with this?
+
+Thanks!",2
+11645892,07/25/2012 08:44:47,1000346,10/18/2011 03:44:34,31,2,Need help to create a facebook like application for my organisation,"I need to create a facebook like application for my organisation.
+Below are the technologies i have in my mind
+1) asp.net MVC4 with Entity framework(My Vote)  
+2) HTML5+node.js+espresso(Will only run in UNIX---so avaoided)
+3) PHP(no experience developers)
+
+Please give me your valuable inputs as to which technology i should start for the development considering the parameters like maintainability, extensibility and ease of development.
+
+Cheers,
+Sajesh Nambiar   ",asp.net-mvc-3,html5,node.js,,,07/25/2012 08:49:13,not a real question,1,65,11,"Need help to create a facebook like application for my organisation I need to create a facebook like application for my organisation.
+Below are the technologies i have in my mind
+1) asp.net MVC4 with Entity framework(My Vote)  
+2) HTML5+node.js+espresso(Will only run in UNIX---so avaoided)
+3) PHP(no experience developers)
+
+Please give me your valuable inputs as to which technology i should start for the development considering the parameters like maintainability, extensibility and ease of development.
+
+Cheers,
+Sajesh Nambiar   ",3
+10814055,05/30/2012 10:00:45,782252,06/03/2011 06:19:00,81,1,load different html in the current page without reloading/refreshing,"i was looking at this website and i am interested on how did the developer managed to load different htmls in a single page without the current page being reloaded... 
+
+here is the website: http://demos.kendoui.com/web/validator/index.html... 
+
+for example if you clicked globalization in the Framework section, you can see the url changed, the body changed also but a part of the page remains (the top part) and the current page is not reloaded... 
+
+ i am just starting in web development and i want to know this technique... i hope you can share it to me.... thanks :)",asp.net-mvc-3,single-page-application,,,,,open,0,97,9,"load different html in the current page without reloading/refreshing i was looking at this website and i am interested on how did the developer managed to load different htmls in a single page without the current page being reloaded... 
+
+here is the website: http://demos.kendoui.com/web/validator/index.html... 
+
+for example if you clicked globalization in the Framework section, you can see the url changed, the body changed also but a part of the page remains (the top part) and the current page is not reloaded... 
+
+ i am just starting in web development and i want to know this technique... i hope you can share it to me.... thanks :)",2
+8096937,11/11/2011 16:24:33,740987,05/06/2011 02:11:43,10,0,how to route all IIS requests to my MVC app?,"I'm creating an MVC 3 app that manages business for client companies. When deployed, incoming requests should prominently feature the name of the client company; thus,
+`http://hosteddomain.com/Excelsior/Home/Dashboard/3` should retrieve the home page for a user from client Excelsior.
+
+**Question 1**: On the development server this works fine (`localhost:28497/ClientCompany/...`) because my `RouteConstraint` looks up the business name. However, when I deploy this, how do I tell IIS to send all requests to my app? As it is now, IIS will look for an app named ""ClientCompany"".
+
+**Question 2**: Is there a better way to do this? For example, using URLs of the form `ClientCompany.hosteddomain.com/SomeAppName/[pages...]`. If so, how do I tell IIS to remap the requests to my app AND how do I get the name of the client company from inside the MVC app?
+
+Thanks for insight
+Eric",asp.net-mvc-3,iis7,,,,,open,0,132,10,"how to route all IIS requests to my MVC app? I'm creating an MVC 3 app that manages business for client companies. When deployed, incoming requests should prominently feature the name of the client company; thus,
+`http://hosteddomain.com/Excelsior/Home/Dashboard/3` should retrieve the home page for a user from client Excelsior.
+
+**Question 1**: On the development server this works fine (`localhost:28497/ClientCompany/...`) because my `RouteConstraint` looks up the business name. However, when I deploy this, how do I tell IIS to send all requests to my app? As it is now, IIS will look for an app named ""ClientCompany"".
+
+**Question 2**: Is there a better way to do this? For example, using URLs of the form `ClientCompany.hosteddomain.com/SomeAppName/[pages...]`. If so, how do I tell IIS to remap the requests to my app AND how do I get the name of the client company from inside the MVC app?
+
+Thanks for insight
+Eric",2
+10106825,04/11/2012 13:24:27,1244706,03/02/2012 09:08:44,13,0,MVC3 search textbox with magnifying glass,May someone kindly share code that will allow me to create a search textbox with the magnifying glass. Im using mvc 3. Thanks ,asp.net-mvc-3,full-text-search,,,,04/11/2012 20:23:02,not a real question,1,24,6,MVC3 search textbox with magnifying glass May someone kindly share code that will allow me to create a search textbox with the magnifying glass. Im using mvc 3. Thanks ,2
+5629547,04/12/2011 01:50:01,330561,05/01/2010 21:19:00,182,5,Calls-per-day rate limiting in ASP.NET MVC 3?,"I've seen Jarrod Dixon's solution (http://stackoverflow.com/questions/33969/best-way-to-implement-request-throttling-in-asp-net-mvc/1318059#1318059) for implementing calls-per-second rate limiting. I'm now trying to figure out how to build a similar filter for N-calls-per-day. 
+
+I am building a developer API where free accounts get ~100 calls per day and paid accounts get a higher rate limit. What's the best way to do calls-per-day rate limiting in MVC 3?",asp.net-mvc-3,rate-limiting,,,,,open,0,59,7,"Calls-per-day rate limiting in ASP.NET MVC 3? I've seen Jarrod Dixon's solution (http://stackoverflow.com/questions/33969/best-way-to-implement-request-throttling-in-asp-net-mvc/1318059#1318059) for implementing calls-per-second rate limiting. I'm now trying to figure out how to build a similar filter for N-calls-per-day. 
+
+I am building a developer API where free accounts get ~100 calls per day and paid accounts get a higher rate limit. What's the best way to do calls-per-day rate limiting in MVC 3?",2
+10187110,04/17/2012 07:39:32,725505,04/26/2011 13:57:18,154,2,MVC3 db.SaveChanges() INSERT statement error,"I am following MVC music store similarly. http://www.asp.net/mvc/tutorials/mvc-music-store/mvc-music-store-part-9
+
+
+When I doing create orderDetails, I have got error with inner exception.
+
+Could you help me what does it mean? 
+
+""The INSERT statement conflicted with the FOREIGN KEY constraint \""FK_OrderDetails_Product\"". The conflict occurred in database \""rentalDB\"", table \""dbo.Product\"", column 'productId'.\r\nThe statement has been terminated.""
+
+Do I need to check in SQL Server? I don't know why it errors happen..
+
+Can you give me some advice? I am giving you some my code.
+
+Please help me. Thanks.
+
+
+    public int CreateOrder(Order order)
+        {
+            decimal orderTotal = 0;
+
+            var cartItems = GetCartItems();
+
+            // Iterate over the items in the cart, adding the order details for each
+            foreach (var item in cartItems)
+            {
+                var orderDetail = new OrderDetails
+                {
+                    productId = item.Product.productId,
+                    orderId = order.orderId,
+                    unitPrice = item.priceValue,
+                    rentalPeriod = item.rentalPeriod,
+                    startDate = item.dateCreated.AddDays(2),
+                    endDate = item.dateCreated.AddDays(2 + item.rentalPeriod),
+                    quantity = item.count
+                };
+
+                // Set the order total of the shopping cart
+                orderTotal += (item.count * item.priceValue);
+
+                db.OrderDetails.Add(orderDetail);
+
+            }
+
+            // Set the order's total to the orderTotal count
+            order.total = orderTotal;
+
+            // Save the order
+            db.SaveChanges(); //I have error in here!!!
+
+            // Empty the shopping cart
+            EmptyCart();
+
+            // Return the OrderId as the confirmation number
+            return order.orderId;
+        }
+
+Here is viewModel
+
+    public class ShoppingCartViewModel
+	{
+        public List<Cart> CartItems { get; set; }
+        public decimal CartTotal { get; set; }
+	}
+
+Here is Cart
+
+    public class Cart
+    {
+        [Key]
+        public int recordId { get; set; }
+        public string cartId { get; set; }
+        public int productId { get; set; }
+        public decimal priceValue { get; set; }
+        public int count { get; set; }
+        public int rentalPeriod { get; set; }
+        public DateTime dateCreated { get; set; }
+        public virtual Product Product { get; set; }
+    }
+
+Here is Product
+
+     public class Product
+    {
+        [Key] public int productId { get; set; }
+
+        [Required(ErrorMessage = ""Please select category"")]
+        public int categoryId { get; set; }
+
+        //[Required(ErrorMessage = ""Please select model"")]
+        //public int modelId { get; set; }
+
+        [Required(ErrorMessage = ""Please fill in model name"")]
+        [DisplayName(""Model name"")]
+        public String model { get; set; }
+
+        [DisplayName(""Description"")]
+        public String description { get; set; }
+
+        [DisplayName(""Original price"")]
+        public decimal price { get; set; }
+
+        [Required(ErrorMessage = ""Please fill in stock of product"")]
+        [DisplayName(""Stock"")]
+        public int stock { get; set; }
+        public virtual Category Category { get; set; }
+    }",asp.net-mvc-3,,,,,,open,0,982,5,"MVC3 db.SaveChanges() INSERT statement error I am following MVC music store similarly. http://www.asp.net/mvc/tutorials/mvc-music-store/mvc-music-store-part-9
+
+
+When I doing create orderDetails, I have got error with inner exception.
+
+Could you help me what does it mean? 
+
+""The INSERT statement conflicted with the FOREIGN KEY constraint \""FK_OrderDetails_Product\"". The conflict occurred in database \""rentalDB\"", table \""dbo.Product\"", column 'productId'.\r\nThe statement has been terminated.""
+
+Do I need to check in SQL Server? I don't know why it errors happen..
+
+Can you give me some advice? I am giving you some my code.
+
+Please help me. Thanks.
+
+
+    public int CreateOrder(Order order)
+        {
+            decimal orderTotal = 0;
+
+            var cartItems = GetCartItems();
+
+            // Iterate over the items in the cart, adding the order details for each
+            foreach (var item in cartItems)
+            {
+                var orderDetail = new OrderDetails
+                {
+                    productId = item.Product.productId,
+                    orderId = order.orderId,
+                    unitPrice = item.priceValue,
+                    rentalPeriod = item.rentalPeriod,
+                    startDate = item.dateCreated.AddDays(2),
+                    endDate = item.dateCreated.AddDays(2 + item.rentalPeriod),
+                    quantity = item.count
+                };
+
+                // Set the order total of the shopping cart
+                orderTotal += (item.count * item.priceValue);
+
+                db.OrderDetails.Add(orderDetail);
+
+            }
+
+            // Set the order's total to the orderTotal count
+            order.total = orderTotal;
+
+            // Save the order
+            db.SaveChanges(); //I have error in here!!!
+
+            // Empty the shopping cart
+            EmptyCart();
+
+            // Return the OrderId as the confirmation number
+            return order.orderId;
+        }
+
+Here is viewModel
+
+    public class ShoppingCartViewModel
+	{
+        public List<Cart> CartItems { get; set; }
+        public decimal CartTotal { get; set; }
+	}
+
+Here is Cart
+
+    public class Cart
+    {
+        [Key]
+        public int recordId { get; set; }
+        public string cartId { get; set; }
+        public int productId { get; set; }
+        public decimal priceValue { get; set; }
+        public int count { get; set; }
+        public int rentalPeriod { get; set; }
+        public DateTime dateCreated { get; set; }
+        public virtual Product Product { get; set; }
+    }
+
+Here is Product
+
+     public class Product
+    {
+        [Key] public int productId { get; set; }
+
+        [Required(ErrorMessage = ""Please select category"")]
+        public int categoryId { get; set; }
+
+        //[Required(ErrorMessage = ""Please select model"")]
+        //public int modelId { get; set; }
+
+        [Required(ErrorMessage = ""Please fill in model name"")]
+        [DisplayName(""Model name"")]
+        public String model { get; set; }
+
+        [DisplayName(""Description"")]
+        public String description { get; set; }
+
+        [DisplayName(""Original price"")]
+        public decimal price { get; set; }
+
+        [Required(ErrorMessage = ""Please fill in stock of product"")]
+        [DisplayName(""Stock"")]
+        public int stock { get; set; }
+        public virtual Category Category { get; set; }
+    }",1
+9963479,04/01/2012 09:53:30,580710,01/18/2011 23:34:48,15,0,How do you use [RequireHttps] in a Rackspace Cloud Site,"I am trying to use [RequireHttps] in Rackspace Cloud Site, but I am just getting a redirect loop message when I hit any actions that use the attribute.  I have talk to support, but they are not much help.  Has anyone got [RequireHttps] working in a MVC 3 site?
+
+Thanks",asp.net-mvc-3,ssl,rackspace-cloud,,,,open,0,51,10,"How do you use [RequireHttps] in a Rackspace Cloud Site I am trying to use [RequireHttps] in Rackspace Cloud Site, but I am just getting a redirect loop message when I hit any actions that use the attribute.  I have talk to support, but they are not much help.  Has anyone got [RequireHttps] working in a MVC 3 site?
+
+Thanks",3
+10983118,06/11/2012 15:27:29,1449244,06/11/2012 14:59:10,1,0,MVC 3 Razor-Partial Validation of Model,"I am currently working on a project in MVC 3 where I am leveraging Entity Framework to persist one data model over two Views which each contain one HTML Form (similar to wizard-based design).
+
+Yet after the user fills out the appropriate fields on the first View and submits the form, client-side validation for the entire model is triggered, and validation errors are shown for fields that will not even be available for input until the second View instantiates.
+
+I have currently implemented a workaround where I simply turn off client-side validation for the first View entirely, but I am certainly not keen on the idea of populating my model with data that has not been validated at all. This is bad. M'kay.
+
+Is there any way to partially validate the fields on the first View and not trigger valdiation for the whole data model?",asp.net-mvc-3,razor,form-validation,entity-framework-mapping,,,open,0,142,6,"MVC 3 Razor-Partial Validation of Model I am currently working on a project in MVC 3 where I am leveraging Entity Framework to persist one data model over two Views which each contain one HTML Form (similar to wizard-based design).
+
+Yet after the user fills out the appropriate fields on the first View and submits the form, client-side validation for the entire model is triggered, and validation errors are shown for fields that will not even be available for input until the second View instantiates.
+
+I have currently implemented a workaround where I simply turn off client-side validation for the first View entirely, but I am certainly not keen on the idea of populating my model with data that has not been validated at all. This is bad. M'kay.
+
+Is there any way to partially validate the fields on the first View and not trigger valdiation for the whole data model?",4
+11202633,06/26/2012 07:32:17,584018,01/21/2011 05:51:03,80,0,cursor position not appreas in text input?,"In my asp.net MVC app, I'm using a HTML text input, while I apply a style to format currecy value and I want it to RIGHT align so that I also apply style.
+
+But the cursor is not apprer in text box? What is the possible reason and please provide the solution?
+
+**HTML**
+
+    <input type=""text"" class=""OnlyMoney"" />
+
+**Script**
+
+    $(document).ready(function () {
+           $(""input[type=text].OnlyMoney"").live('keydown', currenciesOnly)
+               .live('blur',
+               function() { $(this).formatCurrency(); });
+
+       });
+
+**CSS**
+
+    .OnlyMoney { text-align: right; }
+
+**Note:** If I change above style ""text-align: left"" then cursor is visible in text box.",asp.net-mvc-3,,,,,,open,0,138,7,"cursor position not appreas in text input? In my asp.net MVC app, I'm using a HTML text input, while I apply a style to format currecy value and I want it to RIGHT align so that I also apply style.
+
+But the cursor is not apprer in text box? What is the possible reason and please provide the solution?
+
+**HTML**
+
+    <input type=""text"" class=""OnlyMoney"" />
+
+**Script**
+
+    $(document).ready(function () {
+           $(""input[type=text].OnlyMoney"").live('keydown', currenciesOnly)
+               .live('blur',
+               function() { $(this).formatCurrency(); });
+
+       });
+
+**CSS**
+
+    .OnlyMoney { text-align: right; }
+
+**Note:** If I change above style ""text-align: left"" then cursor is visible in text box.",1
+10243416,04/20/2012 09:19:10,1303462,03/30/2012 14:13:00,3,0,how to add multiple records under a master record and all the records should save in single click in mvc 3 razor,"we had a requirement , while creating a new site user can add multiple url's under it .
+All the site details and url's under it should save on submit .
+how to do this?
+for preview please refer the below url:
+  
+http://www.in10sity.net/sites/www/inpowercms/site-manager-add.html
+
+my code looks as below:
+
+Models:
+
+
+    public class Site : Model
+    {
+         
+        public string Title { get; set; }
+        
+        public bool Approval { get; set; }
+
+        public bool RequiresLogin { get; set; }
+
+        public bool ForceHTTPS { get; set; }
+
+        public bool Archived { get; set; }
+
+        public int StatusValue { get; set; }
+         
+        public SiteStatus Status
+        {
+            get
+            {
+                return (SiteStatus)this.StatusValue;
+            }
+            set
+            {
+                StatusValue = (int)value;
+            }
+        }
+
+        
+        public bool Deleted { get; set; }
+        
+        public virtual ICollection<URL> URLs { get; set; }
+    }
+    
+    public enum SiteStatus
+    {
+        Demo = 1,
+        Development = 2,
+        Beta = 3,
+        Live = 4,
+        Closed = 5
+    }
+
+    public class URL : Model
+    {
+   
+        public int SiteID { get; set; }
+       
+        public string DomainName { get; set; }
+       
+        public string RedirectURL { get; set; }
+
+        public bool Primary { get; set; }
+       
+        public bool Deleted { get; set; }
+
+        public virtual Site Site { get; set; }
+  
+    }
+
+I'm able to add site ,but unable to add multiple url's under it
+
+please suggest ...  
+
+",asp.net-mvc-3,razor,,,,04/20/2012 13:23:12,not a real question,1,560,22,"how to add multiple records under a master record and all the records should save in single click in mvc 3 razor we had a requirement , while creating a new site user can add multiple url's under it .
+All the site details and url's under it should save on submit .
+how to do this?
+for preview please refer the below url:
+  
+http://www.in10sity.net/sites/www/inpowercms/site-manager-add.html
+
+my code looks as below:
+
+Models:
+
+
+    public class Site : Model
+    {
+         
+        public string Title { get; set; }
+        
+        public bool Approval { get; set; }
+
+        public bool RequiresLogin { get; set; }
+
+        public bool ForceHTTPS { get; set; }
+
+        public bool Archived { get; set; }
+
+        public int StatusValue { get; set; }
+         
+        public SiteStatus Status
+        {
+            get
+            {
+                return (SiteStatus)this.StatusValue;
+            }
+            set
+            {
+                StatusValue = (int)value;
+            }
+        }
+
+        
+        public bool Deleted { get; set; }
+        
+        public virtual ICollection<URL> URLs { get; set; }
+    }
+    
+    public enum SiteStatus
+    {
+        Demo = 1,
+        Development = 2,
+        Beta = 3,
+        Live = 4,
+        Closed = 5
+    }
+
+    public class URL : Model
+    {
+   
+        public int SiteID { get; set; }
+       
+        public string DomainName { get; set; }
+       
+        public string RedirectURL { get; set; }
+
+        public bool Primary { get; set; }
+       
+        public bool Deleted { get; set; }
+
+        public virtual Site Site { get; set; }
+  
+    }
+
+I'm able to add site ,but unable to add multiple url's under it
+
+please suggest ...  
+
+",2
+8324645,11/30/2011 10:44:24,785683,06/06/2011 09:49:16,1,0,RedirectToAction runs forever,"I have trouble with redirects in MVC 3
+Here is my form:
+
+    @using (Ajax.BeginForm(""Create"", ""Client"", new AjaxOptions { HttpMethod = ""POST"", OnSuccess = ""sem.pivotAjaxSuccess"" })) { ...form inputs... }
+
+in the controller after successful I return redirect to action
+
+    return RedirectToAction(""Index"");
+
+everything looks good but GET in firebug continues forever. i can't post image because of Stackoverflow's law :)
+
+OnSuccess function is
+
+    this.pivotAjaxSuccess = function (data) {
+            if ($(data).filter('#main-pivot').length > 0) {
+                $('#main-pivot').html($(data).filter('#main-pivot').html());
+            }
+            else {
+                $('#main-pivot').html($(data));
+            }
+    
+            parseElem('#main-pivot');
+            setMenu('/' + this.url.substr(0, this.url.indexOf('?')).replace(History.getRootUrl(), ''));
+    
+            var requestUrl = this.url, title = $(data).filter('title').text();
+    
+            currentUrl = requestUrl.substr(0, requestUrl.indexOf('?'));
+            History.pushState(null, title, requestUrl.substr(0, requestUrl.indexOf('?')));
+        }",asp.net-mvc-3,redirect,history.js,,,,open,0,253,3,"RedirectToAction runs forever I have trouble with redirects in MVC 3
+Here is my form:
+
+    @using (Ajax.BeginForm(""Create"", ""Client"", new AjaxOptions { HttpMethod = ""POST"", OnSuccess = ""sem.pivotAjaxSuccess"" })) { ...form inputs... }
+
+in the controller after successful I return redirect to action
+
+    return RedirectToAction(""Index"");
+
+everything looks good but GET in firebug continues forever. i can't post image because of Stackoverflow's law :)
+
+OnSuccess function is
+
+    this.pivotAjaxSuccess = function (data) {
+            if ($(data).filter('#main-pivot').length > 0) {
+                $('#main-pivot').html($(data).filter('#main-pivot').html());
+            }
+            else {
+                $('#main-pivot').html($(data));
+            }
+    
+            parseElem('#main-pivot');
+            setMenu('/' + this.url.substr(0, this.url.indexOf('?')).replace(History.getRootUrl(), ''));
+    
+            var requestUrl = this.url, title = $(data).filter('title').text();
+    
+            currentUrl = requestUrl.substr(0, requestUrl.indexOf('?'));
+            History.pushState(null, title, requestUrl.substr(0, requestUrl.indexOf('?')));
+        }",3
+5457271,03/28/2011 09:50:15,128585,06/25/2009 03:24:13,3518,188,MVC3 - Coding a custom HTML Helper which output works with unobtrusive Javascript,"I am attempting to add unobtrusive JavaScript to a file upload input control, using a custom HTML Helper extension. However, I have checked various blogs which use different methods to create the control, such as tab-builder but I couldn't find out how the unobtrusive data tags are added.",asp.net-mvc-3,,,,,,open,0,48,13,"MVC3 - Coding a custom HTML Helper which output works with unobtrusive Javascript I am attempting to add unobtrusive JavaScript to a file upload input control, using a custom HTML Helper extension. However, I have checked various blogs which use different methods to create the control, such as tab-builder but I couldn't find out how the unobtrusive data tags are added.",1
+10997219,06/12/2012 13:00:54,1191314,02/05/2012 23:27:39,3,0,"Entity Framework query returns one record, but its supposed to return more","As title say, i got problem with a query in Asp.net mvc 3 EF. 
+I got 2 tables with 1 to many relationship.
+
+table1 Users int user_ID string username
+
+table2 Friends int friendshipID int user_ID int friend_ID
+
+The controller:
+
+// // GET: /User/Details/5
+
+    public ViewResult Details(int id)
+        {
+            User user = db.Users.Include(""Friends"").FirstOrDefault(u => u.user_ID == id);
+            //Also for each friend get the User:
+            foreach (var friend in user.Friends.ToList())
+            {
+                friend.User = db.Users.Find(friend.friend_ID);
+            }
+            return View(user);
+        }
+
+The view ""details"":
+
+    @model Social2.Models.User
+    
+    @{
+        ViewBag.Title = ""Details"";
+    }
+    
+    <h2>Details</h2>
+        <div class=""display-field"">
+            @foreach (var friend in @Model.Friends)
+        {
+               @friend.User.username;
+        }   
+        </div>
+
+Context:
+
+    public partial class ASPNETDBEntities : DbContext
+    {
+        public ASPNETDBEntities()
+            : base(""name=ASPNETDBEntities"")
+        {
+        }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+
+        public DbSet<aspnet_Users> aspnet_Users { get; set; }
+        public DbSet<Friend> Friends { get; set; }
+        public DbSet<User> Users { get; set; }
+    }
+
+user model:
+
+    public partial class User
+    {
+        public User()
+        {
+            this.Friends = new HashSet<Friend>();
+        }
+        [Key]
+        public int user_ID { get; set; }
+        public System.Guid user_UniqueID { get; set; }
+        public string username { get; set; }
+    
+        public virtual aspnet_Users aspnet_Users { get; set; }
+        public virtual ICollection<Friend> Friends { get; set; }
+    }
+
+friend model
+
+    public partial class Friend
+    {
+        public int friendship_ID { get; set; }
+        public int user_fr_ID { get; set; }
+        public int friend_ID { get; set; }
+    
+        public virtual User User { get; set; }
+    }
+    
+
+The problem is, when i go to ~/user/details/1, the view show only one(the last one) friend.For every user it shows their last friend. How to show them all ?",asp.net-mvc-3,query,entity-framework,,,,open,0,666,12,"Entity Framework query returns one record, but its supposed to return more As title say, i got problem with a query in Asp.net mvc 3 EF. 
+I got 2 tables with 1 to many relationship.
+
+table1 Users int user_ID string username
+
+table2 Friends int friendshipID int user_ID int friend_ID
+
+The controller:
+
+// // GET: /User/Details/5
+
+    public ViewResult Details(int id)
+        {
+            User user = db.Users.Include(""Friends"").FirstOrDefault(u => u.user_ID == id);
+            //Also for each friend get the User:
+            foreach (var friend in user.Friends.ToList())
+            {
+                friend.User = db.Users.Find(friend.friend_ID);
+            }
+            return View(user);
+        }
+
+The view ""details"":
+
+    @model Social2.Models.User
+    
+    @{
+        ViewBag.Title = ""Details"";
+    }
+    
+    <h2>Details</h2>
+        <div class=""display-field"">
+            @foreach (var friend in @Model.Friends)
+        {
+               @friend.User.username;
+        }   
+        </div>
+
+Context:
+
+    public partial class ASPNETDBEntities : DbContext
+    {
+        public ASPNETDBEntities()
+            : base(""name=ASPNETDBEntities"")
+        {
+        }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+
+        public DbSet<aspnet_Users> aspnet_Users { get; set; }
+        public DbSet<Friend> Friends { get; set; }
+        public DbSet<User> Users { get; set; }
+    }
+
+user model:
+
+    public partial class User
+    {
+        public User()
+        {
+            this.Friends = new HashSet<Friend>();
+        }
+        [Key]
+        public int user_ID { get; set; }
+        public System.Guid user_UniqueID { get; set; }
+        public string username { get; set; }
+    
+        public virtual aspnet_Users aspnet_Users { get; set; }
+        public virtual ICollection<Friend> Friends { get; set; }
+    }
+
+friend model
+
+    public partial class Friend
+    {
+        public int friendship_ID { get; set; }
+        public int user_fr_ID { get; set; }
+        public int friend_ID { get; set; }
+    
+        public virtual User User { get; set; }
+    }
+    
+
+The problem is, when i go to ~/user/details/1, the view show only one(the last one) friend.For every user it shows their last friend. How to show them all ?",3
+8890651,01/17/2012 06:42:51,468345,10/06/2010 18:50:33,1086,10,Customizable audio-video chat for asp.net mvc 3 web site,"I have a need to integrate something like a video-chat-conference -text chat in a asp.net mvc 3web site. 
+
+The systems of online conference have the functional I need:  any user can call any consultant which is online. It allows making conferences. 
+It’s desirable that  the solution I’m looking for allows setting up. For example, I’d like to take a stock of a conversation or add some functional. And it’s good if that system allows to switch between video and audio chat.  
+  
+Are there any solutions? If there’re free ones it’s very good. Does anybody have a link to the example?
+",asp.net-mvc-3,chat,livechat,videochat,,,open,0,105,9,"Customizable audio-video chat for asp.net mvc 3 web site I have a need to integrate something like a video-chat-conference -text chat in a asp.net mvc 3web site. 
+
+The systems of online conference have the functional I need:  any user can call any consultant which is online. It allows making conferences. 
+It’s desirable that  the solution I’m looking for allows setting up. For example, I’d like to take a stock of a conversation or add some functional. And it’s good if that system allows to switch between video and audio chat.  
+  
+Are there any solutions? If there’re free ones it’s very good. Does anybody have a link to the example?
+",4
+8444501,12/09/2011 11:00:02,581007,01/19/2011 06:26:14,1,0,How to generate html controls as per rows in table using asp.net mvc,"Iam developing Application using Asp.Net MVC3, i need create view as per database table rows.
+
+Ex: Table have 1 column having 5 records(Rows). So now my application View should show those 5 records(Rows) as Html textbox Controls.
+How to do this?
+
+",asp.net-mvc-3,jquery-ajax,,,,12/09/2011 18:44:29,not a real question,1,39,13,"How to generate html controls as per rows in table using asp.net mvc Iam developing Application using Asp.Net MVC3, i need create view as per database table rows.
+
+Ex: Table have 1 column having 5 records(Rows). So now my application View should show those 5 records(Rows) as Html textbox Controls.
+How to do this?
+
+",2
+7315978,09/06/2011 06:55:00,769829,05/25/2011 15:09:14,184,1,Membership user in ASP.NET‎ MVC3,"
+I have been working on ASP.Net MVC3. I created view and controller. Also, I have a model to create account.
+
+
+Controller:
+
+
+    [HttpPost]
+        public ActionResult LogOn(LogOnModel model, string returnUrl)
+        {
+            if (ModelState.IsValid)
+            {
+               ----> if (model.UserName == ""Guven"" && model.Password == ""12345"")
+                {
+                    FormsAuthentication.SetAuthCookie(model.UserName, false);
+                    return RedirectToAction(""Index"", ""Home"");
+                }
+                else
+                {
+                    ModelState.AddModelError("""", ""aaaaaaaaaaaaaaaaaa."");
+                }
+            }
+            return View(model);
+        }
+
+I want to make from the database to control that the line marked on the above code.My question is:How can I do that controller?",asp.net-mvc-3,,,,,,open,0,293,5,"Membership user in ASP.NET‎ MVC3 
+I have been working on ASP.Net MVC3. I created view and controller. Also, I have a model to create account.
+
+
+Controller:
+
+
+    [HttpPost]
+        public ActionResult LogOn(LogOnModel model, string returnUrl)
+        {
+            if (ModelState.IsValid)
+            {
+               ----> if (model.UserName == ""Guven"" && model.Password == ""12345"")
+                {
+                    FormsAuthentication.SetAuthCookie(model.UserName, false);
+                    return RedirectToAction(""Index"", ""Home"");
+                }
+                else
+                {
+                    ModelState.AddModelError("""", ""aaaaaaaaaaaaaaaaaa."");
+                }
+            }
+            return View(model);
+        }
+
+I want to make from the database to control that the line marked on the above code.My question is:How can I do that controller?",1
+8729788,01/04/2012 15:56:55,897756,08/17/2011 01:01:52,446,3,Windows Workflow (WWF) or equivalent?,"General ask to reach out to the community for ideas related to bpm/workflow tools as integrated within asp.net-mvc3 such as windows workflow.  What I""m looking for is basic workflow containers and a framework that will create a task (create new task), send an email to a sign off person, have the person sign off on the task (click ok) and then send another email to a group of stakeholders.  Basic style like this but have the work flow be managed by state so that certain code is executed based on that state of the bpm/workflow.",asp.net-mvc-3,workflow-foundation,workflow-foundation-4,,,01/04/2012 17:42:30,too localized,1,97,5,"Windows Workflow (WWF) or equivalent? General ask to reach out to the community for ideas related to bpm/workflow tools as integrated within asp.net-mvc3 such as windows workflow.  What I""m looking for is basic workflow containers and a framework that will create a task (create new task), send an email to a sign off person, have the person sign off on the task (click ok) and then send another email to a group of stakeholders.  Basic style like this but have the work flow be managed by state so that certain code is executed based on that state of the bpm/workflow.",3
+9851903,03/24/2012 12:49:03,461810,09/29/2010 14:04:36,3,0,MVC component GUI approach,"I am interested in general approach for building interactive GUI using MVC3.
+
+The idea is to build set of different components that can be integrated (plugged in) into various scenarios.
+
+Each **Component** MUST have it's own model definition, controller and views.
+Component encapsulates not just the view but also behavior through it's controller.
+
+All internal implementation details, model, behavior, etc... must reside inside component, 
+so that component becomes independent, modular - black box. 
+This allows component to be changed without breaking anything in context in which component is used. 
+
+Context in which component runs must not make any assumptions about internal details of component implementation.
+
+On the other side the component does not make any assumptions about context in which it will be used.
+
+Finally, the component must provide mechanism to ""communicate"" or ""interact"" with outside world. Beside internals, component must provide some kind of ""external"" interface (like parameters, data, functions, events whatever...) which would allow component to be integrated into execution context.
+
+The **Context** (or scenario) is part which contains components.
+Now, the basic challenge for the context is to manage interaction between components.
+
+Real-world **Categories component** example:
+
+Component displays list of categories and allows user to perform various actions such as sorting, paging and record selection.
+Internally, it has it's own model which stores relevant information like current page, sort, selection, etc...
+Internally, it implements all required actions (for basic render, for user actions response, etc...) in it's own controller.
+Internally, it handles model state persistence in the view and model state restore in it's own controller.
+
+
+Real-world **Products component** example:
+
+Component displays list of products and allows user to perform various actions such as sorting, paging and record selection.
+Internally, it has it's own model which stores relevant information like current page, sort, selection, etc...
+Internally, it implements all required actions (for basic render, for user actions response, etc...) in it's own controller. 
+Internally, it handles model state persistence in the view and model state restore in it's own controller.
+
+Real-world **Dashboard page** (context, scenario) example:
+
+Page displays both Categories and Products components.
+Products component displays all products for the currently selected category and thus must provide external interface (parameter or something) to receive selected category identifier from the context.
+Categories component must provide some kind of external interface so that context can act when selected category changes and provide selected category identifier for the products component.
+
+Technically, communication approach for page updates would mostly go through AJAX but if this is possible without AJAX, it would be even better.
+
+In the case of AJAX, I **would like** solution which uses server side controller(s) which decides and renders what should be updated on the client (JSON or something).
+
+I would **not like** solution in the client script (client side ""like"" controller) which decides what actions to call and what parts of page to update - this as said in previous paragraph must be decided by controller(s) on the server.
+
+**Important:** It is not necessarily for the components to work when directly called via some route.
+
+How would you generally implement described system?",asp.net-mvc-3,mvc,components,modularity,interaction,,open,0,489,4,"MVC component GUI approach I am interested in general approach for building interactive GUI using MVC3.
+
+The idea is to build set of different components that can be integrated (plugged in) into various scenarios.
+
+Each **Component** MUST have it's own model definition, controller and views.
+Component encapsulates not just the view but also behavior through it's controller.
+
+All internal implementation details, model, behavior, etc... must reside inside component, 
+so that component becomes independent, modular - black box. 
+This allows component to be changed without breaking anything in context in which component is used. 
+
+Context in which component runs must not make any assumptions about internal details of component implementation.
+
+On the other side the component does not make any assumptions about context in which it will be used.
+
+Finally, the component must provide mechanism to ""communicate"" or ""interact"" with outside world. Beside internals, component must provide some kind of ""external"" interface (like parameters, data, functions, events whatever...) which would allow component to be integrated into execution context.
+
+The **Context** (or scenario) is part which contains components.
+Now, the basic challenge for the context is to manage interaction between components.
+
+Real-world **Categories component** example:
+
+Component displays list of categories and allows user to perform various actions such as sorting, paging and record selection.
+Internally, it has it's own model which stores relevant information like current page, sort, selection, etc...
+Internally, it implements all required actions (for basic render, for user actions response, etc...) in it's own controller.
+Internally, it handles model state persistence in the view and model state restore in it's own controller.
+
+
+Real-world **Products component** example:
+
+Component displays list of products and allows user to perform various actions such as sorting, paging and record selection.
+Internally, it has it's own model which stores relevant information like current page, sort, selection, etc...
+Internally, it implements all required actions (for basic render, for user actions response, etc...) in it's own controller. 
+Internally, it handles model state persistence in the view and model state restore in it's own controller.
+
+Real-world **Dashboard page** (context, scenario) example:
+
+Page displays both Categories and Products components.
+Products component displays all products for the currently selected category and thus must provide external interface (parameter or something) to receive selected category identifier from the context.
+Categories component must provide some kind of external interface so that context can act when selected category changes and provide selected category identifier for the products component.
+
+Technically, communication approach for page updates would mostly go through AJAX but if this is possible without AJAX, it would be even better.
+
+In the case of AJAX, I **would like** solution which uses server side controller(s) which decides and renders what should be updated on the client (JSON or something).
+
+I would **not like** solution in the client script (client side ""like"" controller) which decides what actions to call and what parts of page to update - this as said in previous paragraph must be decided by controller(s) on the server.
+
+**Important:** It is not necessarily for the components to work when directly called via some route.
+
+How would you generally implement described system?",5
+8692894,01/01/2012 11:34:00,1088953,12/09/2011 03:00:27,3,0,How to create SEO friendly links in MVC using ActionLink,"I'm wondering how I can make ActionLink method create a link that generates something like:
+
+    /Home/Search/canon
+
+instead of 
+
+    /Home/Search?q=canon
+
+If ActionLink cannot do that, has anybody ever done this by other means?",asp.net-mvc-3,seo-friendly,,,,,open,0,37,10,"How to create SEO friendly links in MVC using ActionLink I'm wondering how I can make ActionLink method create a link that generates something like:
+
+    /Home/Search/canon
+
+instead of 
+
+    /Home/Search?q=canon
+
+If ActionLink cannot do that, has anybody ever done this by other means?",2
+8804392,01/10/2012 13:57:17,818951,06/28/2011 10:18:20,37,7,jQuery Mobile ASP MVC 3 helpers,"I have noticed that the standard MVC 4 mobile project helpers add the neccesary attributes for jQuery Mobile, and those helpers appear to be the exact same as the MVC3 helpers, but they don't emit the necessary plumbing in MVC3. Is there a way I can use those helpers with MVC3 or get the MVC3 helpers to emit the plumbing code, or does anyone know where some good helpers can be found?",asp.net-mvc-3,jquery-mobile,,,,,open,0,72,6,"jQuery Mobile ASP MVC 3 helpers I have noticed that the standard MVC 4 mobile project helpers add the neccesary attributes for jQuery Mobile, and those helpers appear to be the exact same as the MVC3 helpers, but they don't emit the necessary plumbing in MVC3. Is there a way I can use those helpers with MVC3 or get the MVC3 helpers to emit the plumbing code, or does anyone know where some good helpers can be found?",2
+9383765,02/21/2012 19:20:51,318620,04/16/2010 15:15:31,11,1,MVC 3 unobtrusive jquery validate - how to add a Dummy message to Vallidation Summary,"I get some error messages from the back end service and I want them to be displayed in the Validation Summary control on the page. 
+
+I am using MVC 3 and ValidationSummary is not on the page till a validation fails due to unobtrusive stuff i believe.
+
+I looked at the following [example][1] but it does not work with MVC 3.
+
+Does anyone knows how to simply insert an error message in Validation summary control in MVC 3 with all the unobtrusive stuff switched on?
+
+Thanks,
+
+Dexter
+
+
+  [1]: http://stackoverflow.com/questions/2808327/how-to-read-modelstate-errors-when-returned-by-json",asp.net-mvc-3,jquery-validate,unobtrusive-validation,,,,open,0,86,15,"MVC 3 unobtrusive jquery validate - how to add a Dummy message to Vallidation Summary I get some error messages from the back end service and I want them to be displayed in the Validation Summary control on the page. 
+
+I am using MVC 3 and ValidationSummary is not on the page till a validation fails due to unobtrusive stuff i believe.
+
+I looked at the following [example][1] but it does not work with MVC 3.
+
+Does anyone knows how to simply insert an error message in Validation summary control in MVC 3 with all the unobtrusive stuff switched on?
+
+Thanks,
+
+Dexter
+
+
+  [1]: http://stackoverflow.com/questions/2808327/how-to-read-modelstate-errors-when-returned-by-json",3
+6491220,06/27/2011 09:58:42,13198,09/16/2008 17:36:01,11303,758,Show Image on Select Change in MVC3 Razor,"I have a select list which contains some values representing status of some task. 
+
+The values for select list will come from a property in ViewModel. The object representing status also contains path of associate image like:
+
+    class Status
+    {
+        public int Id{get;set;}
+        public string Title{get;set;}
+        public string ImagePath{get;set;}
+    }
+
+Example values for **Rejected** status:
+
+    var s=new Status{ Id=1, Title=""Rejected"", ImagePath=""~/images/rej.png""};
+
+The image path is relative to root directory.
+
+I want to display image representing the status on change of the select list in an image besides it. What is the best way to do this using  MVC3 Razor?",asp.net-mvc-3,drop-down-menu,razor,,,,open,0,130,8,"Show Image on Select Change in MVC3 Razor I have a select list which contains some values representing status of some task. 
+
+The values for select list will come from a property in ViewModel. The object representing status also contains path of associate image like:
+
+    class Status
+    {
+        public int Id{get;set;}
+        public string Title{get;set;}
+        public string ImagePath{get;set;}
+    }
+
+Example values for **Rejected** status:
+
+    var s=new Status{ Id=1, Title=""Rejected"", ImagePath=""~/images/rej.png""};
+
+The image path is relative to root directory.
+
+I want to display image representing the status on change of the select list in an image besides it. What is the best way to do this using  MVC3 Razor?",3
+9950037,03/30/2012 20:30:20,368259,06/16/2010 13:12:28,889,32,MVC3 browser error...'sessionStorage' is undefined,"I have an MVC3 C# .Net web app.  The app works fine when launching the website from external browsers (i.e., the browser on my machine and other users' machine).  However, when launched on the web server itself, I receive the following error
+
+    'sessionStorage' is undefined
+
+...when loading an web page.  It's the type of error that displays the little yellow icon at the bottom of the browser.
+
+Any ideas?  I must be missing on the server's browser.
+
+",asp.net-mvc-3,session,browser,storage,,,open,0,82,5,"MVC3 browser error...'sessionStorage' is undefined I have an MVC3 C# .Net web app.  The app works fine when launching the website from external browsers (i.e., the browser on my machine and other users' machine).  However, when launched on the web server itself, I receive the following error
+
+    'sessionStorage' is undefined
+
+...when loading an web page.  It's the type of error that displays the little yellow icon at the bottom of the browser.
+
+Any ideas?  I must be missing on the server's browser.
+
+",4
+11299837,07/02/2012 19:18:32,349974,05/25/2010 13:49:44,684,29,How can I set up custom ImageResizer urls?,"I'm just getting started with ImageResizer and I'm stuck on what seem like totally basic questions: 
+
+1. I have an uploader that I use to put images into a directory that's not directly accessible over HTTP.  (If I just put a image at, say, `/images/myimage.jpg`, then anyone could access it by just asking for it, whereas I want to limit access via thumbnails, watermarks, etc.).  So I want to put it at `/offlimits/myimage.jpg`, but be able to serve it up at `/public/images/myimage.jpg`.
+2. I don't really want to dump all the images in the same `offlimits` folder, because putting lots of files in one folder makes Windows unhappy.  But I don't want to expose the details of that subdirectory structure either, so where do I put the mapping between the public facing url and the actual image location?
+3. Most generally, I don't necessarily want an image extension at all, so I'd like to say `/public/image_id?width=100...` and have this map to `/offlimits/sub1/sub2/sub3/image_id.jpg`.
+
+
+Can anyone advise about how to set this up?",asp.net-mvc-3,imageresizer,,,,,open,0,171,8,"How can I set up custom ImageResizer urls? I'm just getting started with ImageResizer and I'm stuck on what seem like totally basic questions: 
+
+1. I have an uploader that I use to put images into a directory that's not directly accessible over HTTP.  (If I just put a image at, say, `/images/myimage.jpg`, then anyone could access it by just asking for it, whereas I want to limit access via thumbnails, watermarks, etc.).  So I want to put it at `/offlimits/myimage.jpg`, but be able to serve it up at `/public/images/myimage.jpg`.
+2. I don't really want to dump all the images in the same `offlimits` folder, because putting lots of files in one folder makes Windows unhappy.  But I don't want to expose the details of that subdirectory structure either, so where do I put the mapping between the public facing url and the actual image location?
+3. Most generally, I don't necessarily want an image extension at all, so I'd like to say `/public/image_id?width=100...` and have this map to `/offlimits/sub1/sub2/sub3/image_id.jpg`.
+
+
+Can anyone advise about how to set this up?",2

@@ -1,0 +1,2686 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+6808085,07/24/2011 16:28:14,688912,04/02/2011 12:46:29,123,6,what exactly is vim's advance,"I have a question about vim.
+
+I didn't use vim in my work before, but I tried hard to learn it. and I'm really curios of people who use vim(gcc gdb) as their IDE, is it really that good? even better than VC6, or sourceinsight or VS2010+visual assist x or eclipse?
+
+could anyone tell me the great thing about vim and so I can have faith to learn it.
+
+btw I think the first IDE I used when I was a kid was visual basic 6, did all you vim guys use vim as your first editor when you use computers?",vim,ide,,,,07/24/2011 16:49:50,not constructive,1,98,5,"what exactly is vim's advance I have a question about vim.
+
+I didn't use vim in my work before, but I tried hard to learn it. and I'm really curios of people who use vim(gcc gdb) as their IDE, is it really that good? even better than VC6, or sourceinsight or VS2010+visual assist x or eclipse?
+
+could anyone tell me the great thing about vim and so I can have faith to learn it.
+
+btw I think the first IDE I used when I was a kid was visual basic 6, did all you vim guys use vim as your first editor when you use computers?",2
+10766058,05/26/2012 12:05:09,403390,07/27/2010 12:45:07,4036,83,How to scroll in insert mode?,"Is there a default key for scrolling in insert mode? I know that I could just
+
+    :imap <F5> <ESC><C-e>a
+    :imap <F6> <ESC><C-y>a
+
+but I'm wondering if there's any key binding there by default.",vim,,,,,,open,0,38,6,"How to scroll in insert mode? Is there a default key for scrolling in insert mode? I know that I could just
+
+    :imap <F5> <ESC><C-e>a
+    :imap <F6> <ESC><C-y>a
+
+but I'm wondering if there's any key binding there by default.",1
+8080802,11/10/2011 14:12:15,72583,03/02/2009 00:04:44,5057,71,VIM vs Emacs for low level Arduino development?,"Over the past few years I have mostly focused on high level programming, such as Ruby on Rails, Java, etc. But recently I decided to learn something low level, so I ordered Arduino starter kit and got some books.
+
+The question at hand is, what should I use for an editor?
+
+For me, there are really two options, Emacs and VIM. I don't want to use any kind of IDE. I already have quite a lot of experience with VIM, but mostly for system administration and never really for programming.
+
+On the other hand, I always wanted to learn Emacs, but every time I give it a try, I fail for lack of motivation. Last time I wanted to use Emacs for Ruby I ended up switching to TextMate, because it was just so much easier and more productive (for me as a Emacs noob).
+
+But now that I'm going to work with low level stuff for Arduino, I want to get dirty and really learn to use the editor I chose to it's fullest. I don't want any hand-holding-IDE-stuff anymore.
+
+The thing is, I still can't decide. I googled around a lot about Emacs vs VIM, and it usually ends up either in *VIM is better for small stuff and Emacs for bigger stuff*, but other people say it's a matter of choice.
+
+To be completely honest, I'm leaning towards VIM just because I'm already familiar with it. On the other hand, every time I see someone praise Emacs, I feel sad because I've never really given it a try.
+
+**Are there any low level programming specific (C/C++ or Assembler) things that I should note when deciding between VIM and Emacs?**
+
+I'm working on a Macbook Pro, so the *VI is everywhere because it's POSIX* argument doesn't apply here.",vim,emacs,editor,arduino,low-level,11/10/2011 16:52:03,not constructive,1,292,8,"VIM vs Emacs for low level Arduino development? Over the past few years I have mostly focused on high level programming, such as Ruby on Rails, Java, etc. But recently I decided to learn something low level, so I ordered Arduino starter kit and got some books.
+
+The question at hand is, what should I use for an editor?
+
+For me, there are really two options, Emacs and VIM. I don't want to use any kind of IDE. I already have quite a lot of experience with VIM, but mostly for system administration and never really for programming.
+
+On the other hand, I always wanted to learn Emacs, but every time I give it a try, I fail for lack of motivation. Last time I wanted to use Emacs for Ruby I ended up switching to TextMate, because it was just so much easier and more productive (for me as a Emacs noob).
+
+But now that I'm going to work with low level stuff for Arduino, I want to get dirty and really learn to use the editor I chose to it's fullest. I don't want any hand-holding-IDE-stuff anymore.
+
+The thing is, I still can't decide. I googled around a lot about Emacs vs VIM, and it usually ends up either in *VIM is better for small stuff and Emacs for bigger stuff*, but other people say it's a matter of choice.
+
+To be completely honest, I'm leaning towards VIM just because I'm already familiar with it. On the other hand, every time I see someone praise Emacs, I feel sad because I've never really given it a try.
+
+**Are there any low level programming specific (C/C++ or Assembler) things that I should note when deciding between VIM and Emacs?**
+
+I'm working on a Macbook Pro, so the *VI is everywhere because it's POSIX* argument doesn't apply here.",5
+4617059,01/06/2011 16:18:28,350789,05/26/2010 10:18:46,47,2,Showing trailing spaces in vim,"I've set the following options in .vimrc
+
+    set listchars=tab:▸\ ,trail:·
+    set list
+
+And expected to see dots in those places where spaces are used for tabulation in the code (I use spaces, not tabs).
+However, the result is different:
+http://clip2net.com/clip/m56531/1294330645-clipj13237-52kb.png
+
+Could you please recommend how to reach the desired result? Thanks!",vim,indentation,,,,,open,0,53,5,"Showing trailing spaces in vim I've set the following options in .vimrc
+
+    set listchars=tab:▸\ ,trail:·
+    set list
+
+And expected to see dots in those places where spaces are used for tabulation in the code (I use spaces, not tabs).
+However, the result is different:
+http://clip2net.com/clip/m56531/1294330645-clipj13237-52kb.png
+
+Could you please recommend how to reach the desired result? Thanks!",2
+5642341,04/12/2011 22:24:25,415600,08/09/2010 22:13:59,423,32,Is it possible to use multiple arguments in vim command,"I have this mvn command  
+
+    mvn install:install-file -DgroupId=i.hate.james.blunt -DartifactId=yourartifactid... -Dversion=1.0 -Dpackaging=jar -Dfile=/path/to/jarfile
+
+And I want to transfer it to a command in vim, at the moment I have this
+
+    command -nargs=* MvnAddToRepositoy :!mvn install:install-file -DgroupId=i.hate.james.blunt -DartifactId=<arg1> -Dversion=1.0 -Dpackaging=jar -Dfile=<arg2>
+
+I am unable to find this in vim docs or an example on the net.
+
+Can anyone help?",vim,vimrc,,,,,open,0,62,10,"Is it possible to use multiple arguments in vim command I have this mvn command  
+
+    mvn install:install-file -DgroupId=i.hate.james.blunt -DartifactId=yourartifactid... -Dversion=1.0 -Dpackaging=jar -Dfile=/path/to/jarfile
+
+And I want to transfer it to a command in vim, at the moment I have this
+
+    command -nargs=* MvnAddToRepositoy :!mvn install:install-file -DgroupId=i.hate.james.blunt -DartifactId=<arg1> -Dversion=1.0 -Dpackaging=jar -Dfile=<arg2>
+
+I am unable to find this in vim docs or an example on the net.
+
+Can anyone help?",2
+7325052,09/06/2011 19:24:29,403915,07/27/2010 21:47:50,90,12,Can someone explain to me why the dot (.) command is so useful in VIM?,I use VIM pretty regularly now but I never use the dot (.) command to repeat the previous action. I keep reading about how awesome it is but I never see any real world examples that make sense to me and the way I code in VIM. What are some real world examples that show how awesome the dot (.) command is?,vim,vi,,,,,open,0,62,15,Can someone explain to me why the dot (.) command is so useful in VIM? I use VIM pretty regularly now but I never use the dot (.) command to repeat the previous action. I keep reading about how awesome it is but I never see any real world examples that make sense to me and the way I code in VIM. What are some real world examples that show how awesome the dot (.) command is?,2
+11694659,07/27/2012 19:42:18,1302754,03/30/2012 08:09:30,17,0,is it possible to lock keyboard layout for app in ubuntu?,I'm using two keyboard layouts in my ubuntu. But in vim I'm using a keymap switching so I want to lock English  layout to gvim window whenever I switch to it. Is it possible in ubuntu?,vim,ubuntu,keyboard-layout,,,07/29/2012 16:41:09,off topic,1,37,11,is it possible to lock keyboard layout for app in ubuntu? I'm using two keyboard layouts in my ubuntu. But in vim I'm using a keymap switching so I want to lock English  layout to gvim window whenever I switch to it. Is it possible in ubuntu?,3
+10330760,04/26/2012 09:33:35,662967,03/16/2011 17:14:17,761,4,How can I resolve these problems with numbers?,"I still have troubles with numbers in Vim:
+
+p.e.
+
+    let a = 1.02 | let b = '10000000' | let total = a*b | echo total --> 1.02e7  
+
+I would like to avoid Exponentials.
+How can I have the output 10200000 ?
+
+    let a = 4000000000 | let b = '1' | let total = a+b | echo total  --> -294967295 
+
+Why does this give a wrong output? 
+
+Tnx
+",vim,float,numbers,integer,exponential,,open,0,75,8,"How can I resolve these problems with numbers? I still have troubles with numbers in Vim:
+
+p.e.
+
+    let a = 1.02 | let b = '10000000' | let total = a*b | echo total --> 1.02e7  
+
+I would like to avoid Exponentials.
+How can I have the output 10200000 ?
+
+    let a = 4000000000 | let b = '1' | let total = a+b | echo total  --> -294967295 
+
+Why does this give a wrong output? 
+
+Tnx
+",5
+5603667,04/09/2011 07:51:32,662967,03/16/2011 17:14:17,150,4,Which LEADER key and ESC key are you using in VIM?,"Many people use a customized Leader/ESC key in VIM.   
+Which are you using?   
+Aren't they conflicting with normal mode mapping?",vim,key,productivity,,,04/09/2011 17:45:08,not a real question,1,24,11,"Which LEADER key and ESC key are you using in VIM? Many people use a customized Leader/ESC key in VIM.   
+Which are you using?   
+Aren't they conflicting with normal mode mapping?",3
+10677044,05/20/2012 20:44:27,1073134,11/30/2011 10:33:47,1,0,Deep Vim integration for windows and Linux Environments at the System Level,"Being a vim fanboy, I want to surround myself with the power of vim everywhere I type/edit. 
+*(I'm using pentadactyl add-on for Firefox to get the power of vim-key bindings in the browser)*
+
+But, I'm looking for **Deep** vim integration and key-bindings in windows(win7) and Linux environments.
+i.e replacing the default buffers and instead use vim buffers and vim modes totally system wide for editing. 
+
+Lets say in any app now I get options - **to use the vim modes** or the 
+**default normal mode** typing.
+
+Is this practically possible? 
+
+
+----------
+
+
+And I would love to take this as a side-project this summer. Any good pointers to start off?",vim,,,,,05/21/2012 12:14:54,off topic,1,105,12,"Deep Vim integration for windows and Linux Environments at the System Level Being a vim fanboy, I want to surround myself with the power of vim everywhere I type/edit. 
+*(I'm using pentadactyl add-on for Firefox to get the power of vim-key bindings in the browser)*
+
+But, I'm looking for **Deep** vim integration and key-bindings in windows(win7) and Linux environments.
+i.e replacing the default buffers and instead use vim buffers and vim modes totally system wide for editing. 
+
+Lets say in any app now I get options - **to use the vim modes** or the 
+**default normal mode** typing.
+
+Is this practically possible? 
+
+
+----------
+
+
+And I would love to take this as a side-project this summer. Any good pointers to start off?",1
+1830875,12/02/2009 05:42:50,222616,12/02/2009 04:21:17,1,0,Finding definitions/references to C++ class members in Vim,"I'm using Vim for a C++ project that I've started working on and I've been spending a lot of time lately browsing through the existing code to get a hang of it. To make the browsing easier, I've setup ctags and cscope in Vim to jump to definitions and find references.
+
+However, I find that neither of them are intelligent enough to know which class a member variable/function belongs to. For example:
+
+    class Square;
+    ...
+
+    Square a;
+    ...
+    a.rotate();
+
+Attempting to find the definition of `rotate()` will bring up member functions from other classes too, like Triangle. I use `g]` in Vim to bring up a list of matching tags and fortunately ctags lists the associated class for each entry. However, when there are 200 classes with the same member function, it can be tiresome to hunt down the correct tag.
+
+Also, if I am at a function definition:
+
+    Square::rotate()
+    {
+        ...
+    }
+
+Attempting to find all calls to `rotate()` using cscope brings up calls to Triangle's and other classes' rotate functions.
+
+Because of this, I find myself jumping to **Visual Slickedit** every now and then to find the definition or reference to a member function or member variable. Is there any way I can accomplish this in good old **Vim**?
+",vim,c++,,,,,open,0,237,8,"Finding definitions/references to C++ class members in Vim I'm using Vim for a C++ project that I've started working on and I've been spending a lot of time lately browsing through the existing code to get a hang of it. To make the browsing easier, I've setup ctags and cscope in Vim to jump to definitions and find references.
+
+However, I find that neither of them are intelligent enough to know which class a member variable/function belongs to. For example:
+
+    class Square;
+    ...
+
+    Square a;
+    ...
+    a.rotate();
+
+Attempting to find the definition of `rotate()` will bring up member functions from other classes too, like Triangle. I use `g]` in Vim to bring up a list of matching tags and fortunately ctags lists the associated class for each entry. However, when there are 200 classes with the same member function, it can be tiresome to hunt down the correct tag.
+
+Also, if I am at a function definition:
+
+    Square::rotate()
+    {
+        ...
+    }
+
+Attempting to find all calls to `rotate()` using cscope brings up calls to Triangle's and other classes' rotate functions.
+
+Because of this, I find myself jumping to **Visual Slickedit** every now and then to find the definition or reference to a member function or member variable. Is there any way I can accomplish this in good old **Vim**?
+",2
+5510367,04/01/2011 07:29:38,1145225,04/01/2011 07:15:08,1,0,can't run vim-ruby-debugger(rails3). any choices to run?,"1. :Rdebugger - running, but server doesn't start automatically
+2. :Rdebugger 'script/rails server' -- E77: Too many file names
+3. tryed just to run :Rserver - failed. I don't have 'rails server -d' working at all- after start rails stops without any errors. In common everything works(from console).
+Env - Mac Os X 10.6.6, macvim 7.3, zsh, rvm, ruby 1.8.7(as default)
+
+",vim,macvim,,,,,open,0,58,7,"can't run vim-ruby-debugger(rails3). any choices to run? 1. :Rdebugger - running, but server doesn't start automatically
+2. :Rdebugger 'script/rails server' -- E77: Too many file names
+3. tryed just to run :Rserver - failed. I don't have 'rails server -d' working at all- after start rails stops without any errors. In common everything works(from console).
+Env - Mac Os X 10.6.6, macvim 7.3, zsh, rvm, ruby 1.8.7(as default)
+
+",2
+5235692,03/08/2011 16:59:28,650190,03/08/2011 16:59:28,1,0,Why VIM's (jk) navigate file line instead of screen line?,Why VIM set the default line navigation (jk) to navigate file line instead of screen line. Is there any use-case when this behavior is desirable?,vim,key-bindings,,,,03/08/2011 21:22:17,not constructive,1,25,10,Why VIM's (jk) navigate file line instead of screen line? Why VIM set the default line navigation (jk) to navigate file line instead of screen line. Is there any use-case when this behavior is desirable?,2
+10015575,04/04/2012 16:40:05,283807,03/01/2010 18:09:56,676,28,Tmux vs. iTerm2 split panes,"Why should I use tmux when iterm2 has split panes?  
+
+I have never used tmux, and want to know if there are advantages to using that in my workflow instead of the split pane features iterm2 has.
+
+I really like the dimming of inactive windows that iTerm2 split panes offers.  Does tmux do something similar?
+
+Is it better to use tmux with vim instead of the iterm2 split panes?",vim,tmux,iterm,,,04/05/2012 20:24:27,off topic,1,69,5,"Tmux vs. iTerm2 split panes Why should I use tmux when iterm2 has split panes?  
+
+I have never used tmux, and want to know if there are advantages to using that in my workflow instead of the split pane features iterm2 has.
+
+I really like the dimming of inactive windows that iTerm2 split panes offers.  Does tmux do something similar?
+
+Is it better to use tmux with vim instead of the iterm2 split panes?",3
+3822835,09/29/2010 14:52:56,180604,09/28/2009 17:53:01,946,31,How do I exclusively indent a code block in vim?,"There are a [surprising][1] [number][2] of [questions][3] on [this][4] [subject][5], yet some how none of them answer what I want.
+
+I have a code block as follows:
+
+    void foo {
+    
+    somecodehere
+    morecode
+    ...
+    
+    }
+
+As you can see the guts of my function are indents on the same level as the rest of my code block.  What I currently do is `>%` on the end of my block (ie the `}`) which indents the entire block, including the lines with my curly braces.
+
+What I'd like to do is a similar command which indented every line in between __excluding__ my curly braces.
+
+I can not begin to tell you how much time this would save me.
+
+  [1]: http://stackoverflow.com/questions/1407922/vim-question-tabbing-a-block-of-code
+  [2]: http://stackoverflow.com/questions/413208/how-to-indent-code-in-vim-editor-in-windows
+  [3]: http://stackoverflow.com/questions/318923/how-to-indent-a-selection-in-gvim-win32
+  [4]: http://stackoverflow.com/questions/235839/how-do-i-indent-multiple-lines-quickly-in-vi
+  [5]: http://stackoverflow.com/questions/442302/tabbing-selected-section-in-vim",vim,,,,,,open,0,151,10,"How do I exclusively indent a code block in vim? There are a [surprising][1] [number][2] of [questions][3] on [this][4] [subject][5], yet some how none of them answer what I want.
+
+I have a code block as follows:
+
+    void foo {
+    
+    somecodehere
+    morecode
+    ...
+    
+    }
+
+As you can see the guts of my function are indents on the same level as the rest of my code block.  What I currently do is `>%` on the end of my block (ie the `}`) which indents the entire block, including the lines with my curly braces.
+
+What I'd like to do is a similar command which indented every line in between __excluding__ my curly braces.
+
+I can not begin to tell you how much time this would save me.
+
+  [1]: http://stackoverflow.com/questions/1407922/vim-question-tabbing-a-block-of-code
+  [2]: http://stackoverflow.com/questions/413208/how-to-indent-code-in-vim-editor-in-windows
+  [3]: http://stackoverflow.com/questions/318923/how-to-indent-a-selection-in-gvim-win32
+  [4]: http://stackoverflow.com/questions/235839/how-do-i-indent-multiple-lines-quickly-in-vi
+  [5]: http://stackoverflow.com/questions/442302/tabbing-selected-section-in-vim",1
+9315857,02/16/2012 17:17:52,554327,12/26/2010 14:44:17,154,5,Which macvim for osx 10.6.8?,"The site says:
+
+    http://code.google.com/p/macvim/
+    MacVim 7.3 (build 53) for OS X 10.6, 32/64 bit version for Intel. The latest snapshot for Snow Leopard is available from @alexlovelltroy's GitHub page.
+
+This leads to here:
+https://github.com/alexlovelltroy/macvim/downloads
+
+MacVim-snapshot-64-OSX-10_6.tbz **has only 226 downloads**
+
+At the top of the page there is also a link to the downloads page:
+https://github.com/b4winckler/macvim/downloads
+
+LEGACY-OSX-10_6-MacVim-snapshot-62.tbz — LEGACY - OS X 10.6 - Snapshot 62  **has over 7k downloads**
+
+MacVim-snapshot-61.tbz — Snapshot 61 for Mac OS X 10.6 & 10.7 (64 bit) **has over 27k downloads**
+
+Of the 3 versions listed here the one recommended has only 226 downloads while the rest are in the thousands. Which version of macvim do I download?
+",vim,macvim,,,,02/16/2012 21:17:24,off topic,1,112,5,"Which macvim for osx 10.6.8? The site says:
+
+    http://code.google.com/p/macvim/
+    MacVim 7.3 (build 53) for OS X 10.6, 32/64 bit version for Intel. The latest snapshot for Snow Leopard is available from @alexlovelltroy's GitHub page.
+
+This leads to here:
+https://github.com/alexlovelltroy/macvim/downloads
+
+MacVim-snapshot-64-OSX-10_6.tbz **has only 226 downloads**
+
+At the top of the page there is also a link to the downloads page:
+https://github.com/b4winckler/macvim/downloads
+
+LEGACY-OSX-10_6-MacVim-snapshot-62.tbz — LEGACY - OS X 10.6 - Snapshot 62  **has over 7k downloads**
+
+MacVim-snapshot-61.tbz — Snapshot 61 for Mac OS X 10.6 & 10.7 (64 bit) **has over 27k downloads**
+
+Of the 3 versions listed here the one recommended has only 226 downloads while the rest are in the thousands. Which version of macvim do I download?
+",2
+3984040,10/21/2010 03:19:33,482480,10/21/2010 02:45:53,1,0,justify my love of gvim,"I have been using gvim at work for a year or so, just at the point where I'm loving it, getting the hang of it and trying to j,k all over Microsoft Outlook.  Then my computer died.  Now, originally I had installed gvim myself, which at the time was a ""no-no"" and is now is really a bad idea (what with all the people introducing viruses to the network and whatnot).
+
+We have a software review board to which I was sent when I wanted gvim ""legally"" installed.  I was told that the standard text editor is UltraEdit and they don't want to support more than one.  If I want to use gvim I need to talk management into making it the standard.
+
+I'm kind of at a loss.  Obviously, I can tout the cost savings, but I was having a hard time explaining what my fuss was about.  If it were another programmer, I'd just force them to use it and they'd figure it out for themselves.  But management folk aren't much interested in not being able to figure out you need to ""i"" before you can type, er, insert.
+
+I told my manager it was like having a rowboat instead of swimming everywhere.  And sometimes you're motorboating in that thing, but I'm looking for concise, compelling arguments which aren't based on bad analogies.  There are a number of similar-ish questions, but I fear they trend too technical. Any ideas? 
+
+And after all your awesome advice wins the day for me, how do I ease former UltraEdit users into becoming gvimmers?
+",vim,,,,,10/23/2010 00:53:54,not constructive,1,268,5,"justify my love of gvim I have been using gvim at work for a year or so, just at the point where I'm loving it, getting the hang of it and trying to j,k all over Microsoft Outlook.  Then my computer died.  Now, originally I had installed gvim myself, which at the time was a ""no-no"" and is now is really a bad idea (what with all the people introducing viruses to the network and whatnot).
+
+We have a software review board to which I was sent when I wanted gvim ""legally"" installed.  I was told that the standard text editor is UltraEdit and they don't want to support more than one.  If I want to use gvim I need to talk management into making it the standard.
+
+I'm kind of at a loss.  Obviously, I can tout the cost savings, but I was having a hard time explaining what my fuss was about.  If it were another programmer, I'd just force them to use it and they'd figure it out for themselves.  But management folk aren't much interested in not being able to figure out you need to ""i"" before you can type, er, insert.
+
+I told my manager it was like having a rowboat instead of swimming everywhere.  And sometimes you're motorboating in that thing, but I'm looking for concise, compelling arguments which aren't based on bad analogies.  There are a number of similar-ish questions, but I fear they trend too technical. Any ideas? 
+
+And after all your awesome advice wins the day for me, how do I ease former UltraEdit users into becoming gvimmers?
+",1
+816175,05/03/2009 02:46:44,54964,01/14/2009 11:38:17,1802,40,Unable to close many Windows in Vim,"I use Vim in Screen. I run the command
+ 
+    vim <bigFolder>
+
+I am in stuck, since it does not make sense to close each buffer by
+
+     :q
+
+**How can you close all active buffers in Vim,** by one command inside Vim?",vim,close,,,,,open,0,47,7,"Unable to close many Windows in Vim I use Vim in Screen. I run the command
+ 
+    vim <bigFolder>
+
+I am in stuck, since it does not make sense to close each buffer by
+
+     :q
+
+**How can you close all active buffers in Vim,** by one command inside Vim?",2
+2588481,04/06/2010 21:29:35,1483,08/15/2008 20:40:17,1950,103,Are there any kata for practice VIM?,"I've used VIM for many years as my primary text editor. And I am still learning how to use VIM for various editing tasks.
+
+The problem is that even if I learn something and use it once a week I forgot soon how I did it -- classic case is search and replace in many buffers using `bufdo` :(.
+
+I was wondering if there is any kata to daily VIM practice including many VIM commands:
+ 
+ * open existing files,
+ * create new files,
+ * edit files and move around:
+   * move cursor (beginning & end of line/function/block/screen, top & bottom of screen, move screen line up/down, etc.),
+   * mark, copy & paste,
+   * insert & remove characters/words/lines,
+   * move between buffers,
+   * move between windows,
+   * arrange windows,
+   * search & replace,
+   * repeat last command,
+   * formatting (`=`),
+   * probably some more (bookmarks, macros).
+ * save files,
+ * create/update/save an open projects (`mksession` and `source`).
+
+Do you know any kata for VIM of tutorial which could help to practice all above (and more) VIM commands?
+",vim,code-kata,editor,practice,,02/25/2011 13:54:05,not constructive,1,194,7,"Are there any kata for practice VIM? I've used VIM for many years as my primary text editor. And I am still learning how to use VIM for various editing tasks.
+
+The problem is that even if I learn something and use it once a week I forgot soon how I did it -- classic case is search and replace in many buffers using `bufdo` :(.
+
+I was wondering if there is any kata to daily VIM practice including many VIM commands:
+ 
+ * open existing files,
+ * create new files,
+ * edit files and move around:
+   * move cursor (beginning & end of line/function/block/screen, top & bottom of screen, move screen line up/down, etc.),
+   * mark, copy & paste,
+   * insert & remove characters/words/lines,
+   * move between buffers,
+   * move between windows,
+   * arrange windows,
+   * search & replace,
+   * repeat last command,
+   * formatting (`=`),
+   * probably some more (bookmarks, macros).
+ * save files,
+ * create/update/save an open projects (`mksession` and `source`).
+
+Do you know any kata for VIM of tutorial which could help to practice all above (and more) VIM commands?
+",4
+2457459,03/16/2010 19:32:23,129089,06/25/2009 21:09:12,285,3,"VIM Question: When a .swp file exists, is it possible to add a ""(D)elete"" option","Many times when I lose connection to my development server, I just log back in and have a .swp file to deal with when I re-open. Does vim have a mod to allow deleting by initial prompt?
+
+Thanks",vim,linux,,,,,open,0,37,15,"VIM Question: When a .swp file exists, is it possible to add a ""(D)elete"" option Many times when I lose connection to my development server, I just log back in and have a .swp file to deal with when I re-open. Does vim have a mod to allow deleting by initial prompt?
+
+Thanks",2
+6735996,07/18/2011 16:19:52,662967,03/16/2011 17:14:17,460,4,How to avoid certain formatting with PAR?,"PAR does i.m.o. a much better formatting as Vim default formatter.
+
+But sometimes PAR does't work very well.
+
+p.e.
+
+<pre>this is a test this is a test this is a test.
+this is my text this is my text this is my text.</pre>
+
+formatting with par 44 becomes:
+
+<pre>this is a test this is a test this is a   t.
+this is tes my text this is my text this  t.
+this is is my tex                         t.</pre>
+
+Is there a way to resolve this kind of formattion?
+",vim,formatting,par,,,,open,0,105,7,"How to avoid certain formatting with PAR? PAR does i.m.o. a much better formatting as Vim default formatter.
+
+But sometimes PAR does't work very well.
+
+p.e.
+
+<pre>this is a test this is a test this is a test.
+this is my text this is my text this is my text.</pre>
+
+formatting with par 44 becomes:
+
+<pre>this is a test this is a test this is a   t.
+this is tes my text this is my text this  t.
+this is is my tex                         t.</pre>
+
+Is there a way to resolve this kind of formattion?
+",3
+11682301,07/27/2012 06:04:50,1503012,07/05/2012 05:38:39,1,4,how to jump to the next open directory in vim nerdtree plugin,"For example 
+My file tree looks like this 
+
+    +/root/  
+        -/close/  
+        +/open/  
+            aa.html  
+            bb.xml  
+
+If the cursor is in root line ,how to jump to 'open' directory as quick as possible,
+Each time I need to use the 'j','k' key,it's not convenient enough!
+Thanks for help",vim,nerdtree,,,,,open,0,92,12,"how to jump to the next open directory in vim nerdtree plugin For example 
+My file tree looks like this 
+
+    +/root/  
+        -/close/  
+        +/open/  
+            aa.html  
+            bb.xml  
+
+If the cursor is in root line ,how to jump to 'open' directory as quick as possible,
+Each time I need to use the 'j','k' key,it's not convenient enough!
+Thanks for help",2
+11627859,07/24/2012 09:24:39,1548133,07/24/2012 09:07:50,1,0,Return to main latex file after correcting error in GVim,"Using the vim-latexsuite for Gvim, I am editing a fairly large document.
+It contains of a main document that contains \begin{document}, \end{document} etc.
+in between there is a lot of sections that are writeen in another documents and imported with \input{blahblah}
+
+the problem is that when i compile using \ll, and there is an error in one of the imported documents, this document is opened in the current tab, along with the errorlog etc. This is of course done so that I can correct the error easily.
+
+... but after correcting the error, I am now positioned in another document in the tab that was previously my maindocument. This document does not have the preamble and therefore I have to reopen the main document in order to recompile to see if my correction works.
+
+It seems to me that i should be easy to recompile on the spot after I have corrected the error. How can I do that?",vim,macros,latex,recompile,,,open,0,154,10,"Return to main latex file after correcting error in GVim Using the vim-latexsuite for Gvim, I am editing a fairly large document.
+It contains of a main document that contains \begin{document}, \end{document} etc.
+in between there is a lot of sections that are writeen in another documents and imported with \input{blahblah}
+
+the problem is that when i compile using \ll, and there is an error in one of the imported documents, this document is opened in the current tab, along with the errorlog etc. This is of course done so that I can correct the error easily.
+
+... but after correcting the error, I am now positioned in another document in the tab that was previously my maindocument. This document does not have the preamble and therefore I have to reopen the main document in order to recompile to see if my correction works.
+
+It seems to me that i should be easy to recompile on the spot after I have corrected the error. How can I do that?",4
+7024660,08/11/2011 10:58:43,181725,09/30/2009 10:28:36,367,9,Mindmapping with graphviz,"I use Vim and vimwiki for daily work and for mindmapping I use Xmind.
+
+Does anyone use graphviz for mindmapping? 
+Is it feasible and would you recommend it?",vim,graphviz,,,,08/12/2011 12:36:26,off topic,1,27,3,"Mindmapping with graphviz I use Vim and vimwiki for daily work and for mindmapping I use Xmind.
+
+Does anyone use graphviz for mindmapping? 
+Is it feasible and would you recommend it?",2
+11705554,07/28/2012 23:44:07,1560299,07/28/2012 23:37:29,1,0,make with vim using Intel Fortran,"I have a project with Fortran and I use gvim as my editor. When I use gfortran as my compiler in my makefile, I encounter no problems. I also have a version of the makefile that uses intel fortran and that makefile also works fine when called from the terminal. 
+
+My problem is within gvim. Gfortran version of my makefile works great when called within vim with :make and it shows me the errors and jumps to them etc. However, when I use the ifort version, :make command in vim gives me an error saying he could not find ifort.
+
+ifort works fine from the terminal. I have both ~/.bashrc and /etc/bash.bashrc edited so that it sources intel compilers. I use Crunchbang Waldorf (read: Debian Testing) and I remember having the same problem in LMDE. 
+
+Any help is greatly appreciated",vim,make,fortran,debian,,,open,0,139,6,"make with vim using Intel Fortran I have a project with Fortran and I use gvim as my editor. When I use gfortran as my compiler in my makefile, I encounter no problems. I also have a version of the makefile that uses intel fortran and that makefile also works fine when called from the terminal. 
+
+My problem is within gvim. Gfortran version of my makefile works great when called within vim with :make and it shows me the errors and jumps to them etc. However, when I use the ifort version, :make command in vim gives me an error saying he could not find ifort.
+
+ifort works fine from the terminal. I have both ~/.bashrc and /etc/bash.bashrc edited so that it sources intel compilers. I use Crunchbang Waldorf (read: Debian Testing) and I remember having the same problem in LMDE. 
+
+Any help is greatly appreciated",4
+2236171,02/10/2010 10:48:49,247675,01/10/2010 22:45:48,1,0,Compiling gVim with Python 3 support,"I hope this is the right place to ask this question:
+
+I am trying to compile gVim with python 3 support using cygwin under windows:
+
+I changed the Make_cyg.mak files Python section to the following:
+
+
+    ##############################
+    # DYNAMIC_PYTHON=yes works.
+    # DYNAMIC_PYTHON=no does not (unresolved externals on link).
+    ##############################
+    ifdef PYTHON
+    DEFINES += -DFEAT_PYTHON
+    INCLUDES += -I$(PYTHON)/include
+    EXTRA_OBJS += $(OUTDIR)/if_python.o
+
+    ifndef DYNAMIC_PYTHON
+    DYNAMIC_PYTHON = yes
+    endif
+    
+    ifndef PYTHON_VER
+    PYTHON_VER = 30
+    endif
+    
+    ifeq (yes, $(DYNAMIC_PYTHON))
+    DEFINES += -DDYNAMIC_PYTHON -DDYNAMIC_PYTHON_DLL=\""python$(PYTHON_VER).dll\""
+    else
+    EXTRA_LIBS += $(PYTHON)/libs/python$(PYTHON_VER).lib
+    endif
+    endif
+
+However when running:
+
+    $ make -f Make_cyg.mak OLE=Yes PYTHON=/cygdrive/p/Applications/PortablePython_1.1_py3.0.1/App/ RUBY=/cygdrive/c/Programme/Ruby/
+
+this results in the following errors:
+
+    In file included from /cygdrive/p/Applications/PortablePython_1.1_py3.0.1/App//i
+    nclude/Python.h:70,
+                     from if_python.c:43:
+    /cygdrive/p/Applications/PortablePython_1.1_py3.0.1/App//include/bytesobject.h:1
+    04:1: warning: ""F_BLANK"" redefined
+    In file included from globals.h:1554,
+                     from vim.h:1831,
+                     from if_python.c:20:
+    farsi.h:74:1: warning: this is the location of the previous definition
+    if_python.c:729: warning: initialization makes integer from pointer without a ca
+    st
+    if_python.c:733: warning: initialization from incompatible pointer type
+    if_python.c:734: warning: initialization from incompatible pointer type
+    if_python.c:735: warning: initialization from incompatible pointer type
+    if_python.c:737: error: `cmpfunc' undeclared here (not in a function)
+    if_python.c:737: error: initializer element is not constant
+    if_python.c:737: error: (near initialization for `OutputType.tp_repr')
+    if_python.c:737: error: parse error before numeric constant
+    /** more errors **/
+    if_python.c:2256: warning: initialization from incompatible pointer type
+    if_python.c:2257: warning: initialization from incompatible pointer type
+    if_python.c: In function `PythonMod_Init':
+    if_python.c:2351: error: structure has no member named `ob_type'
+    if_python.c:2352: error: structure has no member named `ob_type'
+    if_python.c:2353: error: structure has no member named `ob_type'
+    if_python.c:2354: error: structure has no member named `ob_type'
+    if_python.c:2355: error: structure has no member named `ob_type'
+    if_python.c:2356: error: structure has no member named `ob_type'
+    make: *** [gobj/if_python.o] Error 1
+
+I am using a portable python install from [Portable Python][1]. I don't know if that may be the source of the error.
+
+I am hoping someone knows how to compile vim with python 3 support (if I only compile it with ruby support it compiles nicely).
+
+Thanks in advance,
+
+Gjallar
+
+
+  [1]: http://www.portablepython.com/",vim,python,compilation,,,,open,0,522,6,"Compiling gVim with Python 3 support I hope this is the right place to ask this question:
+
+I am trying to compile gVim with python 3 support using cygwin under windows:
+
+I changed the Make_cyg.mak files Python section to the following:
+
+
+    ##############################
+    # DYNAMIC_PYTHON=yes works.
+    # DYNAMIC_PYTHON=no does not (unresolved externals on link).
+    ##############################
+    ifdef PYTHON
+    DEFINES += -DFEAT_PYTHON
+    INCLUDES += -I$(PYTHON)/include
+    EXTRA_OBJS += $(OUTDIR)/if_python.o
+
+    ifndef DYNAMIC_PYTHON
+    DYNAMIC_PYTHON = yes
+    endif
+    
+    ifndef PYTHON_VER
+    PYTHON_VER = 30
+    endif
+    
+    ifeq (yes, $(DYNAMIC_PYTHON))
+    DEFINES += -DDYNAMIC_PYTHON -DDYNAMIC_PYTHON_DLL=\""python$(PYTHON_VER).dll\""
+    else
+    EXTRA_LIBS += $(PYTHON)/libs/python$(PYTHON_VER).lib
+    endif
+    endif
+
+However when running:
+
+    $ make -f Make_cyg.mak OLE=Yes PYTHON=/cygdrive/p/Applications/PortablePython_1.1_py3.0.1/App/ RUBY=/cygdrive/c/Programme/Ruby/
+
+this results in the following errors:
+
+    In file included from /cygdrive/p/Applications/PortablePython_1.1_py3.0.1/App//i
+    nclude/Python.h:70,
+                     from if_python.c:43:
+    /cygdrive/p/Applications/PortablePython_1.1_py3.0.1/App//include/bytesobject.h:1
+    04:1: warning: ""F_BLANK"" redefined
+    In file included from globals.h:1554,
+                     from vim.h:1831,
+                     from if_python.c:20:
+    farsi.h:74:1: warning: this is the location of the previous definition
+    if_python.c:729: warning: initialization makes integer from pointer without a ca
+    st
+    if_python.c:733: warning: initialization from incompatible pointer type
+    if_python.c:734: warning: initialization from incompatible pointer type
+    if_python.c:735: warning: initialization from incompatible pointer type
+    if_python.c:737: error: `cmpfunc' undeclared here (not in a function)
+    if_python.c:737: error: initializer element is not constant
+    if_python.c:737: error: (near initialization for `OutputType.tp_repr')
+    if_python.c:737: error: parse error before numeric constant
+    /** more errors **/
+    if_python.c:2256: warning: initialization from incompatible pointer type
+    if_python.c:2257: warning: initialization from incompatible pointer type
+    if_python.c: In function `PythonMod_Init':
+    if_python.c:2351: error: structure has no member named `ob_type'
+    if_python.c:2352: error: structure has no member named `ob_type'
+    if_python.c:2353: error: structure has no member named `ob_type'
+    if_python.c:2354: error: structure has no member named `ob_type'
+    if_python.c:2355: error: structure has no member named `ob_type'
+    if_python.c:2356: error: structure has no member named `ob_type'
+    make: *** [gobj/if_python.o] Error 1
+
+I am using a portable python install from [Portable Python][1]. I don't know if that may be the source of the error.
+
+I am hoping someone knows how to compile vim with python 3 support (if I only compile it with ruby support it compiles nicely).
+
+Thanks in advance,
+
+Gjallar
+
+
+  [1]: http://www.portablepython.com/",3
+11716618,07/30/2012 06:53:20,180168,09/28/2009 07:38:19,17,0,How to perform action on marked lines in vim?,Can anyone give me a piece of function that iterates through marked lines and perform actions to copy/cut/del those lines,vim,scripting,,,,07/31/2012 04:13:00,not a real question,1,20,9,How to perform action on marked lines in vim? Can anyone give me a piece of function that iterates through marked lines and perform actions to copy/cut/del those lines,2
+11548476,07/18/2012 19:01:23,164148,08/27/2009 11:33:59,1844,41,VIM: Easy visualisation of manuals within the source code?,"A firm in Kickstarter is merging different ideas together with this novel idea [here](http://www.kickstarter.com/projects/ibdknox/light-table), please, see the point 3.40. My first idea was something like gf, NERDtree, tag-tree -- but this require system -dependent operations so probably some Java -hack or some service that stores all manuals, perhaps some cloud service because things are easily broken. Anyway I would like to see particularly the feature 3.40 in VIM -- does there exist something this ambitious in VIM? I am skeptical whether it is possible to do it as a script due to the system -requirements, anyway how can Vim -powerusers do something like the novel idea in Kickstarter?
+
+
+**Interesting general threads, not about Vim specifially**
+
+> - http://stackoverflow.com/questions/6826382/spaghetti-code-visualisation-software
+> 
+> - http://stackoverflow.com/questions/104196/benefits-of-static-code-analysis?rq=1
+> 
+> - http://stackoverflow.com/questions/244416/best-examples-of-data-visualisation?rq=1
+> 
+> - http://stackoverflow.com/questions/1136728/where-can-i-find-good-open-source-code-flow-visualization-software?rq=1",vim,manual,,,,07/24/2012 01:26:49,not a real question,1,125,9,"VIM: Easy visualisation of manuals within the source code? A firm in Kickstarter is merging different ideas together with this novel idea [here](http://www.kickstarter.com/projects/ibdknox/light-table), please, see the point 3.40. My first idea was something like gf, NERDtree, tag-tree -- but this require system -dependent operations so probably some Java -hack or some service that stores all manuals, perhaps some cloud service because things are easily broken. Anyway I would like to see particularly the feature 3.40 in VIM -- does there exist something this ambitious in VIM? I am skeptical whether it is possible to do it as a script due to the system -requirements, anyway how can Vim -powerusers do something like the novel idea in Kickstarter?
+
+
+**Interesting general threads, not about Vim specifially**
+
+> - http://stackoverflow.com/questions/6826382/spaghetti-code-visualisation-software
+> 
+> - http://stackoverflow.com/questions/104196/benefits-of-static-code-analysis?rq=1
+> 
+> - http://stackoverflow.com/questions/244416/best-examples-of-data-visualisation?rq=1
+> 
+> - http://stackoverflow.com/questions/1136728/where-can-i-find-good-open-source-code-flow-visualization-software?rq=1",2
+7810845,10/18/2011 16:50:10,1001604,10/18/2011 16:37:09,1,0,How to open pdf files under cursor (using 'gf') with external PDF readers in vim,"The current 'gf' command will open *.pdf files as ascii text. I want the pdf file opened with external tools (like okular, foxitreader, etc.). I tried to use autocmd to achieve it like this:
+    
+    au BufReadCmd *.pdf silent !FoxitReader % & ""open file under cursor with FoxitReader
+    au BufEnter *.pdf <Ctrl-O> ""since we do not really open the file, go back to the previous buffer
+
+However, the second autocmd failed to work as expected. I could not figure out a way to execute ""<Ctrl-o>"" command in a ""autocmd"" way. 
+
+Could anyone give me a hint on how to <Ctrl-O> in autocmd, or just directly suggest a better way to open pdf files with 'gf'?
+
+Thanks.",vim,vimrc,autocmd,,,,open,0,123,15,"How to open pdf files under cursor (using 'gf') with external PDF readers in vim The current 'gf' command will open *.pdf files as ascii text. I want the pdf file opened with external tools (like okular, foxitreader, etc.). I tried to use autocmd to achieve it like this:
+    
+    au BufReadCmd *.pdf silent !FoxitReader % & ""open file under cursor with FoxitReader
+    au BufEnter *.pdf <Ctrl-O> ""since we do not really open the file, go back to the previous buffer
+
+However, the second autocmd failed to work as expected. I could not figure out a way to execute ""<Ctrl-o>"" command in a ""autocmd"" way. 
+
+Could anyone give me a hint on how to <Ctrl-O> in autocmd, or just directly suggest a better way to open pdf files with 'gf'?
+
+Thanks.",3
+9501529,02/29/2012 15:07:01,214890,11/19/2009 19:14:19,839,32,How can I move my cursor to the bottom line displayed in the current window?,"I've been flipping thru the help files and can't seem to find any command that would let me easily move my cursor position to the last line displayed on screen. The closest thing I can think of is the zX commands (zb, zt) but those move the window, not the cursor position.
+
+Any ideas?",vim,,,,,,open,0,53,15,"How can I move my cursor to the bottom line displayed in the current window? I've been flipping thru the help files and can't seem to find any command that would let me easily move my cursor position to the last line displayed on screen. The closest thing I can think of is the zX commands (zb, zt) but those move the window, not the cursor position.
+
+Any ideas?",1
+8017899,11/05/2011 03:08:21,486167,10/25/2010 07:46:18,40,2,VIM: Doesn't VIM 'replace' use of CTRL with ESC?,"It is usually advertised that using VIM alleviates the need of moving the hand away from home row. 
+However, it seems that instead of going to CTRL, I am stretching my hand to ESC all the time.  
+Note: I am a new vim user and I am trying to migrate from Notepad (windows) to VIM. I am asking this question, in case there is some issue in my use or understanding of VIM philosophy.",vim,notepad,,,,,open,0,75,9,"VIM: Doesn't VIM 'replace' use of CTRL with ESC? It is usually advertised that using VIM alleviates the need of moving the hand away from home row. 
+However, it seems that instead of going to CTRL, I am stretching my hand to ESC all the time.  
+Note: I am a new vim user and I am trying to migrate from Notepad (windows) to VIM. I am asking this question, in case there is some issue in my use or understanding of VIM philosophy.",2
+3566419,08/25/2010 13:41:53,55366,11/12/2008 20:15:20,206,7,"Vim, automatically remove swap file when file is saved.","Is it possible to automatically remove the swapfile when the file is saved, and automatically create it again when the file is changed?
+
+And is this a good idea?",vim,,,,,,open,0,28,9,"Vim, automatically remove swap file when file is saved. Is it possible to automatically remove the swapfile when the file is saved, and automatically create it again when the file is changed?
+
+And is this a good idea?",1
+6615171,07/07/2011 18:11:12,13227,09/16/2008 17:43:51,5633,127,What Vim plugins or native behaviour simulates these features?,"I've started using [Vim][1] for development and i'm really starting to like it a lot. But there are a few features of my usual editor ([EditPlus][2]) that i would like to have in Vim, maybe you can suggest ways of simulating or educating me on these?
+
+ 1. Global search of an entire project's source files for search term.
+ 2. Adding bookmarks to a file's source lines that i can jump to with a key press.
+ 3. Find all occurrences of word under cursor.
+ 4. Search and replace that lets me step through each for confirmation.
+ 5. Change line or selection to uppercase, lowercase, capitalize.
+ 6. Match brace/tag
+
+P.S. I'm using Vim on Windows.
+
+  [1]: http://www.vim.org/
+  [2]: http://www.editplus.com/",vim,plugins,keyboard-shortcuts,,,07/10/2011 10:35:30,not a real question,1,118,9,"What Vim plugins or native behaviour simulates these features? I've started using [Vim][1] for development and i'm really starting to like it a lot. But there are a few features of my usual editor ([EditPlus][2]) that i would like to have in Vim, maybe you can suggest ways of simulating or educating me on these?
+
+ 1. Global search of an entire project's source files for search term.
+ 2. Adding bookmarks to a file's source lines that i can jump to with a key press.
+ 3. Find all occurrences of word under cursor.
+ 4. Search and replace that lets me step through each for confirmation.
+ 5. Change line or selection to uppercase, lowercase, capitalize.
+ 6. Match brace/tag
+
+P.S. I'm using Vim on Windows.
+
+  [1]: http://www.vim.org/
+  [2]: http://www.editplus.com/",3
+7048756,08/13/2011 05:23:00,522000,11/27/2010 04:35:00,1,0,How to recover VIM in mac?,"I wrongly deleted the folder /usr/share/vim (with all subfolders and files) in my mac os. How can i get it recovered?
+
+Thanks a lot in advance.",vim,,,,,08/13/2011 09:55:26,off topic,1,25,6,"How to recover VIM in mac? I wrongly deleted the folder /usr/share/vim (with all subfolders and files) in my mac os. How can i get it recovered?
+
+Thanks a lot in advance.",1
+2816719,05/12/2010 07:22:24,288613,03/08/2010 08:49:08,346,8,Clear the .viminfo file,"how can I clear the .viminfo file.
+
+I want to clear the Command Line History,File marks, Jumplist etc., 
+other then Search String History
+
+Is there any way to do this.
+
+
+
+  ",vim,,,,,12/01/2011 04:19:20,off topic,1,30,4,"Clear the .viminfo file how can I clear the .viminfo file.
+
+I want to clear the Command Line History,File marks, Jumplist etc., 
+other then Search String History
+
+Is there any way to do this.
+
+
+
+  ",1
+1506764,10/01/2009 22:03:35,437507,04/02/2009 16:01:57,140,5,How to map Ctrl+A and Ctrl+Shift+A differently?,"In a terminal, one cannot distinguish Ctrl+A and Ctrl+Shift+A as they both emit the same key code, so I can see why vim can't do it. But gvim, being an X application, can differentiate Ctrl+A and Ctrl+Shift+A. So is there any way to map those two things differently?
+
+For starter, I'd like to do something like the following, to make ""paste from clipboard"" work like gnome terminal, while keeping Ctrl+V to the visual mode.
+
+    :nmap <C-S-V> ""+gP
+",vim,,,,,06/13/2011 14:56:50,off topic,1,79,7,"How to map Ctrl+A and Ctrl+Shift+A differently? In a terminal, one cannot distinguish Ctrl+A and Ctrl+Shift+A as they both emit the same key code, so I can see why vim can't do it. But gvim, being an X application, can differentiate Ctrl+A and Ctrl+Shift+A. So is there any way to map those two things differently?
+
+For starter, I'd like to do something like the following, to make ""paste from clipboard"" work like gnome terminal, while keeping Ctrl+V to the visual mode.
+
+    :nmap <C-S-V> ""+gP
+",1
+10635099,05/17/2012 11:43:34,952129,09/19/2011 07:03:52,872,78,What is the best way to upgrade Vim 7.2 to 7.3 in Ubuntu 10.10,I've got default repositories which are pre built with Ubuntu,vim,ubuntu-10.10,,,,05/17/2012 12:35:46,off topic,1,10,14,What is the best way to upgrade Vim 7.2 to 7.3 in Ubuntu 10.10 I've got default repositories which are pre built with Ubuntu,2
+8912416,01/18/2012 15:08:51,1128260,01/03/2012 16:35:08,18,0,Does exist any opencl syntax plugin for codeblocks?,"Yes, this is the question. Has anyone developed it?
+I use vim too, so if you have got any configuration file please share it with us.
+
+Thank you so much!",vim,plugins,opencl,vimrc,codeblocks,01/19/2012 21:03:12,not a real question,1,28,8,"Does exist any opencl syntax plugin for codeblocks? Yes, this is the question. Has anyone developed it?
+I use vim too, so if you have got any configuration file please share it with us.
+
+Thank you so much!",5
+4355306,12/04/2010 19:14:31,530668,12/04/2010 19:14:31,1,0,"vim setting a default folder to store all txt files, how?","I want to set it so that when I write a text file and save it - it is saved to a default folder called TEXT which will be in my main Vim folder eg.
+C:\Program Files\Vim\vim73\TEXT
+
+at the moment they are saved by default in the vim73 folder mixed in with everything else.
+so if I type :W^M   the file gets saved there and I want it to go to the folder named TEXT",vim,save,default,folder,,,open,0,74,11,"vim setting a default folder to store all txt files, how? I want to set it so that when I write a text file and save it - it is saved to a default folder called TEXT which will be in my main Vim folder eg.
+C:\Program Files\Vim\vim73\TEXT
+
+at the moment they are saved by default in the vim73 folder mixed in with everything else.
+so if I type :W^M   the file gets saved there and I want it to go to the folder named TEXT",4
+11669369,07/26/2012 12:32:23,961441,09/23/2011 15:04:15,58,0,VIMRC # Key Case-Insensitive Search,"I commonly use the # key in VIM to search for text that matches the text under my cursor.  Lately, I have been reading VHDL files which are case insensitive.  Unfortunately for me, the person who originally wrote these files was not consistent with the case of their signals, variables, etc...
+
+Is there a way that I can make the # and * keys be a case-insensitive search? 
+",vim,vimrc,,,,07/27/2012 14:44:36,off topic,1,70,5,"VIMRC # Key Case-Insensitive Search I commonly use the # key in VIM to search for text that matches the text under my cursor.  Lately, I have been reading VHDL files which are case insensitive.  Unfortunately for me, the person who originally wrote these files was not consistent with the case of their signals, variables, etc...
+
+Is there a way that I can make the # and * keys be a case-insensitive search? 
+",2
+5768003,04/24/2011 01:08:23,166229,07/06/2009 10:14:19,819,18,Vim quits after buffer delete (bd).,"According to the [answer of this question](http://stackoverflow.com/questions/256204/vim-close-file-without-quiting-vim-application) `:bd` should not quit Vim (GVim) when it is the last buffer. Unfortunately it does close GVim in my case. Did I understand something wrong with bd?
+
+I am also using a preconfigured vimrc file. Maybe a setting in there (https://gist.github.com/939194) has that side affect, but I couldn't find it.",vim,,,,,,open,0,56,6,"Vim quits after buffer delete (bd). According to the [answer of this question](http://stackoverflow.com/questions/256204/vim-close-file-without-quiting-vim-application) `:bd` should not quit Vim (GVim) when it is the last buffer. Unfortunately it does close GVim in my case. Did I understand something wrong with bd?
+
+I am also using a preconfigured vimrc file. Maybe a setting in there (https://gist.github.com/939194) has that side affect, but I couldn't find it.",1
+2081896,01/17/2010 17:26:13,39442,11/20/2008 19:51:29,85,2,Vim remapping weirdness,"When I start with a blank .vimrc in ~, and add `imap jj <esc>` to it, everything works fine at first (i.e. typing jj exits from insert mode -> normal mode). But as I add more to my .vimrc, eventually typing jj will skip the cursor ahead some seemingly random, short distance (a couple of words or a couple of lines) in addition to entering normal mode. I haven't pinned it down to any specific thing I've added to .vimrc -- it just at some point goes from working correctly to malfunctioning. Then, if I delete the .vimmrc file, start over again with a new .vimrc with just that mapping, the weird jumping goes away.
+
+Any clues as to what's going on?",vim,,,,,,open,0,121,3,"Vim remapping weirdness When I start with a blank .vimrc in ~, and add `imap jj <esc>` to it, everything works fine at first (i.e. typing jj exits from insert mode -> normal mode). But as I add more to my .vimrc, eventually typing jj will skip the cursor ahead some seemingly random, short distance (a couple of words or a couple of lines) in addition to entering normal mode. I haven't pinned it down to any specific thing I've added to .vimrc -- it just at some point goes from working correctly to malfunctioning. Then, if I delete the .vimmrc file, start over again with a new .vimrc with just that mapping, the weird jumping goes away.
+
+Any clues as to what's going on?",1
+8504897,12/14/2011 12:59:35,539783,12/12/2010 19:24:32,54,2,How to reinstall vim?,"I have problems with my vim in Ubuntu 11.10, when I press 'i' or 'v' vim doesn't show anything like 'INSERT MODE' or 'VISUAL MODE', when I try to delete with backspace, vim only move the cursor to the left. I tried reinstalling with this http://stackoverflow.com/questions/8234099/reinstalling-vim but got the same result, also I don't have ~/.vim directory.",vim,,,,,12/14/2011 16:21:40,off topic,1,57,4,"How to reinstall vim? I have problems with my vim in Ubuntu 11.10, when I press 'i' or 'v' vim doesn't show anything like 'INSERT MODE' or 'VISUAL MODE', when I try to delete with backspace, vim only move the cursor to the left. I tried reinstalling with this http://stackoverflow.com/questions/8234099/reinstalling-vim but got the same result, also I don't have ~/.vim directory.",1
+3217007,07/09/2010 22:43:00,93311,04/20/2009 17:14:16,351,21,How do you paste with vim without code being commented?,"Dumb question, right? Literally can't figure this out.
+
+Everytime I paste in vim, every line is commented out.
+
+Is there a way around this?",vim,vimscript,,,,,open,0,22,10,"How do you paste with vim without code being commented? Dumb question, right? Literally can't figure this out.
+
+Everytime I paste in vim, every line is commented out.
+
+Is there a way around this?",2
+1318875,08/23/2009 15:59:57,161609,08/23/2009 15:59:57,1,0,How to indent lines automatically?,"Quick newbie question. Let's say I have the following code in Vim:
+
+void main()
+
+{
+
+        int i = i + 1;
+
+        return i;
+}
+
+I have the cursor on the empty line between the two lines of code. When I press i (or a) to enter text I want to cursor to indent to the right position (i.e. below the i in ""int i...""). Any ideas how it can be done?",vim,,,,,,open,0,81,5,"How to indent lines automatically? Quick newbie question. Let's say I have the following code in Vim:
+
+void main()
+
+{
+
+        int i = i + 1;
+
+        return i;
+}
+
+I have the cursor on the empty line between the two lines of code. When I press i (or a) to enter text I want to cursor to indent to the right position (i.e. below the i in ""int i...""). Any ideas how it can be done?",1
+4444547,12/14/2010 21:42:55,77650,03/13/2009 11:00:15,276,6,Using single vim instance with --remote-silent,"I've always been a console vim user, but lately I've tried to use gvim.
+I've made settings such that my console habits won't suffer, such as
+opening an urxvt terminal at the current directory with <F12>.
+
+However having multiple gvims and terminals open with my netbook is
+horrible, quickly reducing my vim-space to a centimeter or two. At best,
+the window width is halved, making it impossible to vertically split
+screen (tiling wm).
+
+I went around this problem by aliasing vim to `gvim --remote-silent` and it
+worked fine for a couple of days, but today I needed to use -c '' and
+realized that having any switches behind --remote-silent opens those
+switches as files. So doing `gvim --remote-silent --foo bar` opens two
+files, --foo and bar.
+
+I put a new alias for `alias vim=gvim`, but I'm afraid this will make me a
+console vim user again, sooner than I thought I would.
+
+So the question is, what would be the preferred way to keep using gvim,
+with minimal effort (setting up the system can be laborous) so that I can
+still keep using vim with its full power. The solution does not need to use
+remote vim, it should just minimize the gvim windows.
+",vim,,,,,,open,0,187,6,"Using single vim instance with --remote-silent I've always been a console vim user, but lately I've tried to use gvim.
+I've made settings such that my console habits won't suffer, such as
+opening an urxvt terminal at the current directory with <F12>.
+
+However having multiple gvims and terminals open with my netbook is
+horrible, quickly reducing my vim-space to a centimeter or two. At best,
+the window width is halved, making it impossible to vertically split
+screen (tiling wm).
+
+I went around this problem by aliasing vim to `gvim --remote-silent` and it
+worked fine for a couple of days, but today I needed to use -c '' and
+realized that having any switches behind --remote-silent opens those
+switches as files. So doing `gvim --remote-silent --foo bar` opens two
+files, --foo and bar.
+
+I put a new alias for `alias vim=gvim`, but I'm afraid this will make me a
+console vim user again, sooner than I thought I would.
+
+So the question is, what would be the preferred way to keep using gvim,
+with minimal effort (setting up the system can be laborous) so that I can
+still keep using vim with its full power. The solution does not need to use
+remote vim, it should just minimize the gvim windows.
+",1
+3699904,09/13/2010 11:20:07,322537,04/21/2010 17:28:57,205,12,Vim start with cursor where last went off,"Is it possible to have Vim always start at whatever line i was in last time i was working in that given file?
+And if so, how do i do that?
+
+",vim,cursor,position,,,04/12/2012 15:03:24,off topic,1,30,8,"Vim start with cursor where last went off Is it possible to have Vim always start at whatever line i was in last time i was working in that given file?
+And if so, how do i do that?
+
+",3
+4837349,01/29/2011 14:18:49,308668,04/04/2010 11:13:41,782,29,Synonym for Vim's normal mode CTRL-A?,"I came to an idea that `<C-a>` in Vim's normal mode should not only increase numbers but toggle booleans. It makes sense if you consider `true` and `false` as integers modulo 2.
+
+So, I [downloaded an excellent script][1] to do the hairy work and wrote a new definition for `<C-a>`:
+
+    fun! NewCA()
+        let cw = tolower(expand(""<cword>""))
+        if cw == ""true"" || cw == ""false""
+            ToggleWord
+        else
+            "" run the built-in <C-a>
+            execute ""normal \<C-a>""
+        endif
+    endfun
+    command! NewCA :call NewCA()
+    nnoremap <C-a> :NewCA<cr>
+
+But as it happens, `nnoremap` doesn't go as far as to check inside functions. I get recursive behaviour _if_ my cursor is not on words `true` or `false`. 
+
+In this point I swear a lot, why didn't Bram go pick an excellent idea from Emacs, that everything should be functions and key bindings freely setable. Then I just could check the function for `<C-a>` and call it in that function. But no, I can't find such a function, and the `execute ""normal foo""` phrases seem to be the Vim idiom.
+
+Any suggestions on how I could make `<C-a>` work such that
+
+* Toggle booleans when the cursor is over a word  `true` or `false`
+* Fall back to built-in `<C-a> ` behaviour otherwise
+
+Help appreciated!
+
+  [1]: http://www.vim.org/scripts/script.php?script_id=1676",vim,,,,,,open,0,279,6,"Synonym for Vim's normal mode CTRL-A? I came to an idea that `<C-a>` in Vim's normal mode should not only increase numbers but toggle booleans. It makes sense if you consider `true` and `false` as integers modulo 2.
+
+So, I [downloaded an excellent script][1] to do the hairy work and wrote a new definition for `<C-a>`:
+
+    fun! NewCA()
+        let cw = tolower(expand(""<cword>""))
+        if cw == ""true"" || cw == ""false""
+            ToggleWord
+        else
+            "" run the built-in <C-a>
+            execute ""normal \<C-a>""
+        endif
+    endfun
+    command! NewCA :call NewCA()
+    nnoremap <C-a> :NewCA<cr>
+
+But as it happens, `nnoremap` doesn't go as far as to check inside functions. I get recursive behaviour _if_ my cursor is not on words `true` or `false`. 
+
+In this point I swear a lot, why didn't Bram go pick an excellent idea from Emacs, that everything should be functions and key bindings freely setable. Then I just could check the function for `<C-a>` and call it in that function. But no, I can't find such a function, and the `execute ""normal foo""` phrases seem to be the Vim idiom.
+
+Any suggestions on how I could make `<C-a>` work such that
+
+* Toggle booleans when the cursor is over a word  `true` or `false`
+* Fall back to built-in `<C-a> ` behaviour otherwise
+
+Help appreciated!
+
+  [1]: http://www.vim.org/scripts/script.php?script_id=1676",1
+6758732,07/20/2011 07:56:42,160665,08/21/2009 09:31:03,1637,44,Quickly highlight a column range in vim,"When working with positional data files, it is often *very* useful to highlight a specific column. In such files it is quite common to have huge ""areas"" filled with spaces (or ``NULL`` values) and only very sparse data points. In such cases it becomes difficult to read the file.
+
+I found it helpful to simply highlight a specific column. At first I tried to use a regular ``:match``, but this turned out to be **way** to slow on huge data files. I posted this as [another question][1]. The answer is simple. ``cursorcolumn`` (available since vim 7.3) can be set to a range and is a lot faster as it does not need to match the characters.
+
+Implementing the proposed solution I saw it working. But it's cumbersome, and - knowing vim - there should be an easier way to specify this.
+
+Question:
+=========
+
+Is it possible to set the ``cursorcolumn`` range to the columns of the currently selected (visual) block?
+
+
+
+[1]: http://stackoverflow.com/questions/6730713/highlight-specific-column-in-vim",vim,highlighting,,,,,open,0,156,7,"Quickly highlight a column range in vim When working with positional data files, it is often *very* useful to highlight a specific column. In such files it is quite common to have huge ""areas"" filled with spaces (or ``NULL`` values) and only very sparse data points. In such cases it becomes difficult to read the file.
+
+I found it helpful to simply highlight a specific column. At first I tried to use a regular ``:match``, but this turned out to be **way** to slow on huge data files. I posted this as [another question][1]. The answer is simple. ``cursorcolumn`` (available since vim 7.3) can be set to a range and is a lot faster as it does not need to match the characters.
+
+Implementing the proposed solution I saw it working. But it's cumbersome, and - knowing vim - there should be an easier way to specify this.
+
+Question:
+=========
+
+Is it possible to set the ``cursorcolumn`` range to the columns of the currently selected (visual) block?
+
+
+
+[1]: http://stackoverflow.com/questions/6730713/highlight-specific-column-in-vim",2
+4446127,12/15/2010 02:11:53,65845,02/13/2009 01:04:46,4715,248,Is there a way to paste the output of a vim command into the buffer?,"Something that I want to do from time to time is paste the output of a vim command into the buffer.  E.g. when I'm editing my vimrc, it'd be nice to be able to fiddle with `statusline` and then be able to just do something akin to
+
+    ""=set statusline?<Enter>p
+
+Problem is, that yields
+
+    E121: Undefined variable: set
+    E15: Invalid expression: set statusline?
+    Press ENTER or type command to continue
+
+I figure that this is possible, and that I just don't know enough about the builtin functions and how to use them (I see `expand` used here and there, but have never successfully made it work for me in any context), even though I (think that I) have a pretty solid understanding of normal mode.
+
+Note that this specific example is a little contrived, but I can't think of a better one right now.  For the specific use case above, I could just `"":p` to get the whole `set` command and then edit to suit, but fairly regularly I run into other cases where I want vim to tell me something and then I want to paste that output somewhere so that I can continue to look at it while continuing with my work.",vim,,,,,,open,0,214,15,"Is there a way to paste the output of a vim command into the buffer? Something that I want to do from time to time is paste the output of a vim command into the buffer.  E.g. when I'm editing my vimrc, it'd be nice to be able to fiddle with `statusline` and then be able to just do something akin to
+
+    ""=set statusline?<Enter>p
+
+Problem is, that yields
+
+    E121: Undefined variable: set
+    E15: Invalid expression: set statusline?
+    Press ENTER or type command to continue
+
+I figure that this is possible, and that I just don't know enough about the builtin functions and how to use them (I see `expand` used here and there, but have never successfully made it work for me in any context), even though I (think that I) have a pretty solid understanding of normal mode.
+
+Note that this specific example is a little contrived, but I can't think of a better one right now.  For the specific use case above, I could just `"":p` to get the whole `set` command and then edit to suit, but fairly regularly I run into other cases where I want vim to tell me something and then I want to paste that output somewhere so that I can continue to look at it while continuing with my work.",1
+10415261,05/02/2012 13:57:39,1043903,11/13/2011 06:07:08,14,1,Installing wget for Mac,"I was installing wget 1.13 after downloading it from http://ftp.gnu.org/gnu/wget/.
+I followed the instructions laid here http://krypted.com/mac-os-x/howto-install-wget-for-mac-os-x/.
+A problem arose when I was running ./configure.
+The output I received in the terminal was 
+    
+    error: --with-ssl was given, but GNUTLS is not available
+Hence, I was unable to carry on to
+
+    make
+    make install
+Anyone who has an idea what i am missing here?
+
+All assistance are greatly appreciated.
+
+I'm running on Mac 10.7.3, if it helps.
+
+Thank you.",vim,wget,,,,05/03/2012 16:39:08,off topic,1,84,4,"Installing wget for Mac I was installing wget 1.13 after downloading it from http://ftp.gnu.org/gnu/wget/.
+I followed the instructions laid here http://krypted.com/mac-os-x/howto-install-wget-for-mac-os-x/.
+A problem arose when I was running ./configure.
+The output I received in the terminal was 
+    
+    error: --with-ssl was given, but GNUTLS is not available
+Hence, I was unable to carry on to
+
+    make
+    make install
+Anyone who has an idea what i am missing here?
+
+All assistance are greatly appreciated.
+
+I'm running on Mac 10.7.3, if it helps.
+
+Thank you.",2
+7499700,09/21/2011 12:26:48,930116,09/06/2011 07:06:16,1,0,Where can I find a good GVIM cheatsheet?,"Can anyone recommend a GVim cheatsheet specifically for GVIM? 
+Am pretty much a new user and wondering where to look for a cheatsheet?
+",vim,gvimrc,,,,09/21/2011 16:30:25,off topic,1,23,8,"Where can I find a good GVIM cheatsheet? Can anyone recommend a GVim cheatsheet specifically for GVIM? 
+Am pretty much a new user and wondering where to look for a cheatsheet?
+",2
+8486785,12/13/2011 09:20:26,912475,08/25/2011 15:37:52,59,1,for nothing but editing and navigating text as quickly as possible: is there any reason to prefer vim over vim emulations in emacs?,"I edit a lot of text (as in notes, mail etc.), I want to do it as quickly as possible. It seems like a good idea to learn how to use something more complicated than text edit. Is there any significant difference between the potential speed of an experienced user of either vim or vim emulation X in emacs?",vim,emacs,,,,12/13/2011 18:00:49,not constructive,1,59,23,"for nothing but editing and navigating text as quickly as possible: is there any reason to prefer vim over vim emulations in emacs? I edit a lot of text (as in notes, mail etc.), I want to do it as quickly as possible. It seems like a good idea to learn how to use something more complicated than text edit. Is there any significant difference between the potential speed of an experienced user of either vim or vim emulation X in emacs?",2
+10064394,04/08/2012 16:31:34,403840,07/27/2010 20:22:14,75,6,"In Vim, can we complete LaTeX in line equation with ctrl-n / ctrl-p?","That's Vim gives us a list of matched ""$ someMathsSymbles $"" when we press Ctrl-n after typing just ""$"" or ""$ withMoreMaths"", ",vim,autocomplete,latex,,,,open,0,23,13,"In Vim, can we complete LaTeX in line equation with ctrl-n / ctrl-p? That's Vim gives us a list of matched ""$ someMathsSymbles $"" when we press Ctrl-n after typing just ""$"" or ""$ withMoreMaths"", ",3
+6882589,07/30/2011 10:35:31,821812,06/29/2011 19:40:25,48,3,"Vim: If editing line in window bottom, also show next 4-5 lines","Don't exactly know what to search for:
+If i edit text in vim it sometimes happen that i edit the last visible line. I'd like also to see the next 5 lines, so i'm looking for something like an ""edit margin"". Or something like: If i edit the third last line vim should scroll down 2 lines automatic. Would this be possible?",vim,vimrc,,,,,open,0,61,12,"Vim: If editing line in window bottom, also show next 4-5 lines Don't exactly know what to search for:
+If i edit text in vim it sometimes happen that i edit the last visible line. I'd like also to see the next 5 lines, so i'm looking for something like an ""edit margin"". Or something like: If i edit the third last line vim should scroll down 2 lines automatic. Would this be possible?",2
+11473758,07/13/2012 15:39:06,229001,12/10/2009 17:27:15,205,6,Can you remove default color schemes from vim in a vimrc?,"I've reduced the number of custom color schemes in vim to the bare minimum of great ones, but I still have all of the crazy defaults, like `elflord`, which I'd rather not have to tab through. Can I remove these without hacking my MacVim install and having to do it in the next update?
+
+Obviously this is splitting hairs, but configuring my `.vimrc` in the first place is splitting hairs.",vim,,,,,,open,0,69,11,"Can you remove default color schemes from vim in a vimrc? I've reduced the number of custom color schemes in vim to the bare minimum of great ones, but I still have all of the crazy defaults, like `elflord`, which I'd rather not have to tab through. Can I remove these without hacking my MacVim install and having to do it in the next update?
+
+Obviously this is splitting hairs, but configuring my `.vimrc` in the first place is splitting hairs.",1
+7514271,09/22/2011 11:49:39,959021,09/22/2011 11:49:39,1,0,"I need to run the zen coding within a file. Less, anyone?",I need to configure the files with extension to use .less zen conding for VIM.,vim,less,zen,,,,open,0,15,12,"I need to run the zen coding within a file. Less, anyone? I need to configure the files with extension to use .less zen conding for VIM.",3
+826208,05/05/2009 18:13:00,3189,08/27/2008 11:59:18,672,33,Making vim ubiquitous,"The Pragmatic Programmers recommend that you should use one text editor for everything. My chosen <strike>weapon</strike> editor is vim.
+
+So I want to collect all the ways in which vim (and the vim keybindings) can be used and setting up your computer to make vim work well. This includes how to embed vim in your IDE, web browser, email client, command shell ...
+
+But I don't want vim tips - there are other questions for them. I want tips to get into vim, or vim mode. Though tips about vim mode not in an editor would be allowed (eg tips for vi mode when using bash).",vim,vi,productivity,,,11/17/2011 15:58:23,not constructive,1,104,3,"Making vim ubiquitous The Pragmatic Programmers recommend that you should use one text editor for everything. My chosen <strike>weapon</strike> editor is vim.
+
+So I want to collect all the ways in which vim (and the vim keybindings) can be used and setting up your computer to make vim work well. This includes how to embed vim in your IDE, web browser, email client, command shell ...
+
+But I don't want vim tips - there are other questions for them. I want tips to get into vim, or vim mode. Though tips about vim mode not in an editor would be allowed (eg tips for vi mode when using bash).",3
+4187499,11/15/2010 18:14:21,76434,03/11/2009 00:46:18,1935,94,How to use '^@' in Vim scripts?,"I'm trying to work around a problem with using ^@ (i.e., `<ctrl-@>`) characters in Vim scripts.  I can insert them into a script, but when the script runs it seems the line is truncated at the point where a ^@ was located.  
+
+My kludgy solution so far is to have a ^@ stored in a variable, then reference the variable in the script whenever I would have quoted a literal ^@. Can someone tell me what's going on here?  Is there a better way around this problem?
+
+",vim,special-characters,vimscript,,,,open,0,90,7,"How to use '^@' in Vim scripts? I'm trying to work around a problem with using ^@ (i.e., `<ctrl-@>`) characters in Vim scripts.  I can insert them into a script, but when the script runs it seems the line is truncated at the point where a ^@ was located.  
+
+My kludgy solution so far is to have a ^@ stored in a variable, then reference the variable in the script whenever I would have quoted a literal ^@. Can someone tell me what's going on here?  Is there a better way around this problem?
+
+",3
+8402651,12/06/2011 15:44:19,4937,09/06/2008 20:01:14,867,14,Can I make Tmux tell Vim when its pane loses focus?,"I use Vim and Bash side-by-side in Tmux.  I have Vim configured to autosave files as I switch between them, but I'd really like it to autosave when I switch to the Bash pane.
+
+Is there a way to get Tmux to send some kind of code to Vim when its pane loses focus?",vim,tmux,,,,12/06/2011 15:57:50,off topic,1,54,11,"Can I make Tmux tell Vim when its pane loses focus? I use Vim and Bash side-by-side in Tmux.  I have Vim configured to autosave files as I switch between them, but I'd really like it to autosave when I switch to the Bash pane.
+
+Is there a way to get Tmux to send some kind of code to Vim when its pane loses focus?",2
+903816,05/24/2009 14:02:46,54964,01/14/2009 11:38:17,1587,49,Unable to get Vim work properly inside Screen,"The line numbers get on the foldColumn as below
+![alt text][1]
+
+**My .screenrc**
+    
+    # control arrows move by words. (set B, e, and w to F keys so that i can
+    # use them to move by words, but they themselves still quit copy mode.)
+    markkeys B=[:E=]:b={:e=}:w=>
+    bindkey -m ^[Od stuff {  #""[[}""
+    bindkey -m ^[Oc stuff ]  #""}]^f""
+    
+    
+    ### Keybindings# {{{
+    
+    # remove some key bindings
+    bind W
+    bind ^h
+    
+    # same as C-a ""
+    bind 'W' windowlist
+    
+    ### }}}
+    # }}}
+    ##### Title bars# {{{
+    # make screen assign window titles automatically
+    shelltitle "" ""  
+    
+    # show all window titles at bottom line of term
+    #hardstatus alwayslastline ""%w (%{W}%n*%f%t%?(%u)%?%{r}) %{w}%?%+Lw%?%?%= %{g}""
+    hardstatus alwayslastline ""%{k}%-w%{.kY}%n %t%{-}%+w %= %H: %l %d/%m %c""
+    
+    
+    # to be in the VT100 mode  
+    termcap  vt100* ms:AL=\E[%dL:DL=\E[%dM:UP=\E[%dA:DO=\E[%dB:LE=\E[%dD:RI=\E[%dC
+    terminfo vt100* ms:AL=\E[%p1%dL:DL=\E[%p1%dM:UP=\E[%p1%dA:DO=\E[%p1%dB:LE=\E[%p1%dD:RI=\E[%p1%dC
+    
+    # }}}
+    ### General# {{{
+    
+    # to increase the history of scrollback lines
+    defscrollback 5000
+    activity ""active: %n (%t) [%w:%s]""
+    
+    startup_message off # Turn off the copyright message 
+    
+    # Support alternate screens
+    # eg quit Emacs and the display is redrawn as it was before entering Emacs 
+    altscreen on
+    
+    vbell on
+    vbell_msg ""[[[ ding ]]]""
+    # }}}
+    # Experimental# {{{
+    autodetach on
+    
+    bind b eval ""writebuf /tmp/screen-pbcopy"" ""exec /usr/bin/osascript -e 'tell application \""System Events\""' -e 'set the clipboard to (read posix file \""/tmp/screen-pbcopy\"" as text)' -e 'end tell'""
+    
+  
+    
+    # }}}
+    
+    ### Sources# {{{
+    # http://wiki.linuxquestions.org/wiki/Screen
+    # http://snarfed.org/space/Emacs%20keybindings%20in%20GNU%20screen%27s%20copy-scrollback%20mode
+    ## }}}
+
+
+**How can you get Vim work properly inside Screen?**
+
+  [1]: http://dl.getdropbox.com/u/175564/vimScreenFold.png
+
+",vim,screen,,,,,open,0,452,8,"Unable to get Vim work properly inside Screen The line numbers get on the foldColumn as below
+![alt text][1]
+
+**My .screenrc**
+    
+    # control arrows move by words. (set B, e, and w to F keys so that i can
+    # use them to move by words, but they themselves still quit copy mode.)
+    markkeys B=[:E=]:b={:e=}:w=>
+    bindkey -m ^[Od stuff {  #""[[}""
+    bindkey -m ^[Oc stuff ]  #""}]^f""
+    
+    
+    ### Keybindings# {{{
+    
+    # remove some key bindings
+    bind W
+    bind ^h
+    
+    # same as C-a ""
+    bind 'W' windowlist
+    
+    ### }}}
+    # }}}
+    ##### Title bars# {{{
+    # make screen assign window titles automatically
+    shelltitle "" ""  
+    
+    # show all window titles at bottom line of term
+    #hardstatus alwayslastline ""%w (%{W}%n*%f%t%?(%u)%?%{r}) %{w}%?%+Lw%?%?%= %{g}""
+    hardstatus alwayslastline ""%{k}%-w%{.kY}%n %t%{-}%+w %= %H: %l %d/%m %c""
+    
+    
+    # to be in the VT100 mode  
+    termcap  vt100* ms:AL=\E[%dL:DL=\E[%dM:UP=\E[%dA:DO=\E[%dB:LE=\E[%dD:RI=\E[%dC
+    terminfo vt100* ms:AL=\E[%p1%dL:DL=\E[%p1%dM:UP=\E[%p1%dA:DO=\E[%p1%dB:LE=\E[%p1%dD:RI=\E[%p1%dC
+    
+    # }}}
+    ### General# {{{
+    
+    # to increase the history of scrollback lines
+    defscrollback 5000
+    activity ""active: %n (%t) [%w:%s]""
+    
+    startup_message off # Turn off the copyright message 
+    
+    # Support alternate screens
+    # eg quit Emacs and the display is redrawn as it was before entering Emacs 
+    altscreen on
+    
+    vbell on
+    vbell_msg ""[[[ ding ]]]""
+    # }}}
+    # Experimental# {{{
+    autodetach on
+    
+    bind b eval ""writebuf /tmp/screen-pbcopy"" ""exec /usr/bin/osascript -e 'tell application \""System Events\""' -e 'set the clipboard to (read posix file \""/tmp/screen-pbcopy\"" as text)' -e 'end tell'""
+    
+  
+    
+    # }}}
+    
+    ### Sources# {{{
+    # http://wiki.linuxquestions.org/wiki/Screen
+    # http://snarfed.org/space/Emacs%20keybindings%20in%20GNU%20screen%27s%20copy-scrollback%20mode
+    ## }}}
+
+
+**How can you get Vim work properly inside Screen?**
+
+  [1]: http://dl.getdropbox.com/u/175564/vimScreenFold.png
+
+",2
+10661988,05/19/2012 03:05:28,541686,12/14/2010 08:54:07,30877,806,How to save GVIM settings?,"I just installed GVIM, went through the menus, and changed a bunch of settings.
+
+I closed GVIM, and the settings were all lost. :(
+
+I made my changes again.
+
+Now how do I keep my settings?",vim,,,,,05/19/2012 17:49:18,off topic,1,33,5,"How to save GVIM settings? I just installed GVIM, went through the menus, and changed a bunch of settings.
+
+I closed GVIM, and the settings were all lost. :(
+
+I made my changes again.
+
+Now how do I keep my settings?",1
+10017997,04/04/2012 19:32:11,287451,03/05/2010 21:12:30,75,3,Disable Macvim scrolloff when selecting with the mouse,"I have set a high value for scrolloff, which works really well for me when I am moving around with the keyboard. However, any time I try to select something with the mouse in an off-center line (so that I can copy some text), that line jumps to the center, preventing me from selecting that text. Is there a way to keep the scrolloff setting but prevent a mouse click from moving the cursor to that line?",vim,macvim,,,,,open,0,77,8,"Disable Macvim scrolloff when selecting with the mouse I have set a high value for scrolloff, which works really well for me when I am moving around with the keyboard. However, any time I try to select something with the mouse in an off-center line (so that I can copy some text), that line jumps to the center, preventing me from selecting that text. Is there a way to keep the scrolloff setting but prevent a mouse click from moving the cursor to that line?",2
+8234099,11/22/2011 21:32:21,1024973,11/02/2011 05:14:28,11,0,Resintalling Vim,"I'm trying to reinstall vim in ubuntu 11.10, but am having trouble. From the software center I click on install, and I get the error message: ""Failed to download package files. Check your internet connection"". (my internet connection is fine.
+
+Then, I click on OK, and this message comes up: ""Requires Installation of untrusted packages."" I click on OK (the only option), and the installation ceases. Anyone know how I resolve this problem?",vim,ubuntu,ubuntu-11.10,,,11/24/2011 09:34:11,off topic,1,72,2,"Resintalling Vim I'm trying to reinstall vim in ubuntu 11.10, but am having trouble. From the software center I click on install, and I get the error message: ""Failed to download package files. Check your internet connection"". (my internet connection is fine.
+
+Then, I click on OK, and this message comes up: ""Requires Installation of untrusted packages."" I click on OK (the only option), and the installation ceases. Anyone know how I resolve this problem?",3
+7000960,08/09/2011 18:24:30,465403,10/03/2010 21:50:30,258,5,Vim mouse problem,"I tend to maximize a terminal to one screen, and vertically split several windows in Vim. Everything works fine for the first few windows on the left, but clicking past about the 220th column in the terminal doesn't work correctly. Any mouse clicks past column 220 seem to be wrapping around to column 1. I've tested in xterm, urxvt, and Gnome terminal with and without tmux/screen; always the same behavior. If I greatly increase the size of the font in Gnome terminal, I can click on the last column (although it is no longer past column #220).
+
+If I run a command in a terminal that prints to standard output, I can click all the way to the right of the terminal. The problem does seem to be related to Vim.
+
+I have `set mouse=a` in `.vimrc`. I'll post the entire file on request, but it doesn't seem to have anything else related to the mouse.
+
+It's probably irrelevant, but I'm running Xmonad+Gnome. Thanks in advance.",vim,,,,,,open,0,163,3,"Vim mouse problem I tend to maximize a terminal to one screen, and vertically split several windows in Vim. Everything works fine for the first few windows on the left, but clicking past about the 220th column in the terminal doesn't work correctly. Any mouse clicks past column 220 seem to be wrapping around to column 1. I've tested in xterm, urxvt, and Gnome terminal with and without tmux/screen; always the same behavior. If I greatly increase the size of the font in Gnome terminal, I can click on the last column (although it is no longer past column #220).
+
+If I run a command in a terminal that prints to standard output, I can click all the way to the right of the terminal. The problem does seem to be related to Vim.
+
+I have `set mouse=a` in `.vimrc`. I'll post the entire file on request, but it doesn't seem to have anything else related to the mouse.
+
+It's probably irrelevant, but I'm running Xmonad+Gnome. Thanks in advance.",1
+3538247,08/21/2010 16:50:44,23080,09/27/2008 22:59:13,784,32,"What keys do you map <left>, <down>, <up>, <right> commands in VIM insert mode?","In Vim it is nice to use hjkl in normal mode and would be great to continue to use them in insert mode. I tried to map them to Ctrl-h, Ctrl-j, Ctrl-k, Ctrl-l:
+
+     imap <C-h> <left>
+     imap <C-j> <down>
+     imap <C-k> <up>
+     imap <C-l> <right>
+
+but it is not convenient especially because it masks Ctrl-H and backspace stops responding.
+Have you been able somehow to use HJKL keys for movements in insert mode?",vim,,,,,,open,0,87,14,"What keys do you map <left>, <down>, <up>, <right> commands in VIM insert mode? In Vim it is nice to use hjkl in normal mode and would be great to continue to use them in insert mode. I tried to map them to Ctrl-h, Ctrl-j, Ctrl-k, Ctrl-l:
+
+     imap <C-h> <left>
+     imap <C-j> <down>
+     imap <C-k> <up>
+     imap <C-l> <right>
+
+but it is not convenient especially because it masks Ctrl-H and backspace stops responding.
+Have you been able somehow to use HJKL keys for movements in insert mode?",1
+6065264,05/19/2011 21:50:57,3461,08/28/2008 16:30:07,86,17,embed node.js in vim?,"One thing that can make large vim scripting projects easier is its embedded interpreter support. There's an `--enable-rubyinterp` flag that is included in the official builds for MacPorts, and used by [janus](https://github.com/carlhuda/janus).
+
+Is there a way to embed node.js in vim?",vim,node.js,,,,,open,0,40,4,"embed node.js in vim? One thing that can make large vim scripting projects easier is its embedded interpreter support. There's an `--enable-rubyinterp` flag that is included in the official builds for MacPorts, and used by [janus](https://github.com/carlhuda/janus).
+
+Is there a way to embed node.js in vim?",2
+5536753,04/04/2011 09:35:12,644350,03/04/2011 08:29:05,520,38,Vim: goto function declaration,"I know the way to go to the function definition (using ctags + `Ctrl + ]`). But what if I want no to go to the function _definition_ but to the function _declaration_ instead.
+
+For example:
+
+    // foo.c
+    #include ""foo.h""
+
+    ...
+    if (x > 3) foo_function(x);
+    ...
+
+    void foo_function(int x) {
+        ...
+    }
+
+and 
+
+    // foo.h
+    void foo_function(int x);
+
+Then `Ctrl + ]` opens `foo.h` and points to the `void foo_function(int x);` line. I want to go to the `foo.c` to the `foo_function` declaration. I have `taglist` installed, but don't want to open the taglist window every time I just want to jump to the function declaration under cursor. Is there a way to do this with a keymap?
+
+Thanks.",vim,,,,,,open,0,151,4,"Vim: goto function declaration I know the way to go to the function definition (using ctags + `Ctrl + ]`). But what if I want no to go to the function _definition_ but to the function _declaration_ instead.
+
+For example:
+
+    // foo.c
+    #include ""foo.h""
+
+    ...
+    if (x > 3) foo_function(x);
+    ...
+
+    void foo_function(int x) {
+        ...
+    }
+
+and 
+
+    // foo.h
+    void foo_function(int x);
+
+Then `Ctrl + ]` opens `foo.h` and points to the `void foo_function(int x);` line. I want to go to the `foo.c` to the `foo_function` declaration. I have `taglist` installed, but don't want to open the taglist window every time I just want to jump to the function declaration under cursor. Is there a way to do this with a keymap?
+
+Thanks.",1
+10014017,04/04/2012 15:12:23,1144401,01/12/2012 00:25:56,21,3,"I found awesome theme for Vim. Unfortunately, I couldn't find it's name. Does any body know it?",http://images3.wikia.nocookie.net/__cb20120312145513/vim/images/3/33/Snapshot1.png,vim,color-scheme,,,,04/04/2012 15:23:48,not a real question,1,1,17,"I found awesome theme for Vim. Unfortunately, I couldn't find it's name. Does any body know it? http://images3.wikia.nocookie.net/__cb20120312145513/vim/images/3/33/Snapshot1.png",2
+8704610,01/02/2012 19:31:45,333061,05/05/2010 04:31:45,543,48,Easy typing for non-english keyboards vim users,"In English or US keyboards keys like `\` `/` `[` `]` are very easily typed with only one key stroke. Usually is not the same for non-english keyboards. Is there a way to achieve the same easiness of typing for these type of keyboards?  
+If it is a matter of `mapping keys` can you please put clear instructions to do it? (Spanish layout example is welcome)",vim,keyboard,mapping,,,06/20/2012 01:56:57,not constructive,1,67,7,"Easy typing for non-english keyboards vim users In English or US keyboards keys like `\` `/` `[` `]` are very easily typed with only one key stroke. Usually is not the same for non-english keyboards. Is there a way to achieve the same easiness of typing for these type of keyboards?  
+If it is a matter of `mapping keys` can you please put clear instructions to do it? (Spanish layout example is welcome)",3
+3266618,07/16/2010 15:49:03,198553,10/29/2009 00:27:30,264,6,Tab to exit quotes in vim.,"Usually when I coding in Python, I have to create a dictionary, and I press `""` once and it creates `""|""`, being `|` my cursor.
+
+I'm using `TAB` key in snipmate plugin to use snippets. I would like to press tab, when inside quotes after writing a string, that ""exits"" the quotes, but mantain snipmate. Example:
+
+`""name|""`, and, pressing TAB, to become `""name""|`. How should I do it?
+
+Thanks!",vim,vimrc,vimscript,,,,open,0,66,6,"Tab to exit quotes in vim. Usually when I coding in Python, I have to create a dictionary, and I press `""` once and it creates `""|""`, being `|` my cursor.
+
+I'm using `TAB` key in snipmate plugin to use snippets. I would like to press tab, when inside quotes after writing a string, that ""exits"" the quotes, but mantain snipmate. Example:
+
+`""name|""`, and, pressing TAB, to become `""name""|`. How should I do it?
+
+Thanks!",3
+6053301,05/19/2011 03:03:02,44286,12/08/2008 12:56:11,1443,40,easier way to navigate between vim split panes,"I am using `NERDTree` on vim and usually open files with `i`
+
+Is there an easy way to switch between different panes? Currently I use `CTRL+W+W` to move from one pane to another.  
+
+",vim,,,,,,open,0,34,8,"easier way to navigate between vim split panes I am using `NERDTree` on vim and usually open files with `i`
+
+Is there an easy way to switch between different panes? Currently I use `CTRL+W+W` to move from one pane to another.  
+
+",1
+2277551,02/17/2010 00:42:14,28817,10/17/2008 04:26:41,2139,70,Use last arguments from vim's :make command,"I have a one key mapping to build my project.
+
+    noremap <F5> :make<CR>
+
+This works great.  However I sometimes am building a only a piece of the project.  In this case I use the command `:make smaller_part` to build just that piece.  I'd also like a one key mapping for this use case as well.
+
+    noremap <S-F5> :make last_arguments()<CR>
+
+Is this possible?  A `last_arguments()` function isn't required.  It's just how I imagine the solution would look.  The important part is I hit one key and it runs :make with the arguments that I gave it last time.
+",vim,,,,,,open,0,107,7,"Use last arguments from vim's :make command I have a one key mapping to build my project.
+
+    noremap <F5> :make<CR>
+
+This works great.  However I sometimes am building a only a piece of the project.  In this case I use the command `:make smaller_part` to build just that piece.  I'd also like a one key mapping for this use case as well.
+
+    noremap <S-F5> :make last_arguments()<CR>
+
+Is this possible?  A `last_arguments()` function isn't required.  It's just how I imagine the solution would look.  The important part is I hit one key and it runs :make with the arguments that I gave it last time.
+",1
+4480147,12/18/2010 21:00:00,85833,04/01/2009 18:54:17,43,2,"In Vim a script/plugin, how do I visual selection string then replace with a new string?","I want to try writing a few simple VIM plugins. What I have in mind to would involve taking the current visual selection, processing that string then replacing the selection with the result. Later I'd like to try extend this to work with text objects and ranges.
+
+Specifically I'd like to know how to:
+
+ - Get a string from the current character-wise selection
+ - Delete the selection
+ - Insert my new string
+",vim,vimscript,,,,,open,0,71,16,"In Vim a script/plugin, how do I visual selection string then replace with a new string? I want to try writing a few simple VIM plugins. What I have in mind to would involve taking the current visual selection, processing that string then replacing the selection with the result. Later I'd like to try extend this to work with text objects and ranges.
+
+Specifically I'd like to know how to:
+
+ - Get a string from the current character-wise selection
+ - Delete the selection
+ - Insert my new string
+",2
+2603262,04/08/2010 20:34:53,1946,08/19/2008 14:53:06,1808,35,vim: How do I line up ruby options?,"With vim how do I to turn this:    
+
+    t.string :crypted_password :null => false
+    t.string :password_salt, :null => false
+
+into this:
+
+    t.string :crypted_password,  :null => false
+    t.string :password_salt,     :null => false
+
+without manually adding the tabs to each line?",vim,ruby,,,,,open,0,57,8,"vim: How do I line up ruby options? With vim how do I to turn this:    
+
+    t.string :crypted_password :null => false
+    t.string :password_salt, :null => false
+
+into this:
+
+    t.string :crypted_password,  :null => false
+    t.string :password_salt,     :null => false
+
+without manually adding the tabs to each line?",2
+1318470,08/23/2009 12:40:11,161561,08/23/2009 12:40:11,1,0,Change wrap width in a text file using Vim,"I want to format srt subtitle text files to avoid wrapping problems on my media player.
+
+I need to set a line wrap width to a number of characters e.g. 43
+
+I can do this with Editplus, its a built in function and works well.  The reason I want to do it in Vim, firstly Editplus is only available on the PC and the secondly Vim is badass.
+
+I have found the following solution on the net..
+
+:set tw=43
+gggqG
+
+It does work, but not exactly how I want it.
+
+E.g.
+
+I have this text:
+
+557
+00:47:39,487 --> 00:47:42,453
+I will have to complete some procedures,
+and I asked you to check out what they are for me
+
+after I format it, I get:
+
+557 00:47:39,487 --> 00:47:42,453 I will
+have to complete some procedures, and I
+asked you to check out what they are for
+me
+
+I seems to ignore line breaks/CRs.  As you can see the ""I will"" has been added to the second line.
+
+How do I get it to not ignore line breaks?",vim,editor,formatting,text,,,open,0,160,9,"Change wrap width in a text file using Vim I want to format srt subtitle text files to avoid wrapping problems on my media player.
+
+I need to set a line wrap width to a number of characters e.g. 43
+
+I can do this with Editplus, its a built in function and works well.  The reason I want to do it in Vim, firstly Editplus is only available on the PC and the secondly Vim is badass.
+
+I have found the following solution on the net..
+
+:set tw=43
+gggqG
+
+It does work, but not exactly how I want it.
+
+E.g.
+
+I have this text:
+
+557
+00:47:39,487 --> 00:47:42,453
+I will have to complete some procedures,
+and I asked you to check out what they are for me
+
+after I format it, I get:
+
+557 00:47:39,487 --> 00:47:42,453 I will
+have to complete some procedures, and I
+asked you to check out what they are for
+me
+
+I seems to ignore line breaks/CRs.  As you can see the ""I will"" has been added to the second line.
+
+How do I get it to not ignore line breaks?",4
+10097478,04/10/2012 22:39:50,343302,05/17/2010 17:43:03,826,51,VIM: matchtime not working,"Does the VIM `matchtime` option not work in Putty? I have tried this `.vimrc` but I still cannot get the option to work:
+
+    set showmatch
+    set matchtime=1
+
+The server that I am SSHing into is CentOS 5.x, VIM 7.0.
+
+Thanks.",vim,,,,,04/11/2012 16:20:46,off topic,1,44,4,"VIM: matchtime not working Does the VIM `matchtime` option not work in Putty? I have tried this `.vimrc` but I still cannot get the option to work:
+
+    set showmatch
+    set matchtime=1
+
+The server that I am SSHing into is CentOS 5.x, VIM 7.0.
+
+Thanks.",1
+2843913,05/16/2010 13:28:21,251589,01/15/2010 14:24:59,659,23,Looking for a VIM Book,"I have been using vim for about six months now.  I know my way around pretty well.  I know all of the ""basic commands"", have defined my own functions and have defined some syntax files.  
+
+I was hopping to pickup a book on vim to read in my spare time.  There is nothing specific that I want to learn I just want to improve my general knowledge.  
+
+I looked on amazon and there are about <a href=""http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vim+&x=0&y=0"">7 possibilities</a>.  Any recommendations?  ",vim,book,,,,07/03/2012 13:59:03,not constructive,1,88,5,"Looking for a VIM Book I have been using vim for about six months now.  I know my way around pretty well.  I know all of the ""basic commands"", have defined my own functions and have defined some syntax files.  
+
+I was hopping to pickup a book on vim to read in my spare time.  There is nothing specific that I want to learn I just want to improve my general knowledge.  
+
+I looked on amazon and there are about <a href=""http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vim+&x=0&y=0"">7 possibilities</a>.  Any recommendations?  ",2
+164847,10/02/2008 22:14:18,7028,09/15/2008 13:02:20,2590,170,What is in your .vimrc?,"VI an VIm allow for really awesome customization, typically stored inside a `.vimrc` file. Typical features for a programmer would be syntax highlighting, smart indenting and so on.
+
+**What other tricks for productive programming have you got, hidden in your .vimrc?**
+
+I am mostly interested in refactorings, auto classes and similar productivity macros, especially for C#.",vim,.vimrc,productivity,hints-and-tips,c#,11/27/2011 17:31:53,not constructive,1,54,5,"What is in your .vimrc? VI an VIm allow for really awesome customization, typically stored inside a `.vimrc` file. Typical features for a programmer would be syntax highlighting, smart indenting and so on.
+
+**What other tricks for productive programming have you got, hidden in your .vimrc?**
+
+I am mostly interested in refactorings, auto classes and similar productivity macros, especially for C#.",5
+11404863,07/09/2012 23:52:57,184212,10/05/2009 07:45:31,3827,121,How to remove a segment in vim Powerline?,"I'm using [vim Powerline](https://github.com/Lokaltog/vim-powerline/), it comes by default with quite a few segments in the powerline. More than I want.
+
+I'd like to remove several of the default ones. Specifically, the one that tells me my git branch, the file encoding, the source language, the line/col number, the one that says unix (probably line ends).
+
+In the [docs](https://github.com/Lokaltog/vim-powerline/blob/f0caee81697fd0021c82caee61265fdc3ae191de/doc/Powerline.txt#L272), they say you should be able to use Pl#Theme#RemoveSegment.
+
+So I added `call Pl#Theme#RemoveSegment('figitive')` to my ~/.vimrc, and then ran `:PowerlineClearCache` and reloaded the file, but the git branch is still there. Perhaps I'm getting the name wrong, I guessed that this is the one that enters my git branch based on the naming from [here](https://github.com/Lokaltog/vim-powerline/blob/c4b72c5be57b165bb6a89d0b8a974fe62c0091d0/autoload/Powerline/Segments/fugitive.vim#L1).
+
+If there's a way to reflect on some variable and see what segments are registered, that would be useful, but I can't tell if I'm getting the name wrong, or invoking the method incorrectly, or what.",vim,vimscript,vim-plugin,,,,open,0,146,8,"How to remove a segment in vim Powerline? I'm using [vim Powerline](https://github.com/Lokaltog/vim-powerline/), it comes by default with quite a few segments in the powerline. More than I want.
+
+I'd like to remove several of the default ones. Specifically, the one that tells me my git branch, the file encoding, the source language, the line/col number, the one that says unix (probably line ends).
+
+In the [docs](https://github.com/Lokaltog/vim-powerline/blob/f0caee81697fd0021c82caee61265fdc3ae191de/doc/Powerline.txt#L272), they say you should be able to use Pl#Theme#RemoveSegment.
+
+So I added `call Pl#Theme#RemoveSegment('figitive')` to my ~/.vimrc, and then ran `:PowerlineClearCache` and reloaded the file, but the git branch is still there. Perhaps I'm getting the name wrong, I guessed that this is the one that enters my git branch based on the naming from [here](https://github.com/Lokaltog/vim-powerline/blob/c4b72c5be57b165bb6a89d0b8a974fe62c0091d0/autoload/Powerline/Segments/fugitive.vim#L1).
+
+If there's a way to reflect on some variable and see what segments are registered, that would be useful, but I can't tell if I'm getting the name wrong, or invoking the method incorrectly, or what.",3
+7941427,10/29/2011 20:18:20,152739,08/07/2009 20:25:40,2724,104,MacVim: how do I set a left gutter (margin) for my buffers?,"In MacVim the text that I'm editing in all buffers is jammed up hard against the left hand side of the buffer. I find this quite visually jarring, especially if I'm looking at a vertical split.
+
+It looks like there is only one pixel between my text and the window border.
+
+Is there a setting that will allow me to add, say, a character width as a gutter or margin?",vim,macvim,,,,,open,0,68,12,"MacVim: how do I set a left gutter (margin) for my buffers? In MacVim the text that I'm editing in all buffers is jammed up hard against the left hand side of the buffer. I find this quite visually jarring, especially if I'm looking at a vertical split.
+
+It looks like there is only one pixel between my text and the window border.
+
+Is there a setting that will allow me to add, say, a character width as a gutter or margin?",2
+485933,01/28/2009 00:14:45,42223,12/01/2008 19:20:22,964,24,VimL Script language: what is an acceptable alternative?,"**Problem:** One of my favorite aspects of Vim is its flexibility. One of my least favorite is the VimL script language itself. I know everyone has his or her own preference for languages and editors, so I take it for granted that not everyone agrees with me.
+
+**Question:** *If* you are a Vim user, and *if* you have had a similar disaffection for using VimL to extend vim, what alternatives have you used in order to extend Vim while avoiding the default language? I am looking for ideas that may help beyond what I've already tried, including, but not limited to:
+
+* recompiling vim with the add-on support for python, ruby, and perl (nice, but it does not help when I am running vim on someone else's machine without that support added in)
+* never writing a line of VimL script and simply download preexisting add-ons (great, if and only if the existing stuff does exactly what you want it to, not so great if you have to make a change and end up having to look at more VimL script)
+
+**Disclaimer:** Note, this is *not* a slam against VimL script or anyone's preferences. If it works great for you, that's great! I'm just asking those who have found a need for an alternative, and a way to fulfill that need to their satisfaction.
+",vim,scripting,extensibility,plugins,,11/16/2011 01:16:03,not constructive,1,220,8,"VimL Script language: what is an acceptable alternative? **Problem:** One of my favorite aspects of Vim is its flexibility. One of my least favorite is the VimL script language itself. I know everyone has his or her own preference for languages and editors, so I take it for granted that not everyone agrees with me.
+
+**Question:** *If* you are a Vim user, and *if* you have had a similar disaffection for using VimL to extend vim, what alternatives have you used in order to extend Vim while avoiding the default language? I am looking for ideas that may help beyond what I've already tried, including, but not limited to:
+
+* recompiling vim with the add-on support for python, ruby, and perl (nice, but it does not help when I am running vim on someone else's machine without that support added in)
+* never writing a line of VimL script and simply download preexisting add-ons (great, if and only if the existing stuff does exactly what you want it to, not so great if you have to make a change and end up having to look at more VimL script)
+
+**Disclaimer:** Note, this is *not* a slam against VimL script or anyone's preferences. If it works great for you, that's great! I'm just asking those who have found a need for an alternative, and a way to fulfill that need to their satisfaction.
+",4
+4391901,12/08/2010 20:21:55,103088,05/07/2009 18:45:14,171,5,vim and dvorak counter-efficiency,"I'm using Dvorak and starting with vim.
+I found quite a few recommended Dvorak-rebinding, but all of them are for people experienced with vim but new to  Dvorak; In this case rebinding makes a lot of sense.
+However, since my vim muscle memory is still clear, both option will require me the same effort.
+
+Is vim more efficient by design the Qwerty layout?
+What about the case where SSH to an un-rebinded remote host?
+
+More pros and cons are welcomed.",vim,dvorak,,,,10/31/2011 14:32:24,not constructive,1,76,4,"vim and dvorak counter-efficiency I'm using Dvorak and starting with vim.
+I found quite a few recommended Dvorak-rebinding, but all of them are for people experienced with vim but new to  Dvorak; In this case rebinding makes a lot of sense.
+However, since my vim muscle memory is still clear, both option will require me the same effort.
+
+Is vim more efficient by design the Qwerty layout?
+What about the case where SSH to an un-rebinded remote host?
+
+More pros and cons are welcomed.",2
+6039325,05/18/2011 02:42:52,166482,09/01/2009 09:09:21,720,27,"Gvim doesn't highlight syntax correctly, how to fix it?","I have a HTML file which contains both HTML and JavaScript. When I folded some code snippets, the syntax highlight didn't work well. Screenshot as following:
+![enter image description here][1]
+
+Line79 function setColor(color) is not correctly highlighted. Is there any way to fix it?
+
+BTW, I am using GVIM 7.2 in windows 7.
+
+Thanks!
+
+  [1]: http://i.stack.imgur.com/qAkS5.png",vim,syntax-highlighting,,,,,open,0,53,9,"Gvim doesn't highlight syntax correctly, how to fix it? I have a HTML file which contains both HTML and JavaScript. When I folded some code snippets, the syntax highlight didn't work well. Screenshot as following:
+![enter image description here][1]
+
+Line79 function setColor(color) is not correctly highlighted. Is there any way to fix it?
+
+BTW, I am using GVIM 7.2 in windows 7.
+
+Thanks!
+
+  [1]: http://i.stack.imgur.com/qAkS5.png",2
+3474709,08/13/2010 07:19:37,414668,08/09/2010 03:01:52,1,0,Delete all spaces and tabs at the end of my lines,"Any idea on how to delete all the spaces and tabs at the end of all my lines in my code using vim? I sometimes use commands to add things at the end of my lines, but sometimes, because of these unexpected blanks (that is, I put these blanks there inadvertently while coding), which serve no purpose whatsoever, these commands don't do the right job... so i'd like to get rid of the blanks once and for all using some vim command. Thanks in advance!",vim,,,,,,open,0,85,11,"Delete all spaces and tabs at the end of my lines Any idea on how to delete all the spaces and tabs at the end of all my lines in my code using vim? I sometimes use commands to add things at the end of my lines, but sometimes, because of these unexpected blanks (that is, I put these blanks there inadvertently while coding), which serve no purpose whatsoever, these commands don't do the right job... so i'd like to get rid of the blanks once and for all using some vim command. Thanks in advance!",1
+11478486,07/13/2012 21:14:51,1524641,07/13/2012 21:00:27,1,0,does Emacs good for newbies to programming?,"I'm newbie to the programming world, I've started **HTML\css,** and now I'm learning JavaScript. and I saw my instructor using **emacs** for programming, he said that tough - pro- programmers only use it!! but one day my friend told me that if i wanna be a good programmer -web developer etc..- it's good to start with **emacs** or **Vim**. 
+So I'm confused now and I couldn't find the good answer!! 
+
+thanks.
+
+note**: I've searched here @stack-overflow and didn't find anything about this topic! ",vim,emacs,,,,07/13/2012 21:29:57,not constructive,1,83,7,"does Emacs good for newbies to programming? I'm newbie to the programming world, I've started **HTML\css,** and now I'm learning JavaScript. and I saw my instructor using **emacs** for programming, he said that tough - pro- programmers only use it!! but one day my friend told me that if i wanna be a good programmer -web developer etc..- it's good to start with **emacs** or **Vim**. 
+So I'm confused now and I couldn't find the good answer!! 
+
+thanks.
+
+note**: I've searched here @stack-overflow and didn't find anything about this topic! ",2
+3435325,08/08/2010 17:33:37,224192,12/03/2009 19:30:29,117,5,Feeds and podcasts for the vim text editor?,"[Vimcasts](http://vimcasts.org) is fantastic, and I want more educational, vim-related feeds and podcasts but am having trouble finding any more quality ones. There must be more out there!
+
+Please list your favorite vim-related XML feeds and podcasts.",vim,feeds,podcasts,,,09/18/2011 02:58:33,not constructive,1,35,8,"Feeds and podcasts for the vim text editor? [Vimcasts](http://vimcasts.org) is fantastic, and I want more educational, vim-related feeds and podcasts but am having trouble finding any more quality ones. There must be more out there!
+
+Please list your favorite vim-related XML feeds and podcasts.",3
+5811188,04/27/2011 22:06:01,713873,04/18/2011 17:40:02,28,1,vim and notepad++,"So a lot of my programmer buddies have urged me to switch from (g)vim to a ""real"" text editor like notepad++.  My opinion has always been that they simply don't understand how to use vim.  Lately, I've been hearing more and more people talking about notepad++ and I got to wondering...  Does notepad++ actually have any features that Vim doesn't or vice versa?  Nobody has actually been able to give me any legitimate reason to make the switch other than that they like it more.  What are your thoughts?",vim,notepad++,,,,04/27/2011 22:24:28,not constructive,1,94,3,"vim and notepad++ So a lot of my programmer buddies have urged me to switch from (g)vim to a ""real"" text editor like notepad++.  My opinion has always been that they simply don't understand how to use vim.  Lately, I've been hearing more and more people talking about notepad++ and I got to wondering...  Does notepad++ actually have any features that Vim doesn't or vice versa?  Nobody has actually been able to give me any legitimate reason to make the switch other than that they like it more.  What are your thoughts?",2
+10855539,06/01/2012 18:28:44,446554,09/13/2010 16:46:34,956,16,Why does vim incsearch pause when cancelling a search with the <ESC> key?,"In vim, if you `set incsearch` then it will scroll to the next match of your current search term without moving the cursor.  I often use this to read a section of code without moving the cursor there, because I can then hit `<ESC>` and the screen will return back to wherever my cursor was when I started searching.
+
+However, vim has a pause after you hit `<ESC>`, and before it scrolls back to the cursor.  I find this pause very irritating.  What is the purpose behind this pause, and/or is this pause configurable?",vim,,,,,,open,0,96,13,"Why does vim incsearch pause when cancelling a search with the <ESC> key? In vim, if you `set incsearch` then it will scroll to the next match of your current search term without moving the cursor.  I often use this to read a section of code without moving the cursor there, because I can then hit `<ESC>` and the screen will return back to wherever my cursor was when I started searching.
+
+However, vim has a pause after you hit `<ESC>`, and before it scrolls back to the cursor.  I find this pause very irritating.  What is the purpose behind this pause, and/or is this pause configurable?",1
+8859926,01/14/2012 03:28:10,284981,10/09/2009 07:20:01,378,9,"Vim: visually select a section of text, then delete (or replace) every instance of it in the document?","I'm cleaning up an html site originally generated by Front Page, and there is alot of repeating FrontPage code I'd like to delete.  What's the best way to visually select those sections of text, and then pipe them into a global delete or substitute command, so that every repeating instance in the document is deleted?",vim,delete,global,substitute,,01/14/2012 06:21:25,off topic,1,56,18,"Vim: visually select a section of text, then delete (or replace) every instance of it in the document? I'm cleaning up an html site originally generated by Front Page, and there is alot of repeating FrontPage code I'd like to delete.  What's the best way to visually select those sections of text, and then pipe them into a global delete or substitute command, so that every repeating instance in the document is deleted?",4
+1118333,07/13/2009 08:45:22,1084,08/12/2008 11:01:49,4931,184,How can I convert a decimal number to hex in VIM?,"I have this column in a file I'm editing in VIM:
+
+    16128
+    16132
+    16136
+    16140
+    # etc...
+
+And I want to convert it to this column:
+
+    0x3f00
+    0x3f04
+    0x3f08
+    0x3f0c
+    # etc...
+
+How can I do this in VIM?
+",vim,,,,,,open,0,67,11,"How can I convert a decimal number to hex in VIM? I have this column in a file I'm editing in VIM:
+
+    16128
+    16132
+    16136
+    16140
+    # etc...
+
+And I want to convert it to this column:
+
+    0x3f00
+    0x3f04
+    0x3f08
+    0x3f0c
+    # etc...
+
+How can I do this in VIM?
+",1
+8706051,01/02/2012 22:38:22,1030470,11/04/2011 21:31:48,8,0,To those of you who do a majority of you developement work in vim; What does your workflow look like?,"As a high school student who does most of his coding in the Netbeans IDE (As a class requirement), but also proficient at vim usage (As A Linux user I decided to invest my time in learning it; I actually wrote this post in GVim with the ""It's all text"" addon). 
+
+    I wish to do more in Vim. I work mostly in Java, and I'm also teaching myself python on the side, and I edit the source files with vanilla Vim with little more than just syntax highlighting for readabilities sake. 
+
+    Any descriptions of your work flow(including OS, and primary language) and auxiliary tools/plug-ins would be much appreciated as well as any notable customization that you have made to said tools, so that I might have an idea of where I might start to look to find my preferred work flow.
+
+",vim,workflow,customization,,,01/02/2012 22:43:20,off topic,1,149,20,"To those of you who do a majority of you developement work in vim; What does your workflow look like? As a high school student who does most of his coding in the Netbeans IDE (As a class requirement), but also proficient at vim usage (As A Linux user I decided to invest my time in learning it; I actually wrote this post in GVim with the ""It's all text"" addon). 
+
+    I wish to do more in Vim. I work mostly in Java, and I'm also teaching myself python on the side, and I edit the source files with vanilla Vim with little more than just syntax highlighting for readabilities sake. 
+
+    Any descriptions of your work flow(including OS, and primary language) and auxiliary tools/plug-ins would be much appreciated as well as any notable customization that you have made to said tools, so that I might have an idea of where I might start to look to find my preferred work flow.
+
+",3
+10727392,05/23/2012 20:32:41,1084945,12/07/2011 05:20:07,1895,63,vim not allowing backspace,"File `foo` has text:
+
+    This| is a line.
+
+If I place the cursor at the `|`, hop into `insert` mode, and press <kbd>backspace</kbd>, nothing happens. If I type something, I can delete the things I've typed, but only back to where the insertion began. For example, if I place the cursor at the end of the line, and type `word`, I can delete `word` but can't delete the `.` or anything to the left of it. 
+
+This is rather annoying. What `vim` setting does this?",vim,,,,,,open,0,87,4,"vim not allowing backspace File `foo` has text:
+
+    This| is a line.
+
+If I place the cursor at the `|`, hop into `insert` mode, and press <kbd>backspace</kbd>, nothing happens. If I type something, I can delete the things I've typed, but only back to where the insertion began. For example, if I place the cursor at the end of the line, and type `word`, I can delete `word` but can't delete the `.` or anything to the left of it. 
+
+This is rather annoying. What `vim` setting does this?",1
+6613617,07/07/2011 16:06:31,833912,07/07/2011 16:01:00,1,0,A popup when I open a file use gvim,"When I open a file, Gvim shows me a popup like this:
+
+filetypedetect  BufRead
+
+*if !did_filetype() && expand(""<amatch>"") !~ g:ft_ignore_pat | 
+runtime! scripts.vim | endif
+
+*if !did_filetype() && expand(""<amatch>"") !~ g:ft_ignore_pat    &&
+
+How can I forbid it?",vim,,,,,,open,0,37,9,"A popup when I open a file use gvim When I open a file, Gvim shows me a popup like this:
+
+filetypedetect  BufRead
+
+*if !did_filetype() && expand(""<amatch>"") !~ g:ft_ignore_pat | 
+runtime! scripts.vim | endif
+
+*if !did_filetype() && expand(""<amatch>"") !~ g:ft_ignore_pat    &&
+
+How can I forbid it?",1
+597077,02/27/2009 23:27:07,7839,09/15/2008 14:31:57,1028,25,Is learning VIM worth the effort?,"I spend a lot of hours at the keyboard and it kind of bothers me when I have to use the mouse for some of the most common things. It kind of breaks my concentration. I've always considered to learn VIM but the amount of time needed to master it always made me to step back.
+
+I'd like to hear from people who has learned it and if it's one of those things you cannot live without.
+
+Thanks.",vim,editor,productivity,,,01/22/2012 16:19:14,not constructive,1,76,6,"Is learning VIM worth the effort? I spend a lot of hours at the keyboard and it kind of bothers me when I have to use the mouse for some of the most common things. It kind of breaks my concentration. I've always considered to learn VIM but the amount of time needed to master it always made me to step back.
+
+I'd like to hear from people who has learned it and if it's one of those things you cannot live without.
+
+Thanks.",3
+7274961,09/01/2011 18:45:42,742390,05/06/2011 19:48:02,48,4,Using numpad in Vi (ViM) via Putty,"The numberpad does not work properly when using ViM through Putty, instead of numbers I get
+
+    y
+    x
+    w
+    v
+    u
+    t
+    s
+    r
+    q
+",vim,putty,,,,,open,0,52,7,"Using numpad in Vi (ViM) via Putty The numberpad does not work properly when using ViM through Putty, instead of numbers I get
+
+    y
+    x
+    w
+    v
+    u
+    t
+    s
+    r
+    q
+",2
+8070850,11/09/2011 20:01:46,132987,07/03/2009 22:51:57,712,22,Get position of splitted windows on a vim editor,"I've been trying to find out how the get the position/coordinates of a splitt window inside a vim editor window, but no luck so far.
+
+Say for example I have this layout
+ 
+         (0,0)         (2, 0)           
+           \____________/____________
+           |            |          |
+           |  Split A   |  Split C |
+     (0,2)-+------------+----------+
+           |  Split B   |  Split D |
+           |____________|__________|  #Split D would be (2, 2)
+
+I want to get the coordinates of the different splits on of my Vim Window, is this possible?
+
+---
+
+I've done my homework and googled this, also went through the vim `:help`/`:helpgrep`
+
+Things that I've tried that wouldn't work:
+
+* `getwinposx()`/`getwinposy()`: They doesn't work on terminal, and they don't actually return the info I want, it just returns the position of the Host OS window.
+
+* `:winpos`: the same reason as the previous bullet.
+
+",vim,vimscript,,,,,open,0,239,9,"Get position of splitted windows on a vim editor I've been trying to find out how the get the position/coordinates of a splitt window inside a vim editor window, but no luck so far.
+
+Say for example I have this layout
+ 
+         (0,0)         (2, 0)           
+           \____________/____________
+           |            |          |
+           |  Split A   |  Split C |
+     (0,2)-+------------+----------+
+           |  Split B   |  Split D |
+           |____________|__________|  #Split D would be (2, 2)
+
+I want to get the coordinates of the different splits on of my Vim Window, is this possible?
+
+---
+
+I've done my homework and googled this, also went through the vim `:help`/`:helpgrep`
+
+Things that I've tried that wouldn't work:
+
+* `getwinposx()`/`getwinposy()`: They doesn't work on terminal, and they don't actually return the info I want, it just returns the position of the Host OS window.
+
+* `:winpos`: the same reason as the previous bullet.
+
+",2
+4942591,02/09/2011 08:14:05,609391,02/09/2011 08:02:39,1,0,"I used to use nano to edit text but vim, which is more powerful.  Will I get the same power up if I move to emacs?","For about 3+ years, all I thought I needed (and technically true) was nano. I did not understand all the hoopla about vim until I tried it.  Although the learning curve is ever so slightly higher,  it has greatly simplified coding for me and I would not dream of going back to nano.  I have, however, heard many times over that emacs is the most difficult to learn, yet most useful editor for a programmer.  Can anyone who has taken a similar path of evolution through text editors, and find themselves currently choosing emacs tell me what the advantage is.  Right now my view on vim is the same as my previous view on nano which is will the marginal utility be great enough to justify putting in the time to learn.  with nano > vim the answer is an obvious yes (for me anyway).  Will I look back and say the same thing about vim if I learn emacs?  Thanks much!",vim,emacs,nano,,,02/09/2011 15:19:26,not constructive,1,170,27,"I used to use nano to edit text but vim, which is more powerful.  Will I get the same power up if I move to emacs? For about 3+ years, all I thought I needed (and technically true) was nano. I did not understand all the hoopla about vim until I tried it.  Although the learning curve is ever so slightly higher,  it has greatly simplified coding for me and I would not dream of going back to nano.  I have, however, heard many times over that emacs is the most difficult to learn, yet most useful editor for a programmer.  Can anyone who has taken a similar path of evolution through text editors, and find themselves currently choosing emacs tell me what the advantage is.  Right now my view on vim is the same as my previous view on nano which is will the marginal utility be great enough to justify putting in the time to learn.  with nano > vim the answer is an obvious yes (for me anyway).  Will I look back and say the same thing about vim if I learn emacs?  Thanks much!",3
+8233664,11/22/2011 20:52:12,1024973,11/02/2011 05:14:28,11,0,Restoring vimrc,"I had to reinstall vim due to a problem with my vimrc file. I got that solved, but now I don't have a vimrc file. Can anybody tell me where how to create one or where I can download one? I'm using Ubuntu 11.10. Thanks.",vim,ubuntu,vimrc,,,11/24/2011 09:34:56,off topic,1,45,2,"Restoring vimrc I had to reinstall vim due to a problem with my vimrc file. I got that solved, but now I don't have a vimrc file. Can anybody tell me where how to create one or where I can download one? I'm using Ubuntu 11.10. Thanks.",3
+9677475,03/13/2012 02:12:09,157300,08/16/2009 13:35:45,2068,1,how can I do the paste in vim without troubled by intent issue,"    aaa
+            bbb
+            ccc
+    ddd
+when I using copy the above lines from a file and pasted by ""right click the mouse and select past option and left click the mouse"" into a file under edit by vim in the insert mode, I get
+the following:
+
+    aa
+            bbb
+                    ccc
+                    ddd
+
+I think it is due to some indent related settings in vim, so drop my as question as the title.
+",vim,,,,,,open,0,147,13,"how can I do the paste in vim without troubled by intent issue     aaa
+            bbb
+            ccc
+    ddd
+when I using copy the above lines from a file and pasted by ""right click the mouse and select past option and left click the mouse"" into a file under edit by vim in the insert mode, I get
+the following:
+
+    aa
+            bbb
+                    ccc
+                    ddd
+
+I think it is due to some indent related settings in vim, so drop my as question as the title.
+",1
+2085407,01/18/2010 10:48:39,253098,01/18/2010 10:29:22,1,0,Syntax highlight file for the echo command (VIM)?,"I am working in a Vim script. One of my functions needs a temporal display like the one you get when typing ""**:clist**"". I don't want a whole new buffer since I am so lazy that I prefer typing just one key to delete the info.
+
+I am stuck with the syntax highlighting of the echo command. I want to apply a whole syntax file but so far I've just seen ""**:echohl**"" and with that I can only apply one syntax rule. I've tried a syntax cluster but that does not work either.
+
+Is **"":echohl**"" and syntax clusters the right way to go?",vim,scripting,,,,,open,0,101,8,"Syntax highlight file for the echo command (VIM)? I am working in a Vim script. One of my functions needs a temporal display like the one you get when typing ""**:clist**"". I don't want a whole new buffer since I am so lazy that I prefer typing just one key to delete the info.
+
+I am stuck with the syntax highlighting of the echo command. I want to apply a whole syntax file but so far I've just seen ""**:echohl**"" and with that I can only apply one syntax rule. I've tried a syntax cluster but that does not work either.
+
+Is **"":echohl**"" and syntax clusters the right way to go?",2
+6363895,06/15/2011 20:25:59,461992,09/29/2010 16:19:41,76,1,Should I switch form my current editor to VIM or an IDE,"In my programming live I have been using quite bit of different text editors, most of the time I used notepad++ on Windows, gedit on Linux and Espresso (similar to Coda & textmate). I mainly do web development, so I spend most of the time editing PHP/JS/CSS/HTML files and interacting with git repositories.
+
+A lot of people recommended using Vim and also a lot of people have recommend using an IDE. I have used Vim some time (but never long enough to get fast with all is's commands), but have never used an IDE for Web development.
+
+I would like to know if it I should switch from my current texteditor to vim or an IDE. The main reason why I am considering to switch to VIM or an IDE is that I think I can increase my editing speed a new editor. Also, which plugins for Vim would you recomende for a web developer?
+
+The most important features to me are:
+
+ - superb syntax highlighting 
+ - auto code-completion 
+ - easy file switching
+ - multi-language spellchecking (in HTML files)
+
+",vim,editor,textmate,espresso,,06/15/2011 22:20:19,not constructive,1,178,12,"Should I switch form my current editor to VIM or an IDE In my programming live I have been using quite bit of different text editors, most of the time I used notepad++ on Windows, gedit on Linux and Espresso (similar to Coda & textmate). I mainly do web development, so I spend most of the time editing PHP/JS/CSS/HTML files and interacting with git repositories.
+
+A lot of people recommended using Vim and also a lot of people have recommend using an IDE. I have used Vim some time (but never long enough to get fast with all is's commands), but have never used an IDE for Web development.
+
+I would like to know if it I should switch from my current texteditor to vim or an IDE. The main reason why I am considering to switch to VIM or an IDE is that I think I can increase my editing speed a new editor. Also, which plugins for Vim would you recomende for a web developer?
+
+The most important features to me are:
+
+ - superb syntax highlighting 
+ - auto code-completion 
+ - easy file switching
+ - multi-language spellchecking (in HTML files)
+
+",4
+3713932,09/15/2010 00:46:42,238030,12/24/2009 04:19:24,702,22,Why don't more people use emacs with viper-mode?,"I've started to use emacs, and I've found out that while the editor-specific features of emacs are better than those of vi, the text-manipulation methods of vi are better than those of emacs (and easier on your control-pinky!).
+
+It seems that viper-mode, a marriage of the two best parts of each editor, is the ideal solution for someone that wants a complete editor.
+
+But before I start investing my time learning the vi commands in the emacs environment, I'd like to know why it doesn't seem like many people use viper-mode. <b>Is there something I'll find out after using it a while that will cause me to switch to plain emacs or vi?</b>",vim,emacs,vi,viper-mode,,09/15/2010 03:48:48,not constructive,1,111,8,"Why don't more people use emacs with viper-mode? I've started to use emacs, and I've found out that while the editor-specific features of emacs are better than those of vi, the text-manipulation methods of vi are better than those of emacs (and easier on your control-pinky!).
+
+It seems that viper-mode, a marriage of the two best parts of each editor, is the ideal solution for someone that wants a complete editor.
+
+But before I start investing my time learning the vi commands in the emacs environment, I'd like to know why it doesn't seem like many people use viper-mode. <b>Is there something I'll find out after using it a while that will cause me to switch to plain emacs or vi?</b>",4
+3847224,10/02/2010 19:36:03,192812,10/20/2009 03:23:43,1136,89,Documentation for vim help file markup,"Is there a complete source of documentation on the markup format used in vim help files?  `:help write-local-help` provides some info but does not, for example, document the markup used to indicate quoted sections.",vim,markup,,,,,open,0,35,6,"Documentation for vim help file markup Is there a complete source of documentation on the markup format used in vim help files?  `:help write-local-help` provides some info but does not, for example, document the markup used to indicate quoted sections.",2
+823754,05/05/2009 07:30:54,54964,01/14/2009 11:38:17,1890,44,How can indent text to some lenght in Vim?,"Let's speak of relative measures. My Vim looks like:
+
+    aaaaaaaaaaaaa 
+    bbbbbbbbbbbbb 
+    ccccccccccccc 
+    etc
+
+I would like it to be smaller:
+
+    aaaaa
+    aaaaa
+    bbbbb
+    bbbbb
+    ccccc
+    ccccc
+    etc
+
+How can I get it? And how can I manage setting the lenght of such block?",vim,indentation,,,,,open,0,77,9,"How can indent text to some lenght in Vim? Let's speak of relative measures. My Vim looks like:
+
+    aaaaaaaaaaaaa 
+    bbbbbbbbbbbbb 
+    ccccccccccccc 
+    etc
+
+I would like it to be smaller:
+
+    aaaaa
+    aaaaa
+    bbbbb
+    bbbbb
+    ccccc
+    ccccc
+    etc
+
+How can I get it? And how can I manage setting the lenght of such block?",2
+4534643,12/26/2010 16:58:55,554395,12/26/2010 16:58:55,1,0,VIM.. Yank multiple rows based on regex,"Here's my situation I have numerous SQL rows like the following.
+
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+
+I want to rearrange it using VIM to 
+
+    SET IDENTITY_INSERT blah
+    SET IDENTITY_INSERT blah
+    SET IDENTITY_INSERT blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    DELETE FROM blah
+    DELETE FROM blah
+
+now I know I could write a simple python script to accomplish this quickly but I'm trying to up my VIM skills.
+
+
+",vim,,,,,,open,0,142,7,"VIM.. Yank multiple rows based on regex Here's my situation I have numerous SQL rows like the following.
+
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+
+I want to rearrange it using VIM to 
+
+    SET IDENTITY_INSERT blah
+    SET IDENTITY_INSERT blah
+    SET IDENTITY_INSERT blah
+    SET IDENTITY_INSERT blah
+    DELETE FROM blah
+    DELETE FROM blah
+    DELETE FROM blah
+
+now I know I could write a simple python script to accomplish this quickly but I'm trying to up my VIM skills.
+
+
+",1
+1002404,06/16/2009 15:52:25,122785,06/14/2009 17:33:56,28,0,project management plugin for vim,"Can somebody recommend, if there is any, of course, a project management plugin for Vim (GVim actually, if it makes any difference). 
+
+I'm not looking for anything extravagant, just something which will keep my files under one project name, and some sort of buffer which will display what files go under what project. You know what I mean, you see it in every IDE.
+
+Much grateful for all suggestions.",vim,,,,,,open,0,68,5,"project management plugin for vim Can somebody recommend, if there is any, of course, a project management plugin for Vim (GVim actually, if it makes any difference). 
+
+I'm not looking for anything extravagant, just something which will keep my files under one project name, and some sort of buffer which will display what files go under what project. You know what I mean, you see it in every IDE.
+
+Much grateful for all suggestions.",1
+7495932,09/21/2011 07:15:32,423585,08/18/2010 04:37:10,457,8,How can I trim blank lines in the end of file in VIM?,"Sometimes I leave blank lines in the bottom of file. <br/>
+How can I trim them on saving?",vim,texttrimming,,,,,open,0,17,13,"How can I trim blank lines in the end of file in VIM? Sometimes I leave blank lines in the bottom of file. <br/>
+How can I trim them on saving?",2
+9034203,01/27/2012 13:51:20,404020,07/28/2010 01:02:19,1436,5,vi randomly echoing key presses,"When using vi it sometimes echoes keypresses to the screen. For example, if I press escape, it will show ^[ on the screen. The actual characters don't get written to the file, because if I go to another place in the file and come back, the characters aren't there. Still, it's confusing when this happens, especially if the characters appear where there's text.
+
+I also have gvim installed. It never happens there, but it happens in all the various types of vi that run in a terminal.
+
+Why does this happen, and how can it be fixed?
+",vim,vi,,,,,open,0,95,5,"vi randomly echoing key presses When using vi it sometimes echoes keypresses to the screen. For example, if I press escape, it will show ^[ on the screen. The actual characters don't get written to the file, because if I go to another place in the file and come back, the characters aren't there. Still, it's confusing when this happens, especially if the characters appear where there's text.
+
+I also have gvim installed. It never happens there, but it happens in all the various types of vi that run in a terminal.
+
+Why does this happen, and how can it be fixed?
+",2
+9378434,02/21/2012 13:26:29,1111573,12/22/2011 10:57:18,1,0,vim nerd commenter range command,"I found similar topic (http://stackoverflow.com/questions/1375031/nerd-commenter-how-to-comment-out-a-range), but I want to do something different. When using nerd command, in normal mode You can do:
+
+    5ggv12gg,c<space>
+
+It will toggle comment from line 5 to 12. But instead I would like to be able to write:
+
+    :5,12Ct
+
+So I tried to write my own command for that using predefined nerd commenter command:
+
+    command! -nargs=? -range=% Ct <line1>ggv<line2>gg<Leader>c<space>
+
+but as I assumed it gives me an error ""not an editor command: 5ggv12gg,c "" - probably because it expects command like :something, not normal mode command.
+
+Is there a way to achieve something like this?",vim,,,,,,open,0,104,5,"vim nerd commenter range command I found similar topic (http://stackoverflow.com/questions/1375031/nerd-commenter-how-to-comment-out-a-range), but I want to do something different. When using nerd command, in normal mode You can do:
+
+    5ggv12gg,c<space>
+
+It will toggle comment from line 5 to 12. But instead I would like to be able to write:
+
+    :5,12Ct
+
+So I tried to write my own command for that using predefined nerd commenter command:
+
+    command! -nargs=? -range=% Ct <line1>ggv<line2>gg<Leader>c<space>
+
+but as I assumed it gives me an error ""not an editor command: 5ggv12gg,c "" - probably because it expects command like :something, not normal mode command.
+
+Is there a way to achieve something like this?",1
+7913737,10/27/2011 09:01:29,481635,10/20/2010 11:49:11,359,14,How to autoformat (not just auto-indent) in vim?,"Is there a way to let vim Autoformat my (c#) code? I'm not just talking about indenting, but actually formatting.
+
+Like changing
+
+    public void Program() {
+        ...
+    }
+
+to 
+
+    public void Program ()
+    {
+        ...
+    }
+
+and the other way around. Be it a macro, plugin or something else (formatexpr?).
+
+I'm trying to imitate the Visual Studio formatting here. I'd love to type `}` and have everything look nice.",vim,code-formatting,,,,,open,0,95,8,"How to autoformat (not just auto-indent) in vim? Is there a way to let vim Autoformat my (c#) code? I'm not just talking about indenting, but actually formatting.
+
+Like changing
+
+    public void Program() {
+        ...
+    }
+
+to 
+
+    public void Program ()
+    {
+        ...
+    }
+
+and the other way around. Be it a macro, plugin or something else (formatexpr?).
+
+I'm trying to imitate the Visual Studio formatting here. I'd love to type `}` and have everything look nice.",2
+1321936,08/24/2009 11:58:43,54684,01/13/2009 17:24:51,7150,237,Vim python's buffer.append(line) switch window's focus,"I am trying to fill Vim's buffer from separate thread by using this python code.
+
+    python << PYTHON_CODE
+    
+    import vim
+    import time
+    
+    buffer_number = -1
+    class AppendLineTest( Thread ):
+       def run(self):
+          buffer = vim.buffers[buffer_number - 1]
+    
+          for i in range(10):
+             buffer.append('Line number %s' % i)
+             time.sleep(1)
+    
+    PYTHON_CODE
+    
+    function! s:test()
+       split TestBuffer
+       exec 'python buffer_number = '.bufnr('%')
+    
+       setlocal noswapfile
+       setlocal bufhidden=delete
+       setlocal buftype=nofile
+       setlocal nobuflisted
+       setlocal nonumber
+       setlocal nowrap
+       setlocal nocursorline
+    
+       python AppendLineTest().start()
+    endfunction
+    
+    command! -nargs=0 PythonAppendTest call s:test()
+
+I am not sure that accessing Vim's buffers from separate threads are allowed and wonder is there some safe dispatch way. 
+But if it is allowed, I would like to get rid of the cursor jumping when append line taking place.
+
+So to reproduce the behavior, save the code to some name.vim file and open it in the Vim. Then 
+
+    :source %
+
+And then 
+
+    PythonAppendTest
+
+Lines will be added 10 times to the temporary buffer. Just move cursor back to the window where you were and you will understand what I am talking about.
+
+If you wonder why can someone need to add lines to buffers from the separate thread, here is an example: 
+
+ - unix top 
+ - unix tail 
+ - rss
+ - email
+
+While you work, they are appearing in some predefined buffer.
+
+Thanks in advance.",vim,python,embedded,plugins,,,open,0,386,6,"Vim python's buffer.append(line) switch window's focus I am trying to fill Vim's buffer from separate thread by using this python code.
+
+    python << PYTHON_CODE
+    
+    import vim
+    import time
+    
+    buffer_number = -1
+    class AppendLineTest( Thread ):
+       def run(self):
+          buffer = vim.buffers[buffer_number - 1]
+    
+          for i in range(10):
+             buffer.append('Line number %s' % i)
+             time.sleep(1)
+    
+    PYTHON_CODE
+    
+    function! s:test()
+       split TestBuffer
+       exec 'python buffer_number = '.bufnr('%')
+    
+       setlocal noswapfile
+       setlocal bufhidden=delete
+       setlocal buftype=nofile
+       setlocal nobuflisted
+       setlocal nonumber
+       setlocal nowrap
+       setlocal nocursorline
+    
+       python AppendLineTest().start()
+    endfunction
+    
+    command! -nargs=0 PythonAppendTest call s:test()
+
+I am not sure that accessing Vim's buffers from separate threads are allowed and wonder is there some safe dispatch way. 
+But if it is allowed, I would like to get rid of the cursor jumping when append line taking place.
+
+So to reproduce the behavior, save the code to some name.vim file and open it in the Vim. Then 
+
+    :source %
+
+And then 
+
+    PythonAppendTest
+
+Lines will be added 10 times to the temporary buffer. Just move cursor back to the window where you were and you will understand what I am talking about.
+
+If you wonder why can someone need to add lines to buffers from the separate thread, here is an example: 
+
+ - unix top 
+ - unix tail 
+ - rss
+ - email
+
+While you work, they are appearing in some predefined buffer.
+
+Thanks in advance.",4
+1601220,10/21/2009 14:32:02,193863,10/21/2009 14:32:02,1,0,Vim omnicompletion for Java,"I've read heaps of blogs on Vim's supposedly great omnicompletion, and yet no matter what I do I can't get it to work satisfactorily. It took me ages to figure discover that the version of ctags that is preinstalled on my system was the emacs one, and didn't have the --recurse option, but now that I've run ctags-exuberant on my copy of the OpenJDK sources to attempt to get some kind of code completion going, Vim hangs whenever I try to invoke it with <C-n> or <C-p>.
+
+All I really want is something that works like the code completion in Eclipse; I like Vim as an editor, but Eclipse just has those extra features out-of-the-box which Vim seems to fail with. Eclipse with a vi-mode plugin wasn't particularly useful to me, and it is too much of a memory and CPU hog to be of any use; eclim doesn't quite like me either.
+
+Can anyone suggest a simpler way to get some kind of code completion working in Vim that actually works?",vim,java,omnicomplete,autocomplete,,,open,0,170,4,"Vim omnicompletion for Java I've read heaps of blogs on Vim's supposedly great omnicompletion, and yet no matter what I do I can't get it to work satisfactorily. It took me ages to figure discover that the version of ctags that is preinstalled on my system was the emacs one, and didn't have the --recurse option, but now that I've run ctags-exuberant on my copy of the OpenJDK sources to attempt to get some kind of code completion going, Vim hangs whenever I try to invoke it with <C-n> or <C-p>.
+
+All I really want is something that works like the code completion in Eclipse; I like Vim as an editor, but Eclipse just has those extra features out-of-the-box which Vim seems to fail with. Eclipse with a vi-mode plugin wasn't particularly useful to me, and it is too much of a memory and CPU hog to be of any use; eclim doesn't quite like me either.
+
+Can anyone suggest a simpler way to get some kind of code completion working in Vim that actually works?",4
+3889997,10/08/2010 11:24:41,322537,04/21/2010 17:28:57,224,12,"vim travel to pathfile via shortcut, directly, always.","when i travel between files using a shortcut over a pathfile, then it seems like i don't just travel between files.
+
+i go to a file using &gt;, within that file i change location of the cursor and do something, then i press &lt;. but instead of going to the previous file, it first goes to the original location i was at when i entered the file, then i need to press &lt; again to actually get to the previous file.
+
+that's a nuisance for it doesn't allow me to change the stored location within the destination file. it always remains the same so i always enter at the same place, plus this requires two clicks to travel when only one is necessary. and this makes the system behavior more confusing.
+
+this problem only seems to arise when i enter very large files. with the small ones the location works fine.
+
+how do i make the &lt; button move me to the previous file i was in, directly, always?
+
+p.s.<br>
+is use the following mapping in my vimrc:<br>
+noremap &gt; gf<br>
+noremap &lt; &lt;C-o&gt;<br>
+<br>
+i have tried substituting &lt;C-o&gt; with &lt;C-6&gt;, but that doesn't work, for some reason.<br>",vim,path,,,,,open,0,189,8,"vim travel to pathfile via shortcut, directly, always. when i travel between files using a shortcut over a pathfile, then it seems like i don't just travel between files.
+
+i go to a file using &gt;, within that file i change location of the cursor and do something, then i press &lt;. but instead of going to the previous file, it first goes to the original location i was at when i entered the file, then i need to press &lt; again to actually get to the previous file.
+
+that's a nuisance for it doesn't allow me to change the stored location within the destination file. it always remains the same so i always enter at the same place, plus this requires two clicks to travel when only one is necessary. and this makes the system behavior more confusing.
+
+this problem only seems to arise when i enter very large files. with the small ones the location works fine.
+
+how do i make the &lt; button move me to the previous file i was in, directly, always?
+
+p.s.<br>
+is use the following mapping in my vimrc:<br>
+noremap &gt; gf<br>
+noremap &lt; &lt;C-o&gt;<br>
+<br>
+i have tried substituting &lt;C-o&gt; with &lt;C-6&gt;, but that doesn't work, for some reason.<br>",2
+7646916,10/04/2011 11:05:27,783994,06/04/2011 14:09:09,75,2,Increase Vim's Scrolling Speed,"I don't like the way MacVim has such a slow scrolling speed, ( Was faster on gVim, Ubuntu ), is there a way to speed it up ?",vim,macvim,,,,10/04/2011 13:40:17,off topic,1,28,4,"Increase Vim's Scrolling Speed I don't like the way MacVim has such a slow scrolling speed, ( Was faster on gVim, Ubuntu ), is there a way to speed it up ?",2
+4910994,02/06/2011 01:50:15,604912,11/18/2010 05:49:09,1,0,shortcut of making windows equal in split windows ,"I was reading the byte of vim.Here is a problem that I met.
+
+I am using vim in mac os x. (command line not GUI)
+In the text, **""Want to make the windows 'equal' in height again? press ctrl-w =""**
+actually, I try that, but not working at all, it did give some sound (which alway indicate 
+this command is not right) 
+
+However, when I looking at the windows help page of vim in mac, I did found this command.
+try that, still not working, **but it did working in GUI mode (MacVim) not in command line.**
+
+Does anyone have any idea to solve that? Thanks a lot!",vim,,,,,,open,0,103,9,"shortcut of making windows equal in split windows  I was reading the byte of vim.Here is a problem that I met.
+
+I am using vim in mac os x. (command line not GUI)
+In the text, **""Want to make the windows 'equal' in height again? press ctrl-w =""**
+actually, I try that, but not working at all, it did give some sound (which alway indicate 
+this command is not right) 
+
+However, when I looking at the windows help page of vim in mac, I did found this command.
+try that, still not working, **but it did working in GUI mode (MacVim) not in command line.**
+
+Does anyone have any idea to solve that? Thanks a lot!",1
+10105059,04/11/2012 11:32:43,1317105,04/06/2012 08:58:51,11,0,Vim Macro with arguments,"I need to do some search and replace in vim regularly. Using regex I did some operations to get the desired result this time. However since these operations are a bit complicated I would like to have a mechanism where I can take the range of lines under consideration and carry out the sequential operations I have already developed.
+
+Is this possible with vim?
+
+Now suppose lets say everytime I have to replace a particular word with a desired word which is not fixed, can this also be passed through that mechanism.
+
+Thanks.",vim,,,,,04/12/2012 13:53:40,not a real question,1,90,4,"Vim Macro with arguments I need to do some search and replace in vim regularly. Using regex I did some operations to get the desired result this time. However since these operations are a bit complicated I would like to have a mechanism where I can take the range of lines under consideration and carry out the sequential operations I have already developed.
+
+Is this possible with vim?
+
+Now suppose lets say everytime I have to replace a particular word with a desired word which is not fixed, can this also be passed through that mechanism.
+
+Thanks.",1
+2200924,02/04/2010 15:37:05,232417,12/15/2009 20:21:32,233,2,Vim Ruby syntax coloring messes up terminal colors on exiting vim in Gnu Screen,"I fire up Gnu screen and start editing a Ruby file with syntax coloring on and choose a vim colorscheme that uses boldface and a colored background (e.g. evening). Then I quit vim. The terminal doesn't return to the way it was before, but takes on some of the properties of the colorscheme I was using in Vim.
+
+This doesn't happen if I'm using vim outside of Gnu screen.
+
+Has anyone experienced this too? What's the workaround?
+
+I'm using Ubuntu Jaunty and the GNOME Terminal.",vim,gnu-screen,ruby,,,,open,0,82,14,"Vim Ruby syntax coloring messes up terminal colors on exiting vim in Gnu Screen I fire up Gnu screen and start editing a Ruby file with syntax coloring on and choose a vim colorscheme that uses boldface and a colored background (e.g. evening). Then I quit vim. The terminal doesn't return to the way it was before, but takes on some of the properties of the colorscheme I was using in Vim.
+
+This doesn't happen if I'm using vim outside of Gnu screen.
+
+Has anyone experienced this too? What's the workaround?
+
+I'm using Ubuntu Jaunty and the GNOME Terminal.",3
+11460663,07/12/2012 21:04:52,100208,05/03/2009 11:24:02,3584,79,Vim: delete until character for all lines containing a pattern,"I'm learning the [power of g](http://vim.wikia.com/wiki/Power_of_g) and want to delete all lines containing an expression, to the end of the sentence (marked by a period). Like so:
+
+` There was a little sheep. The sheep was black. There was another sheep.`
+
+(command to find all sentences like `There was` and delete to the next period).
+
+` The sheep was black.`
+
+I've tried:
+
+ 1. `:g/There was/d\/\.` in an attempt to ""delete forward until the next period"" but I get a `trailing characters` error. 
+ 2. `:g/There was/df.` but get a `df. is not an editor command error.`
+
+Any thoughts?",vim,,,,,,open,0,93,10,"Vim: delete until character for all lines containing a pattern I'm learning the [power of g](http://vim.wikia.com/wiki/Power_of_g) and want to delete all lines containing an expression, to the end of the sentence (marked by a period). Like so:
+
+` There was a little sheep. The sheep was black. There was another sheep.`
+
+(command to find all sentences like `There was` and delete to the next period).
+
+` The sheep was black.`
+
+I've tried:
+
+ 1. `:g/There was/d\/\.` in an attempt to ""delete forward until the next period"" but I get a `trailing characters` error. 
+ 2. `:g/There was/df.` but get a `df. is not an editor command error.`
+
+Any thoughts?",1
+9679690,03/13/2012 07:08:16,911063,08/25/2011 02:59:27,11,0,Ragtag apparently not working?,"I am currently trying to use ragtag to close some of my html tags in ERB files. However, pressing something like (C-X)/ (which I interpret to be , ""CONTROL"" + ""uppercase X"" + ""/"") it just prints the / to the buffer. Any ideas?
+
+ ",vim,,,,,,open,0,45,4,"Ragtag apparently not working? I am currently trying to use ragtag to close some of my html tags in ERB files. However, pressing something like (C-X)/ (which I interpret to be , ""CONTROL"" + ""uppercase X"" + ""/"") it just prints the / to the buffer. Any ideas?
+
+ ",1
+2902048,05/25/2010 04:42:00,87513,04/06/2009 08:19:35,1,0,vim: save a list of open files and later open all files,"I want to save a list of open files (:ls), quit gvim, start gvim, reopen all previously opened files. I don't want to use :mksession because it doesn't work correctly (probably due to some of the plugins I'm using)",vim,,,,,,open,0,39,12,"vim: save a list of open files and later open all files I want to save a list of open files (:ls), quit gvim, start gvim, reopen all previously opened files. I don't want to use :mksession because it doesn't work correctly (probably due to some of the plugins I'm using)",1
+4300781,11/29/2010 04:06:17,427014,08/21/2010 08:42:58,1,0,"vim-surround, cs command E319: Sorry, the command is not available in this version","I tried to execute the cs command for vim-surround. But, unfortunately, I got the E319: Sorry, the command is not available in this version message. I use the vimrc from http://amix.dk/vim/vimrc.html
+
+This is my Vim version: 
+
+VIM - Vi IMproved 7.3 (2010 Aug 15, compiled Nov 27 2010 19:38:25)
+MacOS X (unix) version
+Included patches: 1-47
+Compiled by dio@Dios-MacBook.local
+Normal version with MacVim GUI.  Features included (+) or not (-):
+-arabic +autocmd +balloon_eval +browse +builtin_terms +byte_offset +cindent +clientserver +clipboard +cmdline_compl
++cmdline_hist +cmdline_info +comments -conceal +cryptv -cscope +cursorbind +cursorshape +dialog_con_gui +diff +digraphs
+ +dnd -ebcdic -emacs_tags +eval +ex_extra +extra_search -farsi +file_in_path +find_in_path +float +folding -footer
++fork() +fullscreen -gettext -hangul_input +iconv +insert_expand +jumplist -keymap -langmap +libcall +linebreak
++lispindent +listcmds +localmap -lua +menu +mksession +modify_fname +mouse +mouseshape -mouse_dec -mouse_gpm
+-mouse_jsbterm -mouse_netterm -mouse_sysmouse +mouse_xterm +multi_byte +multi_lang -mzscheme +netbeans_intg +odbeditor
+-osfiletype +path_extra -perl +persistent_undo +postscript +printer -profile -python -python3 +quickfix +reltime
+-rightleft +ruby +scrollbind +signs +smartindent -sniff +startuptime +statusline -sun_workshop +syntax +tag_binary
++tag_old_static -tag_any_white -tcl +terminfo +termresponse +textobjects +title +toolbar +transparency +user_commands
++vertsplit +virtualedit +visual +visualextra +viminfo +vreplace +wildignore +wildmenu +windows +writebackup -X11
+-xfontset +xim -xsmp -xterm_clipboard -xterm_save
+   system vimrc file: ""$VIM/vimrc""
+     user vimrc file: ""$HOME/.vimrc""
+
+Thanks",vim,vimrc,,,,,open,0,182,13,"vim-surround, cs command E319: Sorry, the command is not available in this version I tried to execute the cs command for vim-surround. But, unfortunately, I got the E319: Sorry, the command is not available in this version message. I use the vimrc from http://amix.dk/vim/vimrc.html
+
+This is my Vim version: 
+
+VIM - Vi IMproved 7.3 (2010 Aug 15, compiled Nov 27 2010 19:38:25)
+MacOS X (unix) version
+Included patches: 1-47
+Compiled by dio@Dios-MacBook.local
+Normal version with MacVim GUI.  Features included (+) or not (-):
+-arabic +autocmd +balloon_eval +browse +builtin_terms +byte_offset +cindent +clientserver +clipboard +cmdline_compl
++cmdline_hist +cmdline_info +comments -conceal +cryptv -cscope +cursorbind +cursorshape +dialog_con_gui +diff +digraphs
+ +dnd -ebcdic -emacs_tags +eval +ex_extra +extra_search -farsi +file_in_path +find_in_path +float +folding -footer
++fork() +fullscreen -gettext -hangul_input +iconv +insert_expand +jumplist -keymap -langmap +libcall +linebreak
++lispindent +listcmds +localmap -lua +menu +mksession +modify_fname +mouse +mouseshape -mouse_dec -mouse_gpm
+-mouse_jsbterm -mouse_netterm -mouse_sysmouse +mouse_xterm +multi_byte +multi_lang -mzscheme +netbeans_intg +odbeditor
+-osfiletype +path_extra -perl +persistent_undo +postscript +printer -profile -python -python3 +quickfix +reltime
+-rightleft +ruby +scrollbind +signs +smartindent -sniff +startuptime +statusline -sun_workshop +syntax +tag_binary
++tag_old_static -tag_any_white -tcl +terminfo +termresponse +textobjects +title +toolbar +transparency +user_commands
++vertsplit +virtualedit +visual +visualextra +viminfo +vreplace +wildignore +wildmenu +windows +writebackup -X11
+-xfontset +xim -xsmp -xterm_clipboard -xterm_save
+   system vimrc file: ""$VIM/vimrc""
+     user vimrc file: ""$HOME/.vimrc""
+
+Thanks",2
+1385196,09/06/2009 08:17:41,77222,03/12/2009 13:38:09,274,13,VIM Restore last search pattern,"I remapped `[[` and `]]` to find the previous and next pattern in the file.  The mappings are as follows:
+
+    nmap [[ ?^.section <CR>
+    nmap ]] /?section /<CR>
+
+The issue is that when I use any of them, I ""loose"" the current search pattern, so when doing `n` for the next match, I search for the next ""section"".
+
+Is there a way to restore the search pattern, or for the `[[` and `]]` mappings to not affect the current search pattern?",vim,,,,,,open,0,86,5,"VIM Restore last search pattern I remapped `[[` and `]]` to find the previous and next pattern in the file.  The mappings are as follows:
+
+    nmap [[ ?^.section <CR>
+    nmap ]] /?section /<CR>
+
+The issue is that when I use any of them, I ""loose"" the current search pattern, so when doing `n` for the next match, I search for the next ""section"".
+
+Is there a way to restore the search pattern, or for the `[[` and `]]` mappings to not affect the current search pattern?",1
+8221538,11/22/2011 03:16:22,941401,09/12/2011 21:30:12,27,0,VIM as main text editor,"I've been struggling for hours on trying to make VIM my main code editor for scripting languages like python and php. Of course, I can open files with VIM, but how do I get nice formatting and syntax highlighting?
+
+Thanks a bunch
+",vim,,,,,11/22/2011 03:19:27,not a real question,1,41,5,"VIM as main text editor I've been struggling for hours on trying to make VIM my main code editor for scripting languages like python and php. Of course, I can open files with VIM, but how do I get nice formatting and syntax highlighting?
+
+Thanks a bunch
+",1
+4920101,02/07/2011 10:17:45,348535,05/23/2010 22:46:57,289,0,How to easily add syntax highlighting for custom DSL into Vim,I am wondering how to conveniently add a custom DSL syntax highlighting into VIM. Is there any good tutorial on this topic anywhere?,vim,,,,,,open,0,23,11,How to easily add syntax highlighting for custom DSL into Vim I am wondering how to conveniently add a custom DSL syntax highlighting into VIM. Is there any good tutorial on this topic anywhere?,1
+10151280,04/14/2012 05:28:33,1311390,04/03/2012 20:44:44,140,0,Learn Emacs/Slime the Hard way (from 10 years of Vim),"This is a genuine question, not intended to start a flame war.
+
+I've used Vim for over 10 years; watching people use Emacs/Slime ... has made me decide to learn Emacs/Slime.
+
+I want to get up to speed as fast as quickly:
+
+* there are a bunch of ""finger macros"" I instinctively do -- I want to figure out the equivalent in Emacs/Slime & retrain myself
+
+* Since I'm familiar with Clojure, writing elisp config won't be a problem (minus the dynamic vars sometimes)
+
+What should I be reading / memorizing?
+
+EDIT: note, I have tried VimClojure, and decided I like Slime/Swank more.",vim,emacs,clojure,slime,,04/14/2012 21:46:01,not constructive,1,97,10,"Learn Emacs/Slime the Hard way (from 10 years of Vim) This is a genuine question, not intended to start a flame war.
+
+I've used Vim for over 10 years; watching people use Emacs/Slime ... has made me decide to learn Emacs/Slime.
+
+I want to get up to speed as fast as quickly:
+
+* there are a bunch of ""finger macros"" I instinctively do -- I want to figure out the equivalent in Emacs/Slime & retrain myself
+
+* Since I'm familiar with Clojure, writing elisp config won't be a problem (minus the dynamic vars sometimes)
+
+What should I be reading / memorizing?
+
+EDIT: note, I have tried VimClojure, and decided I like Slime/Swank more.",4
+10681013,05/21/2012 07:25:35,1407269,05/21/2012 07:16:10,1,0,Remotely modify OpenVMS file using vim and SFTP from a Linux system,"I'm using CentOS 5.5 and I'm trying to remotely modify file of an OpenVMS server. I tried with scp but I got an error about an ""unexpected newline"".
+
+I tried to find the solution to this but I haven't found it yet.
+
+Then I tried with sftp and I succeded but only in my openvms home directory. I don't know how to reach other folders.
+
+For example : 
+
+vim sftp://myLogin@myServer//sys\$user/myLogin/test.txt
+
+will successfully open the file test.txt in my openvms home directory.
+
+What I would like to achieve is to modify the file test.txt in this directory for example : OpenVMSHomeDirectory.xxx.yyy
+
+Does anybody know a way to do this ? I fail to find how to reach my file to edit it.
+
+Thank you.",vim,sftp,scp,openvms,,05/22/2012 14:04:26,off topic,1,116,12,"Remotely modify OpenVMS file using vim and SFTP from a Linux system I'm using CentOS 5.5 and I'm trying to remotely modify file of an OpenVMS server. I tried with scp but I got an error about an ""unexpected newline"".
+
+I tried to find the solution to this but I haven't found it yet.
+
+Then I tried with sftp and I succeded but only in my openvms home directory. I don't know how to reach other folders.
+
+For example : 
+
+vim sftp://myLogin@myServer//sys\$user/myLogin/test.txt
+
+will successfully open the file test.txt in my openvms home directory.
+
+What I would like to achieve is to modify the file test.txt in this directory for example : OpenVMSHomeDirectory.xxx.yyy
+
+Does anybody know a way to do this ? I fail to find how to reach my file to edit it.
+
+Thank you.",4
+7060052,08/14/2011 22:10:48,604734,02/05/2011 21:10:09,762,26,Run bash command on Vim and copy result to clipboard,"How can I create a Vim command and copy it's results to clipboard?
+
+I want to convert Markdown to HTML and copy the result to the clipboard. So far I got:
+
+`nmap md :%!/bin/markdown/Markdown.pl --html4tags`
+
+But this will substitute my opened file on Vim to the result of Markdown.",vim,copy,clipboard,markdown,,,open,0,46,10,"Run bash command on Vim and copy result to clipboard How can I create a Vim command and copy it's results to clipboard?
+
+I want to convert Markdown to HTML and copy the result to the clipboard. So far I got:
+
+`nmap md :%!/bin/markdown/Markdown.pl --html4tags`
+
+But this will substitute my opened file on Vim to the result of Markdown.",4
+7028876,08/11/2011 15:46:06,730313,04/29/2011 01:15:29,11,0,What is difference between system wide vimrc and user vimrc?,I already have a .vimrc in my home dirrectory(~). but still I need to use <set nocompatible> in my vimrc for certain feature. ,vim,vimrc,,,,,open,0,24,10,What is difference between system wide vimrc and user vimrc? I already have a .vimrc in my home dirrectory(~). but still I need to use <set nocompatible> in my vimrc for certain feature. ,2
+11215767,06/26/2012 20:54:38,320105,04/19/2010 07:46:17,570,21,How to make Vim GUI tab menu to look like Console tab menu,When more than one file is opened in vim in console(terminal) with tabnew <filename> we will get a tabbed interface for each file. My question is can we get the same look and feel for gvim(GUI) rather than having real GUI tabbed interface for each file.,vim,vi,,,,,open,0,46,13,How to make Vim GUI tab menu to look like Console tab menu When more than one file is opened in vim in console(terminal) with tabnew <filename> we will get a tabbed interface for each file. My question is can we get the same look and feel for gvim(GUI) rather than having real GUI tabbed interface for each file.,2
+1884860,12/10/2009 23:30:07,145190,07/26/2009 05:53:32,10939,570,"VIM: Delete+Paste in one ""command""?","I'm doing a lot of text manipulation between multiple files that requires a lot of `yy`, `dd` and `p`ing. This may sound crazy but is there some shorter way of doing `dd` and `p` in one go? Maybe even with a plugin?",vim,keyboard-shortcuts,,,,,open,0,42,5,"VIM: Delete+Paste in one ""command""? I'm doing a lot of text manipulation between multiple files that requires a lot of `yy`, `dd` and `p`ing. This may sound crazy but is there some shorter way of doing `dd` and `p` in one go? Maybe even with a plugin?",2
+4313239,11/30/2010 11:31:38,35700,11/08/2008 04:58:05,470,14,[VIM] How to delete current buffer and reopen the next buffer in current window?,I would like to know is there any shortcuts or commands to switch buffer(delete current and reopen next buffer) in current window because sometimes I feel I opened too many buffers? And currently I use bufexplorer and fuzzyfinder.,vim,vim-plugin,,,,,open,0,38,14,[VIM] How to delete current buffer and reopen the next buffer in current window? I would like to know is there any shortcuts or commands to switch buffer(delete current and reopen next buffer) in current window because sometimes I feel I opened too many buffers? And currently I use bufexplorer and fuzzyfinder.,2
+8636572,12/26/2011 14:22:10,1116408,12/26/2011 14:07:09,1,0,Websites about programming languages like vimgolf?,"I'm an newbie programmer and a strong vim enthusiast. Recently, I discovered marvelous website about my editor - [VimGolf.com][1]. I think there's no need to explain how it works. I found out that playing VimGolf is a very efficient way to learn vim.
+
+Because of this, I'm wondering is there any website using similar concept but focused on any programming language (preferably C, C++, Java, Python) or algorithms? It would be a great way to learn. Of course, I'm aware that whole concept would be different - for example users will get constant amount points for completing some exercise, unlike in VimGolf, where amount of points vary.
+
+Sorry for my English, this is my first question there. And thanks in advance for your help!
+
+mc
+
+  [1]: http://vimgolf.com ""VimGolf""",vim,,,,,12/27/2011 09:01:51,off topic,1,126,6,"Websites about programming languages like vimgolf? I'm an newbie programmer and a strong vim enthusiast. Recently, I discovered marvelous website about my editor - [VimGolf.com][1]. I think there's no need to explain how it works. I found out that playing VimGolf is a very efficient way to learn vim.
+
+Because of this, I'm wondering is there any website using similar concept but focused on any programming language (preferably C, C++, Java, Python) or algorithms? It would be a great way to learn. Of course, I'm aware that whole concept would be different - for example users will get constant amount points for completing some exercise, unlike in VimGolf, where amount of points vary.
+
+Sorry for my English, this is my first question there. And thanks in advance for your help!
+
+mc
+
+  [1]: http://vimgolf.com ""VimGolf""",1
+11034510,06/14/2012 13:47:00,1456364,06/14/2012 13:38:31,1,0,Bug in gvim - where to report?,"I recently encountered a bug in gvim's (that is the gui for vim) syntax highlighting for LaTeX which can be reproduced on several platforms (packages vim-gtk in debian/ubuntu and mvim for MacOS X) but not in command line vim. I wonder what is the right place to report this issue?
+
+Many thanks in advance,
+Kay",vim,bugs,,,,06/14/2012 17:50:09,off topic,1,53,7,"Bug in gvim - where to report? I recently encountered a bug in gvim's (that is the gui for vim) syntax highlighting for LaTeX which can be reproduced on several platforms (packages vim-gtk in debian/ubuntu and mvim for MacOS X) but not in command line vim. I wonder what is the right place to report this issue?
+
+Many thanks in advance,
+Kay",2
+6112379,05/24/2011 14:51:25,212063,11/16/2009 13:29:04,7446,283,What is vim syntax name for printf placement %d within strings?,"Within `printf` format strings, the placement characters, from `%` to the corresponding `d`, or `x` appear in dark blue. With a black background, they are very hard to read.
+
+To change the color, I know I have to change the color with a command like this:
+
+    highlight Comment ctermfg=Cyan
+
+But I have to put the correct syntax group name instead of `Comment`.
+
+Does anyone know what this syntax group name is?",vim,colors,syntax-highlighting,,,,open,0,71,11,"What is vim syntax name for printf placement %d within strings? Within `printf` format strings, the placement characters, from `%` to the corresponding `d`, or `x` appear in dark blue. With a black background, they are very hard to read.
+
+To change the color, I know I have to change the color with a command like this:
+
+    highlight Comment ctermfg=Cyan
+
+But I have to put the correct syntax group name instead of `Comment`.
+
+Does anyone know what this syntax group name is?",3
+2474654,03/19/2010 02:35:12,164299,08/27/2009 15:30:18,1546,40,What are you ideal vim configuration for php development ?,"I use VIM editor for PHP, i know many people will point to PDT but somehow I  like to stay with VIM and so 
+
+What are your suggestions for ideal VIM configuration for PHP Development ?
+
+
+",vim,php,editor,,,,open,0,37,10,"What are you ideal vim configuration for php development ? I use VIM editor for PHP, i know many people will point to PDT but somehow I  like to stay with VIM and so 
+
+What are your suggestions for ideal VIM configuration for PHP Development ?
+
+
+",3
+5477944,03/29/2011 19:39:23,103672,05/08/2009 16:46:52,28,1,How do I jump to after the next match in VIM?,"I've got a file I am working on where I need to make a lot of edits. The text just prior to what I need to edit is constant, but what I need to edit varies. What I'm doing right now is
+`/my_constant_text` and `n` to jump to the lines I need to edit. But using `n` like this I still have to move the cursor forward past my matched text to get to where I want to start editing. It seems to me there has to be a way to just my cursor to just past my matched text but I'm having no luck finding it.
+
+If it helps the file I'm working on looks like the following two lines repeated numerous times just with different values.
+
+
+    INSERT INTO TABLE (ID, NAME, VALUE) VALUES ('1','foo','all sorts of random stuff')
+    INSERT INTO TABLE (ID, NAME, VALUE) VALUES ('2','bar','some other random stuff')
+
+I want to to be able to jump my cursor to right after `'foo','` (ie my_constant_text).",vim,,,,,,open,0,170,11,"How do I jump to after the next match in VIM? I've got a file I am working on where I need to make a lot of edits. The text just prior to what I need to edit is constant, but what I need to edit varies. What I'm doing right now is
+`/my_constant_text` and `n` to jump to the lines I need to edit. But using `n` like this I still have to move the cursor forward past my matched text to get to where I want to start editing. It seems to me there has to be a way to just my cursor to just past my matched text but I'm having no luck finding it.
+
+If it helps the file I'm working on looks like the following two lines repeated numerous times just with different values.
+
+
+    INSERT INTO TABLE (ID, NAME, VALUE) VALUES ('1','foo','all sorts of random stuff')
+    INSERT INTO TABLE (ID, NAME, VALUE) VALUES ('2','bar','some other random stuff')
+
+I want to to be able to jump my cursor to right after `'foo','` (ie my_constant_text).",1
+3230765,07/12/2010 17:43:45,65192,02/11/2009 17:28:37,203,5,Achieving Netbeans-style line moving and duplicating in VIM,"In Netbeans, Ctrl-Shift-Up/Down duplicates the current line or selection and Alt+Shift+Up/Down/Left/Right moves the current line or selection.  How can this be achieved in VIM 7?
+
+So far, I'm able to get Alt+Shift+Up/Down working using these mappings:
+
+    :nmap <A-S-up> :m .-2<Enter>
+    :imap <A-S-up> <Esc>:m .-2<Enter>gi
+    :vmap <A-S-up> :m .-2<Enter>gv
+    
+    :nmap <A-S-down> :m .+1<Enter>
+    :imap <A-S-down> <Esc>:m +1<Enter>gi
+    :vmap <A-S-down> :m '>+1<Enter>gv
+
+I'm still strugging with:
+
+1. Having Alt+Shift+j/k work like Alt+Shift+Up/Down.  Simply changing ""up"" to ""k"" isn't working.
+2. Ctrl-Shift-Up/Down mappings aren't working.  Is this an unmappable sequence?
+3. To map both Alt+Shift+up and Alt+Shift+k to the same command, is there a better way than duplicating the map command to another line? ",vim,netbeans,,,,,open,0,132,8,"Achieving Netbeans-style line moving and duplicating in VIM In Netbeans, Ctrl-Shift-Up/Down duplicates the current line or selection and Alt+Shift+Up/Down/Left/Right moves the current line or selection.  How can this be achieved in VIM 7?
+
+So far, I'm able to get Alt+Shift+Up/Down working using these mappings:
+
+    :nmap <A-S-up> :m .-2<Enter>
+    :imap <A-S-up> <Esc>:m .-2<Enter>gi
+    :vmap <A-S-up> :m .-2<Enter>gv
+    
+    :nmap <A-S-down> :m .+1<Enter>
+    :imap <A-S-down> <Esc>:m +1<Enter>gi
+    :vmap <A-S-down> :m '>+1<Enter>gv
+
+I'm still strugging with:
+
+1. Having Alt+Shift+j/k work like Alt+Shift+Up/Down.  Simply changing ""up"" to ""k"" isn't working.
+2. Ctrl-Shift-Up/Down mappings aren't working.  Is this an unmappable sequence?
+3. To map both Alt+Shift+up and Alt+Shift+k to the same command, is there a better way than duplicating the map command to another line? ",2
+1697214,11/08/2009 17:18:07,125633,06/19/2009 09:36:36,130,0,VIM like tools and softwares Collection ,"I've used VI(M) for over 2 years, and I really love its easy navigation and keyboard orientation. So except VI(VIM, gvim), I try to find more VIM-like tools(softwares) to benefit more. And I've got the following findings:
+
+ 1. [apvlv][1]: for pdf reading(really impressive)
+ 2. [VIM like chrome browser plugin][2] (and firefox has a similar [vimoperator][3])
+
+And we can use vim like navigation key binding in gmail/greader too. But it's not enough. So I hope anyone who knows more such tools(software), which has the VIM like key binding, can list your findings here too. Writing down the corresponding link and main features will be appreciated. Thanks.
+
+
+  [1]: http://code.google.com/p/apvlv/
+  [2]: http://code.google.com/p/vimlike-smooziee/
+  [3]: https://addons.mozilla.org/en-US/firefox/addon/4891",vim,productivity,,,,11/17/2011 15:58:17,not constructive,1,113,7,"VIM like tools and softwares Collection  I've used VI(M) for over 2 years, and I really love its easy navigation and keyboard orientation. So except VI(VIM, gvim), I try to find more VIM-like tools(softwares) to benefit more. And I've got the following findings:
+
+ 1. [apvlv][1]: for pdf reading(really impressive)
+ 2. [VIM like chrome browser plugin][2] (and firefox has a similar [vimoperator][3])
+
+And we can use vim like navigation key binding in gmail/greader too. But it's not enough. So I hope anyone who knows more such tools(software), which has the VIM like key binding, can list your findings here too. Writing down the corresponding link and main features will be appreciated. Thanks.
+
+
+  [1]: http://code.google.com/p/apvlv/
+  [2]: http://code.google.com/p/vimlike-smooziee/
+  [3]: https://addons.mozilla.org/en-US/firefox/addon/4891",2
+4561910,12/30/2010 10:39:46,180275,09/28/2009 11:12:14,1588,71,"What's the problem with 'execute ""w! "" + a:name' in a vim script/function?","I have the following Vim-function:
+
+    fu! Create_file_and_write_to_it(name, text)
+    
+      new 
+      execute ""normal i"" . a:text
+      execute ""w! "" + a:name
+    
+    endfu
+
+I call this function like so:
+
+    :call Create_file_and_write_to_it('c:\temp\foo.txt', ""here is some text"")
+
+While it creates a new buffer and writes the desired text (ie: *here is some text*) into the buffer, it doesn't write the buffer to a file named *c:\temp\foo.txt* or any other name I could see. Neither do I get an error message. 
+
+Is there a reason for this behaviour, or am I doing something wrong, and how would I go about getting the desired functionality?
+",vim,,,,,,open,0,129,13,"What's the problem with 'execute ""w! "" + a:name' in a vim script/function? I have the following Vim-function:
+
+    fu! Create_file_and_write_to_it(name, text)
+    
+      new 
+      execute ""normal i"" . a:text
+      execute ""w! "" + a:name
+    
+    endfu
+
+I call this function like so:
+
+    :call Create_file_and_write_to_it('c:\temp\foo.txt', ""here is some text"")
+
+While it creates a new buffer and writes the desired text (ie: *here is some text*) into the buffer, it doesn't write the buffer to a file named *c:\temp\foo.txt* or any other name I could see. Neither do I get an error message. 
+
+Is there a reason for this behaviour, or am I doing something wrong, and how would I go about getting the desired functionality?
+",1
+5375240,03/21/2011 08:18:39,174320,09/16/2009 12:37:36,53,7,A more useful statusline in vim?,I would like to make my statusline in vim more informative and interesting and for that I need some ideas. How did you costumize your statusline?,vim,vimrc,,,,05/07/2012 21:11:29,not constructive,1,26,6,A more useful statusline in vim? I would like to make my statusline in vim more informative and interesting and for that I need some ideas. How did you costumize your statusline?,2
+10843075,06/01/2012 00:42:14,163203,08/26/2009 01:48:57,21635,673,autotag-vim plugin doesn't index tags upon save,"I have installed the latest version of the autotag-vim plugin. The tags compiled statically works in my project. When ever I make changes to a file and save the `tags` file is not updated.
+
+I have file called home_controller.rb as shown below
+
+    class HomeController < ApplicationController
+      def index
+        foo  # CTRL+] jumps to implementation
+      end
+
+    private
+
+      def foo
+      end
+    end
+
+
+If I modify the file to add new function and save the tag navigation doesn't work for the new function.
+
+    class HomeController < ApplicationController
+
+      def index
+        foo
+        bar  # CTRL+] does not jump to implementation after save
+      end
+
+    private
+
+      def foo
+      end
+
+      def bar
+      end
+
+    end
+
+I enabled the debug buffer by calling `:call AutoTagDebug()` and I noticed that tagging was happening as expected. But the `tags` file is not getting updated.
+
+    source = ""C:\Users\user1\My Projects\test1\app\controllers\home_controller.rb""
+    drive = ""C:"", file = ""\Users\user1\My Projects\test1\app\controllers""
+    tagsFile ""C:\Users\user1\My Projects\test1\app\controllers\tags""
+    drive = ""C:"", file = ""\Users\user1\My Projects\test1\app""
+    tagsFile ""C:\Users\user1\My Projects\test1\app\tags""
+    drive = ""C:"", file = ""\Users\user1\My Projects\test1""
+    tagsFile ""C:\Users\user1\My Projects\test1\tags""
+    Stripping tags for test1/app/controllers/home_controller.rb from tags file C:\Users\user1\My Projects\test1\tags",vim,autotag-vim,,,,,open,0,287,7,"autotag-vim plugin doesn't index tags upon save I have installed the latest version of the autotag-vim plugin. The tags compiled statically works in my project. When ever I make changes to a file and save the `tags` file is not updated.
+
+I have file called home_controller.rb as shown below
+
+    class HomeController < ApplicationController
+      def index
+        foo  # CTRL+] jumps to implementation
+      end
+
+    private
+
+      def foo
+      end
+    end
+
+
+If I modify the file to add new function and save the tag navigation doesn't work for the new function.
+
+    class HomeController < ApplicationController
+
+      def index
+        foo
+        bar  # CTRL+] does not jump to implementation after save
+      end
+
+    private
+
+      def foo
+      end
+
+      def bar
+      end
+
+    end
+
+I enabled the debug buffer by calling `:call AutoTagDebug()` and I noticed that tagging was happening as expected. But the `tags` file is not getting updated.
+
+    source = ""C:\Users\user1\My Projects\test1\app\controllers\home_controller.rb""
+    drive = ""C:"", file = ""\Users\user1\My Projects\test1\app\controllers""
+    tagsFile ""C:\Users\user1\My Projects\test1\app\controllers\tags""
+    drive = ""C:"", file = ""\Users\user1\My Projects\test1\app""
+    tagsFile ""C:\Users\user1\My Projects\test1\app\tags""
+    drive = ""C:"", file = ""\Users\user1\My Projects\test1""
+    tagsFile ""C:\Users\user1\My Projects\test1\tags""
+    Stripping tags for test1/app/controllers/home_controller.rb from tags file C:\Users\user1\My Projects\test1\tags",2
+8269873,11/25/2011 13:30:09,414271,08/08/2010 09:55:28,450,22,Vim Color Scheme Problems on Ubuntu 11.04,"When I change my color scheme in command-line Vim on Ubuntu 11.04, stripes on the bottom and right of the terminal (xterm) refuse to change color. While I can select any color scheme that I like, the two bands of color will remain at the default set for my xterm profile. Here's a link to an [image][1] to illustrate what I describe; my best guess is that xterm is not playing well with fullscreen mode in Unity. Do you have any suggestions for things I should try in order to fix this?
+
+
+  [1]: http://i.imgur.com/Q4lVt.png",vim,ubuntu,xterm,,,11/26/2011 05:21:16,off topic,1,95,7,"Vim Color Scheme Problems on Ubuntu 11.04 When I change my color scheme in command-line Vim on Ubuntu 11.04, stripes on the bottom and right of the terminal (xterm) refuse to change color. While I can select any color scheme that I like, the two bands of color will remain at the default set for my xterm profile. Here's a link to an [image][1] to illustrate what I describe; my best guess is that xterm is not playing well with fullscreen mode in Unity. Do you have any suggestions for things I should try in order to fix this?
+
+
+  [1]: http://i.imgur.com/Q4lVt.png",3
+6230490,06/03/2011 17:23:54,554019,12/25/2010 22:37:39,143,4,"how i can change cursor color in color scheme "" vim """," hi all  i use this color scheme 
+
+[Cobalt Colour scheme : Vim version of TextMates Cobalt colour scheme][1] 
+
+I can not see the cursor in insert mode 
+
+how i can change this color 
+
+    hi CursorLine     guifg=none            guibg=#002943
+    hi Cursor         guifg=#F8F8F8           guibg=#A7A7A7
+    hi CursorIM       guifg=#F8F8F8           guibg=#002947""#5F5A60
+
+thanks
+
+  [1]: http://www.vim.org/scripts/script.php?script_id=2828
+
+",vim,color-scheme,,,,,open,0,109,12,"how i can change cursor color in color scheme "" vim ""  hi all  i use this color scheme 
+
+[Cobalt Colour scheme : Vim version of TextMates Cobalt colour scheme][1] 
+
+I can not see the cursor in insert mode 
+
+how i can change this color 
+
+    hi CursorLine     guifg=none            guibg=#002943
+    hi Cursor         guifg=#F8F8F8           guibg=#A7A7A7
+    hi CursorIM       guifg=#F8F8F8           guibg=#002947""#5F5A60
+
+thanks
+
+  [1]: http://www.vim.org/scripts/script.php?script_id=2828
+
+",2
+2974192,06/04/2010 12:42:30,128850,06/25/2009 13:54:43,353,15,How can I pare down Vim's buffer list to only include active buffers,"How can I pare down my buffer list to only include buffers that are currently open in a window/tab?
+
+When I've been running Vim for a long time, the list of buffers revealed by the `:ls` command is too large to work with. Ideally, I would like to delete all of the buffers which are not currently visible in a tab or window by running a custom command such as `:Only`. Can anybody suggest how to achieve this?
+
+It looks like the [`:bdelete`][bd] command can accept a list of buffer numbers, but I'm not sure how to translate the output from `:ls` to a format that can be consumed by the `:bdelete` command. Any help would be appreciated.
+
+[bd]: http://vimdoc.sourceforge.net/htmldoc/windows.html#:bdelete
+",vim,vimscript,,,,,open,0,117,13,"How can I pare down Vim's buffer list to only include active buffers How can I pare down my buffer list to only include buffers that are currently open in a window/tab?
+
+When I've been running Vim for a long time, the list of buffers revealed by the `:ls` command is too large to work with. Ideally, I would like to delete all of the buffers which are not currently visible in a tab or window by running a custom command such as `:Only`. Can anybody suggest how to achieve this?
+
+It looks like the [`:bdelete`][bd] command can accept a list of buffer numbers, but I'm not sure how to translate the output from `:ls` to a format that can be consumed by the `:bdelete` command. Any help would be appreciated.
+
+[bd]: http://vimdoc.sourceforge.net/htmldoc/windows.html#:bdelete
+",2

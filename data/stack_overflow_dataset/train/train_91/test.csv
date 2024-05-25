@@ -1,0 +1,758 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+3201614,07/08/2010 07:55:04,386361,07/08/2010 07:42:52,1,0,how can i show new friend request in home page,"how can i show new friend request in home page using php
+",php5,,,,,07/08/2010 08:00:25,not a real question,1,12,10,"how can i show new friend request in home page how can i show new friend request in home page using php
+",1
+11048164,06/15/2012 09:37:54,794785,06/12/2011 13:37:33,52,0,PHP: Hashing or encrypting a shopping bag ID to store into cookie,"The items that a visitor has in his shopping bag are linked to a bagID.
+If a user revised the site I like to show them there previous bag content.
+
+I'm not sure which method, encryption or hasing to store the bagID  on a client pc cookie. 
+The bag content isn't anything to be afraid of if others would now it. 
+
+**opt1: storing bagID + the salt(hash) into user cookie**  
+Hashing bagID + salt gives access to the bag content. The salt is unique for each bag so  
+if someone retrieves this cookie from a user he only has access to the bag content of this specific user.
+
+**opt2: encrypt the bagID.**  
+A disadvantage seems it would be slow to do it well.
+
+**opt3:?** I'm open for suggestions.
+
+If one of the two would be a good option what kind of hasing or encryption algorithm would be recommendable for this situation? I'm using php 5.3.",php5,cookies,encryption,hashing,,06/15/2012 17:18:42,not constructive,1,154,12,"PHP: Hashing or encrypting a shopping bag ID to store into cookie The items that a visitor has in his shopping bag are linked to a bagID.
+If a user revised the site I like to show them there previous bag content.
+
+I'm not sure which method, encryption or hasing to store the bagID  on a client pc cookie. 
+The bag content isn't anything to be afraid of if others would now it. 
+
+**opt1: storing bagID + the salt(hash) into user cookie**  
+Hashing bagID + salt gives access to the bag content. The salt is unique for each bag so  
+if someone retrieves this cookie from a user he only has access to the bag content of this specific user.
+
+**opt2: encrypt the bagID.**  
+A disadvantage seems it would be slow to do it well.
+
+**opt3:?** I'm open for suggestions.
+
+If one of the two would be a good option what kind of hasing or encryption algorithm would be recommendable for this situation? I'm using php 5.3.",4
+11022297,06/13/2012 19:50:20,1139336,01/09/2012 18:29:21,22,0,PHPCassa within Smarty Template Function,"I'm attempting to call a phpcassa class within a smarty function and I'm getting the following error:
+
+Fatal error: Call to a member function describe_keyspace() on a non-object in /home/sysadmin/www/lib/phpcassa/ColumnFamily.php on line 192
+
+I assume it has something to do with multiple classes and namespaces. 
+
+How can I use multiple classes within the same function?",php5,smarty3,phpcassa,,,,open,0,53,5,"PHPCassa within Smarty Template Function I'm attempting to call a phpcassa class within a smarty function and I'm getting the following error:
+
+Fatal error: Call to a member function describe_keyspace() on a non-object in /home/sysadmin/www/lib/phpcassa/ColumnFamily.php on line 192
+
+I assume it has something to do with multiple classes and namespaces. 
+
+How can I use multiple classes within the same function?",3
+4416903,12/11/2010 13:20:49,491992,10/30/2010 06:28:06,1,0,PHP WebServices,"Please help me. I am getting this error when i am calling a web service..
+Fatal error: Uncaught SoapFault exception: [SOAP-ENV:Server] SoapServer::addFunction() [<a href='soapserver.addfunction'>soapserver.addfunction</a>]: Tried to add a non existant function 'getContactByGroup' in D:\wamp\www\whozz2\web_api\client.php:3 Stack trace: #0 [internal function]: SoapClient->__call('getContactByGro...', Array) #1 D:\wamp\www\whozz2\web_api\client.php(3): SoapClient->getContactByGroup('ankita', 'ankipanki', 'new_group', '', '', '') #2 {main} thrown in D:\wamp\www\whozz2\web_api\client.php on line 3
+
+Thanks in advance.",php5,,,,,06/07/2011 15:52:56,too localized,1,58,2,"PHP WebServices Please help me. I am getting this error when i am calling a web service..
+Fatal error: Uncaught SoapFault exception: [SOAP-ENV:Server] SoapServer::addFunction() [<a href='soapserver.addfunction'>soapserver.addfunction</a>]: Tried to add a non existant function 'getContactByGroup' in D:\wamp\www\whozz2\web_api\client.php:3 Stack trace: #0 [internal function]: SoapClient->__call('getContactByGro...', Array) #1 D:\wamp\www\whozz2\web_api\client.php(3): SoapClient->getContactByGroup('ankita', 'ankipanki', 'new_group', '', '', '') #2 {main} thrown in D:\wamp\www\whozz2\web_api\client.php on line 3
+
+Thanks in advance.",1
+9284767,02/14/2012 21:55:07,399584,07/22/2010 20:19:56,749,43,Practical examples of late static binding in PHP?,"I understand how late static binding works, but I can't seem to come up with a time when I'd use it.  The examples on the PHP site are nice, but don't show any kind of realistic usage.  I'm just wondering if there are any examples of when LSB is absolutely necessary to solve a problem, or when it helps simplify potentially complicated code.",php5,,,,,02/16/2012 21:21:43,not constructive,1,65,8,"Practical examples of late static binding in PHP? I understand how late static binding works, but I can't seem to come up with a time when I'd use it.  The examples on the PHP site are nice, but don't show any kind of realistic usage.  I'm just wondering if there are any examples of when LSB is absolutely necessary to solve a problem, or when it helps simplify potentially complicated code.",1
+5211311,03/06/2011 15:22:20,628424,02/22/2011 13:56:36,1,0,What knowledge is required to develop any website in php?,"I mean is there any need that i must know followig things:
+Ajax
+jquery
+jsp
+or anything else?
+
+",php5,,,,,03/06/2011 18:25:21,not a real question,1,14,10,"What knowledge is required to develop any website in php? I mean is there any need that i must know followig things:
+Ajax
+jquery
+jsp
+or anything else?
+
+",1
+8039849,11/07/2011 17:01:53,975816,10/02/2011 21:21:29,240,25,user notification system design,"I'm trying to make a user notification system(like facebook)
+I have mysql tables like ;
+
+    user : id,username
+    post : id,user_id,text
+    comment:id,user_id,post_id
+    post_like:id,post_id,user_id
+    friend:id,owner_id,follower_id
+
+You can see the relations between tables.. This notification system should allow to user track comments under a post which owner of a post or touched to the post(like or comment),
+track like action on a post which owner of a post or touched to the post(like or comment),
+notify friendship actions and similars.
+
+First I think to solve it with another tables ;
+
+    notification: id,notification_type,user_owner,user_other,isNotified,date
+    ntype:id,type (such as friendship,add a comment, like a post etc.)
+
+So when a user make an action I'll just insert the action on notification table then on client I'll check with ajax the logged user has any notification(with isNotified=false)
+after that just update isNotified=true.
+
+In this scenario how can i notify other users which touch a post (commented or liked).. It's just notifiying to owner of post in this case..
+
+Also while i'm researching find [the notification queque][1], I think it's better way to implement something like that.. So can you give some details about how to imlement a notification queque..
+
+I'm also curious about performance issues about it.. Let say what happens if have 100K user and each user has 10 post and 100 comments,likes daily. Then what will happen?
+Should i consider some nosql solutions for this job such as neo4G or mongodb?
+Thank you..
+
+
+  [1]: http://stackoverflow.com/questions/1315991/design-pattern-notification-system",php5,design-patterns,database-design,notifications,,11/13/2011 16:09:40,not constructive,1,249,4,"user notification system design I'm trying to make a user notification system(like facebook)
+I have mysql tables like ;
+
+    user : id,username
+    post : id,user_id,text
+    comment:id,user_id,post_id
+    post_like:id,post_id,user_id
+    friend:id,owner_id,follower_id
+
+You can see the relations between tables.. This notification system should allow to user track comments under a post which owner of a post or touched to the post(like or comment),
+track like action on a post which owner of a post or touched to the post(like or comment),
+notify friendship actions and similars.
+
+First I think to solve it with another tables ;
+
+    notification: id,notification_type,user_owner,user_other,isNotified,date
+    ntype:id,type (such as friendship,add a comment, like a post etc.)
+
+So when a user make an action I'll just insert the action on notification table then on client I'll check with ajax the logged user has any notification(with isNotified=false)
+after that just update isNotified=true.
+
+In this scenario how can i notify other users which touch a post (commented or liked).. It's just notifiying to owner of post in this case..
+
+Also while i'm researching find [the notification queque][1], I think it's better way to implement something like that.. So can you give some details about how to imlement a notification queque..
+
+I'm also curious about performance issues about it.. Let say what happens if have 100K user and each user has 10 post and 100 comments,likes daily. Then what will happen?
+Should i consider some nosql solutions for this job such as neo4G or mongodb?
+Thank you..
+
+
+  [1]: http://stackoverflow.com/questions/1315991/design-pattern-notification-system",4
+9887834,03/27/2012 10:32:23,1295167,03/27/2012 09:57:58,1,0,How to upload a video from a web application to youtube using php,I need to upload the video from a web application to you tub and need to get the url of the video uploaded as response. Can any one tell how to do dis using php. Thanks in advance. ,php5,codeigniter,youtube,,,07/01/2012 14:20:19,not a real question,1,39,13,How to upload a video from a web application to youtube using php I need to upload the video from a web application to you tub and need to get the url of the video uploaded as response. Can any one tell how to do dis using php. Thanks in advance. ,3
+5499551,03/31/2011 12:05:47,662155,03/16/2011 08:58:58,13,2,things to be noticed when upgrading oscommerce 2.2 to 2.3 ?,I want to upgrade my website from oscommerce 2.2 to oscommerce 2.3. What are the important things to notice. ,php5,upgrade,oscommerce,,,04/01/2011 09:18:26,off topic,1,20,11,things to be noticed when upgrading oscommerce 2.2 to 2.3 ? I want to upgrade my website from oscommerce 2.2 to oscommerce 2.3. What are the important things to notice. ,3
+11441966,07/11/2012 21:45:04,657732,03/13/2011 17:56:57,44,2,yii-bootstrap: Opening modal window from BootNavbar,"I am using Yii-bootstrap widgets for creating my website.
+http://www.yiiframework.com/extension/bootstrap/
+
+http://www.cniska.net/yii-bootstrap/
+
+I am trying to use the ""BootButton"" as a part of the BootNavbar menu to open a ""BootModal"" login component. The BootModal component works fine when I try it out as it is, but does not work when I incorporate the button as a part of the menu. It also does not give me any error, but just comes up with a blank page.
+
+The code is as follows
+
+    <?php $this->widget('bootstrap.widgets.BootButton', array(
+    'label'=>'Click me',
+    'url'=> array('/site/login#mylogin'),
+    'type'=>'primary',
+    'htmlOptions'=>array('data-toggle'=>'modal'),
+     )); ?>
+
+    <?php $this->widget('bootstrap.widgets.BootNavbar', array(
+    'fixed'=>false,
+    'brand'=>'Test',
+    'brandUrl'=>Yii::app()->request->baseUrl,
+    'collapse'=>true, // requires bootstrap-responsive.css
+    'items'=>array(
+        array(
+            'class'=>'bootstrap.widgets.BootMenu',
+            'htmlOptions'=>array('class'=>'pull-right'),
+            'items'=>array(
+                array('label'=>'Blog', 'url'=>array('post/index')),
+                '---',
+                /*array('label'=>'Login', 'url'=>array('site/login'), 'visible'=>Yii::app()->user->isGuest),*/
+                **array('class' => 'bootstrap.widgets.BootButton',
+                'label'=>'Login',
+                'url'=> array('/site/login#mylogin'),
+                'visible'=>Yii::app()->user->isGuest,
+                'type'=>'primary',
+                'htmlOptions'=>array('data-toggle'=>'modal'),
+                ),**
+                array('label'=> Yii::app()->user->name, 'url'=>'#', 'items'=>array(
+                    array('label'=>'Account Settings', 'url'=>'#'),
+                    array('label'=>'Logout', 'url'=>array('site/logout')),
+                ),
+                'visible'=>!Yii::app()->user->isGuest),
+            ),
+        ),
+    ),
+    )); ?>",php5,yii,twitter-bootstrap,yii-mvc,yii-components,07/18/2012 08:13:25,not a real question,1,468,6,"yii-bootstrap: Opening modal window from BootNavbar I am using Yii-bootstrap widgets for creating my website.
+http://www.yiiframework.com/extension/bootstrap/
+
+http://www.cniska.net/yii-bootstrap/
+
+I am trying to use the ""BootButton"" as a part of the BootNavbar menu to open a ""BootModal"" login component. The BootModal component works fine when I try it out as it is, but does not work when I incorporate the button as a part of the menu. It also does not give me any error, but just comes up with a blank page.
+
+The code is as follows
+
+    <?php $this->widget('bootstrap.widgets.BootButton', array(
+    'label'=>'Click me',
+    'url'=> array('/site/login#mylogin'),
+    'type'=>'primary',
+    'htmlOptions'=>array('data-toggle'=>'modal'),
+     )); ?>
+
+    <?php $this->widget('bootstrap.widgets.BootNavbar', array(
+    'fixed'=>false,
+    'brand'=>'Test',
+    'brandUrl'=>Yii::app()->request->baseUrl,
+    'collapse'=>true, // requires bootstrap-responsive.css
+    'items'=>array(
+        array(
+            'class'=>'bootstrap.widgets.BootMenu',
+            'htmlOptions'=>array('class'=>'pull-right'),
+            'items'=>array(
+                array('label'=>'Blog', 'url'=>array('post/index')),
+                '---',
+                /*array('label'=>'Login', 'url'=>array('site/login'), 'visible'=>Yii::app()->user->isGuest),*/
+                **array('class' => 'bootstrap.widgets.BootButton',
+                'label'=>'Login',
+                'url'=> array('/site/login#mylogin'),
+                'visible'=>Yii::app()->user->isGuest,
+                'type'=>'primary',
+                'htmlOptions'=>array('data-toggle'=>'modal'),
+                ),**
+                array('label'=> Yii::app()->user->name, 'url'=>'#', 'items'=>array(
+                    array('label'=>'Account Settings', 'url'=>'#'),
+                    array('label'=>'Logout', 'url'=>array('site/logout')),
+                ),
+                'visible'=>!Yii::app()->user->isGuest),
+            ),
+        ),
+    ),
+    )); ?>",5
+9990810,04/03/2012 09:46:14,1310065,04/03/2012 09:40:28,1,0,Very slow when fetching data from server,"Amm using windows xp system, am fetching data from AS400 DB2 database through php. Am getting the result too late. I want to know the reason, i think my server is in italy, but working in India? Is it correct reason or wrong? If correct means please tell the idea to fetch the result fast...",php5,,,,,04/14/2012 12:43:31,not a real question,1,55,7,"Very slow when fetching data from server Amm using windows xp system, am fetching data from AS400 DB2 database through php. Am getting the result too late. I want to know the reason, i think my server is in italy, but working in India? Is it correct reason or wrong? If correct means please tell the idea to fetch the result fast...",1
+9964255,04/01/2012 12:07:56,917197,06/07/2011 11:08:17,17,2,Please suggest a code which returns length of longest string passed as its arguments in php,"There is a function GetLongestString, whose arguments are character strings. It should return an integer representing the length of the longest string passed as its argument; for example:
+
+GetLongestString(""a"", ""aaa"", ""aa"") should return 3,
+GetLongestString(""a"", ""bcd"", ""efgh"", ""ij"", """") should return 4.
+",php5,,,,,04/01/2012 17:19:03,not a real question,1,40,16,"Please suggest a code which returns length of longest string passed as its arguments in php There is a function GetLongestString, whose arguments are character strings. It should return an integer representing the length of the longest string passed as its argument; for example:
+
+GetLongestString(""a"", ""aaa"", ""aa"") should return 3,
+GetLongestString(""a"", ""bcd"", ""efgh"", ""ij"", """") should return 4.
+",1
+11008990,06/13/2012 05:57:20,1379084,05/07/2012 06:33:13,1,1,Is it poosible to have only one cart for 2 different magento stores/website?,"I am facing an issue regarding providing a single shopping cart for 2 different magento Websites or you can say 2 different stores.
+
+The basic concept what I am trying to achieve is , For example i have 2 magento sites abc.com and xyz.com and i want to provide a common cart to both the Websites, so that they can genreate a single invoice which contains the product purchased from both the Websites.
+
+Is it really possible to achieve this functionality. I have been searching on the Internet and forums since days.  ",php5,magento,magento-1.4,magento-1.5,magento-1.6,06/13/2012 16:33:20,not a real question,1,92,13,"Is it poosible to have only one cart for 2 different magento stores/website? I am facing an issue regarding providing a single shopping cart for 2 different magento Websites or you can say 2 different stores.
+
+The basic concept what I am trying to achieve is , For example i have 2 magento sites abc.com and xyz.com and i want to provide a common cart to both the Websites, so that they can genreate a single invoice which contains the product purchased from both the Websites.
+
+Is it really possible to achieve this functionality. I have been searching on the Internet and forums since days.  ",5
+11724164,07/30/2012 15:05:03,1563281,07/30/2012 14:51:59,1,0,Comparing published date in Joomla K2 for New Icon,"I am trying to automate the process of adding a css New icon next to my K2 article within the first 3 days of the published date. So here's what I came up with in com_k2\template\category_item.php 
+
+        $newdate = time($this->item->publish_up) + 86400;
+        $nowdate = time();
+        <?php echo $nowdate <= $newdate?' item-new':'' ?>
+
+The first line will get the published date of the article and add 3 days to it. The 2nd line would then grab the current server time. Then the 3rd line would compare the two date and echo item-new if the current time is still within 3 days from the published date.
+
+The code did not generate any error msg, but the comparing of the two date doesn't seems to work because the New icon display on every article.
+
+Could someone kindly point me in the right direction? I'm not good with php and most of that coding was inferred from other code. My guess is that the variables were defined properly but I cannot simply compare two dates with smaller or equal to?
+
+",php5,joomla-k2,,,,,open,0,194,9,"Comparing published date in Joomla K2 for New Icon I am trying to automate the process of adding a css New icon next to my K2 article within the first 3 days of the published date. So here's what I came up with in com_k2\template\category_item.php 
+
+        $newdate = time($this->item->publish_up) + 86400;
+        $nowdate = time();
+        <?php echo $nowdate <= $newdate?' item-new':'' ?>
+
+The first line will get the published date of the article and add 3 days to it. The 2nd line would then grab the current server time. Then the 3rd line would compare the two date and echo item-new if the current time is still within 3 days from the published date.
+
+The code did not generate any error msg, but the comparing of the two date doesn't seems to work because the New icon display on every article.
+
+Could someone kindly point me in the right direction? I'm not good with php and most of that coding was inferred from other code. My guess is that the variables were defined properly but I cannot simply compare two dates with smaller or equal to?
+
+",2
+4498754,12/21/2010 11:30:25,545689,12/17/2010 05:32:07,6,0,Converting the content of <div> Tag To An Image,how to convert the content of <div> tag into image fomat in php,php5,,,,,12/22/2010 05:56:08,not a real question,1,13,9,Converting the content of <div> Tag To An Image how to convert the content of <div> tag into image fomat in php,1
+10363142,04/28/2012 11:39:56,1297476,03/28/2012 07:37:03,6,0,How to reduce the file upload time?,"I need to upload large size video files. I've set the maximum file upload preferences. Ive set the following preferences:
+    
+    memory_limit        :150M
+    upload_max_filesize :120M
+    post_max_size       :120M  
+    max_execution_time  :300s 
+    max_input_time      :300s
+
+It works but for takes too long. For 12M it takes 5mns, for 50M it may take nearly 30mns. Is there any way to reduce the file upload  time.",php5,file-upload,php-ini,,,05/01/2012 01:48:47,not a real question,1,100,7,"How to reduce the file upload time? I need to upload large size video files. I've set the maximum file upload preferences. Ive set the following preferences:
+    
+    memory_limit        :150M
+    upload_max_filesize :120M
+    post_max_size       :120M  
+    max_execution_time  :300s 
+    max_input_time      :300s
+
+It works but for takes too long. For 12M it takes 5mns, for 50M it may take nearly 30mns. Is there any way to reduce the file upload  time.",3
+11000308,06/12/2012 15:55:46,1342281,04/18/2012 19:01:11,10,0,Facebook Graph API and FQL gives error in PHP,"I'm trying to run FQL using graph api.
+
+$graph_url = ""https://graph.facebook.com/fql?q="".$fql.""&access_token="". $access_token;
+				
+$output = json_decode(file_get_contents($graph_url));
+
+var_dump($output);
+
+This gives an error  [function.file-get-contents]: failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request 
+
+If i copy and paste the contents of $graph_url in the browser, i get the expected results. So, I'm sure my access_token and fql query are correct.
+
+Also, if i try to fetch the contents by
+
+   $graph_url = ""https://graph.facebook.com/me/?access_token="". $access_token;
+
+   $output = json_decode(file_get_contents($graph_url));
+
+   var_dump($output);
+
+I don't get any errors but expected result. 
+
+I'm not sure, what is missing in my fql query. Please help.
+
+Thank You.
+
+",php5,facebook-graph-api,facebook-fql,,,06/13/2012 16:32:52,not a real question,1,98,9,"Facebook Graph API and FQL gives error in PHP I'm trying to run FQL using graph api.
+
+$graph_url = ""https://graph.facebook.com/fql?q="".$fql.""&access_token="". $access_token;
+				
+$output = json_decode(file_get_contents($graph_url));
+
+var_dump($output);
+
+This gives an error  [function.file-get-contents]: failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request 
+
+If i copy and paste the contents of $graph_url in the browser, i get the expected results. So, I'm sure my access_token and fql query are correct.
+
+Also, if i try to fetch the contents by
+
+   $graph_url = ""https://graph.facebook.com/me/?access_token="". $access_token;
+
+   $output = json_decode(file_get_contents($graph_url));
+
+   var_dump($output);
+
+I don't get any errors but expected result. 
+
+I'm not sure, what is missing in my fql query. Please help.
+
+Thank You.
+
+",3
+11465809,07/13/2012 07:15:00,1522828,07/13/2012 07:06:47,1,0,http post giving out 500 error for just 3.4kb data,I have a page that accepts articles from user and process using php and it has only three columns and one is a textarea when the data in the textarea is small everything is fine and process as usual but if the data in textarea is a bit large it gives out 500 error.My max receiving limits are large enough and are upto 8mb in php.Any help is greatly appreiated. ,php5,http-post,,,,07/14/2012 16:35:20,too localized,1,71,10,http post giving out 500 error for just 3.4kb data I have a page that accepts articles from user and process using php and it has only three columns and one is a textarea when the data in the textarea is small everything is fine and process as usual but if the data in textarea is a bit large it gives out 500 error.My max receiving limits are large enough and are upto 8mb in php.Any help is greatly appreiated. ,2
+2468199,03/18/2010 07:46:23,138541,07/15/2009 07:32:19,107,0,Get country location of an IP with native PHP,"Read on before you say this is a duplicate, it's not. (as far as I could see)
+
+I want to get the county code in php from the client.
+
+Yes I know you can do this using external sites or with the likes of ""geoip_record_by_name"" but I don't want to be dependent on an external site, and I can't install ""pear"" for php as im using shard Dreamhost hosting.
+
+I thought I could just do something like this:
+
+    $output = shell_exec('whois '.$ip.' -H | grep country | awk \'{print $2}\'');
+    echo ""<pre>$output</pre>"";
+
+But dreamhost seems to have an old version of whois (4.7.5), so I get this error on allot of IPs:
+
+    Unknown AS number or IP network. Please upgrade this program.
+So unless someone knows how to get a binary of a newer version of whois onto dreamhost im stuck.
+
+Or is there another way I could get the country code from the client who is loading the page?",php5,dreamhost,geolocation,whois,,,open,0,163,9,"Get country location of an IP with native PHP Read on before you say this is a duplicate, it's not. (as far as I could see)
+
+I want to get the county code in php from the client.
+
+Yes I know you can do this using external sites or with the likes of ""geoip_record_by_name"" but I don't want to be dependent on an external site, and I can't install ""pear"" for php as im using shard Dreamhost hosting.
+
+I thought I could just do something like this:
+
+    $output = shell_exec('whois '.$ip.' -H | grep country | awk \'{print $2}\'');
+    echo ""<pre>$output</pre>"";
+
+But dreamhost seems to have an old version of whois (4.7.5), so I get this error on allot of IPs:
+
+    Unknown AS number or IP network. Please upgrade this program.
+So unless someone knows how to get a binary of a newer version of whois onto dreamhost im stuck.
+
+Or is there another way I could get the country code from the client who is loading the page?",4
+9748873,03/17/2012 09:37:55,1271038,03/15/2012 08:23:29,1,0,prevent direct access to form confirmation page in php,"I am new in php.
+
+I searched every where, but don't find solution for my problem. So I post it here.
+
+I created a form page (order.php) that post their data to another thank page (thanks.php).
+
+thanks.php submit information that entered in previous form to database and redirect to paypal.
+
+I want to prevent direct access to thanks.php, so it is accessed only if user submit form.
+
+Thanks
+
+",php5,,,,,07/01/2012 17:53:57,not a real question,1,63,9,"prevent direct access to form confirmation page in php I am new in php.
+
+I searched every where, but don't find solution for my problem. So I post it here.
+
+I created a form page (order.php) that post their data to another thank page (thanks.php).
+
+thanks.php submit information that entered in previous form to database and redirect to paypal.
+
+I want to prevent direct access to thanks.php, so it is accessed only if user submit form.
+
+Thanks
+
+",1
+3216990,07/09/2010 22:38:53,128618,06/25/2009 04:43:13,180,5,map array in php,"I have two array
+
+    K = {""a"", ""b"", ""b""};
+    V = {""1"", ""2"", ""3""};
+
+from these two array I want to got the result like this
+
+    $display = ""a: 1; b: 2; c: 3;""
+    echo $display;
+
+output
+
+    ""a: 1; b: 2; c: 3;""
+
+
+Anybody here please give me the idea?
+
+thanks",php5,,,,,,open,0,62,4,"map array in php I have two array
+
+    K = {""a"", ""b"", ""b""};
+    V = {""1"", ""2"", ""3""};
+
+from these two array I want to got the result like this
+
+    $display = ""a: 1; b: 2; c: 3;""
+    echo $display;
+
+output
+
+    ""a: 1; b: 2; c: 3;""
+
+
+Anybody here please give me the idea?
+
+thanks",1
+5920257,05/07/2011 09:38:45,683395,03/30/2011 06:25:04,1,0,how can open an image in a image viewer in php,"how can  open an image in a image viewer in php ????????
+any code like openwith() ???",php5,,,,,05/07/2011 09:42:36,not a real question,1,17,11,"how can open an image in a image viewer in php how can  open an image in a image viewer in php ????????
+any code like openwith() ???",1
+10085039,04/10/2012 07:49:29,1234019,02/26/2012 16:05:38,28,0,PostgreSql 'PDOException' with message 'could not find driver',"pdo is working fine with mysql but with pgsql its giving error `'PDOException' with message 'could not find driver'` I've installed `php5-pgsql` package which also includes `pdo_pgsql` 
+
+http://packages.debian.org/sid/php5-pgsql
+> This package provides a module for PostgreSQL database connections directly from PHP scripts. It also includes the pdo_pgsql module for use with the PHP Data Object extension.
+
+my dsn is `pgsql:dbname=DB;host=192.168.0.2`
+I am using Ubuntu 10.04",php5,postgresql,ubuntu,pdo,,07/20/2012 16:40:21,too localized,1,62,8,"PostgreSql 'PDOException' with message 'could not find driver' pdo is working fine with mysql but with pgsql its giving error `'PDOException' with message 'could not find driver'` I've installed `php5-pgsql` package which also includes `pdo_pgsql` 
+
+http://packages.debian.org/sid/php5-pgsql
+> This package provides a module for PostgreSQL database connections directly from PHP scripts. It also includes the pdo_pgsql module for use with the PHP Data Object extension.
+
+my dsn is `pgsql:dbname=DB;host=192.168.0.2`
+I am using Ubuntu 10.04",4
+10107314,04/11/2012 13:50:28,1313398,04/04/2012 16:49:35,12,0,INSERT or UPDATE using IF-ELSE php MYSQL,"    DONOR
+    donor-nic----username-----status
+    111----------ali----------available
+    222---------usman--------notavailable
+
+another is
+
+    DONATION
+    donation_id------donor_nic-----date---
+    1----------------111----------2012/03/04
+    2---------------111-----------2012/06/07
+    3----------------111---------2012/07/08
+    4----------------222---------2012/03/03
+
+now i want to update the date if it is already exits corresponding to donor_nic
+if date does not exists i want to insert that new date,.
+
+i am using this query to fetching all dates according to corresponding donor_nic
+
+    SELECT donor.donor_nic, donation.lastdonationdate
+    FROM donor
+    JOIN donation ON donor.donor_nic = donation.donor_nic
+    WHERE username = 'ali'
+    GROUP BY donation.lastdonationdate
+
+now this query works in phpmyadmin.. but when i use this in my page.. it does not match date.. i am matching date like this
+
+       $sql= SELECT donor.donor_nic, donation.lastdonationdate
+        FROM donor
+        JOIN donation ON donor.donor_nic = donation.donor_nic
+        WHERE username = 'ali'
+        GROUP BY donation.lastdonationdate
+
+    $res=mysql_query($sql, $con);
+    
+    if($res == $date)
+    {
+    echo ""update"";
+    }
+    else
+    {
+    echo ""insert"";
+    }
+
+but this thing didnt work.. may be i am making mistake in conditional (if-else) statment..  plz help me what should i do..
+thanks in advance
+
+",php5,,,,,05/30/2012 14:27:49,too localized,1,258,7,"INSERT or UPDATE using IF-ELSE php MYSQL     DONOR
+    donor-nic----username-----status
+    111----------ali----------available
+    222---------usman--------notavailable
+
+another is
+
+    DONATION
+    donation_id------donor_nic-----date---
+    1----------------111----------2012/03/04
+    2---------------111-----------2012/06/07
+    3----------------111---------2012/07/08
+    4----------------222---------2012/03/03
+
+now i want to update the date if it is already exits corresponding to donor_nic
+if date does not exists i want to insert that new date,.
+
+i am using this query to fetching all dates according to corresponding donor_nic
+
+    SELECT donor.donor_nic, donation.lastdonationdate
+    FROM donor
+    JOIN donation ON donor.donor_nic = donation.donor_nic
+    WHERE username = 'ali'
+    GROUP BY donation.lastdonationdate
+
+now this query works in phpmyadmin.. but when i use this in my page.. it does not match date.. i am matching date like this
+
+       $sql= SELECT donor.donor_nic, donation.lastdonationdate
+        FROM donor
+        JOIN donation ON donor.donor_nic = donation.donor_nic
+        WHERE username = 'ali'
+        GROUP BY donation.lastdonationdate
+
+    $res=mysql_query($sql, $con);
+    
+    if($res == $date)
+    {
+    echo ""update"";
+    }
+    else
+    {
+    echo ""insert"";
+    }
+
+but this thing didnt work.. may be i am making mistake in conditional (if-else) statment..  plz help me what should i do..
+thanks in advance
+
+",1
+11745473,07/31/2012 17:11:39,1226349,02/22/2012 16:26:53,1,2,Call to undefined function user_access,"Just installed Drupal 6.26 using git.
+When I am trying to open http://myhost.com/user/1 getting error:
+[Tue Jul 31 11:48:01 2012] [error] [client 111.222.333.444] PHP Fatal error:  Call to undefined function user_access() in /var/www/vhosts/myhost.com/httpdocs/includes/theme.inc on line 1804, referer: http://myhost.com/themes/garland/style.css?0
+
+PHP version on server is:
+# php -v
+PHP 5.2.17 (cli) (built: Jan  7 2011 10:39:29)
+Copyright (c) 1997-2010 The PHP Group
+Zend Engine v2.2.0, Copyright (c) 1998-2010 Zend Technologies
+    with the ionCube PHP Loader v3.3.11, Copyright (c) 2002-2010, by ionCube Ltd.
+",php5,drupal-6,,,,08/01/2012 01:10:37,off topic,1,78,5,"Call to undefined function user_access Just installed Drupal 6.26 using git.
+When I am trying to open http://myhost.com/user/1 getting error:
+[Tue Jul 31 11:48:01 2012] [error] [client 111.222.333.444] PHP Fatal error:  Call to undefined function user_access() in /var/www/vhosts/myhost.com/httpdocs/includes/theme.inc on line 1804, referer: http://myhost.com/themes/garland/style.css?0
+
+PHP version on server is:
+# php -v
+PHP 5.2.17 (cli) (built: Jan  7 2011 10:39:29)
+Copyright (c) 1997-2010 The PHP Group
+Zend Engine v2.2.0, Copyright (c) 1998-2010 Zend Technologies
+    with the ionCube PHP Loader v3.3.11, Copyright (c) 2002-2010, by ionCube Ltd.
+",2
+4874687,02/02/2011 12:52:41,697150,02/02/2011 12:22:25,1,0,SOAP_WSDL stop working since changing the server,"I have a working website on a pre-production server, all functions are responding correctly. The site uses SOAP to request our clients server. 
+
+It uses two basic functions, one for searching items and other one to get the details of an specific item. Since I've installed the website into the production server, the search one just return ""null"" (the other one works fine).
+
+I use pear SOAP 0.12.0. http://pear.php.net/package/SOAP/
+
+Here's an example of the code:
+
+    include_once(""./SOAP/Client.php"");
+    $wsdl = new SOAP_WSDL('http://webservice.homeresa.com/WebHR.asmx?WSDL');
+    $getservice = $wsdl->getProxy();
+    $results = $getservice->Function($var1, $var2, $var3);
+
+Has anyone any idea of what's happening? Am I missing something? 
+
+Also, is it possible to debug someway the SOAP calls?
+
+Thanks in advance.",php5,soap,wsdl,,,,open,0,120,7,"SOAP_WSDL stop working since changing the server I have a working website on a pre-production server, all functions are responding correctly. The site uses SOAP to request our clients server. 
+
+It uses two basic functions, one for searching items and other one to get the details of an specific item. Since I've installed the website into the production server, the search one just return ""null"" (the other one works fine).
+
+I use pear SOAP 0.12.0. http://pear.php.net/package/SOAP/
+
+Here's an example of the code:
+
+    include_once(""./SOAP/Client.php"");
+    $wsdl = new SOAP_WSDL('http://webservice.homeresa.com/WebHR.asmx?WSDL');
+    $getservice = $wsdl->getProxy();
+    $results = $getservice->Function($var1, $var2, $var3);
+
+Has anyone any idea of what's happening? Am I missing something? 
+
+Also, is it possible to debug someway the SOAP calls?
+
+Thanks in advance.",3
+8779511,01/08/2012 17:17:19,1085825,12/07/2011 14:29:07,1,1,How to get unique column values in php using join query ?,"I have joined two table and getting values for report. But when i am trying to put distinct for particular column its showing error. And now i am getting repeated label from db. I need only unique labels not all. I am working with PHP(Codeigniter).
+
+ **Can any one help me out ??** ",php5,phpmyadmin,codeigniter-2,,,07/31/2012 07:47:54,not constructive,1,53,12,"How to get unique column values in php using join query ? I have joined two table and getting values for report. But when i am trying to put distinct for particular column its showing error. And now i am getting repeated label from db. I need only unique labels not all. I am working with PHP(Codeigniter).
+
+ **Can any one help me out ??** ",3
+3324679,07/24/2010 10:15:29,395640,07/19/2010 08:52:17,8,0,PHP Force Download file corrupt,"[php:novice]I am using a php script to download a file 
+php <br>
+$status=stripos($_SERVER['HTTP_REFERER'],'servername'); <br>
+if($status===false) <br>
+{ <br>
+  header('Location:http://xyz.com); <br>
+} <br>
+else <br>
+{ <br>
+header('Content-disposition: attachment; filename=XXX.pdf');<br>
+header('Content-type: application/pdf');<br>
+readfile('http://www.xyz.com/Downloads/XXX.pdf);<br>
+} <br>
+However when i download the file in any browser it says it is corrupt.
+
+Please Help!",php5,file-download,corrupt,,,,open,0,39,5,"PHP Force Download file corrupt [php:novice]I am using a php script to download a file 
+php <br>
+$status=stripos($_SERVER['HTTP_REFERER'],'servername'); <br>
+if($status===false) <br>
+{ <br>
+  header('Location:http://xyz.com); <br>
+} <br>
+else <br>
+{ <br>
+header('Content-disposition: attachment; filename=XXX.pdf');<br>
+header('Content-type: application/pdf');<br>
+readfile('http://www.xyz.com/Downloads/XXX.pdf);<br>
+} <br>
+However when i download the file in any browser it says it is corrupt.
+
+Please Help!",3
+7371123,09/10/2011 10:35:08,849900,07/18/2011 11:13:06,4,0,PHP pages inclusion,"i want to redirect a PHP page . like this .
+ `
+
+> "" include 'info.php#info'
+
+`..""but ,this gives error.can some one help me :: 
+
+thanks",php5,,,,,09/11/2011 12:08:39,not a real question,1,24,3,"PHP pages inclusion i want to redirect a PHP page . like this .
+ `
+
+> "" include 'info.php#info'
+
+`..""but ,this gives error.can some one help me :: 
+
+thanks",1
+9926226,03/29/2012 13:21:55,1275417,03/17/2012 06:49:17,1,0,Inteface design - through PHP application,"I need to provide an interface through my PHP web application for the users to create banners
+
+like users can upload images, videos, text and position them by pick and place/drag drop, also they will be able increase font size, change color, rotate etc So that they can create a banner thro' our PHP application.
+
+How this can be acheived
+
+Any open source tools are available for this
+
+Please Advise
+
+
+Thanks",php5,,,,,03/29/2012 20:36:28,not constructive,1,66,6,"Inteface design - through PHP application I need to provide an interface through my PHP web application for the users to create banners
+
+like users can upload images, videos, text and position them by pick and place/drag drop, also they will be able increase font size, change color, rotate etc So that they can create a banner thro' our PHP application.
+
+How this can be acheived
+
+Any open source tools are available for this
+
+Please Advise
+
+
+Thanks",1
+6210695,06/02/2011 05:14:31,299589,03/23/2010 03:55:22,51,9,"Is it possible, using PHPUnit mock objects, to expect a call to a magic __call() method?","I've got a mock object in a test. The real object, PageRepository, implements a magic method using __call(), so if you call $pageRepository->findOneByXXXX($value_of_field_XXXX), it will search the database for records matching that parameter. 
+
+Is there a way to mock that method?
+
+The real method call would look something like this:
+
+    $homepage = $pageRepository->findOneBySlug('homepage');
+
+The test would look like this:
+
+    $mockPageRepository->expects($this->any())
+        ->method('findOneBySlug')
+        ->will($this->returnValue(new Page()));
+
+But it doesn't work -- PHPUnit doesn't spot the method call. The only way to get it to see the method is to define the method explicitly in PageRepository.",php5,phpunit,symfony-2.0,magic-methods,,,open,0,109,16,"Is it possible, using PHPUnit mock objects, to expect a call to a magic __call() method? I've got a mock object in a test. The real object, PageRepository, implements a magic method using __call(), so if you call $pageRepository->findOneByXXXX($value_of_field_XXXX), it will search the database for records matching that parameter. 
+
+Is there a way to mock that method?
+
+The real method call would look something like this:
+
+    $homepage = $pageRepository->findOneBySlug('homepage');
+
+The test would look like this:
+
+    $mockPageRepository->expects($this->any())
+        ->method('findOneBySlug')
+        ->will($this->returnValue(new Page()));
+
+But it doesn't work -- PHPUnit doesn't spot the method call. The only way to get it to see the method is to define the method explicitly in PageRepository.",4
+8487322,12/13/2011 10:06:11,1083534,12/06/2011 12:57:06,2,0,"read,write and save doc file using php in linux server","I want to read,write and save doc file on remote server using php in Linux server.
+
+anyone please tell me how to do this.",php5,,,,,12/13/2011 12:31:43,not a real question,1,23,10,"read,write and save doc file using php in linux server I want to read,write and save doc file on remote server using php in Linux server.
+
+anyone please tell me how to do this.",1
+4301226,11/29/2010 06:03:11,523755,11/29/2010 06:03:11,1,0,Question defining a relationship in Doctrine,"I am experimenting with designing a model for a project I am working on in Doctrine, and I wanted some advice on how I would define different relationships.
+
+I've got 3 tables
+
+Venue, Series and Event
+
+* Venue has many events, and can host events that are sometimes but not necessarily part of a series.
+* Series is a set of events, which can always occur at the same venue or different venues.
+* Event always has to occur at a venue and can optionally be part of a series.
+
+My understanding is that Venue and Series would be a many-to-many relationship as many venues can have many series of events and vice versa.  Does the fact that this relationship is ""optional"" change things?
+
+I also understand that event would be a one to many relationship with both Venue and Series as one Venue can have many events and one Series can have many events, but an event can only have one of each.
+
+Am I looking at this the correct way, and can anyone advise on the best way to define this within Doctrine?
+
+Thanks in advance for helping me understand this!",php5,doctrine,many-to-many,,,,open,0,185,6,"Question defining a relationship in Doctrine I am experimenting with designing a model for a project I am working on in Doctrine, and I wanted some advice on how I would define different relationships.
+
+I've got 3 tables
+
+Venue, Series and Event
+
+* Venue has many events, and can host events that are sometimes but not necessarily part of a series.
+* Series is a set of events, which can always occur at the same venue or different venues.
+* Event always has to occur at a venue and can optionally be part of a series.
+
+My understanding is that Venue and Series would be a many-to-many relationship as many venues can have many series of events and vice versa.  Does the fact that this relationship is ""optional"" change things?
+
+I also understand that event would be a one to many relationship with both Venue and Series as one Venue can have many events and one Series can have many events, but an event can only have one of each.
+
+Am I looking at this the correct way, and can anyone advise on the best way to define this within Doctrine?
+
+Thanks in advance for helping me understand this!",3
+8400347,12/06/2011 13:04:18,1083534,12/06/2011 12:57:06,1,0,how to create log file of my web site in php?,"I want to know How to create log file of my web site in php?which help me to maintain User Log in my website.So any buddy can help me,
+
+Thanx,
+
+",php5,,,,,12/06/2011 16:17:59,not a real question,1,29,11,"how to create log file of my web site in php? I want to know How to create log file of my web site in php?which help me to maintain User Log in my website.So any buddy can help me,
+
+Thanx,
+
+",1
+2594093,04/07/2010 16:21:48,4376,09/03/2008 09:30:40,3589,143,PHP: how can a class reference its own name?,"In PHP, how can a class reference its own name?
+
+For example, what would the method look like to do this?
+
+    Dog::sayOwnClassName();
+    //echos ""Dog"";",php5,php,,,,,open,0,29,9,"PHP: how can a class reference its own name? In PHP, how can a class reference its own name?
+
+For example, what would the method look like to do this?
+
+    Dog::sayOwnClassName();
+    //echos ""Dog"";",2

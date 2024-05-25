@@ -1,0 +1,1100 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+8108804,11/13/2011 01:09:20,383632,07/05/2010 11:51:55,256,5,How do I transform a 2D screen coordinate to a 2D map coordinate in openGL?,"I am working on a small game that uses a 2D map (made up out of tiles). I would now like to find out what tile is being selected by the user. As the map can move and scale (glTranslate(), glScale(), etc), I'm not entirely sure a direct conversion is possible.
+So how do I obtain the ""map"" coordinates from the mouse coordinates on my screen?",opengl,,,,,,open,0,65,15,"How do I transform a 2D screen coordinate to a 2D map coordinate in openGL? I am working on a small game that uses a 2D map (made up out of tiles). I would now like to find out what tile is being selected by the user. As the map can move and scale (glTranslate(), glScale(), etc), I'm not entirely sure a direct conversion is possible.
+So how do I obtain the ""map"" coordinates from the mouse coordinates on my screen?",1
+5906993,05/06/2011 05:05:03,154066,08/11/2009 00:27:18,157,10,What is a normal in OpenGL?,"I heard that I should use normals instead of colors, because colors are deprecated. (Is that true?) Normals have something to do with the reflection of light, but I can't find a clear and intuitive explanation. What is a normal?",opengl,,,,,,open,0,40,6,"What is a normal in OpenGL? I heard that I should use normals instead of colors, because colors are deprecated. (Is that true?) Normals have something to do with the reflection of light, but I can't find a clear and intuitive explanation. What is a normal?",1
+11542415,07/18/2012 13:21:33,1376228,05/05/2012 03:11:56,1,1,3D visualize depth information in OpenGL,"I have a depth data stored in a text file, then I load it into a matrix z.
+After create the mesh grid, I want to visualize the depth data as a 3D image.
+My work is the same with the function  ""surf"" in Matlab.
+Here is my code:
+
+load file and create grid
+    
+        FILE * pFile;
+    	long lSize;
+    	char * fBuffer;
+    	size_t result;
+    	char* Token = (char*)calloc(8,sizeof(char));
+    	pFile = fopen(""td.txt"",""r"");	
+    	if(pFile == NULL){
+    		std::cerr<< ""File Open Failed...\n"";
+    		exit(-1);
+    	}
+    	// obtain file size:
+    	fseek (pFile , 0 , SEEK_END);
+    	lSize = ftell (pFile);
+    	rewind (pFile);
+    	// allocate memory to contain the whole file:
+    	fBuffer = (char*) malloc (sizeof(char)*lSize);
+    	if (fBuffer == NULL) {std::cerr<< ""Memory error \n""; exit (2);}
+    	result = fread (fBuffer, 1, lSize, pFile);
+    	//if (result != lSize) {std::cerr<< ""Reading error \n""; exit (3);}
+
+	float oct;
+	bool bk_for=false;
+	Token = (char*)strtok(fBuffer,"" \n"");
+	for(i=0; i< HEIGHT; i++){
+		for(j=0; j< WIDTH; j++){
+			//mesh grid from -1 to 1
+                        x[i][j] = 2.0*((float) j + 0.5)/WIDTH - 1.0;  
+			y[i][j] = 2.0*((float) i + 0.5)/HEIGHT - 1.0;
+			oct = atof(Token);
+			z[i][j] = oct;
+			std::cout<<z[i][j]<<"" "";
+			Token = (char*)strtok( NULL,"" \n"" );				
+			if( Token == NULL){ bk_for=true; break; }			
+		}
+		if(bk_for == true)	break;
+		std::cout<< ""\n"";
+	} 
+and to show the image
+    
+
+    
+
+    int i,j;
+    	GLfloat nx,ny,nz;
+    	// Clears the screen and depth buffer.
+    	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    	glMatrixMode(GL_MODELVIEW);
+    	glBegin(GL_QUADS);
+
+	for (i = 0; i < (HEIGHT-1); i++) {
+	  for (j = 0; j < (WIDTH-1); j++) {
+		 normal(x[i][j],y[i][j],z[i][j],
+				x[i+1][j],y[i+1][j],z[i+1][j],
+				x[i][j+1],y[i][j+1],z[i][j+1],
+				&nx,&ny,&nz);
+		 glNormal3f(nx,ny,nz);
+		 glVertex3f(x[i][j],y[i][j],z[i][j]);
+		 glVertex3f(x[i+1][j],y[i+1][j],z[i+1][j]);
+		 glVertex3f(x[i+1][j+1],y[i+1][j+1],z[i+1][j+1]);
+		 glVertex3f(x[i][j+1],y[i][j+1],z[i][j+1]);
+		}
+	}
+	glEnd();
+
+	glutSwapBuffers();
+	glutPostRedisplay();
+	glFlush();
+
+But I still cannot get the result I want.
+Could anyone help me to overcome it? Thank you very much!",opengl,3d,,,,07/19/2012 13:38:49,not a real question,1,362,6,"3D visualize depth information in OpenGL I have a depth data stored in a text file, then I load it into a matrix z.
+After create the mesh grid, I want to visualize the depth data as a 3D image.
+My work is the same with the function  ""surf"" in Matlab.
+Here is my code:
+
+load file and create grid
+    
+        FILE * pFile;
+    	long lSize;
+    	char * fBuffer;
+    	size_t result;
+    	char* Token = (char*)calloc(8,sizeof(char));
+    	pFile = fopen(""td.txt"",""r"");	
+    	if(pFile == NULL){
+    		std::cerr<< ""File Open Failed...\n"";
+    		exit(-1);
+    	}
+    	// obtain file size:
+    	fseek (pFile , 0 , SEEK_END);
+    	lSize = ftell (pFile);
+    	rewind (pFile);
+    	// allocate memory to contain the whole file:
+    	fBuffer = (char*) malloc (sizeof(char)*lSize);
+    	if (fBuffer == NULL) {std::cerr<< ""Memory error \n""; exit (2);}
+    	result = fread (fBuffer, 1, lSize, pFile);
+    	//if (result != lSize) {std::cerr<< ""Reading error \n""; exit (3);}
+
+	float oct;
+	bool bk_for=false;
+	Token = (char*)strtok(fBuffer,"" \n"");
+	for(i=0; i< HEIGHT; i++){
+		for(j=0; j< WIDTH; j++){
+			//mesh grid from -1 to 1
+                        x[i][j] = 2.0*((float) j + 0.5)/WIDTH - 1.0;  
+			y[i][j] = 2.0*((float) i + 0.5)/HEIGHT - 1.0;
+			oct = atof(Token);
+			z[i][j] = oct;
+			std::cout<<z[i][j]<<"" "";
+			Token = (char*)strtok( NULL,"" \n"" );				
+			if( Token == NULL){ bk_for=true; break; }			
+		}
+		if(bk_for == true)	break;
+		std::cout<< ""\n"";
+	} 
+and to show the image
+    
+
+    
+
+    int i,j;
+    	GLfloat nx,ny,nz;
+    	// Clears the screen and depth buffer.
+    	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    	glMatrixMode(GL_MODELVIEW);
+    	glBegin(GL_QUADS);
+
+	for (i = 0; i < (HEIGHT-1); i++) {
+	  for (j = 0; j < (WIDTH-1); j++) {
+		 normal(x[i][j],y[i][j],z[i][j],
+				x[i+1][j],y[i+1][j],z[i+1][j],
+				x[i][j+1],y[i][j+1],z[i][j+1],
+				&nx,&ny,&nz);
+		 glNormal3f(nx,ny,nz);
+		 glVertex3f(x[i][j],y[i][j],z[i][j]);
+		 glVertex3f(x[i+1][j],y[i+1][j],z[i+1][j]);
+		 glVertex3f(x[i+1][j+1],y[i+1][j+1],z[i+1][j+1]);
+		 glVertex3f(x[i][j+1],y[i][j+1],z[i][j+1]);
+		}
+	}
+	glEnd();
+
+	glutSwapBuffers();
+	glutPostRedisplay();
+	glFlush();
+
+But I still cannot get the result I want.
+Could anyone help me to overcome it? Thank you very much!",2
+1938466,12/21/2009 06:08:17,108301,05/17/2009 02:36:54,437,19,GLSL cannot link compiled shaders,"I have a small class that allows me to load shaders and use them in my program. I am able to compile the shaders, but when it's time to link them, they just don't want to. Using glGetProgramInfoLog I got the following error log. I don't understand why it tells me that there are no program defined since the compilation worked fine...
+
+    Vertex info
+    -----------
+    (0) : error C3001: no program defined
+    Fragment info
+    -------------
+    (0) : error C3001: no program defined
+
+The code below does the GLSL linking:
+
+    program_ = glCreateProgramObjectARB();
+    
+    if (vertex_) {
+	   glAttachObjectARB(program_, vertex_);
+	}
+	
+	if (fragment_) {
+	   glAttachObjectARB(program_, fragment_);
+	}
+
+	glLinkProgramARB(program_); 
+
+vertex_ and fragment_ are the vertex and fragment shader, and program_ is the ProgramObjectARB.
+
+I'd like to know what are the necessary modifications I need to do in order to make this run.",opengl,glsl,,,,,open,0,164,5,"GLSL cannot link compiled shaders I have a small class that allows me to load shaders and use them in my program. I am able to compile the shaders, but when it's time to link them, they just don't want to. Using glGetProgramInfoLog I got the following error log. I don't understand why it tells me that there are no program defined since the compilation worked fine...
+
+    Vertex info
+    -----------
+    (0) : error C3001: no program defined
+    Fragment info
+    -------------
+    (0) : error C3001: no program defined
+
+The code below does the GLSL linking:
+
+    program_ = glCreateProgramObjectARB();
+    
+    if (vertex_) {
+	   glAttachObjectARB(program_, vertex_);
+	}
+	
+	if (fragment_) {
+	   glAttachObjectARB(program_, fragment_);
+	}
+
+	glLinkProgramARB(program_); 
+
+vertex_ and fragment_ are the vertex and fragment shader, and program_ is the ProgramObjectARB.
+
+I'd like to know what are the necessary modifications I need to do in order to make this run.",2
+11337027,07/05/2012 01:55:42,737071,05/03/2011 23:19:10,179,3,Simple Opengl and Graphics Questions,"<br>
+Im trying to get to grips with some basics of OpenGl and 3D Grachics. And I was wandering if some could answer a few questions? :)<br>
+
+ 1. Is COP and the ""Camera"" the same thing? Which in turn refers to the ""User"" looking at the screen?
+ 2. Can someone please explain to me the relation between the Projection Perspective and the Viewport if there is one? Because at the moment to me they seem to be the same thing. Or is the PP the Window which is then scaled to fit the viewport?
+ 3. In OpenGL when setting up gluPerspective the zNear value is the distance of the Camera from the Projection Perspective so the combination of the fovy and zNear defines the size of the Window (assuming that the Window == the Projection Perspective and I undestand something :/ ) into the World.
+ 4. When creating a window (only using gl and glu), after you have initalized everything you enter while(!quit) loop that has a render function(this is question is a bit silly), does everything in all case get drawn in this render function which has glBegin() and glEnd(). Lets assume I have a biggish world with lots of features and so on. Does everything that needs to get drawn fit in between those functions such that this Render function can in time become really large?
+
+Sorry I know these questions are really naive but they are a few things that I'm having a bit of trouble understanding.
+
+
+",opengl,graphics,3d,,,07/06/2012 04:08:13,not constructive,1,248,5,"Simple Opengl and Graphics Questions <br>
+Im trying to get to grips with some basics of OpenGl and 3D Grachics. And I was wandering if some could answer a few questions? :)<br>
+
+ 1. Is COP and the ""Camera"" the same thing? Which in turn refers to the ""User"" looking at the screen?
+ 2. Can someone please explain to me the relation between the Projection Perspective and the Viewport if there is one? Because at the moment to me they seem to be the same thing. Or is the PP the Window which is then scaled to fit the viewport?
+ 3. In OpenGL when setting up gluPerspective the zNear value is the distance of the Camera from the Projection Perspective so the combination of the fovy and zNear defines the size of the Window (assuming that the Window == the Projection Perspective and I undestand something :/ ) into the World.
+ 4. When creating a window (only using gl and glu), after you have initalized everything you enter while(!quit) loop that has a render function(this is question is a bit silly), does everything in all case get drawn in this render function which has glBegin() and glEnd(). Lets assume I have a biggish world with lots of features and so on. Does everything that needs to get drawn fit in between those functions such that this Render function can in time become really large?
+
+Sorry I know these questions are really naive but they are a few things that I'm having a bit of trouble understanding.
+
+
+",3
+8453310,12/10/2011 00:16:41,284681,03/02/2010 19:04:58,493,26,Orthographic Projection in Modern OpenGL,"I'd like to set up an orthographic projection using only modern OpenGL techniques (i.e. no immediate-mode stuff). I'm seeing conflicting info on the web about how to approach this.
+
+Some people are saying that it's still OK to call `glMatrixMode(GL_PROJECTION)` and then `glOrtho`. This has always worked for me in the past, but I'm wondering if this has been deprecated in modern OpenGL.
+
+If so, are vertex shaders the standard way to do an orthographic projection nowadays? Does GLSL provide a handy built-in function to set up an orthographic projection, or do I need to write that math myself in the vertex shader?",opengl,glsl,orthographic,,,,open,0,101,5,"Orthographic Projection in Modern OpenGL I'd like to set up an orthographic projection using only modern OpenGL techniques (i.e. no immediate-mode stuff). I'm seeing conflicting info on the web about how to approach this.
+
+Some people are saying that it's still OK to call `glMatrixMode(GL_PROJECTION)` and then `glOrtho`. This has always worked for me in the past, but I'm wondering if this has been deprecated in modern OpenGL.
+
+If so, are vertex shaders the standard way to do an orthographic projection nowadays? Does GLSL provide a handy built-in function to set up an orthographic projection, or do I need to write that math myself in the vertex shader?",3
+11202992,06/26/2012 07:57:00,1010005,10/23/2011 22:42:48,717,0,Updating texture memory via shader?,"What the title says.Is it possible to update a texture via a glsl shader  ? Something like :
+
+
+    //Read
+    vec4 Pixel = texture2D(TextureID,gl_TexCoord[TextureIndex].st);
+
+    //Write to texture memory ?
+    vec4 NewPixel = Pixel + vec4(0.0,0.0,0.0,AlphaPatch);
+
+    // ?? How to write back to texture memory ??
+    texture2D(TextureID,gl_TexCoord[TextureIndex].st) = NewPixel; 
+
+
+??
+",opengl,graphics,glsl,shader,,06/27/2012 13:14:19,off topic,1,67,5,"Updating texture memory via shader? What the title says.Is it possible to update a texture via a glsl shader  ? Something like :
+
+
+    //Read
+    vec4 Pixel = texture2D(TextureID,gl_TexCoord[TextureIndex].st);
+
+    //Write to texture memory ?
+    vec4 NewPixel = Pixel + vec4(0.0,0.0,0.0,AlphaPatch);
+
+    // ?? How to write back to texture memory ??
+    texture2D(TextureID,gl_TexCoord[TextureIndex].st) = NewPixel; 
+
+
+??
+",4
+10075653,04/09/2012 15:35:26,1322101,04/09/2012 14:54:30,1,0,OpenGL VBO setup,"I have seen a lot of information about reducing the calls to openGL, but I don't understand the pipeline well enough. Can you set up the VBO completely head of time?  Specifically using this [example][1], it sets up the VBO and then each frame calls the enabling/pointer setup prior to the draw call.  Can the VBO be completely set up with the enabling/pointer setup when it is created?
+
+Something like this 
+
+     Data_Init_Func(...)
+     {
+     ....
+ 
+     glGenBuffers(1, &IndexVBOID);
+     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndexVBOID);
+     glBufferData(GL_ELEMENT_ARRAY_BUFFER, SizeInBytes, NULL, GL_STATIC_DRAW);
+     short pindices[YYY];
+     pindices[0]=0;
+     pindices[1]=5;
+     //etc...
+     offsetInByte=0;
+     glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, offsetInByte, SizeInBytes, pindices);
+
+     glGenBuffers(1, VertexVBOID);
+     glBindBuffer(GL_ARRAY_BUFFER, VertexVBOID);
+     glBufferData(GL_ARRAY_BUFFER, SizeInBytes, NULL, GL_STATIC_DRAW);4
+
+     //data creation and binding
+     ...
+
+     // Normally it seems like this code is PER FRAME... DOES IT NEED TO BE?
+     glEnableClientState(GL_VERTEX_ARRAY);
+     glEnableClientState(GL_NORMAL_ARRAY); 
+     glVertexPointer(3, GL_FLOAT, 64, BUFFER_OFFSET(0));
+     glNormalPointer(GL_FLOAT, 64, BUFFER_OFFSET(12));
+     glClientActiveTexture(GL_TEXTURE0);
+     glEnableClientState(GL_TEXTURE_COORD_ARRAY);    //Notice that after we call            
+     glClientActiveTexture, we enable the array
+     glTexCoordPointer(2, GL_FLOAT, 64, BUFFER_OFFSET(24));
+     glClientActiveTexture(GL_TEXTURE1);
+     glEnableClientState(GL_TEXTURE_COORD_ARRAY);    //Notice that after we call
+     glClientActiveTexture, we enable the array
+     glTexCoordPointer(2, GL_FLOAT, 64, BUFFER_OFFSET(32));
+     glClientActiveTexture(GL_TEXTURE2);
+     glEnableClientState(GL_TEXTURE_COORD_ARRAY);    //Notice that after we call
+     glClientActiveTexture, we enable the array
+     glTexCoordPointer(2, GL_FLOAT, 64, BUFFER_OFFSET(40));
+     ...
+     }
+
+     Draw(...)
+     {
+     glBindBuffer(GL_ARRAY_BUFFER_ARB, VertexVBOID);         // for vertex coordinates
+     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndexVBOID); // for indices
+
+     // DO I NEED TO CALL THE VERTEX ENABLING/POINTER SETUP HERE?
+     
+     // draw 6 quads using offset of index array
+     glDrawRangeElements(GL_TRIANGLES, x, y, z, GL_UNSIGNED_SHORT, BUFFER_OFFSET(0));
+
+     ...
+     }
+
+
+  [1]: http://www.opengl.org/wiki/Vertex_Buffer_Object",opengl,vbo,,,,,open,0,441,3,"OpenGL VBO setup I have seen a lot of information about reducing the calls to openGL, but I don't understand the pipeline well enough. Can you set up the VBO completely head of time?  Specifically using this [example][1], it sets up the VBO and then each frame calls the enabling/pointer setup prior to the draw call.  Can the VBO be completely set up with the enabling/pointer setup when it is created?
+
+Something like this 
+
+     Data_Init_Func(...)
+     {
+     ....
+ 
+     glGenBuffers(1, &IndexVBOID);
+     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndexVBOID);
+     glBufferData(GL_ELEMENT_ARRAY_BUFFER, SizeInBytes, NULL, GL_STATIC_DRAW);
+     short pindices[YYY];
+     pindices[0]=0;
+     pindices[1]=5;
+     //etc...
+     offsetInByte=0;
+     glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, offsetInByte, SizeInBytes, pindices);
+
+     glGenBuffers(1, VertexVBOID);
+     glBindBuffer(GL_ARRAY_BUFFER, VertexVBOID);
+     glBufferData(GL_ARRAY_BUFFER, SizeInBytes, NULL, GL_STATIC_DRAW);4
+
+     //data creation and binding
+     ...
+
+     // Normally it seems like this code is PER FRAME... DOES IT NEED TO BE?
+     glEnableClientState(GL_VERTEX_ARRAY);
+     glEnableClientState(GL_NORMAL_ARRAY); 
+     glVertexPointer(3, GL_FLOAT, 64, BUFFER_OFFSET(0));
+     glNormalPointer(GL_FLOAT, 64, BUFFER_OFFSET(12));
+     glClientActiveTexture(GL_TEXTURE0);
+     glEnableClientState(GL_TEXTURE_COORD_ARRAY);    //Notice that after we call            
+     glClientActiveTexture, we enable the array
+     glTexCoordPointer(2, GL_FLOAT, 64, BUFFER_OFFSET(24));
+     glClientActiveTexture(GL_TEXTURE1);
+     glEnableClientState(GL_TEXTURE_COORD_ARRAY);    //Notice that after we call
+     glClientActiveTexture, we enable the array
+     glTexCoordPointer(2, GL_FLOAT, 64, BUFFER_OFFSET(32));
+     glClientActiveTexture(GL_TEXTURE2);
+     glEnableClientState(GL_TEXTURE_COORD_ARRAY);    //Notice that after we call
+     glClientActiveTexture, we enable the array
+     glTexCoordPointer(2, GL_FLOAT, 64, BUFFER_OFFSET(40));
+     ...
+     }
+
+     Draw(...)
+     {
+     glBindBuffer(GL_ARRAY_BUFFER_ARB, VertexVBOID);         // for vertex coordinates
+     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndexVBOID); // for indices
+
+     // DO I NEED TO CALL THE VERTEX ENABLING/POINTER SETUP HERE?
+     
+     // draw 6 quads using offset of index array
+     glDrawRangeElements(GL_TRIANGLES, x, y, z, GL_UNSIGNED_SHORT, BUFFER_OFFSET(0));
+
+     ...
+     }
+
+
+  [1]: http://www.opengl.org/wiki/Vertex_Buffer_Object",2
+2208304,02/05/2010 15:37:44,161554,08/23/2009 12:22:30,91,5,Picking with OpenGL Shading Language,"I'm trying to figure out the best way to pick informations rendered using shaders.
+A window manager buffer (the window) is used for outputting rendering. On user event I should pick the geometry rendered. Using gluPick is easy, but I'm trying to pick using only shaders.
+
+Flexibility of shaders doesn'y aid me to find a correct solution. I've found the following solutions:
+
+- Rendering using the system provided buffer (indeed using colors). Use glScissor to limit the rendering on a certain region and use glReadPixels for fetching colors, mapped with geometry identifiers
+- Rendering using a separate framebuffer object. Renderbuffer formats need to defined. Maybe can I use plain integers for putting names?
+- Rendering using a framebuffer object, both for rendering and picking. An additionally renderbuffer object containing rendered names.
+
+It seems that the second solution is the best, since doesn't alterate the window buffers and it's possible to define a custom way to specify geometry names.
+
+Any suggestion?",opengl,glsl,picking,,,,open,0,153,5,"Picking with OpenGL Shading Language I'm trying to figure out the best way to pick informations rendered using shaders.
+A window manager buffer (the window) is used for outputting rendering. On user event I should pick the geometry rendered. Using gluPick is easy, but I'm trying to pick using only shaders.
+
+Flexibility of shaders doesn'y aid me to find a correct solution. I've found the following solutions:
+
+- Rendering using the system provided buffer (indeed using colors). Use glScissor to limit the rendering on a certain region and use glReadPixels for fetching colors, mapped with geometry identifiers
+- Rendering using a separate framebuffer object. Renderbuffer formats need to defined. Maybe can I use plain integers for putting names?
+- Rendering using a framebuffer object, both for rendering and picking. An additionally renderbuffer object containing rendered names.
+
+It seems that the second solution is the best, since doesn't alterate the window buffers and it's possible to define a custom way to specify geometry names.
+
+Any suggestion?",3
+11634068,07/24/2012 15:20:49,1537772,07/19/2012 11:43:21,6,1,(L)Ubuntu - Cannot finf libGL.so but OpenGL works perfectly fine,"I have some strange problem here.
+I'm trying to create an OpenGL program but I cannot link it because
+I always get the linker error that the libGL could not be found.
+I thought it is not installed, so i installed all the Mesa OpenGL stuff.
+libgl1-mesa-*
+mesa-*
+
+My driver is xserver-xorg-video-intel.
+All installed OpenGL software is prefectly running (linke Xmoto and Compitz).
+So I thought there might be a missing symlink. I searche the /usr/lib folder but found only libGLEW.so (no libGL.so).
+The headers are there. In /usr/include/GL
+
+Then I tried to ask pkg-config to get me the path to the OpenGL libs but it won't give any path, just the linker flag -lGL.
+And ""pkg-config --libs-only-L gl"" returns nothing.
+
+My glxinfo output is:
+https://gist.github.com/3170592
+
+As already said every installed OpenGL application works but the library is missing.
+I cannot find a ""mesa"" folder either.
+
+I'm appreciate any suggestion.",opengl,ubuntu,missing,mesa,,,open,0,134,10,"(L)Ubuntu - Cannot finf libGL.so but OpenGL works perfectly fine I have some strange problem here.
+I'm trying to create an OpenGL program but I cannot link it because
+I always get the linker error that the libGL could not be found.
+I thought it is not installed, so i installed all the Mesa OpenGL stuff.
+libgl1-mesa-*
+mesa-*
+
+My driver is xserver-xorg-video-intel.
+All installed OpenGL software is prefectly running (linke Xmoto and Compitz).
+So I thought there might be a missing symlink. I searche the /usr/lib folder but found only libGLEW.so (no libGL.so).
+The headers are there. In /usr/include/GL
+
+Then I tried to ask pkg-config to get me the path to the OpenGL libs but it won't give any path, just the linker flag -lGL.
+And ""pkg-config --libs-only-L gl"" returns nothing.
+
+My glxinfo output is:
+https://gist.github.com/3170592
+
+As already said every installed OpenGL application works but the library is missing.
+I cannot find a ""mesa"" folder either.
+
+I'm appreciate any suggestion.",4
+6024246,05/16/2011 22:40:20,679286,03/27/2011 19:51:37,11,0,VBO won't display (sdl with glew),"I'm just starting out using VBOs (using SDL/glew). I'm trying to start out using the simple example of a cube - actually at the moment just the one face of a cube - but I can't get anything to display
+
+my vertex structure is defined as follows:
+
+    struct Vertex
+    {
+    float x, y, z;          //Vertex coords
+    float tx, ty;           //Texture coords
+    float nx, ny, nz;       //Normal coords
+    };
+
+The cube is then generated like so:
+
+            Vertex temp;
+    
+            //NOTE: Perspective is from looking at the cube from the outside
+       //Just trying to display one face for the moment to simplify
+            //Back face ------------------------------------------------------------------------------------------
+            temp.x = 0.f; temp.y = 0.f; temp.z = 0.f;       //Bottom Right  - 0
+            temp.nx = 0.f; temp.ny = 0.f; temp.nz = 1.f; // This stays the same for the rest of the face
+            temp.tx = 1.f; temp.ty = 0.f;
+            m_vertices.push_back(temp);
+            
+            temp.x = 0.f; temp.y = m_fHeight; temp.z = 0.f;         //Top Right - 1
+            temp.tx = 1.f; temp.ty = 1.f;
+            m_vertices.push_back(temp);
+    
+            temp.x = m_fWidth; temp.y = m_fHeight; temp.z = 0.f;    //Top Left      - 2
+            temp.tx = 0.f; temp.ty = 1.f;
+            m_vertices.push_back(temp);
+    
+            temp.x = m_fWidth; temp.y = 0.f; temp.z = 0.f;  //Bottom Left - 3
+            temp.tx = 0.f; temp.ty = 0.f;
+            m_vertices.push_back(temp);
+    
+            m_indeces.push_back(0); m_indeces.push_back(1); m_indeces.push_back(2);
+            m_indeces.push_back(2); m_indeces.push_back(3); m_indeces.push_back(0);
+    
+    
+            //Generate the vertex buffer
+            glGenBuffers(1, &m_vertexBufferID);
+            //Bind the vertex buffer                                                                                                
+            glBindBuffer(GL_ARRAY_BUFFER, m_vertexBufferID);
+            //Fill the vertex buffer - size is 24*sizeof(Vertex) bcs 6 faces with 4 corners
+            glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * 4, NULL, GL_STATIC_DRAW);
+            glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(Vertex) * 4, &m_vertices); // Actually upload the data
+    
+            //Set up the pointers
+            glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(12));
+            glNormalPointer(GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(20));
+            glVertexPointer(3, GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(0));
+    
+    
+            //Generate the index buffer
+            glGenBuffers(1, &m_indexBufferID);                                      
+            //Bind the index buffer                                                                                         
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_indexBufferID);
+            //Fill the index buffer- size is 36*sizeof(uint) bcs 6 traingle coords in 1 face * 6 faces
+            glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLubyte) * 6, NULL, GL_STATIC_DRAW);
+            glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, 0, sizeof(GLubyte) * 6, &m_indeces); // Actually upload the data
+
+which is then sent to render in a seperate function:
+
+    glBindBuffer(GL_ARRAY_BUFFER, vertexID);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexID);
+
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+    glEnableClientState(GL_VERTEX_ARRAY);
+
+    // Resetup the pointers. 
+    glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(12));
+    glNormalPointer(GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(20));
+    glVertexPointer(3, GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(0));
+
+    //Draw the indexed elements
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, BUFFER_OFFSET(0));
+    
+    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    glDisableClientState(GL_NORMAL_ARRAY);
+    glDisableClientState(GL_VERTEX_ARRAY);
+
+and BUFFER_OFFSET() is a simaple macro defined as:
+
+    // A helper macro to get a position
+    #define BUFFER_OFFSET(i) ((char *)NULL + (i))
+
+But I just can't get anything to display - applying the same texture etc. to a cube in immediate mode shows up fine.
+
+The weird thing is that occasionaly something very strange will get displayed, which is different every time - so maybe it's some sort of initialization error?
+
+would be much appreciated if anyone could help me out with this.  Have been banging my head against the brick wall for a while...
+
+cheers. 
+
+
+
+
+",opengl,sdl,vbo,glew,,,open,0,1238,6,"VBO won't display (sdl with glew) I'm just starting out using VBOs (using SDL/glew). I'm trying to start out using the simple example of a cube - actually at the moment just the one face of a cube - but I can't get anything to display
+
+my vertex structure is defined as follows:
+
+    struct Vertex
+    {
+    float x, y, z;          //Vertex coords
+    float tx, ty;           //Texture coords
+    float nx, ny, nz;       //Normal coords
+    };
+
+The cube is then generated like so:
+
+            Vertex temp;
+    
+            //NOTE: Perspective is from looking at the cube from the outside
+       //Just trying to display one face for the moment to simplify
+            //Back face ------------------------------------------------------------------------------------------
+            temp.x = 0.f; temp.y = 0.f; temp.z = 0.f;       //Bottom Right  - 0
+            temp.nx = 0.f; temp.ny = 0.f; temp.nz = 1.f; // This stays the same for the rest of the face
+            temp.tx = 1.f; temp.ty = 0.f;
+            m_vertices.push_back(temp);
+            
+            temp.x = 0.f; temp.y = m_fHeight; temp.z = 0.f;         //Top Right - 1
+            temp.tx = 1.f; temp.ty = 1.f;
+            m_vertices.push_back(temp);
+    
+            temp.x = m_fWidth; temp.y = m_fHeight; temp.z = 0.f;    //Top Left      - 2
+            temp.tx = 0.f; temp.ty = 1.f;
+            m_vertices.push_back(temp);
+    
+            temp.x = m_fWidth; temp.y = 0.f; temp.z = 0.f;  //Bottom Left - 3
+            temp.tx = 0.f; temp.ty = 0.f;
+            m_vertices.push_back(temp);
+    
+            m_indeces.push_back(0); m_indeces.push_back(1); m_indeces.push_back(2);
+            m_indeces.push_back(2); m_indeces.push_back(3); m_indeces.push_back(0);
+    
+    
+            //Generate the vertex buffer
+            glGenBuffers(1, &m_vertexBufferID);
+            //Bind the vertex buffer                                                                                                
+            glBindBuffer(GL_ARRAY_BUFFER, m_vertexBufferID);
+            //Fill the vertex buffer - size is 24*sizeof(Vertex) bcs 6 faces with 4 corners
+            glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * 4, NULL, GL_STATIC_DRAW);
+            glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(Vertex) * 4, &m_vertices); // Actually upload the data
+    
+            //Set up the pointers
+            glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(12));
+            glNormalPointer(GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(20));
+            glVertexPointer(3, GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(0));
+    
+    
+            //Generate the index buffer
+            glGenBuffers(1, &m_indexBufferID);                                      
+            //Bind the index buffer                                                                                         
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_indexBufferID);
+            //Fill the index buffer- size is 36*sizeof(uint) bcs 6 traingle coords in 1 face * 6 faces
+            glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLubyte) * 6, NULL, GL_STATIC_DRAW);
+            glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, 0, sizeof(GLubyte) * 6, &m_indeces); // Actually upload the data
+
+which is then sent to render in a seperate function:
+
+    glBindBuffer(GL_ARRAY_BUFFER, vertexID);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexID);
+
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+    glEnableClientState(GL_VERTEX_ARRAY);
+
+    // Resetup the pointers. 
+    glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(12));
+    glNormalPointer(GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(20));
+    glVertexPointer(3, GL_FLOAT, sizeof(Vertex), BUFFER_OFFSET(0));
+
+    //Draw the indexed elements
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, BUFFER_OFFSET(0));
+    
+    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    glDisableClientState(GL_NORMAL_ARRAY);
+    glDisableClientState(GL_VERTEX_ARRAY);
+
+and BUFFER_OFFSET() is a simaple macro defined as:
+
+    // A helper macro to get a position
+    #define BUFFER_OFFSET(i) ((char *)NULL + (i))
+
+But I just can't get anything to display - applying the same texture etc. to a cube in immediate mode shows up fine.
+
+The weird thing is that occasionaly something very strange will get displayed, which is different every time - so maybe it's some sort of initialization error?
+
+would be much appreciated if anyone could help me out with this.  Have been banging my head against the brick wall for a while...
+
+cheers. 
+
+
+
+
+",4
+1080290,07/03/2009 17:38:58,129917,06/27/2009 20:57:02,10,0,Creating the links of a chain in OpenGL,"I am working on a project where I have to create a chain with 12 links in it. I want to create the chain out of two curved segments for the top and bottom of the link ad  two cylinders for the straight segments, I intend to use a display list to create one link and then display it over and over after applying some rotation transformations. My question is how can I construct the curved sections? 
+
+One idea was to use gluPartialDisk(); swept thru 180 degrees to construct the top and bottom portions. is there a more efficient way of doing this?
+",opengl,,,,,,open,0,104,8,"Creating the links of a chain in OpenGL I am working on a project where I have to create a chain with 12 links in it. I want to create the chain out of two curved segments for the top and bottom of the link ad  two cylinders for the straight segments, I intend to use a display list to create one link and then display it over and over after applying some rotation transformations. My question is how can I construct the curved sections? 
+
+One idea was to use gluPartialDisk(); swept thru 180 degrees to construct the top and bottom portions. is there a more efficient way of doing this?
+",1
+8632162,12/25/2011 23:35:13,991379,10/12/2011 11:58:55,3,0,OpenGl independent Object,"I am trying to draw two objects and move one of them via keyboard interaction, while the other one stays fixed. How can I do it? Of course, I know how to draw, I also know the keyboard interaction-moving part, but I am stuck at moving one of them independently. ",opengl,,,,,12/26/2011 14:44:44,not a real question,1,51,3,"OpenGl independent Object I am trying to draw two objects and move one of them via keyboard interaction, while the other one stays fixed. How can I do it? Of course, I know how to draw, I also know the keyboard interaction-moving part, but I am stuck at moving one of them independently. ",1
+7789072,10/17/2011 03:27:16,260593,01/28/2010 02:27:36,1661,50,Segmentation fault when trying to use SDL + GLEW,"I'm attempting to learn how to use SDL with OpenGL using GLEW for the extension methods.  As far as I can tell from pages such as [Using OpenGL with SDL](http://osdl.sourceforge.net/main/documentation/rendering/SDL-openGL.html) from SDL corner the following code should work
+
+
+    #include <glew.h>
+    #include <SDL.h>
+    
+    #include <cstdlib>
+    
+    int main(int argc, char *argv[]) {
+        if (SDL_Init( SDL_INIT_EVERYTHING ) != 0) exit(EXIT_FAILURE);
+        if (SDL_GL_LoadLibrary( NULL ) != 0) exit(EXIT_FAILURE);
+        if (SDL_SetVideoMode(640, 480, 0, SDL_OPENGL) == NULL) exit(EXIT_FAILURE);
+        if (glewInit() != GLEW_OK) exit(EXIT_FAILURE);
+    
+        glViewport(0, 0, 640, 480);
+    
+        while (1) {
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+            glMatrixMode(GL_PROJECTION);
+            glLoadIdentity();
+            gluPerspective(50.0, 1.0, 0.1, 1000.0);
+    
+            glMatrixMode(GL_MODELVIEW);
+            glLoadIdentity();
+            gluLookAt(0.0, 0.0, 3.0, 0.0, 0.0, 2.0, 0.0, 1.0, 0.0);
+    
+            glPolygonMode(GL_FRONT, GL_FILL);
+    
+            glBegin(GL_QUADS);
+                glColor3f(1, 0, 0); glVertex3f(0, 0, 0);
+                glColor3f(1, 1, 0); glVertex3f(3, 0, 0);
+                glColor3f(1, 0, 1); glVertex3f(3, 3, 0);
+                glColor3f(1, 1, 1); glVertex3f(0, 3, 0);
+            glEnd();
+    
+            SDL_GL_SwapBuffers();
+        }
+    
+        SDL_Quit();
+        return 0;
+    }
+
+However it just segfaults on line 12 when trying to call `glViewport`.  This is being compiled on OS X 10.7 with:
+
+    clang++ -g $(pkg-config --cflags sdl gl glu glew) -o test test.cpp $(pkg-config --libs sdl gl glu glew)
+
+SDL is version 1.2.14 and GLEW is version 1.7.0.",opengl,sdl,glew,,,,open,0,487,9,"Segmentation fault when trying to use SDL + GLEW I'm attempting to learn how to use SDL with OpenGL using GLEW for the extension methods.  As far as I can tell from pages such as [Using OpenGL with SDL](http://osdl.sourceforge.net/main/documentation/rendering/SDL-openGL.html) from SDL corner the following code should work
+
+
+    #include <glew.h>
+    #include <SDL.h>
+    
+    #include <cstdlib>
+    
+    int main(int argc, char *argv[]) {
+        if (SDL_Init( SDL_INIT_EVERYTHING ) != 0) exit(EXIT_FAILURE);
+        if (SDL_GL_LoadLibrary( NULL ) != 0) exit(EXIT_FAILURE);
+        if (SDL_SetVideoMode(640, 480, 0, SDL_OPENGL) == NULL) exit(EXIT_FAILURE);
+        if (glewInit() != GLEW_OK) exit(EXIT_FAILURE);
+    
+        glViewport(0, 0, 640, 480);
+    
+        while (1) {
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+            glMatrixMode(GL_PROJECTION);
+            glLoadIdentity();
+            gluPerspective(50.0, 1.0, 0.1, 1000.0);
+    
+            glMatrixMode(GL_MODELVIEW);
+            glLoadIdentity();
+            gluLookAt(0.0, 0.0, 3.0, 0.0, 0.0, 2.0, 0.0, 1.0, 0.0);
+    
+            glPolygonMode(GL_FRONT, GL_FILL);
+    
+            glBegin(GL_QUADS);
+                glColor3f(1, 0, 0); glVertex3f(0, 0, 0);
+                glColor3f(1, 1, 0); glVertex3f(3, 0, 0);
+                glColor3f(1, 0, 1); glVertex3f(3, 3, 0);
+                glColor3f(1, 1, 1); glVertex3f(0, 3, 0);
+            glEnd();
+    
+            SDL_GL_SwapBuffers();
+        }
+    
+        SDL_Quit();
+        return 0;
+    }
+
+However it just segfaults on line 12 when trying to call `glViewport`.  This is being compiled on OS X 10.7 with:
+
+    clang++ -g $(pkg-config --cflags sdl gl glu glew) -o test test.cpp $(pkg-config --libs sdl gl glu glew)
+
+SDL is version 1.2.14 and GLEW is version 1.7.0.",3
+7430743,09/15/2011 12:22:43,375666,06/24/2010 20:10:52,56,1,Drawing a texture into n*n cubes,"I've acquired a texture from the webcam using opencv, and I drew an n*n cubes using opengl drawcube(). I would like to put that texture which I've got from the webcam and draw it into that grid of cubes, so that the cubes can form the web cam image.
+
+Thanks ",opengl,opencv,cinder,,,,open,0,50,6,"Drawing a texture into n*n cubes I've acquired a texture from the webcam using opencv, and I drew an n*n cubes using opengl drawcube(). I would like to put that texture which I've got from the webcam and draw it into that grid of cubes, so that the cubes can form the web cam image.
+
+Thanks ",3
+9138175,02/04/2012 03:31:57,969416,09/28/2011 15:33:22,164,1,SDL OpenGL Blank Screen,"I've not done programming in OpenGL and SDL for a while so I decided to write a small program that I'm going to keep on adding to and improving on as I progress.
+
+Fallen at the first hurdle...
+
+http://pastie.org/3313160
+
+I have this program (which is quite unorganized) that compiles with no errors and gives me the typical blank screen that so many manage to achieve.
+
+I've tried stepping through it from the main to the bottom over and over but I'm amiss.
+
+
+I am now hoping someone experienced in OpenGL and SDL (although I suspect the problem is just to do with OpenGL) could browse through the code and hopefully the problem would jump out immediately.
+
+Thank you for taking your time to help me in advance.
+
+",opengl,sdl,,,,02/04/2012 04:05:58,too localized,1,121,4,"SDL OpenGL Blank Screen I've not done programming in OpenGL and SDL for a while so I decided to write a small program that I'm going to keep on adding to and improving on as I progress.
+
+Fallen at the first hurdle...
+
+http://pastie.org/3313160
+
+I have this program (which is quite unorganized) that compiles with no errors and gives me the typical blank screen that so many manage to achieve.
+
+I've tried stepping through it from the main to the bottom over and over but I'm amiss.
+
+
+I am now hoping someone experienced in OpenGL and SDL (although I suspect the problem is just to do with OpenGL) could browse through the code and hopefully the problem would jump out immediately.
+
+Thank you for taking your time to help me in advance.
+
+",2
+4268690,11/24/2010 15:51:13,506185,11/12/2010 19:24:16,8,0,Applying a shader to framebuffer object to get fisheye affect,"Lets say i have an application ( the details of the application should be irrelevent for solving the problem ). Instead of rendering to the screen, i am somehow able to force the application to render to a framebuffer object instead of rendering to the screen ( messing with glew or intercepting a call in a dll ).
+
+Once the application has rendered its content to the FBO is it possible to apply a shader to the contents of the FB? My knowledge is limited here, so from what i understand at this stage all information about vertices is no longer available and all the necessary tests have been applied, so whats left in the buffer is just pixel data. Is this correct?
+
+If it is possible to apply a shader to the FBO, is is possible to get a fisheye affect? ( like this for example: http://idea.hosting.lv/a/gfx/quakeshots.html )
+
+The technique used in the linke above is to create 6 different viewports and render each viewport to a cubemap face and then apply the texture to a mesh.
+
+Thanks",opengl,graphics,glsl,,,,open,0,175,10,"Applying a shader to framebuffer object to get fisheye affect Lets say i have an application ( the details of the application should be irrelevent for solving the problem ). Instead of rendering to the screen, i am somehow able to force the application to render to a framebuffer object instead of rendering to the screen ( messing with glew or intercepting a call in a dll ).
+
+Once the application has rendered its content to the FBO is it possible to apply a shader to the contents of the FB? My knowledge is limited here, so from what i understand at this stage all information about vertices is no longer available and all the necessary tests have been applied, so whats left in the buffer is just pixel data. Is this correct?
+
+If it is possible to apply a shader to the FBO, is is possible to get a fisheye affect? ( like this for example: http://idea.hosting.lv/a/gfx/quakeshots.html )
+
+The technique used in the linke above is to create 6 different viewports and render each viewport to a cubemap face and then apply the texture to a mesh.
+
+Thanks",3
+10446577,05/04/2012 09:54:06,1319259,04/07/2012 15:35:12,8,0,"Register a source, what licence?","I'm about to publish a C++/OpenGL source code under an open source license.
+I wonder which license I have to choose and what are the requirements as I'm using some libraries that are already under licenses (OpenCV, OpenGL, Glew, Qt) ?
+
+Any advices ?",opengl,opencv,copyright,glew,,05/04/2012 12:23:46,off topic,1,42,5,"Register a source, what licence? I'm about to publish a C++/OpenGL source code under an open source license.
+I wonder which license I have to choose and what are the requirements as I'm using some libraries that are already under licenses (OpenCV, OpenGL, Glew, Qt) ?
+
+Any advices ?",4
+4424296,12/12/2010 21:56:01,272582,02/13/2010 23:06:29,62,1,CUDA - copy OpenGL rendered image to 2D array,"Is it possible, to render a scene using OpenGL and than somehow copy rendered image to, for example, 2D array using CUDA? I'd need to place a result in `bool picture[resX][resY]` array, where true = coloured pixel, false = empty space.
+
+Thanks is advance for any suggestions!",opengl,multidimensional-array,rendering,cuda,,,open,0,46,9,"CUDA - copy OpenGL rendered image to 2D array Is it possible, to render a scene using OpenGL and than somehow copy rendered image to, for example, 2D array using CUDA? I'd need to place a result in `bool picture[resX][resY]` array, where true = coloured pixel, false = empty space.
+
+Thanks is advance for any suggestions!",4
+5698134,04/18/2011 03:11:17,712729,04/18/2011 03:11:17,1,0,openGL glGenList Segmentation Fault on OSX,"I am working with OpenGL and am having an issue using glGenLists. Every time I call it, I am getting a segfault. I wrote a simple program to test if it was the external libraries I was using, but discovered it was not. Here is the simple program:
+
+<code>
+
+include ""GLUT/glut.h""
+
+int main(){
+
+	GLuint list = glGenLists(1);
+
+return 0;
+
+}
+</code>
+
+I am running this on OSX 10.6.7 and am compile with:
+
+g++ -framework OpenGL -framework GLUT -o test test.cpp
+
+Any suggestions would be greatly appreciated",opengl,,,,,,open,0,76,6,"openGL glGenList Segmentation Fault on OSX I am working with OpenGL and am having an issue using glGenLists. Every time I call it, I am getting a segfault. I wrote a simple program to test if it was the external libraries I was using, but discovered it was not. Here is the simple program:
+
+<code>
+
+include ""GLUT/glut.h""
+
+int main(){
+
+	GLuint list = glGenLists(1);
+
+return 0;
+
+}
+</code>
+
+I am running this on OSX 10.6.7 and am compile with:
+
+g++ -framework OpenGL -framework GLUT -o test test.cpp
+
+Any suggestions would be greatly appreciated",1
+5782306,04/25/2011 19:29:26,724264,04/25/2011 19:29:26,1,0,Why isn't OpenGL used in the majority of today's blockbuster games?,"My friend came up with this simple question: Why do the ""big"" titles of today almost all use DirectX, and not OpenGL?
+
+Are there specific technical reasons, or is it all Microsoft's marketing?",opengl,directx,,,,04/25/2011 19:38:28,not constructive,1,32,11,"Why isn't OpenGL used in the majority of today's blockbuster games? My friend came up with this simple question: Why do the ""big"" titles of today almost all use DirectX, and not OpenGL?
+
+Are there specific technical reasons, or is it all Microsoft's marketing?",2
+10025319,04/05/2012 08:40:19,1206651,02/13/2012 11:15:22,13,0,how to setup openGL environment in windows 7,"I am new to openGL. I have to develope a simple 3D application. I read from google that i have to install GLUT and OpenGL. Is that right? Can you tell what exactly should i install?
+any link for proper download is appreciated.
+
+thanks in advance",opengl,,,,,04/05/2012 09:05:04,off topic,1,44,8,"how to setup openGL environment in windows 7 I am new to openGL. I have to develope a simple 3D application. I read from google that i have to install GLUT and OpenGL. Is that right? Can you tell what exactly should i install?
+any link for proper download is appreciated.
+
+thanks in advance",1
+1682667,11/05/2009 18:40:41,199901,10/30/2009 19:51:26,3,0,Basic Open GL/GLUT Issue,"I am studying graphics and currently using OpenGL with GLUT. Doing my editing in codeblocks and using an online tutorial located at [lighthouse3d][1]. I am using the main method declared on that page however it will not let me compile. The error message consists of the main method not returning an int, I have ""played"" with the code enough to say I am confused. The GLUT Library is installed, and I do not see where the error is coming from.
+
+Thank you,
+Zach Smith
+
+
+  [1]: http://www.lighthouse3d.com/opengl/glut/index.php?2",opengl,glut,graphics,,,,open,0,85,4,"Basic Open GL/GLUT Issue I am studying graphics and currently using OpenGL with GLUT. Doing my editing in codeblocks and using an online tutorial located at [lighthouse3d][1]. I am using the main method declared on that page however it will not let me compile. The error message consists of the main method not returning an int, I have ""played"" with the code enough to say I am confused. The GLUT Library is installed, and I do not see where the error is coming from.
+
+Thank you,
+Zach Smith
+
+
+  [1]: http://www.lighthouse3d.com/opengl/glut/index.php?2",3
+5934738,05/09/2011 09:06:19,583464,01/20/2011 19:04:45,97,0,opengl -- glBeginQuery not declared,"i want to use the commands :
+
+glBeginQuery 
+
+glEndQuery
+
+glGetQueryObjectiv
+ 
+glGenQueries
+
+
+but the compiler gives me ""..was not declared""
+
+I use linux and i have these header files (which work fine until now)
+
+    
+              #include <GL/gl.h>
+              #include <GL/glu.h>
+              #include <GL/glut.h>
+              #include <GL/glx.h>
+
+              #include <X11/X.h>    
+              #include <X11/keysym.h>
+ 
+
+
+Is there a solution for this?
+Thank you..
+
+
+
+",opengl,,,,,,open,0,134,5,"opengl -- glBeginQuery not declared i want to use the commands :
+
+glBeginQuery 
+
+glEndQuery
+
+glGetQueryObjectiv
+ 
+glGenQueries
+
+
+but the compiler gives me ""..was not declared""
+
+I use linux and i have these header files (which work fine until now)
+
+    
+              #include <GL/gl.h>
+              #include <GL/glu.h>
+              #include <GL/glut.h>
+              #include <GL/glx.h>
+
+              #include <X11/X.h>    
+              #include <X11/keysym.h>
+ 
+
+
+Is there a solution for this?
+Thank you..
+
+
+
+",1
+4296126,11/28/2010 09:12:31,45963,12/13/2008 12:23:04,1900,41,"Is there a difference between glClearColor(0.0,0.0,0.0,0.0) and glClear(COLOR_BUFFER_BIT)? ","
+
+Both clear the color matrix, right? Do they do it the same way? ",opengl,,,,,,open,0,14,9,"Is there a difference between glClearColor(0.0,0.0,0.0,0.0) and glClear(COLOR_BUFFER_BIT)?  
+
+Both clear the color matrix, right? Do they do it the same way? ",1
+8129497,11/14/2011 23:06:53,1046520,11/14/2011 23:03:49,1,0,What should I study after basic C++?,"I've been Programming in C++ for a year. I've learned Basics and all other OOP concepts(like inheritance,polymorphism and STL)
+
+I want to be a game programmer, but i don't know what to study now?
+
+I've heard about OpenGL, DirectX, GUI libraries as a result i m confused to choose which topic. Should I go for OpenGL or DirectX or GUI libraries or maybe something else.
+
+If you think this is too early for me to learn these things then plz mention a good topic to me.
+
+Thanks ",opengl,directx,,,,11/14/2011 23:09:41,not constructive,1,84,7,"What should I study after basic C++? I've been Programming in C++ for a year. I've learned Basics and all other OOP concepts(like inheritance,polymorphism and STL)
+
+I want to be a game programmer, but i don't know what to study now?
+
+I've heard about OpenGL, DirectX, GUI libraries as a result i m confused to choose which topic. Should I go for OpenGL or DirectX or GUI libraries or maybe something else.
+
+If you think this is too early for me to learn these things then plz mention a good topic to me.
+
+Thanks ",2
+6137179,05/26/2011 10:35:33,667027,03/19/2011 05:27:26,296,1,Can I write directly into the color buffer in OpenGL?,"For some reason I want to write directly some pixels into the screen. For example, is there any function call that close to: `glDrawPixels(int x, int y)`, or is there any way I can get and set the color buffer?",opengl,,,,,,open,0,40,10,"Can I write directly into the color buffer in OpenGL? For some reason I want to write directly some pixels into the screen. For example, is there any function call that close to: `glDrawPixels(int x, int y)`, or is there any way I can get and set the color buffer?",1
+11706747,07/29/2012 04:46:22,1368767,05/01/2012 22:23:21,1,0,Opengl glMultiDrawElements,"When I try to use glMultiDrawElements, I get errors about type casting.
+When I cast the arguments to appropriate type, I still get error.
+
+is glMultiDrawElements broken?",opengl,,,,,07/29/2012 18:42:42,not a real question,1,25,2,"Opengl glMultiDrawElements When I try to use glMultiDrawElements, I get errors about type casting.
+When I cast the arguments to appropriate type, I still get error.
+
+is glMultiDrawElements broken?",1
+7307819,09/05/2011 12:05:45,742010,05/06/2011 15:07:22,30,0,Opengl float buffer,"I'm writing my first ray tracer. I want to make it work in real-time.
+I want to use opengl for display.
+I want to write my screen to floating point buffer and display the buffer.
+What extension and/or buffer type I need?
+
+Thanks in advance!",opengl,,,,,,open,0,41,3,"Opengl float buffer I'm writing my first ray tracer. I want to make it work in real-time.
+I want to use opengl for display.
+I want to write my screen to floating point buffer and display the buffer.
+What extension and/or buffer type I need?
+
+Thanks in advance!",1
+8824269,01/11/2012 18:00:09,675455,03/24/2011 18:23:59,560,10,GL/CL interoperability: Shared Texture,"I intend to make Graphics calculation with OpenCL such as ray casting, ray marching and others. And I want to use OpenGL to display result of this calculations (pixel images). I use texture buffer attached to frame buffer. OpenCL writes the result into the texture and then I use glBlitFrameBuffer function to copy texture data to application window framebuffer.
+I met a CL/GL inter problem during the implementation of it. I wrote a simple example to show it. This example shows framebuffer object and texture object initialization, their conjunction, OpenCL buffer creation from GL texture buffer. At the end the main render loop is shown. It consists of texture writing with new data in each frame, framebuffer attachment and copying of this framebuffer.
+
+Texture Initialization:
+
+    for (int i = 0; i < data.Length; i +=4) {
+                data [i] = 255;
+             }
+             GL.BindTexture (TextureTarget.Texture2D, tboID [0]);
+             GL.TexImage2D<byte> (TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba8, w, h, 0,
+                                  PixelFormat.Rgba, PixelType.UnsignedByte, data);
+             
+             GL.BindTexture (TextureTarget.Texture2D, 0)
+
+
+TBO+FBO Initialization:
+     
+     GL.BindFramebuffer (FramebufferTarget.FramebufferExt, fboID [0]);
+     GL.FramebufferTexture2D (FramebufferTarget.FramebufferExt, FramebufferAttachment.ColorAttachment0,
+                              TextureTarget.Texture2D, tboID [0], 0);
+     GL.BindFramebuffer (FramebufferTarget.FramebufferExt, 0);
+     
+
+CL/GL Initialization:
+
+    bufferID = CL.CreateFromGLTexture2D (context, MemFlags.MemReadWrite, TextureTarget.Texture2D, ((uint[])tboID.Clone()) [0], 0);
+
+Render Loop: 
+
+   
+
+     for (int i = 0; i < data.Length; i += 4) {
+            data [i] = tt;
+         }
+         tt++;
+         GL.BindTexture (TextureTarget.Texture2D, tboID [0]);
+         GL.TexImage2D<byte> (TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba8, w, h, 0,
+                              PixelFormat.Rgba, PixelType.UnsignedByte, data);
+         
+         GL.BindTexture (TextureTarget.Texture2D, 0);
+         GL.BindFramebuffer (FramebufferTarget.FramebufferExt, fboID [0]);
+         GL.FramebufferTexture2D (FramebufferTarget.FramebufferExt, FramebufferAttachment.ColorAttachment0,
+                                  TextureTarget.Texture2D, tboID [0], 0);
+         GL.BindFramebuffer (FramebufferTarget.FramebufferExt, 0);GL.BindFramebuffer (FramebufferTarget.ReadFramebuffer, fboID [0]);
+    
+         GL.ReadBuffer (ReadBufferMode.ColorAttachment0);
+         GL.DrawBuffer (DrawBufferMode.Back);
+    
+         GL.BlitFramebuffer (0, 0, w, h, 0, 0, w, h, ClearBufferMask.ColorBufferBit, BlitFramebufferFilter.Nearest);
+    
+         GL.BindFramebuffer (FramebufferTarget.ReadFramebuffer, 0);
+
+At the first glance this code looks weird, but it completely shows my problem. CL does not work at all here. In this application OpenCL context is created and OpenCL buffer initialization is occured.
+The work of this should be simple. The color of screen is being changed from black to red. And It does not work in this way. The color does not change from the initial red (texture initialization).
+But it works normal when I comment the CL/GL Initialization (creation of CL buffer from GL texture).
+Why is it so? Why the behavior of the GL buffer is changed depending on CL attachments? How to fix it and make it works?",opengl,opencl,gpu,gpgpu,gpu-programming,01/26/2012 13:36:31,too localized,1,725,4,"GL/CL interoperability: Shared Texture I intend to make Graphics calculation with OpenCL such as ray casting, ray marching and others. And I want to use OpenGL to display result of this calculations (pixel images). I use texture buffer attached to frame buffer. OpenCL writes the result into the texture and then I use glBlitFrameBuffer function to copy texture data to application window framebuffer.
+I met a CL/GL inter problem during the implementation of it. I wrote a simple example to show it. This example shows framebuffer object and texture object initialization, their conjunction, OpenCL buffer creation from GL texture buffer. At the end the main render loop is shown. It consists of texture writing with new data in each frame, framebuffer attachment and copying of this framebuffer.
+
+Texture Initialization:
+
+    for (int i = 0; i < data.Length; i +=4) {
+                data [i] = 255;
+             }
+             GL.BindTexture (TextureTarget.Texture2D, tboID [0]);
+             GL.TexImage2D<byte> (TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba8, w, h, 0,
+                                  PixelFormat.Rgba, PixelType.UnsignedByte, data);
+             
+             GL.BindTexture (TextureTarget.Texture2D, 0)
+
+
+TBO+FBO Initialization:
+     
+     GL.BindFramebuffer (FramebufferTarget.FramebufferExt, fboID [0]);
+     GL.FramebufferTexture2D (FramebufferTarget.FramebufferExt, FramebufferAttachment.ColorAttachment0,
+                              TextureTarget.Texture2D, tboID [0], 0);
+     GL.BindFramebuffer (FramebufferTarget.FramebufferExt, 0);
+     
+
+CL/GL Initialization:
+
+    bufferID = CL.CreateFromGLTexture2D (context, MemFlags.MemReadWrite, TextureTarget.Texture2D, ((uint[])tboID.Clone()) [0], 0);
+
+Render Loop: 
+
+   
+
+     for (int i = 0; i < data.Length; i += 4) {
+            data [i] = tt;
+         }
+         tt++;
+         GL.BindTexture (TextureTarget.Texture2D, tboID [0]);
+         GL.TexImage2D<byte> (TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba8, w, h, 0,
+                              PixelFormat.Rgba, PixelType.UnsignedByte, data);
+         
+         GL.BindTexture (TextureTarget.Texture2D, 0);
+         GL.BindFramebuffer (FramebufferTarget.FramebufferExt, fboID [0]);
+         GL.FramebufferTexture2D (FramebufferTarget.FramebufferExt, FramebufferAttachment.ColorAttachment0,
+                                  TextureTarget.Texture2D, tboID [0], 0);
+         GL.BindFramebuffer (FramebufferTarget.FramebufferExt, 0);GL.BindFramebuffer (FramebufferTarget.ReadFramebuffer, fboID [0]);
+    
+         GL.ReadBuffer (ReadBufferMode.ColorAttachment0);
+         GL.DrawBuffer (DrawBufferMode.Back);
+    
+         GL.BlitFramebuffer (0, 0, w, h, 0, 0, w, h, ClearBufferMask.ColorBufferBit, BlitFramebufferFilter.Nearest);
+    
+         GL.BindFramebuffer (FramebufferTarget.ReadFramebuffer, 0);
+
+At the first glance this code looks weird, but it completely shows my problem. CL does not work at all here. In this application OpenCL context is created and OpenCL buffer initialization is occured.
+The work of this should be simple. The color of screen is being changed from black to red. And It does not work in this way. The color does not change from the initial red (texture initialization).
+But it works normal when I comment the CL/GL Initialization (creation of CL buffer from GL texture).
+Why is it so? Why the behavior of the GL buffer is changed depending on CL attachments? How to fix it and make it works?",5
+3309512,07/22/2010 13:48:45,81000,03/22/2009 03:28:04,876,62,What are some good graphics programming interview questions?,"What are some good graphics programming interview questions?  These could be math questions, OpenGL questions, DirectX questions, shader questions, etc.  ",opengl,opengl-es,interview-questions,directx,graphics-programming,11/30/2011 03:17:29,not constructive,1,23,8,"What are some good graphics programming interview questions? What are some good graphics programming interview questions?  These could be math questions, OpenGL questions, DirectX questions, shader questions, etc.  ",5

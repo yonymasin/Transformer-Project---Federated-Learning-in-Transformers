@@ -1,0 +1,2889 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+2296851,02/19/2010 14:10:53,216675,11/22/2009 23:30:48,16,2,Can an Event Handler return a value?," I'm trying to write a class that its constructor takes as argument a String ( which is an image in my directory ie: jpg ) and load the corresponding image via a loader object in memory. I also provide function getBitmapFromLoader() to get the bitmap of the loader in order to use it from another class.
+
+
+<code>	
+        public class LoadImage extends Loader
+	{
+		private var bitmap:Bitmap;
+		private var ldr:Loader;
+		
+		public function LoadImage(nameURL:String):void
+		{
+			trace(""LoadImage constructor"");
+			ldr = new Loader();
+			ldr.contentLoaderInfo.addEventListener(Event.COMPLETE, completeHandler);
+			ldr.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, ioErrorEventHandler);
+			var request:URLRequest = new URLRequest(nameURL);
+			ldr.load(request);
+		}
+		
+		/* methods */
+		public function getBitmapFromLoader():Bitmap
+		{
+			return bitmap;
+		}
+		
+		public function toSprite():Sprite
+		{
+			trace(""toSprite method"");
+			var sprite:Sprite = new Sprite();
+			sprite.addChild(bitmap);
+			return sprite;
+		}
+		
+		public function toMovieClip():MovieClip
+		{
+			trace(""toMovieClip method"");
+			var mvc:MovieClip = new MovieClip();
+			mvc.addChild(bitmap);
+			return mvc;
+		}
+		
+		private function completeHandler(event:Event):void
+		{
+			trace(""completeHandler "" + event.currentTarget);
+			bitmap = new Bitmap();
+			bitmap = Bitmap(event.currentTarget.content);
+		}
+				
+		private function ioErrorEventHandler(event:IOErrorEvent):void
+		{
+			trace(""ioErrorEventHandler "" + event.currentTarget);
+			trace(""error on loading image: "" + event.currentTarget.url);
+			bitmap = null;
+		}
+	}
+}
+</code>
+
+but it does not work.",actionscript-3,flash,,,,,open,0,133,7,"Can an Event Handler return a value?  I'm trying to write a class that its constructor takes as argument a String ( which is an image in my directory ie: jpg ) and load the corresponding image via a loader object in memory. I also provide function getBitmapFromLoader() to get the bitmap of the loader in order to use it from another class.
+
+
+<code>	
+        public class LoadImage extends Loader
+	{
+		private var bitmap:Bitmap;
+		private var ldr:Loader;
+		
+		public function LoadImage(nameURL:String):void
+		{
+			trace(""LoadImage constructor"");
+			ldr = new Loader();
+			ldr.contentLoaderInfo.addEventListener(Event.COMPLETE, completeHandler);
+			ldr.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, ioErrorEventHandler);
+			var request:URLRequest = new URLRequest(nameURL);
+			ldr.load(request);
+		}
+		
+		/* methods */
+		public function getBitmapFromLoader():Bitmap
+		{
+			return bitmap;
+		}
+		
+		public function toSprite():Sprite
+		{
+			trace(""toSprite method"");
+			var sprite:Sprite = new Sprite();
+			sprite.addChild(bitmap);
+			return sprite;
+		}
+		
+		public function toMovieClip():MovieClip
+		{
+			trace(""toMovieClip method"");
+			var mvc:MovieClip = new MovieClip();
+			mvc.addChild(bitmap);
+			return mvc;
+		}
+		
+		private function completeHandler(event:Event):void
+		{
+			trace(""completeHandler "" + event.currentTarget);
+			bitmap = new Bitmap();
+			bitmap = Bitmap(event.currentTarget.content);
+		}
+				
+		private function ioErrorEventHandler(event:IOErrorEvent):void
+		{
+			trace(""ioErrorEventHandler "" + event.currentTarget);
+			trace(""error on loading image: "" + event.currentTarget.url);
+			bitmap = null;
+		}
+	}
+}
+</code>
+
+but it does not work.",2
+4739257,01/19/2011 18:39:34,545255,12/16/2010 19:41:11,29,3,ActionScript 3 - Using CASALIB Distribution for several objects with different sizes,"Does anyone know of a framework similar to CASALIB that has some class  Distribution of objects with different sizes?
+
+I'm using the Distribution class, but it only works for objects with similar sizes.
+
+See [this link][1]
+
+
+  [1]: http://as3.casalib.org/docs/org_casalib_layout_Distribution.html",actionscript-3,distribution,,,,,open,0,38,12,"ActionScript 3 - Using CASALIB Distribution for several objects with different sizes Does anyone know of a framework similar to CASALIB that has some class  Distribution of objects with different sizes?
+
+I'm using the Distribution class, but it only works for objects with similar sizes.
+
+See [this link][1]
+
+
+  [1]: http://as3.casalib.org/docs/org_casalib_layout_Distribution.html",2
+7103432,08/18/2011 06:47:19,859903,07/24/2011 03:13:32,3,1,Is is possible to set BufferSize in FileStream?,"I need to write large data into disk, so I use FileStream.openAsync
+
+    this.file_stream = new FileStream();
+    this.file_stream.openAsync(fl, FileMode.WRITE);
+
+    //Write large get from database
+    while(i < 10240000) {
+        this.file_stream.write(bigDatas)
+        i = i + 1;
+    }
+
+and then , the app killed by Linux kenkel (message copy from 'dmesg'):
+    Killed process 4267 (MyFlex) total-vm:1282708kB, anon-rss:863176kB, file-rss:756kB
+
+So, is there any way to set buffer size in FileStream ?",actionscript-3,flex4,,,,,open,0,96,8,"Is is possible to set BufferSize in FileStream? I need to write large data into disk, so I use FileStream.openAsync
+
+    this.file_stream = new FileStream();
+    this.file_stream.openAsync(fl, FileMode.WRITE);
+
+    //Write large get from database
+    while(i < 10240000) {
+        this.file_stream.write(bigDatas)
+        i = i + 1;
+    }
+
+and then , the app killed by Linux kenkel (message copy from 'dmesg'):
+    Killed process 4267 (MyFlex) total-vm:1282708kB, anon-rss:863176kB, file-rss:756kB
+
+So, is there any way to set buffer size in FileStream ?",2
+10381225,04/30/2012 09:20:20,932779,09/07/2011 13:14:35,30,0,compare threshold and floodfill methods in bitmapdata class of AS 3.0,"what are __compare__, __threshold__ and __floodfill__ methods of the bitmapdata class and how can we use them. I mean in what kind of scenarios can we use them",actionscript-3,,,,,05/01/2012 01:46:39,not a real question,1,28,11,"compare threshold and floodfill methods in bitmapdata class of AS 3.0 what are __compare__, __threshold__ and __floodfill__ methods of the bitmapdata class and how can we use them. I mean in what kind of scenarios can we use them",1
+6012310,05/16/2011 00:50:54,80766,03/21/2009 02:07:57,144,12,How to duplicate loaded *.swf without setting a class name.,"I have read this article about abstracting assets from actionscript:
+
+http://darylteo.com/blog/2007/11/16/abstracting-assets-from-actionscript-in-as30-asset-libraries/#more-57
+
+But it requires to set the Linkage Class name. How can I get the same result without setting the linkage class name?
+
+What I want to do is to cache a loaded asset, and use the cached version every time I request the same URL. A solution is to clone the loaded DisplayObject, but I think it's unnecessary since I only want a new copy.",actionscript-3,,,,,,open,0,73,10,"How to duplicate loaded *.swf without setting a class name. I have read this article about abstracting assets from actionscript:
+
+http://darylteo.com/blog/2007/11/16/abstracting-assets-from-actionscript-in-as30-asset-libraries/#more-57
+
+But it requires to set the Linkage Class name. How can I get the same result without setting the linkage class name?
+
+What I want to do is to cache a loaded asset, and use the cached version every time I request the same URL. A solution is to clone the loaded DisplayObject, but I think it's unnecessary since I only want a new copy.",1
+9923261,03/29/2012 10:09:37,1187314,02/03/2012 10:49:41,87,10,Error: Access of undefined property JSON ... but it IS there,"I am developing a Flash application (Flash Player 11 as target platform) that uses the AS3 Facebook API, which in turn  uses as3corelib JSON functionality. Or at least it should do so.
+
+However, in spite of including the [latest version][1] (.93) of the as3corelib.swc, I still get the ""Error: Access of undefined property JSON"". I also tried including the sources directly, to no avail.
+
+Any ideas what I am doing wrong?
+
+As I said, the *.swc is definitely included. As is the source code (all at the correct path).
+
+
+  [1]: https://github.com/mikechambers/as3corelib/downloads",actionscript-3,flash,facebook-graph-api,flashdevelop,,,open,0,90,11,"Error: Access of undefined property JSON ... but it IS there I am developing a Flash application (Flash Player 11 as target platform) that uses the AS3 Facebook API, which in turn  uses as3corelib JSON functionality. Or at least it should do so.
+
+However, in spite of including the [latest version][1] (.93) of the as3corelib.swc, I still get the ""Error: Access of undefined property JSON"". I also tried including the sources directly, to no avail.
+
+Any ideas what I am doing wrong?
+
+As I said, the *.swc is definitely included. As is the source code (all at the correct path).
+
+
+  [1]: https://github.com/mikechambers/as3corelib/downloads",4
+7278049,09/02/2011 00:16:55,924444,09/02/2011 00:16:55,1,0,FileShare read on ActionScript 3?,"i'm starting an application with flash and ActionScript 3.
+
+I'm opening a file for writing, but the process locks the file on the disk, so no other process can read it. I'd like to make it so that others process can read it too.
+
+I googled it and searched in adobe doc, but found nothing.
+
+Is it possible to allow other process to read an opened file in AS3 ?
+
+Thanks",actionscript-3,file,open,fileshare,,,open,0,67,5,"FileShare read on ActionScript 3? i'm starting an application with flash and ActionScript 3.
+
+I'm opening a file for writing, but the process locks the file on the disk, so no other process can read it. I'd like to make it so that others process can read it too.
+
+I googled it and searched in adobe doc, but found nothing.
+
+Is it possible to allow other process to read an opened file in AS3 ?
+
+Thanks",4
+9329582,02/17/2012 14:00:11,1142384,01/11/2012 05:03:37,33,0,change RichTexteditor background color,"I am using Flex 4.5, and i am trying to change the back ground color of richtexteditor but i am not able to do so in flex 4.5 but its working fine in flex 3.
+
+Please Help Me,
+
+Thank You,
+",actionscript-3,flex,flex4,flex4.5,,,open,0,38,4,"change RichTexteditor background color I am using Flex 4.5, and i am trying to change the back ground color of richtexteditor but i am not able to do so in flex 4.5 but its working fine in flex 3.
+
+Please Help Me,
+
+Thank You,
+",4
+11619057,07/23/2012 19:20:55,1480803,06/25/2012 18:35:08,35,2,AS3 - Reliability of NetConnection calls using RTMFP / UDP?,"My applet connects to FMS4.5 using RTMFP. I open one NetConnection and stream video from the server to the applet using a NetStream. When i want to execute a function on either the applet or the server i use a NetConnection.call();
+
+My question is does AS3 do anything internally to make sure the call over UDP happens or is there a risk of UDP loss and the function never happening when it is called?
+
+Assuming there might be times the UDP traffic is lost i made a responder retry onStatus. Does this code look like it would actually do the job or is it overkill?
+
+
+    // This is code on FMS to call a function in the applet.
+    
+    var networkRetryMax = 30;
+    if (something == true) doSomethingInApplet(client, 0);
+    
+    
+    function doSomethingInApplet (client, retryCount) {
+        if (retryCount < networkRetryMax) {
+            retryCount++;
+            client.call(""funcNameInApplet"", new doSomethingInAppletResponder(client, retryCount), ""foobar"");
+        }
+        return;
+    }
+    
+    
+    function doSomethingInAppletResponder (client, retryCount) {
+        this.onResult = function() {...}
+        this.onStatus = function() {doSomethingInApplet(client, retryCount);}
+        return;
+    }
+
+
+And...
+
+
+    // This is code in the applet.
+    // I return true to give it something to onResult or onStatus.
+    
+    public static function funcNameInApplet(result:String):Boolean {
+        trace(""Result: "" + result);
+        return true;
+    }
+
+
+
+So would this ensure the function is called over UDP / RTMFP?
+
+Or is .call() reliability handled internally and this is unnecessary?
+
+",actionscript-3,flex,rtmfp,,,,open,0,347,10,"AS3 - Reliability of NetConnection calls using RTMFP / UDP? My applet connects to FMS4.5 using RTMFP. I open one NetConnection and stream video from the server to the applet using a NetStream. When i want to execute a function on either the applet or the server i use a NetConnection.call();
+
+My question is does AS3 do anything internally to make sure the call over UDP happens or is there a risk of UDP loss and the function never happening when it is called?
+
+Assuming there might be times the UDP traffic is lost i made a responder retry onStatus. Does this code look like it would actually do the job or is it overkill?
+
+
+    // This is code on FMS to call a function in the applet.
+    
+    var networkRetryMax = 30;
+    if (something == true) doSomethingInApplet(client, 0);
+    
+    
+    function doSomethingInApplet (client, retryCount) {
+        if (retryCount < networkRetryMax) {
+            retryCount++;
+            client.call(""funcNameInApplet"", new doSomethingInAppletResponder(client, retryCount), ""foobar"");
+        }
+        return;
+    }
+    
+    
+    function doSomethingInAppletResponder (client, retryCount) {
+        this.onResult = function() {...}
+        this.onStatus = function() {doSomethingInApplet(client, retryCount);}
+        return;
+    }
+
+
+And...
+
+
+    // This is code in the applet.
+    // I return true to give it something to onResult or onStatus.
+    
+    public static function funcNameInApplet(result:String):Boolean {
+        trace(""Result: "" + result);
+        return true;
+    }
+
+
+
+So would this ensure the function is called over UDP / RTMFP?
+
+Or is .call() reliability handled internally and this is unnecessary?
+
+",3
+5310006,03/15/2011 09:52:05,660313,03/15/2011 09:52:05,1,0,actionscript 3 transfer from one scene to another,"i am working on an adobe flash project and i want the code that trasfer me from scene one to scene 2 when clicking on a button on scene 1
+
+i appreciate a quick answer 
+
+Thanks,
+Asmaa",actionscript-3,adobe-flash-cs5,,,,,open,0,35,8,"actionscript 3 transfer from one scene to another i am working on an adobe flash project and i want the code that trasfer me from scene one to scene 2 when clicking on a button on scene 1
+
+i appreciate a quick answer 
+
+Thanks,
+Asmaa",2
+10257092,04/21/2012 07:20:00,457224,09/24/2010 11:33:37,16,1,Is it okay to embed external movie clips in Flash,"I want to embed another flash movie within my original flash movie.
+I cannot 100% trust the external flash movie.
+
+Is it safe to load and use it?",actionscript-3,flash,,,,04/21/2012 22:17:57,off topic,1,26,10,"Is it okay to embed external movie clips in Flash I want to embed another flash movie within my original flash movie.
+I cannot 100% trust the external flash movie.
+
+Is it safe to load and use it?",2
+1517589,10/04/2009 22:38:34,183806,10/04/2009 01:35:02,20,0,"Which Is More Efficient, Embeddeing an FLV or Compiling an FLV to a SWF and Loading it Dynamically? ","Recently I took on a rather daunting task of creating an interactive music video for the popular show Ghost Whisperer.  I was brought in late in the project and was confronted with a giant authoring file (some 5000+ frames long).  The previous programmer (who did everything in AS2) had essentially embedded a two and half minute FLV on the time main time line and at certain frame points would add in clips for interactivity with basic mouse click functionality that would trigger those clips to play other clips with some flash elements and some video elements.  
+
+(the final version I created can be viewed here [http://www.gwghostmagic.com][1]);
+
+Being a neat freak I decided to rebuild the whole thing in AS3, ditch the time line altogether and rather load in my elements at run time so that instead of 5000 frames I had one frame and to trigger the actions added an Event.ENTER_FRAME event listener to trigger the interactivity when the loaded .swf would reach certain frames.  From a programmers stand point it made everything much clearer and easier to manipulate certain actions.  The problem was, the thing ran like crap.  
+
+The 5000+ frame version loaded faster and ran smoother than my AS3 version.  Which brings me to the question,  when is it better to embed and run off the time line than run off of an event listener?  Is flash better suited for time line functionality?  
+
+Initially I decided to build and run off of a streaming .flv but syncing up the actions to the .flv was impossible because the .flv was running at 23.975 fps whereas my flash movie was running at 24 fps.  Alas I was forced to compile an .swf with the flv embedded.  That .swf was then loaded into my main .swf that contained all the functions and extra clips that would play according to the loaded .swf's frame position.  
+
+One thing I've noticed is that the Event.ENTER_FRAME seems to slow the whole damn application down because at every frame it has to run down a list of if statements 200 lines of code long.  Wherein if the whole thing was embedded I might only need to insert a keyframe where the interactive clip would be instantiated and then would know immediately what to do, rather than cycle through if else statements.  
+
+Did I screw up trying to make things nice and tidy?  Is it better to let flash be flash? Should I seek out another career?  Any input is greatly appreciated.
+
+
+  [1]: http://www.gwghostmagic.com",actionscript-3,video-embedding,timeline,enterframeevent,,,open,0,434,19,"Which Is More Efficient, Embeddeing an FLV or Compiling an FLV to a SWF and Loading it Dynamically?  Recently I took on a rather daunting task of creating an interactive music video for the popular show Ghost Whisperer.  I was brought in late in the project and was confronted with a giant authoring file (some 5000+ frames long).  The previous programmer (who did everything in AS2) had essentially embedded a two and half minute FLV on the time main time line and at certain frame points would add in clips for interactivity with basic mouse click functionality that would trigger those clips to play other clips with some flash elements and some video elements.  
+
+(the final version I created can be viewed here [http://www.gwghostmagic.com][1]);
+
+Being a neat freak I decided to rebuild the whole thing in AS3, ditch the time line altogether and rather load in my elements at run time so that instead of 5000 frames I had one frame and to trigger the actions added an Event.ENTER_FRAME event listener to trigger the interactivity when the loaded .swf would reach certain frames.  From a programmers stand point it made everything much clearer and easier to manipulate certain actions.  The problem was, the thing ran like crap.  
+
+The 5000+ frame version loaded faster and ran smoother than my AS3 version.  Which brings me to the question,  when is it better to embed and run off the time line than run off of an event listener?  Is flash better suited for time line functionality?  
+
+Initially I decided to build and run off of a streaming .flv but syncing up the actions to the .flv was impossible because the .flv was running at 23.975 fps whereas my flash movie was running at 24 fps.  Alas I was forced to compile an .swf with the flv embedded.  That .swf was then loaded into my main .swf that contained all the functions and extra clips that would play according to the loaded .swf's frame position.  
+
+One thing I've noticed is that the Event.ENTER_FRAME seems to slow the whole damn application down because at every frame it has to run down a list of if statements 200 lines of code long.  Wherein if the whole thing was embedded I might only need to insert a keyframe where the interactive clip would be instantiated and then would know immediately what to do, rather than cycle through if else statements.  
+
+Did I screw up trying to make things nice and tidy?  Is it better to let flash be flash? Should I seek out another career?  Any input is greatly appreciated.
+
+
+  [1]: http://www.gwghostmagic.com",4
+5350304,03/18/2011 09:51:37,480986,10/19/2010 20:40:00,101,6,Logging injection for flex/actionscript?,Is it possible to trace every single method call in flex/actionscript by injecting logging statements some way? Like how it's possible in C# using PostSharp.,actionscript-3,logging,flex4,tracing,code-injection,,open,0,25,4,Logging injection for flex/actionscript? Is it possible to trace every single method call in flex/actionscript by injecting logging statements some way? Like how it's possible in C# using PostSharp.,5
+9388201,02/22/2012 02:08:53,699632,04/06/2011 03:25:04,7522,412,How do I select a set of grid cells along a given angle quickly?,"I have set up a grid class that contains theoretical cells.
+
+I have a method `collectCells()` which accepts a starting point, radians and distance as arguments. I want this method to return an Array containing all the cells that are along a given angle and that are within the specified distance from the starting point, e.g.
+
+![enter image description here][1]
+
+The easiest way for me to do this is just loop through all the pixels in the given direction and pick cells up as I go, something like:
+
+    for(var i:int = 0; i<distance; i++)
+    {
+        startPoint.x += Math.cos(radians);
+        startPoint.y += Math.sin(radians);
+    
+        if( start point falls within uncollected cell) collect cell;
+    }
+
+This is obviously really poor, as the loop will be as long as the distance I specify - extremely slow.
+
+I tried something different, creating a `nextCell()` method which accepts the last collected cell and radians. The method threw a point 25 pixels in the direction specified by radians, collected the resulting cell and then started over from that cell for a given amount of cells.
+
+I didn't really think about this approach clearly enough, and once done realized that I had a problem, being that the actual path I'm testing gets broken each time the next cell is sought, e.g.
+
+![enter image description here][2]
+
+Where the green dotted line is the desired path, and the blue lines are the paths that make up each `nextCell()` call because the check is made from the centre of each cell.
+
+What is the correct way to efficiently collect the cells in a given direction over a specified distance (pixels)?
+
+
+  [1]: http://i.stack.imgur.com/78KsQ.png
+  [2]: http://i.stack.imgur.com/QJitL.png",actionscript-3,math,grid,tiles,,,open,0,299,14,"How do I select a set of grid cells along a given angle quickly? I have set up a grid class that contains theoretical cells.
+
+I have a method `collectCells()` which accepts a starting point, radians and distance as arguments. I want this method to return an Array containing all the cells that are along a given angle and that are within the specified distance from the starting point, e.g.
+
+![enter image description here][1]
+
+The easiest way for me to do this is just loop through all the pixels in the given direction and pick cells up as I go, something like:
+
+    for(var i:int = 0; i<distance; i++)
+    {
+        startPoint.x += Math.cos(radians);
+        startPoint.y += Math.sin(radians);
+    
+        if( start point falls within uncollected cell) collect cell;
+    }
+
+This is obviously really poor, as the loop will be as long as the distance I specify - extremely slow.
+
+I tried something different, creating a `nextCell()` method which accepts the last collected cell and radians. The method threw a point 25 pixels in the direction specified by radians, collected the resulting cell and then started over from that cell for a given amount of cells.
+
+I didn't really think about this approach clearly enough, and once done realized that I had a problem, being that the actual path I'm testing gets broken each time the next cell is sought, e.g.
+
+![enter image description here][2]
+
+Where the green dotted line is the desired path, and the blue lines are the paths that make up each `nextCell()` call because the check is made from the centre of each cell.
+
+What is the correct way to efficiently collect the cells in a given direction over a specified distance (pixels)?
+
+
+  [1]: http://i.stack.imgur.com/78KsQ.png
+  [2]: http://i.stack.imgur.com/QJitL.png",4
+7345214,09/08/2011 08:29:04,219609,11/26/2009 18:13:57,912,13,AS3 / AIR readObject() from socket - How do you check all data has been received?,"If you write a simple object to a socket:
+
+    var o:Object = new Object();
+    o.type = e.type;
+	o.params = e.params;
+	_socket.writeObject(o);
+	_socket.flush();
+
+
+Then on the client do you simply use:
+
+    private function onData(e:ProgressEvent):void
+	{
+		var o:Object = _clientSocket.readObject();
+	}
+
+Or do you have to implement some way of checking all of the data has been received recieved before calling `.readObject()`",actionscript-3,sockets,,,,,open,0,61,16,"AS3 / AIR readObject() from socket - How do you check all data has been received? If you write a simple object to a socket:
+
+    var o:Object = new Object();
+    o.type = e.type;
+	o.params = e.params;
+	_socket.writeObject(o);
+	_socket.flush();
+
+
+Then on the client do you simply use:
+
+    private function onData(e:ProgressEvent):void
+	{
+		var o:Object = _clientSocket.readObject();
+	}
+
+Or do you have to implement some way of checking all of the data has been received recieved before calling `.readObject()`",2
+4770510,01/22/2011 20:51:56,147915,07/30/2009 15:48:14,451,42,Events declared in a class,"I sometimes see events declared near the top of the class (i.e. below the imports but above the constructor):
+
+    /**
+    * Description here
+    *
+    **/
+    
+    [Event(name=""complete"", type=""flash.events.Event"")]
+
+What exactly is this? Is this an ""import"" of a certain type of event?",actionscript-3,,,,,,open,0,59,5,"Events declared in a class I sometimes see events declared near the top of the class (i.e. below the imports but above the constructor):
+
+    /**
+    * Description here
+    *
+    **/
+    
+    [Event(name=""complete"", type=""flash.events.Event"")]
+
+What exactly is this? Is this an ""import"" of a certain type of event?",1
+10885024,06/04/2012 16:52:39,1432235,06/02/2012 09:47:30,1,0,How can I Print using FlexPrintJob in Landscape?,i`m trying to print spark DataGrid commponent using FlexPrintJob class and cant change orientation to landscape.,actionscript-3,flex,mxml,,,06/06/2012 12:19:24,not a real question,1,16,8,How can I Print using FlexPrintJob in Landscape? i`m trying to print spark DataGrid commponent using FlexPrintJob class and cant change orientation to landscape.,3
+8844104,01/12/2012 23:55:27,1128718,01/03/2012 21:17:56,12,0,camera following character in as3,"I have a character called _player mc that moves when the mouse is clicked. I need it so that when i click the camera moves with the character. ( I don't want it so that the stage moves) I have searched everywhere but couldn't find it. how would i go about doing this? this is my code.
+
+    package {
+    	import flash.display.Sprite;
+    	import flash.display.MovieClip;
+    	import flash.events.Event;
+    	import flash.events.MouseEvent;
+    	import flash.text.TextField;
+
+	public class Main extends MovieClip {
+		// player
+		
+		public var _player:MovieClip;
+ 
+		// player settings
+		private var _playerSpeed:Number = 10;
+ 
+		// other vars
+		private var _destinationX:int;
+		private var _destinationY:int;
+		
+		//box
+		private var boxAmount:Number=0;
+		private var boxLimit:Number=20;
+		private var _root:Object;
+		//$txt
+		public var money:int=0;
+		public var gold:int=0;
+		public var my_scrollbar:MakeScrollBar;
+		
+		//$$
+		public var testnumber:Number = 1;
+		
+
+
+		public function Main() {
+			
+			$box.click$.move$.buttonMode=true;
+			$box.click$.clickmini$.buttonMode=true;
+
+
+
+    			
+    createPlayer();
+
+ 
+			// add listeners
+			stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
+			stage.addEventListener(MouseEvent.CLICK, mouseHandler);
+			
+
+			//box add listener
+			addEventListener(Event.ENTER_FRAME, eFrame);
+
+			//moneybox
+			$box.click$.move$.addEventListener(MouseEvent.MOUSE_DOWN, startmoving$);
+			$box.click$.move$.addEventListener(MouseEvent.MOUSE_UP, stopmoving$);
+			$box.click$.clickmini$.addEventListener(MouseEvent.CLICK, c$mini);
+
+			my_scrollbar=new MakeScrollBar(scroll_mc,scroll_text);
+
+
+
+		}
+			private function createPlayer():void
+		{
+			_destinationX = stage.stageWidth / 2;
+			_destinationY = stage.stageHeight / 2;
+ 
+			_player = new Player();
+			_player.x = stage.stageWidth / 2;
+			_player.y = stage.stageHeight / 2;
+			stage.addChild(_player);
+		}
+ 
+		
+		private function enterFrameHandler(event:Event):void
+		{
+			_player.x += (_destinationX - _player.x) / _playerSpeed;
+			_player.y += (_destinationY - _player.y) / _playerSpeed;
+		}
+ 
+		
+		private function mouseHandler(event:MouseEvent):void
+		{
+			_destinationX = event.stageX;
+			_destinationY = event.stageY;
+ 
+			rotatePlayer();
+		}
+ 
+		private function rotatePlayer():void
+		{
+			var radians:Number = Math.atan2(_destinationY - _player.y, _destinationX - _player.x);
+			var degrees:Number = radians / (Math.PI / 180) + 90;
+			_player.rotation = degrees;
+		}
+ 
+	
+
+
+			
+		//boxadding
+		private function eFrame(event:Event):void {
+			if (boxAmount<=boxLimit) {
+				boxAmount++;
+
+				var _box:Box=new Box  ;
+				_box.addEventListener(MouseEvent.CLICK,boxclick);
+				_box.buttonMode=true;
+				_box.y=Math.random()*stage.stageHeight;
+
+				_box.x=Math.random()*stage.stageWidth;
+
+				addChild(_box);
+
+			}
+
+		}
+
+		public function boxclick(event:MouseEvent):void {
+			var _box:Box=event.currentTarget as Box;
+			logtxt.appendText(""You collected "" + testnumber +  "" boxes"" );
+			_destinationX = _box.y + 40 + (_player.height / 2);
+			_destinationY = _box.x;
+
+			
+			logtxt.scrollV=logtxt.maxScrollV;
+			var randVal$:Number=Math.random();
+			if (randVal$>=0.49) {
+				money+=100;
+			} else if (randVal$ <= 0.50 && randVal$ >= 0.15) {
+				money+=200;
+			} else if (randVal$ <= 0.14 && randVal$ >= 0.02) {
+				gold+=10;
+			} else if (randVal$ == 0.01) {
+				money+=200;
+				gold+=20;
+			}
+			
+			
+				testnumber ++;
+
+
+
+			boxAmount--;
+			
+			
+			$box.box$in.box$insins.Moneytxt.text=String(money);
+			$box.box$in.box$insins.Goldtxt.text=String(gold);
+			removeChild(_box);
+
+		}
+
+		private function startmoving$(event:MouseEvent):void {
+			$box.startDrag();
+		}
+		private function stopmoving$(event:MouseEvent):void {
+			$box.stopDrag();
+		}
+		private function c$mini(event:MouseEvent):void {
+			$box.click$.move$.visible=false;
+			$box.box$in.visible=false;
+
+			$box.y=200;
+			$box.x=100;
+			$box.click$.clickmini$.addEventListener(MouseEvent.CLICK, reclickbox$);
+			$box.click$.clickmini$.removeEventListener(MouseEvent.CLICK, c$mini);
+
+
+		}
+		private function reclickbox$(event:MouseEvent):void {
+			$box.click$.clickmini$.addEventListener(MouseEvent.CLICK, c$mini);
+			$box.click$.clickmini$.removeEventListener(MouseEvent.CLICK, reclickbox$);
+			$box.y=70;
+			$box.x=250;
+			$box.click$.move$.visible=true;
+			$box.box$in.visible=true;
+		}
+
+		public function scroll_text( n:Number ) {
+			
+			logtxt.scrollV = Math.round( ( logtxt.maxScrollV - 1 ) * n ) + 1;
+		}
+
+	}
+    }",actionscript-3,flash-cs4,,,,01/16/2012 15:45:43,too localized,1,317,5,"camera following character in as3 I have a character called _player mc that moves when the mouse is clicked. I need it so that when i click the camera moves with the character. ( I don't want it so that the stage moves) I have searched everywhere but couldn't find it. how would i go about doing this? this is my code.
+
+    package {
+    	import flash.display.Sprite;
+    	import flash.display.MovieClip;
+    	import flash.events.Event;
+    	import flash.events.MouseEvent;
+    	import flash.text.TextField;
+
+	public class Main extends MovieClip {
+		// player
+		
+		public var _player:MovieClip;
+ 
+		// player settings
+		private var _playerSpeed:Number = 10;
+ 
+		// other vars
+		private var _destinationX:int;
+		private var _destinationY:int;
+		
+		//box
+		private var boxAmount:Number=0;
+		private var boxLimit:Number=20;
+		private var _root:Object;
+		//$txt
+		public var money:int=0;
+		public var gold:int=0;
+		public var my_scrollbar:MakeScrollBar;
+		
+		//$$
+		public var testnumber:Number = 1;
+		
+
+
+		public function Main() {
+			
+			$box.click$.move$.buttonMode=true;
+			$box.click$.clickmini$.buttonMode=true;
+
+
+
+    			
+    createPlayer();
+
+ 
+			// add listeners
+			stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
+			stage.addEventListener(MouseEvent.CLICK, mouseHandler);
+			
+
+			//box add listener
+			addEventListener(Event.ENTER_FRAME, eFrame);
+
+			//moneybox
+			$box.click$.move$.addEventListener(MouseEvent.MOUSE_DOWN, startmoving$);
+			$box.click$.move$.addEventListener(MouseEvent.MOUSE_UP, stopmoving$);
+			$box.click$.clickmini$.addEventListener(MouseEvent.CLICK, c$mini);
+
+			my_scrollbar=new MakeScrollBar(scroll_mc,scroll_text);
+
+
+
+		}
+			private function createPlayer():void
+		{
+			_destinationX = stage.stageWidth / 2;
+			_destinationY = stage.stageHeight / 2;
+ 
+			_player = new Player();
+			_player.x = stage.stageWidth / 2;
+			_player.y = stage.stageHeight / 2;
+			stage.addChild(_player);
+		}
+ 
+		
+		private function enterFrameHandler(event:Event):void
+		{
+			_player.x += (_destinationX - _player.x) / _playerSpeed;
+			_player.y += (_destinationY - _player.y) / _playerSpeed;
+		}
+ 
+		
+		private function mouseHandler(event:MouseEvent):void
+		{
+			_destinationX = event.stageX;
+			_destinationY = event.stageY;
+ 
+			rotatePlayer();
+		}
+ 
+		private function rotatePlayer():void
+		{
+			var radians:Number = Math.atan2(_destinationY - _player.y, _destinationX - _player.x);
+			var degrees:Number = radians / (Math.PI / 180) + 90;
+			_player.rotation = degrees;
+		}
+ 
+	
+
+
+			
+		//boxadding
+		private function eFrame(event:Event):void {
+			if (boxAmount<=boxLimit) {
+				boxAmount++;
+
+				var _box:Box=new Box  ;
+				_box.addEventListener(MouseEvent.CLICK,boxclick);
+				_box.buttonMode=true;
+				_box.y=Math.random()*stage.stageHeight;
+
+				_box.x=Math.random()*stage.stageWidth;
+
+				addChild(_box);
+
+			}
+
+		}
+
+		public function boxclick(event:MouseEvent):void {
+			var _box:Box=event.currentTarget as Box;
+			logtxt.appendText(""You collected "" + testnumber +  "" boxes"" );
+			_destinationX = _box.y + 40 + (_player.height / 2);
+			_destinationY = _box.x;
+
+			
+			logtxt.scrollV=logtxt.maxScrollV;
+			var randVal$:Number=Math.random();
+			if (randVal$>=0.49) {
+				money+=100;
+			} else if (randVal$ <= 0.50 && randVal$ >= 0.15) {
+				money+=200;
+			} else if (randVal$ <= 0.14 && randVal$ >= 0.02) {
+				gold+=10;
+			} else if (randVal$ == 0.01) {
+				money+=200;
+				gold+=20;
+			}
+			
+			
+				testnumber ++;
+
+
+
+			boxAmount--;
+			
+			
+			$box.box$in.box$insins.Moneytxt.text=String(money);
+			$box.box$in.box$insins.Goldtxt.text=String(gold);
+			removeChild(_box);
+
+		}
+
+		private function startmoving$(event:MouseEvent):void {
+			$box.startDrag();
+		}
+		private function stopmoving$(event:MouseEvent):void {
+			$box.stopDrag();
+		}
+		private function c$mini(event:MouseEvent):void {
+			$box.click$.move$.visible=false;
+			$box.box$in.visible=false;
+
+			$box.y=200;
+			$box.x=100;
+			$box.click$.clickmini$.addEventListener(MouseEvent.CLICK, reclickbox$);
+			$box.click$.clickmini$.removeEventListener(MouseEvent.CLICK, c$mini);
+
+
+		}
+		private function reclickbox$(event:MouseEvent):void {
+			$box.click$.clickmini$.addEventListener(MouseEvent.CLICK, c$mini);
+			$box.click$.clickmini$.removeEventListener(MouseEvent.CLICK, reclickbox$);
+			$box.y=70;
+			$box.x=250;
+			$box.click$.move$.visible=true;
+			$box.box$in.visible=true;
+		}
+
+		public function scroll_text( n:Number ) {
+			
+			logtxt.scrollV = Math.round( ( logtxt.maxScrollV - 1 ) * n ) + 1;
+		}
+
+	}
+    }",2
+9550100,03/03/2012 21:38:41,920457,08/30/2011 20:22:23,108,9,Setting a Spark list to 100% height inside of a TabbedViewNavigatorApplication,"I'm trying to set a Spark list control to 100% height of a View inside of a TabbedViewNavigatorApplication.
+
+
+    <s:List dataProvider=""{dp}"" itemRenderer=""renderers.Renderer"" width=""100%"" height=""100%"" />
+
+Using this I can't seem to get the list to fit to the view, it always ends up being much too tall.
+
+I'm testing using the Flash Builder mobile profile, the results seem to be the same across all phones. Setting the height to some number under 50% seems to bring the list closer to full width but it's not consistent across phones.
+
+My app container is set for 160DPI
+
+    <s:TabbedViewNavigatorApplication xmlns:fx=""http://ns.adobe.com/mxml/2009"" 
+								  xmlns:s=""library://ns.adobe.com/flex/spark"" applicationDPI=""160"" applicationComplete=""init(event)"">
+
+I haven't come across this issue until I started using TabbedViewNavigatorApplication, 100% seems to work fine in a standard view based application.
+
+
+Thanks!",actionscript-3,flex,actionscript,flex-mobile,,,open,0,125,11,"Setting a Spark list to 100% height inside of a TabbedViewNavigatorApplication I'm trying to set a Spark list control to 100% height of a View inside of a TabbedViewNavigatorApplication.
+
+
+    <s:List dataProvider=""{dp}"" itemRenderer=""renderers.Renderer"" width=""100%"" height=""100%"" />
+
+Using this I can't seem to get the list to fit to the view, it always ends up being much too tall.
+
+I'm testing using the Flash Builder mobile profile, the results seem to be the same across all phones. Setting the height to some number under 50% seems to bring the list closer to full width but it's not consistent across phones.
+
+My app container is set for 160DPI
+
+    <s:TabbedViewNavigatorApplication xmlns:fx=""http://ns.adobe.com/mxml/2009"" 
+								  xmlns:s=""library://ns.adobe.com/flex/spark"" applicationDPI=""160"" applicationComplete=""init(event)"">
+
+I haven't come across this issue until I started using TabbedViewNavigatorApplication, 100% seems to work fine in a standard view based application.
+
+
+Thanks!",4
+11011807,06/13/2012 09:20:02,883210,08/07/2011 23:25:43,20,2,Playing NetStream.send data from an FLV file,"I am trying to replay function calls sent to Flash Media Server in a NetStream that also contains audio data. 
+
+The data is transmitted between two live clients and recorded to the Media server simultaneously. This produces FLV files as output. So far I've had no trouble playing the audio from the FLVs, but the send data does not seem to be doing anything. I've tried to use an approach similar to the example provided here, but haven't had any luck.
+
+http://alainthibodeau.com/blog/?p=82
+
+Does anyone know of a better approach or have advice on how to store and replay function calls  transmitted via a NetStream?",actionscript-3,flash,fms,netstream,flvplayback,,open,0,103,7,"Playing NetStream.send data from an FLV file I am trying to replay function calls sent to Flash Media Server in a NetStream that also contains audio data. 
+
+The data is transmitted between two live clients and recorded to the Media server simultaneously. This produces FLV files as output. So far I've had no trouble playing the audio from the FLVs, but the send data does not seem to be doing anything. I've tried to use an approach similar to the example provided here, but haven't had any luck.
+
+http://alainthibodeau.com/blog/?p=82
+
+Does anyone know of a better approach or have advice on how to store and replay function calls  transmitted via a NetStream?",5
+3919938,10/13/2010 00:05:04,473834,10/12/2010 21:03:34,1,0,Pass variables from AS3 swf to AS2 swf,"I am trying to load an AS2 swf from an AS3 swf. The AS2 swf which was written long back, expects parameters from the timeline(_root). These were passed to it before from HTML using flashvars. 
+
+Now I am trying to get rid of the HTML pages, by directly loading the AS2 swf from the AS3 swf. However, when I try to load the AS2 swf using the Loader class, the swf loads fine, but the parameters are not getting passed on.
+
+I tried to add the query string to the url parameter I used in the URL request used for the Loader, but that did not work.(Adding URL variables as data to URLRequest did not work either.)Is there any way that I can do this?
+
+Thanks",actionscript-3,flex3,,,,,open,0,124,8,"Pass variables from AS3 swf to AS2 swf I am trying to load an AS2 swf from an AS3 swf. The AS2 swf which was written long back, expects parameters from the timeline(_root). These were passed to it before from HTML using flashvars. 
+
+Now I am trying to get rid of the HTML pages, by directly loading the AS2 swf from the AS3 swf. However, when I try to load the AS2 swf using the Loader class, the swf loads fine, but the parameters are not getting passed on.
+
+I tried to add the query string to the url parameter I used in the URL request used for the Loader, but that did not work.(Adding URL variables as data to URLRequest did not work either.)Is there any way that I can do this?
+
+Thanks",2
+11145878,06/21/2012 20:03:46,1403892,05/18/2012 16:52:21,3,0,Flash CS6 ActionScript 3 Error #2025,"I'm working on a webpage for a class and am trying to work the navigation using ActionScript 3. My understanding of how it should work is that when you click the links at the top, it removes whatever is currently displayed, using removeChild, and adds the new page's content using addChild. 
+
+It works fine when going from the initial page to one of the links. But whenever I go from a page that is not the home page to another page I get:
+
+
+> ArgumentError: Error #2025: The supplied DisplayObject must be a child
+> of the caller. 	at flash.display::DisplayObjectContainer/removeChild()
+> 	at nutshellMathReCoded4_fla::MainTimeline/hideOtherPages() 	at
+> nutshellMathReCoded4_fla::MainTimeline/runSubtraction()
+
+
+Here is the code:
+
+    stop();
+    // Flash Imports
+    import flash.events.MouseEvent;
+    import flash.events.Event;
+    import flash.media.SoundMixer;
+    
+    //Page Components //
+    // Home //
+    // Links
+    // Create Header & Nav //
+    // Logo Link
+    	var headerLogo:logoMainPage = new logoMainPage();
+    	headerLogo.x = 252.85;
+    	headerLogo.y = 18.00;
+    	//Addition Link
+    	var additionLink:addPageLink = new addPageLink();
+    	additionLink.x = 142.35;
+    	additionLink.y = 96.00;
+    	//Subtraction Link
+    	var subtractionLink:subPageLink = new subPageLink();
+    	subtractionLink.x = 208.60;
+    	subtractionLink.y = 144.60;
+    	// Multiplication Link
+    	var multiplicationLink:mulPageLink = new mulPageLink();
+    	multiplicationLink.x = 397.80;
+    	multiplicationLink.y = 100.00;
+    	// Division Link
+    	var divisionLink:divPageLink = new divPageLink();
+    	divisionLink.x = 597.95;
+    	divisionLink.y = 144.60;
+    
+    //Animation
+    	var animation:mainAnimation = new mainAnimation();
+    	animation.x = 99.90;
+    	animation.y = 244.00;
+    
+    //Addition // 
+    	var addSimpleX:additionSimpleX = new additionSimpleX();
+    	addSimpleX.x = 41;
+    	addSimpleX.y = 395.95;
+    
+    	var addSimpleY:additionSimpleY = new additionSimpleY();
+    	addSimpleY.x = 364;
+    	addSimpleY.y = 395.95;
+    
+    	var addSimpleAnswer:additionSimpleAnswer = new additionSimpleAnswer();
+    	addSimpleAnswer.x = 701;
+    	addSimpleAnswer.y = 395.95;
+    	
+    	var additionAddSign:additionSign = new additionSign();
+    	additionAddSign.x = 276.55;
+    	additionAddSign.y = 360.20;
+    	
+    	var additionEqualsSign:equalsSign = new equalsSign();
+    	additionEqualsSign.x = 613.95;
+    	additionEqualsSign.y = 360.20;
+    	
+    	var addSum:additionSummary = new additionSummary();
+    	addSum.x = 178.25;
+    	addSum.y = 202;
+    	
+    	var addTryOut:tryItOut = new tryItOut();
+    	addTryOut.x = 205.70;
+    	addTryOut.y = 475.65;
+    	
+    	var addDDLink:digDeeperLink = new digDeeperLink();
+    	addDDLink.x = 274.95;
+    	addDDLink.y = 696;
+    	
+    	var addTQLink:quizLink = new quizLink();
+    	addTQLink.x = 465;
+    	addTQLink.y = 696.50;
+    	
+    //Addition Deeper
+    	var addLong:additionExtended = new additionExtended();
+    	addLong.x = 193.00;
+    	addLong.y = 323.00;
+    	
+    	var addDDSum:additionDDSummary = new additionDDSummary();
+    	addDDSum.x = 222.40;
+    	addDDSum.y = 201.20;
+    	
+    	var addDDB2B:backToBasicsLink = new backToBasicsLink();
+    	addDDB2B.x = 271.95;
+    	addDDB2B.y = 696;
+    	
+    	var addDDTQ:quizLink = new quizLink();
+    	addDDTQ.x = 468;
+    	addDDTQ.y = 696;
+    
+    //Subtraction
+    	var subSimpleX:subtractionSimpleX = new subtractionSimpleX();
+    	subSimpleX.x = 44;
+    	subSimpleX.y = 408.50;
+    	
+    	var subSimpleY:subtractionSimpleY = new subtractionSimpleY();
+    	subSimpleY.x = 367;
+    	subSimpleY.y = 408.50;
+    	
+    	var subSimpleAnswer:subtractionSimpleAnswer = new subtractionSimpleAnswer();
+    	subSimpleAnswer.x = 692.95;
+    	subSimpleAnswer.y = 408.50;
+    	
+    	var subtractionEqualsSign:equalsSign = new equalsSign();
+    	subtractionEqualsSign.x = 612.80;
+    	subtractionEqualsSign.y = 372.95
+    	
+    	var subtractionSubSign:subtractionSign = new subtractionSign();
+    	subtractionSubSign.x = 280.85;
+    	subtractionSubSign.y = 371.95;
+    	
+    	var subTryOut:tryItOut = new tryItOut();
+    	subTryOut.x = 221.8;
+    	subTryOut.y = 477.95;
+    	
+    	var subDDLink:digDeeperLink = new digDeeperLink();
+    	subDDLink.x = 274.95;
+    	subDDLink.y = 696;
+    	
+    	var subTQLink:quizLink = new quizLink();
+    	subTQLink.x = 465;
+    	subTQLink.y = 696.50;
+    	
+    	var subSum:subtractionSummary = new subtractionSummary();
+    	subSum.x = 147.30;
+    	subSum.y = 210.05;
+    	
+    // Subtraction Dig Deeper
+    
+    	var subBudget:budget = new budget();
+    	subBudget.x = 367.95;
+    	subBudget.y = 400.90;
+    	
+    	var subExpenses:expenses = new expenses();
+    	subExpenses.x = 204.00;
+    	subExpenses.y = 513.40;
+    	
+    	var subDDT1:subtractionDD1 = new subtractionDD1();
+    	subDDT1.x = 264.05;
+    	subDDT1.y = 211;
+    	
+    	var subDDT2:subtractionDD2 = new subtractionDD2();
+    	subDDT2.x = 206.65;
+    	subDDT2.y = 351;
+    	
+    	var subDDT3:subtractionDD3 = new subtractionDD3();
+    	subDDT3.x = 131.80;
+    	subDDT3.y = 474.95;
+    	
+    	var subDDT4:subtractionDD4 = new subtractionDD4();
+    	subDDT4.x = 291.00;
+    	subDDT4.y = 463;
+    
+    	var subCheckBudgetLink:checkBudgetLink = new checkBudgetLink();
+    	subCheckBudgetLink.x = 437;
+    	subCheckBudgetLink.y = 609.5;
+    	
+    	var subB2BLink:backToBasicsLink = new backToBasicsLink();
+    	subB2BLink.x = 271.95;
+    	subB2BLink.y = 696;
+    	
+    	var subDDTQLink:quizLink = new quizLink();
+    	subDDTQLink.x = 468;
+    	subDDTQLink.y = 696;
+    
+    //Multiplication
+    	var mulSimpleX:multiplicationSimpleX = new multiplicationSimpleX();
+    	mulSimpleX.x = 30.85;
+    	mulSimpleX.y = 395.35;
+    	
+    	var mulSimpleY:multiplicationSimpleY = new multiplicationSimpleY();
+    	mulSimpleY.x = 370.85;
+    	mulSimpleY.y = 395.35;
+    	
+    	var mulSimpleAnswer:multiplicationSimpleAnswer = new multiplicationSimpleAnswer();
+    	mulSimpleAnswer.x = 691.90;
+    	mulSimpleAnswer.y = 395.35;
+    	
+    	var multiplicationMulSign:multiplicationSign = new multiplicationSign();
+    	multiplicationMulSign.x = 284.60;
+    	multiplicationMulSign.y = 365.95;
+    	
+    	var mulEqualsSign:equalsSign = new equalsSign();
+    	mulEqualsSign.x = 609.80;
+    	mulEqualsSign.y = 356.95;
+    	
+    	var mulSummary:multiplicationSummary = new multiplicationSummary();
+    	mulSummary.x = 145.30;
+    	mulSummary.y = 202.40;
+    	
+    	var mulTryOut:tryItOut = new tryItOut();
+    	mulTryOut.x = 218.80;
+    	mulTryOut.y = 461.95;
+    	
+    	var mulDDLink:digDeeperLink = new digDeeperLink();
+    	mulDDLink.x = 274.95;
+    	mulDDLink.y = 696;
+    	
+    	var mulTQLink:quizLink = new quizLink();
+    	mulTQLink.x = 465.00;
+    	mulTQLink.y = 696;
+    	
+    	
+    	
+    // Multiplication Deeper
+    
+    	var mulDD1:multiplicationDD1 = new multiplicationDD1();
+    	mulDD1.x = 241.15;
+    	mulDD1.y = 209;
+    	
+    	var mulDD2:multiplicationDD2 = new multiplicationDD2();
+    	mulDD2.x = 297.05;
+    	mulDD2.y = 350.40;
+    	
+    	var mulDD3:multiplicationDD3 = new multiplicationDD3();
+    	mulDD3.x = 316.75;
+    	mulDD3.y = 393.65;
+    	
+    	var mulDD4:multiplicationDD4 = new multiplicationDD4();
+    	mulDD4.x = 297.55;
+    	mulDD4.y = 436.90;
+    	
+    	var mulB2BLink:backToBasicsLink = new backToBasicsLink();
+    	mulB2BLink.x = 271.95;
+    	mulB2BLink.y = 696;
+    	
+    	var mulDDTQL:quizLink = new quizLink();
+    	mulDDTQL.x = 468;
+    	mulDDTQL.y = 696;
+    	
+    // Division
+    	var divSimpleX:divisionSimpleX = new divisionSimpleX();
+    	divSimpleX.x = 42;
+    	divSimpleX.y = 397.5;
+    	
+    	var divSimpleY:divisionSimpleY = new divisionSimpleY();
+    	divSimpleY.x = 366.95;
+    	divSimpleY.y = 397.50;
+    	
+    	var divSimpleAnswer:divisionSimpleAnswer = new divisionSimpleAnswer();
+    	divSimpleAnswer.x = 698.95;
+    	divSimpleAnswer.y = 397.50;
+    	
+    	var divisionDivSign:divisionSign = new divisionSign();
+    	divisionDivSign.x = 277.80;
+    	divisionDivSign.y = 360.95;
+    	
+    	var divEqualsSign:equalsSign = new equalsSign();
+    	divEqualsSign.x = 609.80;
+    	divEqualsSign.y = 361.95;
+    	
+    	var divSummary:divisionSummary = new divisionSummary();
+    	divSummary.x = 112.50;
+    	divSummary.y = 202.20;
+    	
+    	var divTryOut:tryItOut = new tryItOut();
+    	divTryOut.x = 218.80;
+    	divTryOut.y = 466.95;
+    	
+    	var divDDLink:digDeeperLink = new digDeeperLink();
+    	divDDLink.x = 274.95;
+    	divDDLink.y = 696;
+    	
+    	var divTQLink:quizLink = new quizLink();
+    	divTQLink.x = 274.95;
+    	divTQLink.y = 696;
+    	
+    // Division Deeper
+    
+    	var divDD1:divisionDD1 = new divisionDD1();
+    	divDD1.x = 239.60;
+    	divDD1.y = 215.00;
+    	
+    	var divDD2:divisionDD2 = new divisionDD2();
+    	divDD2.x = 328.65;
+    	divDD2.y = 336.70;
+    	
+    	var divDD3:divisionDD3 = new divisionDD3();
+    	divDD3.x = 308.95;
+    	divDD3.y = 381.20;
+    	
+    	var divB2BLink:backToBasicsLink = new backToBasicsLink();
+    	divB2BLink.x = 271.95;
+    	divB2BLink.y = 696;
+    	
+    	var divDDTQLink:quizLink = new quizLink();
+    	divDDTQLink.x = 468;
+    	divDDTQLink.y = 696;
+    	
+    
+    // Quiz
+    	//Title
+    	var titleQuiz:quizTitle = new quizTitle();
+    	titleQuiz.x = 419.40;
+    	titleQuiz.y = 192;
+    	// Random Number Backgrounds
+    	var quizBG1:shortTextBG = new shortTextBG();
+    	quizBG1.x = 44.9;
+    	quizBG1.y = 283;
+    	
+    	var quizBG2:shortTextBG = new shortTextBG();
+    	quizBG2.x = 368.95;
+    	quizBG2.y = 283;
+    	
+    	var quizBG3:shortTextBG = new shortTextBG();
+    	quizBG3.x = 44.9;
+    	quizBG3.y = 360.25;
+    	
+    	var quizBG4:shortTextBG = new shortTextBG();
+    	quizBG4.x = 368.95;
+    	quizBG4.y = 360.25;
+    	
+    	var quizBG5:shortTextBG = new shortTextBG();
+    	quizBG5.x = 44.90;
+    	quizBG5.y = 440.20;
+    	
+    	var quizBG6:shortTextBG = new shortTextBG();
+    	quizBG6.x = 368.95;
+    	quizBG6.y = 440.20;
+    	
+    	var quizBG7:shortTextBG = new shortTextBG();
+    	quizBG7.x = 44.90;
+    	quizBG7.y = 518.80;
+    	
+    	var quizBG8:shortTextBG = new shortTextBG();
+    	quizBG8.x = 368.95;
+    	quizBG8.y = 518.80
+    	
+    	// Signs
+    	var quizAddSign:additionSign = new additionSign();
+    	quizAddSign.x = 280.05;
+    	quizAddSign.y = 251.90;
+    	
+    	var quizSubSign:subtractionSign = new subtractionSign();
+    	quizSubSign.x = 281.40;
+    	quizSubSign.y = 323.80;
+    	
+    	var quizMulSign:multiplicationSign = new multiplicationSign();
+    	quizMulSign.x = 288.20;
+    	quizMulSign.y = 414.05;
+    	
+    	var quizDivSign:divisionSign = new divisionSign();
+    	quizDivSign.x = 280.05;
+    	quizDivSign.y = 489.20;
+    	
+    	var quizAddEqualsSign:equalsSign = new equalsSign();
+    	quizAddEqualsSign.x = 603.90;
+    	quizAddEqualsSign.y = 251.90;
+    	
+    	var quizSubEqualsSign:equalsSign = new equalsSign();
+    	quizSubEqualsSign.x = 603.90;
+    	quizSubEqualsSign.y = 330.55;
+    	
+    	var quizMulEqualsSign:equalsSign = new equalsSign();
+    	quizMulEqualsSign.x = 603.90;
+    	quizMulEqualsSign.y = 409.20;
+    	
+    	var quizDivEqualsSign:equalsSign = new equalsSign();
+    	quizDivEqualsSign.x = 603.90;
+    	quizDivEqualsSign.y = 489.20;
+    	
+    	// Check quiz
+    	var quizCheck:checkQuiz = new checkQuiz();
+    	quizCheck.x = 369.95;
+    	quizCheck.y = 626.60;
+    	
+    	var answerWrong:wrongAnswer = new wrongAnswer();
+    	var answerCorrect:correctAnswer = new correctAnswer();
+    	
+    
+    // Home Page //;
+    
+    // Create Header & Nav //
+    // Logo
+    addChild(headerLogo);
+    addChild(additionLink);
+    addChild(subtractionLink);
+    addChild(multiplicationLink);
+    addChild(divisionLink);
+    addChild(animation);
+    
+    
+    
+    headerLogo.addEventListener(MouseEvent.CLICK, runIndexPage);
+    function runIndexPage(e:MouseEvent):void
+    {
+    	// Hide other Pages
+    	hideOtherPages();
+    	
+    	addChild(animation);
+    	animation.gotoAndPlay(1);
+    }
+    
+    // Addition Page //
+    additionLink.addEventListener(MouseEvent.CLICK, runAddition);
+    function runAddition(e:MouseEvent):void
+    {
+    	hideOtherPages();
+    	createAdditionPage();
+    	
+    	
+    }
+    
+    subtractionLink.addEventListener(MouseEvent.CLICK, runSubtraction);
+    function runSubtraction(e:MouseEvent):void
+    {
+    		hideOtherPages();
+    		createSubtractionPage();
+    }
+    
+    multiplicationLink.addEventListener(MouseEvent.CLICK, runMultiplication);
+    function runMultiplication(e:MouseEvent):void
+    {
+    		hideOtherPages();
+    		createMultiplicationPage();
+    }
+    
+    divisionLink.addEventListener(MouseEvent.CLICK, runDivision);
+    function runDivision(e:MouseEvent):void
+    {
+    	hideOtherPages();
+    	createDivisionPage();
+    }
+    
+    
+    //Global Functions
+    function createAdditionPage():void
+    {
+    	addChild(addSimpleX);
+    	addChild(addSimpleY);
+    	addChild(addSimpleAnswer);
+    	addChild(additionAddSign);
+    	addChild(additionEqualsSign);
+    	addChild(addSum);
+    	addChild(addTryOut);
+    	addChild(addDDLink);
+    	addChild(addTQLink);
+    }
+    
+    function createSubtractionPage():void
+    {
+    		addChild(subSimpleX);
+    		addChild(subSimpleY);
+    		addChild(subSimpleAnswer);
+    		addChild(subtractionSubSign);
+    		addChild(subtractionEqualsSign);
+    		addChild(subSum);
+    		addChild(subTryOut);
+    		addChild(subDDLink);
+    		addChild(subTQLink);
+    }
+    
+    function createMultiplicationPage():void
+    {
+    		addChild(mulSimpleX);
+    		addChild(mulSimpleY);
+    		addChild(mulSimpleAnswer);
+    		addChild(multiplicationMulSign);
+    		addChild(mulEqualsSign);
+    		addChild(mulSummary);
+    		addChild(mulTryOut);
+    		addChild(mulDDLink);
+    		addChild(mulTQLink);
+    }
+    
+    function createDivisionPage():void
+    {
+    		addChild(divSimpleX);
+    		addChild(divSimpleY);
+    		addChild(divSimpleAnswer);
+    		addChild(divisionDivSign);
+    		addChild(divEqualsSign);
+    		addChild(divSummary);
+    		addChild(divTryOut);
+    		addChild(divDDLink);
+    		addChild(divTQLink);
+    }
+    
+    function hideOtherPages():void
+    {
+    	if(animation)
+    	{
+    		removeChild(animation);
+    		SoundMixer.stopAll();
+    	}
+    	
+    	else if(addSimpleX)
+    	{
+    		
+    		removeChild(addSimpleX);
+    		removeChild(addSimpleY);
+    		removeChild(addSimpleAnswer);
+    		removeChild(additionAddSign);
+    		removeChild(additionEqualsSign);
+    		removeChild(addSum);
+    		removeChild(addTryOut);
+    		removeChild(addDDLink);
+    		removeChild(addTQLink);
+    	}
+    	
+    	else if(addLong)
+    	{
+    		removeChild(addLong);
+    		removeChild(addDDSum);
+    		removeChild(addDDB2B);
+    		removeChild(addDDTQ);
+    	}
+    	
+    	else if(subSimpleX)
+    	{
+    		removeChild(subSimpleX);
+    		removeChild(subSimpleY);
+    		removeChild(subSimpleAnswer);
+    		removeChild(subtractionSubSign);
+    		removeChild(subtractionEqualsSign);
+    		removeChild(subSum);
+    		removeChild(subTryOut);
+    		removeChild(subDDLink);
+    		removeChild(subTQLink);
+    	}
+    	
+    	else if(subBudget)
+    	{
+    		removeChild(subBudget);
+    		removeChild(subExpenses);
+    		removeChild(subDDT1);
+    		removeChild(subDDT2);
+    		removeChild(subDDT3);
+    		removeChild(subDDT4);
+    		removeChild(subCheckBudgetLink);
+    		removeChild(subB2BLink);
+    		removeChild(subDDTQLink);
+    	}
+    	
+    	else if(mulSimpleX)
+    	{
+    		removeChild(mulSimpleX);
+    		removeChild(mulSimpleY);
+    		removeChild(mulSimpleAnswer);
+    		removeChild(multiplicationMulSign);
+    		removeChild(mulEqualsSign);
+    		removeChild(mulSummary);
+    		removeChild(mulDDLink);
+    		removeChild(mulTQLink);		
+    	}
+    	
+    	else if(mulDD1)
+    	{
+    		removeChild(mulDD1);
+    		removeChild(mulDD2);
+    		removeChild(mulDD3);
+    		removeChild(mulDD4);
+    		removeChild(mulB2BLink);
+    		removeChild(mulDDTQL);
+    	}
+    	
+    	else if(divSimpleX)
+    	{
+    		removeChild(divSimpleX);
+    		removeChild(divSimpleY);
+    		removeChild(divSimpleAnswer);
+    		removeChild(divisionDivSign);
+    		removeChild(divEqualsSign);
+    		removeChild(divSummary);
+    		removeChild(divTryOut);
+    		removeChild(divDDLink);
+    		removeChild(divTQLink);
+    	}
+    	
+    	else if(divDD1)
+    	{
+    		removeChild(divDD1);
+    		removeChild(divDD2);
+    		removeChild(divDD3);
+    		removeChild(divB2BLink);
+    		removeChild(divDDTQLink);
+    	}
+    	
+    	else if(titleQuiz)
+    	{
+    		removeChild(titleQuiz);
+    		removeChild(quizBG1);
+    		removeChild(quizBG2);
+    		removeChild(quizBG3);
+    		removeChild(quizBG4);
+    		removeChild(quizBG5);
+    		removeChild(quizBG6);
+    		removeChild(quizBG7);
+    		removeChild(quizBG8);
+    		removeChild(quizAddSign);
+    		removeChild(quizSubSign);
+    		removeChild(quizMulSign);
+    		removeChild(quizDivSign);
+    		removeChild(quizAddEqualsSign);
+    		removeChild(quizSubEqualsSign);
+    		removeChild(quizMulEqualsSign);
+    		removeChild(quizDivEqualsSign);
+    		removeChild(quizCheck);
+    		
+    		//Dynamic Quiz Removal Section ****
+    	}
+    	
+    	
+    }
+
+",actionscript-3,flash,removechild,addchild,,,open,0,3286,6,"Flash CS6 ActionScript 3 Error #2025 I'm working on a webpage for a class and am trying to work the navigation using ActionScript 3. My understanding of how it should work is that when you click the links at the top, it removes whatever is currently displayed, using removeChild, and adds the new page's content using addChild. 
+
+It works fine when going from the initial page to one of the links. But whenever I go from a page that is not the home page to another page I get:
+
+
+> ArgumentError: Error #2025: The supplied DisplayObject must be a child
+> of the caller. 	at flash.display::DisplayObjectContainer/removeChild()
+> 	at nutshellMathReCoded4_fla::MainTimeline/hideOtherPages() 	at
+> nutshellMathReCoded4_fla::MainTimeline/runSubtraction()
+
+
+Here is the code:
+
+    stop();
+    // Flash Imports
+    import flash.events.MouseEvent;
+    import flash.events.Event;
+    import flash.media.SoundMixer;
+    
+    //Page Components //
+    // Home //
+    // Links
+    // Create Header & Nav //
+    // Logo Link
+    	var headerLogo:logoMainPage = new logoMainPage();
+    	headerLogo.x = 252.85;
+    	headerLogo.y = 18.00;
+    	//Addition Link
+    	var additionLink:addPageLink = new addPageLink();
+    	additionLink.x = 142.35;
+    	additionLink.y = 96.00;
+    	//Subtraction Link
+    	var subtractionLink:subPageLink = new subPageLink();
+    	subtractionLink.x = 208.60;
+    	subtractionLink.y = 144.60;
+    	// Multiplication Link
+    	var multiplicationLink:mulPageLink = new mulPageLink();
+    	multiplicationLink.x = 397.80;
+    	multiplicationLink.y = 100.00;
+    	// Division Link
+    	var divisionLink:divPageLink = new divPageLink();
+    	divisionLink.x = 597.95;
+    	divisionLink.y = 144.60;
+    
+    //Animation
+    	var animation:mainAnimation = new mainAnimation();
+    	animation.x = 99.90;
+    	animation.y = 244.00;
+    
+    //Addition // 
+    	var addSimpleX:additionSimpleX = new additionSimpleX();
+    	addSimpleX.x = 41;
+    	addSimpleX.y = 395.95;
+    
+    	var addSimpleY:additionSimpleY = new additionSimpleY();
+    	addSimpleY.x = 364;
+    	addSimpleY.y = 395.95;
+    
+    	var addSimpleAnswer:additionSimpleAnswer = new additionSimpleAnswer();
+    	addSimpleAnswer.x = 701;
+    	addSimpleAnswer.y = 395.95;
+    	
+    	var additionAddSign:additionSign = new additionSign();
+    	additionAddSign.x = 276.55;
+    	additionAddSign.y = 360.20;
+    	
+    	var additionEqualsSign:equalsSign = new equalsSign();
+    	additionEqualsSign.x = 613.95;
+    	additionEqualsSign.y = 360.20;
+    	
+    	var addSum:additionSummary = new additionSummary();
+    	addSum.x = 178.25;
+    	addSum.y = 202;
+    	
+    	var addTryOut:tryItOut = new tryItOut();
+    	addTryOut.x = 205.70;
+    	addTryOut.y = 475.65;
+    	
+    	var addDDLink:digDeeperLink = new digDeeperLink();
+    	addDDLink.x = 274.95;
+    	addDDLink.y = 696;
+    	
+    	var addTQLink:quizLink = new quizLink();
+    	addTQLink.x = 465;
+    	addTQLink.y = 696.50;
+    	
+    //Addition Deeper
+    	var addLong:additionExtended = new additionExtended();
+    	addLong.x = 193.00;
+    	addLong.y = 323.00;
+    	
+    	var addDDSum:additionDDSummary = new additionDDSummary();
+    	addDDSum.x = 222.40;
+    	addDDSum.y = 201.20;
+    	
+    	var addDDB2B:backToBasicsLink = new backToBasicsLink();
+    	addDDB2B.x = 271.95;
+    	addDDB2B.y = 696;
+    	
+    	var addDDTQ:quizLink = new quizLink();
+    	addDDTQ.x = 468;
+    	addDDTQ.y = 696;
+    
+    //Subtraction
+    	var subSimpleX:subtractionSimpleX = new subtractionSimpleX();
+    	subSimpleX.x = 44;
+    	subSimpleX.y = 408.50;
+    	
+    	var subSimpleY:subtractionSimpleY = new subtractionSimpleY();
+    	subSimpleY.x = 367;
+    	subSimpleY.y = 408.50;
+    	
+    	var subSimpleAnswer:subtractionSimpleAnswer = new subtractionSimpleAnswer();
+    	subSimpleAnswer.x = 692.95;
+    	subSimpleAnswer.y = 408.50;
+    	
+    	var subtractionEqualsSign:equalsSign = new equalsSign();
+    	subtractionEqualsSign.x = 612.80;
+    	subtractionEqualsSign.y = 372.95
+    	
+    	var subtractionSubSign:subtractionSign = new subtractionSign();
+    	subtractionSubSign.x = 280.85;
+    	subtractionSubSign.y = 371.95;
+    	
+    	var subTryOut:tryItOut = new tryItOut();
+    	subTryOut.x = 221.8;
+    	subTryOut.y = 477.95;
+    	
+    	var subDDLink:digDeeperLink = new digDeeperLink();
+    	subDDLink.x = 274.95;
+    	subDDLink.y = 696;
+    	
+    	var subTQLink:quizLink = new quizLink();
+    	subTQLink.x = 465;
+    	subTQLink.y = 696.50;
+    	
+    	var subSum:subtractionSummary = new subtractionSummary();
+    	subSum.x = 147.30;
+    	subSum.y = 210.05;
+    	
+    // Subtraction Dig Deeper
+    
+    	var subBudget:budget = new budget();
+    	subBudget.x = 367.95;
+    	subBudget.y = 400.90;
+    	
+    	var subExpenses:expenses = new expenses();
+    	subExpenses.x = 204.00;
+    	subExpenses.y = 513.40;
+    	
+    	var subDDT1:subtractionDD1 = new subtractionDD1();
+    	subDDT1.x = 264.05;
+    	subDDT1.y = 211;
+    	
+    	var subDDT2:subtractionDD2 = new subtractionDD2();
+    	subDDT2.x = 206.65;
+    	subDDT2.y = 351;
+    	
+    	var subDDT3:subtractionDD3 = new subtractionDD3();
+    	subDDT3.x = 131.80;
+    	subDDT3.y = 474.95;
+    	
+    	var subDDT4:subtractionDD4 = new subtractionDD4();
+    	subDDT4.x = 291.00;
+    	subDDT4.y = 463;
+    
+    	var subCheckBudgetLink:checkBudgetLink = new checkBudgetLink();
+    	subCheckBudgetLink.x = 437;
+    	subCheckBudgetLink.y = 609.5;
+    	
+    	var subB2BLink:backToBasicsLink = new backToBasicsLink();
+    	subB2BLink.x = 271.95;
+    	subB2BLink.y = 696;
+    	
+    	var subDDTQLink:quizLink = new quizLink();
+    	subDDTQLink.x = 468;
+    	subDDTQLink.y = 696;
+    
+    //Multiplication
+    	var mulSimpleX:multiplicationSimpleX = new multiplicationSimpleX();
+    	mulSimpleX.x = 30.85;
+    	mulSimpleX.y = 395.35;
+    	
+    	var mulSimpleY:multiplicationSimpleY = new multiplicationSimpleY();
+    	mulSimpleY.x = 370.85;
+    	mulSimpleY.y = 395.35;
+    	
+    	var mulSimpleAnswer:multiplicationSimpleAnswer = new multiplicationSimpleAnswer();
+    	mulSimpleAnswer.x = 691.90;
+    	mulSimpleAnswer.y = 395.35;
+    	
+    	var multiplicationMulSign:multiplicationSign = new multiplicationSign();
+    	multiplicationMulSign.x = 284.60;
+    	multiplicationMulSign.y = 365.95;
+    	
+    	var mulEqualsSign:equalsSign = new equalsSign();
+    	mulEqualsSign.x = 609.80;
+    	mulEqualsSign.y = 356.95;
+    	
+    	var mulSummary:multiplicationSummary = new multiplicationSummary();
+    	mulSummary.x = 145.30;
+    	mulSummary.y = 202.40;
+    	
+    	var mulTryOut:tryItOut = new tryItOut();
+    	mulTryOut.x = 218.80;
+    	mulTryOut.y = 461.95;
+    	
+    	var mulDDLink:digDeeperLink = new digDeeperLink();
+    	mulDDLink.x = 274.95;
+    	mulDDLink.y = 696;
+    	
+    	var mulTQLink:quizLink = new quizLink();
+    	mulTQLink.x = 465.00;
+    	mulTQLink.y = 696;
+    	
+    	
+    	
+    // Multiplication Deeper
+    
+    	var mulDD1:multiplicationDD1 = new multiplicationDD1();
+    	mulDD1.x = 241.15;
+    	mulDD1.y = 209;
+    	
+    	var mulDD2:multiplicationDD2 = new multiplicationDD2();
+    	mulDD2.x = 297.05;
+    	mulDD2.y = 350.40;
+    	
+    	var mulDD3:multiplicationDD3 = new multiplicationDD3();
+    	mulDD3.x = 316.75;
+    	mulDD3.y = 393.65;
+    	
+    	var mulDD4:multiplicationDD4 = new multiplicationDD4();
+    	mulDD4.x = 297.55;
+    	mulDD4.y = 436.90;
+    	
+    	var mulB2BLink:backToBasicsLink = new backToBasicsLink();
+    	mulB2BLink.x = 271.95;
+    	mulB2BLink.y = 696;
+    	
+    	var mulDDTQL:quizLink = new quizLink();
+    	mulDDTQL.x = 468;
+    	mulDDTQL.y = 696;
+    	
+    // Division
+    	var divSimpleX:divisionSimpleX = new divisionSimpleX();
+    	divSimpleX.x = 42;
+    	divSimpleX.y = 397.5;
+    	
+    	var divSimpleY:divisionSimpleY = new divisionSimpleY();
+    	divSimpleY.x = 366.95;
+    	divSimpleY.y = 397.50;
+    	
+    	var divSimpleAnswer:divisionSimpleAnswer = new divisionSimpleAnswer();
+    	divSimpleAnswer.x = 698.95;
+    	divSimpleAnswer.y = 397.50;
+    	
+    	var divisionDivSign:divisionSign = new divisionSign();
+    	divisionDivSign.x = 277.80;
+    	divisionDivSign.y = 360.95;
+    	
+    	var divEqualsSign:equalsSign = new equalsSign();
+    	divEqualsSign.x = 609.80;
+    	divEqualsSign.y = 361.95;
+    	
+    	var divSummary:divisionSummary = new divisionSummary();
+    	divSummary.x = 112.50;
+    	divSummary.y = 202.20;
+    	
+    	var divTryOut:tryItOut = new tryItOut();
+    	divTryOut.x = 218.80;
+    	divTryOut.y = 466.95;
+    	
+    	var divDDLink:digDeeperLink = new digDeeperLink();
+    	divDDLink.x = 274.95;
+    	divDDLink.y = 696;
+    	
+    	var divTQLink:quizLink = new quizLink();
+    	divTQLink.x = 274.95;
+    	divTQLink.y = 696;
+    	
+    // Division Deeper
+    
+    	var divDD1:divisionDD1 = new divisionDD1();
+    	divDD1.x = 239.60;
+    	divDD1.y = 215.00;
+    	
+    	var divDD2:divisionDD2 = new divisionDD2();
+    	divDD2.x = 328.65;
+    	divDD2.y = 336.70;
+    	
+    	var divDD3:divisionDD3 = new divisionDD3();
+    	divDD3.x = 308.95;
+    	divDD3.y = 381.20;
+    	
+    	var divB2BLink:backToBasicsLink = new backToBasicsLink();
+    	divB2BLink.x = 271.95;
+    	divB2BLink.y = 696;
+    	
+    	var divDDTQLink:quizLink = new quizLink();
+    	divDDTQLink.x = 468;
+    	divDDTQLink.y = 696;
+    	
+    
+    // Quiz
+    	//Title
+    	var titleQuiz:quizTitle = new quizTitle();
+    	titleQuiz.x = 419.40;
+    	titleQuiz.y = 192;
+    	// Random Number Backgrounds
+    	var quizBG1:shortTextBG = new shortTextBG();
+    	quizBG1.x = 44.9;
+    	quizBG1.y = 283;
+    	
+    	var quizBG2:shortTextBG = new shortTextBG();
+    	quizBG2.x = 368.95;
+    	quizBG2.y = 283;
+    	
+    	var quizBG3:shortTextBG = new shortTextBG();
+    	quizBG3.x = 44.9;
+    	quizBG3.y = 360.25;
+    	
+    	var quizBG4:shortTextBG = new shortTextBG();
+    	quizBG4.x = 368.95;
+    	quizBG4.y = 360.25;
+    	
+    	var quizBG5:shortTextBG = new shortTextBG();
+    	quizBG5.x = 44.90;
+    	quizBG5.y = 440.20;
+    	
+    	var quizBG6:shortTextBG = new shortTextBG();
+    	quizBG6.x = 368.95;
+    	quizBG6.y = 440.20;
+    	
+    	var quizBG7:shortTextBG = new shortTextBG();
+    	quizBG7.x = 44.90;
+    	quizBG7.y = 518.80;
+    	
+    	var quizBG8:shortTextBG = new shortTextBG();
+    	quizBG8.x = 368.95;
+    	quizBG8.y = 518.80
+    	
+    	// Signs
+    	var quizAddSign:additionSign = new additionSign();
+    	quizAddSign.x = 280.05;
+    	quizAddSign.y = 251.90;
+    	
+    	var quizSubSign:subtractionSign = new subtractionSign();
+    	quizSubSign.x = 281.40;
+    	quizSubSign.y = 323.80;
+    	
+    	var quizMulSign:multiplicationSign = new multiplicationSign();
+    	quizMulSign.x = 288.20;
+    	quizMulSign.y = 414.05;
+    	
+    	var quizDivSign:divisionSign = new divisionSign();
+    	quizDivSign.x = 280.05;
+    	quizDivSign.y = 489.20;
+    	
+    	var quizAddEqualsSign:equalsSign = new equalsSign();
+    	quizAddEqualsSign.x = 603.90;
+    	quizAddEqualsSign.y = 251.90;
+    	
+    	var quizSubEqualsSign:equalsSign = new equalsSign();
+    	quizSubEqualsSign.x = 603.90;
+    	quizSubEqualsSign.y = 330.55;
+    	
+    	var quizMulEqualsSign:equalsSign = new equalsSign();
+    	quizMulEqualsSign.x = 603.90;
+    	quizMulEqualsSign.y = 409.20;
+    	
+    	var quizDivEqualsSign:equalsSign = new equalsSign();
+    	quizDivEqualsSign.x = 603.90;
+    	quizDivEqualsSign.y = 489.20;
+    	
+    	// Check quiz
+    	var quizCheck:checkQuiz = new checkQuiz();
+    	quizCheck.x = 369.95;
+    	quizCheck.y = 626.60;
+    	
+    	var answerWrong:wrongAnswer = new wrongAnswer();
+    	var answerCorrect:correctAnswer = new correctAnswer();
+    	
+    
+    // Home Page //;
+    
+    // Create Header & Nav //
+    // Logo
+    addChild(headerLogo);
+    addChild(additionLink);
+    addChild(subtractionLink);
+    addChild(multiplicationLink);
+    addChild(divisionLink);
+    addChild(animation);
+    
+    
+    
+    headerLogo.addEventListener(MouseEvent.CLICK, runIndexPage);
+    function runIndexPage(e:MouseEvent):void
+    {
+    	// Hide other Pages
+    	hideOtherPages();
+    	
+    	addChild(animation);
+    	animation.gotoAndPlay(1);
+    }
+    
+    // Addition Page //
+    additionLink.addEventListener(MouseEvent.CLICK, runAddition);
+    function runAddition(e:MouseEvent):void
+    {
+    	hideOtherPages();
+    	createAdditionPage();
+    	
+    	
+    }
+    
+    subtractionLink.addEventListener(MouseEvent.CLICK, runSubtraction);
+    function runSubtraction(e:MouseEvent):void
+    {
+    		hideOtherPages();
+    		createSubtractionPage();
+    }
+    
+    multiplicationLink.addEventListener(MouseEvent.CLICK, runMultiplication);
+    function runMultiplication(e:MouseEvent):void
+    {
+    		hideOtherPages();
+    		createMultiplicationPage();
+    }
+    
+    divisionLink.addEventListener(MouseEvent.CLICK, runDivision);
+    function runDivision(e:MouseEvent):void
+    {
+    	hideOtherPages();
+    	createDivisionPage();
+    }
+    
+    
+    //Global Functions
+    function createAdditionPage():void
+    {
+    	addChild(addSimpleX);
+    	addChild(addSimpleY);
+    	addChild(addSimpleAnswer);
+    	addChild(additionAddSign);
+    	addChild(additionEqualsSign);
+    	addChild(addSum);
+    	addChild(addTryOut);
+    	addChild(addDDLink);
+    	addChild(addTQLink);
+    }
+    
+    function createSubtractionPage():void
+    {
+    		addChild(subSimpleX);
+    		addChild(subSimpleY);
+    		addChild(subSimpleAnswer);
+    		addChild(subtractionSubSign);
+    		addChild(subtractionEqualsSign);
+    		addChild(subSum);
+    		addChild(subTryOut);
+    		addChild(subDDLink);
+    		addChild(subTQLink);
+    }
+    
+    function createMultiplicationPage():void
+    {
+    		addChild(mulSimpleX);
+    		addChild(mulSimpleY);
+    		addChild(mulSimpleAnswer);
+    		addChild(multiplicationMulSign);
+    		addChild(mulEqualsSign);
+    		addChild(mulSummary);
+    		addChild(mulTryOut);
+    		addChild(mulDDLink);
+    		addChild(mulTQLink);
+    }
+    
+    function createDivisionPage():void
+    {
+    		addChild(divSimpleX);
+    		addChild(divSimpleY);
+    		addChild(divSimpleAnswer);
+    		addChild(divisionDivSign);
+    		addChild(divEqualsSign);
+    		addChild(divSummary);
+    		addChild(divTryOut);
+    		addChild(divDDLink);
+    		addChild(divTQLink);
+    }
+    
+    function hideOtherPages():void
+    {
+    	if(animation)
+    	{
+    		removeChild(animation);
+    		SoundMixer.stopAll();
+    	}
+    	
+    	else if(addSimpleX)
+    	{
+    		
+    		removeChild(addSimpleX);
+    		removeChild(addSimpleY);
+    		removeChild(addSimpleAnswer);
+    		removeChild(additionAddSign);
+    		removeChild(additionEqualsSign);
+    		removeChild(addSum);
+    		removeChild(addTryOut);
+    		removeChild(addDDLink);
+    		removeChild(addTQLink);
+    	}
+    	
+    	else if(addLong)
+    	{
+    		removeChild(addLong);
+    		removeChild(addDDSum);
+    		removeChild(addDDB2B);
+    		removeChild(addDDTQ);
+    	}
+    	
+    	else if(subSimpleX)
+    	{
+    		removeChild(subSimpleX);
+    		removeChild(subSimpleY);
+    		removeChild(subSimpleAnswer);
+    		removeChild(subtractionSubSign);
+    		removeChild(subtractionEqualsSign);
+    		removeChild(subSum);
+    		removeChild(subTryOut);
+    		removeChild(subDDLink);
+    		removeChild(subTQLink);
+    	}
+    	
+    	else if(subBudget)
+    	{
+    		removeChild(subBudget);
+    		removeChild(subExpenses);
+    		removeChild(subDDT1);
+    		removeChild(subDDT2);
+    		removeChild(subDDT3);
+    		removeChild(subDDT4);
+    		removeChild(subCheckBudgetLink);
+    		removeChild(subB2BLink);
+    		removeChild(subDDTQLink);
+    	}
+    	
+    	else if(mulSimpleX)
+    	{
+    		removeChild(mulSimpleX);
+    		removeChild(mulSimpleY);
+    		removeChild(mulSimpleAnswer);
+    		removeChild(multiplicationMulSign);
+    		removeChild(mulEqualsSign);
+    		removeChild(mulSummary);
+    		removeChild(mulDDLink);
+    		removeChild(mulTQLink);		
+    	}
+    	
+    	else if(mulDD1)
+    	{
+    		removeChild(mulDD1);
+    		removeChild(mulDD2);
+    		removeChild(mulDD3);
+    		removeChild(mulDD4);
+    		removeChild(mulB2BLink);
+    		removeChild(mulDDTQL);
+    	}
+    	
+    	else if(divSimpleX)
+    	{
+    		removeChild(divSimpleX);
+    		removeChild(divSimpleY);
+    		removeChild(divSimpleAnswer);
+    		removeChild(divisionDivSign);
+    		removeChild(divEqualsSign);
+    		removeChild(divSummary);
+    		removeChild(divTryOut);
+    		removeChild(divDDLink);
+    		removeChild(divTQLink);
+    	}
+    	
+    	else if(divDD1)
+    	{
+    		removeChild(divDD1);
+    		removeChild(divDD2);
+    		removeChild(divDD3);
+    		removeChild(divB2BLink);
+    		removeChild(divDDTQLink);
+    	}
+    	
+    	else if(titleQuiz)
+    	{
+    		removeChild(titleQuiz);
+    		removeChild(quizBG1);
+    		removeChild(quizBG2);
+    		removeChild(quizBG3);
+    		removeChild(quizBG4);
+    		removeChild(quizBG5);
+    		removeChild(quizBG6);
+    		removeChild(quizBG7);
+    		removeChild(quizBG8);
+    		removeChild(quizAddSign);
+    		removeChild(quizSubSign);
+    		removeChild(quizMulSign);
+    		removeChild(quizDivSign);
+    		removeChild(quizAddEqualsSign);
+    		removeChild(quizSubEqualsSign);
+    		removeChild(quizMulEqualsSign);
+    		removeChild(quizDivEqualsSign);
+    		removeChild(quizCheck);
+    		
+    		//Dynamic Quiz Removal Section ****
+    	}
+    	
+    	
+    }
+
+",4
+5804676,04/27/2011 13:12:52,31480,10/25/2008 19:38:50,6917,245,How do you create a shallow copy of an Array in ActionScript 3,"Title says it all really.
+
+    var a:Array = [""a"",""b"",""c""];
+
+    var b:Array;
+
+    /* insert code here to copy 'a' and assign it to 'b'*/",actionscript-3,flex3,lazyweb,,,,open,0,32,13,"How do you create a shallow copy of an Array in ActionScript 3 Title says it all really.
+
+    var a:Array = [""a"",""b"",""c""];
+
+    var b:Array;
+
+    /* insert code here to copy 'a' and assign it to 'b'*/",3
+4963694,02/10/2011 22:58:03,235654,12/20/2009 21:42:37,4286,164,Displaying Actionscript Documentation in Eclipse,"This is probably a very basic question, but how does one enable the actionscript documentation to appear properly in Eclipse? For example, if you hover over `addChild`, the ASDoc view brings up the class hierarchy with `flash.display.DisplayObjectContainer.addChild(child:DisplayObject):DisplayObject`, but does not give any of the details, descriptive text, parameters, etc. If I write my own documentation using the `/** */` format, it does appear in there. What have I done wrong? :P
+
+I'm using the Helios version of Eclipse with Flash Builder 4. Thanks!",actionscript-3,,,,,,open,0,82,5,"Displaying Actionscript Documentation in Eclipse This is probably a very basic question, but how does one enable the actionscript documentation to appear properly in Eclipse? For example, if you hover over `addChild`, the ASDoc view brings up the class hierarchy with `flash.display.DisplayObjectContainer.addChild(child:DisplayObject):DisplayObject`, but does not give any of the details, descriptive text, parameters, etc. If I write my own documentation using the `/** */` format, it does appear in there. What have I done wrong? :P
+
+I'm using the Helios version of Eclipse with Flash Builder 4. Thanks!",1
+10675511,05/20/2012 17:15:47,1406512,05/20/2012 17:06:25,1,0,Can anybody help convert this script from as2 to as3,"    level = new Array();
+        _root.attachMovie(""starz"", ""starz"", 1, {_x:-20, _y:-20});
+        _root.createEmptyMovieClip(""bricks"", 2);
+        level[0] = new Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0);
+        level[1] = new Array(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1);
+        level[2] = new Array(1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1);
+        level[3] = new Array(1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1);
+        level[4] = new Array(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        level[5] = new Array(1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1);
+        level[6] = new Array(1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1);
+        level[7] = new Array(1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1);
+        level[8] = new Array(1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1);
+        level[9] = new Array(1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1);
+        level[10] = new Array(0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1);
+        for (y=0; y<=10; y++) {
+        	for (x=0; x<=11; x++) {
+        		if (level[y][x] == 1) {
+        			place_brick = bricks.attachMovie(""brick"", ""brick_""+bricks.getNextHighestDepth(), bricks.getNextHighestDepth(), {_x:x*80, _y:y*80});
+        		}
+        	}
+        }
+        _root.attachMovie(""ball"", ""ball"", _root.getNextHighestDepth(), {_x:240, _y:220});
+        bricks._x = 240;
+        bricks._y = 220;
+        ball.texture.setMask(ball.ball_itself);
+        power = 0.4;
+        yspeed = 0;
+        xspeed = 0;
+        friction = 0.99;
+        ball.onEnterFrame = function() {
+        	if (Key.isDown(Key.LEFT)) {
+        		xspeed -= power;
+        	}
+        	if (Key.isDown(Key.RIGHT)) {
+        		xspeed += power;
+        	}
+        	if (Key.isDown(Key.UP)) {
+        		yspeed -= power;
+        	}
+        	if (Key.isDown(Key.DOWN)) {
+        		yspeed += power;
+        	}
+        	xspeed *= friction;
+        	yspeed *= friction;
+        	bricks._y -= yspeed;
+        	bricks._x -= xspeed;
+        	starz._x = -20+((bricks._x-240)/10);
+        	starz._y = -20+((bricks._y-220)/10);
+        	this.texture._y += yspeed;
+        	this.texture._x += xspeed;
+        	if (this.texture._x>53) {
+        		this.texture._x -= 63;
+        	}
+        	if (this.texture._x<-53) {
+        		this.texture._x += 63;
+        	}
+        	if (this.texture._y>53) {
+        		this.texture._y -= 63;
+        	}
+        	if (this.texture._y<-53) {
+        		this.texture._y += 63;
+        	}
+        	brick_x = Math.floor((bricks._x-200)/80)*-1;
+        	brick_y = Math.floor((bricks._y-180)/80)*-1;
+        	if (level[brick_y][brick_x] != 1) {
+        		bricks._x = 240;
+        		bricks._y = 220;
+        		starz._x = -20;
+        		starz._y = -20;
+        		xspeed = 0;
+        		yspeed = 0;
+        	}
+        };
+I got this from the internet as a tutorial and I tried to convert the as2 into as3 but i can only get so far. Could someone plz help.
+Dont know if it will be useful but here are my movieclips
+
+Name : AS Linkage<br/>
+ball : ball<br/>
+ball_itself : ball_itself<br/>
+brick : brick<br/>
+starz : starz<br/>
+texture : texture<br/>",actionscript-3,actionscript-2,convert,,,06/12/2012 08:22:20,too localized,1,900,10,"Can anybody help convert this script from as2 to as3     level = new Array();
+        _root.attachMovie(""starz"", ""starz"", 1, {_x:-20, _y:-20});
+        _root.createEmptyMovieClip(""bricks"", 2);
+        level[0] = new Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0);
+        level[1] = new Array(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1);
+        level[2] = new Array(1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1);
+        level[3] = new Array(1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1);
+        level[4] = new Array(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        level[5] = new Array(1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1);
+        level[6] = new Array(1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1);
+        level[7] = new Array(1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1);
+        level[8] = new Array(1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1);
+        level[9] = new Array(1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1);
+        level[10] = new Array(0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1);
+        for (y=0; y<=10; y++) {
+        	for (x=0; x<=11; x++) {
+        		if (level[y][x] == 1) {
+        			place_brick = bricks.attachMovie(""brick"", ""brick_""+bricks.getNextHighestDepth(), bricks.getNextHighestDepth(), {_x:x*80, _y:y*80});
+        		}
+        	}
+        }
+        _root.attachMovie(""ball"", ""ball"", _root.getNextHighestDepth(), {_x:240, _y:220});
+        bricks._x = 240;
+        bricks._y = 220;
+        ball.texture.setMask(ball.ball_itself);
+        power = 0.4;
+        yspeed = 0;
+        xspeed = 0;
+        friction = 0.99;
+        ball.onEnterFrame = function() {
+        	if (Key.isDown(Key.LEFT)) {
+        		xspeed -= power;
+        	}
+        	if (Key.isDown(Key.RIGHT)) {
+        		xspeed += power;
+        	}
+        	if (Key.isDown(Key.UP)) {
+        		yspeed -= power;
+        	}
+        	if (Key.isDown(Key.DOWN)) {
+        		yspeed += power;
+        	}
+        	xspeed *= friction;
+        	yspeed *= friction;
+        	bricks._y -= yspeed;
+        	bricks._x -= xspeed;
+        	starz._x = -20+((bricks._x-240)/10);
+        	starz._y = -20+((bricks._y-220)/10);
+        	this.texture._y += yspeed;
+        	this.texture._x += xspeed;
+        	if (this.texture._x>53) {
+        		this.texture._x -= 63;
+        	}
+        	if (this.texture._x<-53) {
+        		this.texture._x += 63;
+        	}
+        	if (this.texture._y>53) {
+        		this.texture._y -= 63;
+        	}
+        	if (this.texture._y<-53) {
+        		this.texture._y += 63;
+        	}
+        	brick_x = Math.floor((bricks._x-200)/80)*-1;
+        	brick_y = Math.floor((bricks._y-180)/80)*-1;
+        	if (level[brick_y][brick_x] != 1) {
+        		bricks._x = 240;
+        		bricks._y = 220;
+        		starz._x = -20;
+        		starz._y = -20;
+        		xspeed = 0;
+        		yspeed = 0;
+        	}
+        };
+I got this from the internet as a tutorial and I tried to convert the as2 into as3 but i can only get so far. Could someone plz help.
+Dont know if it will be useful but here are my movieclips
+
+Name : AS Linkage<br/>
+ball : ball<br/>
+ball_itself : ball_itself<br/>
+brick : brick<br/>
+starz : starz<br/>
+texture : texture<br/>",3
+8416185,12/07/2011 13:37:06,521946,11/27/2010 01:50:45,1,0,"Flash/Flex Speex audio decode, to play a speex file","all~ I want to play *.spx files which encoded by Speex(www.speex.org) on the Web. <br>
+But I have no knowledge of Flash/Flex or any Flash Audio codec. After Google search for a whole day, I got some solutions, that is:
+
+1. Do something wrapping Speex files with a FLV container because that the Speex is only playable as the audio codec in a FLV container.<br>
+Now I can play a SPX-Audio-Only FLV file in Flex, I use `netStream.play(""audio-only-speex.flv"")`, But I donot know how to wrap a Spx file with FLV container using ActionScript. <br>
+Any example project?
+
+2. Decode Spx using AS. <br>
+I checked out the fllowing pages that they all decoded OGG Vorbis but no Speex :(<br>
+h ttp://barelyfocused.net/blog/2008/10/03/flash-vorbis-player<br>
+h ttp://www.exswap.com/?p=132 <br>
+h ttp://mauft.com/2010/11/ogg-vorbis-in-flash <br>
+Adobe also provides a AS3 OggVorbis Library which ported by Alchemy:<br>
+h ttp://labs.adobe.com/wiki/index.php/Alchemy:Libraries
+
+3. FMS: do a server streaming using FMS or Red/Xuggle.
+I have never heard FMS stuffs before, as well as I'm not sure whether  my virtual host can support or not...
+
+4. Convert every Spx files to MP3.
+
+I think the best solution is decoding Spx in AS3, Yes, I'd like to make a Spx Flash Player.
+
+So, I downloaded Speex Library from speex.org, installed Adobe Alchemy. After `./configure;make` the libspeex, build libspeex/speex.c out a <i>libspeex.swc</i> via Alchemy. then, I donot know how to do next. How can I decode the speex audio with AS3?
+
+<b>In addtion</b>, should I rewrite the libspeex using [Alchemy API](http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Developing_with_Alchemy:C_API) before build the libspeex.swc?
+
+
+Although I am not professional in AS, but I have a strong ability to learn. <b>Any advice will be greatly appreciated, Thanks very much.</b>
+
+
+",actionscript-3,flex,adobe,alchemy,speex,,open,0,256,9,"Flash/Flex Speex audio decode, to play a speex file all~ I want to play *.spx files which encoded by Speex(www.speex.org) on the Web. <br>
+But I have no knowledge of Flash/Flex or any Flash Audio codec. After Google search for a whole day, I got some solutions, that is:
+
+1. Do something wrapping Speex files with a FLV container because that the Speex is only playable as the audio codec in a FLV container.<br>
+Now I can play a SPX-Audio-Only FLV file in Flex, I use `netStream.play(""audio-only-speex.flv"")`, But I donot know how to wrap a Spx file with FLV container using ActionScript. <br>
+Any example project?
+
+2. Decode Spx using AS. <br>
+I checked out the fllowing pages that they all decoded OGG Vorbis but no Speex :(<br>
+h ttp://barelyfocused.net/blog/2008/10/03/flash-vorbis-player<br>
+h ttp://www.exswap.com/?p=132 <br>
+h ttp://mauft.com/2010/11/ogg-vorbis-in-flash <br>
+Adobe also provides a AS3 OggVorbis Library which ported by Alchemy:<br>
+h ttp://labs.adobe.com/wiki/index.php/Alchemy:Libraries
+
+3. FMS: do a server streaming using FMS or Red/Xuggle.
+I have never heard FMS stuffs before, as well as I'm not sure whether  my virtual host can support or not...
+
+4. Convert every Spx files to MP3.
+
+I think the best solution is decoding Spx in AS3, Yes, I'd like to make a Spx Flash Player.
+
+So, I downloaded Speex Library from speex.org, installed Adobe Alchemy. After `./configure;make` the libspeex, build libspeex/speex.c out a <i>libspeex.swc</i> via Alchemy. then, I donot know how to do next. How can I decode the speex audio with AS3?
+
+<b>In addtion</b>, should I rewrite the libspeex using [Alchemy API](http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Developing_with_Alchemy:C_API) before build the libspeex.swc?
+
+
+Although I am not professional in AS, but I have a strong ability to learn. <b>Any advice will be greatly appreciated, Thanks very much.</b>
+
+
+",5
+6689723,07/14/2011 07:18:36,624094,04/23/2010 07:41:41,56,13,Is java is better than as3?,"Is java is better than as3? If not, what are the characteristics java does, and as3 can't?",actionscript-3,flash-cs4,flash-cs5,,,07/14/2011 07:28:09,not a real question,1,17,6,"Is java is better than as3? Is java is better than as3? If not, what are the characteristics java does, and as3 can't?",3
+3485704,08/15/2010 00:26:35,290221,03/10/2010 05:25:22,555,31,Best advanced book on Actionscript?,"Is there a ""very best"" book on Actionscript?
+
+Ideally an advanced book, one that teaches a good deal of movie clip manipulation, Flash's APIs and usual patterns.",actionscript-3,actionscript,books,,,03/14/2012 17:36:03,not constructive,1,26,5,"Best advanced book on Actionscript? Is there a ""very best"" book on Actionscript?
+
+Ideally an advanced book, one that teaches a good deal of movie clip manipulation, Flash's APIs and usual patterns.",3
+7080020,08/16/2011 14:40:31,387015,07/08/2010 18:18:37,67,6,AS3 Air: Print Dialog Always On Top,"A small problem we have found with the print dialog box.
+
+Our Air application has no system chrome and set to maximise
+
+    stage.nativeWindow.maximize();
+
+- If you use printjob.start() you obviously get up the print dialog (which is desired).
+- Air application is paused while this dialog is up (again, expected and desired).
+- But if you ignore the print dialog and click on the air application the print dialog box goes behind the air app and is hidden. This makes the air app look like it is frozen. (Not desired)
+
+I need a way to keep the Print Dialog above the air app but have not found a way to do so.
+
+The only other solution I have came up with is:
+
+    stage.nativeWindow.visible = false;
+    if ( _printJob.start() ) {
+      //blar
+    }
+    stage.nativeWindow.visible = true;
+
+But I have been told this is not an option.
+
+I also hoped to have a timer run in the background and if it triggers close that dialog box and ask again, but whole air app pauses until dialog box has been confirmed or cancelled, this includes timers that had already been started.
+
+Also, not displaying the dialog box with _printJob.start2(blarblar) is not an option either.
+
+Suggestions are welcome.",actionscript-3,printing,dialog,air,,,open,0,214,7,"AS3 Air: Print Dialog Always On Top A small problem we have found with the print dialog box.
+
+Our Air application has no system chrome and set to maximise
+
+    stage.nativeWindow.maximize();
+
+- If you use printjob.start() you obviously get up the print dialog (which is desired).
+- Air application is paused while this dialog is up (again, expected and desired).
+- But if you ignore the print dialog and click on the air application the print dialog box goes behind the air app and is hidden. This makes the air app look like it is frozen. (Not desired)
+
+I need a way to keep the Print Dialog above the air app but have not found a way to do so.
+
+The only other solution I have came up with is:
+
+    stage.nativeWindow.visible = false;
+    if ( _printJob.start() ) {
+      //blar
+    }
+    stage.nativeWindow.visible = true;
+
+But I have been told this is not an option.
+
+I also hoped to have a timer run in the background and if it triggers close that dialog box and ask again, but whole air app pauses until dialog box has been confirmed or cancelled, this includes timers that had already been started.
+
+Also, not displaying the dialog box with _printJob.start2(blarblar) is not an option either.
+
+Suggestions are welcome.",4
+9703833,03/14/2012 14:24:37,885566,08/09/2011 08:53:07,100,8,Protect Air application content,"On Mac Os, I see that all content on my application can be readable (mxml and as files).
+Indeed with right clic on application, you can see all application content and so all files.
+So It's very dangerous for a company to distribute air application like that.
+Is a solution exist to protect those files.
+
+Thanks",actionscript-3,flex,air,flash-builder,,,open,0,52,4,"Protect Air application content On Mac Os, I see that all content on my application can be readable (mxml and as files).
+Indeed with right clic on application, you can see all application content and so all files.
+So It's very dangerous for a company to distribute air application like that.
+Is a solution exist to protect those files.
+
+Thanks",4
+11028338,06/14/2012 07:13:39,1076854,12/02/2011 06:45:48,11,0,FlexPrintJob outputs PrintDataGrid individual row height issue,FlexPrintJob outputs PrintDataGrid individual row height is greater than it should be. From where I can change/set the height of individual row.,actionscript-3,printing,,,,,open,0,22,7,FlexPrintJob outputs PrintDataGrid individual row height issue FlexPrintJob outputs PrintDataGrid individual row height is greater than it should be. From where I can change/set the height of individual row.,2
+11445563,07/12/2012 05:36:20,1337872,04/17/2012 05:27:41,3,0,Multiple Actionscript 3 layers,"I'm wondering if I split up certain bits of code that are meant for different sections into different layers will they have functionality between them or act as separate things. (will I be able to reference a variable on one layer from the other?)
+
+Basically I have a set of code that runs throughout every frame but also need code specific to certain frames but still be able to access the main code.
+
+Thanks",actionscript-3,flash,actionscript,layer,,,open,0,72,4,"Multiple Actionscript 3 layers I'm wondering if I split up certain bits of code that are meant for different sections into different layers will they have functionality between them or act as separate things. (will I be able to reference a variable on one layer from the other?)
+
+Basically I have a set of code that runs throughout every frame but also need code specific to certain frames but still be able to access the main code.
+
+Thanks",4
+6651287,07/11/2011 14:01:45,503510,11/10/2010 16:55:40,237,6,How to detect CTRL + C input and F3 key inputs in flex,"I am trying to implement find functionality in my application and for this I am trying to open a find popup based on keyboard inputs like F3 or CTRL + F. But on F3, instead of going to event listener, it opens up the default find toolbar of the Internet Explorer instead. Any clues, how I could bypass it and use f3 in my application?
+
+Another thing is how do I capture CTRL + F in flex?
+
+ 
+
+    private function keyPressed(evt:KeyboardEvent):void
+    		   {
+    			   if (evt.keyCode == Keyboard.F3)
+    			   {
+    			   		//open popup
+    			   		}
+    			   		else {
+    			   			//do something elese
+    			   		}
+    			   } 	
+
+Thanks.",actionscript-3,flex3,,,,,open,0,154,13,"How to detect CTRL + C input and F3 key inputs in flex I am trying to implement find functionality in my application and for this I am trying to open a find popup based on keyboard inputs like F3 or CTRL + F. But on F3, instead of going to event listener, it opens up the default find toolbar of the Internet Explorer instead. Any clues, how I could bypass it and use f3 in my application?
+
+Another thing is how do I capture CTRL + F in flex?
+
+ 
+
+    private function keyPressed(evt:KeyboardEvent):void
+    		   {
+    			   if (evt.keyCode == Keyboard.F3)
+    			   {
+    			   		//open popup
+    			   		}
+    			   		else {
+    			   			//do something elese
+    			   		}
+    			   } 	
+
+Thanks.",2
+10875527,06/04/2012 01:55:14,1433762,06/03/2012 16:31:01,1,0,"actionscript 3.0 error 1069 ""this"" cannot find declared variable inside class","""This"" is incapable of finding the appropriate variable ""array1"" despite it clearly being declared within the class. But if I declare the variables outside of the class it works. How can I have the variables inside the class but keep it working?
+
+	package 
+	{
+
+    //If I declared the variables here it would work.
+
+	public class main extends MovieClip
+	{
+		public function main():void
+		{
+			var array1:Array = [1,2];
+			var array2:Array = [3,4];
+			trace(this[""array""+1][1]); //returns reference error 1069	
+		}
+		
+	}
+	}
+
+Am I stuck with declaring the variables outside of the class?
+
+And no, multidimensional arrays won't work for what I need it for. Though it looks like it would solve everything within the code snippet provided huh?
+
+My intentions is to pass arrays through a class to be used and change which array bunch I use. If I used multidimensional arrays, it would be inefficient due to the amount of copying that would occur.",actionscript-3,,,,,,open,0,142,11,"actionscript 3.0 error 1069 ""this"" cannot find declared variable inside class ""This"" is incapable of finding the appropriate variable ""array1"" despite it clearly being declared within the class. But if I declare the variables outside of the class it works. How can I have the variables inside the class but keep it working?
+
+	package 
+	{
+
+    //If I declared the variables here it would work.
+
+	public class main extends MovieClip
+	{
+		public function main():void
+		{
+			var array1:Array = [1,2];
+			var array2:Array = [3,4];
+			trace(this[""array""+1][1]); //returns reference error 1069	
+		}
+		
+	}
+	}
+
+Am I stuck with declaring the variables outside of the class?
+
+And no, multidimensional arrays won't work for what I need it for. Though it looks like it would solve everything within the code snippet provided huh?
+
+My intentions is to pass arrays through a class to be used and change which array bunch I use. If I used multidimensional arrays, it would be inefficient due to the amount of copying that would occur.",1
+11457054,07/12/2012 17:11:58,1521449,07/12/2012 16:44:33,1,0,export release build of air mobile app to iOs,"I've made an ActionScript Mobile project in Flash Builder 4.6 and AIR 3.2, and a'm getting error that I can't fix. 
+I use preloader in my app : 
+
+        package 
+        {
+	        [Frame(factoryClass=""Preloader"")]
+        	public class Main extends Sprite
+	        {
+                 // -------
+                }
+        }
+
+Preloader.as and Main.as are in default package. 
+When I debug my app on desktop, all works great, but if I try export release build, i get error message 'some classes used in application could not be resolved for packaging'. When I remove '[Frame(factoryClass=""Preloader"")]', building is ok. 
+
+How can I get rid of this error? What should I be looking at, or for? 
+Thanks! ",actionscript-3,flashbuilder4,,,,,open,0,179,9,"export release build of air mobile app to iOs I've made an ActionScript Mobile project in Flash Builder 4.6 and AIR 3.2, and a'm getting error that I can't fix. 
+I use preloader in my app : 
+
+        package 
+        {
+	        [Frame(factoryClass=""Preloader"")]
+        	public class Main extends Sprite
+	        {
+                 // -------
+                }
+        }
+
+Preloader.as and Main.as are in default package. 
+When I debug my app on desktop, all works great, but if I try export release build, i get error message 'some classes used in application could not be resolved for packaging'. When I remove '[Frame(factoryClass=""Preloader"")]', building is ok. 
+
+How can I get rid of this error? What should I be looking at, or for? 
+Thanks! ",2
+11457039,07/12/2012 17:11:03,388025,07/09/2010 18:32:09,676,3,Event once all the custom item renderers have been created/set,"I'm using a custom item renderer in my datagrid, and need to make a button visible or invisible based on if there has been a negative value on any of the values in the renderer. So I'd like to set a flag to false when the first renderer is set off, turn it to true if there's any negative values, and at the end check for the value of the flag. I know I can dispatch a dataChange event for every time the data is changed in the renderer instances, but I was wondering if there is anyway I can know when all of them are set off?
+
+Thanks!",actionscript-3,flex,actionscript,,,,open,0,108,10,"Event once all the custom item renderers have been created/set I'm using a custom item renderer in my datagrid, and need to make a button visible or invisible based on if there has been a negative value on any of the values in the renderer. So I'd like to set a flag to false when the first renderer is set off, turn it to true if there's any negative values, and at the end check for the value of the flag. I know I can dispatch a dataChange event for every time the data is changed in the renderer instances, but I was wondering if there is anyway I can know when all of them are set off?
+
+Thanks!",3
+3690059,09/11/2010 06:26:10,431145,08/25/2010 20:01:33,1,1,How to place a mc above an embeded swf,"I am struggling to embed a swf in a flash movie so that it appears beneath a mc menubar.  
+The menu is in a mc on the main time line at the top layer.  
+The swf is embeded into a mc using the following  :  
+
+    swapChildren(fullmc, swfbox1);
+    var myLoader1 :Loader = new Loader(); 
+     swfbox1.addChild(myLoader1);
+     var url1 :URLRequest = new URLRequest(""26A.swf""); 
+     myLoader1 .load(url1 );
+     stop();  
+
+However whatever I do (even trying ""swapChildren"" ) the embeded swf always appears on top of the menu mc hiding it completely.
+Im sure theres a simple reason. Any help would be GREATLY appreciated. Thanks
+Ed     ",actionscript-3,flash-cs4,,,,,open,0,133,9,"How to place a mc above an embeded swf I am struggling to embed a swf in a flash movie so that it appears beneath a mc menubar.  
+The menu is in a mc on the main time line at the top layer.  
+The swf is embeded into a mc using the following  :  
+
+    swapChildren(fullmc, swfbox1);
+    var myLoader1 :Loader = new Loader(); 
+     swfbox1.addChild(myLoader1);
+     var url1 :URLRequest = new URLRequest(""26A.swf""); 
+     myLoader1 .load(url1 );
+     stop();  
+
+However whatever I do (even trying ""swapChildren"" ) the embeded swf always appears on top of the menu mc hiding it completely.
+Im sure theres a simple reason. Any help would be GREATLY appreciated. Thanks
+Ed     ",2
+11037751,06/14/2012 16:47:53,1171620,01/26/2012 15:46:15,774,29,How to publish FLV file to media server?,"I have FLV file in local directory. Is it possible to publish it to media server with Flash technology?
+
+I am trying the following but it causes ""One of the parameters is invalid"" in `appendBytes()` call.
+
+            protected function publishButton_clickHandler(event:MouseEvent) : void {
+				
+				sourceFile = new File(""D:/Users/myfile.flv"");
+				sourceFile.load();
+				sourceFile.addEventListener(Event.COMPLETE, sourceFile_CompleteHandler);
+				
+				trace(""publishButton_clickHandler: "" + event.toString());
+				nc.addEventListener(NetStatusEvent.NET_STATUS, nc_netStatusHandler);
+				nc.connect(""rtmp://localhost/myapp/"");
+			}
+			
+			protected function nc_netStatusHandler(event:NetStatusEvent) : void {
+				
+				trace(""nc_netStatusHandler: "" + event.toString());
+				
+				if (event.info.code == ""NetConnection.Connect.Success"") {
+					stream = new NetStream(nc);
+					stream.addEventListener(NetStatusEvent.NET_STATUS, stream_netStatusHandler);
+					
+					
+					stream.publish(""simplestream"", ""live"");
+					stream.play(null);
+					stream.appendBytes(sourceFile.data);
+				}
+				
+			}
+
+First handler is invoke by button press. Button is in Air application.",actionscript-3,flash,flv,flash-media-server,,,open,0,88,8,"How to publish FLV file to media server? I have FLV file in local directory. Is it possible to publish it to media server with Flash technology?
+
+I am trying the following but it causes ""One of the parameters is invalid"" in `appendBytes()` call.
+
+            protected function publishButton_clickHandler(event:MouseEvent) : void {
+				
+				sourceFile = new File(""D:/Users/myfile.flv"");
+				sourceFile.load();
+				sourceFile.addEventListener(Event.COMPLETE, sourceFile_CompleteHandler);
+				
+				trace(""publishButton_clickHandler: "" + event.toString());
+				nc.addEventListener(NetStatusEvent.NET_STATUS, nc_netStatusHandler);
+				nc.connect(""rtmp://localhost/myapp/"");
+			}
+			
+			protected function nc_netStatusHandler(event:NetStatusEvent) : void {
+				
+				trace(""nc_netStatusHandler: "" + event.toString());
+				
+				if (event.info.code == ""NetConnection.Connect.Success"") {
+					stream = new NetStream(nc);
+					stream.addEventListener(NetStatusEvent.NET_STATUS, stream_netStatusHandler);
+					
+					
+					stream.publish(""simplestream"", ""live"");
+					stream.play(null);
+					stream.appendBytes(sourceFile.data);
+				}
+				
+			}
+
+First handler is invoke by button press. Button is in Air application.",4
+10983589,06/11/2012 15:57:00,279112,02/23/2010 00:11:13,244,9,"In ActionScript 3.0, when using Ookla's Speedtest in an SWFLoader, how do you allow it to load and run more than once?","Got another weird/specific question for y'all:  I'm able to do with this with other .swfs just fine, but Ookla's Speedtest is something of a problem.  Basically we have a part of our website that runs Speedtest to determine somebody's bandwidth and use its results in some if statements.  But when the person tries to change panels and come back in, Speedtest just sort of disappears.  It's supposed to go back to the beginning and start again, but it's like it just keeps running and turns invisible.
+
+When I tried loading another .swf in the SWFLoader, I could get it to reset just fine without disappearing.  There's something specifically about Ookla's Speedtest that's causing a problem.  If I do nothing to reset the Speedtest .swf when the user starts moving around panels, it won't disappear at least.  Putting in code to make it reset is a completely different story though.
+
+What's the trick for this program?  Did Ookla design the .swf specifically so it wouldn't work like that or something?  Thanks!",actionscript-3,swf,swfloader,speed-test,,,open,0,177,22,"In ActionScript 3.0, when using Ookla's Speedtest in an SWFLoader, how do you allow it to load and run more than once? Got another weird/specific question for y'all:  I'm able to do with this with other .swfs just fine, but Ookla's Speedtest is something of a problem.  Basically we have a part of our website that runs Speedtest to determine somebody's bandwidth and use its results in some if statements.  But when the person tries to change panels and come back in, Speedtest just sort of disappears.  It's supposed to go back to the beginning and start again, but it's like it just keeps running and turns invisible.
+
+When I tried loading another .swf in the SWFLoader, I could get it to reset just fine without disappearing.  There's something specifically about Ookla's Speedtest that's causing a problem.  If I do nothing to reset the Speedtest .swf when the user starts moving around panels, it won't disappear at least.  Putting in code to make it reset is a completely different story though.
+
+What's the trick for this program?  Did Ookla design the .swf specifically so it wouldn't work like that or something?  Thanks!",4
+10369226,04/29/2012 02:28:41,1347783,04/21/2012 02:52:19,8,0,AS3 How to simulate the throwing of something?,"So I have started this game, and the premise is you are going to be running around, and balls are going to be thrown from the sides of the screens. You have to try to dodge the balls. What I want to know is how do you make the balls act like they are actually being thrown. Like what would be the formula or whatever for something like this. ",actionscript-3,flash-cs5,,,,04/30/2012 05:33:48,not a real question,1,70,8,"AS3 How to simulate the throwing of something? So I have started this game, and the premise is you are going to be running around, and balls are going to be thrown from the sides of the screens. You have to try to dodge the balls. What I want to know is how do you make the balls act like they are actually being thrown. Like what would be the formula or whatever for something like this. ",2
+1891008,12/11/2009 21:33:44,12261,09/16/2008 13:46:51,1501,98,How can I include JavaScript dynamically from Flash using ActionScript?,"I have a flash movie that requires some JavaScript from an include file but I'd like to be able to embed it anywhere without requiring a script tag. 
+
+Is there a way to include an external JavaScript file using the ExternalInterface library so I can call the methods in the JavaScript include file later?
+
+Thanks!",actionscript-3,flash,javascript,,,,open,0,54,10,"How can I include JavaScript dynamically from Flash using ActionScript? I have a flash movie that requires some JavaScript from an include file but I'd like to be able to embed it anywhere without requiring a script tag. 
+
+Is there a way to include an external JavaScript file using the ExternalInterface library so I can call the methods in the JavaScript include file later?
+
+Thanks!",3
+9747687,03/17/2012 06:01:49,1167572,01/24/2012 17:22:11,29,0,Styling part of the list component,"I have a List object in AS3, and I want to format the text in the list. I know that I can do this by using the setStyleRenderer() but this function will format the whole list and I want to format only part of it. So is there a way to do that?",actionscript-3,list,formatting,,,,open,0,53,6,"Styling part of the list component I have a List object in AS3, and I want to format the text in the list. I know that I can do this by using the setStyleRenderer() but this function will format the whole list and I want to format only part of it. So is there a way to do that?",3
+10278866,04/23/2012 10:31:27,1005253,10/20/2011 13:05:22,144,0,Free Graphics for a simple game,"I'm creating a game for the android phone atm. It is a very simple game. I have nearly done all my programming. I'm starting to put together some graphics for the game.
+
+The game is about a cat, and giving the cat food etc to keep it happy. I would much appreciate it if the community could point me towards sites which give some simple graphics for games free(if there is any?).
+
+ The game is for children, so I would the cat to be colorful. I think I would like to use a cartoon image rather than a real image of a cat. Do you think this is suitable? I'm open to any suggestions! 
+
+Much thanks!
+Mike
+
+P.S I am creating the game in flash using Actionscript.",actionscript-3,flash,graphics,children,,,open,0,124,6,"Free Graphics for a simple game I'm creating a game for the android phone atm. It is a very simple game. I have nearly done all my programming. I'm starting to put together some graphics for the game.
+
+The game is about a cat, and giving the cat food etc to keep it happy. I would much appreciate it if the community could point me towards sites which give some simple graphics for games free(if there is any?).
+
+ The game is for children, so I would the cat to be colorful. I think I would like to use a cartoon image rather than a real image of a cat. Do you think this is suitable? I'm open to any suggestions! 
+
+Much thanks!
+Mike
+
+P.S I am creating the game in flash using Actionscript.",4
+3964288,10/18/2010 23:29:31,388185,07/09/2010 23:05:17,67,1,ActionScript 3: maintaining textarea UIscrollbar position on loss of focus in flash embed.,"I'm using Flash CS4. Everything functions as it should when CS4 previews the swf after compiling it.
+
+However, after embedding the flash item in a webpage, if the textArea loses focus within the flash piece, the textarea's built-in UIscrollbar resets to the very top. 
+
+Here's the kicker: if I add a FOCUS_OUT event listener to the textArea to store the current scrollbar value, I find that the scrollbar value has been reset to minimum even before the FOCUS_OUT event is triggered! WTF? 
+
+I think this is occurring because the textArea's htmlText propery is dynamically populated. Adobe AIR has advanced methods for handing HTML, but not simple AS3, oh no. How obnoxious. What can be done?",actionscript-3,flash-cs4,htmltext,,,,open,0,114,13,"ActionScript 3: maintaining textarea UIscrollbar position on loss of focus in flash embed. I'm using Flash CS4. Everything functions as it should when CS4 previews the swf after compiling it.
+
+However, after embedding the flash item in a webpage, if the textArea loses focus within the flash piece, the textarea's built-in UIscrollbar resets to the very top. 
+
+Here's the kicker: if I add a FOCUS_OUT event listener to the textArea to store the current scrollbar value, I find that the scrollbar value has been reset to minimum even before the FOCUS_OUT event is triggered! WTF? 
+
+I think this is occurring because the textArea's htmlText propery is dynamically populated. Adobe AIR has advanced methods for handing HTML, but not simple AS3, oh no. How obnoxious. What can be done?",3
+6149641,05/27/2011 08:23:33,219609,11/26/2009 18:13:57,768,9,Design pattern for multiple view states?,"I have an application that takes the user through a set of steps, configuring a product, say about 10+ screens.  With options to go back, skip to a certain point etc. I need to fade between these steps, and also have language switches available at any point.
+
+I was thinking of using an MVC style pattern, having a master view that accepts a ‘next view’ and fades it in, removing the old.
+
+It feels bloated to have 10+ separate view classes, using similar components for this task, so was wondering **what other approaches there are that I should look into? or one that is suited for this kind of application**
+",actionscript-3,mvc,design-patterns,user-interface,view,,open,0,109,6,"Design pattern for multiple view states? I have an application that takes the user through a set of steps, configuring a product, say about 10+ screens.  With options to go back, skip to a certain point etc. I need to fade between these steps, and also have language switches available at any point.
+
+I was thinking of using an MVC style pattern, having a master view that accepts a ‘next view’ and fades it in, removing the old.
+
+It feels bloated to have 10+ separate view classes, using similar components for this task, so was wondering **what other approaches there are that I should look into? or one that is suited for this kind of application**
+",5
+1583774,10/18/2009 01:52:53,189625,10/14/2009 06:29:15,3,1,"Function executing as construct, but not as function","I have the following code in my displayandmove.as file:
+
+<pre>
+package {
+	
+	import flash.display.MovieClip;
+	
+	public class FigureConstruct extends MovieClip {
+		
+		public function displayandmove() {
+			this.height = stage.stageHeight/5;
+			this.width = stage.stageWidth/5;
+		}
+		
+	}
+	
+}
+</pre>
+
+And I have the following on frame 1 of my displayandmove.fla:
+<pre>
+var figure:FigureConstruct = new FigureConstruct();
+stage.addChild(figure);
+figure.x = stage.stageWidth/2;
+figure.y = stage.stageHeight/2;
+</pre>
+
+These files are in the same directory. In my FLA library I have my figure MovieClip and it ha a Class of ""FigureConstruct"" and base class of ""flash.display.MovieClip"". 
+
+Currently the code above works fine because I figured out that if I execute the object size code as a construct -- using the file name as the function name -- it works.
+
+What I originally intended to do was to have my function named ""sizeFigure()"" in my AS file and then call ""figure.sizeFigure();"" after ""stage.addChild(figure);"" on frame 1 of my FLA.
+
+This output ""Error #1006: value is not a function.""
+
+Can anyone explain what I am missing to get this to execute as a function rather than as a constructor?
+
+I thought maybe I am goofing up when I set my Class and Base Class pointers for the library object... but not sure.
+
+PS - Sorry if I am misusing terms, still nailing those down as I go.",actionscript-3,as3,,,,,open,0,192,8,"Function executing as construct, but not as function I have the following code in my displayandmove.as file:
+
+<pre>
+package {
+	
+	import flash.display.MovieClip;
+	
+	public class FigureConstruct extends MovieClip {
+		
+		public function displayandmove() {
+			this.height = stage.stageHeight/5;
+			this.width = stage.stageWidth/5;
+		}
+		
+	}
+	
+}
+</pre>
+
+And I have the following on frame 1 of my displayandmove.fla:
+<pre>
+var figure:FigureConstruct = new FigureConstruct();
+stage.addChild(figure);
+figure.x = stage.stageWidth/2;
+figure.y = stage.stageHeight/2;
+</pre>
+
+These files are in the same directory. In my FLA library I have my figure MovieClip and it ha a Class of ""FigureConstruct"" and base class of ""flash.display.MovieClip"". 
+
+Currently the code above works fine because I figured out that if I execute the object size code as a construct -- using the file name as the function name -- it works.
+
+What I originally intended to do was to have my function named ""sizeFigure()"" in my AS file and then call ""figure.sizeFigure();"" after ""stage.addChild(figure);"" on frame 1 of my FLA.
+
+This output ""Error #1006: value is not a function.""
+
+Can anyone explain what I am missing to get this to execute as a function rather than as a constructor?
+
+I thought maybe I am goofing up when I set my Class and Base Class pointers for the library object... but not sure.
+
+PS - Sorry if I am misusing terms, still nailing those down as I go.",2
+8210063,11/21/2011 10:04:04,676355,03/25/2011 08:37:55,41,3,AS3 moving/scrolling text up/down,"I am trying to move up and down in AS3 with the code below:
+It's not working because its moving the entire container up and down not just the text.
+
+    Up.addEventListener(MouseEvent.MOUSE_DOWN, upPressed);
+    Down.addEventListener(MouseEvent.MOUSE_DOWN, downPressed);
+    
+    function upPressed(event:MouseEvent):void
+    {
+        Rules.y += 50;
+    }
+    
+    function downPressed(event:MouseEvent):void
+    {
+        Rules.y -= 50;
+    }
+
+Does anyone know how to move the text only?
+
+Best Regards,
+Luben",actionscript-3,text,moving,,,,open,0,102,4,"AS3 moving/scrolling text up/down I am trying to move up and down in AS3 with the code below:
+It's not working because its moving the entire container up and down not just the text.
+
+    Up.addEventListener(MouseEvent.MOUSE_DOWN, upPressed);
+    Down.addEventListener(MouseEvent.MOUSE_DOWN, downPressed);
+    
+    function upPressed(event:MouseEvent):void
+    {
+        Rules.y += 50;
+    }
+    
+    function downPressed(event:MouseEvent):void
+    {
+        Rules.y -= 50;
+    }
+
+Does anyone know how to move the text only?
+
+Best Regards,
+Luben",3
+4347451,12/03/2010 16:12:59,439484,09/04/2010 06:57:19,72,0,"adding child with ""getChildByName""?","I have a variable as following:
+
+    private var fotoSlide:FotoSlide;
+
+and i am doing the following inside my code:
+
+    var data:Object = _dataProvider[0];
+    trace(data.type);//This gives back the string Foto
+    var slide:Sprite = new (getChildByName(data.type+""Slide""));
+    addChild(slide);
+
+So if i'm declaring my variable with getChildByName the result should be FotoSlide.
+But it doesnt seem to work. I think it has to do because getChildByName can only be used when a child is added to the stage? Not sure thou. Anyone who knows what the problem is?",actionscript-3,,,,,,open,0,95,4,"adding child with ""getChildByName""? I have a variable as following:
+
+    private var fotoSlide:FotoSlide;
+
+and i am doing the following inside my code:
+
+    var data:Object = _dataProvider[0];
+    trace(data.type);//This gives back the string Foto
+    var slide:Sprite = new (getChildByName(data.type+""Slide""));
+    addChild(slide);
+
+So if i'm declaring my variable with getChildByName the result should be FotoSlide.
+But it doesnt seem to work. I think it has to do because getChildByName can only be used when a child is added to the stage? Not sure thou. Anyone who knows what the problem is?",1

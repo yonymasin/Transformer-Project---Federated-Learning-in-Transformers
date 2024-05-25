@@ -1,0 +1,786 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+84404,09/17/2008 15:22:38,6839,09/15/2008 12:42:27,11,2,Using Visual Studio's 'cl' from a normal command line,"Visual Studio 2003 and 2005 (and perhaps 2008 for all I know) require the command line user to run in the 'Visual Studio Command Prompt'.  When starting this command prompt it sets various environment variables that the C++ compiler, cl, uses when compiling.
+
+Is there an easy way to run cl without having to run from within the Visual Studio command prompt?",visual-studio,command-line,,,,,open,0,62,9,"Using Visual Studio's 'cl' from a normal command line Visual Studio 2003 and 2005 (and perhaps 2008 for all I know) require the command line user to run in the 'Visual Studio Command Prompt'.  When starting this command prompt it sets various environment variables that the C++ compiler, cl, uses when compiling.
+
+Is there an easy way to run cl without having to run from within the Visual Studio command prompt?",2
+99792,09/19/2008 05:07:24,11034,09/16/2008 04:12:29,42,4,Visual Studio color settings for better eye,Which Visual Studio color settings is more comfortable to reduce eye strain? Whether dark setting or default (black text on white background) is best for eyes?,visual-studio,settings,,,,01/24/2012 08:24:57,not constructive,1,26,7,Visual Studio color settings for better eye Which Visual Studio color settings is more comfortable to reduce eye strain? Whether dark setting or default (black text on white background) is best for eyes?,2
+1114994,07/12/2009 00:13:49,23276,09/28/2008 22:05:35,185,5,Does the Visual Studio Test Runner Support Other Frameworks?,Can I run nUnit tests in Visual Studio (for instance)?,visual-studio,,,,,,open,0,10,9,Does the Visual Studio Test Runner Support Other Frameworks? Can I run nUnit tests in Visual Studio (for instance)?,1
+7655830,10/05/2011 01:30:41,28128,10/15/2008 06:16:24,3636,159,Installing Visual Studio Project Templates without deleting the ProjectTemplatesCache,"I'm working on an installer that needs to add several files to [AVR Studio 5][1], an IDE developed by Atmel that is based on the Visual Studio Isolated Shell.  These files include [project templates][2] for the ""New Project"" dialog.
+
+By experimenting, I found that I can successfully add the project templates and get them to show up in the dialog if I simply copy them into `C:\Program Files (x86)\Atmel\AVR Studio 5.0\ProjectTemplates\` and then delete or rename `C:\Program Files (x86)\Atmel\AVR Studio 5.0\ProjectTemplateCache\cache.bin`.  I have not been able to find any good documentation on how the Visual Studio ProjectTemplateCache folder works.  It seems to contain the same files as the ProjectTemplates folder, plus the cache.bin file, so I'm not sure why it would be useful.  After I rename cache.bin, Visual Studio does *not* regenerate it, which makes me worried that renaming it might have some permanent consequences.  **Is renaming cache.bin a bad idea?  What problems can it cause?**
+
+**Is there another, easy way to install new project templates?**  Ideally I would like something that is easier than creating a Visual Studio Extension (.vsix) file, as recommended in this previous StackOverflow question: http://stackoverflow.com/questions/2102605/installing-a-custom-project-template-with-visual-studio-installer-project
+
+The installer I am working on uses [NSIS][3], if that matters.
+
+  [1]: http://www.atmel.com/microsite/avr_studio_5/default.asp?source=redirect
+  [2]: http://msdn.microsoft.com/en-us/library/6db0hwky%28v=VS.100%29.aspx
+  [3]: http://nsis.sourceforge.net/Main_Page",visual-studio,nsis,visual-studio-templates,visual-studio-extensions,avr-studio5,,open,0,214,9,"Installing Visual Studio Project Templates without deleting the ProjectTemplatesCache I'm working on an installer that needs to add several files to [AVR Studio 5][1], an IDE developed by Atmel that is based on the Visual Studio Isolated Shell.  These files include [project templates][2] for the ""New Project"" dialog.
+
+By experimenting, I found that I can successfully add the project templates and get them to show up in the dialog if I simply copy them into `C:\Program Files (x86)\Atmel\AVR Studio 5.0\ProjectTemplates\` and then delete or rename `C:\Program Files (x86)\Atmel\AVR Studio 5.0\ProjectTemplateCache\cache.bin`.  I have not been able to find any good documentation on how the Visual Studio ProjectTemplateCache folder works.  It seems to contain the same files as the ProjectTemplates folder, plus the cache.bin file, so I'm not sure why it would be useful.  After I rename cache.bin, Visual Studio does *not* regenerate it, which makes me worried that renaming it might have some permanent consequences.  **Is renaming cache.bin a bad idea?  What problems can it cause?**
+
+**Is there another, easy way to install new project templates?**  Ideally I would like something that is easier than creating a Visual Studio Extension (.vsix) file, as recommended in this previous StackOverflow question: http://stackoverflow.com/questions/2102605/installing-a-custom-project-template-with-visual-studio-installer-project
+
+The installer I am working on uses [NSIS][3], if that matters.
+
+  [1]: http://www.atmel.com/microsite/avr_studio_5/default.asp?source=redirect
+  [2]: http://msdn.microsoft.com/en-us/library/6db0hwky%28v=VS.100%29.aspx
+  [3]: http://nsis.sourceforge.net/Main_Page",5
+7944948,10/30/2011 12:41:09,399658,07/22/2010 21:31:48,172,5,How to link to areas in MVC4,"I am not sure if Areas are part of VS2011 or MVC4, but it seems very good for organizing a big project. But I have troubles linking to Controllers in Areas.
+
+There is a screenshot of my project here http://www.gratisimage.dk/graphic/images/2011/October/30/724D_4EAD44CD.jpg
+
+I have then made this link `@Html.ActionLink(""Create Vessel"", ""CreateVessel"", ""Units/Vehicle"")`
+
+But I just a The resource cannot be found. error
+
+I have the action setup
+
+    public ActionResult CreateVehicle()
+        {
+            return View();
+        }
+The URL seems correct with Requested URL: /Units/Vehicle/CreateVessel if I look in the 
+routing `context.MapRoute(
+                ""Units_default"",
+                ""Units/{controller}/{action}/{id}"",
+                new { action = ""Index"", id = UrlParameter.Optional }
+            );`",visual-studio,asp.net-mvc-4,,,,,open,0,178,7,"How to link to areas in MVC4 I am not sure if Areas are part of VS2011 or MVC4, but it seems very good for organizing a big project. But I have troubles linking to Controllers in Areas.
+
+There is a screenshot of my project here http://www.gratisimage.dk/graphic/images/2011/October/30/724D_4EAD44CD.jpg
+
+I have then made this link `@Html.ActionLink(""Create Vessel"", ""CreateVessel"", ""Units/Vehicle"")`
+
+But I just a The resource cannot be found. error
+
+I have the action setup
+
+    public ActionResult CreateVehicle()
+        {
+            return View();
+        }
+The URL seems correct with Requested URL: /Units/Vehicle/CreateVessel if I look in the 
+routing `context.MapRoute(
+                ""Units_default"",
+                ""Units/{controller}/{action}/{id}"",
+                new { action = ""Index"", id = UrlParameter.Optional }
+            );`",2
+3802359,09/27/2010 09:05:27,330280,05/01/2010 09:09:35,50,1,[Visual Studio - C#] View container of a control in a Form,"I'm wont working with netbeans, and with Visual studio i can't find the way to view an hierarcal relation of the control(Parent container ---> Child) in the form, something like this : 
+![alt text][1]
+
+
+  [1]: http://i.stack.imgur.com/Ddj9n.png
+
+
+Is there a way to have a view like this in Visual Studio 2010 with c# programming language ?",visual-studio,visual-studio-2010,,,,,open,0,55,12,"[Visual Studio - C#] View container of a control in a Form I'm wont working with netbeans, and with Visual studio i can't find the way to view an hierarcal relation of the control(Parent container ---> Child) in the form, something like this : 
+![alt text][1]
+
+
+  [1]: http://i.stack.imgur.com/Ddj9n.png
+
+
+Is there a way to have a view like this in Visual Studio 2010 with c# programming language ?",2
+5728136,04/20/2011 09:24:14,488735,10/27/2010 11:15:57,285,0,What Framework should I use to edit VB6 Projects?,"I have a VB6 project that I need to edit. I have downloaded the Visual Studio 2010, but I have read that I need VB6. I have googled but I can't find where I can download VB6.
+
+It is possible to edit this VB6 project with Visual Studio 2010? If not, what can I do?
+
+Best Regards,",visual-studio,vb6,,,,,open,0,55,9,"What Framework should I use to edit VB6 Projects? I have a VB6 project that I need to edit. I have downloaded the Visual Studio 2010, but I have read that I need VB6. I have googled but I can't find where I can download VB6.
+
+It is possible to edit this VB6 project with Visual Studio 2010? If not, what can I do?
+
+Best Regards,",2
+352699,12/09/2008 13:29:47,1353085,09/08/2008 06:22:18,476,18,How do I find a complete list of extensions installed in VS2008?,"I want that list, because if something horrible happens, and I'll have to reinstall Visual Studio - I'll need this list, so that I can recreate the same development environment. This also makes it hard to search for updates - I can not see the versions of currently installed plug-ins.
+
+So, is there a single place in Visual Studio, that would show me a complete list of plug-ins and their versions?",visual-studio,vs2008,plugins,,,,open,0,70,12,"How do I find a complete list of extensions installed in VS2008? I want that list, because if something horrible happens, and I'll have to reinstall Visual Studio - I'll need this list, so that I can recreate the same development environment. This also makes it hard to search for updates - I can not see the versions of currently installed plug-ins.
+
+So, is there a single place in Visual Studio, that would show me a complete list of plug-ins and their versions?",3
+807639,04/30/2009 15:54:17,93802,04/21/2009 13:43:27,60,1,Override visual syntax highlighting through a plug-in?,"This is related to [this question I asked earlier][1] about syntax highlighting user-defined blocks of code.
+
+
+  [1]: http://stackoverflow.com/questions/807404/displaying-code-sections-with-a-different-background-color
+
+Is it possible to write some kind of plug-in for visual studio where it would override how it does syntax highlighting? Where would I start looking for that?
+
+Thanks!",visual-studio,visual-studio-2008,visual-studio-2005,,,,open,0,46,7,"Override visual syntax highlighting through a plug-in? This is related to [this question I asked earlier][1] about syntax highlighting user-defined blocks of code.
+
+
+  [1]: http://stackoverflow.com/questions/807404/displaying-code-sections-with-a-different-background-color
+
+Is it possible to write some kind of plug-in for visual studio where it would override how it does syntax highlighting? Where would I start looking for that?
+
+Thanks!",3
+575173,02/22/2009 16:31:47,52913,01/08/2009 12:53:13,498,5,What 's your favorate way when debugging your program in Visual Studio?,"These day I come up with a large software. 
+
+I have to debug in Visual Studio 2008.
+
+The steps I take are:
+
+1.Using callstack window to find the code blocks that I i thinks it may have bugs.
+
+2.Using Immediate windows to call some local functions to see whether the data structures
+   in this blocks are correct.
+
+3.When get the result in step 2,I have to go to step 1 to find the source of the bug
+  using callstack again.
+
+What is your favorite method to debug large or small program in Visual Studio?
+
+
+I don't think to run whole the program and watch all the related data structure is 
+good way to debug.
+
+
+
+",visual-studio,visualstudio2008,debugging,debug,,04/18/2012 12:06:11,not constructive,1,111,12,"What 's your favorate way when debugging your program in Visual Studio? These day I come up with a large software. 
+
+I have to debug in Visual Studio 2008.
+
+The steps I take are:
+
+1.Using callstack window to find the code blocks that I i thinks it may have bugs.
+
+2.Using Immediate windows to call some local functions to see whether the data structures
+   in this blocks are correct.
+
+3.When get the result in step 2,I have to go to step 1 to find the source of the bug
+  using callstack again.
+
+What is your favorite method to debug large or small program in Visual Studio?
+
+
+I don't think to run whole the program and watch all the related data structure is 
+good way to debug.
+
+
+
+",4
+5156282,03/01/2011 15:07:40,192961,10/20/2009 09:13:25,1073,54,Does ReadyBoost help for Visual Studio?,"Is there any way that you can check if ReadyBoost actually has an impact on performance? I don't really experience much improvement.
+
+Also can it be useful for Visual Studio anyway or would that never help?",visual-studio,performance,readyboost,,,03/03/2011 14:20:14,off topic,1,35,6,"Does ReadyBoost help for Visual Studio? Is there any way that you can check if ReadyBoost actually has an impact on performance? I don't really experience much improvement.
+
+Also can it be useful for Visual Studio anyway or would that never help?",3
+3953335,10/17/2010 13:11:46,379079,06/29/2010 14:05:34,39,0,Mercurial or Git,"I need a good SCM with integration in Visual Studio 2010 and ability to work over internet, I mean other users should be able to checkin/checkout files through internet/network.
+I saw Git and it's Extensions but I had problem with VS Integration. It's toolbar buttons and menu items didn't respond to my clicks, it just did nothing. I tried reinstalling it several times but without success. If you have a solution on this issue, please let me know. 
+Also a big advantage would be to use that SCM with my Qt projects, Qt Creator supports both mercurial and git. 
+So what would suggest? which one should I choose?",visual-studio,git,qt,mercurial,qt-creator,10/17/2010 21:06:02,not constructive,1,107,3,"Mercurial or Git I need a good SCM with integration in Visual Studio 2010 and ability to work over internet, I mean other users should be able to checkin/checkout files through internet/network.
+I saw Git and it's Extensions but I had problem with VS Integration. It's toolbar buttons and menu items didn't respond to my clicks, it just did nothing. I tried reinstalling it several times but without success. If you have a solution on this issue, please let me know. 
+Also a big advantage would be to use that SCM with my Qt projects, Qt Creator supports both mercurial and git. 
+So what would suggest? which one should I choose?",5
+706938,04/01/2009 19:04:45,72631,03/02/2009 04:08:53,1289,60,Visual Studio 2008 macro to switch between header and source files?,"Does anyone know how to make a macro or something to switch between foo.hpp and foo.cpp? I would really appreciate having a macro like this. I guess it would help if it actually opened the corresponding file, but kept the old one in a tab.
+
+Thanks",visual-studio,visual-studio-2008,shortcuts,,,,open,0,45,11,"Visual Studio 2008 macro to switch between header and source files? Does anyone know how to make a macro or something to switch between foo.hpp and foo.cpp? I would really appreciate having a macro like this. I guess it would help if it actually opened the corresponding file, but kept the old one in a tab.
+
+Thanks",3
+5863024,05/02/2011 22:09:35,373674,06/22/2010 21:52:41,549,4,Generating resource files for application based on default resource files,"I have a .net application that currently has resource files for all it's content, one per .aspx and .ascx. Currently there are only resource files for english. 
+
+I now need to add resource files for another language which means I need to replicate all the resource files with just the keys and no values, files named with the correct culture extension eg es for spainish. 
+
+My application is built against the .net 3.5 framework in VS2008. 
+
+Is there any way of automatically creating/generating the new resource files, in the format detailed above for the entire solution?",visual-studio,resources,localization,globalization,,,open,0,96,10,"Generating resource files for application based on default resource files I have a .net application that currently has resource files for all it's content, one per .aspx and .ascx. Currently there are only resource files for english. 
+
+I now need to add resource files for another language which means I need to replicate all the resource files with just the keys and no values, files named with the correct culture extension eg es for spainish. 
+
+My application is built against the .net 3.5 framework in VS2008. 
+
+Is there any way of automatically creating/generating the new resource files, in the format detailed above for the entire solution?",4
+8659718,12/28/2011 18:25:17,147851,07/30/2009 14:09:56,957,54,TFS Work Item Template - Cannot Remove Activated Field Rules from Initial Transition,"I have modified a 'BUG' work item template to include an initial state of 'Proposed' rather than 'Active'.  The initial transition used on item creation has two unwanted Field Rules:  Activated By' and 'Activated Date'.  I've tried unsccessfully to remove them and save the workflow, but they continue to regenerate.  Has anyone encountered this behavior before?
+
+I've exhausted MSDN and other forums tyring to find an answer, so I thought it was time to turn to the Stack community for some advice.
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/1kBwH.gif",visual-studio,visual-studio-2010,tfs,tfs2010,,,open,0,91,13,"TFS Work Item Template - Cannot Remove Activated Field Rules from Initial Transition I have modified a 'BUG' work item template to include an initial state of 'Proposed' rather than 'Active'.  The initial transition used on item creation has two unwanted Field Rules:  Activated By' and 'Activated Date'.  I've tried unsccessfully to remove them and save the workflow, but they continue to regenerate.  Has anyone encountered this behavior before?
+
+I've exhausted MSDN and other forums tyring to find an answer, so I thought it was time to turn to the Stack community for some advice.
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/1kBwH.gif",4
+8467826,12/11/2011 21:56:55,914835,08/26/2011 21:16:10,18,0,does deploying an app i have developed on Visual Studio to Windowsphone require a paid license?,"because I'm trying to deploy my app by following all the steps mentioned in msdn
+i keep having this error code: 0x80043009
+help me please, thanks.",visual-studio,windows-phone-7,msdn,,,12/14/2011 11:38:36,off topic,1,24,16,"does deploying an app i have developed on Visual Studio to Windowsphone require a paid license? because I'm trying to deploy my app by following all the steps mentioned in msdn
+i keep having this error code: 0x80043009
+help me please, thanks.",3
+7842031,10/20/2011 20:46:21,745491,05/09/2011 16:19:45,217,9,Visual Web Developer Debugger - Is it just me or is this debugger itself full of bugs?,"I am starting to get really frustrated with the Visual Web Developer Express Debugging.
+
+It seem often I set two or three break points. And what happens is the cursor ends up going around in a loop. I will have been through all of my breakpoints but instead of exiting the debugging and showing me the result of the web page in the browser the cursor jumps back to the beginning. 
+
+Or I will be half way through my break points and the cursor will jump back to the previous breakpoint and and get stuck in a loop, again always jumping back to the previous break point.
+
+It seems the debugger is not consistent either sometimes it will work fine and other times it will do as described above.
+
+Sometimes I get a yellow arrow with a tiny blue dot in the margin when this is happening. Which when I hover over it says ""The process or thread has changed since the last step"" what is that all about?
+
+Also I am getting inacurate Exceptions. I have a method in C# that takes an `out` parameter. When the cursor reaches this method call sometimes it gives me a null reference exception. But it is an `out` parameter they are allowed to be null. And again VWD seems to be inconsistent. Sometimes I get this problem, most of the time I don't.
+
+Am I doing something wrong or has VWD Debugger got a lot of screws loose?
+
+Please help me because I am starting to use my mind!",visual-studio,visual-web-developer,visual-studio-debugging,,,10/20/2011 21:47:38,not constructive,1,251,17,"Visual Web Developer Debugger - Is it just me or is this debugger itself full of bugs? I am starting to get really frustrated with the Visual Web Developer Express Debugging.
+
+It seem often I set two or three break points. And what happens is the cursor ends up going around in a loop. I will have been through all of my breakpoints but instead of exiting the debugging and showing me the result of the web page in the browser the cursor jumps back to the beginning. 
+
+Or I will be half way through my break points and the cursor will jump back to the previous breakpoint and and get stuck in a loop, again always jumping back to the previous break point.
+
+It seems the debugger is not consistent either sometimes it will work fine and other times it will do as described above.
+
+Sometimes I get a yellow arrow with a tiny blue dot in the margin when this is happening. Which when I hover over it says ""The process or thread has changed since the last step"" what is that all about?
+
+Also I am getting inacurate Exceptions. I have a method in C# that takes an `out` parameter. When the cursor reaches this method call sometimes it gives me a null reference exception. But it is an `out` parameter they are allowed to be null. And again VWD seems to be inconsistent. Sometimes I get this problem, most of the time I don't.
+
+Am I doing something wrong or has VWD Debugger got a lot of screws loose?
+
+Please help me because I am starting to use my mind!",3
+7601555,09/29/2011 18:09:10,299408,03/22/2010 21:23:02,1076,11,VsVim or ViEmu?,I couldn't find any comparisions or information on which is better. Is it worth it to pay the money for ViEmu or is Jared version just as good?,visual-studio,vim,,,,09/30/2011 10:34:28,not constructive,1,28,3,VsVim or ViEmu? I couldn't find any comparisions or information on which is better. Is it worth it to pay the money for ViEmu or is Jared version just as good?,2
+45908,09/05/2008 14:21:21,1196,08/13/2008 12:33:04,1859,130,Tips and tricks for working with Microsoft Visual Studio solutions and project,"After answering on [this question][1] I thought it would be nice to collect some tips & tricks for working with MSVS solutions and projects.  
+
+Here is my list:  
+
+  - How to avoid saving new projects
+    automatically to reduce garbage in
+    file system.
+
+    Uncheck **Tools->Options->Projects and Solutions->Save new projects when created**
+
+  - How to add common file to multiple
+    projects without copying it to
+    project’s directory.
+
+    Right click on a project, select **Add->Existing Item->Add as link** (press on small arrow on Add button)
+
+  - How to add project to solution
+    without including it in the build
+    process
+
+    Right click on solution, select **Add->New solution folder**.  
+    Right click on created folder, **select Add->Add existing project**
+
+  - How to edit project file from Visual
+    Studio?
+
+    Right click on project and select **Unload Project**, right click on unloaded project and select **Edit**.
+    Or install [Power Commands][2] and select **Edit Project File**
+
+  - How to group files in the project
+    tree (like auto-generated files for
+    WinForms controls)
+
+    Open project file for editing.  
+   
+<pre>   Change</pre>
+    <Compile Include=""MainFile.cs"" />
+    <Compile Include=""SecondaryFile.cs"" />
+
+    To
+
+    <Compile Include=""SecondaryFile.cs "">
+        <DependentUpon> MainFile.cs </DependentUpon>
+    </Compile>
+
+Do you have anything else to add?
+
+
+  [1]: http://stackoverflow.com/questions/45650/common-files-in-visual-studio-solution#45664
+  [2]: http://code.msdn.microsoft.com/PowerCommands",visual-studio,tips-and-tricks,,,,05/06/2012 14:35:04,not constructive,1,281,12,"Tips and tricks for working with Microsoft Visual Studio solutions and project After answering on [this question][1] I thought it would be nice to collect some tips & tricks for working with MSVS solutions and projects.  
+
+Here is my list:  
+
+  - How to avoid saving new projects
+    automatically to reduce garbage in
+    file system.
+
+    Uncheck **Tools->Options->Projects and Solutions->Save new projects when created**
+
+  - How to add common file to multiple
+    projects without copying it to
+    project’s directory.
+
+    Right click on a project, select **Add->Existing Item->Add as link** (press on small arrow on Add button)
+
+  - How to add project to solution
+    without including it in the build
+    process
+
+    Right click on solution, select **Add->New solution folder**.  
+    Right click on created folder, **select Add->Add existing project**
+
+  - How to edit project file from Visual
+    Studio?
+
+    Right click on project and select **Unload Project**, right click on unloaded project and select **Edit**.
+    Or install [Power Commands][2] and select **Edit Project File**
+
+  - How to group files in the project
+    tree (like auto-generated files for
+    WinForms controls)
+
+    Open project file for editing.  
+   
+<pre>   Change</pre>
+    <Compile Include=""MainFile.cs"" />
+    <Compile Include=""SecondaryFile.cs"" />
+
+    To
+
+    <Compile Include=""SecondaryFile.cs "">
+        <DependentUpon> MainFile.cs </DependentUpon>
+    </Compile>
+
+Do you have anything else to add?
+
+
+  [1]: http://stackoverflow.com/questions/45650/common-files-in-visual-studio-solution#45664
+  [2]: http://code.msdn.microsoft.com/PowerCommands",2
+5306972,03/15/2011 02:45:15,205110,11/06/2009 18:24:07,55,8,What Extension/Plugin do you use/need ?,"Some might need it, some might not. 
+All those extra feature help noobs to gurus not only sometimes become a better programmer but also help them make their **life easier**.
+
+One of the recent questions I found, was about the new `dynamic` variable introduced with the framework 4. Problem was it did not have highlighting nor intellisense. This was easily resolved with Resharper.
+
+*My question is what kind of Extensions/Plugins do you have or must die for ?*
+----------------------------------------
+
+And if possible not limited to Visual Studio as we all program in many different languages.
+
+For me :
+
+ - [Resharper for Visual Studio][1] :
+   Highlighter, Intellisense and so much
+   more
+ - [JustCode for Visual Studio][2] :
+   Highlighter, Intellisense
+   
+   Wonder: if we can make a faq about
+   all the Extensions/Plugins available
+   to us.
+
+  [1]: http://www.jetbrains.com/resharper/
+  [2]: http://www.telerik.com/products/justcode.aspx",visual-studio,,,,,03/15/2011 04:25:00,not constructive,1,148,6,"What Extension/Plugin do you use/need ? Some might need it, some might not. 
+All those extra feature help noobs to gurus not only sometimes become a better programmer but also help them make their **life easier**.
+
+One of the recent questions I found, was about the new `dynamic` variable introduced with the framework 4. Problem was it did not have highlighting nor intellisense. This was easily resolved with Resharper.
+
+*My question is what kind of Extensions/Plugins do you have or must die for ?*
+----------------------------------------
+
+And if possible not limited to Visual Studio as we all program in many different languages.
+
+For me :
+
+ - [Resharper for Visual Studio][1] :
+   Highlighter, Intellisense and so much
+   more
+ - [JustCode for Visual Studio][2] :
+   Highlighter, Intellisense
+   
+   Wonder: if we can make a faq about
+   all the Extensions/Plugins available
+   to us.
+
+  [1]: http://www.jetbrains.com/resharper/
+  [2]: http://www.telerik.com/products/justcode.aspx",1
+2760738,05/03/2010 19:44:26,138347,07/14/2009 21:51:21,199,5,Visual Studio Web Testing - Are there any good books/videos available?,"I am trying to find a good resource on web and load testing. I'm using Visual Studio 2010 ultimate and, while i'm sure it is too early for much material to be released, i'm hoping there are some good resources for Visual Studio 2008 that are still relevant. While MSDN has some good information I'm looking for something more cohesive that i can view on my way to/from work - hence a book or a video
+Thanks in advance,
+JP",visual-studio,load-testing,web-testing,webtest,,08/01/2012 12:43:19,not constructive,1,78,11,"Visual Studio Web Testing - Are there any good books/videos available? I am trying to find a good resource on web and load testing. I'm using Visual Studio 2010 ultimate and, while i'm sure it is too early for much material to be released, i'm hoping there are some good resources for Visual Studio 2008 that are still relevant. While MSDN has some good information I'm looking for something more cohesive that i can view on my way to/from work - hence a book or a video
+Thanks in advance,
+JP",4
+9603217,03/07/2012 14:24:15,242189,01/02/2010 05:39:28,368,9,Type providers samples with Visual Studio Beta,"Good news, Type Providers now use Microsoft.FSharp.Quotations.**FSharpExpr** instead of **Linq** Expressions
+
+
+Bad news, many samples do not work anymore, the ones using ProvidedTypes-0.1.fs .....
+
+
+Do you know where to get a hold on updated samples /  ProvidedTypes-0.x.fs ?",visual-studio,f#,visual-studio-11,type-providers,f#-3.0,03/16/2012 03:52:13,too localized,1,37,7,"Type providers samples with Visual Studio Beta Good news, Type Providers now use Microsoft.FSharp.Quotations.**FSharpExpr** instead of **Linq** Expressions
+
+
+Bad news, many samples do not work anymore, the ones using ProvidedTypes-0.1.fs .....
+
+
+Do you know where to get a hold on updated samples /  ProvidedTypes-0.x.fs ?",5
+1314355,08/21/2009 21:40:58,158483,08/18/2009 13:53:12,84,25,Can I get access to the database schema project types without having to buy VSTS?,"I'm currently working on an ASP.NET application, and I have downloaded the Visual Studio 2010 Team System beta, which I'm using for my project.
+
+In this version I learned that there is a database schema project. By searching the net I found that this project type also exists for VS 2008, but only in some of the Team System versions. I really learned to appreciate this project type, it really helps out a lot in my database design and development. But the Team System versions are absurdly expensive.
+
+Is there a way to get this project type without having to purchase a Team System license?
+
+It is the only feature of the Team System version that I want.",visual-studio,visual-studio-team-system,,,,,open,0,115,15,"Can I get access to the database schema project types without having to buy VSTS? I'm currently working on an ASP.NET application, and I have downloaded the Visual Studio 2010 Team System beta, which I'm using for my project.
+
+In this version I learned that there is a database schema project. By searching the net I found that this project type also exists for VS 2008, but only in some of the Team System versions. I really learned to appreciate this project type, it really helps out a lot in my database design and development. But the Team System versions are absurdly expensive.
+
+Is there a way to get this project type without having to purchase a Team System license?
+
+It is the only feature of the Team System version that I want.",2
+95188,09/18/2008 18:15:45,9344,09/15/2008 18:29:50,11,2,What is your favorite Resharper/Visual Studio shortcut?,"Let's show some Resharper love and learn new shortcuts while at it:
+
+Along the lines of Joel Spolsky's ""What is your single favorite keyboard shortcut in Emacs?"" what is your single favorite Resharper shortcut? One shortcut per answer, please.
+
+Would it be:
+
+  - ctrl-N/ctrl-shift-N (open type/open file) 
+  - ctrl-shift-G (a friend calls this
+    ""Super Go"")
+  - alt-ins
+  - ctrl-k-ctrl-s/ctrl-/ (comment/uncomment)
+  - f2 (rename method/variable etc.)
+
+I figure we can deal with more than one favorite by providing multiple answers - let the best ones rise to the top.",visual-studio,resharper,keyboard-shortcuts,,,09/17/2011 02:16:50,off topic,1,94,7,"What is your favorite Resharper/Visual Studio shortcut? Let's show some Resharper love and learn new shortcuts while at it:
+
+Along the lines of Joel Spolsky's ""What is your single favorite keyboard shortcut in Emacs?"" what is your single favorite Resharper shortcut? One shortcut per answer, please.
+
+Would it be:
+
+  - ctrl-N/ctrl-shift-N (open type/open file) 
+  - ctrl-shift-G (a friend calls this
+    ""Super Go"")
+  - alt-ins
+  - ctrl-k-ctrl-s/ctrl-/ (comment/uncomment)
+  - f2 (rename method/variable etc.)
+
+I figure we can deal with more than one favorite by providing multiple answers - let the best ones rise to the top.",3
+10039922,04/06/2012 06:25:13,415037,08/09/2010 11:55:28,902,12,Adding MySQL in bootstrapper,"While making setup file, we can add SQL Server Express as pre-req so setup installs that first.
+How to do the same with MySQL?  I want my application to install MySQL if not installed on the target PC.
+
+Thanks
+",visual-studio,setup-project,,,,,open,0,38,4,"Adding MySQL in bootstrapper While making setup file, we can add SQL Server Express as pre-req so setup installs that first.
+How to do the same with MySQL?  I want my application to install MySQL if not installed on the target PC.
+
+Thanks
+",2
+1190680,07/27/2009 21:19:33,141652,07/20/2009 20:44:08,299,50,Visual Studio (with TFS) history other than solution explorer?,"Has anyone ever found other ways to get a file's commit history outside of solution explorer? It's really annoying that history is so stagnant because it is a really helpful view.  I just wish it would show the current file. Here is the use case.
+
+I build my gigantic solution, find random errors in files I have never heard of and want to know who's at fault. I can get to the file by double clicking from the Error List view, but right clicking doesn't work, nor does navigating View->Other Windows->History. If I can even get the history view, I just get the last history that I right-clicked from the Solution Explorer. +1 Also for anyone that has a way to find a file in the solution.",visual-studio,visual-studio-2008,tfs,visual-studio-team-system,,,open,0,127,9,"Visual Studio (with TFS) history other than solution explorer? Has anyone ever found other ways to get a file's commit history outside of solution explorer? It's really annoying that history is so stagnant because it is a really helpful view.  I just wish it would show the current file. Here is the use case.
+
+I build my gigantic solution, find random errors in files I have never heard of and want to know who's at fault. I can get to the file by double clicking from the Error List view, but right clicking doesn't work, nor does navigating View->Other Windows->History. If I can even get the history view, I just get the last history that I right-clicked from the Solution Explorer. +1 Also for anyone that has a way to find a file in the solution.",4
+230927,10/23/2008 18:42:28,6992,09/15/2008 12:58:25,126,0,What would be the most convenient way to connect Visual Studio 2005 (C#) to Oracle8?,"I'm looking for best practices for establishing connections between Oracle 8 and Visual Studio 2005 applications. The target would be a Windows Forms application written in C# that hits the database once a second to monitor tables looking for their last inserted record. I'm considering using ""Application settings"" to store the connection string there, but I'd love to hear from you guys. Thanks in advance!",visual-studio,csharp,oracle,dotnet,windowsforms,,open,0,65,15,"What would be the most convenient way to connect Visual Studio 2005 (C#) to Oracle8? I'm looking for best practices for establishing connections between Oracle 8 and Visual Studio 2005 applications. The target would be a Windows Forms application written in C# that hits the database once a second to monitor tables looking for their last inserted record. I'm considering using ""Application settings"" to store the connection string there, but I'd love to hear from you guys. Thanks in advance!",5
+7696819,10/08/2011 12:32:22,199722,10/30/2009 15:19:19,1604,14,TFS MSF for Agile Software Development v5.0 Documents and Reports nodes are missing,"Reading about TFS' MSF for Agile Software Development v5.0 template ([for example here][1]) I can see nice **Documents** and **Reports** installed by default:
+
+![enter image description here][2]
+
+but after I installed this template myself I can see no such nodes:
+
+![enter image description here][3]
+
+**What should I do to see (or install) them?**
+
+
+  [1]: http://blogs.technet.com/b/chrad/archive/2011/02/10/tfs-2010-msf-agile-vs-visual-studio-scrum-1-0-smackdown-planning-w-agile-part-ii.aspx
+  [2]: http://i.stack.imgur.com/1oS45.png
+  [3]: http://i.stack.imgur.com/bfbFd.png",visual-studio,visual-studio-2010,templates,tfs,tfs2010,,open,0,58,13,"TFS MSF for Agile Software Development v5.0 Documents and Reports nodes are missing Reading about TFS' MSF for Agile Software Development v5.0 template ([for example here][1]) I can see nice **Documents** and **Reports** installed by default:
+
+![enter image description here][2]
+
+but after I installed this template myself I can see no such nodes:
+
+![enter image description here][3]
+
+**What should I do to see (or install) them?**
+
+
+  [1]: http://blogs.technet.com/b/chrad/archive/2011/02/10/tfs-2010-msf-agile-vs-visual-studio-scrum-1-0-smackdown-planning-w-agile-part-ii.aspx
+  [2]: http://i.stack.imgur.com/1oS45.png
+  [3]: http://i.stack.imgur.com/bfbFd.png",5
+11118503,06/20/2012 11:27:29,1350644,04/23/2012 06:37:18,53,6,is VS 2011 Ultimate version released?,"what is the latest version in micro soft VS, is that VS 2011 ultimate version is released or only beta version is released  ",visual-studio,,,,,06/20/2012 12:04:17,off topic,1,25,6,"is VS 2011 Ultimate version released? what is the latest version in micro soft VS, is that VS 2011 ultimate version is released or only beta version is released  ",1
+8198513,11/20/2011 00:33:52,31317,10/24/2008 20:39:48,14664,494,contents of map file - details(VS 2008 / VS 2010),"Is there any detailed documentation / information for the contents of map files? I have a rough idea, but some elements are not apparent to me, and google didnät help either.
+
+Examples:
+
+     0001:00000000 <decorated name>  00401000 f i CMDevNode.obj
+     0001:0000c870 <decorated name>  0040d870 f   uafxcw:afxmem.obj
+     ...                                          CIL library: CIL module
+
+
+What is the ""f"" and ""i""?  Are there other flags like these?
+
+The lib:obj probably refers to a DLL/static library?
+
+What is the ""CIL library: CIL module"" - that seems to be code generated by the compiler.
+
+TIA
+
+
+
+
+
+",visual-studio,linker,map-files,,,,open,0,141,10,"contents of map file - details(VS 2008 / VS 2010) Is there any detailed documentation / information for the contents of map files? I have a rough idea, but some elements are not apparent to me, and google didnät help either.
+
+Examples:
+
+     0001:00000000 <decorated name>  00401000 f i CMDevNode.obj
+     0001:0000c870 <decorated name>  0040d870 f   uafxcw:afxmem.obj
+     ...                                          CIL library: CIL module
+
+
+What is the ""f"" and ""i""?  Are there other flags like these?
+
+The lib:obj probably refers to a DLL/static library?
+
+What is the ""CIL library: CIL module"" - that seems to be code generated by the compiler.
+
+TIA
+
+
+
+
+
+",3
+2979831,06/05/2010 09:40:16,8741,09/15/2008 16:46:16,2460,71,Error handling in VS/C# build events.,"I have just written a small utility to be used in a pre-build event. The utilty works fine when run as standalone, but does nothing when used in the build event.  Is there a standard way of noticing and dealing with error conditions in build events, or is that the domain of more advanced build control?",visual-studio,build-process,,,,,open,0,57,6,"Error handling in VS/C# build events. I have just written a small utility to be used in a pre-build event. The utilty works fine when run as standalone, but does nothing when used in the build event.  Is there a standard way of noticing and dealing with error conditions in build events, or is that the domain of more advanced build control?",2
+141371,09/26/2008 19:15:51,4481,09/04/2008 02:59:09,40,8,Which Visual Studio Color Theme?,"Which Visual Studio Color Theme do you use?
+
+Do you find that the darker themes work best for you? Do they help ease your eye strain?
+
+What is your favorite color theme & where can I get it?
+",visual-studio,color-scheme,color-theme,customization,visualstudio2008,08/09/2011 11:27:38,not constructive,1,36,5,"Which Visual Studio Color Theme? Which Visual Studio Color Theme do you use?
+
+Do you find that the darker themes work best for you? Do they help ease your eye strain?
+
+What is your favorite color theme & where can I get it?
+",5
+3887878,10/08/2010 05:14:43,443987,09/10/2010 03:25:58,3,0,Referencing an object using a variable string in Visual Basic 2010,"I have several sets of similar objects (labels, progress bars) on a form in Visual Basic 2010.  In my code, I have collections that contain data, which needs to be pushed into the value/text property of each.  
+
+I would like to get a solution similar to PHP in that I can assign values somewhat like: 
+
+`For ID as Integer from 0 to count(collectionExample)
+lblExample{ID}.Text=collectionExample(variableID)`
+
+...and as such to loop through so each of the different lblExample's were updated to their corresponding value.  
+
+The issue I have come to is that I cannot seem to reference an object on the form using a variable.  I have also tried using something like 
+
+`CallByName(""lblExample"" + variableID, ""Text"", CallType.Set, exampleCollection(variableID))`... however I still can't combine the string and variable to reference the object.  
+
+**Any solutions on referring to objects in VB2010 by combining a string prefix and a variable string identifier, similar to PHP's $variable{$variable} approach?**
+
+",visual-studio,visual-studio-2010,vb,,,,open,0,155,11,"Referencing an object using a variable string in Visual Basic 2010 I have several sets of similar objects (labels, progress bars) on a form in Visual Basic 2010.  In my code, I have collections that contain data, which needs to be pushed into the value/text property of each.  
+
+I would like to get a solution similar to PHP in that I can assign values somewhat like: 
+
+`For ID as Integer from 0 to count(collectionExample)
+lblExample{ID}.Text=collectionExample(variableID)`
+
+...and as such to loop through so each of the different lblExample's were updated to their corresponding value.  
+
+The issue I have come to is that I cannot seem to reference an object on the form using a variable.  I have also tried using something like 
+
+`CallByName(""lblExample"" + variableID, ""Text"", CallType.Set, exampleCollection(variableID))`... however I still can't combine the string and variable to reference the object.  
+
+**Any solutions on referring to objects in VB2010 by combining a string prefix and a variable string identifier, similar to PHP's $variable{$variable} approach?**
+
+",3
+5912733,05/06/2011 14:18:36,497313,11/04/2010 15:18:17,238,22,Visual Studio Version Mainstream,"Which is preferred in the software design world, VS2008 or VS2010. I find that I like the UI, debugger, and enhanced intellisense in VS2010; however most people on my team have not upgraded to VS2010 making it tough to convert projects back from 2010 to 2008. I almost get the impression VS2008 is preferred. Also, how long would you say it took VS2005 to disappear from the mainstream.",visual-studio,,,,,05/07/2011 10:53:18,too localized,1,68,4,"Visual Studio Version Mainstream Which is preferred in the software design world, VS2008 or VS2010. I find that I like the UI, debugger, and enhanced intellisense in VS2010; however most people on my team have not upgraded to VS2010 making it tough to convert projects back from 2010 to 2008. I almost get the impression VS2008 is preferred. Also, how long would you say it took VS2005 to disappear from the mainstream.",1
+1482700,09/27/2009 03:06:26,50225,12/30/2008 16:44:53,247,18,visual studio extensibility - how to add folder to database project?,"I'm trying to add a folder to a database project in visual studio 2008. I've found out that database projects don't implement the full EnvDTE.Project interface. Specifically the ProjectItems property is not implemented so I can't do this:
+
+    dbProj.ProjectItems.AddFolder(""test"")
+
+Does anyone know of a workaround? Is there another API available for extending visual studio?",visual-studio,extensibility,,,,,open,0,56,11,"visual studio extensibility - how to add folder to database project? I'm trying to add a folder to a database project in visual studio 2008. I've found out that database projects don't implement the full EnvDTE.Project interface. Specifically the ProjectItems property is not implemented so I can't do this:
+
+    dbProj.ProjectItems.AddFolder(""test"")
+
+Does anyone know of a workaround? Is there another API available for extending visual studio?",2
+2936568,05/29/2010 20:51:00,173520,09/15/2009 05:18:28,1351,15,Which MacBook(Pro) for running Visual Studio 2010 on VMWare Fusion on a Mac?,"Anyone have experience running Visual Studio 2010 on a MacBook or MacBook Pro?  (via VMWare fusion)
+
+Any feedback / advice based on your experience re what level of MacBook Pro (i.e. CPU type, CPU speed) you would target to get reasonable/good performance from VS2010 on it?
+
+(I'm just concerned about getting a base level MacBook Pro 13"" 2.4GHz Core2Duo whether I would be frustrated with performance or not)
+",visual-studio,visual-studio-2010,macbook,macbookpro,vmware-fusion,05/30/2010 01:14:09,off topic,1,67,13,"Which MacBook(Pro) for running Visual Studio 2010 on VMWare Fusion on a Mac? Anyone have experience running Visual Studio 2010 on a MacBook or MacBook Pro?  (via VMWare fusion)
+
+Any feedback / advice based on your experience re what level of MacBook Pro (i.e. CPU type, CPU speed) you would target to get reasonable/good performance from VS2010 on it?
+
+(I'm just concerned about getting a base level MacBook Pro 13"" 2.4GHz Core2Duo whether I would be frustrated with performance or not)
+",5
+3740726,09/18/2010 07:10:26,43907,12/06/2008 09:03:27,1852,0,what is the Tool-Box that every programmer need ?,"what is the Tool-Box that every programmer need ?
+
+for example i use:  `Notepad++ , xmlMarker , ReSharper`
+
+is there more cool Tools that can make easy life ?
+
+thank's in advance",visual-studio,,,,,09/18/2010 07:30:20,not constructive,1,30,9,"what is the Tool-Box that every programmer need ? what is the Tool-Box that every programmer need ?
+
+for example i use:  `Notepad++ , xmlMarker , ReSharper`
+
+is there more cool Tools that can make easy life ?
+
+thank's in advance",1
+141659,09/26/2008 20:10:05,19678,09/20/2008 15:51:34,41,4,Viewing the Visual SourceSafe log inside Visual Studio,"Is there any way to view the activity log for the integrate SourceSafe inside Visual Studio 2005 Pro? I'd like to be able to quickly see the results of any Get Latest Version, Check In and Checkout actions, and I can't find a way to get that information without having to open the VSS client.
+
+Thanks.",visual-studio,visual-sourcesafe,,,,,open,0,55,8,"Viewing the Visual SourceSafe log inside Visual Studio Is there any way to view the activity log for the integrate SourceSafe inside Visual Studio 2005 Pro? I'd like to be able to quickly see the results of any Get Latest Version, Check In and Checkout actions, and I can't find a way to get that information without having to open the VSS client.
+
+Thanks.",2
+11414363,07/10/2012 13:27:35,1156377,01/18/2012 13:56:48,21,1,Use Delphi / Object Pascal within Visual Studio IDE,"**Background:**
+
+I've been using Delphi since version 2, and since moving up to around v5/v6, I've never upgraded to get newer features - but instead to get around bugs in the IDE/compiler.  Today, I opened up a personal project that I've been working on occasionally for the past year and it wouldn't compile (having not been changed at all since last time).  Eventually it compiled but wouldn't run.........
+
+I've been using C# / visual studio quite a lot for work and quick'n'dirty projects and the only problems I've come across with C#/VS are limitations of the C# language itself.
+
+
+**The question:**
+
+Is there some way that I can edit my Delphi projects within Visual Studio and run/debug them from there, instead of having to use the Delphi IDE/debugger with all its numerous bugs?  I really don't want to have to upgrade Delphi again purely to get around Borland's heisenbugs.
+
+I saw some LGPL'd project to get Delphi into visual studio but it seemed to be dead as of 2007.  Likewise, I've seen Delphi .NET in visual studio, but some of my scientific code is heavily ASM optimised (SSE/FMA).
+
+
+Alternatively, is there a decent (and free/cheap) Delphi=>C++ / Delphi=>C# translator program around?  If I can just have my Delphi code translated to a Visual Studio language (give or take the occasional bit of ASM), that would probably suffice.
+
+
+
+    Thanks,
+      Mark",visual-studio,delphi,object-pascal,,,07/12/2012 02:39:15,not constructive,1,236,9,"Use Delphi / Object Pascal within Visual Studio IDE **Background:**
+
+I've been using Delphi since version 2, and since moving up to around v5/v6, I've never upgraded to get newer features - but instead to get around bugs in the IDE/compiler.  Today, I opened up a personal project that I've been working on occasionally for the past year and it wouldn't compile (having not been changed at all since last time).  Eventually it compiled but wouldn't run.........
+
+I've been using C# / visual studio quite a lot for work and quick'n'dirty projects and the only problems I've come across with C#/VS are limitations of the C# language itself.
+
+
+**The question:**
+
+Is there some way that I can edit my Delphi projects within Visual Studio and run/debug them from there, instead of having to use the Delphi IDE/debugger with all its numerous bugs?  I really don't want to have to upgrade Delphi again purely to get around Borland's heisenbugs.
+
+I saw some LGPL'd project to get Delphi into visual studio but it seemed to be dead as of 2007.  Likewise, I've seen Delphi .NET in visual studio, but some of my scientific code is heavily ASM optimised (SSE/FMA).
+
+
+Alternatively, is there a decent (and free/cheap) Delphi=>C++ / Delphi=>C# translator program around?  If I can just have my Delphi code translated to a Visual Studio language (give or take the occasional bit of ASM), that would probably suffice.
+
+
+
+    Thanks,
+      Mark",3
+4295094,11/28/2010 02:59:27,496949,11/04/2010 08:45:00,1106,1,some files in output directory are locked even the executable is stop running,I found sometime some files in output directory is locked even after executable finishes running. I have to restart the Visual studio to solve it. Is there simple way to get out from there?,visual-studio,visual-studio-2008,visual-studio-2010,,,12/01/2010 07:23:17,not a real question,1,34,13,some files in output directory are locked even the executable is stop running I found sometime some files in output directory is locked even after executable finishes running. I have to restart the Visual studio to solve it. Is there simple way to get out from there?,3
+7567601,09/27/2011 10:23:26,521289,11/26/2010 11:07:29,46,0,viusal studio licence upgrations,My company has visual studio 2003 edition licence and we need to shift to visual studio 2008. can we renew 2003 licence to the 2008 licence or we have to purchase new licence to VS 2008?,visual-studio,visual-studio-2008,,,,09/27/2011 11:17:52,off topic,1,36,4,viusal studio licence upgrations My company has visual studio 2003 edition licence and we need to shift to visual studio 2008. can we renew 2003 licence to the 2008 licence or we have to purchase new licence to VS 2008?,2
+2676096,04/20/2010 14:50:22,321418,04/20/2010 14:50:22,1,0,want to start programming,"I really want to learn how to program. A friend suggested I buy [vs 2005][1] or a newer version if I'm serious about it. Is there a cheaper root? I would like to start with c#.
+
+
+  [1]: http://www.amazon.com/gp/product/B000BTA4LU",visual-studio,c#,,,,12/10/2011 01:44:43,not constructive,1,39,4,"want to start programming I really want to learn how to program. A friend suggested I buy [vs 2005][1] or a newer version if I'm serious about it. Is there a cheaper root? I would like to start with c#.
+
+
+  [1]: http://www.amazon.com/gp/product/B000BTA4LU",2
+3007312,06/09/2010 15:31:39,9611,09/15/2008 19:21:17,18231,680,Resolving LNK4098: defaultlib 'MSVCRT' conflicts with ...,"This warning:
+
+    LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts
+      with use of other libs; use /NODEFAULTLIB:library
+
+is a fairly common warning in Visual Studio> I'd like to understand the exact reason for it and the right way (if at all) to handle it.
+
+This comes up in a debug build, compiled with `\MDd`. The project is linked to things like windows `Version.dll` and `pdh.dll` which themselves link with `MSVCRT.dll`. Obviously, I don't have the debug versions of these and can't compile them.  
+
+So I added `/NODEFAULTLIB:MSVCRT` to the linker command line and it actually did remove the warning. But what does this actually do? And why is it necessary?",visual-studio,dll,linker,warnings,msvcrt,,open,0,116,7,"Resolving LNK4098: defaultlib 'MSVCRT' conflicts with ... This warning:
+
+    LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts
+      with use of other libs; use /NODEFAULTLIB:library
+
+is a fairly common warning in Visual Studio> I'd like to understand the exact reason for it and the right way (if at all) to handle it.
+
+This comes up in a debug build, compiled with `\MDd`. The project is linked to things like windows `Version.dll` and `pdh.dll` which themselves link with `MSVCRT.dll`. Obviously, I don't have the debug versions of these and can't compile them.  
+
+So I added `/NODEFAULTLIB:MSVCRT` to the linker command line and it actually did remove the warning. But what does this actually do? And why is it necessary?",5
+7457251,09/17/2011 19:28:02,69636,02/22/2009 18:35:54,934,10,cannot install visual studio 11 preview,"I use vista sp2 and have vs 2005/8/10 installed.
+
+I try to install vs 11 preview using the web installer but immediately get a message ""setup blocked"" (see image). the linked log just has many lines like
+
+    [1424:1894][2011-09-17T22:13:51.749+02:00]: Detected package: netfx_dtpmsi_1048, state: Present, cached: No
+
+
+any idea?
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/0Z2F3.jpg",visual-studio,visual-studio-11,,,,09/18/2011 08:10:17,off topic,1,54,6,"cannot install visual studio 11 preview I use vista sp2 and have vs 2005/8/10 installed.
+
+I try to install vs 11 preview using the web installer but immediately get a message ""setup blocked"" (see image). the linked log just has many lines like
+
+    [1424:1894][2011-09-17T22:13:51.749+02:00]: Detected package: netfx_dtpmsi_1048, state: Present, cached: No
+
+
+any idea?
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/0Z2F3.jpg",2
+6043276,05/18/2011 10:32:42,759005,05/18/2011 10:32:42,1,0,Do we have to run Visual Studio Test Professional 2010 license as well as a VS Premium or can it be standalone?,"we're currently in the process of upgrading to VS2010. Our company already has a number of VS2010 Premium licenses for our dev teams (great), but I manage a test team. Test Professional looks to be the better option for us as we currently use manaual scripts with a view to automating in the future. 
+Does anybody know if we have to run Test Professional inline with Premium or could we reduce the overall licnse cost to only licnse Test Professional to those testers without C# knowledge?",visual-studio,,,,,05/18/2011 13:35:13,off topic,1,86,22,"Do we have to run Visual Studio Test Professional 2010 license as well as a VS Premium or can it be standalone? we're currently in the process of upgrading to VS2010. Our company already has a number of VS2010 Premium licenses for our dev teams (great), but I manage a test team. Test Professional looks to be the better option for us as we currently use manaual scripts with a view to automating in the future. 
+Does anybody know if we have to run Test Professional inline with Premium or could we reduce the overall licnse cost to only licnse Test Professional to those testers without C# knowledge?",1
+738654,04/10/2009 19:38:59,71079,02/25/2009 21:29:55,3,0,Is it possible to customize the colors of RockScroll's variable syntax highlighting?,"As some of you know the RockScroll Visual Studio plugin is pretty darn awesome.  It turns your scrollbar into a mini preview of your code and offers the Eclipse like functionality of highlighting any word that you doubleclick in your code.
+
+The problem is the author of RockScroll chose a color that is VERY difficult to see and almost defeats the purpose of such a cool and very useful feature.
+
+So my question is.  Is it possible to customize the color or specify your own somehow?
+
+Stay tuned because I answered my own question and found a way!",visual-studio,syntax-highlighting,c#,,,,open,0,97,12,"Is it possible to customize the colors of RockScroll's variable syntax highlighting? As some of you know the RockScroll Visual Studio plugin is pretty darn awesome.  It turns your scrollbar into a mini preview of your code and offers the Eclipse like functionality of highlighting any word that you doubleclick in your code.
+
+The problem is the author of RockScroll chose a color that is VERY difficult to see and almost defeats the purpose of such a cool and very useful feature.
+
+So my question is.  Is it possible to customize the color or specify your own somehow?
+
+Stay tuned because I answered my own question and found a way!",3
+5542496,04/04/2011 18:12:21,435093,08/30/2010 15:12:01,1119,48,Where is stlib.h / stdint.h in Visual Studio 2010?,"I was googling a bit and heard that although `stdint.h` was not shipped with old versions of Visual Studio, it should be there in Visual Studio 2010.
+
+However, I have this project that's supposed to use it, but it says it can't find either `stlib.h` or `stdint.h`.
+
+![enter image description here][1]
+
+Why is that and how could I fix this?
+
+---
+
+Running Visual Studio 2010 with .NET 4.0 on an x86 Windows 7 machine.
+
+  [1]: http://i.stack.imgur.com/XLvLy.png",visual-studio,visual-studio-2010,stdlib,stdint,,,open,0,72,9,"Where is stlib.h / stdint.h in Visual Studio 2010? I was googling a bit and heard that although `stdint.h` was not shipped with old versions of Visual Studio, it should be there in Visual Studio 2010.
+
+However, I have this project that's supposed to use it, but it says it can't find either `stlib.h` or `stdint.h`.
+
+![enter image description here][1]
+
+Why is that and how could I fix this?
+
+---
+
+Running Visual Studio 2010 with .NET 4.0 on an x86 Windows 7 machine.
+
+  [1]: http://i.stack.imgur.com/XLvLy.png",4
+7203891,08/26/2011 11:20:48,136141,07/10/2009 08:41:48,3294,34,Why my Visual Studio automatically started to focus OutPut window after each Build instead of ErrorList?,"For some reason my Visual Studio started to focus Output window -if it is closed it opens it- after each build.
+
+I was more happy to see the Error List instead.
+
+How can I configure my VS to focus on Error List window instead of Output window?
+
+Thanks
+",visual-studio,visual-studio-2010,,,,,open,0,45,16,"Why my Visual Studio automatically started to focus OutPut window after each Build instead of ErrorList? For some reason my Visual Studio started to focus Output window -if it is closed it opens it- after each build.
+
+I was more happy to see the Error List instead.
+
+How can I configure my VS to focus on Error List window instead of Output window?
+
+Thanks
+",2
+9219205,02/09/2012 21:37:50,178315,09/24/2009 08:48:59,530,24,How does MS Visual Studio determine that source file have changed?,Does it use modification timestamp or/and does it check whether the actual content has changed (e.g. by comparing the checksum)?,visual-studio,file-io,compilation,,,02/10/2012 12:56:50,off topic,1,20,11,How does MS Visual Studio determine that source file have changed? Does it use modification timestamp or/and does it check whether the actual content has changed (e.g. by comparing the checksum)?,3
+5184831,03/03/2011 18:21:27,95245,04/23/2009 23:49:55,1735,98,visual studio keyboard shortcuts as resource designer,"If I wanted to externalize a keyboard gesture like Ctrl-S, is there a standard way to do this in Visual Studio the way you would with strings and other resources? I can't seem to add ""Other"" resources in the designer...
+
+Cheers,  
+Berry",visual-studio,internationalization,keyboard-shortcuts,preferences,,,open,0,42,7,"visual studio keyboard shortcuts as resource designer If I wanted to externalize a keyboard gesture like Ctrl-S, is there a standard way to do this in Visual Studio the way you would with strings and other resources? I can't seem to add ""Other"" resources in the designer...
+
+Cheers,  
+Berry",4
+8130586,11/15/2011 01:56:19,1046665,11/15/2011 01:51:32,1,0,Assigning words to a variable on visual Studio,I just need to know how to assign a specific word to a variable such as 'x' in Visual Studio. What is the proper syntax or assignment operator? ,visual-studio,,,,,11/15/2011 10:25:06,not a real question,1,29,8,Assigning words to a variable on visual Studio I just need to know how to assign a specific word to a variable such as 'x' in Visual Studio. What is the proper syntax or assignment operator? ,1
+7391048,09/12/2011 16:32:38,674896,03/24/2011 12:37:51,30,1,Download Visual Basic 6.0,I think I have looked at everywhere... but can anyone supply a link to download Visual Studio so that I can program in Visual Basic 6.0?,visual-studio,vb,,,,09/12/2011 17:30:26,off topic,1,26,4,Download Visual Basic 6.0 I think I have looked at everywhere... but can anyone supply a link to download Visual Studio so that I can program in Visual Basic 6.0?,2
+677858,03/24/2009 15:16:54,7565,09/15/2008 13:58:28,6370,263,Would ReadyBoost have an impact on Visual Studio 2008?,"Has anyone seen a performance increase in Visual Studio 2008 by using ReadyBoost in Windows Vista? I have 4G of RAM and adding more will do nothing (I'm running Vista 32), so I'm investigating other options to speed up the responsiveness of the development environment and the build process.
+",visual-studio,readyboost,performance,,,,open,0,49,9,"Would ReadyBoost have an impact on Visual Studio 2008? Has anyone seen a performance increase in Visual Studio 2008 by using ReadyBoost in Windows Vista? I have 4G of RAM and adding more will do nothing (I'm running Vista 32), so I'm investigating other options to speed up the responsiveness of the development environment and the build process.
+",3
+43908,09/04/2008 14:43:18,4177,09/02/2008 09:02:28,71,14,Resources for building a Visual Studio plug-in?,"I'd like to build a pretty simple plug-in for Visual Studio, but I don't really know how this has to be done.  Is this doable in (non-managed) C++? 
+
+I'd like to know what resources you'd recommend me...
+
+Thanks.
+",visual-studio,plugin-development,,,,07/27/2012 10:20:04,not constructive,1,38,7,"Resources for building a Visual Studio plug-in? I'd like to build a pretty simple plug-in for Visual Studio, but I don't really know how this has to be done.  Is this doable in (non-managed) C++? 
+
+I'd like to know what resources you'd recommend me...
+
+Thanks.
+",2
+3587560,08/27/2010 19:36:26,319988,04/19/2010 03:35:28,582,16,Which editions of Visual Studio actually include a profiler for C++?,"I'm really confused by all the ambiguity from all the sources I've been looking at. Can anyone give a clear answer to which editions of Visual Studio that actually includes a profiler for native C++ applications?
+
+Thanks",visual-studio,,,,,,open,0,36,11,"Which editions of Visual Studio actually include a profiler for C++? I'm really confused by all the ambiguity from all the sources I've been looking at. Can anyone give a clear answer to which editions of Visual Studio that actually includes a profiler for native C++ applications?
+
+Thanks",1

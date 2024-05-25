@@ -1,0 +1,1041 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+2894041,05/24/2010 00:01:17,348070,05/23/2010 00:25:37,1,0,Clustered index on frequently changing reference table of one or more foreign keys,"My specific concern is related to the performance of a clustered index on a reference table that has many rapid inserts and deletes.
+
+    Table 1 ""Collection"" collection_pk int (among other fields)
+    Table 2 ""Item"" item_pk int (among other fields)
+    Reference Table ""Collection_Items"" collection_pk int, item_pk int (combined primary key)
+
+Because the primary key is composed of both pks, a clustered index is created and the data physically ordered in the table according to the combined keys.
+
+I have many users creating and deleting collections and adding and removing items to those collections very frequently affecting the ""Collection_Items"" table, and its clustered index.
+
+QUESTION PART: Since the ""Collection_Items"" table is so dynamic, wouldn't there be a big performance hit on constantly resorting the table rows because of the clustered index ?
+
+If yes, what should I do to minimize this ?
+
+",sql-server-2008,indexing,,,,,open,0,145,13,"Clustered index on frequently changing reference table of one or more foreign keys My specific concern is related to the performance of a clustered index on a reference table that has many rapid inserts and deletes.
+
+    Table 1 ""Collection"" collection_pk int (among other fields)
+    Table 2 ""Item"" item_pk int (among other fields)
+    Reference Table ""Collection_Items"" collection_pk int, item_pk int (combined primary key)
+
+Because the primary key is composed of both pks, a clustered index is created and the data physically ordered in the table according to the combined keys.
+
+I have many users creating and deleting collections and adding and removing items to those collections very frequently affecting the ""Collection_Items"" table, and its clustered index.
+
+QUESTION PART: Since the ""Collection_Items"" table is so dynamic, wouldn't there be a big performance hit on constantly resorting the table rows because of the clustered index ?
+
+If yes, what should I do to minimize this ?
+
+",2
+10382622,04/30/2012 11:04:22,1365638,04/30/2012 10:56:42,1,0,Install Drupal with MS SQL Server 2008 R2,"Is it possible in any ways to connect Drupal 6.x to MS SQL Server 2008 R2? I am really struggling to find a way out.
+
+please let me know. Any help would be greatly appreciated!",sql-server-2008,php5,drupal-6,sql-server-2008-r2,,,open,0,34,8,"Install Drupal with MS SQL Server 2008 R2 Is it possible in any ways to connect Drupal 6.x to MS SQL Server 2008 R2? I am really struggling to find a way out.
+
+please let me know. Any help would be greatly appreciated!",4
+5418501,03/24/2011 11:37:59,674809,03/24/2011 11:37:59,1,0,Adding SQL Server registered servers in Powershell,"I am attempting to use Powershell v2 to add registered servers in SQL Server Management Studio 2008.
+
+So far I have the following outline
+
+
+    add-pssnapin SqlServerProviderSnapin100
+    add-pssnapin SqlServerCmdletSnapin100
+    ##get-pssnapin
+    
+    sl ""SQLSERVER:\SQLRegistration\Database Engine Server Group""
+    
+    new-item SERVERNAME\INSTANCENAME -itemtype registration -Value ""server=SERVERNAME\INSTANCENAME;integrated security=false;User Id=SA;Password=foofoo""
+
+
+The problem I have is with the registered server friendly name. We require slashes in it as we have named instances with the same names on different servers.
+
+Regardless of what I try I get the following error message.
+
+> The type is not a known type for the
+> file system. Only ""file"" and
+> ""directory"" can be specified
+
+I have tried enclosing in quotes, using grave as an escape character. None of which works for me.
+
+Cheers    
+David  ",sql-server-2008,scripting,powershell,,,,open,0,142,7,"Adding SQL Server registered servers in Powershell I am attempting to use Powershell v2 to add registered servers in SQL Server Management Studio 2008.
+
+So far I have the following outline
+
+
+    add-pssnapin SqlServerProviderSnapin100
+    add-pssnapin SqlServerCmdletSnapin100
+    ##get-pssnapin
+    
+    sl ""SQLSERVER:\SQLRegistration\Database Engine Server Group""
+    
+    new-item SERVERNAME\INSTANCENAME -itemtype registration -Value ""server=SERVERNAME\INSTANCENAME;integrated security=false;User Id=SA;Password=foofoo""
+
+
+The problem I have is with the registered server friendly name. We require slashes in it as we have named instances with the same names on different servers.
+
+Regardless of what I try I get the following error message.
+
+> The type is not a known type for the
+> file system. Only ""file"" and
+> ""directory"" can be specified
+
+I have tried enclosing in quotes, using grave as an escape character. None of which works for me.
+
+Cheers    
+David  ",3
+7832521,10/20/2011 07:31:48,348249,05/23/2010 11:58:31,6,0,Indexing Sql Server,"I wanted to know if i hava a table test with field a,b,c,d.
+I created one index on table with a,b,c
+I created another index with b,a
+
+Now if run a query with where clause a>10 and b>5, which index will be used and why?
+If query where clause is b>10 and a>1 and c>2, then which index will be used and why?
+
+Thanks in advance.",sql-server-2008,index,,,,10/20/2011 14:36:12,not a real question,1,61,3,"Indexing Sql Server I wanted to know if i hava a table test with field a,b,c,d.
+I created one index on table with a,b,c
+I created another index with b,a
+
+Now if run a query with where clause a>10 and b>5, which index will be used and why?
+If query where clause is b>10 and a>1 and c>2, then which index will be used and why?
+
+Thanks in advance.",2
+11125114,06/20/2012 17:39:57,267542,02/06/2010 02:06:15,1487,57,A Query to remove relationships that do not belong,"In a SQL Server 2008 R2 database, given this schema:
+
+    AgentsAccounts
+    _______________
+    AgentID int UNIQUE
+    AccountID
+
+
+    FinalAgents
+    ___________
+    AgentID
+
+
+I need to create a query that does this:  For each AgentID 'final' in FinalAgents remove all of the OTHER AgentID's from AgentsAccounts that have the same AccountID as 'final'.  So if the tables have these rows before the query:
+
+    AgentsAccounts
+    AgentID    AccountID
+    1          A
+    2          A
+    3          B
+    4          B
+
+    FinalAgents
+    1
+    3
+
+then after the query the AgentsAccounts table will look like this:
+
+    AgentsAccounts
+    AgentID    AccountID
+    1          A
+    3          B
+
+
+This would be easy to do procedurally with a cursor and a loop but can it be done more naturally in T-SQL?  ",sql-server-2008,query,tsql,,,06/21/2012 16:23:01,not a real question,1,234,9,"A Query to remove relationships that do not belong In a SQL Server 2008 R2 database, given this schema:
+
+    AgentsAccounts
+    _______________
+    AgentID int UNIQUE
+    AccountID
+
+
+    FinalAgents
+    ___________
+    AgentID
+
+
+I need to create a query that does this:  For each AgentID 'final' in FinalAgents remove all of the OTHER AgentID's from AgentsAccounts that have the same AccountID as 'final'.  So if the tables have these rows before the query:
+
+    AgentsAccounts
+    AgentID    AccountID
+    1          A
+    2          A
+    3          B
+    4          B
+
+    FinalAgents
+    1
+    3
+
+then after the query the AgentsAccounts table will look like this:
+
+    AgentsAccounts
+    AgentID    AccountID
+    1          A
+    3          B
+
+
+This would be easy to do procedurally with a cursor and a loop but can it be done more naturally in T-SQL?  ",3
+9942518,03/30/2012 12:00:17,392362,07/15/2010 06:26:54,72,1,"Force SQL Server to use harddrive space for ""memory""","Is there any way to force SQL Server to use harddrive space for memory instead of RAM. I have extremely limited RAM but I have fast harddrive access, so it would be great if I could somehow allow the SQL Server to use the harddrive instead of RAM for memory needs (much like Windows is able to set up a paging file).
+
+I cannot set a paging file on the server, so that is not a possible solutions. I'm looking for alternatives to that.
+
+It's OK that performance degrades.
+
+I have SQL Server 2008 Workgroup Edition and Windows Server 2008 R2 Datacenter.",sql-server-2008,windows-server-2008,,,,06/06/2012 22:28:41,off topic,1,99,9,"Force SQL Server to use harddrive space for ""memory"" Is there any way to force SQL Server to use harddrive space for memory instead of RAM. I have extremely limited RAM but I have fast harddrive access, so it would be great if I could somehow allow the SQL Server to use the harddrive instead of RAM for memory needs (much like Windows is able to set up a paging file).
+
+I cannot set a paging file on the server, so that is not a possible solutions. I'm looking for alternatives to that.
+
+It's OK that performance degrades.
+
+I have SQL Server 2008 Workgroup Edition and Windows Server 2008 R2 Datacenter.",2
+5667505,04/14/2011 18:01:32,576050,01/14/2011 18:40:29,119,3,sql server like clause,"i am having a column in sql server table. which is nvarchar(max), i am querying it like this.
+<code>
+select * from CrossArticle_Article where Summary like '%PHILADELPHIA-BASED GUITARIST AND composer Tim%'
+</code>
+
+in like clause if i enter 5words i gets result. if add more words, i dont get any results, even if there exist that record.
+
+is there any limitation for the records.",sql-server-2008,like-keyword,,,,,open,0,59,4,"sql server like clause i am having a column in sql server table. which is nvarchar(max), i am querying it like this.
+<code>
+select * from CrossArticle_Article where Summary like '%PHILADELPHIA-BASED GUITARIST AND composer Tim%'
+</code>
+
+in like clause if i enter 5words i gets result. if add more words, i dont get any results, even if there exist that record.
+
+is there any limitation for the records.",2
+6603898,07/06/2011 22:39:32,275390,02/17/2010 16:09:58,1098,42,best way to deal SELECT statement with conditoins,"i have this sp: using sql server 2008
+
+    create procedure SelectTopCounts
+    	@Id bigint = null,
+    	@Count int = null,
+    	@All bit = 0
+    as
+    begin
+    	set nocount on
+    	
+    	IF (@Count IS NULL)
+            SELECT @Count = 15 --default
+            
+        if(@GetAll = 1) 
+           begin
+              --very long select statement...
+           end
+        else
+           begin
+             --very long select statement...
+           end 
+
+is there a way i can have only ONE select statement instead of duplicate twic with `if and else` condition?
+",sql-server-2008,,,,,,open,0,204,8,"best way to deal SELECT statement with conditoins i have this sp: using sql server 2008
+
+    create procedure SelectTopCounts
+    	@Id bigint = null,
+    	@Count int = null,
+    	@All bit = 0
+    as
+    begin
+    	set nocount on
+    	
+    	IF (@Count IS NULL)
+            SELECT @Count = 15 --default
+            
+        if(@GetAll = 1) 
+           begin
+              --very long select statement...
+           end
+        else
+           begin
+             --very long select statement...
+           end 
+
+is there a way i can have only ONE select statement instead of duplicate twic with `if and else` condition?
+",1
+11155840,06/22/2012 12:06:56,694659,04/06/2011 10:38:31,814,24,Are there any pitfalls when upgrading SQL Server Express Standard 2008 R2 that serves a Microsoft Sharepoint 2007 (MOSS 2077) implementation?,"Are there any pitfalls when upgrading SQL Server Express to SQL Server Standard 2008 R2 that serves a Microsoft Sharepoint 2007 (MOSS 2077) implementation?
+
+We recently completed an update of a team foundation sql server by installing the Standard Edition of SQL over the top of the existing Express edition with no issue.  So we plan to upgrade the Sharepoint server the same way.
+
+Are there any pitfalls or hints we should be aware of? I am concerned that the data and customizations done in Sharepoint are not lost or damaged.
+
+We will as a matter of course be taking backups prior to any change.
+
+",sql-server-2008,sharepoint2007,,,,06/27/2012 14:20:08,off topic,1,103,21,"Are there any pitfalls when upgrading SQL Server Express Standard 2008 R2 that serves a Microsoft Sharepoint 2007 (MOSS 2077) implementation? Are there any pitfalls when upgrading SQL Server Express to SQL Server Standard 2008 R2 that serves a Microsoft Sharepoint 2007 (MOSS 2077) implementation?
+
+We recently completed an update of a team foundation sql server by installing the Standard Edition of SQL over the top of the existing Express edition with no issue.  So we plan to upgrade the Sharepoint server the same way.
+
+Are there any pitfalls or hints we should be aware of? I am concerned that the data and customizations done in Sharepoint are not lost or damaged.
+
+We will as a matter of course be taking backups prior to any change.
+
+",2
+9201535,02/08/2012 21:15:52,245473,01/07/2010 11:42:57,25,1,MS SQL Sever Database Encryption Products,I need some Product recommendation for Encrypting SQL stored procedure. ,sql-server-2008,,,,,02/08/2012 21:54:08,off topic,1,11,6,MS SQL Sever Database Encryption Products I need some Product recommendation for Encrypting SQL stored procedure. ,1
+10640156,05/17/2012 17:00:42,946225,09/15/2011 07:26:44,62,0,Access Denied (SQLEditors),"I have an Employee Database in SQL Server 2008. When I right click on any table and chose **Edit Top 200 Rows** then it shows following Error Box:
+![Access Denied Error][1]
+
+
+  [1]: http://i.stack.imgur.com/gJyB3.png
+
+How can i fix it?
+Thanks",sql-server-2008,,,,,,open,0,37,3,"Access Denied (SQLEditors) I have an Employee Database in SQL Server 2008. When I right click on any table and chose **Edit Top 200 Rows** then it shows following Error Box:
+![Access Denied Error][1]
+
+
+  [1]: http://i.stack.imgur.com/gJyB3.png
+
+How can i fix it?
+Thanks",1
+8494999,12/13/2011 19:28:59,109676,04/27/2009 18:56:57,1907,76,sp_send_dbmail system stored procedure,"I see that the system stored procedure named ""sp_send_dbmail"" is kept in the MSDB database.
+
+I have a local installation of SQL Server 2008 Developers addition. Why don't I have this database? Did I miss installing an optional component? Confuring Dbmail doesn't seem to result in the creation of this database.
+",sql-server-2008,,,,,12/13/2011 20:19:27,too localized,1,50,4,"sp_send_dbmail system stored procedure I see that the system stored procedure named ""sp_send_dbmail"" is kept in the MSDB database.
+
+I have a local installation of SQL Server 2008 Developers addition. Why don't I have this database? Did I miss installing an optional component? Confuring Dbmail doesn't seem to result in the creation of this database.
+",1
+11264227,06/29/2012 15:05:19,1458312,06/15/2012 09:34:14,9,0,Can't create table or database in sql server as permission denied in database master . (Logged in with windows authentication ),"Can't create table or database in sql server as permission denied in database master. 
+Log in authentication is Windows authentication (./SQLEXPRESS)",sql-server-2008,,,,,06/29/2012 16:29:52,off topic,1,21,21,"Can't create table or database in sql server as permission denied in database master . (Logged in with windows authentication ) Can't create table or database in sql server as permission denied in database master. 
+Log in authentication is Windows authentication (./SQLEXPRESS)",1
+6688730,07/14/2011 05:10:29,569466,01/09/2011 21:20:04,441,0,i lost my shortcut to sql server management studio - where to find it ?,"i lost my shortcut to sql server management studio - where to find it ?
+
+what is the EXE name ?
+
+thanks in advance",sql-server-2008,,,,,07/14/2011 12:23:16,off topic,1,22,15,"i lost my shortcut to sql server management studio - where to find it ? i lost my shortcut to sql server management studio - where to find it ?
+
+what is the EXE name ?
+
+thanks in advance",1
+9320872,02/16/2012 23:43:55,93468,02/03/2009 22:24:01,3528,23,Default Value set but Field not Being Updated,"Just added a default value of 0 to my bit field in my SQL Server 2008 table.  Inserts are not defaulting to 0...not sure why.
+
+ALTER TABLE [dbo].[Messages] ADD  CONSTRAINT [DF_Cars_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]",sql-server-2008,,,,,,open,0,37,8,"Default Value set but Field not Being Updated Just added a default value of 0 to my bit field in my SQL Server 2008 table.  Inserts are not defaulting to 0...not sure why.
+
+ALTER TABLE [dbo].[Messages] ADD  CONSTRAINT [DF_Cars_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]",1
+5786044,04/26/2011 04:45:29,265519,02/03/2010 18:06:08,1440,90,"Binary file, Memory chunks in SQL Server","Hope this question is not ridiculous but is there a way to create a `binary file` instead of writing to a file in `SQL Server 2008`, also, Is there a way to map memory or make chunks of 1 MB instead of writing to a file?",sql-server-2008,file,memory,binary,chunking,04/26/2011 05:26:18,not a real question,1,46,7,"Binary file, Memory chunks in SQL Server Hope this question is not ridiculous but is there a way to create a `binary file` instead of writing to a file in `SQL Server 2008`, also, Is there a way to map memory or make chunks of 1 MB instead of writing to a file?",5
+8315358,11/29/2011 17:53:37,405883,07/29/2010 15:47:12,38,2,Cannot open Symmetric key by certificate as SQL user account,"I create my key using a certificate like this:  
+ 
+`CREATE SYMMETRIC KEY some_Key_01  
+ WITH ALGORITHM = AES_256  
+ ENCRYPTION BY CERTIFICATE myCert;  
+GO`  
+
+`GRANT VIEW DEFINITION ON CERTIFICATE::myCert TO sqlUser;  
+GO`
+
+`GRANT VIEW DEFINITION ON SYMMETRIC KEY::some_Key_01 TO sqlUser;  
+GO`  
+
+Then I try to open and us it like this:
+
+`OPEN SYMMETRIC KEY some_Key_01  
+   DECRYPTION BY CERTIFICATE myCert;  
+GO  
+SELECT CONVERT(datetime, DecryptByKey(EncryptedField))  
+    AS 'DecryptedField'  
+    FROM MyTable;  
+GO`
+
+But I get the message:  
+`Msg 15151, Level 16, State 1, Line 23  
+Cannot find the certificate 'myCert', because it does not exist or you do not have permission.`
+
+",sql-server-2008,encryption,certificate,,,11/29/2011 18:20:48,off topic,1,122,10,"Cannot open Symmetric key by certificate as SQL user account I create my key using a certificate like this:  
+ 
+`CREATE SYMMETRIC KEY some_Key_01  
+ WITH ALGORITHM = AES_256  
+ ENCRYPTION BY CERTIFICATE myCert;  
+GO`  
+
+`GRANT VIEW DEFINITION ON CERTIFICATE::myCert TO sqlUser;  
+GO`
+
+`GRANT VIEW DEFINITION ON SYMMETRIC KEY::some_Key_01 TO sqlUser;  
+GO`  
+
+Then I try to open and us it like this:
+
+`OPEN SYMMETRIC KEY some_Key_01  
+   DECRYPTION BY CERTIFICATE myCert;  
+GO  
+SELECT CONVERT(datetime, DecryptByKey(EncryptedField))  
+    AS 'DecryptedField'  
+    FROM MyTable;  
+GO`
+
+But I get the message:  
+`Msg 15151, Level 16, State 1, Line 23  
+Cannot find the certificate 'myCert', because it does not exist or you do not have permission.`
+
+",3
+4541056,12/27/2010 18:56:13,122517,06/13/2009 17:23:10,110,1,SQL server insert multiple rows and incrementing a int column,"Good afternoon,
+
+I have some rows in a table and need to transfer them to another table.
+
+In the destination table i need also to add a field with an incremental value.
+
+I'm doing this way, but i know that something in the insert is wrong, because the incremented value (intCodInterno) is always the same:
+
+
+>     INSERT INTO Emp_VISOT.dbo.TBL_GCE_ARTIGOS
+>             ( strCodigo ,
+>               strDescricao ,
+>               intCodInterno ,
+>               intCodTaxaIvaCompra ,
+>               intCodTaxaIvaVenda ,
+>               strCodCategoria ,
+>               strAbrevMedStk ,
+>               strAbrevMedVnd ,
+>               strAbrevMedCmp ,
+>               bitAfectaIntrastat
+>             )(
+>             SELECT  A.Artigo ,
+>                     a.Descricao ,
+>                     IDENT_CURRENT('Emp_VISOT.dbo.TBL_GCE_ARTIGOS')+1,
+>                     '3' ,
+>                     '3' ,
+>                     '1' ,
+>                     'Un' ,
+>                     'Un' ,
+>                     'Un' ,
+>                     '0'
+>             FROM PRIVESAM.DBO.Artigo A)
+
+What do i need to change so the value is incremented correcty?
+
+Thank you.
+
+
+",sql-server-2008,auto-increment,,,,,open,0,469,10,"SQL server insert multiple rows and incrementing a int column Good afternoon,
+
+I have some rows in a table and need to transfer them to another table.
+
+In the destination table i need also to add a field with an incremental value.
+
+I'm doing this way, but i know that something in the insert is wrong, because the incremented value (intCodInterno) is always the same:
+
+
+>     INSERT INTO Emp_VISOT.dbo.TBL_GCE_ARTIGOS
+>             ( strCodigo ,
+>               strDescricao ,
+>               intCodInterno ,
+>               intCodTaxaIvaCompra ,
+>               intCodTaxaIvaVenda ,
+>               strCodCategoria ,
+>               strAbrevMedStk ,
+>               strAbrevMedVnd ,
+>               strAbrevMedCmp ,
+>               bitAfectaIntrastat
+>             )(
+>             SELECT  A.Artigo ,
+>                     a.Descricao ,
+>                     IDENT_CURRENT('Emp_VISOT.dbo.TBL_GCE_ARTIGOS')+1,
+>                     '3' ,
+>                     '3' ,
+>                     '1' ,
+>                     'Un' ,
+>                     'Un' ,
+>                     'Un' ,
+>                     '0'
+>             FROM PRIVESAM.DBO.Artigo A)
+
+What do i need to change so the value is incremented correcty?
+
+Thank you.
+
+
+",2
+7797495,10/17/2011 17:45:16,938266,09/10/2011 14:35:41,28,0,Performance issue in sql query,"Hy,
+
+   I have 2 table in following structure 
+
+    Table_1
+    
+    ID     Name
+
+    1       a
+
+    2       b
+
+    3       a
+
+    Table_2
+
+    SID    ID    sname
+    1       1     a
+    2       1     b
+    3       2     a
+
+Now I want something different......
+
+Output
+
+    ID     Sname
+     1      a
+     1      b
+     2      a
+     2      b
+     3      a
+     3      b
+
+i.e for each record in table_1 there should be 2 possible value in table_2....
+if record contain in only table_1 then 2 row should display in out put as display in result for id =3
+if there is only one row of table_1 in table_2 then display row with second row as display in result for id = 2
+
+i have written one query for this but it take time.....
+
+here is my query...
+
+     DECLARE @tab table
+     (
+	id int,
+	Sname varchar(10)
+     )
+     INSERT INTO @tab
+     SELECT TB1.[Sid],TB2.sname FROM [Practise].[dbo].[Table_1] 
+     TB1 INNER JOIN  [Table_2] TB2 ON TB1.[Sid] = TB2.[Sid]
+  
+     INSERT INTO @tab 
+     SELECT TB1.[Sid],'a' FROM [Practise].[dbo].[Table_1] TB1 
+     LEFT OUTER JOIN @tab TB2  ON  TB1.[Sid] = TB2.id WHERE TB2.id IS NULL
+  
+     INSERT INTO @tab 
+     SELECT TB1.[Sid],'b' FROM [Practise].[dbo].[Table_1] TB1 
+     LEFT OUTER JOIN Table_2 TB2 ON TB1.[Sid] = TB2.Sid WHERE TB2.Sid IS NULL
+  
+     INSERT INTO @tab
+     SELECT id,min(case when Sname ='a' THEN 'b' 
+				 when Sname='b' Then 'a'
+			END) from @tab group by id having COUNT(id) = 1 
+
+     SELECT * FROM @tab	ORDER BY id	",sql-server-2008,,,,,10/28/2011 02:16:05,not a real question,1,443,5,"Performance issue in sql query Hy,
+
+   I have 2 table in following structure 
+
+    Table_1
+    
+    ID     Name
+
+    1       a
+
+    2       b
+
+    3       a
+
+    Table_2
+
+    SID    ID    sname
+    1       1     a
+    2       1     b
+    3       2     a
+
+Now I want something different......
+
+Output
+
+    ID     Sname
+     1      a
+     1      b
+     2      a
+     2      b
+     3      a
+     3      b
+
+i.e for each record in table_1 there should be 2 possible value in table_2....
+if record contain in only table_1 then 2 row should display in out put as display in result for id =3
+if there is only one row of table_1 in table_2 then display row with second row as display in result for id = 2
+
+i have written one query for this but it take time.....
+
+here is my query...
+
+     DECLARE @tab table
+     (
+	id int,
+	Sname varchar(10)
+     )
+     INSERT INTO @tab
+     SELECT TB1.[Sid],TB2.sname FROM [Practise].[dbo].[Table_1] 
+     TB1 INNER JOIN  [Table_2] TB2 ON TB1.[Sid] = TB2.[Sid]
+  
+     INSERT INTO @tab 
+     SELECT TB1.[Sid],'a' FROM [Practise].[dbo].[Table_1] TB1 
+     LEFT OUTER JOIN @tab TB2  ON  TB1.[Sid] = TB2.id WHERE TB2.id IS NULL
+  
+     INSERT INTO @tab 
+     SELECT TB1.[Sid],'b' FROM [Practise].[dbo].[Table_1] TB1 
+     LEFT OUTER JOIN Table_2 TB2 ON TB1.[Sid] = TB2.Sid WHERE TB2.Sid IS NULL
+  
+     INSERT INTO @tab
+     SELECT id,min(case when Sname ='a' THEN 'b' 
+				 when Sname='b' Then 'a'
+			END) from @tab group by id having COUNT(id) = 1 
+
+     SELECT * FROM @tab	ORDER BY id	",1
+8941828,01/20/2012 12:59:01,79076,03/17/2009 16:02:27,1095,131,Formula in Dundas Chart in SSRS not doing anything,"I have a Dundas Chart Control in an SSRS Report
+
+When I select a formula for a line chart e.g. Bollinger Bands, Simple Moving Average, Rate of Change
+
+it doesn't do anything to the data, the line remains as though for a standard line chart
+
+I've tried altering the various options e.g. Period, Start from first column but to no effect
+
+Any ideas?
+
+Version Info:
+
+Microsoft Visual Studio 2008    
+Version 9.0.30729.1 SP    
+Microsoft .NET Framework    
+Version 3.5 SP1    
+
+Dundas Chart for Reporting Services   3.0  (3.1.0.254)
+",sql-server-2008,reporting-services,charts,ssrs-2008,dundas,,open,0,94,9,"Formula in Dundas Chart in SSRS not doing anything I have a Dundas Chart Control in an SSRS Report
+
+When I select a formula for a line chart e.g. Bollinger Bands, Simple Moving Average, Rate of Change
+
+it doesn't do anything to the data, the line remains as though for a standard line chart
+
+I've tried altering the various options e.g. Period, Start from first column but to no effect
+
+Any ideas?
+
+Version Info:
+
+Microsoft Visual Studio 2008    
+Version 9.0.30729.1 SP    
+Microsoft .NET Framework    
+Version 3.5 SP1    
+
+Dundas Chart for Reporting Services   3.0  (3.1.0.254)
+",5
+10937814,06/07/2012 18:36:18,935730,09/08/2011 21:05:51,63,1,"In ddl alter table trigger, how can I get the new create table statement?","I want to get the new table definition(create table statement) and save it to a txt file when the ddl alter table trigger fires.
+
+I have tried xp_helptext, this only works for view. I hope there's something like this for altering table to get new create statement.",sql-server-2008,c#-4.0,ddl,,,,open,0,46,14,"In ddl alter table trigger, how can I get the new create table statement? I want to get the new table definition(create table statement) and save it to a txt file when the ddl alter table trigger fires.
+
+I have tried xp_helptext, this only works for view. I hope there's something like this for altering table to get new create statement.",3
+9287119,02/15/2012 02:29:26,1186699,02/03/2012 04:09:31,1,0,Get frist row for one group,"I have a result from temp table like this:
+
+TeacherID        ClassID              ClassStudentID    SUM1    SUM2
+70100G07.000051	11111CNC10204001	CD09CKM2	90.00	90.0000
+70100G07.000051	11111CNC10204002	CD09CKM1	90.00	90.0000
+70100G07.000052	11111CNC10205202	CD09CKM2	315.00	293.4000
+70100G07.000052	11111CSC10204001	CD10CKM1	315.00	293.4000
+70100G07.000052	11111CSC10204002	CD10CKM2	315.00	293.4000
+70100G07.000052	11111CSC10204003	CD10CKM3	315.00	293.4000
+79000G07.000108	11111CNC10212001	CD09CKM1	90.00	90.0000
+79000G07.000108	11111CNC10212002	CD09CKM2	90.00	90.0000
+79000G07.000206	11111CSC10207001	CD10CKM1	135.00	135.0000
+79000G07.000206	11111CSC10207002	CD10CKM2	135.00	135.0000
+79000G07.000206	11111CSC10207003	CD10CKM3	135.00	135.0000
+79000G07.000244	11111CNC10701001	CD10CNTT2	150.00	156.0000
+79000G07.000244	11111CNC10701002	CD10CNTT1	150.00	156.0000
+79000G07.000244	11111CNC10703001	CD09CNTT1	150.00	156.0000
+79000G07.000244	11111CNC10703001	CD09CNTT2	150.00	156.0000
+
+I want to get one row for every teacherid. Can help me? Thanks so much.
+",sql-server-2008,,,,,03/12/2012 17:14:44,not a real question,1,53,6,"Get frist row for one group I have a result from temp table like this:
+
+TeacherID        ClassID              ClassStudentID    SUM1    SUM2
+70100G07.000051	11111CNC10204001	CD09CKM2	90.00	90.0000
+70100G07.000051	11111CNC10204002	CD09CKM1	90.00	90.0000
+70100G07.000052	11111CNC10205202	CD09CKM2	315.00	293.4000
+70100G07.000052	11111CSC10204001	CD10CKM1	315.00	293.4000
+70100G07.000052	11111CSC10204002	CD10CKM2	315.00	293.4000
+70100G07.000052	11111CSC10204003	CD10CKM3	315.00	293.4000
+79000G07.000108	11111CNC10212001	CD09CKM1	90.00	90.0000
+79000G07.000108	11111CNC10212002	CD09CKM2	90.00	90.0000
+79000G07.000206	11111CSC10207001	CD10CKM1	135.00	135.0000
+79000G07.000206	11111CSC10207002	CD10CKM2	135.00	135.0000
+79000G07.000206	11111CSC10207003	CD10CKM3	135.00	135.0000
+79000G07.000244	11111CNC10701001	CD10CNTT2	150.00	156.0000
+79000G07.000244	11111CNC10701002	CD10CNTT1	150.00	156.0000
+79000G07.000244	11111CNC10703001	CD09CNTT1	150.00	156.0000
+79000G07.000244	11111CNC10703001	CD09CNTT2	150.00	156.0000
+
+I want to get one row for every teacherid. Can help me? Thanks so much.
+",1
+7671164,10/06/2011 07:08:41,980393,10/05/2011 12:58:51,1,0,value of month in sequence using sql procedure,"<pre lang=""SQL"">SELECT DateCreated,totCount FROM( SELECT REPLACE( RIGHT(CONVERT(VARCHAR(9), tof.create_stamp, 6), 6), ' ', ' ') AS DateCreated, COUNT(DISTINCT tof.unique_id) AS totCount FROM trn_open_files tof JOIN trn_debtor tb ON (tof.unique_id=tb.unique_id AND tb.debtor_seq_num=1 AND tb.rec_status='R') JOIN trn_property tp ON (tof.unique_id=tp.unique_id) LEFT OUTER JOIN trn_parties prty_cccs ON (prty_cccs.unique_id=tof.unique_id AND prty_cccs.party_role='CCCS' AND prty_cccs.rec_status='A') LEFT OUTER JOIN trn_parties prty_srv ON (prty_srv.unique_id=tof.unique_id AND prty_srv.party_role='SRV' AND prty_srv.rec_status='A') LEFT OUTER JOIN trn_parties prty_vend ON (prty_vend.unique_id= tof.unique_id AND prty_vend.party_role='CLMO' AND prty_vend.rec_status='A') LEFT OUTER JOIN trn_parties prty_ins ON (prty_ins.unique_id= tof.unique_id AND prty_ins.party_role='INS' AND prty_ins.rec_status='A') LEFT OUTER JOIN trn_parties prty_ss ON (prty_ss.unique_id= tof.unique_id AND prty_ss.party_role='SS' AND prty_ss.rec_status='A') LEFT OUTER JOIN trn_parties prty_realtor ON (prty_realtor.unique_id= tof.unique_id AND prty_realtor.party_role='REALTOR' AND prty_realtor.rec_status='A') LEFT OUTER JOIN mst_comp_info mci1 ON (mci1.comp_id = prty_cccs.party_comp_id AND mci1.comp_type='CCCS' AND mci1.rec_status='A') LEFT OUTER JOIN mst_comp_info mci ON (mci.comp_id = prty_srv.party_comp_id AND mci.comp_type='SRV' AND mci.rec_status='A' AND mci.pilot_flag='Y') LEFT OUTER JOIN mst_comp_info mci2 ON (mci2.comp_id = prty_vend.party_comp_id AND mci2.comp_type='VEND' AND mci2.rec_status='A') LEFT OUTER JOIN mst_comp_info mci3 ON (mci3.comp_id = prty_ins.party_comp_id AND mci3.comp_type='INS' AND mci3.rec_status='A') LEFT OUTER JOIN mst_comp_info mci4 ON (mci4.comp_id = prty_ss.party_comp_id AND mci4.comp_type='SS' AND mci4.rec_status='A') LEFT OUTER JOIN mst_comp_info mci5 ON (mci5.comp_id = prty_realtor.party_comp_id AND mci4.comp_type='REALTOR' AND mci4.rec_status='A') LEFT OUTER JOIN mst_status_codes i ON (i.status_code=tof.case_status AND i.comp_id=tof.comp_id AND (i.party_role IS NULL OR i.party_role='VEND') AND tof.file_type=i.file_type) WHERE tof.cur_status='A' AND tof.cms_flag='Y' AND CONVERT(DATE,tof.create_stamp) &gt;= CONVERT(DATE,'2010-06-06') AND CONVERT(DATE,tof.create_stamp) &lt;= CONVERT(DATE,'2011-10-01') AND prty_cccs.party_comp_id=10153 AND prty_cccs.party_comp_id=10153 GROUP BY REPLACE( RIGHT(CONVERT(VARCHAR(9), tof.create_stamp, 6), 6), ' ', ' '),prty_cccs.party_comp_id) q1</pre>
+
+having this procedure how to show month in proper sequence.
+
+now month is appear as
+<pre lang=""text"">
+out put: DateCreated totcount Sep 11 7
+May 11 2
+Jun 11 10
+Jul 11 40
+Aug 11 144</pre>
+
+i want month in sequence like DateCreated totcount May 11 2
+<pre lang=""text"">Jun 11 10
+Jul 11 40
+Aug 11 144
+Sep 11 7</pre>
+",sql-server-2008,,,,,,open,0,279,8,"value of month in sequence using sql procedure <pre lang=""SQL"">SELECT DateCreated,totCount FROM( SELECT REPLACE( RIGHT(CONVERT(VARCHAR(9), tof.create_stamp, 6), 6), ' ', ' ') AS DateCreated, COUNT(DISTINCT tof.unique_id) AS totCount FROM trn_open_files tof JOIN trn_debtor tb ON (tof.unique_id=tb.unique_id AND tb.debtor_seq_num=1 AND tb.rec_status='R') JOIN trn_property tp ON (tof.unique_id=tp.unique_id) LEFT OUTER JOIN trn_parties prty_cccs ON (prty_cccs.unique_id=tof.unique_id AND prty_cccs.party_role='CCCS' AND prty_cccs.rec_status='A') LEFT OUTER JOIN trn_parties prty_srv ON (prty_srv.unique_id=tof.unique_id AND prty_srv.party_role='SRV' AND prty_srv.rec_status='A') LEFT OUTER JOIN trn_parties prty_vend ON (prty_vend.unique_id= tof.unique_id AND prty_vend.party_role='CLMO' AND prty_vend.rec_status='A') LEFT OUTER JOIN trn_parties prty_ins ON (prty_ins.unique_id= tof.unique_id AND prty_ins.party_role='INS' AND prty_ins.rec_status='A') LEFT OUTER JOIN trn_parties prty_ss ON (prty_ss.unique_id= tof.unique_id AND prty_ss.party_role='SS' AND prty_ss.rec_status='A') LEFT OUTER JOIN trn_parties prty_realtor ON (prty_realtor.unique_id= tof.unique_id AND prty_realtor.party_role='REALTOR' AND prty_realtor.rec_status='A') LEFT OUTER JOIN mst_comp_info mci1 ON (mci1.comp_id = prty_cccs.party_comp_id AND mci1.comp_type='CCCS' AND mci1.rec_status='A') LEFT OUTER JOIN mst_comp_info mci ON (mci.comp_id = prty_srv.party_comp_id AND mci.comp_type='SRV' AND mci.rec_status='A' AND mci.pilot_flag='Y') LEFT OUTER JOIN mst_comp_info mci2 ON (mci2.comp_id = prty_vend.party_comp_id AND mci2.comp_type='VEND' AND mci2.rec_status='A') LEFT OUTER JOIN mst_comp_info mci3 ON (mci3.comp_id = prty_ins.party_comp_id AND mci3.comp_type='INS' AND mci3.rec_status='A') LEFT OUTER JOIN mst_comp_info mci4 ON (mci4.comp_id = prty_ss.party_comp_id AND mci4.comp_type='SS' AND mci4.rec_status='A') LEFT OUTER JOIN mst_comp_info mci5 ON (mci5.comp_id = prty_realtor.party_comp_id AND mci4.comp_type='REALTOR' AND mci4.rec_status='A') LEFT OUTER JOIN mst_status_codes i ON (i.status_code=tof.case_status AND i.comp_id=tof.comp_id AND (i.party_role IS NULL OR i.party_role='VEND') AND tof.file_type=i.file_type) WHERE tof.cur_status='A' AND tof.cms_flag='Y' AND CONVERT(DATE,tof.create_stamp) &gt;= CONVERT(DATE,'2010-06-06') AND CONVERT(DATE,tof.create_stamp) &lt;= CONVERT(DATE,'2011-10-01') AND prty_cccs.party_comp_id=10153 AND prty_cccs.party_comp_id=10153 GROUP BY REPLACE( RIGHT(CONVERT(VARCHAR(9), tof.create_stamp, 6), 6), ' ', ' '),prty_cccs.party_comp_id) q1</pre>
+
+having this procedure how to show month in proper sequence.
+
+now month is appear as
+<pre lang=""text"">
+out put: DateCreated totcount Sep 11 7
+May 11 2
+Jun 11 10
+Jul 11 40
+Aug 11 144</pre>
+
+i want month in sequence like DateCreated totcount May 11 2
+<pre lang=""text"">Jun 11 10
+Jul 11 40
+Aug 11 144
+Sep 11 7</pre>
+",1
+11338387,07/05/2012 05:44:03,1004164,10/19/2011 22:53:08,190,5,"which is the fastest way Triggers, Services, Procedures in Jobs or Agent?","Hi i am using SQL SERVER 2008 R2,
+i am new in performance and tuning where i am working on how to improve the performance of an product. 
+so i have to right the business logic for product and will be implemented.
+so following are the option by that we can implement it.
+
+1] Triggers
+2] Services
+3] Procedures in Jobs or Agent
+
+from the above which one is the fastest way to implement so that it wont take for the front end to take a load, and to retrieve the data and get available to the front end or is there any other option by which we can implement the business logic.
+Thanks! in advanced. 
+",sql-server-2008,service,sql-server-2008-r2,,,07/05/2012 08:27:52,not a real question,1,110,12,"which is the fastest way Triggers, Services, Procedures in Jobs or Agent? Hi i am using SQL SERVER 2008 R2,
+i am new in performance and tuning where i am working on how to improve the performance of an product. 
+so i have to right the business logic for product and will be implemented.
+so following are the option by that we can implement it.
+
+1] Triggers
+2] Services
+3] Procedures in Jobs or Agent
+
+from the above which one is the fastest way to implement so that it wont take for the front end to take a load, and to retrieve the data and get available to the front end or is there any other option by which we can implement the business logic.
+Thanks! in advanced. 
+",3
+8312915,11/29/2011 14:58:37,888553,08/10/2011 18:39:24,13,1,Can I use @variable (name table) in a cursor stored Procedure,"Hei Folkens,
+I have a stored procedure and i need to send name table cursos like a @variable, is that possible?? like
+
+
+`declare recCliente cursor
+for select top(10) NCuenta,logo,RutCliente,DvCliente,NombreCliente,FechaNacimiento,DirecParticular,
+ComunaDireccParticular,TelefonoDireccParticular,FonoEnvioEECC
+from unifica.dbo.@NameTable`
+",sql-server-2008,stored-procedures,,,,11/29/2011 21:27:09,not a real question,1,27,11,"Can I use @variable (name table) in a cursor stored Procedure Hei Folkens,
+I have a stored procedure and i need to send name table cursos like a @variable, is that possible?? like
+
+
+`declare recCliente cursor
+for select top(10) NCuenta,logo,RutCliente,DvCliente,NombreCliente,FechaNacimiento,DirecParticular,
+ComunaDireccParticular,TelefonoDireccParticular,FonoEnvioEECC
+from unifica.dbo.@NameTable`
+",2
+5973479,05/12/2011 05:01:58,434910,08/30/2010 11:50:53,591,36,How to compare hash tables in sql server 2008,"Hai all,
+
+ I want to compare 2 hash tables in sql server 2008 using query. Whether its possible or not
+
+Please Help",sql-server-2008,compare,hashtable,,,05/12/2011 11:29:30,not a real question,1,21,9,"How to compare hash tables in sql server 2008 Hai all,
+
+ I want to compare 2 hash tables in sql server 2008 using query. Whether its possible or not
+
+Please Help",3
+7285036,09/02/2011 14:35:29,925473,09/02/2011 14:35:29,1,0,Generate unique 9 digits values,"I have a table as shown below:
+
+Group			
+			
+Id	Num	        Name  	Age
+
+1	424000000	Damine	22
+
+2	324000000	Arshley	18
+
+3	276000000	Tita	20
+
+4	424000000	Helen	21
+
+5	424000000	Mary	19
+
+6	324000000	Kathe	20
+
+7	324000000	Mark	18
+
+8	276000000	Phill	22
+
+
+			
+i want to make the Num col unique so i need to generate 9 digit numeric random values for the duplicates.  
+
+
+please help, Thanks",sql-server-2008,,,,,,open,0,41,5,"Generate unique 9 digits values I have a table as shown below:
+
+Group			
+			
+Id	Num	        Name  	Age
+
+1	424000000	Damine	22
+
+2	324000000	Arshley	18
+
+3	276000000	Tita	20
+
+4	424000000	Helen	21
+
+5	424000000	Mary	19
+
+6	324000000	Kathe	20
+
+7	324000000	Mark	18
+
+8	276000000	Phill	22
+
+
+			
+i want to make the Num col unique so i need to generate 9 digit numeric random values for the duplicates.  
+
+
+please help, Thanks",1
+8874300,01/15/2012 23:27:33,484512,10/22/2010 17:46:14,46,3,Is there any performance gain if I put SQL server DB files on a separate EBS volume?,I have an EC2 instance running IIS7 + 2008 R2 SQL database on an EBS volume and wondering if there will be a performance gain by atatching a separate EBS volume just for the database files.,sql-server-2008,iis7,amazon-ec2,,,01/16/2012 04:19:47,off topic,1,36,17,Is there any performance gain if I put SQL server DB files on a separate EBS volume? I have an EC2 instance running IIS7 + 2008 R2 SQL database on an EBS volume and wondering if there will be a performance gain by atatching a separate EBS volume just for the database files.,3
+9569712,03/05/2012 15:56:01,1250202,03/05/2012 15:40:44,1,0,Mixing 32-bit JDBC with 64-bit database on same server,"We are running Windows Server 2008 R2 (64-bit), SQL Server 2008 R2 (64-bit) and a 32-bit Java application all on the same server.  The application uses the Microsoft JDBC Driver v3.  The application can use Java 5 or Java 6, but both as 32-bit JRE's.  So the driver can be type 3 or type 4.
+
+Here's what we see:  When the application runs, database access can become quite slow when under any type of load.  When you remove the load, it will be okay.  Put it under load again, and it becomes slow.
+
+The complex part of this is:  If we run the application on a separate but equal server from the database, it is not slow.
+
+So it appears that the behavior of the driver is different.  When driver and database are on the same server (reached through the local stack), then the mix of 32-bit and 64-bit slows things down.  When the driver and database are separate from each other (reached through the network), then the mix does not cause a slow down.
+Any thoughts?
+
+We do not expect the application and database to be on the same server.  But we have sales people who demonstrate on a single laptop, so they need it all together.  Currently, we look like we will be forced to isolate using VM's or similar.  Not what sales wants.
+Technically, we are curious why introducing the network makes a difference.",sql-server-2008,jdbc,64bit,32bit,,,open,0,243,9,"Mixing 32-bit JDBC with 64-bit database on same server We are running Windows Server 2008 R2 (64-bit), SQL Server 2008 R2 (64-bit) and a 32-bit Java application all on the same server.  The application uses the Microsoft JDBC Driver v3.  The application can use Java 5 or Java 6, but both as 32-bit JRE's.  So the driver can be type 3 or type 4.
+
+Here's what we see:  When the application runs, database access can become quite slow when under any type of load.  When you remove the load, it will be okay.  Put it under load again, and it becomes slow.
+
+The complex part of this is:  If we run the application on a separate but equal server from the database, it is not slow.
+
+So it appears that the behavior of the driver is different.  When driver and database are on the same server (reached through the local stack), then the mix of 32-bit and 64-bit slows things down.  When the driver and database are separate from each other (reached through the network), then the mix does not cause a slow down.
+Any thoughts?
+
+We do not expect the application and database to be on the same server.  But we have sales people who demonstrate on a single laptop, so they need it all together.  Currently, we look like we will be forced to isolate using VM's or similar.  Not what sales wants.
+Technically, we are curious why introducing the network makes a difference.",4
+8656692,12/28/2011 13:43:43,1074474,11/30/2011 23:52:29,23,0,features of Dataware housing via SQL server,"do sql server provide any tools/functions which help us in making star scheme ,aggregates or similar ?  I am using winform application to give layout for dwh users and sql server 2008 for db",sql-server-2008,data-warehouse,olap,star-schema,,12/28/2011 13:57:55,not a real question,1,35,7,"features of Dataware housing via SQL server do sql server provide any tools/functions which help us in making star scheme ,aggregates or similar ?  I am using winform application to give layout for dwh users and sql server 2008 for db",4
+6083390,05/21/2011 17:40:19,764185,05/21/2011 17:40:19,1,0,Sql Server group by multiple columns uniqueness only on one column,"I am building a system to send emails and I am needing to go into the [User] table to retrieve the email to send to, as well as a GUID(uniqueidentifier type) which will be used for unsubscribe purposes.  
+
+It is for an ecommerce solution so because anonymous and logged in users can have the same email addresses it creates duplicate entries of emails that need to be distinct in the query.
+
+I am having trouble finding a solution to retrieve the email and the guid but only be distinct on the email.
+
+Here is my query so far.
+
+SELECT Email, User_GUID
+FROM [User]
+WHERE IsActive = 1 AND IsEmailValid = 1 And IsNotActiveBecauseUnsubscribed = 0 AND Subscribed = 1
+GROUP BY Email, User_GUID
+
+I have searched and searched and I cannot figure this one out.
+
+",sql-server-2008,group-by,,,,,open,0,129,11,"Sql Server group by multiple columns uniqueness only on one column I am building a system to send emails and I am needing to go into the [User] table to retrieve the email to send to, as well as a GUID(uniqueidentifier type) which will be used for unsubscribe purposes.  
+
+It is for an ecommerce solution so because anonymous and logged in users can have the same email addresses it creates duplicate entries of emails that need to be distinct in the query.
+
+I am having trouble finding a solution to retrieve the email and the guid but only be distinct on the email.
+
+Here is my query so far.
+
+SELECT Email, User_GUID
+FROM [User]
+WHERE IsActive = 1 AND IsEmailValid = 1 And IsNotActiveBecauseUnsubscribed = 0 AND Subscribed = 1
+GROUP BY Email, User_GUID
+
+I have searched and searched and I cannot figure this one out.
+
+",2
+6133839,05/26/2011 04:54:12,238232,12/24/2009 13:41:39,1011,16,Making script to create database sceleton for ms sql sever 2008,"I'm making Visual Studio setup for my project.
+
+I want it automatically create empty database inside some ms - sql - sever 2008 (express)
+
+ 1. Is there some tool / way to automatic generate such script of my database (sadly my database structure isn't stable yet)
+ 2. How can I add it to installation process ? I know that I can run programs and scripts during installation but how can I specify sql server for my script ?
+
+thank you.",sql-server-2008,setup,setup-project,,,,open,0,78,11,"Making script to create database sceleton for ms sql sever 2008 I'm making Visual Studio setup for my project.
+
+I want it automatically create empty database inside some ms - sql - sever 2008 (express)
+
+ 1. Is there some tool / way to automatic generate such script of my database (sadly my database structure isn't stable yet)
+ 2. How can I add it to installation process ? I know that I can run programs and scripts during installation but how can I specify sql server for my script ?
+
+thank you.",3
+11265549,06/29/2012 16:27:50,1491510,06/29/2012 15:13:19,1,0,What is the most efficient way to perform a MS T-SQL Insert based on whether it already exists?,"I am performing a great deal of inserts from a detail table into a summary table within MS SQL.  I am currently using LEFT OUTER JOINs to determine if the row from the detail table already exists in the summary table prior to inserting it like the example below:
+
+    INSERT INTO TableA
+           (columnA
+           ,columnB
+           ,columnC)
+    SELECT 
+        b.columnA, 
+        b.columnB, 
+        b.columnC
+    FROM TableB b
+        LEFT OUTER JOIN TableA a
+            on a.columnA = b.columnA
+    WHERE
+        a.columnA IS NULL 
+
+I've found that this method takes a considerable amount of time even if there are no records to insert because it has to compare all records to determine what already exists.  In this scenario I would normally consider adding a flag to TableB to say what rows have been inserted. However there are several different scenarios for a row in TableB to be inserted into TableA which would require several flag fields and I would prefer not to use the storage space as TableB is VERY LARGE and getting LARGER.  Thanks for any advice.",sql-server-2008,tsql,,,,,open,0,263,18,"What is the most efficient way to perform a MS T-SQL Insert based on whether it already exists? I am performing a great deal of inserts from a detail table into a summary table within MS SQL.  I am currently using LEFT OUTER JOINs to determine if the row from the detail table already exists in the summary table prior to inserting it like the example below:
+
+    INSERT INTO TableA
+           (columnA
+           ,columnB
+           ,columnC)
+    SELECT 
+        b.columnA, 
+        b.columnB, 
+        b.columnC
+    FROM TableB b
+        LEFT OUTER JOIN TableA a
+            on a.columnA = b.columnA
+    WHERE
+        a.columnA IS NULL 
+
+I've found that this method takes a considerable amount of time even if there are no records to insert because it has to compare all records to determine what already exists.  In this scenario I would normally consider adding a flag to TableB to say what rows have been inserted. However there are several different scenarios for a row in TableB to be inserted into TableA which would require several flag fields and I would prefer not to use the storage space as TableB is VERY LARGE and getting LARGER.  Thanks for any advice.",2
+7277459,09/01/2011 22:45:58,16241,09/17/2008 15:38:49,6533,150,How can I merge two tables without a primary key (or how to have the leftovers from a merge get deleted)?,"Say I have these two tables:
+<pre>
+     Table A                             Table B  
+_______________________            _______________________
+ Id | Description                    Id | Description
+-----------------------            -----------------------
+ 1  | Some Val                       1  | Some Val                      
+ 2  | More Data                      2  | More Data
+ 2  | Even More                      2  | Less Is More
+ 2  | More again                     3  | This Changed
+ 3  | Other Values                   4  | these are random             
+ 3  | But Not this                 ------------------------  
+ 4  | these are random             
+-----------------------
+</pre>
+
+How can I do a merge to Table A of Table B's changes and get this:
+
+<pre>
+     Table A                       
+_______________________            
+ Id | Description                  
+-----------------------            
+ 1  | Some Val                     
+ 2  | More Data                      
+ 2  | Less Is More
+ 3  | This Changed
+ 4  | these are random             
+-----------------------
+</pre>
+
+
+
+
+
+
+  When I try something like this:
+
+    merge TableA as target
+    using (select Id, Description
+           from   TableB) 
+           as source (Id, Description)
+    on (target.Id = source.Id)             
+    when MATCHED then
+        update set Id = source.Id, Description = source.Description
+    when NOT MATCHED then
+        insert (Id, Description)
+        values (source.Id, source.Description);
+
+I get this error:  
+>The MERGE statement attempted to UPDATE or DELETE the same row more than once. This happens when a target row matches more than one source row. A MERGE statement cannot UPDATE/DELETE the same row of the target table multiple times. Refine the ON clause to ensure a target row matches at most one source row, or use the GROUP BY clause to group the source rows.
+
+That is because Id is not unique.  I can add Description, but then it will never update.  That means that changes will orphan rows.
+
+What I really need is a way to say: leave what matches, insert what is missing and delete the rest.
+
+How can I do that delete part?
+
+**NOTE:** I realized that Table A is really just taking all the values of Table B.  But I still want to merge because in practice, very little will be changing between these tables.  A full truncate and re-insert is overkill.
+
+   ",sql-server-2008,merge,,,,,open,0,780,21,"How can I merge two tables without a primary key (or how to have the leftovers from a merge get deleted)? Say I have these two tables:
+<pre>
+     Table A                             Table B  
+_______________________            _______________________
+ Id | Description                    Id | Description
+-----------------------            -----------------------
+ 1  | Some Val                       1  | Some Val                      
+ 2  | More Data                      2  | More Data
+ 2  | Even More                      2  | Less Is More
+ 2  | More again                     3  | This Changed
+ 3  | Other Values                   4  | these are random             
+ 3  | But Not this                 ------------------------  
+ 4  | these are random             
+-----------------------
+</pre>
+
+How can I do a merge to Table A of Table B's changes and get this:
+
+<pre>
+     Table A                       
+_______________________            
+ Id | Description                  
+-----------------------            
+ 1  | Some Val                     
+ 2  | More Data                      
+ 2  | Less Is More
+ 3  | This Changed
+ 4  | these are random             
+-----------------------
+</pre>
+
+
+
+
+
+
+  When I try something like this:
+
+    merge TableA as target
+    using (select Id, Description
+           from   TableB) 
+           as source (Id, Description)
+    on (target.Id = source.Id)             
+    when MATCHED then
+        update set Id = source.Id, Description = source.Description
+    when NOT MATCHED then
+        insert (Id, Description)
+        values (source.Id, source.Description);
+
+I get this error:  
+>The MERGE statement attempted to UPDATE or DELETE the same row more than once. This happens when a target row matches more than one source row. A MERGE statement cannot UPDATE/DELETE the same row of the target table multiple times. Refine the ON clause to ensure a target row matches at most one source row, or use the GROUP BY clause to group the source rows.
+
+That is because Id is not unique.  I can add Description, but then it will never update.  That means that changes will orphan rows.
+
+What I really need is a way to say: leave what matches, insert what is missing and delete the rest.
+
+How can I do that delete part?
+
+**NOTE:** I realized that Table A is really just taking all the values of Table B.  But I still want to merge because in practice, very little will be changing between these tables.  A full truncate and re-insert is overkill.
+
+   ",2
+10433434,05/03/2012 14:25:31,1296353,03/27/2012 18:40:50,6,0,DB SqlServer to UMLClassDiagramme,"it's possible to generate the class diagram from a database sql server ?
+i'm using VS2010 ultimate sql-server-2008
+
+thanks,",sql-server-2008,class-diagram,,,,05/03/2012 16:40:11,not a real question,1,17,4,"DB SqlServer to UMLClassDiagramme it's possible to generate the class diagram from a database sql server ?
+i'm using VS2010 ultimate sql-server-2008
+
+thanks,",2
+8434318,12/08/2011 16:34:29,233861,12/17/2009 14:56:23,263,12,Cant shrink my SQL Server 2008 Log files - 260GB currently,"I'm not quite sure what do at the moment, I have tried numerous scripts such as:
+
+    DBCC SHRINKFILE ('HM_Log', 0)
+
+As well as using the Shrink option in SQL Server Management Studio however the log file doesn't seem to shrink.
+
+Has anyone got any suggestions?
+
+The database is on my production server and actively used, I also have a maintenance plan setup to run all the relevant tasks including a daily transaction log backup and a weekly full backup which appears to be working fine.
+
+I need to shrink it down so I can do a full backup + restore on my local development machine, however at the moment the log files is too large for my local drive.
+
+Thank You,
+Paul",sql-server-2008,transaction-log,shrinkdatabase,,,12/13/2011 11:55:08,off topic,1,119,11,"Cant shrink my SQL Server 2008 Log files - 260GB currently I'm not quite sure what do at the moment, I have tried numerous scripts such as:
+
+    DBCC SHRINKFILE ('HM_Log', 0)
+
+As well as using the Shrink option in SQL Server Management Studio however the log file doesn't seem to shrink.
+
+Has anyone got any suggestions?
+
+The database is on my production server and actively used, I also have a maintenance plan setup to run all the relevant tasks including a daily transaction log backup and a weekly full backup which appears to be working fine.
+
+I need to shrink it down so I can do a full backup + restore on my local development machine, however at the moment the log files is too large for my local drive.
+
+Thank You,
+Paul",3

@@ -1,0 +1,584 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+11717650,07/30/2012 08:16:54,1562264,07/30/2012 07:45:39,1,0,calling cuda API using C,"this is my code that calls a cuda API,i run it in visual studio 2008.it opens an window but doesn't show anything!can u tell me what is my problem? 
+    
+    
+    #include <iostream>
+    #include <stdio.h>
+    #include <cuda.h>
+    #include <conio.h>
+    #include <windows.h>
+    int main()
+    {
+    HRESULT __stdcall NVGetHWEncodeCaps();
+    getch();
+    return 0;
+    }
+    
+
+'num2.exe': Loaded 'C:\Windows\System32\ntdll.dll'
+'num2.exe': Loaded 'C:\Windows\System32\kernel32.dll'
+'num2.exe': Loaded 'C:\Windows\System32\KernelBase.dll'
+'num2.exe': Loaded 'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\bin\cudart64_42_9.dll', Binary was not built with debug information.
+The thread 'Win64 Thread' (0x28c) has exited with code -1073741510 (0xc000013a).
+The program '[2648] num2.exe: Native' has exited with code -1073741510 (0xc000013a).
+//////////
+NVGetHWEncodeCaps
+Description:
+ Query if the GPU supports the NVIDIA CUDA Video encoder 
+Syntax:
+HRESULT __stdcall NVGetHWEncodeCaps(void)
+ Parameter:
+None 
+Return Value:
+S_OK: CUDA based encoding is supported
+ E_FAIL: No CUDA capability present
+ Remarks:
+None",api,cuda,,,,07/30/2012 20:48:40,not a real question,1,161,5,"calling cuda API using C this is my code that calls a cuda API,i run it in visual studio 2008.it opens an window but doesn't show anything!can u tell me what is my problem? 
+    
+    
+    #include <iostream>
+    #include <stdio.h>
+    #include <cuda.h>
+    #include <conio.h>
+    #include <windows.h>
+    int main()
+    {
+    HRESULT __stdcall NVGetHWEncodeCaps();
+    getch();
+    return 0;
+    }
+    
+
+'num2.exe': Loaded 'C:\Windows\System32\ntdll.dll'
+'num2.exe': Loaded 'C:\Windows\System32\kernel32.dll'
+'num2.exe': Loaded 'C:\Windows\System32\KernelBase.dll'
+'num2.exe': Loaded 'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\bin\cudart64_42_9.dll', Binary was not built with debug information.
+The thread 'Win64 Thread' (0x28c) has exited with code -1073741510 (0xc000013a).
+The program '[2648] num2.exe: Native' has exited with code -1073741510 (0xc000013a).
+//////////
+NVGetHWEncodeCaps
+Description:
+ Query if the GPU supports the NVIDIA CUDA Video encoder 
+Syntax:
+HRESULT __stdcall NVGetHWEncodeCaps(void)
+ Parameter:
+None 
+Return Value:
+S_OK: CUDA based encoding is supported
+ E_FAIL: No CUDA capability present
+ Remarks:
+None",2
+9429919,02/24/2012 11:23:40,1230619,02/24/2012 11:12:12,1,0,win32 very low level assembly - application startup issue,"I am busy programming a win32 program in assembly with a form and buttons... The problem is windows modify my variables in ram. The place were a store my hInstance and hwnd variables. I have found a workaround, but it is not an elegant solution. I would like to know why windows modify my variables and also were can I find documentation which describe the start up of an application.",api,winapi,assembly,user32,,,open,0,70,9,"win32 very low level assembly - application startup issue I am busy programming a win32 program in assembly with a form and buttons... The problem is windows modify my variables in ram. The place were a store my hInstance and hwnd variables. I have found a workaround, but it is not an elegant solution. I would like to know why windows modify my variables and also were can I find documentation which describe the start up of an application.",4
+5454076,03/28/2011 02:28:49,644093,03/04/2011 04:03:20,1,2,local.yahooapis.com stopped work as of today?,"This seemed to work fine (with my appId, or the default one) for weeks... but stopped working 27-Mar-2011.  (I even got another new appId.)  
+
+No error.  No results.
+
+http://local.yahooapis.com/LocalSearchService/V3/localSearch?appid=YahooDemo&query=store&results=20&radius=30&latitude=32.4&longitude=-93.4&sort=distance
+
+Did something break?
+
+Yahoo says ""everything is fine"".... but even their own examples have all stopped working as of today.
+
+http://local.yahooapis.com/LocalSearchService/V3/localSearch?appid=YahooDemo&query=pizza&zip=94306&results=2
+
+",api,search,yahoo,,,03/28/2011 13:01:04,too localized,1,49,6,"local.yahooapis.com stopped work as of today? This seemed to work fine (with my appId, or the default one) for weeks... but stopped working 27-Mar-2011.  (I even got another new appId.)  
+
+No error.  No results.
+
+http://local.yahooapis.com/LocalSearchService/V3/localSearch?appid=YahooDemo&query=store&results=20&radius=30&latitude=32.4&longitude=-93.4&sort=distance
+
+Did something break?
+
+Yahoo says ""everything is fine"".... but even their own examples have all stopped working as of today.
+
+http://local.yahooapis.com/LocalSearchService/V3/localSearch?appid=YahooDemo&query=pizza&zip=94306&results=2
+
+",3
+6398300,06/18/2011 19:14:50,471149,08/01/2010 10:11:33,177,6,how does imo.im run skype?,"imo.im allows to use skype without downloading skype standalone client program. I wonder how do they do it? They have partnership with skype company? or they took usual skype client, cut off all unnecessary things and use it?
+
+I have read skype kit license agreement, it allows to use it only in electronic devices with some exclusions.
+
+How?",api,skype,,,,06/19/2011 07:34:52,not a real question,1,56,5,"how does imo.im run skype? imo.im allows to use skype without downloading skype standalone client program. I wonder how do they do it? They have partnership with skype company? or they took usual skype client, cut off all unnecessary things and use it?
+
+I have read skype kit license agreement, it allows to use it only in electronic devices with some exclusions.
+
+How?",2
+3622766,09/01/2010 23:12:30,13238,09/15/2008 12:40:26,643,16,Best REST API documentation,"What is the best REST API documentation that you've come across?
+
+What did you really like about it?  HOWTOs?  Videos?  Code snippets?  Browser based API explorer?
+
+For example, I quite like the Flikr API documentation - http://www.flickr.com/services/api/flickr.photos.search.html, especially the API explorer.
+
+The SOAPI-Explorer is also pretty cool - http://soapi.info/Code/JS/Stable/soapi-explore-beta.htm, although it lacks an overview of how to use things together.
+
+What information is always missing from REST API documentation that catches you out?  Eg, Date Formats.
+
+Thanks!",api,rest,documentation,favorites,,04/19/2012 14:58:02,not constructive,1,77,4,"Best REST API documentation What is the best REST API documentation that you've come across?
+
+What did you really like about it?  HOWTOs?  Videos?  Code snippets?  Browser based API explorer?
+
+For example, I quite like the Flikr API documentation - http://www.flickr.com/services/api/flickr.photos.search.html, especially the API explorer.
+
+The SOAPI-Explorer is also pretty cool - http://soapi.info/Code/JS/Stable/soapi-explore-beta.htm, although it lacks an overview of how to use things together.
+
+What information is always missing from REST API documentation that catches you out?  Eg, Date Formats.
+
+Thanks!",4
+8807956,01/10/2012 17:50:08,1141435,01/10/2012 17:32:25,1,0,Building a Web App Platform,"I am a developer looking for precious advice for the startup I work in.
+Sorry for the length of this post, I hope it is as clear as I intended to be.
+
+We are currently providing a B2B service that is essentially an application: a client access our administration panel to configure the application and makes it accessible to his users through a URL we provide.
+Regarding our platform, it is standard PHP/MySQL with MVC Framework, but over the past few months, we have been pushing more application logic client-side, to a point server-side code mostly performs model validation and persistence.
+
+We would like to move forward by being less of an application and more of a platform, where we could offer different applications for our clients to customise (changing configuration values), and extend from (using Javascript code) to match more precise needs.
+Our main idea is to provide a rich REST/JSON API we would use ourselves to create our applications, secured with OAuth2 and running in a Cloud infrastructure (most likely to be Amazon AWS as we are already using S3).
+
+Both our administration panel (accessed by our clients) and public applications (accessed by our clients’ users) would be able to run Javascript applications based on CommonJS. An application would be a CommonJS package set of an assembly of modules, all having access to an ‘API’ root module that would expose utility, CRUD and query methods to access our API server. Ideally, modules inside a package would be able to communicate between one-another so that each could focus on a single, quite simple, task and could therefore be useful in different packages simply by changing configuration values.
+
+All permissions would be stored server-side so the servers would filter calls to only process authorised ones and return a response object or HTTP error codes accordingly.
+The idea would be to use stateless (so easily scalable) EC2 instances running Node.js that would check the OAuth2 token (or provide one if needed), check the application permissions (query, CRUD operations) and retrieve the object either from the DB or from a cache shared by all instances.
+Node.js seems a good choice for it because it is non-blocking and we would like to use WebSockets at some point, even though it is not our current priority.
+
+Regarding data I/O, we would most likely have heavy write on certain entities (mainly users), medium write on entities related to applications (setting permissions, configuration, dependencies, Javascript code) and heavy read on them, but they would likely fit in a cache. 
+
+The way I see it, we need relations (between applications and their dependencies, between our clients and their users...) but most of them would not change often and could be in the cache, so a document DB seems be a better fit than a relational one, as we would be dealing with Javascript, using JSON for data seems far more relevant.
+Applications’ Javascript code would be minified, packed and stored on S3 to be accessible with a simple HTTP request.
+
+User data stored by applications could be large sets of key-value pairs, but also binary data such as images. A document DB having Map/Reduce capacities seems a good fit for key-value pairs, but S3 a better one for binary data.
+
+As for the cache, Amazon provides the Memcached-compliant ElastiCache but Redis seems more interesting regarding query capacities, and the Pub/Sub capacities could be very useful for communication between EC2 instances.
+
+At some point, we would also like to provide data analysis and prediction, especially on the way our clients interact with their users. The document-graph DB OrientDB seems incredibly powerful and the ability to manage relationships as a graph very appealing, but I could not find lots of information about companies using it in production.
+User data would mostly be stored in relation to a single application, so we would also need a way to quickly aggregate data from many applications and process it. We are currently reaching limits with MySQL as it is very slow to query the data we need, so some Map/Reduce or graph traversal could be very useful.
+
+So here are my main questions:
+
+ - Are these first considerations coherent with our needs, or should we
+   stick with PHP/MySQL and build on it?
+ - Is Amazon AWS a good choice for our needs or would other providers be more efficient and/or cost-effective?
+ - Using AWS, should we prefer their own solutions (SimpleDB, ElastiCache, SNS...) over equivalent third-party ones (MongoDB, CouchDB, Redis...)?
+ - Again with AWS, should we stick to MySQL using RDS, at least when we need relations, or prefer a document DB and handle relations in our code ?
+ - Taking CommonJS as a standard for our platform development, would we be more effective and/or easier to develop for than rolling our own solution?
+ - Is Node.js a valid choice for a fast API? Are there other technologies that would be a better fit for our needs?
+ - Is OrientDB the unicorn of NoSQL databases, having all the capacities we could dream of without drawbacks or is it some kind of very promising but not ready yet technology?
+
+Thanks for the feedback!",api,node.js,nosql,amazon-web-services,oauth-2.0,01/21/2012 13:55:54,not constructive,1,845,5,"Building a Web App Platform I am a developer looking for precious advice for the startup I work in.
+Sorry for the length of this post, I hope it is as clear as I intended to be.
+
+We are currently providing a B2B service that is essentially an application: a client access our administration panel to configure the application and makes it accessible to his users through a URL we provide.
+Regarding our platform, it is standard PHP/MySQL with MVC Framework, but over the past few months, we have been pushing more application logic client-side, to a point server-side code mostly performs model validation and persistence.
+
+We would like to move forward by being less of an application and more of a platform, where we could offer different applications for our clients to customise (changing configuration values), and extend from (using Javascript code) to match more precise needs.
+Our main idea is to provide a rich REST/JSON API we would use ourselves to create our applications, secured with OAuth2 and running in a Cloud infrastructure (most likely to be Amazon AWS as we are already using S3).
+
+Both our administration panel (accessed by our clients) and public applications (accessed by our clients’ users) would be able to run Javascript applications based on CommonJS. An application would be a CommonJS package set of an assembly of modules, all having access to an ‘API’ root module that would expose utility, CRUD and query methods to access our API server. Ideally, modules inside a package would be able to communicate between one-another so that each could focus on a single, quite simple, task and could therefore be useful in different packages simply by changing configuration values.
+
+All permissions would be stored server-side so the servers would filter calls to only process authorised ones and return a response object or HTTP error codes accordingly.
+The idea would be to use stateless (so easily scalable) EC2 instances running Node.js that would check the OAuth2 token (or provide one if needed), check the application permissions (query, CRUD operations) and retrieve the object either from the DB or from a cache shared by all instances.
+Node.js seems a good choice for it because it is non-blocking and we would like to use WebSockets at some point, even though it is not our current priority.
+
+Regarding data I/O, we would most likely have heavy write on certain entities (mainly users), medium write on entities related to applications (setting permissions, configuration, dependencies, Javascript code) and heavy read on them, but they would likely fit in a cache. 
+
+The way I see it, we need relations (between applications and their dependencies, between our clients and their users...) but most of them would not change often and could be in the cache, so a document DB seems be a better fit than a relational one, as we would be dealing with Javascript, using JSON for data seems far more relevant.
+Applications’ Javascript code would be minified, packed and stored on S3 to be accessible with a simple HTTP request.
+
+User data stored by applications could be large sets of key-value pairs, but also binary data such as images. A document DB having Map/Reduce capacities seems a good fit for key-value pairs, but S3 a better one for binary data.
+
+As for the cache, Amazon provides the Memcached-compliant ElastiCache but Redis seems more interesting regarding query capacities, and the Pub/Sub capacities could be very useful for communication between EC2 instances.
+
+At some point, we would also like to provide data analysis and prediction, especially on the way our clients interact with their users. The document-graph DB OrientDB seems incredibly powerful and the ability to manage relationships as a graph very appealing, but I could not find lots of information about companies using it in production.
+User data would mostly be stored in relation to a single application, so we would also need a way to quickly aggregate data from many applications and process it. We are currently reaching limits with MySQL as it is very slow to query the data we need, so some Map/Reduce or graph traversal could be very useful.
+
+So here are my main questions:
+
+ - Are these first considerations coherent with our needs, or should we
+   stick with PHP/MySQL and build on it?
+ - Is Amazon AWS a good choice for our needs or would other providers be more efficient and/or cost-effective?
+ - Using AWS, should we prefer their own solutions (SimpleDB, ElastiCache, SNS...) over equivalent third-party ones (MongoDB, CouchDB, Redis...)?
+ - Again with AWS, should we stick to MySQL using RDS, at least when we need relations, or prefer a document DB and handle relations in our code ?
+ - Taking CommonJS as a standard for our platform development, would we be more effective and/or easier to develop for than rolling our own solution?
+ - Is Node.js a valid choice for a fast API? Are there other technologies that would be a better fit for our needs?
+ - Is OrientDB the unicorn of NoSQL databases, having all the capacities we could dream of without drawbacks or is it some kind of very promising but not ready yet technology?
+
+Thanks for the feedback!",5
+10918887,06/06/2012 17:10:32,1440335,06/06/2012 16:55:20,1,0,How to access results of Sonar metrics for use with applications like PowerPivot,"I'm trying to run a number of applications with known failure rates through Sonar, with hopes of deciding which metrics are most valuable in determining whether a particular application will fail. Ultimately I'll be making some sort of algorithm that will look at the outputs of whatever metrics I'm using and generate a score from 1 - 100. I've got about 21 applications put through Sonar, and the results have been stored in a MySQL database. I originally planned to use PowerPivot to find relationships in the data, but it seems like the formatting of the tables doesn't lend itself well to that. Other questions on stackoverflow have told me that Sonar's tables are unformatted, and I should instead use the Web Service API to get the information. I'm unfamiliar with API and was unsuccessful in trying to do what I wanted by looking at Sonar's documentation for API. 
+
+From an answer to another question:
+http://nemo.sonarsource.org/api/timemachine?resource=org.apache.cxf:cxf&format=csv&metrics=ncloc,violations_density,comment_lines_density,public_documented_api_density,duplicated_lines_density,blocker_violations,critical_violations,major_violations,minor_violations
+
+This looks very similar to what I'd like to have, except I'm only looking at each application once (I'm analyzing a sample of all the live applications on a grid), which means Timemachine isn't really what I'm looking for. Would it be possible to generate a similar table, except instead of the stats for a particular application per date, it showed the statistics for an application and all of its classes, etc?",api,sonar,powerpivot,,,,open,0,226,13,"How to access results of Sonar metrics for use with applications like PowerPivot I'm trying to run a number of applications with known failure rates through Sonar, with hopes of deciding which metrics are most valuable in determining whether a particular application will fail. Ultimately I'll be making some sort of algorithm that will look at the outputs of whatever metrics I'm using and generate a score from 1 - 100. I've got about 21 applications put through Sonar, and the results have been stored in a MySQL database. I originally planned to use PowerPivot to find relationships in the data, but it seems like the formatting of the tables doesn't lend itself well to that. Other questions on stackoverflow have told me that Sonar's tables are unformatted, and I should instead use the Web Service API to get the information. I'm unfamiliar with API and was unsuccessful in trying to do what I wanted by looking at Sonar's documentation for API. 
+
+From an answer to another question:
+http://nemo.sonarsource.org/api/timemachine?resource=org.apache.cxf:cxf&format=csv&metrics=ncloc,violations_density,comment_lines_density,public_documented_api_density,duplicated_lines_density,blocker_violations,critical_violations,major_violations,minor_violations
+
+This looks very similar to what I'd like to have, except I'm only looking at each application once (I'm analyzing a sample of all the live applications on a grid), which means Timemachine isn't really what I'm looking for. Would it be possible to generate a similar table, except instead of the stats for a particular application per date, it showed the statistics for an application and all of its classes, etc?",3
+8442214,12/09/2011 07:12:09,904456,08/21/2011 09:32:46,3,0,how to upgrade sundaymorning.js script to google translate api V2?,"in the site: http://sundaymorning.jaysalvat.com/
+there is a plugin for translating on site.
+it doesn't work because google have depreciated V1. 
+
+can someone please point to how to upgrade that script to V2 ?
+is it only about entering the new API ?
+or should I change something else as well.
+
+thank you.",api,google,translate,,,,open,0,47,10,"how to upgrade sundaymorning.js script to google translate api V2? in the site: http://sundaymorning.jaysalvat.com/
+there is a plugin for translating on site.
+it doesn't work because google have depreciated V1. 
+
+can someone please point to how to upgrade that script to V2 ?
+is it only about entering the new API ?
+or should I change something else as well.
+
+thank you.",3
+6666130,07/12/2011 14:49:53,273067,02/14/2010 20:05:45,1,0,Is there simple API for SWIFT bank search,"I have information about SWIFT number. The API should returns All information concerning bank.
+In addition may be there is simple api which can find banks and SWIFT by name or part of the name.
+Simple googling didnt tell.",api,swift,,,,07/13/2011 21:26:16,not a real question,1,37,8,"Is there simple API for SWIFT bank search I have information about SWIFT number. The API should returns All information concerning bank.
+In addition may be there is simple api which can find banks and SWIFT by name or part of the name.
+Simple googling didnt tell.",2
+8263108,11/24/2011 22:35:24,1062775,11/23/2011 21:09:34,1,0,Metal price API,"Is there any API for the price of different metals (such as copper, silver, gold, iron, and such) very much like currency exchange API?
+
+Thanks
+",api,exchange,,,,11/25/2011 03:35:55,not a real question,1,24,3,"Metal price API Is there any API for the price of different metals (such as copper, silver, gold, iron, and such) very much like currency exchange API?
+
+Thanks
+",2
+7049878,08/13/2011 10:25:04,258462,01/25/2010 13:55:25,157,7,Google Search by Image API,"Is there a [Google Search by Image][1] API? I would like to search the web ""by image"" programmatically, but I haven't found any way to do this.
+
+  [1]: http://www.google.com/insidesearch/searchbyimage.html",api,search,google,language-agnostic,search-engine,06/27/2012 16:03:14,not a real question,1,30,5,"Google Search by Image API Is there a [Google Search by Image][1] API? I would like to search the web ""by image"" programmatically, but I haven't found any way to do this.
+
+  [1]: http://www.google.com/insidesearch/searchbyimage.html",5
+10675801,05/20/2012 17:59:11,1338976,04/17/2012 14:00:27,1,0,"Google Maps, Count buildings inside area polygon?","Is there a way to count buildings, homes etc inside a polygon? I am distributing flyers for my business and would like to count the homes in an area. I am doing it one at a time and its taking forever. 
+
+I have tried using commercial real-estate sites like Trulia, Zillow to draw boundaries, but they only return homes for sale. 
+
+I am looking for all homes in an area. 
+
+
+Thank you,
+Steve",api,count,maps,polygon,counter,05/21/2012 19:06:10,off topic,1,72,7,"Google Maps, Count buildings inside area polygon? Is there a way to count buildings, homes etc inside a polygon? I am distributing flyers for my business and would like to count the homes in an area. I am doing it one at a time and its taking forever. 
+
+I have tried using commercial real-estate sites like Trulia, Zillow to draw boundaries, but they only return homes for sale. 
+
+I am looking for all homes in an area. 
+
+
+Thank you,
+Steve",5
+7264653,08/31/2011 23:32:50,922592,04/07/2011 17:45:57,1,0,How to use a public API?,"I'm a pretty amateur programmer and i need more coding that is not related to school. I live in the bay area and came across the Bay Area Rapid Transit's API. But their documentation sucks! I want to build a simple webpage that uses the bike flag (seen here: http://api.bart.gov/docs/sched/stnsched.aspx) to display when someone can bring their bicycle on the subway. I've never used an API before so i'm pretty lost. I've written simple programs with c++, java and python.  
+
+how should i get started? What languages are good? What would this simple web app look like? 
+
+Thanks for any help!
+
+",api,web,,,,09/01/2011 00:00:35,off topic,1,102,6,"How to use a public API? I'm a pretty amateur programmer and i need more coding that is not related to school. I live in the bay area and came across the Bay Area Rapid Transit's API. But their documentation sucks! I want to build a simple webpage that uses the bike flag (seen here: http://api.bart.gov/docs/sched/stnsched.aspx) to display when someone can bring their bicycle on the subway. I've never used an API before so i'm pretty lost. I've written simple programs with c++, java and python.  
+
+how should i get started? What languages are good? What would this simple web app look like? 
+
+Thanks for any help!
+
+",2
+11524535,07/17/2012 14:21:08,904991,08/21/2011 21:44:53,3,0,"adding a map which plots where people are, shows blurb/video about them","I am trying to add a map to my website with the following specs:
+
+ - I am trying to follow people in african countries and south american countries, and need a way to show only enough of a map to show this.
+ - I am trying to make a popup appear on hover which will show either an image of the person I am following along with a blurb or a video (preferably completely customizable)
+
+I have access to google earth outreach (I am doing this for a non-profit which is following researchers in developing countries) and would like to use their tools, but feel their maps are too detailed and interactive (zoom in features, too realistic etc)
+
+Is there any way I can do this?  The website uses wordpress.
+
+",api,google-maps,google-earth,,,07/17/2012 16:45:25,not a real question,1,129,12,"adding a map which plots where people are, shows blurb/video about them I am trying to add a map to my website with the following specs:
+
+ - I am trying to follow people in african countries and south american countries, and need a way to show only enough of a map to show this.
+ - I am trying to make a popup appear on hover which will show either an image of the person I am following along with a blurb or a video (preferably completely customizable)
+
+I have access to google earth outreach (I am doing this for a non-profit which is following researchers in developing countries) and would like to use their tools, but feel their maps are too detailed and interactive (zoom in features, too realistic etc)
+
+Is there any way I can do this?  The website uses wordpress.
+
+",3
+8630443,12/25/2011 16:28:23,298593,03/21/2010 19:53:11,71,2,TV Series API (Season count per series / Episode count per season),"Does anyone know of a JSON or XML API that gives you the amount of seasons and the amount of episodes per season (or for each season) for a given tv series?
+
+I'm trying to create a 'random episode' button, but to be able to do that I need to have this information. The tv-series themselves are not saved locally so I cannot just query the fs for filenames and build the db myself.",api,series,tv,,,02/13/2012 02:27:18,off topic,1,73,12,"TV Series API (Season count per series / Episode count per season) Does anyone know of a JSON or XML API that gives you the amount of seasons and the amount of episodes per season (or for each season) for a given tv series?
+
+I'm trying to create a 'random episode' button, but to be able to do that I need to have this information. The tv-series themselves are not saved locally so I cannot just query the fs for filenames and build the db myself.",3
+4834884,01/29/2011 03:03:36,315725,04/13/2010 17:02:14,32,3,Getting bank account information from a bank and displaying on a website,"I am looking for a way to get bank account information (transactions and balance) from a financial institution and display it on a website.  
+The question is vague intentionally....   
+   
+Everything is open. I haven't chosen a bank, serverside technology or front end technology.   
+The idea is to have a script run automatically periodically (once or twice a day) and get the latest account information from the bank server automatically.   
+   
+ Probably something in the direction of OFX (Open financial exchange), HBCI (home banking c.. interface), fnts or something like it.    
+Even working over a closed source API is not out of question: Wesabe or Mint or something.    
+   
+**Paypal is not an option because it won't work in India or Pakistan.**    
+cheers
+   
+
+
+  [Flexi Comment Box][1]
+
+
+  [1]: http://www.alimsyed.com",api,onlinebanking,ofx,,,01/29/2011 11:55:20,off topic,1,156,12,"Getting bank account information from a bank and displaying on a website I am looking for a way to get bank account information (transactions and balance) from a financial institution and display it on a website.  
+The question is vague intentionally....   
+   
+Everything is open. I haven't chosen a bank, serverside technology or front end technology.   
+The idea is to have a script run automatically periodically (once or twice a day) and get the latest account information from the bank server automatically.   
+   
+ Probably something in the direction of OFX (Open financial exchange), HBCI (home banking c.. interface), fnts or something like it.    
+Even working over a closed source API is not out of question: Wesabe or Mint or something.    
+   
+**Paypal is not an option because it won't work in India or Pakistan.**    
+cheers
+   
+
+
+  [Flexi Comment Box][1]
+
+
+  [1]: http://www.alimsyed.com",3
+5989629,05/13/2011 09:07:18,118027,06/05/2009 14:04:37,4411,227,Twitter API: Get latest Tweets for an keyword including GEO - Cords?,"Is there any way to get the Cords of the ""Twitterer"" when using Twitter Search Api? If i understand the API Doc right, is there no GEO Result in their XML / JSON return object?
+
+",api,twitter,,,,,open,0,35,12,"Twitter API: Get latest Tweets for an keyword including GEO - Cords? Is there any way to get the Cords of the ""Twitterer"" when using Twitter Search Api? If i understand the API Doc right, is there no GEO Result in their XML / JSON return object?
+
+",2
+9287198,02/15/2012 02:43:03,1210377,02/15/2012 02:30:20,1,0,Forgotten Alternative to Wikipedia,"A year or two ago, I was stumbling around the web and found a freely queryable public database of knowledge that not only had an open API, but through its API could suggest related topics as well. The point was, as best as I can remember, to produce facts around topics/keywords provided, and suggest related information.
+
+Of course I did not bookmark this site, and now I'm developing a site in which I think this functionality could be quite useful. Does this ring a bell for anyone, or are there other open databases that expose a public API in such a way?",api,open-source,,,,03/01/2012 04:32:23,off topic,1,101,4,"Forgotten Alternative to Wikipedia A year or two ago, I was stumbling around the web and found a freely queryable public database of knowledge that not only had an open API, but through its API could suggest related topics as well. The point was, as best as I can remember, to produce facts around topics/keywords provided, and suggest related information.
+
+Of course I did not bookmark this site, and now I'm developing a site in which I think this functionality could be quite useful. Does this ring a bell for anyone, or are there other open databases that expose a public API in such a way?",2
+11267424,06/29/2012 18:53:13,136946,07/10/2009 15:38:39,107,10,I need a TON of album art by genre or date,"I'm working on an art project and would like to compile a large amount of album art JPGs (largest web size available). last.fm, echonest and others are great but I don't think there is a way for me to easily get a set of releases by genre or release date range. 
+
+I prefer php, json, xml, mysql. I will be processing the images in software locally (or maybe via AWS) only once when I have decided on some parameters. So storage and access efficiency isn't a big consideration. I might want to get these sets by genre or say ""releases in 2011""
+
+This would probably end up being many gigs of images. 
+
+
+",api,metadata,last.fm,albumart,musicbrainz,07/03/2012 02:47:25,not a real question,1,112,11,"I need a TON of album art by genre or date I'm working on an art project and would like to compile a large amount of album art JPGs (largest web size available). last.fm, echonest and others are great but I don't think there is a way for me to easily get a set of releases by genre or release date range. 
+
+I prefer php, json, xml, mysql. I will be processing the images in software locally (or maybe via AWS) only once when I have decided on some parameters. So storage and access efficiency isn't a big consideration. I might want to get these sets by genre or say ""releases in 2011""
+
+This would probably end up being many gigs of images. 
+
+
+",5
+11265352,06/29/2012 16:13:11,864112,07/26/2011 18:57:46,519,2,Why is there a fold method for Form in Play 2.0.2?,"I'm referring to this:
+
+http://www.playframework.org/documentation/api/2.0.2/scala/index.html#play.api.data.Form
+
+If you search for a method called fold, it shows a method used for handling the form. Is there a reason why this method is called fold? Given that fold already has a meaning for list like objects, it seems that this name could easily cause confusion.",api,scala,playframework,,,,open,0,50,11,"Why is there a fold method for Form in Play 2.0.2? I'm referring to this:
+
+http://www.playframework.org/documentation/api/2.0.2/scala/index.html#play.api.data.Form
+
+If you search for a method called fold, it shows a method used for handling the form. Is there a reason why this method is called fold? Given that fold already has a meaning for list like objects, it seems that this name could easily cause confusion.",3
+9913950,03/28/2012 18:57:38,1166651,01/24/2012 09:21:00,13,0,PHP REST API with OAuth Tutorial/Example,"i would like to implement an api for my current web application project. I think a REST api is a good idea, but REST is stateless and i need a bit more security as HTTP basic or digest auth. I've read that OAuth can be used for the authentication part.
+
+I am very new to this topics and would like to know if there are examples or tutorials?
+
+is this approach a good idea or would you prefer others?
+
+i am using kohana as hmvc framework in version 3.2...
+
+thx and kind regards!",api,rest,oauth,kohana,,04/05/2012 18:19:13,not constructive,1,89,6,"PHP REST API with OAuth Tutorial/Example i would like to implement an api for my current web application project. I think a REST api is a good idea, but REST is stateless and i need a bit more security as HTTP basic or digest auth. I've read that OAuth can be used for the authentication part.
+
+I am very new to this topics and would like to know if there are examples or tutorials?
+
+is this approach a good idea or would you prefer others?
+
+i am using kohana as hmvc framework in version 3.2...
+
+thx and kind regards!",4
+6340015,06/14/2011 06:48:51,203308,11/05/2009 09:28:21,314,11,Import of txt/csv into Umbraco (willing to pay),"Maybe this should go into a sisterforum. I could not find anything about bounty or payment for help. Moderators: feel free to move this to a sister forum is not appropriate in this forum. And I will add a ""sorry"" if I am doing wrong.
+
+But this issue is for me to big just to ask for help, so if anyone is capable and can do the work I am willing to pay. Also OK to suggest a company that can solve the problem.
+
+--
+
+I need to import a product catalog on a regular basis. It consist right now of one single file (a report with redundant data) but can be split inro 3-4 (clean, non-redundant) text or csv files with a total of aprox. 1500 rows (users, normal product, user specific products and discount prices for customers). Each row should end up in Umbraco as a new node, or an update to an existing node.
+
+**Users** and **normal products** are just inserted under the same node (well, two nodes. One for users, one for products).
+**Discounts** and **users specific products** should be inserted under the user node (created when importing the users)
+
+For each import this should happen:
+1) If item is not in Umbraco then create it
+2) If item is present in Umbraco then update it
+3) If item is in Umbraco but not in the file then hide it
+
+Suggestion, when running import:
+1) hide all items
+2) run import/update and unhide affected elements at the same time
+This can be done either on the report containing all data. Or on 3-4 files each holding a single type of data. I hope you can advise on what to do.
+
+**Compentences needed:** Knowledge of Umbraco API and kind of an ""Umbraco expert"" or at least experienced with importing data into Umbraco
+**Issue:** Normal use of Umbracos API will give a slooooow import lasting hours. Some clever solution that will speed up the import is needed. We need someone with that experience and knowledge.
+**Deadline:** ASAP
+
+Payment: If you can solve this problem, then just name your price. Is it to low I will doubble it. Is it to high I might choose someone else.
+
+BR. Anders Tillebeck
+mail: at@opengate.dk",api,import,umbraco,contracting,,06/20/2011 15:37:19,not constructive,1,354,8,"Import of txt/csv into Umbraco (willing to pay) Maybe this should go into a sisterforum. I could not find anything about bounty or payment for help. Moderators: feel free to move this to a sister forum is not appropriate in this forum. And I will add a ""sorry"" if I am doing wrong.
+
+But this issue is for me to big just to ask for help, so if anyone is capable and can do the work I am willing to pay. Also OK to suggest a company that can solve the problem.
+
+--
+
+I need to import a product catalog on a regular basis. It consist right now of one single file (a report with redundant data) but can be split inro 3-4 (clean, non-redundant) text or csv files with a total of aprox. 1500 rows (users, normal product, user specific products and discount prices for customers). Each row should end up in Umbraco as a new node, or an update to an existing node.
+
+**Users** and **normal products** are just inserted under the same node (well, two nodes. One for users, one for products).
+**Discounts** and **users specific products** should be inserted under the user node (created when importing the users)
+
+For each import this should happen:
+1) If item is not in Umbraco then create it
+2) If item is present in Umbraco then update it
+3) If item is in Umbraco but not in the file then hide it
+
+Suggestion, when running import:
+1) hide all items
+2) run import/update and unhide affected elements at the same time
+This can be done either on the report containing all data. Or on 3-4 files each holding a single type of data. I hope you can advise on what to do.
+
+**Compentences needed:** Knowledge of Umbraco API and kind of an ""Umbraco expert"" or at least experienced with importing data into Umbraco
+**Issue:** Normal use of Umbracos API will give a slooooow import lasting hours. Some clever solution that will speed up the import is needed. We need someone with that experience and knowledge.
+**Deadline:** ASAP
+
+Payment: If you can solve this problem, then just name your price. Is it to low I will doubble it. Is it to high I might choose someone else.
+
+BR. Anders Tillebeck
+mail: at@opengate.dk",4
+10519337,05/09/2012 15:34:40,530863,12/05/2010 00:01:34,37,0,I need to create a WebSerVice CLient in PHP for https://api.title365.com/PropertyData.svc. Someone can help me?,I need to create a WebSerVice CLient in PHP5.3 for https://api.title365.com/PropertyData.svc. Someone can help me?,api,php5,,,,05/10/2012 13:50:46,not a real question,1,15,15,I need to create a WebSerVice CLient in PHP for https://api.title365.com/PropertyData.svc. Someone can help me? I need to create a WebSerVice CLient in PHP5.3 for https://api.title365.com/PropertyData.svc. Someone can help me?,2
+7278512,09/02/2011 01:51:44,142237,07/21/2009 18:58:50,559,29,Stock Market API,"I wondered if there was some stock market api that would allow me to create an indepenant website to display a certain corporation's stock info. 
+
+I've looked at Google Finance API and apparently you can only use it to make iGoogle gadgets so that won't work. ",api,,,,,09/02/2011 05:36:09,off topic,1,47,3,"Stock Market API I wondered if there was some stock market api that would allow me to create an indepenant website to display a certain corporation's stock info. 
+
+I've looked at Google Finance API and apparently you can only use it to make iGoogle gadgets so that won't work. ",1
+3774713,09/23/2010 01:02:10,196387,10/26/2009 01:15:14,13,0,API used in http://picclick.com/,"my friend pointed me to the [http://picclick.com/][1] site yesterday, and i was curious if there's any public api the developer have used to get the results, i know google blocks your ip when it detects that you are sending automated requests. Thanks! 
+
+
+  [1]: http://picclick.com/",api,,,,,09/23/2010 03:49:19,not a real question,1,46,4,"API used in http://picclick.com/ my friend pointed me to the [http://picclick.com/][1] site yesterday, and i was curious if there's any public api the developer have used to get the results, i know google blocks your ip when it detects that you are sending automated requests. Thanks! 
+
+
+  [1]: http://picclick.com/",1
+4624590,01/07/2011 10:31:14,566742,01/07/2011 10:31:14,1,0,How do I find category of a website??,How do I find a website is in which category by checking some websites or using some api???,api,website,seo,code-generation,,01/07/2011 10:34:40,not a real question,1,18,8,How do I find category of a website?? How do I find a website is in which category by checking some websites or using some api???,4
+469161,01/22/2009 13:42:12,26004,10/08/2008 01:57:08,813,38,Good API vs Bad API,"I'm having at the university a course called ""Software Constraints"" where we are learning how to build good APIs. 
+
+A good example we got of a really bad API function is the socket **""public static void Select(IList checkRead, IList checkWrite, IList checkError, int microseconds);""** in c#. Which receives 3 lists of sockets, and destroys them, making the user to havet o clone all the sockets before feeding them into the Select(). It also has a microseconds timeout which is an int, that by it's turn makes that the maximum time the server can be waiting for a socket is +/- 35 Minutes (because it is an int).
+
+So what i wanted to ask, to help me making an union of what the teacher teaches compared with what experienced devs see/use.
+
+How do you categorize an API as being bad? (Some points)
+
+ - Functions names are hard to remember
+ - Functions parameters are hard to understand
+ - Bad documentation
+ - Everything being so interconnected that if you need to change 1 line of code you actualy will need to change 100 lines in other places.
+ - Functions that destroy their arguments ? (sometimes might be needed) ?
+ - Bad scalability due to ""hidden"" complexity
+ - It's required from the user/dev to build wrappers around the API so that it can be used.
+
+How do you categorize an API as being good? (Points here are the contrary of the up ones so i'm not re-writing them)",api,api-design,,,,07/26/2012 12:14:26,not constructive,1,241,5,"Good API vs Bad API I'm having at the university a course called ""Software Constraints"" where we are learning how to build good APIs. 
+
+A good example we got of a really bad API function is the socket **""public static void Select(IList checkRead, IList checkWrite, IList checkError, int microseconds);""** in c#. Which receives 3 lists of sockets, and destroys them, making the user to havet o clone all the sockets before feeding them into the Select(). It also has a microseconds timeout which is an int, that by it's turn makes that the maximum time the server can be waiting for a socket is +/- 35 Minutes (because it is an int).
+
+So what i wanted to ask, to help me making an union of what the teacher teaches compared with what experienced devs see/use.
+
+How do you categorize an API as being bad? (Some points)
+
+ - Functions names are hard to remember
+ - Functions parameters are hard to understand
+ - Bad documentation
+ - Everything being so interconnected that if you need to change 1 line of code you actualy will need to change 100 lines in other places.
+ - Functions that destroy their arguments ? (sometimes might be needed) ?
+ - Bad scalability due to ""hidden"" complexity
+ - It's required from the user/dev to build wrappers around the API so that it can be used.
+
+How do you categorize an API as being good? (Points here are the contrary of the up ones so i'm not re-writing them)",2
+4969538,02/11/2011 13:29:03,46768,12/16/2008 18:26:48,1990,67,Using OAuth to secure services that use SSO,"This is a conceptual challenge that I'm trying to wrap my mind around. Let's say I have an SSO (single sign on) service and two separate web services that use it. Let's say that the SSO login happens via OAuth, just like Login with Facebook. (Correct me if I'm wrong that they're not just requesting an OAuth access token for the site in question.)
+
+The question is then, how should the two web services expose their own APIs to third parties? Given that we've drunken the OAuth kool aid, it seems logical that the third parties should be considered OAuth consumers and they should request that the user approves an access token for them. Accepting that the question is, should the the web services handle all this OAuth stuff themselves, having the third parties register as OAuth consumers with them and only using the SSO to login the user? Or, should the web services hand all responsibility off to the SSO service? For signed requests, the web service would check the validity of the access token via the SSO's API and then process it as normal.
+
+I see pluses and minuses to both approaches. On one hand, the first option places fewer demands on the SSO and each web service can handle the authorization for their APIs their own way. On the other hand, having the SSO handle things means that the third parties can get access tokens that are valid across all the services, just like how users can login across all of them. This can enable a better user interface, as otherwise the third party might have to keep asking the user for authorization as it needs to use different web services of the system, despite the separation between the different web services being invisible to the user. Of course, then either the SSO needs to have some sort of shared permission rules or each web service will still need to enforce its own rules. Also, the SSO would probably have to take some sort of text or HTML from the web services to display when asking the user to authorize the third party service.
+
+Any suggestions? Are there any existing, publicly documented systems that do this well? Am I just over-complicating the whole thing?",api,authentication,oauth,authorization,sso,,open,0,374,8,"Using OAuth to secure services that use SSO This is a conceptual challenge that I'm trying to wrap my mind around. Let's say I have an SSO (single sign on) service and two separate web services that use it. Let's say that the SSO login happens via OAuth, just like Login with Facebook. (Correct me if I'm wrong that they're not just requesting an OAuth access token for the site in question.)
+
+The question is then, how should the two web services expose their own APIs to third parties? Given that we've drunken the OAuth kool aid, it seems logical that the third parties should be considered OAuth consumers and they should request that the user approves an access token for them. Accepting that the question is, should the the web services handle all this OAuth stuff themselves, having the third parties register as OAuth consumers with them and only using the SSO to login the user? Or, should the web services hand all responsibility off to the SSO service? For signed requests, the web service would check the validity of the access token via the SSO's API and then process it as normal.
+
+I see pluses and minuses to both approaches. On one hand, the first option places fewer demands on the SSO and each web service can handle the authorization for their APIs their own way. On the other hand, having the SSO handle things means that the third parties can get access tokens that are valid across all the services, just like how users can login across all of them. This can enable a better user interface, as otherwise the third party might have to keep asking the user for authorization as it needs to use different web services of the system, despite the separation between the different web services being invisible to the user. Of course, then either the SSO needs to have some sort of shared permission rules or each web service will still need to enforce its own rules. Also, the SSO would probably have to take some sort of text or HTML from the web services to display when asking the user to authorize the third party service.
+
+Any suggestions? Are there any existing, publicly documented systems that do this well? Am I just over-complicating the whole thing?",5
+3118415,06/25/2010 13:36:03,376305,06/25/2010 13:36:03,1,0,WildWestDomains API,I am interested in purchasing the script and your programming notes for the WildWestDomains API and certification process.  Any way you can reduce your price?,api,,,,,06/25/2010 13:42:48,off topic,1,26,2,WildWestDomains API I am interested in purchasing the script and your programming notes for the WildWestDomains API and certification process.  Any way you can reduce your price?,1
+6789849,07/22/2011 12:13:23,341497,05/13/2010 11:21:07,88,6,How can I avoiding API Access alerts in WTK,"I have made a Home - Made Nokia 5800 emulator in my WTK 2.5.1, by converting on of the WTK's devices.
+In my program, i'm using FileConnection.
+When a call made to this APi, an alert been displayed and block the screen. Since my ""emulator"" contains no buttons i can confim the access, and can not continue with debuging.
+How can I remove this alert? I'm using NetBeans 6.9.1.
+Thanks,
+Eyal.",api,java-me,emulator,alert,access,,open,0,66,9,"How can I avoiding API Access alerts in WTK I have made a Home - Made Nokia 5800 emulator in my WTK 2.5.1, by converting on of the WTK's devices.
+In my program, i'm using FileConnection.
+When a call made to this APi, an alert been displayed and block the screen. Since my ""emulator"" contains no buttons i can confim the access, and can not continue with debuging.
+How can I remove this alert? I'm using NetBeans 6.9.1.
+Thanks,
+Eyal.",5
+4753841,01/20/2011 23:25:42,4843,09/05/2008 23:02:34,2014,48,API/SDK for reading results from SilkTest 2010,"Is there any way (API/SDK/open source project etc.) for returning a list of tests, and their historical run results from Borland/Microfocus SilkTest 2010.",api,sdk,silktest,microfocus,,,open,0,23,7,"API/SDK for reading results from SilkTest 2010 Is there any way (API/SDK/open source project etc.) for returning a list of tests, and their historical run results from Borland/Microfocus SilkTest 2010.",4
+11238665,06/28/2012 05:43:56,1487570,06/28/2012 05:40:30,1,0,USSD API for mobile banking,"Need to know USSD APIs for a Mobile banking
+Need the Request - Response API Call.
+
+Geeat if i get help..
+Thanks in advance.",api,mobile,,,,06/28/2012 12:33:08,not a real question,1,21,5,"USSD API for mobile banking Need to know USSD APIs for a Mobile banking
+Need the Request - Response API Call.
+
+Geeat if i get help..
+Thanks in advance.",2
+10361912,04/28/2012 08:32:06,820496,06/29/2011 06:40:06,27,1,API For Japanese Postal Codes,"I was wondering if anyone knew of an online API that would return the address for a given postal code in Japan.  I've seen several pieces of software that, when given a postal code, will return the prefecture, city, and neighborhood. I was wondering if anyone had happened upon a service like this via someplace like Google or the Japan Postal Service.",api,street-address,postal-code,japan,,04/30/2012 03:23:03,not constructive,1,63,5,"API For Japanese Postal Codes I was wondering if anyone knew of an online API that would return the address for a given postal code in Japan.  I've seen several pieces of software that, when given a postal code, will return the prefecture, city, and neighborhood. I was wondering if anyone had happened upon a service like this via someplace like Google or the Japan Postal Service.",4
+3678396,09/09/2010 16:09:07,60281,01/29/2009 16:46:09,4741,154,Xerces-C: Migration from v2.x to v3.x?,"I would like to migrate a project (legacy code which I am not quite familiar with) from Xerces-C v2.x to v3.x.
+
+It turns out that Xerces-C v3 dropped the DOMBuilder class. The [migration archive][1] tells me this:
+
+> ...a number of DOM interfaces (DOMBuilder, DOMWriter, DOMInputSource, etc.) were replaced as part of the the final DOM Level 3 specification conformance work.
+
+That's nice. But is there any guide on how to migrate code that relies on these classes to the new API?
+
+  [1]: http://xerces.apache.org/xerces-c/migrate-archive-3.html#DeprecatedAPI300",api,migration,xerces-c,,,,open,0,82,6,"Xerces-C: Migration from v2.x to v3.x? I would like to migrate a project (legacy code which I am not quite familiar with) from Xerces-C v2.x to v3.x.
+
+It turns out that Xerces-C v3 dropped the DOMBuilder class. The [migration archive][1] tells me this:
+
+> ...a number of DOM interfaces (DOMBuilder, DOMWriter, DOMInputSource, etc.) were replaced as part of the the final DOM Level 3 specification conformance work.
+
+That's nice. But is there any guide on how to migrate code that relies on these classes to the new API?
+
+  [1]: http://xerces.apache.org/xerces-c/migrate-archive-3.html#DeprecatedAPI300",3
+2213160,02/06/2010 13:00:55,182172,09/30/2009 23:11:53,334,15,API to make phone calls,"is there an API to make phone calls in the web (maybe flash based?), like skype but without having to install software?
+
+thanks",api,telephony,,,,,open,0,22,5,"API to make phone calls is there an API to make phone calls in the web (maybe flash based?), like skype but without having to install software?
+
+thanks",2
+6916067,08/02/2011 17:31:57,288032,03/07/2010 02:26:49,421,12,What Charting API / Tool is this?,"What Charting API / Tool is this?
+
+http://wordpress.org/extend/plugins/multiple-post-thumbnails/stats/
+
+The pie chart at least is an svg canvas inside of an iframe. i am confused what they are using, but I like it.
+
+<img src=""http://img38.imageshack.us/img38/6513/picturets.png"" alt=""image"" />",api,html5,charts,,,08/02/2011 22:34:02,off topic,1,33,7,"What Charting API / Tool is this? What Charting API / Tool is this?
+
+http://wordpress.org/extend/plugins/multiple-post-thumbnails/stats/
+
+The pie chart at least is an svg canvas inside of an iframe. i am confused what they are using, but I like it.
+
+<img src=""http://img38.imageshack.us/img38/6513/picturets.png"" alt=""image"" />",3
+3672580,09/08/2010 23:04:41,290221,03/10/2010 05:25:22,908,45,The best Scala API reference?,"In my PHP years http://www.php.net was my best friend.  
+
+I think that the clean and complete API reference on that website is one of the best features of the language.  It references every function available with examples and comments from the community.
+
+I want to ask all the Scala programmers out there:  Is there something like this for the Scala programming language?
+
+Please, don't answer if you are not a Scala programmer.  I already used Google myself.  ;-)",api,scala,documentation,,,09/11/2011 23:58:44,not constructive,1,81,5,"The best Scala API reference? In my PHP years http://www.php.net was my best friend.  
+
+I think that the clean and complete API reference on that website is one of the best features of the language.  It references every function available with examples and comments from the community.
+
+I want to ask all the Scala programmers out there:  Is there something like this for the Scala programming language?
+
+Please, don't answer if you are not a Scala programmer.  I already used Google myself.  ;-)",3
+10374553,04/29/2012 18:02:20,1364455,04/29/2012 17:27:58,1,0,Windows Low-Level Graphics,"I'm new to programming. I do know C/C++ and the basics of Win32. I am now trying to do graphics, but I want the fastest connection to the screen. I realize most are going with Opengl or DirectX. But, I don't want the overhead. I want to start from scratch and control the pixel data. I know about GDI bitmap, but I'm not sure if this is best access to the data. I know that I have to talk through windows, which is the trouble. Do Opengl and DirectX compile down to the level of GDI or is there a special way they do it, do they bypass or use similar code? Please, Don't ask why I want to do this. Maybe an explanation of how this is done might help. Like how windows combines all windows to create the final image. ",api,winapi,graphics,directx,gdi,04/30/2012 09:47:01,not constructive,1,143,3,"Windows Low-Level Graphics I'm new to programming. I do know C/C++ and the basics of Win32. I am now trying to do graphics, but I want the fastest connection to the screen. I realize most are going with Opengl or DirectX. But, I don't want the overhead. I want to start from scratch and control the pixel data. I know about GDI bitmap, but I'm not sure if this is best access to the data. I know that I have to talk through windows, which is the trouble. Do Opengl and DirectX compile down to the level of GDI or is there a special way they do it, do they bypass or use similar code? Please, Don't ask why I want to do this. Maybe an explanation of how this is done might help. Like how windows combines all windows to create the final image. ",5
+7947665,10/30/2011 20:39:20,582282,01/20/2011 00:13:57,6,1,Dreamweaver DOM getCurrentLine(),"I'm currently trying to create a small panel extension that recreates the 'minimap' feature on the Sublime Text 2 code editor, but for Dreamweaver. I've successfully created the view but I want to click anywhere in the minimap and the current page will scroll down to the current line that was clicked. 
+Unfortunately, I can only find the 'getCurrentLines()' code function for the Dreamweaver DOM that returns character offsets rather that line numbers. Does anyone know how I can return the current line number from the document?
+
+I can scroll down the user document by hard-coding a value in using the theDOM.source.setCurrentLine(200); code, but it's getting that number which is stumping me! Any help is much appreciated.",api,dom,extension,dreamweaver,,,open,0,116,3,"Dreamweaver DOM getCurrentLine() I'm currently trying to create a small panel extension that recreates the 'minimap' feature on the Sublime Text 2 code editor, but for Dreamweaver. I've successfully created the view but I want to click anywhere in the minimap and the current page will scroll down to the current line that was clicked. 
+Unfortunately, I can only find the 'getCurrentLines()' code function for the Dreamweaver DOM that returns character offsets rather that line numbers. Does anyone know how I can return the current line number from the document?
+
+I can scroll down the user document by hard-coding a value in using the theDOM.source.setCurrentLine(200); code, but it's getting that number which is stumping me! Any help is much appreciated.",4

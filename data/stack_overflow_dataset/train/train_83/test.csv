@@ -1,0 +1,460 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+7784741,10/16/2011 14:00:07,488966,10/27/2010 14:34:17,1,0,How to clean-up email?,"i got email with such symbols in html code, as: 3D, =BB, = . How to get normal email? Thanks.",email,character-encoding,,,,10/16/2011 15:52:04,not a real question,1,20,4,"How to clean-up email? i got email with such symbols in html code, as: 3D, =BB, = . How to get normal email? Thanks.",2
+10389830,04/30/2012 20:00:53,37772,11/14/2008 19:31:53,549,2,How can I backup a subset of my GMail in an mbox format?,"I'd like to backup my GMail account in an mbox file.  Except, I don't want all of my GMail account.  I just want all the messages labeled `foo` (or even better, the messages which are the result of a search for `bar`--but those are equivalent).  What's the right way to go about this?",email,gmail,backup,backup-strategies,mbox,05/03/2012 08:09:17,off topic,1,56,13,"How can I backup a subset of my GMail in an mbox format? I'd like to backup my GMail account in an mbox file.  Except, I don't want all of my GMail account.  I just want all the messages labeled `foo` (or even better, the messages which are the result of a search for `bar`--but those are equivalent).  What's the right way to go about this?",5
+5231954,03/08/2011 11:40:31,649703,03/08/2011 11:24:14,1,0,I want to mail small data on mobile phone through php mail function . is this possible?,"I want to mail small data on mobile phone through php mail() function . is this possible?
+
+
+
+
+",email,,,,,04/16/2011 11:20:01,not a real question,1,17,17,"I want to mail small data on mobile phone through php mail function . is this possible? I want to mail small data on mobile phone through php mail() function . is this possible?
+
+
+
+
+",1
+3746213,09/19/2010 15:06:26,63051,02/05/2009 20:53:34,7456,105,sendgrid vs postmark,"I am evaluating 3rd party services to handle our webapps email.
+
+Requirements:
+
+* Tracking bounces
+* HTML email
+* Customer headers
+* Incoming email queue (Post email to some URL?)
+* Spam filtering of incoming email
+* Handle SMTP server issues, authentication, whitelisting, keys, etc
+* Support attached images as well as embedded images from an URL
+* Reasonable performance (don't have hard numbers but most email should pass in under 15 secs)
+* Cheap
+
+I ran across [postmark][1] and [sendgrid][2], I guess there are more. What do you think?
+
+
+  [1]: http://postmarkapp.com/
+  [2]: http://sendgrid.com",email,smtp,outsourcing,sendgrid,postmark,09/10/2011 15:40:13,not constructive,1,85,3,"sendgrid vs postmark I am evaluating 3rd party services to handle our webapps email.
+
+Requirements:
+
+* Tracking bounces
+* HTML email
+* Customer headers
+* Incoming email queue (Post email to some URL?)
+* Spam filtering of incoming email
+* Handle SMTP server issues, authentication, whitelisting, keys, etc
+* Support attached images as well as embedded images from an URL
+* Reasonable performance (don't have hard numbers but most email should pass in under 15 secs)
+* Cheap
+
+I ran across [postmark][1] and [sendgrid][2], I guess there are more. What do you think?
+
+
+  [1]: http://postmarkapp.com/
+  [2]: http://sendgrid.com",5
+4431876,12/13/2010 17:57:22,425315,08/19/2010 13:56:57,3,1,server mail logs too large,"I have a ubuntu server which handles mail via postfix. The server has recently been caned by spam emails and the mail logs are really large as a consequence. The logs are stored with timestamps and I was just wondering if I can just clear out the old logs without consequence to recover some disk space?
+
+Also, being none-too-clever about such things, I am struggling to see where to change the settings for log rotation and deletion... any clues from more knowledgable folks?",email,ubuntu,logging,postfix,,09/04/2011 15:44:10,off topic,1,82,5,"server mail logs too large I have a ubuntu server which handles mail via postfix. The server has recently been caned by spam emails and the mail logs are really large as a consequence. The logs are stored with timestamps and I was just wondering if I can just clear out the old logs without consequence to recover some disk space?
+
+Also, being none-too-clever about such things, I am struggling to see where to change the settings for log rotation and deletion... any clues from more knowledgable folks?",4
+9385396,02/21/2012 21:25:21,1162541,01/21/2012 16:57:42,101,0,User suspended for 6 days in Google Apps,"We're using Google Apps for e-mail for a large number of clients. It's very convenient and we've had little issues. However, we now suddenly have a major problem. An important e-mail addresses was suspended 'due to abuse', with no option to restore this. In the [related help document][1], Google  explains:
+
+> As a Google Apps account administrator, you can restore some suspended
+> user accounts. While you can restore users that you (or another
+> administrator) suspended, you can’t restore users that were
+> automatically suspended for exceeding any account limits or any user
+> with an abusive account status. If you can’t restore a user, they
+> might remain locked out of the account for 1 - 24 hours. Contact
+> Support if you need immediate assistance.
+
+That sounds fair. The limits appear not be be reached (user uses 0% of the account and does not send a whole lot of mail, but you never know what massive e-mail campaign do-it-yourself might undertake). So assuming this was a client-related issue, we waited 1-24 hours. In fact, we waited 6 days. But nothing has happened. The account remains suspended and can not be unsuspended by us. As recommended by other threads, I:
+
+- Changed the password of the user
+- Tried the 'unlock captcha' option
+- Tried logging in normally through webmail and then type the captcha (but it tells me account is disabled without showing a captcha).
+
+So the account remains suspended, which is a huge issue. I have tried to [contact support][2], but all the links lead to online documents, and nothing to a way to contact Google, unless you are a paid user. The forums are full of people asking for this kind of thing, sometimes being attended, and sometimes not. Does anybody know a way to get this solved on the short term? 
+
+  [1]: http://support.google.com/a/bin/answer.py?hl=en&answer=1110339
+  [2]: http://support.google.com/a/bin/static.py?hl=en&page=contacting_support.html",email,google,,,,02/21/2012 22:04:38,off topic,1,303,8,"User suspended for 6 days in Google Apps We're using Google Apps for e-mail for a large number of clients. It's very convenient and we've had little issues. However, we now suddenly have a major problem. An important e-mail addresses was suspended 'due to abuse', with no option to restore this. In the [related help document][1], Google  explains:
+
+> As a Google Apps account administrator, you can restore some suspended
+> user accounts. While you can restore users that you (or another
+> administrator) suspended, you can’t restore users that were
+> automatically suspended for exceeding any account limits or any user
+> with an abusive account status. If you can’t restore a user, they
+> might remain locked out of the account for 1 - 24 hours. Contact
+> Support if you need immediate assistance.
+
+That sounds fair. The limits appear not be be reached (user uses 0% of the account and does not send a whole lot of mail, but you never know what massive e-mail campaign do-it-yourself might undertake). So assuming this was a client-related issue, we waited 1-24 hours. In fact, we waited 6 days. But nothing has happened. The account remains suspended and can not be unsuspended by us. As recommended by other threads, I:
+
+- Changed the password of the user
+- Tried the 'unlock captcha' option
+- Tried logging in normally through webmail and then type the captcha (but it tells me account is disabled without showing a captcha).
+
+So the account remains suspended, which is a huge issue. I have tried to [contact support][2], but all the links lead to online documents, and nothing to a way to contact Google, unless you are a paid user. The forums are full of people asking for this kind of thing, sometimes being attended, and sometimes not. Does anybody know a way to get this solved on the short term? 
+
+  [1]: http://support.google.com/a/bin/answer.py?hl=en&answer=1110339
+  [2]: http://support.google.com/a/bin/static.py?hl=en&page=contacting_support.html",2
+11532724,07/18/2012 00:26:56,1509991,07/08/2012 12:18:56,1,0,Configure Lotus Domino server to receive POP mail from external source,"I am looking to trial having a mailbox on a Domino server - prior to moving the whole domain over upon successful proof of concept.
+
+The current environment has:
+
+ - Mail hosted, available via POP3 or IMAP.
+ - Domino users all send mail from one mailbox.
+
+The Domino environment has been configured as follows:
+
+ - All users share the same email file (as all emails must go from that one user).
+ - There is a global domain document with a fictitious domain, ensuring that all email, including emails on the same domain, are routed via the SMTP server.
+
+I have looked at two products to pull the emails in from the mailbox, and put them into the mail.box on the server for distribution.  I need to be careful on the configuration here as I still want emails to be routed to the external provider.
+
+My proof of concept will span 3 mailboxes, so the one alternative is to set up 3 clients, all configured to receive email and then replicate that onto the server.  This is a little messy.
+
+Anyone got any recommendations?
+
+A",email,lotus-domino,lotus,pop,,07/18/2012 11:42:50,off topic,1,180,11,"Configure Lotus Domino server to receive POP mail from external source I am looking to trial having a mailbox on a Domino server - prior to moving the whole domain over upon successful proof of concept.
+
+The current environment has:
+
+ - Mail hosted, available via POP3 or IMAP.
+ - Domino users all send mail from one mailbox.
+
+The Domino environment has been configured as follows:
+
+ - All users share the same email file (as all emails must go from that one user).
+ - There is a global domain document with a fictitious domain, ensuring that all email, including emails on the same domain, are routed via the SMTP server.
+
+I have looked at two products to pull the emails in from the mailbox, and put them into the mail.box on the server for distribution.  I need to be careful on the configuration here as I still want emails to be routed to the external provider.
+
+My proof of concept will span 3 mailboxes, so the one alternative is to set up 3 clients, all configured to receive email and then replicate that onto the server.  This is a little messy.
+
+Anyone got any recommendations?
+
+A",4
+8218424,11/21/2011 20:55:26,213154,11/17/2009 18:52:07,1299,92,Email validation at user account setup—good idea?,"Validating an email address in a web site user account setup process by sending an email and requiring user action based on its content is (was?) pretty much canonical.
+
+With spam being what it is and mitigation techniques the mess they are, we can't expect *all* new users to see and act on the validation email. A significant minority won't complete. In a new project I'm involved in, that minority is an alarming number in terms of lost users.
+
+In a quick survey of some big sites: Amazon, Facebook, PayPal and GMail don't do it. (Gmail and FB require a captcha. PayPal requires address and phone number.)
+
+If service usability is a priority, should you skip this step? Or is there a nice way to get the users who fall through the cracks on board?",email,,,,,11/23/2011 06:13:09,off topic,1,132,7,"Email validation at user account setup—good idea? Validating an email address in a web site user account setup process by sending an email and requiring user action based on its content is (was?) pretty much canonical.
+
+With spam being what it is and mitigation techniques the mess they are, we can't expect *all* new users to see and act on the validation email. A significant minority won't complete. In a new project I'm involved in, that minority is an alarming number in terms of lost users.
+
+In a quick survey of some big sites: Amazon, Facebook, PayPal and GMail don't do it. (Gmail and FB require a captcha. PayPal requires address and phone number.)
+
+If service usability is a priority, should you skip this step? Or is there a nice way to get the users who fall through the cracks on board?",1
+3240816,07/13/2010 19:41:05,265650,02/03/2010 21:05:20,177,13,What does Google get by offering free email service ?,"Google provides many services - Google Adwords, Google Adsense, Google Search APIs which are directly or indirectly generating lot of revenue for Google.
+
+But what does Google gain by providing free email service with 10's of Gigabytes of space at free of cost? And I bet the number of registered users are in millions...and obviously there are several data centers established across the world to support the same!
+
+I don't get the magic!",email,google,,,,07/13/2010 19:43:47,off topic,1,71,10,"What does Google get by offering free email service ? Google provides many services - Google Adwords, Google Adsense, Google Search APIs which are directly or indirectly generating lot of revenue for Google.
+
+But what does Google gain by providing free email service with 10's of Gigabytes of space at free of cost? And I bet the number of registered users are in millions...and obviously there are several data centers established across the world to support the same!
+
+I don't get the magic!",2
+7764830,10/14/2011 08:12:49,994999,10/14/2011 08:07:53,1,0,Mail not working properly on server,"I am having an issue with my servers mail functionality.
+First off the the web forms on my site for instance contact form take several minutes to send after clicking send. So, I know the mail is working something is just getting held up.
+
+When I try to test to see if I have the slowness on my webserver, none of the mail commands are working. I tried:
+
+    mail example@example.com
+and I receive mail: no command found.
+
+when I try 
+
+    sendmail example@example.com
+
+the terminal doesn't do anything. Anyone have any ideas?
+",email,sendmail,fedora,,,10/14/2011 21:18:46,off topic,1,93,6,"Mail not working properly on server I am having an issue with my servers mail functionality.
+First off the the web forms on my site for instance contact form take several minutes to send after clicking send. So, I know the mail is working something is just getting held up.
+
+When I try to test to see if I have the slowness on my webserver, none of the mail commands are working. I tried:
+
+    mail example@example.com
+and I receive mail: no command found.
+
+when I try 
+
+    sendmail example@example.com
+
+the terminal doesn't do anything. Anyone have any ideas?
+",3
+5480896,03/30/2011 01:26:06,415465,08/09/2010 19:18:57,304,2,What are the most common mail servers?,"I've been searching for statistics, but I've come up short.  
+
+I'm looking for statistics on mail servers where you host a custom domain.  For example, if someone has a gmail address, it's imap.gmail.com, but if you have your own domain on godaddy email, it's secureserver.net.  
+
+Are there statistics available for the most common email servers?
+
+To clarify, I'm looking for statistics on most common for custom domains (so excluding hotmail.com, gmail.com, yahoo.com, etc..)",email,statistics,mailserver,,,03/30/2011 01:56:47,off topic,1,75,7,"What are the most common mail servers? I've been searching for statistics, but I've come up short.  
+
+I'm looking for statistics on mail servers where you host a custom domain.  For example, if someone has a gmail address, it's imap.gmail.com, but if you have your own domain on godaddy email, it's secureserver.net.  
+
+Are there statistics available for the most common email servers?
+
+To clarify, I'm looking for statistics on most common for custom domains (so excluding hotmail.com, gmail.com, yahoo.com, etc..)",3
+8104790,11/12/2011 13:43:07,736757,05/03/2011 18:13:30,65,1,networks - sending email using organization's mail server,"If I send an email using my college's mail server to say my google email from my home, does my email initially get sent to my ISP's mail server which then sends an email to my college's mail server to then get sent to the google mail server
+ 
+or 
+
+do I establish a connection with the college mail server directly and have the email get sent to my google mail without going through my local mail server?
+
+thanks",email,networking,smtp,communication,,11/17/2011 13:57:50,off topic,1,77,8,"networks - sending email using organization's mail server If I send an email using my college's mail server to say my google email from my home, does my email initially get sent to my ISP's mail server which then sends an email to my college's mail server to then get sent to the google mail server
+ 
+or 
+
+do I establish a connection with the college mail server directly and have the email get sent to my google mail without going through my local mail server?
+
+thanks",4
+1809906,11/27/2009 17:37:28,11236,09/16/2008 06:29:28,3231,70,Choosing an email sending service,"I'm going to send a lot of (legitimate, not spam) emails, and would like to use an external service provider for this purpose (help track bounce rate, ""marked as spam"" emails, etc...). 
+
+We really need a reliable solution, that would have:
+
+ - Very low percentage of lost emails
+ - No mysterious delays from time of sending to the time the mail is received
+ - Good bulk API and a high throughput
+ - Good cost/email is also a factor, though I'd prefer a quality solution over a cheap one.
+
+Which service would you use? What are the benefits of yours chosen solution?",email,,,,,,open,0,100,5,"Choosing an email sending service I'm going to send a lot of (legitimate, not spam) emails, and would like to use an external service provider for this purpose (help track bounce rate, ""marked as spam"" emails, etc...). 
+
+We really need a reliable solution, that would have:
+
+ - Very low percentage of lost emails
+ - No mysterious delays from time of sending to the time the mail is received
+ - Good bulk API and a high throughput
+ - Good cost/email is also a factor, though I'd prefer a quality solution over a cheap one.
+
+Which service would you use? What are the benefits of yours chosen solution?",1
+8751419,01/05/2012 23:28:23,1133257,01/05/2012 23:10:58,1,0,"Options for an automated, office-wide photo sharing/publishing system?","The news organization I work for is trying to streamline its photo gathering operation. Right now, reporters send photos from the field via email, editors download and edit them, and producers upload them to the CMS. We want to try and replace this, though we're not exactly sure with what. There are a few main objectives: make it a simple process for the reporter, have the files accesible to multiple people, and streamline the process as much as possible.
+
+Most of our reporters take iPhone photos in the field, so an ideal solution would be developing an app that lets the photographers upload their photos directly to the CMS. This would take some time and resources, though, so I think my best temporary solution is going to be to use AppleScript to move all photo attachments to a Dropbox folder. There are many problems with this method, though, so I'm looking for some other suggestions.",email,cloud,photo,,,01/06/2012 20:35:06,off topic,1,154,8,"Options for an automated, office-wide photo sharing/publishing system? The news organization I work for is trying to streamline its photo gathering operation. Right now, reporters send photos from the field via email, editors download and edit them, and producers upload them to the CMS. We want to try and replace this, though we're not exactly sure with what. There are a few main objectives: make it a simple process for the reporter, have the files accesible to multiple people, and streamline the process as much as possible.
+
+Most of our reporters take iPhone photos in the field, so an ideal solution would be developing an app that lets the photographers upload their photos directly to the CMS. This would take some time and resources, though, so I think my best temporary solution is going to be to use AppleScript to move all photo attachments to a Dropbox folder. There are many problems with this method, though, so I'm looking for some other suggestions.",3
+7656498,10/05/2011 03:47:03,979637,10/05/2011 03:40:04,1,0,How to setup my company email system,"I want to setup a small email system for my company but I don't know how to start.
+
+Can you show me what organization must I register with them to my email not mark as bulk mail when sending to my client.
+
+Thanks",email,,,,,10/05/2011 04:23:54,off topic,1,41,7,"How to setup my company email system I want to setup a small email system for my company but I don't know how to start.
+
+Can you show me what organization must I register with them to my email not mark as bulk mail when sending to my client.
+
+Thanks",1
+3946930,10/15/2010 23:50:06,403965,07/27/2010 22:42:48,402,3,"Email form within website (not mailto link), which language?","I was wondering what language I need to use in order to create a simple form for emailing an email address on a website.
+
+What language do I need to use in order to make this happen, and does it need to be server-side?  I would imagine so.",email,programming-languages,,,,04/20/2012 12:24:00,not constructive,1,48,9,"Email form within website (not mailto link), which language? I was wondering what language I need to use in order to create a simple form for emailing an email address on a website.
+
+What language do I need to use in order to make this happen, and does it need to be server-side?  I would imagine so.",2
+8286975,11/27/2011 16:19:20,514707,11/20/2010 20:51:51,6,0,Alternative to Google Apps Email,"Primarily Google Apps offers am Email Server with:
+
+- a great Web-Interface
+- great Spam Detection
+- IMAP & Push E-Mail for iPhone with Google Sync
+
+
+I wonder what are the alternatives to Google? 
+I am looking for something which offers at lest the same features mentioned above. I don't want to self host it. 
+",email,gmail,exchange,google-apps,,11/27/2011 17:11:59,off topic,1,52,5,"Alternative to Google Apps Email Primarily Google Apps offers am Email Server with:
+
+- a great Web-Interface
+- great Spam Detection
+- IMAP & Push E-Mail for iPhone with Google Sync
+
+
+I wonder what are the alternatives to Google? 
+I am looking for something which offers at lest the same features mentioned above. I don't want to self host it. 
+",4
+9906653,03/28/2012 11:34:50,909813,08/24/2011 14:19:05,31,2,Outlook 2010 envelope icon appears in task bar although there are no unread emails,"I am using outlook 2010 SP1 and there some rules that move specific emails from inbox to sun-folders and set the email message as read; the rule works OK, but the envelope icon appears in the task bar although there is no any unread email in inbox or sub-folders.
+The envelope icon disappears only when I exit Outlook then re-open it again.
+
+Outlook version: 14.0.6112 (32-bit) SP1
+
+OS: Windows 7 Ultimate SP1
+",email,windows-7,outlook-2010,envelope,read-unread,04/23/2012 00:51:33,off topic,1,69,14,"Outlook 2010 envelope icon appears in task bar although there are no unread emails I am using outlook 2010 SP1 and there some rules that move specific emails from inbox to sun-folders and set the email message as read; the rule works OK, but the envelope icon appears in the task bar although there is no any unread email in inbox or sub-folders.
+The envelope icon disappears only when I exit Outlook then re-open it again.
+
+Outlook version: 14.0.6112 (32-bit) SP1
+
+OS: Windows 7 Ultimate SP1
+",5
+7109071,08/18/2011 14:28:37,652846,03/10/2011 03:49:55,1,1,How to show Mac Mail Name vs Email Address in Inbox?,"Since converting to Mac Lion the Mail application appears to be using the email address vs. the name (if provided) in the Inbox Panel - whether the preview is to the right or below.
+
+Ex. <address@stackoverflow.com> vs. Jon Q Address (easier to read name).
+
+This is making scanning emails tedious.  Help greatly appreciated!
+
+",email,apple,osx-lion,inbox,,08/18/2011 19:19:49,off topic,1,52,11,"How to show Mac Mail Name vs Email Address in Inbox? Since converting to Mac Lion the Mail application appears to be using the email address vs. the name (if provided) in the Inbox Panel - whether the preview is to the right or below.
+
+Ex. <address@stackoverflow.com> vs. Jon Q Address (easier to read name).
+
+This is making scanning emails tedious.  Help greatly appreciated!
+
+",4
+767276,04/20/2009 07:43:50,62830,02/05/2009 10:06:33,1140,191,What is the best and safest way to store user email addresses in the database?,"From security reasons, is it worth encrypting user emails before putting them into the database?
+
+I know we hash and salt passwords but that's another story as we do not really need password originals. With emails it is different.
+
+Knowing that the decryption key will anyway be somewhere close to the database, does it make sense to encrypt emails? I suppose if someone gets into the system, they will find the key as well, if not immediately then eventually.
+
+What are the best-practices? Are there any other options available if I run my own servers and not on a shared/virtual hosting?",email,security,web-security,encryption,,,open,0,98,15,"What is the best and safest way to store user email addresses in the database? From security reasons, is it worth encrypting user emails before putting them into the database?
+
+I know we hash and salt passwords but that's another story as we do not really need password originals. With emails it is different.
+
+Knowing that the decryption key will anyway be somewhere close to the database, does it make sense to encrypt emails? I suppose if someone gets into the system, they will find the key as well, if not immediately then eventually.
+
+What are the best-practices? Are there any other options available if I run my own servers and not on a shared/virtual hosting?",4
+8000423,11/03/2011 19:00:35,1028368,11/03/2011 18:53:59,1,0,How to start to learn SEO?,My company has started new SEO business and i am partner of the company so i should have knowledge about product so i am keen interested to learn SEO so please any one can help me out for the same.,email,seo,,,,11/03/2011 19:19:46,off topic,1,40,6,How to start to learn SEO? My company has started new SEO business and i am partner of the company so i should have knowledge about product so i am keen interested to learn SEO so please any one can help me out for the same.,2
+10957723,06/09/2012 01:38:04,1256088,03/08/2012 01:55:20,1,0,"Postfix unable to send mail externally, works internally virtual domain configuration + NAT + VPN","Alright here's the situation, trying to setup a Postfix + Dovecot + Mysql virtual domain virtual mailbox configuration. Following the script below.
+
+http://privatepaste.com/7e72ea24cd
+
+The configuration is behind a NAT firewall hosted on an external VPN endpoint. I can send mail internally on the system and recieve from the outside but when I attempt to email a gmail.com address my mail is bounced with an error of loop back. I am completely at a loss on this issue.
+
+
+Jun  9 01:22:30 Debian-60-squeeze-32-minimal postfix/smtpd[13985]: connect from     unknown[10.0.0.1]
+Jun  9 01:22:31 Debian-60-squeeze-32-minimal postfix/smtpd[13985]: 343F4843C9:client=unknown[10.0.0.1], sasl_method=PLAIN, sasl_username=admin@domain.tld
+Jun  9 01:22:31 Debian-60-squeeze-32-minimal postfix/cleanup[13989]: 343F4843C9: message-id=<4FD2A563.2040201@domain.tld>
+Jun  9 01:22:31 Debian-60-squeeze-32-minimal postfix/qmgr[13984]: 343F4843C9: from=<admin@domain.tld>, size=608, nrcpt=1 (queue active)
+Jun  9 01:22:32 Debian-60-squeeze-32-minimal postfix/smtpd[13985]: disconnect from unknown[10.0.0.1]
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtpd[13993]: connect from unknown[10.0.0.1]
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtp[13992]: warning: host gmail-smtp-in-v4v6.l.google.com[173.194.73.27]:25 greeted me with my own hostname domain
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtp[13992]: warning: host gmail-smtp-in-v4v6.l.google.com[173.194.73.27]:25 replied to HELO/EHLO with my own hostname domain
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtp[13992]: 343F4843C9: to=<testuser@gmail.com>, relay=gmail-smtp-in-v4v6.l.google.com[173.194.73.27]:25, delay=2.4, delays=0.62/0.01/1.8/0, dsn=5.4.6, status=bounced (mail for gmail.com loops back to myself)
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/cleanup[13989]: 611F9843D0: message-id=<20120609012233.611F9843D0@domain>
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/bounce[13994]: 343F4843C9: sender non-delivery notification: 611F9843D0
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/qmgr[13984]: 611F9843D0: from=<>, size=2346, nrcpt=1 (queue active)
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/qmgr[13984]: 343F4843C9: removed
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/pipe[13990]: 611F9843D0: to=<admin@domain.tld>, relay=dovecot, delay=0.02, delays=0/0/0/0.01, dsn=2.0.0, status=sent (delivered via dovecot service)
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/qmgr[13984]: 611F9843D0: removed
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtpd[13993]: disconnect from unknown[10.0.0.1]
+
+",email,postfix,bounce,loopback,dovecot,06/10/2012 16:13:49,off topic,1,245,15,"Postfix unable to send mail externally, works internally virtual domain configuration + NAT + VPN Alright here's the situation, trying to setup a Postfix + Dovecot + Mysql virtual domain virtual mailbox configuration. Following the script below.
+
+http://privatepaste.com/7e72ea24cd
+
+The configuration is behind a NAT firewall hosted on an external VPN endpoint. I can send mail internally on the system and recieve from the outside but when I attempt to email a gmail.com address my mail is bounced with an error of loop back. I am completely at a loss on this issue.
+
+
+Jun  9 01:22:30 Debian-60-squeeze-32-minimal postfix/smtpd[13985]: connect from     unknown[10.0.0.1]
+Jun  9 01:22:31 Debian-60-squeeze-32-minimal postfix/smtpd[13985]: 343F4843C9:client=unknown[10.0.0.1], sasl_method=PLAIN, sasl_username=admin@domain.tld
+Jun  9 01:22:31 Debian-60-squeeze-32-minimal postfix/cleanup[13989]: 343F4843C9: message-id=<4FD2A563.2040201@domain.tld>
+Jun  9 01:22:31 Debian-60-squeeze-32-minimal postfix/qmgr[13984]: 343F4843C9: from=<admin@domain.tld>, size=608, nrcpt=1 (queue active)
+Jun  9 01:22:32 Debian-60-squeeze-32-minimal postfix/smtpd[13985]: disconnect from unknown[10.0.0.1]
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtpd[13993]: connect from unknown[10.0.0.1]
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtp[13992]: warning: host gmail-smtp-in-v4v6.l.google.com[173.194.73.27]:25 greeted me with my own hostname domain
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtp[13992]: warning: host gmail-smtp-in-v4v6.l.google.com[173.194.73.27]:25 replied to HELO/EHLO with my own hostname domain
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtp[13992]: 343F4843C9: to=<testuser@gmail.com>, relay=gmail-smtp-in-v4v6.l.google.com[173.194.73.27]:25, delay=2.4, delays=0.62/0.01/1.8/0, dsn=5.4.6, status=bounced (mail for gmail.com loops back to myself)
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/cleanup[13989]: 611F9843D0: message-id=<20120609012233.611F9843D0@domain>
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/bounce[13994]: 343F4843C9: sender non-delivery notification: 611F9843D0
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/qmgr[13984]: 611F9843D0: from=<>, size=2346, nrcpt=1 (queue active)
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/qmgr[13984]: 343F4843C9: removed
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/pipe[13990]: 611F9843D0: to=<admin@domain.tld>, relay=dovecot, delay=0.02, delays=0/0/0/0.01, dsn=2.0.0, status=sent (delivered via dovecot service)
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/qmgr[13984]: 611F9843D0: removed
+Jun  9 01:22:33 Debian-60-squeeze-32-minimal postfix/smtpd[13993]: disconnect from unknown[10.0.0.1]
+
+",5
+9333557,02/17/2012 18:35:46,1216889,02/17/2012 18:24:45,1,0,We need a bulk non-commercial email solution,"Our SaaS software company is essentially a middle man between contractors/suppliers and the companies that hire them to do work. We need to send bulk emails to 10,000 contractors at a time in order to inform them of information they need to know in order to stay on an employing company's preferred list. These emails are non-commercial (we're not trying to sell anything to them), so we have a legal right to send them and when customers sign up they acknowledge this. The problem is if we use Constant Contact or a similar email marketing solution to send these, some of the contractors opt out and we are unable to send them an email that, for example, tells them they need to update their safety stats for the prior year by February 1 or they'll be dropped off preferred lists. We need a bulk email system that will let us remove the opt-out option. Any suggestions?",email,email-spam,bulk-email,,,02/18/2012 03:35:09,off topic,1,156,7,"We need a bulk non-commercial email solution Our SaaS software company is essentially a middle man between contractors/suppliers and the companies that hire them to do work. We need to send bulk emails to 10,000 contractors at a time in order to inform them of information they need to know in order to stay on an employing company's preferred list. These emails are non-commercial (we're not trying to sell anything to them), so we have a legal right to send them and when customers sign up they acknowledge this. The problem is if we use Constant Contact or a similar email marketing solution to send these, some of the contractors opt out and we are unable to send them an email that, for example, tells them they need to update their safety stats for the prior year by February 1 or they'll be dropped off preferred lists. We need a bulk email system that will let us remove the opt-out option. Any suggestions?",3
+2527865,03/27/2010 02:09:43,13924,09/16/2008 21:20:00,2540,93,Automatic e-mail processing,"I'd like to write a .NET application in F# to automate some of the processing of my e-mails. For example, when an order comes in my program might compute a new htpasswd from the e-mail's contents, upload it to our web server and reply to the customer with login details.
+
+How do people do this? I've tried Outlook 2007 automation but it just prompts the user for security and my attempts to get it to stop doing this have failed so I cannot automate anything with it. Is there a .NET-friendly e-mail client I can use more easily?
+
+This has been so tedious that I'm seriously considering writing my own .NET-friendly e-mail client...
+",email,transaction,processing,automatic,outlook,,open,0,111,3,"Automatic e-mail processing I'd like to write a .NET application in F# to automate some of the processing of my e-mails. For example, when an order comes in my program might compute a new htpasswd from the e-mail's contents, upload it to our web server and reply to the customer with login details.
+
+How do people do this? I've tried Outlook 2007 automation but it just prompts the user for security and my attempts to get it to stop doing this have failed so I cannot automate anything with it. Is there a .NET-friendly e-mail client I can use more easily?
+
+This has been so tedious that I'm seriously considering writing my own .NET-friendly e-mail client...
+",5
+11165195,06/22/2012 22:58:16,679339,03/27/2011 20:58:11,26,0,Best email marketing software (alternative to PHPlist),"Are there good alternatives to PHPlist out there?  Particularly in ruby on rails?
+
+We are looking to build a product like www.campaignmonitor.com
+
+thanks!",email,newsletter,mailman,phplist,,07/09/2012 01:47:32,off topic,1,22,7,"Best email marketing software (alternative to PHPlist) Are there good alternatives to PHPlist out there?  Particularly in ruby on rails?
+
+We are looking to build a product like www.campaignmonitor.com
+
+thanks!",4
+3270249,07/17/2010 04:26:19,394474,07/17/2010 04:26:19,1,0, Email has been compromised!,"I have a cart script on my website that will collect information, and then send an email to the admin and the user.  
+
+The email will auto send from info@website.com
+
+info@website does not actually exist, but on the server i have set the options to fwd any mails addressed to info@website.com to my main email.
+
+as of recently i am receiving DELIVERY FAILURE emails to info@website.com that fwd to me.
+
+something is sending emails from info@website.com randomly with spam links to emails of what seems to be legitimate email addresses.  
+
+Any way to fix this, or have i just been F*ed?
+
+thanks!",email,hacked,,,,07/17/2010 05:05:30,off topic,1,100,5," Email has been compromised! I have a cart script on my website that will collect information, and then send an email to the admin and the user.  
+
+The email will auto send from info@website.com
+
+info@website does not actually exist, but on the server i have set the options to fwd any mails addressed to info@website.com to my main email.
+
+as of recently i am receiving DELIVERY FAILURE emails to info@website.com that fwd to me.
+
+something is sending emails from info@website.com randomly with spam links to emails of what seems to be legitimate email addresses.  
+
+Any way to fix this, or have i just been F*ed?
+
+thanks!",2
+7489065,09/20/2011 17:17:33,301736,03/25/2010 13:53:40,63,0,Learning Windows 2008 webserver administration,"I am a developer and know just about Webserver administration. I have recently purchased a Windows 2008 Webserver (from Kimsufi/OVH) and would like to learn how to setup it up and use it properly. I have looked at a number websites on this subject, but would like some recommendations on which are the best, and also which books are best on this subject.
+
+I am particularly interested in FTP, Mail servers, Webhosting and registering domain names / DNS lookup
+",email,ftp,dns,webserver,windows-server-2008-r2,02/13/2012 02:27:05,off topic,1,78,5,"Learning Windows 2008 webserver administration I am a developer and know just about Webserver administration. I have recently purchased a Windows 2008 Webserver (from Kimsufi/OVH) and would like to learn how to setup it up and use it properly. I have looked at a number websites on this subject, but would like some recommendations on which are the best, and also which books are best on this subject.
+
+I am particularly interested in FTP, Mail servers, Webhosting and registering domain names / DNS lookup
+",5
+4141179,11/10/2010 04:17:26,401217,07/24/2010 19:59:36,6,0,use google to search for real email addresses,"When a spam email from a company comes in... how can i use google to search for real email adresses at the same domain to get a legitamate unsubscribe or to be an equal nuisance to the company? For example if camelbackford.com sent me unsolicited spam how can i search the internet for real email adresses like ""@camelbackford.com""to get me results like sales@camelbackford.com...  When i use google it seems the ""@"" is not specific enough to only return real possible email adresses at a domain.
+",email,search,google,,,11/10/2010 04:49:04,off topic,1,86,8,"use google to search for real email addresses When a spam email from a company comes in... how can i use google to search for real email adresses at the same domain to get a legitamate unsubscribe or to be an equal nuisance to the company? For example if camelbackford.com sent me unsolicited spam how can i search the internet for real email adresses like ""@camelbackford.com""to get me results like sales@camelbackford.com...  When i use google it seems the ""@"" is not specific enough to only return real possible email adresses at a domain.
+",3
+7779147,10/15/2011 16:37:00,409110,08/02/2010 22:26:31,344,4,"nodejs, redis and mailparser wont parse an email",I am using mailparser by andris(https://github.com/andris9/mailparser). I am sending an email via redis to an nodejs app. The mailparser for somereason is unable to parse it. What could be causing the issue?,email,node.js,email-parsing,,,,open,0,32,8,"nodejs, redis and mailparser wont parse an email I am using mailparser by andris(https://github.com/andris9/mailparser). I am sending an email via redis to an nodejs app. The mailparser for somereason is unable to parse it. What could be causing the issue?",3
+4416538,12/11/2010 11:41:48,515060,11/21/2010 11:50:46,1,0,codeigniter email error,"if i use codeigniter email libiry to send mail
+
+the mail not send
+
+and i got thes msg
+
+    We do not authorize the use of this system to transport unsolicited, 220 and/or bulk e-mail. ",email,codeigniter,,,,,open,0,36,3,"codeigniter email error if i use codeigniter email libiry to send mail
+
+the mail not send
+
+and i got thes msg
+
+    We do not authorize the use of this system to transport unsolicited, 220 and/or bulk e-mail. ",2
+10239419,04/20/2012 02:26:00,674202,03/24/2011 02:44:04,73,0,Setting Up Email Server In LAN,"Currently I have a Ubuntu VM & Windows XP VM running on my MAC host using VMwareFusion. Both of the VM are using bridged network connections. I would like to set up an email server in my local area network and could anyone advice how should I go about achieving my objectives ? What are the requirements of setting up an email server in this kind of Virtual environment ?
+
+Thanks in advance.",email,virtual-machine,,,,04/20/2012 04:20:18,off topic,1,72,6,"Setting Up Email Server In LAN Currently I have a Ubuntu VM & Windows XP VM running on my MAC host using VMwareFusion. Both of the VM are using bridged network connections. I would like to set up an email server in my local area network and could anyone advice how should I go about achieving my objectives ? What are the requirements of setting up an email server in this kind of Virtual environment ?
+
+Thanks in advance.",2
+5508259,04/01/2011 01:17:39,671432,03/22/2011 15:00:23,1,0,How can a team handle too many communication channels?,"I'm working with some friends on a project and we have way too many means of communicating.
+
+ - Email
+ - Facebook
+ - Text
+ - Call
+ - Skype
+ - IRC
+ - IM
+ - GChat
+
+There just feel like far too many communication channels to worry about.  None of these seem to be providing a unified way to get in touch.  Is there any real solution for this?",email,communication,collaboration,irc,instant-messaging,04/01/2011 01:59:11,off topic,1,67,9,"How can a team handle too many communication channels? I'm working with some friends on a project and we have way too many means of communicating.
+
+ - Email
+ - Facebook
+ - Text
+ - Call
+ - Skype
+ - IRC
+ - IM
+ - GChat
+
+There just feel like far too many communication channels to worry about.  None of these seem to be providing a unified way to get in touch.  Is there any real solution for this?",5
+6667908,07/12/2011 16:48:18,832361,07/06/2011 20:33:35,1,1,What percentage of users can't read html emails,"I'm looking for an up to date statistics of how many users wont be able to read my messages if I only send an html message.
+
+The reason I want this information, is to know if its worth to do the effort to support both html/plain-text emails.
+
+Thanks :)",email,statistics,html-email,usage,usage-statistics,07/14/2011 01:50:16,off topic,1,47,8,"What percentage of users can't read html emails I'm looking for an up to date statistics of how many users wont be able to read my messages if I only send an html message.
+
+The reason I want this information, is to know if its worth to do the effort to support both html/plain-text emails.
+
+Thanks :)",5
