@@ -1,0 +1,1761 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+4705970,01/16/2011 14:46:31,330897,05/02/2010 17:10:40,16,1,complex regular expression task,"What regular expressions do I need to extract section title(s) in a text file?  So, in the following sample text, I'd like to extract
+""Communication and Leadership"", ""1.Self-Knowledge"", ""2. Humility"" and ""(3) Clear Thinking"".  Many thanks.
+
+   Communication and Leadership
+   True leaders understand that, rather than forcing their followers into a preconceived mold, their job is to motivate and organize 
+
+followers to collectively accomplish goals that are in everyone's interests. The ability to communicate this to co-workers and followers is 
+
+critical to the effectiveness of leadership. 
+
+      1.Self-Knowledge
+Superior leaders are able to devote their skills and energies to leadership of a group because they have worked through personal issues to 
+
+the point where they know themselves thoroughly. A high level of self-knowledge is a prerequisite to effective communication skills, because 
+
+the things that you communicate as a leader are coming from within.
+
+      2. Humility
+   This subversion of personal preference requires a certain level of humility. Although popular definitions of leaders do not always see 
+
+them as humble, the most effective leaders actually are. This humility may not be expressed in self-effacement, but in a total commitment to 
+
+the goals of the organization. Humility requires an understanding of one's own relative unimportance in comparison to larger systems. 
+
+    (3) Clear Thinking
+   Clarity of thinking translates into clarity of communication. A leader whose goals or personal analysis is muddled will tend to deliver 
+
+unclear or ambiguous directions to followers, leading to confusion and dissatisfaction. A leader with a clear mind who is not ambivalent 
+
+about her purposes will communicate what needs to be done in a straightforward and unmistakable manner.",regex,,,,,01/16/2011 15:22:03,not a real question,1,289,4,"complex regular expression task What regular expressions do I need to extract section title(s) in a text file?  So, in the following sample text, I'd like to extract
+""Communication and Leadership"", ""1.Self-Knowledge"", ""2. Humility"" and ""(3) Clear Thinking"".  Many thanks.
+
+   Communication and Leadership
+   True leaders understand that, rather than forcing their followers into a preconceived mold, their job is to motivate and organize 
+
+followers to collectively accomplish goals that are in everyone's interests. The ability to communicate this to co-workers and followers is 
+
+critical to the effectiveness of leadership. 
+
+      1.Self-Knowledge
+Superior leaders are able to devote their skills and energies to leadership of a group because they have worked through personal issues to 
+
+the point where they know themselves thoroughly. A high level of self-knowledge is a prerequisite to effective communication skills, because 
+
+the things that you communicate as a leader are coming from within.
+
+      2. Humility
+   This subversion of personal preference requires a certain level of humility. Although popular definitions of leaders do not always see 
+
+them as humble, the most effective leaders actually are. This humility may not be expressed in self-effacement, but in a total commitment to 
+
+the goals of the organization. Humility requires an understanding of one's own relative unimportance in comparison to larger systems. 
+
+    (3) Clear Thinking
+   Clarity of thinking translates into clarity of communication. A leader whose goals or personal analysis is muddled will tend to deliver 
+
+unclear or ambiguous directions to followers, leading to confusion and dissatisfaction. A leader with a clear mind who is not ambivalent 
+
+about her purposes will communicate what needs to be done in a straightforward and unmistakable manner.",1
+5559108,04/05/2011 22:02:34,179362,09/26/2009 02:04:43,241,0,Regular Expressions with conditions,"I have a string that looks like:
+
+    this is a string [[and]] it is [[awesome|amazing]]
+
+I have the following regular expression so far:
+
+    (?<mygroup>(?<=\[\[).+?(?=\]\]))
+
+I am basically trying to capture everything inside the brackets. However, I need to add another condition that says: If the matched result contains a pipe delimiter then only return the word to the right of the pipe delimiter. If there is no pipe then just return everything inside the brackets.
+
+The parsing result I am looking for given the example above should look like:
+
+and
+amazing
+
+Any input is appreciated.",regex,,,,,,open,0,95,4,"Regular Expressions with conditions I have a string that looks like:
+
+    this is a string [[and]] it is [[awesome|amazing]]
+
+I have the following regular expression so far:
+
+    (?<mygroup>(?<=\[\[).+?(?=\]\]))
+
+I am basically trying to capture everything inside the brackets. However, I need to add another condition that says: If the matched result contains a pipe delimiter then only return the word to the right of the pipe delimiter. If there is no pipe then just return everything inside the brackets.
+
+The parsing result I am looking for given the example above should look like:
+
+and
+amazing
+
+Any input is appreciated.",1
+11551172,07/18/2012 22:15:11,1536229,07/18/2012 21:50:55,1,0,How to use regular expressions to return only a part of a file name?,"I am having trouble to create a regular expression that returns only a part of a string.
+
+Passing the following strings:
+
+    /path/of/the/file/1 - 2 - Lecture 1.2_ Max Bense (13_49).mp4
+    /path/of/the/file/1 - 3 - Lecture 1.3_ Michael Friedman (12_15).mp4
+    /path/of/the/file/2 - 1 - Lecture 2.1_ Paul Feyerabend (12_55).mp4
+    /path/of/the/file/2 - 2 - Lecture 2.2_ Alhazen (11_37).mp4
+    /path/of/the/file/3 - 2 - Lecture 3.2_ Study Case - Dominicus Gundissalinus (14_30).mp4 
+    /path/of/the/file/3 - 3 - Lecture 3.3_ Study Case - Carl Friedrich von Weizsacker (11_48).mp4
+
+
+It should return only the following parts respectively:
+
+    Max Bense
+    Michael Friedman
+    Paul Feyerabend
+    Alhazen
+    Study Case - Dominicus Gundissalinus
+    Study Case - Carl Friedrich von Weizsacker",regex,sed,grep,expression,,,open,0,144,14,"How to use regular expressions to return only a part of a file name? I am having trouble to create a regular expression that returns only a part of a string.
+
+Passing the following strings:
+
+    /path/of/the/file/1 - 2 - Lecture 1.2_ Max Bense (13_49).mp4
+    /path/of/the/file/1 - 3 - Lecture 1.3_ Michael Friedman (12_15).mp4
+    /path/of/the/file/2 - 1 - Lecture 2.1_ Paul Feyerabend (12_55).mp4
+    /path/of/the/file/2 - 2 - Lecture 2.2_ Alhazen (11_37).mp4
+    /path/of/the/file/3 - 2 - Lecture 3.2_ Study Case - Dominicus Gundissalinus (14_30).mp4 
+    /path/of/the/file/3 - 3 - Lecture 3.3_ Study Case - Carl Friedrich von Weizsacker (11_48).mp4
+
+
+It should return only the following parts respectively:
+
+    Max Bense
+    Michael Friedman
+    Paul Feyerabend
+    Alhazen
+    Study Case - Dominicus Gundissalinus
+    Study Case - Carl Friedrich von Weizsacker",4
+4880402,02/02/2011 22:01:34,471136,10/09/2010 20:01:19,48,0,How to auto generate regex from given list of strings?,"You are given 2 lists of Strings - A and B. Find the shortest regex that matches all strings in A and none in B. Note that this regex can match/not-match other strings that are not in A and not in B. For simplicity, we can assume the that our alphabet size is just 2 characters - 0 and 1. Also only these operators are allowed:
+
+\* - 0 or more<br/>
+? - 0 or 1<br/>
++ - 1 or more<br/>
+() - brackets<br/>
+
+The regex not operator is not allowed. Here are some examples:<br/>
+A=[00,01,10] <br/>
+B=[11]<br/>
+answer = 1*0+1*<br/>
+<br/>
+A=[00,01,11] <br/>
+B=[10]<br/>
+answer = 0*1*<br/>
+
+",regex,algorithm,,,,02/01/2012 20:23:53,not a real question,1,96,10,"How to auto generate regex from given list of strings? You are given 2 lists of Strings - A and B. Find the shortest regex that matches all strings in A and none in B. Note that this regex can match/not-match other strings that are not in A and not in B. For simplicity, we can assume the that our alphabet size is just 2 characters - 0 and 1. Also only these operators are allowed:
+
+\* - 0 or more<br/>
+? - 0 or 1<br/>
++ - 1 or more<br/>
+() - brackets<br/>
+
+The regex not operator is not allowed. Here are some examples:<br/>
+A=[00,01,10] <br/>
+B=[11]<br/>
+answer = 1*0+1*<br/>
+<br/>
+A=[00,01,11] <br/>
+B=[10]<br/>
+answer = 0*1*<br/>
+
+",2
+8330086,11/30/2011 17:15:14,1073871,11/30/2011 17:09:17,1,0,Regex .NET Multiline Capture,"I would like to capture the word ""ABADDON"", up to (not including ABAFT). I would then like to repeat this capture with ""ABAFT"", up to the next word (not including the next word). The words are capitalized.
+
+    ABADDON
+    A*bad""don, n. Etym: [Heb. abaddon destruction, abyss, fr. abad to be
+    lost, to perish.]
+
+    1. The destroyer, or angel of the bottomless pit; -- the same as
+    Apollyon and Asmodeus.
+
+    2. Hell; the bottomless pit. [Poetic]
+    In all her gates, Abaddon rues Thy bold attempt. Milton.
+
+    ABAFT
+    A*baft"", prep. Etym: [Pref. a-on + OE. baft, baften, biaften, AS.
+    beæftan; be by + æftan behind. See After, Aft, By.] (Naut.)
+
+    Defn: Behind; toward the stern from; as, abaft the wheelhouse. Abaft
+    the beam. See under Beam.",regex,,,,,12/01/2011 03:55:55,not a real question,1,159,4,"Regex .NET Multiline Capture I would like to capture the word ""ABADDON"", up to (not including ABAFT). I would then like to repeat this capture with ""ABAFT"", up to the next word (not including the next word). The words are capitalized.
+
+    ABADDON
+    A*bad""don, n. Etym: [Heb. abaddon destruction, abyss, fr. abad to be
+    lost, to perish.]
+
+    1. The destroyer, or angel of the bottomless pit; -- the same as
+    Apollyon and Asmodeus.
+
+    2. Hell; the bottomless pit. [Poetic]
+    In all her gates, Abaddon rues Thy bold attempt. Milton.
+
+    ABAFT
+    A*baft"", prep. Etym: [Pref. a-on + OE. baft, baften, biaften, AS.
+    beæftan; be by + æftan behind. See After, Aft, By.] (Naut.)
+
+    Defn: Behind; toward the stern from; as, abaft the wheelhouse. Abaft
+    the beam. See under Beam.",1
+9161979,02/06/2012 14:53:13,1192137,02/06/2012 11:22:50,1,0,Perl: using grep to extract a pattern matching substr of a file line,"i have the following content in a file:
+
+gi|***170570902***|gb|ABLA01000008.1|  0.457  24  0.581  24  0.876  11  0.744   0.669 Y  0.450      SignalP-noTM
+
+For every line in the file I would like to extract the number highlighted above and push it to an array. I'm trying to grep this number and extract it from the matched line, but I don't seem to find the right way to do it.
+
+Here's what I have in mind:
+
+    while ($sec_gi = <IN_SIDS>){
+	    $sec_gi =~ s/[0-9]{5,}/$&/;
+	    print $sec_gi.""\n"";
+    }
+
+$& is supposed to be the exact match string. With this I get the matched line EXCEPT the match pattern, which is exactly the opposite to what I want. 
+
+Could anyone pls help?
+
+Thanks!",regex,perl,grep,,,,open,0,138,13,"Perl: using grep to extract a pattern matching substr of a file line i have the following content in a file:
+
+gi|***170570902***|gb|ABLA01000008.1|  0.457  24  0.581  24  0.876  11  0.744   0.669 Y  0.450      SignalP-noTM
+
+For every line in the file I would like to extract the number highlighted above and push it to an array. I'm trying to grep this number and extract it from the matched line, but I don't seem to find the right way to do it.
+
+Here's what I have in mind:
+
+    while ($sec_gi = <IN_SIDS>){
+	    $sec_gi =~ s/[0-9]{5,}/$&/;
+	    print $sec_gi.""\n"";
+    }
+
+$& is supposed to be the exact match string. With this I get the matched line EXCEPT the match pattern, which is exactly the opposite to what I want. 
+
+Could anyone pls help?
+
+Thanks!",3
+1021710,06/20/2009 14:21:43,11208,09/16/2008 06:12:22,5065,297,"regex help: how to eliminate dots from filenames, except for the file extension","I have a bunch of files that look like this:
+
+    A.File.With.Dots.Instead.Of.Spaces.Extension
+
+Which I want to transform via a regex into:
+
+    A File With Dots Instead Of Spaces.Extension
+
+It has to be in one regex (because I want to use it with Total Commander's batch rename tool).
+
+Help me, regex gurus, you're my only hope.
+
+",regex,,,,,,open,0,57,13,"regex help: how to eliminate dots from filenames, except for the file extension I have a bunch of files that look like this:
+
+    A.File.With.Dots.Instead.Of.Spaces.Extension
+
+Which I want to transform via a regex into:
+
+    A File With Dots Instead Of Spaces.Extension
+
+It has to be in one regex (because I want to use it with Total Commander's batch rename tool).
+
+Help me, regex gurus, you're my only hope.
+
+",1
+5887978,05/04/2011 18:13:05,738563,05/04/2011 18:13:05,1,0,javascript - string replacement,"Given only the email address, I'm trying to remove the email, corresponding person's name and the following comma (if exist) from the string regardless where in the string the email appears.
+
+`var str = 'Peter Johnson <aa156@ss.edu>, Bob Cooper-Junior <aa1233@ss.edu>, John Michaels <qq@zzz.edu>';`
+
+so if I want to remove `'aa1233@ss.edu'` I would end-up with:
+
+`var str = 'Peter Johnson <aa156@ss.edu>, John Michaels <qq@zzz.edu>';`
+
+Thanks",regex,,,,,,open,0,60,4,"javascript - string replacement Given only the email address, I'm trying to remove the email, corresponding person's name and the following comma (if exist) from the string regardless where in the string the email appears.
+
+`var str = 'Peter Johnson <aa156@ss.edu>, Bob Cooper-Junior <aa1233@ss.edu>, John Michaels <qq@zzz.edu>';`
+
+so if I want to remove `'aa1233@ss.edu'` I would end-up with:
+
+`var str = 'Peter Johnson <aa156@ss.edu>, John Michaels <qq@zzz.edu>';`
+
+Thanks",1
+9213057,02/09/2012 14:51:51,980557,10/05/2011 14:26:49,3,1,"Regexp replace all dots in string, except when between round braces","I'm trying to find the right regexp to do the following:
+
+input: '$MM.Player.Panning(1, 0.1)';
+output '$MM->Player->Panning(1, 0.1)';
+
+I can't figure out how to replace the dots with '->', without replacing dots between the round braces.
+
+Any input or suggestions would be highly appreciated",regex,,,,,,open,0,39,11,"Regexp replace all dots in string, except when between round braces I'm trying to find the right regexp to do the following:
+
+input: '$MM.Player.Panning(1, 0.1)';
+output '$MM->Player->Panning(1, 0.1)';
+
+I can't figure out how to replace the dots with '->', without replacing dots between the round braces.
+
+Any input or suggestions would be highly appreciated",1
+7458319,09/17/2011 22:42:36,914705,08/26/2011 19:34:45,616,42,a regular expression for an anagram,"Problem: write a program in any language which, given a string of characters, generates a regex that matches any anagram of the input string.  The program must be shorter than the list of all possible anagrams, and the length of the program should grow ""slowly"" as the input string grows (ideally linearly, but possibly n ln n).",regex,complexity,,,,,open,0,58,6,"a regular expression for an anagram Problem: write a program in any language which, given a string of characters, generates a regex that matches any anagram of the input string.  The program must be shorter than the list of all possible anagrams, and the length of the program should grow ""slowly"" as the input string grows (ideally linearly, but possibly n ln n).",2
+5185983,03/03/2011 20:10:19,612987,02/11/2011 11:52:55,74,9,notepad++ delete all lines starting form # or ;,"using notepad++ 
+
+> how to remove all lines starting from
+> character # or ;
+
+",regex,remove,notepad++,howto,,,open,0,14,9,"notepad++ delete all lines starting form # or ; using notepad++ 
+
+> how to remove all lines starting from
+> character # or ;
+
+",4
+6619126,07/08/2011 01:46:49,785129,06/05/2011 21:11:06,18,0,Simple regular expression question...,"I basically want to learn how to extract a number from between 2 words...
+
+For example I want '2000' from the phrase 'around 2000 years'.
+
+How would I do this?
+
+Cheers",regex,,,,,,open,0,28,4,"Simple regular expression question... I basically want to learn how to extract a number from between 2 words...
+
+For example I want '2000' from the phrase 'around 2000 years'.
+
+How would I do this?
+
+Cheers",1
+2245282,02/11/2010 15:01:45,120578,06/10/2009 14:44:16,2307,158,What is the longest regular expression you have seen,"I just found an extremely long regular expression (6000+ characters) for a WordPress email validation.  That got me thinking, what is the longest one you have ever actually seen that is being used in a production environment.",regex,,,,,02/13/2010 16:31:37,not a real question,1,38,9,"What is the longest regular expression you have seen I just found an extremely long regular expression (6000+ characters) for a WordPress email validation.  That got me thinking, what is the longest one you have ever actually seen that is being used in a production environment.",1
+10414765,05/02/2012 13:29:05,1232532,02/25/2012 13:05:15,12,0,How to validate user inputs using regexp,"I need to validate the  user input using regular expression. It should be a number with 6 or 7 digit (between 0-9), no trailing and leading spaces should be allowed. Currently i am using ""^\d{6,7}"" the problem here is even if i type 6 or 7 digits am getting the error message.
+
+Can anyone help me?",regex,,,,,06/21/2012 00:50:19,not a real question,1,56,7,"How to validate user inputs using regexp I need to validate the  user input using regular expression. It should be a number with 6 or 7 digit (between 0-9), no trailing and leading spaces should be allowed. Currently i am using ""^\d{6,7}"" the problem here is even if i type 6 or 7 digits am getting the error message.
+
+Can anyone help me?",1
+7182782,08/24/2011 21:53:27,825780,07/02/2011 05:13:00,113,14,Django is giving trouble on urls to catch and forward to a view. (slug fields),"I am currently making `views` called by `slug`s on `django` but I seem to have some troubles on that.
+
+
+Suppose I have database entries like `de` `ce` `ceiling` (`slug fields`). 
+Now when I call, `myapp/ce` or `myapp/de`. It returns the view I want. But when I call `myapp/ceiling`, it returns `404`.
+
+`No sculpture found matching the query`
+
+It catches the url though.
+
+I failed to understand this behavior.
+
+My code is as follows:  
+`urls.py`
+-
+    urlpatterns = patterns('sculptures.views',
+                (r'^$', SculptureListView.as_view()),
+                (r'^(?P<slug>[\w-]+)/$', SculptureDetailView.as_view()),
+            )
+
+`views.py`
+-
+    class SculptureDetailView(DetailView):
+        context_object_name = 'sculpture'
+        def get_queryset(self):
+            sculpture_slug = get_object_or_404(Sculpture, slug__iexact=self.kwargs['slug'])
+            return Sculpture.objects.filter(slug=sculpture_slug)
+
+",regex,django,django-views,,,,open,0,174,15,"Django is giving trouble on urls to catch and forward to a view. (slug fields) I am currently making `views` called by `slug`s on `django` but I seem to have some troubles on that.
+
+
+Suppose I have database entries like `de` `ce` `ceiling` (`slug fields`). 
+Now when I call, `myapp/ce` or `myapp/de`. It returns the view I want. But when I call `myapp/ceiling`, it returns `404`.
+
+`No sculpture found matching the query`
+
+It catches the url though.
+
+I failed to understand this behavior.
+
+My code is as follows:  
+`urls.py`
+-
+    urlpatterns = patterns('sculptures.views',
+                (r'^$', SculptureListView.as_view()),
+                (r'^(?P<slug>[\w-]+)/$', SculptureDetailView.as_view()),
+            )
+
+`views.py`
+-
+    class SculptureDetailView(DetailView):
+        context_object_name = 'sculpture'
+        def get_queryset(self):
+            sculpture_slug = get_object_or_404(Sculpture, slug__iexact=self.kwargs['slug'])
+            return Sculpture.objects.filter(slug=sculpture_slug)
+
+",3
+3887492,10/08/2010 03:28:59,469816,10/08/2010 03:28:59,1,0,ANTLR match to end of input,"I'm trying to match my grammar to an entire string, and have it error out if it cannot consume the entire input. Basically, this pseudo regex:
+
+    \whitespace*  [a-zA-Z]+  [-]?  [a-zA-Z]+ \whitespace* $
+
+According to <a href=""http://stackoverflow.com/questions/2147964/antlr-how-to-detect-rubbish-data-at-end-of-input"">this</a>, EOF should work. So, consider this grammar:
+
+start 	:	CHARS EOF;
+CHARS	:	('a'..'z')+;
+
+If I set input to ""hello"" in this code:
+
+            var ss = new Antlr.Runtime.ANTLRStringStream(input);
+            var lex = new autocompleteLexer(ss);
+            var tokens = new CommonTokenStream(lex);
+            var parser = new autocompleteParser(tokens);
+            return (BaseTree)(parser.start().Tree);
+
+I get an AST with two children, HELLO and EOF, as expected. But if I set the input to say ""hello#"", it gives back the same tree, and doesn't complain about the hash at all. I'm not sure what I'm doing wrong. ",regex,parsing,input,antlr,,,open,0,177,6,"ANTLR match to end of input I'm trying to match my grammar to an entire string, and have it error out if it cannot consume the entire input. Basically, this pseudo regex:
+
+    \whitespace*  [a-zA-Z]+  [-]?  [a-zA-Z]+ \whitespace* $
+
+According to <a href=""http://stackoverflow.com/questions/2147964/antlr-how-to-detect-rubbish-data-at-end-of-input"">this</a>, EOF should work. So, consider this grammar:
+
+start 	:	CHARS EOF;
+CHARS	:	('a'..'z')+;
+
+If I set input to ""hello"" in this code:
+
+            var ss = new Antlr.Runtime.ANTLRStringStream(input);
+            var lex = new autocompleteLexer(ss);
+            var tokens = new CommonTokenStream(lex);
+            var parser = new autocompleteParser(tokens);
+            return (BaseTree)(parser.start().Tree);
+
+I get an AST with two children, HELLO and EOF, as expected. But if I set the input to say ""hello#"", it gives back the same tree, and doesn't complain about the hash at all. I'm not sure what I'm doing wrong. ",4
+8849357,01/13/2012 10:48:29,197420,10/27/2009 15:12:15,512,32,Add quotation at the start and end of each line in Nextpad++,"I have a list (in a .txt file) which I'd like to quickly convert to JavaScript Syntax, so I want to take the following:
+
+    AliceBlue
+    AntiqueWhite
+    Aqua
+    Aquamarine
+    Azure
+    Beige
+    Bisque
+    Black
+    BlanchedAlmond
+
+and convert it to an array literal...
+
+    var myArray = [""AliceBlue"", ""AntiqueWhite"", ... ]
+
+I have the list in notepad++ and I need a reg expression to add the `""` at the start of the line and `"",` at the end and remove the line break... does anyone have a quick fix to do this? I'm terrible with RegEx.
+
+I often have to perform such tasks so to know how to do this would be a great benefit to me. Many thanks",regex,text-editor,notepad++,,,,open,0,142,12,"Add quotation at the start and end of each line in Nextpad++ I have a list (in a .txt file) which I'd like to quickly convert to JavaScript Syntax, so I want to take the following:
+
+    AliceBlue
+    AntiqueWhite
+    Aqua
+    Aquamarine
+    Azure
+    Beige
+    Bisque
+    Black
+    BlanchedAlmond
+
+and convert it to an array literal...
+
+    var myArray = [""AliceBlue"", ""AntiqueWhite"", ... ]
+
+I have the list in notepad++ and I need a reg expression to add the `""` at the start of the line and `"",` at the end and remove the line break... does anyone have a quick fix to do this? I'm terrible with RegEx.
+
+I often have to perform such tasks so to know how to do this would be a great benefit to me. Many thanks",3
+1375806,09/03/2009 20:36:42,25515,10/06/2008 15:01:43,1035,55,Help simplifying this Regular Expression pattern,"I have this Regular Expression that matches the following strings:
+
+    <!-- 09-02-2009 --->
+    <!-- 09-02-2009 12:00:00 -->
+    <!-- 09-02-2009 12:00:00 A -->
+    <!-- 09-02-2009 12:00:00 AM -->
+
+Here is the pattern:
+
+    <!-- (?<month>\d{2}?)-(?<day>\d{2}?)-(?<year>\d{4}?)(?:(?: ?\d{2}:?){3}?(?: ?[aApP][mM]?)?)? --->
+
+Is there anything I can do to simplify this pattern?
+
+Thanks!",regex,,,,,,open,0,59,6,"Help simplifying this Regular Expression pattern I have this Regular Expression that matches the following strings:
+
+    <!-- 09-02-2009 --->
+    <!-- 09-02-2009 12:00:00 -->
+    <!-- 09-02-2009 12:00:00 A -->
+    <!-- 09-02-2009 12:00:00 AM -->
+
+Here is the pattern:
+
+    <!-- (?<month>\d{2}?)-(?<day>\d{2}?)-(?<year>\d{4}?)(?:(?: ?\d{2}:?){3}?(?: ?[aApP][mM]?)?)? --->
+
+Is there anything I can do to simplify this pattern?
+
+Thanks!",1
+11211921,06/26/2012 16:33:56,1421543,05/28/2012 10:56:14,14,6,How to delete files that are not mp3?,"I have a mp3 Player. I have connected it to my PC which has Ubuntu as an OS.
+I want to delete all the files that are not .mp3.
+
+I know that for deleting them the command is rm *.mp3, but what's the combination for negating this?
+I've tried: rm ^.mp3, ^mp3 ^[mp3], but they didn't work! Any suggestion?",regex,linux,ubuntu,rm,,07/23/2012 05:44:54,off topic,1,56,8,"How to delete files that are not mp3? I have a mp3 Player. I have connected it to my PC which has Ubuntu as an OS.
+I want to delete all the files that are not .mp3.
+
+I know that for deleting them the command is rm *.mp3, but what's the combination for negating this?
+I've tried: rm ^.mp3, ^mp3 ^[mp3], but they didn't work! Any suggestion?",4
+7974093,11/01/2011 23:18:47,1019787,10/29/2011 13:02:36,1,0,Matching balanced parenthesis in Perl regex,"I have an expression which I need to split and store in an array:
+
+    aaa=""bbb{ccc}ddd"" { aa=""bb,cc"" { a=""b"", c=""d"" } }, aaa=""bbb{}"" { aa=""b}b"" }, aaa=""bbb,ccc""
+
+It should look like this once split and stored in the array:
+
+    aaa=""bbb{ccc}ddd"" { aa=""bb,cc"" { a=""b"", c=""d"" } }
+    aaa=""bbb{}"" { aa=""b}b"" }
+    aaa=""bbb,ccc""
+
+I use Perl version 5.8 and could someone resolve this?",regex,per,,,,,open,0,72,6,"Matching balanced parenthesis in Perl regex I have an expression which I need to split and store in an array:
+
+    aaa=""bbb{ccc}ddd"" { aa=""bb,cc"" { a=""b"", c=""d"" } }, aaa=""bbb{}"" { aa=""b}b"" }, aaa=""bbb,ccc""
+
+It should look like this once split and stored in the array:
+
+    aaa=""bbb{ccc}ddd"" { aa=""bb,cc"" { a=""b"", c=""d"" } }
+    aaa=""bbb{}"" { aa=""b}b"" }
+    aaa=""bbb,ccc""
+
+I use Perl version 5.8 and could someone resolve this?",2
+9136738,02/03/2012 23:09:26,727074,04/27/2011 10:52:56,484,30,Proof that RegEx should not be used for HTML parsing and that an XML parser should be used instead,"The general consensus is never use RegEx for HTML parsing; an XML parser should be used instead.  
+
+Is there any commendable papers/theses out there which states/prove this?
+
+
+----------
+
+
+After reading [this answer](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) to the [""RegEx match open tags except XHTML self-contained tags""](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags) question and the subsequent ['Parsing Html The Cthulhu Way'](http://www.codinghorror.com/blog/2009/11/parsing-html-the-cthulhu-way.html) blog post by Jeff Atwood, I am a bit annoyed that the head of our Computer Science department taught us 2/3 modules on parsing HTML with RegEx. I'm looking for something I can approach the department with so we can 'save the children'. I don't think they'd change course content based on a blog/SO post. It would be real nice if the documentation proves that an XML parser is the way forward also.",regex,xml-parsing,html-parsing,computer-science,education,02/04/2012 15:09:30,not constructive,1,123,19,"Proof that RegEx should not be used for HTML parsing and that an XML parser should be used instead The general consensus is never use RegEx for HTML parsing; an XML parser should be used instead.  
+
+Is there any commendable papers/theses out there which states/prove this?
+
+
+----------
+
+
+After reading [this answer](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) to the [""RegEx match open tags except XHTML self-contained tags""](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags) question and the subsequent ['Parsing Html The Cthulhu Way'](http://www.codinghorror.com/blog/2009/11/parsing-html-the-cthulhu-way.html) blog post by Jeff Atwood, I am a bit annoyed that the head of our Computer Science department taught us 2/3 modules on parsing HTML with RegEx. I'm looking for something I can approach the department with so we can 'save the children'. I don't think they'd change course content based on a blog/SO post. It would be real nice if the documentation proves that an XML parser is the way forward also.",5
+2824291,05/13/2010 03:41:33,24802,10/03/2008 12:15:13,768,43,Regex to check if exact string exists,"I am looking for a way to check if an exact string match exists in another string using Regex or any better method suggested. I understand that you tell regex to match a space or any other non-word character at the beginning or end of a string. However, I don't know exactly how to set it up.
+
+Search String: `t`
+
+String 1: `Hello World, Nice to see you! t`  
+String 2: `Hello World, Nice to see you!`  
+String 3: `T Hello World, Nice to see you!`  
+
+I would like to use the search string and compare it to String 1, String 2 and String 3 and only get a positive match from String 1 and String 3 but not from String 2.
+
+Requirements:  
+Search String may be at any character position in the Subject.  
+There may or may not be a white-space character before or after it.  
+I do not want it to match if it is part of another string; such as part of a word.
+
+For the sake of this question:
+I think I would do this using this pattern: `/\bt\b/gi`  
+
+`/\b{$search_string}\b/gi`  
+
+Does this look right? Can it be made better? Any situations where this pattern wouldn't work?  
+Additional info: this will be used in PHP 5",regex,php,exact-match,,,,open,0,213,7,"Regex to check if exact string exists I am looking for a way to check if an exact string match exists in another string using Regex or any better method suggested. I understand that you tell regex to match a space or any other non-word character at the beginning or end of a string. However, I don't know exactly how to set it up.
+
+Search String: `t`
+
+String 1: `Hello World, Nice to see you! t`  
+String 2: `Hello World, Nice to see you!`  
+String 3: `T Hello World, Nice to see you!`  
+
+I would like to use the search string and compare it to String 1, String 2 and String 3 and only get a positive match from String 1 and String 3 but not from String 2.
+
+Requirements:  
+Search String may be at any character position in the Subject.  
+There may or may not be a white-space character before or after it.  
+I do not want it to match if it is part of another string; such as part of a word.
+
+For the sake of this question:
+I think I would do this using this pattern: `/\bt\b/gi`  
+
+`/\b{$search_string}\b/gi`  
+
+Does this look right? Can it be made better? Any situations where this pattern wouldn't work?  
+Additional info: this will be used in PHP 5",3
+32282,08/28/2008 13:34:55,2820,08/25/2008 11:37:16,40,4,Regex Testing Tools,"I know of [The Regulator][1] for testing regular expressions.  And there's also [RegExr][2] for testing regular expressions as well.  Does anyone know of other regex testing tools?  Do any of these tools allow you to specify which RE engine you're testing against?
+
+
+  [1]: http://sourceforge.net/projects/regulator
+  [2]: http://gskinner.com/RegExr/",regex,,,,,03/21/2012 11:02:29,not constructive,1,51,3,"Regex Testing Tools I know of [The Regulator][1] for testing regular expressions.  And there's also [RegExr][2] for testing regular expressions as well.  Does anyone know of other regex testing tools?  Do any of these tools allow you to specify which RE engine you're testing against?
+
+
+  [1]: http://sourceforge.net/projects/regulator
+  [2]: http://gskinner.com/RegExr/",1
+2269479,02/15/2010 22:46:36,147215,07/29/2009 15:28:59,60,4,regex.replace Querystring parameters,"I don't know if this is even possible, I have the following regular expression (?<=[\?|\&])(?<key>[^\?=\&\#]+)=?(?<value>[^\?=\&\#]*)& which splits a URL into key/value pairs.  I would like to use this in a replace function to build some markup:
+
+    string sTest = ""test.aspx?width=100&height=200&"";
+                ltTest.Text = Regex.Replace(sTest, @""(?<=[\?|\&])(?<key>[^\?=\&\#]+)=?(?<value>[^\?=\&\#]*)&"",
+                                                    ""< div style='width:$2px; height:$2px; border:solid 1px red;'>asdf</div>"");
+
+
+this is generating:
+
+    
+
+    test.aspx?<div style='width:100px; height:100px; border:solid 1px red;'>asdf</div><div style='width:200px; height:200px; border:solid 1px red;'>asdf</div>
+
+Any ideas?
+
+Thanks in advance!",regex,c#,replace,,,,open,0,144,3,"regex.replace Querystring parameters I don't know if this is even possible, I have the following regular expression (?<=[\?|\&])(?<key>[^\?=\&\#]+)=?(?<value>[^\?=\&\#]*)& which splits a URL into key/value pairs.  I would like to use this in a replace function to build some markup:
+
+    string sTest = ""test.aspx?width=100&height=200&"";
+                ltTest.Text = Regex.Replace(sTest, @""(?<=[\?|\&])(?<key>[^\?=\&\#]+)=?(?<value>[^\?=\&\#]*)&"",
+                                                    ""< div style='width:$2px; height:$2px; border:solid 1px red;'>asdf</div>"");
+
+
+this is generating:
+
+    
+
+    test.aspx?<div style='width:100px; height:100px; border:solid 1px red;'>asdf</div><div style='width:200px; height:200px; border:solid 1px red;'>asdf</div>
+
+Any ideas?
+
+Thanks in advance!",3
+6929848,08/03/2011 16:27:43,506236,11/12/2010 20:30:46,1905,72,Regular Expression Help,"The following regular expression is in use to validate email addresses:
+
+    ^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$
+
+I need to modify it to allow apostrophe's in the username (before the @ symbol).",regex,,,,,,open,0,29,3,"Regular Expression Help The following regular expression is in use to validate email addresses:
+
+    ^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$
+
+I need to modify it to allow apostrophe's in the username (before the @ symbol).",1
+6844785,07/27/2011 13:05:03,523517,11/29/2010 06:06:02,20,1,How to use regex with find command?,"I have some images named with generated uuid1 string. For example 81397018-b84a-11e0-9d2a-001b77dc0bed.jpg. I want to find out all these images using ""find"" command:
+
+    find . -regex ""[a-f0-9\-]\{36\}\.\jpg"".
+
+But it doesn't work. Something wrong with the regex? Could someone help me with this?",regex,linux,find,,,07/27/2011 15:20:03,off topic,1,44,7,"How to use regex with find command? I have some images named with generated uuid1 string. For example 81397018-b84a-11e0-9d2a-001b77dc0bed.jpg. I want to find out all these images using ""find"" command:
+
+    find . -regex ""[a-f0-9\-]\{36\}\.\jpg"".
+
+But it doesn't work. Something wrong with the regex? Could someone help me with this?",3
+11183000,06/25/2012 02:56:08,1478929,06/25/2012 02:43:09,1,0,find a string that end with any number by regular expression,I want to identify two kinds of string: one end with numbers (or not with) by regular expression. But i can't classify them by    `\d+$` or    `^\D*\d*$` or    `^[a-zA-Z]*[0-9]*$`... does anyone can tell me why? and how to solve this problem..?,regex,,,,,,open,0,50,11,find a string that end with any number by regular expression I want to identify two kinds of string: one end with numbers (or not with) by regular expression. But i can't classify them by    `\d+$` or    `^\D*\d*$` or    `^[a-zA-Z]*[0-9]*$`... does anyone can tell me why? and how to solve this problem..?,1
+11650468,07/25/2012 13:10:20,1075996,12/01/2011 17:47:15,29,0,"Perl script, find first half of string","Within a Perl script I need to process the following string:
+
+    426852	total
+
+The string will always contain an integer followed by some white space and the word total. I need to strip away the string part of the variable to just leave an integer that I can compare later in the script.
+
+What is the best way to achieve this?
+
+Thanks
+",regex,string,perl,,,07/29/2012 01:06:54,not a real question,1,61,7,"Perl script, find first half of string Within a Perl script I need to process the following string:
+
+    426852	total
+
+The string will always contain an integer followed by some white space and the word total. I need to strip away the string part of the variable to just leave an integer that I can compare later in the script.
+
+What is the best way to achieve this?
+
+Thanks
+",3
+8762517,01/06/2012 18:19:36,1134916,01/06/2012 18:17:48,1,0,Regular expression to match string no matter the case,"I would need to know what regular expression should I use when I want to find particular string (case insensitive)..just the regex generally, not for any particular language.
+Thanks",regex,,,,,01/06/2012 19:10:17,not a real question,1,28,9,"Regular expression to match string no matter the case I would need to know what regular expression should I use when I want to find particular string (case insensitive)..just the regex generally, not for any particular language.
+Thanks",1
+8548710,12/17/2011 23:29:16,1030608,11/05/2011 00:03:46,40,0,Regular expression in Flex,I want to check if the string is not empty (having whitespaces only also counts as empty). How to compose the regular expression in actionscript?,regex,flex4.5,,,,,open,0,25,4,Regular expression in Flex I want to check if the string is not empty (having whitespaces only also counts as empty). How to compose the regular expression in actionscript?,2
+10634142,05/17/2012 10:38:19,506303,11/12/2010 21:48:34,491,20,What will be the regular expression for following text?,"I want to extract the id from:
+
+    duke-of-york-t112141.html
+
+i.e. 112141, what will be the regular expression for that?",regex,,,,,05/18/2012 08:40:52,too localized,1,20,9,"What will be the regular expression for following text? I want to extract the id from:
+
+    duke-of-york-t112141.html
+
+i.e. 112141, what will be the regular expression for that?",1
+9178429,02/07/2012 14:56:04,1064710,11/24/2011 22:07:56,104,0,"regular expression PHP alphabetic, numeric and default symbols","This is the regular expression that I am using atm in PHP:
+
+    preg_match('/^[\sa-zA-Z0-9]+$/', $value)
+
+So that will do only alphabetic and numeric characters, now I need to add these symbols to be allowed in the regular expression: comma, question mark, dot, and @. How can I do this, sorry for the question I know its kinda easy but I hate regex :P
+
+Thanks for help anyway :)",regex,,,,,,open,0,68,8,"regular expression PHP alphabetic, numeric and default symbols This is the regular expression that I am using atm in PHP:
+
+    preg_match('/^[\sa-zA-Z0-9]+$/', $value)
+
+So that will do only alphabetic and numeric characters, now I need to add these symbols to be allowed in the regular expression: comma, question mark, dot, and @. How can I do this, sorry for the question I know its kinda easy but I hate regex :P
+
+Thanks for help anyway :)",1
+10909127,06/06/2012 06:24:31,1166606,01/24/2012 08:55:28,1,1,Perl: Why doesn't eval '/(...)/' set $1?,"If a regular expression match occurs inside an eval, changes to the capture-related variables ($1, etc.) are not visible in the outside environment.  Is this a bug?
+
+*perlop* and *perlre* don't seem to mention any such restriction.
+
+For example:
+
+     use strict; use warnings;
+     $_ = ""hello"";
+     eval '/(.*)/';
+     print ""GOT: $1\n"";
+gives:
+     
+
+    Use of uninitialized value $1 in concatenation (.) or string at -e line 1.
+    GOT:
+
+A more succinct demo is:
+
+    perl -we '$_=""foo""; eval q(/(.*)/;) ; print ""GOT:$1\n"";'",regex,perl,eval,,,,open,0,107,7,"Perl: Why doesn't eval '/(...)/' set $1? If a regular expression match occurs inside an eval, changes to the capture-related variables ($1, etc.) are not visible in the outside environment.  Is this a bug?
+
+*perlop* and *perlre* don't seem to mention any such restriction.
+
+For example:
+
+     use strict; use warnings;
+     $_ = ""hello"";
+     eval '/(.*)/';
+     print ""GOT: $1\n"";
+gives:
+     
+
+    Use of uninitialized value $1 in concatenation (.) or string at -e line 1.
+    GOT:
+
+A more succinct demo is:
+
+    perl -we '$_=""foo""; eval q(/(.*)/;) ; print ""GOT:$1\n"";'",3
+9626283,03/08/2012 22:50:32,990434,10/11/2011 22:43:29,37,1,^a-zA-Z0-9 excluding spaces?,"I am trying to find everything in a paragraph that is not abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 and not space / /gi
+
+    /[^a-zA-Z0-9]|[^ ]/gi
+
+the above doesn't work!
+
+
+edit I have kept this open for a while... meanwhile, I figgured it out and would like to share it as I couldn't find the answer elsewhere:
+
+    /[^a-zA-Z0-9 ]/gi
+
+winning!!",regex,exclude,spaces,excluding,,,open,0,57,3,"^a-zA-Z0-9 excluding spaces? I am trying to find everything in a paragraph that is not abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 and not space / /gi
+
+    /[^a-zA-Z0-9]|[^ ]/gi
+
+the above doesn't work!
+
+
+edit I have kept this open for a while... meanwhile, I figgured it out and would like to share it as I couldn't find the answer elsewhere:
+
+    /[^a-zA-Z0-9 ]/gi
+
+winning!!",4
+8184583,11/18/2011 15:12:25,979992,10/05/2011 08:38:48,1,0,How can I write a Regex expression like this,"How can I write a RegEx expression match the number begin with 3 or 4 digits with the  whole lengh between 10 or 11 digits
+",regex,,,,,11/18/2011 15:27:06,not a real question,1,26,9,"How can I write a Regex expression like this How can I write a RegEx expression match the number begin with 3 or 4 digits with the  whole lengh between 10 or 11 digits
+",1
+7389516,09/12/2011 14:32:02,404581,07/28/2010 13:50:14,204,24,"Regex ""do not contain comma""","I'd like to find a Regex expression that do not allow strings containing the ""."" character.
+
+Eg: 
+
+`this_is!a-cat -> ok`
+
+`this.isacat ->nok`
+
+I've tried many expressions and searched a bit around but in vain..
+
+Thx for your help!",regex,,,,,,open,0,34,5,"Regex ""do not contain comma"" I'd like to find a Regex expression that do not allow strings containing the ""."" character.
+
+Eg: 
+
+`this_is!a-cat -> ok`
+
+`this.isacat ->nok`
+
+I've tried many expressions and searched a bit around but in vain..
+
+Thx for your help!",1
+7124111,08/19/2011 15:45:39,788081,06/07/2011 19:04:01,11,0,Need Regular Expressions for asp.net,"I have three text boxes.
+
+1. Regular expression to only allow 3 upper case alphabets. No empty strings and no numbers
+
+2.Regular expression to allow only 3 numbers. no empty strings
+
+3. Regular expression for 5 or fewer uppercase alphabets only. no empty strings, no numbers
+
+",regex,,,,,08/19/2011 17:26:32,not a real question,1,43,5,"Need Regular Expressions for asp.net I have three text boxes.
+
+1. Regular expression to only allow 3 upper case alphabets. No empty strings and no numbers
+
+2.Regular expression to allow only 3 numbers. no empty strings
+
+3. Regular expression for 5 or fewer uppercase alphabets only. no empty strings, no numbers
+
+",1
+5849919,05/01/2011 17:04:31,29573,10/20/2008 11:39:35,150,8,Split a string like 'foo=bar#baz=qo\#ox#alpha=beta using regexp,"Here's a quick challenge. 
+Take this string 'foo=bar#baz=qo\#ox#al\=pha=beta' (sans quotes) which consists of  key-value pairs delimited by # from each other [pair] and with = as delimiter between key and value and split it into its components using regular expression (perl, python, classic, whatever). If characters # and = are encountered in the keys or values, they are prefixed with \. 
+So, the result should be  a table of keys/values:
+
+
+    KEY    | VALUE
+    foo    |  bar
+    baz    | qo#ox
+    al=pha | beta
+
+You get 100 points if your regexp (split or match) just splits it at the # character. Collect extra 50 points if you manage to split in one go also keys and values at = character.
+
+P.S. it is trivial to solve this using token parsing and look-ahead or behind, so no points.",regex,challenge,,,,,open,0,157,7,"Split a string like 'foo=bar#baz=qo\#ox#alpha=beta using regexp Here's a quick challenge. 
+Take this string 'foo=bar#baz=qo\#ox#al\=pha=beta' (sans quotes) which consists of  key-value pairs delimited by # from each other [pair] and with = as delimiter between key and value and split it into its components using regular expression (perl, python, classic, whatever). If characters # and = are encountered in the keys or values, they are prefixed with \. 
+So, the result should be  a table of keys/values:
+
+
+    KEY    | VALUE
+    foo    |  bar
+    baz    | qo#ox
+    al=pha | beta
+
+You get 100 points if your regexp (split or match) just splits it at the # character. Collect extra 50 points if you manage to split in one go also keys and values at = character.
+
+P.S. it is trivial to solve this using token parsing and look-ahead or behind, so no points.",2
+9225088,02/10/2012 08:51:38,1005072,10/20/2011 11:15:20,16,1,Regex to seperate request uri by 'real' page request and image/js/css requests,"I want to filter out all entries in my access logs that have a request uri which are requesting static recources like images, js, css, xml. The goal is to have an minfied access log wich only contains 'real' page request.
+
+I'm trying to find a regex that fits my purpose and here's the point where  I would like to ask for your help.
+
+Here are some examples:
+
+Strings I want to match:
+
+    r:GET / HTTP/1.1
+    r:GET /m HTTP/1.1
+    r:GET /autor/William-Mills/Deep-Hunting-Shallow-Fishing-8163700-t/ HTTP/1.1	
+    r:GET /?wicket:interface=:1::IActivePageBehaviorListener:15:2&wicket:ignoreIfNotActive=true HTTP/1.1
+
+Strings I **not** want to match: (One could say all that conatins something like .xxx before the ?querystring)
+
+    r:GET /js/global.js?v=17 HTTP/1.1
+    r:GET /js/global.js HTTP/1.1  
+    r:GET /img/icon_action_arrow.png HTTP/1.1
+
+I endend up, having a regex like this:
+
+**r:[A-Z]+ \S+[^\.\s]{5}** (With a real whitespace at the end)
+
+But this one is matching the first short url's ""/"" and ""/m"" I would like to match. And it also matches the ""/js/global.js?v=17 "" I would **not** like to match.
+
+
+Thanks in advance for any hints, help or advices!
+",regex,,,,,,open,0,184,12,"Regex to seperate request uri by 'real' page request and image/js/css requests I want to filter out all entries in my access logs that have a request uri which are requesting static recources like images, js, css, xml. The goal is to have an minfied access log wich only contains 'real' page request.
+
+I'm trying to find a regex that fits my purpose and here's the point where  I would like to ask for your help.
+
+Here are some examples:
+
+Strings I want to match:
+
+    r:GET / HTTP/1.1
+    r:GET /m HTTP/1.1
+    r:GET /autor/William-Mills/Deep-Hunting-Shallow-Fishing-8163700-t/ HTTP/1.1	
+    r:GET /?wicket:interface=:1::IActivePageBehaviorListener:15:2&wicket:ignoreIfNotActive=true HTTP/1.1
+
+Strings I **not** want to match: (One could say all that conatins something like .xxx before the ?querystring)
+
+    r:GET /js/global.js?v=17 HTTP/1.1
+    r:GET /js/global.js HTTP/1.1  
+    r:GET /img/icon_action_arrow.png HTTP/1.1
+
+I endend up, having a regex like this:
+
+**r:[A-Z]+ \S+[^\.\s]{5}** (With a real whitespace at the end)
+
+But this one is matching the first short url's ""/"" and ""/m"" I would like to match. And it also matches the ""/js/global.js?v=17 "" I would **not** like to match.
+
+
+Thanks in advance for any hints, help or advices!
+",1
+4863619,02/01/2011 14:17:21,598505,02/01/2011 14:13:00,1,0,Need Help in writing the pattern to match and replace the string using Regex,"Wanted the space between the span tags to be replaced by &nbsp;
+
+    <span style=""font-size:11;color:black""> </span>
+
+For that i wrote the following regex but it give me the out put as below :
+
+regex :
+
+    Regex.Replace(xml, @""<span[^>]*?>\s*</span>"", (match) => match.Value.Replace("" "", ""&nbsp;""), RegexOptions.IgnoreCase);
+
+output :
+
+    <span&nbsp;style=""font-size:11;color:black"">&nbsp;</span>
+
+It also places the &nbsp after the span
+",regex,c#-4.0,,,,,open,0,58,14,"Need Help in writing the pattern to match and replace the string using Regex Wanted the space between the span tags to be replaced by &nbsp;
+
+    <span style=""font-size:11;color:black""> </span>
+
+For that i wrote the following regex but it give me the out put as below :
+
+regex :
+
+    Regex.Replace(xml, @""<span[^>]*?>\s*</span>"", (match) => match.Value.Replace("" "", ""&nbsp;""), RegexOptions.IgnoreCase);
+
+output :
+
+    <span&nbsp;style=""font-size:11;color:black"">&nbsp;</span>
+
+It also places the &nbsp after the span
+",2
+10208694,04/18/2012 11:47:32,615217,02/13/2011 16:42:53,100,5,regex to parse string with escaped characters,"I am reading information out of a formatted string.
+The format looks like this:
+
+    ""foo:bar:beer:123::lol""
+
+Everything between the "":"" is data I want to extract with regex. If a : is followed by another : (like ""::"") the data for this has to be """" (an empty string).
+
+Currently I am parsing it with this regex:
+
+    (.*?)(:|$)
+
+Now it came to my mind that "":"" may exist within the data, as well. So it has to be escaped.
+Example:
+
+    ""foo:bar:beer:\::1337""
+
+How can I change my regular expression so that it matches the ""\:"" as data, too? 
+
+Thanks,
+McFarlane",regex,,,,,,open,0,100,7,"regex to parse string with escaped characters I am reading information out of a formatted string.
+The format looks like this:
+
+    ""foo:bar:beer:123::lol""
+
+Everything between the "":"" is data I want to extract with regex. If a : is followed by another : (like ""::"") the data for this has to be """" (an empty string).
+
+Currently I am parsing it with this regex:
+
+    (.*?)(:|$)
+
+Now it came to my mind that "":"" may exist within the data, as well. So it has to be escaped.
+Example:
+
+    ""foo:bar:beer:\::1337""
+
+How can I change my regular expression so that it matches the ""\:"" as data, too? 
+
+Thanks,
+McFarlane",1
+11351065,07/05/2012 19:18:16,214405,11/19/2009 08:06:02,162,5,"Regular expression to find "" but not the ones that have "",""","I just cant get the hang of regular expressions, trying to find the "" , but not the ones with , on either side
+
+I "",""can haz "",""kittens. ""Mmmm"". Tasty, tasty kittens.
+
+Thanks in advance",regex,,,,,,open,0,33,12,"Regular expression to find "" but not the ones that have "","" I just cant get the hang of regular expressions, trying to find the "" , but not the ones with , on either side
+
+I "",""can haz "",""kittens. ""Mmmm"". Tasty, tasty kittens.
+
+Thanks in advance",1
+6211000,06/02/2011 05:58:58,780611,06/02/2011 05:53:41,1,0,Help to Create Regular Expression,"In Extjs textField, I want to use maskRe, so I need Regular Expression.
+
+Scenario : 
+ - I want textField which allows only number
+ - some special character
+ - 1-2  (range) || >2 || <2 || =2 || 1.2 || 2+ || 2
+   (only one at the time)
+ - dont want to allow 1>1>1>1 || 1.2.2.3. 
+
+Please help me to create this RE.
+Thanks in advance.",regex,extjs,,,,06/02/2011 22:26:43,not a real question,1,67,5,"Help to Create Regular Expression In Extjs textField, I want to use maskRe, so I need Regular Expression.
+
+Scenario : 
+ - I want textField which allows only number
+ - some special character
+ - 1-2  (range) || >2 || <2 || =2 || 1.2 || 2+ || 2
+   (only one at the time)
+ - dont want to allow 1>1>1>1 || 1.2.2.3. 
+
+Please help me to create this RE.
+Thanks in advance.",2
+8823683,01/11/2012 17:20:12,1022456,10/31/2011 18:04:29,25,3,Best Practice: Partial Regex Matching,"I'm not sure that regexes are the best solution here, but they seem logical enough; I'm just not sure how to actually implement this.
+
+Basically, I want my user to be able to type in a method name and have it parsed for validity after each character input.  I have defined a valid function format as a regex, and it is easy enough to test if the two match.  The trouble is, I would like to be able to do a partial match, so as to let the user know, ""So far, this is valid"".
+
+For example,
+
+    +(NSString *)thisIsAValid:(ObjectiveC *)method;
+
+is a valid method.  It can be matched by a simple regex string like
+
+    [\+-]\(w+\s*\*?\)\w+....etc...
+
+.  But I would love to be able to have that same regex string ""match""
+
+    +(NSStr
+
+(which I realize is sort of a backwards way of using regex).  I would still not want the regex to match
+
+    Q)(NStr
+
+Is there a way to implement something like this with standard regex functions, or would I have to do something more drastic?
+
+Thanks so much!  You guys are invaluable.",regex,parsing,coding-style,regexkit,,,open,0,193,5,"Best Practice: Partial Regex Matching I'm not sure that regexes are the best solution here, but they seem logical enough; I'm just not sure how to actually implement this.
+
+Basically, I want my user to be able to type in a method name and have it parsed for validity after each character input.  I have defined a valid function format as a regex, and it is easy enough to test if the two match.  The trouble is, I would like to be able to do a partial match, so as to let the user know, ""So far, this is valid"".
+
+For example,
+
+    +(NSString *)thisIsAValid:(ObjectiveC *)method;
+
+is a valid method.  It can be matched by a simple regex string like
+
+    [\+-]\(w+\s*\*?\)\w+....etc...
+
+.  But I would love to be able to have that same regex string ""match""
+
+    +(NSStr
+
+(which I realize is sort of a backwards way of using regex).  I would still not want the regex to match
+
+    Q)(NStr
+
+Is there a way to implement something like this with standard regex functions, or would I have to do something more drastic?
+
+Thanks so much!  You guys are invaluable.",4
+164414,10/02/2008 20:27:08,21384,09/23/2008 21:22:52,56,5,"How to ""inverse match"" with regex?","I'm using RegexBuddy but I'm in trouble anyway with this thing :\
+
+I'm processing line by line a file. I built a ""line model"" to match what I want.
+
+Now i'd like to do an inverse match... i.e. I want to match lines where there is a string of 6 letters, but only if these six letters are **not** *Andrea*, how should I do that?",regex,regexbuddy,regexp,inverse-match,,,open,0,63,6,"How to ""inverse match"" with regex? I'm using RegexBuddy but I'm in trouble anyway with this thing :\
+
+I'm processing line by line a file. I built a ""line model"" to match what I want.
+
+Now i'd like to do an inverse match... i.e. I want to match lines where there is a string of 6 letters, but only if these six letters are **not** *Andrea*, how should I do that?",4
+1421785,09/14/2009 14:09:02,171808,09/11/2009 01:59:33,8,0,how to use PCRE to get all match groups?,"i am not good at c, i do not know how to use PCRE to get matches.
+Here is a demo code:
+
+    int test2()
+        {
+        	const char *error;
+                int   erroffset;
+                pcre *re;
+                int   rc;
+                int   i;
+                int   ovector[OVECCOUNT];
+        
+        	char *regex = ""From:([^@]+)@([^\r]+)"";
+                char str[]  = ""From:regular.expressions@example.com\r\n""\
+        	              ""From:exddd@43434.com\r\n""\
+        	              ""From:7853456@exgem.com\r\n"";
+        
+          re = pcre_compile (
+                 regex,       /* the pattern */
+                 0,                    /* default options */
+                 &error,               /* for error message */
+                 &erroffset,           /* for error offset */
+                 0);                   /* use default character tables */
+        
+          if (!re) {
+            printf(""pcre_compile failed (offset: %d), %s\n"", erroffset, error);
+            return -1;
+          }
+        
+          rc = pcre_exec (
+            re,                   /* the compiled pattern */
+            0,                    /* no extra data - pattern was not studied */
+            str,                  /* the string to match */
+            strlen(str),          /* the length of the string */
+            0,                    /* start at offset 0 in the subject */
+            0,                    /* default options */
+            ovector,              /* output vector for substring information */
+            OVECCOUNT);           /* number of elements in the output vector */
+        
+          if (rc < 0) {
+            switch (rc) {
+              case PCRE_ERROR_NOMATCH:
+                printf(""String didn't match"");
+                break;
+        
+              default:
+                printf(""Error while matching: %d\n"", rc);
+                break;
+            }
+            free(re);
+            return -1;
+          }
+        
+          for (i = 0; i < rc; i++) {
+            printf(""%2d: %.*s\n"", i, ovector[2*i+1] - ovector[2*i], str + ovector[2*i]);
+          }
+        }
+
+In this demo, the output is only:
+ 0: From:regular.expressions@example.com
+ 1: regular.expressions
+ 2: example.com
+
+I want to output all the matches, how can i do that?
+Thanks.
+",regex,,,,,,open,0,1053,9,"how to use PCRE to get all match groups? i am not good at c, i do not know how to use PCRE to get matches.
+Here is a demo code:
+
+    int test2()
+        {
+        	const char *error;
+                int   erroffset;
+                pcre *re;
+                int   rc;
+                int   i;
+                int   ovector[OVECCOUNT];
+        
+        	char *regex = ""From:([^@]+)@([^\r]+)"";
+                char str[]  = ""From:regular.expressions@example.com\r\n""\
+        	              ""From:exddd@43434.com\r\n""\
+        	              ""From:7853456@exgem.com\r\n"";
+        
+          re = pcre_compile (
+                 regex,       /* the pattern */
+                 0,                    /* default options */
+                 &error,               /* for error message */
+                 &erroffset,           /* for error offset */
+                 0);                   /* use default character tables */
+        
+          if (!re) {
+            printf(""pcre_compile failed (offset: %d), %s\n"", erroffset, error);
+            return -1;
+          }
+        
+          rc = pcre_exec (
+            re,                   /* the compiled pattern */
+            0,                    /* no extra data - pattern was not studied */
+            str,                  /* the string to match */
+            strlen(str),          /* the length of the string */
+            0,                    /* start at offset 0 in the subject */
+            0,                    /* default options */
+            ovector,              /* output vector for substring information */
+            OVECCOUNT);           /* number of elements in the output vector */
+        
+          if (rc < 0) {
+            switch (rc) {
+              case PCRE_ERROR_NOMATCH:
+                printf(""String didn't match"");
+                break;
+        
+              default:
+                printf(""Error while matching: %d\n"", rc);
+                break;
+            }
+            free(re);
+            return -1;
+          }
+        
+          for (i = 0; i < rc; i++) {
+            printf(""%2d: %.*s\n"", i, ovector[2*i+1] - ovector[2*i], str + ovector[2*i]);
+          }
+        }
+
+In this demo, the output is only:
+ 0: From:regular.expressions@example.com
+ 1: regular.expressions
+ 2: example.com
+
+I want to output all the matches, how can i do that?
+Thanks.
+",1
+11701269,07/28/2012 13:04:54,1446335,06/09/2012 15:13:36,1,1,regular expression functions calling syntax cheatsheet for multiple languages,"Is there a cheatsheet webpage summarizing **names of functions and their calling syntax** (order of arguments) for searching, replacing, splitting with regular expressions in various popular languages? 
+
+I'm thinking of something like this wikipedia page, except that this page doesn't deal with regular expressions:
+
+[Wikipedia - Comparison of programming languages (string functions)][1]
+
+Bonus points for cheatsheets that also include
+
++ whether placeholders for relacement texts are \1, \2, .. or $1, $2, ... or %1, %2, %3, ...
+
++ how to pass case sensitivity flag
+
++ how to pass global flag
+
++ inclusion of JavaScript
+
+
+  [1]: http://en.wikipedia.org/wiki/Comparison_of_programming_languages_%28string_functions%29
+",regex,language-agnostic,,,,07/29/2012 11:40:25,not constructive,1,92,9,"regular expression functions calling syntax cheatsheet for multiple languages Is there a cheatsheet webpage summarizing **names of functions and their calling syntax** (order of arguments) for searching, replacing, splitting with regular expressions in various popular languages? 
+
+I'm thinking of something like this wikipedia page, except that this page doesn't deal with regular expressions:
+
+[Wikipedia - Comparison of programming languages (string functions)][1]
+
+Bonus points for cheatsheets that also include
+
++ whether placeholders for relacement texts are \1, \2, .. or $1, $2, ... or %1, %2, %3, ...
+
++ how to pass case sensitivity flag
+
++ how to pass global flag
+
++ inclusion of JavaScript
+
+
+  [1]: http://en.wikipedia.org/wiki/Comparison_of_programming_languages_%28string_functions%29
+",2
+4731104,01/19/2011 02:06:07,107156,05/14/2009 15:29:57,354,10,Worst Case Analysis for Regular Expressions,"Are there any tools that will take a particular regular expression and return the worst case scenario in terms of the number of operations required for a certain number of characters that the regular expression is matched against?
+
+So for example, given a `(f|a)oo.*[ ]baz`, how many steps might the engine possibly go though through to match 100 characters?
+
+I would also be interested if there is a tool that can take a bunch of text samples and show the average operations for each run.
+
+I realize this will depend a lot on the engine used and the implementation -- but I am ignorant as to how common this is. So if it is common for many languages (making my question to vague) I would be particularly interested in Perl and Python.",regex,optimization,analysis,,,,open,0,129,6,"Worst Case Analysis for Regular Expressions Are there any tools that will take a particular regular expression and return the worst case scenario in terms of the number of operations required for a certain number of characters that the regular expression is matched against?
+
+So for example, given a `(f|a)oo.*[ ]baz`, how many steps might the engine possibly go though through to match 100 characters?
+
+I would also be interested if there is a tool that can take a bunch of text samples and show the average operations for each run.
+
+I realize this will depend a lot on the engine used and the implementation -- but I am ignorant as to how common this is. So if it is common for many languages (making my question to vague) I would be particularly interested in Perl and Python.",3
+3022571,06/11/2010 12:13:02,21606,09/24/2008 10:30:30,1384,40,How to deal with the new line character in the Silverlight TextBox,"When using a multi-line TextBox (AcceptsReturn=""True"") in Silverlight, line feeds are recorded as \r rather than \r\n. This is causing problems when the data is persisted and later exported to another format to be read by a Windows application.
+
+I was thinking of using a regular expression to replace any single \r characters with a \r\n, but I suck at regex's and couldn't get it to work. 
+
+Because there may be a mixture of line endings just blindy replacing all \r with \r\n doesn't cut it.
+
+So two questions really...
+
+If regex is the way to go what's the correct pattern?
+
+Is there a way to get Silverlight to respect it's own Environment.NewLine character in TextBox's and have it insert \r\n rather just a single \r?
+",regex,silverlight,,,,,open,0,122,12,"How to deal with the new line character in the Silverlight TextBox When using a multi-line TextBox (AcceptsReturn=""True"") in Silverlight, line feeds are recorded as \r rather than \r\n. This is causing problems when the data is persisted and later exported to another format to be read by a Windows application.
+
+I was thinking of using a regular expression to replace any single \r characters with a \r\n, but I suck at regex's and couldn't get it to work. 
+
+Because there may be a mixture of line endings just blindy replacing all \r with \r\n doesn't cut it.
+
+So two questions really...
+
+If regex is the way to go what's the correct pattern?
+
+Is there a way to get Silverlight to respect it's own Environment.NewLine character in TextBox's and have it insert \r\n rather just a single \r?
+",2
+6076093,05/20/2011 18:21:04,193643,10/21/2009 07:57:33,340,6,Allow dots in URL using regex,"How can I allow a dot in an URL using Regex? Any advice?
+
+thanks",regex,url,url-routing,dot,,05/20/2011 23:33:59,not a real question,1,13,6,"Allow dots in URL using regex How can I allow a dot in an URL using Regex? Any advice?
+
+thanks",4
+3742023,09/18/2010 14:20:29,148597,07/31/2009 16:48:03,85,3,regular expression word boundary,"I'm using a simple regular expression to match on the start of words, using the word boundary matcher, like
+
+    /(\b)rice/
+
+will match on ""years of rice and salt"" but not ""maurice ravel"" and so on.
+
+However, I'm finding a ! at the start of the string is negating the word boundary matcher. So the string ""!!"" is matching on ""some text!!"".
+
+Anyone know why this would be happening? Haven't seen that it's a special character.",regex,,,,,,open,0,75,4,"regular expression word boundary I'm using a simple regular expression to match on the start of words, using the word boundary matcher, like
+
+    /(\b)rice/
+
+will match on ""years of rice and salt"" but not ""maurice ravel"" and so on.
+
+However, I'm finding a ! at the start of the string is negating the word boundary matcher. So the string ""!!"" is matching on ""some text!!"".
+
+Anyone know why this would be happening? Haven't seen that it's a special character.",1
+6109700,05/24/2011 11:29:49,635549,02/26/2011 13:49:44,23,0,"In bash, what's the regular expression to list two types of files?","A directory contains `.zip` and `.rar` files, and files of other type.  
+
+To list only `.rar` and `.zip` files, there is `ls *.zip *.rar`
+
+In bash, how to match both types with one regex?
+",regex,bash,,,,,open,0,34,12,"In bash, what's the regular expression to list two types of files? A directory contains `.zip` and `.rar` files, and files of other type.  
+
+To list only `.rar` and `.zip` files, there is `ls *.zip *.rar`
+
+In bash, how to match both types with one regex?
+",2
+9933871,03/29/2012 21:32:56,504239,11/11/2010 08:30:08,1203,70,Perl's regular expression end of last match position,"What Perl Variable is used for `End of last successful regex match position`? For completeness, you can also throw in the Start of last successful match position too.",regex,perl,perlvar,,,03/29/2012 22:54:57,too localized,1,28,8,"Perl's regular expression end of last match position What Perl Variable is used for `End of last successful regex match position`? For completeness, you can also throw in the Start of last successful match position too.",3
+5531768,04/03/2011 19:05:29,157416,08/16/2009 20:11:22,532,7,Mod_Rewrite help,"My url pattern is like so:  
+
+    example.com/A/B
+
+  
+I want my url condition to be if `A.html` does no exist in the cache folder do such and such, I have something like this so far:
+  
+
+    RewriteCond ^([^/]+)/?([^/]*) /cache/$1.html -f  
+
+  
+But I know its not the right way of doing it, any help would be appreciated!  
+Thank You!",regex,apache,mod-rewrite,rewrite,,,open,0,71,2,"Mod_Rewrite help My url pattern is like so:  
+
+    example.com/A/B
+
+  
+I want my url condition to be if `A.html` does no exist in the cache folder do such and such, I have something like this so far:
+  
+
+    RewriteCond ^([^/]+)/?([^/]*) /cache/$1.html -f  
+
+  
+But I know its not the right way of doing it, any help would be appreciated!  
+Thank You!",4
+4474219,12/17/2010 19:48:20,539165,12/11/2010 21:18:51,11,1,Self hosted Yahoo Pipes alterantive?,"I've searched high and low for a Yahoo Pipes alternative and the only online app I found that is anything like it - seems to be an abandoned project.
+
+Are there any self hosted solutions that allow truncate, filter and regex per feed item?",regex,rss,,,,12/19/2010 13:25:12,off topic,1,43,5,"Self hosted Yahoo Pipes alterantive? I've searched high and low for a Yahoo Pipes alternative and the only online app I found that is anything like it - seems to be an abandoned project.
+
+Are there any self hosted solutions that allow truncate, filter and regex per feed item?",2
+6668366,07/12/2011 17:24:20,500233,11/08/2010 01:26:46,66,0,What regular expressions does c-x c-f (opening a file) in Emacs accept?,"I know that it will accept '*' in file names, but standard regular expression operators such as '.' or character classes do not work.  I thought this would be something that I would easily find online but after about 15 min of searching, I could not find an answer to my question to my dismay. 
+
+Thanks for the help. ",regex,emacs,find-file,,,,open,0,61,12,"What regular expressions does c-x c-f (opening a file) in Emacs accept? I know that it will accept '*' in file names, but standard regular expression operators such as '.' or character classes do not work.  I thought this would be something that I would easily find online but after about 15 min of searching, I could not find an answer to my question to my dismay. 
+
+Thanks for the help. ",3
+6554822,07/02/2011 02:49:40,339660,05/12/2010 19:25:59,86,8,Matching numbers with decimals in regular expression,"Something just isn't clicking, and any help is appreciated.
+
+Essentially what I want to do is see if a number that I have is between two other numbers.
+
+Let's say my number is 0.17 .  I would like the regular expression to be something like this [0.15-0.22] .
+
+The decimals are playing havoc with my mind, and its just not clicking.
+
+Could someone help get me on the right track?
+
+Thanks.
+
+",regex,,,,,,open,0,67,7,"Matching numbers with decimals in regular expression Something just isn't clicking, and any help is appreciated.
+
+Essentially what I want to do is see if a number that I have is between two other numbers.
+
+Let's say my number is 0.17 .  I would like the regular expression to be something like this [0.15-0.22] .
+
+The decimals are playing havoc with my mind, and its just not clicking.
+
+Could someone help get me on the right track?
+
+Thanks.
+
+",1
+7769295,10/14/2011 14:41:08,589173,01/25/2011 14:51:55,46,0,Regex to remove duplicate scripts from html file,"Let's say you have a HTML file with a couple duplicate scripts, meaning multiple external script tags for the same resource, like loading jquery 3 times on the page.  Is there an efficient regular expression that can remove the duplicates but keep the first one in place.",regex,script,,,,,open,0,48,8,"Regex to remove duplicate scripts from html file Let's say you have a HTML file with a couple duplicate scripts, meaning multiple external script tags for the same resource, like loading jquery 3 times on the page.  Is there an efficient regular expression that can remove the duplicates but keep the first one in place.",2
+11610752,07/23/2012 10:29:06,1246987,03/03/2012 15:15:55,337,12,Regex: Simple search regex?,"I need a regex which helps me searching through the database.
+
+It should be able to do:
+
+1. In word searching. Example: *ell* => Hello, Yello, Mellt, ....
+2. Similar words: Example: gold => hold, golt, cost, ...
+
+Is this possible to do with a regex?
+
+If yes how does this regex look like?
+
+Regards",regex,search,,,,07/26/2012 01:07:36,not a real question,1,49,4,"Regex: Simple search regex? I need a regex which helps me searching through the database.
+
+It should be able to do:
+
+1. In word searching. Example: *ell* => Hello, Yello, Mellt, ....
+2. Similar words: Example: gold => hold, golt, cost, ...
+
+Is this possible to do with a regex?
+
+If yes how does this regex look like?
+
+Regards",2
+2982231,06/05/2010 21:45:49,234224,12/17/2009 23:35:01,140,4,Regex in Flex 3: How to Wrap Quotations Around a Dynamic String?,"I need some Regex help. 
+
+I need to find beacon_ followed by an alphanumeric code and then wrap it in quotation marks. For something static, like the example, below it's straight forward.
+
+    myReturn = myReturn.replace( 'id=beacon_80291ee9b3', 'id=""beacon_80291ee9b3""');
+
+But, my problem is that the part after beacon is a *random* alphanumeric code. (However, it is always the same length). For example, the beacon part could be:
+
+
+ - beacon_c8ac873136
+   
+ - beacon_dc83b5953e
+
+ - beacon_7a910d03d8
+
+etc.
+
+The haystack that I'll search will look like:
+
+    myReturn = ""blah blah id=beacon_80291ee9b3 blah blah"";
+
+ 
+Thanks.
+
+-Laxmidi
+
+
+
+
+",regex,flex,,,,,open,0,94,12,"Regex in Flex 3: How to Wrap Quotations Around a Dynamic String? I need some Regex help. 
+
+I need to find beacon_ followed by an alphanumeric code and then wrap it in quotation marks. For something static, like the example, below it's straight forward.
+
+    myReturn = myReturn.replace( 'id=beacon_80291ee9b3', 'id=""beacon_80291ee9b3""');
+
+But, my problem is that the part after beacon is a *random* alphanumeric code. (However, it is always the same length). For example, the beacon part could be:
+
+
+ - beacon_c8ac873136
+   
+ - beacon_dc83b5953e
+
+ - beacon_7a910d03d8
+
+etc.
+
+The haystack that I'll search will look like:
+
+    myReturn = ""blah blah id=beacon_80291ee9b3 blah blah"";
+
+ 
+Thanks.
+
+-Laxmidi
+
+
+
+
+",2
+9456756,02/26/2012 20:15:41,1189880,02/04/2012 21:05:25,1,0,Linux - find specific text in file and wrap in with other text,"Im looking for the best method to find specific text in a file and wrap other text around it from the linux command line.
+
+So for example the file may contain the following:
+
+    This
+    is
+    a
+    test.
+    anchor-start
+    text to wrap will is in here
+    anchor-end
+
+
+So in the above example i want to find the text inbetween anchor-start and anchor-end and then wrap that text.  So i should end up with:
+
+    This
+    is
+    a
+    test.
+    anchor-start
+    wrapping-start
+    text to wrap will is in here
+    wrapping-end
+    anchor-end
+
+I should also note that i am looking for a solution whereby if anchor-start is immediately followed by wrapping-start (i.e. the wrapping has already occurred) then it should not be duplicated.",regex,linux,sed,awk,,,open,0,164,13,"Linux - find specific text in file and wrap in with other text Im looking for the best method to find specific text in a file and wrap other text around it from the linux command line.
+
+So for example the file may contain the following:
+
+    This
+    is
+    a
+    test.
+    anchor-start
+    text to wrap will is in here
+    anchor-end
+
+
+So in the above example i want to find the text inbetween anchor-start and anchor-end and then wrap that text.  So i should end up with:
+
+    This
+    is
+    a
+    test.
+    anchor-start
+    wrapping-start
+    text to wrap will is in here
+    wrapping-end
+    anchor-end
+
+I should also note that i am looking for a solution whereby if anchor-start is immediately followed by wrapping-start (i.e. the wrapping has already occurred) then it should not be duplicated.",4
+11256479,06/29/2012 05:27:14,783743,06/04/2011 08:22:56,1363,75,"How to simulate backreferences, lookaheads, and lookbehinds in finite state automata?","I created a simple regular expression lexer and parser to take a regular expression and generate its parse tree. Creating a non-deterministic finite state automaton from this parse tree is relatively simple for basic regular expressions. However I can't seem to wrap my head around how to simulate backreferences, lookaheads, and lookbehinds.
+
+From what I read in the purple dragon book I understood that to simulate a lookahead (e.g. `r/s`) where the regular expression `r` is matched iff it's followed by the regular expression `s` you create a non-deterministic finite state automaton in which `/` is replaced by `ε`. Is it possible to create a deterministic finite state automaton that does the same?
+
+What about simulating negative lookaheads and lookbehinds? I would really appreciate it if you would link me to a resource which describes how to do this in detail.",regex,finite-automata,lookahead,backreference,lookbehind,06/30/2012 09:07:46,off topic,1,139,11,"How to simulate backreferences, lookaheads, and lookbehinds in finite state automata? I created a simple regular expression lexer and parser to take a regular expression and generate its parse tree. Creating a non-deterministic finite state automaton from this parse tree is relatively simple for basic regular expressions. However I can't seem to wrap my head around how to simulate backreferences, lookaheads, and lookbehinds.
+
+From what I read in the purple dragon book I understood that to simulate a lookahead (e.g. `r/s`) where the regular expression `r` is matched iff it's followed by the regular expression `s` you create a non-deterministic finite state automaton in which `/` is replaced by `ε`. Is it possible to create a deterministic finite state automaton that does the same?
+
+What about simulating negative lookaheads and lookbehinds? I would really appreciate it if you would link me to a resource which describes how to do this in detail.",5
+7637786,10/03/2011 16:25:25,848925,07/17/2011 18:02:55,133,3,Need regex to grep quote tags,"I need regex for preg_replace to change:
+
+`[quote](content)[/quote]` into `<blockquote>(content)</blockquote>`
+
++
+
+`[quote=(username)][/quote]` into `<blockquote>Post user: (username)</blockquote>`
+
++
+
+`[quote=(username);(id)][/quote]` into `<blockquote>Post user: (username).<br/>ID: (id)</blockquote>`
+
+Ofcourse, the (content), (username), (id) should be the ones which regex will grep.
+I've searched alot, and didn't finded any good regex for this action. So, help me guys, please.",regex,replace,preg-match,bbcode,,,open,0,46,6,"Need regex to grep quote tags I need regex for preg_replace to change:
+
+`[quote](content)[/quote]` into `<blockquote>(content)</blockquote>`
+
++
+
+`[quote=(username)][/quote]` into `<blockquote>Post user: (username)</blockquote>`
+
++
+
+`[quote=(username);(id)][/quote]` into `<blockquote>Post user: (username).<br/>ID: (id)</blockquote>`
+
+Ofcourse, the (content), (username), (id) should be the ones which regex will grep.
+I've searched alot, and didn't finded any good regex for this action. So, help me guys, please.",4
+7786679,10/16/2011 19:21:52,238729,12/26/2009 02:27:45,47,1,how to write the regex and to replace,"i write my custom httpmodule in ASP.NET, when user visit these urls: http://wap.abc.com/abc, http://wap.abc.com/uuu/demo.aspx, http://wap.abc.com/alse/product，then get values ""abc""，""uuu""，""alse"" to query database，if find，it can RewritePath to http://wap.abc.com，http://wap.abc.com/demo.aspx，http://wap.abc.com/product，all are ok，but i want to filter all these links of output HTML，the filter code like this: http://aspnetresources.com/articles/HttpFilters，and these links such as： 
+
+<link rel=""canonical"" href=""http://wap.abc.com"">   ---  <link rel=""canonical"" href=""http://wap.abc.com/subname"">
+<a href=""http://wap.abc.com/"">   ----  <a href=""http://wap.abc.com/subname""> 
+<a href=""http://www.externaldomain.com/"">   ----  <a href=""http://www.externaldomain.com/"">   (not replace) 
+<a href=""/"">   ----  <a href=""/subname/"">
+<link href=""../css.css"" rel=""Stylesheet"" type=""text/css"" /> ---- <link href=""../subname/css.css"" rel=""Stylesheet"" type=""text/css"" />
+<a href=""/product/prductlist.aspx?type=2893"">   ----  <a href=""/subname/product/prductlist.aspx?type=2893"">
+<a href=""#top"">  ---- <a href=""/subname#top"">
+<a href=""/news/news.aspx?id=23#top"">  ---- <a href=""/subname/news/news.aspx?id=23#top"">
+<img src=""../images/123.gif"" />  ---- <img src=""../subname/images/123.gif"" />
+
+please give me advice or help me, thanks.",regex,filter,httpmodule,,,,open,0,125,8,"how to write the regex and to replace i write my custom httpmodule in ASP.NET, when user visit these urls: http://wap.abc.com/abc, http://wap.abc.com/uuu/demo.aspx, http://wap.abc.com/alse/product，then get values ""abc""，""uuu""，""alse"" to query database，if find，it can RewritePath to http://wap.abc.com，http://wap.abc.com/demo.aspx，http://wap.abc.com/product，all are ok，but i want to filter all these links of output HTML，the filter code like this: http://aspnetresources.com/articles/HttpFilters，and these links such as： 
+
+<link rel=""canonical"" href=""http://wap.abc.com"">   ---  <link rel=""canonical"" href=""http://wap.abc.com/subname"">
+<a href=""http://wap.abc.com/"">   ----  <a href=""http://wap.abc.com/subname""> 
+<a href=""http://www.externaldomain.com/"">   ----  <a href=""http://www.externaldomain.com/"">   (not replace) 
+<a href=""/"">   ----  <a href=""/subname/"">
+<link href=""../css.css"" rel=""Stylesheet"" type=""text/css"" /> ---- <link href=""../subname/css.css"" rel=""Stylesheet"" type=""text/css"" />
+<a href=""/product/prductlist.aspx?type=2893"">   ----  <a href=""/subname/product/prductlist.aspx?type=2893"">
+<a href=""#top"">  ---- <a href=""/subname#top"">
+<a href=""/news/news.aspx?id=23#top"">  ---- <a href=""/subname/news/news.aspx?id=23#top"">
+<img src=""../images/123.gif"" />  ---- <img src=""../subname/images/123.gif"" />
+
+please give me advice or help me, thanks.",3
+8664643,12/29/2011 06:24:20,1044402,11/13/2011 17:19:37,1,0,Stop a Software's Batch Script after 10 Days,"I have created a software which i am going to sell on trail basis to the clients.But i am not able to figure out that how will i be able to stop the clients the usage of the software 10 days after it has been installed on their machines.If the client back dates it then also it should not work.The code of the software has already been created and it cannot be edited.so is there anything to stop the services of the software externally.Its my task for the week so plz reply ASAP.
+Thanks in advance :) ",regex,,,,,12/29/2011 17:45:19,off topic,1,97,8,"Stop a Software's Batch Script after 10 Days I have created a software which i am going to sell on trail basis to the clients.But i am not able to figure out that how will i be able to stop the clients the usage of the software 10 days after it has been installed on their machines.If the client back dates it then also it should not work.The code of the software has already been created and it cannot be edited.so is there anything to stop the services of the software externally.Its my task for the week so plz reply ASAP.
+Thanks in advance :) ",1
+10308094,04/25/2012 01:10:33,1355021,04/25/2012 01:07:28,1,0,Simple regex expression needed,"Should be simple and unfortunately I don't really need to learn Regex, it's just one of those occasions..
+
+What is the expression to find something like this: wordhere_478234828
+
+where the numbers could be random, but the word is always the same?
+
+",regex,,,,,04/25/2012 02:38:27,not a real question,1,39,4,"Simple regex expression needed Should be simple and unfortunately I don't really need to learn Regex, it's just one of those occasions..
+
+What is the expression to find something like this: wordhere_478234828
+
+where the numbers could be random, but the word is always the same?
+
+",1
+11674092,07/26/2012 16:46:04,695438,04/06/2011 18:39:52,25,6,Windows Password RegExp,"Does anyone have a regular expression for a password that enforces the Windows password policy password requirements:
+
+1) Is at least 8 characters in length
+
+2) Contains characters from three of the following four categories:
+
+ - English upper case characters (A..Z)
+ - English lower case characters (a..z)
+ - Base 10 digits (0..9)
+ - Nonalphanumeric (For example, !,$#,%)",regex,passwords,,,,07/26/2012 17:12:27,not a real question,1,55,3,"Windows Password RegExp Does anyone have a regular expression for a password that enforces the Windows password policy password requirements:
+
+1) Is at least 8 characters in length
+
+2) Contains characters from three of the following four categories:
+
+ - English upper case characters (A..Z)
+ - English lower case characters (a..z)
+ - Base 10 digits (0..9)
+ - Nonalphanumeric (For example, !,$#,%)",2
+3231257,07/12/2010 18:46:33,389757,07/12/2010 18:39:34,1,0,Google Analytics funnel goals not working?,"I have a goal set up that is roughly as follows:
+
+product page -> first page order form -> second page order form -> thank you page
+
+I have checked the regex for all of the above by searching the filters in Top Content and have checked over all of them a few times.
+
+On the funnel visualization page, every number listed is zero. On the goal detail page however, the data is as follows (for the two days the goal has been active):
+
+8 total conversions
+0.39% conversion rate
+0.00% abandonment rate
+
+This makes me think that in the funnels I should see 20 users start from the product page and get funneled down until only 8 actually get through to the thank you page. Is there something I'm missing? Why is the funnel visualization completely empty? 
+
+I also posted a [thread][1] on this but didn't get any useful replies.
+
+
+  [1]: http://www.google.com/support/forum/p/Google+Analytics/thread?tid=714e51eea5503879&hl=en&fid=714e51eea550387900048b351d2eb393",regex,google-analytics,,,,10/15/2011 17:24:28,off topic,1,147,6,"Google Analytics funnel goals not working? I have a goal set up that is roughly as follows:
+
+product page -> first page order form -> second page order form -> thank you page
+
+I have checked the regex for all of the above by searching the filters in Top Content and have checked over all of them a few times.
+
+On the funnel visualization page, every number listed is zero. On the goal detail page however, the data is as follows (for the two days the goal has been active):
+
+8 total conversions
+0.39% conversion rate
+0.00% abandonment rate
+
+This makes me think that in the funnels I should see 20 users start from the product page and get funneled down until only 8 actually get through to the thank you page. Is there something I'm missing? Why is the funnel visualization completely empty? 
+
+I also posted a [thread][1] on this but didn't get any useful replies.
+
+
+  [1]: http://www.google.com/support/forum/p/Google+Analytics/thread?tid=714e51eea5503879&hl=en&fid=714e51eea550387900048b351d2eb393",2
+11630160,07/24/2012 11:44:31,1446154,06/09/2012 11:49:02,94,8,Perl Regexp to tcl,"Does anybody know how to transform this `perl` expression:  
+
+    $FullPath =~ s/^([^\s]*)((m\-\-)|(aba))\s(.*)/\1launched\5/;   
+    $FullPath =~ s/^([^\s]*)((m\-\-)|(aba))$/\1launched/;
+to `TCL`
+
+",regex,perl,tcl,,,07/24/2012 12:19:41,too localized,1,27,4,"Perl Regexp to tcl Does anybody know how to transform this `perl` expression:  
+
+    $FullPath =~ s/^([^\s]*)((m\-\-)|(aba))\s(.*)/\1launched\5/;   
+    $FullPath =~ s/^([^\s]*)((m\-\-)|(aba))$/\1launched/;
+to `TCL`
+
+",3
+9075776,01/31/2012 07:15:03,788252,06/07/2011 21:07:00,24,0,need to form a regex,"I am trying to write a regex query for a a language with letters a,b,c such that a is never adjacent to b.
+
+Can it be done by using only the plus ,concatenation amd multiplication operators?
+
+
+L= w belongs to {a,b,c}* such that a is never adjacent to b",regex,,,,,01/31/2012 13:17:41,not a real question,1,47,5,"need to form a regex I am trying to write a regex query for a a language with letters a,b,c such that a is never adjacent to b.
+
+Can it be done by using only the plus ,concatenation amd multiplication operators?
+
+
+L= w belongs to {a,b,c}* such that a is never adjacent to b",1
+977251,06/10/2009 18:04:35,95232,04/23/2009 23:03:46,316,10,Regular Expressions and negating a whole character group,"I'm attempting something which I feel should be fairly obvious to me but it's not.  I'm trying to match a string which does NOT contain a specific sequence of characters.  I've tried using `[^ab]`, `[^(ab)]`, etc. to match strings containing no 'a's or 'b's, or only 'a's or only 'b's or 'ba' but not match on 'ab'.  But Is there some simple way to do this?",regex,,,,,,open,0,69,8,"Regular Expressions and negating a whole character group I'm attempting something which I feel should be fairly obvious to me but it's not.  I'm trying to match a string which does NOT contain a specific sequence of characters.  I've tried using `[^ab]`, `[^(ab)]`, etc. to match strings containing no 'a's or 'b's, or only 'a's or only 'b's or 'ba' but not match on 'ab'.  But Is there some simple way to do this?",1
+8787295,01/09/2012 10:54:30,1125955,01/02/2012 09:00:07,9,0,Regular expression for Entity framework model,"I need to add regular expression data annotation on asp.net MVC 3 model ( I am using Entity frame work 4.1 code first).
+
+Requirement is:
+
+
+    Capitalize matters. use 6 to 32 characters and don’t use your name.
+    To make your password more secure:- use special characters (e.g., @) – mix lower and upper case.
+
+
+Please suggest me the regular expression or tool to create one.
+
+Thanks.
+
+",regex,asp.net-mvc-3,entity-framework-4.1,,,01/09/2012 19:53:02,not a real question,1,69,6,"Regular expression for Entity framework model I need to add regular expression data annotation on asp.net MVC 3 model ( I am using Entity frame work 4.1 code first).
+
+Requirement is:
+
+
+    Capitalize matters. use 6 to 32 characters and don’t use your name.
+    To make your password more secure:- use special characters (e.g., @) – mix lower and upper case.
+
+
+Please suggest me the regular expression or tool to create one.
+
+Thanks.
+
+",3
+9496464,02/29/2012 09:23:53,1230255,02/24/2012 08:05:47,1,0,"Can anyone explain me this expression $input =~ m/\G"".*?""(,|$)/gc || $input =~ m/\G[^,]*(,|$)/gc || die;","		
+Can some one please explain me the following expression
+$input =~ m/\G"".*?""(,|$)/gc || $input =~ m/\G[^,]*(,|$)/gc || die;",regex,perl,,,,07/10/2012 13:55:14,too localized,1,17,15,"Can anyone explain me this expression $input =~ m/\G"".*?""(,|$)/gc || $input =~ m/\G[^,]*(,|$)/gc || die; 		
+Can some one please explain me the following expression
+$input =~ m/\G"".*?""(,|$)/gc || $input =~ m/\G[^,]*(,|$)/gc || die;",2
+8377635,12/04/2011 18:38:52,614425,02/12/2011 18:06:03,341,34,Proper configuration .htaccess for successful indexing ajax-content by googlebot,"Based on [these][1] answers in the Help of Google's Webmaster, googlebot can normally indexing ajax-content when webmaster proper uses anchor links ('#!') and configure redirection for addresses that contain _escaped_fragment_ = in the query.
+
+I use Apache as a server (with mod_rewrite). I wrote the following rule in the .htaccess for redirection:
+
+    RewriteEngine on
+    
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+    RewriteRule \?_escaped_fragment_=(.*) snapshots/snap_%1.html [NC,R=301,L]
+
+
+The problem is that such a rule does not work as expected: RewriteRule not work out and redirection is not happening.
+
+In the case of this rule:
+
+    RewriteEngine on
+    
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+    RewriteRule ^(.*)$ mysite.com/snapshots/snap_%1.html [NC,R=301,L]
+
+
+url becomes http://mysite.com/snapshots/snap_ACHORLINK.html?_escaped_fragment_=ACHORLINK for links like http://mysite.com/?_escaped_fragment_=ACHORLINK, which leads to cyclic redirects.
+
+If someone can explain where the error crept in, I'll be very grateful.
+
+
+  [1]: http://www.google.com/support/webmasters/bin/answer.py?answer=174993",regex,apache,.htaccess,mod-rewrite,googlebot,12/05/2011 20:00:35,off topic,1,146,9,"Proper configuration .htaccess for successful indexing ajax-content by googlebot Based on [these][1] answers in the Help of Google's Webmaster, googlebot can normally indexing ajax-content when webmaster proper uses anchor links ('#!') and configure redirection for addresses that contain _escaped_fragment_ = in the query.
+
+I use Apache as a server (with mod_rewrite). I wrote the following rule in the .htaccess for redirection:
+
+    RewriteEngine on
+    
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+    RewriteRule \?_escaped_fragment_=(.*) snapshots/snap_%1.html [NC,R=301,L]
+
+
+The problem is that such a rule does not work as expected: RewriteRule not work out and redirection is not happening.
+
+In the case of this rule:
+
+    RewriteEngine on
+    
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+    RewriteRule ^(.*)$ mysite.com/snapshots/snap_%1.html [NC,R=301,L]
+
+
+url becomes http://mysite.com/snapshots/snap_ACHORLINK.html?_escaped_fragment_=ACHORLINK for links like http://mysite.com/?_escaped_fragment_=ACHORLINK, which leads to cyclic redirects.
+
+If someone can explain where the error crept in, I'll be very grateful.
+
+
+  [1]: http://www.google.com/support/webmasters/bin/answer.py?answer=174993",5
+4569825,12/31/2010 11:31:10,408070,08/01/2010 18:48:37,222,0,sed one-liner to convert all uppercase to lowercase?,"I have a textfile in which some words are printed in ALL CAPS. I want to be able to just convert everything in the textfile to lowercase, using `sed`. That means that the first sentence would then read, 'i have a textfile in which some words are printed in all caps.' ",regex,,,,,,open,0,52,8,"sed one-liner to convert all uppercase to lowercase? I have a textfile in which some words are printed in ALL CAPS. I want to be able to just convert everything in the textfile to lowercase, using `sed`. That means that the first sentence would then read, 'i have a textfile in which some words are printed in all caps.' ",1
+3965497,10/19/2010 05:12:34,418621,06/03/2010 19:16:12,1,0,"Regex for finding number of times substring ""hello hello"" occurs in string ""hello hello hello""","I want to get the count of occurrence of a substring within a string.
+
+My string is ""hello hello hello""
+
+I want to get the number of times hello hello occurs. Which in above case is 3. Can someone please tell me a regex for it? 
+
+Thanks!",regex,perl,,,,10/20/2010 01:01:53,not a real question,1,45,15,"Regex for finding number of times substring ""hello hello"" occurs in string ""hello hello hello"" I want to get the count of occurrence of a substring within a string.
+
+My string is ""hello hello hello""
+
+I want to get the number of times hello hello occurs. Which in above case is 3. Can someone please tell me a regex for it? 
+
+Thanks!",2
+11334841,07/04/2012 20:00:00,1461166,06/16/2012 22:07:32,12,0,I can't find a regex for this Regular Expression,"I am not very good with regular expressions, and I just have a simple question here.
+
+I have a list of links in this way:
+
+http://domain.com/andrei/sometext
+http://domain2.com/someothertext/sometextyouknow/whoknows
+http://domain341.com/text/thisisit/haha
+
+I just want two regular expressions, to take this out:
+
+http://domain.com/andrei/
+http://domain2.com/someothertext/
+http://domain341.com/text/
+
+This is the first regex that I need, and I need another regex only to take out the domain, but I guess I'll figure that out if somebody could tell me the regex to take out only what I wrote.
+
+Would be much appreciated.
+
+Regards",regex,,,,,,open,0,75,9,"I can't find a regex for this Regular Expression I am not very good with regular expressions, and I just have a simple question here.
+
+I have a list of links in this way:
+
+http://domain.com/andrei/sometext
+http://domain2.com/someothertext/sometextyouknow/whoknows
+http://domain341.com/text/thisisit/haha
+
+I just want two regular expressions, to take this out:
+
+http://domain.com/andrei/
+http://domain2.com/someothertext/
+http://domain341.com/text/
+
+This is the first regex that I need, and I need another regex only to take out the domain, but I guess I'll figure that out if somebody could tell me the regex to take out only what I wrote.
+
+Would be much appreciated.
+
+Regards",1
+11374196,07/07/2012 10:26:34,243680,10/18/2009 14:57:46,776,19,Regular Expression to accept all the decimals from 0 to 100,"I want to modify my existing Regular Expression which accepts decimals from 0 to 99.99
+
+    \d{0,2}(\.\d{1,2})?$ 
+
+i want this to be **accept**
+
+    100
+    100.0
+    100.00
+
+and should **not accept**
+
+    100.1
+    100.02
+    101
+
+Can anyone help me modify the above RE",regex,,,,,,open,0,59,11,"Regular Expression to accept all the decimals from 0 to 100 I want to modify my existing Regular Expression which accepts decimals from 0 to 99.99
+
+    \d{0,2}(\.\d{1,2})?$ 
+
+i want this to be **accept**
+
+    100
+    100.0
+    100.00
+
+and should **not accept**
+
+    100.1
+    100.02
+    101
+
+Can anyone help me modify the above RE",1

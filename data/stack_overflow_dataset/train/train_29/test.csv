@@ -1,0 +1,505 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9035228,01/27/2012 14:57:33,792889,06/10/2011 14:28:04,12,0,Unix profile detect who logged in,"Is it possible for a Unix profile to detect from which ip or host you are logging on from and then apply specific settings? If so, can someone please post a quick example? ",unix,,,,,01/27/2012 16:09:00,off topic,1,34,6,"Unix profile detect who logged in Is it possible for a Unix profile to detect from which ip or host you are logging on from and then apply specific settings? If so, can someone please post a quick example? ",1
+2888996,05/22/2010 17:11:53,347894,05/22/2010 17:11:53,1,0,Loading zsh as the default shell in gnu screen,"Im using KUbuntu 10.04 (Lucid Lynx). I have installed zsh and screen. I have set zsh as the default shell, by setting Command to zsh in Settings->Edit Current Profile of the terminal.
+But,when i launch screen,the bash shell is loaded. If i run the command zsh, then zsh starts but the following message is displayed:
+
+    ""/home/joel/.zshrc:36: Can't add module parameter `mapfile': parameter already exists""
+
+Also,zsh is invoked for only the current screen instance and i have to invoke it manually again for other instances.
+So,is there any way to make screen load zsh by default and invoke it automatically for every instance ?
+
+Thank You
+
+",unix,zsh,gnu-screen,,,10/06/2011 15:33:06,off topic,1,104,9,"Loading zsh as the default shell in gnu screen Im using KUbuntu 10.04 (Lucid Lynx). I have installed zsh and screen. I have set zsh as the default shell, by setting Command to zsh in Settings->Edit Current Profile of the terminal.
+But,when i launch screen,the bash shell is loaded. If i run the command zsh, then zsh starts but the following message is displayed:
+
+    ""/home/joel/.zshrc:36: Can't add module parameter `mapfile': parameter already exists""
+
+Also,zsh is invoked for only the current screen instance and i have to invoke it manually again for other instances.
+So,is there any way to make screen load zsh by default and invoke it automatically for every instance ?
+
+Thank You
+
+",3
+3451863,08/10/2010 17:47:53,55597,01/15/2009 20:24:40,27,0,When does a UNIX directory change its timestamp,"I used ""touch"" on a file, updating the file's timestamp but the parent directory's timestamp did not change.  However, (as expected) when I created a new file within the parent directory, the directory's timestamp did change.
+
+What criteria do UNIX-like operating systems (specifically AIX) use to determine when to update the timestamp of a directory?
+
+",unix,unix-timestamp,,,,,open,0,55,8,"When does a UNIX directory change its timestamp I used ""touch"" on a file, updating the file's timestamp but the parent directory's timestamp did not change.  However, (as expected) when I created a new file within the parent directory, the directory's timestamp did change.
+
+What criteria do UNIX-like operating systems (specifically AIX) use to determine when to update the timestamp of a directory?
+
+",2
+6222802,06/03/2011 03:55:24,243174,01/04/2010 12:43:14,94,3,Can we bundle mono in our installation package?,"Just for thought; can i bundle mono with my application package. So that if not installed then it get installed automatically.
+
+",unix,mono,,,,,open,0,21,8,"Can we bundle mono in our installation package? Just for thought; can i bundle mono with my application package. So that if not installed then it get installed automatically.
+
+",2
+11493691,07/15/2012 16:38:13,1527148,07/15/2012 16:29:29,1,0,How to write the following program?,"Problem: Euler's number, e, can be estimated using the following formula:
+
+e =  1 + 1/1! + 1/2! + 1/3! + 1/4! + 1/5! + 1/6! + ...
+
+Ask the user to enter a maximum desired difference between the estimate above and the value of Euler's number from
+math.h. Be sure to validate that the desired difference is greater than zero.
+
+Example Execution #1:
+Enter desired difference: 0.005
+Requested maximum difference: 0.0050000000
+Term Estimate Math.h Difference
+---- ------------ ------------ ------------
+1 1.0000000000 2.7182818285 1.7182818285
+2 2.0000000000 2.7182818285 0.7182818285
+3 2.5000000000 2.7182818285 0.2182818285
+4 2.6666666667 2.7182818285 0.0516151618
+5 2.7083333333 2.7182818285 0.0099484951
+6 2.7166666667 2.7182818285 0.0016151618
+",unix,,,,,07/15/2012 16:42:40,too localized,1,91,6,"How to write the following program? Problem: Euler's number, e, can be estimated using the following formula:
+
+e =  1 + 1/1! + 1/2! + 1/3! + 1/4! + 1/5! + 1/6! + ...
+
+Ask the user to enter a maximum desired difference between the estimate above and the value of Euler's number from
+math.h. Be sure to validate that the desired difference is greater than zero.
+
+Example Execution #1:
+Enter desired difference: 0.005
+Requested maximum difference: 0.0050000000
+Term Estimate Math.h Difference
+---- ------------ ------------ ------------
+1 1.0000000000 2.7182818285 1.7182818285
+2 2.0000000000 2.7182818285 0.7182818285
+3 2.5000000000 2.7182818285 0.2182818285
+4 2.6666666667 2.7182818285 0.0516151618
+5 2.7083333333 2.7182818285 0.0099484951
+6 2.7166666667 2.7182818285 0.0016151618
+",1
+8201243,11/20/2011 11:40:34,728747,04/28/2011 07:08:10,25,1,Vfork() and more corruption,"my question is on execution what will happen to parent stack?
+    main()
+    {
+    `f();`
+    `g();`
+    }
+    f()
+    {
+    `vfork();`
+    }
+    g()
+    { 
+    `int blast[100],i;`
+    `for(i=0;i<100;i++)`
+    `blast[i]=i;`
+    }
+
+
+",unix,bsd,,,,,open,0,73,4,"Vfork() and more corruption my question is on execution what will happen to parent stack?
+    main()
+    {
+    `f();`
+    `g();`
+    }
+    f()
+    {
+    `vfork();`
+    }
+    g()
+    { 
+    `int blast[100],i;`
+    `for(i=0;i<100;i++)`
+    `blast[i]=i;`
+    }
+
+
+",2
+10308796,04/25/2012 03:04:18,859556,07/23/2011 17:51:58,2,0,Maximum file size on a v6 File system,"Can some one help me with the solution for this question.
+
+How would you double the size of the largest file on a v6 filesystem without changing the inode size and block size.
+
+The system is Unix, v6 filesystem.
+
+Thanks
+manjit",unix,filesystems,,,,04/25/2012 03:26:24,off topic,1,37,8,"Maximum file size on a v6 File system Can some one help me with the solution for this question.
+
+How would you double the size of the largest file on a v6 filesystem without changing the inode size and block size.
+
+The system is Unix, v6 filesystem.
+
+Thanks
+manjit",2
+10182798,04/16/2012 22:49:45,306,08/04/2008 14:09:03,1320,29,Why are ports below 1024 privileged?,"I've heard it's meant to be a security feature, but it often seems like a security problem. If I want to write a server that uses a privileged port, not only do I have to worry about how secure my code is, I have to especially worry about whether I'm using setuid right and dropping privileges.",unix,ip,,,,,open,0,56,6,"Why are ports below 1024 privileged? I've heard it's meant to be a security feature, but it often seems like a security problem. If I want to write a server that uses a privileged port, not only do I have to worry about how secure my code is, I have to especially worry about whether I'm using setuid right and dropping privileges.",2
+5564188,04/06/2011 09:28:04,58089,01/22/2009 22:29:53,1309,27,What is the best website to use to view man pages?,"Sometimes I want to link to man pages.  When I just google for a man page, I usually get a bunch of ugly web pages and often they disappear after a while.  This is not the end of the world or anything, but it irks me.
+
+Is there a man page website that doesn't look like it was created in 1895?  It would be great if it did the thing where it links to related man pages.  Also, it would be awesome if the site had man pages for all kinds of different Unixes.  But barring that, I'd settle for whatever comes with Linux/Ubuntu.",unix,ubuntu,website,documentation,man,01/29/2012 06:19:39,off topic,1,108,11,"What is the best website to use to view man pages? Sometimes I want to link to man pages.  When I just google for a man page, I usually get a bunch of ugly web pages and often they disappear after a while.  This is not the end of the world or anything, but it irks me.
+
+Is there a man page website that doesn't look like it was created in 1895?  It would be great if it did the thing where it links to related man pages.  Also, it would be awesome if the site had man pages for all kinds of different Unixes.  But barring that, I'd settle for whatever comes with Linux/Ubuntu.",5
+8187680,11/18/2011 19:00:24,781529,06/02/2011 16:53:03,200,14,What happens when you type on unix shell,What happens when you type (not necessary a command) on a unix shell? More specifically what happens in the background as you type on the shell?,unix,sh,,,,11/18/2011 19:20:37,not a real question,1,26,8,What happens when you type on unix shell What happens when you type (not necessary a command) on a unix shell? More specifically what happens in the background as you type on the shell?,2
+7292609,09/03/2011 10:37:05,922667,09/01/2011 00:58:33,1,0,sftp from mainframes to other server,"I need a unix script that would take the file from a mainframe to another server.
+
+Presently i am using a ndm but i am not knowing what the changes would be required to change to sftp.
+
+Can you please provide some code that would be helpful
+
+Thanks",unix,sftp,,,,09/03/2011 14:48:18,not a real question,1,45,6,"sftp from mainframes to other server I need a unix script that would take the file from a mainframe to another server.
+
+Presently i am using a ndm but i am not knowing what the changes would be required to change to sftp.
+
+Can you please provide some code that would be helpful
+
+Thanks",2
+5329206,03/16/2011 17:25:48,374916,06/24/2010 06:01:22,346,4,date calculations using unix time,"Looking for help in unix to get the following date stamps using unix date:
+
+    today at 12:00am  
+    12:00am - 15 days ago
+    12:00am - 30 days ago 
+
+in Unix epoch time? (`1300295838`)
+
+",unix,unixtime,,,,,open,0,43,5,"date calculations using unix time Looking for help in unix to get the following date stamps using unix date:
+
+    today at 12:00am  
+    12:00am - 15 days ago
+    12:00am - 30 days ago 
+
+in Unix epoch time? (`1300295838`)
+
+",2
+8523106,12/15/2011 16:12:35,183380,10/02/2009 21:49:11,2150,108,gphoto2: no file list after capture,"Currently taking a picture on a connected camera takes anywhere from 15 - 20 seconds. When I take a picture on the camera manually, while disconnected from the computer, I can take one every 3 seconds or so. I've found that gphoto seems to be taking some time asking the camera for details about the image just taken after a capture. Does any one know if that can be turned off?
+
+Is it possible with gphoto2 to just take a photo and not retrieve the file information of the shot just taken?",unix,photography,gphoto2,,,12/16/2011 13:09:22,off topic,1,91,6,"gphoto2: no file list after capture Currently taking a picture on a connected camera takes anywhere from 15 - 20 seconds. When I take a picture on the camera manually, while disconnected from the computer, I can take one every 3 seconds or so. I've found that gphoto seems to be taking some time asking the camera for details about the image just taken after a capture. Does any one know if that can be turned off?
+
+Is it possible with gphoto2 to just take a photo and not retrieve the file information of the shot just taken?",3
+8840355,01/12/2012 18:31:33,493085,10/31/2010 23:22:58,339,15,Why do carriage returns ruin everything in Unix?,"I see a lot of questions about how to remove them, but I haven't found an answer as to why they ""mess up"" all my testing/printing functions in Unix systems and terminals.
+
+So, in a programmer sense, why do carriage returns mess up Unix shells. It seems I'm always writing the same code in different languages to trash them.",unix,terminal,,,,01/13/2012 01:34:14,not a real question,1,58,8,"Why do carriage returns ruin everything in Unix? I see a lot of questions about how to remove them, but I haven't found an answer as to why they ""mess up"" all my testing/printing functions in Unix systems and terminals.
+
+So, in a programmer sense, why do carriage returns mess up Unix shells. It seems I'm always writing the same code in different languages to trash them.",2
+9705579,03/14/2012 16:05:26,1263849,03/12/2012 10:20:35,1,0,find files modified between two dates,"I need to find files modified between two dates.
+for example say between day 2 and 5, not calendar days but days ago from right now.
+so files modified before 2 and 5 days but not 1 day before.",unix,,,,,03/15/2012 06:01:59,not a real question,1,37,6,"find files modified between two dates I need to find files modified between two dates.
+for example say between day 2 and 5, not calendar days but days ago from right now.
+so files modified before 2 and 5 days but not 1 day before.",1
+10079740,04/09/2012 20:55:09,1070422,11/29/2011 01:21:27,34,0,find files with size in unix,"I am looking for a unix command to print the files with its size. I used this but didnt work.
+
+    find . -size +10000k -print.
+
+I want to print the size of the file also along with the filename/dir",unix,find,size,command,,04/09/2012 21:15:39,off topic,1,41,6,"find files with size in unix I am looking for a unix command to print the files with its size. I used this but didnt work.
+
+    find . -size +10000k -print.
+
+I want to print the size of the file also along with the filename/dir",4
+5933891,05/09/2011 07:32:22,718917,04/21/2011 12:23:19,6,0,how to chat over terminal in ubuntu,"Good afternoon all,
+
+I tried to figure out , how to chat through ubuntu terminal, over a network or any know person outside the world...
+i tried to use talk but it shows error to me...
+if any one pls help me /or provide me to site where i can learn -""how to chat over terminal""
+
+
+                                             Thank in advance",unix,ubuntu,chat,,,05/09/2011 09:19:54,off topic,1,100,7,"how to chat over terminal in ubuntu Good afternoon all,
+
+I tried to figure out , how to chat through ubuntu terminal, over a network or any know person outside the world...
+i tried to use talk but it shows error to me...
+if any one pls help me /or provide me to site where i can learn -""how to chat over terminal""
+
+
+                                             Thank in advance",3
+4024105,10/26/2010 13:25:53,166034,08/31/2009 14:15:07,100,2,Convert hexadecimal to octet format,"the ifconfig output of my machine is the following:
+
+
+:~ shell$ ifconfig en0
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether 00:25:bc:e7:39:6a 
+	inet6 fe80::225:bcff:fee7:396a%en0 prefixlen 64 scopeid 0x4 
+	inet 10.170.133.45 netmask 0xffffff00 broadcast 10.170.133.255
+	media: autoselect (100baseTX <full-duplex>)
+	status: active
+
+
+I know that netmask 0xffffff00 is the hexadecimal representation of 255.255.255.0.
+
+But which is the correct way of converting that string into the octet format?
+
+Can you suggest some unix command or shell script?
+",unix,networking,type-conversion,,,,open,0,63,5,"Convert hexadecimal to octet format the ifconfig output of my machine is the following:
+
+
+:~ shell$ ifconfig en0
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether 00:25:bc:e7:39:6a 
+	inet6 fe80::225:bcff:fee7:396a%en0 prefixlen 64 scopeid 0x4 
+	inet 10.170.133.45 netmask 0xffffff00 broadcast 10.170.133.255
+	media: autoselect (100baseTX <full-duplex>)
+	status: active
+
+
+I know that netmask 0xffffff00 is the hexadecimal representation of 255.255.255.0.
+
+But which is the correct way of converting that string into the octet format?
+
+Can you suggest some unix command or shell script?
+",3
+3800969,09/27/2010 03:37:43,437655,09/02/2010 06:58:01,100,25,Microsoft DOS vs Unix,Which one is more powerful operating system? And is it possible to convert Microsoft-DOS batch file into Unix Script and vice-versa?,unix,dos,ms-dos,,,09/27/2010 03:42:09,off topic,1,21,4,Microsoft DOS vs Unix Which one is more powerful operating system? And is it possible to convert Microsoft-DOS batch file into Unix Script and vice-versa?,3
+9250322,02/12/2012 16:13:19,996922,10/15/2011 14:21:49,32,0,Unix - from logical block to disk track,"Suppose you have the following disk requests in a Unix environment (each couple is formed by #logical block and filename) :
+ 
+          (20,B), (14,A), (36, B), (450, A), (2300, B), (4530,A) ...
+
+Also, suppose that the physical blocks of the files A and B are allocated starting from 0 (for file B) e from 1 (for file A) incrementing the block number by 2 each time (so for example, A has blocks 0,2,4... B : 1,3,5...). Also, consider 290 blocks per track, each of 8 KB, 32-bit memory addresses and 400 cylinders.
+
+How can you get the right track number for each of the above requests?
+",unix,filesystems,disk,,,02/12/2012 16:54:56,off topic,1,113,8,"Unix - from logical block to disk track Suppose you have the following disk requests in a Unix environment (each couple is formed by #logical block and filename) :
+ 
+          (20,B), (14,A), (36, B), (450, A), (2300, B), (4530,A) ...
+
+Also, suppose that the physical blocks of the files A and B are allocated starting from 0 (for file B) e from 1 (for file A) incrementing the block number by 2 each time (so for example, A has blocks 0,2,4... B : 1,3,5...). Also, consider 290 blocks per track, each of 8 KB, 32-bit memory addresses and 400 cylinders.
+
+How can you get the right track number for each of the above requests?
+",3
+11304533,07/03/2012 04:34:45,957682,09/21/2011 19:02:03,86,2,Cant install CRON job,"When I try installing my Cron job I get the following error:
+
+""crontab.txt"":8: premature EOF errors in crontab file, can't install
+
+",unix,cron,crontab,cron-task,,,open,0,20,4,"Cant install CRON job When I try installing my Cron job I get the following error:
+
+""crontab.txt"":8: premature EOF errors in crontab file, can't install
+
+",4
+4011814,10/25/2010 03:55:37,60628,01/30/2009 14:28:28,5380,136,How to interleave the lines of two text files?,"What's the easiest/quickest way to interleave the lines of two (or more) text files? Example:
+
+File 1:
+
+    line1.1
+    line1.2
+    line1.3
+
+File 2:
+
+    line2.1
+    line2.2
+    line2.3
+
+Interleaved:
+
+    line1.1
+    line2.1
+    line1.2
+    line2.2
+    line1.3
+    line2.3
+
+Sure it's easy to write a little Perl script that opens them both and does the task. But I was wondering if it's possible to get away with fewer code, maybe a one-liner using unix tools?
+",unix,text,,,,,open,0,100,9,"How to interleave the lines of two text files? What's the easiest/quickest way to interleave the lines of two (or more) text files? Example:
+
+File 1:
+
+    line1.1
+    line1.2
+    line1.3
+
+File 2:
+
+    line2.1
+    line2.2
+    line2.3
+
+Interleaved:
+
+    line1.1
+    line2.1
+    line1.2
+    line2.2
+    line1.3
+    line2.3
+
+Sure it's easy to write a little Perl script that opens them both and does the task. But I was wondering if it's possible to get away with fewer code, maybe a one-liner using unix tools?
+",2
+11413773,07/10/2012 12:55:09,1179499,01/31/2012 04:29:30,11,0,How does Unix System V allocate memory,"For example, does it use a free list, memory pooling, buddy system, etc.? Please provide a source. ",unix,memory-management,operating-system,,,07/12/2012 12:17:51,off topic,1,18,7,"How does Unix System V allocate memory For example, does it use a free list, memory pooling, buddy system, etc.? Please provide a source. ",3
+74844,09/16/2008 17:32:30,13158,09/16/2008 17:24:21,1,0,Bash or Ksh ?,"I'm not new to *nix, however lately I have been spending a lot of time at the prompt to do my development for my job. My question is what are the advantages of using Korn Shell or Bash Shell? Where are the pitfalls of using one over the other? Looking to understand from the perspective of a user, rather than purely scripting.",unix,bash,ksh,,,09/02/2011 06:30:54,off topic,1,62,4,"Bash or Ksh ? I'm not new to *nix, however lately I have been spending a lot of time at the prompt to do my development for my job. My question is what are the advantages of using Korn Shell or Bash Shell? Where are the pitfalls of using one over the other? Looking to understand from the perspective of a user, rather than purely scripting.",3
+3227373,07/12/2010 09:43:34,308826,03/18/2010 11:56:37,56,2,Signals in fork,"What is signal behavior  in the fork. 
+Should all signals are inherited in fork If not then which one and why?
+",unix,fork,signals,,,,open,0,22,3,"Signals in fork What is signal behavior  in the fork. 
+Should all signals are inherited in fork If not then which one and why?
+",3
+5390023,03/22/2011 10:48:14,114260,05/29/2009 12:03:25,8,1,ssh fails for an unix server due to dual layer of authorization,I have a server which has dual authorization layer. Meaning first a user has to login to the box using his userid and then use a group id to access the development folder(say). Now I have a script which uses ssh to copy a file to the development folder. What should be the command for this? Normal ssh command as ***ssh $user@host $cmd*** where *$cmd=cp ~/user/Test.txt ~/grp/*      won't work because we are using user's id to copy to group's directory which is not allowed. And if we use group id to login it will be denied permission. Any suggestions?,unix,authentication,ssh,,,03/24/2011 00:43:00,off topic,1,104,12,ssh fails for an unix server due to dual layer of authorization I have a server which has dual authorization layer. Meaning first a user has to login to the box using his userid and then use a group id to access the development folder(say). Now I have a script which uses ssh to copy a file to the development folder. What should be the command for this? Normal ssh command as ***ssh $user@host $cmd*** where *$cmd=cp ~/user/Test.txt ~/grp/*      won't work because we are using user's id to copy to group's directory which is not allowed. And if we use group id to login it will be denied permission. Any suggestions?,3
+4647282,01/10/2011 13:22:59,404512,07/28/2010 12:44:04,26,0,HOW TO AUTO FTP PARTICULAR FILES FROM TELNET SERVER TO SSH SERVER VIA SOLARIS SERVER,"HI,
+I have One Sun OS Server.I want to do it in Unix Language...
+
+
+From Server : Telnet Server 
+To Server : SSH Server
+
+I am in need of FTP Script to, FTP Particular files from Telnet To SSH Server automated one.
+
+Note : Unix Language is preferably",unix,,,,,01/10/2011 13:25:31,not a real question,1,44,15,"HOW TO AUTO FTP PARTICULAR FILES FROM TELNET SERVER TO SSH SERVER VIA SOLARIS SERVER HI,
+I have One Sun OS Server.I want to do it in Unix Language...
+
+
+From Server : Telnet Server 
+To Server : SSH Server
+
+I am in need of FTP Script to, FTP Particular files from Telnet To SSH Server automated one.
+
+Note : Unix Language is preferably",1
+5636882,04/12/2011 14:29:44,678793,03/07/2011 13:27:34,47,0,While using sed command i receive the following error : Function cannot be parsed. Any Solutions or reason for this?,"Hi i need to change a particular character in a txt file to be replaced by another character.
+EG test.txt
+
+
+Need ""E"" to be replaced as ""A""
+
+EG:
+Apple ice   to ApplA Ica
+
+The operating system used is unix.
+
+While executing sed 's/E/A' <apple.txt>app.txt
+
+I receive the function cannot be parsed error...
+
+Please help !!!
+
+I need to automate this using Antscript .",unix,ant,sed,,,,open,0,56,20,"While using sed command i receive the following error : Function cannot be parsed. Any Solutions or reason for this? Hi i need to change a particular character in a txt file to be replaced by another character.
+EG test.txt
+
+
+Need ""E"" to be replaced as ""A""
+
+EG:
+Apple ice   to ApplA Ica
+
+The operating system used is unix.
+
+While executing sed 's/E/A' <apple.txt>app.txt
+
+I receive the function cannot be parsed error...
+
+Please help !!!
+
+I need to automate this using Antscript .",3
+7891360,10/25/2011 15:02:29,410693,08/04/2010 11:16:53,320,6,Confused on the output of 'ip addr show',"
+
+I am trying to retrieve the ipaddress of the unix system.. ip addr show..
+
+
+and I got this as an output 
+
+2: eth0:  mtu 1500 qdisc mq state UP qlen 1000
+    link/ether b8:ac:6f:65:31:e5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.2.100/24 brd 192.168.2.255 scope global eth0
+    inet6 fe80::baac:6fff:fe65:31e5/64 scope link
+       valid_lft forever preferred_lft forever
+
+But I am not clear on the output So can anyone help me in finding
+what can be the Ip address in the above data ?",unix,cmd,,,,10/26/2011 07:23:54,off topic,1,89,8,"Confused on the output of 'ip addr show' 
+
+I am trying to retrieve the ipaddress of the unix system.. ip addr show..
+
+
+and I got this as an output 
+
+2: eth0:  mtu 1500 qdisc mq state UP qlen 1000
+    link/ether b8:ac:6f:65:31:e5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.2.100/24 brd 192.168.2.255 scope global eth0
+    inet6 fe80::baac:6fff:fe65:31e5/64 scope link
+       valid_lft forever preferred_lft forever
+
+But I am not clear on the output So can anyone help me in finding
+what can be the Ip address in the above data ?",2
+3049897,06/15/2010 23:57:12,311521,04/08/2010 01:38:31,22,0,SSH copying folders,"I have a folder on my server that I'd like to copy to another directory. However, after I copy it and navigate to the new folder, some of the directories are RED and I can't navigate into them. I think this has something to do with them creating links instead of actually copying the folders.
+
+    cp -a site2.com/httpdocs site1.com/httpdocs
+But then some of the sub folders from site2.com/httpdocs are setup as invalid links into site1.com/httpdocs and I cannot navigate to them nor can the webserver display them.
+
+Additionally, I have a permissions error where the copied files have their user set to site2.com but even after CHOWN I cannot get site1.com to display them.",unix,permissions,ssh,copy,chown,06/16/2010 05:08:52,off topic,1,115,3,"SSH copying folders I have a folder on my server that I'd like to copy to another directory. However, after I copy it and navigate to the new folder, some of the directories are RED and I can't navigate into them. I think this has something to do with them creating links instead of actually copying the folders.
+
+    cp -a site2.com/httpdocs site1.com/httpdocs
+But then some of the sub folders from site2.com/httpdocs are setup as invalid links into site1.com/httpdocs and I cannot navigate to them nor can the webserver display them.
+
+Additionally, I have a permissions error where the copied files have their user set to site2.com but even after CHOWN I cannot get site1.com to display them.",5
+3694839,09/12/2010 12:37:26,445562,09/12/2010 12:37:26,1,0,Free Unix Shell with open port ?,"I'm in a restricted network,that way I'm looking for a free Unix shell with open port
+to use SSH tunnelling (remote port forwarding) and thanks.",unix,shell,free,port,open,09/12/2010 13:19:17,off topic,1,24,7,"Free Unix Shell with open port ? I'm in a restricted network,that way I'm looking for a free Unix shell with open port
+to use SSH tunnelling (remote port forwarding) and thanks.",5
+1875773,12/09/2009 18:16:02,224640,12/04/2009 09:59:24,21,2,Assign threads to run on a custom Core in Unix,"Is it possible to run a particular thread/process on any core we want?
+ Since multi-core systems are available today . Is it possible to assign two (mutually independent ) segments of code run on any core we want to rather than wait for it to be assigned in a round robin fashion?
+This way we can truly reap the benefits of parallel processing.
+
+Is there a system call in the **Unix flavours** that lets us assign threads to specific cores?",unix,parallel-processing,,,,,open,0,78,10,"Assign threads to run on a custom Core in Unix Is it possible to run a particular thread/process on any core we want?
+ Since multi-core systems are available today . Is it possible to assign two (mutually independent ) segments of code run on any core we want to rather than wait for it to be assigned in a round robin fashion?
+This way we can truly reap the benefits of parallel processing.
+
+Is there a system call in the **Unix flavours** that lets us assign threads to specific cores?",2
+800030,04/28/2009 22:05:57,12942,09/16/2008 16:19:33,18,0,Remove carriage return in Unix,What is the simplest way to remove all the carriage returns <CR> from a file in Unix?,unix,remove,carriage-return,,,,open,0,17,5,Remove carriage return in Unix What is the simplest way to remove all the carriage returns <CR> from a file in Unix?,3
+2829613,05/13/2010 19:17:33,340599,05/13/2010 19:09:44,1,0,How do you tell if a string contains another string in Unix shell scripting?,"I want to write a Unix shell script that will do various logic if there is a string inside of another string. For example, if I am in a certain folder, branch off. Could someone please tell me how to accomplish this? If possible I would like to make this not shell specific (i.e. not bash only) but if there's no other way I can make do with that.
+
+    #!/bin/sh
+    CURRENT_DIR=`pwd`
+    
+    if [ CURRENT_DIR contains ""String1"" ]
+    then
+     echo ""String1 present""
+    elif [ CURRENT_DIR contains ""String1"" ]
+    then
+     echo ""String2 present""
+    else
+     echo ""Else""
+    fi",unix,,,,,,open,0,135,14,"How do you tell if a string contains another string in Unix shell scripting? I want to write a Unix shell script that will do various logic if there is a string inside of another string. For example, if I am in a certain folder, branch off. Could someone please tell me how to accomplish this? If possible I would like to make this not shell specific (i.e. not bash only) but if there's no other way I can make do with that.
+
+    #!/bin/sh
+    CURRENT_DIR=`pwd`
+    
+    if [ CURRENT_DIR contains ""String1"" ]
+    then
+     echo ""String1 present""
+    elif [ CURRENT_DIR contains ""String1"" ]
+    then
+     echo ""String2 present""
+    else
+     echo ""Else""
+    fi",1
+7769450,10/14/2011 14:54:20,859711,07/23/2011 21:25:29,1,0,Unix Fork Understanding,"[I am learning process forking ][1]
+http://www.ibm.com/developerworks/aix/library/au-unixprocess.html
+
+
+I am trying the code of listing 3..
+
+
+
+
+
+The output I get is 
+    Original program, pid=2728
+    In parent, pid=2728, fork returned=2731
+    In child process, pid=2731, ppid=2728
+
+Where as The page shows an output of child first then parent?
+I don't understand this
+Also I run the code in my college lab I get output as shown on the page 
+Thanks a lot in advance for troubling to answer this naive question
+I am running Ubuntu 11.04
+
+
+  [1]: http://www.ibm.com/developerworks/aix/library/au-unixprocess.html
+  [2]: http://www.ibm.com/developerworks/aix/library/au-unixprocess.html",unix,fork,child,,,,open,0,92,3,"Unix Fork Understanding [I am learning process forking ][1]
+http://www.ibm.com/developerworks/aix/library/au-unixprocess.html
+
+
+I am trying the code of listing 3..
+
+
+
+
+
+The output I get is 
+    Original program, pid=2728
+    In parent, pid=2728, fork returned=2731
+    In child process, pid=2731, ppid=2728
+
+Where as The page shows an output of child first then parent?
+I don't understand this
+Also I run the code in my college lab I get output as shown on the page 
+Thanks a lot in advance for troubling to answer this naive question
+I am running Ubuntu 11.04
+
+
+  [1]: http://www.ibm.com/developerworks/aix/library/au-unixprocess.html
+  [2]: http://www.ibm.com/developerworks/aix/library/au-unixprocess.html",3
+958249,06/05/2009 21:30:57,16584,09/17/2008 18:42:46,834,17,What's the difference between nohup and a daemon?,"I was just wondering what the implication is for running a script as a daemon versus using nohup?
+
+I know what the difference is terms of forking processes etc, but what impact does that have on my script?",unix,daemon,,,,,open,0,37,8,"What's the difference between nohup and a daemon? I was just wondering what the implication is for running a script as a daemon versus using nohup?
+
+I know what the difference is terms of forking processes etc, but what impact does that have on my script?",2

@@ -1,0 +1,2655 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+7458964,09/18/2011 01:37:36,204623,11/06/2009 08:57:11,1282,11,Help with file permissions. Cannot access file with 644 mask,I have given a text file in my home directory a 644 mask. Another user logged into the same machine cannot read or copy my file. Why is this? ,unix,,,,,09/18/2011 01:58:58,off topic,1,30,10,Help with file permissions. Cannot access file with 644 mask I have given a text file in my home directory a 644 mask. Another user logged into the same machine cannot read or copy my file. Why is this? ,1
+1040196,06/24/2009 18:46:24,32262,10/29/2008 02:41:08,104,2,What is the best unix compression utility?,What is the best unix compression utility available?,unix,compression,,,,06/24/2009 18:54:43,off topic,1,8,7,What is the best unix compression utility? What is the best unix compression utility available?,2
+7795558,10/17/2011 14:52:31,999363,10/17/2011 14:33:08,1,0,stdbuf usage: increasing buffer size,"I've got an awk script sending out long strings (>10K chars) to stdout.
+
+I would like to increase the buffer size so that larger chunks of those long strings are written at once. I've timed both pipes below with different -o sizes but there's no significant changes
+
+    time stdbuf -o 100MB awk -f processing.awk infile.txt | sort -k1,1 > outfile.txt
+    time stdbuf -o 100MB awk -f processing.awk infile.txt > outfile.txt
+
+real/user/sys timings are all very similar to oneanother (+- 10% on each metric).
+
+My question is whether I'm using stdbuf the right way? Thank you.
+
+FZ.
+",unix,pipes,,,,,open,0,98,5,"stdbuf usage: increasing buffer size I've got an awk script sending out long strings (>10K chars) to stdout.
+
+I would like to increase the buffer size so that larger chunks of those long strings are written at once. I've timed both pipes below with different -o sizes but there's no significant changes
+
+    time stdbuf -o 100MB awk -f processing.awk infile.txt | sort -k1,1 > outfile.txt
+    time stdbuf -o 100MB awk -f processing.awk infile.txt > outfile.txt
+
+real/user/sys timings are all very similar to oneanother (+- 10% on each metric).
+
+My question is whether I'm using stdbuf the right way? Thank you.
+
+FZ.
+",2
+6222898,06/03/2011 04:16:07,243174,01/04/2010 12:43:14,94,3,What is the sequence of mono rpm's installation?,As mono have alot of rpm's to get completely installed? What is the sequence of those rpm's installation as each rpm is dependent on other? ,unix,mono,,,,06/05/2011 11:31:53,off topic,1,26,8,What is the sequence of mono rpm's installation? As mono have alot of rpm's to get completely installed? What is the sequence of those rpm's installation as each rpm is dependent on other? ,2
+1878278,12/10/2009 02:24:36,363566,09/19/2009 23:38:19,238,1,What's the best way to edit a text file record using shell?,"I have data file that stores records like this:
+
+    make=honda|model=civic|color=red
+    make=toyota|model=corolla|color=blue
+
+What would be the best way to detect (based on the make field) whether a given make exists in the file and then replace it with a new record? (Using shell script)",unix,shell,,,,,open,0,48,12,"What's the best way to edit a text file record using shell? I have data file that stores records like this:
+
+    make=honda|model=civic|color=red
+    make=toyota|model=corolla|color=blue
+
+What would be the best way to detect (based on the make field) whether a given make exists in the file and then replace it with a new record? (Using shell script)",2
+7498417,09/21/2011 10:43:36,946124,09/15/2011 06:12:50,6,1,syntax error at line 18: `newline or ;' unexpected,"When I am executing the shell script I am getting the below error.
+
+I am not sure about the problem
+Can anyone please suggets me something.
+
+ERROR
+
+
+(vs4b1:/usr/local/sprt/bgc_sg4/servicegateway/agent)% ./sprt_acs stop
+./sprt_acs: syntax error at line 18: `newline or ;' unexpected
+",unix,shell-scripting,,,,09/21/2011 18:20:39,not a real question,1,35,9,"syntax error at line 18: `newline or ;' unexpected When I am executing the shell script I am getting the below error.
+
+I am not sure about the problem
+Can anyone please suggets me something.
+
+ERROR
+
+
+(vs4b1:/usr/local/sprt/bgc_sg4/servicegateway/agent)% ./sprt_acs stop
+./sprt_acs: syntax error at line 18: `newline or ;' unexpected
+",2
+7537640,09/24/2011 07:14:55,301155,03/24/2010 19:26:25,11,0,SSH smoke & mirrors,"**Situation:**
+I've been given SSH access to a server running LAMP (Redhat) and the brief is to migrate files and database from current live server to this new development server for testing.
+Further this SSH access is contained within a Protected Workspace, so basically I have to access this companies internal network and then I can access the server there through SSH.
+
+**Issue:**
+SSH - WTF?? :- In the murky world of media agency smoke and mirrors alas I'm not allowed to  admit weakness and it appears that I won't have access to my familiar tools (filezilla + sequelpro)
+
+I managed to logon to the server yesterday with Putty though have no idea how to achieve the mission:
+
+ - Create a database
+ - Import data to that database
+ - Upload files
+ - Set permission on files and folders
+ - At what address will I be able to view the website?
+
+Is there a kind soul out there who can point me in the right direction?
+
+Thanks.",unix,ssh,putty,,,09/24/2011 07:20:36,off topic,1,160,4,"SSH smoke & mirrors **Situation:**
+I've been given SSH access to a server running LAMP (Redhat) and the brief is to migrate files and database from current live server to this new development server for testing.
+Further this SSH access is contained within a Protected Workspace, so basically I have to access this companies internal network and then I can access the server there through SSH.
+
+**Issue:**
+SSH - WTF?? :- In the murky world of media agency smoke and mirrors alas I'm not allowed to  admit weakness and it appears that I won't have access to my familiar tools (filezilla + sequelpro)
+
+I managed to logon to the server yesterday with Putty though have no idea how to achieve the mission:
+
+ - Create a database
+ - Import data to that database
+ - Upload files
+ - Set permission on files and folders
+ - At what address will I be able to view the website?
+
+Is there a kind soul out there who can point me in the right direction?
+
+Thanks.",3
+5933153,05/09/2011 06:06:59,295019,03/16/2010 17:58:56,95,0,From this screenshot would anyone be able to identify what program this is?,"![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/m5gxN.jpg
+
+It appears to be a diff tool but I was really curious to know which one exactly.",unix,compare,,,,05/09/2011 07:01:39,off topic,1,23,13,"From this screenshot would anyone be able to identify what program this is? ![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/m5gxN.jpg
+
+It appears to be a diff tool but I was really curious to know which one exactly.",2
+10540935,05/10/2012 19:32:29,1135954,01/07/2012 13:13:51,76,10,What is the difference between tar and zip?,What is the difference between tar and zip ? What are the scenarios for there usage?,unix,compression,zip,difference,tar,05/30/2012 01:57:21,off topic,1,16,8,What is the difference between tar and zip? What is the difference between tar and zip ? What are the scenarios for there usage?,5
+1083739,07/05/2009 09:21:22,67819,02/18/2009 12:31:40,454,64,Windows API vs. UNIX shell  (equiv?) -- Or -- When is a programming language a language and not a script?,"I've seen a number of question's closed as ""Not programming related"" (e.g. http://stackoverflow.com/questions/397854/what-process-accesses-my-hdd)
+
+I understand that their's several alternative site (stackoverflow) themed-forums and to attempt keep site question's to a minimum also some may argue that this is too subjective, o well, I got madly flamed for my first answer, so here's my first question, I'll try to frame it in a psudo-contextual-basis (jepordy style) to keep some regulator's at bay... 
+
+Is it not fair to #include UNIX systems's level discussion in the same realm as programming?  One of the most usefull UNIX tools I've ever used, strace/trus/par, is based around system call information and reporting, other tools like ltrace can do similar things for libararies... 
+
+Now given UNIX and Windows are wholy different (e.g. Windows programmer interfaces are nearly exclusivly library calls) and how tighly UNIX intergrates kernel and system services and interfaces with the standard user shells', like the C shell;
+
+Is it not the case that UNIX systems related questions are programming questions? If not, where is the boundry between a programming/scripting language and user interface?
+",unix,windows,compare,interface,,07/05/2009 13:49:59,off topic,1,178,21,"Windows API vs. UNIX shell  (equiv?) -- Or -- When is a programming language a language and not a script? I've seen a number of question's closed as ""Not programming related"" (e.g. http://stackoverflow.com/questions/397854/what-process-accesses-my-hdd)
+
+I understand that their's several alternative site (stackoverflow) themed-forums and to attempt keep site question's to a minimum also some may argue that this is too subjective, o well, I got madly flamed for my first answer, so here's my first question, I'll try to frame it in a psudo-contextual-basis (jepordy style) to keep some regulator's at bay... 
+
+Is it not fair to #include UNIX systems's level discussion in the same realm as programming?  One of the most usefull UNIX tools I've ever used, strace/trus/par, is based around system call information and reporting, other tools like ltrace can do similar things for libararies... 
+
+Now given UNIX and Windows are wholy different (e.g. Windows programmer interfaces are nearly exclusivly library calls) and how tighly UNIX intergrates kernel and system services and interfaces with the standard user shells', like the C shell;
+
+Is it not the case that UNIX systems related questions are programming questions? If not, where is the boundry between a programming/scripting language and user interface?
+",4
+11188372,06/25/2012 11:20:30,1479784,06/25/2012 11:16:00,1,0,Using virtual file systems OR file containers,"Every linuxoid knows how to create a virtual file system using:
+
+    dd if=/dev/zero of=files.box count=1024 bs=MB
+    mkfs.ext2 files.box 
+
+But... Where you have use this feature?",unix,filesystems,dd,,,06/26/2012 10:03:19,not a real question,1,31,7,"Using virtual file systems OR file containers Every linuxoid knows how to create a virtual file system using:
+
+    dd if=/dev/zero of=files.box count=1024 bs=MB
+    mkfs.ext2 files.box 
+
+But... Where you have use this feature?",3
+4358762,12/05/2010 12:25:37,531181,12/05/2010 12:25:37,1,0,unix time setting,write command to print time in 24 hour format in unix.,unix,,,,,12/05/2010 22:02:56,not a real question,1,11,3,unix time setting write command to print time in 24 hour format in unix.,1
+9173798,02/07/2012 09:29:01,83916,03/28/2009 03:57:16,1205,8,What grep command do I need to search and replace a string on all of my files on my server using a cronjob?,"My site was hacked and a line of malicious code keeps re-appearing on various of the index.php pages throughout the folders on my web server. I want to run a cronjob every minute that searches all of the files on the server for the matching string and then replaces that with an empty string to remove it.
+
+I found a grep command that sounds like what I want([http://vasir.net/blog/ubuntu/replace_string_in_multiple_files/][1]), but it doesn't seem to be working. 
+
+As a test, I added the word ""RemoveThisWord"" to one of my pages and am trying to replace it with the word ""AddThisWord"" using the following grep command using a cronjob on my server:
+
+    grep -rl 'RemoveThisWord' ./ | xargs sed -i 's/RemoveThisWord/AddThisWord/g'
+
+Unfortunately, it doesn't seem to be replacing the string. What grep command do I need to search and replace a string on all of my files on my server using a cronjob?
+
+
+
+
+
+  [1]: http://vasir.net/blog/ubuntu/replace_string_in_multiple_files/",unix,grep,,,,02/07/2012 17:44:12,off topic,1,154,23,"What grep command do I need to search and replace a string on all of my files on my server using a cronjob? My site was hacked and a line of malicious code keeps re-appearing on various of the index.php pages throughout the folders on my web server. I want to run a cronjob every minute that searches all of the files on the server for the matching string and then replaces that with an empty string to remove it.
+
+I found a grep command that sounds like what I want([http://vasir.net/blog/ubuntu/replace_string_in_multiple_files/][1]), but it doesn't seem to be working. 
+
+As a test, I added the word ""RemoveThisWord"" to one of my pages and am trying to replace it with the word ""AddThisWord"" using the following grep command using a cronjob on my server:
+
+    grep -rl 'RemoveThisWord' ./ | xargs sed -i 's/RemoveThisWord/AddThisWord/g'
+
+Unfortunately, it doesn't seem to be replacing the string. What grep command do I need to search and replace a string on all of my files on my server using a cronjob?
+
+
+
+
+
+  [1]: http://vasir.net/blog/ubuntu/replace_string_in_multiple_files/",2
+5799930,04/27/2011 05:48:25,507737,11/15/2010 00:54:49,175,2,Unix: moving process to a screen.,"If I have a process that is already running, and I do not want to interrupt it, is there any way to move it to a screen (for lack of a better way to phrase it), so that I close the connection I've established remotely with a server.",unix,process,terminal,screen,,04/28/2011 13:27:22,off topic,1,48,6,"Unix: moving process to a screen. If I have a process that is already running, and I do not want to interrupt it, is there any way to move it to a screen (for lack of a better way to phrase it), so that I close the connection I've established remotely with a server.",4
+8923180,01/19/2012 08:43:42,834104,07/07/2011 18:03:00,1,1,Does crypt Command Unix/Solaris 10 support 128bit encryption/decryption?,"I need to know whether the ""crypt"" Command Unix/Solaris 10 support 128bit encryption/decryption.
+
+Thanks",unix,encryption,command,solaris,,01/29/2012 06:06:07,off topic,1,13,8,"Does crypt Command Unix/Solaris 10 support 128bit encryption/decryption? I need to know whether the ""crypt"" Command Unix/Solaris 10 support 128bit encryption/decryption.
+
+Thanks",4
+7675945,10/06/2011 14:39:10,511792,11/18/2010 07:36:08,21,0,How to find out all the .cpp files in a directory and cat them one by one?,"Tasks that I want to complete:
+
+1. Find out all the .cpp files in a directory
+2. For each .cpp file, print some header, then cat the content of the file
+
+Thanks so much!!!
+",unix,cat,,,,10/07/2011 17:02:04,not a real question,1,31,17,"How to find out all the .cpp files in a directory and cat them one by one? Tasks that I want to complete:
+
+1. Find out all the .cpp files in a directory
+2. For each .cpp file, print some header, then cat the content of the file
+
+Thanks so much!!!
+",2
+4358888,12/05/2010 12:56:26,531181,12/05/2010 12:25:37,6,0,messaging in unix,how can you find out if you have permissions to send a message,unix,unix-utils,,,,12/05/2010 13:16:59,not a real question,1,13,3,messaging in unix how can you find out if you have permissions to send a message,2
+2803590,05/10/2010 14:50:24,134713,07/08/2009 05:51:58,1978,53,searching multiple strings in a single file,"
+
+`grep 'string1' 'string2' file`;-this  is an error even though!!
+
+how could i do the above on unix command line?",unix,command-line,grep,,,,open,0,19,7,"searching multiple strings in a single file 
+
+`grep 'string1' 'string2' file`;-this  is an error even though!!
+
+how could i do the above on unix command line?",3
+5044392,02/18/2011 17:17:50,623431,02/18/2011 16:06:05,1,0,shell programming,tell me the shell program to print home directory of each user .user details are stored in /etc/passwd,unix,,,,,02/18/2011 17:21:34,not a real question,1,18,2,shell programming tell me the shell program to print home directory of each user .user details are stored in /etc/passwd,1
+7751843,10/13/2011 09:12:32,988685,10/11/2011 02:03:15,1,0,Formatting output of queries in SQLPlus,"I'm working with SQLPlus at the moment and whenever I query the Database, the result is in a complete mess. In other words, it is hard to read.   I wonder if anyone knows how to format the output of queries ( columns, tables.. etc) in SQLPlus that is running on Unix server. But, I am accessing the server from my windows.
+
+And, Could anyone tell me where I can get SQLPlus for Ubuntu from?
+
+
+Cheers,
+",unix,ubuntu,formatting,output,sqlplus,,open,0,75,6,"Formatting output of queries in SQLPlus I'm working with SQLPlus at the moment and whenever I query the Database, the result is in a complete mess. In other words, it is hard to read.   I wonder if anyone knows how to format the output of queries ( columns, tables.. etc) in SQLPlus that is running on Unix server. But, I am accessing the server from my windows.
+
+And, Could anyone tell me where I can get SQLPlus for Ubuntu from?
+
+
+Cheers,
+",5
+7663729,10/05/2011 15:25:20,980661,10/05/2011 15:16:34,1,0,Why does /proc/cpuinfo differ from the Intel Specification?,"when I run: `cat /proc/cpuinfo` on my machine I get the following output:
+
+mk527@node5: ~
+$ cat /proc/cpuinfo 
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4662.55
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.15
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4656.47
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.36
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.39
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4653.23
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.34
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+I looked up the intel model number E5345, here's the link: http://ark.intel.com/products/28032/Intel-Xeon-Processor-E5345-%288M-Cache-2_33-GHz-1333-MHz-FSB%29 I see that L2 cache for this processor should be 8MB but according to the above I am only seeing 4MB. What is the reason for this discrepancy?
+
+Thanks in advance!
+ ",unix,caching,hardware,intel,microprocessors,10/05/2011 15:35:34,off topic,1,811,8,"Why does /proc/cpuinfo differ from the Intel Specification? when I run: `cat /proc/cpuinfo` on my machine I get the following output:
+
+mk527@node5: ~
+$ cat /proc/cpuinfo 
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4662.55
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.15
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4656.47
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.36
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.39
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4653.23
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 15
+model name	: Intel(R) Xeon(R) CPU           E5345  @ 2.33GHz
+stepping	: 7
+cpu MHz		: 2327.551
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm syscall nx lm constant_tsc pni monitor ds_cpl vmx est tm2 cx16 xtpr dca lahf_lm
+bogomips	: 4655.34
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+I looked up the intel model number E5345, here's the link: http://ark.intel.com/products/28032/Intel-Xeon-Processor-E5345-%288M-Cache-2_33-GHz-1333-MHz-FSB%29 I see that L2 cache for this processor should be 8MB but according to the above I am only seeing 4MB. What is the reason for this discrepancy?
+
+Thanks in advance!
+ ",5
+4803699,01/26/2011 10:54:41,1423327,01/18/2011 08:46:25,11,0,Difference between linenumbers of cat file | nl and wc -l file ,"i have a file with e.g. 9818 lines. When i use wc -l file, i see 9818 lines. When i vi the file, i see 9818 lines. When i :set numbers, i see 9818 lines. But when i cat file | nl, i see the final line number is 9750 (e.g.). Basically i'm asking why line numbers from cat file | nl and wc -l file do not match.",unix,ksh,,,,,open,0,69,13,"Difference between linenumbers of cat file | nl and wc -l file  i have a file with e.g. 9818 lines. When i use wc -l file, i see 9818 lines. When i vi the file, i see 9818 lines. When i :set numbers, i see 9818 lines. But when i cat file | nl, i see the final line number is 9750 (e.g.). Basically i'm asking why line numbers from cat file | nl and wc -l file do not match.",2
+11331244,07/04/2012 14:41:41,962035,09/23/2011 22:13:22,1,0,"In Unix, how can I register to know when a process is launched?","Let's say I want to have a background process which writes to a file every time a process is launched or exits. Any process (though I'm mostly interested in those with graphical components).
+
+I'd rather not constantly poll the list of running process. My is that I'd have to replace exec or fork with my own copy, but I'm not sure how that's done. Or is there a better way?",unix,process,exec,fork,,,open,0,69,13,"In Unix, how can I register to know when a process is launched? Let's say I want to have a background process which writes to a file every time a process is launched or exits. Any process (though I'm mostly interested in those with graphical components).
+
+I'd rather not constantly poll the list of running process. My is that I'd have to replace exec or fork with my own copy, but I'm not sure how that's done. Or is there a better way?",4
+274700,11/08/2008 13:13:10,4857,09/06/2008 03:07:01,721,58,"UNIX, Linux, BSD and Solaris syscalls variations.","###Are there differences between the amount of syscalls in the major *NIX variants ?
+
+<br>
+###Which syscalls would be supported universally ?",unix,linux,bsd,solaris,syscall,,open,0,20,7,"UNIX, Linux, BSD and Solaris syscalls variations. ###Are there differences between the amount of syscalls in the major *NIX variants ?
+
+<br>
+###Which syscalls would be supported universally ?",5
+5923086,05/07/2011 18:18:04,300097,03/23/2010 16:15:26,83,0,unix find command Permission issues in result.,"In Unix,  
+when i execute
+
+$ find . -name 'Export.class' -print
+
+Displays,
+
+The file access permissions do not allow the specified action.
+find: 0652-081 cannot change directory to </usr/.ibm>:
+
+the errors should not be displayed in console. Only the result is required.
+",unix,command,,,,,open,0,38,7,"unix find command Permission issues in result. In Unix,  
+when i execute
+
+$ find . -name 'Export.class' -print
+
+Displays,
+
+The file access permissions do not allow the specified action.
+find: 0652-081 cannot change directory to </usr/.ibm>:
+
+the errors should not be displayed in console. Only the result is required.
+",2
+4729784,01/18/2011 22:28:10,484638,10/22/2010 20:13:03,67,4,Custom PS1 prompt in .kshrc not working,"Greetings! 
+
+I have to work with a NFS user id between two hosts: A running Ksh 93 and B running pdksh 88.
+
+My problem has to do with the custom prompt I created on A: it works like a charm. 
+
+    PS1=""$'\E[46;31m'`logname`@$'\E[1;33m'`hostname -s`:$'\E[0m>""
+
+But I switch over to B, it all goes to hell (private info removed)
+
+    $'\E[46;31m'NFS_user_name@$'\E[1;33m'host_name_for_B:$'\E[0m>
+
+To get around the problem, I edited my .kshrc file to add this code at the end
+
+    export NODE=`uname -n`
+    
+    case $NODE in
+        host_name_for_B)
+            PS1=""[`logname`@`uname -n`]>""
+            ;;
+        *)
+            PS1=""$'\E[46;31m'`logname`@$'\E[1;33m'`hostname -s`:$'\E[0m>""
+            ;;
+    esac
+
+It does not work. PS1 prompt remains broken on host B. 
+
+Any idea what could be the problem? Thanks!
+",unix,,,,,,open,0,182,7,"Custom PS1 prompt in .kshrc not working Greetings! 
+
+I have to work with a NFS user id between two hosts: A running Ksh 93 and B running pdksh 88.
+
+My problem has to do with the custom prompt I created on A: it works like a charm. 
+
+    PS1=""$'\E[46;31m'`logname`@$'\E[1;33m'`hostname -s`:$'\E[0m>""
+
+But I switch over to B, it all goes to hell (private info removed)
+
+    $'\E[46;31m'NFS_user_name@$'\E[1;33m'host_name_for_B:$'\E[0m>
+
+To get around the problem, I edited my .kshrc file to add this code at the end
+
+    export NODE=`uname -n`
+    
+    case $NODE in
+        host_name_for_B)
+            PS1=""[`logname`@`uname -n`]>""
+            ;;
+        *)
+            PS1=""$'\E[46;31m'`logname`@$'\E[1;33m'`hostname -s`:$'\E[0m>""
+            ;;
+    esac
+
+It does not work. PS1 prompt remains broken on host B. 
+
+Any idea what could be the problem? Thanks!
+",1
+10589929,05/14/2012 19:37:31,1293653,03/26/2012 17:51:28,160,1,"find the line number where a specific word appears with ""grep""","Is `grep` capable of providing the line number on which the specified word appears?
+
+Also, is possible to use `grep` to search for a word starting from some certain line downward?
+
+Thanks",unix,grep,,,,05/16/2012 20:57:15,off topic,1,30,11,"find the line number where a specific word appears with ""grep"" Is `grep` capable of providing the line number on which the specified word appears?
+
+Also, is possible to use `grep` to search for a word starting from some certain line downward?
+
+Thanks",2
+207848,10/16/2008 08:58:43,4037,09/01/2008 13:58:54,33,2,"Getting The Full Result from ""ps""","How do I get the full width result for the *nix command ""**ps**""?<br />
+I know we can specify something like ""--cols 1000"" but is there anyway I can
+the columns and just print out everything?",unix,linux,ps,command-line,process,,open,0,34,6,"Getting The Full Result from ""ps"" How do I get the full width result for the *nix command ""**ps**""?<br />
+I know we can specify something like ""--cols 1000"" but is there anyway I can
+the columns and just print out everything?",5
+4216505,11/18/2010 15:33:08,507401,11/14/2010 14:30:23,38,0,about environment variables in unix,i want to know about the environment variables and want to know how are they used and where are they used?,unix,,,,,11/18/2010 15:39:25,not a real question,1,21,5,about environment variables in unix i want to know about the environment variables and want to know how are they used and where are they used?,1
+8447337,12/09/2011 14:58:25,437242,09/01/2010 18:22:44,114,0,questions about nmap,"i have several questions about nmap:
+first, nmap can detect servers via:
+
+ - link-layer
+ - network-layer
+ - transport-layer
+
+where are the differences (not in the layer, but in the way how nmap does it) and how does nmap do this?
+
+second, when i make a port scan with nmap, the UDP scan takes much longer then the TCP scan, why?
+
+third: are there any different methods to explore the OS then to use the `-O --osscan-guess` command (i mean totally different, not e.g. just add `--fuzzy`)",unix,networking,nmap,,,12/09/2011 15:29:07,off topic,1,82,3,"questions about nmap i have several questions about nmap:
+first, nmap can detect servers via:
+
+ - link-layer
+ - network-layer
+ - transport-layer
+
+where are the differences (not in the layer, but in the way how nmap does it) and how does nmap do this?
+
+second, when i make a port scan with nmap, the UDP scan takes much longer then the TCP scan, why?
+
+third: are there any different methods to explore the OS then to use the `-O --osscan-guess` command (i mean totally different, not e.g. just add `--fuzzy`)",3
+1309521,08/21/2009 00:25:05,106095,05/13/2009 08:38:34,187,13,Launch a child process on OSX/Unix that doesn't inherit files/ports,"I want to launch a child process on OS X such that the child process does not inherit the current process's open files/ports. 
+
+Any suggestions on how to accomplish this? Shell commands that I can invoke using the system() function would work too - I just don't know of a good shell command that enables this.
+
+Thanks!",unix,processes,osx,,,,open,0,56,10,"Launch a child process on OSX/Unix that doesn't inherit files/ports I want to launch a child process on OS X such that the child process does not inherit the current process's open files/ports. 
+
+Any suggestions on how to accomplish this? Shell commands that I can invoke using the system() function would work too - I just don't know of a good shell command that enables this.
+
+Thanks!",3
+6856820,07/28/2011 09:32:30,867029,07/28/2011 08:24:14,6,0,"Best Distribution for LAMP Dev, New Admin","I need to select a *nix distribution for developing a small PHP web app, which I'll be using on two Cloud servers (staging & production).  My needs / situation are:
+
+-  New to Unix admin.  Would like something that I can learn on & doesn't require lots of configuration 
+-  Avaiable from EC2 or Rackspace
+-  Works well in a LAMP environment
+-  Would be nice to have a GUI admin pre-installed or easily available if I get stuck at command line
+
+Your thoughts / recommendations are appreciated!
+
+
+
+
+
+
+
+",unix,distribution,lamp,,,07/28/2011 13:44:42,off topic,1,90,7,"Best Distribution for LAMP Dev, New Admin I need to select a *nix distribution for developing a small PHP web app, which I'll be using on two Cloud servers (staging & production).  My needs / situation are:
+
+-  New to Unix admin.  Would like something that I can learn on & doesn't require lots of configuration 
+-  Avaiable from EC2 or Rackspace
+-  Works well in a LAMP environment
+-  Would be nice to have a GUI admin pre-installed or easily available if I get stuck at command line
+
+Your thoughts / recommendations are appreciated!
+
+
+
+
+
+
+
+",3
+6486717,06/26/2011 21:00:33,649605,03/08/2011 10:11:59,58,5,What are the essential differences Between ext2 - ext3 and ext3 - ext4 ?,"i really want to know the essential differences between those filesystems, for example the inodes pointer Structure and so on!
+
+Thank you",unix,filesystems,ext3,ext2,ext4,06/26/2011 21:20:43,off topic,1,21,14,"What are the essential differences Between ext2 - ext3 and ext3 - ext4 ? i really want to know the essential differences between those filesystems, for example the inodes pointer Structure and so on!
+
+Thank you",5
+11046482,06/15/2012 07:36:57,1458041,06/15/2012 07:20:35,1,0,Start X Program with /etc/crontab on Debian 6.0.4,"I am trying to start a X-Programm (e.g. gedit or Firefox) with crontab.
+I have searched quite a while, and the forums are full of help, unfortunately nothing was usefull for me.
+
+What I am trying is, to start a X-Programm by Crontab.
+For testing Purposes I have done the following:
+
+Entry in my ""/etc/crontab"" (my User-Account is mrs, I am logged on):
+
+    * * * * * mrs /bin/bash /tmp/test.sh
+
+cat /tmp/test.sh:
+
+    #!/bin/bash
+    DISPLAY="":0.0""
+    gedit 1> /tmp/out 2>/tmp/err
+
+cat /tmp/err:
+
+    No protocol specified
+    (gedit:3456): Gtk-WARNING **: cannot open display: :0.0
+
+/tmp/out is empty!",unix,debian,crontab,xserver,xauth,07/03/2012 12:18:12,off topic,1,105,8,"Start X Program with /etc/crontab on Debian 6.0.4 I am trying to start a X-Programm (e.g. gedit or Firefox) with crontab.
+I have searched quite a while, and the forums are full of help, unfortunately nothing was usefull for me.
+
+What I am trying is, to start a X-Programm by Crontab.
+For testing Purposes I have done the following:
+
+Entry in my ""/etc/crontab"" (my User-Account is mrs, I am logged on):
+
+    * * * * * mrs /bin/bash /tmp/test.sh
+
+cat /tmp/test.sh:
+
+    #!/bin/bash
+    DISPLAY="":0.0""
+    gedit 1> /tmp/out 2>/tmp/err
+
+cat /tmp/err:
+
+    No protocol specified
+    (gedit:3456): Gtk-WARNING **: cannot open display: :0.0
+
+/tmp/out is empty!",5
+6920413,08/03/2011 00:36:11,568173,01/08/2011 17:00:49,73,0,Shell script input,"#!/bin/sh 
+
+if test -n $1  
+then  
+  echo ""Some input entered""  
+  echo $1  
+else  
+  echo ""no input entered""  
+fi
+
+The above code is supposed to say ""no input entered"" if I dont pass an argument to the shell script. the echo $1 shows a blank line when I dont pass any arguments. 
+",unix,shell,,,,,open,0,63,3,"Shell script input #!/bin/sh 
+
+if test -n $1  
+then  
+  echo ""Some input entered""  
+  echo $1  
+else  
+  echo ""no input entered""  
+fi
+
+The above code is supposed to say ""no input entered"" if I dont pass an argument to the shell script. the echo $1 shows a blank line when I dont pass any arguments. 
+",2
+7311874,09/05/2011 19:04:35,682869,03/29/2011 21:04:12,223,1,unix passwd program location,"I want to copy the passwd program to my own directory but am not able to find it. Can anyone please tell where exactly is the passwd program file located in unix? 
+
+Thanks.",unix,,,,,09/05/2011 19:14:40,off topic,1,33,4,"unix passwd program location I want to copy the passwd program to my own directory but am not able to find it. Can anyone please tell where exactly is the passwd program file located in unix? 
+
+Thanks.",1
+9736295,03/16/2012 11:18:58,726771,04/27/2011 08:00:35,133,2,How to find lines that contain more than a single whitespace between strings in unix?,"I have lines like
+
+    1|Harry|says|hi
+    2|Ron|says|bye
+    3|Her   mi oh ne|is|silent
+    4|The|above|sentence|is|weird
+
+I need a grep command that'll detect the third line.
+
+This is what Im doing.
+    
+    grep -E '"" """" ""+' $dname"".txt"" >> $dname""_error.txt""
+
+The logic on which I'm basing this is, the first white space must be followed by one or more white spaces to be detected as an error.
+
+$dname is a variable that holds the filename path.
+
+How do I get my desired output?
+
+( which is 
+
+          3|Her   mi oh ne|is|silent
+
+)",unix,grep,,,,,open,0,111,15,"How to find lines that contain more than a single whitespace between strings in unix? I have lines like
+
+    1|Harry|says|hi
+    2|Ron|says|bye
+    3|Her   mi oh ne|is|silent
+    4|The|above|sentence|is|weird
+
+I need a grep command that'll detect the third line.
+
+This is what Im doing.
+    
+    grep -E '"" """" ""+' $dname"".txt"" >> $dname""_error.txt""
+
+The logic on which I'm basing this is, the first white space must be followed by one or more white spaces to be detected as an error.
+
+$dname is a variable that holds the filename path.
+
+How do I get my desired output?
+
+( which is 
+
+          3|Her   mi oh ne|is|silent
+
+)",2
+11650973,07/25/2012 13:35:00,1513168,07/09/2012 21:35:10,34,0,"How to ""cd"" to a directory after ""grep""?","I want to find a directory using `grep` then change current directory to the resulting directory.
+For example:
+
+    $ ls | grep 1670 |
+
+finds me directory haib12CJS1670. I am trying to do something like below:
+
+    $ ls | grep 1670 | cd
+
+so that my directory is set to haib12CJS1670 at a single step. Obviously my way is not working. Any suggestions? Thank you",unix,terminal,,,,07/27/2012 04:16:05,off topic,1,68,8,"How to ""cd"" to a directory after ""grep""? I want to find a directory using `grep` then change current directory to the resulting directory.
+For example:
+
+    $ ls | grep 1670 |
+
+finds me directory haib12CJS1670. I am trying to do something like below:
+
+    $ ls | grep 1670 | cd
+
+so that my directory is set to haib12CJS1670 at a single step. Obviously my way is not working. Any suggestions? Thank you",2
+2613662,04/10/2010 14:15:16,179015,09/25/2009 11:36:40,566,40,Display Directories with a Bold Font – How to enable? with .bash_profile?,"I'm using a linux server that display directories in a bold font, and files in a normal font.
+
+------
+
+e.g. `$ ls` produces
+
+afile.txt   **afolder**   anotherfile.txt    **anotherfolder**
+
+--------
+
+I'd like to use this feature on some other servers. How can it be done? with the .bash_profile?
+
+If anyone has other ideas on how to differentiate folders from file, they'd be good to know?",unix,linux,bash,,,,open,0,64,12,"Display Directories with a Bold Font – How to enable? with .bash_profile? I'm using a linux server that display directories in a bold font, and files in a normal font.
+
+------
+
+e.g. `$ ls` produces
+
+afile.txt   **afolder**   anotherfile.txt    **anotherfolder**
+
+--------
+
+I'd like to use this feature on some other servers. How can it be done? with the .bash_profile?
+
+If anyone has other ideas on how to differentiate folders from file, they'd be good to know?",3
+8414489,12/07/2011 11:21:39,534908,12/08/2010 11:21:30,180,8,Configure password-less SSH access among UNIX boxes,"I need to configure ssh session between two unix boxes with public key encryption.
+Issue is these two boxes dosen't have the automounter running.",unix,ssh,,,,12/07/2011 20:48:45,not a real question,1,23,7,"Configure password-less SSH access among UNIX boxes I need to configure ssh session between two unix boxes with public key encryption.
+Issue is these two boxes dosen't have the automounter running.",2
+1561737,10/13/2009 17:28:47,164299,08/27/2009 15:30:18,464,14,What are some best UNIX Online Tutorials/Books ?,"I am new to Unix Operating System and my job involves mainly working with Unix Environment and so what are some of the best resources, online/books that one would recommend for Unix. 
+
+
+Thanks. ",unix,books,tutorials,training,,10/01/2011 20:54:10,off topic,1,34,8,"What are some best UNIX Online Tutorials/Books ? I am new to Unix Operating System and my job involves mainly working with Unix Environment and so what are some of the best resources, online/books that one would recommend for Unix. 
+
+
+Thanks. ",4
+4827797,01/28/2011 11:39:50,571131,01/11/2011 10:40:56,17,0,how to get the previous line of a file after searching for one line?,how to get the previous line of a file after searching for one line?,unix,,,,,01/28/2011 14:04:14,not a real question,1,14,14,how to get the previous line of a file after searching for one line? how to get the previous line of a file after searching for one line?,1
+3608400,08/31/2010 11:11:40,79358,03/18/2009 07:53:51,317,20,if [ $? -ne 0 ] then syntax error then unexpected,"I have been trying to execute the following unix shell script which is not working.
+I am running it by ksh.
+
+    echo $?;
+    if [ $? -ne 0 ]
+    then
+     failed $LINENO-2 $5 $6
+    fi
+    failed()
+    {
+            echo ""$0 failed at line number $1"";
+     echo ""moving $2 to failed folder""
+    }
+
+This is giving an error saying ""Synatx error:then unexpected"". Basically I have to check for the last executed korn shell script's highest/last statement's return code and if it is not equal to zero i have to call function failed with the given parameters. I tried putting semicolon before then that also dint work out.
+
+Can you please help?",unix,function,if-statement,return-value,ksh,,open,0,146,11,"if [ $? -ne 0 ] then syntax error then unexpected I have been trying to execute the following unix shell script which is not working.
+I am running it by ksh.
+
+    echo $?;
+    if [ $? -ne 0 ]
+    then
+     failed $LINENO-2 $5 $6
+    fi
+    failed()
+    {
+            echo ""$0 failed at line number $1"";
+     echo ""moving $2 to failed folder""
+    }
+
+This is giving an error saying ""Synatx error:then unexpected"". Basically I have to check for the last executed korn shell script's highest/last statement's return code and if it is not equal to zero i have to call function failed with the given parameters. I tried putting semicolon before then that also dint work out.
+
+Can you please help?",5
+6924539,08/03/2011 09:47:13,876296,08/03/2011 09:28:03,1,0,/usr/local/bin/cvs: Not found,"I can able to access  /opt/soe/local/cfengine/bin/cvs in the terminal (AIX 6.1 Box).
+but i am getting the ""/usr/local/bin/cvs: Not found ""
+when i call it from the script. please some one assist me what maybe problem.",unix,aix,,,,08/04/2011 04:52:28,off topic,1,35,3,"/usr/local/bin/cvs: Not found I can able to access  /opt/soe/local/cfengine/bin/cvs in the terminal (AIX 6.1 Box).
+but i am getting the ""/usr/local/bin/cvs: Not found ""
+when i call it from the script. please some one assist me what maybe problem.",2
+602921,03/02/2009 16:16:14,55119,01/14/2009 18:52:06,12,0,What unix command can we use to append some text to a specific line in a file?,"Does anyone know of a series of unix commands that allows someone to append some text to the end of a specific line in a file?
+
+eg
+
+Line 1
+
+Line 2
+
+Line 3
+
+Line 4
+
+I wish to append the text "", extra information"" to Line 3 so that the File will now look like this:
+
+Line 1
+
+Line 2
+
+Line 3, extra information
+
+Line 4",unix,file,editing,line,,,open,0,56,17,"What unix command can we use to append some text to a specific line in a file? Does anyone know of a series of unix commands that allows someone to append some text to the end of a specific line in a file?
+
+eg
+
+Line 1
+
+Line 2
+
+Line 3
+
+Line 4
+
+I wish to append the text "", extra information"" to Line 3 so that the File will now look like this:
+
+Line 1
+
+Line 2
+
+Line 3, extra information
+
+Line 4",4
+1764085,11/19/2009 15:27:26,174908,09/17/2009 11:37:21,18,0,Startup time in solaris server using shell script,How to find the start up time of a server using shell script solaris server using shell script?,unix,solaris,shell,scripting,,,open,0,18,8,Startup time in solaris server using shell script How to find the start up time of a server using shell script solaris server using shell script?,4
+4842760,01/30/2011 11:59:02,258367,01/25/2010 11:27:07,38,3,tar blocksize message,"I am writing a program which untars a file. While doing untar tar command give message
+
+tar -xf testing_Download.txt1.tar  
+Tar: blocksize = 12  
+
+I tried below  
+tar 2>&1 1>/dev/null -xf testing_Download.txt1.tar  
+Tar: blocksize = 12   
+
+Below was command output for tar file which was not present in disk  
+tar 2>&1 1>/dev/null -xf testing_Download.txt12.tar  
+tar: cannot open testing_Download.txt12.tar
+
+I want to know how can i tweak my tar command so that i can identify that untar got executed successfully.
+",unix,tar,,,,,open,0,84,3,"tar blocksize message I am writing a program which untars a file. While doing untar tar command give message
+
+tar -xf testing_Download.txt1.tar  
+Tar: blocksize = 12  
+
+I tried below  
+tar 2>&1 1>/dev/null -xf testing_Download.txt1.tar  
+Tar: blocksize = 12   
+
+Below was command output for tar file which was not present in disk  
+tar 2>&1 1>/dev/null -xf testing_Download.txt12.tar  
+tar: cannot open testing_Download.txt12.tar
+
+I want to know how can i tweak my tar command so that i can identify that untar got executed successfully.
+",2
+4297961,11/28/2010 17:14:54,521776,11/26/2010 20:47:07,3,6,What does GNU means?,"Yes, I know GNU means 'GNU is Not Unix', but what's that GNU?? I mean, if I substitute GNU in it's own definition I get 'GNU is Not Unix is Not Unix', and I can do it again infinite times. It could sound quite stupid as a question, but I really can't understand...",unix,gnu,,,,11/28/2010 17:57:38,off topic,1,53,4,"What does GNU means? Yes, I know GNU means 'GNU is Not Unix', but what's that GNU?? I mean, if I substitute GNU in it's own definition I get 'GNU is Not Unix is Not Unix', and I can do it again infinite times. It could sound quite stupid as a question, but I really can't understand...",2
+10138066,04/13/2012 09:05:30,1329239,04/12/2012 13:33:50,6,0,SSH Public Key Based Authentication filename issues,"What i wanted to do was to set up an SSH Public Key Based Authentication. This i was able to do. However there is a problem that is bugging me
+
+Enter file in which to save the key (/export/home/oracle/.ssh/id_dsa):
+
+Here when i enter blank and use the default filename the key is set up and everything works.
+However when i use my own name, like say idvxmlivr_dsa, i get stuck here. 
+
+    oracle@sunv440$scp ~/.ssh/idvxmlivr_dsa.pub root@172.19.66.137:
+    key_read: uudecode 34:06:d3:21:c9:4d:b1:a7:e6:32:45:53:6c:21:91:50
+     failed
+    root@172.19.66.137's password: 
+    /export/home/oracle/.ssh/idvxmlivr_dsa.pub: No such file or directory
+the entire procedure works only for the default name(id_dsa). why is it so? And also is there any way to send passwords via ssh. i don't have sshpass installed and dont have access to superuser, so i can't install it. **Security is not an issue**. 
+
+",unix,ssh,ssh-keys,public-key,,,open,0,146,7,"SSH Public Key Based Authentication filename issues What i wanted to do was to set up an SSH Public Key Based Authentication. This i was able to do. However there is a problem that is bugging me
+
+Enter file in which to save the key (/export/home/oracle/.ssh/id_dsa):
+
+Here when i enter blank and use the default filename the key is set up and everything works.
+However when i use my own name, like say idvxmlivr_dsa, i get stuck here. 
+
+    oracle@sunv440$scp ~/.ssh/idvxmlivr_dsa.pub root@172.19.66.137:
+    key_read: uudecode 34:06:d3:21:c9:4d:b1:a7:e6:32:45:53:6c:21:91:50
+     failed
+    root@172.19.66.137's password: 
+    /export/home/oracle/.ssh/idvxmlivr_dsa.pub: No such file or directory
+the entire procedure works only for the default name(id_dsa). why is it so? And also is there any way to send passwords via ssh. i don't have sshpass installed and dont have access to superuser, so i can't install it. **Security is not an issue**. 
+
+",4
+5975040,05/12/2011 08:01:32,394741,07/17/2010 16:34:08,21,1,"Unix,Linux and Solaris","Please can any one help to find what is the difference between Unix,Linux,Solaris.Brief about Operatin System.
+ Please also share good and valuable links where we can find info. of it .",unix,,,,,05/12/2011 09:23:34,off topic,1,31,3,"Unix,Linux and Solaris Please can any one help to find what is the difference between Unix,Linux,Solaris.Brief about Operatin System.
+ Please also share good and valuable links where we can find info. of it .",1
+6023726,05/16/2011 21:35:16,152512,03/30/2009 08:52:38,59,0,How to sort the files according to the time stamp in unix?,"How to sort the files according to the time stamp in unix?
+I need to sort the files and also based on time they created.
+Please help.
+
+Thanks,
+Srihari
+",unix,unix-utils,unixtime,,,05/16/2011 21:52:03,off topic,1,25,12,"How to sort the files according to the time stamp in unix? How to sort the files according to the time stamp in unix?
+I need to sort the files and also based on time they created.
+Please help.
+
+Thanks,
+Srihari
+",3
+7550472,09/26/2011 03:45:36,860497,07/24/2011 18:35:46,1,0,How can i see Timestamps in Unix files,"Files in UNIX filesystems have 3 types of timestamps: Access, Modify, and Change. In order to investigate this, I created a file and I want to look at timestamps  . Anybody knows how can i look the different timestamps. Then, which commands timestamps. ",unix,ubuntu,,,,09/26/2011 04:43:47,off topic,1,45,8,"How can i see Timestamps in Unix files Files in UNIX filesystems have 3 types of timestamps: Access, Modify, and Change. In order to investigate this, I created a file and I want to look at timestamps  . Anybody knows how can i look the different timestamps. Then, which commands timestamps. ",2
+7446962,09/16/2011 15:27:40,458742,09/26/2010 14:45:11,3983,242,Generate a coredump from crashed process attached to ddd/dbx,"I'm running dbx in ddd on Solaris. The attached process has crashed and I can examine the stack in the debugger.
+
+I want to save this core dump to disk for later.
+
+Google shows me several ways to create a core dump but none of them are ddd/dbx commands. `gcore` can't grab the process because dbx is already holding it.
+
+So how do I do this? Thanks.",unix,solaris,coredump,dbx,ddd-debugger,,open,0,64,9,"Generate a coredump from crashed process attached to ddd/dbx I'm running dbx in ddd on Solaris. The attached process has crashed and I can examine the stack in the debugger.
+
+I want to save this core dump to disk for later.
+
+Google shows me several ways to create a core dump but none of them are ddd/dbx commands. `gcore` can't grab the process because dbx is already holding it.
+
+So how do I do this? Thanks.",5
+8837294,01/12/2012 15:09:28,1086037,12/07/2011 16:10:11,4,0,run unix script as scheduled job,I want my unix script to run as a scheduled job such that the script is invoked once every 15 minutes. Is there any way to achieve this other than running the script as a cron job?,unix,,,,,01/12/2012 21:28:39,off topic,1,37,6,run unix script as scheduled job I want my unix script to run as a scheduled job such that the script is invoked once every 15 minutes. Is there any way to achieve this other than running the script as a cron job?,1
+10139590,04/13/2012 11:00:42,1329239,04/12/2012 13:33:50,6,0,passphrase issues in public key authentication with ssh2,"These are the steps i have followed
+
+    oracle@sunv440$ssh-keygen -t dsa
+    Generating public/private dsa key pair.
+    Enter file in which to save the key (/export/home/oracle/.ssh/id_dsa): /export/home/oracle/.ssh/vxmlivr_dsa 
+    Enter passphrase (empty for no passphrase): 
+    Enter same passphrase again: 
+    Your identification has been saved in /export/home/oracle/.ssh/vxmlivr_dsa.
+    Your public key has been saved in /export/home/oracle/.ssh/vxmlivr_dsa.pub
+    
+    oracle@sunv440$scp /export/home/oracle/.ssh/vxmlivr_dsa.pub root@172.19.66.137:
+    key_read: uudecode 34:06:d3:21:c9:4d:b1:a7:e6:32:45:53:6c:21:91:50
+     failed
+    root@172.19.66.137's password: 
+    vxmlivr_dsa.pub      100% |*****************************|   604       00:00 
+    
+    After this ,i logged in
+    [root@gjivr5mw ~]# cat ~/vxmlivr_dsa.pub >> ~/.ssh/authorized_keys 
+
+then i exited
+
+**But now when i run ssh root@172.19.66.137 it asks me for a password. I entered my passphrase but it didnt work. When i repeated the entire procedure with a blank pass phrase, public key was setup and ssh root@172.19.66.137 worked perfectly**. 
+
+Is there something ive missed as i intend to keep a passphrase.",unix,ssh,passphrase,public-key,,,open,0,199,8,"passphrase issues in public key authentication with ssh2 These are the steps i have followed
+
+    oracle@sunv440$ssh-keygen -t dsa
+    Generating public/private dsa key pair.
+    Enter file in which to save the key (/export/home/oracle/.ssh/id_dsa): /export/home/oracle/.ssh/vxmlivr_dsa 
+    Enter passphrase (empty for no passphrase): 
+    Enter same passphrase again: 
+    Your identification has been saved in /export/home/oracle/.ssh/vxmlivr_dsa.
+    Your public key has been saved in /export/home/oracle/.ssh/vxmlivr_dsa.pub
+    
+    oracle@sunv440$scp /export/home/oracle/.ssh/vxmlivr_dsa.pub root@172.19.66.137:
+    key_read: uudecode 34:06:d3:21:c9:4d:b1:a7:e6:32:45:53:6c:21:91:50
+     failed
+    root@172.19.66.137's password: 
+    vxmlivr_dsa.pub      100% |*****************************|   604       00:00 
+    
+    After this ,i logged in
+    [root@gjivr5mw ~]# cat ~/vxmlivr_dsa.pub >> ~/.ssh/authorized_keys 
+
+then i exited
+
+**But now when i run ssh root@172.19.66.137 it asks me for a password. I entered my passphrase but it didnt work. When i repeated the entire procedure with a blank pass phrase, public key was setup and ssh root@172.19.66.137 worked perfectly**. 
+
+Is there something ive missed as i intend to keep a passphrase.",4
+9694972,03/14/2012 02:05:28,513551,11/19/2010 13:51:14,1,0,Understanding NFS mount point on HP-UNIX,"
+total 152
+drwxr-xr-x   9 adm     df2intg       1024 Mar 12 09:11 .
+drwxr-xr-x  35 usr    df2intg       1024 Oct 20  2008 ..
+**lrwxr-xr-x   1 root       sys     33 Dec  6 12:42 data -> /fs277.1/integration/data
+drwxr-xr-x   2 adm     df2intg      16384 Mar 12 09:20 ddl
+drwxr-xr-x   2 adm     df2intg       6144 Mar 12 09:20 dml
+drwxr-xr-x   2 adm     df2intg      20480 Mar 12 09:20 exe
+drwxr-xr-x  11 adm     df2intg       2048 Mar 12 09:20 lib
+drwxr-xr-x   2 adm     df2intg       7168 Mar 12 09:20 parms
+drwxr-xr-x   3 adm     df2intg       1024 Mar 12 09:20 source
+drwxr-xr-x   3 adm     df2intg      22528 Mar 12 09:20 sql
+
+what is that /fs277.1/integration/data mean here? Please explain this concept with an example.
+
+Best Regards,
+Monsieur
+
+",unix,,,,,03/14/2012 05:09:12,off topic,1,213,6,"Understanding NFS mount point on HP-UNIX 
+total 152
+drwxr-xr-x   9 adm     df2intg       1024 Mar 12 09:11 .
+drwxr-xr-x  35 usr    df2intg       1024 Oct 20  2008 ..
+**lrwxr-xr-x   1 root       sys     33 Dec  6 12:42 data -> /fs277.1/integration/data
+drwxr-xr-x   2 adm     df2intg      16384 Mar 12 09:20 ddl
+drwxr-xr-x   2 adm     df2intg       6144 Mar 12 09:20 dml
+drwxr-xr-x   2 adm     df2intg      20480 Mar 12 09:20 exe
+drwxr-xr-x  11 adm     df2intg       2048 Mar 12 09:20 lib
+drwxr-xr-x   2 adm     df2intg       7168 Mar 12 09:20 parms
+drwxr-xr-x   3 adm     df2intg       1024 Mar 12 09:20 source
+drwxr-xr-x   3 adm     df2intg      22528 Mar 12 09:20 sql
+
+what is that /fs277.1/integration/data mean here? Please explain this concept with an example.
+
+Best Regards,
+Monsieur
+
+",1
+2993216,06/07/2010 21:13:18,235310,12/19/2009 23:25:11,324,10,How to copy Files from Network folder to Local drive and preserve permissions?,"Is it possible?
+
+I have a network disk mounted. How do I save the files (folders and files recursively) to my local disk preserving permissions?
+
+Thank you...",unix,permissions,networking,copy,,06/08/2010 23:11:29,off topic,1,25,13,"How to copy Files from Network folder to Local drive and preserve permissions? Is it possible?
+
+I have a network disk mounted. How do I save the files (folders and files recursively) to my local disk preserving permissions?
+
+Thank you...",4
+3466046,08/12/2010 08:54:16,343617,05/18/2010 02:40:38,69,0,Untar contents to same directory,"I have this scenario in UNIX:
+
+I am tar'ing files of a directory like this:
+
+    tar cvf test.tar /dir1/dir2/file1.xml /dir1/dir2/file2.xml
+
+When I copy this tar file to a different directory and Untar it, I want the two files(and all the other files) to be untared in the curent directory only. How can I do this? Btw, I must be using the absolute path only, for creating the tar.",unix,tar,,,,08/20/2011 16:45:25,off topic,1,69,5,"Untar contents to same directory I have this scenario in UNIX:
+
+I am tar'ing files of a directory like this:
+
+    tar cvf test.tar /dir1/dir2/file1.xml /dir1/dir2/file2.xml
+
+When I copy this tar file to a different directory and Untar it, I want the two files(and all the other files) to be untared in the curent directory only. How can I do this? Btw, I must be using the absolute path only, for creating the tar.",2
+5043601,02/18/2011 16:06:05,623431,02/18/2011 16:06:05,1,0,shell programming,"tell me a shell program that accept two file names as argument and copy the content of source file to the destination file.if the destination file already exist,then the system should confirm user for overwriting",unix,,,,,02/21/2011 01:11:13,not a real question,1,35,2,"shell programming tell me a shell program that accept two file names as argument and copy the content of source file to the destination file.if the destination file already exist,then the system should confirm user for overwriting",1
+2439333,03/13/2010 17:48:07,293058,03/13/2010 17:46:10,1,0,Unix shell script with Iseries command,"I am trying to ftp a file from unix to as400 and executing iseries command in the script.
+ftp is working fine,I am getting an error in jobd command as
+HOST=KCBNSXDD.svr.us.bank.net   
+USER=test             
+PASS=1234          #This is the password for the FTP user. 
+ftp -env  $HOST << EOF 
+# Call 2. Here the login credentials are supplied by calling the variables. 
+user $USER $PASS 
+# Call 3. Here you will change to the directory where you want to put or get 
+cd ""\$QARCVBEN"" 
+# Call4.  Here you will tell FTP to put or get the file. 
+#Ebcdic 
+#Mode b 
+quote site crtccsid *user 
+quote site crtccsid *sysval 
+put prod.txt 
+quote rcmd sbmjob cmd(call pgm(pmtiprcc0) parm('prod' 'DEV')) job(\$pmtiprcc) jobd(orderbatch)
+
+550-Error occurred on command SBMJOB cmd(call pgm(pmtiprcc0)) job($pmtiprcc) jobd(orderbatch). 
+550 Errors occurred on SBMJOB command.. 
+221 QUIT subcommand received. ",unix,,,,,,open,0,158,6,"Unix shell script with Iseries command I am trying to ftp a file from unix to as400 and executing iseries command in the script.
+ftp is working fine,I am getting an error in jobd command as
+HOST=KCBNSXDD.svr.us.bank.net   
+USER=test             
+PASS=1234          #This is the password for the FTP user. 
+ftp -env  $HOST << EOF 
+# Call 2. Here the login credentials are supplied by calling the variables. 
+user $USER $PASS 
+# Call 3. Here you will change to the directory where you want to put or get 
+cd ""\$QARCVBEN"" 
+# Call4.  Here you will tell FTP to put or get the file. 
+#Ebcdic 
+#Mode b 
+quote site crtccsid *user 
+quote site crtccsid *sysval 
+put prod.txt 
+quote rcmd sbmjob cmd(call pgm(pmtiprcc0) parm('prod' 'DEV')) job(\$pmtiprcc) jobd(orderbatch)
+
+550-Error occurred on command SBMJOB cmd(call pgm(pmtiprcc0)) job($pmtiprcc) jobd(orderbatch). 
+550 Errors occurred on SBMJOB command.. 
+221 QUIT subcommand received. ",1
+10285251,04/23/2012 17:26:20,1351888,04/23/2012 17:12:11,1,0,ignore pagination in aix,"I'm trying to generate a report which has the property  Ignore Pagination = TRUE, in Windows works fine, but in the client server (AIX), the pdf report only shows a white vertical line in the center of the report.
+
+There´s a specific property for AIX to use Ignore Pagination ?
+
+I'm using iReport Designer 3.7.6 to do the report
+
+Thanks in advance.",unix,report,ireport,aix,,04/25/2012 17:26:18,off topic,1,60,4,"ignore pagination in aix I'm trying to generate a report which has the property  Ignore Pagination = TRUE, in Windows works fine, but in the client server (AIX), the pdf report only shows a white vertical line in the center of the report.
+
+There´s a specific property for AIX to use Ignore Pagination ?
+
+I'm using iReport Designer 3.7.6 to do the report
+
+Thanks in advance.",4
+10205928,04/18/2012 08:48:16,864753,07/27/2011 06:12:38,16,0,Resources utilization summary for interval of time using UNIX command,"I have a Unix server box , i need to generate Resource utilization report for this server from (1-1-2012 to today ) how i can do that ?
+
+Example of report parameter :
+
+Memory size
+Memory free size
+Memory used size
+Virtual Memory size
+average Memory size
+average Memory free size
+average Memory used size
+average Virtual Memory size
+
+the same for CPU",unix,memory-management,command-line,resources,,04/27/2012 12:53:41,off topic,1,53,10,"Resources utilization summary for interval of time using UNIX command I have a Unix server box , i need to generate Resource utilization report for this server from (1-1-2012 to today ) how i can do that ?
+
+Example of report parameter :
+
+Memory size
+Memory free size
+Memory used size
+Virtual Memory size
+average Memory size
+average Memory free size
+average Memory used size
+average Virtual Memory size
+
+the same for CPU",4
+7548025,09/25/2011 19:30:13,682869,03/29/2011 21:04:12,278,1,unix open file for write given file descriptor,"I want to open a file for write and I have been given the file descriptor for that file.
+
+I know that fdopen can be used to write to the file as follows:
+
+    FILE * fp;
+    fp = fdopen(filedes, ""a+"");
+    fwrite(""\n"", sizeof(char), 1, fp);
+
+Is there any other way to achive the same, i.e., write to a file given a file descriptor?
+
+Thanks
+",unix,,,,,,open,0,69,8,"unix open file for write given file descriptor I want to open a file for write and I have been given the file descriptor for that file.
+
+I know that fdopen can be used to write to the file as follows:
+
+    FILE * fp;
+    fp = fdopen(filedes, ""a+"");
+    fwrite(""\n"", sizeof(char), 1, fp);
+
+Is there any other way to achive the same, i.e., write to a file given a file descriptor?
+
+Thanks
+",1
+10429665,05/03/2012 10:37:04,284113,03/02/2010 04:19:55,173,6,arecord not interrupted after specified duration,"I have used the arecord command like this
+
+arecord -d 1 test.wav
+
+It is keep on waiting. I need to manually interrupt it by ctrl-c. Why it is not interrupting after one second?
+
+The arecord version which I am using is : 
+
+arecord: version 1.0.23 by Jaroslav Kysela <perex@perex.cz>",unix,,,,,05/16/2012 12:35:10,off topic,1,46,6,"arecord not interrupted after specified duration I have used the arecord command like this
+
+arecord -d 1 test.wav
+
+It is keep on waiting. I need to manually interrupt it by ctrl-c. Why it is not interrupting after one second?
+
+The arecord version which I am using is : 
+
+arecord: version 1.0.23 by Jaroslav Kysela <perex@perex.cz>",1
+7884759,10/25/2011 04:35:51,702432,04/11/2011 15:15:31,180,0,Subset delimited file by subset of one column,"I have a text file (call it `infile.txt`) where the columns have headers and are delimited by semicolons. A subset of it is reproduced below:
+
+    SCHCD;	SCHNAME
+    13110208001;	GOVT MIDSCHOOL 
+    10110208002;	GOVT HIGHSCHOOL 
+    21110208101;	MATRIC
+    21110208102;	UPPER SECONDARY
+    13110208201;	SECONDARY
+I want a subset of the file where the first two characters of ""SCHCD"" is ""13"". So my subset (call it `outfile.txt`) should look like:
+
+    SCHCD;	SCHNAME
+    13110208001;	GOVT MIDSCHOOL 
+    13110208201;	SECONDARY
+Thanks in advance.",unix,,,,,,open,0,94,8,"Subset delimited file by subset of one column I have a text file (call it `infile.txt`) where the columns have headers and are delimited by semicolons. A subset of it is reproduced below:
+
+    SCHCD;	SCHNAME
+    13110208001;	GOVT MIDSCHOOL 
+    10110208002;	GOVT HIGHSCHOOL 
+    21110208101;	MATRIC
+    21110208102;	UPPER SECONDARY
+    13110208201;	SECONDARY
+I want a subset of the file where the first two characters of ""SCHCD"" is ""13"". So my subset (call it `outfile.txt`) should look like:
+
+    SCHCD;	SCHNAME
+    13110208001;	GOVT MIDSCHOOL 
+    13110208201;	SECONDARY
+Thanks in advance.",1
+10601108,05/15/2012 12:53:51,230803,12/13/2009 19:40:19,53,2,Is there a way to calculate a average bitrate of video stream for each second? Using ffmpeg or gsteamer toolkits,"I've encoded some video sample by different x264 presets. I already gathered some metric for each preset's file sample (PSNR,SSIM http://en.wikipedia.org/wiki/Structural_similarity)
+Now I am curious in instant (every seconds) file sample's bitrate, to compare them.
+",unix,ffmpeg,video-encoding,,,05/15/2012 16:12:15,not a real question,1,34,20,"Is there a way to calculate a average bitrate of video stream for each second? Using ffmpeg or gsteamer toolkits I've encoded some video sample by different x264 presets. I already gathered some metric for each preset's file sample (PSNR,SSIM http://en.wikipedia.org/wiki/Structural_similarity)
+Now I am curious in instant (every seconds) file sample's bitrate, to compare them.
+",3
+4522674,12/23/2010 21:43:35,394741,07/17/2010 16:34:08,8,1,How to concardinate an extra field with the input text ,"The input text will be 
+9842901121
+9942501133
+9942501199
+9942501133
+9842901121
+ At first the input file should be sorted with unique lines only.
+Then the output to be 
+'9842901121',()(now,
+'9942501133',()(now,
+'9942501199',()(now,
+If we use ' thing in unix command the promt goes to > .Kindly help out
+",unix,,,,,,open,0,38,11,"How to concardinate an extra field with the input text  The input text will be 
+9842901121
+9942501133
+9942501199
+9942501133
+9842901121
+ At first the input file should be sorted with unique lines only.
+Then the output to be 
+'9842901121',()(now,
+'9942501133',()(now,
+'9942501199',()(now,
+If we use ' thing in unix command the promt goes to > .Kindly help out
+",1
+10749558,05/25/2012 06:30:20,1326705,04/11/2012 13:31:15,60,2,Chaning Port for SSH access?,"Im new to SSH access and was trying to access a local machine with port 22 disabled. Hover I have different ports opened and was wondering how I could attempt to access the machine using that port.
+
+`ssh example@10.1.1.5`
+
+Were does the port number go?",unix,ssh,,,,05/25/2012 18:28:03,off topic,1,43,5,"Chaning Port for SSH access? Im new to SSH access and was trying to access a local machine with port 22 disabled. Hover I have different ports opened and was wondering how I could attempt to access the machine using that port.
+
+`ssh example@10.1.1.5`
+
+Were does the port number go?",2
+8016902,11/04/2011 23:28:16,969792,09/28/2011 19:04:29,30,0,What caracter encoding is common on Unix systems?,What character encoding is common in unix e.g. CentOS do they use ASCII or UTF-8?,unix,character-encoding,ascii,utf,,04/06/2012 17:18:11,off topic,1,15,8,What caracter encoding is common on Unix systems? What character encoding is common in unix e.g. CentOS do they use ASCII or UTF-8?,4
+2230467,02/09/2010 16:05:41,97248,04/28/2009 17:44:37,3299,130,"How to get the system library path on Unix (Linux, FreeBSD)","I need a more-or-less portable programmatic way for querying the the dynamic library path list. For Linux, I can concatenate the `$LD_LIBRARY_PATH` and the contents of `/etc/ld.so.conf` (processing the `include` directives as needed), but that doesn't work e.g. on FreeBSD.
+
+Ultimately, I need a Python function for doing that. It can call gcc or other external commands if needed.",unix,linux,freebsd,library-path,python,,open,0,58,11,"How to get the system library path on Unix (Linux, FreeBSD) I need a more-or-less portable programmatic way for querying the the dynamic library path list. For Linux, I can concatenate the `$LD_LIBRARY_PATH` and the contents of `/etc/ld.so.conf` (processing the `include` directives as needed), but that doesn't work e.g. on FreeBSD.
+
+Ultimately, I need a Python function for doing that. It can call gcc or other external commands if needed.",5
+10398562,05/01/2012 13:44:22,1356163,04/25/2012 12:22:07,1,0,behaviour of cron command,"Guys i would like to know if cron runs a command without restrictions. The problem when i run a command(from any location) manually everything works fine. But when i run it through cron it does not behave like i want it to. Does cron have restrictions on removing files? Or does it have some other restrictions like calling a script from within a script.
+
+Command XYZ when entered manually works.From any location.
+Command XYZ when put into cron behaves wrongly.
+
+according to me the behaviour should be same, shouldn't it?",unix,cron,behavior,,,05/01/2012 14:09:55,off topic,1,87,4,"behaviour of cron command Guys i would like to know if cron runs a command without restrictions. The problem when i run a command(from any location) manually everything works fine. But when i run it through cron it does not behave like i want it to. Does cron have restrictions on removing files? Or does it have some other restrictions like calling a script from within a script.
+
+Command XYZ when entered manually works.From any location.
+Command XYZ when put into cron behaves wrongly.
+
+according to me the behaviour should be same, shouldn't it?",3
+8493,08/12/2008 05:24:36,459,08/05/2008 21:54:42,11,4,What's in your .procmailrc,Are there any handy general items you put in your .procmailrc file?,unix,email,procmail,.procmailrc,,09/09/2011 15:08:40,not constructive,1,12,4,What's in your .procmailrc Are there any handy general items you put in your .procmailrc file?,4
+3206497,07/08/2010 17:53:38,386997,07/08/2010 17:53:38,1,0,can i display the my name 10 times what is the commands in shell script ,tel me the answer the above question ,unix,,,,,07/09/2010 00:14:42,not a real question,1,8,16,can i display the my name 10 times what is the commands in shell script  tel me the answer the above question ,1
+9058280,01/30/2012 00:58:42,436493,12/15/2009 16:58:55,715,10,Difficulties with awk scripting,"Hi everyone I have a file called **Halls Engines** in the directory **Halls**. 
+
+So the directory structure looks something like 
+
+> Halls/Halls Engines
+
+The file **Halls Engines** contains the following information:
+
+> Brown,John,24000 
+
+> Brown,Susan,26000 
+
+> Smith,Jill,24000
+
+I'm trying to write a script that takes in two parameters - family name and file name which isn't working too well. 
+
+The final code should print out an initial line containing the file name and family name and the given name and salary of all those with the specified family name.
+
+This is the code I've written so far:
+
+    cd Halls
+    for filename in $2
+    do
+    echo ""Subsidiary=$2 Family Name=$1""
+    awk -F, '$1 ~/$1/{print $1 "" has a salary of "" $3}'
+    done
+
+So this is how I would run the script (saved as **ss1**):
+
+    ./ss1 Brown ""Halls Engines""
+
+This should return something:
+
+> Brown has a salary of £24000 
+>
+> Brown has a salary of £26000
+
+But I get no output past the echo statement. Any advice on how I can sort this problem out?
+
+",unix,,,,,,open,0,187,4,"Difficulties with awk scripting Hi everyone I have a file called **Halls Engines** in the directory **Halls**. 
+
+So the directory structure looks something like 
+
+> Halls/Halls Engines
+
+The file **Halls Engines** contains the following information:
+
+> Brown,John,24000 
+
+> Brown,Susan,26000 
+
+> Smith,Jill,24000
+
+I'm trying to write a script that takes in two parameters - family name and file name which isn't working too well. 
+
+The final code should print out an initial line containing the file name and family name and the given name and salary of all those with the specified family name.
+
+This is the code I've written so far:
+
+    cd Halls
+    for filename in $2
+    do
+    echo ""Subsidiary=$2 Family Name=$1""
+    awk -F, '$1 ~/$1/{print $1 "" has a salary of "" $3}'
+    done
+
+So this is how I would run the script (saved as **ss1**):
+
+    ./ss1 Brown ""Halls Engines""
+
+This should return something:
+
+> Brown has a salary of £24000 
+>
+> Brown has a salary of £26000
+
+But I get no output past the echo statement. Any advice on how I can sort this problem out?
+
+",1
+5708785,04/18/2011 20:55:10,553223,12/24/2010 10:35:59,121,7,wget or lynx not able to download some webpages due to frames contained in it,"I want to download [http://www.wordwebonline.com/en/TEXT][1] this webpage on UNIX.
+
+
+  [1]: http://www.wordwebonline.com/en/TEXT
+
+I tried to use wget and lynx but the page is not download. Instead following text is seen in it
+
+
+   FRAME: [2]fr_top
+   FRAME: [3]fr_bottom
+
+   Your browser doesn't support frames: Click on the link below to
+   proceed to the
+
+
+With wget -U Mozilla option was also tried but still the same result
+So how can I overcome this? How to get the data within frames using either wget or lynx. Or any other command line tool  to do this? 
+",unix,download,frame,wget,lynx,,open,0,97,15,"wget or lynx not able to download some webpages due to frames contained in it I want to download [http://www.wordwebonline.com/en/TEXT][1] this webpage on UNIX.
+
+
+  [1]: http://www.wordwebonline.com/en/TEXT
+
+I tried to use wget and lynx but the page is not download. Instead following text is seen in it
+
+
+   FRAME: [2]fr_top
+   FRAME: [3]fr_bottom
+
+   Your browser doesn't support frames: Click on the link below to
+   proceed to the
+
+
+With wget -U Mozilla option was also tried but still the same result
+So how can I overcome this? How to get the data within frames using either wget or lynx. Or any other command line tool  to do this? 
+",5
+8761311,01/06/2012 16:48:24,1020814,10/30/2011 15:27:57,8,0,Selecting All from a Long unix text file like (Ctrl+A),"I want to find out if there is a function in unix to select All the contents of a text file in a unix editor, copy it and paste it into a notepad file. I dont have the drive mapped to my windows so just wanted to find out if it can actually be done straight from the unix editor or not.
+
+Thanks",unix,,,,,01/06/2012 18:01:22,off topic,1,62,10,"Selecting All from a Long unix text file like (Ctrl+A) I want to find out if there is a function in unix to select All the contents of a text file in a unix editor, copy it and paste it into a notepad file. I dont have the drive mapped to my windows so just wanted to find out if it can actually be done straight from the unix editor or not.
+
+Thanks",1
+5578035,04/07/2011 08:22:11,696381,04/07/2011 08:22:11,1,0,What is a address space of process ?,"Please any body tell what is meant by address space ?
+why it is called like that ?
+and also about the virtual memory ?
+
+Thanks in advance 
+
+
+Regards
+Pavankumar  ",unix,,,,,04/07/2011 17:44:26,not a real question,1,28,8,"What is a address space of process ? Please any body tell what is meant by address space ?
+why it is called like that ?
+and also about the virtual memory ?
+
+Thanks in advance 
+
+
+Regards
+Pavankumar  ",1
+7865891,10/23/2011 11:39:03,692601,04/05/2011 09:45:29,23,2,how to extend hard disk centos (4 HDD to one folder),"i have centos system.
+and i want to combine 4 hard drives to one folder.
+i have 4X1.0T and each of them is separated.
+how can i combine them all to the same folder.
+like if there is no store left in the first HDD, then it will save the files and the seocnd and on...
+here is my fdisk list:
+
+> Disk /dev/sda: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *           1          13      104391   83  Linux
+/dev/sda2              14      119301   958180860   83  Linux
+Disk /dev/sdb: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb2               1      121601   976760001    5  Extended
+Disk /dev/sdc: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+
+Disk /dev/sdd: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+
+
+notice that i tryed to extend /dev/sda2 and i got:
+
+**/dev/sdb2               1      121601   976760001    5  Extended**
+
+is that extened to /dev/sda2 ? i dont know.
+important, i cant re-install my system.
+please help.
+thanks.
+Koren Or",unix,centos,harddrive,lvm,fdisk,10/24/2011 19:14:49,off topic,1,400,11,"how to extend hard disk centos (4 HDD to one folder) i have centos system.
+and i want to combine 4 hard drives to one folder.
+i have 4X1.0T and each of them is separated.
+how can i combine them all to the same folder.
+like if there is no store left in the first HDD, then it will save the files and the seocnd and on...
+here is my fdisk list:
+
+> Disk /dev/sda: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *           1          13      104391   83  Linux
+/dev/sda2              14      119301   958180860   83  Linux
+Disk /dev/sdb: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb2               1      121601   976760001    5  Extended
+Disk /dev/sdc: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+
+Disk /dev/sdd: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+
+
+notice that i tryed to extend /dev/sda2 and i got:
+
+**/dev/sdb2               1      121601   976760001    5  Extended**
+
+is that extened to /dev/sda2 ? i dont know.
+important, i cant re-install my system.
+please help.
+thanks.
+Koren Or",5
+8158456,11/16/2011 20:47:50,1050485,11/16/2011 20:38:52,1,0,How will you design memory for 1GB memory with each page size being 4K,"I was asked this question in a job interview recently. I answered that I wud use a hash data structure to begin with designing the system. But couldn't answer that well. I think the interviewer was looking for answers like how will i design a page table for this. 
+
+I would like to know how to answer this question. Like for each page size being 4K how many pages would be needed for 1Gb? Also, what other considerations I should keep in my mind to design it efficiently. 
+
+Please respond me back if you know the answer.
+
+Thanks in advance",unix,,,,,11/20/2011 00:52:12,not a real question,1,99,14,"How will you design memory for 1GB memory with each page size being 4K I was asked this question in a job interview recently. I answered that I wud use a hash data structure to begin with designing the system. But couldn't answer that well. I think the interviewer was looking for answers like how will i design a page table for this. 
+
+I would like to know how to answer this question. Like for each page size being 4K how many pages would be needed for 1Gb? Also, what other considerations I should keep in my mind to design it efficiently. 
+
+Please respond me back if you know the answer.
+
+Thanks in advance",1
+10537816,05/10/2012 15:54:53,441878,09/07/2010 22:04:14,170,13,Cannot connect to beaglebone.local,"I need to know how to connect to a beaglebone (or beagleboard) with SSH when I plug it into a new network with an ethernet cable like this:
+
+        $ ssh root@beaglebone.local 
+
+So far I've only been able to access it like this, *if I know the IP address*:
+
+        $ ssh root@<ip_address> 
+
+But I don't always know the IP address of the board on new networks so I'm hoping to access it with with a name like: beaglebone.local. 
+
+Right now when I try to do this I get this error: 
+
+        ""ssh: Could not resolve hostname beaglebone.local: nodename nor servname provided, or not known"" 
+
+I checked the hostname and hosts files, and added ""127.0.0.1        beaglebone"" to the hosts on the beaglebone, but not sure what else I can do? 
+
+        # cat /etc/hostname 
+        beaglebone 
+
+        # cat /etc/hosts 
+        127.0.0.1        localhost.localdomain                localhost 
+        127.0.0.1        beaglebone 
+
+",unix,networking,ip-address,beagleboard,angstrom-linux,,open,0,238,4,"Cannot connect to beaglebone.local I need to know how to connect to a beaglebone (or beagleboard) with SSH when I plug it into a new network with an ethernet cable like this:
+
+        $ ssh root@beaglebone.local 
+
+So far I've only been able to access it like this, *if I know the IP address*:
+
+        $ ssh root@<ip_address> 
+
+But I don't always know the IP address of the board on new networks so I'm hoping to access it with with a name like: beaglebone.local. 
+
+Right now when I try to do this I get this error: 
+
+        ""ssh: Could not resolve hostname beaglebone.local: nodename nor servname provided, or not known"" 
+
+I checked the hostname and hosts files, and added ""127.0.0.1        beaglebone"" to the hosts on the beaglebone, but not sure what else I can do? 
+
+        # cat /etc/hostname 
+        beaglebone 
+
+        # cat /etc/hosts 
+        127.0.0.1        localhost.localdomain                localhost 
+        127.0.0.1        beaglebone 
+
+",5
+5115117,02/25/2011 08:31:47,529899,12/03/2010 21:25:08,6,0,Anyone know the encoding of kernel files? (Ubuntu 10.10),"Exploring the system.
+What would be the default encodings of a kernel file, if I wanted to perhaps see what it looked like?",unix,linux-kernel,,,,02/25/2011 11:15:06,not a real question,1,22,9,"Anyone know the encoding of kernel files? (Ubuntu 10.10) Exploring the system.
+What would be the default encodings of a kernel file, if I wanted to perhaps see what it looked like?",2
+3827104,09/30/2010 01:29:32,303911,03/29/2010 03:14:32,3928,190,How to send commands to telnet and leave session open,"I have to connect to a remote server via telnet and want to send file input there.
+
+This is a processor emulator (MCF68k), so I can't just scp the file to the server and run from there.
+
+I can send input like this:
+
+`telnet host.name < input.file`
+
+Which will successfully transmit the data to the server and run the commands stored that I want.
+However, I need the telnet session to stay interactive (not terminate).
+
+How do I pipe a file to a command, then return control of stdin to the terminal and keep the interactive session open?",unix,pipes,telnet,,,10/01/2010 10:16:56,off topic,1,92,10,"How to send commands to telnet and leave session open I have to connect to a remote server via telnet and want to send file input there.
+
+This is a processor emulator (MCF68k), so I can't just scp the file to the server and run from there.
+
+I can send input like this:
+
+`telnet host.name < input.file`
+
+Which will successfully transmit the data to the server and run the commands stored that I want.
+However, I need the telnet session to stay interactive (not terminate).
+
+How do I pipe a file to a command, then return control of stdin to the terminal and keep the interactive session open?",3
+5973036,05/12/2011 03:37:47,749838,05/12/2011 03:37:47,1,0,UNIX: rename files piped from find command,"I basically want to add a string to all the files in a directory that are locked. I'm having trouble passing the filenames to a mv command:
+
+    find . -flags uchg -exec chflags nouchg ""{}"" | mv ""{}"" ""{}""_LOCK \;
+The above code obviously doesnt work but I think it explains what I'm trying to do.
+
+I'm facing two promlems:
+1. adding a string to the end of a filename but before the extension ( 001_LOCK.jpg ).
+2. passing the output of the find command twice. I need to do this because it wont let me change the names of the files while they are locked. So I need to unlock the file and then renames it.
+
+Does anyone have any ideas?",unix,find,rename,flags,locked,,open,0,120,7,"UNIX: rename files piped from find command I basically want to add a string to all the files in a directory that are locked. I'm having trouble passing the filenames to a mv command:
+
+    find . -flags uchg -exec chflags nouchg ""{}"" | mv ""{}"" ""{}""_LOCK \;
+The above code obviously doesnt work but I think it explains what I'm trying to do.
+
+I'm facing two promlems:
+1. adding a string to the end of a filename but before the extension ( 001_LOCK.jpg ).
+2. passing the output of the find command twice. I need to do this because it wont let me change the names of the files while they are locked. So I need to unlock the file and then renames it.
+
+Does anyone have any ideas?",5
+150697,09/29/2008 21:12:10,2238,08/21/2008 05:51:27,170,13,Why is dd better than cat?,"Suppose I want to clone my hard drive (`hda`) to another drive (`hdb`) in the same computer. As I see it, there's two easy, rough and do-it-yourself ways:
+
+<pre>cat /dev/hda > /dev/hdb</pre>
+
+and
+
+<pre>dd if=/dev/hda of=/dev/hdb</pre>
+
+What technical reasons are there to that the latter is often/always said to be better than the former?
+
+_under no circumstances try these commands at home, or your UNIX is fubar'd_",unix,linux,harddrive,clone,copy,,open,0,62,6,"Why is dd better than cat? Suppose I want to clone my hard drive (`hda`) to another drive (`hdb`) in the same computer. As I see it, there's two easy, rough and do-it-yourself ways:
+
+<pre>cat /dev/hda > /dev/hdb</pre>
+
+and
+
+<pre>dd if=/dev/hda of=/dev/hdb</pre>
+
+What technical reasons are there to that the latter is often/always said to be better than the former?
+
+_under no circumstances try these commands at home, or your UNIX is fubar'd_",5
+4223796,11/19/2010 09:49:35,507401,11/14/2010 14:30:23,39,0,arp across different subnets,how can a host find the mac address of system in another subnet.,unix,networking,network-programming,tcp,,,open,0,13,4,arp across different subnets how can a host find the mac address of system in another subnet.,4
+7762943,10/14/2011 04:12:11,50385,12/31/2008 03:59:09,3532,45,Why is '.' a hard link in Unix?,"I've seen many explanations for why the link count for an empty directory in Unix based OSes is 2 instead of 1. They all say that it's because of the '.' directory, which every directory has pointing back to itself. I understand why having some concept of '.' is useful for specifying relative paths, but what is gained by implementing it at the filesystem level? Why not just have shells or the system calls that take paths know how to interpret it?
+
+That '..' is a real link makes much more sense to me -- the filesystem needs to store a pointer back to the parent directory in order to navigate to it. But I don't see why '.' being a real link is necessary. It also seems like it leads to an ugly special case in the implementation -- you would think you could only free the space used by inodes that have a link count less than 1, but if they're directories, you actually need to check for a link count less than 2. Why the inconsistency?",unix,filesystems,directory,relative-path,inode,10/14/2011 20:08:03,off topic,1,178,8,"Why is '.' a hard link in Unix? I've seen many explanations for why the link count for an empty directory in Unix based OSes is 2 instead of 1. They all say that it's because of the '.' directory, which every directory has pointing back to itself. I understand why having some concept of '.' is useful for specifying relative paths, but what is gained by implementing it at the filesystem level? Why not just have shells or the system calls that take paths know how to interpret it?
+
+That '..' is a real link makes much more sense to me -- the filesystem needs to store a pointer back to the parent directory in order to navigate to it. But I don't see why '.' being a real link is necessary. It also seems like it leads to an ugly special case in the implementation -- you would think you could only free the space used by inodes that have a link count less than 1, but if they're directories, you actually need to check for a link count less than 2. Why the inconsistency?",5
+6627394,07/08/2011 16:21:10,822372,06/30/2011 05:18:33,1,0,"Does the internal working of Unix,Windows,Linux are similar?","I want to know whether the internal working (like memory management,thread,interrupts,etc..)of all OS (win/unix/linux) are happens in similar fashion irrespective of software.",unix,operating-system,,,,07/08/2011 16:35:10,not a real question,1,22,8,"Does the internal working of Unix,Windows,Linux are similar? I want to know whether the internal working (like memory management,thread,interrupts,etc..)of all OS (win/unix/linux) are happens in similar fashion irrespective of software.",2
+5958800,05/11/2011 03:09:10,747937,05/11/2011 03:09:10,1,0,how to run screen command from NSTask ?,"I want to monitor a virtual com port (arduino rfid) on my mac. I can run ""screen /dev/tty.serialnumber"" from terminal and it outputs the rfid serial number when I swipe it. 
+
+As soon as I try it from Xcode with an NSTask I get the following output: ""Must be connected to a terminal.""
+
+
+Here's my code:
+
+
+
+ NSTask *cd = [[NSTask alloc] init];
+
+    
+    [cd setLaunchPath:@""/usr/bin/screen""];
+    [cd setArguments:[NSArray arrayWithObjects:@""-L"",@""/dev/tty.usbserial-A800509K"",nil]];
+     
+     NSPipe *pipe;
+     pipe = [NSPipe pipe];
+     [cd setStandardOutput: pipe];
+     [cd setStandardInput:[NSPipe pipe]];
+    
+     NSFileHandle *file;
+     file = [pipe fileHandleForReading];
+    
+      [cd launch];
+    
+    
+    NSData *data;
+    data = [file readDataToEndOfFile];
+    
+    NSString *string;
+    string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+     
+     NSLog (@""%@"", string);
+     
+   
+    [cd waitUntilExit];
+    [cd release];",unix,screen,arduino,nstask,rfid,,open,0,208,8,"how to run screen command from NSTask ? I want to monitor a virtual com port (arduino rfid) on my mac. I can run ""screen /dev/tty.serialnumber"" from terminal and it outputs the rfid serial number when I swipe it. 
+
+As soon as I try it from Xcode with an NSTask I get the following output: ""Must be connected to a terminal.""
+
+
+Here's my code:
+
+
+
+ NSTask *cd = [[NSTask alloc] init];
+
+    
+    [cd setLaunchPath:@""/usr/bin/screen""];
+    [cd setArguments:[NSArray arrayWithObjects:@""-L"",@""/dev/tty.usbserial-A800509K"",nil]];
+     
+     NSPipe *pipe;
+     pipe = [NSPipe pipe];
+     [cd setStandardOutput: pipe];
+     [cd setStandardInput:[NSPipe pipe]];
+    
+     NSFileHandle *file;
+     file = [pipe fileHandleForReading];
+    
+      [cd launch];
+    
+    
+    NSData *data;
+    data = [file readDataToEndOfFile];
+    
+    NSString *string;
+    string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+     
+     NSLog (@""%@"", string);
+     
+   
+    [cd waitUntilExit];
+    [cd release];",5
+764876,04/19/2009 05:20:00,90575,04/14/2009 08:03:47,12,1,fork in freeBSD unix,Does the fork system call allocate a new user structure for the child process?It does allocate new process structure for the child process.,unix,,,,,,open,0,23,4,fork in freeBSD unix Does the fork system call allocate a new user structure for the child process?It does allocate new process structure for the child process.,1
+10098356,04/11/2012 00:32:39,1325340,04/10/2012 23:51:41,1,0,Sending email in unix using shell script,"does anyone know how I can send an email using Unix Shell script whenever a particular file is created in a particular directory. I already have access to the SMTP server using port 25 however been having a hard time to create the script as I am very new with Shell scripting, any help will be greatly appreciated. :)",unix,,,,,04/11/2012 18:48:53,off topic,1,59,7,"Sending email in unix using shell script does anyone know how I can send an email using Unix Shell script whenever a particular file is created in a particular directory. I already have access to the SMTP server using port 25 however been having a hard time to create the script as I am very new with Shell scripting, any help will be greatly appreciated. :)",1
+8472640,12/12/2011 10:06:15,283474,03/01/2010 09:06:33,1056,79,htmldoc convertion,"I have used the html table. I have used the htmldoc for converting the html file to pdf file using the htmldoc command. 
+
+But After conversion I am not able to get the table content in the correct format. The formats are not showing proper format. 
+
+I have used the following commands to convert the html to pdf 
+
+htmldoc text.html --webpage -f  text.pdf",unix,,,,,12/12/2011 16:09:58,not a real question,1,64,2,"htmldoc convertion I have used the html table. I have used the htmldoc for converting the html file to pdf file using the htmldoc command. 
+
+But After conversion I am not able to get the table content in the correct format. The formats are not showing proper format. 
+
+I have used the following commands to convert the html to pdf 
+
+htmldoc text.html --webpage -f  text.pdf",1
+3904646,10/11/2010 08:33:50,404512,07/28/2010 12:44:04,31,0,PICK UP PARTICULAR SET OF LINES FROM A FILE...,"INPUT FILE FORMAT:
+
+<Tariff>
+<AA>10030</AA>
+<AA>100</AA>
+</Tariff>
+<Tariff>
+<AA>30004</AA>
+<AA>30001</AA>
+</Tariff>
+<Tariff>
+<AA>Account division</AA>
+<AA>AIR</AA>
+<AA>AA</AA>
+<AA>10039</AA>
+</Tariff>
+
+OUTPUT FORMAT :
+Output should be aligned in a manner of Open Tag of ""<Tariff>"" & Having End Tag of ""<\Tariff>"" also separated by comma separator.
+
+OUTPUT :
+
+<Tariff>,<AA>10030</AA>,<AA>100</AA>,</Tariff>
+<Tariff>,<AA>30004</AA>,<AA>30001</AA>,</Tariff>
+<Tariff>,<AA>Account division</AA>,<AA>AIR</AA>,<AA>AA</AA>,<AA>10039</AA>,</Tariff>",unix,,,,,10/11/2010 09:21:21,not a real question,1,30,9,"PICK UP PARTICULAR SET OF LINES FROM A FILE... INPUT FILE FORMAT:
+
+<Tariff>
+<AA>10030</AA>
+<AA>100</AA>
+</Tariff>
+<Tariff>
+<AA>30004</AA>
+<AA>30001</AA>
+</Tariff>
+<Tariff>
+<AA>Account division</AA>
+<AA>AIR</AA>
+<AA>AA</AA>
+<AA>10039</AA>
+</Tariff>
+
+OUTPUT FORMAT :
+Output should be aligned in a manner of Open Tag of ""<Tariff>"" & Having End Tag of ""<\Tariff>"" also separated by comma separator.
+
+OUTPUT :
+
+<Tariff>,<AA>10030</AA>,<AA>100</AA>,</Tariff>
+<Tariff>,<AA>30004</AA>,<AA>30001</AA>,</Tariff>
+<Tariff>,<AA>Account division</AA>,<AA>AIR</AA>,<AA>AA</AA>,<AA>10039</AA>,</Tariff>",1
+9974192,04/02/2012 09:49:06,1281512,03/20/2012 16:53:37,1,0,Using chmod for giving access to users,"I need to provide access to a file in UNIX to particular users.
+How do i use chmod to do this?",unix,chmod,,,,04/02/2012 14:19:11,off topic,1,20,7,"Using chmod for giving access to users I need to provide access to a file in UNIX to particular users.
+How do i use chmod to do this?",2
+9198643,02/08/2012 17:44:53,794479,06/12/2011 04:26:16,28,0,Unix command to separate two lists into three: common between the two and unique to each one?,"Is there a simple unix command set I can use to separate two lists into three lists that are comprised of the common lines between the two lists, the lines unique to the first, and the lines unique to the last? The lists would be unsorted and each line would be unique.
+
+For example:
+List 1:
+cat
+hat
+box
+
+List 2:
+box 
+dog
+rock
+
+Output: box, cat hat, dog rock",unix,grep,sets,,,,open,0,61,17,"Unix command to separate two lists into three: common between the two and unique to each one? Is there a simple unix command set I can use to separate two lists into three lists that are comprised of the common lines between the two lists, the lines unique to the first, and the lines unique to the last? The lists would be unsorted and each line would be unique.
+
+For example:
+List 1:
+cat
+hat
+box
+
+List 2:
+box 
+dog
+rock
+
+Output: box, cat hat, dog rock",3
+9660891,03/12/2012 02:02:46,1146679,10/05/2011 04:56:31,253,3,Switching to a Unix environment,"I'm not entirely sure this is the right format for a question on StackOverflow, but here goes.
+
+I've been wanting to switch to a Unix development environment forever.  Everything I do on Windows just doesn't feel as legitimate as programming in a shell, and I feel like there's an enormous body of programming knowledge that I'm missing out on.  I bought a new laptop and had planned on making an almost-complete operating system switch to Ubuntu Linux (I wanted to save Windows 7).
+
+Unfortunately, the Ubuntu installation has proven extremely difficult.  I had a lot of problems.  Google, AskUbuntu, and the Ubuntu forums were unhelpful, and the #Ubuntu IRC channel was unfriendly, almost mocking.
+
+I seem to have a couple options:
+1.  I can go to Best Buy tomorrow and pay them a lot of money to do it for me.
+2.  I could just use Windows normally and use a Virtual Machine whenever I wanted to code.
+3.  I could try to emulate the Unix environment in Windows.
+
+Any advice or suggestions?  I'm not sure where to go from here.  Here's what I've tried, in more detail:
+
+-First, I tried directly dual booting Ubuntu 11.10 from the Live CD.  I got to the part where you partition your disk and couldn't figure it out.  First it wasn't showing anything, and then after an hour of Google searches I found a recommendation for what to type in the Terminal.  After I tried that, I could see the disks, but it was showing 2 separate hard drives, and the 450 GB partition had ""unknown"" for ""used"".  Nobody would help me figure out my problem, and I couldn't figure it out on my own.  Ubuntu was really laggy when I ran it off the Live CD.
+
+-Next, I tried using Wubi.  It gave me an error when I tried to boot up.  I spent a couple hours and made some posts to try to figure out the error, and eventually realized it was due to the RAID setup (or lack thereof) in my computer, and the unspecified number of hard disks.  After calling HP tech support (useless) and using the #Ubuntu IRC channel (made me feel like an idiot), I gave up on that as well.
+
+-I used VMWare, and hoped that I could just run the VirtualMachine all the time.  Unfortunately, this was way too slow, Banshee froze, even typing had like a half a second lagtime.  It was ridiculous.  ",unix,ubuntu,advice,,,03/12/2012 13:16:37,off topic,1,420,5,"Switching to a Unix environment I'm not entirely sure this is the right format for a question on StackOverflow, but here goes.
+
+I've been wanting to switch to a Unix development environment forever.  Everything I do on Windows just doesn't feel as legitimate as programming in a shell, and I feel like there's an enormous body of programming knowledge that I'm missing out on.  I bought a new laptop and had planned on making an almost-complete operating system switch to Ubuntu Linux (I wanted to save Windows 7).
+
+Unfortunately, the Ubuntu installation has proven extremely difficult.  I had a lot of problems.  Google, AskUbuntu, and the Ubuntu forums were unhelpful, and the #Ubuntu IRC channel was unfriendly, almost mocking.
+
+I seem to have a couple options:
+1.  I can go to Best Buy tomorrow and pay them a lot of money to do it for me.
+2.  I could just use Windows normally and use a Virtual Machine whenever I wanted to code.
+3.  I could try to emulate the Unix environment in Windows.
+
+Any advice or suggestions?  I'm not sure where to go from here.  Here's what I've tried, in more detail:
+
+-First, I tried directly dual booting Ubuntu 11.10 from the Live CD.  I got to the part where you partition your disk and couldn't figure it out.  First it wasn't showing anything, and then after an hour of Google searches I found a recommendation for what to type in the Terminal.  After I tried that, I could see the disks, but it was showing 2 separate hard drives, and the 450 GB partition had ""unknown"" for ""used"".  Nobody would help me figure out my problem, and I couldn't figure it out on my own.  Ubuntu was really laggy when I ran it off the Live CD.
+
+-Next, I tried using Wubi.  It gave me an error when I tried to boot up.  I spent a couple hours and made some posts to try to figure out the error, and eventually realized it was due to the RAID setup (or lack thereof) in my computer, and the unspecified number of hard disks.  After calling HP tech support (useless) and using the #Ubuntu IRC channel (made me feel like an idiot), I gave up on that as well.
+
+-I used VMWare, and hoped that I could just run the VirtualMachine all the time.  Unfortunately, this was way too slow, Banshee froze, even typing had like a half a second lagtime.  It was ridiculous.  ",3
+1795976,11/25/2009 10:21:35,42106,12/01/2008 11:44:12,1884,124,Can the Unix list command 'ls' output numerical chmod permissions?,"Is it possible when listing a directory to view numerical unix permissions such as 644 rather than the symbolic output -rw-rw-r--
+
+Thanks.",unix,permissions,command-line,,,,open,0,21,10,"Can the Unix list command 'ls' output numerical chmod permissions? Is it possible when listing a directory to view numerical unix permissions such as 644 rather than the symbolic output -rw-rw-r--
+
+Thanks.",3
+11350906,07/05/2012 19:06:20,1484056,06/26/2012 21:44:58,5,0,How can i improve this file check code,"How can i improve below code. In a nutshell, this code: searches for a file --> if not found wait for sometime to be created -> do something on it.
+--------------------------------------------------
+
+filename=`command to search and get file name`
+
+if [filename is empty]      
+{
+       
+sleep for 10 sec    
+ filename=`command to search and get file name`;
+  
+}
+
+if [ filename is not empty ]
+ 
+then
+    
+     process the file here;
+
+else
+    
+    send a mail saying file could not be found;
+
+fi
+
+--------------------------------------",unix,,,,,07/27/2012 00:47:52,not a real question,1,103,8,"How can i improve this file check code How can i improve below code. In a nutshell, this code: searches for a file --> if not found wait for sometime to be created -> do something on it.
+--------------------------------------------------
+
+filename=`command to search and get file name`
+
+if [filename is empty]      
+{
+       
+sleep for 10 sec    
+ filename=`command to search and get file name`;
+  
+}
+
+if [ filename is not empty ]
+ 
+then
+    
+     process the file here;
+
+else
+    
+    send a mail saying file could not be found;
+
+fi
+
+--------------------------------------",1
+1490811,09/29/2009 06:04:46,179736,09/27/2009 11:27:55,51,1,I have a file with all the iptable settings. How do I load this into my server?,"My system admin gave me a file with iptables rules.
+What command do I type in to load this?
+
+Something like...iptables > thefile.dat ????",unix,,,,,,open,0,22,17,"I have a file with all the iptable settings. How do I load this into my server? My system admin gave me a file with iptables rules.
+What command do I type in to load this?
+
+Something like...iptables > thefile.dat ????",1
+7615933,09/30/2011 20:47:03,371574,06/20/2010 15:38:02,92,0,tail -f equivalent,"I am seeing several seconds delay with the tail command. I found the cause for it has something to do with nfs services. I am using arch linux and yet to find out how to disable all these services
+
+I have searched and had some indication that other tools will not be effected such as cat so what can give equivalent results to tail -f",unix,,,,,09/30/2011 20:50:05,off topic,1,64,3,"tail -f equivalent I am seeing several seconds delay with the tail command. I found the cause for it has something to do with nfs services. I am using arch linux and yet to find out how to disable all these services
+
+I have searched and had some indication that other tools will not be effected such as cat so what can give equivalent results to tail -f",1
+11422699,07/10/2012 22:00:48,800270,06/15/2011 19:18:29,560,46,Fastcall in 64 bit,"I've been reading up on the differences in 32bit calling conventions. The `fastcall` vs. `stdcall` ordeal that is.
+
+From what I read there was great confusion with the two conventions, and 64 bit was standardized to avoid this confusion.
+
+I have to ask, why was `fastcall` chosen?
+
+Also, since `fastcall` and `stdcall` are win32 terms, what is the UNIX term for function calling that does or does not use registers for passing arguments?",unix,64bit,x86-64,stdcall,fastcall,,open,0,70,4,"Fastcall in 64 bit I've been reading up on the differences in 32bit calling conventions. The `fastcall` vs. `stdcall` ordeal that is.
+
+From what I read there was great confusion with the two conventions, and 64 bit was standardized to avoid this confusion.
+
+I have to ask, why was `fastcall` chosen?
+
+Also, since `fastcall` and `stdcall` are win32 terms, what is the UNIX term for function calling that does or does not use registers for passing arguments?",5
+2148465,01/27/2010 16:16:12,251589,01/15/2010 14:24:59,149,2,What unix text editor should I learn?  ,"Maybe this should be a community wiki page...
+
+What unix text editor should I learn?  My co-workers mostly use vi.  I am thinking about vim because the syntax highlighting seems appealing.  Is there any advantage to vi over vim?  
+
+I know that there are a lot of emacs fans out there too?  Is there any reason to learn a specific editor?  
+
+Can you point me to some good learning references (for your suggested editor)?
+
+Thanks!
+",unix,texteditor,vi,vim,emacs,01/27/2010 16:27:25,not constructive,1,79,9,"What unix text editor should I learn?   Maybe this should be a community wiki page...
+
+What unix text editor should I learn?  My co-workers mostly use vi.  I am thinking about vim because the syntax highlighting seems appealing.  Is there any advantage to vi over vim?  
+
+I know that there are a lot of emacs fans out there too?  Is there any reason to learn a specific editor?  
+
+Can you point me to some good learning references (for your suggested editor)?
+
+Thanks!
+",5
+7567627,09/27/2011 10:24:59,966790,09/27/2011 10:20:56,1,0,How do I install Tomcat5 on CentOS 5.7,"#Setting up Install Process
+    Resolving Dependencies
+    --> Running transaction check
+    ---> Package tomcat5-admin-webapps.noarch 0:5.5.25-1jpp set to be updated
+    --> Processing Dependency: tomcat5 = 5.5.25-1jpp for package: tomcat5-admin-webapps
+    ---> Package tomcat5-webapps.noarch 0:5.5.25-1jpp set to be updated
+    --> Processing Dependency: tomcat5 = 5.5.25-1jpp for package: tomcat5-webapps
+    --> Finished Dependency Resolution
+    tomcat5-webapps-5.5.25-1jpp.noarch from jpackage-generic has depsolving problems
+      --> Missing Dependency: tomcat5 = 5.5.25-1jpp is needed by package tomcat5-webapps-5.5.25-1jpp.noarch (jpackage-generic)
+    tomcat5-admin-webapps-5.5.25-1jpp.noarch from jpackage-generic has depsolving problems
+      --> Missing Dependency: tomcat5 = 5.5.25-1jpp is needed by package tomcat5-admin-webapps-5.5.25-1jpp.noarch (jpackage-generic)
+    Error: Missing Dependency: tomcat5 = 5.5.25-1jpp is needed by package tomcat5-webapps-5.5.25-1jpp.noarch (jpackage-generic)
+    Error: Missing Dependency: tomcat5 = 5.5.25-1jpp is needed by package tomcat5-admin-webapps-5.5.25-1jpp.noarch (jpackage-generic)
+    
+    
+#Having the following dependency issues.",unix,tomcat,centos,,,09/27/2011 12:05:35,off topic,1,163,8,"How do I install Tomcat5 on CentOS 5.7 #Setting up Install Process
+    Resolving Dependencies
+    --> Running transaction check
+    ---> Package tomcat5-admin-webapps.noarch 0:5.5.25-1jpp set to be updated
+    --> Processing Dependency: tomcat5 = 5.5.25-1jpp for package: tomcat5-admin-webapps
+    ---> Package tomcat5-webapps.noarch 0:5.5.25-1jpp set to be updated
+    --> Processing Dependency: tomcat5 = 5.5.25-1jpp for package: tomcat5-webapps
+    --> Finished Dependency Resolution
+    tomcat5-webapps-5.5.25-1jpp.noarch from jpackage-generic has depsolving problems
+      --> Missing Dependency: tomcat5 = 5.5.25-1jpp is needed by package tomcat5-webapps-5.5.25-1jpp.noarch (jpackage-generic)
+    tomcat5-admin-webapps-5.5.25-1jpp.noarch from jpackage-generic has depsolving problems
+      --> Missing Dependency: tomcat5 = 5.5.25-1jpp is needed by package tomcat5-admin-webapps-5.5.25-1jpp.noarch (jpackage-generic)
+    Error: Missing Dependency: tomcat5 = 5.5.25-1jpp is needed by package tomcat5-webapps-5.5.25-1jpp.noarch (jpackage-generic)
+    Error: Missing Dependency: tomcat5 = 5.5.25-1jpp is needed by package tomcat5-admin-webapps-5.5.25-1jpp.noarch (jpackage-generic)
+    
+    
+#Having the following dependency issues.",3
+11544478,07/18/2012 15:06:26,184862,10/06/2009 09:35:35,1051,61,File transfer Unix to mainframe,I want to transfer files from UNIX to mainframe using dataaset. I know it works in ftp. Please help.,unix,mainframe,,,,07/27/2012 18:29:10,not a real question,1,19,5,File transfer Unix to mainframe I want to transfer files from UNIX to mainframe using dataaset. I know it works in ftp. Please help.,2
+7331651,09/07/2011 09:35:35,320615,04/19/2010 17:46:03,14140,524,Find the owner of a file in unix,"Is there a way to get just the file's owner and group, separated by space in unix shell?
+
+I'm trying to write a script to find the owner of all the files in a directory and print it (in a specific format, can't use `ls -la`).",unix,,,,,09/08/2011 00:14:01,off topic,1,45,8,"Find the owner of a file in unix Is there a way to get just the file's owner and group, separated by space in unix shell?
+
+I'm trying to write a script to find the owner of all the files in a directory and print it (in a specific format, can't use `ls -la`).",1
+7328223,09/07/2011 02:18:26,682869,03/29/2011 21:04:12,224,1,unix export command,"I am new to unix and am trying to understand the use of 'export' command. I tried using 'man export', but there is no manual for this command. 
+
+Can anyone please help me out understanding the use of 'export' in unix ?
+
+Thanks.",unix,,,,,09/07/2011 03:01:26,off topic,1,42,3,"unix export command I am new to unix and am trying to understand the use of 'export' command. I tried using 'man export', but there is no manual for this command. 
+
+Can anyone please help me out understanding the use of 'export' in unix ?
+
+Thanks.",1
+8549850,12/18/2011 04:38:17,204623,11/06/2009 08:57:11,1636,11,How to delete a network interface?,"I tried to create an IPIP tunel using the ip tunnel add command. Now I want to delete it but it won't go away!
+
+
+    tunl0     Link encap:IPIP Tunnel  HWaddr   
+              NOARP  MTU:1480  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0 
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+    $ sudo ifdown tunl0
+    ifdown: interface tunl0 not configured
+    $ sudo ifconfig tunl0 down
+    $ /sbin/ip tunnel del tunl0
+    delete tunnel tunl0 failed: Operation not permitted
+
+What should I do?
+",unix,networking,,,,12/18/2011 08:37:05,off topic,1,178,6,"How to delete a network interface? I tried to create an IPIP tunel using the ip tunnel add command. Now I want to delete it but it won't go away!
+
+
+    tunl0     Link encap:IPIP Tunnel  HWaddr   
+              NOARP  MTU:1480  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0 
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+    $ sudo ifdown tunl0
+    ifdown: interface tunl0 not configured
+    $ sudo ifconfig tunl0 down
+    $ /sbin/ip tunnel del tunl0
+    delete tunnel tunl0 failed: Operation not permitted
+
+What should I do?
+",2
+8022455,11/05/2011 18:53:37,660944,03/15/2011 16:03:52,100,3,To sftp or to scp?,"I'm a learning unix.  I want to transfer large files between two hosts.  Would it be faster to sftp or scp.  Please explain any reason you would want to not use the faster of these two methods. What i means is, let's say hypothetically that scp is the faster of the two, is there any reason other than speed that one one my choose to use sftp instead?  What are the pros and cons of each?  ",unix,sftp,scp,,,11/05/2011 19:34:30,off topic,1,82,5,"To sftp or to scp? I'm a learning unix.  I want to transfer large files between two hosts.  Would it be faster to sftp or scp.  Please explain any reason you would want to not use the faster of these two methods. What i means is, let's say hypothetically that scp is the faster of the two, is there any reason other than speed that one one my choose to use sftp instead?  What are the pros and cons of each?  ",3
+10647032,05/18/2012 05:11:35,752603,05/13/2011 14:55:06,347,10,exterme-coupling in UNIX-like OSs,"As we know a very basic software engineering principal  is loose coupling.
+But we know that programs in UNIX-like OSs are extremely coupled. How this can be explained/justified? ",unix,software-engineering,loose-coupling,,,05/18/2012 06:24:43,not a real question,1,29,4,"exterme-coupling in UNIX-like OSs As we know a very basic software engineering principal  is loose coupling.
+But we know that programs in UNIX-like OSs are extremely coupled. How this can be explained/justified? ",3
+9177479,02/07/2012 13:54:13,1194777,02/07/2012 13:46:24,1,0,UNIX: Moving files based on date,"How can I move files from a source directory to target directory based on specific date? and this has to run everyday morning...
+Can any one you please suggest me with some solution...
+
+Thanks in advance, Dilip",unix,moving,,,,02/07/2012 13:59:28,off topic,1,35,6,"UNIX: Moving files based on date How can I move files from a source directory to target directory based on specific date? and this has to run everyday morning...
+Can any one you please suggest me with some solution...
+
+Thanks in advance, Dilip",2
+11621266,07/23/2012 22:07:05,515382,07/21/2010 01:03:47,12,1,How do I install this command-line software?,"Here's a link to the software - it's command line and I have no idea how to install so I can use it in Terminal on my Mac.
+
+http://git.zx2c4.com/password-store/about/
+
+Thank you.",unix,command-line,terminal,pass,,07/24/2012 04:47:33,off topic,1,29,7,"How do I install this command-line software? Here's a link to the software - it's command line and I have no idea how to install so I can use it in Terminal on my Mac.
+
+http://git.zx2c4.com/password-store/about/
+
+Thank you.",4
+7645414,10/04/2011 08:55:02,509101,11/16/2010 05:07:38,1,0,bash shell scripts,"Write a script that copies the file tree (including subdirectories) in your home directory. As the initial directory to take the directory / usr / share / doc, as the destination directory using the directory $ {HOME} / doc.
+Write a script corresponding to paragraph 1. Additional conditions: a) should be copied only the files without the end, that is, not match the pattern *.* to the names of newly created files to add the ending. txt; b) files should be copied only with the ending. html, ending again should be replaced with. HTM
+Write a script corresponding to step 2. Additional terms: names of newly created directories must be made in the upper register.
+Write a script that prepares a list of files from this directory and its subdirectories. The script receives the following parameters:
+mask of files to search for
+ownership of files to search for
+File access rights
+For laboratory work to use external commands
+
+find (man find)
+sed (man sed)
+tr (man tr)
+basename (man basename)
+dirname (man dirname)
+Interpreter and builtins bash (man bash)
+while; do; done
+read
+if; then; else; fi",unix,,,,,10/04/2011 10:17:24,not a real question,1,171,3,"bash shell scripts Write a script that copies the file tree (including subdirectories) in your home directory. As the initial directory to take the directory / usr / share / doc, as the destination directory using the directory $ {HOME} / doc.
+Write a script corresponding to paragraph 1. Additional conditions: a) should be copied only the files without the end, that is, not match the pattern *.* to the names of newly created files to add the ending. txt; b) files should be copied only with the ending. html, ending again should be replaced with. HTM
+Write a script corresponding to step 2. Additional terms: names of newly created directories must be made in the upper register.
+Write a script that prepares a list of files from this directory and its subdirectories. The script receives the following parameters:
+mask of files to search for
+ownership of files to search for
+File access rights
+For laboratory work to use external commands
+
+find (man find)
+sed (man sed)
+tr (man tr)
+basename (man basename)
+dirname (man dirname)
+Interpreter and builtins bash (man bash)
+while; do; done
+read
+if; then; else; fi",1
+7686600,10/07/2011 11:27:59,728747,04/28/2011 07:08:10,20,1,"Operating Systems,Unix","The process is in either user mode or kernel mode based on this fact i want to ask that how process in user mode can map virtual address to physical address when it has no access to uarea.
+",unix,operating-system,,,,10/07/2011 12:12:49,not a real question,1,38,2,"Operating Systems,Unix The process is in either user mode or kernel mode based on this fact i want to ask that how process in user mode can map virtual address to physical address when it has no access to uarea.
+",2
+1619156,10/24/2009 21:16:55,3886,08/31/2008 16:55:28,3356,193,How feasible would it be to create a bash shell in a browser?,"Primarily, I'm a C/C++ programmer on Unix machines... But I'd kill for browser based shell access to a linux box...
+
+So, the question is: How hard would it be, and what approaches would be the best for building real shell level access into a web page? Flash? Javascript?
+
+I know this is really all opinion, but I'm curious if people think it might be possible?",unix,flash,javascript,,,,open,0,63,13,"How feasible would it be to create a bash shell in a browser? Primarily, I'm a C/C++ programmer on Unix machines... But I'd kill for browser based shell access to a linux box...
+
+So, the question is: How hard would it be, and what approaches would be the best for building real shell level access into a web page? Flash? Javascript?
+
+I know this is really all opinion, but I'm curious if people think it might be possible?",3
+8886997,01/16/2012 22:11:09,189336,10/13/2009 18:22:59,561,4,Being 'nice' with I/O: limiting a processes I/O resources in *nix,"I'm working on a big shared Ubuntu server and am annoying my colleagues.  One of my processes is making a lot of inserts into a MySQL database and it's bogging the whole server down.
+
+MySQL is not using much of the CPU resources nor much of the RAM.  If that were the case I could use the tools 'nice' and 'ulimit' to throttle the process (in fact I am using nice on MySQL and it's not helping).  Instead, MySQL seems to be making lots of random disk read and write operations and so whenever anyone else wants to read or write a file from disk, they have to wait a second or two, which is not acceptable for interactive use.
+
+Any thoughts on what I can do to limit MySQL's disk I/O?
+
+What I need is well described in a message board [here][1].
+
+
+  [1]: http://forums.fedoraforum.org/showthread.php?t=255886",unix,,,,,01/17/2012 00:50:59,off topic,1,146,11,"Being 'nice' with I/O: limiting a processes I/O resources in *nix I'm working on a big shared Ubuntu server and am annoying my colleagues.  One of my processes is making a lot of inserts into a MySQL database and it's bogging the whole server down.
+
+MySQL is not using much of the CPU resources nor much of the RAM.  If that were the case I could use the tools 'nice' and 'ulimit' to throttle the process (in fact I am using nice on MySQL and it's not helping).  Instead, MySQL seems to be making lots of random disk read and write operations and so whenever anyone else wants to read or write a file from disk, they have to wait a second or two, which is not acceptable for interactive use.
+
+Any thoughts on what I can do to limit MySQL's disk I/O?
+
+What I need is well described in a message board [here][1].
+
+
+  [1]: http://forums.fedoraforum.org/showthread.php?t=255886",1
+11604515,07/22/2012 22:32:35,845081,07/14/2011 17:17:41,312,0,check my unix account quota,"I am using University unix sever, I got an account.
+But I don;t know how many quota I got.
+How can I check it by command?
+Thank you!
+
+I tried `""quota""` but seems not work.",unix,,,,,07/22/2012 23:06:07,off topic,1,31,5,"check my unix account quota I am using University unix sever, I got an account.
+But I don;t know how many quota I got.
+How can I check it by command?
+Thank you!
+
+I tried `""quota""` but seems not work.",1
+7326441,09/06/2011 21:34:11,329700,04/30/2010 11:12:27,882,19,File contains two EOF characters; what happens?,Will this screw up file size estimation on the file system? Will the filesystem overwrite everything past the first EOF character? How is this handled?,unix,eof,,,,,open,0,25,7,File contains two EOF characters; what happens? Will this screw up file size estimation on the file system? Will the filesystem overwrite everything past the first EOF character? How is this handled?,2
+8558885,12/19/2011 08:47:27,1105509,12/19/2011 08:43:05,1,0,putty logs streamlining,"Our Technical Leadership has asked to maintain putty logs within our workstation, however considering the large environment, and number of servers we support, it is very difficult to someone enable the putting logging. Also, in case if i need to change the workstation, i have to reconfigure everythig from scratch. 
+
+This is just not for me, it is with all our teammates. 
+
+Please let me know if anyone has any script, or some easily solution to enable putty login on all the saved session. Also, something where we rotate our putty logs on weekly/mothly basis. 
+
+I did try to do some home work, but could not figure out an automated way of doing this. 
+
+Thanks, John",unix,putty,,,,12/19/2011 13:51:16,off topic,1,116,3,"putty logs streamlining Our Technical Leadership has asked to maintain putty logs within our workstation, however considering the large environment, and number of servers we support, it is very difficult to someone enable the putting logging. Also, in case if i need to change the workstation, i have to reconfigure everythig from scratch. 
+
+This is just not for me, it is with all our teammates. 
+
+Please let me know if anyone has any script, or some easily solution to enable putty login on all the saved session. Also, something where we rotate our putty logs on weekly/mothly basis. 
+
+I did try to do some home work, but could not figure out an automated way of doing this. 
+
+Thanks, John",2
+1825552,12/01/2009 11:23:13,184862,10/06/2009 09:35:35,158,43,Grep a tab in UNIX,How to grep tab (\t) in the file on Unix platform,unix,grep,,,,,open,0,11,5,Grep a tab in UNIX How to grep tab (\t) in the file on Unix platform,2
+3681057,09/09/2010 22:37:01,258956,01/26/2010 02:36:59,91,0,Adding User and Group in Unix,"Does anyone know the api for adding users and groups in unix and removing them ? I want to do this programatically.
+
+Thanks,
+Frank",unix,,,,,,open,0,22,6,"Adding User and Group in Unix Does anyone know the api for adding users and groups in unix and removing them ? I want to do this programatically.
+
+Thanks,
+Frank",1
+8899655,01/17/2012 18:22:04,1154592,01/17/2012 18:13:26,1,0,"Is ""grep -i test | test.ext"" legal unix command?",This command listed in my homework sheet. ,unix,,,,,01/18/2012 04:09:27,too localized,1,8,9,"Is ""grep -i test | test.ext"" legal unix command? This command listed in my homework sheet. ",1
+7377596,09/11/2011 10:24:29,45843,12/12/2008 21:03:08,2066,22,Directory recursion,"If you need to recursively traverse a directory tree, there are two ways to do it:
+
+1. Build up pathnames of increasing length as you go, .../.../... etc.
+
+2. Use chdir to step down into each directory as you come to it, so you are never dealing with pathnames longer than two components.
+
+The first method strikes me as more obvious, and might be more robust against untoward events like something being unmounted while you are halfway through it. On the other hand, looking over the code for the GNU _find_ utility, I notice it uses the second method. Is there a reason for that? Any advantage of the second method that I hadn't thought of?",unix,recursion,directory,folder,,,open,0,113,2,"Directory recursion If you need to recursively traverse a directory tree, there are two ways to do it:
+
+1. Build up pathnames of increasing length as you go, .../.../... etc.
+
+2. Use chdir to step down into each directory as you come to it, so you are never dealing with pathnames longer than two components.
+
+The first method strikes me as more obvious, and might be more robust against untoward events like something being unmounted while you are halfway through it. On the other hand, looking over the code for the GNU _find_ utility, I notice it uses the second method. Is there a reason for that? Any advantage of the second method that I hadn't thought of?",4
+9396957,02/22/2012 14:43:31,1098361,12/14/2011 17:20:48,661,44,shell script email notification upon success or failure,"I'm writing a shell script that basically transfers data files through SFTP to a database server and then invokes a pl/sql procedure which loads the data from those files (external tables) into internal database tables.
+
+I've been doing some research on effective exception handling in shell scripts and it appears the `set -e` option can be used to terminate a script with an error whenever any command in the script runs which returns a non-zero exitcode.
+
+So, my plan is to have a script which contains all of the processing that needs to get done (SFTP, moving/deleting files, calling pl/sql procedure, etc...) and to include `set -e` at the top of the script.  I also plan to redirect output to a log file in this script.
+
+Then, I plan to have another script that calls the main processing script and then emails the log that gets produced with either a ""Success"" or ""Failure"" indicator in the subject of the email.
+
+Are there any ""gotchas"" that any of you can foresee in this approach or does this seem reasonable?",unix,sh,,,,,open,0,175,8,"shell script email notification upon success or failure I'm writing a shell script that basically transfers data files through SFTP to a database server and then invokes a pl/sql procedure which loads the data from those files (external tables) into internal database tables.
+
+I've been doing some research on effective exception handling in shell scripts and it appears the `set -e` option can be used to terminate a script with an error whenever any command in the script runs which returns a non-zero exitcode.
+
+So, my plan is to have a script which contains all of the processing that needs to get done (SFTP, moving/deleting files, calling pl/sql procedure, etc...) and to include `set -e` at the top of the script.  I also plan to redirect output to a log file in this script.
+
+Then, I plan to have another script that calls the main processing script and then emails the log that gets produced with either a ""Success"" or ""Failure"" indicator in the subject of the email.
+
+Are there any ""gotchas"" that any of you can foresee in this approach or does this seem reasonable?",2
+6903756,08/01/2011 20:01:52,873404,08/01/2011 19:59:30,1,0,Controlling programs with terminal commands,"I just got into writing bash scripts and was wondering if there is a way to control and change settings of programs that are running via the terminal?
+Such as tell the terminal to start ""OpenOffice Writer"" and write the words ""hello world"" and save the file. Or change the settings inside of a program?
+Just curious :D",unix,command-line,ubuntu,terminal,,01/01/2012 23:28:36,off topic,1,56,5,"Controlling programs with terminal commands I just got into writing bash scripts and was wondering if there is a way to control and change settings of programs that are running via the terminal?
+Such as tell the terminal to start ""OpenOffice Writer"" and write the words ""hello world"" and save the file. Or change the settings inside of a program?
+Just curious :D",4
+1043064,06/25/2009 10:10:21,108147,05/16/2009 12:38:17,33,6,Should different servers translate unix timestamps as different dates?,"Whilst working on a UI update for a client, I noticed the dates associated with all the articles were out by a day. I figured I'd screwed something up during my changes, but to be sure, threw together a little php test file that gave me some odd results. The test file is just;
+
+    <?php
+    $date = 1246053600;
+    echo 'unix: ',$date,', converted: ',date('d/m/Y', $date);
+    ?>
+
+If I run the above code on my localhost I get:
+
+> unix: 1246053600, converted:
+> 26/06/2009
+
+But if I run it on the production server I get:
+
+> unix: 1246053600, converted:
+> 27/06/2009
+
+Notice the day difference between the two? What's happening here?! Surely converting a unix timestamp to a date doesn't have any server specific dependancies?",unix,timestamp,date,php,,,open,0,128,9,"Should different servers translate unix timestamps as different dates? Whilst working on a UI update for a client, I noticed the dates associated with all the articles were out by a day. I figured I'd screwed something up during my changes, but to be sure, threw together a little php test file that gave me some odd results. The test file is just;
+
+    <?php
+    $date = 1246053600;
+    echo 'unix: ',$date,', converted: ',date('d/m/Y', $date);
+    ?>
+
+If I run the above code on my localhost I get:
+
+> unix: 1246053600, converted:
+> 26/06/2009
+
+But if I run it on the production server I get:
+
+> unix: 1246053600, converted:
+> 27/06/2009
+
+Notice the day difference between the two? What's happening here?! Surely converting a unix timestamp to a date doesn't have any server specific dependancies?",4
+8916819,01/18/2012 20:17:50,1053820,11/18/2011 12:51:11,13,0,Destructive one word unix commands,Hi I'm trying to hack a web server as part of an assignment and have gotten it to exec commands but I cannot pass commands arguments as the program splits up space separated words and only execs the first one. Is there anything I can pass to cause any sort of damage in one word? Btw webserver runs as root. Thanks,unix,command,hacking,,,01/18/2012 20:24:03,off topic,1,61,5,Destructive one word unix commands Hi I'm trying to hack a web server as part of an assignment and have gotten it to exec commands but I cannot pass commands arguments as the program splits up space separated words and only execs the first one. Is there anything I can pass to cause any sort of damage in one word? Btw webserver runs as root. Thanks,3
+11582164,07/20/2012 15:17:09,777890,06/02/2010 14:52:13,699,32,"How can I view all ""man"" entries in Unix?","I was trying to learn more about `grep` (as my coworkers suggested) since I rarely used it and needed to refresh my Unix knowledge. However, when I typed `man grep`, the following message was displayed:<br>
+`No manual entry for grep`<br>
+This occurred for many commands, each stating that there is no manual entry for that particular command.<br>
+<br>
+I was wondering if there was a way to view all man pages (or at least their titles)? I want to know if perhaps there are <i>no</i> man pages on this machine.<br>
+<br>
+Thanks!<br>
+<br>
+<b>Clarification</b>: I am not using a regular distribution of Unix. I don't have Ubuntu or anything like this. The man command is there, but no manual pages seem to exist. Someone (I do not know who) installed this version of Unix a long time ago on this machine.",unix,man,,,,07/20/2012 20:11:47,off topic,1,133,9,"How can I view all ""man"" entries in Unix? I was trying to learn more about `grep` (as my coworkers suggested) since I rarely used it and needed to refresh my Unix knowledge. However, when I typed `man grep`, the following message was displayed:<br>
+`No manual entry for grep`<br>
+This occurred for many commands, each stating that there is no manual entry for that particular command.<br>
+<br>
+I was wondering if there was a way to view all man pages (or at least their titles)? I want to know if perhaps there are <i>no</i> man pages on this machine.<br>
+<br>
+Thanks!<br>
+<br>
+<b>Clarification</b>: I am not using a regular distribution of Unix. I don't have Ubuntu or anything like this. The man command is there, but no manual pages seem to exist. Someone (I do not know who) installed this version of Unix a long time ago on this machine.",2
+4282402,11/26/2010 03:46:51,344781,05/19/2010 06:29:32,21,0,Problem: Unable to execute the correct executable file in Unix,"I am encountering a really strange problem, any help is appreciated.
+
+I have a executable file compiled and cp to a specific location. There is a newly added cout statement at the first line of the main function. But when I execute the binary file in that directory, i can not see it. After a long while I accidentally find out that if I am not in that directory, I can see the outputed string when i execute it.
+
+And later I find out that it's only when I am in that directory, the executed binary file is wrong and I will not see the string.
+
+when I use which on that executable, no mater what directory I am in, I always get the same result and it is the correct location.
+
+Really confused..
+
+
+
+
+
+
+",unix,,,,,,open,0,130,10,"Problem: Unable to execute the correct executable file in Unix I am encountering a really strange problem, any help is appreciated.
+
+I have a executable file compiled and cp to a specific location. There is a newly added cout statement at the first line of the main function. But when I execute the binary file in that directory, i can not see it. After a long while I accidentally find out that if I am not in that directory, I can see the outputed string when i execute it.
+
+And later I find out that it's only when I am in that directory, the executed binary file is wrong and I will not see the string.
+
+when I use which on that executable, no mater what directory I am in, I always get the same result and it is the correct location.
+
+Really confused..
+
+
+
+
+
+
+",1
+10774191,05/27/2012 13:04:47,1414276,05/24/2012 06:39:31,16,0,removing a file in unix,"In a UNIX filesystem,
+
+If the inode of the root directory is in the memory, what are the sequence of disk operations needed to remove a file in Desktop. 
+
+While I am trying to solve a question in textbook, I have seen this question but I could not solve it . Can anyone help me ? 
+
+If you know much about Unix, can you tell me what are sequence of disk operation needed for creating a file in Desktop ?",unix,io,filesystems,inode,,05/27/2012 19:26:42,off topic,1,79,5,"removing a file in unix In a UNIX filesystem,
+
+If the inode of the root directory is in the memory, what are the sequence of disk operations needed to remove a file in Desktop. 
+
+While I am trying to solve a question in textbook, I have seen this question but I could not solve it . Can anyone help me ? 
+
+If you know much about Unix, can you tell me what are sequence of disk operation needed for creating a file in Desktop ?",4
+2972351,06/04/2010 07:56:07,323129,04/22/2010 10:00:52,8,0,ssh many users to one home,"I want to allow some trusted users to scp files into my server (to an specific user), but I do not want to give these users a home, neither ssh login.
+
+I'm having problems to understand the correct settings of users/groups I have to create to allow this to happen.
+
+I will put an example;
+
+Having:
+
+ 1. `MyUser@MyServer`
+ 2. `MyUser` belongs to the group `MyGroup`
+ 3. MyUser's home will be lets say, `/home/MyUser`
+ 4. `SFTPGuy1@OtherBox1`
+ 5. `SFTPGuy2@OtherBox2`
+
+They give me their `id_dsa.pub`'s and I add it to my `authorized_keys`
+
+I reckon then, I'd do in my server something like
+
+`useradd -d /home/MyUser -s /bin/false SFTPGuy1` (and the same for the other..)
+
+And for the last, `useradd -G MyGroup SFTPGuy1` (then again, for the other guy)
+
+I'd expect then, the SFTPGuys to be able to `sftp -o IdentityFile=id_dsa MyServer` and to be taken to MyUser's home...
+
+Well, this is not the case... SFTP just keeps asking me for a password.
+
+Could someone point out what am I missing?
+
+Thanks a mil,
+
+f.
+",unix,ssh,ssh-keys,,,06/04/2010 12:08:36,off topic,1,159,6,"ssh many users to one home I want to allow some trusted users to scp files into my server (to an specific user), but I do not want to give these users a home, neither ssh login.
+
+I'm having problems to understand the correct settings of users/groups I have to create to allow this to happen.
+
+I will put an example;
+
+Having:
+
+ 1. `MyUser@MyServer`
+ 2. `MyUser` belongs to the group `MyGroup`
+ 3. MyUser's home will be lets say, `/home/MyUser`
+ 4. `SFTPGuy1@OtherBox1`
+ 5. `SFTPGuy2@OtherBox2`
+
+They give me their `id_dsa.pub`'s and I add it to my `authorized_keys`
+
+I reckon then, I'd do in my server something like
+
+`useradd -d /home/MyUser -s /bin/false SFTPGuy1` (and the same for the other..)
+
+And for the last, `useradd -G MyGroup SFTPGuy1` (then again, for the other guy)
+
+I'd expect then, the SFTPGuys to be able to `sftp -o IdentityFile=id_dsa MyServer` and to be taken to MyUser's home...
+
+Well, this is not the case... SFTP just keeps asking me for a password.
+
+Could someone point out what am I missing?
+
+Thanks a mil,
+
+f.
+",3
+2009782,01/05/2010 22:56:10,174896,09/17/2009 11:09:27,744,42,"How to acess ctime, mtime, … of a symbolic link?","On unix symlinks are pointers to another file. Not only the file but also the symlink has a ctime, mtime, …. I know the symlinks time can be accessed, as `ls` displays it. If I use one of ruby's `File#ctime`, `File#mtime`, …, I always get the attribute of the file the symlink is pointing to, not of the symlink. How can I read this values in ruby? If this is not possible in ruby, tell me how to do it in C. I would write my own c extension in that case.",unix,filesystems,symlink,ruby,c,,open,0,92,10,"How to acess ctime, mtime, … of a symbolic link? On unix symlinks are pointers to another file. Not only the file but also the symlink has a ctime, mtime, …. I know the symlinks time can be accessed, as `ls` displays it. If I use one of ruby's `File#ctime`, `File#mtime`, …, I always get the attribute of the file the symlink is pointing to, not of the symlink. How can I read this values in ruby? If this is not possible in ruby, tell me how to do it in C. I would write my own c extension in that case.",5
+8196066,11/19/2011 17:59:23,924140,09/01/2011 19:46:06,10,0,using mail to sent message to other users,"sombody please help me on mail command ,
+
+How could I sent mail to other users in my system usning mail command ?
+and where could they  read the mail from , (say ,is that stored in any special file or such )and  is there any mechanism to alert them of that mail ?
+
+please help 
+",unix,,,,,11/19/2011 19:25:31,off topic,1,56,8,"using mail to sent message to other users sombody please help me on mail command ,
+
+How could I sent mail to other users in my system usning mail command ?
+and where could they  read the mail from , (say ,is that stored in any special file or such )and  is there any mechanism to alert them of that mail ?
+
+please help 
+",1
+6532817,06/30/2011 09:37:16,787472,06/07/2011 12:47:53,16,2,difference bwteen sudo su - and sudo -u root,"We have a application which is installed by root user on a Solaris 10 server.
+if we start the application services by using following command, it works perfectly, and no problem at. but if we use ""sudo -u root"" to restart the services, it will have all sorts of permission issues, can any one tell me the difference bewteen
+
+    ""sudo su - ""   and   ""sudo -u root""
+
+------------------------------------------------------------------------
+
+below script works 
+
+    sudo su -
+    ./services start
+
+below script is NOT working
+
+    sudo -u root ./services start",unix,root,sudo,solaris-10,,06/30/2011 11:51:23,off topic,1,99,9,"difference bwteen sudo su - and sudo -u root We have a application which is installed by root user on a Solaris 10 server.
+if we start the application services by using following command, it works perfectly, and no problem at. but if we use ""sudo -u root"" to restart the services, it will have all sorts of permission issues, can any one tell me the difference bewteen
+
+    ""sudo su - ""   and   ""sudo -u root""
+
+------------------------------------------------------------------------
+
+below script works 
+
+    sudo su -
+    ./services start
+
+below script is NOT working
+
+    sudo -u root ./services start",4
+1654942,10/31/2009 17:02:04,113471,05/28/2009 00:15:04,31,2,/usr/share/zoneinfo epic fail,"I have just, in my groggy morning state, reversed & confused the arguments to `ln`, replacing `/usr/share/zoneinfo/America/Toronto` with a link to the non-existant `/etc/localtime`, when I really wanted to link /etc/localtime to Toronto. Now I have no timezone file for where I live. Does anybody have a copy or know where I could get one? It's just instructions on how to translate unix time into toronto time, but I cat'd a few of the other files, and they don't seem like something I'm up to the task of writing by hand.
+
+I know. At least I've never rm -r'd my /",unix,ln,timezone,localtime,,06/28/2011 17:58:16,off topic,1,100,3,"/usr/share/zoneinfo epic fail I have just, in my groggy morning state, reversed & confused the arguments to `ln`, replacing `/usr/share/zoneinfo/America/Toronto` with a link to the non-existant `/etc/localtime`, when I really wanted to link /etc/localtime to Toronto. Now I have no timezone file for where I live. Does anybody have a copy or know where I could get one? It's just instructions on how to translate unix time into toronto time, but I cat'd a few of the other files, and they don't seem like something I'm up to the task of writing by hand.
+
+I know. At least I've never rm -r'd my /",4
+382846,12/20/2008 03:27:41,35092,11/06/2008 14:07:57,2188,140,Good Current Systems Programming Books?,"This just occurred to me in answering another question.  Can anyone recommend any good, current, *systems programming* books, for really *any* variant of UNIX?  Such a book would teach file and directory structure, fork/exec, pipes, FIFOS, and semaphores.  I'd think (looking back on my similar course) that a reasonable final project would be writing a full shell, and possibly a lightweight HTTP daemon.
+
+The *UNIX Programming Environment* by Kernighan and PIke comes closest, but is pretty old. ",unix,textbooks,,,,09/30/2011 14:47:17,not constructive,1,80,5,"Good Current Systems Programming Books? This just occurred to me in answering another question.  Can anyone recommend any good, current, *systems programming* books, for really *any* variant of UNIX?  Such a book would teach file and directory structure, fork/exec, pipes, FIFOS, and semaphores.  I'd think (looking back on my similar course) that a reasonable final project would be writing a full shell, and possibly a lightweight HTTP daemon.
+
+The *UNIX Programming Environment* by Kernighan and PIke comes closest, but is pretty old. ",2
+10960494,06/09/2012 11:10:56,1289683,03/24/2012 08:19:47,1,0,"""grep | xargs grep"" with search conditions on different strings","I want to grep files that contain text ""wp_"" but do not contain text ""wp3_"". E.g. I've got a file with two strings:
+>wp_123
+
+>wp3_123
+
+I try `$ grep -lr wp_ ~/tmp | xargs grep -vl wp3_`
+
+It outputs this file name! But if I remove the linebreak, it's working like I want, i.e. handles string ""wp_123 wp3_123"" correctly.
+
+How to make it work with search conditions on different strings?
+
+P.S. Sorry for kind of duplicate, but seems that nobody noticed [my comment](http://stackoverflow.com/questions/10959666/another-grep-advanced#comment-14308071) during last hour...",unix,search,grep,,,,open,0,80,10,"""grep | xargs grep"" with search conditions on different strings I want to grep files that contain text ""wp_"" but do not contain text ""wp3_"". E.g. I've got a file with two strings:
+>wp_123
+
+>wp3_123
+
+I try `$ grep -lr wp_ ~/tmp | xargs grep -vl wp3_`
+
+It outputs this file name! But if I remove the linebreak, it's working like I want, i.e. handles string ""wp_123 wp3_123"" correctly.
+
+How to make it work with search conditions on different strings?
+
+P.S. Sorry for kind of duplicate, but seems that nobody noticed [my comment](http://stackoverflow.com/questions/10959666/another-grep-advanced#comment-14308071) during last hour...",3
+2657151,04/17/2010 03:50:00,139117,07/16/2009 01:12:31,1835,51,What are some tips for troubleshooting builds of complicated software?,"Sometimes I want to build Python or GCC from scratch just for fun, but I can't parse the errors I get, or don't understand statements like ""libtool link error # XYZ"". What are some tricks that unix/systems gurus use to compile software of this size from scratch?
+
+Of course I already do things like read config.log (if there is one), google around, and post in newsgroups. I'm looking for things that either
+
+- make the process go smoother or
+- get me more information about the error to help me understand and fix it.
+
+
+It's a little tough to get this information sometimes, because some compile bugs can be quite obscure. What can I do at that point?",unix,compiler,build-process,,,12/08/2011 01:13:50,not constructive,1,114,10,"What are some tips for troubleshooting builds of complicated software? Sometimes I want to build Python or GCC from scratch just for fun, but I can't parse the errors I get, or don't understand statements like ""libtool link error # XYZ"". What are some tricks that unix/systems gurus use to compile software of this size from scratch?
+
+Of course I already do things like read config.log (if there is one), google around, and post in newsgroups. I'm looking for things that either
+
+- make the process go smoother or
+- get me more information about the error to help me understand and fix it.
+
+
+It's a little tough to get this information sometimes, because some compile bugs can be quite obscure. What can I do at that point?",3
+11105444,06/19/2012 16:38:28,1070422,11/29/2011 01:21:27,40,0,unix - run a command as another user,"I am a newbie to Unix. I am trying to run a shell script and command as another user.
+
+For example:
+I am logged in as user1 and want to execute a script as user2. I dont want the password prompt and I want it to be auto-entered. I am aware of the public key authentication but I am trying to find if there is something like:
+
+    sudo -u user2 script.sh
+
+I am trying to cron this, so I dont want the password prompt. I want it to be handled in the sudo command itself.
+
+please help",unix,script,sudo,,,06/20/2012 03:00:37,off topic,1,96,8,"unix - run a command as another user I am a newbie to Unix. I am trying to run a shell script and command as another user.
+
+For example:
+I am logged in as user1 and want to execute a script as user2. I dont want the password prompt and I want it to be auto-entered. I am aware of the public key authentication but I am trying to find if there is something like:
+
+    sudo -u user2 script.sh
+
+I am trying to cron this, so I dont want the password prompt. I want it to be handled in the sudo command itself.
+
+please help",3
+7970067,11/01/2011 17:07:08,342095,05/15/2010 20:30:45,613,11,What is the page size in UNIX?,"I have tried my best to understand the page translation concept shown [here][1]
+
+Offset is of 12 bits, it means there 4096 entries or 4K entries. And each entry in memory is of 32 bits or 4bytes. So it means that a page is of size 4K x 4Bytes = 16KB.
+
+But that don't seems correct.
+
+My calculations of size are messed up. Please help me understand this two level page translation with sizes.
+
+  [1]: http://zoo.cs.yale.edu/classes/cs422/2010/lec/x86_translation.svg",unix,page,,,,11/02/2011 18:46:56,off topic,1,74,7,"What is the page size in UNIX? I have tried my best to understand the page translation concept shown [here][1]
+
+Offset is of 12 bits, it means there 4096 entries or 4K entries. And each entry in memory is of 32 bits or 4bytes. So it means that a page is of size 4K x 4Bytes = 16KB.
+
+But that don't seems correct.
+
+My calculations of size are messed up. Please help me understand this two level page translation with sizes.
+
+  [1]: http://zoo.cs.yale.edu/classes/cs422/2010/lec/x86_translation.svg",2
+7697013,10/08/2011 13:08:06,164641,08/28/2009 04:35:10,66,1,"Parent never calls for wait function , still zombie not created","**""Parent never calls for wait function , still zombie process is not created ""**
+can anyone explain this with example ! thanks in advance ! ",unix,,,,,10/08/2011 14:55:50,not a real question,1,25,11,"Parent never calls for wait function , still zombie not created **""Parent never calls for wait function , still zombie process is not created ""**
+can anyone explain this with example ! thanks in advance ! ",1
+865194,05/14/2009 19:24:10,44586,12/09/2008 13:16:06,655,45,Transferring files from AIX batch to Windows batch,"The responses to [my previous question][1] suggested SSIS as the most efficient and reliable way to get files from AIX into SQL Server. I agree that it's probably a good idea. But for the sake of understanding the other options better, I'd like to narrow the scope a little bit.
+
+Irrespective of what I plan to do with the files, how can I determine the most efficient and reliable method of retrieving from a Windows batch job files that are created by an AIX batch job, assuming I'm in control of both ends. The basic options I know of are sftp, scp and samba. I'm open to other options.
+
+My criteria are as follows.
+
+ - Reliability. From my experience (maybe just a problem in our systems) ftp jobs in batch are among the most frequent to fail. 
+ - Security. Both servers are on the internal network, but the transfer still needs to be secure.
+ - Maintainability. We have a fairly strict password expiration policy. So I'd like to minimize the number of different accounts and passwords.
+ - Efficiency. The amount of data to be transferred in this specific case is small but not trivial. I'd be interested to know whether any of these approaches performs and scales better than the others.
+
+Any suggestions or input will be appreciated.
+
+  [1]: http://stackoverflow.com/questions/864561/most-efficient-and-reliable-way-to-get-unix-files-into-sql-server",unix,ftp,samba,scp,windows,06/01/2011 14:42:50,off topic,1,219,8,"Transferring files from AIX batch to Windows batch The responses to [my previous question][1] suggested SSIS as the most efficient and reliable way to get files from AIX into SQL Server. I agree that it's probably a good idea. But for the sake of understanding the other options better, I'd like to narrow the scope a little bit.
+
+Irrespective of what I plan to do with the files, how can I determine the most efficient and reliable method of retrieving from a Windows batch job files that are created by an AIX batch job, assuming I'm in control of both ends. The basic options I know of are sftp, scp and samba. I'm open to other options.
+
+My criteria are as follows.
+
+ - Reliability. From my experience (maybe just a problem in our systems) ftp jobs in batch are among the most frequent to fail. 
+ - Security. Both servers are on the internal network, but the transfer still needs to be secure.
+ - Maintainability. We have a fairly strict password expiration policy. So I'd like to minimize the number of different accounts and passwords.
+ - Efficiency. The amount of data to be transferred in this specific case is small but not trivial. I'd be interested to know whether any of these approaches performs and scales better than the others.
+
+Any suggestions or input will be appreciated.
+
+  [1]: http://stackoverflow.com/questions/864561/most-efficient-and-reliable-way-to-get-unix-files-into-sql-server",5
+10013680,04/04/2012 14:54:06,863645,07/26/2011 14:26:54,70,0,Automatically unmount a disk in Unix?,"I have an iMac with a USB external hard drive plugged in. The iMac has two log-in accounts. I want to set it so the external hard drive only mounts for ONE of the accounts, and not the other. I have an Automator function set-up on the other account that dismounts the hard drive automatically when the user logs in. However, after a while it seems to automatically mount again when it is plugged in (not sure why). Is there a way I can fiddle with permissions or Unix to keep that drive unmounted as long as that user account is logged in?",unix,mount,,,,04/04/2012 20:26:44,off topic,1,103,6,"Automatically unmount a disk in Unix? I have an iMac with a USB external hard drive plugged in. The iMac has two log-in accounts. I want to set it so the external hard drive only mounts for ONE of the accounts, and not the other. I have an Automator function set-up on the other account that dismounts the hard drive automatically when the user logs in. However, after a while it seems to automatically mount again when it is plugged in (not sure why). Is there a way I can fiddle with permissions or Unix to keep that drive unmounted as long as that user account is logged in?",2
+1547383,10/10/2009 08:25:04,82733,03/25/2009 18:28:23,6,0,Single unix command to correctly transfer a large file?,"I am trying to transfer a large (~3GB) file between two unix machines.
+
+I can use scp or rsync, but sometimes the transfer is corrupted. (I have to check manually.)
+I can split the file into pieces and transfer them and then checksum and then recombine, but this is tedious.
+
+Is there a single command to *correctly* transfer a large file between two Unix machines?
+I want it to automatically checksum both copies, and keep redoing the transfer (or pieces thereof) until it gets all bytes across the wire correctly.",unix,file,,,,10/10/2009 08:38:01,off topic,1,86,9,"Single unix command to correctly transfer a large file? I am trying to transfer a large (~3GB) file between two unix machines.
+
+I can use scp or rsync, but sometimes the transfer is corrupted. (I have to check manually.)
+I can split the file into pieces and transfer them and then checksum and then recombine, but this is tedious.
+
+Is there a single command to *correctly* transfer a large file between two Unix machines?
+I want it to automatically checksum both copies, and keep redoing the transfer (or pieces thereof) until it gets all bytes across the wire correctly.",2

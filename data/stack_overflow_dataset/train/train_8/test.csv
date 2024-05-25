@@ -1,0 +1,635 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+10455036,05/04/2012 19:31:40,158475,08/18/2009 13:45:03,344,7,How to format detailed app description,"
+How can we format the detailed app description when submitting an app?
+
+Entering a simple bulleted list like this:
+
+- See multiple currencies
+- Conversion for ...
+
+Shows this ugly on the phone Marketplace:
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/sxymx.jpg",windows-phone-7,,,,,05/07/2012 15:42:15,off topic,1,36,6,"How to format detailed app description 
+How can we format the detailed app description when submitting an app?
+
+Entering a simple bulleted list like this:
+
+- See multiple currencies
+- Conversion for ...
+
+Shows this ugly on the phone Marketplace:
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/sxymx.jpg",1
+8770211,01/07/2012 13:59:22,208348,11/11/2009 03:04:55,267,3,How to upload Sqlce Db to SkyDrive for windows phone,say I have an app that uses SQlCe DB in windows phone.  How do I upload this SqlCe DB ( sdf file) to SkyDrive?  The SQLCe DB is in IsolatedStorage. What are the steps I need to do to upload it? Thanks,windows-phone-7,,,,,,open,0,44,10,How to upload Sqlce Db to SkyDrive for windows phone say I have an app that uses SQlCe DB in windows phone.  How do I upload this SqlCe DB ( sdf file) to SkyDrive?  The SQLCe DB is in IsolatedStorage. What are the steps I need to do to upload it? Thanks,1
+9044992,01/28/2012 11:44:22,1158827,01/19/2012 15:24:49,4,0,how to use pls format into windows phone?," private static List<AudioTrack> _playList = new List<AudioTrack>
+        {
+           
+            new AudioTrack(new Uri(""http://mobilehigh.bmradio.de:8080/titel-info"", UriKind.Absolute),  
+                            ""Windows Phone Radio"", 
+                            ""Windows Phone Radio Podcast"",
+                            new Uri(""shared/media/Episode29.jpg"", UriKind.Relative)),
+           
+        
+        };
+How to use pls format into windows phone.",windows-phone-7,,,,,,open,0,170,8,"how to use pls format into windows phone?  private static List<AudioTrack> _playList = new List<AudioTrack>
+        {
+           
+            new AudioTrack(new Uri(""http://mobilehigh.bmradio.de:8080/titel-info"", UriKind.Absolute),  
+                            ""Windows Phone Radio"", 
+                            ""Windows Phone Radio Podcast"",
+                            new Uri(""shared/media/Episode29.jpg"", UriKind.Relative)),
+           
+        
+        };
+How to use pls format into windows phone.",1
+9145951,02/05/2012 00:41:52,208081,11/10/2009 19:18:06,493,6,Microsoft Pubcenter - AdUnits - best way to use?,"I have 12 different apps on WP7 platform and the trial versions use Microsoft Advertising to display ads.
+Should I be creating an AdUnit for each app separately on PubCenter or should I create a single AdUnit and use it for all my apps.
+
+Does this even matter?  I mean, if the apps have a single adunit, can it make more money (eCPM)
+
+Thanks in advance.",windows-phone-7,windows-phone-7.5,advertising,,,02/06/2012 18:30:00,off topic,1,64,9,"Microsoft Pubcenter - AdUnits - best way to use? I have 12 different apps on WP7 platform and the trial versions use Microsoft Advertising to display ads.
+Should I be creating an AdUnit for each app separately on PubCenter or should I create a single AdUnit and use it for all my apps.
+
+Does this even matter?  I mean, if the apps have a single adunit, can it make more money (eCPM)
+
+Thanks in advance.",3
+9415729,02/23/2012 15:15:14,476024,10/14/2010 16:35:57,1251,10,make a game that is featured as an xbox game,"I've seen a great deal of games on windows phone featuring the xbox mark and a lot not featuring it. I have some questions about that:
+
+1) What is the difference between the 2 types of games? As i see it, i think that the xbox versions can award achievements for some tasks on the users xbox profile. Is there more?
+
+2) How can one add a game to the marketplace and make it xbox-able?
+
+Any tutorial or web source could be of great use! 
+",windows-phone-7,windows-phone-7.5,windows-phone,,,02/23/2012 16:10:13,off topic,1,83,10,"make a game that is featured as an xbox game I've seen a great deal of games on windows phone featuring the xbox mark and a lot not featuring it. I have some questions about that:
+
+1) What is the difference between the 2 types of games? As i see it, i think that the xbox versions can award achievements for some tasks on the users xbox profile. Is there more?
+
+2) How can one add a game to the marketplace and make it xbox-able?
+
+Any tutorial or web source could be of great use! 
+",3
+6558696,07/02/2011 18:02:37,625253,02/20/2011 13:46:09,3,1,Wp7 Mango Clipboard access,"The docs http://msdn.microsoft.com/en-us/library/ms597043%28v=VS.96%29.aspx state the System.Windows.Clipboard should be available in Windows Phone 7.1. I tried using it in the Visual Studio Express 2010 (beta 2 for Mango from June) but when 
+
+using System.Windows.Clipboard;
+
+VS complains :
+
+Error	1	The type or namespace name 'Clipboard' does not exist in the namespace 'System.Windows' (are you missing an assembly reference?)
+
+Do I miss anything or is this just not ready yet?
+
+Thanks a lot!
+Chris
+",windows-phone-7,clipboard,windows-phone-7.1,,,,open,0,65,4,"Wp7 Mango Clipboard access The docs http://msdn.microsoft.com/en-us/library/ms597043%28v=VS.96%29.aspx state the System.Windows.Clipboard should be available in Windows Phone 7.1. I tried using it in the Visual Studio Express 2010 (beta 2 for Mango from June) but when 
+
+using System.Windows.Clipboard;
+
+VS complains :
+
+Error	1	The type or namespace name 'Clipboard' does not exist in the namespace 'System.Windows' (are you missing an assembly reference?)
+
+Do I miss anything or is this just not ready yet?
+
+Thanks a lot!
+Chris
+",3
+9561897,03/05/2012 05:07:16,1109837,12/21/2011 12:28:20,43,5,Windows 7 mobile app development,Is it the right time to start a long duration project for windows 7 mobile ? as silverlight and flash are dying away ... and HTML 5 which would be the future platform ... or should i wait for some more time for windows 7  to extend support HTML 5 ?,windows-phone-7,,,,,03/05/2012 08:20:27,not constructive,1,52,5,Windows 7 mobile app development Is it the right time to start a long duration project for windows 7 mobile ? as silverlight and flash are dying away ... and HTML 5 which would be the future platform ... or should i wait for some more time for windows 7  to extend support HTML 5 ?,1
+11201480,06/26/2012 05:57:01,144373,07/24/2009 09:32:08,5258,269,Windows Phone Webbroswer is not rendering content correctly?,"Windows phone Webbrowser is not rendering the content correctly. For example the Euro symbol is showing as special character ""***(euro (€)***"". Is there any way i can show the actual content like this in WebBrowser?",windows-phone-7,,,,,,open,0,35,8,"Windows Phone Webbroswer is not rendering content correctly? Windows phone Webbrowser is not rendering the content correctly. For example the Euro symbol is showing as special character ""***(euro (€)***"". Is there any way i can show the actual content like this in WebBrowser?",1
+5190441,03/04/2011 06:28:34,1312208,09/19/2008 15:18:40,833,22,Zip code with geolocation service in Windows Phone 7,"I want to get the Zip-Code for current user location from Windows Phone 7. From GeoLocation service I am able to get latitude and longitude and with the help of Bing map API I am able to get all other information (Like City, State) except zipcode (Postal code). For United States the PostalCode field is blank. Is there any way of getting the ZipCode? My application limitations are following.
+
+1. We cannot use any other service than BingMap API/Web service to get the ZipCode.
+2. We only support US as location. So if the solution works only for US. It is ok.",windows-phone-7,geolocation,zipcode,,,,open,0,100,9,"Zip code with geolocation service in Windows Phone 7 I want to get the Zip-Code for current user location from Windows Phone 7. From GeoLocation service I am able to get latitude and longitude and with the help of Bing map API I am able to get all other information (Like City, State) except zipcode (Postal code). For United States the PostalCode field is blank. Is there any way of getting the ZipCode? My application limitations are following.
+
+1. We cannot use any other service than BingMap API/Web service to get the ZipCode.
+2. We only support US as location. So if the solution works only for US. It is ok.",3
+4651732,01/10/2011 21:32:50,3635,08/29/2008 16:13:11,425,21,Is an API available to query Deep links for Windows Phone 7 apps in the marketplace?,"I have seen couple of Web sites that list Windows Phone 7 apps from the marketplace with deep links.
+
+Is an API available for the Windows Phone 7 Marketplace that allows me to query and maybe create a better Marketplace?
+
+Thanks in Advance",windows-phone-7,,,,,,open,0,41,16,"Is an API available to query Deep links for Windows Phone 7 apps in the marketplace? I have seen couple of Web sites that list Windows Phone 7 apps from the marketplace with deep links.
+
+Is an API available for the Windows Phone 7 Marketplace that allows me to query and maybe create a better Marketplace?
+
+Thanks in Advance",1
+9294125,02/15/2012 13:14:48,476024,10/14/2010 16:35:57,1236,10,Issue displaying image on a modelmesh with transparency,"i have a modelmesh that has a image on it. When i draw the modelmesh i get the image but i also get a black bacground. The image is png and transparent and is added in 3ds max(i don't give it coordinates to be drawn, it sits on the modelmesh). How can i make the black background transparent? 
+
+Here is my drawing code:
+
+ 
+
+     foreach (BasicEffect effect2 in modelMesh)
+                            {
+                                effect2.DiffuseColor = Color.White.ToVector3();
+                                effect2.LightingEnabled = true;
+                                effect2.AmbientLightColor = new Vector3(1, 1, 1);
+                                effect2.Projection = camera.projectionMatrix;
+                                effect2.View = camera.viewMatrix;
+                                effect2.World = transforms[modelMesh.ParentBone.Index] * gameobject.orientation;
+                                effect2.Alpha = 1;
+                                 
+                            }
+                             modelMesh.Draw();",windows-phone-7,xna,,,,02/16/2012 20:07:56,off topic,1,434,8,"Issue displaying image on a modelmesh with transparency i have a modelmesh that has a image on it. When i draw the modelmesh i get the image but i also get a black bacground. The image is png and transparent and is added in 3ds max(i don't give it coordinates to be drawn, it sits on the modelmesh). How can i make the black background transparent? 
+
+Here is my drawing code:
+
+ 
+
+     foreach (BasicEffect effect2 in modelMesh)
+                            {
+                                effect2.DiffuseColor = Color.White.ToVector3();
+                                effect2.LightingEnabled = true;
+                                effect2.AmbientLightColor = new Vector3(1, 1, 1);
+                                effect2.Projection = camera.projectionMatrix;
+                                effect2.View = camera.viewMatrix;
+                                effect2.World = transforms[modelMesh.ParentBone.Index] * gameobject.orientation;
+                                effect2.Alpha = 1;
+                                 
+                            }
+                             modelMesh.Draw();",2
+8488420,12/13/2011 11:29:39,698502,04/08/2011 10:55:55,74,0,Windows phone Video and audio doesn't work at the same time?,"I have a little problem in my app.
+
+I make a slide show of images and videos, and when i pass the images i  want to play a music but this doesn't work after the video play.. the audio only plays before the video.. why this happen? Because the stream? How can i solve this problem? some example of using this type together..",windows-phone-7,audio,video,,,12/13/2011 15:09:18,not a real question,1,63,11,"Windows phone Video and audio doesn't work at the same time? I have a little problem in my app.
+
+I make a slide show of images and videos, and when i pass the images i  want to play a music but this doesn't work after the video play.. the audio only plays before the video.. why this happen? Because the stream? How can i solve this problem? some example of using this type together..",3
+6759014,07/20/2011 08:24:43,765529,05/23/2011 06:33:08,30,5,how to Customize PasswordBox in window phone 7,"I'm using PassWordBox, but I want set focus when user. 
+
+How can inherit attributes availability of PasswordBox. I want to build your own DLL ?
+
+For TextBlock I can inherit it from the control is available, but it seems PasswordBox no
+
+Here is code for textblock i inherit TextBlock from control Textblock.
+
+    public class PassWordBox : TextBox
+{}
+
+I want to change the TextBlock into PasswordBox get or not? Please help me ?",windows-phone-7,window,,,,07/21/2011 05:28:04,not a real question,1,72,8,"how to Customize PasswordBox in window phone 7 I'm using PassWordBox, but I want set focus when user. 
+
+How can inherit attributes availability of PasswordBox. I want to build your own DLL ?
+
+For TextBlock I can inherit it from the control is available, but it seems PasswordBox no
+
+Here is code for textblock i inherit TextBlock from control Textblock.
+
+    public class PassWordBox : TextBox
+{}
+
+I want to change the TextBlock into PasswordBox get or not? Please help me ?",2
+8828931,01/12/2012 01:12:32,1144444,01/12/2012 01:00:03,1,0,How to communicate windows phone7.1 emulator like silverlight spy tool?,"We want to create windows phone7 application GUI testing tool.
+
+but Do not access windows phone7 emulator.
+
+Please let us know how to approach or tip
+",windows-phone-7,testing,,,,01/12/2012 16:49:34,not a real question,1,24,10,"How to communicate windows phone7.1 emulator like silverlight spy tool? We want to create windows phone7 application GUI testing tool.
+
+but Do not access windows phone7 emulator.
+
+Please let us know how to approach or tip
+",2
+7334626,09/07/2011 13:26:10,220583,11/28/2009 18:55:25,518,30,How to set the time in phone7?,Can an application set the current time on a phone7 device? I can't seem to find any documentation about it but I'm sure it's possible.,windows-phone-7,,,,,,open,0,25,7,How to set the time in phone7? Can an application set the current time on a phone7 device? I can't seem to find any documentation about it but I'm sure it's possible.,1
+5183309,03/03/2011 16:06:40,264557,02/02/2010 17:06:43,388,11,How to filter contacts by name,"I'm developing a windows phone 7 application.
+I'm trying to understand how I'm supposed to filter contacts by letters. I want to display the keyboard to the user and show all the contacts. If the user pushes ""a"" everyone with an a in the name should be shown. 
+
+Please tell me this is possible. I'm getting more and more frustrated with this API..",windows-phone-7,,,,,,open,0,62,6,"How to filter contacts by name I'm developing a windows phone 7 application.
+I'm trying to understand how I'm supposed to filter contacts by letters. I want to display the keyboard to the user and show all the contacts. If the user pushes ""a"" everyone with an a in the name should be shown. 
+
+Please tell me this is possible. I'm getting more and more frustrated with this API..",1
+7151755,08/22/2011 18:18:26,893105,08/13/2011 13:45:20,30,0,advantages to put code in app.xaml.cs in wp7,"I am wondering is that any advantages to put the code into app.xaml.cs (Application_Launching) compare to the code i put into the mainpage.xaml.cs (MainPage()) section.
+
+",windows-phone-7,,,,,,open,0,25,8,"advantages to put code in app.xaml.cs in wp7 I am wondering is that any advantages to put the code into app.xaml.cs (Application_Launching) compare to the code i put into the mainpage.xaml.cs (MainPage()) section.
+
+",1
+8444095,12/09/2011 10:23:32,430652,08/25/2010 12:19:42,655,39,Which is the best processor for mobile emulators like Android and Windows Mobile?,"I am using Intel-i3 processor for android development.Emulator is really sluggish.Let me know whether Android emulators will use the full functionality of hyper threading.Now i am planning to buy a processor.Which one should i go with,whether i5 or i7? 
+
+Also from Windows Mobile Application development perspective,Which processor is good for emulator development environment?",windows-phone-7,android-emulator,emulator,processor,hyperthreading,12/09/2011 15:13:32,off topic,1,53,13,"Which is the best processor for mobile emulators like Android and Windows Mobile? I am using Intel-i3 processor for android development.Emulator is really sluggish.Let me know whether Android emulators will use the full functionality of hyper threading.Now i am planning to buy a processor.Which one should i go with,whether i5 or i7? 
+
+Also from Windows Mobile Application development perspective,Which processor is good for emulator development environment?",5
+9520049,03/01/2012 16:29:43,1221664,02/20/2012 17:37:02,1,0,Error on App Hub-error connecting to the server please try again later,"An error occured in app hub error connecting to the server please try again later
+
+This error occurs while uploading xap file for an app..
+
+Tried to upload it using two different networks.. Still getting the same error
+
+Any solutions buddy",windows-phone-7,,,,,03/01/2012 16:44:17,too localized,1,38,12,"Error on App Hub-error connecting to the server please try again later An error occured in app hub error connecting to the server please try again later
+
+This error occurs while uploading xap file for an app..
+
+Tried to upload it using two different networks.. Still getting the same error
+
+Any solutions buddy",1
+8116633,11/14/2011 02:24:04,851553,07/19/2011 08:14:23,1,0,why some methods has been never browsable from within an editor in WindowsPhone71 SDK?,"When I want to use the method ""CheckAccess"" in the class ""Dispatcher"",I find that it is marked whit ""EditorBrowsable(EditorBrowsableState.Never)"",so why? It's not fit to use in
+the WindowsPhone71?",windows-phone-7,silverlight-4.0,silverlight-3.0,,,,open,0,27,14,"why some methods has been never browsable from within an editor in WindowsPhone71 SDK? When I want to use the method ""CheckAccess"" in the class ""Dispatcher"",I find that it is marked whit ""EditorBrowsable(EditorBrowsableState.Never)"",so why? It's not fit to use in
+the WindowsPhone71?",3
+10981344,06/11/2012 13:45:26,7021,09/15/2008 13:01:34,6269,94,WP7 navigate to new page without putting current on back stack,"In an Windows Phone 7 application I got a CurrentPage, which, on a special event does navigate to a new page using the NavigationService:
+
+    NavigationService.Navigate(new Uri(""/NewPage.xaml"", UriKind.Relative));
+
+Now when the user clicks back on the NewPage I want the app to skip the CurrentPage and go directly to the MainPage of the app.
+
+I tried to use NavigationService.RemoveBackEntry, but this removes the MainPage instead of the CurrentPage.
+
+How do I navigate to a new page without putting the current on the back stack?",windows-phone-7,navigation,,,,,open,0,83,11,"WP7 navigate to new page without putting current on back stack In an Windows Phone 7 application I got a CurrentPage, which, on a special event does navigate to a new page using the NavigationService:
+
+    NavigationService.Navigate(new Uri(""/NewPage.xaml"", UriKind.Relative));
+
+Now when the user clicks back on the NewPage I want the app to skip the CurrentPage and go directly to the MainPage of the app.
+
+I tried to use NavigationService.RemoveBackEntry, but this removes the MainPage instead of the CurrentPage.
+
+How do I navigate to a new page without putting the current on the back stack?",2
+11503587,07/16/2012 11:45:00,857588,07/22/2011 09:01:49,410,18,Best practices to design Windows phone app UI,"**I am new in windows phone app development. I want to know what is the best practices or best ways to implement UI in Winodws phone app.**
+
+",windows-phone-7,windows-7,,,,07/16/2012 16:21:07,not constructive,1,27,8,"Best practices to design Windows phone app UI **I am new in windows phone app development. I want to know what is the best practices or best ways to implement UI in Winodws phone app.**
+
+",2
+9061989,01/30/2012 09:49:58,371991,04/14/2010 10:09:51,502,0,Which one is better Sqlite or Linq to sql in windows Phone 7?,"i am using link to sql for saving the data .But it doesn't support in 7.0 version mobiles.
+
+if we can use the sqlite then it will support in 7.0 and 7.1 mobiles also.
+
+Please suggest your idea in the usage of sqlite in windows phone ........",windows-phone-7,,,,,01/30/2012 17:00:03,not constructive,1,45,13,"Which one is better Sqlite or Linq to sql in windows Phone 7? i am using link to sql for saving the data .But it doesn't support in 7.0 version mobiles.
+
+if we can use the sqlite then it will support in 7.0 and 7.1 mobiles also.
+
+Please suggest your idea in the usage of sqlite in windows phone ........",1
+6790518,07/22/2011 13:13:30,483663,10/21/2010 23:55:28,75,1,Where can I find Windows Live Style comment box for Windows Phone 7 ?,"I am looking for a nice comment box, instead of creating something with textbox and a button. Windows live photos has a nice comment box under each photo, it is one line with a small triangle on left bottom , which makes it look like dialog box from comic books. It also has send button on the right inside the box so no additional buttons. How can I do something like this ? 
+",windows-phone-7,textbox,richtextbox,commenting,,,open,0,74,14,"Where can I find Windows Live Style comment box for Windows Phone 7 ? I am looking for a nice comment box, instead of creating something with textbox and a button. Windows live photos has a nice comment box under each photo, it is one line with a small triangle on left bottom , which makes it look like dialog box from comic books. It also has send button on the right inside the box so no additional buttons. How can I do something like this ? 
+",4
+5868344,05/03/2011 10:50:21,236573,12/22/2009 04:29:46,368,27,HTC HD7 Windows Phone 7 - Hotmail notification stopped working,Ever since downloading and installing the latest Windows Phone 7 update for my phone I have noticed that the Hotmail new mail notification has stopped working.  I now have to manually sync the Hotmail account to find if I have new emails.  Previously the number of new emails would appear on the pinned Hotmail tile.  Any ideas?  Is this a Hotmail issue or a problem with WP7?,windows-phone-7,htc,,,,05/03/2011 13:13:08,off topic,1,71,10,HTC HD7 Windows Phone 7 - Hotmail notification stopped working Ever since downloading and installing the latest Windows Phone 7 update for my phone I have noticed that the Hotmail new mail notification has stopped working.  I now have to manually sync the Hotmail account to find if I have new emails.  Previously the number of new emails would appear on the pinned Hotmail tile.  Any ideas?  Is this a Hotmail issue or a problem with WP7?,2
+9817541,03/22/2012 06:36:24,440921,09/06/2010 21:23:07,330,5,What should I look for when buying a Windows Phone 7 handset for development?,"I'm looking to buy a Windows Phone 7 handset SIM-free for development and I wonder if there's anything that might make a particular handset more suitable or unsuitable.
+
+I'm aware that Microsoft mandates a rigid [base specification][1] for WP7 handsets. I've also developed for many other mobile platforms and realise that choosing a latest, top-of-the-range handset won't be representative of the market as a whole.
+
+The kind of things I'm after (maybe shaped by my experience with Android) are:
+
+ 1. How do different handsets deal with new firmware updates? Is it manufacturer-specific?
+ 2. Do all handsets use Zune software to connect to a PC or do some manufacturers require you to use their own software?
+ 3. Are there any features not included in Microsoft's base spec that other developers would recommend as worth having for general purpose development?
+
+Currently I'm considering an [HTC Radar][2] as they're available in the UK for half the price of a [Lumia 800][3]. As a *developer* (rather than a user) would I notice any significant differences between the two?
+
+
+  [1]: http://msdn.microsoft.com/en-us/library/ff637514%28v=vs.92%29.aspx
+  [2]: http://www.htc.com/uk/smartphones/htc-radar/
+  [3]: http://www.nokia.com/gb-en/products/phone/lumia800/",windows-phone-7,hardware,windows-phone,handset,,04/19/2012 11:51:54,not constructive,1,180,14,"What should I look for when buying a Windows Phone 7 handset for development? I'm looking to buy a Windows Phone 7 handset SIM-free for development and I wonder if there's anything that might make a particular handset more suitable or unsuitable.
+
+I'm aware that Microsoft mandates a rigid [base specification][1] for WP7 handsets. I've also developed for many other mobile platforms and realise that choosing a latest, top-of-the-range handset won't be representative of the market as a whole.
+
+The kind of things I'm after (maybe shaped by my experience with Android) are:
+
+ 1. How do different handsets deal with new firmware updates? Is it manufacturer-specific?
+ 2. Do all handsets use Zune software to connect to a PC or do some manufacturers require you to use their own software?
+ 3. Are there any features not included in Microsoft's base spec that other developers would recommend as worth having for general purpose development?
+
+Currently I'm considering an [HTC Radar][2] as they're available in the UK for half the price of a [Lumia 800][3]. As a *developer* (rather than a user) would I notice any significant differences between the two?
+
+
+  [1]: http://msdn.microsoft.com/en-us/library/ff637514%28v=vs.92%29.aspx
+  [2]: http://www.htc.com/uk/smartphones/htc-radar/
+  [3]: http://www.nokia.com/gb-en/products/phone/lumia800/",4
+10480902,05/07/2012 11:01:36,1377714,05/06/2012 06:51:34,1,0,Add to favorite,"I have a list reading from xml file and I want to add checkbox or button if selected add that index of the list to favorite list(another list)
+I'm confusing  ",windows-phone-7,,,,,05/07/2012 17:31:32,not a real question,1,31,3,"Add to favorite I have a list reading from xml file and I want to add checkbox or button if selected add that index of the list to favorite list(another list)
+I'm confusing  ",1
+4725871,01/18/2011 15:28:35,123011,06/15/2009 09:54:08,1190,64,Windows Phone 7 Frame Rate Performance,"Reading [Jeff Willcox on frame rate counters][1], I realized my application rarely hit the 60 fps. I'm not satisfied with the global performance of my app (compared to its iPhone counterpart), but the numbers seems weird to me.
+
+When the app is doing nothing, even just after launch, it's even sometimes at 0 fps. And the higher I hit is 50 fps.
+
+Overall, my application is not blazing fast, but not really slow. So how can I interpret the numbers ? **How can I spot the issue that makes my app have a bad fps ?**
+
+
+  [1]: http://www.jeff.wilcox.name/2010/07/counters/",windows-phone-7,,,,,,open,0,97,6,"Windows Phone 7 Frame Rate Performance Reading [Jeff Willcox on frame rate counters][1], I realized my application rarely hit the 60 fps. I'm not satisfied with the global performance of my app (compared to its iPhone counterpart), but the numbers seems weird to me.
+
+When the app is doing nothing, even just after launch, it's even sometimes at 0 fps. And the higher I hit is 50 fps.
+
+Overall, my application is not blazing fast, but not really slow. So how can I interpret the numbers ? **How can I spot the issue that makes my app have a bad fps ?**
+
+
+  [1]: http://www.jeff.wilcox.name/2010/07/counters/",1
+4642973,01/10/2011 01:18:57,380317,06/30/2010 16:52:41,588,34,Windows Phone 7 - Message based off of ANID,"I am collecting ANIDs from my application and I was wondering is there a way to send the phone a message based off of ANIDs?
+",windows-phone-7,,,,,,open,0,25,9,"Windows Phone 7 - Message based off of ANID I am collecting ANIDs from my application and I was wondering is there a way to send the phone a message based off of ANIDs?
+",1
+11014715,06/13/2012 12:21:17,1406479,05/20/2012 16:32:23,1,0,passing data while navigation between pages onNavigatedTo no suitable method found to override in Windows Phone 7,"I'm try to pass a parameter while navigate between pages..
+in the firs page I have:
+
+    private void companyGrid_Tap(object sender, GestureEventArgs e)
+        {
+            String tempVal = """";
+            tempVal = ""PassVal"";
+            NavigationService.Navigate(new Uri(""/ComPage.xaml?comID="" + tempVal, UriKind.Relative));
+        }
+
+and in the next page i have:
+
+    protected override void onNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            String strId = NavigationContext.QueryString[""comID""];
+
+        }
+
+
+but I get an error about the override ""onNavigatedTo"" mathod say: ""no suitable method found to override""
+
+i check and all the Examples show the same way to pass the parameter... 
+Maybe someone know what the reason it's not working???",windows-phone-7,navigation,parameter-passing,method-overriding,,06/13/2012 16:29:16,too localized,1,180,17,"passing data while navigation between pages onNavigatedTo no suitable method found to override in Windows Phone 7 I'm try to pass a parameter while navigate between pages..
+in the firs page I have:
+
+    private void companyGrid_Tap(object sender, GestureEventArgs e)
+        {
+            String tempVal = """";
+            tempVal = ""PassVal"";
+            NavigationService.Navigate(new Uri(""/ComPage.xaml?comID="" + tempVal, UriKind.Relative));
+        }
+
+and in the next page i have:
+
+    protected override void onNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            String strId = NavigationContext.QueryString[""comID""];
+
+        }
+
+
+but I get an error about the override ""onNavigatedTo"" mathod say: ""no suitable method found to override""
+
+i check and all the Examples show the same way to pass the parameter... 
+Maybe someone know what the reason it's not working???",4
+3939389,10/15/2010 03:53:34,44815,12/10/2008 00:45:55,544,9,Display Soft Input Panel (SIP) on WP7 programmatically,"How can I programmatically display the soft input panel (SIP)/keypad, via code. (I dont have a text-box on which I can specify the InputScope).",windows-phone-7,,,,,,open,0,24,8,"Display Soft Input Panel (SIP) on WP7 programmatically How can I programmatically display the soft input panel (SIP)/keypad, via code. (I dont have a text-box on which I can specify the InputScope).",1
+8427088,12/08/2011 06:29:27,1045019,11/14/2011 05:51:39,11,3,Windows Phone 7 Designer view error in Visual Studio 2010 Ultimate,"I got struck with this designer error, can some one help me on this. I was using Visual Studio express for windows phone, after i installed Visual Studio 2010 Ultimate i get this error. Attached screen shot for reference.
+
+Note - When executing the application still we get the output in the Win Phone 7 Emulator.
+
+
+
+Error:
+An Unhandled Exception has occured
+
+Click here to reload the designer
+
+Details:
+
+    System.ArgumentNullException
+    Value cannot be null.
+    Parameter name: parentContext
+       at Microsoft.Windows.Design.Metadata.ReflectionMetadataContext..ctor(IMetadataContext parentContext)
+       at MS.Internal.Host.ProjectMetadataContext..ctor(IMetadataContext platformMetadata, AssemblyReferenceProvider referenceProvider)
+       at MS.Internal.Host.ProjectMetadataContext.FromReferences(AssemblyReferenceProvider referenceProvider)
+       at MS.Internal.Designer.VSDesigner.GetMetadataForDesignerContext(DesignerContext designerContext)
+       at MS.Internal.Host.PersistenceSubsystem.Load()
+       at MS.Internal.Host.Designer.Load()
+       at MS.Internal.Designer.VSDesigner.Load()
+       at MS.Internal.Designer.VSIsolatedDesigner.VSIsolatedView.Load()
+       at MS.Internal.Designer.VSIsolatedDesigner.VSIsolatedDesignerFactory.Load(IsolatedView view)
+       at MS.Internal.Host.Isolation.IsolatedDesigner.BootstrapProxy.LoadDesigner(IsolatedDesignerFactory factory, IsolatedView view)
+       at MS.Internal.Host.Isolation.IsolatedDesigner.BootstrapProxy.LoadDesigner(IsolatedDesignerFactory factory, IsolatedView view)
+       at MS.Internal.Host.Isolation.IsolatedDesigner.Load()
+       at MS.Internal.Designer.DesignerPane.LoadDesignerView()
+
+
+",windows-phone-7,,,,,12/08/2011 15:35:34,too localized,1,198,11,"Windows Phone 7 Designer view error in Visual Studio 2010 Ultimate I got struck with this designer error, can some one help me on this. I was using Visual Studio express for windows phone, after i installed Visual Studio 2010 Ultimate i get this error. Attached screen shot for reference.
+
+Note - When executing the application still we get the output in the Win Phone 7 Emulator.
+
+
+
+Error:
+An Unhandled Exception has occured
+
+Click here to reload the designer
+
+Details:
+
+    System.ArgumentNullException
+    Value cannot be null.
+    Parameter name: parentContext
+       at Microsoft.Windows.Design.Metadata.ReflectionMetadataContext..ctor(IMetadataContext parentContext)
+       at MS.Internal.Host.ProjectMetadataContext..ctor(IMetadataContext platformMetadata, AssemblyReferenceProvider referenceProvider)
+       at MS.Internal.Host.ProjectMetadataContext.FromReferences(AssemblyReferenceProvider referenceProvider)
+       at MS.Internal.Designer.VSDesigner.GetMetadataForDesignerContext(DesignerContext designerContext)
+       at MS.Internal.Host.PersistenceSubsystem.Load()
+       at MS.Internal.Host.Designer.Load()
+       at MS.Internal.Designer.VSDesigner.Load()
+       at MS.Internal.Designer.VSIsolatedDesigner.VSIsolatedView.Load()
+       at MS.Internal.Designer.VSIsolatedDesigner.VSIsolatedDesignerFactory.Load(IsolatedView view)
+       at MS.Internal.Host.Isolation.IsolatedDesigner.BootstrapProxy.LoadDesigner(IsolatedDesignerFactory factory, IsolatedView view)
+       at MS.Internal.Host.Isolation.IsolatedDesigner.BootstrapProxy.LoadDesigner(IsolatedDesignerFactory factory, IsolatedView view)
+       at MS.Internal.Host.Isolation.IsolatedDesigner.Load()
+       at MS.Internal.Designer.DesignerPane.LoadDesignerView()
+
+
+",1
+10358032,04/27/2012 21:20:46,1197559,02/08/2012 15:29:56,1,0,Database Lessons,"I am almost done my Windows 7 app, this is my first time creating apps for mobile devices and I really need some help on what database to use for Windows phone and where are the best websites or possibly books for database connections such as MySQL or SQL. Please Help",windows-phone-7,,,,,04/28/2012 13:31:23,not constructive,1,51,2,"Database Lessons I am almost done my Windows 7 app, this is my first time creating apps for mobile devices and I really need some help on what database to use for Windows phone and where are the best websites or possibly books for database connections such as MySQL or SQL. Please Help",1
+8497371,12/13/2011 22:50:54,1048881,11/16/2011 03:33:41,12,0,How to display a only time?,"I have a basic problem, how to display only a current time?
+Please give me an examples.
+
+I know about [msdn][1] but still have a problem.
+
+
+  [1]: http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k%28SYSTEM.DATETIME%29;k%28TargetFrameworkMoniker-%22SILVERLIGHT,VERSION=V4.0%22%29;k%28DevLang-CSHARP%29&rd=true",windows-phone-7,,,,,12/14/2011 20:14:33,not a real question,1,27,6,"How to display a only time? I have a basic problem, how to display only a current time?
+Please give me an examples.
+
+I know about [msdn][1] but still have a problem.
+
+
+  [1]: http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k%28SYSTEM.DATETIME%29;k%28TargetFrameworkMoniker-%22SILVERLIGHT,VERSION=V4.0%22%29;k%28DevLang-CSHARP%29&rd=true",1
+8366861,12/03/2011 09:46:56,728825,04/28/2011 07:58:53,1,0,How do we read webpages using WP7 Mango?,I'm trying to read a web page using WP7 using the Windows Phone 7.1 SDK (Mango). I have a URL which I would like to read and later perform some function on it. I tried using HttpWebRequest and WebClient but wasn't successful in obtaining a response. Any suggestions?,windows-phone-7,httpwebrequest,webclient,,,12/05/2011 15:42:37,too localized,1,48,8,How do we read webpages using WP7 Mango? I'm trying to read a web page using WP7 using the Windows Phone 7.1 SDK (Mango). I have a URL which I would like to read and later perform some function on it. I tried using HttpWebRequest and WebClient but wasn't successful in obtaining a response. Any suggestions?,3
+7477582,09/19/2011 21:35:24,255654,01/21/2010 09:53:47,1,0,wp7 player freezes if html5 <video> and isolated storage,"I have video file located in my application isolated storage and would like to play it from html using video tag. Video player runs and then hangs on ""loading.."". Can someone manage to get video played using html5 video tag and isolated storage?
+
+My observations and tests (HTC HD7, Mango Beta 2 - 7.10.7712.60).
+
+1. I can play this video file using MediaElement or MediaPlayerLauncher. So the file is correct.
+2. If I publish this file in internet and change reference to absolute (src=""http://absoluteUri.mp4"") video file is opened correctly. So it seems there is a problem with  relative path and isolated storage.
+3. If i specify incorrect relative path I see another message so relative path in my experiments is correct.
+4. audio html5 tag works with isolated storage files very well; video -  doesn't (freezes) but works correct if I reference to audio file in internet
+5. For ""/folder/video.mp4"" and ""\folder\video.mp4"" device opens different playback screens, but both freeze with 'loading' and 'opening' messages.
+6. There is MediaPlayerLauncher C# class that works with ""folder/video.mp4"" name (doesn't freeze)and does not work with leading slash in path - ""/folder/video.mp4"" - throws file not found; contrariwise <video> tag can't find file w/o leading slash, even in root folder.
+7. Playback screens triggered by MediaPlayerLauncher and html <video> tag look identical but in first case it works and in second it freezes.",windows-phone-7,,,,,,open,0,223,9,"wp7 player freezes if html5 <video> and isolated storage I have video file located in my application isolated storage and would like to play it from html using video tag. Video player runs and then hangs on ""loading.."". Can someone manage to get video played using html5 video tag and isolated storage?
+
+My observations and tests (HTC HD7, Mango Beta 2 - 7.10.7712.60).
+
+1. I can play this video file using MediaElement or MediaPlayerLauncher. So the file is correct.
+2. If I publish this file in internet and change reference to absolute (src=""http://absoluteUri.mp4"") video file is opened correctly. So it seems there is a problem with  relative path and isolated storage.
+3. If i specify incorrect relative path I see another message so relative path in my experiments is correct.
+4. audio html5 tag works with isolated storage files very well; video -  doesn't (freezes) but works correct if I reference to audio file in internet
+5. For ""/folder/video.mp4"" and ""\folder\video.mp4"" device opens different playback screens, but both freeze with 'loading' and 'opening' messages.
+6. There is MediaPlayerLauncher C# class that works with ""folder/video.mp4"" name (doesn't freeze)and does not work with leading slash in path - ""/folder/video.mp4"" - throws file not found; contrariwise <video> tag can't find file w/o leading slash, even in root folder.
+7. Playback screens triggered by MediaPlayerLauncher and html <video> tag look identical but in first case it works and in second it freezes.",1
+9635719,03/09/2012 14:31:20,1259445,03/09/2012 13:56:46,1,0,Using Google's text to speech on WP7,"I’m writing some code to use Google translate’s text to speech using a simple GET method and I’m perplexed as to why it doesn’t work.  For example, click on…
+
+http://translate.google.com/translate_tts?tl=en&q=hello
+
+I wrote some C# code and, from what I can tell, it should work, but it doesn’t.  I wander if Google is blocking the requests?  Trying this from console gives me a 403 Error (“Forbidden”).
+
+Below is the code.  If anyone can help, I’d appreciate it!
+
+    
+    namespace WCTest
+    {
+        public partial class MainPage : PhoneApplicationPage
+        {
+            string searchString = ""http://translate.google.com/translate_tts?tl=en&q=hello""; 
+
+            // Constructor
+            public MainPage()
+            {
+                InitializeComponent();
+
+                WebClient client = new WebClient();
+                client.Headers[""User-Agent""] = ""Mozilla/4.0 (Compatible; Windows NT 5.1; MSIE 6.0)"" + "" (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)"";
+                client.Headers[""Referrer""] = ""http://brillisoft.com""; 
+
+                client.OpenReadCompleted += (s, e) =>
+                {
+                    if (e.Error == null)
+                    {
+                        Stream audio = e.Result;
+                        mediaElement1.SetSource(audio);
+                        mediaElement1.Play();
+                    }
+                };
+    
+                client.OpenReadAsync(new Uri(searchString));
+                
+            }
+        }
+    }",windows-phone-7,google,webclient,text-to-speech,http-status-code-403,,open,0,509,7,"Using Google's text to speech on WP7 I’m writing some code to use Google translate’s text to speech using a simple GET method and I’m perplexed as to why it doesn’t work.  For example, click on…
+
+http://translate.google.com/translate_tts?tl=en&q=hello
+
+I wrote some C# code and, from what I can tell, it should work, but it doesn’t.  I wander if Google is blocking the requests?  Trying this from console gives me a 403 Error (“Forbidden”).
+
+Below is the code.  If anyone can help, I’d appreciate it!
+
+    
+    namespace WCTest
+    {
+        public partial class MainPage : PhoneApplicationPage
+        {
+            string searchString = ""http://translate.google.com/translate_tts?tl=en&q=hello""; 
+
+            // Constructor
+            public MainPage()
+            {
+                InitializeComponent();
+
+                WebClient client = new WebClient();
+                client.Headers[""User-Agent""] = ""Mozilla/4.0 (Compatible; Windows NT 5.1; MSIE 6.0)"" + "" (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)"";
+                client.Headers[""Referrer""] = ""http://brillisoft.com""; 
+
+                client.OpenReadCompleted += (s, e) =>
+                {
+                    if (e.Error == null)
+                    {
+                        Stream audio = e.Result;
+                        mediaElement1.SetSource(audio);
+                        mediaElement1.Play();
+                    }
+                };
+    
+                client.OpenReadAsync(new Uri(searchString));
+                
+            }
+        }
+    }",5
+5752202,04/22/2011 04:07:54,464682,10/02/2010 15:56:31,1,0,How much does a Windows Phone 7 license cost?,"Not a license to develop apps, but a cost of the actual OS to put on your phone if you're a manufacturer. Basically, what amount of what the consumer pays (before carrier subsidies) goes to the OS?",windows-phone-7,licensing,cost,,,04/22/2011 04:51:16,off topic,1,37,9,"How much does a Windows Phone 7 license cost? Not a license to develop apps, but a cost of the actual OS to put on your phone if you're a manufacturer. Basically, what amount of what the consumer pays (before carrier subsidies) goes to the OS?",3
+8665500,12/29/2011 08:28:29,1057076,11/21/2011 03:07:28,1,0,How can I install windows phone 7 on my develop board?,"I'm a student and I am doing a project related to windows phone 7. Because this project is related to the hardware, so my teacher asked me to installing windows phone 7 on the board. I wondering that if I could install it. if I could, how can I do it? If I cannot, can I use windows embeded 7 standard instead???
+My board is intel Atom E620?
+I'd appreciate it very much. Thx anyway~~~~",windows-phone-7,,,,,01/04/2012 19:07:58,off topic,1,73,11,"How can I install windows phone 7 on my develop board? I'm a student and I am doing a project related to windows phone 7. Because this project is related to the hardware, so my teacher asked me to installing windows phone 7 on the board. I wondering that if I could install it. if I could, how can I do it? If I cannot, can I use windows embeded 7 standard instead???
+My board is intel Atom E620?
+I'd appreciate it very much. Thx anyway~~~~",1
+8266470,11/25/2011 08:36:53,418957,08/12/2010 21:49:55,183,17,How to construct a settings page similar to the stock one in Windows Phone 7?,"When I launch the Windows Phone Settings app, what is presented is a pivot control with a bunch of items on each page. For example, the first item is:
+
+    THEME
+    blue
+
+What is the standard way of creating these items? I want them to have the same font style and look. Is there any control to represent the item above?
+
+Thanks!",windows-phone-7,windows-phone-7.1,windows-phone-7.5,,,,open,0,65,15,"How to construct a settings page similar to the stock one in Windows Phone 7? When I launch the Windows Phone Settings app, what is presented is a pivot control with a bunch of items on each page. For example, the first item is:
+
+    THEME
+    blue
+
+What is the standard way of creating these items? I want them to have the same font style and look. Is there any control to represent the item above?
+
+Thanks!",3
+10180182,04/16/2012 19:12:53,1272870,03/15/2012 23:23:03,13,0,Certified and published,"The status of my app changed today from certified to published on Apphub. When will I be able to search for/download the application? It isn't appearing on search results, I'm just wondering what the process is. I'm finding no conclusive answers online.
+
+Also, will my app be downloadable from any region? I fear that it may only be available in the US as I stated [assembly: NeutralResourcesLanguage(""en-US"", UltimateResourceFallbackLocation.Satellite)] in the AssemblyInfo.
+
+Thanks,
+GK.",windows-phone-7,publish,marketplace,,,04/16/2012 19:14:31,off topic,1,70,3,"Certified and published The status of my app changed today from certified to published on Apphub. When will I be able to search for/download the application? It isn't appearing on search results, I'm just wondering what the process is. I'm finding no conclusive answers online.
+
+Also, will my app be downloadable from any region? I fear that it may only be available in the US as I stated [assembly: NeutralResourcesLanguage(""en-US"", UltimateResourceFallbackLocation.Satellite)] in the AssemblyInfo.
+
+Thanks,
+GK.",3
+9166418,02/06/2012 19:59:37,280693,02/24/2010 20:53:53,3327,217,Pushpin visibility property not working with converter,"I have a visibility converter that converts a bool to a Visibility enum, it is pretty straight forward. But for some reason it doesn't work with my `Pushpin`. My markup look like this:
+
+    <UserControl.Resources>
+        <DataTemplate x:Key=""EndPinTemplate"">
+            <maps:Pushpin CacheMode=""BitmapCache"" Background=""{Binding Urgency, Converter={StaticResource UrgencyToColorConverter}, Mode=OneWay}"" 
+                          Content=""{Binding Data, Mode=OneWay}""  FontSize=""14.667"" Location=""{Binding EndLocation}"" 
+                          Visibility=""{Binding HasEndPoint, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneWay}""
+                          DataContext=""{Binding}""/>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid x:Name=""LayoutRoot"" Background=""Transparent"">
+        <maps:Map>
+            <maps:MapItemsControl ItemsSource=""{Binding PushPins}"" ItemTemplate=""{StaticResource EndPinTemplate}"" />
+        </maps:Map>
+    </Grid>
+
+It is only the `Visibility` property the converter doesn't work for. Setting it manually work, but I would like to do it with a converter. What should I do? Or what am I doing wrong?",windows-phone-7,,,,,,open,0,243,7,"Pushpin visibility property not working with converter I have a visibility converter that converts a bool to a Visibility enum, it is pretty straight forward. But for some reason it doesn't work with my `Pushpin`. My markup look like this:
+
+    <UserControl.Resources>
+        <DataTemplate x:Key=""EndPinTemplate"">
+            <maps:Pushpin CacheMode=""BitmapCache"" Background=""{Binding Urgency, Converter={StaticResource UrgencyToColorConverter}, Mode=OneWay}"" 
+                          Content=""{Binding Data, Mode=OneWay}""  FontSize=""14.667"" Location=""{Binding EndLocation}"" 
+                          Visibility=""{Binding HasEndPoint, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneWay}""
+                          DataContext=""{Binding}""/>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid x:Name=""LayoutRoot"" Background=""Transparent"">
+        <maps:Map>
+            <maps:MapItemsControl ItemsSource=""{Binding PushPins}"" ItemTemplate=""{StaticResource EndPinTemplate}"" />
+        </maps:Map>
+    </Grid>
+
+It is only the `Visibility` property the converter doesn't work for. Setting it manually work, but I would like to do it with a converter. What should I do? Or what am I doing wrong?",1
+8191234,11/19/2011 01:48:33,645460,03/04/2011 21:38:53,1704,100,Uniquely identify albums and songs in Windows Phone media library,"I am importing a songs collection from an `Album` object that is obtained from querying `MediaLibrary` on Windows Phone Mango. 
+
+Is there a unique identifier provided by the platform, by which I could be identifying different songs and albums?
+
+ I need something that will remain the same for the same albums if I re-query the `MediaLibrary` next time my app is ran. 
+
+I have seen a ""handle"" property in the debugger, but it doesn't appear in any of the Album class documentation.",windows-phone-7,media-library,,,,,open,0,82,10,"Uniquely identify albums and songs in Windows Phone media library I am importing a songs collection from an `Album` object that is obtained from querying `MediaLibrary` on Windows Phone Mango. 
+
+Is there a unique identifier provided by the platform, by which I could be identifying different songs and albums?
+
+ I need something that will remain the same for the same albums if I re-query the `MediaLibrary` next time my app is ran. 
+
+I have seen a ""handle"" property in the debugger, but it doesn't appear in any of the Album class documentation.",2
+4222474,11/19/2010 05:57:22,208081,11/10/2009 19:18:06,106,0,WP7 fragment error,"For a Windows Phone 7 app, I have created an application bar which is common for all my pages and is defined inside App.xaml
+
+For eg. the buttons are Home, Help, About
+Now, when I start my application, the default page is Home.xaml and the application bar is displayed.  When I click Help or About buttons, the navigation is performed using NavigationService and the corresponding page is displayed. But, if I click Home button, an exception is thrown - No Fragment Support at this time.
+
+I found some suggestions where a unique querystring needs to be appended if you are trying to navigate to the same page.  Are there any other better solutions?
+
+Also, can anyone suggest any techniques to keep such code in one place so I don't have to repeat this logic on every page for which there is an app bar icon.
+
+Pratik",windows-phone-7,navigation,,,,,open,0,143,3,"WP7 fragment error For a Windows Phone 7 app, I have created an application bar which is common for all my pages and is defined inside App.xaml
+
+For eg. the buttons are Home, Help, About
+Now, when I start my application, the default page is Home.xaml and the application bar is displayed.  When I click Help or About buttons, the navigation is performed using NavigationService and the corresponding page is displayed. But, if I click Home button, an exception is thrown - No Fragment Support at this time.
+
+I found some suggestions where a unique querystring needs to be appended if you are trying to navigate to the same page.  Are there any other better solutions?
+
+Also, can anyone suggest any techniques to keep such code in one place so I don't have to repeat this logic on every page for which there is an app bar icon.
+
+Pratik",2
