@@ -1,0 +1,1945 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+7176502,08/24/2011 13:46:37,394491,07/17/2010 05:19:27,687,24,Reverse AJAX with Grails,"I'm looking to implement some reverse AJAX on a small Grails demo I'm working (potential 'prototype' for larger project).
+
+What I have in mind (feel free to correct me if you think I am approaching this is the wrong way) is to have a JMS message service on the backend that will push messages to clients subscribed to certain topics with some form of reverse AJAX.
+
+From what I can see, there appear to be a few different potential implementations with Grails (i.e. CometD, IcePush, Atmosphere, DWR). I was wondering if anyone has had any success implementing reverse AJAX with Grails and what technologies they used.
+
+In terms of a use-case, I suppose thinking of something like a Facebook user logged in watching as new messages appear is appropriate.",ajax,grails,reverse-ajax,,,08/25/2011 23:18:30,not constructive,1,126,4,"Reverse AJAX with Grails I'm looking to implement some reverse AJAX on a small Grails demo I'm working (potential 'prototype' for larger project).
+
+What I have in mind (feel free to correct me if you think I am approaching this is the wrong way) is to have a JMS message service on the backend that will push messages to clients subscribed to certain topics with some form of reverse AJAX.
+
+From what I can see, there appear to be a few different potential implementations with Grails (i.e. CometD, IcePush, Atmosphere, DWR). I was wondering if anyone has had any success implementing reverse AJAX with Grails and what technologies they used.
+
+In terms of a use-case, I suppose thinking of something like a Facebook user logged in watching as new messages appear is appropriate.",3
+9340121,02/18/2012 09:37:47,1124634,12/31/2011 19:29:37,61,0,Which one is better pushstate or location.hash?,"`window.location.hash vs html5 history.pushstate.` Which one of these would be better to meet the url with the ajax request and why?
+Thanks.",ajax,html5,url,,,,open,0,21,7,"Which one is better pushstate or location.hash? `window.location.hash vs html5 history.pushstate.` Which one of these would be better to meet the url with the ajax request and why?
+Thanks.",3
+2621008,04/12/2010 09:35:27,189762,10/14/2009 10:43:03,6,0,Which is best Ajax Framework?,"I am going to use the ajax for simply refresh the multiple element on the page based on synchronous or asynchronous .
+  I want to refresh the page When the ajax request in completed.
+  Is there any ajax framework that has ajax utility function ?
+  I did not use any javascript framework.
+  Now I am developing page based on J2EE.",ajax,ajaxtoolkit,ajax.net,java-ee,,09/12/2011 11:49:53,not constructive,1,64,5,"Which is best Ajax Framework? I am going to use the ajax for simply refresh the multiple element on the page based on synchronous or asynchronous .
+  I want to refresh the page When the ajax request in completed.
+  Is there any ajax framework that has ajax utility function ?
+  I did not use any javascript framework.
+  Now I am developing page based on J2EE.",4
+11164517,06/22/2012 21:42:06,1296437,03/27/2012 19:28:58,882,59,Google ReCaptcha without PHP plugin,"I understand the cross-domain error when using ajax to try to obtain information from another website but according to jQuery you should be able to use a jsonp request instead.  I am stumped on how to achieve this when trying to display recaptcha.  The issue is I am unable to use the plugin to achieve this, which would make it so much easier.
+
+    <script type=""text/javascript"" src=""http://www.google.com/recaptcha/api/js/recaptcha_ajax.js""></script>
+    <script type=""text/javascript"">
+              function showRecaptcha() {
+                Recaptcha.create(""// removed for example"", 'captchadiv', { 
+                    tabindex: 1,
+                    theme: ""red"",
+                    callback: Recaptcha.focus_response_field
+                });
+              }
+    
+    jQuery(document).ready(function(){
+      showRecaptcha('recaptcha_div');
+      
+      jQuery('#contact-form').submit(function(){
+          var challenge = Recaptcha.get_challenge();
+          var response = Recaptcha.get_response();
+          var ip = ""<?php print $_SERVER['REMOTE_ADDR'] ?>"";
+          var private = ""// removed for example"";
+    
+           var requestUrl = ""http://www.google.com/recaptcha/api/verify?privatekey="" + private + ""&remoteip="" + ip + ""&challenge="" + challenge + ""&response="" + response;
+    
+           jQuery.getJSON(requestUrl, function(json) {
+               alert(""what"");
+           });
+    
+       })
+    });
+    </script>
+    
+    <form id="""">
+    
+    // Form stuff
+    
+    </form>
+    <div id=""captchadiv""></div>
+    <input type=""submit"" name=""submit"" id=""form-submit"">
+
+How should I call this to googles server and obtain the correct callback.  It's basically going to return a true or false.  I either get the infamous Access-Control-Allow-Login or or an error regarding plain/text.  Anyone with suggestions?",ajax,json,google,recaptcha,,,open,0,463,5,"Google ReCaptcha without PHP plugin I understand the cross-domain error when using ajax to try to obtain information from another website but according to jQuery you should be able to use a jsonp request instead.  I am stumped on how to achieve this when trying to display recaptcha.  The issue is I am unable to use the plugin to achieve this, which would make it so much easier.
+
+    <script type=""text/javascript"" src=""http://www.google.com/recaptcha/api/js/recaptcha_ajax.js""></script>
+    <script type=""text/javascript"">
+              function showRecaptcha() {
+                Recaptcha.create(""// removed for example"", 'captchadiv', { 
+                    tabindex: 1,
+                    theme: ""red"",
+                    callback: Recaptcha.focus_response_field
+                });
+              }
+    
+    jQuery(document).ready(function(){
+      showRecaptcha('recaptcha_div');
+      
+      jQuery('#contact-form').submit(function(){
+          var challenge = Recaptcha.get_challenge();
+          var response = Recaptcha.get_response();
+          var ip = ""<?php print $_SERVER['REMOTE_ADDR'] ?>"";
+          var private = ""// removed for example"";
+    
+           var requestUrl = ""http://www.google.com/recaptcha/api/verify?privatekey="" + private + ""&remoteip="" + ip + ""&challenge="" + challenge + ""&response="" + response;
+    
+           jQuery.getJSON(requestUrl, function(json) {
+               alert(""what"");
+           });
+    
+       })
+    });
+    </script>
+    
+    <form id="""">
+    
+    // Form stuff
+    
+    </form>
+    <div id=""captchadiv""></div>
+    <input type=""submit"" name=""submit"" id=""form-submit"">
+
+How should I call this to googles server and obtain the correct callback.  It's basically going to return a true or false.  I either get the infamous Access-Control-Allow-Login or or an error regarding plain/text.  Anyone with suggestions?",4
+503469,02/02/2009 14:58:58,12318,09/16/2008 13:58:03,104,13,Securing a remote ajax method call,"I have coded some JavaScript to perform an ajax call in an asp.net application. This triggers a method that calls a URL, sending some parameters in the POST.
+
+The receiving page processes the data and updates our database.
+
+We will be providing this code to customers to allow them to send us the data we need in their checkout process for each transaction.
+
+Can anyone tell me if there is a way to prevent unauthorized access to this URL? Otherwise an unscrupulous developer could use this URL to add data to our database when they shouldn't be.
+
+Thanks for any pointers.",ajax,javascript,security,,,,open,0,97,6,"Securing a remote ajax method call I have coded some JavaScript to perform an ajax call in an asp.net application. This triggers a method that calls a URL, sending some parameters in the POST.
+
+The receiving page processes the data and updates our database.
+
+We will be providing this code to customers to allow them to send us the data we need in their checkout process for each transaction.
+
+Can anyone tell me if there is a way to prevent unauthorized access to this URL? Otherwise an unscrupulous developer could use this URL to add data to our database when they shouldn't be.
+
+Thanks for any pointers.",3
+1764005,11/19/2009 15:16:07,107083,05/14/2009 13:59:50,43,3,Ajax not supported?,"I have a page that uses an AJAX request (using Prototype's Ajax.Request()) to validate something.  We keep very detailed logs of all of the requests.  Occasionally customers will complain that they are entering something and it is not being validated.  In such a case I check the logs searching for their IP address, time of their email, and a description of the information that they tried to have validated.
+
+Sometimes I find that they are not in the logs, which would imply that the AJAX request is not executing.
+
+One example of the most recent case of this has a user string of
+>  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; GTB6; InfoPath.1)
+
+according the email they sent.
+
+I cannot find them in the log.  Is there any reason to suspect that somebody using IE8 would not be able to execute AJAX?
+
+Is there any practical way that I could alter my environment to not support AJAX as well to test some alternatives.
+
+Note this most recent user said that they have tried many times over multiple days so it's not like this is a one-time thing for them or a bad connection, necessarily.
+
+This is a regularly occurring issue that I cannot recreate.  Any help would be appreciated.  Thanks.",ajax,javascript,,,,,open,0,210,3,"Ajax not supported? I have a page that uses an AJAX request (using Prototype's Ajax.Request()) to validate something.  We keep very detailed logs of all of the requests.  Occasionally customers will complain that they are entering something and it is not being validated.  In such a case I check the logs searching for their IP address, time of their email, and a description of the information that they tried to have validated.
+
+Sometimes I find that they are not in the logs, which would imply that the AJAX request is not executing.
+
+One example of the most recent case of this has a user string of
+>  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; GTB6; InfoPath.1)
+
+according the email they sent.
+
+I cannot find them in the log.  Is there any reason to suspect that somebody using IE8 would not be able to execute AJAX?
+
+Is there any practical way that I could alter my environment to not support AJAX as well to test some alternatives.
+
+Note this most recent user said that they have tried many times over multiple days so it's not like this is a one-time thing for them or a bad connection, necessarily.
+
+This is a regularly occurring issue that I cannot recreate.  Any help would be appreciated.  Thanks.",2
+8286741,11/27/2011 15:45:19,154293,08/11/2009 11:28:40,340,12,Hide/Show ajax cloud BalloonPopupExtender,"I'm using the BalloonPopupExtender on a text box in order to say : ""Unknown input""
+because its the only one who allows me to have a panel in which i can insert whatever controls i want.
+
+i want from a button push to show it and from a text change in the textbox to hide it.
+i noticed there is no visibility property for BalloonPopupExtender, only the DisplayOnFocus, DisplayOnClick.... properties. but no way to control it from another button of function.
+
+how can i hide/show the BalloonPopupExtender?",ajax,popup-balloons,extender,,,,open,0,83,4,"Hide/Show ajax cloud BalloonPopupExtender I'm using the BalloonPopupExtender on a text box in order to say : ""Unknown input""
+because its the only one who allows me to have a panel in which i can insert whatever controls i want.
+
+i want from a button push to show it and from a text change in the textbox to hide it.
+i noticed there is no visibility property for BalloonPopupExtender, only the DisplayOnFocus, DisplayOnClick.... properties. but no way to control it from another button of function.
+
+how can i hide/show the BalloonPopupExtender?",3
+11137820,06/21/2012 12:09:05,627161,02/21/2011 19:02:05,1,1,How to prevent a page event to trigger in jquery mobile,"The following events are called when transitioning from page A to page B:
+
+* pagebeforechange
+* pagebeforeload
+* pagebeforecreate
+* pagecreate
+* pageinit
+* pageload
+* pagebeforechange (yes, again)
+* pagebeforeshow
+* pageshow
+* pagechange
+
+I'd like to stop that chain of events at some point to load some dynamic data via AJAX and then restart the chain of events to show a fully complete page.
+
+Is that possible?
+",ajax,events,jquery-mobile,,,,open,0,57,11,"How to prevent a page event to trigger in jquery mobile The following events are called when transitioning from page A to page B:
+
+* pagebeforechange
+* pagebeforeload
+* pagebeforecreate
+* pagecreate
+* pageinit
+* pageload
+* pagebeforechange (yes, again)
+* pagebeforeshow
+* pageshow
+* pagechange
+
+I'd like to stop that chain of events at some point to load some dynamic data via AJAX and then restart the chain of events to show a fully complete page.
+
+Is that possible?
+",3
+7057158,08/14/2011 13:42:53,842799,07/13/2011 13:43:44,134,0,index ajax pages,"My site's URL (web address) is:[www.iranfairco.com/MainPP.aspx?idCompany=142707090021][1]
+This page(MainPP.aspx) uses content from the site URL will change.
+
+I've used the jquery.ajax for load date of content page.
+
+in sitemap(for google) add page with all the different idCompany.
+
+now google index other pages that does not use ajax.
+
+but this page does not index.
+
+
+i set title by ajax .
+first get name company from DB by ajax and set title page by jquery .
+but google show Unititled 
+
+MainPP.aspx content 6000 Company
+But Google shows that only only  7 of
+
+
+please help me
+
+
+  [1]: http://www.iranfairco.com/MainPP.aspx?idCompany=142707090021
+
+
+  ",ajax,google,jquery-ajax,seo,pagerank,08/14/2011 14:04:39,off topic,1,88,3,"index ajax pages My site's URL (web address) is:[www.iranfairco.com/MainPP.aspx?idCompany=142707090021][1]
+This page(MainPP.aspx) uses content from the site URL will change.
+
+I've used the jquery.ajax for load date of content page.
+
+in sitemap(for google) add page with all the different idCompany.
+
+now google index other pages that does not use ajax.
+
+but this page does not index.
+
+
+i set title by ajax .
+first get name company from DB by ajax and set title page by jquery .
+but google show Unititled 
+
+MainPP.aspx content 6000 Company
+But Google shows that only only  7 of
+
+
+please help me
+
+
+  [1]: http://www.iranfairco.com/MainPP.aspx?idCompany=142707090021
+
+
+  ",5
+11750617,07/31/2012 23:39:07,1189361,02/04/2012 13:11:19,150,8,Does stackoverflow uses any ajax push?,Does stackoverflow.com uses any push engine to push the data to the browser?  It is extremely fast.  Anyone who know the details please let me know.  In which language it has been done?,ajax,,,,,07/31/2012 23:45:49,off topic,1,36,6,Does stackoverflow uses any ajax push? Does stackoverflow.com uses any push engine to push the data to the browser?  It is extremely fast.  Anyone who know the details please let me know.  In which language it has been done?,1
+7784538,10/16/2011 13:19:29,997785,10/16/2011 11:57:51,1,0,Sending AJAX ASYNC Request one after another at an interval of 15 seconds,"I want to poll the data from the WebServer(PHP) at an interval of 15 seconds, for 50 to 100 times (or lets say infinite loop, until the stopFlag variable is set to true.).
+For this data polling, i am going to use the AJAX ASYNC message for sending the requests to the WebServer. 
+How can i achieve this?
+I have tried to solve this puzzle by myself, but unfortunatly, i failed as there is no keyword for pausing the script execution in the javascript. 
+Is there any way to make it work? or any workaround on this? Kindly let me know or share your experience if you have already faced this issue.",ajax,loops,asynchronous,requests,,,open,0,110,13,"Sending AJAX ASYNC Request one after another at an interval of 15 seconds I want to poll the data from the WebServer(PHP) at an interval of 15 seconds, for 50 to 100 times (or lets say infinite loop, until the stopFlag variable is set to true.).
+For this data polling, i am going to use the AJAX ASYNC message for sending the requests to the WebServer. 
+How can i achieve this?
+I have tried to solve this puzzle by myself, but unfortunatly, i failed as there is no keyword for pausing the script execution in the javascript. 
+Is there any way to make it work? or any workaround on this? Kindly let me know or share your experience if you have already faced this issue.",4
+10136079,04/13/2012 06:12:21,432836,08/27/2010 10:53:31,623,56,Understanding Ajax crawling of search site,"I have a couple of questions about Ajax crawling of site, which is kind of search engine itself. 
+The base [article][1] explains the mechanism of making AJAX application crawlable. All this stuff with HTML-snapshots is clear and easy to implement, but I cant understand where will Google bot will get ""the crawler finds a pretty AJAX URL""( ie `www.example.com/ajax.html#key=value`) to work with.
+
+First thing, that came on mind - is breadcrumb. In sitemap we can specify pages with breadcrumb on it. so bot will go to these pages and get  HTML-snapshots from here.
+But I'm sure, there are exists other ways to give bot this ""pretty AJAX URL"".
+
+In our case, we have simple search site, where user enters keyword, presses ""Find"", js execute Ajax request, receives JSON reponce and fill page with results(without any refresh of course). 
+In this case - how to make google bot crawle all the presults in addition to sitemap?
+
+Is there some example of solution, described in article above?
+
+
+  [1]: https://developers.google.com/webmasters/ajax-crawling/docs/getting-started",ajax,url,google,seo,crawling,05/07/2012 12:40:29,off topic,1,165,6,"Understanding Ajax crawling of search site I have a couple of questions about Ajax crawling of site, which is kind of search engine itself. 
+The base [article][1] explains the mechanism of making AJAX application crawlable. All this stuff with HTML-snapshots is clear and easy to implement, but I cant understand where will Google bot will get ""the crawler finds a pretty AJAX URL""( ie `www.example.com/ajax.html#key=value`) to work with.
+
+First thing, that came on mind - is breadcrumb. In sitemap we can specify pages with breadcrumb on it. so bot will go to these pages and get  HTML-snapshots from here.
+But I'm sure, there are exists other ways to give bot this ""pretty AJAX URL"".
+
+In our case, we have simple search site, where user enters keyword, presses ""Find"", js execute Ajax request, receives JSON reponce and fill page with results(without any refresh of course). 
+In this case - how to make google bot crawle all the presults in addition to sitemap?
+
+Is there some example of solution, described in article above?
+
+
+  [1]: https://developers.google.com/webmasters/ajax-crawling/docs/getting-started",5
+2268392,02/15/2010 19:29:26,169992,09/08/2009 06:08:26,1528,66,Saving Ajax Form Data Best Practices,"I am just wondering what general best practice is for saving data in Ajax Forms.  In [Spree ECommerce](http://spreecommerce.com/) for example, every time you change a value in a list of objects (say you change the quantity of a certain Item in an Order), it updates the database with an Ajax call.
+
+Is it better to have the User manually press ""Save"" or ""Update"" when they're done editing a form, or if you can (you have setup an ajax alternative), to just automatically save the data every time something changes?
+
+It seems like Stack Overflow Careers saves a ""Draft"" of your profile every few seconds using some ajax thing.",ajax,forms,saving-data,,,,open,0,107,6,"Saving Ajax Form Data Best Practices I am just wondering what general best practice is for saving data in Ajax Forms.  In [Spree ECommerce](http://spreecommerce.com/) for example, every time you change a value in a list of objects (say you change the quantity of a certain Item in an Order), it updates the database with an Ajax call.
+
+Is it better to have the User manually press ""Save"" or ""Update"" when they're done editing a form, or if you can (you have setup an ajax alternative), to just automatically save the data every time something changes?
+
+It seems like Stack Overflow Careers saves a ""Draft"" of your profile every few seconds using some ajax thing.",3
+7920112,10/27/2011 17:47:57,1017018,10/27/2011 17:34:08,1,0,JSF 2.0 : A navigation case,"I got a page with a form like this :
+
+        <h:form>
+			<h:commandButton value=""click"" action=""#{searchBean.doSearch}"" >
+				<f:ajax execute=""@form"" render=""result""></f:ajax>
+			</h:commandButton>
+			
+			<a4j:outputPanel id=""result"" >
+					<h:commandLink value=""click"" action=""#{searchBean.doShowDetail}"" rendered=""#{searchBean.result != null}"" />
+			</a4j:outputPanel>						
+		</h:form>	
+
+doShowDetail action redirects to another page in whicth result details are shown.
+Result is correctly rendered after form submitting, but current page is refreshed.
+If you reload manually the page then the desired page is displayed.
+
+Am i missing something?
+
+Thx.
+",ajax,jsf-2.0,navigation,,,,open,0,67,6,"JSF 2.0 : A navigation case I got a page with a form like this :
+
+        <h:form>
+			<h:commandButton value=""click"" action=""#{searchBean.doSearch}"" >
+				<f:ajax execute=""@form"" render=""result""></f:ajax>
+			</h:commandButton>
+			
+			<a4j:outputPanel id=""result"" >
+					<h:commandLink value=""click"" action=""#{searchBean.doShowDetail}"" rendered=""#{searchBean.result != null}"" />
+			</a4j:outputPanel>						
+		</h:form>	
+
+doShowDetail action redirects to another page in whicth result details are shown.
+Result is correctly rendered after form submitting, but current page is refreshed.
+If you reload manually the page then the desired page is displayed.
+
+Am i missing something?
+
+Thx.
+",3
+7277181,09/01/2011 22:14:53,535967,12/09/2010 05:51:49,819,3,AJAX pass 2 variables to .php file,"I need to pass the variables `uid` and `siteAurl` with AJAX. How do I do it?
+
+You can see me doing it wrong here:
+
+    xmlhttp.open(""GET"",""insert/insert-badge.php?user=""uid""&site=""+siteAurl,true);
+
+Thanks",ajax,,,,,,open,0,27,7,"AJAX pass 2 variables to .php file I need to pass the variables `uid` and `siteAurl` with AJAX. How do I do it?
+
+You can see me doing it wrong here:
+
+    xmlhttp.open(""GET"",""insert/insert-badge.php?user=""uid""&site=""+siteAurl,true);
+
+Thanks",1
+10855668,06/01/2012 18:41:51,1183759,02/01/2012 21:30:40,72,1,Grails - Passing domain parameter to Javascript,"Is there a way to pass an instance variable in my gsp file to Javascript?
+
+This is what I have that doesn't work:
+
+    <input type=""button"" value=""Add"" onclick=""addTo('${person.id}');"" />
+
+${person.id} is the ID of the domain instance Person.",ajax,grails,,,,,open,0,38,7,"Grails - Passing domain parameter to Javascript Is there a way to pass an instance variable in my gsp file to Javascript?
+
+This is what I have that doesn't work:
+
+    <input type=""button"" value=""Add"" onclick=""addTo('${person.id}');"" />
+
+${person.id} is the ID of the domain instance Person.",2
+2985299,06/06/2010 18:14:38,299711,03/23/2010 08:19:18,118,8,Use AJAX to load webpage content into DIV,"I have a text field. When I type something into than text field, I want to load stuff into the DIV below. That's my code equivalent:
+
+    <input type=""text"" onkeyup=""/* I am not sure, how it's done, but I'll just write: */ document.getElementById('search_results').innerHTML = getContents('search.php?query='+this.value);"" /><br/>
+    <div id=""search_results""></div>
+
+Hope you can help. Thanks in advance!",ajax,div,load,content,into,,open,0,59,8,"Use AJAX to load webpage content into DIV I have a text field. When I type something into than text field, I want to load stuff into the DIV below. That's my code equivalent:
+
+    <input type=""text"" onkeyup=""/* I am not sure, how it's done, but I'll just write: */ document.getElementById('search_results').innerHTML = getContents('search.php?query='+this.value);"" /><br/>
+    <div id=""search_results""></div>
+
+Hope you can help. Thanks in advance!",5
+9966641,04/01/2012 17:38:53,585101,01/21/2011 21:46:19,1063,84,How to test Controller properly using Devise with Rspec,"I want to start testing my controllers, however I'm new on this stage (testing)
+
+The first controller I want to be tested is my `UsersController`.
+
+Here's the controller code:
+
+    class UsersController < ApplicationController
+      load_and_authorize_resource
+      respond_to :html, :js
+    
+      def index
+        @users = User.page(params[:page])
+      end
+    
+      def show
+        @user = User.find(params[:id])
+      end
+    
+      def destroy
+        User.find(params[:id]).destroy
+        render :index
+      end
+    
+      def turns_manager
+        @user = User.find(params[:id]).manager!
+        respond_with(@user, :layout => !request.xhr?)
+      end
+    
+      def turns_moderator
+        @user = User.find(params[:id]).moderator!
+        respond_with(@user, :layout => !request.xhr?)
+      end
+    
+      def turns_user
+        @user = User.find(params[:id]).user!
+        respond_with(@user, :layout => !request.xhr?)
+      end
+    
+    end
+
+
+It's pretty basic but I have 3 actions that I make use of Ajax requests.
+
+For now, I have the following tests:
+
+    require 'spec_helper'
+
+    describe UsersController do
+    
+      include Devise::TestHelpers
+    
+      it ""should get #index"" do
+        get 'index'
+        response.should be_success
+      end
+    
+      context ""should get #show"" do
+        before { @user =  FactoryGirl.create(:user) } 
+    
+        get 'show', :id => @user
+        response.should be_success
+      end
+    
+      it ""should DELETE #destroy"" do
+        delete 'destroy'
+        response.should be_success
+      end
+    
+    end
+
+Is this the correctt way of testing controllers?
+
+I appreciate any help.
+
+Thank you.",ajax,ruby-on-rails-3,rspec2,,,,open,0,455,9,"How to test Controller properly using Devise with Rspec I want to start testing my controllers, however I'm new on this stage (testing)
+
+The first controller I want to be tested is my `UsersController`.
+
+Here's the controller code:
+
+    class UsersController < ApplicationController
+      load_and_authorize_resource
+      respond_to :html, :js
+    
+      def index
+        @users = User.page(params[:page])
+      end
+    
+      def show
+        @user = User.find(params[:id])
+      end
+    
+      def destroy
+        User.find(params[:id]).destroy
+        render :index
+      end
+    
+      def turns_manager
+        @user = User.find(params[:id]).manager!
+        respond_with(@user, :layout => !request.xhr?)
+      end
+    
+      def turns_moderator
+        @user = User.find(params[:id]).moderator!
+        respond_with(@user, :layout => !request.xhr?)
+      end
+    
+      def turns_user
+        @user = User.find(params[:id]).user!
+        respond_with(@user, :layout => !request.xhr?)
+      end
+    
+    end
+
+
+It's pretty basic but I have 3 actions that I make use of Ajax requests.
+
+For now, I have the following tests:
+
+    require 'spec_helper'
+
+    describe UsersController do
+    
+      include Devise::TestHelpers
+    
+      it ""should get #index"" do
+        get 'index'
+        response.should be_success
+      end
+    
+      context ""should get #show"" do
+        before { @user =  FactoryGirl.create(:user) } 
+    
+        get 'show', :id => @user
+        response.should be_success
+      end
+    
+      it ""should DELETE #destroy"" do
+        delete 'destroy'
+        response.should be_success
+      end
+    
+    end
+
+Is this the correctt way of testing controllers?
+
+I appreciate any help.
+
+Thank you.",3
+6580668,07/05/2011 09:42:05,829392,07/05/2011 09:42:05,1,0,how to use jquery ajax success data,"I'm constantly running into an issue where i am unable to use the ajax success data to perform another function. as per below
+
+$(""#addproperty_state"").keyup(function(){
+	var vardata = $(this).val();
+	var urlPro =""<?php echo HTTP_PHP; ?>ajax_common.php?action=get_area&area=""+vardata;
+	$.ajax({
+		type: ""POST"",
+		url: urlPro,
+		dataType: ""text"",
+    	    async:false,
+		success: function(data) {
+			$('#statelist').html(data);
+			}
+	});
+	return false; 
+});
+
+I want to now use the result of the ajax call so that i can populate another text box with the result value.
+
+$(""#statelist li"").click(function(){
+	var statename = $(this).attr(""title"");
+	$(""#addproperty_state"").val(statename);
+});
+
+but if i was now to click on the li nothing happens. How can i use the ajax result to actually do something else with it?
+Any assistance would be greatly appreciated.
+Thank you",ajax,,,,,,open,0,103,7,"how to use jquery ajax success data I'm constantly running into an issue where i am unable to use the ajax success data to perform another function. as per below
+
+$(""#addproperty_state"").keyup(function(){
+	var vardata = $(this).val();
+	var urlPro =""<?php echo HTTP_PHP; ?>ajax_common.php?action=get_area&area=""+vardata;
+	$.ajax({
+		type: ""POST"",
+		url: urlPro,
+		dataType: ""text"",
+    	    async:false,
+		success: function(data) {
+			$('#statelist').html(data);
+			}
+	});
+	return false; 
+});
+
+I want to now use the result of the ajax call so that i can populate another text box with the result value.
+
+$(""#statelist li"").click(function(){
+	var statename = $(this).attr(""title"");
+	$(""#addproperty_state"").val(statename);
+});
+
+but if i was now to click on the li nothing happens. How can i use the ajax result to actually do something else with it?
+Any assistance would be greatly appreciated.
+Thank you",1
+4369441,12/06/2010 18:01:07,365251,06/12/2010 13:37:57,466,1,Struts2 + Jquery Library - What is wrong on this AJAX call?,"Im trying some ajax call with Struts2 and the JQuery library. This is the code of the jsp :
+
+    <s:div id=""my_result"" >
+        Nothing
+    </s:div>
+
+    <s:form action=""UserManager"" theme=""simple"">
+        <s:textfield name=""nickname"" />
+        <s:password name=""password"" />
+        <s:label cssClass=""menu_span"">
+            <sj:submit targets=""my_result"" value=""Login"" />
+        </s:label>
+    </s:form>
+
+this is the code of the bean/action with the xml :
+
+    public class UserManager extends ActionSupport {
+        private String nickname;
+        private String password;
+
+        @Override
+        public String execute() throws Exception {
+            String output=""i have insered ""+this.getNickname()+"" and ""+this.getPassword();
+            System.out.println(output);
+            return output;
+        }
+
+        public String getNickname() { return nickname; }
+        public void setNickname(String newValue) { nickname=newValue; }
+
+        public String getPassword() { return password; }
+        public void setPassword(String newValue) { password=newValue; }
+    }
+
+    <package name=""model"" extends=""struts-default"">
+        <action name=""UserManager"" class=""model.UserManager"">
+            <result>index.jsp</result>
+        </action>
+    </package>
+
+If i `return SUCCESS` on the UserManager bean, it load on `my_result` the same calling page. Else, if i `return output` i get `Messages:	
+No result defined for action model.UserManager and result i have insered aaa and bbb
+` messagge (with nickname=aaa and password=bbb).
+
+What's happened? How can i return that string? I think it's a struts.xml fault
+
+Cheers",ajax,struts2,struts,javabeans,,,open,0,364,12,"Struts2 + Jquery Library - What is wrong on this AJAX call? Im trying some ajax call with Struts2 and the JQuery library. This is the code of the jsp :
+
+    <s:div id=""my_result"" >
+        Nothing
+    </s:div>
+
+    <s:form action=""UserManager"" theme=""simple"">
+        <s:textfield name=""nickname"" />
+        <s:password name=""password"" />
+        <s:label cssClass=""menu_span"">
+            <sj:submit targets=""my_result"" value=""Login"" />
+        </s:label>
+    </s:form>
+
+this is the code of the bean/action with the xml :
+
+    public class UserManager extends ActionSupport {
+        private String nickname;
+        private String password;
+
+        @Override
+        public String execute() throws Exception {
+            String output=""i have insered ""+this.getNickname()+"" and ""+this.getPassword();
+            System.out.println(output);
+            return output;
+        }
+
+        public String getNickname() { return nickname; }
+        public void setNickname(String newValue) { nickname=newValue; }
+
+        public String getPassword() { return password; }
+        public void setPassword(String newValue) { password=newValue; }
+    }
+
+    <package name=""model"" extends=""struts-default"">
+        <action name=""UserManager"" class=""model.UserManager"">
+            <result>index.jsp</result>
+        </action>
+    </package>
+
+If i `return SUCCESS` on the UserManager bean, it load on `my_result` the same calling page. Else, if i `return output` i get `Messages:	
+No result defined for action model.UserManager and result i have insered aaa and bbb
+` messagge (with nickname=aaa and password=bbb).
+
+What's happened? How can i return that string? I think it's a struts.xml fault
+
+Cheers",4
+6979281,08/08/2011 08:12:12,883630,08/08/2011 08:12:12,1,0,i want to create multiple facebox with multiple ajax validation,i am working on comment section in that multiple face box and multiple ajax validation on reply button. but in that my ajax validation not working properly. if you have any solution regarding that please help me....,ajax,validation,,,,,open,0,37,10,i want to create multiple facebox with multiple ajax validation i am working on comment section in that multiple face box and multiple ajax validation on reply button. but in that my ajax validation not working properly. if you have any solution regarding that please help me....,2
+9057043,01/29/2012 21:39:25,1016473,10/27/2011 12:37:27,1,0,A good book on AJAX for an experienced developer?,"I want to read a good book on AJAX. I want it to be concise, I don't want it to explain all the basic concepts all over again but I also want it to show me the guts and insides of AJAX. I am an experienced developer, I already know Javascript, ActionScript, XML, JSON and PHP. I am looking for a book which is somewhat like ""Javascript - The Good Parts"" by Douglas Crockford. I know that some similar question have already been asked here but all the books I found there are more than 600 pages.
+Thank You for your help.",ajax,books,,,,01/30/2012 07:42:51,not constructive,1,101,9,"A good book on AJAX for an experienced developer? I want to read a good book on AJAX. I want it to be concise, I don't want it to explain all the basic concepts all over again but I also want it to show me the guts and insides of AJAX. I am an experienced developer, I already know Javascript, ActionScript, XML, JSON and PHP. I am looking for a book which is somewhat like ""Javascript - The Good Parts"" by Douglas Crockford. I know that some similar question have already been asked here but all the books I found there are more than 600 pages.
+Thank You for your help.",2
+7723056,10/11/2011 08:08:45,981660,10/06/2011 06:21:50,6,0,Issue in Ajax tabs control,"   When i access that form in fire fox version 7.0 then these tabs does not show and that form is working perfect in all other browsers. please solve that issue. Thanks in advance.
+    Below is my code.
+      `<form id=""frmNewsManagement"" runat=""server"" enctype=""multipart/form-data"">
+            <cc1:ToolkitScriptManager ID=""ScriptManager1"" runat=""server"">
+            </cc1:ToolkitScriptManager>
+            <asp:UpdatePanel ID=""UDPMain"" runat=""server"">
+                <ContentTemplate>
+                    <div style=""margin-left: 10px; margin-right: 10px;"">                             
+                        <cc1:TabContainer ID=""TabContainer1"" runat=""server"">
+                            <cc1:TabPanel ID=""tbpnlNewsManagement"" runat=""server"">
+                                <HeaderTemplate>
+                                    News Management
+                                </HeaderTemplate>
+                                <ContentTemplate>
+                                    <asp:UpdatePanel ID=""UDPfirst""         ChildrenAsTriggers=""true"" runat=""server"" UpdateMode=""Conditional"">
+                                        <ContentTemplate>
+                                            <table class=""FormTable"">
+                                                <tr>
+                                                    <td align=""left"" style=""width: 50px"">
+                                                        <asp:Label ID=""lblSelect"" runat=""server"" Text=""Select"" SkinID=""Label""></asp:Label>
+                                                    </td>
+                                                    <td>
+                                                        <asp:DropDownList ID=""cmbStatuses"" runat=""server"" SkinID=""DropDownList"" OnSelectedIndexChanged=""ddlSelect_SelectedIndexChanged""
+                                                            AutoPostBack=""true"">
+                                                            <asp:ListItem Text=""Show Active"" Value=""0""></asp:ListItem>
+                                                            <asp:ListItem Text=""Show Deleted"" Value=""1""></asp:ListItem>
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <asp:GridView ID=""grdViewRecord"" OnDataBound=""grdViewRecord_DataBound"" SkinID=""gvwSilver""
+                                                AutoGenerateColumns=""False"" OnRowCommand=""grdViewRecord_RowCommand"" runat=""server""
+                                                DataKeyNames=""NEWSID"" OnSorting=""grdViewRecord_Sorting"">
+                                                <Columns>
+                                                    <asp:BoundField HeaderText=""id"" DataField=""NEWSID"" Visible=""false"" />
+                                                    <asp:BoundField HeaderText=""News Title"" ItemStyle-Wrap=""true"" DataField=""NEWSTITLE""
+                                                        SortExpression=""NEWSTITLE"">
+                                                        <HeaderStyle HorizontalAlign=""Left"" Font-Bold=""True"" />
+                                                        <ItemStyle Width=""200px"" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField HeaderText=""Date"" DataField=""NEWSDATE"" ItemStyle-Wrap=""true"" SortExpression=""NEWSDATE"">
+                                                        <HeaderStyle HorizontalAlign=""Left"" Font-Bold=""True"" />
+                                                        <ItemStyle Width=""100px"" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField HeaderText=""Department"" ItemStyle-Wrap=""true"" DataField=""DEPARTMENTNAME""
+                                                        SortExpression=""DEPARTMENTNAME"">
+                                                        <HeaderStyle HorizontalAlign=""Left"" Font-Bold=""True"" />
+                                                        <ItemStyle Width=""150px"" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField HeaderText=""Status"" ItemStyle-Wrap=""true"" DataField=""STATUSSHORTDESC""
+                                                        SortExpression=""STATUSSHORTDESC"">
+                                                        <HeaderStyle HorizontalAlign=""Left"" Font-Bold=""True"" />
+                                                        <ItemStyle Width=""100px"" />
+                                                    </asp:BoundField>
+                                                    <asp:TemplateField HeaderText=""Actions"" HeaderStyle-HorizontalAlign=""center"" Visible=""false"">
+                                                        <ItemTemplate>
+                                                            <center>
+                                                                <asp:ImageButton ID=""btnEdit"" ImageUrl=""~/images/Icon/ico_edit.png"" CommandArgument='<%# Eval(""NEWSID"") %>'
+                                                                    runat=""server"" CommandName=""EditNews"" Text=""Edit"" ToolTip=""Edit News"" />
+                                                                &nbsp;    
+                                                                <asp:ImageButton ID=""btnDelete"" ImageUrl=""~/images/Icon/ico_delete.png"" CommandArgument='<%# Eval(""NEWSID"") %>'
+                                                                    runat=""server"" CommandName=""DeleteNews"" Text=""Delete"" ToolTip=""Delete News"" />
+                                                            </center>
+                                                        </ItemTemplate>
+                                                        <ItemStyle Width=""25px"" />
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText=""Actions"" HeaderStyle-HorizontalAlign=""center"" ItemStyle-Width=""20px"" Visible=""false"">
+                                                        <ItemTemplate>
+                                                            <center>
+                                                                <asp:ImageButton ID=""btnRestore"" ImageUrl=""~/images/Icon/restore.png"" CommandArgument='<%# Eval(""NEWSID"") %>'
+                                                                    runat=""server"" CommandName=""RestoreNews"" Text=""Restore"" ToolTip=""Restore News"" />
+                                                            </center>
+                                                        </ItemTemplate>
+                                                        <ItemStyle Width=""25px"" />
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                                <PagerTemplate>
+                                                    <table border=""0"" width=""100%"">
+                                                        <tr>
+                                                            <td style=""border: 0"">
+                                                                <asp:Label ID=""lblTotalRecord"" runat=""server""></asp:Label>
+                                                            </td>
+                                                            <td style=""float: right; border: 0"">
+                                                                <asp:TextBox ID=""txtSearch"" CssClass=""totalPagesAlign"" runat=""server""></asp:TextBox>
+                                                                <asp:ImageButton ID=""btnSearch"" runat=""server"" ImageUrl=""~/Images/search.png"" OnCommand=""btnSearch_Command""
+                                                                    CommandArgument=""Search"" ToolTip=""Search by news title"" CommandName=""Search""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""imgPageFirst"" runat=""server"" ImageUrl=""~/Images/Icon/first.gif""
+                                                                    CommandArgument=""First"" ToolTip=""First"" CommandName=""Page"" OnCommand=""imgPageFirst_Command"">
+                                                                </asp:ImageButton>
+                                                                <asp:ImageButton ID=""imgPagePrevious"" runat=""server"" ImageUrl=""~/Images/Icon/Prev.gif""
+                                                                    CommandArgument=""Prev"" ToolTip=""Previous"" CommandName=""Page"" OnCommand=""imgPagePrevious_Command"">
+                                                                </asp:ImageButton>
+                                                                <span class=""totalPagesAlign"">
+                                                                <asp:Label ID=""lblRecord"" runat=""server""></asp:Label>
+                                                                <asp:Label ID=""lblOf"" runat=""server"" Text=""of""></asp:Label>
+                                                                <asp:Label ID=""lblTotalPage"" runat=""server""></asp:Label>
+                                                                </span>
+                                                                <asp:ImageButton ID=""imgPageNext"" runat=""server"" ImageUrl=""~/Images/Icon/next.gif""
+                                                                    CommandArgument=""Next"" ToolTip=""Next"" CommandName=""Page"" OnCommand=""imgPageNext_Command""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""imgPageLast"" runat=""server"" ImageUrl=""~/Images/Icon/Last.gif""
+                                                                    CommandArgument=""Last"" ToolTip=""Last"" CommandName=""Page"" OnCommand=""imgPageLast_Command""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""btnPageSize"" ToolTip=""Show five records"" runat=""server"" ImageUrl=""~/Images/Icon/5.gif"" OnCommand=""btnPageSize_Command"">
+                                                                </asp:ImageButton>
+                                                                <asp:ImageButton ID=""btnPageSize2"" runat=""server"" ToolTip=""Show ten records"" ImageUrl=""~/Images/Icon/10.gif""
+                                                                    OnCommand=""btnPageSize2_Command""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""btnPageSize3"" runat=""server"" ToolTip=""Show twenty records"" ImageUrl=""~/Images/Icon/20.gif""
+                                                                    OnCommand=""btnPageSize3_Command""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""btnPageSize4"" runat=""server"" ToolTip=""Show fifty records"" ImageUrl=""~/Images/Icon/50.gif""
+                                                                    OnCommand=""btnPageSize4_Command""></asp:ImageButton>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </PagerTemplate>
+                                            </asp:GridView>
+                                            <asp:Label ID=""lblPopupTargetID"" runat=""server"" Style=""display: none;""></asp:Label>
+                                            <cc1:ModalPopupExtender ID=""btnDelete_ModalPopupExtender"" runat=""server"" PopupControlID=""pnlDelete""
+                                                TargetControlID=""lblPopupTargetID"" BackgroundCssClass=""ModalPopupBG"" DynamicServicePath=""""
+                                                Enabled=""True"" CancelControlID=""btnDeleteCancel"">
+                                            </cc1:ModalPopupExtender>
+                                            <asp:Panel ID=""pnlDelete"" runat=""server"" Style=""display: none;"">
+                                                <div class=""popup_Container"">
+                                                    <div class=""popup_Titlebar"" id=""PopupHeader"">
+                                                        <div class=""TitlebarLeft"">
+                                                            Delete
+                                                        </div>
+                                                        <div class=""TitlebarRight"" onclick=""btnDelete_ModalPopupExtender.Hide()"">
+                                                        </div>
+                                                    </div>
+                                                    <div class=""popup_Body"">
+                                                        Are you sure, you want to Delete the record?
+                                                    </div>
+                                                    <div>
+                                                        <center>
+                                                            <asp:Button ID=""btnDeleteOK"" OnClick=""btnDeleteOK_Click"" runat=""server"" SkinID=""Button""
+                                                                Text=""Ok"" />
+                                                            &nbsp;
+                                                            <asp:Button ID=""btnDeleteCancel"" runat=""server"" SkinID=""Button"" Text=""Cancel"" />
+                                                        </center>
+                                                        <br />
+                                                    </div>
+                                                </div>
+                                            </asp:Panel>
+                                            <asp:Label ID=""lblRestorePopupId"" runat=""server"" Style=""display: none;""></asp:Label>
+                                            <cc1:ModalPopupExtender ID=""mdpopupRestore"" runat=""server"" PopupControlID=""pnlRestore""
+                                                TargetControlID=""lblRestorePopupId"" BackgroundCssClass=""ModalPopupBG"" DynamicServicePath=""""
+                                                Enabled=""True"" CancelControlID=""btnRestoreCancel"">
+                                            </cc1:ModalPopupExtender>
+                                            <asp:Panel ID=""pnlRestore"" runat=""server"" Style=""display: none;"">
+                                                <div class=""popup_Container"">
+                                                    <div class=""popup_Titlebar"" id=""Div1"">
+                                                        <div class=""TitlebarLeft"">
+                                                            Restore
+                                                        </div>
+                                                        <div class=""TitlebarRight"" onclick=""btnDelete_ModalPopupExtender.Hide()"">
+                                                        </div>
+                                                    </div>
+                                                    <div class=""popup_Body"">
+                                                        Are you sure, you want to Restore the record?
+                                                    </div>
+                                                    <div>
+                                                        <center>
+                                                            <asp:Button ID=""btnRestoreOk"" OnClick=""btnRestoreOK_Click"" runat=""server"" SkinID=""Button""
+                                                                Text=""Ok"" />
+                                                            &nbsp;
+                                                            <asp:Button ID=""btnRestoreCancel"" runat=""server"" SkinID=""Button"" Text=""Cancel"" />
+                                                        </center>
+                                                        <br />
+                                                    </div>
+                                                </div>
+                                            </asp:Panel>
+                                        </ContentTemplate>
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID=""cmbStatuses"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""grdViewRecord"" EventName=""RowCommand"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""btnDeleteOK"" EventName=""Click"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""btnDeleteCancel"" EventName=""Click"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""btnRestoreOK"" EventName=""Click"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""btnRestoreCancel"" EventName=""Click"" />
+                                            <asp:PostBackTrigger ControlID=""btnReport"" />
+                                        </Triggers>
+                                    </asp:UpdatePanel>
+                                    <hr />
+                                    <asp:Button ID=""btnAdd"" SkinID=""button"" runat=""server"" Text=""Add New"" OnClick=""btnAdd_Click"" />
+                                    <asp:Button ID=""btnReport"" runat=""server"" Text=""Report"" SkinID=""ReportButton"" OnClick=""btnReport_Click"">
+                                    </asp:Button>
+                                </ContentTemplate>
+                            </cc1:TabPanel>
+                        </cc1:TabContainer>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            </form>` 
+
+When i access that form in fire fox version 7.0 then these tabs does not show and that form is working perfect in all other browsers. please solve that issue.",ajax,ajaxcontroltoolkit,,,,10/11/2011 11:31:33,not a real question,1,10130,5,"Issue in Ajax tabs control    When i access that form in fire fox version 7.0 then these tabs does not show and that form is working perfect in all other browsers. please solve that issue. Thanks in advance.
+    Below is my code.
+      `<form id=""frmNewsManagement"" runat=""server"" enctype=""multipart/form-data"">
+            <cc1:ToolkitScriptManager ID=""ScriptManager1"" runat=""server"">
+            </cc1:ToolkitScriptManager>
+            <asp:UpdatePanel ID=""UDPMain"" runat=""server"">
+                <ContentTemplate>
+                    <div style=""margin-left: 10px; margin-right: 10px;"">                             
+                        <cc1:TabContainer ID=""TabContainer1"" runat=""server"">
+                            <cc1:TabPanel ID=""tbpnlNewsManagement"" runat=""server"">
+                                <HeaderTemplate>
+                                    News Management
+                                </HeaderTemplate>
+                                <ContentTemplate>
+                                    <asp:UpdatePanel ID=""UDPfirst""         ChildrenAsTriggers=""true"" runat=""server"" UpdateMode=""Conditional"">
+                                        <ContentTemplate>
+                                            <table class=""FormTable"">
+                                                <tr>
+                                                    <td align=""left"" style=""width: 50px"">
+                                                        <asp:Label ID=""lblSelect"" runat=""server"" Text=""Select"" SkinID=""Label""></asp:Label>
+                                                    </td>
+                                                    <td>
+                                                        <asp:DropDownList ID=""cmbStatuses"" runat=""server"" SkinID=""DropDownList"" OnSelectedIndexChanged=""ddlSelect_SelectedIndexChanged""
+                                                            AutoPostBack=""true"">
+                                                            <asp:ListItem Text=""Show Active"" Value=""0""></asp:ListItem>
+                                                            <asp:ListItem Text=""Show Deleted"" Value=""1""></asp:ListItem>
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <asp:GridView ID=""grdViewRecord"" OnDataBound=""grdViewRecord_DataBound"" SkinID=""gvwSilver""
+                                                AutoGenerateColumns=""False"" OnRowCommand=""grdViewRecord_RowCommand"" runat=""server""
+                                                DataKeyNames=""NEWSID"" OnSorting=""grdViewRecord_Sorting"">
+                                                <Columns>
+                                                    <asp:BoundField HeaderText=""id"" DataField=""NEWSID"" Visible=""false"" />
+                                                    <asp:BoundField HeaderText=""News Title"" ItemStyle-Wrap=""true"" DataField=""NEWSTITLE""
+                                                        SortExpression=""NEWSTITLE"">
+                                                        <HeaderStyle HorizontalAlign=""Left"" Font-Bold=""True"" />
+                                                        <ItemStyle Width=""200px"" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField HeaderText=""Date"" DataField=""NEWSDATE"" ItemStyle-Wrap=""true"" SortExpression=""NEWSDATE"">
+                                                        <HeaderStyle HorizontalAlign=""Left"" Font-Bold=""True"" />
+                                                        <ItemStyle Width=""100px"" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField HeaderText=""Department"" ItemStyle-Wrap=""true"" DataField=""DEPARTMENTNAME""
+                                                        SortExpression=""DEPARTMENTNAME"">
+                                                        <HeaderStyle HorizontalAlign=""Left"" Font-Bold=""True"" />
+                                                        <ItemStyle Width=""150px"" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField HeaderText=""Status"" ItemStyle-Wrap=""true"" DataField=""STATUSSHORTDESC""
+                                                        SortExpression=""STATUSSHORTDESC"">
+                                                        <HeaderStyle HorizontalAlign=""Left"" Font-Bold=""True"" />
+                                                        <ItemStyle Width=""100px"" />
+                                                    </asp:BoundField>
+                                                    <asp:TemplateField HeaderText=""Actions"" HeaderStyle-HorizontalAlign=""center"" Visible=""false"">
+                                                        <ItemTemplate>
+                                                            <center>
+                                                                <asp:ImageButton ID=""btnEdit"" ImageUrl=""~/images/Icon/ico_edit.png"" CommandArgument='<%# Eval(""NEWSID"") %>'
+                                                                    runat=""server"" CommandName=""EditNews"" Text=""Edit"" ToolTip=""Edit News"" />
+                                                                &nbsp;    
+                                                                <asp:ImageButton ID=""btnDelete"" ImageUrl=""~/images/Icon/ico_delete.png"" CommandArgument='<%# Eval(""NEWSID"") %>'
+                                                                    runat=""server"" CommandName=""DeleteNews"" Text=""Delete"" ToolTip=""Delete News"" />
+                                                            </center>
+                                                        </ItemTemplate>
+                                                        <ItemStyle Width=""25px"" />
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText=""Actions"" HeaderStyle-HorizontalAlign=""center"" ItemStyle-Width=""20px"" Visible=""false"">
+                                                        <ItemTemplate>
+                                                            <center>
+                                                                <asp:ImageButton ID=""btnRestore"" ImageUrl=""~/images/Icon/restore.png"" CommandArgument='<%# Eval(""NEWSID"") %>'
+                                                                    runat=""server"" CommandName=""RestoreNews"" Text=""Restore"" ToolTip=""Restore News"" />
+                                                            </center>
+                                                        </ItemTemplate>
+                                                        <ItemStyle Width=""25px"" />
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                                <PagerTemplate>
+                                                    <table border=""0"" width=""100%"">
+                                                        <tr>
+                                                            <td style=""border: 0"">
+                                                                <asp:Label ID=""lblTotalRecord"" runat=""server""></asp:Label>
+                                                            </td>
+                                                            <td style=""float: right; border: 0"">
+                                                                <asp:TextBox ID=""txtSearch"" CssClass=""totalPagesAlign"" runat=""server""></asp:TextBox>
+                                                                <asp:ImageButton ID=""btnSearch"" runat=""server"" ImageUrl=""~/Images/search.png"" OnCommand=""btnSearch_Command""
+                                                                    CommandArgument=""Search"" ToolTip=""Search by news title"" CommandName=""Search""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""imgPageFirst"" runat=""server"" ImageUrl=""~/Images/Icon/first.gif""
+                                                                    CommandArgument=""First"" ToolTip=""First"" CommandName=""Page"" OnCommand=""imgPageFirst_Command"">
+                                                                </asp:ImageButton>
+                                                                <asp:ImageButton ID=""imgPagePrevious"" runat=""server"" ImageUrl=""~/Images/Icon/Prev.gif""
+                                                                    CommandArgument=""Prev"" ToolTip=""Previous"" CommandName=""Page"" OnCommand=""imgPagePrevious_Command"">
+                                                                </asp:ImageButton>
+                                                                <span class=""totalPagesAlign"">
+                                                                <asp:Label ID=""lblRecord"" runat=""server""></asp:Label>
+                                                                <asp:Label ID=""lblOf"" runat=""server"" Text=""of""></asp:Label>
+                                                                <asp:Label ID=""lblTotalPage"" runat=""server""></asp:Label>
+                                                                </span>
+                                                                <asp:ImageButton ID=""imgPageNext"" runat=""server"" ImageUrl=""~/Images/Icon/next.gif""
+                                                                    CommandArgument=""Next"" ToolTip=""Next"" CommandName=""Page"" OnCommand=""imgPageNext_Command""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""imgPageLast"" runat=""server"" ImageUrl=""~/Images/Icon/Last.gif""
+                                                                    CommandArgument=""Last"" ToolTip=""Last"" CommandName=""Page"" OnCommand=""imgPageLast_Command""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""btnPageSize"" ToolTip=""Show five records"" runat=""server"" ImageUrl=""~/Images/Icon/5.gif"" OnCommand=""btnPageSize_Command"">
+                                                                </asp:ImageButton>
+                                                                <asp:ImageButton ID=""btnPageSize2"" runat=""server"" ToolTip=""Show ten records"" ImageUrl=""~/Images/Icon/10.gif""
+                                                                    OnCommand=""btnPageSize2_Command""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""btnPageSize3"" runat=""server"" ToolTip=""Show twenty records"" ImageUrl=""~/Images/Icon/20.gif""
+                                                                    OnCommand=""btnPageSize3_Command""></asp:ImageButton>
+                                                                <asp:ImageButton ID=""btnPageSize4"" runat=""server"" ToolTip=""Show fifty records"" ImageUrl=""~/Images/Icon/50.gif""
+                                                                    OnCommand=""btnPageSize4_Command""></asp:ImageButton>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </PagerTemplate>
+                                            </asp:GridView>
+                                            <asp:Label ID=""lblPopupTargetID"" runat=""server"" Style=""display: none;""></asp:Label>
+                                            <cc1:ModalPopupExtender ID=""btnDelete_ModalPopupExtender"" runat=""server"" PopupControlID=""pnlDelete""
+                                                TargetControlID=""lblPopupTargetID"" BackgroundCssClass=""ModalPopupBG"" DynamicServicePath=""""
+                                                Enabled=""True"" CancelControlID=""btnDeleteCancel"">
+                                            </cc1:ModalPopupExtender>
+                                            <asp:Panel ID=""pnlDelete"" runat=""server"" Style=""display: none;"">
+                                                <div class=""popup_Container"">
+                                                    <div class=""popup_Titlebar"" id=""PopupHeader"">
+                                                        <div class=""TitlebarLeft"">
+                                                            Delete
+                                                        </div>
+                                                        <div class=""TitlebarRight"" onclick=""btnDelete_ModalPopupExtender.Hide()"">
+                                                        </div>
+                                                    </div>
+                                                    <div class=""popup_Body"">
+                                                        Are you sure, you want to Delete the record?
+                                                    </div>
+                                                    <div>
+                                                        <center>
+                                                            <asp:Button ID=""btnDeleteOK"" OnClick=""btnDeleteOK_Click"" runat=""server"" SkinID=""Button""
+                                                                Text=""Ok"" />
+                                                            &nbsp;
+                                                            <asp:Button ID=""btnDeleteCancel"" runat=""server"" SkinID=""Button"" Text=""Cancel"" />
+                                                        </center>
+                                                        <br />
+                                                    </div>
+                                                </div>
+                                            </asp:Panel>
+                                            <asp:Label ID=""lblRestorePopupId"" runat=""server"" Style=""display: none;""></asp:Label>
+                                            <cc1:ModalPopupExtender ID=""mdpopupRestore"" runat=""server"" PopupControlID=""pnlRestore""
+                                                TargetControlID=""lblRestorePopupId"" BackgroundCssClass=""ModalPopupBG"" DynamicServicePath=""""
+                                                Enabled=""True"" CancelControlID=""btnRestoreCancel"">
+                                            </cc1:ModalPopupExtender>
+                                            <asp:Panel ID=""pnlRestore"" runat=""server"" Style=""display: none;"">
+                                                <div class=""popup_Container"">
+                                                    <div class=""popup_Titlebar"" id=""Div1"">
+                                                        <div class=""TitlebarLeft"">
+                                                            Restore
+                                                        </div>
+                                                        <div class=""TitlebarRight"" onclick=""btnDelete_ModalPopupExtender.Hide()"">
+                                                        </div>
+                                                    </div>
+                                                    <div class=""popup_Body"">
+                                                        Are you sure, you want to Restore the record?
+                                                    </div>
+                                                    <div>
+                                                        <center>
+                                                            <asp:Button ID=""btnRestoreOk"" OnClick=""btnRestoreOK_Click"" runat=""server"" SkinID=""Button""
+                                                                Text=""Ok"" />
+                                                            &nbsp;
+                                                            <asp:Button ID=""btnRestoreCancel"" runat=""server"" SkinID=""Button"" Text=""Cancel"" />
+                                                        </center>
+                                                        <br />
+                                                    </div>
+                                                </div>
+                                            </asp:Panel>
+                                        </ContentTemplate>
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID=""cmbStatuses"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""grdViewRecord"" EventName=""RowCommand"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""btnDeleteOK"" EventName=""Click"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""btnDeleteCancel"" EventName=""Click"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""btnRestoreOK"" EventName=""Click"" />
+                                            <asp:AsyncPostBackTrigger ControlID=""btnRestoreCancel"" EventName=""Click"" />
+                                            <asp:PostBackTrigger ControlID=""btnReport"" />
+                                        </Triggers>
+                                    </asp:UpdatePanel>
+                                    <hr />
+                                    <asp:Button ID=""btnAdd"" SkinID=""button"" runat=""server"" Text=""Add New"" OnClick=""btnAdd_Click"" />
+                                    <asp:Button ID=""btnReport"" runat=""server"" Text=""Report"" SkinID=""ReportButton"" OnClick=""btnReport_Click"">
+                                    </asp:Button>
+                                </ContentTemplate>
+                            </cc1:TabPanel>
+                        </cc1:TabContainer>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            </form>` 
+
+When i access that form in fire fox version 7.0 then these tabs does not show and that form is working perfect in all other browsers. please solve that issue.",2
+3823562,09/29/2010 16:12:50,381903,05/27/2010 09:36:03,6,1,2 selectboxes one for updating the other onclick cakephp,"I have a form callled ""Project"", it contains a selectbox with the names of the companies <select name=""ProjectCompany"">, the other selectbox is hidden and is called ""Staff"" and is to be made visible and filled with the names and ids of users that are working for the selected company.
+<pre>
+>>selectbox ""Company"" visible	|	>>selectbox ""Staff"" hidden
+----------------------------------------------------------------------------
+[Company microsoft]		      |   [null]
+[Company aol] 			       |				
+[Company google]		         |						
+[Company facebook]		       |						
+
+--> onclik selectbox ""Company"" -> e.g. google
+
+>>selectbox ""Staff"" visible
+------------------------------
+[Staff X of google]
+[Staff Y of google]
+[Staff Z of google]</pre>
+
+in Html
+
+    <form id=""ProjectAddForm"">
+    <select id=""ProjectCompany"" multiple=""multiple"" onClick=""makeStaffVisible"">
+        <option value=""1"">Microsoft</option>
+        <option value=""2"">AOL</option>
+        <option value=""3"">Google</option>
+        <option value=""4"">facebook</option>
+    </select>
+    <select id=""Staff"" style=""visibility: hidden"">
+        <option></option>
+    </select>
+</form>
+
+I just don't know how to realize that with cakephp. Thanks for any help.",ajax,cakephp,update,selectbox,,,open,0,192,9,"2 selectboxes one for updating the other onclick cakephp I have a form callled ""Project"", it contains a selectbox with the names of the companies <select name=""ProjectCompany"">, the other selectbox is hidden and is called ""Staff"" and is to be made visible and filled with the names and ids of users that are working for the selected company.
+<pre>
+>>selectbox ""Company"" visible	|	>>selectbox ""Staff"" hidden
+----------------------------------------------------------------------------
+[Company microsoft]		      |   [null]
+[Company aol] 			       |				
+[Company google]		         |						
+[Company facebook]		       |						
+
+--> onclik selectbox ""Company"" -> e.g. google
+
+>>selectbox ""Staff"" visible
+------------------------------
+[Staff X of google]
+[Staff Y of google]
+[Staff Z of google]</pre>
+
+in Html
+
+    <form id=""ProjectAddForm"">
+    <select id=""ProjectCompany"" multiple=""multiple"" onClick=""makeStaffVisible"">
+        <option value=""1"">Microsoft</option>
+        <option value=""2"">AOL</option>
+        <option value=""3"">Google</option>
+        <option value=""4"">facebook</option>
+    </select>
+    <select id=""Staff"" style=""visibility: hidden"">
+        <option></option>
+    </select>
+</form>
+
+I just don't know how to realize that with cakephp. Thanks for any help.",4
+2088558,01/18/2010 19:11:42,229976,12/11/2009 21:17:38,198,27,Updating HTML via JSON/AJAX,"I've been using JSON to handle AJAX functionality in my rails applications ever since I heard about it, because using RJS/rendering HTML ""felt"" wrong because it violated MVC.  The first AJAX-heavy project I worked on ended up with 20-30 controller actions tied directly to specific UI-behaviors and my view code spread over controller actions, partials and rjs files .  
+
+The one headache I've found from using pure JSON is that you have to 'render' HTML via JS, which in the case of AJAX that has to update DOM-heavy elements, can be a real pain.  I end up with long string building code like
+
+    // ...ajax 
+    success: function(records){
+      $(records).each(function(record){
+        var html = ('<div id=""blah"">' + record.attr +
+          etc +
+        ')
+      })
+    }
+
+where etc is 10-15 lines of dynamically constructing HTML based on record data.  Is there a better practice for this approach?
+
+(My motivation for finally reaching out is I am now tasked with updating HTML so complex it required two nested loops of Ruby code to render in the first place.  Duplicating that in Javascript seems insane.)
+
+",ajax,json,ruby-on-rails,javascript,jquery,,open,0,224,4,"Updating HTML via JSON/AJAX I've been using JSON to handle AJAX functionality in my rails applications ever since I heard about it, because using RJS/rendering HTML ""felt"" wrong because it violated MVC.  The first AJAX-heavy project I worked on ended up with 20-30 controller actions tied directly to specific UI-behaviors and my view code spread over controller actions, partials and rjs files .  
+
+The one headache I've found from using pure JSON is that you have to 'render' HTML via JS, which in the case of AJAX that has to update DOM-heavy elements, can be a real pain.  I end up with long string building code like
+
+    // ...ajax 
+    success: function(records){
+      $(records).each(function(record){
+        var html = ('<div id=""blah"">' + record.attr +
+          etc +
+        ')
+      })
+    }
+
+where etc is 10-15 lines of dynamically constructing HTML based on record data.  Is there a better practice for this approach?
+
+(My motivation for finally reaching out is I am now tasked with updating HTML so complex it required two nested loops of Ruby code to render in the first place.  Duplicating that in Javascript seems insane.)
+
+",5
+4183115,11/15/2010 09:45:56,312853,04/09/2010 13:58:48,187,4,Why is AJAX authentication through HTTP considered to be non secure?,"Lets consider next scenario: assume I have a web app, and authentication of users is performed through a modal dialog window (lets say, that when a user clicks login button, ajax request is sent and depending on the callback I either close the window or display an error), and I use **only HTTP** protocol. Why is it considered to be not secure way to do things?",ajax,security,web-applications,authentication,hacking,,open,0,66,11,"Why is AJAX authentication through HTTP considered to be non secure? Lets consider next scenario: assume I have a web app, and authentication of users is performed through a modal dialog window (lets say, that when a user clicks login button, ajax request is sent and depending on the callback I either close the window or display an error), and I use **only HTTP** protocol. Why is it considered to be not secure way to do things?",5
+5617711,04/11/2011 06:47:46,368084,06/16/2010 09:14:19,216,7,Any way to bypass validations and still update bean values ?,"I use Richfaces. I am facing a situation where I have a form and 2 buttons. On click of one of the buttons, say button1, I need the validations. On click of another, button2,  I dont. The issue arises when I click on the button1 and I get all validation error messages. This prevents clicking of button2. I tried ajaxSingle, immediate, which help in bypassing the validations but bean values are not updated. How can I achieve that ?",ajax,jsf,java-ee,richfaces,,,open,0,80,11,"Any way to bypass validations and still update bean values ? I use Richfaces. I am facing a situation where I have a form and 2 buttons. On click of one of the buttons, say button1, I need the validations. On click of another, button2,  I dont. The issue arises when I click on the button1 and I get all validation error messages. This prevents clicking of button2. I tried ajaxSingle, immediate, which help in bypassing the validations but bean values are not updated. How can I achieve that ?",4
+10012137,04/04/2012 13:29:34,1139637,01/09/2012 21:18:38,25,2,Anyone worked with Tipsy in Yii?,"I want something like facebook actions tooltip, that you can see in FB when you want to delete any post from feeds it give you options in tooltip. So for this i am working with Tipsy widget of Yii, 
+
+**Ref:** 
+http://www.yiiframework.com/extension/jquery-tipsy
+
+I have implemented and its is working normaly fine, but if i want to apply some options like **DelayIn** and **DelayOut** or **Trigger** *mannual* it never effects .. 
+
+example that i did: 
+
+        <?php 
+        
+        $this->widget('application.extensions.tipsy.Tipsy', array(  
+          'trigger' => 'manual',
+	  'fade' => true,
+          'delayIn' => '5000',
+          'delayOut' => '1000',
+          'title' => 'Here to test',
+          'items' => array(
+            array(
+                  'id' => '#element_id',
+                  'gravity' => 'sw' , 
+                  'fallback' => 'Put <i>custom</i> <strong>tooltip </strong> here.' ,
+                  'html' => true, 
+                  ),    
+          ),  
+        ));
+        
+        ?>
+
+
+
+    <div id=""elemets"">
+    
+    <a original-title=""testng title"" rel=""tipsy"">This is Cool1</a>
+                
+    <a href='#' onclick='$(""#elemets a[rel=tipsy]"").tipsy(""show""); return false;'>Show</a>
+                    <br />
+    <a href='#' onclick='$(""#elemets a[rel=tipsy]"").tipsy(""hide""); return false;'>Hide</a>
+                
+    </div>
+
+
+please share your experince .. 
+and thanks .. 
+",ajax,facebook,yii,tooltip,tipsy,04/06/2012 17:33:25,not a real question,1,426,6,"Anyone worked with Tipsy in Yii? I want something like facebook actions tooltip, that you can see in FB when you want to delete any post from feeds it give you options in tooltip. So for this i am working with Tipsy widget of Yii, 
+
+**Ref:** 
+http://www.yiiframework.com/extension/jquery-tipsy
+
+I have implemented and its is working normaly fine, but if i want to apply some options like **DelayIn** and **DelayOut** or **Trigger** *mannual* it never effects .. 
+
+example that i did: 
+
+        <?php 
+        
+        $this->widget('application.extensions.tipsy.Tipsy', array(  
+          'trigger' => 'manual',
+	  'fade' => true,
+          'delayIn' => '5000',
+          'delayOut' => '1000',
+          'title' => 'Here to test',
+          'items' => array(
+            array(
+                  'id' => '#element_id',
+                  'gravity' => 'sw' , 
+                  'fallback' => 'Put <i>custom</i> <strong>tooltip </strong> here.' ,
+                  'html' => true, 
+                  ),    
+          ),  
+        ));
+        
+        ?>
+
+
+
+    <div id=""elemets"">
+    
+    <a original-title=""testng title"" rel=""tipsy"">This is Cool1</a>
+                
+    <a href='#' onclick='$(""#elemets a[rel=tipsy]"").tipsy(""show""); return false;'>Show</a>
+                    <br />
+    <a href='#' onclick='$(""#elemets a[rel=tipsy]"").tipsy(""hide""); return false;'>Hide</a>
+                
+    </div>
+
+
+please share your experince .. 
+and thanks .. 
+",5
+11441667,07/11/2012 21:20:15,399356,07/22/2010 16:44:42,158,0,What is the difference between ASP.NET MVC AJAX and AJAX TOOLKIT,"I'm pretty lost about it. With ASP.NET MVC app you can use :
+
+    <script src=""../../Scripts/MicrosoftMvcAjax.js"" type=""text/javascript""></script>
+
+and then you can type:
+
+    <%= Ajax.ActionLink(item.Name, ""Index"", new { id = item.Id }, new AjaxOptions { UpdateTargetId = ""divContactList""})%>
+
+to implement an Ajax action to a controller..
+So what is the advantage to download and use [ajax ToolKit][1] ?
+
+Can you also use Jquery to hit a controller in an asynchronous way?
+
+
+What are the differences? What is the best choice if there is one?
+Thanks to help
+
+
+  [1]: http://www.asp.net/ajaxlibrary/AjaxControlToolkitSampleSite/",ajax,asp.net-mvc-3,jquery-ajax,ajaxcontroltoolkit,,07/11/2012 21:23:53,too localized,1,88,11,"What is the difference between ASP.NET MVC AJAX and AJAX TOOLKIT I'm pretty lost about it. With ASP.NET MVC app you can use :
+
+    <script src=""../../Scripts/MicrosoftMvcAjax.js"" type=""text/javascript""></script>
+
+and then you can type:
+
+    <%= Ajax.ActionLink(item.Name, ""Index"", new { id = item.Id }, new AjaxOptions { UpdateTargetId = ""divContactList""})%>
+
+to implement an Ajax action to a controller..
+So what is the advantage to download and use [ajax ToolKit][1] ?
+
+Can you also use Jquery to hit a controller in an asynchronous way?
+
+
+What are the differences? What is the best choice if there is one?
+Thanks to help
+
+
+  [1]: http://www.asp.net/ajaxlibrary/AjaxControlToolkitSampleSite/",4
+10542379,05/10/2012 21:25:29,1245603,03/02/2012 17:04:05,21,0,Get data since a request ajax with asp.net mvc,"I would like get all data into an object with request ajax.
+
+This data are get into my controller with a function.
+In the headers of my data I have this information:
+
+I have 4 objects allPly create but all data(gramme,lotion and others) equals null or zero.
+But the data comment and OtherData it's ok, this works.
+
+Thanks for your help
+In the headers html:
+
+	allPly[0][Gramme]:10
+	allPly[0][Toto]:White
+	allPly[0][Test]:None
+	allPly[0][Lotion]:1
+	allPly[1][Grammage]:11
+	allPly[1][Toto]:White
+	allPly[1][Test]:Fine
+	allPly[1][Lotion]:0
+	OtherData : 585
+	Comment: all it's ok
+
+In my controller:
+
+	[HttpPost]
+	public ActionResult Toipa(AllStep21 allStep21)
+	{
+	}
+
+In my model:
+
+	public class AllStep21
+    {
+        public String OtherData { get; set; }
+        public String Comment { get; set; }
+        public List<allPly> allPly { get; set; }
+    }
+	public class allPly
+    {
+        public int[] Gramme { get; set; }
+        public String Toto { get; set; }
+        public String Test { get; set; }
+        public int Lotion { get; set; }
+    }",ajax,asp.net-mvc,asp.net-mvc-3,asp.net-mvc-2,asp.net-ajax,,open,0,189,9,"Get data since a request ajax with asp.net mvc I would like get all data into an object with request ajax.
+
+This data are get into my controller with a function.
+In the headers of my data I have this information:
+
+I have 4 objects allPly create but all data(gramme,lotion and others) equals null or zero.
+But the data comment and OtherData it's ok, this works.
+
+Thanks for your help
+In the headers html:
+
+	allPly[0][Gramme]:10
+	allPly[0][Toto]:White
+	allPly[0][Test]:None
+	allPly[0][Lotion]:1
+	allPly[1][Grammage]:11
+	allPly[1][Toto]:White
+	allPly[1][Test]:Fine
+	allPly[1][Lotion]:0
+	OtherData : 585
+	Comment: all it's ok
+
+In my controller:
+
+	[HttpPost]
+	public ActionResult Toipa(AllStep21 allStep21)
+	{
+	}
+
+In my model:
+
+	public class AllStep21
+    {
+        public String OtherData { get; set; }
+        public String Comment { get; set; }
+        public List<allPly> allPly { get; set; }
+    }
+	public class allPly
+    {
+        public int[] Gramme { get; set; }
+        public String Toto { get; set; }
+        public String Test { get; set; }
+        public int Lotion { get; set; }
+    }",5
+4653415,01/11/2011 01:44:24,371178,06/19/2010 18:46:01,38,1,Elegant solution for multiple forms on single page,"I'm building a web application (in Django) that will accept a search criteria and display a report - once the user is satisfied with the results, save both the criteria and a reference to these objects back to the database.
+
+The problem I'm having is finding an elegant solution for having 2 forms: 
+
+
+ 1. Display (GET) the results of their criteria.
+ 2. Enter in some descriptions, and save (POST) everything back to the database.
+
+I'm leaning towards AJAX for the GET stuff and a POST for the save, but I wanted to make sure there wasn't a more elegant solution first. ",ajax,django,django-forms,get,postback,,open,0,101,8,"Elegant solution for multiple forms on single page I'm building a web application (in Django) that will accept a search criteria and display a report - once the user is satisfied with the results, save both the criteria and a reference to these objects back to the database.
+
+The problem I'm having is finding an elegant solution for having 2 forms: 
+
+
+ 1. Display (GET) the results of their criteria.
+ 2. Enter in some descriptions, and save (POST) everything back to the database.
+
+I'm leaning towards AJAX for the GET stuff and a POST for the save, but I wanted to make sure there wasn't a more elegant solution first. ",5
+10539667,05/10/2012 17:58:20,1368228,05/01/2012 17:17:12,18,2,django save(commit = False) vs settin initial value,"I have a django project and in one of the pages i have a form where i set commit=False on the form.save so i can add a value for a foreign key. 
+
+When i do so, the rest of the values in the form don't save
+
+basically I am getting two errors depending on how I save the form
+
+the first is when i use save.(commit=False)
+
+code:
+
+    form = RecipeForm()
+    form = form.save(commit=False)
+    form.original_cookbook = request.user.cookbooks.all()[0]
+    form.save()
+
+error:
+
+    IntegrityError at /cookbook/createrecipe/
+    
+    (1048, ""Column 'ingredients' cannot be null"")
+    
+    Request Method: 	POST
+
+but i know that my ingredients field is not null
+
+
+the second error is when i don't use commit and instead set an initial value
+
+code:
+
+    form = RecipeForm(initial = {'original_cookbook' : request.user.cookbooks.all()[0]})
+    form.save()
+error:
+
+    IntegrityError at /cookbook/createrecipe/
+    
+    (1048, ""Column 'original_cookbook_id' cannot be null"")
+    
+    Request Method: 	POST
+
+
+any idea why neither of these methods seem to work? Just so you know I am trying to submit a form via ajax...
+
+thanks a lot
+
+katie
+",ajax,django,commit,form-submit,initial,,open,0,205,8,"django save(commit = False) vs settin initial value I have a django project and in one of the pages i have a form where i set commit=False on the form.save so i can add a value for a foreign key. 
+
+When i do so, the rest of the values in the form don't save
+
+basically I am getting two errors depending on how I save the form
+
+the first is when i use save.(commit=False)
+
+code:
+
+    form = RecipeForm()
+    form = form.save(commit=False)
+    form.original_cookbook = request.user.cookbooks.all()[0]
+    form.save()
+
+error:
+
+    IntegrityError at /cookbook/createrecipe/
+    
+    (1048, ""Column 'ingredients' cannot be null"")
+    
+    Request Method: 	POST
+
+but i know that my ingredients field is not null
+
+
+the second error is when i don't use commit and instead set an initial value
+
+code:
+
+    form = RecipeForm(initial = {'original_cookbook' : request.user.cookbooks.all()[0]})
+    form.save()
+error:
+
+    IntegrityError at /cookbook/createrecipe/
+    
+    (1048, ""Column 'original_cookbook_id' cannot be null"")
+    
+    Request Method: 	POST
+
+
+any idea why neither of these methods seem to work? Just so you know I am trying to submit a form via ajax...
+
+thanks a lot
+
+katie
+",5
+1059923,06/29/2009 19:05:28,53740,01/10/2009 18:52:56,405,5,Best tools for AJAX,"What are the best tools for AJAX development? I know of firebug for firefox, what other great tools are there for AJAX development?",ajax,,,,,09/12/2011 11:51:11,not constructive,1,23,4,"Best tools for AJAX What are the best tools for AJAX development? I know of firebug for firefox, what other great tools are there for AJAX development?",1
+8653183,12/28/2011 07:40:25,438581,09/03/2010 03:19:35,11,2,Facebook Share showing _escaped_fragment_ URL instead of hash version,"I've created a single-page app. All deep links are in the form of mysite.com/#!/entry_title. This allows Google (and Facebook) to check an alternate URL for the content of that page. 
+
+I've setup a server-side check to determine if Google or Facebook is looking for the HTML snapshot of this page. If so, it sends a different header containing the necessary Facebook og meta tags. 
+
+Here's the problem. If I paste one of my URLs (mysite.com/#!/entry_title) into my status box the URL that gets displayed is the HTML snapshot URL (mysite.com/?_escaped_fragment_/entry_title).
+
+The og:url meta tag on the HTML snapshot page is set to mysite.com/#!/entry_title.
+
+How can I make the Sharer display the mysite.com/#!/entry_title version of the URL instead of the HTML snapshot version?
+
+Thanks in advance!
+
+- Brett",ajax,facebook,facebook-graph-api,facebook-sharer,,,open,0,123,9,"Facebook Share showing _escaped_fragment_ URL instead of hash version I've created a single-page app. All deep links are in the form of mysite.com/#!/entry_title. This allows Google (and Facebook) to check an alternate URL for the content of that page. 
+
+I've setup a server-side check to determine if Google or Facebook is looking for the HTML snapshot of this page. If so, it sends a different header containing the necessary Facebook og meta tags. 
+
+Here's the problem. If I paste one of my URLs (mysite.com/#!/entry_title) into my status box the URL that gets displayed is the HTML snapshot URL (mysite.com/?_escaped_fragment_/entry_title).
+
+The og:url meta tag on the HTML snapshot page is set to mysite.com/#!/entry_title.
+
+How can I make the Sharer display the mysite.com/#!/entry_title version of the URL instead of the HTML snapshot version?
+
+Thanks in advance!
+
+- Brett",4
+7404890,09/13/2011 16:00:05,634256,02/25/2011 14:06:55,25,2,<f:validator disabled flag not working,"I've created a custom validator for my project, it simply checks the select ones value and 'validates' the value is not '0'.  We have a standard (I'm sure not uncommon) of manually setting the first value of our selectOneMenu compents to:
+
+    <f:selectItem itemValue=""0""
+				  itemLabel=""-- Select One --""/>
+
+Which works fine, but then makes the component always pass the required check.  So this validator simply treats this value as if there was no selection made.  
+
+ 
+
+
+SelectOneMenu example:
+
+    <h:selectOneMenu id=""eligibility""
+				 value=""#{reg.eligibility}""
+				 required=""#{reg.fieldsRequired}"">
+	<f:selectItem itemValue=""0""
+				  itemLabel=""-- Select One --""/>
+	<f:selectItems value=""#{reg.eligibilityList}"" />
+	<f:validator validatorId=""selectOneValidator""
+				 disabled=""#{!reg.fieldsRequired}""/>
+
+Custom Validator:
+
+    @FacesValidator(""selectOneValidator"")
+public class SelectOneValidator implements Validator {
+
+
+    @Override
+    public void validate(FacesContext context, UIComponent uiComponent, Object o) throws ValidatorException {
+        String val = null;
+        if (uiComponent instanceof HtmlSelectOneMenu) {
+            HtmlSelectOneMenu oneMenu = (HtmlSelectOneMenu) uiComponent;
+
+
+            if (oneMenu.isRequired() && !oneMenu.isDisabled()) {
+                if (o instanceof String) {
+                    val = (String) o;
+                } else if (o instanceof Number) {
+                    val = String.valueOf(o);
+                }
+
+                if (""0"".equals(val)) {
+                    FacesMessage msg = new FacesMessage();
+                    msg.setSummary(""Please select a value from the list."");
+                    msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+                    throw new ValidatorException(msg);
+                }
+            }
+        }
+    }
+}
+
+This has worked just fine thus far, however, the current use-case I'm running into trouble.
+My page has multiple SelectOneMenus one of which toggles the required and disabled attributes via an ajax call for the page.  I'm not having any issues with the `required=""#{reg.fieldsRequired}""`, however; the `disabled=""#{!reg.fieldsRequired}""` attribute on my custom validator does not seem to make a difference.  I'm just thinking out loud, but when the page first loads the `#{reg.fieldsRequired}` expression is false.  If I then change the SelectOneMenu to set this boolean value to true, then press the submit button, the disabled attribute doesn't seem to have been set.  I wondered if this is simply a ajax issue and that all of components simply needed to be re-renderd so I added the @form in my ajax call: `<a4j:ajax render=""@form"" listener=""#{reg.saveActionChanged}""/>` in hopes that would fix the problem, but no difference in the behavior. 
+
+Environment:  
+JSF 2.0.3  
+Tomcat 6.0.14  
+ajax call being made with RichFaces 4.0 <a4j:ajax/>
+
+Any help is most appreciated! 
+",ajax,jsf,form-validation,disable,,,open,0,605,5,"<f:validator disabled flag not working I've created a custom validator for my project, it simply checks the select ones value and 'validates' the value is not '0'.  We have a standard (I'm sure not uncommon) of manually setting the first value of our selectOneMenu compents to:
+
+    <f:selectItem itemValue=""0""
+				  itemLabel=""-- Select One --""/>
+
+Which works fine, but then makes the component always pass the required check.  So this validator simply treats this value as if there was no selection made.  
+
+ 
+
+
+SelectOneMenu example:
+
+    <h:selectOneMenu id=""eligibility""
+				 value=""#{reg.eligibility}""
+				 required=""#{reg.fieldsRequired}"">
+	<f:selectItem itemValue=""0""
+				  itemLabel=""-- Select One --""/>
+	<f:selectItems value=""#{reg.eligibilityList}"" />
+	<f:validator validatorId=""selectOneValidator""
+				 disabled=""#{!reg.fieldsRequired}""/>
+
+Custom Validator:
+
+    @FacesValidator(""selectOneValidator"")
+public class SelectOneValidator implements Validator {
+
+
+    @Override
+    public void validate(FacesContext context, UIComponent uiComponent, Object o) throws ValidatorException {
+        String val = null;
+        if (uiComponent instanceof HtmlSelectOneMenu) {
+            HtmlSelectOneMenu oneMenu = (HtmlSelectOneMenu) uiComponent;
+
+
+            if (oneMenu.isRequired() && !oneMenu.isDisabled()) {
+                if (o instanceof String) {
+                    val = (String) o;
+                } else if (o instanceof Number) {
+                    val = String.valueOf(o);
+                }
+
+                if (""0"".equals(val)) {
+                    FacesMessage msg = new FacesMessage();
+                    msg.setSummary(""Please select a value from the list."");
+                    msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+                    throw new ValidatorException(msg);
+                }
+            }
+        }
+    }
+}
+
+This has worked just fine thus far, however, the current use-case I'm running into trouble.
+My page has multiple SelectOneMenus one of which toggles the required and disabled attributes via an ajax call for the page.  I'm not having any issues with the `required=""#{reg.fieldsRequired}""`, however; the `disabled=""#{!reg.fieldsRequired}""` attribute on my custom validator does not seem to make a difference.  I'm just thinking out loud, but when the page first loads the `#{reg.fieldsRequired}` expression is false.  If I then change the SelectOneMenu to set this boolean value to true, then press the submit button, the disabled attribute doesn't seem to have been set.  I wondered if this is simply a ajax issue and that all of components simply needed to be re-renderd so I added the @form in my ajax call: `<a4j:ajax render=""@form"" listener=""#{reg.saveActionChanged}""/>` in hopes that would fix the problem, but no difference in the behavior. 
+
+Environment:  
+JSF 2.0.3  
+Tomcat 6.0.14  
+ajax call being made with RichFaces 4.0 <a4j:ajax/>
+
+Any help is most appreciated! 
+",4
+1061731,06/30/2009 04:29:58,71524,02/26/2009 18:37:39,21,7,How do I temporarily convert an ASP.NET Ajax form to not use partial page updates?,"I need the ability to temporarily turn an ASP.NET Ajax / UpdatePanel based page back into it's classic full page POST counterpart. In other words, I want the partial page update ability to be simply turned off for a certain page. (The reason is to circumvent the issue where IE blocks ""automatic file downloads"" for downloads generated as a result of this postback, but I don't want to distract from my original question) 
+
+I looked at the client side javascript libraries hoping to find a switch somewhere. I think a solution might involve using javascript to override the 'onclick' event handler for the control that acts as the trigger, and then calling ""submit"" on the form itself..
+
+Any ideas? And yes, I have to be a bit vague. :)
+
+Cheers!
+- Sean",ajax,asp.net-ajax,asp.net,,,,open,0,129,15,"How do I temporarily convert an ASP.NET Ajax form to not use partial page updates? I need the ability to temporarily turn an ASP.NET Ajax / UpdatePanel based page back into it's classic full page POST counterpart. In other words, I want the partial page update ability to be simply turned off for a certain page. (The reason is to circumvent the issue where IE blocks ""automatic file downloads"" for downloads generated as a result of this postback, but I don't want to distract from my original question) 
+
+I looked at the client side javascript libraries hoping to find a switch somewhere. I think a solution might involve using javascript to override the 'onclick' event handler for the control that acts as the trigger, and then calling ""submit"" on the form itself..
+
+Any ideas? And yes, I have to be a bit vague. :)
+
+Cheers!
+- Sean",3
+10963138,06/09/2012 17:38:13,546427,06/10/2010 18:25:18,821,18,"creating a global urls object in javascript, for easy reverse routing in templates","I am working on a web project that uses lots of ajax. I am using playframework, and in my html templates, I have access to the playframework reverse router, so I can get urls from the router and not have to worry about what happens if I later decide to change the url structure of the site. However I don't have access tho the reverse router in the external js files, but would often like to leverage the indirection of the reverse router for requests in these files.
+
+I came up with a solution that doesn't force every external ajax function to accept a url parameter, and that was to create a global url object like this:
+
+    var globalUrls = {
+        confirmImageUpload : ""@routes.UploadController.confirmResourceUpload()"",
+        anotherUrl : ""@routes.AnotherController.anotherControllerMethod()""
+	}
+
+I then use this object in the external js files to know where to send ajax requests.
+
+Is this ok to do? I don't know if this is bad practice, or if exposing all the urls like that is wise... 
+
+I am hoping some experienced individual will interject if this is for some reason dumb...",ajax,templates,playframework,global-variables,,,open,0,196,13,"creating a global urls object in javascript, for easy reverse routing in templates I am working on a web project that uses lots of ajax. I am using playframework, and in my html templates, I have access to the playframework reverse router, so I can get urls from the router and not have to worry about what happens if I later decide to change the url structure of the site. However I don't have access tho the reverse router in the external js files, but would often like to leverage the indirection of the reverse router for requests in these files.
+
+I came up with a solution that doesn't force every external ajax function to accept a url parameter, and that was to create a global url object like this:
+
+    var globalUrls = {
+        confirmImageUpload : ""@routes.UploadController.confirmResourceUpload()"",
+        anotherUrl : ""@routes.AnotherController.anotherControllerMethod()""
+	}
+
+I then use this object in the external js files to know where to send ajax requests.
+
+Is this ok to do? I don't know if this is bad practice, or if exposing all the urls like that is wise... 
+
+I am hoping some experienced individual will interject if this is for some reason dumb...",4
+1999688,01/04/2010 13:59:06,243212,01/04/2010 13:52:23,1,0,Ajax.BeginForm show loadingElementId when OnBegin return false,"Hello im having the same problem that this post 
+
+http://stackoverflow.com/questions/1164251/ajax-beginform-not-hiding-loading-element-when-onbegin-fails but i have not found how to solve it yet.
+
+Basically when i use Ajax.BeginForm with a OnBegin function and this function return false, the loading elementID is still show and it never hides againg.
+
+This is the code im testing it with:
+
+    function isValid() {
+
+                return false
+            } 
+
+
+    <% using (Ajax.BeginForm(""LogIn"", ""Security"", new { ReturnUrl = Request[""ReturnUrl""] }
+           , new AjaxOptions { UpdateTargetId = ""resultErrors"", OnBegin = ""isValid"", LoadingElementId = ""updatePanel"" }))
+       { %>
+
+
+
+",ajax,mvc,asp,ajax.beginform,,,open,0,132,7,"Ajax.BeginForm show loadingElementId when OnBegin return false Hello im having the same problem that this post 
+
+http://stackoverflow.com/questions/1164251/ajax-beginform-not-hiding-loading-element-when-onbegin-fails but i have not found how to solve it yet.
+
+Basically when i use Ajax.BeginForm with a OnBegin function and this function return false, the loading elementID is still show and it never hides againg.
+
+This is the code im testing it with:
+
+    function isValid() {
+
+                return false
+            } 
+
+
+    <% using (Ajax.BeginForm(""LogIn"", ""Security"", new { ReturnUrl = Request[""ReturnUrl""] }
+           , new AjaxOptions { UpdateTargetId = ""resultErrors"", OnBegin = ""isValid"", LoadingElementId = ""updatePanel"" }))
+       { %>
+
+
+
+",4
+1829257,12/01/2009 22:03:00,49153,12/26/2008 04:39:37,5150,168,How to display an AJAX progress bar / message,"I don't necessarily need a progress bar, what I need is a way to update the progress message being shown to the user from the server.. without the javascript repeatedly requesting an update from the server.
+
+For example:
+
+- User clicks a 'Submit' button
+- A message shows up 'Processing X/100'
+- Then the message automatically updates itself with 'Processing 2/100, 3/100, etc' automatically.
+
+What I would like, is that a connection to the server is maintained throughout the request, and whenever the server pushes out a new status message, the javascript receives it and updates the progress message, until the server gives the message that 100/100 processed, and then the javascript terminates the connection.
+
+Essentially I'm looking for the technique Gmail, Facebook etc use to 'push' data from the server and having the client get updated, without the client requesting an update from the server like its normally done.
+
+Any thoughts?",ajax,javascript,jquery,server-push,,,open,0,145,9,"How to display an AJAX progress bar / message I don't necessarily need a progress bar, what I need is a way to update the progress message being shown to the user from the server.. without the javascript repeatedly requesting an update from the server.
+
+For example:
+
+- User clicks a 'Submit' button
+- A message shows up 'Processing X/100'
+- Then the message automatically updates itself with 'Processing 2/100, 3/100, etc' automatically.
+
+What I would like, is that a connection to the server is maintained throughout the request, and whenever the server pushes out a new status message, the javascript receives it and updates the progress message, until the server gives the message that 100/100 processed, and then the javascript terminates the connection.
+
+Essentially I'm looking for the technique Gmail, Facebook etc use to 'push' data from the server and having the client get updated, without the client requesting an update from the server like its normally done.
+
+Any thoughts?",4
+7359704,09/09/2011 09:37:27,936500,09/09/2011 09:37:27,1,0,Ajax content still not crawable // although hashtag included,"first of all - yes, I have tried to find a solution in the web.<br><br>
+I have made everything as far as I can see which is proposed here at google : 
+http://code.google.com/intl/de-DE/web/ajaxcrawling/docs/getting-started.html - in order to make my ajax-content crawable **(ht/tp=http)**:
+
+The url: ht/tp://www.abc.com<br>
+The ajax-request: ht/tp://www.abc.com/#!ajaxcontent.html<br>
+The googlebot-request: ht/tp://www.abc.com/?_escaped_fragment_=ajaxcontent.html<br>
+The 301-redirect on gb-request:  ht/tp://www.abc.com/ajaxcontent.html<br>
+
+If you try to access the url of the redirect directly you can see all the html-content without problems (pages are valid too). The 301-redirect is working just fine.
+
+I am not really an expert in this area and thats my first time trying to make my ajax-content crawable. But if I ""fetch page as googlebot"", I get this:
+
+----
+
+URL: ht/tp://www.abc.com/#!ajaxcontent.html<br>
+
+HTTP/1.1 301 Moved Permanently<br>
+Date: Thu, 08 Sep 2011 12:28:10 GMT<br>
+Server: Apache/2.2.19 (Unix) mod_ssl/2.2.19 OpenSSL/0.9.8r<br>
+X-Powered-By: PHP/5.2.17<br>
+Location: ht/tp://www.abc.com/ajaxcontent.html<br>
+Content-Length: 0<br>
+Keep-Alive: timeout=3, max=100<br>
+Connection: Keep-Alive<br>
+Content-Type: text/html<br>
+
+-----
+
+Sitemap and robots.txt are included as recommended.
+
+To me it seems like everything is working as it should - but googlebot is not able to see any content?<br>Pages aren´t indexed either yet - but as I read it could take a while.
+I have updated the page 2 days ago.
+
+What am I doing wrong?",ajax,,,,,,open,0,181,9,"Ajax content still not crawable // although hashtag included first of all - yes, I have tried to find a solution in the web.<br><br>
+I have made everything as far as I can see which is proposed here at google : 
+http://code.google.com/intl/de-DE/web/ajaxcrawling/docs/getting-started.html - in order to make my ajax-content crawable **(ht/tp=http)**:
+
+The url: ht/tp://www.abc.com<br>
+The ajax-request: ht/tp://www.abc.com/#!ajaxcontent.html<br>
+The googlebot-request: ht/tp://www.abc.com/?_escaped_fragment_=ajaxcontent.html<br>
+The 301-redirect on gb-request:  ht/tp://www.abc.com/ajaxcontent.html<br>
+
+If you try to access the url of the redirect directly you can see all the html-content without problems (pages are valid too). The 301-redirect is working just fine.
+
+I am not really an expert in this area and thats my first time trying to make my ajax-content crawable. But if I ""fetch page as googlebot"", I get this:
+
+----
+
+URL: ht/tp://www.abc.com/#!ajaxcontent.html<br>
+
+HTTP/1.1 301 Moved Permanently<br>
+Date: Thu, 08 Sep 2011 12:28:10 GMT<br>
+Server: Apache/2.2.19 (Unix) mod_ssl/2.2.19 OpenSSL/0.9.8r<br>
+X-Powered-By: PHP/5.2.17<br>
+Location: ht/tp://www.abc.com/ajaxcontent.html<br>
+Content-Length: 0<br>
+Keep-Alive: timeout=3, max=100<br>
+Connection: Keep-Alive<br>
+Content-Type: text/html<br>
+
+-----
+
+Sitemap and robots.txt are included as recommended.
+
+To me it seems like everything is working as it should - but googlebot is not able to see any content?<br>Pages aren´t indexed either yet - but as I read it could take a while.
+I have updated the page 2 days ago.
+
+What am I doing wrong?",1
+4660130,01/11/2011 16:46:20,554355,12/26/2010 15:30:11,15,0,JSF 2.0: Re-rendering/updating a single item in ui:repeat using AJAX,"My page consists of several areas which are created by iterating over a list of items using `<ui:repeat>`. Imagine this simplified example:
+
+    <h:form id=""form"">    
+        <ui:repeat id=""repeatContainer"" var=""item"" value=""#{testBean.items}"" varStatus=""status"">
+	    	<h:outputText value=""#{item.title}: ""/>
+
+            <!-- I want to re-render only a single one of these fields -->
+	    	<h:outputText id=""valueContainer"" value=""#{item.value}""/><br/>	    	
+	    </ui:repeat>
+    </h:form>
+
+Now, I want to re-render (only) the `valueContainer` of a **specific element** within this list **using AJAX** (say, the element with index 1). I have already tried all of these combinations without any luck:
+
+    <!-- Works, but renders all items: -->
+    <f:ajax render="":form""/>
+	    	
+    <!-- Does not work (component not found): -->
+    <f:ajax render="":form:repeatContainer""/>
+	    	     
+    <!-- Does not work (component not found): -->
+    <f:ajax render="":form:repeatContainer:1""/>
+	    	     
+    <!-- Does not work (component not found): -->
+    <f:ajax render="":form:1""/>
+	    	     
+    <!-- Does not work (component not found): -->
+    <f:ajax render="":form:1:valueContainer""/>
+
+    <!-- Does not work (no error message, but does nothing): -->
+    <f:ajax render="":form:repeatContainer:valueContainer""/>
+
+My requirements include:
+
+ - I need to identify the component to
+   re-render with an **absolute identifier
+   path**, because the button that
+   triggers the update is somewhere
+   completely different in the component
+   tree.
+ - Re-rendering the entire page or
+   form (using `@all`/`@form`) is
+   useless to me, because that kind of
+   puts into question why I am using JSF/AJAX
+   at all...
+ - I need to achieve the same thing with PrimeFaces `<p:dataGrid>` cells (i.e. update only a specific sub-component of a specific cell), but I assume that this reduces to the same problem.
+
+I guess there must be an easy solution to this that I am currently overlooking?!
+",ajax,jsf,jsf-2.0,repeat,,,open,0,375,10,"JSF 2.0: Re-rendering/updating a single item in ui:repeat using AJAX My page consists of several areas which are created by iterating over a list of items using `<ui:repeat>`. Imagine this simplified example:
+
+    <h:form id=""form"">    
+        <ui:repeat id=""repeatContainer"" var=""item"" value=""#{testBean.items}"" varStatus=""status"">
+	    	<h:outputText value=""#{item.title}: ""/>
+
+            <!-- I want to re-render only a single one of these fields -->
+	    	<h:outputText id=""valueContainer"" value=""#{item.value}""/><br/>	    	
+	    </ui:repeat>
+    </h:form>
+
+Now, I want to re-render (only) the `valueContainer` of a **specific element** within this list **using AJAX** (say, the element with index 1). I have already tried all of these combinations without any luck:
+
+    <!-- Works, but renders all items: -->
+    <f:ajax render="":form""/>
+	    	
+    <!-- Does not work (component not found): -->
+    <f:ajax render="":form:repeatContainer""/>
+	    	     
+    <!-- Does not work (component not found): -->
+    <f:ajax render="":form:repeatContainer:1""/>
+	    	     
+    <!-- Does not work (component not found): -->
+    <f:ajax render="":form:1""/>
+	    	     
+    <!-- Does not work (component not found): -->
+    <f:ajax render="":form:1:valueContainer""/>
+
+    <!-- Does not work (no error message, but does nothing): -->
+    <f:ajax render="":form:repeatContainer:valueContainer""/>
+
+My requirements include:
+
+ - I need to identify the component to
+   re-render with an **absolute identifier
+   path**, because the button that
+   triggers the update is somewhere
+   completely different in the component
+   tree.
+ - Re-rendering the entire page or
+   form (using `@all`/`@form`) is
+   useless to me, because that kind of
+   puts into question why I am using JSF/AJAX
+   at all...
+ - I need to achieve the same thing with PrimeFaces `<p:dataGrid>` cells (i.e. update only a specific sub-component of a specific cell), but I assume that this reduces to the same problem.
+
+I guess there must be an easy solution to this that I am currently overlooking?!
+",4
+10220443,04/19/2012 01:29:28,1285270,03/22/2012 07:28:31,1,0,Exception filling buffer with data from underlying input stream,"when I load a file use apache.commons.fileupload,it throw an exception:
+
+ org.apache.commons.fileupload.FileUploadException: Exception filling buffer with data from       underlying input stream: not an EAGAIN status, so perhaps disconnected client?
+	Please,help!
+        Thanks! ",ajax,jsp,tomcat,,,,open,0,43,9,"Exception filling buffer with data from underlying input stream when I load a file use apache.commons.fileupload,it throw an exception:
+
+ org.apache.commons.fileupload.FileUploadException: Exception filling buffer with data from       underlying input stream: not an EAGAIN status, so perhaps disconnected client?
+	Please,help!
+        Thanks! ",3
+9389768,02/22/2012 05:54:29,425720,08/19/2010 20:27:55,969,48,how to read (download) ajax feed having just URL of whole page,"I would like to download and save information from web page, which updates
+part of html, probably, with ajax.
+
+How to do it? Basically, how to act like web browser, but on server side application?
+
+Obviously, I know the div location and can parse it, but I do not want to execute http request
+each time I would like to obtain the data. I would like to, somehow, hook up a socket to it and just read data.. 
+",ajax,browser,web-crawler,comet,crawler,,open,0,75,12,"how to read (download) ajax feed having just URL of whole page I would like to download and save information from web page, which updates
+part of html, probably, with ajax.
+
+How to do it? Basically, how to act like web browser, but on server side application?
+
+Obviously, I know the div location and can parse it, but I do not want to execute http request
+each time I would like to obtain the data. I would like to, somehow, hook up a socket to it and just read data.. 
+",5
+9703625,03/14/2012 14:12:02,1269205,03/14/2012 14:07:49,1,0,update panel not rased event in Mozial firefox,"Timestamp: 3/14/2012 7:11:00 PM
+Error: uncaught exception: [Exception... ""Index or size is negative or greater than the allowed amount""  code: ""1"" nsresult: ""0x80530001 (NS_ERROR_DOM_INDEX_SIZE_ERR)""  location: ""http://localhost:49327/UI/pgCandidateRegistration.aspx?_TSM_HiddenField_=ctl00_ToolkitScriptManager1_HiddenField&_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.40412.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a1547e793-5b7e-48fe-8490-03a375b13a33%3ade1feab2%3af9cec9bc%3ae4bd8421%3a8ad18101%3afcf0e993%3af2c8e708%3a720a52bf%3a589eaa30%3a698129cf%3afb9b4c57%3accb96cf9%3ae148b24b%3aa67c2700%3a8613aea7%3a3202a5a2%3aab09e3fe%3a87104b7c%3abe6fb298 Line: 12""]",ajax,,,,,03/15/2012 12:37:31,not a real question,1,29,8,"update panel not rased event in Mozial firefox Timestamp: 3/14/2012 7:11:00 PM
+Error: uncaught exception: [Exception... ""Index or size is negative or greater than the allowed amount""  code: ""1"" nsresult: ""0x80530001 (NS_ERROR_DOM_INDEX_SIZE_ERR)""  location: ""http://localhost:49327/UI/pgCandidateRegistration.aspx?_TSM_HiddenField_=ctl00_ToolkitScriptManager1_HiddenField&_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.40412.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a1547e793-5b7e-48fe-8490-03a375b13a33%3ade1feab2%3af9cec9bc%3ae4bd8421%3a8ad18101%3afcf0e993%3af2c8e708%3a720a52bf%3a589eaa30%3a698129cf%3afb9b4c57%3accb96cf9%3ae148b24b%3aa67c2700%3a8613aea7%3a3202a5a2%3aab09e3fe%3a87104b7c%3abe6fb298 Line: 12""]",1
+11112759,06/20/2012 04:22:25,1436641,06/05/2012 06:13:51,1,0,How to retrieve data from database using AJAX?,"I am very new to web programming. I am developing a website where user need to communicate with the oracle database without any page refresh. I decided to use AJAX for that.But I don't know how to do this using AJAX. 
+
+Please help me.
+
+Thanks,
+Minhaz",ajax,oracle,,,,06/20/2012 22:12:07,not a real question,1,44,8,"How to retrieve data from database using AJAX? I am very new to web programming. I am developing a website where user need to communicate with the oracle database without any page refresh. I decided to use AJAX for that.But I don't know how to do this using AJAX. 
+
+Please help me.
+
+Thanks,
+Minhaz",2
+5599967,04/08/2011 19:35:10,451623,12/15/2008 05:25:30,116,6,How could configure or modify SWFAddress to make it use #! instead of #,"SWFAddress it's very cool way of providing deep linking in flash. But unless you use #! in urls (and a other things too), google wont index your internal pages. 
+
+How would be the best way to configure (or modify) SWFAddress to use #!? ",ajax,flash,seo,indexing,swfaddress,,open,0,44,14,"How could configure or modify SWFAddress to make it use #! instead of # SWFAddress it's very cool way of providing deep linking in flash. But unless you use #! in urls (and a other things too), google wont index your internal pages. 
+
+How would be the best way to configure (or modify) SWFAddress to use #!? ",5

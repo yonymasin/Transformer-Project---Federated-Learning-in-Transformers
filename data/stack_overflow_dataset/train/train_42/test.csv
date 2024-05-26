@@ -1,0 +1,1995 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+5467007,03/29/2011 01:41:45,319473,04/18/2010 00:36:13,38,3,"Inverting rotation in 3D, to make an object always face the camera?","i have lots of sprites arranged in 3D space, and their parent container has rotations applied.
+How do i reverse the sprites 3D rotation, that they always face the camera (Actionscript 3)?
+
+heres a code to test it:
+
+    package{
+    import flash.display.Sprite;
+    import flash.events.Event;
+    public class test extends Sprite{
+	
+	var canvas:Sprite = new Sprite();
+	var sprites:Array = []
+		
+	public function test(){
+		addChild(canvas)
+		for (var i:int=0;i<20;i++){
+			var sp:Sprite = new Sprite();
+			canvas.addChild(sp);
+			sp.graphics.beginFill(0xFF0000);
+			sp.graphics.drawCircle(0,0,4);
+			sp.x = Math.random()*400-200;
+			sp.y = Math.random()*400-200;
+			sp.z = Math.random()*400-200;
+			sprites.push(sp);
+		}
+		addEventListener(Event.ENTER_FRAME,function():void{
+			canvas.rotationX++;
+			canvas.rotationY = canvas.rotationY+Math.random()*2;
+			canvas.rotationZ++;
+			for (var i:int=0;i<20;i++){
+				//this is not working...
+				sprites[i].rotationX = -canvas.rotationX
+				sprites[i].rotationY = -canvas.rotationY
+				sprites[i].rotationZ = -canvas.rotationZ
+			}
+		})
+	}
+    }
+    }
+
+I am guessing i have to do some magic with the rotation3D matrices of the sprites...
+I've tried to implement this script: http://ughzoid.wordpress.com/2011/02/03/papervision3d-sprite3d/ , but had so success  
+Thanks for help.",flash,actionscript-3,3d,,,,open,0,130,12,"Inverting rotation in 3D, to make an object always face the camera? i have lots of sprites arranged in 3D space, and their parent container has rotations applied.
+How do i reverse the sprites 3D rotation, that they always face the camera (Actionscript 3)?
+
+heres a code to test it:
+
+    package{
+    import flash.display.Sprite;
+    import flash.events.Event;
+    public class test extends Sprite{
+	
+	var canvas:Sprite = new Sprite();
+	var sprites:Array = []
+		
+	public function test(){
+		addChild(canvas)
+		for (var i:int=0;i<20;i++){
+			var sp:Sprite = new Sprite();
+			canvas.addChild(sp);
+			sp.graphics.beginFill(0xFF0000);
+			sp.graphics.drawCircle(0,0,4);
+			sp.x = Math.random()*400-200;
+			sp.y = Math.random()*400-200;
+			sp.z = Math.random()*400-200;
+			sprites.push(sp);
+		}
+		addEventListener(Event.ENTER_FRAME,function():void{
+			canvas.rotationX++;
+			canvas.rotationY = canvas.rotationY+Math.random()*2;
+			canvas.rotationZ++;
+			for (var i:int=0;i<20;i++){
+				//this is not working...
+				sprites[i].rotationX = -canvas.rotationX
+				sprites[i].rotationY = -canvas.rotationY
+				sprites[i].rotationZ = -canvas.rotationZ
+			}
+		})
+	}
+    }
+    }
+
+I am guessing i have to do some magic with the rotation3D matrices of the sprites...
+I've tried to implement this script: http://ughzoid.wordpress.com/2011/02/03/papervision3d-sprite3d/ , but had so success  
+Thanks for help.",3
+7198329,08/25/2011 23:19:51,368254,06/16/2010 13:06:41,6,0,Offer free apps in App Store as replacement for Flash websites,"I would like to offer free apps in the Apple App Store, with the apps being ported versions of already existing, Flash-based websites I have created for clients. The website and the app would offer the same experience and mostly the same functionality, for example the portfolio of a company or artist.
+
+iPhone and iPad Visitors of the Flash-based website would be informed that there is no Flash available and they would instead be offered a link to the free app in the App Store.
+
+Since the clients obviously do make whatever kind of buisness and profit in the physical world, I am afraid that such an app might be considered free advertisement and be rejected from the store.
+So, is the approach violating Apple's terms and conditions?
+Is it realistic to offer free apps of that kind on a regular basis, for example as a Flash-focussed agency with many existing clients and projects?
+",flash,website,apple,publishing,,08/26/2011 03:38:30,off topic,1,150,11,"Offer free apps in App Store as replacement for Flash websites I would like to offer free apps in the Apple App Store, with the apps being ported versions of already existing, Flash-based websites I have created for clients. The website and the app would offer the same experience and mostly the same functionality, for example the portfolio of a company or artist.
+
+iPhone and iPad Visitors of the Flash-based website would be informed that there is no Flash available and they would instead be offered a link to the free app in the App Store.
+
+Since the clients obviously do make whatever kind of buisness and profit in the physical world, I am afraid that such an app might be considered free advertisement and be rejected from the store.
+So, is the approach violating Apple's terms and conditions?
+Is it realistic to offer free apps of that kind on a regular basis, for example as a Flash-focussed agency with many existing clients and projects?
+",4
+9102477,02/01/2012 20:05:58,121112,06/11/2009 06:46:51,3585,101,Actionscript / CS5 font embedding problems,"I'm working on a very large Flash game project, and we've run across a problem that is extremely annoying.
+
+Every third (or so) compilation, apparently randomly, CS5 doesn't embed a certain font into our application. We notice this when characters are missing in certain places of our game. I can reproduce this problem by recompiling several times; sometimes the font will be embedded, sometimes not.
+
+Has anyone run into a similar issue, and if so, how did you solve it? Any ideas on how to figure out the cause of this problem?",flash,actionscript-3,actionscript,fonts,flash-cs5,,open,0,90,6,"Actionscript / CS5 font embedding problems I'm working on a very large Flash game project, and we've run across a problem that is extremely annoying.
+
+Every third (or so) compilation, apparently randomly, CS5 doesn't embed a certain font into our application. We notice this when characters are missing in certain places of our game. I can reproduce this problem by recompiling several times; sometimes the font will be embedded, sometimes not.
+
+Has anyone run into a similar issue, and if so, how did you solve it? Any ideas on how to figure out the cause of this problem?",5
+8134577,11/15/2011 10:07:41,270311,02/10/2010 13:44:08,826,11,Flash P2P or FMS?,"I am trying to connect 2 flash clients to a flash game, each client will control a object in the flash game.
+
+I am unsure of how I can connect those two clients to the central flash game, or what the best way would be to achieve the desired result.
+
+So basically I am just trying to send commands from the flash clients to the flash game, but I am unsure of how to go about it.
+
+Would P2P or a FMS solution work best?",flash,actionscript-3,flash-media-server,,,,open,0,82,4,"Flash P2P or FMS? I am trying to connect 2 flash clients to a flash game, each client will control a object in the flash game.
+
+I am unsure of how I can connect those two clients to the central flash game, or what the best way would be to achieve the desired result.
+
+So basically I am just trying to send commands from the flash clients to the flash game, but I am unsure of how to go about it.
+
+Would P2P or a FMS solution work best?",3
+7557664,09/26/2011 15:43:37,901601,08/19/2011 00:32:18,1,0,TweenMax show the text please help me！,"Everybody is good, I want to do such an effect, have a bitmap, want to let it out from the left, the emergence of a faded out, then the effect of the display a row of characters, words to the background for boundaries from the left to the right, rolling, I want to use the TweenMax do, but tried for a long time, because the code in the company, I can't stick out, everyone please help me...
+",flash,actionscript,,,,09/27/2011 14:00:11,not a real question,1,77,7,"TweenMax show the text please help me！ Everybody is good, I want to do such an effect, have a bitmap, want to let it out from the left, the emergence of a faded out, then the effect of the display a row of characters, words to the background for boundaries from the left to the right, rolling, I want to use the TweenMax do, but tried for a long time, because the code in the company, I can't stick out, everyone please help me...
+",2
+8561399,12/19/2011 12:30:30,1105883,12/19/2011 12:27:42,1,0,Recording video using webcam in as3,"i am new to as3,
+i know how to use a webcam in as3,i want to record webcam video and save to my Local disk
+Help me 
+           Thanks in advance",flash,actionscript-3,,,,12/19/2011 18:47:39,not a real question,1,39,6,"Recording video using webcam in as3 i am new to as3,
+i know how to use a webcam in as3,i want to record webcam video and save to my Local disk
+Help me 
+           Thanks in advance",2
+11312768,07/03/2012 14:11:14,1499010,07/03/2012 13:59:39,1,0,How can I make a single movieclip that has many frames in it?,"Just like normal when I create an animation, for example, it has 5 frames, each frame has 1 simple graphics. I would like to convert all the graphics in those 5 frames (let just say all 5 frames) into one single movieclip, so that movieclip is like a gif image, it's playable. And when it is in the library, when you click on it, it has a triangle stands for the play button and a square stands for the stop button. It would be convenient to have 1 animated movieclip in the libraby to use anytime. Can you show me how?",flash,movieclip,,,,07/04/2012 14:35:52,off topic,1,101,13,"How can I make a single movieclip that has many frames in it? Just like normal when I create an animation, for example, it has 5 frames, each frame has 1 simple graphics. I would like to convert all the graphics in those 5 frames (let just say all 5 frames) into one single movieclip, so that movieclip is like a gif image, it's playable. And when it is in the library, when you click on it, it has a triangle stands for the play button and a square stands for the stop button. It would be convenient to have 1 animated movieclip in the libraby to use anytime. Can you show me how?",2
+4753796,01/20/2011 23:19:34,200567,11/01/2009 18:31:13,455,6,Stage resizing and getting the right variable,"In my Flash Application (AS3), I want to get the stage size and use that so my objects (which the user controls) can't go outside of the screen.  However, when I use:
+
+    stage.stageWidth;
+    stage.stageHeight;
+
+The values I get aren't actually what I want.  They give me the stage size, but if I resize the window, the numbers change as well.  Now, in a html page, I don't think that will matter, because the user can't resize it... however, I'd like for it to be more solid than relying on the window size.  I also tried to use:
+
+    stage.width;
+    stage.height;
+
+However, those gave me ""801"" and ""601"", one greater than my actual stage size.  Those values did not change when I resized the window, but they were one greater.
+
+So my question is, how can I get the stage size, regardless of resizing the window to always be 800 by 600?  (And perhaps hidden in that question is, ""Why do I get 801 and 601?"" and ""Can I stop people from resizing the window?"")  Phew! Thank you!",flash,actionscript-3,stage,,,,open,0,192,7,"Stage resizing and getting the right variable In my Flash Application (AS3), I want to get the stage size and use that so my objects (which the user controls) can't go outside of the screen.  However, when I use:
+
+    stage.stageWidth;
+    stage.stageHeight;
+
+The values I get aren't actually what I want.  They give me the stage size, but if I resize the window, the numbers change as well.  Now, in a html page, I don't think that will matter, because the user can't resize it... however, I'd like for it to be more solid than relying on the window size.  I also tried to use:
+
+    stage.width;
+    stage.height;
+
+However, those gave me ""801"" and ""601"", one greater than my actual stage size.  Those values did not change when I resized the window, but they were one greater.
+
+So my question is, how can I get the stage size, regardless of resizing the window to always be 800 by 600?  (And perhaps hidden in that question is, ""Why do I get 801 and 601?"" and ""Can I stop people from resizing the window?"")  Phew! Thank you!",3
+7824887,10/19/2011 16:43:50,645260,03/04/2011 18:39:22,17,0,Can't get tutorial to work: Build a Physics-Based Platformer in Under an Hour,"So I found this tutorial online and the idea of learning this in under an hour appealed to me:
+
+http://active.tutsplus.com/tutorials/games/build-a-physics-based-platformer-in-under-an-hour/
+
+Problem is I can't get it to work upon reaching Step 14 - when I test movie as the second paragraph says I get errors.
+
+
+----------
+
+
+I tried test movie after each step and it didn't have any errors until I applied the *view.characters.HeroCharacter* class to the my hero movie clip. So it seems the problem is in the HeroCharacter.as. So I went rogue from the instructions and fiddled with HeroCharacter.as. The FlashDevelop didn't autogenerate all the necessary imports when I copy pasted the code from the tutorial. I narrowed the problem down to finally getting this error in the output window in Flash:
+
+    TypeError: Error #1009: Cannot access a property or method of a null object reference.
+	at misc::Entity/listenWhileVisible()
+	at view.characters::HeroCharacter/create()
+	at misc::Entity/ensureCreated()
+	at Function/<anonymous>()
+
+Here is the Actionscript 
+
+    package view.characters 
+	{
+	import Box2DAS.Collision.b2WorldManifold;
+	import Box2DAS.Common.V2;
+	import Box2DAS.Dynamics.ContactEvent;
+	import Box2DAS.Dynamics.StepEvent;
+	import misc.Input;
+	import misc.Util;	
+	import shapes.Box;
+	import wck.BodyShape;
+	import wck.ContactList;
+	
+	/**
+	 * ...
+	 * @author Hexel Colorado
+	 */
+	public class HeroCharacter extends Box {
+	 
+		private var contacts:ContactList;
+	 
+		public override function create():void {
+			reportBeginContact = true;
+			reportEndContact = true;
+			contacts = new ContactList();
+			contacts.listenTo(this);
+	 
+			fixedRotation = true;
+	 
+			listenWhileVisible(world, StepEvent.STEP, world_stepEventHandler, false, 0, true);
+			listenWhileVisible(this, ContactEvent.BEGIN_CONTACT, this_beginContactHandler, false, 0, true);
+	 
+			super.create();
+		}
+		
+		private function world_stepEventHandler(e:StepEvent):void
+		{
+			var left:Boolean = Input.kd('LEFT', 'A');
+			var right:Boolean = Input.kd('RIGHT', 'D');
+			var jump:Boolean = Input.kp('UP', ' ', 'W');
+		 
+			if (jump) {
+				b2body.ApplyImpulse(new V2(0, -2), b2body.GetWorldCenter());
+			}
+			else if(left) {
+				b2body.ApplyImpulse(new V2(-2, 0), b2body.GetWorldCenter());
+			}
+			else if(right) {
+				b2body.ApplyImpulse(new V2(2, 0), b2body.GetWorldCenter());
+			}
+		}
+		
+		private function this_beginContactHandler(e:ContactEvent):void
+		{
+		}
+
+	}
+	}
+
+I've stopped at Paragraph 2 of Step 14 and won't continue with the rest of the tutorial until I can get this figured out. Thanks for any help.",flash,actionscript-3,tutorials,box2d,,,open,0,263,13,"Can't get tutorial to work: Build a Physics-Based Platformer in Under an Hour So I found this tutorial online and the idea of learning this in under an hour appealed to me:
+
+http://active.tutsplus.com/tutorials/games/build-a-physics-based-platformer-in-under-an-hour/
+
+Problem is I can't get it to work upon reaching Step 14 - when I test movie as the second paragraph says I get errors.
+
+
+----------
+
+
+I tried test movie after each step and it didn't have any errors until I applied the *view.characters.HeroCharacter* class to the my hero movie clip. So it seems the problem is in the HeroCharacter.as. So I went rogue from the instructions and fiddled with HeroCharacter.as. The FlashDevelop didn't autogenerate all the necessary imports when I copy pasted the code from the tutorial. I narrowed the problem down to finally getting this error in the output window in Flash:
+
+    TypeError: Error #1009: Cannot access a property or method of a null object reference.
+	at misc::Entity/listenWhileVisible()
+	at view.characters::HeroCharacter/create()
+	at misc::Entity/ensureCreated()
+	at Function/<anonymous>()
+
+Here is the Actionscript 
+
+    package view.characters 
+	{
+	import Box2DAS.Collision.b2WorldManifold;
+	import Box2DAS.Common.V2;
+	import Box2DAS.Dynamics.ContactEvent;
+	import Box2DAS.Dynamics.StepEvent;
+	import misc.Input;
+	import misc.Util;	
+	import shapes.Box;
+	import wck.BodyShape;
+	import wck.ContactList;
+	
+	/**
+	 * ...
+	 * @author Hexel Colorado
+	 */
+	public class HeroCharacter extends Box {
+	 
+		private var contacts:ContactList;
+	 
+		public override function create():void {
+			reportBeginContact = true;
+			reportEndContact = true;
+			contacts = new ContactList();
+			contacts.listenTo(this);
+	 
+			fixedRotation = true;
+	 
+			listenWhileVisible(world, StepEvent.STEP, world_stepEventHandler, false, 0, true);
+			listenWhileVisible(this, ContactEvent.BEGIN_CONTACT, this_beginContactHandler, false, 0, true);
+	 
+			super.create();
+		}
+		
+		private function world_stepEventHandler(e:StepEvent):void
+		{
+			var left:Boolean = Input.kd('LEFT', 'A');
+			var right:Boolean = Input.kd('RIGHT', 'D');
+			var jump:Boolean = Input.kp('UP', ' ', 'W');
+		 
+			if (jump) {
+				b2body.ApplyImpulse(new V2(0, -2), b2body.GetWorldCenter());
+			}
+			else if(left) {
+				b2body.ApplyImpulse(new V2(-2, 0), b2body.GetWorldCenter());
+			}
+			else if(right) {
+				b2body.ApplyImpulse(new V2(2, 0), b2body.GetWorldCenter());
+			}
+		}
+		
+		private function this_beginContactHandler(e:ContactEvent):void
+		{
+		}
+
+	}
+	}
+
+I've stopped at Paragraph 2 of Step 14 and won't continue with the rest of the tutorial until I can get this figured out. Thanks for any help.",4
+1254814,08/10/2009 13:15:34,136634,07/11/2009 05:01:45,8,0,How do I import a library in flash which lies in a higher directory than my .fla,"I have a directory structure as follows:
+
+    Projects ->
+	Libraries ->
+		Box2d ->
+			Collision->
+			Common ->
+			etc...
+	PlaneGame ->
+		PlaneGame.fla
+		main.as
+
+Now I wish to import classes from Box2d but I cannot figure out how to do ""up one level"" which would be done like ""../../something.example"" in another language.
+
+How can I include classes from inside the Box2d folder?",flash,actionscript-3,,,,,open,0,52,17,"How do I import a library in flash which lies in a higher directory than my .fla I have a directory structure as follows:
+
+    Projects ->
+	Libraries ->
+		Box2d ->
+			Collision->
+			Common ->
+			etc...
+	PlaneGame ->
+		PlaneGame.fla
+		main.as
+
+Now I wish to import classes from Box2d but I cannot figure out how to do ""up one level"" which would be done like ""../../something.example"" in another language.
+
+How can I include classes from inside the Box2d folder?",2
+6571187,07/04/2011 12:01:59,810736,06/22/2011 16:18:09,425,22,PNG with transparency from Photoshop to Flash: how to get exactly the same results?,"I have two layers in Photoshop: 1 -- a texture, 2 -- a semi-transparent image that overlaps texture. The combination of the two looks nice in Photoshop.
+
+I export them separately from Photoshop saving them as 24 bit PNG with transparency and colors converted to sRGB. (Working color space of PS is sRGB.)
+
+The result of importing them into flash makes me cry (see images below, note what areas around crosses look like). :( 
+
+I tried both loading PNGs dynamically and importing them into fla (compression type: lossles, allow smoothing: false). Looks like semi-transparent areas are saved inacurately on export. What's more puzzling to me is why the results differ between dynamic loading and direct importing.
+
+What am I missing? In-depth explanation of these symptoms whould be highly appreciated.
+
+Semi-transparent layer:
+
+![enter image description here][1]
+
+Texture layer:
+
+![enter image description here][2]
+
+Results:
+
+![enter image description here][3]
+
+  [1]: http://i.stack.imgur.com/z3tWq.png
+  [2]: http://i.stack.imgur.com/Gf10E.png
+  [3]: http://i.stack.imgur.com/PgcVP.png",flash,png,transparency,photoshop,alpha,,open,0,146,14,"PNG with transparency from Photoshop to Flash: how to get exactly the same results? I have two layers in Photoshop: 1 -- a texture, 2 -- a semi-transparent image that overlaps texture. The combination of the two looks nice in Photoshop.
+
+I export them separately from Photoshop saving them as 24 bit PNG with transparency and colors converted to sRGB. (Working color space of PS is sRGB.)
+
+The result of importing them into flash makes me cry (see images below, note what areas around crosses look like). :( 
+
+I tried both loading PNGs dynamically and importing them into fla (compression type: lossles, allow smoothing: false). Looks like semi-transparent areas are saved inacurately on export. What's more puzzling to me is why the results differ between dynamic loading and direct importing.
+
+What am I missing? In-depth explanation of these symptoms whould be highly appreciated.
+
+Semi-transparent layer:
+
+![enter image description here][1]
+
+Texture layer:
+
+![enter image description here][2]
+
+Results:
+
+![enter image description here][3]
+
+  [1]: http://i.stack.imgur.com/z3tWq.png
+  [2]: http://i.stack.imgur.com/Gf10E.png
+  [3]: http://i.stack.imgur.com/PgcVP.png",5
+7494658,09/21/2011 04:34:59,697190,04/07/2011 16:24:25,54,1,Would anyone like to work together to add a javascript API to the open source F4 player (http://f4player.org/)?,"I've been looking for a super-light weight open source flash FLV player for my web projects. f4 Player (http://f4player.org/) looks perfect, but it's missing one critical feature: a javascript api. The player is extremely small (only 8 k) so its probably relatively straight forward.
+
+I'd like to work together with an actionscript dev to add a JS api to the player...this means that external javascript can control play, pause, and seek functions. Also, a getState function similar to youtubes getState() api to tell whether the player is playing, buffering, or paused. A listener/event system would be great to communicate with the javascript environment about state changes of the player.
+
+Is anyone else interested in this?",flash,actionscript-3,video,,,09/21/2011 15:18:30,off topic,1,113,18,"Would anyone like to work together to add a javascript API to the open source F4 player (http://f4player.org/)? I've been looking for a super-light weight open source flash FLV player for my web projects. f4 Player (http://f4player.org/) looks perfect, but it's missing one critical feature: a javascript api. The player is extremely small (only 8 k) so its probably relatively straight forward.
+
+I'd like to work together with an actionscript dev to add a JS api to the player...this means that external javascript can control play, pause, and seek functions. Also, a getState function similar to youtubes getState() api to tell whether the player is playing, buffering, or paused. A listener/event system would be great to communicate with the javascript environment about state changes of the player.
+
+Is anyone else interested in this?",3
+5650687,04/13/2011 14:13:25,6791,09/15/2008 12:38:08,2023,82,Has there been any guidance for when AS2 might be dropped from the Flash Player?,"AS3 has been out for quite a while now.
+
+The mobile/android flash 10 player does not include AVM1 support (ie Actionscript 2)
+
+Has there been any guidance for when/if AS2 support might be dropped from the desktop plugin?",flash,,,,,01/16/2012 07:05:58,not constructive,1,36,15,"Has there been any guidance for when AS2 might be dropped from the Flash Player? AS3 has been out for quite a while now.
+
+The mobile/android flash 10 player does not include AVM1 support (ie Actionscript 2)
+
+Has there been any guidance for when/if AS2 support might be dropped from the desktop plugin?",1
+8374306,12/04/2011 09:05:34,967969,09/27/2011 21:43:38,9,2,Is there a way to break text through actionscript (convert text to a shape),"Is there a way to break text through actionscript so that it becomes a shape?
+
+I know that I can hit CTRL+B two times to break apart text and convert it to a shape, but I need to do it through actionscript, so that a user can enter some text, and then I have some effects applied to it.
+
+Thanks.",flash,actionscript-3,,,,,open,0,58,14,"Is there a way to break text through actionscript (convert text to a shape) Is there a way to break text through actionscript so that it becomes a shape?
+
+I know that I can hit CTRL+B two times to break apart text and convert it to a shape, but I need to do it through actionscript, so that a user can enter some text, and then I have some effects applied to it.
+
+Thanks.",2
+1144666,07/17/2009 17:29:01,71050,02/25/2009 20:46:27,163,11,"Display of special characters in a flash movie, ie:  Ó","I've gotta flash movie that refuses to display the character:
+
+Ó
+
+Does anyone out there have an idea why this may be happening?  I know this is a vague question but i really can't explain it any better than that.",flash,,,,,,open,0,39,11,"Display of special characters in a flash movie, ie:  Ó I've gotta flash movie that refuses to display the character:
+
+Ó
+
+Does anyone out there have an idea why this may be happening?  I know this is a vague question but i really can't explain it any better than that.",1
+8358594,12/02/2011 15:27:14,304961,03/30/2010 09:49:45,603,19,Add flash AS3 custome module in bright cove player,"I trying to build one web service call in flash AS3 and after response I try to load Bright cove player but not getting how to add this module in bright cove player?
+can anybody help me out?
+
+Thanks in advance.
+Rohit 
+",flash,actionscript-3,brightcove,,,12/02/2011 23:48:05,not a real question,1,40,9,"Add flash AS3 custome module in bright cove player I trying to build one web service call in flash AS3 and after response I try to load Bright cove player but not getting how to add this module in bright cove player?
+can anybody help me out?
+
+Thanks in advance.
+Rohit 
+",3
+99406,09/19/2008 03:49:16,18511,09/19/2008 03:40:02,6,0,What is the easiest stand-alone FLV player to use?,"I have video that I've converted to FLV format.  I'd rather host it on my own site than use a service like YouTube.  What is the easiest player to use?  I'd like to just put the .swf file of the player somewhere on my server, and give it the video as a parameter.",flash,flv,video,,,01/16/2012 23:51:38,not constructive,1,56,9,"What is the easiest stand-alone FLV player to use? I have video that I've converted to FLV format.  I'd rather host it on my own site than use a service like YouTube.  What is the easiest player to use?  I'd like to just put the .swf file of the player somewhere on my server, and give it the video as a parameter.",3
+6928216,08/03/2011 14:35:32,272087,02/12/2010 19:30:23,302,2,Comparing color contrast to choose final colors,"I got some text that has a background, and the backgroud color can change to any color.
+
+So, I need to find a way to figure if my text will be readable or not, the text should change to black (for example, yellow background) or white ( dark blue background ) if the contrast is not good enough.
+
+So, is there a method to do this?, what would you use to make this work?
+
+Thanks!",flash,colors,actionscript-2,background-color,formula,,open,0,72,7,"Comparing color contrast to choose final colors I got some text that has a background, and the backgroud color can change to any color.
+
+So, I need to find a way to figure if my text will be readable or not, the text should change to black (for example, yellow background) or white ( dark blue background ) if the contrast is not good enough.
+
+So, is there a method to do this?, what would you use to make this work?
+
+Thanks!",5
+11658475,07/25/2012 20:56:15,1552853,07/25/2012 20:50:39,1,0,Changing the root of a flash file,I am linking a flash external movie and I use as2. How I can change the original root?(because it is using the root of my computer) Thanks!,flash,hyperlink,actionscript-2,external,,,open,0,27,7,Changing the root of a flash file I am linking a flash external movie and I use as2. How I can change the original root?(because it is using the root of my computer) Thanks!,4
+8403785,12/06/2011 17:02:37,719637,04/21/2011 20:32:08,25,0,Character/Coin hittest in as3,"I am making a platformer game where there are coins. The coins are supposed to be removed once the character walks over it. I tried 
+
+    private function coinremove(event:Event):void{
+    	if(mcMain.hitTest(Coin)){
+    	this.parent.removeChild(this);
+    	removeEventListener(Event.ENTER_FRAME, coinremove);
+    	_root.mainScore += 100;
+    }
+
+sadly, it did not work so if you have any suggestions or a better way of doing this please post here.",flash,actionscript-3,flash-cs4,,,12/07/2011 00:53:27,not a real question,1,75,4,"Character/Coin hittest in as3 I am making a platformer game where there are coins. The coins are supposed to be removed once the character walks over it. I tried 
+
+    private function coinremove(event:Event):void{
+    	if(mcMain.hitTest(Coin)){
+    	this.parent.removeChild(this);
+    	removeEventListener(Event.ENTER_FRAME, coinremove);
+    	_root.mainScore += 100;
+    }
+
+sadly, it did not work so if you have any suggestions or a better way of doing this please post here.",3
+5729145,04/20/2011 10:55:33,161631,08/23/2009 17:14:32,50,2,i can't retrieve a facebook user's friends list with as3,"hey all i am trying to write a facebook app using as3 and the facebook-actionscipt graph api library
+
+i am having trouble getting a user's friends list, while i have no problem getting a user's other data (favorite movies, for example)
+
+this is strange since getting a user's friends list is the only thing that is available to anyone on facebook: http://developers.facebook.com/docs/reference/api/user/
+
+this function returns an array of movies succesfully:
+
+    function loadMovies() {
+     Facebook.api('/' + userID + '/movies',onLoadedMovies);
+    }
+    			
+    function onLoadedMovies(response:Object, fail:Object):void {
+     (respones) ? movies = response : trace(fail);
+    }
+
+while this one returns an IOerror in the fail (response=null):
+
+
+    function loadFriends() {
+     Facebook.api('/' + userID + '/friends',onLoadedFriends);
+    }
+    			
+    function onLoadedFriends(response:Object, fail:Object):void {
+     (respones) ? friends = response : trace(fail);
+    }
+
+please note that userID is one of the app-user's friends, not the app-user himself
+
+any ideas why this is happening?
+
+thanx
+Saar",flash,flex,actionscript-3,facebook,facebook-graph-api,,open,0,184,10,"i can't retrieve a facebook user's friends list with as3 hey all i am trying to write a facebook app using as3 and the facebook-actionscipt graph api library
+
+i am having trouble getting a user's friends list, while i have no problem getting a user's other data (favorite movies, for example)
+
+this is strange since getting a user's friends list is the only thing that is available to anyone on facebook: http://developers.facebook.com/docs/reference/api/user/
+
+this function returns an array of movies succesfully:
+
+    function loadMovies() {
+     Facebook.api('/' + userID + '/movies',onLoadedMovies);
+    }
+    			
+    function onLoadedMovies(response:Object, fail:Object):void {
+     (respones) ? movies = response : trace(fail);
+    }
+
+while this one returns an IOerror in the fail (response=null):
+
+
+    function loadFriends() {
+     Facebook.api('/' + userID + '/friends',onLoadedFriends);
+    }
+    			
+    function onLoadedFriends(response:Object, fail:Object):void {
+     (respones) ? friends = response : trace(fail);
+    }
+
+please note that userID is one of the app-user's friends, not the app-user himself
+
+any ideas why this is happening?
+
+thanx
+Saar",5
+6679875,07/13/2011 13:42:19,842796,07/13/2011 13:42:19,1,0,flash memory security,"as you might already know there are available security mechanisms to secure flash memories (say USB flash disks) the way how they implement it is by thoroughly encrypting the data in RAM before it is actually written and storing the encrypted data to flash memory and the other way round for reading. but i found this method very ineffective since it requires much of time to do the encryption/decryption stuff. my idea is to encrypt the metadata and address translation table since it requires 0.2% time and performance to do so but i couldn't convince my self to let the data encryption(it doesn't seem very secure). my questions is can you tell me scenarios that attackers can break in to the data with out using the address translation table and metadata and also a solution that i have to add up to my idea so that i can propose a more secure mechanism for my thesis.
+thank you",flash,security,memory,,,11/23/2011 12:52:54,not a real question,1,157,3,"flash memory security as you might already know there are available security mechanisms to secure flash memories (say USB flash disks) the way how they implement it is by thoroughly encrypting the data in RAM before it is actually written and storing the encrypted data to flash memory and the other way round for reading. but i found this method very ineffective since it requires much of time to do the encryption/decryption stuff. my idea is to encrypt the metadata and address translation table since it requires 0.2% time and performance to do so but i couldn't convince my self to let the data encryption(it doesn't seem very secure). my questions is can you tell me scenarios that attackers can break in to the data with out using the address translation table and metadata and also a solution that i have to add up to my idea so that i can propose a more secure mechanism for my thesis.
+thank you",3
+311802,11/22/2008 21:35:04,38522,11/18/2008 10:18:37,247,6,W3C Involvement In Flash & Silverlight,"It seems to me that the key USP of Flash/Silverlight is the ability to provide access (albeit indirectly) to the graphics subsystem of the client, enabling video, smooth transitions and ""fancy"" visual effects.
+
+This sounds like a good idea, and a natural evolution/extension of HTML. But surely it would be better if someone like the W3C controlled such a technology, rather than Microsoft or Adobe locking users into their ""platform"".
+
+Has the W3C taken a role in the development of these technologies, and if not, why?",flash,silverlight,w3c,html,,,open,0,84,6,"W3C Involvement In Flash & Silverlight It seems to me that the key USP of Flash/Silverlight is the ability to provide access (albeit indirectly) to the graphics subsystem of the client, enabling video, smooth transitions and ""fancy"" visual effects.
+
+This sounds like a good idea, and a natural evolution/extension of HTML. But surely it would be better if someone like the W3C controlled such a technology, rather than Microsoft or Adobe locking users into their ""platform"".
+
+Has the W3C taken a role in the development of these technologies, and if not, why?",4
+8577507,12/20/2011 15:09:50,522169,11/27/2010 10:25:53,35,12,delay with connection to FMS Remote Shared object,"Connecting to a remote shared object on the server, from the client. With this:
+
+    var bso:SharedObject = SharedObject.getRemote(""rso"",NC.uri,true);
+    if (bso) {
+       bso.addEventListener (SyncEvent.SYNC,bsoConnect);
+       bso.connect(NC);
+    }
+
+The sync event is not triggered. <br />
+Putting a delay for the 'connect' line: <br />
+
+    setTimeout (function() {bso.connect(sessionNC);},2000);
+
+makes it work.
+
+Why is this undesirable delay happens? I'm guessing it's related to settings in the server config files (one of those XMLs) - but I don't know which one.
+
+Anyone have a clue?
+
+P.S.
+The same happens for nonpersistent SOs as well (where the boolean parameter of getRemote is false).
+",flash,remote,fms,shared-objects,,,open,0,114,8,"delay with connection to FMS Remote Shared object Connecting to a remote shared object on the server, from the client. With this:
+
+    var bso:SharedObject = SharedObject.getRemote(""rso"",NC.uri,true);
+    if (bso) {
+       bso.addEventListener (SyncEvent.SYNC,bsoConnect);
+       bso.connect(NC);
+    }
+
+The sync event is not triggered. <br />
+Putting a delay for the 'connect' line: <br />
+
+    setTimeout (function() {bso.connect(sessionNC);},2000);
+
+makes it work.
+
+Why is this undesirable delay happens? I'm guessing it's related to settings in the server config files (one of those XMLs) - but I don't know which one.
+
+Anyone have a clue?
+
+P.S.
+The same happens for nonpersistent SOs as well (where the boolean parameter of getRemote is false).
+",4
+8839259,01/12/2012 17:15:01,1122610,12/30/2011 08:11:45,6,0,Flash Builder 4.6 not compiling for Flash Player 10.2,"I am new to creating Flex applications and trying to target Flash Player 10.2 with my first. I have created it using Flash Builder 4.6 and compiled using the 4.5a SDK. I've also set the option to target 10.2.0 in the the Adobe Flash Player options. When I create the release build, there are no error and the resulting HTML file contains the following:
+
+    // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
+    var swfVersionStr = ""10.2.0"";
+
+However, if I try to visit the application in a browser with v10.2 of the plug-in it says 11.1 is needed. I also have the same problem with a simple Flash CS5 animation that only uses stop() and getURL(). The animation works but doesn't stop.
+
+Thanks. Dan.",flash,flex,flash-builder,flash-player,,,open,0,139,9,"Flash Builder 4.6 not compiling for Flash Player 10.2 I am new to creating Flex applications and trying to target Flash Player 10.2 with my first. I have created it using Flash Builder 4.6 and compiled using the 4.5a SDK. I've also set the option to target 10.2.0 in the the Adobe Flash Player options. When I create the release build, there are no error and the resulting HTML file contains the following:
+
+    // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
+    var swfVersionStr = ""10.2.0"";
+
+However, if I try to visit the application in a browser with v10.2 of the plug-in it says 11.1 is needed. I also have the same problem with a simple Flash CS5 animation that only uses stop() and getURL(). The animation works but doesn't stop.
+
+Thanks. Dan.",4
+7265002,09/01/2011 00:30:27,550548,12/21/2010 21:58:10,1206,86,Flash Date.getTime bug?,"I'm hitting a wall on this one. My script finds the difference in hours between 2 dates, however..
+
+    var data:Array = [""2011-08-30 11:19:19"", ""01-09-2011 02""];
+    
+    var aDate:String = data[0].split("" "")[0];
+    
+    var dateElements:Array = aDate.split(""-"");
+    var date1:Date = new Date();
+    date1.setDate(int(dateElements[2]));
+    date1.setMonth(int(dateElements[1])-1);
+    date1.setFullYear(int(dateElements[0]));
+    date1.setHours(int(data[0].split("" "")[1].split("":"")[0]));
+    
+    trace(""date: "" + date1.getDate());
+    trace(""month: "" + date1.getMonth());
+    trace(""year: "" + date1.getFullYear());
+    trace(""hours: "" + date1.getHours());
+    
+    dateElements = data[1].split("" "")[0].split(""-"");
+    var date2:Date = new Date();
+    date2.setDate(int(dateElements[0]));
+    date2.setMonth(int(dateElements[1])-1);
+    date2.setFullYear(int(dateElements[2]));
+    date2.setHours(int(data[1].split("" "")[1]));
+    
+    trace(""__"");
+    trace(""date: "" + date2.getDate());
+    trace(""month: "" + date2.getMonth());
+    trace(""year: "" + date2.getFullYear());
+    trace(""hours: "" + date2.getHours());
+    trace(""__"");
+    var elapse:Number = date2.getTime() - date1.getTime();
+    
+    trace(Math.floor(elapse / 3600000));
+
+As you can see, the date elements trace out the way they should. Now try changing the first element of the data array to ""2011-08-31 11:19:19"". Although the date elements are fine, the last trace gives a totally weird value. What's even weirder is that when compiling this script a second time in Flash IDE, it takes a long time to compile, then traces nothing at all, as if the script times out.
+
+What's happening here?",flash,actionscript-3,date,,,,open,0,277,3,"Flash Date.getTime bug? I'm hitting a wall on this one. My script finds the difference in hours between 2 dates, however..
+
+    var data:Array = [""2011-08-30 11:19:19"", ""01-09-2011 02""];
+    
+    var aDate:String = data[0].split("" "")[0];
+    
+    var dateElements:Array = aDate.split(""-"");
+    var date1:Date = new Date();
+    date1.setDate(int(dateElements[2]));
+    date1.setMonth(int(dateElements[1])-1);
+    date1.setFullYear(int(dateElements[0]));
+    date1.setHours(int(data[0].split("" "")[1].split("":"")[0]));
+    
+    trace(""date: "" + date1.getDate());
+    trace(""month: "" + date1.getMonth());
+    trace(""year: "" + date1.getFullYear());
+    trace(""hours: "" + date1.getHours());
+    
+    dateElements = data[1].split("" "")[0].split(""-"");
+    var date2:Date = new Date();
+    date2.setDate(int(dateElements[0]));
+    date2.setMonth(int(dateElements[1])-1);
+    date2.setFullYear(int(dateElements[2]));
+    date2.setHours(int(data[1].split("" "")[1]));
+    
+    trace(""__"");
+    trace(""date: "" + date2.getDate());
+    trace(""month: "" + date2.getMonth());
+    trace(""year: "" + date2.getFullYear());
+    trace(""hours: "" + date2.getHours());
+    trace(""__"");
+    var elapse:Number = date2.getTime() - date1.getTime();
+    
+    trace(Math.floor(elapse / 3600000));
+
+As you can see, the date elements trace out the way they should. Now try changing the first element of the data array to ""2011-08-31 11:19:19"". Although the date elements are fine, the last trace gives a totally weird value. What's even weirder is that when compiling this script a second time in Flash IDE, it takes a long time to compile, then traces nothing at all, as if the script times out.
+
+What's happening here?",3
+5043712,02/18/2011 16:14:59,553303,09/24/2010 22:11:52,23,1,Cu3er SWF Font.,"I have a free Cu3r Slider and I need to embed a font of mine. I tried sIFR but no succes.
+Does anybody have all the settings we can make with the xml file for cu3er?
+Thank you!",flash,,,,,,open,0,36,3,"Cu3er SWF Font. I have a free Cu3r Slider and I need to embed a font of mine. I tried sIFR but no succes.
+Does anybody have all the settings we can make with the xml file for cu3er?
+Thank you!",1
+4516465,12/23/2010 06:43:26,456912,09/24/2010 05:04:49,13,2,"Get ""arrow"" symbol in textField AS3","I have a textField, which has font face to ""Arial"", its dynamic. It also takes htmlText.
+I am using XML to send data to the textFiled.
+
+My problem is that I want an arrow ""&#8594;"" in the textField. I have tried embedding ""Symbol"" font in the swf containing textField but its showing a Register sign.
+
+I'm really stuck with this, any help would be a life-saver!",flash,actionscript-3,textfield,font-face,,,open,0,63,6,"Get ""arrow"" symbol in textField AS3 I have a textField, which has font face to ""Arial"", its dynamic. It also takes htmlText.
+I am using XML to send data to the textFiled.
+
+My problem is that I want an arrow ""&#8594;"" in the textField. I have tried embedding ""Symbol"" font in the swf containing textField but its showing a Register sign.
+
+I'm really stuck with this, any help would be a life-saver!",4
+1809045,11/27/2009 14:19:36,102422,05/06/2009 19:11:55,76,2,chinese search form in flash,"i'm working on a menu with a search field, all this menu is done in flash, on the english side works perfect, you write ""dah"" and it searches for ""dah"" but on chinese, you write ""餅"" it posts ""??"" instead the characters that i want to search for.
+
+I changed the encodig, but it just got things worst, i just can write squares if i change the encoding to big5, lol.
+
+",flash,chinese,big5,forms,,,open,0,70,5,"chinese search form in flash i'm working on a menu with a search field, all this menu is done in flash, on the english side works perfect, you write ""dah"" and it searches for ""dah"" but on chinese, you write ""餅"" it posts ""??"" instead the characters that i want to search for.
+
+I changed the encodig, but it just got things worst, i just can write squares if i change the encoding to big5, lol.
+
+",4
+6678277,07/13/2011 11:41:19,198461,10/28/2009 21:29:11,1,0,"Sample code for aggressive Flash ads (browser takeovers, floaters, etc.)?","I need sample code for a school project that involves showcasing/demonstrating stereotypical annoying Flash advertising tactics—for instance: spanning the whole screen, disabling the back button, making you wait before the close button appears, spoofing a virus scan, spawning a ton of popups, etc.
+
+I have to turn in my own Flash source code for this project. I'm new to Flash, though, and I'd really like to find some sample code to work from or even just direct links to .swf files.
+
+Of course, these malicious and intrusive ads are everywhere when one doesn't want them, but now I can't find any good examples. I've spent hours clicking around on the seediest sites: free Viagra, guaranteed lottery winnings, URLs longer than my address bar—the whole gamut, basically.
+
+I'm using Firefox with Adblock to inspect the list of blocked items on each site. I've also been using Firefox's ""Page Info"" command to inspect for media, but so far the only Flash ads that have been showing up are pretty tame.
+
+So can any of you point me to some obnoxious Flash ads? Anything I can grab with a browser addon like Flashgot would be great. Source code would be ideal, though I don't expect to find that.",flash,actionscript-3,popup,swf,advertising,07/15/2011 15:31:36,off topic,1,201,10,"Sample code for aggressive Flash ads (browser takeovers, floaters, etc.)? I need sample code for a school project that involves showcasing/demonstrating stereotypical annoying Flash advertising tactics—for instance: spanning the whole screen, disabling the back button, making you wait before the close button appears, spoofing a virus scan, spawning a ton of popups, etc.
+
+I have to turn in my own Flash source code for this project. I'm new to Flash, though, and I'd really like to find some sample code to work from or even just direct links to .swf files.
+
+Of course, these malicious and intrusive ads are everywhere when one doesn't want them, but now I can't find any good examples. I've spent hours clicking around on the seediest sites: free Viagra, guaranteed lottery winnings, URLs longer than my address bar—the whole gamut, basically.
+
+I'm using Firefox with Adblock to inspect the list of blocked items on each site. I've also been using Firefox's ""Page Info"" command to inspect for media, but so far the only Flash ads that have been showing up are pretty tame.
+
+So can any of you point me to some obnoxious Flash ads? Anything I can grab with a browser addon like Flashgot would be great. Source code would be ideal, though I don't expect to find that.",5
+4224044,11/19/2010 10:18:41,110976,05/22/2009 09:20:53,1348,15,import fl.data.DataProvider; is not working in Adobe CS4,"How can I use import `fl.data.DataProvider;` in Adobe CS4. When I try to import it showing
+
+`1172: Definition fl.controls could not be found.`
+",flash,actionscript-3,actionscript,adobe,,,open,0,22,8,"import fl.data.DataProvider; is not working in Adobe CS4 How can I use import `fl.data.DataProvider;` in Adobe CS4. When I try to import it showing
+
+`1172: Definition fl.controls could not be found.`
+",4
+6043399,05/18/2011 10:43:13,159354,08/19/2009 14:59:33,48,0,Accessing Responder Object for AMF Call in Action Script 3,"I'm beginner to AS3 and I'm using FlashDevelop as IDE and I'm trying to connect to AMF3 service (amfphp) and get user details.
+
+I can connect to AMF service with this code in AMFinit() function...
+
+    private function AMFinit():void{
+        AMFService.objectEncoding = ObjectEncoding.AMF3;
+        AMFService.connect(AMFServiceURL);
+        AMFService.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler);
+		
+        var responder:Responder = new Responder(AMF_MyUserInfo, AMF_onFault);			
+        AMFService.call(""Danisman.GetUserWithIdentifier"", responder, user_identifier);
+
+        // I NEED TO USE returned object data here!!
+    }
+
+on AMF_MyUserInfo() function I can get object returned from Responder and I can trace it successfully,  here is the code
+
+    private function AMF_MyUserInfo(res:Object):void {
+        AMF_onResult(res);
+        trace(res.user_ID + res.username);
+    }
+
+But to use outside the AMF_MyUserInfo() function I want to copy that ""res"" object to another object. I tried with specifing an object in Class and set res to this object in AMF_MyuserInfo() function with ""this.myobject = res"" but it didn't work. I also tried ""this.myobject.username = res.username"" but it didn't work also.
+
+I'm newbie to OOP, how can I use this res object globally or in AMFinit() function?
+
+
+Thanks for your help...
+",flash,actionscript-3,oop,remoting,,,open,0,229,10,"Accessing Responder Object for AMF Call in Action Script 3 I'm beginner to AS3 and I'm using FlashDevelop as IDE and I'm trying to connect to AMF3 service (amfphp) and get user details.
+
+I can connect to AMF service with this code in AMFinit() function...
+
+    private function AMFinit():void{
+        AMFService.objectEncoding = ObjectEncoding.AMF3;
+        AMFService.connect(AMFServiceURL);
+        AMFService.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler);
+		
+        var responder:Responder = new Responder(AMF_MyUserInfo, AMF_onFault);			
+        AMFService.call(""Danisman.GetUserWithIdentifier"", responder, user_identifier);
+
+        // I NEED TO USE returned object data here!!
+    }
+
+on AMF_MyUserInfo() function I can get object returned from Responder and I can trace it successfully,  here is the code
+
+    private function AMF_MyUserInfo(res:Object):void {
+        AMF_onResult(res);
+        trace(res.user_ID + res.username);
+    }
+
+But to use outside the AMF_MyUserInfo() function I want to copy that ""res"" object to another object. I tried with specifing an object in Class and set res to this object in AMF_MyuserInfo() function with ""this.myobject = res"" but it didn't work. I also tried ""this.myobject.username = res.username"" but it didn't work also.
+
+I'm newbie to OOP, how can I use this res object globally or in AMFinit() function?
+
+
+Thanks for your help...
+",4
+1605739,10/22/2009 08:23:41,64873,02/11/2009 02:30:47,658,20,How can I get plain text file in Flash?,"Which function can I use to get the content of a plain text file?
+
+I can just read ""value=32"" as a variable or file in xml format now, but the file from vendor contains only the value ""32"".",flash,,,,,,open,0,37,9,"How can I get plain text file in Flash? Which function can I use to get the content of a plain text file?
+
+I can just read ""value=32"" as a variable or file in xml format now, but the file from vendor contains only the value ""32"".",1
+4963948,02/10/2011 23:33:50,240511,12/29/2009 22:20:58,79,7,TextFieldAutoSize and textWidth in AS3,"I'm trying to draw a background to a text field in AS3.
+
+I have a TextField with an embedded font and using autoSize = TextFieldAutoSize.LEFT.  I assign the text to the TextField then call try to draw a roundedRect using the textWidth of the TextField.  The text field width is always smaller than the actual text width.  
+
+Is there another way to get the actual textwidth?  I did a few quick google searched but I haven't found anything.",flash,actionscript-3,,,,02/18/2011 16:18:58,too localized,1,81,5,"TextFieldAutoSize and textWidth in AS3 I'm trying to draw a background to a text field in AS3.
+
+I have a TextField with an embedded font and using autoSize = TextFieldAutoSize.LEFT.  I assign the text to the TextField then call try to draw a roundedRect using the textWidth of the TextField.  The text field width is always smaller than the actual text width.  
+
+Is there another way to get the actual textwidth?  I did a few quick google searched but I haven't found anything.",2
+4937112,02/08/2011 18:58:50,608652,02/08/2011 18:58:50,1,0,Flash Applet won't diplay with other computers.,"I made a program using Flash Professional 10 and AS3, i published it.
+It all compiles and works fine on my coding computer. But when I try to view the program on other computers, via internet, or physically putting the files on the computer, it only displays as 5 dots counting up, over and over.",flash,actionscript-3,applet,display,,,open,0,54,7,"Flash Applet won't diplay with other computers. I made a program using Flash Professional 10 and AS3, i published it.
+It all compiles and works fine on my coding computer. But when I try to view the program on other computers, via internet, or physically putting the files on the computer, it only displays as 5 dots counting up, over and over.",4
+1431647,09/16/2009 08:19:11,171301,09/10/2009 08:17:37,1,0,"How to disable and re-enable MouseEvents; buttonMode, mouseChildren and enable don't work","Basically the question could more probably be more accurately asked, how do I simply disable a button and then re-enable it? I've tried setting buttonMode to false, mouseChildren to false and enabled to false. Nothing works. I realize I _could_ just remove the event listeners, but surely there is a more elegant and efficient way. As removing the event listeners would force me to keep track of what functions pertain to certain button states and have to add and remove them over and over again, which seems clunky.
+
+Is there a way to set a flag that makes the temporarily disables any eventListeners an object might have, and then simply turn it again? I was under the misconception that adding rollOver events etc.. to a MovieClip converts it in theory to a button, in which can be easily turned off with the enabled property. Also, I can't use SimpleButton, as I need more flexibility than it provides. 
+
+I've created a custom class that does handle all this functionality, and makes life more simple, but I'm wondering if there as an out-of-the-box official way.
+
+Below is an isolated example, that uses a MovieClip on the stage with an instance name of iPoo, where the events always fire regardless of what gets set when you click the button:
+
+iPoo.addEventListener(MouseEvent.ROLL_OVER, pooRollOver);  
+iPoo.addEventListener(MouseEvent.ROLL_OUT, pooRollOut);  
+iPoo.addEventListener(MouseEvent.CLICK, pooClick);  
+
+function pooRollOver(_event:MouseEvent):void  
+{  
+    
+    iPoo.alpha = 0.5;  
+}
+
+function pooRollOut(_event:MouseEvent):void  
+{  
+
+    iPoo.alpha = 1;  
+}
+
+function pooClick(_event:MouseEvent):void  
+{  
+
+    trace(""Poo"");  
+
+    iPoo.enabled = false;  
+    iPoo.buttonMode = false;  
+    iPoo.mouseChildren = false;  
+}",flash,actionscript,actionscript-3,eventlistener,,,open,0,288,12,"How to disable and re-enable MouseEvents; buttonMode, mouseChildren and enable don't work Basically the question could more probably be more accurately asked, how do I simply disable a button and then re-enable it? I've tried setting buttonMode to false, mouseChildren to false and enabled to false. Nothing works. I realize I _could_ just remove the event listeners, but surely there is a more elegant and efficient way. As removing the event listeners would force me to keep track of what functions pertain to certain button states and have to add and remove them over and over again, which seems clunky.
+
+Is there a way to set a flag that makes the temporarily disables any eventListeners an object might have, and then simply turn it again? I was under the misconception that adding rollOver events etc.. to a MovieClip converts it in theory to a button, in which can be easily turned off with the enabled property. Also, I can't use SimpleButton, as I need more flexibility than it provides. 
+
+I've created a custom class that does handle all this functionality, and makes life more simple, but I'm wondering if there as an out-of-the-box official way.
+
+Below is an isolated example, that uses a MovieClip on the stage with an instance name of iPoo, where the events always fire regardless of what gets set when you click the button:
+
+iPoo.addEventListener(MouseEvent.ROLL_OVER, pooRollOver);  
+iPoo.addEventListener(MouseEvent.ROLL_OUT, pooRollOut);  
+iPoo.addEventListener(MouseEvent.CLICK, pooClick);  
+
+function pooRollOver(_event:MouseEvent):void  
+{  
+    
+    iPoo.alpha = 0.5;  
+}
+
+function pooRollOut(_event:MouseEvent):void  
+{  
+
+    iPoo.alpha = 1;  
+}
+
+function pooClick(_event:MouseEvent):void  
+{  
+
+    trace(""Poo"");  
+
+    iPoo.enabled = false;  
+    iPoo.buttonMode = false;  
+    iPoo.mouseChildren = false;  
+}",4
+1265495,08/12/2009 11:02:18,126142,06/20/2009 11:10:44,1,1,Pass variables into a Flash movie from HTML,"As a Flash newbie I found this very confusing and it cost me a couple of hours.  Answering my own question here in case anyone has the same problem.  
+
+Technically you should be able to do something like this:
+
+    <param name=""movie"" value=""movie.swf?param=value"" />
+    <embed src=""movie.swf?param=value"" ...
+
+Or this:
+
+    <PARAM NAME ""FlashVars"" VALUE=""param=value"">
+    <EMBED .... FlashVars=""param=value"">
+
+Both should create a variable in the _root or _level0 scope called 'param' with the correct value.
+
+These are documented [here][1]
+
+
+  [1]: http://www.permadi.com/tutorial/flashVars/index.html
+
+However, in my particular version of Flash (CS4, ActionScript 2.0), this didn't work. ",flash,flash-cs4,flashvars,,,,open,0,103,8,"Pass variables into a Flash movie from HTML As a Flash newbie I found this very confusing and it cost me a couple of hours.  Answering my own question here in case anyone has the same problem.  
+
+Technically you should be able to do something like this:
+
+    <param name=""movie"" value=""movie.swf?param=value"" />
+    <embed src=""movie.swf?param=value"" ...
+
+Or this:
+
+    <PARAM NAME ""FlashVars"" VALUE=""param=value"">
+    <EMBED .... FlashVars=""param=value"">
+
+Both should create a variable in the _root or _level0 scope called 'param' with the correct value.
+
+These are documented [here][1]
+
+
+  [1]: http://www.permadi.com/tutorial/flashVars/index.html
+
+However, in my particular version of Flash (CS4, ActionScript 2.0), this didn't work. ",3
+10950449,06/08/2012 14:09:16,1180505,01/31/2012 14:13:50,10,0,Flash Text not showing up,"I have an issue with a flash website, the problem is that Body text doesn't show up while it does when I check it through Flash test movie. Didn't have any clue what the problem is.
+
+This is the website.
+http://www.centercitymedicalcenter.com
+
+Here is the link for fla file.
+
+http://dl.dropbox.com/u/64295750/Main_3.zip
+
+
+Thanks.",flash,actionscript,embed,,,06/08/2012 21:10:04,not a real question,1,45,5,"Flash Text not showing up I have an issue with a flash website, the problem is that Body text doesn't show up while it does when I check it through Flash test movie. Didn't have any clue what the problem is.
+
+This is the website.
+http://www.centercitymedicalcenter.com
+
+Here is the link for fla file.
+
+http://dl.dropbox.com/u/64295750/Main_3.zip
+
+
+Thanks.",3
+5296872,03/14/2011 09:37:25,369392,06/17/2010 14:10:14,103,16,flash presentation : How to make it easy like this,"I'm searching a software that offers the possibility of making such as this presentation : 
+http://prezi.com/v7n9pbgpnugw/zk-framework/
+
+Thnx a lot.",flash,presentation,,,,03/22/2011 11:31:03,off topic,1,18,10,"flash presentation : How to make it easy like this I'm searching a software that offers the possibility of making such as this presentation : 
+http://prezi.com/v7n9pbgpnugw/zk-framework/
+
+Thnx a lot.",2
+4378168,12/07/2010 15:10:37,321397,04/14/2010 18:09:52,67,1,Test Flash in Full Screen Mode,"I am creating a flash, virtually it has 2 columns, right side play a video, and the left side will display some text. But there is a problem. The flash and text both are fine when I play flash in window mode, however, when I press Ctrl+F enters into full screen mode, the text won't show up. If I exit the full screen, the text show up again. Go back to full screen disappear again. So weird. 
+
+So I try to debug the flash by dumping some trace result to the Output panel. Since the problem only happened in full screen mode, so I really need to test the flash in full screen mode. But I cannot find a way to test the flash (Ctrl+Enter) in full scree mode. 
+
+Someone know can help me? Why the text disappear OR Why to test flash in full screen mode? Thanks in advance!",flash,debugging,text,adobe,fullscreen,,open,0,150,6,"Test Flash in Full Screen Mode I am creating a flash, virtually it has 2 columns, right side play a video, and the left side will display some text. But there is a problem. The flash and text both are fine when I play flash in window mode, however, when I press Ctrl+F enters into full screen mode, the text won't show up. If I exit the full screen, the text show up again. Go back to full screen disappear again. So weird. 
+
+So I try to debug the flash by dumping some trace result to the Output panel. Since the problem only happened in full screen mode, so I really need to test the flash in full screen mode. But I cannot find a way to test the flash (Ctrl+Enter) in full scree mode. 
+
+Someone know can help me? Why the text disappear OR Why to test flash in full screen mode? Thanks in advance!",5
+1918918,12/17/2009 01:27:53,232568,12/16/2009 01:05:43,6,0,is there a video codec that can be loaded by Flash and Silverlight seamlessly?,"is there any possibility for loading flv or f4v on silverlight platform?
+Thanks!",flash,streaming,actionscript-3,silverlight,video,,open,0,12,14,"is there a video codec that can be loaded by Flash and Silverlight seamlessly? is there any possibility for loading flv or f4v on silverlight platform?
+Thanks!",5
+11596683,07/21/2012 23:44:19,732539,04/30/2011 16:02:02,536,26,"""Find More Themes"" for Flex - Is this a joke?","So I'm designing a Flex app and saw they that I could change the theme of the application very easily. 
+
+I clicked on the Appearances tab, then clicked on my current default theme and saw a wonderful dialog box of themes I could choose that came with Flash Builder 4.6.
+
+I saw the link ""Explore More Themes"" which redirected to the Adobe site. However, I was saddened to see that there was a grand total of 1 theme that was on the Adobe website.
+
+Every theme I find online doesn't seem to import well. The only ones I could find are from 2007, and they all have a CSS file in their zip rather than a SWC. Importing the CSS never seems to get the fonts or colors they use in their examples.
+
+Has anyone else run into this issue? Is there ANY gallery of themes out there? Am I doing something wrong with importing process?",flash,flex,actionscript,themes,,07/22/2012 15:39:36,off topic,1,153,10,"""Find More Themes"" for Flex - Is this a joke? So I'm designing a Flex app and saw they that I could change the theme of the application very easily. 
+
+I clicked on the Appearances tab, then clicked on my current default theme and saw a wonderful dialog box of themes I could choose that came with Flash Builder 4.6.
+
+I saw the link ""Explore More Themes"" which redirected to the Adobe site. However, I was saddened to see that there was a grand total of 1 theme that was on the Adobe website.
+
+Every theme I find online doesn't seem to import well. The only ones I could find are from 2007, and they all have a CSS file in their zip rather than a SWC. Importing the CSS never seems to get the fonts or colors they use in their examples.
+
+Has anyone else run into this issue? Is there ANY gallery of themes out there? Am I doing something wrong with importing process?",4
+11354536,07/06/2012 00:54:26,844672,07/14/2011 13:35:11,49,1,State of Flash vs alternatives?,"I need a little objective advice, which may be tricky given the nature of the subject.
+
+I started in web 15 years ago, with the then Macromedia Flash. I loved Flash, I learned that sucker inside and out. Then I learned how to build websites properly, with CSS etc. 
+
+Back in the day, we were doing some complex things with Flash and AS. I can't begin to imagine what might be possible with the current versions of Flash.
+
+For around 10 years, I have had an idea for a Flash chat room. It's a substantial project, along the lines of Habbo Hotel with bells on. I am now in a position to begin looking at this project.
+
+However, since then there is the whole iPod debacle, and also HTML5 which is supposed to be the new Flash on the block. However, when I have tried to look into HTML5, all I have seen done is some video stuff, and a couple arbitrary basic things that would take 2 minutes in Flash. I haven't tried HTML5 yet but based on the thing I have seen so far, vs what was being done in Flash 10+ years ago, I can't say that I am impressed.
+
+But, if Flash is on the way out, and will be obsolete soon enough, I inversely don't want to rush out and spend 5 figures on a chat system that will be a dinosaur by the coming year.
+
+Could anyone give some good objective advice on this? I haven't managed to find anything objective anywhere, other than ""HTML5 is much better than Flash"", but seemingly nothing to support this in terms of work or projects. The Duke Nukem sim is nice, but again pretty basic stuff.
+
+Your advice is very appreciated.
+
+Best wishes
+
+Edward",flash,html5,actionscript,,,07/07/2012 17:49:30,not constructive,1,289,5,"State of Flash vs alternatives? I need a little objective advice, which may be tricky given the nature of the subject.
+
+I started in web 15 years ago, with the then Macromedia Flash. I loved Flash, I learned that sucker inside and out. Then I learned how to build websites properly, with CSS etc. 
+
+Back in the day, we were doing some complex things with Flash and AS. I can't begin to imagine what might be possible with the current versions of Flash.
+
+For around 10 years, I have had an idea for a Flash chat room. It's a substantial project, along the lines of Habbo Hotel with bells on. I am now in a position to begin looking at this project.
+
+However, since then there is the whole iPod debacle, and also HTML5 which is supposed to be the new Flash on the block. However, when I have tried to look into HTML5, all I have seen done is some video stuff, and a couple arbitrary basic things that would take 2 minutes in Flash. I haven't tried HTML5 yet but based on the thing I have seen so far, vs what was being done in Flash 10+ years ago, I can't say that I am impressed.
+
+But, if Flash is on the way out, and will be obsolete soon enough, I inversely don't want to rush out and spend 5 figures on a chat system that will be a dinosaur by the coming year.
+
+Could anyone give some good objective advice on this? I haven't managed to find anything objective anywhere, other than ""HTML5 is much better than Flash"", but seemingly nothing to support this in terms of work or projects. The Duke Nukem sim is nice, but again pretty basic stuff.
+
+Your advice is very appreciated.
+
+Best wishes
+
+Edward",3
+3290773,07/20/2010 14:05:48,12243,09/16/2008 13:42:50,4887,157,Not quite a Singleton,"I'm using ActionScript3 to develop a Data Access Layer for an application another developer is working on in my team. One of the objects, lets call it `User` is expensive to construct. Each user has a unique ID number so I can tell if they've been created before or not, and all `User` objects are stored in an array somewhere else.
+
+I want to be able to restrict it so that there can be only once instance of a `User` per ID. I.E. each user has to be unique, and requests for an already constructed `User` should receive the pre-constructed `User`.
+
+If I was using a sane, well-designed language I would simple make it a private constructor and force all requests for the object to go through a function that cached things. But flash doesn't allow private constructors (only public and internal, neither of which will work). How can I achieve this?",flash,actionscript-3,data-access-layer,,,,open,0,150,4,"Not quite a Singleton I'm using ActionScript3 to develop a Data Access Layer for an application another developer is working on in my team. One of the objects, lets call it `User` is expensive to construct. Each user has a unique ID number so I can tell if they've been created before or not, and all `User` objects are stored in an array somewhere else.
+
+I want to be able to restrict it so that there can be only once instance of a `User` per ID. I.E. each user has to be unique, and requests for an already constructed `User` should receive the pre-constructed `User`.
+
+If I was using a sane, well-designed language I would simple make it a private constructor and force all requests for the object to go through a function that cached things. But flash doesn't allow private constructors (only public and internal, neither of which will work). How can I achieve this?",3
+9828375,03/22/2012 18:32:51,1286456,03/22/2012 16:29:32,1,0,Read text data from Flash,"everyone.
+How can I read embedded text inside Flash?
+
+For example, [http://www.bet365.com/home/FlashGen4/WebConsoleApp.asp?][1] there are results of games in flash format (""Chelsea - Liverpool 0-0"").
+
+How to get ""Chelsea - Liverpool 0-0"" from there?
+
+
+  [1]: http://www.bet365.com/home/FlashGen4/WebConsoleApp.asp?",flash,text,get,embedded,,,open,0,33,5,"Read text data from Flash everyone.
+How can I read embedded text inside Flash?
+
+For example, [http://www.bet365.com/home/FlashGen4/WebConsoleApp.asp?][1] there are results of games in flash format (""Chelsea - Liverpool 0-0"").
+
+How to get ""Chelsea - Liverpool 0-0"" from there?
+
+
+  [1]: http://www.bet365.com/home/FlashGen4/WebConsoleApp.asp?",4
+924081,05/29/2009 01:57:44,113419,05/27/2009 21:47:45,21,0,SWF Obfuscator,"Does anybody know of a free flash obfuscator? All I can find are commercial ones with free trials. I have done numerous google searches, and have been unable to find what I am looking for. 
+
+I know that obfuscators do not make your swf hack proof, but they make things harder. 
+
+Things I am looking for in an obfuscator:
+
+-Unlimited obfuscations
+-No time limit
+-No watermark (or on the left side only! Right side is no good, same with center)
+-Able to publish work (no special player needed other than standard flashplayer)
+
+I really was surprised to see how hard it was to find a good obfuscator (tried encoder, protection, etc. instead as well) and how easy it is to find a decompiler....
+
+It is imperative that my code be protected, at least partially, to discourage the hacking of my game.",flash,encryption,obfuscation,swf,,10/18/2011 17:49:26,not constructive,1,135,2,"SWF Obfuscator Does anybody know of a free flash obfuscator? All I can find are commercial ones with free trials. I have done numerous google searches, and have been unable to find what I am looking for. 
+
+I know that obfuscators do not make your swf hack proof, but they make things harder. 
+
+Things I am looking for in an obfuscator:
+
+-Unlimited obfuscations
+-No time limit
+-No watermark (or on the left side only! Right side is no good, same with center)
+-Able to publish work (no special player needed other than standard flashplayer)
+
+I really was surprised to see how hard it was to find a good obfuscator (tried encoder, protection, etc. instead as well) and how easy it is to find a decompiler....
+
+It is imperative that my code be protected, at least partially, to discourage the hacking of my game.",4
+4683137,01/13/2011 17:30:10,440201,09/05/2010 20:45:28,23,0,AS3 SWFAddress back button doesn't work in Safari 5.03 on Mac?,"I have implemented SWFAddress 2.4, it works perfectly in Chrome and Firefox on Mac. But in Safari 5.0.3 on Mac, the back button doesn't trigger the AddressChangeEvent. Deep linking works on Safari, just the back button doesn't.
+
+Anyone have encountered this? Is it a bug and is there a solution?
+
+Thanks!",flash,actionscript-3,swfaddress,,,,open,0,49,11,"AS3 SWFAddress back button doesn't work in Safari 5.03 on Mac? I have implemented SWFAddress 2.4, it works perfectly in Chrome and Firefox on Mac. But in Safari 5.0.3 on Mac, the back button doesn't trigger the AddressChangeEvent. Deep linking works on Safari, just the back button doesn't.
+
+Anyone have encountered this? Is it a bug and is there a solution?
+
+Thanks!",3
+8134716,11/15/2011 10:18:03,468102,10/06/2010 14:55:50,447,3,Is there a chrome extension for capturing the content of embedded flash videos?,"I am looking for a extension for Google Chrome of even Firefox that allows me to make a screenshot of the current frame of an embedded flash video.
+
+Anyone know of an extension like that?",flash,google-chrome-extension,flv,,,11/15/2011 15:24:53,off topic,1,34,13,"Is there a chrome extension for capturing the content of embedded flash videos? I am looking for a extension for Google Chrome of even Firefox that allows me to make a screenshot of the current frame of an embedded flash video.
+
+Anyone know of an extension like that?",3
+5869576,05/03/2011 12:40:43,698737,04/08/2011 13:35:33,7,0,Re-code Flex 3 to Flex 4.0,"Guys help transform the code from Flex 3.0 to Flex 4.0
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+<s:Application xmlns:fx=""http://ns.adobe.com/mxml/2009"" 
+			   xmlns:s=""library://ns.adobe.com/flex/spark"" 
+			   xmlns:mx=""library://ns.adobe.com/flex/mx"">
+	
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.List;
+			import mx.core.UITextField;
+			import mx.managers.PopUpManager;
+			import mx.events.ListEvent;
+			import mx.controls.Button;
+			import mx.containers.VBox;
+			import mx.containers.TitleWindow;
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			[Bindable]
+			private var xmlFilePath:String = ""SpecialCharacters.xml"";
+			[Bindable]
+			private var xmlLabelField:String = ""name"";
+			
+			[Bindable]
+			private var xmlSpecialCharacters:XML= null;
+			
+			
+			[Bindable]
+			private var txtContextMenu:ContextMenu= null;
+			
+			[Bindable]
+			private var popUp:TitleWindow = null;
+			
+			/**
+			 * Function Loading XML
+			 **/
+			private function loadXML():void
+			{
+				xmlLoader.send();
+			}
+			/**
+			 * Function Handling XML Response
+			 **/
+			private function resultHandler(event:ResultEvent):void
+			{
+				xmlSpecialCharacters = XML(event.message.body);
+				
+			}
+			/**
+			 * Function Handling XML Response in case of Fault
+			 **/
+			private function faultHandler(event:FaultEvent):void
+			{
+				xmlSpecialCharacters = null;
+				Alert.show(event.message.body.toString());
+			}
+			
+			private function createContextMenu():ContextMenu
+			{
+				var contextMenuItem:ContextMenuItem = new ContextMenuItem(""Special Characters"", true);
+				contextMenuItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, itemSelectHandler);
+				contextMenu = new ContextMenu();
+				contextMenu.hideBuiltInItems();
+				contextMenu.customItems = [contextMenuItem];
+				return contextMenu;
+			}
+			
+			private function createPopUp(titleWindow:TitleWindow, xList:XMLList):TitleWindow
+			{
+				titleWindow.title = ""Select Special Character"";
+				
+				var vbox:VBox = new VBox();
+				
+				var lst:List = new List();
+				lst.labelField = xmlLabelField;
+				lst.dataProvider = xList;
+				lst.addEventListener(ListEvent.ITEM_CLICK, listClickedHandler);
+				
+				vbox.addChild(lst);
+				
+				var hbox:HBox = new HBox();
+				
+				var btnSave:Button = new Button();
+				btnSave.label=""Save"";
+				btnSave.addEventListener(MouseEvent.CLICK, saveHandler); 
+				
+				var btnCancel:Button = new Button();
+				btnCancel.label=""Cancel"";
+				btnCancel.addEventListener(MouseEvent.CLICK, cancelHandler);
+				
+				hbox.addChild(btnSave);
+				hbox.addChild(btnCancel);
+				
+				vbox.addChild(hbox);
+				
+				titleWindow.addChild(vbox);
+				
+				return titleWindow;
+				
+			}
+			
+			private function saveHandler(event:MouseEvent):void
+			{
+				Alert.show(""Save"");
+				PopUpManager.removePopUp(popUp);
+			}
+			
+			private function cancelHandler(event:MouseEvent):void
+			{
+				Alert.show(""Cancel"");
+				PopUpManager.removePopUp(popUp);
+			}
+			
+			private function listClickedHandler(event:ListEvent):void
+			{
+				Alert.show(""Cancel"");
+			}
+			
+			private function itemSelectHandler(event:ContextMenuEvent):void
+			{
+				var textArea:TextArea = TextArea(event.contextMenuOwner);
+				if (isTextSelected(textArea))
+				{
+					var selectedText:String = getSelectedText(textArea);
+					var xList:XMLList = null;
+					if (selectedText.length > 1)
+					{
+						xList = XMLList(xmlSpecialCharacters.specchr.(accentmark==false));
+					}
+					else
+					{
+						xList = XMLList(xmlSpecialCharacters.specchr.(accentmark==true));
+					}
+					popUp = TitleWindow(PopUpManager.createPopUp(this,TitleWindow,true));
+					popUp = createPopUp(popUp, xList);
+				}
+				else
+				{
+					Alert.show(""Текст не выделен"");
+				}
+			}
+			
+			private function isTextSelected(textArea:TextArea):Boolean
+			{
+				return (getSelectedText(textArea) != null)	
+			}
+			private function getTextLength(text:String):int
+			{
+				return text.length;
+			}
+			private function getSelectedText(textArea:TextArea):String
+			{
+				var sIndex:int = textArea.selectionBeginIndex;
+				var eIndex:int = textArea.selectionEndIndex;
+				
+				var selectedText:String = textArea.text.substring(sIndex, eIndex)
+				if (selectedText == """")
+					return null;
+				
+				return selectedText;
+				
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:HTTPService id=""xmlLoader"" 
+						url=""{xmlFilePath}"" 
+						result=""{resultHandler(event)}"" 
+						fault=""{faultHandler(event)}""
+						
+						/>
+	</fx:Declarations>
+	
+	<mx:HBox id=""hBox"" width=""100%"" height=""100%"">
+		<mx:VBox width=""80%"" height=""100%"" creationComplete=""{txtContextMenu = createContextMenu()}"">
+			<mx:TextArea 
+				id=""txtUpper"" 
+				contextMenu=""{txtContextMenu}""
+				height=""100%"" width=""100%""/>
+			<mx:TextArea 
+				id=""txtLower""
+				contextMenu=""{txtContextMenu}""
+				height=""100%"" width=""100%""/>	
+		</mx:VBox>
+	</mx:HBox>
+</s:Application>
+",flash,flex,actionscript-3,,,05/03/2011 17:38:14,not a real question,1,210,6,"Re-code Flex 3 to Flex 4.0 Guys help transform the code from Flex 3.0 to Flex 4.0
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+<s:Application xmlns:fx=""http://ns.adobe.com/mxml/2009"" 
+			   xmlns:s=""library://ns.adobe.com/flex/spark"" 
+			   xmlns:mx=""library://ns.adobe.com/flex/mx"">
+	
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.List;
+			import mx.core.UITextField;
+			import mx.managers.PopUpManager;
+			import mx.events.ListEvent;
+			import mx.controls.Button;
+			import mx.containers.VBox;
+			import mx.containers.TitleWindow;
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			[Bindable]
+			private var xmlFilePath:String = ""SpecialCharacters.xml"";
+			[Bindable]
+			private var xmlLabelField:String = ""name"";
+			
+			[Bindable]
+			private var xmlSpecialCharacters:XML= null;
+			
+			
+			[Bindable]
+			private var txtContextMenu:ContextMenu= null;
+			
+			[Bindable]
+			private var popUp:TitleWindow = null;
+			
+			/**
+			 * Function Loading XML
+			 **/
+			private function loadXML():void
+			{
+				xmlLoader.send();
+			}
+			/**
+			 * Function Handling XML Response
+			 **/
+			private function resultHandler(event:ResultEvent):void
+			{
+				xmlSpecialCharacters = XML(event.message.body);
+				
+			}
+			/**
+			 * Function Handling XML Response in case of Fault
+			 **/
+			private function faultHandler(event:FaultEvent):void
+			{
+				xmlSpecialCharacters = null;
+				Alert.show(event.message.body.toString());
+			}
+			
+			private function createContextMenu():ContextMenu
+			{
+				var contextMenuItem:ContextMenuItem = new ContextMenuItem(""Special Characters"", true);
+				contextMenuItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, itemSelectHandler);
+				contextMenu = new ContextMenu();
+				contextMenu.hideBuiltInItems();
+				contextMenu.customItems = [contextMenuItem];
+				return contextMenu;
+			}
+			
+			private function createPopUp(titleWindow:TitleWindow, xList:XMLList):TitleWindow
+			{
+				titleWindow.title = ""Select Special Character"";
+				
+				var vbox:VBox = new VBox();
+				
+				var lst:List = new List();
+				lst.labelField = xmlLabelField;
+				lst.dataProvider = xList;
+				lst.addEventListener(ListEvent.ITEM_CLICK, listClickedHandler);
+				
+				vbox.addChild(lst);
+				
+				var hbox:HBox = new HBox();
+				
+				var btnSave:Button = new Button();
+				btnSave.label=""Save"";
+				btnSave.addEventListener(MouseEvent.CLICK, saveHandler); 
+				
+				var btnCancel:Button = new Button();
+				btnCancel.label=""Cancel"";
+				btnCancel.addEventListener(MouseEvent.CLICK, cancelHandler);
+				
+				hbox.addChild(btnSave);
+				hbox.addChild(btnCancel);
+				
+				vbox.addChild(hbox);
+				
+				titleWindow.addChild(vbox);
+				
+				return titleWindow;
+				
+			}
+			
+			private function saveHandler(event:MouseEvent):void
+			{
+				Alert.show(""Save"");
+				PopUpManager.removePopUp(popUp);
+			}
+			
+			private function cancelHandler(event:MouseEvent):void
+			{
+				Alert.show(""Cancel"");
+				PopUpManager.removePopUp(popUp);
+			}
+			
+			private function listClickedHandler(event:ListEvent):void
+			{
+				Alert.show(""Cancel"");
+			}
+			
+			private function itemSelectHandler(event:ContextMenuEvent):void
+			{
+				var textArea:TextArea = TextArea(event.contextMenuOwner);
+				if (isTextSelected(textArea))
+				{
+					var selectedText:String = getSelectedText(textArea);
+					var xList:XMLList = null;
+					if (selectedText.length > 1)
+					{
+						xList = XMLList(xmlSpecialCharacters.specchr.(accentmark==false));
+					}
+					else
+					{
+						xList = XMLList(xmlSpecialCharacters.specchr.(accentmark==true));
+					}
+					popUp = TitleWindow(PopUpManager.createPopUp(this,TitleWindow,true));
+					popUp = createPopUp(popUp, xList);
+				}
+				else
+				{
+					Alert.show(""Текст не выделен"");
+				}
+			}
+			
+			private function isTextSelected(textArea:TextArea):Boolean
+			{
+				return (getSelectedText(textArea) != null)	
+			}
+			private function getTextLength(text:String):int
+			{
+				return text.length;
+			}
+			private function getSelectedText(textArea:TextArea):String
+			{
+				var sIndex:int = textArea.selectionBeginIndex;
+				var eIndex:int = textArea.selectionEndIndex;
+				
+				var selectedText:String = textArea.text.substring(sIndex, eIndex)
+				if (selectedText == """")
+					return null;
+				
+				return selectedText;
+				
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:HTTPService id=""xmlLoader"" 
+						url=""{xmlFilePath}"" 
+						result=""{resultHandler(event)}"" 
+						fault=""{faultHandler(event)}""
+						
+						/>
+	</fx:Declarations>
+	
+	<mx:HBox id=""hBox"" width=""100%"" height=""100%"">
+		<mx:VBox width=""80%"" height=""100%"" creationComplete=""{txtContextMenu = createContextMenu()}"">
+			<mx:TextArea 
+				id=""txtUpper"" 
+				contextMenu=""{txtContextMenu}""
+				height=""100%"" width=""100%""/>
+			<mx:TextArea 
+				id=""txtLower""
+				contextMenu=""{txtContextMenu}""
+				height=""100%"" width=""100%""/>	
+		</mx:VBox>
+	</mx:HBox>
+</s:Application>
+",3
+974707,06/10/2009 10:10:39,123137,02/16/2009 22:50:58,13,0,How do I get my guides to snap to pixels in Flash (CS3)?,"So I'm trying to use guides on my flash stage to better align objects, but how do I get the guides to snap to pixels? Half the time they end up being 298.4 etc, when I want them nicely snapped on each pixel, so 298.0.
+
+I'm using Flash CS3, and I have all the snapping options turned on. I read somewhere that holding down shift will snap guides to pixels, but this doesnt seem to work. Any ideas?
+
+Surely this must be possible?
+
+Thanks,
+
+Chris.",flash,,,,,,open,0,81,13,"How do I get my guides to snap to pixels in Flash (CS3)? So I'm trying to use guides on my flash stage to better align objects, but how do I get the guides to snap to pixels? Half the time they end up being 298.4 etc, when I want them nicely snapped on each pixel, so 298.0.
+
+I'm using Flash CS3, and I have all the snapping options turned on. I read somewhere that holding down shift will snap guides to pixels, but this doesnt seem to work. Any ideas?
+
+Surely this must be possible?
+
+Thanks,
+
+Chris.",1
+1166145,07/22/2009 15:34:30,89604,04/10/2009 21:26:54,251,14,How to specify flashvars when importing a flash movie?,"I want to use a flash movie in another movie, so I import the desired swf into the library. Yet, the swf needs some additional configuration that can be passed as flash vars. How can I specify the flash vars?",flash,,,,,,open,0,40,9,"How to specify flashvars when importing a flash movie? I want to use a flash movie in another movie, so I import the desired swf into the library. Yet, the swf needs some additional configuration that can be passed as flash vars. How can I specify the flash vars?",1
+8075692,11/10/2011 06:22:36,1037487,11/09/2011 10:54:15,1,0,How to hack a flash game to increase votes or score?,"I want to know about hacking a flash game...like in a flash game how to hack to increase your votes or score ... As there are flash games in Facebook,how to hack them ...
+any script or cheat engine used for that please tell me if anybody knows",flash,flash-builder,hacking,hack,hacks,11/10/2011 07:26:31,not constructive,1,47,11,"How to hack a flash game to increase votes or score? I want to know about hacking a flash game...like in a flash game how to hack to increase your votes or score ... As there are flash games in Facebook,how to hack them ...
+any script or cheat engine used for that please tell me if anybody knows",5
+7937018,10/29/2011 04:30:25,1019399,10/29/2011 04:18:43,1,0,Are the bytes loaded with URLStream stored in memory?,"I'm using URLStream to download a big file and save locally on a mobile app. To do this, i need to store the downloaded bytes on a ByteArray:
+
+    private function handleStreamProgress(event : ProgressEvent) : void {
+      if ( urlStream.bytesAvailable == 0 ) return;
+      if ( urlStream.connected ) {
+        urlStream.readBytes(byteArray, byteArray.length);
+        fileStream.writeBytes(byteArray, bytesOffset);
+        bytesOffset = byteArray.length;
+      } 
+    }
+
+Are these bytes from the downloaded file stored in Memory? (Profiler doesn't show any excessive memory consumption, though...) 
+
+Should I clean the byteArray after each sequence of bytes is stored?",flash,actionscript-3,flex,actionscript,,,open,0,129,9,"Are the bytes loaded with URLStream stored in memory? I'm using URLStream to download a big file and save locally on a mobile app. To do this, i need to store the downloaded bytes on a ByteArray:
+
+    private function handleStreamProgress(event : ProgressEvent) : void {
+      if ( urlStream.bytesAvailable == 0 ) return;
+      if ( urlStream.connected ) {
+        urlStream.readBytes(byteArray, byteArray.length);
+        fileStream.writeBytes(byteArray, bytesOffset);
+        bytesOffset = byteArray.length;
+      } 
+    }
+
+Are these bytes from the downloaded file stored in Memory? (Profiler doesn't show any excessive memory consumption, though...) 
+
+Should I clean the byteArray after each sequence of bytes is stored?",4
+8669469,12/29/2011 15:05:44,975905,10/02/2011 23:52:34,18,1,How to access to the cells of advancedDatagrid,"I was wondering if anyone can help me how I can access to the row data of my advancedDataGrid, I don't have any item Render set , but I do have data provider and dataField set for my grid, I need to check if the grid has been filled with data or not? that is why I need to access to data in the rows, to see if the rows are empty or not?
+ 
+any help would be appreciated
+ 
+Thanks",flash,flex,actionscript,flash-builder,,,open,0,80,8,"How to access to the cells of advancedDatagrid I was wondering if anyone can help me how I can access to the row data of my advancedDataGrid, I don't have any item Render set , but I do have data provider and dataField set for my grid, I need to check if the grid has been filled with data or not? that is why I need to access to data in the rows, to see if the rows are empty or not?
+ 
+any help would be appreciated
+ 
+Thanks",4
+7030933,08/11/2011 18:24:59,490338,10/28/2010 16:08:22,41,2,Flash as2 introduce delay within sequential code,"In my flash project I wanted to introduce small delays between actions performed by the code in a run.
+
+For example:
+
+    for(i=0; i<5; ++i) {
+        someMovieClip[i]._visible = false;
+        //One second of delay
+    }
+
+Is it possible to implement this one second delay above? (in AS2)",flash,actionscript-2,,,,,open,0,63,7,"Flash as2 introduce delay within sequential code In my flash project I wanted to introduce small delays between actions performed by the code in a run.
+
+For example:
+
+    for(i=0; i<5; ++i) {
+        someMovieClip[i]._visible = false;
+        //One second of delay
+    }
+
+Is it possible to implement this one second delay above? (in AS2)",2
+4395909,12/09/2010 07:32:00,536061,12/09/2010 07:26:37,1,0,how to configure flash player in firefox(flash player is working well in Chrome)?,i can view flash videos with chrome in my computer but can't view flash in firefox. plz how to configure firefox to view flash videos?,flash,firefox,,,,,open,0,25,13,how to configure flash player in firefox(flash player is working well in Chrome)? i can view flash videos with chrome in my computer but can't view flash in firefox. plz how to configure firefox to view flash videos?,2
+6647677,07/11/2011 08:40:33,793842,06/11/2011 09:40:12,937,34,Tips for efficient AS3,"AS3, like many OOP languages, contains many micro/macro-optimization techniques, that may be unheard of to inexperience users. To help the less experienced ones : What are the tips worth knowing, that will enrich an AS3 programmer.
+
+Since most as3 programmer, will use either flash or flex, programming tips involving them are naturally welcomed too.
+
+Also please limit each answer to one tip, so the best ones will naturally float to the top =)",flash,flex,actionscript-3,tips-and-tricks,,07/11/2011 14:46:26,not constructive,1,71,4,"Tips for efficient AS3 AS3, like many OOP languages, contains many micro/macro-optimization techniques, that may be unheard of to inexperience users. To help the less experienced ones : What are the tips worth knowing, that will enrich an AS3 programmer.
+
+Since most as3 programmer, will use either flash or flex, programming tips involving them are naturally welcomed too.
+
+Also please limit each answer to one tip, so the best ones will naturally float to the top =)",4
+5291222,03/13/2011 17:48:31,272741,02/14/2010 12:31:21,151,15,What's the best Facebook SDK,"I was was sondering which one is the best Facebook SDK for AS3? 
+
+Can anyone recommend an extra library/helper to use? E.g. for autoconnect in a canvas App?
+",flash,actionscript-3,facebook,api,,09/19/2011 16:34:11,not constructive,1,28,5,"What's the best Facebook SDK I was was sondering which one is the best Facebook SDK for AS3? 
+
+Can anyone recommend an extra library/helper to use? E.g. for autoconnect in a canvas App?
+",4
+7219487,08/28/2011 06:57:11,443219,09/09/2010 08:47:30,127,11,"""Flash is dead"", they pronounce. But exactly by how much?","Based on the seemingly unstoppable sales march of web enabled Apple products, the blogosphere is abuzz with declarations of Flash's death. Everyone seems to be saying this, and today, I feel dirty to even suggest the use of Flash on a website, even in a small fashion.
+
+Some of my clients do not understand this. They insist on having a *completely* flash based website with feisty navigation and page transition effects and background music in tow. I do tell them that Flash is does not work on mobile devices, and is unsupported on iProducts - but I've even been told by one client that most people they know don't own an iPad, and hardly anyone is solely dependent on one. I've heard similar things from a handful of others.
+
+So, should I bother to fight against Flash? There is of course the fact that what can be done  with flash, cannot be done in JavaScript. Before you bring out your jQuery powered bazooka, I mean a lot of stuff that is super easy in Flash, is very hard to replicate in JavaScript. I would like to think I can continue to create with Flash, while utilizing JS to do stuff that it is really good at. Am I wrong? Also, how does the answer to this question change when we move from a simple site to a web app? Is flash completely prohibited there?",flash,apple,,,,08/28/2011 07:03:23,not constructive,1,233,10,"""Flash is dead"", they pronounce. But exactly by how much? Based on the seemingly unstoppable sales march of web enabled Apple products, the blogosphere is abuzz with declarations of Flash's death. Everyone seems to be saying this, and today, I feel dirty to even suggest the use of Flash on a website, even in a small fashion.
+
+Some of my clients do not understand this. They insist on having a *completely* flash based website with feisty navigation and page transition effects and background music in tow. I do tell them that Flash is does not work on mobile devices, and is unsupported on iProducts - but I've even been told by one client that most people they know don't own an iPad, and hardly anyone is solely dependent on one. I've heard similar things from a handful of others.
+
+So, should I bother to fight against Flash? There is of course the fact that what can be done  with flash, cannot be done in JavaScript. Before you bring out your jQuery powered bazooka, I mean a lot of stuff that is super easy in Flash, is very hard to replicate in JavaScript. I would like to think I can continue to create with Flash, while utilizing JS to do stuff that it is really good at. Am I wrong? Also, how does the answer to this question change when we move from a simple site to a web app? Is flash completely prohibited there?",2
+10413839,05/02/2012 12:33:27,915585,08/27/2011 15:01:05,147,0,Movable/Resizable shapes in Flash,"I'm currently learning flash i'm on it since this morning so i'm really a newbie in it.
+I tried to solve this problem on my own alone but it didn't find a solution.
+I'm trying to create a shape and with dots resize the shape. And when you click the shape it cans be dragged.
+
+I already made the shapes movable and resizable and it works wheel. But if I move the shape after resized it, the dots are not anymore on the shapes.
+
+Because there is a lot of code, I've upload the flash project here :
+http://ploof.eu/trashfiles/8n37.rar
+
+
+Thanks.",flash,,,,,05/02/2012 20:55:45,not a real question,1,94,4,"Movable/Resizable shapes in Flash I'm currently learning flash i'm on it since this morning so i'm really a newbie in it.
+I tried to solve this problem on my own alone but it didn't find a solution.
+I'm trying to create a shape and with dots resize the shape. And when you click the shape it cans be dragged.
+
+I already made the shapes movable and resizable and it works wheel. But if I move the shape after resized it, the dots are not anymore on the shapes.
+
+Because there is a lot of code, I've upload the flash project here :
+http://ploof.eu/trashfiles/8n37.rar
+
+
+Thanks.",1
+3688768,09/10/2010 22:16:26,261251,01/28/2010 18:50:57,182,13,Live streaming webcam on a web page (most efficient solution),"For a quick project I'll be working on, I have to install a multi-webcam setup that will be **live streamed** and accessible **via a web browser**.
+
+I'm looking into the quickest and most efficient solution, the less time and hassle it takes to implement, the better. That means **buying hardware and/or software is not that much of an issue** (as long as it's not 1000$+ flash server software).
+
+The requirements / basic setup:
+
+* The web server will be directly connected the cams (via ethernet / WiFi).
+* The stream should be viewable by the max possible audience so no ActiveX / VLC-style object embedding. **Flash would be ideal** (even if it's a paid solution).
+* Bandwidth is not an issue, max 2-3 clients at a time, most of the time only one.
+
+Any options could be considered, quick-n-dirty hacks included (eg. reloading a .jpeg image 20 times a second via AJAX).",flash,video-streaming,webcam,,,08/17/2011 20:24:09,not constructive,1,146,10,"Live streaming webcam on a web page (most efficient solution) For a quick project I'll be working on, I have to install a multi-webcam setup that will be **live streamed** and accessible **via a web browser**.
+
+I'm looking into the quickest and most efficient solution, the less time and hassle it takes to implement, the better. That means **buying hardware and/or software is not that much of an issue** (as long as it's not 1000$+ flash server software).
+
+The requirements / basic setup:
+
+* The web server will be directly connected the cams (via ethernet / WiFi).
+* The stream should be viewable by the max possible audience so no ActiveX / VLC-style object embedding. **Flash would be ideal** (even if it's a paid solution).
+* Bandwidth is not an issue, max 2-3 clients at a time, most of the time only one.
+
+Any options could be considered, quick-n-dirty hacks included (eg. reloading a .jpeg image 20 times a second via AJAX).",3
+2464313,03/17/2010 17:09:21,295869,03/17/2010 17:09:21,1,0,Can the adp2 device be flashed with 2.0?,Simple question...can the adp2 that I just bought through the Android Market be flashed with Android 2.0?  I can't find anything anywhere.  The HTC developer support only has system images for the adp1 and adp2 phones up to 1.6.  If it can't I will be sending the phone back for a full refund.  Thanks.,flash,operating-system,adp,,,,open,0,58,8,Can the adp2 device be flashed with 2.0? Simple question...can the adp2 that I just bought through the Android Market be flashed with Android 2.0?  I can't find anything anywhere.  The HTC developer support only has system images for the adp1 and adp2 phones up to 1.6.  If it can't I will be sending the phone back for a full refund.  Thanks.,3
+5121109,02/25/2011 18:26:54,586599,01/23/2011 18:58:42,5,0,Actionscript 3 - make sound only play once when objects touch,"I have a griddle_mc, bacon_mc, and BaconCooking.wav. I want to play the wav when the bacon is moved onto the griddle. If I move the bacon until it just touches the griddle the wav plays fine, but if I continue to drag the bacon_mc across the griddle the wav becomes loud and distorted, almost like it's playing multiple instances of the wav at the same time.
+
+private function __handleSliceDown($evt:MouseEvent):void {
+			slice1_mc.startDrag(true);
+			}
+			
+		private function __handleSliceUp($evt:MouseEvent):void {
+			slice1_mc.stopDrag();
+			addEventListener(Event.ENTER_FRAME, __checkHit);	  }
+	  
+	  private function __checkHit($evt:Event):void {
+		     if (this.slice1_mc.hitTestObject(griddle_mc)) {
+ 			if (!hitting) {
+		 			sc = BaconCooking.play();	 
+					}
+			 }
+	  }
+
+How can I get the wav to play correctly? ",flash,actionscript-3,wav,playback,,,open,0,108,11,"Actionscript 3 - make sound only play once when objects touch I have a griddle_mc, bacon_mc, and BaconCooking.wav. I want to play the wav when the bacon is moved onto the griddle. If I move the bacon until it just touches the griddle the wav plays fine, but if I continue to drag the bacon_mc across the griddle the wav becomes loud and distorted, almost like it's playing multiple instances of the wav at the same time.
+
+private function __handleSliceDown($evt:MouseEvent):void {
+			slice1_mc.startDrag(true);
+			}
+			
+		private function __handleSliceUp($evt:MouseEvent):void {
+			slice1_mc.stopDrag();
+			addEventListener(Event.ENTER_FRAME, __checkHit);	  }
+	  
+	  private function __checkHit($evt:Event):void {
+		     if (this.slice1_mc.hitTestObject(griddle_mc)) {
+ 			if (!hitting) {
+		 			sc = BaconCooking.play();	 
+					}
+			 }
+	  }
+
+How can I get the wav to play correctly? ",4
+8352291,12/02/2011 05:52:30,1059220,11/22/2011 06:29:54,6,0,"Actionscript, Read Histogram of an image, create auto levels/ auto correction","I've tried actionscript code to create histograms for any image. And it works . My intention was to read the histogram data and perform automatic adjustment on the image levels. Here's how i wanted to implement 
+1. Generate histogram data
+2. Read/ Analyze the histogram output of the image
+3. Determine where the majority of the pixels lay in the full brightness range to set new black and white points of a level adjustment
+
+I tried doing something like this
+
+googled for anttikupila pixel bender
+
+Here's the working code
+
+    package {
+
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.BitmapDataChannel;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
+
+    [SWF(width=800, height=600, backgroundColor=0xFFFFFF)]
+
+
+    /**
+    * Demonstrates how BitmapData's histogram() method can be used to access brightness
+    * channels of each pixel, and how this may be visually displayed.
+    */
+    public class HistogramTest extends AbstractImageLoader {
+
+        /**
+        * Constructor. Passes path of image to load to super class.
+        */
+        public function HistogramTest() {
+            super(""../../assets/test.jpg"");
+        }
+
+        /**
+        * Run after the image loads in super class. This gets the histrogram data and draws 
+        * column chart in a new image that is displayed to the right of the loaded image.
+        */
+        override protected function runPostImageLoad():void {
+            var bitmapData:BitmapData = _loadedBitmap.bitmapData;
+            
+            addChild(_loadedBitmap);
+        
+            var histogram:Vector.<Vector.<Number>> = bitmapData.histogram();
+            // retrieve the maximum number of pixels in a single brightness level;
+            // this is used to set the top of the column chart
+            
+                        var maxPixels:uint = getMaxPixels(histogram);
+            
+            // new image in which the histrogram data will be displayed
+
+
+            var histogramData:BitmapData = new BitmapData(256, 256, false, 0xFF000000);
+
+
+            // draws each individual color channel's histrogram data into the new image
+            drawChannelData(maxPixels, histogramData, histogram[0], BitmapDataChannel.RED);
+            drawChannelData(maxPixels, histogramData, histogram[1], BitmapDataChannel.GREEN);
+            drawChannelData(maxPixels, histogramData, histogram[2], BitmapDataChannel.BLUE);
+
+
+            // adds the bitmap data to a bitmap and the stage
+            var histogramBitmap:Bitmap = new Bitmap(histogramData);
+            histogramBitmap.x = bitmapData.width + (bitmapData.width-256)/2;
+            histogramBitmap.y = (bitmapData.height-256)/2;
+            addChild(histogramBitmap);
+            
+        }
+
+
+        /**
+        * Returns the maximum number of pixels in a single brightness level in all channels.
+        *
+        * @param histogram The histrogram data retrieved from an image.
+        *
+        * @return The maximum number of pixels in a single brightness level in all channels.
+        */
+        private function getMaxPixels(histogram:Vector.<Vector.<Number>>):uint {
+            var maxPixels:uint = 0;
+            var x:uint;
+            var channel:Vector.<Number>;
+
+
+            // run through all three channels
+            for (var i:uint = 0; i < 3; i++) {
+                channel = histogram[i];
+                
+                // run through all 256 brightness levels
+                for (x = 0; x < 256; x++) {
+                    
+                    maxPixels = Math.max(channel[x], maxPixels);
+                }
+            }
+            
+            return maxPixels;
+        }
+
+
+        /**
+        * Draws a column chart of a channel's histogram data into the specified bitmap.
+        *
+        * @param maxPixels The maximum number of pixels that will be displayed on the y axis, defining chart size.
+        * @param bitmapData The bitmap data in which to draw the channel data column chart.
+        * @param channelData The histogram data for the channel to draw.
+        * @param channel The channel of the image in which to draw the column chart.
+        */
+        private function drawChannelData(
+            maxPixels:uint,
+            bitmapData:BitmapData,
+            channelData:Vector.<Number>,
+            channel:uint
+        ):void {
+            // new bitmap data of exact same dimensions is used
+
+
+            var channelBitmapData:BitmapData = bitmapData.clone();
+            var y:Number;
+
+
+            // run through all 256 brightness levels and draw column for each
+            for (var x:uint = 0; x < 256; x++) {
+
+
+                // scale of the column is dictated by the number of pixels of that brightness in that channel
+                // and the maxPixels value, which defines the height of the y axis and the chart
+                y = channelData[x]/maxPixels*256;
+                // draw a column from the bottom of the image up (256-y)
+                channelBitmapData.fillRect(new Rectangle(x, 256-y, 1, y), 0xFFFFFFFF);
+            }
+            // copy the single channel's data into the final bitmap data
+            
+            bitmapData.copyChannel(channelBitmapData,channelBitmapData.rect,new Point(),channel,channel);
+        }
+
+
+    }
+
+
+
+
+",flash,actionscript-3,image-processing,histogram,,12/02/2011 12:23:00,not a real question,1,1537,11,"Actionscript, Read Histogram of an image, create auto levels/ auto correction I've tried actionscript code to create histograms for any image. And it works . My intention was to read the histogram data and perform automatic adjustment on the image levels. Here's how i wanted to implement 
+1. Generate histogram data
+2. Read/ Analyze the histogram output of the image
+3. Determine where the majority of the pixels lay in the full brightness range to set new black and white points of a level adjustment
+
+I tried doing something like this
+
+googled for anttikupila pixel bender
+
+Here's the working code
+
+    package {
+
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.BitmapDataChannel;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
+
+    [SWF(width=800, height=600, backgroundColor=0xFFFFFF)]
+
+
+    /**
+    * Demonstrates how BitmapData's histogram() method can be used to access brightness
+    * channels of each pixel, and how this may be visually displayed.
+    */
+    public class HistogramTest extends AbstractImageLoader {
+
+        /**
+        * Constructor. Passes path of image to load to super class.
+        */
+        public function HistogramTest() {
+            super(""../../assets/test.jpg"");
+        }
+
+        /**
+        * Run after the image loads in super class. This gets the histrogram data and draws 
+        * column chart in a new image that is displayed to the right of the loaded image.
+        */
+        override protected function runPostImageLoad():void {
+            var bitmapData:BitmapData = _loadedBitmap.bitmapData;
+            
+            addChild(_loadedBitmap);
+        
+            var histogram:Vector.<Vector.<Number>> = bitmapData.histogram();
+            // retrieve the maximum number of pixels in a single brightness level;
+            // this is used to set the top of the column chart
+            
+                        var maxPixels:uint = getMaxPixels(histogram);
+            
+            // new image in which the histrogram data will be displayed
+
+
+            var histogramData:BitmapData = new BitmapData(256, 256, false, 0xFF000000);
+
+
+            // draws each individual color channel's histrogram data into the new image
+            drawChannelData(maxPixels, histogramData, histogram[0], BitmapDataChannel.RED);
+            drawChannelData(maxPixels, histogramData, histogram[1], BitmapDataChannel.GREEN);
+            drawChannelData(maxPixels, histogramData, histogram[2], BitmapDataChannel.BLUE);
+
+
+            // adds the bitmap data to a bitmap and the stage
+            var histogramBitmap:Bitmap = new Bitmap(histogramData);
+            histogramBitmap.x = bitmapData.width + (bitmapData.width-256)/2;
+            histogramBitmap.y = (bitmapData.height-256)/2;
+            addChild(histogramBitmap);
+            
+        }
+
+
+        /**
+        * Returns the maximum number of pixels in a single brightness level in all channels.
+        *
+        * @param histogram The histrogram data retrieved from an image.
+        *
+        * @return The maximum number of pixels in a single brightness level in all channels.
+        */
+        private function getMaxPixels(histogram:Vector.<Vector.<Number>>):uint {
+            var maxPixels:uint = 0;
+            var x:uint;
+            var channel:Vector.<Number>;
+
+
+            // run through all three channels
+            for (var i:uint = 0; i < 3; i++) {
+                channel = histogram[i];
+                
+                // run through all 256 brightness levels
+                for (x = 0; x < 256; x++) {
+                    
+                    maxPixels = Math.max(channel[x], maxPixels);
+                }
+            }
+            
+            return maxPixels;
+        }
+
+
+        /**
+        * Draws a column chart of a channel's histogram data into the specified bitmap.
+        *
+        * @param maxPixels The maximum number of pixels that will be displayed on the y axis, defining chart size.
+        * @param bitmapData The bitmap data in which to draw the channel data column chart.
+        * @param channelData The histogram data for the channel to draw.
+        * @param channel The channel of the image in which to draw the column chart.
+        */
+        private function drawChannelData(
+            maxPixels:uint,
+            bitmapData:BitmapData,
+            channelData:Vector.<Number>,
+            channel:uint
+        ):void {
+            // new bitmap data of exact same dimensions is used
+
+
+            var channelBitmapData:BitmapData = bitmapData.clone();
+            var y:Number;
+
+
+            // run through all 256 brightness levels and draw column for each
+            for (var x:uint = 0; x < 256; x++) {
+
+
+                // scale of the column is dictated by the number of pixels of that brightness in that channel
+                // and the maxPixels value, which defines the height of the y axis and the chart
+                y = channelData[x]/maxPixels*256;
+                // draw a column from the bottom of the image up (256-y)
+                channelBitmapData.fillRect(new Rectangle(x, 256-y, 1, y), 0xFFFFFFFF);
+            }
+            // copy the single channel's data into the final bitmap data
+            
+            bitmapData.copyChannel(channelBitmapData,channelBitmapData.rect,new Point(),channel,channel);
+        }
+
+
+    }
+
+
+
+
+",4
+9253295,02/12/2012 22:24:30,1204111,02/11/2012 18:07:26,1,0,"Embed/download clips from xVideos (Adult, 18+)",The FLV from http://www.xvideos.com/video1755210 that is embeded seems to be with this FLV: http://porn210.xvideos.com/videos/flv/b/9/1/xvideos.com_b913fa258d39995001b5327bfedf099e.flv but I can't embed it (or download) on my player.. Why is that? Thanks,flash,embed,player,,,02/14/2012 14:41:55,not a real question,1,28,6,"Embed/download clips from xVideos (Adult, 18+) The FLV from http://www.xvideos.com/video1755210 that is embeded seems to be with this FLV: http://porn210.xvideos.com/videos/flv/b/9/1/xvideos.com_b913fa258d39995001b5327bfedf099e.flv but I can't embed it (or download) on my player.. Why is that? Thanks",3
+2936228,05/29/2010 18:52:46,343320,05/17/2010 18:06:39,26,3,how can I make windowless flash projector without a 3rd party application?,"i'm trying to finish an educational cdrom done in flash, how can i make a window less projector, or position the window on the center of the screen without a 3rd party software?",flash,actionscript-3,projector,,,,open,0,33,12,"how can I make windowless flash projector without a 3rd party application? i'm trying to finish an educational cdrom done in flash, how can i make a window less projector, or position the window on the center of the screen without a 3rd party software?",3
+4901194,02/04/2011 17:46:29,567659,01/08/2011 01:14:10,18,1,"Need help with ""if"" in Flash AS3","Hi to every 1 need your help with ""if"" in Flash AS3, it should be like this:
+ 
+
+> **if sound play go to frame 1 and if sound doesn't play go to frame 2**
+
+    if (SoundMixer.soundTransform=new SoundTransform(1);)
+    {
+    gotoAndStop(1);
+    }else{
+    gotoAndStop(2);
+    }
+
+
+how to make it work, thanks",flash,actionscript-3,,,,,open,0,65,7,"Need help with ""if"" in Flash AS3 Hi to every 1 need your help with ""if"" in Flash AS3, it should be like this:
+ 
+
+> **if sound play go to frame 1 and if sound doesn't play go to frame 2**
+
+    if (SoundMixer.soundTransform=new SoundTransform(1);)
+    {
+    gotoAndStop(1);
+    }else{
+    gotoAndStop(2);
+    }
+
+
+how to make it work, thanks",2
+5008648,02/15/2011 19:37:32,583262,01/20/2011 16:32:34,10,0,createEmptyMovieClip creates it on all frames (AS2)?,"I have a question regarding createEmptyMovieClip in AS2. I have a flash file separated out into sections with labels and menu buttons which allow you to move you to the relevant frame/section (which contains the information/contents relevant to that section). This works fine. What I can't work out is that if I manually put a movieclip on the stage in my 'about section' and then add contents to it via AS2 then it only exists within the about us section. If I do it using createEmptyMovieClip within the actions for the about frame this works fine but it then always exists on every other frame of the project. I assume this is because it isn't actually creating it within this frame but I can't work out how to make it do this, even when i use this.createEmptyMovieClip it has exactly the same effect. I can obviously remove the movieclip completely each time a user moves to another frame that doesn't contain it but I don't want to do this as it contains a youtube video and leaving it means it doesn't have to be reloaded each time they come back.
+
+I would be massively grateful if anyone could shed any light on this for me as I know i'm not getting how to place it correctly but i'm not sure how I should be doing it?
+
+Thanks so much in advance,
+
+Dave",flash,youtube,actionscript-2,,,,open,0,229,7,"createEmptyMovieClip creates it on all frames (AS2)? I have a question regarding createEmptyMovieClip in AS2. I have a flash file separated out into sections with labels and menu buttons which allow you to move you to the relevant frame/section (which contains the information/contents relevant to that section). This works fine. What I can't work out is that if I manually put a movieclip on the stage in my 'about section' and then add contents to it via AS2 then it only exists within the about us section. If I do it using createEmptyMovieClip within the actions for the about frame this works fine but it then always exists on every other frame of the project. I assume this is because it isn't actually creating it within this frame but I can't work out how to make it do this, even when i use this.createEmptyMovieClip it has exactly the same effect. I can obviously remove the movieclip completely each time a user moves to another frame that doesn't contain it but I don't want to do this as it contains a youtube video and leaving it means it doesn't have to be reloaded each time they come back.
+
+I would be massively grateful if anyone could shed any light on this for me as I know i'm not getting how to place it correctly but i'm not sure how I should be doing it?
+
+Thanks so much in advance,
+
+Dave",3
+11023011,06/13/2012 20:45:12,1031241,11/05/2011 15:22:27,3,0,Looking for Html5 or Flash Video Player with Timeline Markers\Points\Tags,"I'm Looking for Html5 or Flash Video Player with Timeline Markers\Points\Tags
+<br>
+I mean something like this
+[Image-Link][1]
+
+Do you know any solutions to get something like this
+without writing it from scratch
+
+
+  [1]: http://i.stack.imgur.com/Db13U.jpg",flash,html5,html5-video,tagging,marker,,open,0,31,10,"Looking for Html5 or Flash Video Player with Timeline Markers\Points\Tags I'm Looking for Html5 or Flash Video Player with Timeline Markers\Points\Tags
+<br>
+I mean something like this
+[Image-Link][1]
+
+Do you know any solutions to get something like this
+without writing it from scratch
+
+
+  [1]: http://i.stack.imgur.com/Db13U.jpg",5
+2110745,01/21/2010 16:11:37,196082,10/25/2009 04:45:32,19,1,Easy Flash question - use ems for width?,"Can I use ems for the width tag when embedding a flash object?
+
+I've done some googling and it looks like it's just pixels and percentages but I want to double check with the stack overflow community.",flash,,,,,,open,0,36,8,"Easy Flash question - use ems for width? Can I use ems for the width tag when embedding a flash object?
+
+I've done some googling and it looks like it's just pixels and percentages but I want to double check with the stack overflow community.",1
+8825303,01/11/2012 19:19:36,1143944,01/11/2012 19:04:40,1,0,Flash multi-player system. [one player moves the other stops],"## Flash multi-player system. [one player moves the other stops] ##
+
+I started making a small multi-player avatar chat to start my self with flash and multi-player. Everything worded fine when i was using arrows to move but when i started using the mouse something go's wrong.
+
+
+This is the code:
+http://pastebin.com/dCanCtP3",flash,actionscript-3,multiplayer,,,01/12/2012 14:17:04,not a real question,1,49,9,"Flash multi-player system. [one player moves the other stops] ## Flash multi-player system. [one player moves the other stops] ##
+
+I started making a small multi-player avatar chat to start my self with flash and multi-player. Everything worded fine when i was using arrows to move but when i started using the mouse something go's wrong.
+
+
+This is the code:
+http://pastebin.com/dCanCtP3",3
+4522170,12/23/2010 20:17:46,110976,05/22/2009 09:20:53,1234,15,Which is the best pdf to swf convertor?,Which the best tool for converting pdf to swf.,flash,pdf,swf,converter,,06/20/2011 11:58:09,off topic,1,9,8,Which is the best pdf to swf convertor? Which the best tool for converting pdf to swf.,4

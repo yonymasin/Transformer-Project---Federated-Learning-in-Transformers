@@ -1,0 +1,1629 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+11401401,07/09/2012 19:03:41,1437307,06/05/2012 12:04:17,1,1,Restlet GAE Router Template matching,"I'm using Restlet (2.1 rc4) on GAE and Android. On GAE, I'm using the following Router, which isn't working regarding the PatientServerResource:
+
+    public class Server extends Application {
+
+    @Override
+    public Restlet createInboundRoot() {
+        
+        Router router = new Router(getContext());
+        
+        //routes should be matched by uri_starts_with
+        router.setRoutingMode(Router.MODE_FIRST_MATCH);
+        router.setDefaultMatchingMode(Template.MODE_STARTS_WITH);
+        //router.setDefaultMatchingQuery(false);
+
+        router.attach(""/save"", WrapperServerResource.class);
+        TemplateRoute route = router.attach(""/query/{name}?{gdat}?{svnr}"", PatientServerResource.class);
+        Map<String, Variable> routeVariables = route.getTemplate().getVariables();
+        routeVariables.put(""name"", new Variable(Variable.TYPE_URI_QUERY_PARAM));
+        routeVariables.put(""gdat"", new Variable(Variable.TYPE_URI_QUERY_PARAM));
+        routeVariables.put(""svnr"", new Variable(Variable.TYPE_URI_QUERY_PARAM));
+        router.attachDefault(StandardResource.class);
+
+        return router;
+    }
+}
+
+Client Code:
+
+    public class PatientFetcher {
+	
+	private String name, gdat, svnr;
+    
+	public PatientFetcher(String name, String gdat, String svnr) {
+		this.name = name;
+		this.gdat = gdat;
+		this.svnr = svnr;
+	}
+	
+	public List<Patient> fetch(Context ctx) {
+
+		Engine.getInstance().getRegisteredConverters().add(new JacksonConverter());
+		Engine.getInstance().getRegisteredClients().clear();
+		Engine.getInstance().getRegisteredClients().add(new HttpClientHelper(null)); 
+		if(name == null && gdat == null && svnr == null) return null;
+		ClientResource cr = new ClientResource(DataUtil.getUriFetcher(ctx));
+		cr.setRequestEntityBuffering(true);
+		cr.addQueryParameter(""name"", name);
+		cr.addQueryParameter(""gdat"", gdat);
+		cr.addQueryParameter(""svnr"", svnr);
+
+		PatientResource resource = cr.wrap(PatientResource.class);
+		try {
+			JacksonRepresentation<PatientList> repPList = new JacksonRepresentation<PatientList>(resource.search(), PatientList.class);
+			StringWriter writer = new StringWriter();
+			repPList.write(writer);
+			writer.flush();
+			Log.i(""PatientFetcher"", ""jackson json: ""+writer.toString());
+			return repPList.getObject();
+		} catch (IOException e) {
+			Log.e(""PatientFetcher"", e.getMessage());
+			e.printStackTrace();
+			return null;
+		}
+	}
+}
+
+
+According to the GAE Log, the called URI (in this example svnr=1234, other fields are blank - but even if all fields are non-null, it isn't working) is `/query/?name=&gdat=&svnr=1234` which seems to be correct, but the Server's response (in `writer.toString()`) is the Default Route's `StandardResource.represent()` String, so I guess the issue is that Router does not match the calling URI to the PatientResource - what am I doing wrong?
+
+There are no errors/warnings in the GAE log/android logcat except for a EOFException resulting from jackson not being able to deserialize the result string. The other route (""/save"") is working fine.
+(The `router.setDefaultMatchingQuery(false);` line does not seem to have any effect on the result, therefore it's commented out) ",google-app-engine,restlet,router,,,,open,0,384,5,"Restlet GAE Router Template matching I'm using Restlet (2.1 rc4) on GAE and Android. On GAE, I'm using the following Router, which isn't working regarding the PatientServerResource:
+
+    public class Server extends Application {
+
+    @Override
+    public Restlet createInboundRoot() {
+        
+        Router router = new Router(getContext());
+        
+        //routes should be matched by uri_starts_with
+        router.setRoutingMode(Router.MODE_FIRST_MATCH);
+        router.setDefaultMatchingMode(Template.MODE_STARTS_WITH);
+        //router.setDefaultMatchingQuery(false);
+
+        router.attach(""/save"", WrapperServerResource.class);
+        TemplateRoute route = router.attach(""/query/{name}?{gdat}?{svnr}"", PatientServerResource.class);
+        Map<String, Variable> routeVariables = route.getTemplate().getVariables();
+        routeVariables.put(""name"", new Variable(Variable.TYPE_URI_QUERY_PARAM));
+        routeVariables.put(""gdat"", new Variable(Variable.TYPE_URI_QUERY_PARAM));
+        routeVariables.put(""svnr"", new Variable(Variable.TYPE_URI_QUERY_PARAM));
+        router.attachDefault(StandardResource.class);
+
+        return router;
+    }
+}
+
+Client Code:
+
+    public class PatientFetcher {
+	
+	private String name, gdat, svnr;
+    
+	public PatientFetcher(String name, String gdat, String svnr) {
+		this.name = name;
+		this.gdat = gdat;
+		this.svnr = svnr;
+	}
+	
+	public List<Patient> fetch(Context ctx) {
+
+		Engine.getInstance().getRegisteredConverters().add(new JacksonConverter());
+		Engine.getInstance().getRegisteredClients().clear();
+		Engine.getInstance().getRegisteredClients().add(new HttpClientHelper(null)); 
+		if(name == null && gdat == null && svnr == null) return null;
+		ClientResource cr = new ClientResource(DataUtil.getUriFetcher(ctx));
+		cr.setRequestEntityBuffering(true);
+		cr.addQueryParameter(""name"", name);
+		cr.addQueryParameter(""gdat"", gdat);
+		cr.addQueryParameter(""svnr"", svnr);
+
+		PatientResource resource = cr.wrap(PatientResource.class);
+		try {
+			JacksonRepresentation<PatientList> repPList = new JacksonRepresentation<PatientList>(resource.search(), PatientList.class);
+			StringWriter writer = new StringWriter();
+			repPList.write(writer);
+			writer.flush();
+			Log.i(""PatientFetcher"", ""jackson json: ""+writer.toString());
+			return repPList.getObject();
+		} catch (IOException e) {
+			Log.e(""PatientFetcher"", e.getMessage());
+			e.printStackTrace();
+			return null;
+		}
+	}
+}
+
+
+According to the GAE Log, the called URI (in this example svnr=1234, other fields are blank - but even if all fields are non-null, it isn't working) is `/query/?name=&gdat=&svnr=1234` which seems to be correct, but the Server's response (in `writer.toString()`) is the Default Route's `StandardResource.represent()` String, so I guess the issue is that Router does not match the calling URI to the PatientResource - what am I doing wrong?
+
+There are no errors/warnings in the GAE log/android logcat except for a EOFException resulting from jackson not being able to deserialize the result string. The other route (""/save"") is working fine.
+(The `router.setDefaultMatchingQuery(false);` line does not seem to have any effect on the result, therefore it's commented out) ",3
+11715413,07/30/2012 04:29:36,1561907,07/30/2012 04:25:53,1,0,Cant set up app engine html hello world,"I cant   get my app to work http://myfunnyvidss.appspot.com/helloworld.py
+
+I ave followed the instructions in the hello world example and it wont work.
+
+http://myfunnyvidss.appspot.com/helloworld/helloworld.py
+
+I have installed the python msi
+I installed the APP engine console
+
+i have some files called app.yaml
+
+I keep getting errors",google-app-engine,application,engine,,,07/31/2012 10:20:11,not a real question,1,41,8,"Cant set up app engine html hello world I cant   get my app to work http://myfunnyvidss.appspot.com/helloworld.py
+
+I ave followed the instructions in the hello world example and it wont work.
+
+http://myfunnyvidss.appspot.com/helloworld/helloworld.py
+
+I have installed the python msi
+I installed the APP engine console
+
+i have some files called app.yaml
+
+I keep getting errors",3
+6315278,06/11/2011 10:04:12,748381,05/11/2011 09:36:19,1,0,In google App Engine can I create an online dev environment?,"I would like to know how can i create a dev environment where I can deploy and test my application with other user and not locally.
+Do you have any clue?
+",google-app-engine,deployment,,,,,open,0,30,11,"In google App Engine can I create an online dev environment? I would like to know how can i create a dev environment where I can deploy and test my application with other user and not locally.
+Do you have any clue?
+",2
+10071966,04/09/2012 10:35:06,679099,03/13/2011 11:25:30,488,3,Google Cookie decode,"I develop something that base on Google service.
+
+Now i noticed that they add a sessionid to their services and now i need to find it too.
+
+I make a lot of searches and i noticed that they save a cookie with a name : ""`SID`"", so i think that it is.
+
+    Set-Cookie: SID=DQAAALgAAABk20DNISbQnTIm0DHuZIhhJyMg3Gs9i1gxXZrlzfc66Fq05cxvpHShc1pcFzcW0bnFLcROwZSgoiECL2J-_tJ8iGkKh25GYutor0HD15DFjMO_HeUoG4MmrKR3WO8ShxWP624YY_l_sFES6RJzhUHQtvUk0AGtscU7XodCqDjL_7XZXhCsJlBEjB09PYxyxlbEx76ebiMYop-vIx47sTmV-ygoqFaxUfmAnRja9mMbNAu8c_XbQ8Gr9UM0QuviKsE;Domain=.google.com;Path=/;Expires=Thu, 07-Apr-2022 09:48:05 GMT
+
+My question is if their is a way yo decode what wrote in the cookie value to a number(because the session id is a number)",google-app-engine,google,,,,,open,0,82,3,"Google Cookie decode I develop something that base on Google service.
+
+Now i noticed that they add a sessionid to their services and now i need to find it too.
+
+I make a lot of searches and i noticed that they save a cookie with a name : ""`SID`"", so i think that it is.
+
+    Set-Cookie: SID=DQAAALgAAABk20DNISbQnTIm0DHuZIhhJyMg3Gs9i1gxXZrlzfc66Fq05cxvpHShc1pcFzcW0bnFLcROwZSgoiECL2J-_tJ8iGkKh25GYutor0HD15DFjMO_HeUoG4MmrKR3WO8ShxWP624YY_l_sFES6RJzhUHQtvUk0AGtscU7XodCqDjL_7XZXhCsJlBEjB09PYxyxlbEx76ebiMYop-vIx47sTmV-ygoqFaxUfmAnRja9mMbNAu8c_XbQ8Gr9UM0QuviKsE;Domain=.google.com;Path=/;Expires=Thu, 07-Apr-2022 09:48:05 GMT
+
+My question is if their is a way yo decode what wrote in the cookie value to a number(because the session id is a number)",2
+4765356,01/22/2011 00:40:32,391146,04/26/2010 20:47:56,202,8,How do extract the lat and lon from a GeoPt property?,"I'm extending the GeoModel to store locations in the datastore so I can do geo-based searches more efficiently and I assumed I could use the GeoPt property to store latitude and longitude. And the storage has worked fine. But I'm at a complete loss as to how to extract the lat and lon from an entity. 
+
+I must be missing something simple but I can't actually find the documentation for the GeoPt type so I'm looking for help on supported methods.
+
+    class StopLocation(GeoModel):
+        stopID = db.StringProperty()
+    
+    def create(stopID,lat,lon):
+        stop = StopLocation()
+        stop.stopID = stopID
+        stop.location = GeoPt(lat,lon)
+    
+    latitude = stop.location???
+
+ 
+
+
+
+",google-app-engine,gae-datastore,,,,,open,0,146,11,"How do extract the lat and lon from a GeoPt property? I'm extending the GeoModel to store locations in the datastore so I can do geo-based searches more efficiently and I assumed I could use the GeoPt property to store latitude and longitude. And the storage has worked fine. But I'm at a complete loss as to how to extract the lat and lon from an entity. 
+
+I must be missing something simple but I can't actually find the documentation for the GeoPt type so I'm looking for help on supported methods.
+
+    class StopLocation(GeoModel):
+        stopID = db.StringProperty()
+    
+    def create(stopID,lat,lon):
+        stop = StopLocation()
+        stop.stopID = stopID
+        stop.location = GeoPt(lat,lon)
+    
+    latitude = stop.location???
+
+ 
+
+
+
+",2
+6556735,07/02/2011 11:30:59,799238,06/15/2011 08:52:36,1,0,Base64DecoderException error google app engine,"Hi I am getting this error in google app engine:
+
+
+HTTP ERROR 500
+
+Problem accessing /uploadtest. Reason:
+
+    com/google/gdata/util/common/util/Base64DecoderException
+Caused by:
+
+java.lang.NoClassDefFoundError: com/google/gdata/util/common/util/Base64DecoderException
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.mortbay.jetty.servlet.Holder.newInstance(Holder.java:153)
+	at org.mortbay.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:428)
+	at org.mortbay.jetty.servlet.ServletHolder.getServlet(ServletHolder.java:339)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:487)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1166)
+	at com.google.appengine.tools.development.HeaderVerificationFilter.doFilter(HeaderVerificationFilter.java:35)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.api.blobstore.dev.ServeBlobFilter.doFilter(ServeBlobFilter.java:58)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.apphosting.utils.servlet.TransactionCleanupFilter.doFilter(TransactionCleanupFilter.java:43)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.tools.development.StaticFileFilter.doFilter(StaticFileFilter.java:122)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.tools.development.BackendServersFilter.doFilter(BackendServersFilter.java:97)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+	at com.google.apphosting.utils.jetty.DevAppEngineWebAppContext.handle(DevAppEngineWebAppContext.java:70)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at com.google.appengine.tools.development.JettyContainerService$ApiProxyHandler.handle(JettyContainerService.java:351)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:923)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:547)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: java.lang.ClassNotFoundException: com.google.gdata.util.common.util.Base64DecoderException
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at com.google.appengine.tools.development.IsolatedAppClassLoader.loadClass(IsolatedAppClassLoader.java:176)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	... 37 more
+Caused by:
+
+java.lang.ClassNotFoundException: com.google.gdata.util.common.util.Base64DecoderException
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at com.google.appengine.tools.development.IsolatedAppClassLoader.loadClass(IsolatedAppClassLoader.java:176)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.mortbay.jetty.servlet.Holder.newInstance(Holder.java:153)
+	at org.mortbay.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:428)
+	at org.mortbay.jetty.servlet.ServletHolder.getServlet(ServletHolder.java:339)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:487)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1166)
+	at com.google.appengine.tools.development.HeaderVerificationFilter.doFilter(HeaderVerificationFilter.java:35)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.api.blobstore.dev.ServeBlobFilter.doFilter(ServeBlobFilter.java:58)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.apphosting.utils.servlet.TransactionCleanupFilter.doFilter(TransactionCleanupFilter.java:43)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.tools.development.StaticFileFilter.doFilter(StaticFileFilter.java:122)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.tools.development.BackendServersFilter.doFilter(BackendServersFilter.java:97)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+	at com.google.apphosting.utils.jetty.DevAppEngineWebAppContext.handle(DevAppEngineWebAppContext.java:70)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at com.google.appengine.tools.development.JettyContainerService$ApiProxyHandler.handle(JettyContainerService.java:351)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:923)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:547)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Powered by Jetty://
+
+
+
+This is my code in UploadTest.java:
+package sharepro.java.todo;
+
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.KeyFactory;
+import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.spec.EncodedKeySpec;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.PKCS8EncodedKeySpec;
+
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+//import com.google.appengine.repackaged.com.google.common.util.Base64DecoderException;
+//import com.google.appengine.repackaged.com.google.common.util.Base64;
+import com.google.gdata.client.authn.oauth.GoogleOAuthHelper;
+import com.google.gdata.client.authn.oauth.GoogleOAuthParameters;
+import com.google.gdata.client.authn.oauth.OAuthRsaSha1Signer;
+import com.google.gdata.util.common.util.Base64;
+import com.google.gdata.util.common.util.Base64DecoderException;
+
+@SuppressWarnings(""serial"")
+public class Uploadtest extends HttpServlet {
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+	 throws IOException {
+	 String CONSUMER_KEY = ""shareject.appspot.com"";
+	
+	 resp.setContentType(""text/html"");
+	 resp.getWriter().println(""Hello 1, we will use the following consumer key to obtain a OAuth Access Token:<br>"" + CONSUMER_KEY);
+	 
+	 GoogleOAuthParameters oauthParameters = new GoogleOAuthParameters();
+	 oauthParameters.setOAuthConsumerKey(CONSUMER_KEY);
+	 oauthParameters.setScope(""https://docs.google.com/feeds/"");
+	 oauthParameters.setOAuthCallback(""http://shareject.appspot.com/UpgradeToken"");
+	 //Update the above URL to match the domain name for your App Engine application
+	 System.out.print(""sundi "");
+	 PrivateKey privKey = null;
+	try {
+		privKey = getPrivateKey(""WEB-INF/rsakey.pk8"");
+	} catch (com.google.gdata.util.common.util.Base64DecoderException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+
+	 //resp.getWriter().println(privKey.toString());
+	 
+	 GoogleOAuthHelper oauthHelper = null;
+	 try {
+	 
+	 oauthHelper = new GoogleOAuthHelper(new OAuthRsaSha1Signer(privKey));
+	 oauthHelper.getUnauthorizedRequestToken(oauthParameters);
+	 }
+	 catch (Exception e){
+	 resp.getWriter().println(e.toString());
+	 }
+	 
+	 String approvalPageUrl = oauthHelper.createUserAuthorizationUrl(oauthParameters);
+	 resp.getWriter().println(""<br><br><br>"");
+	 resp.getWriter().println(""<a href=\"""" + approvalPageUrl + ""\"">Retrieve an OAuth Token</a>"");
+     
+	 
+	 
+	 /*resp.getWriter().println(""<br><br><br>"");
+	 resp.getWriter().println(""<a href=\"""" + CONSUMER_KEY+ ""\"">Retrieve an OAuth Token</a>"");*/
+	 
+	 
+	}
+	
+	private PrivateKey getPrivateKey(String privKeyFilename) throws com.google.gdata.util.common.util.Base64DecoderException {
+		// TODO Auto-generated method stub
+		  FileInputStream keyfis = null;
+		  try {
+		  keyfis = new FileInputStream(privKeyFilename);
+		  } catch (FileNotFoundException e2) {
+		  e2.printStackTrace();
+		  }
+		  byte[] encKey = null;
+		  try {
+		  encKey = new byte[keyfis.available()];
+		  } catch (IOException e3) {
+		  e3.printStackTrace();
+		  }
+		  try {
+		  keyfis.read(encKey);
+		  } catch (IOException e2) {
+		  e2.printStackTrace();
+		  }
+		  try {
+		  keyfis.close();
+		  } catch (IOException e2) {
+		  e2.printStackTrace();
+		  }
+		  
+		  PrivateKey privKey = null;
+		  KeyFactory keyFactory = null;
+		  
+		  String str = new String(encKey);
+		  
+		  
+		  String BEGIN = ""-----BEGIN PRIVATE KEY-----"";
+		  String END = ""-----END PRIVATE KEY-----"";
+		  
+		  if (str.contains(BEGIN) && str.contains(END)) {
+		      str = str.substring(BEGIN.length(), str.lastIndexOf(END));
+		  }
+
+
+		  KeyFactory fac = null;
+		  try {
+		  fac = KeyFactory.getInstance(""RSA"");
+		  } catch (NoSuchAlgorithmException e) {
+		  e.printStackTrace();
+		  }
+		  EncodedKeySpec privKeySpec = null;
+
+		  System.out.print(""sundi debug 99"");
+         // privKeySpec = new PKCS8EncodedKeySpec(com.google.gdata.util.common.util.Base64.decode(str));
+          try {
+			privKeySpec = new PKCS8EncodedKeySpec(Base64.decode(str));
+		} catch (Base64DecoderException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		  try {
+		  privKey = fac.generatePrivate(privKeySpec);
+		  } catch (InvalidKeySpecException e) {
+		  e.printStackTrace();
+		  } 
+		  
+		  return privKey;
+
+	}
+
+	public void doPost(HttpServletRequest req, HttpServletResponse resp){
+		
+		
+	
+	}
+	
+	
+	
+
+}
+
+
+
+Please help mein resolving the same...Thanks Sundi
+
+
+
+
+
+
+
+
+
+
+",google-app-engine,error-message,,,,07/03/2011 10:24:28,not a real question,1,518,5,"Base64DecoderException error google app engine Hi I am getting this error in google app engine:
+
+
+HTTP ERROR 500
+
+Problem accessing /uploadtest. Reason:
+
+    com/google/gdata/util/common/util/Base64DecoderException
+Caused by:
+
+java.lang.NoClassDefFoundError: com/google/gdata/util/common/util/Base64DecoderException
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.mortbay.jetty.servlet.Holder.newInstance(Holder.java:153)
+	at org.mortbay.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:428)
+	at org.mortbay.jetty.servlet.ServletHolder.getServlet(ServletHolder.java:339)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:487)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1166)
+	at com.google.appengine.tools.development.HeaderVerificationFilter.doFilter(HeaderVerificationFilter.java:35)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.api.blobstore.dev.ServeBlobFilter.doFilter(ServeBlobFilter.java:58)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.apphosting.utils.servlet.TransactionCleanupFilter.doFilter(TransactionCleanupFilter.java:43)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.tools.development.StaticFileFilter.doFilter(StaticFileFilter.java:122)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.tools.development.BackendServersFilter.doFilter(BackendServersFilter.java:97)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+	at com.google.apphosting.utils.jetty.DevAppEngineWebAppContext.handle(DevAppEngineWebAppContext.java:70)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at com.google.appengine.tools.development.JettyContainerService$ApiProxyHandler.handle(JettyContainerService.java:351)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:923)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:547)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: java.lang.ClassNotFoundException: com.google.gdata.util.common.util.Base64DecoderException
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at com.google.appengine.tools.development.IsolatedAppClassLoader.loadClass(IsolatedAppClassLoader.java:176)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	... 37 more
+Caused by:
+
+java.lang.ClassNotFoundException: com.google.gdata.util.common.util.Base64DecoderException
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at com.google.appengine.tools.development.IsolatedAppClassLoader.loadClass(IsolatedAppClassLoader.java:176)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.mortbay.jetty.servlet.Holder.newInstance(Holder.java:153)
+	at org.mortbay.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:428)
+	at org.mortbay.jetty.servlet.ServletHolder.getServlet(ServletHolder.java:339)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:487)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1166)
+	at com.google.appengine.tools.development.HeaderVerificationFilter.doFilter(HeaderVerificationFilter.java:35)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.api.blobstore.dev.ServeBlobFilter.doFilter(ServeBlobFilter.java:58)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.apphosting.utils.servlet.TransactionCleanupFilter.doFilter(TransactionCleanupFilter.java:43)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.tools.development.StaticFileFilter.doFilter(StaticFileFilter.java:122)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at com.google.appengine.tools.development.BackendServersFilter.doFilter(BackendServersFilter.java:97)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+	at com.google.apphosting.utils.jetty.DevAppEngineWebAppContext.handle(DevAppEngineWebAppContext.java:70)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at com.google.appengine.tools.development.JettyContainerService$ApiProxyHandler.handle(JettyContainerService.java:351)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:923)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:547)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Powered by Jetty://
+
+
+
+This is my code in UploadTest.java:
+package sharepro.java.todo;
+
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.KeyFactory;
+import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.spec.EncodedKeySpec;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.PKCS8EncodedKeySpec;
+
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+//import com.google.appengine.repackaged.com.google.common.util.Base64DecoderException;
+//import com.google.appengine.repackaged.com.google.common.util.Base64;
+import com.google.gdata.client.authn.oauth.GoogleOAuthHelper;
+import com.google.gdata.client.authn.oauth.GoogleOAuthParameters;
+import com.google.gdata.client.authn.oauth.OAuthRsaSha1Signer;
+import com.google.gdata.util.common.util.Base64;
+import com.google.gdata.util.common.util.Base64DecoderException;
+
+@SuppressWarnings(""serial"")
+public class Uploadtest extends HttpServlet {
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+	 throws IOException {
+	 String CONSUMER_KEY = ""shareject.appspot.com"";
+	
+	 resp.setContentType(""text/html"");
+	 resp.getWriter().println(""Hello 1, we will use the following consumer key to obtain a OAuth Access Token:<br>"" + CONSUMER_KEY);
+	 
+	 GoogleOAuthParameters oauthParameters = new GoogleOAuthParameters();
+	 oauthParameters.setOAuthConsumerKey(CONSUMER_KEY);
+	 oauthParameters.setScope(""https://docs.google.com/feeds/"");
+	 oauthParameters.setOAuthCallback(""http://shareject.appspot.com/UpgradeToken"");
+	 //Update the above URL to match the domain name for your App Engine application
+	 System.out.print(""sundi "");
+	 PrivateKey privKey = null;
+	try {
+		privKey = getPrivateKey(""WEB-INF/rsakey.pk8"");
+	} catch (com.google.gdata.util.common.util.Base64DecoderException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+
+	 //resp.getWriter().println(privKey.toString());
+	 
+	 GoogleOAuthHelper oauthHelper = null;
+	 try {
+	 
+	 oauthHelper = new GoogleOAuthHelper(new OAuthRsaSha1Signer(privKey));
+	 oauthHelper.getUnauthorizedRequestToken(oauthParameters);
+	 }
+	 catch (Exception e){
+	 resp.getWriter().println(e.toString());
+	 }
+	 
+	 String approvalPageUrl = oauthHelper.createUserAuthorizationUrl(oauthParameters);
+	 resp.getWriter().println(""<br><br><br>"");
+	 resp.getWriter().println(""<a href=\"""" + approvalPageUrl + ""\"">Retrieve an OAuth Token</a>"");
+     
+	 
+	 
+	 /*resp.getWriter().println(""<br><br><br>"");
+	 resp.getWriter().println(""<a href=\"""" + CONSUMER_KEY+ ""\"">Retrieve an OAuth Token</a>"");*/
+	 
+	 
+	}
+	
+	private PrivateKey getPrivateKey(String privKeyFilename) throws com.google.gdata.util.common.util.Base64DecoderException {
+		// TODO Auto-generated method stub
+		  FileInputStream keyfis = null;
+		  try {
+		  keyfis = new FileInputStream(privKeyFilename);
+		  } catch (FileNotFoundException e2) {
+		  e2.printStackTrace();
+		  }
+		  byte[] encKey = null;
+		  try {
+		  encKey = new byte[keyfis.available()];
+		  } catch (IOException e3) {
+		  e3.printStackTrace();
+		  }
+		  try {
+		  keyfis.read(encKey);
+		  } catch (IOException e2) {
+		  e2.printStackTrace();
+		  }
+		  try {
+		  keyfis.close();
+		  } catch (IOException e2) {
+		  e2.printStackTrace();
+		  }
+		  
+		  PrivateKey privKey = null;
+		  KeyFactory keyFactory = null;
+		  
+		  String str = new String(encKey);
+		  
+		  
+		  String BEGIN = ""-----BEGIN PRIVATE KEY-----"";
+		  String END = ""-----END PRIVATE KEY-----"";
+		  
+		  if (str.contains(BEGIN) && str.contains(END)) {
+		      str = str.substring(BEGIN.length(), str.lastIndexOf(END));
+		  }
+
+
+		  KeyFactory fac = null;
+		  try {
+		  fac = KeyFactory.getInstance(""RSA"");
+		  } catch (NoSuchAlgorithmException e) {
+		  e.printStackTrace();
+		  }
+		  EncodedKeySpec privKeySpec = null;
+
+		  System.out.print(""sundi debug 99"");
+         // privKeySpec = new PKCS8EncodedKeySpec(com.google.gdata.util.common.util.Base64.decode(str));
+          try {
+			privKeySpec = new PKCS8EncodedKeySpec(Base64.decode(str));
+		} catch (Base64DecoderException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		  try {
+		  privKey = fac.generatePrivate(privKeySpec);
+		  } catch (InvalidKeySpecException e) {
+		  e.printStackTrace();
+		  } 
+		  
+		  return privKey;
+
+	}
+
+	public void doPost(HttpServletRequest req, HttpServletResponse resp){
+		
+		
+	
+	}
+	
+	
+	
+
+}
+
+
+
+Please help mein resolving the same...Thanks Sundi
+
+
+
+
+
+
+
+
+
+
+",2
+7948849,10/31/2011 00:11:27,721145,04/22/2011 21:24:40,127,1,How can I set a key attribute?,"I have this class in python google app engine:
+
+    class Book(db.Model):
+        name = db.StringProperty()
+        belongsTo = db.Key()
+
+
+My question is, how do I create a key object, for example I want to say that it belongsTo person with id 1, I tried this but it doesn't work
+
+    b = foo.Book(name=""foo book"", belongsTo=""1""
+    b.put()
+
+
+I also tried doing
+
+    belongsTo = key(1)
+
+How can I insert a foreign key?
+
+",google-app-engine,gae-datastore,google-datastore,,,,open,0,90,7,"How can I set a key attribute? I have this class in python google app engine:
+
+    class Book(db.Model):
+        name = db.StringProperty()
+        belongsTo = db.Key()
+
+
+My question is, how do I create a key object, for example I want to say that it belongsTo person with id 1, I tried this but it doesn't work
+
+    b = foo.Book(name=""foo book"", belongsTo=""1""
+    b.put()
+
+
+I also tried doing
+
+    belongsTo = key(1)
+
+How can I insert a foreign key?
+
+",3
+6197104,06/01/2011 06:26:09,169154,09/06/2009 04:15:56,76,6,JDO doesn't create Owned Entities in Google App Engine,"Hey guys, my question is about persisting an entity in JDO.  I have created a class, StoredOPDSFeed, whose members persist correctly.  However, none of its member objects persist correctly.  The class is as follows:
+
+@PersistenceCapable
+public class StorableOPDSFeed implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	private String primaryKey;
+
+	@Persistent
+    private String locale;
+	
+	@Persistent
+    private Date parseDate;
+
+	@Persistent
+    private String title;
+    
+	@Persistent
+    private String href;
+    
+	@Persistent
+	@Element(dependent = ""true"")
+    private ArrayList<OPDSEntry> entries;
+	
+	@Persistent
+	@Element(dependent = ""true"")
+	private ArrayList<OPDSLink> links = new ArrayList<OPDSLink>();
+    
+	@Persistent
+	@Embedded
+    private SearchDescription searchDescription;
+    
+	@Persistent
+    private boolean isStart = false;
+    
+	@Persistent
+	@Element(dependent = ""true"")
+    private ArrayList<OPDSFacetGroup> facet_groups = new ArrayList<OPDSFacetGroup>();
+
+... and accessors, etc.
+}
+
+All of the simple members such as locale, title, href, etc persist correctly.  However, all of the complex ones such as searchDescription do not appear in the datastore.  There is no reference to them whatsoever, no foreign key, nothing.  It's like they are completely ignored.  Does anyone have any idea why?
+
+",google-app-engine,gae-datastore,jdo,,,,open,0,193,9,"JDO doesn't create Owned Entities in Google App Engine Hey guys, my question is about persisting an entity in JDO.  I have created a class, StoredOPDSFeed, whose members persist correctly.  However, none of its member objects persist correctly.  The class is as follows:
+
+@PersistenceCapable
+public class StorableOPDSFeed implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	private String primaryKey;
+
+	@Persistent
+    private String locale;
+	
+	@Persistent
+    private Date parseDate;
+
+	@Persistent
+    private String title;
+    
+	@Persistent
+    private String href;
+    
+	@Persistent
+	@Element(dependent = ""true"")
+    private ArrayList<OPDSEntry> entries;
+	
+	@Persistent
+	@Element(dependent = ""true"")
+	private ArrayList<OPDSLink> links = new ArrayList<OPDSLink>();
+    
+	@Persistent
+	@Embedded
+    private SearchDescription searchDescription;
+    
+	@Persistent
+    private boolean isStart = false;
+    
+	@Persistent
+	@Element(dependent = ""true"")
+    private ArrayList<OPDSFacetGroup> facet_groups = new ArrayList<OPDSFacetGroup>();
+
+... and accessors, etc.
+}
+
+All of the simple members such as locale, title, href, etc persist correctly.  However, all of the complex ones such as searchDescription do not appear in the datastore.  There is no reference to them whatsoever, no foreign key, nothing.  It's like they are completely ignored.  Does anyone have any idea why?
+
+",3
+10868491,06/03/2012 06:57:14,1286851,03/22/2012 19:51:42,11,2,Why have the GAE cold starts gotten worse lately?,"For some time the cold start times for GAE applications have been ok, but now they have started to be really long again. Now (since a couple of days ago) it usually takes many seconds to access a webpage from an app with low traffic. That's totally unacceptable long time for ordinary webpages.",google-app-engine,,,,,06/21/2012 17:46:34,off topic,1,53,9,"Why have the GAE cold starts gotten worse lately? For some time the cold start times for GAE applications have been ok, but now they have started to be really long again. Now (since a couple of days ago) it usually takes many seconds to access a webpage from an app with low traffic. That's totally unacceptable long time for ordinary webpages.",1
+7805150,10/18/2011 09:31:46,953732,09/20/2011 00:14:27,166,0,What happens when I run out of resources on EC2 or GAE?,"I`ve recently read [this article][1] about user loosing data on EC2 when dealing with low resources on EC2. This made me wonder if there is any documentation of what will happen to apps running on EC2 or GAE when they run out of resources? Do they terminate, are frozen until the next cycle or some payment going through, or perhaps something else? How can one mitigate the risks associated with the services running out of resources (asides obviously paying more)?
+
+
+  [1]: http://www.btcnn.com/2011/08/third-largest-bitcoin-exchange-loses.html",google-app-engine,resources,amazon-ec2,cloud,,10/19/2011 03:31:35,not a real question,1,83,12,"What happens when I run out of resources on EC2 or GAE? I`ve recently read [this article][1] about user loosing data on EC2 when dealing with low resources on EC2. This made me wonder if there is any documentation of what will happen to apps running on EC2 or GAE when they run out of resources? Do they terminate, are frozen until the next cycle or some payment going through, or perhaps something else? How can one mitigate the risks associated with the services running out of resources (asides obviously paying more)?
+
+
+  [1]: http://www.btcnn.com/2011/08/third-largest-bitcoin-exchange-loses.html",4
+10734552,05/24/2012 09:18:43,1357607,04/26/2012 02:24:00,8,0,Implementing TaskQueue on Google-App-Engine with Python 2.7,"I am trying to learn about GAE Task Queues with Python 2.7.  The sample code [here](https://developers.google.com/appengine/docs/python/taskqueue/overview-push) doesn't work when I try to copy and past it into a 'helloworld.py' app from the Python 2.7 tutorial [here](https://developers.google.com/appengine/docs/python/gettingstartedpython27/helloworld).
+
+I think it's because I don't have a 'counter.html' and I gather it is a pretty simple task to make one because it says this:
+
+    (In this example, 'counters.html' refers to a Django template that contains the HTML for a page that displays the counter value, and a button to trigger a POST request to the / URL.)
+
+I gather that I should know how to make 'counter.html' but I can't.
+
+Any suggestions?
+",google-app-engine,python-2.7,task-queue,,,,open,0,110,7,"Implementing TaskQueue on Google-App-Engine with Python 2.7 I am trying to learn about GAE Task Queues with Python 2.7.  The sample code [here](https://developers.google.com/appengine/docs/python/taskqueue/overview-push) doesn't work when I try to copy and past it into a 'helloworld.py' app from the Python 2.7 tutorial [here](https://developers.google.com/appengine/docs/python/gettingstartedpython27/helloworld).
+
+I think it's because I don't have a 'counter.html' and I gather it is a pretty simple task to make one because it says this:
+
+    (In this example, 'counters.html' refers to a Django template that contains the HTML for a page that displays the counter value, and a button to trigger a POST request to the / URL.)
+
+I gather that I should know how to make 'counter.html' but I can't.
+
+Any suggestions?
+",3
+10462396,05/05/2012 13:38:10,355866,06/01/2010 21:17:09,2,1,URI regex not working example /events/eventname1,"I have a class EventPage, that I want to provide with event name using events/event-name pattern but I get a 404 error. Does anyone know how to fix it?
+
+    app = webapp2.WSGIApplication([(r'/', IndexPage),
+                                    (r'/events/<eventname:[^/]+>', EventPage)
+                                    ],
+                                  debug=True)",google-app-engine,,,,,,open,0,143,6,"URI regex not working example /events/eventname1 I have a class EventPage, that I want to provide with event name using events/event-name pattern but I get a 404 error. Does anyone know how to fix it?
+
+    app = webapp2.WSGIApplication([(r'/', IndexPage),
+                                    (r'/events/<eventname:[^/]+>', EventPage)
+                                    ],
+                                  debug=True)",1
+2828676,05/13/2010 16:55:31,243494,01/04/2010 21:46:17,943,17,Google App Engine - Will the Id of a datastore entity ever be negative?,Will the Id of a datastore entity ever be negative? Or are they guaranteed to be positive numbers?,google-app-engine,,,,,,open,0,18,14,Google App Engine - Will the Id of a datastore entity ever be negative? Will the Id of a datastore entity ever be negative? Or are they guaranteed to be positive numbers?,1
+3522017,08/19/2010 13:02:17,34747,11/05/2008 16:25:54,104,4,What are examples of high volume apps running atop of Google app engine?,Could not find success stories for AppEngine on Google search. WTF?,google-app-engine,web-applications,,,,08/21/2010 08:26:16,off topic,1,11,13,What are examples of high volume apps running atop of Google app engine? Could not find success stories for AppEngine on Google search. WTF?,2
+1592271,10/20/2009 03:18:10,184362,10/05/2009 12:45:22,286,3,"Why ""not"" Google App Engine? (PHP)","Thanks for looking. All sincerely helpful answers/comments are up-voted. 
+
+I've heard of GAE and even though it doesn't support PHP, people have gotten around this limitation by using Quercus I think (I haven't tried it, but supposedly it works). But what factors should I consider when evaluating whether it's a match for me? For example, what made you **not** go with GAE? Or if you went with it, what are you not happy about?
+
+thanks",google-app-engine,php,hosting,,,10/20/2009 03:58:17,off topic,1,74,6,"Why ""not"" Google App Engine? (PHP) Thanks for looking. All sincerely helpful answers/comments are up-voted. 
+
+I've heard of GAE and even though it doesn't support PHP, people have gotten around this limitation by using Quercus I think (I haven't tried it, but supposedly it works). But what factors should I consider when evaluating whether it's a match for me? For example, what made you **not** go with GAE? Or if you went with it, what are you not happy about?
+
+thanks",3
+4104776,11/05/2010 09:40:51,493473,11/01/2010 10:58:01,1,0,Google analytics unauthorized access (401),"One month ago I developed a windows service which calls some Google anaytics APIs and the code is scheduled to execute each 15 minutes. It has worked properly till 5 days ago when I checked the event viewer I saw that the service raised unauthorized access (401) exception in each connection to Google API. When I restarted the service it again started working properly.
+
+What could be the reason?
+
+Regards",google-app-engine,windows-services,google-analytics,http-status-code-401,unauthorized,,open,0,68,5,"Google analytics unauthorized access (401) One month ago I developed a windows service which calls some Google anaytics APIs and the code is scheduled to execute each 15 minutes. It has worked properly till 5 days ago when I checked the event viewer I saw that the service raised unauthorized access (401) exception in each connection to Google API. When I restarted the service it again started working properly.
+
+What could be the reason?
+
+Regards",5
+1636566,10/28/2009 11:02:53,118973,06/08/2009 00:08:03,180,2,App engine's development server behaves strangely with cookies.  Is it caching them or something?,"I've noticed google app engine's development server handling cookies very strangely.  Basically, they don't seem to go away when they should.  Hopefully somebody else knows what's going on and can enlighten me.  Here's a rough outline of the steps to reproduce.  
+
+First, create three RequestHandlers: setcookie, deletecookie and displaycookie and give them paths that match (e.g. http://localhost:8080/setcookie/).  Then do the following:
+
+1) Hit setcookie  
+2) Hit displaycookie (it prints, right?)  
+3) Hit deletecookie  
+4) Close your browser  
+5) Open your browser and go to displaycookie (uh oh... it prints)  
+6) Check if the cookie really exists using FF's developer toolbar or somesuch (no cookie!)  
+7) Open a *different* browser and go to displaycookie (whoa, it prints!)   
+8) Restart app engine  
+9) Hit displaycookie (finally, it's gone)  
+
+So, what gives?  The only thing I can think of is that the development server is doing some sort of caching.  A quick google search yields a couple of other people who have had the same issue, but there haven't been any good responses so I figured I'd bring it here.
+ 
+I realize that my explanation is long winded and may be unclear. I'm open to suggestions for how to improve it, so please let me know if you have any.
+",google-app-engine,cookies,,,,02/24/2011 14:40:19,too localized,1,223,15,"App engine's development server behaves strangely with cookies.  Is it caching them or something? I've noticed google app engine's development server handling cookies very strangely.  Basically, they don't seem to go away when they should.  Hopefully somebody else knows what's going on and can enlighten me.  Here's a rough outline of the steps to reproduce.  
+
+First, create three RequestHandlers: setcookie, deletecookie and displaycookie and give them paths that match (e.g. http://localhost:8080/setcookie/).  Then do the following:
+
+1) Hit setcookie  
+2) Hit displaycookie (it prints, right?)  
+3) Hit deletecookie  
+4) Close your browser  
+5) Open your browser and go to displaycookie (uh oh... it prints)  
+6) Check if the cookie really exists using FF's developer toolbar or somesuch (no cookie!)  
+7) Open a *different* browser and go to displaycookie (whoa, it prints!)   
+8) Restart app engine  
+9) Hit displaycookie (finally, it's gone)  
+
+So, what gives?  The only thing I can think of is that the development server is doing some sort of caching.  A quick google search yields a couple of other people who have had the same issue, but there haven't been any good responses so I figured I'd bring it here.
+ 
+I realize that my explanation is long winded and may be unclear. I'm open to suggestions for how to improve it, so please let me know if you have any.
+",2
+10768494,05/26/2012 17:47:26,1365851,04/30/2012 12:57:17,46,0,What encoding GAE lxml uses?,"I tested simple parser sample on local dev_appserver and hosted. It seems GAE version of lxml returns some strange encoding of the results, for ex.:
+
+> \xc3\xa8\xc3\xa7\xc3\xa3\xc3\xae\xc3\xb2\xc3\xae\xc3\xa2\xc3\xab\xc3\xa5\xc3\xad\xc3\xa8\xc3\xbe
+> \xc3\xae\xc3\xaa\xc3\xae\xc3\xad \xc3\xaf\xc3\xa2\xc3\xb5
+
+And local ver. returns in Unicode:
+
+> \xe8\xe7\xe3\xee\xf2\xee\xe2\xeb\xe5\xed\xe8\xfe \xee\xea\xee\xed
+> \xef\xe2\xf5
+
+I tried to use UnicodeDammit to create Unicode version on GAE but it returns some wrong string result.
+My code looks like:
+
+    ...
+    # page str input alwase unicode
+    tree = lxml.html.fromstring(page)
+    el = tree.xpath(""//*[contains(@href, '%s')]"" % back)
+    if len(el) and el[0] != None:
+      # This will have some strange encoding
+      text = el[0].text
+    ...",google-app-engine,character-encoding,lxml,,,05/27/2012 20:23:13,not a real question,1,117,5,"What encoding GAE lxml uses? I tested simple parser sample on local dev_appserver and hosted. It seems GAE version of lxml returns some strange encoding of the results, for ex.:
+
+> \xc3\xa8\xc3\xa7\xc3\xa3\xc3\xae\xc3\xb2\xc3\xae\xc3\xa2\xc3\xab\xc3\xa5\xc3\xad\xc3\xa8\xc3\xbe
+> \xc3\xae\xc3\xaa\xc3\xae\xc3\xad \xc3\xaf\xc3\xa2\xc3\xb5
+
+And local ver. returns in Unicode:
+
+> \xe8\xe7\xe3\xee\xf2\xee\xe2\xeb\xe5\xed\xe8\xfe \xee\xea\xee\xed
+> \xef\xe2\xf5
+
+I tried to use UnicodeDammit to create Unicode version on GAE but it returns some wrong string result.
+My code looks like:
+
+    ...
+    # page str input alwase unicode
+    tree = lxml.html.fromstring(page)
+    el = tree.xpath(""//*[contains(@href, '%s')]"" % back)
+    if len(el) and el[0] != None:
+      # This will have some strange encoding
+      text = el[0].text
+    ...",3
+7987652,11/02/2011 21:40:20,315908,11/23/2009 21:11:24,531,17,Migrating an App to High-Replication Datastore - now ancestor issues,"Following these instructions:
+http://neogregious.blogspot.com/2011/04/migrating-app-to-high-replication.html
+
+I have managed to migrate to the high replication datastore however I am now getting the following exception:
+
+    datastore_errors.BadArgumentError('ancestor argument should match app (""%r"" != ""%r"")' %
+            (ancestor.app(), app))
+
+The new app name has not been assigned to the ancestor model data. At the moment the data is returned however the logs are being populated with this exception message.
+
+Is there a way to manually set the app on the model data?  Could I do something like this to resolve this?
+
+    if( ancestor.app() != app )
+      set_app('my_app')
+      put()
+
+Before I do this or apply any other HACK is there something I should have done as part of the data migration?
+",google-app-engine,gae-datastore,,,,,open,0,137,10,"Migrating an App to High-Replication Datastore - now ancestor issues Following these instructions:
+http://neogregious.blogspot.com/2011/04/migrating-app-to-high-replication.html
+
+I have managed to migrate to the high replication datastore however I am now getting the following exception:
+
+    datastore_errors.BadArgumentError('ancestor argument should match app (""%r"" != ""%r"")' %
+            (ancestor.app(), app))
+
+The new app name has not been assigned to the ancestor model data. At the moment the data is returned however the logs are being populated with this exception message.
+
+Is there a way to manually set the app on the model data?  Could I do something like this to resolve this?
+
+    if( ancestor.app() != app )
+      set_app('my_app')
+      put()
+
+Before I do this or apply any other HACK is there something I should have done as part of the data migration?
+",2
+2425958,03/11/2010 14:58:06,4594,09/04/2008 19:07:05,60,2,How to I retrieve an image from a URL and store it as a Blob in Java (google app engine),"I understand how to fetch a URL text page and loop over the results
+
+    URL url = new URL(this.url);
+    BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+    String line;
+    while ((line = reader.readLine()) != null) {
+        ....
+
+
+How would I do this to fetch an image and store it as a Blob?",google-app-engine,java,blob,,,,open,0,68,20,"How to I retrieve an image from a URL and store it as a Blob in Java (google app engine) I understand how to fetch a URL text page and loop over the results
+
+    URL url = new URL(this.url);
+    BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+    String line;
+    while ((line = reader.readLine()) != null) {
+        ....
+
+
+How would I do this to fetch an image and store it as a Blob?",3
+7838951,10/20/2011 16:12:45,276328,02/18/2010 17:35:22,407,23,Anyone have any direct experience with Google App Engine Premier?,"Google App Engine has been great for trying out ideas and learning stuff, but so far I haven't seen much confidence in the community in using it for production applications.
+
+The new pricing is higher than it used to be, but still manageable - $45 for a reserved instance is not all that bad:
+http://www.google.com/enterprise/cloud/appengine/pricing.html
+
+One significant issue that has come up over and over again is that when things go wrong, it's nearly impossible to actually talk to anyone at Google. This is really scary if your company is depending on this service for the production app, so naturally, paying $500 per month for the ""Premier"" account is not such a bad deal.
+
+The Premier Account page looks promising as well:
+http://code.google.com/appengine/docs/premier/index.html
+
+The question I have is, has anyone actually signed up for this service and had real life experience with their support? Was it really 4 hours to just acknowledge a P1?
+
+Also, please share any experiences with using App Engine as your main production hosting. ",google-app-engine,,,,,11/16/2011 20:12:45,off topic,1,162,10,"Anyone have any direct experience with Google App Engine Premier? Google App Engine has been great for trying out ideas and learning stuff, but so far I haven't seen much confidence in the community in using it for production applications.
+
+The new pricing is higher than it used to be, but still manageable - $45 for a reserved instance is not all that bad:
+http://www.google.com/enterprise/cloud/appengine/pricing.html
+
+One significant issue that has come up over and over again is that when things go wrong, it's nearly impossible to actually talk to anyone at Google. This is really scary if your company is depending on this service for the production app, so naturally, paying $500 per month for the ""Premier"" account is not such a bad deal.
+
+The Premier Account page looks promising as well:
+http://code.google.com/appengine/docs/premier/index.html
+
+The question I have is, has anyone actually signed up for this service and had real life experience with their support? Was it really 4 hours to just acknowledge a P1?
+
+Also, please share any experiences with using App Engine as your main production hosting. ",1
+6202922,06/01/2011 14:36:10,604388,02/05/2011 13:21:24,242,23,How to organize the data in application database?,"My application should contain list of questions + user answers. How should I organize the database:
+
+                 question1   question2   question2   ...         questionN
+    user_id_1    yes         no          yes         ...         yes
+    user_id_2    no          no          yes         ...         no
+    ...
+    user_id_N    yes         yes         yes         ...         yes
+
+Looks like I need to create separate table with questions and assign id to each question. How another table should look like (since number of columns is not fixed)? Or, should I have 2 more tables?
+
+Later on I will also need to:
+
+ 1. calculate how many users answered 'yes' on *questionN*;
+ 2. how many friends (another table or json data) of *user_id_N* answered 'yes' on *questionN*.
+
+Should I query database each for getting these numbers, or should I have separate database and keep counters there each time user answer (looks possible for item 1 only since friends list can be changed anytime).",google-app-engine,gae-datastore,,,,,open,0,290,8,"How to organize the data in application database? My application should contain list of questions + user answers. How should I organize the database:
+
+                 question1   question2   question2   ...         questionN
+    user_id_1    yes         no          yes         ...         yes
+    user_id_2    no          no          yes         ...         no
+    ...
+    user_id_N    yes         yes         yes         ...         yes
+
+Looks like I need to create separate table with questions and assign id to each question. How another table should look like (since number of columns is not fixed)? Or, should I have 2 more tables?
+
+Later on I will also need to:
+
+ 1. calculate how many users answered 'yes' on *questionN*;
+ 2. how many friends (another table or json data) of *user_id_N* answered 'yes' on *questionN*.
+
+Should I query database each for getting these numbers, or should I have separate database and keep counters there each time user answer (looks possible for item 1 only since friends list can be changed anytime).",2
+1102449,07/09/2009 08:00:17,82515,10/14/2008 11:02:44,198,3,How to browse local Java App Engine datastore?,"It seems there is no equivalent of Python App Engine's _ah/admin for the Java implementation of Google App Engine.
+
+Is there a manual way I can browse the datastore? Where are the files to be found on my machine? (I am using the App Engine plugin with Eclipse on OS X).",google-app-engine,java,,,,,open,0,50,8,"How to browse local Java App Engine datastore? It seems there is no equivalent of Python App Engine's _ah/admin for the Java implementation of Google App Engine.
+
+Is there a manual way I can browse the datastore? Where are the files to be found on my machine? (I am using the App Engine plugin with Eclipse on OS X).",2
+2497337,03/23/2010 03:05:23,235885,12/21/2009 09:00:51,59,2,Appengine JDO dataclasses to python model,"Does anyone have tried to implement an app in GAE having both java and python?
+
+I have an existing app and my front end is in java. Now I want to use the existing datastore to be interfaced by python. My problem is i don't know how to define the relationships and model that would be equivalent to the one in java. I have tried the one-to-many relationship in python but when stored in the datastore, the fields are different than the one-to-many of java.
+
+My data classes are as follows.
+//one-to-many owned
+
+Parent Class
+
+    public class Parent{
+    	
+    	@PrimaryKey
+    	@Persistent
+    	private String unitID;
+    	//some other fields...
+    	
+    
+    	@Persistent
+    	@Order(extensions = @Extension(vendorName=""datanucleus"", key=""list-ordering"", value=""dateCreated desc""))
+        private List <Child>  child;
+    
+        //methods & constructors were omitted
+    
+              
+    }
+
+
+Child
+
+
+    public class Child{
+    
+    	@PrimaryKey
+    	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    	private Key uId;
+    	
+    	@Persistent
+    	private String name;
+    	
+    	/* etc... */
+    		
+    }",google-app-engine,,,,,,open,0,250,6,"Appengine JDO dataclasses to python model Does anyone have tried to implement an app in GAE having both java and python?
+
+I have an existing app and my front end is in java. Now I want to use the existing datastore to be interfaced by python. My problem is i don't know how to define the relationships and model that would be equivalent to the one in java. I have tried the one-to-many relationship in python but when stored in the datastore, the fields are different than the one-to-many of java.
+
+My data classes are as follows.
+//one-to-many owned
+
+Parent Class
+
+    public class Parent{
+    	
+    	@PrimaryKey
+    	@Persistent
+    	private String unitID;
+    	//some other fields...
+    	
+    
+    	@Persistent
+    	@Order(extensions = @Extension(vendorName=""datanucleus"", key=""list-ordering"", value=""dateCreated desc""))
+        private List <Child>  child;
+    
+        //methods & constructors were omitted
+    
+              
+    }
+
+
+Child
+
+
+    public class Child{
+    
+    	@PrimaryKey
+    	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    	private Key uId;
+    	
+    	@Persistent
+    	private String name;
+    	
+    	/* etc... */
+    		
+    }",1
+5231977,03/08/2011 11:42:24,272865,02/14/2010 14:59:24,573,12,"My appengine sites are down, what could it be?","all my appengine apps are down (error 500).
+I still can access to static files though.
+
+In logs I have errors related to django templates.
+
+    <type 'exceptions.ImportError'>: cannot import name template
+    Traceback (most recent call last):
+      File "".../index.py"", line 4, in <module>
+        from google.appengine.ext.webapp import template
+
+-
+
+    <type 'exceptions.ImportError'>: No module named decimal
+    Traceback (most recent call last):
+      File "".../index.py"", line 21, in <module>
+        from django.template.loader import render_to_string
+      File "".../django/template/__init__.py"", line 60, in <module>
+        from django.utils.text import smart_split, unescape_string_literal, get_text_list
+      File "".../django/utils/text.py"", line 2, in <module>
+        from django.utils.encoding import force_unicode
+      File ""/.../django/utils/encoding.py"", line 6, in <module>
+        from decimal import Decimal
+
+One one site i use built-in templates, on other I use self-installed django templates.
+
+What could it be? was there any change in how templates are handled? what do you think?",google-app-engine,django-templates,,,,03/09/2011 08:36:23,off topic,1,198,9,"My appengine sites are down, what could it be? all my appengine apps are down (error 500).
+I still can access to static files though.
+
+In logs I have errors related to django templates.
+
+    <type 'exceptions.ImportError'>: cannot import name template
+    Traceback (most recent call last):
+      File "".../index.py"", line 4, in <module>
+        from google.appengine.ext.webapp import template
+
+-
+
+    <type 'exceptions.ImportError'>: No module named decimal
+    Traceback (most recent call last):
+      File "".../index.py"", line 21, in <module>
+        from django.template.loader import render_to_string
+      File "".../django/template/__init__.py"", line 60, in <module>
+        from django.utils.text import smart_split, unescape_string_literal, get_text_list
+      File "".../django/utils/text.py"", line 2, in <module>
+        from django.utils.encoding import force_unicode
+      File ""/.../django/utils/encoding.py"", line 6, in <module>
+        from decimal import Decimal
+
+One one site i use built-in templates, on other I use self-installed django templates.
+
+What could it be? was there any change in how templates are handled? what do you think?",2
+1996306,01/03/2010 21:04:53,140901,07/19/2009 07:47:51,341,14,Reasons NOT to use App Engine,"Lately I've been reading a lot of information about App Engine; the Google service that looks very promising to me. However, it all seems too good to be true. Call me a negative person, but I would like to know any reasons NOT to use App Engine.
+
+This is programmers related, since I'm asking as in the programmer point of view.",google-app-engine,web-applications,,,,,open,0,60,6,"Reasons NOT to use App Engine Lately I've been reading a lot of information about App Engine; the Google service that looks very promising to me. However, it all seems too good to be true. Call me a negative person, but I would like to know any reasons NOT to use App Engine.
+
+This is programmers related, since I'm asking as in the programmer point of view.",2
+2688553,04/22/2010 06:04:25,234322,12/18/2009 05:05:53,1098,6,how to setup ssl module for google-app-engine..,"i floow this step  by step: http://beautifulisbetterthanugly.com/posts/2009/aug/19/compile-ssl-115-python-25-or-lower/
+
+but not successful  ,and  this is my error:
+
+![alt text][1]
+
+
+  [1]: http://omploader.org/vNDhtOQ
+
+
+how do do this ,
+
+thanks",google-app-engine,ssl,,,,,open,0,25,7,"how to setup ssl module for google-app-engine.. i floow this step  by step: http://beautifulisbetterthanugly.com/posts/2009/aug/19/compile-ssl-115-python-25-or-lower/
+
+but not successful  ,and  this is my error:
+
+![alt text][1]
+
+
+  [1]: http://omploader.org/vNDhtOQ
+
+
+how do do this ,
+
+thanks",2
+11519761,07/17/2012 09:35:02,1531262,07/17/2012 09:18:37,1,0,how to deal with datastore-indexes app engine?,"for this example <a href=""http://stackoverflow.com/questions/11494240/one-to-many-relationship-in-java-google-ap-engine-caused-error""> LINK </a> 
+i try to make it but this exception occurred ??
+
+    com.google.appengine.api.datastore.DatastoreNeedIndexException: no matching index found.
+    The suggested index for this query is:
+    <datastore-index kind=""Contact"" ancestor=""true"" source=""manual"">
+        <property name=""UserContacts_INTEGER_IDX"" direction=""asc""/>
+    </datastore-index>
+
+how can i write these indexes manually ?? i try to make WEB-INF/datastore-indexes.xml 
+at this XML i write the following :
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <datastore-indexes  autoGenerate=""true"">
+  
+    <datastore-index kind=""Contact"" ancestor=""true"" source=""manual"">
+        <property name=""UserContacts_INTEGER_IDX"" direction=""asc""/>
+    </datastore-index>
+  
+  </datastore-indexes>
+
+
+but when Iam going to deploy this error stop me to continue deploying 
+
+  <i> An internal error occurred during: ""Deploying store to Google"".
+XML error validating</i>
+
+
+So how can i get these indexes ?? </br>
+
+<b>another issues >> </b>
+ when i run this code and add some properties at User class as 
+
+    
+    @Persistent (mappedBy = ""userC"")
+     public List<Contact> UserContacts =new  ArrayList<Contact>();
+
+and deploy it , the engine make indexes for the UserContacts  however appear Exception due to the new property - same error above can't make indexes to them  - ",google-app-engine,servlets,jdo,datanucleus,google-datastore,,open,0,218,7,"how to deal with datastore-indexes app engine? for this example <a href=""http://stackoverflow.com/questions/11494240/one-to-many-relationship-in-java-google-ap-engine-caused-error""> LINK </a> 
+i try to make it but this exception occurred ??
+
+    com.google.appengine.api.datastore.DatastoreNeedIndexException: no matching index found.
+    The suggested index for this query is:
+    <datastore-index kind=""Contact"" ancestor=""true"" source=""manual"">
+        <property name=""UserContacts_INTEGER_IDX"" direction=""asc""/>
+    </datastore-index>
+
+how can i write these indexes manually ?? i try to make WEB-INF/datastore-indexes.xml 
+at this XML i write the following :
+
+    <?xml version=""1.0"" encoding=""utf-8""?>
+    <datastore-indexes  autoGenerate=""true"">
+  
+    <datastore-index kind=""Contact"" ancestor=""true"" source=""manual"">
+        <property name=""UserContacts_INTEGER_IDX"" direction=""asc""/>
+    </datastore-index>
+  
+  </datastore-indexes>
+
+
+but when Iam going to deploy this error stop me to continue deploying 
+
+  <i> An internal error occurred during: ""Deploying store to Google"".
+XML error validating</i>
+
+
+So how can i get these indexes ?? </br>
+
+<b>another issues >> </b>
+ when i run this code and add some properties at User class as 
+
+    
+    @Persistent (mappedBy = ""userC"")
+     public List<Contact> UserContacts =new  ArrayList<Contact>();
+
+and deploy it , the engine make indexes for the UserContacts  however appear Exception due to the new property - same error above can't make indexes to them  - ",5
+6713410,07/15/2011 21:36:36,144866,07/25/2009 04:38:53,1,1,Hosting google app engine application on a custom domain.,"   Question might look very familiar or even duplicate but i feel there is still no clear answer to this. I have read a lot on blogs and questions similar to this but still couldnt find any clear answer. Let me explain my situation. 
+
+ - I bought a domain (lets say mydomain.com) from www.namecheap.com (surprisingly i got same
+   domain name which was once registered with godaddy but it got expired
+   and i never bothered to renew it) .
+ - I have my blog hosted on google app engine lets call it
+   blog.appspot.com 
+ - I have registered my domain with google apps and added my appengine app
+   and gave a URL to it let call that blog.mydomain.com. 
+
+
+So my question is once you have all this setup what is the process to point 
+blog.appspot.com --> blog.mydomain.com 
+
+I am looking for DNS , A record, CNAME and MXRecord settings on Domain Provider side( which is namecheap.com in my case) .. also what is the nameserver settings? 
+
+",google-app-engine,,,,,07/22/2011 12:19:05,off topic,1,177,9,"Hosting google app engine application on a custom domain.    Question might look very familiar or even duplicate but i feel there is still no clear answer to this. I have read a lot on blogs and questions similar to this but still couldnt find any clear answer. Let me explain my situation. 
+
+ - I bought a domain (lets say mydomain.com) from www.namecheap.com (surprisingly i got same
+   domain name which was once registered with godaddy but it got expired
+   and i never bothered to renew it) .
+ - I have my blog hosted on google app engine lets call it
+   blog.appspot.com 
+ - I have registered my domain with google apps and added my appengine app
+   and gave a URL to it let call that blog.mydomain.com. 
+
+
+So my question is once you have all this setup what is the process to point 
+blog.appspot.com --> blog.mydomain.com 
+
+I am looking for DNS , A record, CNAME and MXRecord settings on Domain Provider side( which is namecheap.com in my case) .. also what is the nameserver settings? 
+
+",1
+7245180,08/30/2011 14:53:44,568096,01/08/2011 14:49:34,70,1,Many to Many Relationship + Google Datastore + Python,"Given the log of following:
+    
+    Restaurant = <persistence.model.Restaurant object at 0x3913c01e89e78a20>
+    Review Content = This is my first comment...
+    User[0] = <persistence.model.User object at 0x3913c01e89e780a0>
+
+and following codes:
+
+    class RestaurantReview(db.Model):
+        owned_by = db.ReferenceProperty(Restaurant, required=True, collection_name='restaurant')
+        written_by = db.ReferenceProperty(User, required=True, collection_name='user')
+        content = db.StringProperty(required=True)
+        date = db.DateTimeProperty(auto_now_add=True)
+
+When I was trying to create the instance of RestaurantReview, it just never work:
+
+    RestaurantReview(owned_by=restaurant, written_by=user[0], content=restaurant_review_content.__str__()).put()    
+
+Any idea what's happening?",google-app-engine,datastore,,,,,open,0,115,9,"Many to Many Relationship + Google Datastore + Python Given the log of following:
+    
+    Restaurant = <persistence.model.Restaurant object at 0x3913c01e89e78a20>
+    Review Content = This is my first comment...
+    User[0] = <persistence.model.User object at 0x3913c01e89e780a0>
+
+and following codes:
+
+    class RestaurantReview(db.Model):
+        owned_by = db.ReferenceProperty(Restaurant, required=True, collection_name='restaurant')
+        written_by = db.ReferenceProperty(User, required=True, collection_name='user')
+        content = db.StringProperty(required=True)
+        date = db.DateTimeProperty(auto_now_add=True)
+
+When I was trying to create the instance of RestaurantReview, it just never work:
+
+    RestaurantReview(owned_by=restaurant, written_by=user[0], content=restaurant_review_content.__str__()).put()    
+
+Any idea what's happening?",2
+4334274,12/02/2010 11:07:59,290621,03/10/2010 15:00:04,69,0,"how can I use google search engine to Search my source code for ""Copy pasted code snippet"" from web","I am planning to develop an application which would search my source code for copy pasted
+""code snippet"" from web
+
+As an initial step say I want to search only Function signature
+
+(Motivation Behind: Copy pasting code might lead to Licensing issues)
+
+Q1. Where should I start?.....How can I use google search engine to achieve my goal ?
+
+Q2. Is it possible to develop standalone windows app or I have to go for ASP.net?
+
+
+",google-app-engine,google,,,,,open,0,69,19,"how can I use google search engine to Search my source code for ""Copy pasted code snippet"" from web I am planning to develop an application which would search my source code for copy pasted
+""code snippet"" from web
+
+As an initial step say I want to search only Function signature
+
+(Motivation Behind: Copy pasting code might lead to Licensing issues)
+
+Q1. Where should I start?.....How can I use google search engine to achieve my goal ?
+
+Q2. Is it possible to develop standalone windows app or I have to go for ASP.net?
+
+
+",2
+9945275,03/30/2012 14:48:52,1266230,03/13/2012 10:33:28,5,0,HRD Alias redirecting traffic to?,"I have a domain www.abc.in, which is pointing to x.appspot.com(M/S),  
+
+Environment:  
+SDK: JAVA App Engine SDK 1.6.2.1
+
+Created an appID x-hrd.appspot.com, and migrated the data, and after doing incremental copy, I will go and change the default version to ""maintenance"" on M/S, and after completing the migration process, i.e., aliasing, at the same time what if my users request for www.abc.in, where the traffic is redirected to ? whether to x.appspot.com(M/S) which is still on maintenance page or to the default version of x-hrd.appspot.com ?",google-app-engine,,,,,03/30/2012 16:09:10,off topic,1,86,5,"HRD Alias redirecting traffic to? I have a domain www.abc.in, which is pointing to x.appspot.com(M/S),  
+
+Environment:  
+SDK: JAVA App Engine SDK 1.6.2.1
+
+Created an appID x-hrd.appspot.com, and migrated the data, and after doing incremental copy, I will go and change the default version to ""maintenance"" on M/S, and after completing the migration process, i.e., aliasing, at the same time what if my users request for www.abc.in, where the traffic is redirected to ? whether to x.appspot.com(M/S) which is still on maintenance page or to the default version of x-hrd.appspot.com ?",1
+10709484,05/22/2012 20:13:50,781332,06/02/2011 14:43:33,710,22,How to configure AppWrench tools in Eclipse to work with maven-ized GAE project?,"Before maven-izing a GAE application, I was able to use the AppWrench tools from OnPositive to view the datastore inside Eclipse.
+
+After maven-izing, I can't get things working again.  Here's what I've done so far:
+
+I installed the auth.jar and baseViewerImpl.jar files into my local maven repository with associated pom files that list dependencies on commons-io-2.3 and commons-fileupload-1.2.1.jar.  And I added dependencies for auth.jar and baseViewerImpl.jar to my project's pom file.
+
+When the AppWrench plugin prompts me with ""Do you want to configure project to add OnPositive Base Viewer support now?"", I click OK, and it seems to do something.  However, in my Eclipse Error Log view, I see 
+
+    ""Problems occurred when invoking code from plug-in: ""org.eclipse.text"".
+and
+
+    ""Could not ensure WAR argument existence for the unmanaged WAR project.
+
+I thought maybe AppWrench doesn't like the fact that the war directory is now under ""target"".  I'm on Windows 7, so I created a symbolic link at the top level of my Eclipse project directory called ""war"" that points to the war directory under ""target"", but no luck.
+
+If anybody has got this working, could you share what you did?
+",google-app-engine,maven,,,,,open,0,194,13,"How to configure AppWrench tools in Eclipse to work with maven-ized GAE project? Before maven-izing a GAE application, I was able to use the AppWrench tools from OnPositive to view the datastore inside Eclipse.
+
+After maven-izing, I can't get things working again.  Here's what I've done so far:
+
+I installed the auth.jar and baseViewerImpl.jar files into my local maven repository with associated pom files that list dependencies on commons-io-2.3 and commons-fileupload-1.2.1.jar.  And I added dependencies for auth.jar and baseViewerImpl.jar to my project's pom file.
+
+When the AppWrench plugin prompts me with ""Do you want to configure project to add OnPositive Base Viewer support now?"", I click OK, and it seems to do something.  However, in my Eclipse Error Log view, I see 
+
+    ""Problems occurred when invoking code from plug-in: ""org.eclipse.text"".
+and
+
+    ""Could not ensure WAR argument existence for the unmanaged WAR project.
+
+I thought maybe AppWrench doesn't like the fact that the war directory is now under ""target"".  I'm on Windows 7, so I created a symbolic link at the top level of my Eclipse project directory called ""war"" that points to the war directory under ""target"", but no luck.
+
+If anybody has got this working, could you share what you did?
+",2
+4023531,10/26/2010 12:14:18,281154,02/25/2010 11:09:42,33,4,App Engine datastore get number of childs from multiple parents,"I'm using the datastore of the Google App Engine (DataNucleus). I have two classes, one Chat and one Rating. A chat can be rated more then ones so I created an one-many relationship by adding a list to the Chat class. 
+
+Now I want to know the number of unrated chats, so I did the following:
+
+    int numberOfChatsInStock = 0;
+    for(Chat chat : chats){
+      if(chat.getRatings().size() == 0){
+        numberOfChatsInStock++;
+      }
+    }
+
+It simply iterate through all chats and checks if the number of ratings is 0.
+
+This solution works well when there are 10 chats, but when I have 500+ chats then the speed is terrible (15 sec +).
+
+I thought maybe the size() method is faster. So I tried Query.setFilter(""ratings.size() == 0"") but this gives me the following error:
+Unsupported method <size> while parsing expression: InvokeExpression{[PrimaryExpression{ratings}].size(<none>)}
+
+Is there any way to increase the speed?
+",google-app-engine,gae-datastore,datanucleus,,,,open,0,165,10,"App Engine datastore get number of childs from multiple parents I'm using the datastore of the Google App Engine (DataNucleus). I have two classes, one Chat and one Rating. A chat can be rated more then ones so I created an one-many relationship by adding a list to the Chat class. 
+
+Now I want to know the number of unrated chats, so I did the following:
+
+    int numberOfChatsInStock = 0;
+    for(Chat chat : chats){
+      if(chat.getRatings().size() == 0){
+        numberOfChatsInStock++;
+      }
+    }
+
+It simply iterate through all chats and checks if the number of ratings is 0.
+
+This solution works well when there are 10 chats, but when I have 500+ chats then the speed is terrible (15 sec +).
+
+I thought maybe the size() method is faster. So I tried Query.setFilter(""ratings.size() == 0"") but this gives me the following error:
+Unsupported method <size> while parsing expression: InvokeExpression{[PrimaryExpression{ratings}].size(<none>)}
+
+Is there any way to increase the speed?
+",3
+9460185,02/27/2012 04:47:08,1234780,02/27/2012 04:08:48,1,0,How does an amazon ec2 ECU compare to a google app engine MHZ cpu rating?,"Amazon states that an ECU is approximately equal to a 2007 1200 MHZ opteron.  GAE rates their instance classes(B1,B2,B4,B8,F1,F2,F4) in MHZ.  Does a GAE MHZ approximately equal the MHZ for an ECU? Also does a GAE B8 instance rated at 4800 MHZ have all of that  4800 MHZ available on a single thread or is the 4800 MHZ just a sum of all the cpu capacity across multiple cores?  ",google-app-engine,amazon-ec2,,,,02/27/2012 16:23:26,off topic,1,74,15,"How does an amazon ec2 ECU compare to a google app engine MHZ cpu rating? Amazon states that an ECU is approximately equal to a 2007 1200 MHZ opteron.  GAE rates their instance classes(B1,B2,B4,B8,F1,F2,F4) in MHZ.  Does a GAE MHZ approximately equal the MHZ for an ECU? Also does a GAE B8 instance rated at 4800 MHZ have all of that  4800 MHZ available on a single thread or is the 4800 MHZ just a sum of all the cpu capacity across multiple cores?  ",2
+4478915,12/18/2010 16:28:53,547107,12/18/2010 16:17:47,1,0,Anyone got google app engine experience?,"I'm working with the tipfy framework (tipfy.org) on app engine and am having some real problems. I've been trying to get an extention ""auth-extention"" to work all night. It allows users to sign in via facebook/twitter/openid etc..
+
+The extention can be found at the link below,  the code looks like pretty straight forward if your python ninja, but I'm new to all this and frankly its baffaling!
+
+I've spent the last 24hours try to work it out, but I keep getting errors. 
+There seems to be around 1k downloads of the mod I'm trying to integrate and not many complaints so It must be something simple I'm doing wrong.
+
+Heres a link to the multi auth plugin:
+http://tipfy-auth.appspot.com/
+http://code.google.com/p/tipfy-ext-auth/source/browse/#hg/examples/multi-auth
+
+All I need is the login system above integrated, which according to the tipfy docs should be pretty straight forward, but for some reason.. it's bundled in a way that isn't straight out of the box use.
+
+What I was really getting at was.. to ask if anyone could attach a working app with the login system above (the actual source of it seems to be provided) so I can try and understand where I've gone wrong.. it would be greatly appreciated andI'd be happy to send you a small reward.
+",google-app-engine,google,app,,,12/18/2010 17:36:00,not a real question,1,204,6,"Anyone got google app engine experience? I'm working with the tipfy framework (tipfy.org) on app engine and am having some real problems. I've been trying to get an extention ""auth-extention"" to work all night. It allows users to sign in via facebook/twitter/openid etc..
+
+The extention can be found at the link below,  the code looks like pretty straight forward if your python ninja, but I'm new to all this and frankly its baffaling!
+
+I've spent the last 24hours try to work it out, but I keep getting errors. 
+There seems to be around 1k downloads of the mod I'm trying to integrate and not many complaints so It must be something simple I'm doing wrong.
+
+Heres a link to the multi auth plugin:
+http://tipfy-auth.appspot.com/
+http://code.google.com/p/tipfy-ext-auth/source/browse/#hg/examples/multi-auth
+
+All I need is the login system above integrated, which according to the tipfy docs should be pretty straight forward, but for some reason.. it's bundled in a way that isn't straight out of the box use.
+
+What I was really getting at was.. to ask if anyone could attach a working app with the login system above (the actual source of it seems to be provided) so I can try and understand where I've gone wrong.. it would be greatly appreciated andI'd be happy to send you a small reward.
+",3
+6467893,06/24/2011 12:36:10,383600,07/05/2010 11:08:40,70,4,"Comparing cloud hosting technologies(Azure, EC2 or Google)","I'm going to start a simple SaaS application and am considering which cloud technology to go with(Azure, EC2 or Google).
+
+Can someone who experience both (actual use)point the pros and cons(performence,costs,easy to develop,easy to maintain) of each technology and recommend his favorite?",google-app-engine,azure,amazon-ec2,,,,open,0,41,7,"Comparing cloud hosting technologies(Azure, EC2 or Google) I'm going to start a simple SaaS application and am considering which cloud technology to go with(Azure, EC2 or Google).
+
+Can someone who experience both (actual use)point the pros and cons(performence,costs,easy to develop,easy to maintain) of each technology and recommend his favorite?",3
+8459133,12/10/2011 19:14:53,1091441,12/10/2011 16:58:49,1,0,Querry regarding database in app engine using JSP,"i am a new programmer of Java and trying to use google app engine but there are few problems that i am facing at the start of this. the problems are mentioned here below:
+
+1-)how to create a new database(tables,entities) in app engine using JSP ?
+2-) which type of queries will be in the above mentioned database using the Jsp?
+
+
+i have tried alot to explore google app engine help(articles) but unfortunately i was not able to find any perfect solution for this. 
+
+is there any soltuion or guidance for the beginners of JSP.
+
+
+thanks in advance.",google-app-engine,jsp,gql,,,12/11/2011 11:46:13,not a real question,1,94,8,"Querry regarding database in app engine using JSP i am a new programmer of Java and trying to use google app engine but there are few problems that i am facing at the start of this. the problems are mentioned here below:
+
+1-)how to create a new database(tables,entities) in app engine using JSP ?
+2-) which type of queries will be in the above mentioned database using the Jsp?
+
+
+i have tried alot to explore google app engine help(articles) but unfortunately i was not able to find any perfect solution for this. 
+
+is there any soltuion or guidance for the beginners of JSP.
+
+
+thanks in advance.",3

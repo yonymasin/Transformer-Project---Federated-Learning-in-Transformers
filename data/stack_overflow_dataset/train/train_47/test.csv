@@ -1,0 +1,2317 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+4704079,01/16/2011 05:58:40,236924,12/22/2009 14:50:13,544,2,Rails 3 jquery autocomplete,"So I followed this tutorial:
+
+https://github.com/crowdint/rails3-jquery-autocomplete-app
+
+However I am only getting a textbox and no autocomplete help when I type. Does anyone know what can be the problem?",ruby-on-rails-3,,,,,,open,0,26,4,"Rails 3 jquery autocomplete So I followed this tutorial:
+
+https://github.com/crowdint/rails3-jquery-autocomplete-app
+
+However I am only getting a textbox and no autocomplete help when I type. Does anyone know what can be the problem?",1
+11159873,06/22/2012 15:58:59,571417,01/11/2011 14:54:15,5,0,"Mongoid and simple_form, Boolean type does not create checkbox","I'm starting with mongoid and simple_form.  If I have a model with :type => Boolean and render it in a (haml) view with =f.input, it creates a text input field not a checkbox.  
+
+The doc says that boolean maps to a checkbox but I suspect that Boolean and boolean are not handled the same.
+
+I can work around with adding :as => boolean to the simple_form.
+
+1) Is that expected or am I doing something wrong?
+2) Is there a way to add a general mapping of Boolean to simple_form?
+3) Should I generate an issue for simple_form to correct this?
+
+Thanks in advance.",ruby-on-rails-3,mongoid,simple-form,,,06/27/2012 19:19:11,not a real question,1,101,9,"Mongoid and simple_form, Boolean type does not create checkbox I'm starting with mongoid and simple_form.  If I have a model with :type => Boolean and render it in a (haml) view with =f.input, it creates a text input field not a checkbox.  
+
+The doc says that boolean maps to a checkbox but I suspect that Boolean and boolean are not handled the same.
+
+I can work around with adding :as => boolean to the simple_form.
+
+1) Is that expected or am I doing something wrong?
+2) Is there a way to add a general mapping of Boolean to simple_form?
+3) Should I generate an issue for simple_form to correct this?
+
+Thanks in advance.",3
+7110931,08/18/2011 16:35:55,805027,06/19/2011 03:11:28,15,3,Rails Line Items Help,"i'm trying to figure out the best way to do shopping cart for bicycle components. the problem that i'm encountering is that i can't just add all the components to the same model because they each have different specs (i.e. a chainring has a column for ""number_of_teeth"" while a fork has a column for ""crown_diameter"").
+
+right now i have a table for each component but that makes it difficult to look up information for that item in that i need to have each component listed in the controller which seems redundant. am i better off just making a components model and having a ""type"" column then adding a ""specs"" column that will connect to another table, say chainring_specs, that will have all of that information?
+
+i want to get this set up the best way possible. thank you.",ruby-on-rails-3,e-commerce,shopping-cart,multiple-models,,,open,0,136,4,"Rails Line Items Help i'm trying to figure out the best way to do shopping cart for bicycle components. the problem that i'm encountering is that i can't just add all the components to the same model because they each have different specs (i.e. a chainring has a column for ""number_of_teeth"" while a fork has a column for ""crown_diameter"").
+
+right now i have a table for each component but that makes it difficult to look up information for that item in that i need to have each component listed in the controller which seems redundant. am i better off just making a components model and having a ""type"" column then adding a ""specs"" column that will connect to another table, say chainring_specs, that will have all of that information?
+
+i want to get this set up the best way possible. thank you.",4
+11114317,06/20/2012 06:54:40,1468321,06/20/2012 06:36:42,1,0,Installed drivers and packages got removed after rebooting Ubuntu 12.04,I recently installed Ubuntu 12.04 on my laptop via hard drive. After installing wireless drivers and ruby on rails I rebooted my system.  After reboot none of the installed package or driver is present. Even my desktop configuration is not saved,ruby-on-rails-3,ubuntu,wireless,drivers,,06/21/2012 12:39:59,off topic,1,42,10,Installed drivers and packages got removed after rebooting Ubuntu 12.04 I recently installed Ubuntu 12.04 on my laptop via hard drive. After installing wireless drivers and ruby on rails I rebooted my system.  After reboot none of the installed package or driver is present. Even my desktop configuration is not saved,4
+7049096,08/13/2011 06:59:36,705586,04/13/2011 08:20:52,207,1,Rails 3 - DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s,"I am getting from today still this error message. I found this thread - http://stackoverflow.com/questions/5987123/unable-to-locate-where-deprecated-rails-root-is-used - and I tried  to run **grep -R RAILS_ROOT .**, but nothing happend.
+No error or information message after run this command.
+
+Can anyone help me, please, where could be problem about this message? Thanks you",ruby-on-rails-3,,,,,,open,0,50,11,"Rails 3 - DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s I am getting from today still this error message. I found this thread - http://stackoverflow.com/questions/5987123/unable-to-locate-where-deprecated-rails-root-is-used - and I tried  to run **grep -R RAILS_ROOT .**, but nothing happend.
+No error or information message after run this command.
+
+Can anyone help me, please, where could be problem about this message? Thanks you",1
+11606337,07/23/2012 04:01:51,556298,12/28/2010 18:36:09,86,0,Trouble Showing User List with Tags acts_as_taggable_on,"I'm using act_as_taggable_on plugin, would like to display a list of users for a specific tag but my query is empty. Here is my code:
+
+
+**users_controller.rb**
+
+class UsersController < ApplicationController
+
+	def index
+		@users = User.all
+		@search = User.tagged_with(@tag, :on => :tags)
+	
+	end
+end
+
+**user.rb model**
+
+    class User < ActiveRecord::Base
+	 attr_accessible :name, :tag_list
+         acts_as_taggable_on :tags
+	 scope :by_join_date, order(""created_at DESC"")
+
+    end
+
+**index.html.erb**
+
+Users:
+
+    <%= form_tag users_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, @tag %>
+		<% @search.each do |u| %>
+			<%= u.name %>
+		<% end %>
+        <%= submit_tag ""Search"" %>
+      </p>
+
+    <% end %>
+
+
+",ruby-on-rails-3,acts-as-taggable-on,,,,,open,0,125,7,"Trouble Showing User List with Tags acts_as_taggable_on I'm using act_as_taggable_on plugin, would like to display a list of users for a specific tag but my query is empty. Here is my code:
+
+
+**users_controller.rb**
+
+class UsersController < ApplicationController
+
+	def index
+		@users = User.all
+		@search = User.tagged_with(@tag, :on => :tags)
+	
+	end
+end
+
+**user.rb model**
+
+    class User < ActiveRecord::Base
+	 attr_accessible :name, :tag_list
+         acts_as_taggable_on :tags
+	 scope :by_join_date, order(""created_at DESC"")
+
+    end
+
+**index.html.erb**
+
+Users:
+
+    <%= form_tag users_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, @tag %>
+		<% @search.each do |u| %>
+			<%= u.name %>
+		<% end %>
+        <%= submit_tag ""Search"" %>
+      </p>
+
+    <% end %>
+
+
+",2
+6055615,05/19/2011 08:05:32,611226,02/10/2011 11:02:56,1,0,"find in a ""anded"" array","i have 2 tables : entradas (id, blah...) and georelaciones (:entrada_id, lugar_id, blah...)
+georelaciones is just link table for a polymorphic relation. 
+
+i want to retrieve all the ""entradas"" which are in relation with each lugar_id (pass in an array)
+
+i have build this ugly scope (""d"" will be an array of ""lugar_id""):
+
+    scope :con_pais, lambda {|d|
+      # select e.id from entradas as e inner join georelaciones as g1 on (g1.lugar_id = 55 and g1.entrada_id = e.id) inner join georelaciones as g2 on (g2.lugar_id = 66 and g2.entrada_id = e.id)
+      cadena = """"
+      i = 0 
+      d.each{ |lugar_id| i += 1 ; cadena << "" inner join georelaciones as g"" + i.to_s + "" on (g""+ i.to_s + "".lugar_id = "" + lugar_id.to_s + "" and g"" + i.to_s + "".entrada_id = e.id)""}
+      entradas = Entrada.find_by_sql(""select distinct e.id from entradas as e "" + cadena)
+      a = []
+      entradas.each{ |e| a << e.id }
+      Entrada.where(""id in (?)"", a)
+      }
+
+i know that not good because my table entradas has some million of record and i do not take advantage of the lazy loading because of the use of find_by_sql.  
+My problem is how to do a query that return an ActiveRecord::Relation directly without find_by_sql
+sorry for the poor english...
+",ruby-on-rails-3,,,,,,open,0,255,5,"find in a ""anded"" array i have 2 tables : entradas (id, blah...) and georelaciones (:entrada_id, lugar_id, blah...)
+georelaciones is just link table for a polymorphic relation. 
+
+i want to retrieve all the ""entradas"" which are in relation with each lugar_id (pass in an array)
+
+i have build this ugly scope (""d"" will be an array of ""lugar_id""):
+
+    scope :con_pais, lambda {|d|
+      # select e.id from entradas as e inner join georelaciones as g1 on (g1.lugar_id = 55 and g1.entrada_id = e.id) inner join georelaciones as g2 on (g2.lugar_id = 66 and g2.entrada_id = e.id)
+      cadena = """"
+      i = 0 
+      d.each{ |lugar_id| i += 1 ; cadena << "" inner join georelaciones as g"" + i.to_s + "" on (g""+ i.to_s + "".lugar_id = "" + lugar_id.to_s + "" and g"" + i.to_s + "".entrada_id = e.id)""}
+      entradas = Entrada.find_by_sql(""select distinct e.id from entradas as e "" + cadena)
+      a = []
+      entradas.each{ |e| a << e.id }
+      Entrada.where(""id in (?)"", a)
+      }
+
+i know that not good because my table entradas has some million of record and i do not take advantage of the lazy loading because of the use of find_by_sql.  
+My problem is how to do a query that return an ActiveRecord::Relation directly without find_by_sql
+sorry for the poor english...
+",1
+11216170,06/26/2012 21:26:04,1388866,05/11/2012 07:35:30,34,5,Nested resources create Couldn't find Topic without an ID,"I wanna make an application which User can create a topic and others can make posts after that. I nested my resources in my routes.rb:
+
+    MyPedia2::Application.routes.draw do
+    	resources :users
+    	
+    	resources :sessions, only: [:new, :create, :destroy]
+    	resources :topics, only: [:show, :create, :destroy] 
+    	resources :posts
+    	resources :topics do
+    
+    	resources :posts, only: [:create, :show, :new]
+    
+    	end
+
+In my topic show page , I want to show topic.title and sended Posts and post.form.html.erb.
+Everything works accept when i create a post , I get mistake 
+
+    ActiveRecord::RecordNotFound in PostsController#create
+    
+    Couldn't find Topic without an ID..
+
+This is my posts_controller.rb:
+
+    class PostsController < ApplicationController
+    	before_filter :signed_in_user, only: [:create, :destroy]
+      before_filter :correct_user, only: :destroy
+    
+    	def new
+    		@topic= Topic.find_by_id(params[:id])
+    		@post = @topic.posts.build(params[:post])
+    	end
+    	
+    	
+    	
+    	def show
+        @topic = Topic.find(params[:id])
+        @posts = @topic.posts.paginate(page: params[:page])
+      end 
+    
+    	def create
+    		@topic = Topic.find(params[:id])
+    		@post = @topic.posts.build(params[:post])
+    		@post.topic  = @topic
+    
+    		if @post.save
+    			flash[:success] = ""Konu oluşturuldu!""
+    			redirect_to :back
+    		else
+    			render 'static_pages/home'
+    		end
+    	end
+    
+      def destroy
+        @post.destroy
+        redirect_to root_path
+      end
+      private
+    
+        def correct_user
+          @post = current_user.posts.find_by_id(params[:id])
+          redirect_to root_path if @post.nil?
+        end
+    end
+
+and _post_form.html.erb:
+
+    <%= form_for @new_post do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class=""field"">
+    		<%= f.text_area :content, placeholder: ""yorumunuzu girin..."" %>
+      </div>
+      <%= f.submit ""Gönder"", class: ""btn btn-large btn-primary"" %>
+    <% end %>
+
+
+",ruby-on-rails-3,routes,,,,,open,0,451,9,"Nested resources create Couldn't find Topic without an ID I wanna make an application which User can create a topic and others can make posts after that. I nested my resources in my routes.rb:
+
+    MyPedia2::Application.routes.draw do
+    	resources :users
+    	
+    	resources :sessions, only: [:new, :create, :destroy]
+    	resources :topics, only: [:show, :create, :destroy] 
+    	resources :posts
+    	resources :topics do
+    
+    	resources :posts, only: [:create, :show, :new]
+    
+    	end
+
+In my topic show page , I want to show topic.title and sended Posts and post.form.html.erb.
+Everything works accept when i create a post , I get mistake 
+
+    ActiveRecord::RecordNotFound in PostsController#create
+    
+    Couldn't find Topic without an ID..
+
+This is my posts_controller.rb:
+
+    class PostsController < ApplicationController
+    	before_filter :signed_in_user, only: [:create, :destroy]
+      before_filter :correct_user, only: :destroy
+    
+    	def new
+    		@topic= Topic.find_by_id(params[:id])
+    		@post = @topic.posts.build(params[:post])
+    	end
+    	
+    	
+    	
+    	def show
+        @topic = Topic.find(params[:id])
+        @posts = @topic.posts.paginate(page: params[:page])
+      end 
+    
+    	def create
+    		@topic = Topic.find(params[:id])
+    		@post = @topic.posts.build(params[:post])
+    		@post.topic  = @topic
+    
+    		if @post.save
+    			flash[:success] = ""Konu oluşturuldu!""
+    			redirect_to :back
+    		else
+    			render 'static_pages/home'
+    		end
+    	end
+    
+      def destroy
+        @post.destroy
+        redirect_to root_path
+      end
+      private
+    
+        def correct_user
+          @post = current_user.posts.find_by_id(params[:id])
+          redirect_to root_path if @post.nil?
+        end
+    end
+
+and _post_form.html.erb:
+
+    <%= form_for @new_post do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class=""field"">
+    		<%= f.text_area :content, placeholder: ""yorumunuzu girin..."" %>
+      </div>
+      <%= f.submit ""Gönder"", class: ""btn btn-large btn-primary"" %>
+    <% end %>
+
+
+",2
+9456043,02/26/2012 18:51:44,488856,10/27/2010 13:07:42,763,19,Destroy action in a Rails 3.0 app with jquery mobile is producing a routing error,"I'm using jquery mobile in a rails 3.0 app. I am getting a routing error when attempting to delete an item from a users list. The code and error message are as follows. 
+
+index.mobile.erb:
+
+    <% @items.each do |i| %>
+       ...
+       <div data-role=""button"">
+          <%= link_to 'Delete', i, :confirm => 'Are you sure?', :method => :delete %>
+       </div>
+    <% end %>
+
+routes file:
+
+    resources :items, :except => [:show]
+
+rake routes:
+
+    DELETE /items/:id(.:format)            {:action=>""destroy"", :controller=>""items""}
+
+error message:
+
+    Started GET ""/items/2"" for 127.0.0.1 at 2012-02-26 13:31:37 -0500
+    ActionController::RoutingError (No route matches ""/items/2""):
+
+What am I missing?
+
+Thanks!",ruby-on-rails-3,jquery-mobile,,,,,open,0,144,15,"Destroy action in a Rails 3.0 app with jquery mobile is producing a routing error I'm using jquery mobile in a rails 3.0 app. I am getting a routing error when attempting to delete an item from a users list. The code and error message are as follows. 
+
+index.mobile.erb:
+
+    <% @items.each do |i| %>
+       ...
+       <div data-role=""button"">
+          <%= link_to 'Delete', i, :confirm => 'Are you sure?', :method => :delete %>
+       </div>
+    <% end %>
+
+routes file:
+
+    resources :items, :except => [:show]
+
+rake routes:
+
+    DELETE /items/:id(.:format)            {:action=>""destroy"", :controller=>""items""}
+
+error message:
+
+    Started GET ""/items/2"" for 127.0.0.1 at 2012-02-26 13:31:37 -0500
+    ActionController::RoutingError (No route matches ""/items/2""):
+
+What am I missing?
+
+Thanks!",2
+11423865,07/11/2012 00:21:17,558639,03/30/2010 23:26:32,2342,51,"multiple postgresql instances running, only one doing any work","I've used foreman to launch multiple RoR workers.  Each worker is grabbing data from external sources and writing them into a (single) database.  What I'm observing is that there are N ruby processes and N partner postgresql processes, but only one of the postgresql processes appears to be doing any work (showing CPU activity, sent & received messages, etc).  The others appear to be totally inert.
+
+![Here's a link to a screenshot of ActivityMonitor][1]
+
+This may be the expected behavior: perhaps all the RoR processes use a single postgresql for access to the db.
+
+But it seems like this doesn't take advantage of (e.g.) my quad-core processor.  Should I be configuring things differently?  If so, how?
+
+
+  [1]: http://i.stack.imgur.com/kBVQT.png",ruby-on-rails-3,postgresql,foreman,,,07/16/2012 00:00:44,off topic,1,121,9,"multiple postgresql instances running, only one doing any work I've used foreman to launch multiple RoR workers.  Each worker is grabbing data from external sources and writing them into a (single) database.  What I'm observing is that there are N ruby processes and N partner postgresql processes, but only one of the postgresql processes appears to be doing any work (showing CPU activity, sent & received messages, etc).  The others appear to be totally inert.
+
+![Here's a link to a screenshot of ActivityMonitor][1]
+
+This may be the expected behavior: perhaps all the RoR processes use a single postgresql for access to the db.
+
+But it seems like this doesn't take advantage of (e.g.) my quad-core processor.  Should I be configuring things differently?  If so, how?
+
+
+  [1]: http://i.stack.imgur.com/kBVQT.png",3
+10563036,05/12/2012 10:47:14,571111,09/02/2009 08:18:45,361,9,the difference between multiple active record objects on a given timestamps,"i have a simple problem: imagine a calendar with 1:N events. at some point i would like to know what is changed between two timestamps.
+
+* which events where created, updated or destroyed?
+* i don not need to know about events which are created after the first timestamp, and destroyed before the second timestamp.
+
+i experimented with papertrail, but it seems to me that there should be an simpler way to do that.
+
+simple right ? :)
+
+",ruby-on-rails-3,activerecord,,,,,open,0,74,11,"the difference between multiple active record objects on a given timestamps i have a simple problem: imagine a calendar with 1:N events. at some point i would like to know what is changed between two timestamps.
+
+* which events where created, updated or destroyed?
+* i don not need to know about events which are created after the first timestamp, and destroyed before the second timestamp.
+
+i experimented with papertrail, but it seems to me that there should be an simpler way to do that.
+
+simple right ? :)
+
+",2
+9505035,02/29/2012 19:01:53,796490,06/13/2011 19:19:17,420,22,Resetting password where User set up to have hashed_password,"In my Rails app, I set up my users table to have a string for `email` and `:hashed_password`. However I want to provide the option to reset the password. Using Railscast 274, I have everything set up, but the actual password isn't changing to what I reset it as. I thought maybe I'd have to change `:password` to `:hashed_password` in my User model where I handle validations but `:password` works elsewhere so I ruled it out. Can someone help me figure this out?
+
+**Here's my `User` model:**
+
+    class User < ActiveRecord::Base
+      attr_accessor :password
+      attr_accessible :email, :password, :password_confirmation    
+    
+      before_save :encrypt_new_password
+      before_create { generate_token(:auth_token) }
+      before_validation :downcase_email
+      
+      has_one :profile, :dependent => :destroy
+      
+      accepts_nested_attributes_for :profile
+    
+      validates :email, :uniqueness => true,
+                    :length => { :within => 5..50 },
+                    :format => { :with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$/i }
+      validates :password, :confirmation => true,
+                       :length => { :within => 4..20 },
+                       :presence => true,
+                       :if => :password_required?
+                       
+      def self.authenticate(email, password)
+        user = find_by_email(email)
+        return user if user && user.authenticated?(password)
+      end
+      
+      def authenticated?(password)
+        self.hashed_password == encrypt(password)
+      end
+    
+      def send_password_reset
+        generate_token(:password_reset_token)
+        self.password_reset_sent_at = Time.zone.now
+        save!
+        UserMailer.password_reset(self).deliver
+      end
+    
+      def generate_token(column)
+        begin
+          self[column] = SecureRandom.hex
+        end while User.exists?(column => self[column])
+      end
+    end
+
+**My `password_resets_controller`:**
+
+    class PasswordResetsController < ApplicationController
+      layout ""password_reset""
+    
+      def new
+      end
+    
+      def create
+        user = User.find_by_email(params[:email])
+        if user
+          user.send_password_reset
+          redirect_to new_password_reset_path, :notice => ""Check your email for password reset instructions.""
+        else
+          redirect_to new_password_reset_path, :notice => ""Sorry, we couldn't find that email. Please try again.""
+        end
+        
+      end
+    
+      def edit
+        @user = User.find_by_password_reset_token!(params[:id])
+        session[:user_id] = @user.id
+      end
+    
+      def update
+        @user = User.find_by_password_reset_token!(params[:id])
+        if @user.password_reset_sent_at < 2.hours.ago
+          redirect_to new_password_reset_path, :alert => ""Your password reset link has expired.""
+        elsif @user.update_attributes(params[:user])
+          redirect_to profile_path(@user), :notice => ""Great news: Your password has been reset.""
+        else
+          render :edit
+        end
+      end
+    end
+
+**My password_reset form code:**
+
+    <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+      <% if @user.errors.any? %>
+      <div id=""error_messages"">
+        <% for message in @user.errors.full_messages %>
+        <li class=""error""><%= message %></li>
+        <% end %>
+      </div>
+      <% end %>
+
+      <p class=""label""><label for=""password"">New Password:</label></p>
+      <p><%= password_field_tag :password, nil, :autofocus => true, :autocomplete => 'off', :placeholder => 'Enter a new password' %></p>
+      <p class=""label""><label for=""password_confirmation"">Confirm Password:</label></p>
+      <p><%= password_field_tag :password_confirmation, nil, :autofocus => false, :autocomplete => 'off', :placeholder => 'Reenter your new password' %></p>
+    
+      <%= submit_tag 'Update Password', :class => 'button orange' %>
+    
+    <% end %>
+
+
+**My `users_controller` update action:**
+
+    def update
+      @user = current_user
+      if @user.update_attributes(params[:user])
+        redirect_to settings_path, :notice => 'Updated user information successfully.'
+      else
+        render :action => 'edit'
+      end
+    end",ruby-on-rails-3,authentication,,,,,open,0,1049,9,"Resetting password where User set up to have hashed_password In my Rails app, I set up my users table to have a string for `email` and `:hashed_password`. However I want to provide the option to reset the password. Using Railscast 274, I have everything set up, but the actual password isn't changing to what I reset it as. I thought maybe I'd have to change `:password` to `:hashed_password` in my User model where I handle validations but `:password` works elsewhere so I ruled it out. Can someone help me figure this out?
+
+**Here's my `User` model:**
+
+    class User < ActiveRecord::Base
+      attr_accessor :password
+      attr_accessible :email, :password, :password_confirmation    
+    
+      before_save :encrypt_new_password
+      before_create { generate_token(:auth_token) }
+      before_validation :downcase_email
+      
+      has_one :profile, :dependent => :destroy
+      
+      accepts_nested_attributes_for :profile
+    
+      validates :email, :uniqueness => true,
+                    :length => { :within => 5..50 },
+                    :format => { :with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$/i }
+      validates :password, :confirmation => true,
+                       :length => { :within => 4..20 },
+                       :presence => true,
+                       :if => :password_required?
+                       
+      def self.authenticate(email, password)
+        user = find_by_email(email)
+        return user if user && user.authenticated?(password)
+      end
+      
+      def authenticated?(password)
+        self.hashed_password == encrypt(password)
+      end
+    
+      def send_password_reset
+        generate_token(:password_reset_token)
+        self.password_reset_sent_at = Time.zone.now
+        save!
+        UserMailer.password_reset(self).deliver
+      end
+    
+      def generate_token(column)
+        begin
+          self[column] = SecureRandom.hex
+        end while User.exists?(column => self[column])
+      end
+    end
+
+**My `password_resets_controller`:**
+
+    class PasswordResetsController < ApplicationController
+      layout ""password_reset""
+    
+      def new
+      end
+    
+      def create
+        user = User.find_by_email(params[:email])
+        if user
+          user.send_password_reset
+          redirect_to new_password_reset_path, :notice => ""Check your email for password reset instructions.""
+        else
+          redirect_to new_password_reset_path, :notice => ""Sorry, we couldn't find that email. Please try again.""
+        end
+        
+      end
+    
+      def edit
+        @user = User.find_by_password_reset_token!(params[:id])
+        session[:user_id] = @user.id
+      end
+    
+      def update
+        @user = User.find_by_password_reset_token!(params[:id])
+        if @user.password_reset_sent_at < 2.hours.ago
+          redirect_to new_password_reset_path, :alert => ""Your password reset link has expired.""
+        elsif @user.update_attributes(params[:user])
+          redirect_to profile_path(@user), :notice => ""Great news: Your password has been reset.""
+        else
+          render :edit
+        end
+      end
+    end
+
+**My password_reset form code:**
+
+    <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+      <% if @user.errors.any? %>
+      <div id=""error_messages"">
+        <% for message in @user.errors.full_messages %>
+        <li class=""error""><%= message %></li>
+        <% end %>
+      </div>
+      <% end %>
+
+      <p class=""label""><label for=""password"">New Password:</label></p>
+      <p><%= password_field_tag :password, nil, :autofocus => true, :autocomplete => 'off', :placeholder => 'Enter a new password' %></p>
+      <p class=""label""><label for=""password_confirmation"">Confirm Password:</label></p>
+      <p><%= password_field_tag :password_confirmation, nil, :autofocus => false, :autocomplete => 'off', :placeholder => 'Reenter your new password' %></p>
+    
+      <%= submit_tag 'Update Password', :class => 'button orange' %>
+    
+    <% end %>
+
+
+**My `users_controller` update action:**
+
+    def update
+      @user = current_user
+      if @user.update_attributes(params[:user])
+        redirect_to settings_path, :notice => 'Updated user information successfully.'
+      else
+        render :action => 'edit'
+      end
+    end",2
+8484447,12/13/2011 04:44:52,1095006,12/13/2011 04:23:17,1,0,How do I create form_for for namespaced nested resources in Rails 3.1.3 and Mongoid?,"I am new to Rails and am trying to create an Api for a mobile app. Although the Api will generate json responses, I also need a web interface to create the data. My routes look like this:
+
+    Appone::Application.routes.draw do
+      namespace :api1 do
+        resources :reldates do
+          resources :movies
+        end
+      end
+    end
+The release_date model:
+
+    class Api1::Reldate
+      include Mongoid::Document
+      include Mongoid::MultiParameterAttributes
+      include Mongoid::Timestamps
+      
+      field :release_date, :type => Date
+      
+      embeds_many :api1_movies
+      validates_associated :movie
+      accepts_nested_attributes_for :movie
+    end
+
+The Movie Model:
+
+    class Api1::Movie
+      include Mongoid::Document
+      include Mongoid::MultiParameterAttributes
+      include Mongoid::Timestamps
+      
+      field :title, :type => String
+      field :release_type, :type => String
+      field :release_number, :type => Integer
+      
+      embedded_in :api1_reldate, :inverse_of => :api1_movies
+    end
+and the reldate show.html.erb:
+
+    <p id=""notice""><%= notice %></p>
+    
+    <p>
+      <b>Release date:</b>
+      <%= @api1_reldate.release_date %>
+    </p>
+    
+    <% if @api1_reldate.api1_movies.size > 0 %>
+      <h2>Movies</h2>
+      <% for api1_movie in @api1_reldate.api1_movies %>
+        <h3><%= api1_movie.title %></h3>
+        <p><%= api1_movie.release_type %></p>
+        <p><%= api1_movie.release_number %></p>
+      <% end %>
+    <% end %>
+    
+    <h2>New Movies</h2>
+    <% form_for([:api1], :url => { :action => :create ,:id => @reldate.movie}) do |form| %>
+      <p><%= f.label :title %> <%= f.text_field :title %></p>
+      <p><%= f.label :release_type %> <%= f.text_field :release_type %></p>
+      <p><%= f.label :release_number %> <%= f.number_field :release_number %></p>
+      <p><%= f.submit %></p>
+    <% end %>
+    
+    <%= link_to 'Edit', edit_api1_reldate_path(@api1_reldate) %> |
+    <%= link_to 'Back', api1_reldates_path %>
+
+I am unable to get this to work. I can get the reldate page working but after I click on submit, I get an error like this:
+
+    undefined method `movie' for nil:NilClass
+    Extracted source (around line #18):
+    
+    15: <% end %>
+    16: 
+    17: <h2>New Movies</h2>
+    18: <% form_for([:api1], :url => { :action => :create ,:id => @reldate.movie}) do |form| %>
+    19:   <p><%= f.label :title %> <%= f.text_field :title %></p>
+    20:   <p><%= f.label :release_type %> <%= f.text_field :release_type %></p>
+    21:   <p><%= f.label :release_number %> <%= f.number_field :release_number %></p>
+
+How can I get this to work? I have tried every possible solution available, but it keeps failing. 
+Also, I am using Ryan Bates [Railcast][1] 
+
+
+  [1]: http://railscasts.com/episodes/238-mongoid
+
+Thanks in advance.",ruby-on-rails-3,mongoid,,,,,open,0,614,14,"How do I create form_for for namespaced nested resources in Rails 3.1.3 and Mongoid? I am new to Rails and am trying to create an Api for a mobile app. Although the Api will generate json responses, I also need a web interface to create the data. My routes look like this:
+
+    Appone::Application.routes.draw do
+      namespace :api1 do
+        resources :reldates do
+          resources :movies
+        end
+      end
+    end
+The release_date model:
+
+    class Api1::Reldate
+      include Mongoid::Document
+      include Mongoid::MultiParameterAttributes
+      include Mongoid::Timestamps
+      
+      field :release_date, :type => Date
+      
+      embeds_many :api1_movies
+      validates_associated :movie
+      accepts_nested_attributes_for :movie
+    end
+
+The Movie Model:
+
+    class Api1::Movie
+      include Mongoid::Document
+      include Mongoid::MultiParameterAttributes
+      include Mongoid::Timestamps
+      
+      field :title, :type => String
+      field :release_type, :type => String
+      field :release_number, :type => Integer
+      
+      embedded_in :api1_reldate, :inverse_of => :api1_movies
+    end
+and the reldate show.html.erb:
+
+    <p id=""notice""><%= notice %></p>
+    
+    <p>
+      <b>Release date:</b>
+      <%= @api1_reldate.release_date %>
+    </p>
+    
+    <% if @api1_reldate.api1_movies.size > 0 %>
+      <h2>Movies</h2>
+      <% for api1_movie in @api1_reldate.api1_movies %>
+        <h3><%= api1_movie.title %></h3>
+        <p><%= api1_movie.release_type %></p>
+        <p><%= api1_movie.release_number %></p>
+      <% end %>
+    <% end %>
+    
+    <h2>New Movies</h2>
+    <% form_for([:api1], :url => { :action => :create ,:id => @reldate.movie}) do |form| %>
+      <p><%= f.label :title %> <%= f.text_field :title %></p>
+      <p><%= f.label :release_type %> <%= f.text_field :release_type %></p>
+      <p><%= f.label :release_number %> <%= f.number_field :release_number %></p>
+      <p><%= f.submit %></p>
+    <% end %>
+    
+    <%= link_to 'Edit', edit_api1_reldate_path(@api1_reldate) %> |
+    <%= link_to 'Back', api1_reldates_path %>
+
+I am unable to get this to work. I can get the reldate page working but after I click on submit, I get an error like this:
+
+    undefined method `movie' for nil:NilClass
+    Extracted source (around line #18):
+    
+    15: <% end %>
+    16: 
+    17: <h2>New Movies</h2>
+    18: <% form_for([:api1], :url => { :action => :create ,:id => @reldate.movie}) do |form| %>
+    19:   <p><%= f.label :title %> <%= f.text_field :title %></p>
+    20:   <p><%= f.label :release_type %> <%= f.text_field :release_type %></p>
+    21:   <p><%= f.label :release_number %> <%= f.number_field :release_number %></p>
+
+How can I get this to work? I have tried every possible solution available, but it keeps failing. 
+Also, I am using Ryan Bates [Railcast][1] 
+
+
+  [1]: http://railscasts.com/episodes/238-mongoid
+
+Thanks in advance.",2
+7665699,10/05/2011 18:10:55,437969,09/02/2010 12:47:11,134,0,Nested Nears with Sphinx and Thinking_Sphinx,"I have a RAILS 3.0.10 application (using Ruby 1.9.2) that using the thinking_sphinx gem. Is it possible in the extended match mode to use the ""or"" operator 
+with the ""near"" operator so that thinking_sphinx will find text with 
+either word in group 1 within a specified proximity to either word in 
+group 2. For example, '(pro | support | apologist | backer | stalwart 
+| proponent | patron | partisan | hero | leader | martyr | aimed | 
+stop) NEAR/30 people' ? I am using sphinx 0.9.9-release.  ",ruby-on-rails-3,sphinx,thinking-sphinx,,,,open,0,90,6,"Nested Nears with Sphinx and Thinking_Sphinx I have a RAILS 3.0.10 application (using Ruby 1.9.2) that using the thinking_sphinx gem. Is it possible in the extended match mode to use the ""or"" operator 
+with the ""near"" operator so that thinking_sphinx will find text with 
+either word in group 1 within a specified proximity to either word in 
+group 2. For example, '(pro | support | apologist | backer | stalwart 
+| proponent | patron | partisan | hero | leader | martyr | aimed | 
+stop) NEAR/30 people' ? I am using sphinx 0.9.9-release.  ",3
+10958675,06/09/2012 05:36:27,1373702,05/03/2012 22:05:23,7,1,Rails 3 No Method Error undefined method 'current_page',"`Rails -v 3.2.3`
+im using `kaminari` to do pagination but i keep getting a **NO METHOD ERROR**, `undefined method 'current_page' for nil:NilClass` 
+
+in  **views/layouts/application.html.erb** where line #7 raised:
+
+`<%= paginate @links, :remote => true %>`
+
+is this happening because i have it on the application view instead of my link submission view? does it matter where you place the paginate link?
+",ruby-on-rails-3,pagination,kaminari,,,,open,0,59,8,"Rails 3 No Method Error undefined method 'current_page' `Rails -v 3.2.3`
+im using `kaminari` to do pagination but i keep getting a **NO METHOD ERROR**, `undefined method 'current_page' for nil:NilClass` 
+
+in  **views/layouts/application.html.erb** where line #7 raised:
+
+`<%= paginate @links, :remote => true %>`
+
+is this happening because i have it on the application view instead of my link submission view? does it matter where you place the paginate link?
+",3
+7085243,08/16/2011 21:26:19,59890,01/28/2009 19:11:42,73,1,ActiveModel cascading validator for object and all of its children,"I have a class that uses ActiveModel (not ActiveRecord though). It represents a JSON object retrieved from a remote webservice. The track object has an array of ReportLayout objects, and each ReportLayout object has an array of slots, etc etc. Each model class has some simple validators like 'validates_presence_of' and the like.
+
+How do I kick off a cascading validation, starting with a track object, that goes through each object at each level, validates them, and then validates their array of children? The stack is 4 levels deep and we will soon be adding two more levels.
+
+    class Track
+      include ActiveModel::Validations
+      attr_accessor :name, :report_layouts
+      validates_presence_of :name
+      validates_length_of :name, :minimum => 4, :maximum => 256
+    ....
+    end
+
+    class ReportLayout
+      include ActiveModel::Validations
+      attr_accessor :name, :slots, :start_date, :end_date
+      validates_presence_of :name
+      validates_length_of :name, :minimum => 4, :maximum => 256
+    ....
+    end
+
+    class Slot
+    ...
+    class SlotModule
+
+Thank you,
+Raj
+",ruby-on-rails-3,validation,activemodel,,,,open,0,209,10,"ActiveModel cascading validator for object and all of its children I have a class that uses ActiveModel (not ActiveRecord though). It represents a JSON object retrieved from a remote webservice. The track object has an array of ReportLayout objects, and each ReportLayout object has an array of slots, etc etc. Each model class has some simple validators like 'validates_presence_of' and the like.
+
+How do I kick off a cascading validation, starting with a track object, that goes through each object at each level, validates them, and then validates their array of children? The stack is 4 levels deep and we will soon be adding two more levels.
+
+    class Track
+      include ActiveModel::Validations
+      attr_accessor :name, :report_layouts
+      validates_presence_of :name
+      validates_length_of :name, :minimum => 4, :maximum => 256
+    ....
+    end
+
+    class ReportLayout
+      include ActiveModel::Validations
+      attr_accessor :name, :slots, :start_date, :end_date
+      validates_presence_of :name
+      validates_length_of :name, :minimum => 4, :maximum => 256
+    ....
+    end
+
+    class Slot
+    ...
+    class SlotModule
+
+Thank you,
+Raj
+",3
+6581132,07/05/2011 10:22:37,572943,01/12/2011 15:26:15,18,0,rails 3 undefined method `_index_path' when using form_for,"I have recently created a new rails 3 application, using the code that I wrote for rail 2, upgrading it in the same time to match the new API.
+
+I have the following code:
+
+    #routes.rb:
+    FtpMgmt::Application.routes.draw do
+    	resources :accounts
+    	root :to => ""accounts#index""
+    	match ':controller(/:action(/:id(.:format)))'
+    end
+
+    #new.html.erb
+    <% form_for(@account) do |f| %>
+    ...
+    <% end %>
+
+    #accounts_controller.rb
+    class AccountsController < ApplicationController
+    	respond_to :html, :xml, :json
+    	def new
+    		@account = Accounts.new
+    		respond_with(@account)
+    	end
+    end
+
+The error I get is:
+
+    Showing /opt/rails/ftp_mgmt/app/views/accounts/new.html.erb where line #3 raised: 
+    undefined method `accounts_index_path' for #<#<Class:0x0000000a28a758>:0x0000000a269b70>
+
+Do you have any ideas how to fix this?",ruby-on-rails-3,,,,,,open,0,156,8,"rails 3 undefined method `_index_path' when using form_for I have recently created a new rails 3 application, using the code that I wrote for rail 2, upgrading it in the same time to match the new API.
+
+I have the following code:
+
+    #routes.rb:
+    FtpMgmt::Application.routes.draw do
+    	resources :accounts
+    	root :to => ""accounts#index""
+    	match ':controller(/:action(/:id(.:format)))'
+    end
+
+    #new.html.erb
+    <% form_for(@account) do |f| %>
+    ...
+    <% end %>
+
+    #accounts_controller.rb
+    class AccountsController < ApplicationController
+    	respond_to :html, :xml, :json
+    	def new
+    		@account = Accounts.new
+    		respond_with(@account)
+    	end
+    end
+
+The error I get is:
+
+    Showing /opt/rails/ftp_mgmt/app/views/accounts/new.html.erb where line #3 raised: 
+    undefined method `accounts_index_path' for #<#<Class:0x0000000a28a758>:0x0000000a269b70>
+
+Do you have any ideas how to fix this?",1
+4999127,02/15/2011 01:32:00,41067,11/26/2008 15:34:47,56,1,How do you group a has many through relationship in Rails 3?,"I have 3 models: account, discussion and tag (provided by is_taggable)
+
+<code>
+class Account
+  has_many :discussions
+end
+
+class Discussion
+  belongs_to :account
+  has_many :tags
+  
+  is_taggable
+end
+</code>
+
+I want to be able to do current_account.tags, to list all of the tags currently being used by an account's discussions. So...
+
+<code>
+class Account
+  has_many :discussions
+  has_many :tags, :through => :discussions, :source => :taggings
+end
+</code>
+
+
+Note: the taggings source is for the join table that is_taggable uses to join tags to your taggable model (discussions, in this case...)
+
+The problem with leaving this HM :through this way, is that multiple occurrences of the same tag in different discussions will force them to appear the same number of times in this association. So, I thought ""no problem, I will group this association on the taggings table's tag_id, so each tag shows up only once.
+
+
+class Account
+  has_many :discussions
+  has_many :tags, :through => :discussions, :source => :taggings, :group => ""taggings.tag_id""
+end
+
+This doesn't work, further examination of the SQL this generates shows the GROUP BY doesn't appear in the SQL. My question, how do I get this to work?
+
+Some other things I tried:
+- Making an instance method, ""tags."" While this returned my result set properly, it wasn't an AR collection, and so I wasn't able to manipulate it as so. (maybe someone knows how to do this properly?)
+- Use the :unique => true option. Sounds like it'd work, but since we are sourcing the :taggings table, thats what it tries to make unique, and all entries in that table are unique, nothing changes.
+
+Thanks in advance for any help, and apologies for any iPad-related typos.
+",ruby-on-rails-3,activerecord,associations,,,,open,0,264,12,"How do you group a has many through relationship in Rails 3? I have 3 models: account, discussion and tag (provided by is_taggable)
+
+<code>
+class Account
+  has_many :discussions
+end
+
+class Discussion
+  belongs_to :account
+  has_many :tags
+  
+  is_taggable
+end
+</code>
+
+I want to be able to do current_account.tags, to list all of the tags currently being used by an account's discussions. So...
+
+<code>
+class Account
+  has_many :discussions
+  has_many :tags, :through => :discussions, :source => :taggings
+end
+</code>
+
+
+Note: the taggings source is for the join table that is_taggable uses to join tags to your taggable model (discussions, in this case...)
+
+The problem with leaving this HM :through this way, is that multiple occurrences of the same tag in different discussions will force them to appear the same number of times in this association. So, I thought ""no problem, I will group this association on the taggings table's tag_id, so each tag shows up only once.
+
+
+class Account
+  has_many :discussions
+  has_many :tags, :through => :discussions, :source => :taggings, :group => ""taggings.tag_id""
+end
+
+This doesn't work, further examination of the SQL this generates shows the GROUP BY doesn't appear in the SQL. My question, how do I get this to work?
+
+Some other things I tried:
+- Making an instance method, ""tags."" While this returned my result set properly, it wasn't an AR collection, and so I wasn't able to manipulate it as so. (maybe someone knows how to do this properly?)
+- Use the :unique => true option. Sounds like it'd work, but since we are sourcing the :taggings table, thats what it tries to make unique, and all entries in that table are unique, nothing changes.
+
+Thanks in advance for any help, and apologies for any iPad-related typos.
+",3
+5002908,02/15/2011 11:13:45,334545,05/06/2010 14:56:30,1242,112,labeling checkboxes in rails,"I want my checkboxes to be usable so I usually add label fors to the checkboxes so you can select the text instead of having to ""aim"" for the checkbox.
+
+Problem is, what if I am using a nested attributes form in rails? I have this code for now:
+
+    %ul
+      - test_category.test_cases.each do |test_case|
+        %li
+          = check_box_tag ""job_test_cases[]"", ""#{test_case.id}"", test_case.id
+          = label_tag ""test_case_#{test_case.id}"", test_case.name
+
+problem with this is that it produces this:
+
+    <li>
+      <input type=""checkbox"" value=""test_case_70"" name=""test_case_id[]"" id=""test_case_id_"" checked=""checked"">
+      <label for=""test_case_70"">Blah BLah blah/label>
+    </li>
+
+whereas I wanted it to be like this:
+
+    <li>
+      <input type=""checkbox"" value=""70"" name=""test_case_id[]"" id=""test_case_70"" checked=""checked"">
+      <label for=""test_case_70"">Blah BLah blah/label>
+    </li>",ruby-on-rails-3,label,checkboxes,nested-attributes,,,open,0,166,4,"labeling checkboxes in rails I want my checkboxes to be usable so I usually add label fors to the checkboxes so you can select the text instead of having to ""aim"" for the checkbox.
+
+Problem is, what if I am using a nested attributes form in rails? I have this code for now:
+
+    %ul
+      - test_category.test_cases.each do |test_case|
+        %li
+          = check_box_tag ""job_test_cases[]"", ""#{test_case.id}"", test_case.id
+          = label_tag ""test_case_#{test_case.id}"", test_case.name
+
+problem with this is that it produces this:
+
+    <li>
+      <input type=""checkbox"" value=""test_case_70"" name=""test_case_id[]"" id=""test_case_id_"" checked=""checked"">
+      <label for=""test_case_70"">Blah BLah blah/label>
+    </li>
+
+whereas I wanted it to be like this:
+
+    <li>
+      <input type=""checkbox"" value=""70"" name=""test_case_id[]"" id=""test_case_70"" checked=""checked"">
+      <label for=""test_case_70"">Blah BLah blah/label>
+    </li>",4
+11496631,07/15/2012 23:54:32,1328086,04/12/2012 03:49:54,71,2,Ruby On Rails Tutorial Extensions to the sample application,"To anyone who's read Ruby On Rails 3 Tutorial,
+
+I just finished it.  In the last chapter it gives you some exercises.  I was wondering if someone out there understands the @replies exercise.  
+
+How is the interface supposed to look?  Should there be a textfield under each user's micropost and a submit button which when clicked causes the @reply to be posted underneath the micropost?",ruby-on-rails-3,railstutorial.org,,,,07/17/2012 11:37:09,off topic,1,68,9,"Ruby On Rails Tutorial Extensions to the sample application To anyone who's read Ruby On Rails 3 Tutorial,
+
+I just finished it.  In the last chapter it gives you some exercises.  I was wondering if someone out there understands the @replies exercise.  
+
+How is the interface supposed to look?  Should there be a textfield under each user's micropost and a submit button which when clicked causes the @reply to be posted underneath the micropost?",2
+8845413,01/13/2012 03:08:14,616723,02/14/2011 19:26:10,76,2,Basic database association,"I am attempting to associate 2 models - `Athletes` and `Results`
+
+They have the following fields:
+Athletes - `:name :age :gender`  
+Results - `:name :event :performance`   
+
+I have added `belongs_to :athlete` to `results.rb` & added `has_many :results` to `athletes.rb` 
+
+I would like to use the :name attribute to act as the primary key used to associate the two models as the intention is for all athletes to be uploaded initially and then just use the results input for the remainder of the season.
+
+I have edited the `results_controller` to the following:  
+
+
+    def create
+    #this was the initial code....
+    #@result = Result.new(params[:result])
+
+    # This is the new code to try set up an association
+    @athlete = Athlete.where('name = ?', 'Peter')
+    @result = @athlete.results.create(params[:result])
+
+    respond_to do |format|
+      if @result.save
+        format.html { redirect_to @result, notice: 'Result was successfully created.' }
+        format.json { render json: @result, status: :created, location: @result }
+      else
+        format.html { render action: ""new"" }
+        format.json { render json: @result.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+This however produces the error `undefined method 'results' for #<ActiveRecord::Relation:0x36a2b28>`. I was also hoping to use the line `@athlete = Athlete.where(""name = ?"", params[:name])` however it keeps yielding a NULL parameter value...
+
+Is anyone able to point me in the correct direction please?  
+ 
+
+",ruby-on-rails-3,associations,,,,,open,0,279,3,"Basic database association I am attempting to associate 2 models - `Athletes` and `Results`
+
+They have the following fields:
+Athletes - `:name :age :gender`  
+Results - `:name :event :performance`   
+
+I have added `belongs_to :athlete` to `results.rb` & added `has_many :results` to `athletes.rb` 
+
+I would like to use the :name attribute to act as the primary key used to associate the two models as the intention is for all athletes to be uploaded initially and then just use the results input for the remainder of the season.
+
+I have edited the `results_controller` to the following:  
+
+
+    def create
+    #this was the initial code....
+    #@result = Result.new(params[:result])
+
+    # This is the new code to try set up an association
+    @athlete = Athlete.where('name = ?', 'Peter')
+    @result = @athlete.results.create(params[:result])
+
+    respond_to do |format|
+      if @result.save
+        format.html { redirect_to @result, notice: 'Result was successfully created.' }
+        format.json { render json: @result, status: :created, location: @result }
+      else
+        format.html { render action: ""new"" }
+        format.json { render json: @result.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+This however produces the error `undefined method 'results' for #<ActiveRecord::Relation:0x36a2b28>`. I was also hoping to use the line `@athlete = Athlete.where(""name = ?"", params[:name])` however it keeps yielding a NULL parameter value...
+
+Is anyone able to point me in the correct direction please?  
+ 
+
+",2
+4260819,11/23/2010 20:54:44,502052,11/09/2010 15:12:23,1,0,How to call correctly methods from a model relating to other controllers?,"In my Ruby on Rails application I want to create a new profile and a new statistic for profile, all calling first the related method from the user model, and then from the profile model. 
+
+So... 
+
+... in my user model (user.rb) I have this:
+
+    ...
+
+    has_one :profile
+
+    ...
+    before_save :inizialize_user
+    ...
+
+    private
+    
+    def inizialize_user
+      @user_profile = Profile.new
+      self.user_profile_id = @user_profile.id
+    end
+
+
+... in my profile model (profiles.rb) I have this:
+
+    ...
+    belongs_to :user
+    ...
+    
+    before_save :inizialize_profile
+    
+    private
+    
+    def inizialize_profile
+      @profile_statistic = ProfileStatistic.new
+    end
+
+
+
+
+In the second block of code, on the ""before_save"" it instantiates a new profile statistic:
+""inspecting"" @profile_statistic results a new object (correct!)
+
+
+In the first block of code, on the ""before_save"" it doesn't instantiate a new profile:
+""inspecting"" the @user_profile results nil (it must be a new profile object!)
+
+
+The last part is my problem. Why it happens?",ruby-on-rails-3,methods,model,controller,,,open,0,212,12,"How to call correctly methods from a model relating to other controllers? In my Ruby on Rails application I want to create a new profile and a new statistic for profile, all calling first the related method from the user model, and then from the profile model. 
+
+So... 
+
+... in my user model (user.rb) I have this:
+
+    ...
+
+    has_one :profile
+
+    ...
+    before_save :inizialize_user
+    ...
+
+    private
+    
+    def inizialize_user
+      @user_profile = Profile.new
+      self.user_profile_id = @user_profile.id
+    end
+
+
+... in my profile model (profiles.rb) I have this:
+
+    ...
+    belongs_to :user
+    ...
+    
+    before_save :inizialize_profile
+    
+    private
+    
+    def inizialize_profile
+      @profile_statistic = ProfileStatistic.new
+    end
+
+
+
+
+In the second block of code, on the ""before_save"" it instantiates a new profile statistic:
+""inspecting"" @profile_statistic results a new object (correct!)
+
+
+In the first block of code, on the ""before_save"" it doesn't instantiate a new profile:
+""inspecting"" the @user_profile results nil (it must be a new profile object!)
+
+
+The last part is my problem. Why it happens?",4
+9016678,01/26/2012 10:23:06,1153094,01/17/2012 03:12:17,3,0,Ruby on Rails form_tag parameters missing,"I have a form that takes date range value to generate a report with Jasper Reports
+
+**reports/statistic.html.erb**
+
+    <%= form_tag(""/reports/statistic"", :method => ""post"", :target => ""_blank"") do %>
+    
+      <%= label_tag(:from_date, ""From Date:"") %>
+      <%= text_field_tag :from_date %>
+    
+      <%= label_tag(:to_date, ""To Date:"") %>
+      <%= text_field_tag :to_date %>
+    
+      <br><br>
+      <%= submit_tag(""Generate Report"") %>
+    <% end %>
+
+
+and this is **reports_controller.rb**
+
+    def statistic
+    
+        @details=StatisticTable.where(:dateindb => (params[:from_date])..(params[:to_date])
+
+      	send_doc(render_to_string(
+      		:template => 'reports/statistic.xml', :layout => false),  #source of xml and template
+         	'/statistic/detail', #xml xpath2 query in reports
+        	'statisticreport',   #name of .jasper file
+        	'StatisticReport',   #name of pdf file
+        	'pdf')
+      end
+
+When I clicked Generate Report button, the report displays nicely in a pdf viewer in a new window. But when I try to save the pdf file, the pdf is empty and the date value is returned as null. 
+
+Also, I followed this tutorial http://oldwiki.rubyonrails.org/rails/pages/HowtoIntegrateJasperReports which explains where the send_doc method comes from. 
+
+
+I don't think the problem is in Jasper because if I replace this
+
+    @details=StatisticTable.where(:dateindb => (params[:from_date])..(params[:to_date])
+
+
+with a pre-defined date value
+
+    @details=StatisticTable.where(:dateindb => ('2011-12-01')..('2011-12-31')
+
+the report displays and saves perfectly. So I'm guessing there is something wrong with my Ruby on Rails variables setting?
+
+Thanks!
+",ruby-on-rails-3,variables,date,jasper-reports,,,open,0,301,6,"Ruby on Rails form_tag parameters missing I have a form that takes date range value to generate a report with Jasper Reports
+
+**reports/statistic.html.erb**
+
+    <%= form_tag(""/reports/statistic"", :method => ""post"", :target => ""_blank"") do %>
+    
+      <%= label_tag(:from_date, ""From Date:"") %>
+      <%= text_field_tag :from_date %>
+    
+      <%= label_tag(:to_date, ""To Date:"") %>
+      <%= text_field_tag :to_date %>
+    
+      <br><br>
+      <%= submit_tag(""Generate Report"") %>
+    <% end %>
+
+
+and this is **reports_controller.rb**
+
+    def statistic
+    
+        @details=StatisticTable.where(:dateindb => (params[:from_date])..(params[:to_date])
+
+      	send_doc(render_to_string(
+      		:template => 'reports/statistic.xml', :layout => false),  #source of xml and template
+         	'/statistic/detail', #xml xpath2 query in reports
+        	'statisticreport',   #name of .jasper file
+        	'StatisticReport',   #name of pdf file
+        	'pdf')
+      end
+
+When I clicked Generate Report button, the report displays nicely in a pdf viewer in a new window. But when I try to save the pdf file, the pdf is empty and the date value is returned as null. 
+
+Also, I followed this tutorial http://oldwiki.rubyonrails.org/rails/pages/HowtoIntegrateJasperReports which explains where the send_doc method comes from. 
+
+
+I don't think the problem is in Jasper because if I replace this
+
+    @details=StatisticTable.where(:dateindb => (params[:from_date])..(params[:to_date])
+
+
+with a pre-defined date value
+
+    @details=StatisticTable.where(:dateindb => ('2011-12-01')..('2011-12-31')
+
+the report displays and saves perfectly. So I'm guessing there is something wrong with my Ruby on Rails variables setting?
+
+Thanks!
+",4
+7158068,08/23/2011 08:18:15,510644,11/17/2010 10:20:43,67,1,Devise: Switching User as an admin without logging in (su-method),"I'm using devise on rails3 and I'd like to implement ""su"" with it.
+
+To debug my application, it sometimes helps a lot to see exactly what the user who is having the problem is seeing. Therefore I would like to have the possibility (as an admin) to switch to that user without needing to know his password. Just like su on linux systems.
+
+I've seen it done for authlogic (http://blog.steveklabnik.com/2010/03/05/writing-a-su-feature-with-authlogic.html).
+
+The final outcome should be, that when I call /admin/su/5 as a User with the role ""admin"" I should be logged in as the user with id 5.
+
+Any help or pointers into the right direction are creatly appreciated.",ruby-on-rails-3,devise,,,,,open,0,105,10,"Devise: Switching User as an admin without logging in (su-method) I'm using devise on rails3 and I'd like to implement ""su"" with it.
+
+To debug my application, it sometimes helps a lot to see exactly what the user who is having the problem is seeing. Therefore I would like to have the possibility (as an admin) to switch to that user without needing to know his password. Just like su on linux systems.
+
+I've seen it done for authlogic (http://blog.steveklabnik.com/2010/03/05/writing-a-su-feature-with-authlogic.html).
+
+The final outcome should be, that when I call /admin/su/5 as a User with the role ""admin"" I should be logged in as the user with id 5.
+
+Any help or pointers into the right direction are creatly appreciated.",2
+6559805,07/02/2011 21:52:18,809134,06/21/2011 19:29:59,1,1,Carrierwave Rmagick Segmentation Fault on Wrong Photo Extension,"I got a segmentation fault when I attempted to upload an image to my site on Heroku using Carrierwave with Rmagick.
+
+This is part of the error log output
+
+    ruby: jpc_dec.c:1072: jpc_dec_tiledecode: Assertion `dec->numcomps == 3' failed.
+    /app/.bundle/gems/ruby/1.9.1/gems/carrierwave-0.5.4/lib/carrierwave/processing/rmagick.rb:248: [BUG] Segmentation fault
+    ruby 1.9.2p180 (2011-02-18 revision 30909) [x86_64-linux]
+
+After investigation, the segmentation fault occurs because I attempted to upload a JPEG2000 file with a `.jpg` extension instead of the correct `.jp2` extension.
+
+Is this a bug with Rmagick? 
+
+More importantly, is it possible to prevent the users of my site from triggering this segmentation fault by sending an image with the wrong extension? 
+
+Thanks!",ruby-on-rails-3,rmagick,carrierwave,,,,open,0,109,8,"Carrierwave Rmagick Segmentation Fault on Wrong Photo Extension I got a segmentation fault when I attempted to upload an image to my site on Heroku using Carrierwave with Rmagick.
+
+This is part of the error log output
+
+    ruby: jpc_dec.c:1072: jpc_dec_tiledecode: Assertion `dec->numcomps == 3' failed.
+    /app/.bundle/gems/ruby/1.9.1/gems/carrierwave-0.5.4/lib/carrierwave/processing/rmagick.rb:248: [BUG] Segmentation fault
+    ruby 1.9.2p180 (2011-02-18 revision 30909) [x86_64-linux]
+
+After investigation, the segmentation fault occurs because I attempted to upload a JPEG2000 file with a `.jpg` extension instead of the correct `.jp2` extension.
+
+Is this a bug with Rmagick? 
+
+More importantly, is it possible to prevent the users of my site from triggering this segmentation fault by sending an image with the wrong extension? 
+
+Thanks!",3
+7950310,10/31/2011 05:39:57,833077,07/07/2011 07:54:45,30,0,How to execute scheduled backups in rails 3,"The database table contains database schedule information to take database backup at the following intervals:
+   1. ""Every Day"" at a particular time such as 10:30 AM.
+   2. ""Every Month"" at a particular date time such as 28th at 10:30 AM.
+   3. ""Every Week"" on Sunday at 10:30 AM.
+
+These configuration can be changed by user very frequently.
+
+How do i create an task in crontab to execute my database backup script for above scheduled information in Rails 3?
+
+Regards,
+Sudhir C.N.
+",ruby-on-rails-3,,,,,,open,0,83,8,"How to execute scheduled backups in rails 3 The database table contains database schedule information to take database backup at the following intervals:
+   1. ""Every Day"" at a particular time such as 10:30 AM.
+   2. ""Every Month"" at a particular date time such as 28th at 10:30 AM.
+   3. ""Every Week"" on Sunday at 10:30 AM.
+
+These configuration can be changed by user very frequently.
+
+How do i create an task in crontab to execute my database backup script for above scheduled information in Rails 3?
+
+Regards,
+Sudhir C.N.
+",1
+10568316,05/12/2012 23:53:02,1328086,04/12/2012 03:49:54,16,0,undefined method `key?' for nil:NilClass with bcrypt-ruby and has_secure_password,"I'm going through DHH's Agile Web Development with Rails for Rails 3.1.  In chapter 14 they create a Users sign-in model/view/controller using the has_secure_password method.  My user.rb file looks like this:
+
+        class User < ActiveRecord::Base
+          attr_accessible :name, :password_digest, :password, :password_confirmation
+          validates :name, presence: true, uniqueness: true
+          has_secure_password
+        end
+
+now when I go to localhost:3000/users/new I first get some kind of bcrypt-ruby error and then when I reload the page I get a undefined method `key?' for nil:NilClass
+
+I don't know what needs to be done,
+mike",ruby-on-rails-3,,,,,05/14/2012 13:48:32,too localized,1,126,9,"undefined method `key?' for nil:NilClass with bcrypt-ruby and has_secure_password I'm going through DHH's Agile Web Development with Rails for Rails 3.1.  In chapter 14 they create a Users sign-in model/view/controller using the has_secure_password method.  My user.rb file looks like this:
+
+        class User < ActiveRecord::Base
+          attr_accessible :name, :password_digest, :password, :password_confirmation
+          validates :name, presence: true, uniqueness: true
+          has_secure_password
+        end
+
+now when I go to localhost:3000/users/new I first get some kind of bcrypt-ruby error and then when I reload the page I get a undefined method `key?' for nil:NilClass
+
+I don't know what needs to be done,
+mike",1
+11349595,07/05/2012 17:38:01,558639,03/30/2010 23:26:32,2302,47,How do I do the Delayed::Job equivalent of Process#waitall?,"I have a large task that proceeds in several major steps: Step A must complete before Step B can be started, etc.  But each major step can be divided up across multiple processes, in my case, using `Delayed::Job`.
+
+The question: Is there a simple technique for starting Step B only after all the processes have completed working on Step A?
+
+Note 1: I don't know _a priori_ how many external workers have been spun up, so keeping a reference count of completed workers won't help.  
+
+Note 2: I'd prefer not to create a worker whose sole job is to busy wait for the other jobs to complete.  Heroku workers cost money! 
+
+Note 3: I've considered having each worker examine the Delayed::Job queue in the `after` callback to decide if it's the last one working on Step A, in which case it could initiate Step B.  This could work, but seems potentially fraught with gotchas.  (In the absence of better answers, this is the approach I'm going with.)",ruby-on-rails-3,delayed-job,,,,,open,0,170,9,"How do I do the Delayed::Job equivalent of Process#waitall? I have a large task that proceeds in several major steps: Step A must complete before Step B can be started, etc.  But each major step can be divided up across multiple processes, in my case, using `Delayed::Job`.
+
+The question: Is there a simple technique for starting Step B only after all the processes have completed working on Step A?
+
+Note 1: I don't know _a priori_ how many external workers have been spun up, so keeping a reference count of completed workers won't help.  
+
+Note 2: I'd prefer not to create a worker whose sole job is to busy wait for the other jobs to complete.  Heroku workers cost money! 
+
+Note 3: I've considered having each worker examine the Delayed::Job queue in the `after` callback to decide if it's the last one working on Step A, in which case it could initiate Step B.  This could work, but seems potentially fraught with gotchas.  (In the absence of better answers, this is the approach I'm going with.)",2
+9933514,03/29/2012 21:04:17,1208165,02/14/2012 02:39:13,16,0,activeadmin heroku stylesheet config issue with partial fix,"I was receiving the following error message after precompiling my assets locally and then pushing the code to heroku:   
+
+2012-03-28T17:06:01+00:00 app[web.1]: Started GET ""/admin/login"" for 67.163.67.203 at 2012-03-28 17:06:01 +0000
+2012-03-28T17:06:01+00:00 app[web.1]: 
+2012-03-28T17:06:01+00:00 app[web.1]: ActionView::Template::Error (File to import not found or unreadable: active_admin/mixins.
+2012-03-28T17:06:01+00:00 app[web.1]: Load paths:
+2012-03-28T17:06:01+00:00 app[web.1]:   /app
+2012-03-28T17:06:01+00:00 app[web.1]:   /app/vendor/bundle/ruby/1.9.1/gems/activeadmin-0.4.3/app/assets/stylesheets
+2012-03-28T17:06:01+00:00 app[web.1]:   (in /app/vendor/assets/stylesheets/active_admin.css.scss)):
+2012-03-28T17:06:01+00:00 app[web.1]:     7: 
+2012-03-28T17:06:01+00:00 app[web.1]:     6:   <title><%= [@page_title, active_admin_application.site_title].compact.join("" | "") %></title>
+2012-03-28T17:06:01+00:00 app[web.1]:     8:   <% ActiveAdmin.application.stylesheets.each do |style| %>
+2012-03-28T17:06:01+00:00 app[web.1]:     9:     <%= stylesheet_link_tag style.path, style.options %>
+2012-03-28T17:06:01+00:00 app[web.1]:     10:   <% end %>
+2012-03-28T17:06:01+00:00 app[web.1]:     11:   <% ActiveAdmin.application.javascripts.each do |path| %>
+2012-03-28T17:06:01+00:00 app[web.1]:     12:     <%= javascript_include_tag path %>
+2012-03-28T17:06:01+00:00 app[web.1]:   vendor/assets/stylesheets/active_admin.css.scss:2
+
+...
+
+I followed a bunch of different options including the following tip here  - http://mrdanadams.com/2011/exclude-active-admin-js-css-rails/ and others on the github page.  
+
+None of those options worked.  Ultimately, I received some advice to delete my public/assets directory from git, push the code to heroku and let heroku precompile the assets.  This approach partially worked.  I no longer receive the error message when I try to go to the /admin page of my site.  However, the active_admin css files are missing.  It suspect that since heroku did the precompiling it is not throwing up an error even though the active_admin.css files are not being precompiled.  How can I get active_admin.css precompiled?
+
+Btw, I am running rails 3.2. ",ruby-on-rails-3,heroku,activeadmin,,,,open,0,272,8,"activeadmin heroku stylesheet config issue with partial fix I was receiving the following error message after precompiling my assets locally and then pushing the code to heroku:   
+
+2012-03-28T17:06:01+00:00 app[web.1]: Started GET ""/admin/login"" for 67.163.67.203 at 2012-03-28 17:06:01 +0000
+2012-03-28T17:06:01+00:00 app[web.1]: 
+2012-03-28T17:06:01+00:00 app[web.1]: ActionView::Template::Error (File to import not found or unreadable: active_admin/mixins.
+2012-03-28T17:06:01+00:00 app[web.1]: Load paths:
+2012-03-28T17:06:01+00:00 app[web.1]:   /app
+2012-03-28T17:06:01+00:00 app[web.1]:   /app/vendor/bundle/ruby/1.9.1/gems/activeadmin-0.4.3/app/assets/stylesheets
+2012-03-28T17:06:01+00:00 app[web.1]:   (in /app/vendor/assets/stylesheets/active_admin.css.scss)):
+2012-03-28T17:06:01+00:00 app[web.1]:     7: 
+2012-03-28T17:06:01+00:00 app[web.1]:     6:   <title><%= [@page_title, active_admin_application.site_title].compact.join("" | "") %></title>
+2012-03-28T17:06:01+00:00 app[web.1]:     8:   <% ActiveAdmin.application.stylesheets.each do |style| %>
+2012-03-28T17:06:01+00:00 app[web.1]:     9:     <%= stylesheet_link_tag style.path, style.options %>
+2012-03-28T17:06:01+00:00 app[web.1]:     10:   <% end %>
+2012-03-28T17:06:01+00:00 app[web.1]:     11:   <% ActiveAdmin.application.javascripts.each do |path| %>
+2012-03-28T17:06:01+00:00 app[web.1]:     12:     <%= javascript_include_tag path %>
+2012-03-28T17:06:01+00:00 app[web.1]:   vendor/assets/stylesheets/active_admin.css.scss:2
+
+...
+
+I followed a bunch of different options including the following tip here  - http://mrdanadams.com/2011/exclude-active-admin-js-css-rails/ and others on the github page.  
+
+None of those options worked.  Ultimately, I received some advice to delete my public/assets directory from git, push the code to heroku and let heroku precompile the assets.  This approach partially worked.  I no longer receive the error message when I try to go to the /admin page of my site.  However, the active_admin css files are missing.  It suspect that since heroku did the precompiling it is not throwing up an error even though the active_admin.css files are not being precompiled.  How can I get active_admin.css precompiled?
+
+Btw, I am running rails 3.2. ",3
+8408156,12/06/2011 23:01:47,232417,12/15/2009 20:21:32,3447,14,How can I do SQL string parameter escaping in the #select method of ActiveRecord::Relation?,"
+With ActiveRecord 3, it looks like I have to do this:
+
+      @query = ""some user-entered query""
+      @result = Entry.select(""entries.*, ts_rank(entries.textsearchable_index_col, plainto_tsquery('#{@query}')) as score"").
+                where(""entries.textsearchable_index_col @@ plainto_tsquery(?)"", @query).
+                order(""score desc"")
+
+when I really want to do this:
+
+      @query = ""some user-entered query""
+      @result = Entry.select(""entries.*, ts_rank(entries.textsearchable_index_col, plainto_tsquery(?)) as score"", @query).
+                where(""entries.textsearchable_index_col @@ plainto_tsquery(?)"", @query).
+                order(""score desc"")
+
+(I'm using Postgresql full text search.)
+
+When I try the second form, I get the error:
+
+      ArgumentError (wrong number of arguments (2 for 1)):
+        vendor/bundle/ruby/1.9.1/gems/activerecord-3.0.6/lib/active_record/relation/query_methods.rb:34:in `select'
+        ...
+I would like to have Rails sanitize the @query string and insert it into the `select` part of the SQL query safely.
+
+Any suggestions?",ruby-on-rails-3,activerecord,,,,,open,0,200,14,"How can I do SQL string parameter escaping in the #select method of ActiveRecord::Relation? 
+With ActiveRecord 3, it looks like I have to do this:
+
+      @query = ""some user-entered query""
+      @result = Entry.select(""entries.*, ts_rank(entries.textsearchable_index_col, plainto_tsquery('#{@query}')) as score"").
+                where(""entries.textsearchable_index_col @@ plainto_tsquery(?)"", @query).
+                order(""score desc"")
+
+when I really want to do this:
+
+      @query = ""some user-entered query""
+      @result = Entry.select(""entries.*, ts_rank(entries.textsearchable_index_col, plainto_tsquery(?)) as score"", @query).
+                where(""entries.textsearchable_index_col @@ plainto_tsquery(?)"", @query).
+                order(""score desc"")
+
+(I'm using Postgresql full text search.)
+
+When I try the second form, I get the error:
+
+      ArgumentError (wrong number of arguments (2 for 1)):
+        vendor/bundle/ruby/1.9.1/gems/activerecord-3.0.6/lib/active_record/relation/query_methods.rb:34:in `select'
+        ...
+I would like to have Rails sanitize the @query string and insert it into the `select` part of the SQL query safely.
+
+Any suggestions?",2
+11399920,07/09/2012 17:16:52,955697,09/20/2011 21:18:59,2098,118,Jasmine: testing my rails site's interface with it,"So, I've been looking for ways to test a Rails 3 app that has quite a lot of JS code for it's rich interface.
+
+I tried going with Capybara, but that dind't work out, so now I'm giving Jasmine a try, but  I'm having a hard time understanding how should I go about it.
+
+For what I gathered, Jasmine alone is good for testing JS components of a site, but what if I want to test the interface directly? I need something like:
+
+    describe ""Sign in"" 
+       Visit '/home'
+       When user clicks ""Sign in"" link 
+       The sign in form should appear
+
+Can I actually do something like that with Jasmine?  So far, my tests are included on a results page generated by the rails-jasmine gem and obviously they run over that DOM, not over my site's DOM.
+
+I'm now trying to use evergreen, but I get the same result (I can't even include jquery).
+
+Any ideas?
+
+Thanks!",ruby-on-rails-3,bdd,jasmine,,,,open,0,175,8,"Jasmine: testing my rails site's interface with it So, I've been looking for ways to test a Rails 3 app that has quite a lot of JS code for it's rich interface.
+
+I tried going with Capybara, but that dind't work out, so now I'm giving Jasmine a try, but  I'm having a hard time understanding how should I go about it.
+
+For what I gathered, Jasmine alone is good for testing JS components of a site, but what if I want to test the interface directly? I need something like:
+
+    describe ""Sign in"" 
+       Visit '/home'
+       When user clicks ""Sign in"" link 
+       The sign in form should appear
+
+Can I actually do something like that with Jasmine?  So far, my tests are included on a results page generated by the rails-jasmine gem and obviously they run over that DOM, not over my site's DOM.
+
+I'm now trying to use evergreen, but I get the same result (I can't even include jquery).
+
+Any ideas?
+
+Thanks!",3
+9186655,02/08/2012 01:32:15,1196092,02/08/2012 01:23:22,1,0,Heroku Cedar: How to scale WEB dynos based on time of day,"I want my Rails 3.1 app to scale up to 1 web dyno at 8am, then down to 0 web dynos at 5pm.
+
+BUT, I do not want to sign up for a paid service, and I cannot count on my home computer being connected to the internet.
+
+It seems like the Heroku Scheduler should make this trivial. Any quick solutions or links?",ruby-on-rails-3,heroku,automation,,,,open,0,61,12,"Heroku Cedar: How to scale WEB dynos based on time of day I want my Rails 3.1 app to scale up to 1 web dyno at 8am, then down to 0 web dynos at 5pm.
+
+BUT, I do not want to sign up for a paid service, and I cannot count on my home computer being connected to the internet.
+
+It seems like the Heroku Scheduler should make this trivial. Any quick solutions or links?",3
+9293528,02/15/2012 12:37:59,427805,08/22/2010 19:04:37,287,7,How do you serve a static file with a + character in the name in Rails 3?,"Using Rails 3.1.3 in a standard dev setup (no nginx or anything).
+
+Given that under the public directory of my Rails project I have a file called boo+plus.html
+
+When I browse to http://localhost:3000/boo+plus.html
+
+Then I the files should be served to me
+
+Instead I get You gets 'route not found' :(
+
+This used to work in Rails 2.3.x.
+
+http://localhost:3000/boo%2Bplus.html doesn't work either.
+
+Does this sound like a bug in Rails 3 or am I doing something wrong?
+",ruby-on-rails-3,encoding,routing,escaping,,,open,0,70,17,"How do you serve a static file with a + character in the name in Rails 3? Using Rails 3.1.3 in a standard dev setup (no nginx or anything).
+
+Given that under the public directory of my Rails project I have a file called boo+plus.html
+
+When I browse to http://localhost:3000/boo+plus.html
+
+Then I the files should be served to me
+
+Instead I get You gets 'route not found' :(
+
+This used to work in Rails 2.3.x.
+
+http://localhost:3000/boo%2Bplus.html doesn't work either.
+
+Does this sound like a bug in Rails 3 or am I doing something wrong?
+",4
+7636934,10/03/2011 15:12:49,805611,06/19/2011 18:25:47,21,1,Rack assets:precompile issue. Invalid UTF-8 byte sequence,"Rails 3.1. I'm trying to precompile assets.
+
+    $ rake assets:precompile RAILS_ENV=production
+      rake aborted!
+      /home/user/project/public/assets/jquery-ui.min-0e8a11c7e970b57b4bf5c449cb14480d.js.gz has a invalid UTF-8 byte sequence
+      Tasks: TOP => assets:precompile
+       
+      (See full trace by running task with --trace)
+
+Any ideas?
+
+",ruby-on-rails-3,,,,,,open,0,63,7,"Rack assets:precompile issue. Invalid UTF-8 byte sequence Rails 3.1. I'm trying to precompile assets.
+
+    $ rake assets:precompile RAILS_ENV=production
+      rake aborted!
+      /home/user/project/public/assets/jquery-ui.min-0e8a11c7e970b57b4bf5c449cb14480d.js.gz has a invalid UTF-8 byte sequence
+      Tasks: TOP => assets:precompile
+       
+      (See full trace by running task with --trace)
+
+Any ideas?
+
+",1
+8595416,12/21/2011 19:46:09,1110514,12/21/2011 19:37:56,1,0,Delayed_job(2.1.4) + Rails(3.0.10) undefined method `delay',"I upgrading a rails application to rails(3.0.10) and update the gem delayed_job. I updated my migration for the table delayed_job but unfortunatly the method "".delay"" doesn't work.
+
+    NoMethodError: undefined method `delay' for #<User:0x10394d140>
+
+I didn't find a solution for that. I did : ""bundle install"", I restarted the server, tried to instal as plugin...
+
+Do you have any ideas?
+
+
+Thanks.",ruby-on-rails-3,delayed-job,nomethoderror,,,,open,0,60,6,"Delayed_job(2.1.4) + Rails(3.0.10) undefined method `delay' I upgrading a rails application to rails(3.0.10) and update the gem delayed_job. I updated my migration for the table delayed_job but unfortunatly the method "".delay"" doesn't work.
+
+    NoMethodError: undefined method `delay' for #<User:0x10394d140>
+
+I didn't find a solution for that. I did : ""bundle install"", I restarted the server, tried to instal as plugin...
+
+Do you have any ideas?
+
+
+Thanks.",3
+9477562,02/28/2012 06:43:32,1173629,04/04/2011 15:47:28,164,13,Manually indexing a record in websolr,"Is there any way to index a record manually in websolr.
+
+like in rails code i have get a record 
+
+    a = user.first
+    
+     something like a.index
+
+",ruby-on-rails-3,solr,,,,02/29/2012 19:38:50,not a real question,1,37,6,"Manually indexing a record in websolr Is there any way to index a record manually in websolr.
+
+like in rails code i have get a record 
+
+    a = user.first
+    
+     something like a.index
+
+",2
+9638057,03/09/2012 17:02:56,699557,04/08/2011 04:41:39,58,1,How to test this HTTParty code with RSpec?,"I have the following simple class and HTTParty method:
+
+    class Token
+      require 'httparty'
+
+      include HTTParty
+      base_uri 'https://<some url>'
+      headers 'auth_user' => 'user'
+      headers 'auth_pass' => 'password'
+      headers 'auth_appkey' => 'app_key'
+
+      def self.getToken
+        response = get('/auth/token')
+        @token = response['auth']['token']
+      end
+    end
+
+*I know it works* because I can call the method in the Rails console and successfully get a token back.
+
+**How do I test the above code in RSpec?**
+
+My initial stab at it doesn't work:
+
+    describe Token do
+      before do
+        HTTParty.base_uri 'https://<some url>'
+        HTTParty.headers 'auth_user' => 'user'
+        HTTParty.headers 'auth_pass' => 'password'
+        HTTParty.headers 'auth_appkey' => 'app_key'
+      end
+
+      it ""gets a token"" do
+        HTTParty.get('auth/authenticate')
+        response['auth']['token'].should_not be_nil
+      end
+    end
+
+It says: `NoMethodError: undefined method 'base_uri' for HTTParty:Module`...",ruby-on-rails-3,syntax,rspec,tdd,httparty,,open,0,239,8,"How to test this HTTParty code with RSpec? I have the following simple class and HTTParty method:
+
+    class Token
+      require 'httparty'
+
+      include HTTParty
+      base_uri 'https://<some url>'
+      headers 'auth_user' => 'user'
+      headers 'auth_pass' => 'password'
+      headers 'auth_appkey' => 'app_key'
+
+      def self.getToken
+        response = get('/auth/token')
+        @token = response['auth']['token']
+      end
+    end
+
+*I know it works* because I can call the method in the Rails console and successfully get a token back.
+
+**How do I test the above code in RSpec?**
+
+My initial stab at it doesn't work:
+
+    describe Token do
+      before do
+        HTTParty.base_uri 'https://<some url>'
+        HTTParty.headers 'auth_user' => 'user'
+        HTTParty.headers 'auth_pass' => 'password'
+        HTTParty.headers 'auth_appkey' => 'app_key'
+      end
+
+      it ""gets a token"" do
+        HTTParty.get('auth/authenticate')
+        response['auth']['token'].should_not be_nil
+      end
+    end
+
+It says: `NoMethodError: undefined method 'base_uri' for HTTParty:Module`...",5
+8072356,11/09/2011 22:01:27,92313,04/17/2009 19:50:55,14609,425,Class shown instead of ActionView::Base in development mode backtrace,"I'm in the process of migrating my application from Rails 2.3 to 3.1 and I've noticed something strange. When an invalid method error is encountered in a view, the backtrace in development mode looks something like
+
+    undefined method `calendar_date_select_includes' for #<#<Class:0x00000008d00d38>:0x00000008cf20d0>
+
+However, the same error under Rails 2.3 comes out as 
+
+    undefined method `calendar_date_select_includes' for #<ActionView::Base:0xb6620ac8>
+
+As you can see, instead of showing `ActionView::Base` as the class that the error is taking place in (as it does in Rails 2.3), it shows `#<Class:0x00000008d00d38>` instead.
+
+I thought it might have something to do with a gem or plugin I was using, but I created a brand new Rails 3.1 project and the same behaviour was exhibited.
+
+Is this a known Rails 3.1 bug or is there something I need to do to set up the correct class name being used? It seems that this problem is limited to errors within `ActionView::Base`.",ruby-on-rails-3,error-message,ruby-on-rails-3.1,backtrace,,,open,0,153,9,"Class shown instead of ActionView::Base in development mode backtrace I'm in the process of migrating my application from Rails 2.3 to 3.1 and I've noticed something strange. When an invalid method error is encountered in a view, the backtrace in development mode looks something like
+
+    undefined method `calendar_date_select_includes' for #<#<Class:0x00000008d00d38>:0x00000008cf20d0>
+
+However, the same error under Rails 2.3 comes out as 
+
+    undefined method `calendar_date_select_includes' for #<ActionView::Base:0xb6620ac8>
+
+As you can see, instead of showing `ActionView::Base` as the class that the error is taking place in (as it does in Rails 2.3), it shows `#<Class:0x00000008d00d38>` instead.
+
+I thought it might have something to do with a gem or plugin I was using, but I created a brand new Rails 3.1 project and the same behaviour was exhibited.
+
+Is this a known Rails 3.1 bug or is there something I need to do to set up the correct class name being used? It seems that this problem is limited to errors within `ActionView::Base`.",4
+7295362,09/03/2011 19:26:52,209383,11/12/2009 08:05:28,44,0,How to lookup a data dictionary in rails?,"I have small app in that I manage sales territories. One territory can have x addresses. This is working just fine. I can display a list of territories and go into territories' details and display the addresses.
+
+My question: In the territories table I have a field called sales_rep_id. How do I say the territories index view to display the 'sales_rep_name' instead of the 'sales_rep_id'? The 'sales_rep_name' is stored in the sales_rep table.
+
+Do I have to do another has_many belongs_to relation?
+
+Thanks
+Thomas",ruby-on-rails-3,,,,,,open,0,80,8,"How to lookup a data dictionary in rails? I have small app in that I manage sales territories. One territory can have x addresses. This is working just fine. I can display a list of territories and go into territories' details and display the addresses.
+
+My question: In the territories table I have a field called sales_rep_id. How do I say the territories index view to display the 'sales_rep_name' instead of the 'sales_rep_id'? The 'sales_rep_name' is stored in the sales_rep table.
+
+Do I have to do another has_many belongs_to relation?
+
+Thanks
+Thomas",1
+9451447,02/26/2012 07:47:22,580961,01/19/2011 05:35:30,275,19,Rails 3.1 - Problems transferring a controller query into a model scope,"I have a query in my controller that works fine, but I'd like to make a scope out it.  When I try to do so I get a method not found error.  Here are the details...
+
+    class Post
+      has_ancestry  # part of a tree of posts, managed with the Ancestry gem
+      attr_accessible :body, :user_id, :published
+    end
+
+In `posts_controller.rb` I need to get a set of published sibling posts, sans the @post record itself (which Ancestry includes in the results of 'sibling').  This code works fine:
+
+    def show
+      @post = Post.find(params[:id])
+      @published_sibs = @post.siblings.where(""id <> :id"", :id => @post.id).where(""published = :published"", :published => true)
+    end
+
+I try moving this query into a scope in my `Post.rb` file like this:
+
+    class Post
+      has_ancestry  # part of a tree of posts, managed withthe  Ancestry gem
+      attr_accessible :body, :user_id, :published
+      scope :published_sibs,  self.siblings.where(""id <> :id"", :id => self.id).where(""published = :published"", :published => true)
+    end
+
+When I try to load Rails, I get:
+
+    ... active_record/base.rb:1088:in `method_missing': undefined method `siblings' for #<Class:0x007fc3d4e33470> (NoMethodError)
+
+Why is the Ancestor gem's sibling relationship available in my controller, but not a scope in my model?  How can I translate this query into a scope?
+
+
+",ruby-on-rails-3,query,activerecord,scope,,,open,0,254,12,"Rails 3.1 - Problems transferring a controller query into a model scope I have a query in my controller that works fine, but I'd like to make a scope out it.  When I try to do so I get a method not found error.  Here are the details...
+
+    class Post
+      has_ancestry  # part of a tree of posts, managed with the Ancestry gem
+      attr_accessible :body, :user_id, :published
+    end
+
+In `posts_controller.rb` I need to get a set of published sibling posts, sans the @post record itself (which Ancestry includes in the results of 'sibling').  This code works fine:
+
+    def show
+      @post = Post.find(params[:id])
+      @published_sibs = @post.siblings.where(""id <> :id"", :id => @post.id).where(""published = :published"", :published => true)
+    end
+
+I try moving this query into a scope in my `Post.rb` file like this:
+
+    class Post
+      has_ancestry  # part of a tree of posts, managed withthe  Ancestry gem
+      attr_accessible :body, :user_id, :published
+      scope :published_sibs,  self.siblings.where(""id <> :id"", :id => self.id).where(""published = :published"", :published => true)
+    end
+
+When I try to load Rails, I get:
+
+    ... active_record/base.rb:1088:in `method_missing': undefined method `siblings' for #<Class:0x007fc3d4e33470> (NoMethodError)
+
+Why is the Ancestor gem's sibling relationship available in my controller, but not a scope in my model?  How can I translate this query into a scope?
+
+
+",4
+6775647,07/21/2011 11:58:26,523811,11/29/2010 11:02:50,294,23,rails 3 pagination with kaminari on mongoid embedded documents,"When I call paginate with kaminari on a collection of embedded documents I get the following error: 
+
+    (Access to the collection for Document is not allowed since it is an embedded document, please access a collection from the root document.):
+
+Any idea on how I can fix that ? I have installed kaminari as a gem.
+
+Alex",ruby-on-rails-3,embedded,mongoid,kaminari,,,open,0,59,9,"rails 3 pagination with kaminari on mongoid embedded documents When I call paginate with kaminari on a collection of embedded documents I get the following error: 
+
+    (Access to the collection for Document is not allowed since it is an embedded document, please access a collection from the root document.):
+
+Any idea on how I can fix that ? I have installed kaminari as a gem.
+
+Alex",4
+11572650,07/20/2012 03:55:39,599391,02/02/2011 03:09:55,90,2,Rails Custom Form Building Interface,"I'm building an interface for non-programmers to build and edit a form for a project. When a user clicks to create a new form and is taken to the form to create a new form, I'd like the user to be able to click a button to add a question to the form that is currently being created. I'm sure I could do this with a bunch of fancy AJAX, but for the first iteration of this, all I really want to see is that I am taken to the question's creation form and can create the question, and associate it with the form I was previously creating.
+
+My thought on the approach went something like passing a special flag if a user clicks a submit button called ""Add a question"" and having the forms controller save the current state of the form from the params, take the new form's ID and then redirect to the question's form with that ID, but I can't find a way to conditionally send that flag, since I'd need to encode some sort of param in the submit button itself.",ruby-on-rails-3,,,,,,open,0,185,5,"Rails Custom Form Building Interface I'm building an interface for non-programmers to build and edit a form for a project. When a user clicks to create a new form and is taken to the form to create a new form, I'd like the user to be able to click a button to add a question to the form that is currently being created. I'm sure I could do this with a bunch of fancy AJAX, but for the first iteration of this, all I really want to see is that I am taken to the question's creation form and can create the question, and associate it with the form I was previously creating.
+
+My thought on the approach went something like passing a special flag if a user clicks a submit button called ""Add a question"" and having the forms controller save the current state of the form from the params, take the new form's ID and then redirect to the question's form with that ID, but I can't find a way to conditionally send that flag, since I'd need to encode some sort of param in the submit button itself.",1
+8776700,01/08/2012 10:04:32,89752,04/11/2009 12:32:07,1665,20,Rake aborting with Devise installation on Ruby - cannot migrate the db,"I'm trying my hands on Ruby on Rails and needed to set up a simple authentication using [devise][1]. I followed the instructions however I'm constantly getting the following error:
+
+    >rake db:migrate
+    rake aborted!
+    uninitialized constant User
+    
+    Tasks: TOP => db:migrate => environment
+
+I get this error every time I try to run `rake db:migrate` - the migrate file does exist in the db/migrate folder but it wont proceed further. Please help.
+
+  [1]: https://github.com/plataformatec/devise",ruby-on-rails-3,devise,rake,,,,open,0,89,12,"Rake aborting with Devise installation on Ruby - cannot migrate the db I'm trying my hands on Ruby on Rails and needed to set up a simple authentication using [devise][1]. I followed the instructions however I'm constantly getting the following error:
+
+    >rake db:migrate
+    rake aborted!
+    uninitialized constant User
+    
+    Tasks: TOP => db:migrate => environment
+
+I get this error every time I try to run `rake db:migrate` - the migrate file does exist in the db/migrate folder but it wont proceed further. Please help.
+
+  [1]: https://github.com/plataformatec/devise",3
+9539495,03/02/2012 19:51:56,678659,03/27/2011 05:39:00,78,0,rails with dropbox,"I am doing a ruby on rails project in class with a group and want to add extra gems to my app in the dropbox but once I'm in the terminal, I cant connect to my app. cd Dropbox works fine but cd Dropbox/App gets me -bash: App command not found. Can I gain access to the live folder from the terminal?",ruby-on-rails-3,ruby-on-rails-3.1,,,,03/06/2012 18:34:35,too localized,1,62,3,"rails with dropbox I am doing a ruby on rails project in class with a group and want to add extra gems to my app in the dropbox but once I'm in the terminal, I cant connect to my app. cd Dropbox works fine but cd Dropbox/App gets me -bash: App command not found. Can I gain access to the live folder from the terminal?",2
+5819223,04/28/2011 13:16:25,727978,04/27/2011 19:28:48,1,0,How can I generate test routes for Rails 3 plugins?,"I'm trying to develop tests for plugin ""foobar"" that modifies some of the standard Rails helpers. In vendor/plugins/foobar/test/foobar_test.rb, I have the following:
+
+    # create the test model
+    class Thing < ActiveRecord::Base
+    end
+    
+    # create the test controller, which renders the included index template
+    class ThingsController < ActionController::Base
+      def index
+        @things = Thing.all
+        format.html { render(:file => 'index') }
+      end
+    
+      def destroy
+        @thing = Thing.find(params[:id])
+        @thing.destroy
+        format.html { render(:file => 'index') }
+      end
+    end
+    
+    # confirm that the test environment is working correctly
+    class ThingsTest < ActiveSupport::TestCase
+      test ""model is loaded correctly"" do
+        assert_kind_of Thing, Thing.new
+      end
+    end
+    
+    # confirm that the controller and routes are working correctly
+    class ThingsControllerTest < ActionController::TestCase
+      test ""should load index"" do
+        with_routing do |set|
+          set.draw do
+            resources :things, :only => [:index, :destroy]
+          end
+
+          get :index
+          assert_response :success
+        end
+      end
+    end
+
+When I run rake, I get the following output:
+
+    test_should_load_index(ThingsControllerTest):
+    NameError: undefined local variable or method `_routes' for ThingsController:Class
+
+Any idea what I'm doing wrong that is preventing me from accessing the routes? I've been at this for days and scoured much documentation, to no avail. Thanks for the help!",ruby-on-rails-3,ruby-on-rails-plugins,,,,,open,0,384,10,"How can I generate test routes for Rails 3 plugins? I'm trying to develop tests for plugin ""foobar"" that modifies some of the standard Rails helpers. In vendor/plugins/foobar/test/foobar_test.rb, I have the following:
+
+    # create the test model
+    class Thing < ActiveRecord::Base
+    end
+    
+    # create the test controller, which renders the included index template
+    class ThingsController < ActionController::Base
+      def index
+        @things = Thing.all
+        format.html { render(:file => 'index') }
+      end
+    
+      def destroy
+        @thing = Thing.find(params[:id])
+        @thing.destroy
+        format.html { render(:file => 'index') }
+      end
+    end
+    
+    # confirm that the test environment is working correctly
+    class ThingsTest < ActiveSupport::TestCase
+      test ""model is loaded correctly"" do
+        assert_kind_of Thing, Thing.new
+      end
+    end
+    
+    # confirm that the controller and routes are working correctly
+    class ThingsControllerTest < ActionController::TestCase
+      test ""should load index"" do
+        with_routing do |set|
+          set.draw do
+            resources :things, :only => [:index, :destroy]
+          end
+
+          get :index
+          assert_response :success
+        end
+      end
+    end
+
+When I run rake, I get the following output:
+
+    test_should_load_index(ThingsControllerTest):
+    NameError: undefined local variable or method `_routes' for ThingsController:Class
+
+Any idea what I'm doing wrong that is preventing me from accessing the routes? I've been at this for days and scoured much documentation, to no avail. Thanks for the help!",2
+6455195,06/23/2011 13:55:15,127059,06/22/2009 16:40:16,22134,967,Unexpected dot from helper method,"I have the following routings
+
+    PosTracker::Application.routes.draw do
+      get ""home/index""
+    
+      resources :pos
+      resources :apis
+      
+      match 'update_data' => 'home#update', :as => :update, :via => :get
+      root :to => ""home#index""
+    
+    end
+
+Now, when using the `link_to` helper method:
+
+    link_to ""text"", pos_path(starbase)
+
+I get the following route `/pos.13` instead of `/pos/13`. Obviously, this won't produce valid output. How can I fix this?",ruby-on-rails-3,routing,,,,,open,0,104,5,"Unexpected dot from helper method I have the following routings
+
+    PosTracker::Application.routes.draw do
+      get ""home/index""
+    
+      resources :pos
+      resources :apis
+      
+      match 'update_data' => 'home#update', :as => :update, :via => :get
+      root :to => ""home#index""
+    
+    end
+
+Now, when using the `link_to` helper method:
+
+    link_to ""text"", pos_path(starbase)
+
+I get the following route `/pos.13` instead of `/pos/13`. Obviously, this won't produce valid output. How can I fix this?",2
+7156285,08/23/2011 04:29:44,770670,05/26/2011 04:22:27,79,10,Resque hates kaminari dsl method paginates_per,"So I'm converting my Admin mailers to use Resque and execute in the background.  
+
+When I ran:
+
+    rake resque:work QUEUE='*' --trace
+
+I get this:
+
+    $ rake resque:work QUEUE='*' --trace (in /my/directory)
+    ** Invoke resque:work (first_time)
+    ** Invoke resque:preload (first_time)
+    ** Execute resque:preload rake aborted! undefined method `paginates_per' for #<Class:0x000000045ba1b8>
+
+which traces back to my Micropost model that default to 10 micropost per page using kaminari's dsl method paginates_per:
+
+    class Micropost < ActiveRecord::Base
+    .
+    .
+    .
+      paginates_per 10
+
+How do I get rake to stop puking without moving the DSL method?
+
+
+",ruby-on-rails-3,dsl,resque,kaminari,,,open,0,120,6,"Resque hates kaminari dsl method paginates_per So I'm converting my Admin mailers to use Resque and execute in the background.  
+
+When I ran:
+
+    rake resque:work QUEUE='*' --trace
+
+I get this:
+
+    $ rake resque:work QUEUE='*' --trace (in /my/directory)
+    ** Invoke resque:work (first_time)
+    ** Invoke resque:preload (first_time)
+    ** Execute resque:preload rake aborted! undefined method `paginates_per' for #<Class:0x000000045ba1b8>
+
+which traces back to my Micropost model that default to 10 micropost per page using kaminari's dsl method paginates_per:
+
+    class Micropost < ActiveRecord::Base
+    .
+    .
+    .
+      paginates_per 10
+
+How do I get rake to stop puking without moving the DSL method?
+
+
+",4
+10240630,04/20/2012 05:13:21,386455,07/08/2010 09:16:47,503,41,ROR + Authlogic - Duplication of Email Address in Database,"I'm using authlogic with my user model,
+
+    acts_as_authentic
+
+Here, I want duplication of email address in User table. But authlogic support uniqueness of email address. So please help me out to resolve this issue.
+
+According to requirement, I have to make duplication of email address in user table.
+
+Thanks in advance.",ruby-on-rails-3,authlogic,,,,04/20/2012 05:15:54,not a real question,1,51,10,"ROR + Authlogic - Duplication of Email Address in Database I'm using authlogic with my user model,
+
+    acts_as_authentic
+
+Here, I want duplication of email address in User table. But authlogic support uniqueness of email address. So please help me out to resolve this issue.
+
+According to requirement, I have to make duplication of email address in user table.
+
+Thanks in advance.",2
+9311000,02/16/2012 12:07:13,1061581,11/23/2011 09:39:05,1,0,rails 3 check_box error in storing data in database from html page,"I am getting this error 
+undefined method `Paypal' for #<Item:0xb6ec7aa0>
+
+my code for html page is below.
+			
+				
+					<%= f.check_box :Paypal %>Paypal
+				
+				
+					<%= f.check_box :Cash %>Cash
+				
+					<%= f.check_box :Check %>Check
+				<%= f.check_box :Bank_Transfer %>Bank Transfer
+				
+
+
+
+help me.thanks",ruby-on-rails-3,checkbox,,,,02/16/2012 19:22:12,not a real question,1,30,12,"rails 3 check_box error in storing data in database from html page I am getting this error 
+undefined method `Paypal' for #<Item:0xb6ec7aa0>
+
+my code for html page is below.
+			
+				
+					<%= f.check_box :Paypal %>Paypal
+				
+				
+					<%= f.check_box :Cash %>Cash
+				
+					<%= f.check_box :Check %>Check
+				<%= f.check_box :Bank_Transfer %>Bank Transfer
+				
+
+
+
+help me.thanks",2
+6850069,07/27/2011 19:25:15,858726,07/22/2011 22:01:20,3,0,Complex nested form rails 3 using nested_form gem,"I have a problem and I don't know how to solve it.
+
+I'm using ""nested_form"" gem in classic way so I'm able to add ""multiple tasks"" to a ""project"" while I'm creating a ""project"". That's not the problem.
+
+To explain the problem I'm going to use an example. Supose I have two models, ""Projects"" and ""Tasks"", where project has many tasks and task belongs to project. But in this case I can create a task without a project (foreign key could be null) and I want to make the association later.
+
+So my idea is, when I create the project I want to associate tasks that already exists, so when i save the project, the foreign key in task should be the id of the project just created
+
+Is that possible??, hope you can help me, thanks",ruby-on-rails-3,rubygems,nested-forms,,,,open,0,133,8,"Complex nested form rails 3 using nested_form gem I have a problem and I don't know how to solve it.
+
+I'm using ""nested_form"" gem in classic way so I'm able to add ""multiple tasks"" to a ""project"" while I'm creating a ""project"". That's not the problem.
+
+To explain the problem I'm going to use an example. Supose I have two models, ""Projects"" and ""Tasks"", where project has many tasks and task belongs to project. But in this case I can create a task without a project (foreign key could be null) and I want to make the association later.
+
+So my idea is, when I create the project I want to associate tasks that already exists, so when i save the project, the foreign key in task should be the id of the project just created
+
+Is that possible??, hope you can help me, thanks",3
+7099389,08/17/2011 20:57:54,889074,08/11/2011 02:02:07,11,0,"rails 3, uninitialized constant Tercero::terceroclasificacion","/models/tipotercero.rb
+
+
+     class Tipotercero < ActiveRecord::Base   
+      has_many  :terceroclasificaciones   
+       has_many :terceros , :through => :terceroclasificaciones 
+     end
+
+/models/tercero.rb
+
+    class Tercero < ActiveRecord::Base
+      has_many :ciudades
+      has_many :terceroclasificaciones
+      has_many :tipoterceros, :through => :terceroclasificaciones
+    end
+
+
+    class Terceroclasificacion < ActiveRecord::Base
+      belongs_to :tercero
+      belongs_to :tipotercero
+      attr_accessor :tercero_id, :tipotercero_id
+    end
+
+
+
+/views/terceros/_form.html.erb
+
+    <div class=""field"">
+      	<% for tipotercero in Tipotercero.all %>
+    	<div>
+    	  <%= check_box_tag ""tercero[tipotercero_ids][]"", tipotercero.id, @tercero.tipoterceros.include?(tipotercero) %>
+    	  <%= tipotercero.nombre %>
+    	</div>
+    	<% end %>
+      </div> 
+
+the error is 
+
+    uninitialized constant Tercero::terceroclasificacion
+
+
+I have tried to follow the post
+[http://stackoverflow.com/questions/5054337/rails-3-has-many-through-form][1] but I could not find the error in my application
+
+
+  [1]: http://stackoverflow.com/questions/5054337/rails-3-has-many-through-form",ruby-on-rails-3,,,,,,open,0,193,5,"rails 3, uninitialized constant Tercero::terceroclasificacion /models/tipotercero.rb
+
+
+     class Tipotercero < ActiveRecord::Base   
+      has_many  :terceroclasificaciones   
+       has_many :terceros , :through => :terceroclasificaciones 
+     end
+
+/models/tercero.rb
+
+    class Tercero < ActiveRecord::Base
+      has_many :ciudades
+      has_many :terceroclasificaciones
+      has_many :tipoterceros, :through => :terceroclasificaciones
+    end
+
+
+    class Terceroclasificacion < ActiveRecord::Base
+      belongs_to :tercero
+      belongs_to :tipotercero
+      attr_accessor :tercero_id, :tipotercero_id
+    end
+
+
+
+/views/terceros/_form.html.erb
+
+    <div class=""field"">
+      	<% for tipotercero in Tipotercero.all %>
+    	<div>
+    	  <%= check_box_tag ""tercero[tipotercero_ids][]"", tipotercero.id, @tercero.tipoterceros.include?(tipotercero) %>
+    	  <%= tipotercero.nombre %>
+    	</div>
+    	<% end %>
+      </div> 
+
+the error is 
+
+    uninitialized constant Tercero::terceroclasificacion
+
+
+I have tried to follow the post
+[http://stackoverflow.com/questions/5054337/rails-3-has-many-through-form][1] but I could not find the error in my application
+
+
+  [1]: http://stackoverflow.com/questions/5054337/rails-3-has-many-through-form",1
+11216791,06/26/2012 22:25:14,1484095,06/26/2012 22:13:13,1,0,Tutorial paperclip rails 3,"**I have a problems to save a user:**
+Can't mass-assign protected attributes: photo
+I really need help",ruby-on-rails-3,,,,,06/28/2012 00:39:49,not a real question,1,15,4,"Tutorial paperclip rails 3 **I have a problems to save a user:**
+Can't mass-assign protected attributes: photo
+I really need help",1
+4824097,01/28/2011 02:00:00,342243,05/16/2010 06:49:15,113,1,Best way to learn how capybara and cucumber works?,"I want to ask about the best resources to know how cucumber, capybara works. I know how to use them, but sometimes things go wrong I just don't know why, I thought about reading the capybara and cucumber source code, but It's a bit complicated without having a general idea about their work, so here's my question. How do you learn this things enough to understand whats happening behind and things doesn't seem like magic with tools like this?
+
+Greetings",ruby-on-rails-3,selenium,cucumber,bdd,capybara,04/20/2012 11:10:30,not constructive,1,79,9,"Best way to learn how capybara and cucumber works? I want to ask about the best resources to know how cucumber, capybara works. I know how to use them, but sometimes things go wrong I just don't know why, I thought about reading the capybara and cucumber source code, but It's a bit complicated without having a general idea about their work, so here's my question. How do you learn this things enough to understand whats happening behind and things doesn't seem like magic with tools like this?
+
+Greetings",5
+11197086,06/25/2012 20:45:13,558639,03/30/2010 23:26:32,2230,44,How do I initialize a model table w/RSpec so external processes can see the contents of the table?,"I'm writing a Rails system that ingests data from external sources by spawning multiple processes to fetch the data and updating a single db table.  I want to write RSpec tests that spawn multiple processes that emulate the fetch/write process to look for concurrency issues.  
+
+### short question
+
+How can I initialize a table in an RSpec test so that an external process can see the contents of the table?  (At least, I think that's the right question.  Read on for details...)
+
+### longer form
+
+The general structure of my RSpec test is:
+
+    it 'external task should update the correct records' do
+      initialize_my_model_table_with_some_records
+      spawn_external_task_to_update_records
+      validate_results
+    end
+
+But the external process always sees the model table as empty (verified by debug printing).  Subsequently, attempts to update the table fail.
+
+I'm pretty sure this is because RSpec is holding the table under a lock so it can do a rollback after the test completes.
+
+So (to repeat the short question):  How can I initialize a table in an RSpec test so that an external process can see the initialized contents of the table?
+
+### environment
+
+  * Ruby version 1.9.3 (x86_64-darwin10.8.0)
+  * pg (0.13.2)
+  * rails (3.2.1)
+  * rspec (2.9.0)
+  * rspec-rails (2.9.0)
+",ruby-on-rails-3,postgresql,locking,rspec-rails,external-process,,open,0,225,18,"How do I initialize a model table w/RSpec so external processes can see the contents of the table? I'm writing a Rails system that ingests data from external sources by spawning multiple processes to fetch the data and updating a single db table.  I want to write RSpec tests that spawn multiple processes that emulate the fetch/write process to look for concurrency issues.  
+
+### short question
+
+How can I initialize a table in an RSpec test so that an external process can see the contents of the table?  (At least, I think that's the right question.  Read on for details...)
+
+### longer form
+
+The general structure of my RSpec test is:
+
+    it 'external task should update the correct records' do
+      initialize_my_model_table_with_some_records
+      spawn_external_task_to_update_records
+      validate_results
+    end
+
+But the external process always sees the model table as empty (verified by debug printing).  Subsequently, attempts to update the table fail.
+
+I'm pretty sure this is because RSpec is holding the table under a lock so it can do a rollback after the test completes.
+
+So (to repeat the short question):  How can I initialize a table in an RSpec test so that an external process can see the initialized contents of the table?
+
+### environment
+
+  * Ruby version 1.9.3 (x86_64-darwin10.8.0)
+  * pg (0.13.2)
+  * rails (3.2.1)
+  * rspec (2.9.0)
+  * rspec-rails (2.9.0)
+",5

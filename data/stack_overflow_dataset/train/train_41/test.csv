@@ -1,0 +1,3919 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9896888,03/27/2012 20:08:57,877404,08/03/2011 20:20:50,8,0,Apache vhost error 101,"I have been trying to setup virtual hosts on my apache2 server. It doesn't show any error. I tnormally starts. Though on my web browser it shows connection reset error 101. Here's my vhost config :
+<pre><code>
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@gexodus.com
+    DocumentRoot ""C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/www""
+    ServerName genesisserver.dyndns.org
+    ErrorLog ""logs/www.genesisserver.dyndns.org-error.log""
+    CustomLog ""logs/www.genesisserver.dyndns.org-access.log"" common
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@m.gexodus.com
+    DocumentRoot ""C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/m""
+    ServerName m.genesisserver.dyndns.org
+    ErrorLog ""logs/m.genesisserver.dyndns.org-error.log""
+    CustomLog ""logs/m.genesisserver.dyndns.org-access.log"" common
+</VirtualHost>
+</pre></code>
+Also i know the email is wrong but i dont think this may be the thing.
+Can anyone help me?
+Thanks :)",apache,apache2,,,,03/28/2012 20:42:29,off topic,1,118,4,"Apache vhost error 101 I have been trying to setup virtual hosts on my apache2 server. It doesn't show any error. I tnormally starts. Though on my web browser it shows connection reset error 101. Here's my vhost config :
+<pre><code>
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@gexodus.com
+    DocumentRoot ""C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/www""
+    ServerName genesisserver.dyndns.org
+    ErrorLog ""logs/www.genesisserver.dyndns.org-error.log""
+    CustomLog ""logs/www.genesisserver.dyndns.org-access.log"" common
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@m.gexodus.com
+    DocumentRoot ""C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/m""
+    ServerName m.genesisserver.dyndns.org
+    ErrorLog ""logs/m.genesisserver.dyndns.org-error.log""
+    CustomLog ""logs/m.genesisserver.dyndns.org-access.log"" common
+</VirtualHost>
+</pre></code>
+Also i know the email is wrong but i dont think this may be the thing.
+Can anyone help me?
+Thanks :)",2
+8687558,12/31/2011 10:21:40,1124133,12/31/2011 08:36:08,1,0,How to upgrade Apache from 2.2.3 to 2.2.21,"Using **YUM** I installed apache. 
+Installed apache version is 2.2.3
+
+Our security guy wants that we use 2.2.21 apache
+
+When I try **yum update 'httpd'** nothing happens - No Packages marked for Update
+
+I checked Apache home page (http://www.apache.org/dist/httpd/patches/) regarding patches. Based on there written instruction I try to install 2.2.4 patch (http://www.apache.org/dist/httpd/patches/apply_to_2.2.4/)
+
+**patch -s < /usr/local/src/hack-msvc8-httpd-2.2.4.patch**
+
+And I got such message:
+
+The text leading up to this was:
+
+|###
+
+|### A trivial hack to copy the .manifest files along with the binaries
+
+|### when building from the command line on Visual Studio 2005
+
+|###
+
+|### Courtesy of Gustavo Lopes <Apache geleia.net>
+
+|### Posted to dev@httpd.apache.org,
+
+|### Message-ID: <006901c731ae$97bec180$0201a8c0@cataphract>
+
+|###
+
+|--- Makefile.win.orig	2006-12-07 11:09:37.000000000 -0600
+
+|+++ Makefile.win	2007-01-08 23:55:56.000000000 -0600
+
+File to patch: 
+
+
+What I am doing incorrect? 
+Why I can not update Apatche to 2.2.21 version?
+
+Thanks,
+Artis
+",apache,yum,,,,01/01/2012 17:02:01,off topic,1,118,8,"How to upgrade Apache from 2.2.3 to 2.2.21 Using **YUM** I installed apache. 
+Installed apache version is 2.2.3
+
+Our security guy wants that we use 2.2.21 apache
+
+When I try **yum update 'httpd'** nothing happens - No Packages marked for Update
+
+I checked Apache home page (http://www.apache.org/dist/httpd/patches/) regarding patches. Based on there written instruction I try to install 2.2.4 patch (http://www.apache.org/dist/httpd/patches/apply_to_2.2.4/)
+
+**patch -s < /usr/local/src/hack-msvc8-httpd-2.2.4.patch**
+
+And I got such message:
+
+The text leading up to this was:
+
+|###
+
+|### A trivial hack to copy the .manifest files along with the binaries
+
+|### when building from the command line on Visual Studio 2005
+
+|###
+
+|### Courtesy of Gustavo Lopes <Apache geleia.net>
+
+|### Posted to dev@httpd.apache.org,
+
+|### Message-ID: <006901c731ae$97bec180$0201a8c0@cataphract>
+
+|###
+
+|--- Makefile.win.orig	2006-12-07 11:09:37.000000000 -0600
+
+|+++ Makefile.win	2007-01-08 23:55:56.000000000 -0600
+
+File to patch: 
+
+
+What I am doing incorrect? 
+Why I can not update Apatche to 2.2.21 version?
+
+Thanks,
+Artis
+",2
+10467811,05/06/2012 03:13:10,1197720,02/08/2012 16:39:34,26,0,htaccess RewriteRule for folder and root,"I have a site with a structure like this:
+
+Root
+
+ - Folder1
+ - Folder2
+ - Folder3
+
+For my root, I have a rewrite that sends `root.com/index.php?id=12` to `root.com/12` and that's working fine.
+
+However, I'd also like `root.com/folder1/index.php?id=12` to be `root.com/folder1/12` and it's not working out at all.
+
+Below is my htaccess code:
+
+    RewriteEngine On
+    RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?id=$1
+    RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?id=$1
+    RewriteRule ^folder1/([a-zA-Z0-9_-]+)$ /folder1/index.php?id=$1
+    RewriteRule ^folder1/([a-zA-Z0-9_-]+)/$ /folder1/index.php?id=$1
+
+Can you please let me know what I'm doing wrong with the folder1 rewriterule? Thanks a lot.",apache,.htaccess,mod-rewrite,url-rewriting,,05/07/2012 11:53:50,off topic,1,93,6,"htaccess RewriteRule for folder and root I have a site with a structure like this:
+
+Root
+
+ - Folder1
+ - Folder2
+ - Folder3
+
+For my root, I have a rewrite that sends `root.com/index.php?id=12` to `root.com/12` and that's working fine.
+
+However, I'd also like `root.com/folder1/index.php?id=12` to be `root.com/folder1/12` and it's not working out at all.
+
+Below is my htaccess code:
+
+    RewriteEngine On
+    RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?id=$1
+    RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?id=$1
+    RewriteRule ^folder1/([a-zA-Z0-9_-]+)$ /folder1/index.php?id=$1
+    RewriteRule ^folder1/([a-zA-Z0-9_-]+)/$ /folder1/index.php?id=$1
+
+Can you please let me know what I'm doing wrong with the folder1 rewriterule? Thanks a lot.",4
+7637478,10/03/2011 15:58:55,784597,06/05/2011 09:07:37,180,2,How can i make this taht all can have write access (Not only the admin user ),"I have installed Apache Web server for the purpose of local repository .
+
+I have this lines for my directory .
+
+      # Allow universal read-access, but writes are restricted
+        # to the admin user.
+        <LimitExcept GET OPTIONS>
+            require user admin
+        </LimitExcept>
+    </Directory>
+
+Could anybody please tell me how can i provide write access to all the users not only the admin in this case .
+
+Thanks . 
+
+How can i make this taht all can have write access (Not only the admin user )
+
+",apache,,,,,10/05/2011 14:12:54,off topic,1,121,17,"How can i make this taht all can have write access (Not only the admin user ) I have installed Apache Web server for the purpose of local repository .
+
+I have this lines for my directory .
+
+      # Allow universal read-access, but writes are restricted
+        # to the admin user.
+        <LimitExcept GET OPTIONS>
+            require user admin
+        </LimitExcept>
+    </Directory>
+
+Could anybody please tell me how can i provide write access to all the users not only the admin in this case .
+
+Thanks . 
+
+How can i make this taht all can have write access (Not only the admin user )
+
+",1
+8657537,12/28/2011 15:08:19,321187,04/20/2010 10:25:31,905,27,"Nginx,Lighttpd htaccess-like config absense","Maybe it's not the right place to ask this, but I hope that people familiar with web servers will answer my question.
+
+Have you ever wondered why no other modern webserver like nginx and lighttpd has facilities like .htaccess which apache has for decades? Is it a question of performance? Or htaccess is so old-school that cool kids just don't use it ?",apache,.htaccess,nginx,,,12/30/2011 00:02:00,off topic,1,62,4,"Nginx,Lighttpd htaccess-like config absense Maybe it's not the right place to ask this, but I hope that people familiar with web servers will answer my question.
+
+Have you ever wondered why no other modern webserver like nginx and lighttpd has facilities like .htaccess which apache has for decades? Is it a question of performance? Or htaccess is so old-school that cool kids just don't use it ?",3
+8464498,12/11/2011 13:58:23,916278,08/28/2011 09:37:13,2,0,Apache service not started (-1),"while trying to start apache service through xampp on my windows 7 , I get this
+
+Apache service not started (-1)
+Busy...
+
+How to overcome this issue ?",apache,xampp,,,,12/11/2011 15:17:28,off topic,1,25,5,"Apache service not started (-1) while trying to start apache service through xampp on my windows 7 , I get this
+
+Apache service not started (-1)
+Busy...
+
+How to overcome this issue ?",2
+9602538,03/07/2012 13:38:38,1254790,03/07/2012 13:30:56,1,0,How to automatically add a core to apache solr search integration module?,"I am using apache solr search integration module as my default search engine in one of my sites. I am presently using Drupal 7 and apache solr 3.5. I have created a multicore using the guidance of http://drupal.org/node/484800. 
+
+Now I would like to automatically create cores say whenever a new user registers in my Drupal site. I am tentative on how to achieve this.
+
+Hoping for some suggestions. Thanks in advance.",apache,drupal,,,,03/07/2012 17:26:23,not a real question,1,70,12,"How to automatically add a core to apache solr search integration module? I am using apache solr search integration module as my default search engine in one of my sites. I am presently using Drupal 7 and apache solr 3.5. I have created a multicore using the guidance of http://drupal.org/node/484800. 
+
+Now I would like to automatically create cores say whenever a new user registers in my Drupal site. I am tentative on how to achieve this.
+
+Hoping for some suggestions. Thanks in advance.",2
+6887773,07/31/2011 05:43:36,871301,07/31/2011 05:43:36,1,0,Apache 2.2.19 release compatible with tomcat 6?,"We have apache 2.2.14 but need to upgrade to a higher version due to security vulnerabilities. Apache 2.2.19 is the highest and available now, but we are not sure if it will be compatible with Tomcat 6 we are having. How can I find out about the compatibilities & possible risks? and will it be compatible with tomcat 7?
+",apache,,,,,,open,0,59,7,"Apache 2.2.19 release compatible with tomcat 6? We have apache 2.2.14 but need to upgrade to a higher version due to security vulnerabilities. Apache 2.2.19 is the highest and available now, but we are not sure if it will be compatible with Tomcat 6 we are having. How can I find out about the compatibilities & possible risks? and will it be compatible with tomcat 7?
+",1
+6957538,08/05/2011 14:01:28,312896,04/09/2010 14:51:11,6,1,Change connection timeout for Apache under Windows,"I need to install MediaWiki. It needs to create and setup database. This task take much time. But connection break before operation done. 
+My environment Windows XP, Apache 2.2 . 
+How to set enother timeout?",apache,mediawiki,,,,08/07/2011 09:14:25,off topic,1,35,7,"Change connection timeout for Apache under Windows I need to install MediaWiki. It needs to create and setup database. This task take much time. But connection break before operation done. 
+My environment Windows XP, Apache 2.2 . 
+How to set enother timeout?",2
+11470347,07/13/2012 12:17:25,244413,01/06/2010 02:46:19,3014,1,How to add a subdomain and avoid to create a new folder?,"On my shared hosting, I have just created a new subdomain **static.example.com** but it has also create a new folder **www.example.com/static/** . 
+
+How can I avoid to create these new folders every time I create a new subdomain ?",apache,hosting,subdomain,,,07/17/2012 04:39:49,off topic,1,39,12,"How to add a subdomain and avoid to create a new folder? On my shared hosting, I have just created a new subdomain **static.example.com** but it has also create a new folder **www.example.com/static/** . 
+
+How can I avoid to create these new folders every time I create a new subdomain ?",3
+1681807,11/05/2009 16:32:41,165034,08/28/2009 18:29:39,23,0,Proxy URL without authentication,"I have an Apache web server with basic authentication enabled at the root directory.  I can't change this due to business restrictions.
+
+However, we want a particular URL to be a proxy to a different site, with different authentication, without being asked for authentication by the main site.
+
+Example:
+My site is http://foo.com/  
+If you go to http://foo.com/ in a browser, you are presented with a typical authentication popup.
+
+If I add this:
+
+    ProxyPass /bar/ http://bar.com/
+
+then I go to http://foo.com/bar/ , I am presented with an authentication popup for bar.com followed by an authentication popup for foo.com
+
+How can I do this sort of proxy and ""ignore"" the authentication from the original site?",apache,apache2,mod-proxy,mod-rewrite,basic-authentication,03/31/2011 06:09:15,too localized,1,113,4,"Proxy URL without authentication I have an Apache web server with basic authentication enabled at the root directory.  I can't change this due to business restrictions.
+
+However, we want a particular URL to be a proxy to a different site, with different authentication, without being asked for authentication by the main site.
+
+Example:
+My site is http://foo.com/  
+If you go to http://foo.com/ in a browser, you are presented with a typical authentication popup.
+
+If I add this:
+
+    ProxyPass /bar/ http://bar.com/
+
+then I go to http://foo.com/bar/ , I am presented with an authentication popup for bar.com followed by an authentication popup for foo.com
+
+How can I do this sort of proxy and ""ignore"" the authentication from the original site?",5
+8453724,12/10/2011 01:40:53,1064733,11/24/2011 22:35:35,20,0,How do you make a website with Apache?,"Has anyone reading this actually made a site successfully using Apache and has or knows of a step by step tutorial? I know there's a lot that take you up to the ""run it on your computer"" but nothing about making it public ",apache,,,,,12/10/2011 01:44:54,not a real question,1,44,8,"How do you make a website with Apache? Has anyone reading this actually made a site successfully using Apache and has or knows of a step by step tutorial? I know there's a lot that take you up to the ""run it on your computer"" but nothing about making it public ",1
+9332519,02/17/2012 17:08:11,1058739,11/21/2011 22:50:45,15,0,Is it possible to keep what amount to 301s out of my apache error_log?,"My website has hundreds of thousands of photos, and due to costs I've recently moved half of them to a cheaper host.  I can split them into frequently-accessed and infrequently-accessed, and it works out cheapest to keep the frequent ones at my main webhost, and the less frequent ones (lower bandwidth) on Rackspace Cloudfiles.
+
+Anyway, after moving 100,000 files across, I set up a database table with all of the ""before"" and ""afters"" in it.
+
+If a search engine etc requests a file on the old URL, it gets bounced to my 404 page, which then does a lookup in the database to find the new URL, where possible.  I then serve it up with a 301 header, so hopefully they'll get the message in the end and stop looking in the wrong place.
+
+The problem is, all of these then get logged as ""file does not exist"" in my error_log.  Which annoys the OCD in me, and makes it harder to spot genuine errors.
+
+I can understand why they end up there, what would you suggest I do to better solve this problem?
+
+I'd prefer not to compromise the performance of the images that DO exist on my server.  So I don't want to mod_rewrite the entire images folder to be passed to a php script, as for most requests it's an unnecessary step.
+
+Any suggestions?
+
+",apache,http-status-code-301,error-log,,,,open,0,225,14,"Is it possible to keep what amount to 301s out of my apache error_log? My website has hundreds of thousands of photos, and due to costs I've recently moved half of them to a cheaper host.  I can split them into frequently-accessed and infrequently-accessed, and it works out cheapest to keep the frequent ones at my main webhost, and the less frequent ones (lower bandwidth) on Rackspace Cloudfiles.
+
+Anyway, after moving 100,000 files across, I set up a database table with all of the ""before"" and ""afters"" in it.
+
+If a search engine etc requests a file on the old URL, it gets bounced to my 404 page, which then does a lookup in the database to find the new URL, where possible.  I then serve it up with a 301 header, so hopefully they'll get the message in the end and stop looking in the wrong place.
+
+The problem is, all of these then get logged as ""file does not exist"" in my error_log.  Which annoys the OCD in me, and makes it harder to spot genuine errors.
+
+I can understand why they end up there, what would you suggest I do to better solve this problem?
+
+I'd prefer not to compromise the performance of the images that DO exist on my server.  So I don't want to mod_rewrite the entire images folder to be passed to a php script, as for most requests it's an unnecessary step.
+
+Any suggestions?
+
+",3
+545442,02/13/2009 10:13:53,50348,12/30/2008 23:55:43,25,0,.HTACCESS File causing Internal Server Error,"I have copied the files and database from [BradPPresents.com][1] to [BradP.com][2].
+
+The .htaccess file is required to get pages to display properly since ""Pretty URLs"" are enabled by joomla!. 
+
+You can see that the database and all connections are working at http://bradp.com/index.php, however http://bradp.com/home.html does not work as it relies on the .htaccess file to parse the URL. 
+
+I copied the identical htaccess file from bradppresents.com (currently working fine) to bradp.com and I get ""Internal server error"" when the file is present. As soon as it is deleted the error goes away, but of course the site does not work as needed.
+
+I'm hoping someone can shine a little light on this for me.
+
+Here's the .htaccess file
+
+    RewriteEngine On
+    RewriteBase /
+    
+    RewriteCond %{REQUEST_URI} (/|\.htm|\.php|\.html|\.aspx|\.asp|/[^.]*)$  [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*) index.php
+    
+    ## This attempts to block the most common type of exploit `attempts` to Joomla!
+    #
+    # Block out any script trying to set a mosConfig value through the URL
+    RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+    # Block out any script trying to base64_encode crap to send via URL
+    RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+    # Block out any script that includes a <script> tag in URL
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    # Block out any script trying to set a PHP GLOBALS variable via URL
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    # Block out any script trying to modify a _REQUEST variable via URL
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+    # Send all blocked request to homepage with 403 Forbidden error!
+    RewriteRule ^(.*)$ index.php [F,L]
+    
+    #max files size restrictions
+    php_value upload_max_filesize 20M
+    php_value post_max_size 20M
+
+Here's the site configuration file from Apache. 
+
+    <VirtualHost *:80>
+            ServerAdmin webmaster@localhost
+    
+            DocumentRoot /home/nick/public_html/bradp.com/html/
+            <Directory />
+                    Options FollowSymLinks
+                    AllowOverride All
+            </Directory>
+            <Directory /home/nick/public_html/bradp.com/html/>
+                    Options Indexes FollowSymLinks MultiViews
+                    AllowOverride All
+                    Order allow,deny
+                    allow from all
+            </Directory>
+    
+            ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+            <Directory ""/usr/lib/cgi-bin"">
+                    AllowOverride None
+                    Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+                    Order allow,deny
+                    Allow from all
+            </Directory>
+    
+            ErrorLog /var/log/apache2/error.log
+    
+            # Possible values include: debug, info, notice, warn, error, crit,
+            # alert, emerg.
+            LogLevel warn
+    
+            CustomLog /var/log/apache2/access.log combined
+            ServerSignature On
+    
+        Alias /doc/ ""/usr/share/doc/""
+        <Directory ""/usr/share/doc/"">
+            Options Indexes MultiViews FollowSymLinks
+            AllowOverride None
+            Order deny,allow
+            Deny from all
+            Allow from 127.0.0.0/255.0.0.0 ::1/128
+        </Directory>
+    
+    </VirtualHost>
+
+It's essentially the default file with a few changes. 
+
+I really appreciate any help I can get;
+Thanks a million,
+Nick
+
+
+  [1]: http://BradPPresents.com
+  [2]: http://BradP.com",apache,apache2,mod-rewrite,.htaccess,,,open,0,923,6,".HTACCESS File causing Internal Server Error I have copied the files and database from [BradPPresents.com][1] to [BradP.com][2].
+
+The .htaccess file is required to get pages to display properly since ""Pretty URLs"" are enabled by joomla!. 
+
+You can see that the database and all connections are working at http://bradp.com/index.php, however http://bradp.com/home.html does not work as it relies on the .htaccess file to parse the URL. 
+
+I copied the identical htaccess file from bradppresents.com (currently working fine) to bradp.com and I get ""Internal server error"" when the file is present. As soon as it is deleted the error goes away, but of course the site does not work as needed.
+
+I'm hoping someone can shine a little light on this for me.
+
+Here's the .htaccess file
+
+    RewriteEngine On
+    RewriteBase /
+    
+    RewriteCond %{REQUEST_URI} (/|\.htm|\.php|\.html|\.aspx|\.asp|/[^.]*)$  [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*) index.php
+    
+    ## This attempts to block the most common type of exploit `attempts` to Joomla!
+    #
+    # Block out any script trying to set a mosConfig value through the URL
+    RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+    # Block out any script trying to base64_encode crap to send via URL
+    RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+    # Block out any script that includes a <script> tag in URL
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    # Block out any script trying to set a PHP GLOBALS variable via URL
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    # Block out any script trying to modify a _REQUEST variable via URL
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+    # Send all blocked request to homepage with 403 Forbidden error!
+    RewriteRule ^(.*)$ index.php [F,L]
+    
+    #max files size restrictions
+    php_value upload_max_filesize 20M
+    php_value post_max_size 20M
+
+Here's the site configuration file from Apache. 
+
+    <VirtualHost *:80>
+            ServerAdmin webmaster@localhost
+    
+            DocumentRoot /home/nick/public_html/bradp.com/html/
+            <Directory />
+                    Options FollowSymLinks
+                    AllowOverride All
+            </Directory>
+            <Directory /home/nick/public_html/bradp.com/html/>
+                    Options Indexes FollowSymLinks MultiViews
+                    AllowOverride All
+                    Order allow,deny
+                    allow from all
+            </Directory>
+    
+            ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+            <Directory ""/usr/lib/cgi-bin"">
+                    AllowOverride None
+                    Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+                    Order allow,deny
+                    Allow from all
+            </Directory>
+    
+            ErrorLog /var/log/apache2/error.log
+    
+            # Possible values include: debug, info, notice, warn, error, crit,
+            # alert, emerg.
+            LogLevel warn
+    
+            CustomLog /var/log/apache2/access.log combined
+            ServerSignature On
+    
+        Alias /doc/ ""/usr/share/doc/""
+        <Directory ""/usr/share/doc/"">
+            Options Indexes MultiViews FollowSymLinks
+            AllowOverride None
+            Order deny,allow
+            Deny from all
+            Allow from 127.0.0.0/255.0.0.0 ::1/128
+        </Directory>
+    
+    </VirtualHost>
+
+It's essentially the default file with a few changes. 
+
+I really appreciate any help I can get;
+Thanks a million,
+Nick
+
+
+  [1]: http://BradPPresents.com
+  [2]: http://BradP.com",4
+9806578,03/21/2012 14:25:42,842222,07/13/2011 07:49:22,29,0,How to make Apache work behind a proxy. Why cant apache serve properly?,"i am working on a project. As such it is a simple website based on AMP [***apache***,***Mysql*** and ***PHP***]. The code is near complete but as soon as i run the website with regards to email sending option and things, i get numerous errors. i have noted that my **apache** webserver is not connecting to the internet.
+
+i am in my college hostel behind a squid proxy server [setup in the college]. i have to use the squid proxy to use the internet.
+
+i see that when ever i am try to do tutorials related with sending data and fetching from the outside [the internet], i get many errors. its now that i am coming to the conclusion that my apache webserver is not able to see the outside world.
+
+i tried uploading the website files to an experimental hosting site, and it is able to parse from other websites. the website works on the hosting website but not on my laptop.
+
+so my questions is this, when i tried making a simple rss reader, why is that my **apache** on the **WAMP** thing is not able to work? why do get many errors? where do i have to config for the apache webserver to make it work? as in getting it to parse the websites of the outside world.
+
+whats with the DNS and stuff? i want to know how to host my own website from the **apache** [WAMP] that i have on ly laptop and that too behind this baffling squid proxy... 
+
+wish i had a direct internet. i wish to know more in detail because my project is being delayed because of the proxy thing. i know its much easier to upload the entire site online on a demo hosting site. but then again i have problems uploading. i wish to setup my WAMP server to work online so that i dont have to upload and stuff. what should i do?
+",apache,,,,,,open,0,319,13,"How to make Apache work behind a proxy. Why cant apache serve properly? i am working on a project. As such it is a simple website based on AMP [***apache***,***Mysql*** and ***PHP***]. The code is near complete but as soon as i run the website with regards to email sending option and things, i get numerous errors. i have noted that my **apache** webserver is not connecting to the internet.
+
+i am in my college hostel behind a squid proxy server [setup in the college]. i have to use the squid proxy to use the internet.
+
+i see that when ever i am try to do tutorials related with sending data and fetching from the outside [the internet], i get many errors. its now that i am coming to the conclusion that my apache webserver is not able to see the outside world.
+
+i tried uploading the website files to an experimental hosting site, and it is able to parse from other websites. the website works on the hosting website but not on my laptop.
+
+so my questions is this, when i tried making a simple rss reader, why is that my **apache** on the **WAMP** thing is not able to work? why do get many errors? where do i have to config for the apache webserver to make it work? as in getting it to parse the websites of the outside world.
+
+whats with the DNS and stuff? i want to know how to host my own website from the **apache** [WAMP] that i have on ly laptop and that too behind this baffling squid proxy... 
+
+wish i had a direct internet. i wish to know more in detail because my project is being delayed because of the proxy thing. i know its much easier to upload the entire site online on a demo hosting site. but then again i have problems uploading. i wish to setup my WAMP server to work online so that i dont have to upload and stuff. what should i do?
+",1
+10666568,05/19/2012 15:32:40,1015595,10/26/2011 23:39:11,34,1,Using .htaccess file to redirect to a subdomain,"Hopefully someone will be able to tell me how to do this. In my root folder, I have a home directory and a test directory. Basically, I want all requests for mydomain.com or www.mydomain.com or home.mydomain.com to be routed to mydomain.com/home, but I want the user's address bar to read home.mydomain.com.
+
+At the same time, I'd like to be able to go to test.mydomain.com to access our test site, which is mydomain.com/test.",apache,.htaccess,mod-rewrite,,,,open,0,71,8,"Using .htaccess file to redirect to a subdomain Hopefully someone will be able to tell me how to do this. In my root folder, I have a home directory and a test directory. Basically, I want all requests for mydomain.com or www.mydomain.com or home.mydomain.com to be routed to mydomain.com/home, but I want the user's address bar to read home.mydomain.com.
+
+At the same time, I'd like to be able to go to test.mydomain.com to access our test site, which is mydomain.com/test.",3
+3633244,09/03/2010 05:27:29,147019,07/29/2009 11:15:02,91,9,nginx and apache web servers,"This question is not nginx vs apache. I am more interested in the architectural advantages of NGinx over Apache. As I was able to understand -
+
+ - nginx is an asynchronous, event-driven, web-server which outperforms Apache by a huge margin.
+
+Why is this? Where does Apache fall behind?",apache,design,architecture,webserver,nginx,,open,0,47,5,"nginx and apache web servers This question is not nginx vs apache. I am more interested in the architectural advantages of NGinx over Apache. As I was able to understand -
+
+ - nginx is an asynchronous, event-driven, web-server which outperforms Apache by a huge margin.
+
+Why is this? Where does Apache fall behind?",5
+8872153,01/15/2012 18:21:29,284417,03/02/2010 13:32:50,32,4,Apache dynamic VirtualHost questions,"I would like the following functionality
+
+I would like to have my websites at:
+
+/var/www/vhosts/example.org
+
+example.org has the following structure:
+
+httpdocs
+
+logs
+
+subdomains
+
+When i access the http://example.org i would like the documentroot to be
+
+/var/www/vhosts/example.org/httpdocs
+
+when i hit on the browser http://test.example.org the documentroot to be:
+
+/var/www/vhosts/example.org/subdomains/test/httpdocs
+
+I think this could be done with mod_vhost_alias but i could no do it.
+
+If i put this:
+
+    UseCanonicalName Off
+    <VirtualHost *:80>
+        VirtualDocumentRoot /var/www/vhosts/%0/httpdocs/
+    </VirtualHost>
+
+
+for the above example document root is 
+/var/www/vhosts/example.org/httpdocs (example.org)
+and
+/var/www/vhosts/test.example.org/httpdocs (test.example.org)
+
+I would like something like:
+
+    UseCanonicalName Off
+    <VirtualHost *:80>
+        if not subdomain:
+            VirtualDocumentRoot /var/www/vhosts/%0/httpdocs/
+        else:
+            VirtualDocumentRoot /var/www/vhosts/%domain/subdomains/%subdomain/httpdocs/
+    </VirtualHost>
+
+How can i do it?
+
+",apache,virtual-hosts,,,,01/16/2012 06:57:11,off topic,1,152,4,"Apache dynamic VirtualHost questions I would like the following functionality
+
+I would like to have my websites at:
+
+/var/www/vhosts/example.org
+
+example.org has the following structure:
+
+httpdocs
+
+logs
+
+subdomains
+
+When i access the http://example.org i would like the documentroot to be
+
+/var/www/vhosts/example.org/httpdocs
+
+when i hit on the browser http://test.example.org the documentroot to be:
+
+/var/www/vhosts/example.org/subdomains/test/httpdocs
+
+I think this could be done with mod_vhost_alias but i could no do it.
+
+If i put this:
+
+    UseCanonicalName Off
+    <VirtualHost *:80>
+        VirtualDocumentRoot /var/www/vhosts/%0/httpdocs/
+    </VirtualHost>
+
+
+for the above example document root is 
+/var/www/vhosts/example.org/httpdocs (example.org)
+and
+/var/www/vhosts/test.example.org/httpdocs (test.example.org)
+
+I would like something like:
+
+    UseCanonicalName Off
+    <VirtualHost *:80>
+        if not subdomain:
+            VirtualDocumentRoot /var/www/vhosts/%0/httpdocs/
+        else:
+            VirtualDocumentRoot /var/www/vhosts/%domain/subdomains/%subdomain/httpdocs/
+    </VirtualHost>
+
+How can i do it?
+
+",2
+5770569,04/24/2011 12:49:39,722611,04/24/2011 12:49:39,1,0,server downtime,how to find server downtime. I hosted a site at a free web hosting server. I found that sometimes I cannot open my site and I cannot receive any emails to that server. How to find that downtime and uptime of that server?,apache,webserver,web-server,,,04/24/2011 12:57:52,off topic,1,43,2,server downtime how to find server downtime. I hosted a site at a free web hosting server. I found that sometimes I cannot open my site and I cannot receive any emails to that server. How to find that downtime and uptime of that server?,3
+5201586,03/05/2011 04:04:06,521975,11/27/2010 03:08:12,4,0,Apache automated installation,Is it possible to install Apache with a script/batch file?,apache,previous-installation,,,,,open,0,10,3,Apache automated installation Is it possible to install Apache with a script/batch file?,2
+6850015,07/27/2011 19:21:35,415465,08/09/2010 19:18:57,502,2,ec2/apache not able to locate files on public web from /var/www/html folder,"I just followed the instructions from this page ([http://www.alexkorn.com/blog/2011/03/getting-php-mysql-running-amazon-ec2/][1]) to setup apache and mysql on an ec2 instance.  I couldn't get their custom file structure to point to my files, so I changed the structure to /var/www/html and change changed the bottom of the http.conf file to show this change.  When I do that, I get an Amazon Linux AMI Test Page test page on the server, but when I try to test /index.html or /index.php, I get a file not found error - even though I created the /var/www/html directories and placed both files there - what can I be doing wrong?  
+
+Page location:  [http://ec2-107-20-234-28.compute-1.amazonaws.com/][2]
+
+
+  [1]: http://www.alexkorn.com/blog/2011/03/getting-php-mysql-running-amazon-ec2/
+  [2]: http://ec2-107-20-234-28.compute-1.amazonaws.com/",apache,amazon-ec2,httpd.conf,,,,open,0,116,12,"ec2/apache not able to locate files on public web from /var/www/html folder I just followed the instructions from this page ([http://www.alexkorn.com/blog/2011/03/getting-php-mysql-running-amazon-ec2/][1]) to setup apache and mysql on an ec2 instance.  I couldn't get their custom file structure to point to my files, so I changed the structure to /var/www/html and change changed the bottom of the http.conf file to show this change.  When I do that, I get an Amazon Linux AMI Test Page test page on the server, but when I try to test /index.html or /index.php, I get a file not found error - even though I created the /var/www/html directories and placed both files there - what can I be doing wrong?  
+
+Page location:  [http://ec2-107-20-234-28.compute-1.amazonaws.com/][2]
+
+
+  [1]: http://www.alexkorn.com/blog/2011/03/getting-php-mysql-running-amazon-ec2/
+  [2]: http://ec2-107-20-234-28.compute-1.amazonaws.com/",3
+8370052,12/03/2011 18:48:41,862760,07/26/2011 04:56:28,1,2,Redirect subdomain with www. to without www,"I know there are a lot of such questions, but I could not find a suitable answer.
+
+I am on a shared shell with web hosting.
+
+I have a subdomain- ""xyz.abc.com"".
+The problem is that when I type an extra ""www."" preceding it i.e. ""www.xyz.abc.com"", it redirects to the root website which hosts the shell i.e. ""www.abc.com"".
+
+I had contacted the admin. and he said that he cannot change the redirection settings as he will have to rewrite 2000 lines of APACHE server code.
+
+I tried changing the .htaccess file in my public_html directory i.e ""/home/usr/public_html/.htaccess"" to include this:
+
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+This does not help.
+
+I tried adding a .htaccess at ""/home/usr/.htaccess"". This too does not work.
+
+I cannot add any files at ""/home"".
+
+Is there any easy way for the admin. to change this redirection problem.
+
+    Most people tend to add a ""www."" before any web address.
+",apache,,,,,12/04/2011 22:18:05,off topic,1,159,7,"Redirect subdomain with www. to without www I know there are a lot of such questions, but I could not find a suitable answer.
+
+I am on a shared shell with web hosting.
+
+I have a subdomain- ""xyz.abc.com"".
+The problem is that when I type an extra ""www."" preceding it i.e. ""www.xyz.abc.com"", it redirects to the root website which hosts the shell i.e. ""www.abc.com"".
+
+I had contacted the admin. and he said that he cannot change the redirection settings as he will have to rewrite 2000 lines of APACHE server code.
+
+I tried changing the .htaccess file in my public_html directory i.e ""/home/usr/public_html/.htaccess"" to include this:
+
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+This does not help.
+
+I tried adding a .htaccess at ""/home/usr/.htaccess"". This too does not work.
+
+I cannot add any files at ""/home"".
+
+Is there any easy way for the admin. to change this redirection problem.
+
+    Most people tend to add a ""www."" before any web address.
+",1
+8511771,12/14/2011 21:18:02,411141,08/04/2010 18:33:19,321,9,Redmine working on localhost but not accessible from the web?,"I have recently installed Redmine on my Ubuntu 11.10 box here at work,
+and have it working fine from localhost/redmine. Now I am trying to put
+it out on the web for others in my office to use but am running into a
+hitch somewhere. I read through multiple threads but have not found an
+answer. The latest thing was appending 
+
+> Redmine::Utils::relative_url_root = ""/redmine"" 
+
+I've tried accessing it via my http://2222.us/redmine but only receive
+connection timeout errors. The contents of my httpd.conf is just one line
+
+> ServerName 127.0.0.1
+
+Port 80 IS listening
+> \# netstat -nao | grep 80
+
+> tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      off (0.00/0/0)
+
+And the contents of my sites-enabled file for Redmine is
+
+
+	<VirtualHost *:80>
+		ServerAdmin jd@neongecko.com
+
+		DocumentRoot /var/www
+		<Directory />
+			Options FollowSymLinks
+			AllowOverride None
+		</Directory>
+		<Directory /var/www/>
+			Options Indexes FollowSymLinks MultiViews
+			AllowOverride None
+			Order allow,deny
+			allow from all
+		</Directory>
+
+		ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+		<Directory ""/usr/lib/cgi-bin"">
+			AllowOverride None
+			Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+			Order allow,deny
+			Allow from all
+		</Directory>
+
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+
+		# Possible values include: debug, info, notice, warn, error, crit,
+		# alert, emerg.
+		LogLevel warn
+
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+	    Alias /doc/ ""/usr/share/doc/""
+	    <Directory ""/usr/share/doc/"">
+		Options Indexes MultiViews FollowSymLinks
+		AllowOverride None
+		Order deny,allow
+		Deny from all
+		Allow from 127.0.0.0/255.0.0.0 ::1/128
+	    </Directory>
+
+		# See 
+		# http://www.modrails.com/documentation/Users%20guide%20Apache.html 
+		# for details on what these options do.  They will lead to an increase
+		# in memory usage, but significantly reduced access times.
+
+
+		# Speeds up spawn time tremendously -- if your app is compatible. 
+		# RMagick seems to be incompatible with smart spawning
+		PassengerSpawnMethod smart
+
+
+		# Keep the application instances alive longer. Default is 300 (seconds)
+		PassengerPoolIdleTime 300
+
+
+		# Additionally keep a copy of the Rails framework in memory. If you're 
+		# using multiple apps on the same version of Rails, this will speed up
+		# the creation of new RailsAppSpawners. This isn't necessary if you're
+		# only running one or 2 applications, or if your applications use
+		# different versions of Rails.
+		RailsFrameworkSpawnerIdleTime 0
+
+		# Just in case you're leaking memory, restart a listener 
+		# after processing 5000 requests
+		PassengerMaxRequests 5000
+
+
+		# Only check for restart.txt et al up to once every 5 seconds, 
+		# instead of once per processed request
+		PassengerStatThrottleRate 5
+
+		# Specify the minimum number of instances passenger can keep
+		# while cleaning idle instances
+		PassengerMinInstances 3
+
+		<Location /redmine>
+		    Options Indexes -ExecCGI FollowSymLinks -MultiViews
+		    # AllowOverride None
+		    Order allow,deny
+		    Allow from all
+
+		    # mod_rails
+		    # PassengerUser redmine
+		    #RailsEnv edoceo_live
+		    RailsBaseURI /redmine
+
+		    # environment.rb
+		    # Redmine::Utils::relative_url_root = ""/redmine""    
+		</Location>
+
+	</VirtualHost>
+
+	# Then after the virtualhost is loaded, send it a request
+	# to initialize the redmine installation
+	PassengerPreStart http://2222.us/redmine/
+
+It should be working but its not? Can someone advise? ",apache,localhost,redmine,,,12/14/2011 21:55:05,too localized,1,466,10,"Redmine working on localhost but not accessible from the web? I have recently installed Redmine on my Ubuntu 11.10 box here at work,
+and have it working fine from localhost/redmine. Now I am trying to put
+it out on the web for others in my office to use but am running into a
+hitch somewhere. I read through multiple threads but have not found an
+answer. The latest thing was appending 
+
+> Redmine::Utils::relative_url_root = ""/redmine"" 
+
+I've tried accessing it via my http://2222.us/redmine but only receive
+connection timeout errors. The contents of my httpd.conf is just one line
+
+> ServerName 127.0.0.1
+
+Port 80 IS listening
+> \# netstat -nao | grep 80
+
+> tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      off (0.00/0/0)
+
+And the contents of my sites-enabled file for Redmine is
+
+
+	<VirtualHost *:80>
+		ServerAdmin jd@neongecko.com
+
+		DocumentRoot /var/www
+		<Directory />
+			Options FollowSymLinks
+			AllowOverride None
+		</Directory>
+		<Directory /var/www/>
+			Options Indexes FollowSymLinks MultiViews
+			AllowOverride None
+			Order allow,deny
+			allow from all
+		</Directory>
+
+		ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+		<Directory ""/usr/lib/cgi-bin"">
+			AllowOverride None
+			Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+			Order allow,deny
+			Allow from all
+		</Directory>
+
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+
+		# Possible values include: debug, info, notice, warn, error, crit,
+		# alert, emerg.
+		LogLevel warn
+
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+	    Alias /doc/ ""/usr/share/doc/""
+	    <Directory ""/usr/share/doc/"">
+		Options Indexes MultiViews FollowSymLinks
+		AllowOverride None
+		Order deny,allow
+		Deny from all
+		Allow from 127.0.0.0/255.0.0.0 ::1/128
+	    </Directory>
+
+		# See 
+		# http://www.modrails.com/documentation/Users%20guide%20Apache.html 
+		# for details on what these options do.  They will lead to an increase
+		# in memory usage, but significantly reduced access times.
+
+
+		# Speeds up spawn time tremendously -- if your app is compatible. 
+		# RMagick seems to be incompatible with smart spawning
+		PassengerSpawnMethod smart
+
+
+		# Keep the application instances alive longer. Default is 300 (seconds)
+		PassengerPoolIdleTime 300
+
+
+		# Additionally keep a copy of the Rails framework in memory. If you're 
+		# using multiple apps on the same version of Rails, this will speed up
+		# the creation of new RailsAppSpawners. This isn't necessary if you're
+		# only running one or 2 applications, or if your applications use
+		# different versions of Rails.
+		RailsFrameworkSpawnerIdleTime 0
+
+		# Just in case you're leaking memory, restart a listener 
+		# after processing 5000 requests
+		PassengerMaxRequests 5000
+
+
+		# Only check for restart.txt et al up to once every 5 seconds, 
+		# instead of once per processed request
+		PassengerStatThrottleRate 5
+
+		# Specify the minimum number of instances passenger can keep
+		# while cleaning idle instances
+		PassengerMinInstances 3
+
+		<Location /redmine>
+		    Options Indexes -ExecCGI FollowSymLinks -MultiViews
+		    # AllowOverride None
+		    Order allow,deny
+		    Allow from all
+
+		    # mod_rails
+		    # PassengerUser redmine
+		    #RailsEnv edoceo_live
+		    RailsBaseURI /redmine
+
+		    # environment.rb
+		    # Redmine::Utils::relative_url_root = ""/redmine""    
+		</Location>
+
+	</VirtualHost>
+
+	# Then after the virtualhost is loaded, send it a request
+	# to initialize the redmine installation
+	PassengerPreStart http://2222.us/redmine/
+
+It should be working but its not? Can someone advise? ",3
+11489177,07/15/2012 03:29:00,1347448,04/20/2012 20:38:00,60,0,Permanent Redirect to another URL,"I had a user http://www.example.com/forums for many years and very well index in the search engine. I have moved this to subdomain http://community.example.com and created another website example.com. Now how can I created permanent redirect for all the old indexing that I have in the search engine to go to the new address.
+
+I found about 301 redirect in .htaccess but not sure how to do it.
+
+Can you please advise?
+
+I am on Linux with apache.",apache,shell,,,,07/16/2012 02:01:22,off topic,1,74,5,"Permanent Redirect to another URL I had a user http://www.example.com/forums for many years and very well index in the search engine. I have moved this to subdomain http://community.example.com and created another website example.com. Now how can I created permanent redirect for all the old indexing that I have in the search engine to go to the new address.
+
+I found about 301 redirect in .htaccess but not sure how to do it.
+
+Can you please advise?
+
+I am on Linux with apache.",2
+9365020,02/20/2012 16:53:21,1217396,02/18/2012 00:15:37,1,0,Apache James Server login Authentication failed telnet,"I'm using Apache James Server 2.3.2. While the server is running, in the terminal I type in ""telnet 192.168.0.100 110"". It connects and I receive the message +OK xx POP3 server (JAMES POP3 Server ) ready. Now I type in the username and pass of the account I had created before which is user blue, pass blue but I receive ""-ERR Authentication failed."" error. I looked at the logs but there's nothing new there, I'm able to connect to pop3 but I cant access the account. On the other hand if I try to login to the remote management by using ""telnet 192.168.0.100 4555"" and typing in the user and pass it connects just fine. Would anyone know what's the problem here? Thanks.",apache,telnet,pop3,james,,02/28/2012 13:20:25,off topic,1,123,7,"Apache James Server login Authentication failed telnet I'm using Apache James Server 2.3.2. While the server is running, in the terminal I type in ""telnet 192.168.0.100 110"". It connects and I receive the message +OK xx POP3 server (JAMES POP3 Server ) ready. Now I type in the username and pass of the account I had created before which is user blue, pass blue but I receive ""-ERR Authentication failed."" error. I looked at the logs but there's nothing new there, I'm able to connect to pop3 but I cant access the account. On the other hand if I try to login to the remote management by using ""telnet 192.168.0.100 4555"" and typing in the user and pass it connects just fine. Would anyone know what's the problem here? Thanks.",4
+8651460,12/28/2011 03:15:06,1118594,12/28/2011 02:55:45,1,0,How to enable openssl in apache tomcat,"I have generated certificates and keys from openssl. I also installed APR in my apache tomcat 7. Here's how i configured server.xml file inside conf folder:
+<Connector port=""8443"" maxThreads=""200"" scheme=""https"" secure=""true"" SSLEnabled=""true""
+		SSLCertificateFile=""${catalina.home}/conf/server.crt"" 
+           SSLCertificateKeyFile=""${catalina.home}/conf/server.pem""
+           clientAuth=""optional"" SSLProtocol=""TLSv1""
+		   SSLPassword=""test""
+		   />
+I have copied server.crt and server.pem files inside conf folder. I am on windows platform.
+The problem is that whenever i load https://localhost:8443 it displays 'webpage is not available'.
+My log for APR when i run apache tomcat 7 is like this:
+
+Dec 28, 2011 8:57:13 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.22.
+Dec 28, 2011 8:57:13 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [false], sendfile [true], accept filters [false], random [true].
+
+Please help me.",apache,jsp,tomcat,ssl,openssl,,open,0,133,7,"How to enable openssl in apache tomcat I have generated certificates and keys from openssl. I also installed APR in my apache tomcat 7. Here's how i configured server.xml file inside conf folder:
+<Connector port=""8443"" maxThreads=""200"" scheme=""https"" secure=""true"" SSLEnabled=""true""
+		SSLCertificateFile=""${catalina.home}/conf/server.crt"" 
+           SSLCertificateKeyFile=""${catalina.home}/conf/server.pem""
+           clientAuth=""optional"" SSLProtocol=""TLSv1""
+		   SSLPassword=""test""
+		   />
+I have copied server.crt and server.pem files inside conf folder. I am on windows platform.
+The problem is that whenever i load https://localhost:8443 it displays 'webpage is not available'.
+My log for APR when i run apache tomcat 7 is like this:
+
+Dec 28, 2011 8:57:13 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.22.
+Dec 28, 2011 8:57:13 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [false], sendfile [true], accept filters [false], random [true].
+
+Please help me.",5
+11692135,07/27/2012 16:44:15,1558235,07/27/2012 16:29:54,1,0,how to configure https in ubuntu with apache over windows azure,"I have an Ubuntu 12.04 server in Windows Azure with Apache. I have configured Apache with an SSL certificate.
+I can access apache on port 443 locally, so apache is correctly working for HTTPS.
+
+I have also configured an endpoint for the virtual machine with protocol TCP, public port 443, and private port 443 on windows azure.
+
+And installed the certificate on the windows azure cloud service.
+
+But the traffic is arriving correctly to the server for HTTPS (everything works for other ports like SSH and HTTP).
+
+I have searched a lot over the Internet but all the information I found doesn't match the interface I'm using (I don't have any configuration files to edit...)
+
+Is there anything else that needs to be done.
+
+Any help would be apreciated.",apache,ubuntu,azure,https,certificate,07/29/2012 05:17:08,off topic,1,122,11,"how to configure https in ubuntu with apache over windows azure I have an Ubuntu 12.04 server in Windows Azure with Apache. I have configured Apache with an SSL certificate.
+I can access apache on port 443 locally, so apache is correctly working for HTTPS.
+
+I have also configured an endpoint for the virtual machine with protocol TCP, public port 443, and private port 443 on windows azure.
+
+And installed the certificate on the windows azure cloud service.
+
+But the traffic is arriving correctly to the server for HTTPS (everything works for other ports like SSH and HTTP).
+
+I have searched a lot over the Internet but all the information I found doesn't match the interface I'm using (I don't have any configuration files to edit...)
+
+Is there anything else that needs to be done.
+
+Any help would be apreciated.",5
+682562,03/25/2009 17:15:56,81511,03/23/2009 16:28:24,6,0,can abybody explain the structure of apache server.......,i want to know detailed wotking of apche server pls help.........,apache,,,,,03/26/2011 17:45:06,not a real question,1,11,8,can abybody explain the structure of apache server....... i want to know detailed wotking of apche server pls help.........,1
+10318033,04/25/2012 14:41:26,122835,06/14/2009 21:18:44,1500,33,Excluding admin.php from working rewrite rule,"I have a working rewrite rule in my .htaccess file, it's supposed to redirect from pages ending with /, to without them.
+
+So for example 
+**http://mysite.com/gallery/** will redirect to 
+**http://mysite.com/gallery**
+
+The rewrite rule looks as follows:
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} ^(.+)/$
+    RewriteRule ^(.+)/$  /$1 [R=301,L]
+
+and works 99%. The only problem I'm having is that I need to exclude this for 
+
+**http://mysite.com/admin.php/whatever_may_follow**
+
+I'm not a pro on these rules, and was hoping if someone could give a pointer as to how I can exclude admin.php from the rule.
+
+Thanks in advance! ;)",apache,.htaccess,mod-rewrite,url-rewriting,,04/25/2012 16:10:24,off topic,1,98,6,"Excluding admin.php from working rewrite rule I have a working rewrite rule in my .htaccess file, it's supposed to redirect from pages ending with /, to without them.
+
+So for example 
+**http://mysite.com/gallery/** will redirect to 
+**http://mysite.com/gallery**
+
+The rewrite rule looks as follows:
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} ^(.+)/$
+    RewriteRule ^(.+)/$  /$1 [R=301,L]
+
+and works 99%. The only problem I'm having is that I need to exclude this for 
+
+**http://mysite.com/admin.php/whatever_may_follow**
+
+I'm not a pro on these rules, and was hoping if someone could give a pointer as to how I can exclude admin.php from the rule.
+
+Thanks in advance! ;)",4
+5533502,04/04/2011 00:26:35,648927,01/21/2011 21:44:27,46,0,what are ways of preventing a txt file like www.example.com/file.txt from being accessible to everyone over the web?,"What simple thing can I do to prevent this file from being accessed by everyone else?
+Ideally i would like to keep the file in the root folder.
+
+",apache,http,hosting,,,04/04/2011 07:43:51,off topic,1,27,18,"what are ways of preventing a txt file like www.example.com/file.txt from being accessible to everyone over the web? What simple thing can I do to prevent this file from being accessed by everyone else?
+Ideally i would like to keep the file in the root folder.
+
+",3
+6349424,06/14/2011 20:05:18,768515,05/24/2011 20:50:50,15,0,Apache CXF RS Extensions issue in 2.4.0,"I'm using Apache CXF version 2.4.0.  I'm trying to create a Restful service.  
+
+The below example works in 2.3.4 but does not work in 2.4.0.  What should I do different in beans config file?
+
+When I include the below xml line in my bean config file.
+
+    <import resource=""classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml"" /> 
+
+I get the following stacktrace error:
+
+> org.springframework.beans.factory.parsing.BeanDefinitionParsingException:
+> Configuration problem: Failed to
+> import bean definitions from URL
+> location
+> [classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml]
+> 
+> Offending resource: ServletContext
+> resource [/WEB-INF/beans.xml]; nested
+> exception is
+> org.springframework.beans.factory.BeanDefinitionStoreException:
+> 
+> 
+> IOException parsing XML document from
+> class path resource
+> [META-INF/cxf/cxf-extension-jaxrs-binding.xml];
+> nested exception is
+> java.io.FileNotFoundException: class
+> path resource
+> [META-INF/cxf/cxf-extension-jaxrs-binding.xml]
+> cannot be opened because it does not
+> exist 	at
+> org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+
+My POM dependency is below.  This will work for 2.3.4 but not for 2.4.0.  Any suggestions?  Is that xml extension line deprecated or included in another jar?
+
+        <dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-bundle-jaxrs</artifactId>
+			<version>2.3.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-server</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+",apache,rest,cxf,,,,open,0,148,7,"Apache CXF RS Extensions issue in 2.4.0 I'm using Apache CXF version 2.4.0.  I'm trying to create a Restful service.  
+
+The below example works in 2.3.4 but does not work in 2.4.0.  What should I do different in beans config file?
+
+When I include the below xml line in my bean config file.
+
+    <import resource=""classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml"" /> 
+
+I get the following stacktrace error:
+
+> org.springframework.beans.factory.parsing.BeanDefinitionParsingException:
+> Configuration problem: Failed to
+> import bean definitions from URL
+> location
+> [classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml]
+> 
+> Offending resource: ServletContext
+> resource [/WEB-INF/beans.xml]; nested
+> exception is
+> org.springframework.beans.factory.BeanDefinitionStoreException:
+> 
+> 
+> IOException parsing XML document from
+> class path resource
+> [META-INF/cxf/cxf-extension-jaxrs-binding.xml];
+> nested exception is
+> java.io.FileNotFoundException: class
+> path resource
+> [META-INF/cxf/cxf-extension-jaxrs-binding.xml]
+> cannot be opened because it does not
+> exist 	at
+> org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+
+My POM dependency is below.  This will work for 2.3.4 but not for 2.4.0.  Any suggestions?  Is that xml extension line deprecated or included in another jar?
+
+        <dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-bundle-jaxrs</artifactId>
+			<version>2.3.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-server</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+",3
+7952996,10/31/2011 11:19:50,454827,09/22/2010 08:53:13,45,8,varnish don't resolve ESI in my localhost,"varnish don't resolve ESI in my localhost:
+
+i have similar configuration like other users in apache, but i send/get following headers:
+
+    Server	Apache/2.2.21 (Debian)
+    X-Powered-By	PHP/5.3.8-2
+    Content-Encoding	gzip
+    Edge-Control	cache-maxage=31536000s
+    Cache-Control	public, max-age=31536000
+    Pragma	public
+    Expires	Tue, 30 Oct 2012 11:41:15 GMT
+    ProcessID	3918
+    Etag	c2e6665981c6441ab860d12a6853a002
+    Vary	Accept-Encoding
+    Content-Type	text/html; charset=UTF-8
+    Content-Length	4193
+    Date	Mon, 31 Oct 2011 10:40:54 GMT
+    X-Varnish	630755530
+    Age	0
+    Via	1.1 varnish
+    Request Headersview source
+    Host	i.host.com
+    User-Agent	Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1 Iceweasel/7.0.1
+    Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    Accept-Language	en-us,en;q=0.5
+    Accept-Encoding	gzip, deflate
+    Accept-Charset	ISO-8859-1,utf-8;q=0.7,*;q=0.7
+    Connection	keep-alive
+    Cookie	OAX=1I6M006JYzwABwNj; __utma=164510763.315921951.1317626740.1319722611.1319795071.39; __utmz=164510763.1317626740.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=229641156.678788339.1317628577.1320057939.1320060143.19; __utmz=229641156.1317628577.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); lang=es; __utmc=229641156; __utmb=229641156.4.10.1320060143
+    If-None-Match	c2e6665981c6441ab860d12a6853a002
+    Cache-Control	max-age=0
+
+other user example that works:
+
+    Server	Apache/2.2.4 (Win32) PHP/5.3.5
+    X-Powered-By	PHP/5.3.5
+    Set-Cookie	lang=es; expires=Mon, 31-Oct-2011 11:46:01 GMT; path=/
+    Edge-control 	cache-maxage=31536000s
+    Cache-Control	public, max-age=31536000
+    Pragma	public
+    Expires	Tue, 30 Oct 2012 10:46:01 GMT
+    ProcessID	3824
+    Etag	f9dcd4b1ec3f40e6763e80a3ba195de3
+    Content-Type	text/html; charset=UTF-8
+    Transfer-Encoding	chunked
+    Date	Mon, 31 Oct 2011 10:46:01 GMT
+    X-Varnish 	630755925
+    Age	0
+    Via	1.1 varnish
+    Connection 	keep-alive
+    Cabeceras de la peticiónver fuente
+    Host	t.host.com
+    User-Agent	Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0
+    Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    Accept-Language	es-es,es;q=0.8,en-us;q=0.5,en;q=0.3
+    Accept-Encoding	gzip, deflate
+    Accept-Charset 	ISO-8859-1,utf-8;q=0.7,*;q=0.7
+    Connection	keep-alive
+    Cookie	OAX=1I6M001BiwUAB0EE; __utma=164510763.1374034467.1296142874.1319189845.1319204625.107; __utmz=164510763.1319204625.107.79.utmcsr=tamara.eitb.com|utmccn=(referral)|utmcmd=referral|utmcct=/eu/eguraldia/eskia/; __utma=261580168.2132154740.1302611206.1319197586.1320057948.90; __utmz=261580168.1302611206.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); lang=es; __utmb=261580168.1.10.1320057948; __utmc=261580168
+
+i don't know why i receive different headers from varnish...
+
+i get:
+
+    Content-Encoding	gzip
+    Vary	Accept-Encoding
+
+why i get this headers and the other users no???
+
+both have mod_deflate on...",apache,http-headers,gzip,varnish,,,open,0,335,7,"varnish don't resolve ESI in my localhost varnish don't resolve ESI in my localhost:
+
+i have similar configuration like other users in apache, but i send/get following headers:
+
+    Server	Apache/2.2.21 (Debian)
+    X-Powered-By	PHP/5.3.8-2
+    Content-Encoding	gzip
+    Edge-Control	cache-maxage=31536000s
+    Cache-Control	public, max-age=31536000
+    Pragma	public
+    Expires	Tue, 30 Oct 2012 11:41:15 GMT
+    ProcessID	3918
+    Etag	c2e6665981c6441ab860d12a6853a002
+    Vary	Accept-Encoding
+    Content-Type	text/html; charset=UTF-8
+    Content-Length	4193
+    Date	Mon, 31 Oct 2011 10:40:54 GMT
+    X-Varnish	630755530
+    Age	0
+    Via	1.1 varnish
+    Request Headersview source
+    Host	i.host.com
+    User-Agent	Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1 Iceweasel/7.0.1
+    Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    Accept-Language	en-us,en;q=0.5
+    Accept-Encoding	gzip, deflate
+    Accept-Charset	ISO-8859-1,utf-8;q=0.7,*;q=0.7
+    Connection	keep-alive
+    Cookie	OAX=1I6M006JYzwABwNj; __utma=164510763.315921951.1317626740.1319722611.1319795071.39; __utmz=164510763.1317626740.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=229641156.678788339.1317628577.1320057939.1320060143.19; __utmz=229641156.1317628577.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); lang=es; __utmc=229641156; __utmb=229641156.4.10.1320060143
+    If-None-Match	c2e6665981c6441ab860d12a6853a002
+    Cache-Control	max-age=0
+
+other user example that works:
+
+    Server	Apache/2.2.4 (Win32) PHP/5.3.5
+    X-Powered-By	PHP/5.3.5
+    Set-Cookie	lang=es; expires=Mon, 31-Oct-2011 11:46:01 GMT; path=/
+    Edge-control 	cache-maxage=31536000s
+    Cache-Control	public, max-age=31536000
+    Pragma	public
+    Expires	Tue, 30 Oct 2012 10:46:01 GMT
+    ProcessID	3824
+    Etag	f9dcd4b1ec3f40e6763e80a3ba195de3
+    Content-Type	text/html; charset=UTF-8
+    Transfer-Encoding	chunked
+    Date	Mon, 31 Oct 2011 10:46:01 GMT
+    X-Varnish 	630755925
+    Age	0
+    Via	1.1 varnish
+    Connection 	keep-alive
+    Cabeceras de la peticiónver fuente
+    Host	t.host.com
+    User-Agent	Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0
+    Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    Accept-Language	es-es,es;q=0.8,en-us;q=0.5,en;q=0.3
+    Accept-Encoding	gzip, deflate
+    Accept-Charset 	ISO-8859-1,utf-8;q=0.7,*;q=0.7
+    Connection	keep-alive
+    Cookie	OAX=1I6M001BiwUAB0EE; __utma=164510763.1374034467.1296142874.1319189845.1319204625.107; __utmz=164510763.1319204625.107.79.utmcsr=tamara.eitb.com|utmccn=(referral)|utmcmd=referral|utmcct=/eu/eguraldia/eskia/; __utma=261580168.2132154740.1302611206.1319197586.1320057948.90; __utmz=261580168.1302611206.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); lang=es; __utmb=261580168.1.10.1320057948; __utmc=261580168
+
+i don't know why i receive different headers from varnish...
+
+i get:
+
+    Content-Encoding	gzip
+    Vary	Accept-Encoding
+
+why i get this headers and the other users no???
+
+both have mod_deflate on...",4
+8271407,11/25/2011 15:46:57,421498,08/16/2010 08:01:42,9,0,Subdomain not working,"I created a Subdomain for one of my domains. After creation in Apache & entry in DNS the Subdomain isn't pointing to it specified directory instead it points to its Main Domain's Directory
+
+**Main Domain**
+
+    <VirtualHost *:80>
+	ServerName www.domain.com
+	ServerAlias domain.com *.domain.com
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /var/www/domain/
+
+	<Directory /var/www/domain/>
+		Options FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog /var/log/apache2/domain.error.log
+
+	#Possible Values include: debug, info, notice, warn, error, crit,
+	#alert, emerg.
+	LogLevel alert
+
+	ServerSignature On
+
+</VirtualHost>
+
+
+**Subdomain**
+
+    <VirtualHost *:80>
+	ServerName orders.domain.com
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /var/www/domain/cpanel/
+
+	<Directory /var/www/domain/cpanel/>
+		Options FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog /var/log/apache2/domain.error.log
+
+	#Possible Values include: debug, info, notice, warn, error, crit,
+	#alert, emerg.
+	LogLevel alert
+
+	ServerSignature On
+
+</VirtualHost>
+
+
+After creation of the entry in ""/etc/apache2/sites-available"" & Virtual Link in ""/etc/apache2/sites-enabled"", I restarted Apache.",apache,dns,subdomain,,,,open,0,104,3,"Subdomain not working I created a Subdomain for one of my domains. After creation in Apache & entry in DNS the Subdomain isn't pointing to it specified directory instead it points to its Main Domain's Directory
+
+**Main Domain**
+
+    <VirtualHost *:80>
+	ServerName www.domain.com
+	ServerAlias domain.com *.domain.com
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /var/www/domain/
+
+	<Directory /var/www/domain/>
+		Options FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog /var/log/apache2/domain.error.log
+
+	#Possible Values include: debug, info, notice, warn, error, crit,
+	#alert, emerg.
+	LogLevel alert
+
+	ServerSignature On
+
+</VirtualHost>
+
+
+**Subdomain**
+
+    <VirtualHost *:80>
+	ServerName orders.domain.com
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /var/www/domain/cpanel/
+
+	<Directory /var/www/domain/cpanel/>
+		Options FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog /var/log/apache2/domain.error.log
+
+	#Possible Values include: debug, info, notice, warn, error, crit,
+	#alert, emerg.
+	LogLevel alert
+
+	ServerSignature On
+
+</VirtualHost>
+
+
+After creation of the entry in ""/etc/apache2/sites-available"" & Virtual Link in ""/etc/apache2/sites-enabled"", I restarted Apache.",3
+9760563,03/18/2012 17:38:04,1277213,03/18/2012 17:31:42,1,0,Mahout for unstructured data an advantage?,"Good day
+
+I am some what confused or maybe curious!?; it is a whole mixed feelings on this one. I have installed mahout and test run several examples; would it be safe to say that one of Mahout's advantages it being used for unstructured data (scalability aside)? 
+
+thank you",apache,mahout,,,,03/19/2012 03:01:55,not a real question,1,48,6,"Mahout for unstructured data an advantage? Good day
+
+I am some what confused or maybe curious!?; it is a whole mixed feelings on this one. I have installed mahout and test run several examples; would it be safe to say that one of Mahout's advantages it being used for unstructured data (scalability aside)? 
+
+thank you",2
+9019296,01/26/2012 14:08:31,1012398,10/25/2011 08:50:21,19,0,Quick help! I've messed up the SEO. How can I redirect domain/page to domain/category/page,"Title pretty much says it all. I want to transfer the users to a different page by using the .htaccess file.
+
+So if they go to
+
+www.domain.com/bar
+
+they will be redirected to
+
+www.domain.com/foo/bar",apache,.htaccess,,,,01/27/2012 03:14:46,off topic,1,29,14,"Quick help! I've messed up the SEO. How can I redirect domain/page to domain/category/page Title pretty much says it all. I want to transfer the users to a different page by using the .htaccess file.
+
+So if they go to
+
+www.domain.com/bar
+
+they will be redirected to
+
+www.domain.com/foo/bar",2
+1910021,12/15/2009 20:04:51,72958,03/02/2009 20:43:30,392,12,"PHP/Apache, options +indexes in htaccess doesn't work for root directory","I need to offer a **directory listing of the root directory** of my site, so I created an **.htaccess** file containing
+<pre>
+options +indexes
+</pre>
+It works for subdirectories, but for the main directory I get the **Test Page for the Apache HTTP Server on Red Hat Enterprise Linux** page.
+
+I have two sites that are identical except for the **PHP version** installed. On one site (**PHP 5.2.1**) this technique works fine. On the other (**PHP 5.2.9**), it doesn't.
+
+As far as I know, the **Apache** installations are identical, and I verified that the **httpd.conf files are identical**.
+
+On both sites, the htaccess works for subdirectories. My problem is with the main site directory.
+
+My goal is to create simple sites based on directory listings, similar to <b>[znvy.com][1]</b>.
+ 
+Is there something about the updated PHP version that **prevents listing a root directory**? If so is there a **workaround**?
+
+  [1]: http://znvy.com",apache,php,.htaccess,directory-listing,,,open,0,143,10,"PHP/Apache, options +indexes in htaccess doesn't work for root directory I need to offer a **directory listing of the root directory** of my site, so I created an **.htaccess** file containing
+<pre>
+options +indexes
+</pre>
+It works for subdirectories, but for the main directory I get the **Test Page for the Apache HTTP Server on Red Hat Enterprise Linux** page.
+
+I have two sites that are identical except for the **PHP version** installed. On one site (**PHP 5.2.1**) this technique works fine. On the other (**PHP 5.2.9**), it doesn't.
+
+As far as I know, the **Apache** installations are identical, and I verified that the **httpd.conf files are identical**.
+
+On both sites, the htaccess works for subdirectories. My problem is with the main site directory.
+
+My goal is to create simple sites based on directory listings, similar to <b>[znvy.com][1]</b>.
+ 
+Is there something about the updated PHP version that **prevents listing a root directory**? If so is there a **workaround**?
+
+  [1]: http://znvy.com",4
+10691834,05/21/2012 20:03:47,1071140,11/29/2011 11:06:14,33,1,Apache2 - how to track what script is causing max cpu on all 4 cores,"Apache noob here.  I have a virtualbox instance with debian squeeze installed and apache.  I'm seeing all 4 of my cores max out for about 10 minuets then it goes away.  This is happening a few times per week. When I'm able to load top I can see apache processes maxed out. 
+
+/usr/sbin/apache2 -k start
+
+When I check the access log I'm not seeing a huge amount of traffic.  I installed mod_evasive last week thinking they might have been a ddos or bot hammering on login pages but I can't see that in the logs.  I'm suspecting there might be some bad php code somewhere.  How would I go about tracing where that might be?
+
+The web server is hosting about 4 wordpress sites for a small business and another php application with about 10 users.  
+
+I've ensured i've updated debian.  I'm running on the latest wordpress.
+",apache,,,,,05/21/2012 21:11:49,off topic,1,153,15,"Apache2 - how to track what script is causing max cpu on all 4 cores Apache noob here.  I have a virtualbox instance with debian squeeze installed and apache.  I'm seeing all 4 of my cores max out for about 10 minuets then it goes away.  This is happening a few times per week. When I'm able to load top I can see apache processes maxed out. 
+
+/usr/sbin/apache2 -k start
+
+When I check the access log I'm not seeing a huge amount of traffic.  I installed mod_evasive last week thinking they might have been a ddos or bot hammering on login pages but I can't see that in the logs.  I'm suspecting there might be some bad php code somewhere.  How would I go about tracing where that might be?
+
+The web server is hosting about 4 wordpress sites for a small business and another php application with about 10 users.  
+
+I've ensured i've updated debian.  I'm running on the latest wordpress.
+",1
+6908460,08/02/2011 07:13:06,339872,05/13/2010 01:18:19,149,13,"How to use virtual Linux guest on Windows host and have the Git, HTTPD server and other dev tools on the linux?","Currently I can't afford a Mac .
+
+I need a **UNIX** environment for my development but still be able to use **Adobe**, **Corel**, **Microsoft** office products.... all things that are platform dependant or require high video and RAM support?
+
+I need the **UNIX** environment to act as a server and Windows to be my workstation. The solution **should not require live network connection** as sometimes development can happen at remote places.
+
+**How can I achieve this?**
+
+**If virtual machines are required then the file-system of the shared drives should support `symlinks` and be quickly accessible from *both* OS. Is there such scenario?**
+
+When I tried installing a virtual linux (**CentOS**) **on** Windows host (**Windows 7**) I had to share my drives from windows on the *""virtual network""*. 
+
+The sharing protocol is **`SAMBA`** and linux mounts the drives as **`CIFS`**. This brings problems for 
+
+ - symlinks
+ - speed of access
+ - permissions
+ - ...probably something else
+
+I tried the other way around and installed NFS server (the linux native network sharing protocol) in Windows but other problems appear as:
+
+ - git locks
+ - again speed of access",apache,git,virtualization,samba,cifs,08/03/2011 14:47:12,off topic,1,181,22,"How to use virtual Linux guest on Windows host and have the Git, HTTPD server and other dev tools on the linux? Currently I can't afford a Mac .
+
+I need a **UNIX** environment for my development but still be able to use **Adobe**, **Corel**, **Microsoft** office products.... all things that are platform dependant or require high video and RAM support?
+
+I need the **UNIX** environment to act as a server and Windows to be my workstation. The solution **should not require live network connection** as sometimes development can happen at remote places.
+
+**How can I achieve this?**
+
+**If virtual machines are required then the file-system of the shared drives should support `symlinks` and be quickly accessible from *both* OS. Is there such scenario?**
+
+When I tried installing a virtual linux (**CentOS**) **on** Windows host (**Windows 7**) I had to share my drives from windows on the *""virtual network""*. 
+
+The sharing protocol is **`SAMBA`** and linux mounts the drives as **`CIFS`**. This brings problems for 
+
+ - symlinks
+ - speed of access
+ - permissions
+ - ...probably something else
+
+I tried the other way around and installed NFS server (the linux native network sharing protocol) in Windows but other problems appear as:
+
+ - git locks
+ - again speed of access",5
+2275865,02/16/2010 19:55:22,274569,02/16/2010 17:25:09,6,0,How to understand which modules must be configured in httpd.conf (Apache),"I have latest Apache installed on CentOS 5.4.
+After I configured Virtual hosts and left the server for a while I saw a lot of memory consumption. In the ps aux I saw that apache is taking a lot of memory.
+In order to reduce the memory usage I'd like to disable unneeded modules in apache configuration.
+Web site content:
+1) HTML
+2) CSS
+3) Flash
+4) Java script
+5) Java applets
+
+No php, no cgi.
+
+Please advice which modules from the following list can be easily removed and which I need to leave.
+
+**LoadModule auth_basic_module modules/mod_auth_basic.so
+LoadModule auth_digest_module modules/mod_auth_digest.so
+LoadModule authn_file_module modules/mod_authn_file.so
+LoadModule authn_alias_module modules/mod_authn_alias.so
+LoadModule authn_anon_module modules/mod_authn_anon.so
+LoadModule authn_dbm_module modules/mod_authn_dbm.so
+LoadModule authn_default_module modules/mod_authn_default.so
+LoadModule authz_host_module modules/mod_authz_host.so
+LoadModule authz_user_module modules/mod_authz_user.so
+LoadModule authz_owner_module modules/mod_authz_owner.so
+LoadModule authz_groupfile_module modules/mod_authz_groupfile.so
+LoadModule authz_dbm_module modules/mod_authz_dbm.so
+LoadModule authz_default_module modules/mod_authz_default.so
+LoadModule ldap_module modules/mod_ldap.so
+LoadModule authnz_ldap_module modules/mod_authnz_ldap.so
+LoadModule include_module modules/mod_include.so
+LoadModule log_config_module modules/mod_log_config.so
+LoadModule logio_module modules/mod_logio.so
+LoadModule env_module modules/mod_env.so
+LoadModule ext_filter_module modules/mod_ext_filter.so
+LoadModule mime_magic_module modules/mod_mime_magic.so
+LoadModule expires_module modules/mod_expires.so
+LoadModule deflate_module modules/mod_deflate.so
+LoadModule headers_module modules/mod_headers.so
+LoadModule usertrack_module modules/mod_usertrack.so
+LoadModule setenvif_module modules/mod_setenvif.so
+LoadModule mime_module modules/mod_mime.so
+LoadModule dav_module modules/mod_dav.so
+LoadModule status_module modules/mod_status.so
+LoadModule autoindex_module modules/mod_autoindex.so
+LoadModule info_module modules/mod_info.so
+LoadModule dav_fs_module modules/mod_dav_fs.so
+LoadModule vhost_alias_module modules/mod_vhost_alias.so
+LoadModule negotiation_module modules/mod_negotiation.so
+LoadModule dir_module modules/mod_dir.so
+LoadModule actions_module modules/mod_actions.so
+LoadModule speling_module modules/mod_speling.so
+LoadModule userdir_module modules/mod_userdir.so
+LoadModule alias_module modules/mod_alias.so
+LoadModule rewrite_module modules/mod_rewrite.so
+#-LoadModule proxy_module modules/mod_proxy.so
+#-LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+#-LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
+#-LoadModule proxy_http_module modules/mod_proxy_http.so
+#-LoadModule proxy_connect_module modules/mod_proxy_connect.so
+LoadModule cache_module modules/mod_cache.so
+LoadModule suexec_module modules/mod_suexec.so
+LoadModule disk_cache_module modules/mod_disk_cache.so
+LoadModule file_cache_module modules/mod_file_cache.so
+LoadModule mem_cache_module modules/mod_mem_cache.so
+#LoadModule cgi_module modules/mod_cgi.so
+LoadModule version_module modules/mod_version.so
+#LoadModule cern_meta_module modules/mod_cern_meta.so
+#LoadModule asis_module modules/mod_asis.so**
+
+As you can see I commented some of them already. Please advice.
+
+Thanks in advance!",apache,httpd.conf,module,configuration,,01/10/2012 00:38:47,off topic,1,205,11,"How to understand which modules must be configured in httpd.conf (Apache) I have latest Apache installed on CentOS 5.4.
+After I configured Virtual hosts and left the server for a while I saw a lot of memory consumption. In the ps aux I saw that apache is taking a lot of memory.
+In order to reduce the memory usage I'd like to disable unneeded modules in apache configuration.
+Web site content:
+1) HTML
+2) CSS
+3) Flash
+4) Java script
+5) Java applets
+
+No php, no cgi.
+
+Please advice which modules from the following list can be easily removed and which I need to leave.
+
+**LoadModule auth_basic_module modules/mod_auth_basic.so
+LoadModule auth_digest_module modules/mod_auth_digest.so
+LoadModule authn_file_module modules/mod_authn_file.so
+LoadModule authn_alias_module modules/mod_authn_alias.so
+LoadModule authn_anon_module modules/mod_authn_anon.so
+LoadModule authn_dbm_module modules/mod_authn_dbm.so
+LoadModule authn_default_module modules/mod_authn_default.so
+LoadModule authz_host_module modules/mod_authz_host.so
+LoadModule authz_user_module modules/mod_authz_user.so
+LoadModule authz_owner_module modules/mod_authz_owner.so
+LoadModule authz_groupfile_module modules/mod_authz_groupfile.so
+LoadModule authz_dbm_module modules/mod_authz_dbm.so
+LoadModule authz_default_module modules/mod_authz_default.so
+LoadModule ldap_module modules/mod_ldap.so
+LoadModule authnz_ldap_module modules/mod_authnz_ldap.so
+LoadModule include_module modules/mod_include.so
+LoadModule log_config_module modules/mod_log_config.so
+LoadModule logio_module modules/mod_logio.so
+LoadModule env_module modules/mod_env.so
+LoadModule ext_filter_module modules/mod_ext_filter.so
+LoadModule mime_magic_module modules/mod_mime_magic.so
+LoadModule expires_module modules/mod_expires.so
+LoadModule deflate_module modules/mod_deflate.so
+LoadModule headers_module modules/mod_headers.so
+LoadModule usertrack_module modules/mod_usertrack.so
+LoadModule setenvif_module modules/mod_setenvif.so
+LoadModule mime_module modules/mod_mime.so
+LoadModule dav_module modules/mod_dav.so
+LoadModule status_module modules/mod_status.so
+LoadModule autoindex_module modules/mod_autoindex.so
+LoadModule info_module modules/mod_info.so
+LoadModule dav_fs_module modules/mod_dav_fs.so
+LoadModule vhost_alias_module modules/mod_vhost_alias.so
+LoadModule negotiation_module modules/mod_negotiation.so
+LoadModule dir_module modules/mod_dir.so
+LoadModule actions_module modules/mod_actions.so
+LoadModule speling_module modules/mod_speling.so
+LoadModule userdir_module modules/mod_userdir.so
+LoadModule alias_module modules/mod_alias.so
+LoadModule rewrite_module modules/mod_rewrite.so
+#-LoadModule proxy_module modules/mod_proxy.so
+#-LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+#-LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
+#-LoadModule proxy_http_module modules/mod_proxy_http.so
+#-LoadModule proxy_connect_module modules/mod_proxy_connect.so
+LoadModule cache_module modules/mod_cache.so
+LoadModule suexec_module modules/mod_suexec.so
+LoadModule disk_cache_module modules/mod_disk_cache.so
+LoadModule file_cache_module modules/mod_file_cache.so
+LoadModule mem_cache_module modules/mod_mem_cache.so
+#LoadModule cgi_module modules/mod_cgi.so
+LoadModule version_module modules/mod_version.so
+#LoadModule cern_meta_module modules/mod_cern_meta.so
+#LoadModule asis_module modules/mod_asis.so**
+
+As you can see I commented some of them already. Please advice.
+
+Thanks in advance!",4
+2819273,05/12/2010 13:37:23,48567,12/23/2008 06:14:01,86,2,Autoconf macros for Apache and conf.d install process?,"I have a package that is using the autotools to build and install.
+Part of the package is a website that can be run on the local machine.
+ So in the package there is a .conf file that is meant to be either
+copied or linked to the /etc/apache2/conf.d directory.  What's the
+standard way that packages would do this?  If possible, I'd like for
+the user not to have an extra step to make the website work.  I'd like
+to have them install the package and then be able to browse to
+http://localhost/newpackage to get up and running.
+
+Also, is there a way that autoconf knows about the apache install or a
+standard way through then environment some how?  If someone could
+point me in the right direction that would be great.
+
+Steve",apache,autoconf,conf.d,autotools,,,open,0,127,8,"Autoconf macros for Apache and conf.d install process? I have a package that is using the autotools to build and install.
+Part of the package is a website that can be run on the local machine.
+ So in the package there is a .conf file that is meant to be either
+copied or linked to the /etc/apache2/conf.d directory.  What's the
+standard way that packages would do this?  If possible, I'd like for
+the user not to have an extra step to make the website work.  I'd like
+to have them install the package and then be able to browse to
+http://localhost/newpackage to get up and running.
+
+Also, is there a way that autoconf knows about the apache install or a
+standard way through then environment some how?  If someone could
+point me in the right direction that would be great.
+
+Steve",4
+10554314,05/11/2012 15:27:00,484025,10/22/2010 09:15:19,335,7,.htaccess if file doesn't exist show from here,"I am having problem with my set-up, and frankly I am about to loose it :(
+
+in my .htaccess I have this 4 lines:
+
+	
+
+    RewriteCond 	%{DOCUMENT_ROOT}/%{REQUEST_FILENAME} -f 
+    RewriteRule  ^(.+)	/home/myaccount/webapps/my_app/webroot/$1  [L]
+    
+    	
+    RewriteCond		/home/myaccount/webapps/my_app/webroot/%{REQUEST_FILENAME} -f
+    RewriteRule  ^(.+)	/home/myaccount/webapps/my_framework/webroot/$1  [L]
+
+What it should do is this
+
+if I request a file that doesn't exists:
+http://mydomain.com/file_not_here.js
+
+it should check in webroot dir
+http://mydomain.com/webroot/file_not_here.js
+
+if file still doesn't exist there, then check in the framework webroot dir
+/home/myaccount/webapps/my_framework/webroot/file_not_here.js
+
+
+
+http://mydomain.com/ points to my_app
+no external url points to my_framework dir
+
+
+Please advise
+
+",apache,.htaccess,mod-rewrite,,,05/15/2012 16:45:58,off topic,1,98,8,".htaccess if file doesn't exist show from here I am having problem with my set-up, and frankly I am about to loose it :(
+
+in my .htaccess I have this 4 lines:
+
+	
+
+    RewriteCond 	%{DOCUMENT_ROOT}/%{REQUEST_FILENAME} -f 
+    RewriteRule  ^(.+)	/home/myaccount/webapps/my_app/webroot/$1  [L]
+    
+    	
+    RewriteCond		/home/myaccount/webapps/my_app/webroot/%{REQUEST_FILENAME} -f
+    RewriteRule  ^(.+)	/home/myaccount/webapps/my_framework/webroot/$1  [L]
+
+What it should do is this
+
+if I request a file that doesn't exists:
+http://mydomain.com/file_not_here.js
+
+it should check in webroot dir
+http://mydomain.com/webroot/file_not_here.js
+
+if file still doesn't exist there, then check in the framework webroot dir
+/home/myaccount/webapps/my_framework/webroot/file_not_here.js
+
+
+
+http://mydomain.com/ points to my_app
+no external url points to my_framework dir
+
+
+Please advise
+
+",3
+11064205,06/16/2012 14:21:51,596691,01/31/2011 10:40:33,827,6,How to redirect in apache?,"This should be a simple issue but I can't figure this out. I have a webpage running on a machine to access from the local network. I want to redirect the results of scripts run under cgi back to my ``/var/www/index.html/`` file. I tried to place a redirect line in my /etc/apache2/apache2.conf`` that didn't work so I tried an even simpler task:
+
+    redirect permanent /var/www/index.html http://www.google.com
+
+And not even this worked. 
+
+What am I doing wrong?
+
+I'm running this on an Ubuntu machine.",apache,redirect,,,,,open,0,84,5,"How to redirect in apache? This should be a simple issue but I can't figure this out. I have a webpage running on a machine to access from the local network. I want to redirect the results of scripts run under cgi back to my ``/var/www/index.html/`` file. I tried to place a redirect line in my /etc/apache2/apache2.conf`` that didn't work so I tried an even simpler task:
+
+    redirect permanent /var/www/index.html http://www.google.com
+
+And not even this worked. 
+
+What am I doing wrong?
+
+I'm running this on an Ubuntu machine.",2
+6590058,07/05/2011 23:37:03,785151,06/05/2011 21:37:20,8,0,How to catch all characters with slashes after domain address with mod_rewrite as one parameter?,"How to catch all characters after domain name as one parameter with mod_rewrite?
+I have script which load other page content and displays that like standard page. 
+example script address look like that:
+
+    example.com/script.php/?www='/some/paths/etc'
+
+I want to mask that URL to look like this:
+
+    example.com/some/paths/etc
+
+If no paths exist it should look like
+
+    example.com/
+
+There can be different amount os URL parts (a/b/c/.../X/)
+
+I red about mod_proxy but i can do it with only .htaccess so it doesn.t solve my problem.
+I can't redirect one address to other, they have to be separated.
+",apache,mod-rewrite,,,,,open,0,96,15,"How to catch all characters with slashes after domain address with mod_rewrite as one parameter? How to catch all characters after domain name as one parameter with mod_rewrite?
+I have script which load other page content and displays that like standard page. 
+example script address look like that:
+
+    example.com/script.php/?www='/some/paths/etc'
+
+I want to mask that URL to look like this:
+
+    example.com/some/paths/etc
+
+If no paths exist it should look like
+
+    example.com/
+
+There can be different amount os URL parts (a/b/c/.../X/)
+
+I red about mod_proxy but i can do it with only .htaccess so it doesn.t solve my problem.
+I can't redirect one address to other, they have to be separated.
+",2
+3357055,07/28/2010 20:09:47,404977,07/28/2010 20:09:47,1,0,How do I redirect a subdirectory and all files in it to the root using htaccess?,"I'm trying to redirect all requests for a subdirectory and any files in it to the root directory, using htaccess.  Currently I have redirect 301 /directory/ / But this redirects to the root with the file name requested appended to it.. ie www.domain.com/directory/this.html redirects to www.domain.com/this.html  I don't want it to request the file at all. Is there a way to do this?
+
+Thank you
+
+Karl",apache,redirect,.htaccess,,,,open,0,66,16,"How do I redirect a subdirectory and all files in it to the root using htaccess? I'm trying to redirect all requests for a subdirectory and any files in it to the root directory, using htaccess.  Currently I have redirect 301 /directory/ / But this redirects to the root with the file name requested appended to it.. ie www.domain.com/directory/this.html redirects to www.domain.com/this.html  I don't want it to request the file at all. Is there a way to do this?
+
+Thank you
+
+Karl",3
+9434718,02/24/2012 16:51:35,1179029,01/30/2012 21:25:00,4,0,Hosting own website,"I like to host my own website at home.
+
+I have 5 website running which i like to host at home on my own web server. Can this be done.
+
+I can do this for one website but how do i do this for 5 website.
+
+",apache,localhost,web-hosting,,,02/24/2012 21:12:57,off topic,1,44,3,"Hosting own website I like to host my own website at home.
+
+I have 5 website running which i like to host at home on my own web server. Can this be done.
+
+I can do this for one website but how do i do this for 5 website.
+
+",3
+3222804,07/11/2010 11:03:55,370381,06/18/2010 14:25:23,8,0,How can I install Apache Ant on Mac OS X ?,"I tried to install Apache Ant on my Mac and I followed the next steps :
+
+I Downloaded apache-ant-1.8.1-bin.tar.gz into my Downloads folder.
+I moved the file to /usr/local/ using this commands : sudo sh and mv apache-ant-1.8.1-bin.tar.gz /usr/local/
+Now I want to use cd /usr/local/ but it's not working, I get back ""No such file or directory"".
+
+Then I used cd /usr/ and ls commands and it seems that the local folder is there. If I try to access it I get the same error.
+
+Since I already used sudo su why I can't access it ? Any ideas ?
+
+Thanks.",apache,ant,osx,,,,open,0,96,11,"How can I install Apache Ant on Mac OS X ? I tried to install Apache Ant on my Mac and I followed the next steps :
+
+I Downloaded apache-ant-1.8.1-bin.tar.gz into my Downloads folder.
+I moved the file to /usr/local/ using this commands : sudo sh and mv apache-ant-1.8.1-bin.tar.gz /usr/local/
+Now I want to use cd /usr/local/ but it's not working, I get back ""No such file or directory"".
+
+Then I used cd /usr/ and ls commands and it seems that the local folder is there. If I try to access it I get the same error.
+
+Since I already used sudo su why I can't access it ? Any ideas ?
+
+Thanks.",3
+7757836,10/13/2011 17:13:58,819276,01/08/2011 14:57:18,1,1,Getting to http://localhost:8080/my-site from Parallels Mac Windows VM,"A company I am contracting for installed a custom app on my Mac and it's located at http://localhost:8080/mysite. I'd like to test it in my Windows 7 VM (Parallels Mac) but I cannot seem to get to the address in Internet Explorer in the Windows VM. 
+
+When I have used MAMP Pro for Mac + Parallels Windows VM in the past, I typically enter a hosts entry in Windows like:
+
+    192.168.0.64 mysite
+
+... and then go to: http://mysite:8888
+
+but I cannot how to figure this out since this site is not in MAMP Pro so I am kind of lost. I have asked the developer there who setup my local site but he doesn't know how to do this. ",apache,localhost,vm,parallels,,10/14/2011 02:49:23,off topic,1,121,8,"Getting to http://localhost:8080/my-site from Parallels Mac Windows VM A company I am contracting for installed a custom app on my Mac and it's located at http://localhost:8080/mysite. I'd like to test it in my Windows 7 VM (Parallels Mac) but I cannot seem to get to the address in Internet Explorer in the Windows VM. 
+
+When I have used MAMP Pro for Mac + Parallels Windows VM in the past, I typically enter a hosts entry in Windows like:
+
+    192.168.0.64 mysite
+
+... and then go to: http://mysite:8888
+
+but I cannot how to figure this out since this site is not in MAMP Pro so I am kind of lost. I have asked the developer there who setup my local site but he doesn't know how to do this. ",4
+3230846,07/12/2010 17:54:50,2610,08/23/2008 15:04:15,217,5,htaccess rewriterule for grabbing everything past hostname,"I want an htaccess rewrite rule to grab everything past the host name and use it as an argument. For example, I want http://example.com/one to be handled by http://example.com/category.php?cat=one
+
+I think it should be simple, but I can't quite find the combination.
+Thanks",apache,.htaccess,,,,,open,0,41,7,"htaccess rewriterule for grabbing everything past hostname I want an htaccess rewrite rule to grab everything past the host name and use it as an argument. For example, I want http://example.com/one to be handled by http://example.com/category.php?cat=one
+
+I think it should be simple, but I can't quite find the combination.
+Thanks",2
+1785488,11/23/2009 19:44:25,216552,11/22/2009 17:45:14,1,0,Apache virtual host configuration on debian,"Im new to apache configuration and would be really glad if someone helped me with the following.Im running apache on a virtual private server, running the debian operating system.
+
+In /etc/apache2/sites-available, i have two virtual hosts defined,site1.com.conf and site2.com.conf.
+In /etc/apache2/sites-enabled,i have a symlink to site1.com.conf . The virtual hosts are defined as follows:
+
+**site1.com.conf**
+
+    <VirtualHost *:80>
+      ServerAdmin admin@site1.com
+      ServerName  site1.com
+      ServerAlias www.site1.com site1.com
+      DirectoryIndex index.html index.htm index.php
+      DocumentRoot /var/www/site1
+            <Directory /var/www/site1>
+                    Options Indexes FollowSymLinks MultiViews
+                    AllowOverride None
+                    Order allow,deny
+                    allow from all
+            </Directory>
+      LogLevel warn
+      ErrorLog /var/log/apache2/site1_error.log
+      CustomLog /var/log/apache2/site1_access.log combined
+      ServerSignature Off
+    </VirtualHost>
+
+**site2.com.conf**
+
+    <VirtualHost *:80>
+      ServerAdmin hostmaster@wharfage
+      ServerName  site2.com
+      ServerAlias www.site2.com site2.com
+      DirectoryIndex index.html index.htm index.php
+      DocumentRoot /var/www
+      LogLevel debug
+      ErrorLog /var/log/apache2/site2_error.log
+      CustomLog /var/log/apache2/site2_access.log combined
+      ServerSignature Off
+    
+      <Location />
+        Options -Indexes
+      </Location>
+    
+      Alias /favicon.ico /srv/site2/static/favicon.ico
+    
+      Alias /static /srv/site2/static
+    #  Alias /media  /usr/local/lib/python2.5/site-packages/django/contrib/admin/media
+    
+    Alias /admin/media /var/lib/python-support/python2.5/django/contrib/admin/media 
+    
+      WSGIScriptAlias / /srv/site2/wsgi/django.wsgi
+    
+      WSGIDaemonProcess site2 user=samj group=samj processes=1 threads=10
+      WSGIProcessGroup site2
+    </VirtualHost>
+
+However, a strange thing is happening. Im able to navigate to www.site1.com as expected. It loads the content in /var/www/site which i have defined as the DocumentRoot in site1.com.conf.
+But if i navigate to www.site2.com,instead of loading index.html which is present in /var/www, which is defined as the DocumentRoot for site2.com.conf, as shown above, it loads the content in /var/www/site1. The url in the address bar remains www.site2.com.
+So, i have the following two questions :
+
+**Q.1)** Why is www.site2.com showing the contents of /var/www/site1 when the DocumentRoot for it has been defined as /var/www ?
+
+**Q.2)** Since, site2.com.conf does not have a symlink in sites-enabled, how come im able to navigate to www.site2.com ?
+
+Sorry, if my questions sound noobish, but ill be really happy if someone could explain this.
+
+Thank You.
+ ",apache,debian,unix,virtualhost,,11/23/2009 23:22:31,off topic,1,549,6,"Apache virtual host configuration on debian Im new to apache configuration and would be really glad if someone helped me with the following.Im running apache on a virtual private server, running the debian operating system.
+
+In /etc/apache2/sites-available, i have two virtual hosts defined,site1.com.conf and site2.com.conf.
+In /etc/apache2/sites-enabled,i have a symlink to site1.com.conf . The virtual hosts are defined as follows:
+
+**site1.com.conf**
+
+    <VirtualHost *:80>
+      ServerAdmin admin@site1.com
+      ServerName  site1.com
+      ServerAlias www.site1.com site1.com
+      DirectoryIndex index.html index.htm index.php
+      DocumentRoot /var/www/site1
+            <Directory /var/www/site1>
+                    Options Indexes FollowSymLinks MultiViews
+                    AllowOverride None
+                    Order allow,deny
+                    allow from all
+            </Directory>
+      LogLevel warn
+      ErrorLog /var/log/apache2/site1_error.log
+      CustomLog /var/log/apache2/site1_access.log combined
+      ServerSignature Off
+    </VirtualHost>
+
+**site2.com.conf**
+
+    <VirtualHost *:80>
+      ServerAdmin hostmaster@wharfage
+      ServerName  site2.com
+      ServerAlias www.site2.com site2.com
+      DirectoryIndex index.html index.htm index.php
+      DocumentRoot /var/www
+      LogLevel debug
+      ErrorLog /var/log/apache2/site2_error.log
+      CustomLog /var/log/apache2/site2_access.log combined
+      ServerSignature Off
+    
+      <Location />
+        Options -Indexes
+      </Location>
+    
+      Alias /favicon.ico /srv/site2/static/favicon.ico
+    
+      Alias /static /srv/site2/static
+    #  Alias /media  /usr/local/lib/python2.5/site-packages/django/contrib/admin/media
+    
+    Alias /admin/media /var/lib/python-support/python2.5/django/contrib/admin/media 
+    
+      WSGIScriptAlias / /srv/site2/wsgi/django.wsgi
+    
+      WSGIDaemonProcess site2 user=samj group=samj processes=1 threads=10
+      WSGIProcessGroup site2
+    </VirtualHost>
+
+However, a strange thing is happening. Im able to navigate to www.site1.com as expected. It loads the content in /var/www/site which i have defined as the DocumentRoot in site1.com.conf.
+But if i navigate to www.site2.com,instead of loading index.html which is present in /var/www, which is defined as the DocumentRoot for site2.com.conf, as shown above, it loads the content in /var/www/site1. The url in the address bar remains www.site2.com.
+So, i have the following two questions :
+
+**Q.1)** Why is www.site2.com showing the contents of /var/www/site1 when the DocumentRoot for it has been defined as /var/www ?
+
+**Q.2)** Since, site2.com.conf does not have a symlink in sites-enabled, how come im able to navigate to www.site2.com ?
+
+Sorry, if my questions sound noobish, but ill be really happy if someone could explain this.
+
+Thank You.
+ ",4
+8141137,11/15/2011 18:20:54,648252,03/07/2011 13:55:07,1,0,Rewrite Specific URL to Another Specific URL,"I recently upgraded a Joomla installation to 1.7. Due to this the linking system is now different.  My client has a FLASH banner with specific links inside the FLASH and no access to the original .fla for editing.
+
+What I would like to do is rewrite the linked URL from the banner to what the article id is.
+
+I have the following in my .htaccess but it's not redirecting, I get a 404 error.
+
+    RewriteEngine on
+    RewriteRule ^index.php?option=com_content&view=article&id=25$ index.php?option=com_content&task=view&id=25&Itemid=59 [L]
+
+Thanks! I appreciate any help.
+",apache,mod-rewrite,,,,,open,0,89,7,"Rewrite Specific URL to Another Specific URL I recently upgraded a Joomla installation to 1.7. Due to this the linking system is now different.  My client has a FLASH banner with specific links inside the FLASH and no access to the original .fla for editing.
+
+What I would like to do is rewrite the linked URL from the banner to what the article id is.
+
+I have the following in my .htaccess but it's not redirecting, I get a 404 error.
+
+    RewriteEngine on
+    RewriteRule ^index.php?option=com_content&view=article&id=25$ index.php?option=com_content&task=view&id=25&Itemid=59 [L]
+
+Thanks! I appreciate any help.
+",2
+6069892,05/20/2011 09:23:17,454827,09/22/2010 08:53:13,24,3,apache: different virtualhosts in the same port,"Hi everybody i need to have in the same listen port different projects and logs, example:
+
+    <VirtualHost *:80>
+            DocumentRoot /home/projects/smk
+            ErrorLog /var/log/apache2/smk-error.log
+     
+            RedirectMatch ^/$ /cms
+    </VirtualHost>
+     
+    <VirtualHost *:80>
+            DocumentRoot /home/projects/smk/cms
+            ErrorLog /var/log/apache2/smk-cms-error.log
+    </VirtualHost>
+     
+    <VirtualHost *:80>
+            DocumentRoot /home/projects/smk/deploy
+            ErrorLog /var/log/apache2/smk-deploy-error.log
+    </VirtualHost>",apache,virtualhost,virtual-hosts,,,,open,0,150,7,"apache: different virtualhosts in the same port Hi everybody i need to have in the same listen port different projects and logs, example:
+
+    <VirtualHost *:80>
+            DocumentRoot /home/projects/smk
+            ErrorLog /var/log/apache2/smk-error.log
+     
+            RedirectMatch ^/$ /cms
+    </VirtualHost>
+     
+    <VirtualHost *:80>
+            DocumentRoot /home/projects/smk/cms
+            ErrorLog /var/log/apache2/smk-cms-error.log
+    </VirtualHost>
+     
+    <VirtualHost *:80>
+            DocumentRoot /home/projects/smk/deploy
+            ErrorLog /var/log/apache2/smk-deploy-error.log
+    </VirtualHost>",3
+7759767,10/13/2011 20:01:44,969091,09/28/2011 12:47:53,1,0,Apache Cache with multiple CacheRoots,"I configured Apache with a CacheRoot directory for each of my domains / virtual hosts:
+
+    <VirtualHost>
+    ServerName domain1.tld
+    ...
+    CacheRoot /var/www/vhosts/domain1.tld/httpdocs/cache
+    ...
+    </VirtualHost>
+    
+    <VirtualHost>
+    ServerName domain2.tld
+    ...
+    CacheRoot /var/www/vhosts/domain2.tld/httpdocs/cache
+    ...
+    </VirtualHost>
+
+I have this up and running for quite a while and so fare it's working pretty well except that I have to empty out the cache manually every so often because htcacheclean does't know of the different directories.
+
+Now I would like to setup htcacheclean to watch over the cache directories but as fare as I understand the manual, I can only set it to one cache directory.
+I would like to do something like this but that doesn't work:
+
+    <VirtualHost>
+    ServerName domain1.tld
+    ...
+    CacheRoot /var/www/vhosts/domain1.tld/httpdocs/cache
+    htcacheclean -n -t -p/var/www/vhosts/domain1.tld/httpdocs/cache -l1024M
+    ...
+    </VirtualHost>
+
+Is it even right to have multiple cache directorys or should I work with just one cache directory for all of the domains?",apache,caching,virtualhost,,,10/14/2011 02:51:17,off topic,1,204,5,"Apache Cache with multiple CacheRoots I configured Apache with a CacheRoot directory for each of my domains / virtual hosts:
+
+    <VirtualHost>
+    ServerName domain1.tld
+    ...
+    CacheRoot /var/www/vhosts/domain1.tld/httpdocs/cache
+    ...
+    </VirtualHost>
+    
+    <VirtualHost>
+    ServerName domain2.tld
+    ...
+    CacheRoot /var/www/vhosts/domain2.tld/httpdocs/cache
+    ...
+    </VirtualHost>
+
+I have this up and running for quite a while and so fare it's working pretty well except that I have to empty out the cache manually every so often because htcacheclean does't know of the different directories.
+
+Now I would like to setup htcacheclean to watch over the cache directories but as fare as I understand the manual, I can only set it to one cache directory.
+I would like to do something like this but that doesn't work:
+
+    <VirtualHost>
+    ServerName domain1.tld
+    ...
+    CacheRoot /var/www/vhosts/domain1.tld/httpdocs/cache
+    htcacheclean -n -t -p/var/www/vhosts/domain1.tld/httpdocs/cache -l1024M
+    ...
+    </VirtualHost>
+
+Is it even right to have multiple cache directorys or should I work with just one cache directory for all of the domains?",3
+9211360,02/09/2012 13:04:05,1017550,10/28/2011 00:40:30,136,12,Apache rewrite to 404 except for matched query,"I'm trying to handle logically simple operation, but apache rewrite does not handle my website's query strings requests. I heard it's does not do it eventually. Still cannot understand it's regex syntax.
+
+    RewriteEngine on
+    RewriteBase /
+    #RewriteCond %{QUERY_STRING} ^\?category=([a-z])$ // WHY DO I NEED THIS?
+    RewriteRule ^!(?category=[a-z]+|?do=[a-z]+)$ [R=404,L,NC]
+
+Goal is to send client to 404 for any query NOT matching /?category=[a-z]+ and /?do=[a-z]+. It would be much better if it's possible to load patterns from the text file.
+
+Apache documentation is poor and Google does not help too.
+
+Please help. Thanks.
+
+",apache,mod-rewrite,,,,02/10/2012 16:20:11,off topic,1,100,8,"Apache rewrite to 404 except for matched query I'm trying to handle logically simple operation, but apache rewrite does not handle my website's query strings requests. I heard it's does not do it eventually. Still cannot understand it's regex syntax.
+
+    RewriteEngine on
+    RewriteBase /
+    #RewriteCond %{QUERY_STRING} ^\?category=([a-z])$ // WHY DO I NEED THIS?
+    RewriteRule ^!(?category=[a-z]+|?do=[a-z]+)$ [R=404,L,NC]
+
+Goal is to send client to 404 for any query NOT matching /?category=[a-z]+ and /?do=[a-z]+. It would be much better if it's possible to load patterns from the text file.
+
+Apache documentation is poor and Google does not help too.
+
+Please help. Thanks.
+
+",2
+11654778,07/25/2012 16:52:56,1521306,07/12/2012 15:46:09,6,0,Cannot import data from database table to hdfs,"/*Command not working*/   
+
+
+ hadoopuser@VM-HADOOP:~$ sqoop import --connect jdbc:sqlserver://10.100.0.18/FirstStrikeCommercial_Dev_10_3 --table INVOICE
+    
+    Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+    Please set $HBASE_HOME to the root of your HBase installation.
+    12/07/25 12:32:14 INFO SqlServer.MSSQLServerManagerFactory: Using Microsoft's SQL Server - Hadoop Connector
+    12/07/25 12:32:14 INFO manager.SqlManager: Using default fetchSize of 1000
+    12/07/25 12:32:14 INFO tool.CodeGenTool: Beginning code generation
+    12/07/25 12:32:29 ERROR manager.SqlManager: Error executing statement: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 10.100.0.18/FirstStrikeCommercial_Dev_10_3, port 1433 has failed. Error: ""null. Verify the connection properties, check that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port, and that no firewall is blocking TCP connections to the port."".
+    com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 10.100.0.18/FirstStrikeCommercial_Dev_10_3, port 1433 has failed. Error: ""null. Verify the connection properties, check that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port, and that no firewall is blocking TCP connections to the port."".",apache,hadoop,cloudera,sqoop,,07/26/2012 22:39:23,not a real question,1,187,8,"Cannot import data from database table to hdfs /*Command not working*/   
+
+
+ hadoopuser@VM-HADOOP:~$ sqoop import --connect jdbc:sqlserver://10.100.0.18/FirstStrikeCommercial_Dev_10_3 --table INVOICE
+    
+    Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+    Please set $HBASE_HOME to the root of your HBase installation.
+    12/07/25 12:32:14 INFO SqlServer.MSSQLServerManagerFactory: Using Microsoft's SQL Server - Hadoop Connector
+    12/07/25 12:32:14 INFO manager.SqlManager: Using default fetchSize of 1000
+    12/07/25 12:32:14 INFO tool.CodeGenTool: Beginning code generation
+    12/07/25 12:32:29 ERROR manager.SqlManager: Error executing statement: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 10.100.0.18/FirstStrikeCommercial_Dev_10_3, port 1433 has failed. Error: ""null. Verify the connection properties, check that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port, and that no firewall is blocking TCP connections to the port."".
+    com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 10.100.0.18/FirstStrikeCommercial_Dev_10_3, port 1433 has failed. Error: ""null. Verify the connection properties, check that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port, and that no firewall is blocking TCP connections to the port."".",4
+9580101,03/06/2012 08:19:32,496864,11/04/2010 06:40:40,806,18,Apache libphp and libcurl,"In Apache + PHP + CURL setup, if the libcurl is used to connect to a
+port, how many simultaneous connections are possible from
+libcurl(php5-curl) to the port assuming there are multiple processes
+waiting for a request to that particular port?
+
+Assuming that there is no limitation to libcurl in the number of connections used.
+
+If there were connections from same ip, and i am using a single php
+file to route the connection, that inits executes and closes the
+connection, would it be faster if try for persistance?",apache,libcurl,,,,03/07/2012 20:34:21,off topic,1,82,4,"Apache libphp and libcurl In Apache + PHP + CURL setup, if the libcurl is used to connect to a
+port, how many simultaneous connections are possible from
+libcurl(php5-curl) to the port assuming there are multiple processes
+waiting for a request to that particular port?
+
+Assuming that there is no limitation to libcurl in the number of connections used.
+
+If there were connections from same ip, and i am using a single php
+file to route the connection, that inits executes and closes the
+connection, would it be faster if try for persistance?",2
+5770116,04/24/2011 10:50:12,722540,04/24/2011 10:50:12,1,0,problem with apache seding reply status,"Hello can any one help with this how do I resolve this problem :
+http://pastebin.com/Xq4n1Je8
+this make my server down 
+can any one help me and tell me what is the problem here ?
+
+thank you ",apache,sending,reply,,,04/24/2011 13:37:20,off topic,1,34,6,"problem with apache seding reply status Hello can any one help with this how do I resolve this problem :
+http://pastebin.com/Xq4n1Je8
+this make my server down 
+can any one help me and tell me what is the problem here ?
+
+thank you ",3
+10025676,04/05/2012 09:03:47,1083221,12/06/2011 09:42:06,1,0,Recommended server specs?,"I'm working on buying a cloud server - i have never had my own server before (although i know how to setup the server)
+
+So, i have this website which generate books from user inputs (some of the books are 400+ pages) - these are generated to a PDF file which uses alot of memory (around 600M)
+
+I'm running LAMPP on Ubuntu 10.04 LTS. (THe LINUX alternative for XAMPP) (Apache, mysql, php)
+
+How much ram, how big a processor etc. do i need for this to work properly with around 400 active users a day?  ",apache,cloud,specs,,,04/05/2012 13:29:05,off topic,1,94,3,"Recommended server specs? I'm working on buying a cloud server - i have never had my own server before (although i know how to setup the server)
+
+So, i have this website which generate books from user inputs (some of the books are 400+ pages) - these are generated to a PDF file which uses alot of memory (around 600M)
+
+I'm running LAMPP on Ubuntu 10.04 LTS. (THe LINUX alternative for XAMPP) (Apache, mysql, php)
+
+How much ram, how big a processor etc. do i need for this to work properly with around 400 active users a day?  ",3
+11571768,07/20/2012 01:48:48,1433268,06/03/2012 07:21:15,148,12,Access new web site via browser with IP address?,"Ive set up a new site with WHM but havent got the DNS set up yet. I want to be able to access the site via a browser so I can set up a CMS. Usually, I can just do this by entering the IP address into the browser, but this time I just get a page saying that Apache is working on the server.
+
+Does anyone know a way round this?
+Thanks!
+
+![Apache][1]
+
+
+  [1]: http://i.stack.imgur.com/x3qTp.gif",apache,hosting,ip,cpanel,whm,07/20/2012 17:12:06,off topic,1,74,9,"Access new web site via browser with IP address? Ive set up a new site with WHM but havent got the DNS set up yet. I want to be able to access the site via a browser so I can set up a CMS. Usually, I can just do this by entering the IP address into the browser, but this time I just get a page saying that Apache is working on the server.
+
+Does anyone know a way round this?
+Thanks!
+
+![Apache][1]
+
+
+  [1]: http://i.stack.imgur.com/x3qTp.gif",5
+3339004,07/26/2010 21:04:10,146587,07/28/2009 18:09:01,926,23,custom ban page for homebrew website,"I understand how to ban an IPs address from my apache webserver using .htaccess:
+
+    order allow,deny
+    deny from 192.168.44.201
+    deny from 224.39.163.12
+    deny from 172.16.7.92
+    allow from all
+
+I'd like to create a custom ""You've been banned"" page. How could I do this?",apache,http,.htaccess,,,,open,0,57,6,"custom ban page for homebrew website I understand how to ban an IPs address from my apache webserver using .htaccess:
+
+    order allow,deny
+    deny from 192.168.44.201
+    deny from 224.39.163.12
+    deny from 172.16.7.92
+    allow from all
+
+I'd like to create a custom ""You've been banned"" page. How could I do this?",3
+8373247,12/04/2011 04:21:36,952261,09/19/2011 08:37:23,1,0,OpenSource Licenses - MIT vs Apache License,"What are the differences between Apache License, Version 2.0 and The MIT License?",apache,licensing,mit,,,12/04/2011 22:56:15,not constructive,1,13,7,"OpenSource Licenses - MIT vs Apache License What are the differences between Apache License, Version 2.0 and The MIT License?",3
+5243949,03/09/2011 09:49:16,449344,09/16/2010 10:08:29,99,3,Two or more Web modules defined in the configuration have the same context root,"I am running tomcat server 6.0, when I tried to run any web app on this server it gives me a error saying ""Two or more Web modules defined in the configuration have the same context root To start this server you will need to remove the duplicate(s).""
+
+I am using Eclipse 3.6 helios.
+
+How do I  remove the duplicates? 
+
+Kindly Help me
+",apache,tomcat,tomcat6,,,,open,0,62,14,"Two or more Web modules defined in the configuration have the same context root I am running tomcat server 6.0, when I tried to run any web app on this server it gives me a error saying ""Two or more Web modules defined in the configuration have the same context root To start this server you will need to remove the duplicate(s).""
+
+I am using Eclipse 3.6 helios.
+
+How do I  remove the duplicates? 
+
+Kindly Help me
+",3
+6640390,07/10/2011 09:52:00,679409,03/27/2011 22:21:15,1,1,Virtual Hosts in Apache Web Server and Apache Tomcat Environment,"I have a number of web applications which come with their bundled Apache Tomcat Server. When this tomcat server runs they give me options to access the application using something like http://IPAddress:8080/abcdef/ 
+
+Now on test servers I can always point a domain name to the server and then use http://domain:8080/abcdef to access the web application but in order to set it up on a domain (without port number) only I have been suggested that I should use either mod_proxy or mod_jk for apache which improves the performance of the application server.
+
+Now the big question is that why should I use mod_proxy or mod_jk. What benefits does it give me and then how should I configure it because it is bundled tomcat am I going to hack in the core of the application? Would that configuration be erased/overwritten during upgrade process?
+
+Thanks",apache,tomcat,liferay,alfresco,openerp,,open,0,140,10,"Virtual Hosts in Apache Web Server and Apache Tomcat Environment I have a number of web applications which come with their bundled Apache Tomcat Server. When this tomcat server runs they give me options to access the application using something like http://IPAddress:8080/abcdef/ 
+
+Now on test servers I can always point a domain name to the server and then use http://domain:8080/abcdef to access the web application but in order to set it up on a domain (without port number) only I have been suggested that I should use either mod_proxy or mod_jk for apache which improves the performance of the application server.
+
+Now the big question is that why should I use mod_proxy or mod_jk. What benefits does it give me and then how should I configure it because it is bundled tomcat am I going to hack in the core of the application? Would that configuration be erased/overwritten during upgrade process?
+
+Thanks",5
+8403621,12/06/2011 16:49:24,387671,07/09/2010 11:23:05,143,4,Varnish MISS cache and Varnish control terminal is not responding at 192.168.56.102 on port 6082,"Hi I am using varnish on one box (192.168.56.102) and apache on other box (192.168.56.105).
+on varnish box - in /etc/varnish/default.vcl
+
+    backend default {
+    .host = ""192.168.56.105"";
+    .port = ""80"";
+    }
+and /etc/default/varnish
+
+    DAEMON_OPTS=""-a :80 \
+             -T localhost:6082 \
+             -f /etc/varnish/default.vcl \
+             -S /etc/varnish/secret \
+             -s file,/var/lib/varnish/$INSTANCE/varnish_storage.bin,3G""
+
+ Question 1. Varnish not Caching (MISS)
+
+    When i access 192.168.56.102 it MISS cache and goes to apache box.
+
+    curl -I http://192.168.56.102  [vernish box]
+    		
+    HTTP/1.1 401 Authorization Required
+    Server: Apache
+    WWW-Authenticate: Basic realm=""iExplore Development""
+    Vary: Accept-Encoding
+    Content-Type: text/html; charset=iso-8859-1
+    X-Pad: avoid browser bug
+    Date: Tue, 06 Dec 2011 16:01:25 GMT
+    X-Varnish: 587747945
+    Age: 0
+    Via: 1.1 varnish
+    Connection: keep-alive
+    X-Cache: MISS
+
+ Question 2. Varnish control terminal is not responding 
+    on apache (using drupal-pressflow-6) box - varnish admin (/admin/settings/varnish)
+
+  
+
+      VARNISH CONTROL TERMINAL: 192.168.56.102:6082
+
+      entered VARNISH CONTROL KEY:
+
+      Save configuration
+
+      STATUS: The Varnish control terminal is not responding at 192.168.56.102 on port 6082.
+
+Thanks in advance
+
+    ",apache,drupal,drupal-6,varnish,varnish-vcl,12/06/2011 17:13:44,off topic,1,287,15,"Varnish MISS cache and Varnish control terminal is not responding at 192.168.56.102 on port 6082 Hi I am using varnish on one box (192.168.56.102) and apache on other box (192.168.56.105).
+on varnish box - in /etc/varnish/default.vcl
+
+    backend default {
+    .host = ""192.168.56.105"";
+    .port = ""80"";
+    }
+and /etc/default/varnish
+
+    DAEMON_OPTS=""-a :80 \
+             -T localhost:6082 \
+             -f /etc/varnish/default.vcl \
+             -S /etc/varnish/secret \
+             -s file,/var/lib/varnish/$INSTANCE/varnish_storage.bin,3G""
+
+ Question 1. Varnish not Caching (MISS)
+
+    When i access 192.168.56.102 it MISS cache and goes to apache box.
+
+    curl -I http://192.168.56.102  [vernish box]
+    		
+    HTTP/1.1 401 Authorization Required
+    Server: Apache
+    WWW-Authenticate: Basic realm=""iExplore Development""
+    Vary: Accept-Encoding
+    Content-Type: text/html; charset=iso-8859-1
+    X-Pad: avoid browser bug
+    Date: Tue, 06 Dec 2011 16:01:25 GMT
+    X-Varnish: 587747945
+    Age: 0
+    Via: 1.1 varnish
+    Connection: keep-alive
+    X-Cache: MISS
+
+ Question 2. Varnish control terminal is not responding 
+    on apache (using drupal-pressflow-6) box - varnish admin (/admin/settings/varnish)
+
+  
+
+      VARNISH CONTROL TERMINAL: 192.168.56.102:6082
+
+      entered VARNISH CONTROL KEY:
+
+      Save configuration
+
+      STATUS: The Varnish control terminal is not responding at 192.168.56.102 on port 6082.
+
+Thanks in advance
+
+    ",5
+3053416,06/16/2010 12:58:19,1094466,12/21/2009 15:56:26,1,2,Apache Rewrite - put parts of query string in replacement string,"I'd like to rewrite:
+
+www.example.com/file.html?username=john&number=1234
+
+To:
+
+www.example.com/users/john
+
+But I can't figure out how to extract the ""username"" value from the query string. I've been Googling this all morning and reading the official docs but no luck. I need to solve this problem with a rewrite, rather than changing the application.
+
+Any help much appreciated!
+Rangi",apache,mod-rewrite,rewrite,,,,open,0,49,11,"Apache Rewrite - put parts of query string in replacement string I'd like to rewrite:
+
+www.example.com/file.html?username=john&number=1234
+
+To:
+
+www.example.com/users/john
+
+But I can't figure out how to extract the ""username"" value from the query string. I've been Googling this all morning and reading the official docs but no luck. I need to solve this problem with a rewrite, rather than changing the application.
+
+Any help much appreciated!
+Rangi",3
+7044386,08/12/2011 18:03:38,560287,01/02/2011 11:32:58,352,18,Which vhost causing error request exceeded redirects in error.log,"How can I find out which which virtual host website is causing the error without going through all of my vhosts and change log level?
+
+    Request exceeded the limit of 40 internal redirects due to probable configuration error. Use 'LimitInternalRecursion' to increase the limit if necessary. Use 'LogLevel debug' to get a backtrace.",apache,,,,,,open,0,56,9,"Which vhost causing error request exceeded redirects in error.log How can I find out which which virtual host website is causing the error without going through all of my vhosts and change log level?
+
+    Request exceeded the limit of 40 internal redirects due to probable configuration error. Use 'LimitInternalRecursion' to increase the limit if necessary. Use 'LogLevel debug' to get a backtrace.",1
+1342510,08/27/2009 17:20:12,6618,09/15/2008 12:22:19,112,5,mod_rewrite: setting GET depending on HTTP_HOST,"I recently discovered the power of the mod_rewrite module and I need some help with it.
+
+Say I have a website which has two domain names mapping to the same host...
+
+    example.com
+    example.net
+
+And I would like to set a GET var depending on the the HTTP_HOST (i.e. .com OR .net ?) ...
+
+    /index.php?lang=en
+    /index.php?lang=es
+
+However the caveat is this.. I already have 3 RewriteRules...
+
+    RewriteRule ^(about|contact)/?$ /index.php?page=$1 [NC]
+    ...
+    ..
+
+And if I were to follow the example over [here](http://httpd.apache.org/docs/1.3/mod/mod_rewrite.html#RewriteCond) (bottom of RewriteCond) I would have to copy the 3 RewriteRules for each HTTP_HOST (i.e. .com OR .net) and add the GET var statically like; &lang=en OR &lang=es and the end of each rule...
+
+Is there some way to do this automatically without having to copy the 3 rules all over again which only differ by just one get var at the end?
+
+PS. I know this can be done through the scripting language, but I was wondering if this can be done through mod_rewrite, and how.
+
+thanx!",apache,mod-rewrite,get,,,,open,0,183,6,"mod_rewrite: setting GET depending on HTTP_HOST I recently discovered the power of the mod_rewrite module and I need some help with it.
+
+Say I have a website which has two domain names mapping to the same host...
+
+    example.com
+    example.net
+
+And I would like to set a GET var depending on the the HTTP_HOST (i.e. .com OR .net ?) ...
+
+    /index.php?lang=en
+    /index.php?lang=es
+
+However the caveat is this.. I already have 3 RewriteRules...
+
+    RewriteRule ^(about|contact)/?$ /index.php?page=$1 [NC]
+    ...
+    ..
+
+And if I were to follow the example over [here](http://httpd.apache.org/docs/1.3/mod/mod_rewrite.html#RewriteCond) (bottom of RewriteCond) I would have to copy the 3 RewriteRules for each HTTP_HOST (i.e. .com OR .net) and add the GET var statically like; &lang=en OR &lang=es and the end of each rule...
+
+Is there some way to do this automatically without having to copy the 3 rules all over again which only differ by just one get var at the end?
+
+PS. I know this can be done through the scripting language, but I was wondering if this can be done through mod_rewrite, and how.
+
+thanx!",3
+7523986,09/23/2011 03:38:39,268850,02/08/2010 17:50:52,714,2,Setting up Apache with SSL,"I have installed httpd-2.0.64-win32-x86-openssl-0.9.8o on my machine and I am trying to configure apache to run SSL.
+
+Here's the changes i did to my httpd.conf and ssl.conf files
+
+httpd.conf (relevant changes)
+-------------------------------
+There are no virtual hosts configured. The main server is listening on 80
+
+#LoadModule ssl_module modules/mod_ssl.so
+
+This line was commented. I uncommented it.
+
+<IfModule mod_ssl.c>
+    Include conf/ssl.conf
+</IfModule>
+
+This section was already there to include my ssl.conf file
+
+
+ssl.conf
+---------
+
+SSLRandomSeed startup builtin
+SSLRandomSeed connect builtin
+
+<IfDefine SSL>
+
+Listen 443
+
+AddType application/x-x509-ca-cert .crt
+AddType application/x-pkcs7-crl    .crl
+
+SSLPassPhraseDialog  builtin
+
+SSLSessionCache         dbm:logs/ssl_scache
+SSLSessionCacheTimeout  300
+
+SSLMutex default
+
+<VirtualHost *:443>
+
+#   General setup for the virtual host
+DocumentRoot ""D:/Apache2/wwwroot1""
+ServerName localhost
+ServerAdmin abc@abc.com
+ErrorLog logs/error_log
+TransferLog logs/access_log
+
+SSLEngine on
+
+SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
+
+SSLCertificateFile conf/ssl.crt/server.crt
+
+SSLCertificateKeyFile conf/ssl.crt/server.key
+
+<FilesMatch ""\.(cgi|shtml|phtml|php3?)$"">
+    SSLOptions +StdEnvVars
+</FilesMatch>
+<Directory ""D:/Apache2/cgi"">
+    SSLOptions +StdEnvVars
+</Directory>
+
+SetEnvIf User-Agent "".*MSIE.*"" \
+         nokeepalive ssl-unclean-shutdown \
+         downgrade-1.0 force-response-1.0
+
+CustomLog logs/ssl_request_log \
+          ""%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \""%r\"" %b""
+
+</VirtualHost>                                  
+
+</IfDefine>
+
+I have my server.crt and server.key files in conf/ssl.crt
+
+
+I am not able to access https://localhost with this configuration.
+
+When i checked if there's a service listening on port 443 using netstat -aon, i did not see anything running on 443. I am able to access http://localhost and there is a service running on port 80.
+
+When i tried apache.exe -D SSL from the command prompt, i get this error
+
+(OS 10048)Only one usage of each socket address (protocol/network address/port)
+is normally permitted.  : make_sock: could not bind to address 0.0.0.0:80
+no listening sockets available, shutting down
+Unable to open logs
+
+When i tried openssl s_client -connect localhost:443 -state -debug from command prompt, i get this
+
+Loading 'screen' into random state - done
+connect: Bad file descriptor
+connect:errno=10061
+
+
+What is the problem with my configuration?",apache,ssl,httpd.conf,,,09/24/2011 00:33:45,off topic,1,319,5,"Setting up Apache with SSL I have installed httpd-2.0.64-win32-x86-openssl-0.9.8o on my machine and I am trying to configure apache to run SSL.
+
+Here's the changes i did to my httpd.conf and ssl.conf files
+
+httpd.conf (relevant changes)
+-------------------------------
+There are no virtual hosts configured. The main server is listening on 80
+
+#LoadModule ssl_module modules/mod_ssl.so
+
+This line was commented. I uncommented it.
+
+<IfModule mod_ssl.c>
+    Include conf/ssl.conf
+</IfModule>
+
+This section was already there to include my ssl.conf file
+
+
+ssl.conf
+---------
+
+SSLRandomSeed startup builtin
+SSLRandomSeed connect builtin
+
+<IfDefine SSL>
+
+Listen 443
+
+AddType application/x-x509-ca-cert .crt
+AddType application/x-pkcs7-crl    .crl
+
+SSLPassPhraseDialog  builtin
+
+SSLSessionCache         dbm:logs/ssl_scache
+SSLSessionCacheTimeout  300
+
+SSLMutex default
+
+<VirtualHost *:443>
+
+#   General setup for the virtual host
+DocumentRoot ""D:/Apache2/wwwroot1""
+ServerName localhost
+ServerAdmin abc@abc.com
+ErrorLog logs/error_log
+TransferLog logs/access_log
+
+SSLEngine on
+
+SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
+
+SSLCertificateFile conf/ssl.crt/server.crt
+
+SSLCertificateKeyFile conf/ssl.crt/server.key
+
+<FilesMatch ""\.(cgi|shtml|phtml|php3?)$"">
+    SSLOptions +StdEnvVars
+</FilesMatch>
+<Directory ""D:/Apache2/cgi"">
+    SSLOptions +StdEnvVars
+</Directory>
+
+SetEnvIf User-Agent "".*MSIE.*"" \
+         nokeepalive ssl-unclean-shutdown \
+         downgrade-1.0 force-response-1.0
+
+CustomLog logs/ssl_request_log \
+          ""%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \""%r\"" %b""
+
+</VirtualHost>                                  
+
+</IfDefine>
+
+I have my server.crt and server.key files in conf/ssl.crt
+
+
+I am not able to access https://localhost with this configuration.
+
+When i checked if there's a service listening on port 443 using netstat -aon, i did not see anything running on 443. I am able to access http://localhost and there is a service running on port 80.
+
+When i tried apache.exe -D SSL from the command prompt, i get this error
+
+(OS 10048)Only one usage of each socket address (protocol/network address/port)
+is normally permitted.  : make_sock: could not bind to address 0.0.0.0:80
+no listening sockets available, shutting down
+Unable to open logs
+
+When i tried openssl s_client -connect localhost:443 -state -debug from command prompt, i get this
+
+Loading 'screen' into random state - done
+connect: Bad file descriptor
+connect:errno=10061
+
+
+What is the problem with my configuration?",3
+5426129,03/24/2011 22:02:13,625491,02/20/2011 18:21:54,17,0,XAMPP and SEO URL,"I installed **xampp** on my local pc and want to use **SEO URL**, but it does not work :(
+
+I disabled the ""#"" in my httpd conf at the line ""**LoadModule rewrite_module modules/mod_rewrite.so**""
+
+
+I google this problem for hours and didnt find a solution.
+
+Here is my setup:
+
+
+- Install Path: **C:/xampp/htdocs/**
+
+- **LoadModule rewrite_module modules/mod_rewrite.so** (is enabled - phpinfo..)
+
+
+it would be very nice if someone could send me a working .htaccess which works on xampp and tell me how to setup my xampp...
+
+
+Thank you",apache,seo,xampp,,,03/25/2011 10:15:12,off topic,1,80,4,"XAMPP and SEO URL I installed **xampp** on my local pc and want to use **SEO URL**, but it does not work :(
+
+I disabled the ""#"" in my httpd conf at the line ""**LoadModule rewrite_module modules/mod_rewrite.so**""
+
+
+I google this problem for hours and didnt find a solution.
+
+Here is my setup:
+
+
+- Install Path: **C:/xampp/htdocs/**
+
+- **LoadModule rewrite_module modules/mod_rewrite.so** (is enabled - phpinfo..)
+
+
+it would be very nice if someone could send me a working .htaccess which works on xampp and tell me how to setup my xampp...
+
+
+Thank you",3
+4293107,11/27/2010 18:07:40,516676,11/22/2010 21:23:05,20,1,Mod_rewrite rule if no other rules match,"Is there a way to do a sort of ""catch all"" rule that will only be matched if no other rules have been matched in my .htaccess file?",apache,.htaccess,mod-rewrite,,,,open,0,28,7,"Mod_rewrite rule if no other rules match Is there a way to do a sort of ""catch all"" rule that will only be matched if no other rules have been matched in my .htaccess file?",3
+8424057,12/07/2011 23:19:44,1086669,12/07/2011 22:53:18,1,0,Apache Rewrite Rules,"I got the basic Apache configuration more or less figured out with the guidance of the Apache manual but the redirection rules are a bit to complicated for me at this time so I hope you can help me.
+
+I want to achieve the following:
+
+ - Every incoming request over http should be redirected to use https.
+ - Every subnet except for the ones defined as a vhost (m.domain.tld and content.domain.tld) should redirect to domain.tld.
+ - I rather keep everything after the ""/"" but this isn't necessary.
+
+For example:
+
+ - http:/domain.tld → https:/domain.tld 
+ - http:/whatever.domain.tld → https:/domain.tld
+ - https:/whatever.domain.tld → https:/domain.tld
+ - http:/m.domain.tld → https:/m.domain.tld
+
+I got the basics working with this very basic rule but it only works for request coming in over http so non-existing subnets coming in over https aren't reformatted.
+
+    <VirtualHost _default_:80>
+        Redirect permanent / https://domain.tld/
+    </VirtualHost>
+
+Hope you can help or point me in the direction of a clear guide (haven't fount one yet).
+",apache,mod-rewrite,url-rewriting,,,,open,0,169,3,"Apache Rewrite Rules I got the basic Apache configuration more or less figured out with the guidance of the Apache manual but the redirection rules are a bit to complicated for me at this time so I hope you can help me.
+
+I want to achieve the following:
+
+ - Every incoming request over http should be redirected to use https.
+ - Every subnet except for the ones defined as a vhost (m.domain.tld and content.domain.tld) should redirect to domain.tld.
+ - I rather keep everything after the ""/"" but this isn't necessary.
+
+For example:
+
+ - http:/domain.tld → https:/domain.tld 
+ - http:/whatever.domain.tld → https:/domain.tld
+ - https:/whatever.domain.tld → https:/domain.tld
+ - http:/m.domain.tld → https:/m.domain.tld
+
+I got the basics working with this very basic rule but it only works for request coming in over http so non-existing subnets coming in over https aren't reformatted.
+
+    <VirtualHost _default_:80>
+        Redirect permanent / https://domain.tld/
+    </VirtualHost>
+
+Hope you can help or point me in the direction of a clear guide (haven't fount one yet).
+",3
+11484560,07/14/2012 14:33:28,1525436,07/14/2012 10:39:20,3,0,How do I replicate my .htaccess functionility in NGINX,"I have the below `.htaccess` file in apache that redirects all request to `app/index.php` with or without a `GET` parameter. I just installed NGINX and my application won't run.
+Can anyone assist in replicating same functionality in NGINX? Thanks.
+
+    RewriteEngine on    
+    
+	Options -Indexes
+    
+	RewriteRule    ^$ app/ [L]
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+
+	RewriteRule ^(.+)$ app/index.php?url=$1 [QSA,L]",apache,.htaccess,nginx,,,07/16/2012 07:27:12,off topic,1,71,9,"How do I replicate my .htaccess functionility in NGINX I have the below `.htaccess` file in apache that redirects all request to `app/index.php` with or without a `GET` parameter. I just installed NGINX and my application won't run.
+Can anyone assist in replicating same functionality in NGINX? Thanks.
+
+    RewriteEngine on    
+    
+	Options -Indexes
+    
+	RewriteRule    ^$ app/ [L]
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+
+	RewriteRule ^(.+)$ app/index.php?url=$1 [QSA,L]",3
+8466321,12/11/2011 18:19:58,499445,11/06/2010 20:34:50,127,0,Apache rewrite rule for all pages after domain name,"I have a domain, example.com that has a ton of links/urls indexed so I want to point all urls *after* the / to an archived.example.com. Essentially something like this:
+
+    RewriteEngine On
+    RewriteRule (.*) http://archived.example.com/$1
+
+**However, I want to leave example.com alone (meaning I don't want example.com to go to archived.example.com, only the urls after the /)**
+
+How can I achieve this? I looked through other similar questions on here, but none seem to have the same problem.
+
+Thanks!",apache,mod-rewrite,,,,12/11/2011 20:21:57,off topic,1,81,9,"Apache rewrite rule for all pages after domain name I have a domain, example.com that has a ton of links/urls indexed so I want to point all urls *after* the / to an archived.example.com. Essentially something like this:
+
+    RewriteEngine On
+    RewriteRule (.*) http://archived.example.com/$1
+
+**However, I want to leave example.com alone (meaning I don't want example.com to go to archived.example.com, only the urls after the /)**
+
+How can I achieve this? I looked through other similar questions on here, but none seem to have the same problem.
+
+Thanks!",2
+11683916,07/27/2012 08:10:46,1556976,07/27/2012 07:46:37,1,0,"ProFTPD server - multiple ports, same IP address","I am having problems with ProFTPD server, because I am not able to set it to work correctly when multiple ports are active (IP address is the same).
+
+In my proftpd.conf file, I have added this section:
+
+    <VirtualHost 0.0.0.0>
+        Port                        2122
+        Umask                       022
+        ServerName                  ""Example""
+        DefaultRoot                 /home/usr1/www/example1
+        UserAlias                   fuser usr1
+
+        # Valid LOGINs
+        <Limit LOGIN>
+            AllowUser usr1
+            DenyALL
+        </Limit>
+    </VirtualHost>
+
+
+So, when I try to establish connection to port 21, everything is ok, and I get directory listing. But when I try to establish connection to port 2122, it connects, but I get an error **500 Illegal PORT command** at the very end.
+
+In Linux Firewall ports 21 and 2122 are opened.
+
+This is what I get when execute **netstat -lpn | grep ftp**
+
+    tcp6       0      0 :::2122                 :::*                    LISTEN      30597/proftpd: (acc
+    tcp6       0      0 :::21                   :::*                    LISTEN      30597/proftpd: (acc
+
+Now, I am not sure, where could be a problem with this virtual server, and why I cannot get directory listing at the very end.
+
+The point is, that I need two FTPs, since some of users should connect to the first one, and some of them to the second. Every FTP has its own home directory.
+
+If needed, I can provide the full proftpd.conf file.",apache,ubuntu,ftp,,,07/27/2012 10:29:39,off topic,1,489,8,"ProFTPD server - multiple ports, same IP address I am having problems with ProFTPD server, because I am not able to set it to work correctly when multiple ports are active (IP address is the same).
+
+In my proftpd.conf file, I have added this section:
+
+    <VirtualHost 0.0.0.0>
+        Port                        2122
+        Umask                       022
+        ServerName                  ""Example""
+        DefaultRoot                 /home/usr1/www/example1
+        UserAlias                   fuser usr1
+
+        # Valid LOGINs
+        <Limit LOGIN>
+            AllowUser usr1
+            DenyALL
+        </Limit>
+    </VirtualHost>
+
+
+So, when I try to establish connection to port 21, everything is ok, and I get directory listing. But when I try to establish connection to port 2122, it connects, but I get an error **500 Illegal PORT command** at the very end.
+
+In Linux Firewall ports 21 and 2122 are opened.
+
+This is what I get when execute **netstat -lpn | grep ftp**
+
+    tcp6       0      0 :::2122                 :::*                    LISTEN      30597/proftpd: (acc
+    tcp6       0      0 :::21                   :::*                    LISTEN      30597/proftpd: (acc
+
+Now, I am not sure, where could be a problem with this virtual server, and why I cannot get directory listing at the very end.
+
+The point is, that I need two FTPs, since some of users should connect to the first one, and some of them to the second. Every FTP has its own home directory.
+
+If needed, I can provide the full proftpd.conf file.",3
+11584723,07/20/2012 18:08:29,1505297,07/05/2012 22:05:49,1,0,SSLEngine On causing,"I'm currently trying to run an apache server with a certain webapp(Shibboleth/SAML service provider) on it and I have to enable SSL for the provider to run correctly. However, whenever I uncomment the ""SSLEngine on"" directive in httpd.conf(in Apache2.2\conf\ directory), the apache server fails. I have a .crt and a .key file generated and in my \conf\ directory so I don't think that this is the problem. Below is my httpd.conf file; any help would be appreciated!
+
+Thank you,
+Ken
+
+    #
+    # This is the main Apache HTTP server configuration file.  It contains the
+    # configuration directives that give the server its instructions.
+    # See <URL:http://httpd.apache.org/docs/2.2> for detailed information.
+    # In particular, see 
+    # <URL:http://httpd.apache.org/docs/2.2/mod/directives.html>
+    # for a discussion of each configuration directive.
+    #
+    # Do NOT simply read the instructions in here without understanding
+    # what they do.  They're here only as hints or reminders.  If you are unsure
+    # consult the online docs. You have been warned.  
+    #
+    # Configuration and logfile names: If the filenames you specify for many
+    # of the server's control files begin with ""/"" (or ""drive:/"" for Win32), the
+    # server will use that explicit path.  If the filenames do *not* begin
+    # with ""/"", the value of ServerRoot is prepended -- so ""logs/foo.log""
+    # with ServerRoot set to ""C:/Program Files/Apache Software Foundation/Apache2.2"" will be interpreted by the
+    # server as ""C:/Program Files/Apache Software Foundation/Apache2.2/logs/foo.log"".
+    #
+    # NOTE: Where filenames are specified, you must use forward slashes
+    # instead of backslashes (e.g., ""c:/apache"" instead of ""c:\apache"").
+    # If a drive letter is omitted, the drive on which httpd.exe is located
+    # will be used by default.  It is recommended that you always supply
+    # an explicit drive letter in absolute paths to avoid confusion.
+    
+    #
+    # ServerRoot: The top of the directory tree under which the server's
+    # configuration, error, and log files are kept.
+    #
+    # Do not add a slash at the end of the directory path.  If you point
+    # ServerRoot at a non-local disk, be sure to point the LockFile directive
+    # at a local disk.  If you wish to share the same ServerRoot for multiple
+    # httpd daemons, you will need to change at least LockFile and PidFile.
+    #
+    ServerRoot ""C:/Program Files/Apache Software Foundation/Apache2.2""
+    
+    #
+    # Listen: Allows you to bind Apache to specific IP addresses and/or
+    # ports, instead of the default. See also the <VirtualHost>
+    # directive.
+    #
+    # Change this to Listen on specific IP addresses as shown below to 
+    # prevent Apache from glomming onto all bound IP addresses.
+    #
+    #Listen 12.34.56.78:80
+    Listen 80
+    #Listen 443 
+    
+    
+    #
+    # Dynamic Shared Object (DSO) Support
+    #
+    # To be able to use the functionality of a module which was built as a DSO you
+    # have to place corresponding `LoadModule' lines at this location so the
+    # directives contained in it are actually available _before_ they are used.
+    # Statically compiled modules (those listed by `httpd -l') do not need
+    # to be loaded here.
+    #
+    # Example:
+    # LoadModule foo_module modules/mod_foo.so
+    #
+    LoadModule actions_module modules/mod_actions.so
+    LoadModule alias_module modules/mod_alias.so
+    LoadModule asis_module modules/mod_asis.so
+    LoadModule auth_basic_module modules/mod_auth_basic.so
+    #LoadModule auth_digest_module modules/mod_auth_digest.so
+    #LoadModule authn_alias_module modules/mod_authn_alias.so
+    #LoadModule authn_anon_module modules/mod_authn_anon.so
+    #LoadModule authn_dbd_module modules/mod_authn_dbd.so
+    #LoadModule authn_dbm_module modules/mod_authn_dbm.so
+    LoadModule authn_default_module modules/mod_authn_default.so
+    LoadModule authn_file_module modules/mod_authn_file.so
+    #LoadModule authnz_ldap_module modules/mod_authnz_ldap.so
+    #LoadModule authz_dbm_module modules/mod_authz_dbm.so
+    LoadModule authz_default_module modules/mod_authz_default.so
+    LoadModule authz_groupfile_module modules/mod_authz_groupfile.so
+    LoadModule authz_host_module modules/mod_authz_host.so
+    #LoadModule authz_owner_module modules/mod_authz_owner.so
+    LoadModule authz_user_module modules/mod_authz_user.so
+    LoadModule autoindex_module modules/mod_autoindex.so
+    #LoadModule cache_module modules/mod_cache.so
+    #LoadModule cern_meta_module modules/mod_cern_meta.so
+    LoadModule cgi_module modules/mod_cgi.so
+    #LoadModule charset_lite_module modules/mod_charset_lite.so
+    #LoadModule dav_module modules/mod_dav.so
+    #LoadModule dav_fs_module modules/mod_dav_fs.so
+    #LoadModule dav_lock_module modules/mod_dav_lock.so
+    #LoadModule dbd_module modules/mod_dbd.so
+    #LoadModule deflate_module modules/mod_deflate.so
+    LoadModule dir_module modules/mod_dir.so
+    #LoadModule disk_cache_module modules/mod_disk_cache.so
+    #LoadModule dumpio_module modules/mod_dumpio.so
+    LoadModule env_module modules/mod_env.so
+    #LoadModule expires_module modules/mod_expires.so
+    #LoadModule ext_filter_module modules/mod_ext_filter.so
+    #LoadModule file_cache_module modules/mod_file_cache.so
+    #LoadModule filter_module modules/mod_filter.so
+    #LoadModule headers_module modules/mod_headers.so
+    #LoadModule ident_module modules/mod_ident.so
+    #LoadModule imagemap_module modules/mod_imagemap.so
+    LoadModule include_module modules/mod_include.so
+    #LoadModule info_module modules/mod_info.so
+    LoadModule isapi_module modules/mod_isapi.so
+    #LoadModule ldap_module modules/mod_ldap.so
+    #LoadModule logio_module modules/mod_logio.so
+    LoadModule log_config_module modules/mod_log_config.so
+    #LoadModule log_forensic_module modules/mod_log_forensic.so
+    #LoadModule mem_cache_module modules/mod_mem_cache.so
+    LoadModule mime_module modules/mod_mime.so
+    #LoadModule mime_magic_module modules/mod_mime_magic.so
+    LoadModule negotiation_module modules/mod_negotiation.so
+    #LoadModule proxy_module modules/mod_proxy.so
+    #LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
+    #LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+    #LoadModule proxy_connect_module modules/mod_proxy_connect.so
+    #LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
+    #LoadModule proxy_http_module modules/mod_proxy_http.so
+    #LoadModule proxy_scgi_module modules/mod_proxy_scgi.so
+    #LoadModule reqtimeout_module modules/mod_reqtimeout.so
+    #LoadModule rewrite_module modules/mod_rewrite.so
+    LoadModule setenvif_module modules/mod_setenvif.so
+    #LoadModule speling_module modules/mod_speling.so
+    LoadModule ssl_module modules/mod_ssl.so
+    #LoadModule status_module modules/mod_status.so
+    #LoadModule substitute_module modules/mod_substitute.so
+    #LoadModule unique_id_module modules/mod_unique_id.so
+    #LoadModule userdir_module modules/mod_userdir.so
+    #LoadModule usertrack_module modules/mod_usertrack.so
+    #LoadModule version_module modules/mod_version.so
+    #LoadModule vhost_alias_module modules/mod_vhost_alias.so
+    
+    <IfModule !mpm_netware_module>
+    <IfModule !mpm_winnt_module>
+    #
+    # If you wish httpd to run as a different user or group, you must run
+    # httpd as root initially and it will switch.  
+    #
+    # User/Group: The name (or #number) of the user/group to run httpd as.
+    # It is usually good practice to create a dedicated user and group for
+    # running httpd, as with most system services.
+    #
+    User daemon
+    Group daemon
+    
+    </IfModule>
+    </IfModule>
+    
+    # 'Main' server configuration
+    #
+    # The directives in this section set up the values used by the 'main'
+    # server, which responds to any requests that aren't handled by a
+    # <VirtualHost> definition.  These values also provide defaults for
+    # any <VirtualHost> containers you may define later in the file.
+    #
+    # All of these directives may appear inside <VirtualHost> containers,
+    # in which case these default settings will be overridden for the
+    # virtual host being defined.
+    #
+    
+    #
+    # ServerAdmin: Your address, where problems with the server should be
+    # e-mailed.  This address appears on some server-generated pages, such
+    # as error documents.  e.g. admin@your-domain.com
+    #
+    ServerAdmin admin@example.org
+    
+    #
+    # ServerName gives the name and port that the server uses to identify itself.
+    # This can often be determined automatically, but we recommend you specify
+    # it explicitly to prevent problems during startup.
+    #
+    # If your host doesn't have a registered DNS name, enter its IP address here.
+    #
+    ServerName www.sp.machine
+    
+    #
+    # DocumentRoot: The directory out of which you will serve your
+    # documents. By default, all requests are taken from this directory, but
+    # symbolic links and aliases may be used to point to other locations.
+    #
+    DocumentRoot ""C:/Program Files/Apache Software Foundation/Apache2.2/htdocs""
+    
+    #
+    # Each directory to which Apache has access can be configured with respect
+    # to which services and features are allowed and/or disabled in that
+    # directory (and its subdirectories). 
+    #
+    # First, we configure the ""default"" to be a very restrictive set of 
+    # features.  
+    #
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+        Order deny,allow
+        Deny from all
+    </Directory>
+    
+    #
+    # Note that from this point forward you must specifically allow
+    # particular features to be enabled - so if something's not working as
+    # you might expect, make sure that you have specifically enabled it
+    # below.
+    #
+    
+    #
+    # This should be changed to whatever you set DocumentRoot to.
+    #
+    <Directory ""C:/Program Files/Apache Software Foundation/Apache2.2/htdocs"">
+        #
+        # Possible values for the Options directive are ""None"", ""All"",
+        # or any combination of:
+        #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+        #
+        # Note that ""MultiViews"" must be named *explicitly* --- ""Options All""
+        # doesn't give it to you.
+        #
+        # The Options directive is both complicated and important.  Please see
+        # http://httpd.apache.org/docs/2.2/mod/core.html#options
+        # for more information.
+        #
+        Options Indexes FollowSymLinks
+    
+        #
+        # AllowOverride controls what directives may be placed in .htaccess files.
+        # It can be ""All"", ""None"", or any combination of the keywords:
+        #   Options FileInfo AuthConfig Limit
+        #
+        AllowOverride None
+    
+        #
+        # Controls who can get stuff from this server.
+        #
+        Order allow,deny
+        Allow from all
+    
+    </Directory>
+    
+    #
+    # DirectoryIndex: sets the file that Apache will serve if a directory
+    # is requested.
+    #
+    <IfModule dir_module>
+        DirectoryIndex index.html
+    </IfModule>
+    
+    #
+    # The following lines prevent .htaccess and .htpasswd files from being 
+    # viewed by Web clients. 
+    #
+    <FilesMatch ""^\.ht"">
+        Order allow,deny
+        Deny from all
+        Satisfy All
+    </FilesMatch>
+    
+    #
+    # ErrorLog: The location of the error log file.
+    # If you do not specify an ErrorLog directive within a <VirtualHost>
+    # container, error messages relating to that virtual host will be
+    # logged here.  If you *do* define an error logfile for a <VirtualHost>
+    # container, that host's errors will be logged there and not here.
+    #
+    ErrorLog ""logs/error.log""
+    
+    #
+    # LogLevel: Control the number of messages logged to the error_log.
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    #
+    LogLevel warn
+    
+    <IfModule log_config_module>
+        #
+        # The following directives define some format nicknames for use with
+        # a CustomLog directive (see below).
+        #
+        LogFormat ""%h %l %u %t \""%r\"" %>s %b \""%{Referer}i\"" \""%{User-Agent}i\"""" combined
+        LogFormat ""%h %l %u %t \""%r\"" %>s %b"" common
+    
+        <IfModule logio_module>
+          # You need to enable mod_logio.c to use %I and %O
+          LogFormat ""%h %l %u %t \""%r\"" %>s %b \""%{Referer}i\"" \""%{User-Agent}i\"" %I %O"" combinedio
+        </IfModule>
+    
+        #
+        # The location and format of the access logfile (Common Logfile Format).
+        # If you do not define any access logfiles within a <VirtualHost>
+        # container, they will be logged here.  Contrariwise, if you *do*
+        # define per-<VirtualHost> access logfiles, transactions will be
+        # logged therein and *not* in this file.
+        #
+        CustomLog ""logs/access.log"" common
+    
+        #
+        # If you prefer a logfile with access, agent, and referer information
+        # (Combined Logfile Format) you can use the following directive.
+        #
+        #CustomLog ""logs/access.log"" combined
+    </IfModule>
+    
+    <IfModule alias_module>
+        #
+        # Redirect: Allows you to tell clients about documents that used to 
+        # exist in your server's namespace, but do not anymore. The client 
+        # will make a new request for the document at its new location.
+        # Example:
+        # Redirect permanent /foo http://sp.example.org/bar
+    
+        #
+        # Alias: Maps web paths into filesystem paths and is used to
+        # access content that does not live under the DocumentRoot.
+        # Example:
+        # Alias /webpath /full/filesystem/path
+        #
+        # If you include a trailing / on /webpath then the server will
+        # require it to be present in the URL.  You will also likely
+        # need to provide a <Directory> section to allow access to
+        # the filesystem path.
+    
+        #
+        # ScriptAlias: This controls which directories contain server scripts. 
+        # ScriptAliases are essentially the same as Aliases, except that
+        # documents in the target directory are treated as applications and
+        # run by the server when requested rather than as documents sent to the
+        # client.  The same rules about trailing ""/"" apply to ScriptAlias
+        # directives as to Alias.
+        #
+        ScriptAlias /cgi-bin/ ""C:/Program Files/Apache Software Foundation/Apache2.2/cgi-bin/""
+    
+    </IfModule>
+    
+    <IfModule cgid_module>
+        #
+        # ScriptSock: On threaded servers, designate the path to the UNIX
+        # socket used to communicate with the CGI daemon of mod_cgid.
+        #
+        #Scriptsock logs/cgisock
+    </IfModule>
+    
+    #
+    # ""C:/Program Files/Apache Software Foundation/Apache2.2/cgi-bin"" should be changed to whatever your ScriptAliased
+    # CGI directory exists, if you have that configured.
+    #
+    <Directory ""C:/Program Files/Apache Software Foundation/Apache2.2/cgi-bin"">
+        AllowOverride None
+        Options None
+        Order allow,deny
+        Allow from all
+    </Directory>
+    
+    #
+    # DefaultType: the default MIME type the server will use for a document
+    # if it cannot otherwise determine one, such as from filename extensions.
+    # If your server contains mostly text or HTML documents, ""text/plain"" is
+    # a good value.  If most of your content is binary, such as applications
+    # or images, you may want to use ""application/octet-stream"" instead to
+    # keep browsers from trying to display binary files as though they are
+    # text.
+    #
+    DefaultType text/plain
+    
+    <IfModule mime_module>
+        #
+        # TypesConfig points to the file containing the list of mappings from
+        # filename extension to MIME-type.
+        #
+        TypesConfig conf/mime.types
+    
+        #
+        # AddType allows you to add to or override the MIME configuration
+        # file specified in TypesConfig for specific file types.
+        #
+        #AddType application/x-gzip .tgz
+        #
+        # AddEncoding allows you to have certain browsers uncompress
+        # information on the fly. Note: Not all browsers support this.
+        #
+        #AddEncoding x-compress .Z
+        #AddEncoding x-gzip .gz .tgz
+        #
+        # If the AddEncoding directives above are commented-out, then you
+        # probably should define those extensions to indicate media types:
+        #
+        AddType application/x-compress .Z
+        AddType application/x-gzip .gz .tgz
+    
+        #
+        # AddHandler allows you to map certain file extensions to ""handlers"":
+        # actions unrelated to filetype. These can be either built into the server
+        # or added with the Action directive (see below)
+        #
+        # To use CGI scripts outside of ScriptAliased directories:
+        # (You will also need to add ""ExecCGI"" to the ""Options"" directive.)
+        #
+        #AddHandler cgi-script .cgi
+    
+        # For type maps (negotiated resources):
+        #AddHandler type-map var
+    
+        #
+        # Filters allow you to process content before it is sent to the client.
+        #
+        # To parse .shtml files for server-side includes (SSI):
+        # (You will also need to add ""Includes"" to the ""Options"" directive.)
+        #
+        #AddType text/html .shtml
+        #AddOutputFilter INCLUDES .shtml
+    </IfModule>
+    
+    #
+    # The mod_mime_magic module allows the server to use various hints from the
+    # contents of the file itself to determine its type.  The MIMEMagicFile
+    # directive tells the module where the hint definitions are located.
+    #
+    #MIMEMagicFile conf/magic
+    
+    #
+    # Customizable error responses come in three flavors:
+    # 1) plain text 2) local redirects 3) external redirects
+    #
+    # Some examples:
+    #ErrorDocument 500 ""The server made a boo boo.""
+    #ErrorDocument 404 /missing.html
+    #ErrorDocument 404 ""/cgi-bin/missing_handler.pl""
+    #ErrorDocument 402 http://sp.example.org/subscription_info.html
+    #
+    
+    #
+    # MaxRanges: Maximum number of Ranges in a request before
+    # returning the entire resource, or one of the special
+    # values 'default', 'none' or 'unlimited'.
+    # Default setting is to accept 200 Ranges.
+    #MaxRanges unlimited
+    
+    #
+    # EnableMMAP and EnableSendfile: On systems that support it, 
+    # memory-mapping or the sendfile syscall is used to deliver
+    # files.  This usually improves server performance, but must
+    # be turned off when serving from networked-mounted 
+    # filesystems or if support for these functions is otherwise
+    # broken on your system.
+    #
+    #EnableMMAP off
+    #EnableSendfile off
+    
+    # Supplemental configuration
+    #
+    # The configuration files in the conf/extra/ directory can be 
+    # included to add extra features or to modify the default configuration of 
+    # the server, or you may simply copy their contents here and change as 
+    # necessary.
+    
+    # Server-pool management (MPM specific)
+    #Include conf/extra/httpd-mpm.conf
+    
+    # Multi-language error messages
+    #Include conf/extra/httpd-multilang-errordoc.conf
+    
+    # Fancy directory listings
+    #Include conf/extra/httpd-autoindex.conf
+    
+    # Language settings
+    #Include conf/extra/httpd-languages.conf
+    
+    # User home directories
+    #Include conf/extra/httpd-userdir.conf
+    
+    # Real-time info on requests and configuration
+    #Include conf/extra/httpd-info.conf
+    
+    
+    # Virtual hosts
+    #------!!!!!!!!!!!!!!!------------------------
+    #Include conf/extra/httpd-vhosts.conf
+    
+    # Local access to the Apache HTTP Server Manual
+    #Include conf/extra/httpd-manual.conf
+    
+    # Distributed authoring and versioning (WebDAV)
+    #Include conf/extra/httpd-dav.conf
+    
+    # Various default settings
+    #Include conf/extra/httpd-default.conf
+    
+    
+    #------!!!!!!!!!!!!!!!------------------------
+    # Secure (SSL/TLS) connections
+    Include conf/extra/httpd-ssl.conf
+    #
+    # Note: The following must must be present to support
+    #       starting without SSL on platforms with no /dev/random equivalent
+    #       but a statically compiled-in mod_ssl.
+    #
+    
+    #------!!!!!!!!!!!!!!!------------------------
+    Include C:/opt/shibboleth-sp/etc/shibboleth/apache22.config
+    UseCanonicalName On
+    
+    
+    #<VirtualHost 169.254.127.121>
+    #DocumentRoot /var/www/html2
+    #ServerName www.sp.machine
+    #SSLEngine on
+    #SSLCertificateFile 'C:/Program Files/Apache Software Foundation/Apache2.2/conf/server.crt'
+    #SSLCertificateKeyFile 'C:/Program Files/Apache Software Foundation/Apache2.2/conf/server.key'
+    #SSLCertificateChainFile /path/to/DigiCertCA.crt
+    #</VirtualHost>
+    
+    
+    <IfModule ssl_module>
+    #SSLRandomSeed startup builtin
+    #SSLRandomSeed connect builtin
+    #------!!!!!!!!!!!!!!!------------------------
+    #SSLEngine on
+    #SSLCertificateFile 'C:/Program Files/Apache Software Foundation/Apache2.2/conf/server.crt'
+    #SSLCertificateKeyFile 'C:/Program Files/Apache Software Foundation/Apache2.2/conf/server.key'
+    </IfModule>
+
+",apache,ssl,configuration,https,httpd.conf,07/21/2012 06:00:57,off topic,1,4630,3,"SSLEngine On causing I'm currently trying to run an apache server with a certain webapp(Shibboleth/SAML service provider) on it and I have to enable SSL for the provider to run correctly. However, whenever I uncomment the ""SSLEngine on"" directive in httpd.conf(in Apache2.2\conf\ directory), the apache server fails. I have a .crt and a .key file generated and in my \conf\ directory so I don't think that this is the problem. Below is my httpd.conf file; any help would be appreciated!
+
+Thank you,
+Ken
+
+    #
+    # This is the main Apache HTTP server configuration file.  It contains the
+    # configuration directives that give the server its instructions.
+    # See <URL:http://httpd.apache.org/docs/2.2> for detailed information.
+    # In particular, see 
+    # <URL:http://httpd.apache.org/docs/2.2/mod/directives.html>
+    # for a discussion of each configuration directive.
+    #
+    # Do NOT simply read the instructions in here without understanding
+    # what they do.  They're here only as hints or reminders.  If you are unsure
+    # consult the online docs. You have been warned.  
+    #
+    # Configuration and logfile names: If the filenames you specify for many
+    # of the server's control files begin with ""/"" (or ""drive:/"" for Win32), the
+    # server will use that explicit path.  If the filenames do *not* begin
+    # with ""/"", the value of ServerRoot is prepended -- so ""logs/foo.log""
+    # with ServerRoot set to ""C:/Program Files/Apache Software Foundation/Apache2.2"" will be interpreted by the
+    # server as ""C:/Program Files/Apache Software Foundation/Apache2.2/logs/foo.log"".
+    #
+    # NOTE: Where filenames are specified, you must use forward slashes
+    # instead of backslashes (e.g., ""c:/apache"" instead of ""c:\apache"").
+    # If a drive letter is omitted, the drive on which httpd.exe is located
+    # will be used by default.  It is recommended that you always supply
+    # an explicit drive letter in absolute paths to avoid confusion.
+    
+    #
+    # ServerRoot: The top of the directory tree under which the server's
+    # configuration, error, and log files are kept.
+    #
+    # Do not add a slash at the end of the directory path.  If you point
+    # ServerRoot at a non-local disk, be sure to point the LockFile directive
+    # at a local disk.  If you wish to share the same ServerRoot for multiple
+    # httpd daemons, you will need to change at least LockFile and PidFile.
+    #
+    ServerRoot ""C:/Program Files/Apache Software Foundation/Apache2.2""
+    
+    #
+    # Listen: Allows you to bind Apache to specific IP addresses and/or
+    # ports, instead of the default. See also the <VirtualHost>
+    # directive.
+    #
+    # Change this to Listen on specific IP addresses as shown below to 
+    # prevent Apache from glomming onto all bound IP addresses.
+    #
+    #Listen 12.34.56.78:80
+    Listen 80
+    #Listen 443 
+    
+    
+    #
+    # Dynamic Shared Object (DSO) Support
+    #
+    # To be able to use the functionality of a module which was built as a DSO you
+    # have to place corresponding `LoadModule' lines at this location so the
+    # directives contained in it are actually available _before_ they are used.
+    # Statically compiled modules (those listed by `httpd -l') do not need
+    # to be loaded here.
+    #
+    # Example:
+    # LoadModule foo_module modules/mod_foo.so
+    #
+    LoadModule actions_module modules/mod_actions.so
+    LoadModule alias_module modules/mod_alias.so
+    LoadModule asis_module modules/mod_asis.so
+    LoadModule auth_basic_module modules/mod_auth_basic.so
+    #LoadModule auth_digest_module modules/mod_auth_digest.so
+    #LoadModule authn_alias_module modules/mod_authn_alias.so
+    #LoadModule authn_anon_module modules/mod_authn_anon.so
+    #LoadModule authn_dbd_module modules/mod_authn_dbd.so
+    #LoadModule authn_dbm_module modules/mod_authn_dbm.so
+    LoadModule authn_default_module modules/mod_authn_default.so
+    LoadModule authn_file_module modules/mod_authn_file.so
+    #LoadModule authnz_ldap_module modules/mod_authnz_ldap.so
+    #LoadModule authz_dbm_module modules/mod_authz_dbm.so
+    LoadModule authz_default_module modules/mod_authz_default.so
+    LoadModule authz_groupfile_module modules/mod_authz_groupfile.so
+    LoadModule authz_host_module modules/mod_authz_host.so
+    #LoadModule authz_owner_module modules/mod_authz_owner.so
+    LoadModule authz_user_module modules/mod_authz_user.so
+    LoadModule autoindex_module modules/mod_autoindex.so
+    #LoadModule cache_module modules/mod_cache.so
+    #LoadModule cern_meta_module modules/mod_cern_meta.so
+    LoadModule cgi_module modules/mod_cgi.so
+    #LoadModule charset_lite_module modules/mod_charset_lite.so
+    #LoadModule dav_module modules/mod_dav.so
+    #LoadModule dav_fs_module modules/mod_dav_fs.so
+    #LoadModule dav_lock_module modules/mod_dav_lock.so
+    #LoadModule dbd_module modules/mod_dbd.so
+    #LoadModule deflate_module modules/mod_deflate.so
+    LoadModule dir_module modules/mod_dir.so
+    #LoadModule disk_cache_module modules/mod_disk_cache.so
+    #LoadModule dumpio_module modules/mod_dumpio.so
+    LoadModule env_module modules/mod_env.so
+    #LoadModule expires_module modules/mod_expires.so
+    #LoadModule ext_filter_module modules/mod_ext_filter.so
+    #LoadModule file_cache_module modules/mod_file_cache.so
+    #LoadModule filter_module modules/mod_filter.so
+    #LoadModule headers_module modules/mod_headers.so
+    #LoadModule ident_module modules/mod_ident.so
+    #LoadModule imagemap_module modules/mod_imagemap.so
+    LoadModule include_module modules/mod_include.so
+    #LoadModule info_module modules/mod_info.so
+    LoadModule isapi_module modules/mod_isapi.so
+    #LoadModule ldap_module modules/mod_ldap.so
+    #LoadModule logio_module modules/mod_logio.so
+    LoadModule log_config_module modules/mod_log_config.so
+    #LoadModule log_forensic_module modules/mod_log_forensic.so
+    #LoadModule mem_cache_module modules/mod_mem_cache.so
+    LoadModule mime_module modules/mod_mime.so
+    #LoadModule mime_magic_module modules/mod_mime_magic.so
+    LoadModule negotiation_module modules/mod_negotiation.so
+    #LoadModule proxy_module modules/mod_proxy.so
+    #LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
+    #LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+    #LoadModule proxy_connect_module modules/mod_proxy_connect.so
+    #LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
+    #LoadModule proxy_http_module modules/mod_proxy_http.so
+    #LoadModule proxy_scgi_module modules/mod_proxy_scgi.so
+    #LoadModule reqtimeout_module modules/mod_reqtimeout.so
+    #LoadModule rewrite_module modules/mod_rewrite.so
+    LoadModule setenvif_module modules/mod_setenvif.so
+    #LoadModule speling_module modules/mod_speling.so
+    LoadModule ssl_module modules/mod_ssl.so
+    #LoadModule status_module modules/mod_status.so
+    #LoadModule substitute_module modules/mod_substitute.so
+    #LoadModule unique_id_module modules/mod_unique_id.so
+    #LoadModule userdir_module modules/mod_userdir.so
+    #LoadModule usertrack_module modules/mod_usertrack.so
+    #LoadModule version_module modules/mod_version.so
+    #LoadModule vhost_alias_module modules/mod_vhost_alias.so
+    
+    <IfModule !mpm_netware_module>
+    <IfModule !mpm_winnt_module>
+    #
+    # If you wish httpd to run as a different user or group, you must run
+    # httpd as root initially and it will switch.  
+    #
+    # User/Group: The name (or #number) of the user/group to run httpd as.
+    # It is usually good practice to create a dedicated user and group for
+    # running httpd, as with most system services.
+    #
+    User daemon
+    Group daemon
+    
+    </IfModule>
+    </IfModule>
+    
+    # 'Main' server configuration
+    #
+    # The directives in this section set up the values used by the 'main'
+    # server, which responds to any requests that aren't handled by a
+    # <VirtualHost> definition.  These values also provide defaults for
+    # any <VirtualHost> containers you may define later in the file.
+    #
+    # All of these directives may appear inside <VirtualHost> containers,
+    # in which case these default settings will be overridden for the
+    # virtual host being defined.
+    #
+    
+    #
+    # ServerAdmin: Your address, where problems with the server should be
+    # e-mailed.  This address appears on some server-generated pages, such
+    # as error documents.  e.g. admin@your-domain.com
+    #
+    ServerAdmin admin@example.org
+    
+    #
+    # ServerName gives the name and port that the server uses to identify itself.
+    # This can often be determined automatically, but we recommend you specify
+    # it explicitly to prevent problems during startup.
+    #
+    # If your host doesn't have a registered DNS name, enter its IP address here.
+    #
+    ServerName www.sp.machine
+    
+    #
+    # DocumentRoot: The directory out of which you will serve your
+    # documents. By default, all requests are taken from this directory, but
+    # symbolic links and aliases may be used to point to other locations.
+    #
+    DocumentRoot ""C:/Program Files/Apache Software Foundation/Apache2.2/htdocs""
+    
+    #
+    # Each directory to which Apache has access can be configured with respect
+    # to which services and features are allowed and/or disabled in that
+    # directory (and its subdirectories). 
+    #
+    # First, we configure the ""default"" to be a very restrictive set of 
+    # features.  
+    #
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+        Order deny,allow
+        Deny from all
+    </Directory>
+    
+    #
+    # Note that from this point forward you must specifically allow
+    # particular features to be enabled - so if something's not working as
+    # you might expect, make sure that you have specifically enabled it
+    # below.
+    #
+    
+    #
+    # This should be changed to whatever you set DocumentRoot to.
+    #
+    <Directory ""C:/Program Files/Apache Software Foundation/Apache2.2/htdocs"">
+        #
+        # Possible values for the Options directive are ""None"", ""All"",
+        # or any combination of:
+        #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+        #
+        # Note that ""MultiViews"" must be named *explicitly* --- ""Options All""
+        # doesn't give it to you.
+        #
+        # The Options directive is both complicated and important.  Please see
+        # http://httpd.apache.org/docs/2.2/mod/core.html#options
+        # for more information.
+        #
+        Options Indexes FollowSymLinks
+    
+        #
+        # AllowOverride controls what directives may be placed in .htaccess files.
+        # It can be ""All"", ""None"", or any combination of the keywords:
+        #   Options FileInfo AuthConfig Limit
+        #
+        AllowOverride None
+    
+        #
+        # Controls who can get stuff from this server.
+        #
+        Order allow,deny
+        Allow from all
+    
+    </Directory>
+    
+    #
+    # DirectoryIndex: sets the file that Apache will serve if a directory
+    # is requested.
+    #
+    <IfModule dir_module>
+        DirectoryIndex index.html
+    </IfModule>
+    
+    #
+    # The following lines prevent .htaccess and .htpasswd files from being 
+    # viewed by Web clients. 
+    #
+    <FilesMatch ""^\.ht"">
+        Order allow,deny
+        Deny from all
+        Satisfy All
+    </FilesMatch>
+    
+    #
+    # ErrorLog: The location of the error log file.
+    # If you do not specify an ErrorLog directive within a <VirtualHost>
+    # container, error messages relating to that virtual host will be
+    # logged here.  If you *do* define an error logfile for a <VirtualHost>
+    # container, that host's errors will be logged there and not here.
+    #
+    ErrorLog ""logs/error.log""
+    
+    #
+    # LogLevel: Control the number of messages logged to the error_log.
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    #
+    LogLevel warn
+    
+    <IfModule log_config_module>
+        #
+        # The following directives define some format nicknames for use with
+        # a CustomLog directive (see below).
+        #
+        LogFormat ""%h %l %u %t \""%r\"" %>s %b \""%{Referer}i\"" \""%{User-Agent}i\"""" combined
+        LogFormat ""%h %l %u %t \""%r\"" %>s %b"" common
+    
+        <IfModule logio_module>
+          # You need to enable mod_logio.c to use %I and %O
+          LogFormat ""%h %l %u %t \""%r\"" %>s %b \""%{Referer}i\"" \""%{User-Agent}i\"" %I %O"" combinedio
+        </IfModule>
+    
+        #
+        # The location and format of the access logfile (Common Logfile Format).
+        # If you do not define any access logfiles within a <VirtualHost>
+        # container, they will be logged here.  Contrariwise, if you *do*
+        # define per-<VirtualHost> access logfiles, transactions will be
+        # logged therein and *not* in this file.
+        #
+        CustomLog ""logs/access.log"" common
+    
+        #
+        # If you prefer a logfile with access, agent, and referer information
+        # (Combined Logfile Format) you can use the following directive.
+        #
+        #CustomLog ""logs/access.log"" combined
+    </IfModule>
+    
+    <IfModule alias_module>
+        #
+        # Redirect: Allows you to tell clients about documents that used to 
+        # exist in your server's namespace, but do not anymore. The client 
+        # will make a new request for the document at its new location.
+        # Example:
+        # Redirect permanent /foo http://sp.example.org/bar
+    
+        #
+        # Alias: Maps web paths into filesystem paths and is used to
+        # access content that does not live under the DocumentRoot.
+        # Example:
+        # Alias /webpath /full/filesystem/path
+        #
+        # If you include a trailing / on /webpath then the server will
+        # require it to be present in the URL.  You will also likely
+        # need to provide a <Directory> section to allow access to
+        # the filesystem path.
+    
+        #
+        # ScriptAlias: This controls which directories contain server scripts. 
+        # ScriptAliases are essentially the same as Aliases, except that
+        # documents in the target directory are treated as applications and
+        # run by the server when requested rather than as documents sent to the
+        # client.  The same rules about trailing ""/"" apply to ScriptAlias
+        # directives as to Alias.
+        #
+        ScriptAlias /cgi-bin/ ""C:/Program Files/Apache Software Foundation/Apache2.2/cgi-bin/""
+    
+    </IfModule>
+    
+    <IfModule cgid_module>
+        #
+        # ScriptSock: On threaded servers, designate the path to the UNIX
+        # socket used to communicate with the CGI daemon of mod_cgid.
+        #
+        #Scriptsock logs/cgisock
+    </IfModule>
+    
+    #
+    # ""C:/Program Files/Apache Software Foundation/Apache2.2/cgi-bin"" should be changed to whatever your ScriptAliased
+    # CGI directory exists, if you have that configured.
+    #
+    <Directory ""C:/Program Files/Apache Software Foundation/Apache2.2/cgi-bin"">
+        AllowOverride None
+        Options None
+        Order allow,deny
+        Allow from all
+    </Directory>
+    
+    #
+    # DefaultType: the default MIME type the server will use for a document
+    # if it cannot otherwise determine one, such as from filename extensions.
+    # If your server contains mostly text or HTML documents, ""text/plain"" is
+    # a good value.  If most of your content is binary, such as applications
+    # or images, you may want to use ""application/octet-stream"" instead to
+    # keep browsers from trying to display binary files as though they are
+    # text.
+    #
+    DefaultType text/plain
+    
+    <IfModule mime_module>
+        #
+        # TypesConfig points to the file containing the list of mappings from
+        # filename extension to MIME-type.
+        #
+        TypesConfig conf/mime.types
+    
+        #
+        # AddType allows you to add to or override the MIME configuration
+        # file specified in TypesConfig for specific file types.
+        #
+        #AddType application/x-gzip .tgz
+        #
+        # AddEncoding allows you to have certain browsers uncompress
+        # information on the fly. Note: Not all browsers support this.
+        #
+        #AddEncoding x-compress .Z
+        #AddEncoding x-gzip .gz .tgz
+        #
+        # If the AddEncoding directives above are commented-out, then you
+        # probably should define those extensions to indicate media types:
+        #
+        AddType application/x-compress .Z
+        AddType application/x-gzip .gz .tgz
+    
+        #
+        # AddHandler allows you to map certain file extensions to ""handlers"":
+        # actions unrelated to filetype. These can be either built into the server
+        # or added with the Action directive (see below)
+        #
+        # To use CGI scripts outside of ScriptAliased directories:
+        # (You will also need to add ""ExecCGI"" to the ""Options"" directive.)
+        #
+        #AddHandler cgi-script .cgi
+    
+        # For type maps (negotiated resources):
+        #AddHandler type-map var
+    
+        #
+        # Filters allow you to process content before it is sent to the client.
+        #
+        # To parse .shtml files for server-side includes (SSI):
+        # (You will also need to add ""Includes"" to the ""Options"" directive.)
+        #
+        #AddType text/html .shtml
+        #AddOutputFilter INCLUDES .shtml
+    </IfModule>
+    
+    #
+    # The mod_mime_magic module allows the server to use various hints from the
+    # contents of the file itself to determine its type.  The MIMEMagicFile
+    # directive tells the module where the hint definitions are located.
+    #
+    #MIMEMagicFile conf/magic
+    
+    #
+    # Customizable error responses come in three flavors:
+    # 1) plain text 2) local redirects 3) external redirects
+    #
+    # Some examples:
+    #ErrorDocument 500 ""The server made a boo boo.""
+    #ErrorDocument 404 /missing.html
+    #ErrorDocument 404 ""/cgi-bin/missing_handler.pl""
+    #ErrorDocument 402 http://sp.example.org/subscription_info.html
+    #
+    
+    #
+    # MaxRanges: Maximum number of Ranges in a request before
+    # returning the entire resource, or one of the special
+    # values 'default', 'none' or 'unlimited'.
+    # Default setting is to accept 200 Ranges.
+    #MaxRanges unlimited
+    
+    #
+    # EnableMMAP and EnableSendfile: On systems that support it, 
+    # memory-mapping or the sendfile syscall is used to deliver
+    # files.  This usually improves server performance, but must
+    # be turned off when serving from networked-mounted 
+    # filesystems or if support for these functions is otherwise
+    # broken on your system.
+    #
+    #EnableMMAP off
+    #EnableSendfile off
+    
+    # Supplemental configuration
+    #
+    # The configuration files in the conf/extra/ directory can be 
+    # included to add extra features or to modify the default configuration of 
+    # the server, or you may simply copy their contents here and change as 
+    # necessary.
+    
+    # Server-pool management (MPM specific)
+    #Include conf/extra/httpd-mpm.conf
+    
+    # Multi-language error messages
+    #Include conf/extra/httpd-multilang-errordoc.conf
+    
+    # Fancy directory listings
+    #Include conf/extra/httpd-autoindex.conf
+    
+    # Language settings
+    #Include conf/extra/httpd-languages.conf
+    
+    # User home directories
+    #Include conf/extra/httpd-userdir.conf
+    
+    # Real-time info on requests and configuration
+    #Include conf/extra/httpd-info.conf
+    
+    
+    # Virtual hosts
+    #------!!!!!!!!!!!!!!!------------------------
+    #Include conf/extra/httpd-vhosts.conf
+    
+    # Local access to the Apache HTTP Server Manual
+    #Include conf/extra/httpd-manual.conf
+    
+    # Distributed authoring and versioning (WebDAV)
+    #Include conf/extra/httpd-dav.conf
+    
+    # Various default settings
+    #Include conf/extra/httpd-default.conf
+    
+    
+    #------!!!!!!!!!!!!!!!------------------------
+    # Secure (SSL/TLS) connections
+    Include conf/extra/httpd-ssl.conf
+    #
+    # Note: The following must must be present to support
+    #       starting without SSL on platforms with no /dev/random equivalent
+    #       but a statically compiled-in mod_ssl.
+    #
+    
+    #------!!!!!!!!!!!!!!!------------------------
+    Include C:/opt/shibboleth-sp/etc/shibboleth/apache22.config
+    UseCanonicalName On
+    
+    
+    #<VirtualHost 169.254.127.121>
+    #DocumentRoot /var/www/html2
+    #ServerName www.sp.machine
+    #SSLEngine on
+    #SSLCertificateFile 'C:/Program Files/Apache Software Foundation/Apache2.2/conf/server.crt'
+    #SSLCertificateKeyFile 'C:/Program Files/Apache Software Foundation/Apache2.2/conf/server.key'
+    #SSLCertificateChainFile /path/to/DigiCertCA.crt
+    #</VirtualHost>
+    
+    
+    <IfModule ssl_module>
+    #SSLRandomSeed startup builtin
+    #SSLRandomSeed connect builtin
+    #------!!!!!!!!!!!!!!!------------------------
+    #SSLEngine on
+    #SSLCertificateFile 'C:/Program Files/Apache Software Foundation/Apache2.2/conf/server.crt'
+    #SSLCertificateKeyFile 'C:/Program Files/Apache Software Foundation/Apache2.2/conf/server.key'
+    </IfModule>
+
+",5
+49500,09/08/2008 11:24:42,428,08/05/2008 16:12:27,128,6,Apache rewrite based on subdomain,"Im trying to redirect requests for a wildcard domain to a sub-directory.  
+ie. `something.blah.domain.com` --> `blah.domain.com/something`
+
+I dont know how to get the subdomain name to use in the rewrite rule.",apache,mod-rewrite,,,,03/12/2012 17:15:13,off topic,1,31,5,"Apache rewrite based on subdomain Im trying to redirect requests for a wildcard domain to a sub-directory.  
+ie. `something.blah.domain.com` --> `blah.domain.com/something`
+
+I dont know how to get the subdomain name to use in the rewrite rule.",2
+9701610,03/14/2012 12:03:50,1001034,10/18/2011 11:47:47,178,7,htaccess - internet server error 500 on XAMPP,"I am trying to run script on XAMPP but get ""internet server error 500"".  Its fine when running on the live server.  I assume this is a .htaccess error.  The htaccess code is below:
+
+    <IfModule mod_rewrite.c>
+        RewriteEngine on
+        RewriteRule    ^$    public/    [L]
+        RewriteRule    (.*) public/$1    [L]
+     </IfModule>
+
+I have enabled htaccess by uncommenting the line:
+
+> LoadModule rewrite_module modules/mod_rewrite.so
+
+in the config file.
+
+Any ideas?",apache,.htaccess,xampp,,,03/15/2012 12:49:29,off topic,1,107,8,"htaccess - internet server error 500 on XAMPP I am trying to run script on XAMPP but get ""internet server error 500"".  Its fine when running on the live server.  I assume this is a .htaccess error.  The htaccess code is below:
+
+    <IfModule mod_rewrite.c>
+        RewriteEngine on
+        RewriteRule    ^$    public/    [L]
+        RewriteRule    (.*) public/$1    [L]
+     </IfModule>
+
+I have enabled htaccess by uncommenting the line:
+
+> LoadModule rewrite_module modules/mod_rewrite.so
+
+in the config file.
+
+Any ideas?",3
