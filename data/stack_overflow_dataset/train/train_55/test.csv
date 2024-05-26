@@ -1,0 +1,1342 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+5994090,05/13/2011 15:18:59,632472,02/24/2011 14:26:57,15,2,Where is the Class Model in Xcode 4?,"This was asked [here][1] but that was a beta XCode. Now with official xcode 4, I don't found how to create the Class Model. In XCode 3 this is very easy and obvious: File->New File->Class Model document template in 'others'.
+
+Anyway, the main question is: There are Class Model in XCode 4?
+
+
+  [1]: http://stackoverflow.com/questions/5045714/where-is-the-class-model-in-xcode-4",xcode,xcode4,,,,,open,0,54,8,"Where is the Class Model in Xcode 4? This was asked [here][1] but that was a beta XCode. Now with official xcode 4, I don't found how to create the Class Model. In XCode 3 this is very easy and obvious: File->New File->Class Model document template in 'others'.
+
+Anyway, the main question is: There are Class Model in XCode 4?
+
+
+  [1]: http://stackoverflow.com/questions/5045714/where-is-the-class-model-in-xcode-4",2
+8881914,01/16/2012 15:09:46,1152090,01/16/2012 15:00:40,1,0,How to map Windows CTRL key to MAC Control Key in Real VNC?,"I am using RealVNC to remotely work with Xcode from a Windows machine.
+
+I find some of the operations in XCode require the use of MAC Control key (not CMD, OPT).
+
+Using windows CTRL key doesn't seem to map over to MAC.  Anyone know the answer to this?",xcode,vnc,,,,01/17/2012 03:15:26,off topic,1,47,13,"How to map Windows CTRL key to MAC Control Key in Real VNC? I am using RealVNC to remotely work with Xcode from a Windows machine.
+
+I find some of the operations in XCode require the use of MAC Control key (not CMD, OPT).
+
+Using windows CTRL key doesn't seem to map over to MAC.  Anyone know the answer to this?",2
+1021371,06/20/2009 10:20:14,101160,05/04/2009 21:38:12,97,5,Xcode: Adding Existing Files to Groups & Files Pane causes build error,"I'm working on a project hosted in Beanstalk and would like to access one of my files in my subversion repository. 
+
+I can clearly see the files ""SoundEffect.h"" and ""SoundEffect.m"" in the web-based browser directory, but the files do not appear in the ""Groups and Files"" pane on the left of Xcode after a refresh and update from Xcode.
+
+I tried to ""right click on a file, and add->existing files"" for both SoundEffect.(h|m) and they both appear. But now my project won't build and I get strange errors like
+
+""_AudioServicesPlaySystemSound"", referenced from:
+""_AudioServicesCreateSystemSoundID"", referenced from:
+""_AudioServicesDisposeSystemSoundID"", referenced from:
+
+even though I haven't used the files. 
+
+What is going on and how can I fix it? ",xcode,,,,,,open,0,111,12,"Xcode: Adding Existing Files to Groups & Files Pane causes build error I'm working on a project hosted in Beanstalk and would like to access one of my files in my subversion repository. 
+
+I can clearly see the files ""SoundEffect.h"" and ""SoundEffect.m"" in the web-based browser directory, but the files do not appear in the ""Groups and Files"" pane on the left of Xcode after a refresh and update from Xcode.
+
+I tried to ""right click on a file, and add->existing files"" for both SoundEffect.(h|m) and they both appear. But now my project won't build and I get strange errors like
+
+""_AudioServicesPlaySystemSound"", referenced from:
+""_AudioServicesCreateSystemSoundID"", referenced from:
+""_AudioServicesDisposeSystemSoundID"", referenced from:
+
+even though I haven't used the files. 
+
+What is going on and how can I fix it? ",1
+6231415,06/03/2011 18:53:58,761145,05/19/2011 13:24:59,11,0,want to develop an iphone app,"I am newbie and wish to develop an iphone application.I was amazed to know that we need to pay $99 to register in order to get xcode and then start creating applications.However, One of my friend suggested to get Xcode for $4.99 at appstore.I want to know whether the xcode + macbook is all I need to build an app or I need to have any other tools. please help",xcode,,,,,06/03/2011 18:57:04,not a real question,1,70,6,"want to develop an iphone app I am newbie and wish to develop an iphone application.I was amazed to know that we need to pay $99 to register in order to get xcode and then start creating applications.However, One of my friend suggested to get Xcode for $4.99 at appstore.I want to know whether the xcode + macbook is all I need to build an app or I need to have any other tools. please help",1
+5217759,03/07/2011 09:08:30,602257,02/03/2011 21:21:02,26,3,iPhone app compatibility,"i just want how to make sure that my application will be compatible with iPhone 4, 3GS,3G,iPad touch ?
+should i set up any parameters in Xcode or interface builder or both ?
+THX in advance :)
+
+",xcode,,,,,,open,0,35,3,"iPhone app compatibility i just want how to make sure that my application will be compatible with iPhone 4, 3GS,3G,iPad touch ?
+should i set up any parameters in Xcode or interface builder or both ?
+THX in advance :)
+
+",1
+5230403,03/08/2011 09:10:37,183014,10/02/2009 10:14:31,48,1,Strange memory error in xCode,"I'm getting some strange memory errors in xCode; it's accessing code from other apps which is very strange. 
+
+Here is the code:
+
+    
+[Session started at 2011-03-08 17:04:33 +0800.]
+2011-03-08 17:04:59.438 Movie[5309:207] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-[UIViewController _loadViewFromNibNamed:bundle:] loaded the ""MovieViewController"" nib but the view outlet was not set.'
+*** Call stack at first throw:
+(
+	0   CoreFoundation                      0x00daebe9 __exceptionPreprocess + 185
+	1   libobjc.A.dylib                     0x00f035c2 objc_exception_throw + 47
+	2   CoreFoundation                      0x00d67628 +[NSException raise:format:arguments:] + 136
+	3   CoreFoundation                      0x00d6759a +[NSException raise:format:] + 58
+	4   UIKit                               0x00367b75 -[UIViewController _loadViewFromNibNamed:bundle:] + 295
+	5   UIKit                               0x00365709 -[UIViewController loadView] + 120
+	6   UIKit                               0x003655e3 -[UIViewController view] + 56
+	7   Movie                               0x00002466 -[MovieAppDelegate application:didFinishLaunchingWithOptions:] + 79
+	8   UIKit                               0x002b81fa -[UIApplication _callInitializationDelegatesForURL:payload:suspended:] + 1163
+	9   UIKit                               0x002ba55e -[UIApplication _runWithURL:payload:launchOrientation:statusBarStyle:statusBarHidden:] + 439
+	10  UIKit                               0x002c4db2 -[UIApplication handleEvent:withNewEvent:] + 1533
+	11  UIKit                               0x002bd202 -[UIApplication sendEvent:] + 71
+	12  UIKit                               0x002c2732 _UIApplicationHandleEvent + 7576
+	13  GraphicsServices                    0x016e4a36 PurpleEventCallback + 1550
+	14  CoreFoundation                      0x00d90064 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 52
+	15  CoreFoundation                      0x00cf06f7 __CFRunLoopDoSource1 + 215
+	16  CoreFoundation                      0x00ced983 __CFRunLoopRun + 979
+	17  CoreFoundation                      0x00ced240 CFRunLoopRunSpecific + 208
+	18  CoreFoundation                      0x00ced161 CFRunLoopRunInMode + 97
+	19  UIKit                               0x002b9fa8 -[UIApplication _run] + 636
+	20  UIKit                               0x002c642e UIApplicationMain + 1160
+	21  Movie                               0x000023f4 main + 102
+	22  Movie                               0x00002385 start + 53
+)
+terminate called after throwing an instance of 'NSException'
+
+Can you tell me what this means?
+
+Thanks in advance!",xcode,,,,,,open,0,831,5,"Strange memory error in xCode I'm getting some strange memory errors in xCode; it's accessing code from other apps which is very strange. 
+
+Here is the code:
+
+    
+[Session started at 2011-03-08 17:04:33 +0800.]
+2011-03-08 17:04:59.438 Movie[5309:207] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-[UIViewController _loadViewFromNibNamed:bundle:] loaded the ""MovieViewController"" nib but the view outlet was not set.'
+*** Call stack at first throw:
+(
+	0   CoreFoundation                      0x00daebe9 __exceptionPreprocess + 185
+	1   libobjc.A.dylib                     0x00f035c2 objc_exception_throw + 47
+	2   CoreFoundation                      0x00d67628 +[NSException raise:format:arguments:] + 136
+	3   CoreFoundation                      0x00d6759a +[NSException raise:format:] + 58
+	4   UIKit                               0x00367b75 -[UIViewController _loadViewFromNibNamed:bundle:] + 295
+	5   UIKit                               0x00365709 -[UIViewController loadView] + 120
+	6   UIKit                               0x003655e3 -[UIViewController view] + 56
+	7   Movie                               0x00002466 -[MovieAppDelegate application:didFinishLaunchingWithOptions:] + 79
+	8   UIKit                               0x002b81fa -[UIApplication _callInitializationDelegatesForURL:payload:suspended:] + 1163
+	9   UIKit                               0x002ba55e -[UIApplication _runWithURL:payload:launchOrientation:statusBarStyle:statusBarHidden:] + 439
+	10  UIKit                               0x002c4db2 -[UIApplication handleEvent:withNewEvent:] + 1533
+	11  UIKit                               0x002bd202 -[UIApplication sendEvent:] + 71
+	12  UIKit                               0x002c2732 _UIApplicationHandleEvent + 7576
+	13  GraphicsServices                    0x016e4a36 PurpleEventCallback + 1550
+	14  CoreFoundation                      0x00d90064 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 52
+	15  CoreFoundation                      0x00cf06f7 __CFRunLoopDoSource1 + 215
+	16  CoreFoundation                      0x00ced983 __CFRunLoopRun + 979
+	17  CoreFoundation                      0x00ced240 CFRunLoopRunSpecific + 208
+	18  CoreFoundation                      0x00ced161 CFRunLoopRunInMode + 97
+	19  UIKit                               0x002b9fa8 -[UIApplication _run] + 636
+	20  UIKit                               0x002c642e UIApplicationMain + 1160
+	21  Movie                               0x000023f4 main + 102
+	22  Movie                               0x00002385 start + 53
+)
+terminate called after throwing an instance of 'NSException'
+
+Can you tell me what this means?
+
+Thanks in advance!",1
+10038520,04/06/2012 02:38:12,604731,02/05/2011 20:58:33,3,0,Setting up a simple button between TabBarController and Secondary view with core data,"I have a TabBarController using NSMutableArray to load information on a tableViewController. I have added CoreData to another view which will be linked to the Array (i.e Nsmutable Array item Fruit will link to another table view with a list of fruit added via CoreData and editable)
+
+Until I get all the core data stuff sorted out I have added a button that links from the tabBarController to the first core data table view so I can jump to that view and test my code. This leads to the following error on clicking that button;
+
+
+*Setting up a Fetched Results Controller for the Entity named Eat
+ *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'An instance of NSFetchedResultsController requires a non-nil fetchRequest and managedObjectContext'*
+
+Can anyone please point me in the right direction to either setup a simple button to click to another view temporarily, or if better, how to fix the error so I can go look at the views being setup for core data?
+
+Cheers",xcode,core-data,uitabbarcontroller,nsmutablearray,,,open,0,164,13,"Setting up a simple button between TabBarController and Secondary view with core data I have a TabBarController using NSMutableArray to load information on a tableViewController. I have added CoreData to another view which will be linked to the Array (i.e Nsmutable Array item Fruit will link to another table view with a list of fruit added via CoreData and editable)
+
+Until I get all the core data stuff sorted out I have added a button that links from the tabBarController to the first core data table view so I can jump to that view and test my code. This leads to the following error on clicking that button;
+
+
+*Setting up a Fetched Results Controller for the Entity named Eat
+ *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'An instance of NSFetchedResultsController requires a non-nil fetchRequest and managedObjectContext'*
+
+Can anyone please point me in the right direction to either setup a simple button to click to another view temporarily, or if better, how to fix the error so I can go look at the views being setup for core data?
+
+Cheers",4
+8228386,11/22/2011 14:26:35,1054983,11/19/2011 05:19:00,1,0,Segue from UIBarButtonItem in Storyboiard,"I'm having trouble adding a second bar button item to a UIBarButton through the Storyboard. I can add the button but I can't add a segue to a new view controller. I have no problem hooking up the first bar button item to a view controller but Storyboard won't allow me to make the connection from the bar button item to another view controller.
+
+I'm assuming this has to be done through code. Can anyone point me to a reference or tutorial that covers this?",xcode,storyboard,,,,,open,0,84,5,"Segue from UIBarButtonItem in Storyboiard I'm having trouble adding a second bar button item to a UIBarButton through the Storyboard. I can add the button but I can't add a segue to a new view controller. I have no problem hooking up the first bar button item to a view controller but Storyboard won't allow me to make the connection from the bar button item to another view controller.
+
+I'm assuming this has to be done through code. Can anyone point me to a reference or tutorial that covers this?",2
+8195853,11/19/2011 17:29:12,836026,07/08/2011 20:10:32,12,0,Decent Mac HW confguration to create iOS Apps using XCode,"I'm planning to buy Mac just to develop Apps for iPhone (iOS) using XCode. Hence, I need to know what a decent hardware configuration to develeop with XCode. 
+Since I will only use it for iphone developemnt, i dont want to spend alot of money on it. But also I want to get a good hardware that will not give hard to time. hence, what apple hardware and configuration you recommend.
+
+Thanks,, ",xcode,,,,,11/19/2011 22:39:05,not constructive,1,72,10,"Decent Mac HW confguration to create iOS Apps using XCode I'm planning to buy Mac just to develop Apps for iPhone (iOS) using XCode. Hence, I need to know what a decent hardware configuration to develeop with XCode. 
+Since I will only use it for iphone developemnt, i dont want to spend alot of money on it. But also I want to get a good hardware that will not give hard to time. hence, what apple hardware and configuration you recommend.
+
+Thanks,, ",1
+8953796,01/21/2012 14:36:52,1135556,01/07/2012 04:44:22,1,0,"Error submitting Mac app - ""The product archive package's signature is invalid""","I am trying to upload my Mac app 
+But when I submit or validate the archive there is always the following error showing:
+
+The product archive package's signature is invalid. Ensure that it is signed with your ""3rd Party Mac Developer Installer"" certificate.
+
+What I have to do?
+Thanks",xcode,osx,,,,,open,0,46,12,"Error submitting Mac app - ""The product archive package's signature is invalid"" I am trying to upload my Mac app 
+But when I submit or validate the archive there is always the following error showing:
+
+The product archive package's signature is invalid. Ensure that it is signed with your ""3rd Party Mac Developer Installer"" certificate.
+
+What I have to do?
+Thanks",2
+10283402,04/23/2012 15:21:35,1351577,04/23/2012 14:29:43,3,0,NSString and Japanese,"Does anyone know if NSString supports japanese characters? I wrote something like this:
+
+    NSString* str = @""日本語"";
+
+But that displays only some letters and numbers in the Xcode debugger. How can I write japanese words in an iphone app?",xcode,nsstring,japanese,,,,open,0,41,3,"NSString and Japanese Does anyone know if NSString supports japanese characters? I wrote something like this:
+
+    NSString* str = @""日本語"";
+
+But that displays only some letters and numbers in the Xcode debugger. How can I write japanese words in an iphone app?",3
+9774147,03/19/2012 16:40:21,1079647,12/04/2011 02:28:51,4,0,Xcode freeze at xib open,"**I have a mountain lion with xcode 4.1.
+When i open an XIB or compile an XIB, xcode Not Responding'.
+What i do NOT currently?**
+
+(I haved problem with compile when i haved xcode 4.4 for mountain lion too)",xcode,interface-builder,,,,,open,0,36,5,"Xcode freeze at xib open **I have a mountain lion with xcode 4.1.
+When i open an XIB or compile an XIB, xcode Not Responding'.
+What i do NOT currently?**
+
+(I haved problem with compile when i haved xcode 4.4 for mountain lion too)",2
+6413977,06/20/2011 15:52:09,720133,04/22/2011 06:20:14,16,0,Shortcut Recorder,"is there any way to have a Shortcut Recorder in Xcode 4, where the user can choose the shortcut ?
+
+I tried DDHotKey, which worked for me but with this the user can not choose th shortcut by himself.
+
+Then i tried to implement the Shortcut Recorder but there i can just work with Xcode 3 because of the ibplugin.
+
+So is there any way to have something like this in Xcode 4 ? :![enter image description here][1] 
+
+
+  [1]: http://i.stack.imgur.com/zQ5vz.png
+
+
+Thanks in advance",xcode,shortcut,hotkey,recorder,,,open,0,81,2,"Shortcut Recorder is there any way to have a Shortcut Recorder in Xcode 4, where the user can choose the shortcut ?
+
+I tried DDHotKey, which worked for me but with this the user can not choose th shortcut by himself.
+
+Then i tried to implement the Shortcut Recorder but there i can just work with Xcode 3 because of the ibplugin.
+
+So is there any way to have something like this in Xcode 4 ? :![enter image description here][1] 
+
+
+  [1]: http://i.stack.imgur.com/zQ5vz.png
+
+
+Thanks in advance",4
+10067559,04/08/2012 23:59:21,1121432,12/29/2011 15:15:31,1,0,I can't use the control drag function to hook up a button to action in .h when using storyboard with more than one view controller,"Why can't I use the control drag function to hook up a button to action in .h when using storyboard with more than one view controller? Is there another way to do this?
+
+Thanks a lot on beforehand!
+
+Anton",xcode,control,storyboard,drag,,,open,0,37,25,"I can't use the control drag function to hook up a button to action in .h when using storyboard with more than one view controller Why can't I use the control drag function to hook up a button to action in .h when using storyboard with more than one view controller? Is there another way to do this?
+
+Thanks a lot on beforehand!
+
+Anton",4
+7950583,10/31/2011 06:34:16,761890,05/19/2011 22:47:44,479,6,@autoreleasepool without ARC?,"I'm new to Xcode 4.2, and I'm not yet fully up to speed on ARC. However, I did read that @autoreleasepool replaces the manual use of autorelease pools and does some special magic under the hood to play nice with ARC.
+
+Yet, when I start a new project in Xcode 4.2 specifically with the ARC option turned **off** I still get @autoreleasepool statements in the template code.
+
+What's the deal here?
+",xcode,xcode4.2,automatic-ref-counting,,,,open,0,69,3,"@autoreleasepool without ARC? I'm new to Xcode 4.2, and I'm not yet fully up to speed on ARC. However, I did read that @autoreleasepool replaces the manual use of autorelease pools and does some special magic under the hood to play nice with ARC.
+
+Yet, when I start a new project in Xcode 4.2 specifically with the ARC option turned **off** I still get @autoreleasepool statements in the template code.
+
+What's the deal here?
+",3
+7484290,09/20/2011 11:20:48,954097,09/20/2011 06:11:54,1,0,How to manage big xcode projects,"I want to create big cocoa projects ,but i have no any idea how to manage it in best way considering best utilization of the system,memory and database intraction.",xcode,,,,,09/20/2011 15:54:30,not a real question,1,29,6,"How to manage big xcode projects I want to create big cocoa projects ,but i have no any idea how to manage it in best way considering best utilization of the system,memory and database intraction.",1
+10529943,05/10/2012 08:12:33,1245117,03/02/2012 13:02:05,1,0,Can't install Xcode 3.2.6,"I'm having trouble installing Xcode 3.2.6. I try install Xcode on Mac OS 10.7.3, 10.6.8, 10.6.7. I download Xcode on developer.apple.com and always have some error:
+The installation failed.
+
+An unknown installation error occurred.
+
+The Installer encountered an error that caused the installation to fail. Contact the software manufacturer for assistance.
+
+
+[Error screenshot][1]
+
+
+  [1]: https://www.dropbox.com/s/qsaigz5h011ae9f/Xcode_3.2.6_install_error.jpg.jpg
+",xcode,osx,apple,,,05/11/2012 14:12:11,off topic,1,52,4,"Can't install Xcode 3.2.6 I'm having trouble installing Xcode 3.2.6. I try install Xcode on Mac OS 10.7.3, 10.6.8, 10.6.7. I download Xcode on developer.apple.com and always have some error:
+The installation failed.
+
+An unknown installation error occurred.
+
+The Installer encountered an error that caused the installation to fail. Contact the software manufacturer for assistance.
+
+
+[Error screenshot][1]
+
+
+  [1]: https://www.dropbox.com/s/qsaigz5h011ae9f/Xcode_3.2.6_install_error.jpg.jpg
+",3
+1862248,12/07/2009 19:17:47,202875,11/04/2009 19:14:43,88,8,Xcode save code folding?,"I know it's not directly related to programming, but what better place then stackoverflow right?
+
+So code folding is an awesome feature which I love, but does anyone know if there is a way to get Xcode to remember where you have certain sections collapsed whenever you open a file? 
+
+BTW, I'm coding ruby on rails using git version control.",xcode,code-folding,code-formatting,ruby-on-rails,osx,,open,0,59,4,"Xcode save code folding? I know it's not directly related to programming, but what better place then stackoverflow right?
+
+So code folding is an awesome feature which I love, but does anyone know if there is a way to get Xcode to remember where you have certain sections collapsed whenever you open a file? 
+
+BTW, I'm coding ruby on rails using git version control.",5
+5323871,03/16/2011 10:20:45,338204,03/29/2010 14:31:57,236,28,Pros and Cons of XCODE4 ?,"Before installing xcode4, need know more 
+
+Pros
+*** git support
+
+Cons
+*** Different with 3.x 
+
+What else ?",xcode,xcode4,,,,03/17/2011 00:49:59,not constructive,1,15,6,"Pros and Cons of XCODE4 ? Before installing xcode4, need know more 
+
+Pros
+*** git support
+
+Cons
+*** Different with 3.x 
+
+What else ?",2
+10564610,05/12/2012 14:31:08,1022706,10/31/2011 21:02:08,6,0,NSCalendar - Custom Calendar,"On Mac OS X, If you go to system preferences > Date & Time > Open Language and Texts > On the Top click on Formats > and then with the drop down for calendar there is an option for a coptic calendar. How do I display this calendar in a Mac Application?",xcode,osx,cocoa,nsdate,nscalendar,,open,0,53,4,"NSCalendar - Custom Calendar On Mac OS X, If you go to system preferences > Date & Time > Open Language and Texts > On the Top click on Formats > and then with the drop down for calendar there is an option for a coptic calendar. How do I display this calendar in a Mac Application?",5
+4980678,02/12/2011 21:15:37,380014,06/30/2010 11:57:24,16,0,Xcode - Instruments on device,"I have jailbroken iPhone and I'm using Xcode 3.2.5 to debelop my apps.
+I found tutorial which show how to install apps on device without paying 99$ for developer account.
+
+I did what they've said and it works.
+But unfortunatelly, I can't use Instruments on device.
+
+I receive errors like:
+""Target failed to run: Remote exception encountered: 'Failed to get task for pid 2303'""
+
+Is it possible to use Instruments on device without paying for developer account?",xcode,device,instruments,,,02/14/2011 22:27:19,too localized,1,71,5,"Xcode - Instruments on device I have jailbroken iPhone and I'm using Xcode 3.2.5 to debelop my apps.
+I found tutorial which show how to install apps on device without paying 99$ for developer account.
+
+I did what they've said and it works.
+But unfortunatelly, I can't use Instruments on device.
+
+I receive errors like:
+""Target failed to run: Remote exception encountered: 'Failed to get task for pid 2303'""
+
+Is it possible to use Instruments on device without paying for developer account?",3
+5878120,05/04/2011 03:20:13,560145,01/02/2011 04:44:50,68,4,How to make a language parser,"I would like to make a natural language parsor that could know the question you are asking. How should I start this? I would like to be able to type a question on a screen, and the computer answers your question. Sort of like Tom Riddles Diary http://pandorabots.com/pandora/talk?botid=c96f911b3e35f9e1",xcode,nlp,stanford-nlp,,,05/04/2011 13:05:10,not a real question,1,48,6,"How to make a language parser I would like to make a natural language parsor that could know the question you are asking. How should I start this? I would like to be able to type a question on a screen, and the computer answers your question. Sort of like Tom Riddles Diary http://pandorabots.com/pandora/talk?botid=c96f911b3e35f9e1",3
+7245836,08/30/2011 15:37:28,20578,09/11/2008 10:52:31,12420,649,Why do I need a Java runtime to run XCode on Mac OS X 10.7?,"I just tried opening XCode on my Mac (10.7.1), and it required me to install Java for Mac OS X before it would run.
+
+How come XCode needs Java?",xcode,osx-lion,osx,,,08/30/2011 19:41:13,off topic,1,28,15,"Why do I need a Java runtime to run XCode on Mac OS X 10.7? I just tried opening XCode on my Mac (10.7.1), and it required me to install Java for Mac OS X before it would run.
+
+How come XCode needs Java?",3
+9366426,02/20/2012 18:27:51,1221654,02/20/2012 17:28:10,1,0,Iphone app crashes when I try to load a fifth xib with animation in it,"I´m building an app where I need a bunch of different animations. I use around 30 images to make the animations (see code). I´ve got 1 xib which are linked to the 6 xibs with animation. They all load fine, but when I load the 5th xib with animation the app crashes. It doesn´t matter which xib is the 5th one, it always crashes when I open the 5th one. To explain, I can load xib #1,2,3,4, and then it crashes on #5 - or I can load xib #5,4,2,6 and it crashes on #1. I don´t get a error in debug navigator when this happens, it just says ""paused"". I understand that it´s a memory issue on the iPhone as it doesn´t happen when I try it on the Simulator, but as I´m fairly new to programming I don´t know what to do with it. 
+Thanks for any help :)
+I only pasted one of the m codes since they´re all pretty much the same..
+
+----------
+
+
+    @implementation hoyrekryss
+    
+    
+    -(IBAction)back:(id)sender{
+        [animation removeFromSuperview];
+        [self.view removeFromSuperview];
+    }
+    
+    - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+    {
+        self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+        if (self) {
+            // Custom initialization
+        }
+        return self;
+    }
+    
+    - (void)didReceiveMemoryWarning
+    {
+        // Releases the view if it doesn't have a superview.
+        [super didReceiveMemoryWarning];
+        // Release any cached data, images, etc that aren't in use.
+    }
+    
+    
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+        animation.animationImages =[NSArray arrayWithObjects:
+                                    [UIImage imageNamed:@""hs0.png""],
+                                    [UIImage imageNamed:@""hs1.png""],
+                                    [UIImage imageNamed:@""hs2.png""],
+                                    [UIImage imageNamed:@""hs3.png""],
+                                    [UIImage imageNamed:@""hs4.png""],
+                                    [UIImage imageNamed:@""hs5.png""],
+                                    [UIImage imageNamed:@""hs6.png""],
+                                    [UIImage imageNamed:@""hs7.png""],
+                                    [UIImage imageNamed:@""hs8.png""],
+                                    [UIImage imageNamed:@""hs9.png""],
+                                    [UIImage imageNamed:@""hs10.png""],
+                                    [UIImage imageNamed:@""hs11.png""],
+                                    [UIImage imageNamed:@""hs12.png""],
+                                    [UIImage imageNamed:@""hs13.png""],
+                                    [UIImage imageNamed:@""hs14.png""],
+                                    [UIImage imageNamed:@""hs15.png""],
+                                    [UIImage imageNamed:@""hs16.png""],
+                                    [UIImage imageNamed:@""hs17.png""],
+                                    [UIImage imageNamed:@""hs18.png""],
+                                    [UIImage imageNamed:@""hs19.png""],
+                                    [UIImage imageNamed:@""hs20.png""],
+                                    [UIImage imageNamed:@""hs21.png""],
+                                    [UIImage imageNamed:@""hs22.png""],
+                                    [UIImage imageNamed:@""hs23.png""],
+                                    [UIImage imageNamed:@""hs24.png""],
+                                    [UIImage imageNamed:@""hs25.png""], nil ];
+        [animation setAnimationRepeatCount:20];
+        [animation setAnimationDuration:10];
+        [animation startAnimating];
+    
+        // Do any additional setup after loading the view from its nib.
+    }
+    
+    - (void)viewDidUnload
+    {
+    
+        [super viewDidUnload];
+    
+        
+    
+        // Release any retained subviews of the main view.
+        // e.g. self.myOutlet = nil;
+    }
+    
+    - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+    {
+        // Return YES for supported orientations
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    }
+    
+    @end
+
+",xcode,animation,application,crash,,,open,0,1515,15,"Iphone app crashes when I try to load a fifth xib with animation in it I´m building an app where I need a bunch of different animations. I use around 30 images to make the animations (see code). I´ve got 1 xib which are linked to the 6 xibs with animation. They all load fine, but when I load the 5th xib with animation the app crashes. It doesn´t matter which xib is the 5th one, it always crashes when I open the 5th one. To explain, I can load xib #1,2,3,4, and then it crashes on #5 - or I can load xib #5,4,2,6 and it crashes on #1. I don´t get a error in debug navigator when this happens, it just says ""paused"". I understand that it´s a memory issue on the iPhone as it doesn´t happen when I try it on the Simulator, but as I´m fairly new to programming I don´t know what to do with it. 
+Thanks for any help :)
+I only pasted one of the m codes since they´re all pretty much the same..
+
+----------
+
+
+    @implementation hoyrekryss
+    
+    
+    -(IBAction)back:(id)sender{
+        [animation removeFromSuperview];
+        [self.view removeFromSuperview];
+    }
+    
+    - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+    {
+        self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+        if (self) {
+            // Custom initialization
+        }
+        return self;
+    }
+    
+    - (void)didReceiveMemoryWarning
+    {
+        // Releases the view if it doesn't have a superview.
+        [super didReceiveMemoryWarning];
+        // Release any cached data, images, etc that aren't in use.
+    }
+    
+    
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+        animation.animationImages =[NSArray arrayWithObjects:
+                                    [UIImage imageNamed:@""hs0.png""],
+                                    [UIImage imageNamed:@""hs1.png""],
+                                    [UIImage imageNamed:@""hs2.png""],
+                                    [UIImage imageNamed:@""hs3.png""],
+                                    [UIImage imageNamed:@""hs4.png""],
+                                    [UIImage imageNamed:@""hs5.png""],
+                                    [UIImage imageNamed:@""hs6.png""],
+                                    [UIImage imageNamed:@""hs7.png""],
+                                    [UIImage imageNamed:@""hs8.png""],
+                                    [UIImage imageNamed:@""hs9.png""],
+                                    [UIImage imageNamed:@""hs10.png""],
+                                    [UIImage imageNamed:@""hs11.png""],
+                                    [UIImage imageNamed:@""hs12.png""],
+                                    [UIImage imageNamed:@""hs13.png""],
+                                    [UIImage imageNamed:@""hs14.png""],
+                                    [UIImage imageNamed:@""hs15.png""],
+                                    [UIImage imageNamed:@""hs16.png""],
+                                    [UIImage imageNamed:@""hs17.png""],
+                                    [UIImage imageNamed:@""hs18.png""],
+                                    [UIImage imageNamed:@""hs19.png""],
+                                    [UIImage imageNamed:@""hs20.png""],
+                                    [UIImage imageNamed:@""hs21.png""],
+                                    [UIImage imageNamed:@""hs22.png""],
+                                    [UIImage imageNamed:@""hs23.png""],
+                                    [UIImage imageNamed:@""hs24.png""],
+                                    [UIImage imageNamed:@""hs25.png""], nil ];
+        [animation setAnimationRepeatCount:20];
+        [animation setAnimationDuration:10];
+        [animation startAnimating];
+    
+        // Do any additional setup after loading the view from its nib.
+    }
+    
+    - (void)viewDidUnload
+    {
+    
+        [super viewDidUnload];
+    
+        
+    
+        // Release any retained subviews of the main view.
+        // e.g. self.myOutlet = nil;
+    }
+    
+    - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+    {
+        // Return YES for supported orientations
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    }
+    
+    @end
+
+",4
+8977309,01/23/2012 19:18:04,1144012,01/11/2012 19:42:55,198,15,Images staying behind in Xcode or Phonegap?,"So, I'm having a really strange error in my app right now. I'm using Zepto and Phonegap. I have a target that moves around the screen, and used to load it from an image. Now, I'm using css to draw it. However, even though I removed all copies of the image, and even the image and div tags in the HTML file, the image sticks around. I have no idea what's causing it, I've restarted several times, and cleaned it several more. Does anyone know what may be causing this?",xcode,image,phonegap,zepto,,01/24/2012 20:54:36,too localized,1,90,7,"Images staying behind in Xcode or Phonegap? So, I'm having a really strange error in my app right now. I'm using Zepto and Phonegap. I have a target that moves around the screen, and used to load it from an image. Now, I'm using css to draw it. However, even though I removed all copies of the image, and even the image and div tags in the HTML file, the image sticks around. I have no idea what's causing it, I've restarted several times, and cleaned it several more. Does anyone know what may be causing this?",4
+11238244,06/28/2012 04:50:40,1408546,05/21/2012 18:09:38,20,0,UIScrollView bounds.size,"I am using a UIScrollView in an iPhone xib, and a property called myScrollView to read the size of the scroll view.
+
+@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+
+When I try to read or use the bounds.size of the scroll view it comes out different than the dimentions I have set up in the xib scaled to 320 x 117. But myScrollView.bounds.size.height returns 583. Shouldn't it read the same? Should I set the size some other way?
+
+log statement:   
+
+    NSLog(@""scrollview x y: %f,%f"", myScrollView.bounds.size.width, myScrollView.bounds.size.height);
+
+output:    
+
+    2012-06-28 11:38:13.150 MyApp[1380:707] scrollview x y: 320.000000,583.000000",xcode,uiscrollview,bounds,,,,open,0,102,2,"UIScrollView bounds.size I am using a UIScrollView in an iPhone xib, and a property called myScrollView to read the size of the scroll view.
+
+@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+
+When I try to read or use the bounds.size of the scroll view it comes out different than the dimentions I have set up in the xib scaled to 320 x 117. But myScrollView.bounds.size.height returns 583. Shouldn't it read the same? Should I set the size some other way?
+
+log statement:   
+
+    NSLog(@""scrollview x y: %f,%f"", myScrollView.bounds.size.width, myScrollView.bounds.size.height);
+
+output:    
+
+    2012-06-28 11:38:13.150 MyApp[1380:707] scrollview x y: 320.000000,583.000000",3
+11725957,07/30/2012 16:47:58,866262,07/27/2011 20:30:43,134,0,How to install Xcode 4.4?,"I currently have Xcode 4.2.1, Mac OS X 10.7.4, and Lion. When I try to click the install button for Xcode 4.4 from the App Store. It shows this waiting sign:
+http://www.rdmag.com/WorkArea/images/application/loading_big.gif But other than that nothing else happens.",xcode,xcode4,,,,,open,0,38,5,"How to install Xcode 4.4? I currently have Xcode 4.2.1, Mac OS X 10.7.4, and Lion. When I try to click the install button for Xcode 4.4 from the App Store. It shows this waiting sign:
+http://www.rdmag.com/WorkArea/images/application/loading_big.gif But other than that nothing else happens.",2
+9814724,03/22/2012 00:13:32,1226041,02/22/2012 14:08:59,5,0,segue from allertview,"I'm stuck wringing to change the view by a segue after the user presses a button in a uiallertview. 
+
+This is what i have so far:
+
+
+    - (void)viewDidLoad
+    {
+        [bericht setEditable:NO];
+        [bericht setUserInteractionEnabled:NO];
+        [super viewDidLoad];
+        
+        Reachability *r = [Reachability reachabilityWithHostName:@""www.google.com""];
+        NetworkStatus internetStatus = [r currentReachabilityStatus];
+        
+        if ((internetStatus == ReachableViaWiFi) || (internetStatus == ReachableViaWWAN)){
+            dispatch_async(kBgQueue, ^{
+                NSData* data = [NSData dataWithContentsOfURL:kJsonURL];
+                [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+            });
+        } else {
+            
+            UIAlertView *geenInternet = [[UIAlertView alloc] initWithTitle:@""Geen Internet"" message:@""Voor het gebruik van deze app is een internet verbinding nodig. Momenteel bent u niet verbonden met het internet. Probeer het later nog eens."" delegate:self cancelButtonTitle:@""OK"" otherButtonTitles: nil];
+            [geenInternet show];
+        
+        }
+        
+    }
+    
+    -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+        
+        if (buttonIndex == 0) {
+            [self preformSegueWithIdentifier:@""geenInternetSegue"" sender:self];
+        } else {
+            NSLog(@""Dafaqu?"");
+        }
+    }
+
+The `[self preformSegueWithIdentifier:@""geenInternetSegue"" sender:self];` part doesn't work. anny toughts on how i can fix this?
+
+Tnx",xcode,ios5,storyboard,segue,,04/30/2012 16:07:49,too localized,1,382,3,"segue from allertview I'm stuck wringing to change the view by a segue after the user presses a button in a uiallertview. 
+
+This is what i have so far:
+
+
+    - (void)viewDidLoad
+    {
+        [bericht setEditable:NO];
+        [bericht setUserInteractionEnabled:NO];
+        [super viewDidLoad];
+        
+        Reachability *r = [Reachability reachabilityWithHostName:@""www.google.com""];
+        NetworkStatus internetStatus = [r currentReachabilityStatus];
+        
+        if ((internetStatus == ReachableViaWiFi) || (internetStatus == ReachableViaWWAN)){
+            dispatch_async(kBgQueue, ^{
+                NSData* data = [NSData dataWithContentsOfURL:kJsonURL];
+                [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+            });
+        } else {
+            
+            UIAlertView *geenInternet = [[UIAlertView alloc] initWithTitle:@""Geen Internet"" message:@""Voor het gebruik van deze app is een internet verbinding nodig. Momenteel bent u niet verbonden met het internet. Probeer het later nog eens."" delegate:self cancelButtonTitle:@""OK"" otherButtonTitles: nil];
+            [geenInternet show];
+        
+        }
+        
+    }
+    
+    -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+        
+        if (buttonIndex == 0) {
+            [self preformSegueWithIdentifier:@""geenInternetSegue"" sender:self];
+        } else {
+            NSLog(@""Dafaqu?"");
+        }
+    }
+
+The `[self preformSegueWithIdentifier:@""geenInternetSegue"" sender:self];` part doesn't work. anny toughts on how i can fix this?
+
+Tnx",4
+10679901,05/21/2012 05:30:25,1381179,05/08/2012 04:42:05,1,0,How to display rss feed from wordpress site in Xcode 4.3.2 iOS 5 SDK for iPhone?,"I've viewed tutorials from: http://www.raywenderlich.com/ and similar articles.
+
+I've downloaded and viewed github:
+https://github.com/mwaterfall/MWFeedParser
+
+I've yet to find a simple way to do the following:
+
+Show the last 10 articles (via rss feed) of one specific website in a tableview (with or without image not important right now).
+When user clicks on a tableview cell, they will see the post with pictures and main body content.
+
+Understand that I'm still an amateur iOS 5 dev and that I have yet to use ANY 3rd party libraries (from github, etc.), therefore any answers that might direct me to simple tutorials, or how to easily implement a 3rd party library will be helpful. Meanwhile I will continue to research and understand what I have found thus far in addition to github. But I figured I would post this question in the meantime. Thanks for any support.
+",xcode,wordpress,ios5,rss,reader,,open,0,138,16,"How to display rss feed from wordpress site in Xcode 4.3.2 iOS 5 SDK for iPhone? I've viewed tutorials from: http://www.raywenderlich.com/ and similar articles.
+
+I've downloaded and viewed github:
+https://github.com/mwaterfall/MWFeedParser
+
+I've yet to find a simple way to do the following:
+
+Show the last 10 articles (via rss feed) of one specific website in a tableview (with or without image not important right now).
+When user clicks on a tableview cell, they will see the post with pictures and main body content.
+
+Understand that I'm still an amateur iOS 5 dev and that I have yet to use ANY 3rd party libraries (from github, etc.), therefore any answers that might direct me to simple tutorials, or how to easily implement a 3rd party library will be helpful. Meanwhile I will continue to research and understand what I have found thus far in addition to github. But I figured I would post this question in the meantime. Thanks for any support.
+",5
+2325517,02/24/2010 11:22:34,268733,02/08/2010 15:01:49,100,0,Is there a trick to see NSString values in an NSMutableArray in Xcode debugger?,"When I debug, I never get the value of an NSString inside of an array. All I see are cryptic symbols, probably memory addresses of something like 0x1dc3753. I dig into all the stuff and expand everything, but no humanly readable value at all. Not really useful at all. How do you go about this (besides NSLogging everything)?",xcode,debugging,nsstring,nsarray,iphone,,open,0,58,14,"Is there a trick to see NSString values in an NSMutableArray in Xcode debugger? When I debug, I never get the value of an NSString inside of an array. All I see are cryptic symbols, probably memory addresses of something like 0x1dc3753. I dig into all the stuff and expand everything, but no humanly readable value at all. Not really useful at all. How do you go about this (besides NSLogging everything)?",5
+7874426,10/24/2011 10:45:06,688262,04/01/2011 20:40:12,15,1,How to bookmark/mark lines in Xcode 4?,"I work on a large project with lots of files. How can I bookmark or mark a specific file and a line within it?
+
+Thanks.",xcode,xcode4,,,,,open,0,24,7,"How to bookmark/mark lines in Xcode 4? I work on a large project with lots of files. How can I bookmark or mark a specific file and a line within it?
+
+Thanks.",2
+6491194,06/27/2011 09:56:15,277193,02/19/2010 17:31:50,66,2,Xcode 4 line of crash in code,"Xcode 3 would show me the line that caused a crash when debugging.
+How do you turn this feature on in Xcode 4 ??
+I have added an Exception Breakpoint as suggested here but no joy:
+
+http://stackoverflow.com/questions/5453859/how-to-display-the-exact-line-of-code-causing-application-crash-in-xcode-4-debugg",xcode,xcode4,,,,,open,0,34,7,"Xcode 4 line of crash in code Xcode 3 would show me the line that caused a crash when debugging.
+How do you turn this feature on in Xcode 4 ??
+I have added an Exception Breakpoint as suggested here but no joy:
+
+http://stackoverflow.com/questions/5453859/how-to-display-the-exact-line-of-code-causing-application-crash-in-xcode-4-debugg",2
+7422560,09/14/2011 20:25:18,815367,06/25/2011 13:49:53,48,0,How to restore default xib values each time after returning back from another view?,"I'm using a xib in xCode4 which is a table filled largely with static, default values. (These values were manually set in IB and are typically dashes to show empty cells.)  The user enters input parameters on a preceding view, a bunch of calculations happen, and some of the default values on the xib on then updated.
+
+My question is, when the user goes back to change the input parameters, new calculations are done on different values, and the xib is viewed a second (or third, etc.) time, how can I restore all the default values before updating some of them with calculated values? Otherwise I have to programmatically set either the default or the calculated value for each variable.
+
+Thanks for the help.",xcode,xib,default-value,,,,open,0,123,14,"How to restore default xib values each time after returning back from another view? I'm using a xib in xCode4 which is a table filled largely with static, default values. (These values were manually set in IB and are typically dashes to show empty cells.)  The user enters input parameters on a preceding view, a bunch of calculations happen, and some of the default values on the xib on then updated.
+
+My question is, when the user goes back to change the input parameters, new calculations are done on different values, and the xib is viewed a second (or third, etc.) time, how can I restore all the default values before updating some of them with calculated values? Otherwise I have to programmatically set either the default or the calculated value for each variable.
+
+Thanks for the help.",3
+7206924,08/26/2011 15:18:21,914387,08/26/2011 15:18:21,1,0,Converting previous website code to YII framework code for images data record,"Thanks guys for this useful resources. I have this code for inserting the image information in a database from my previous website and am converting it to to use Yii. as part of uploading the files and getting the data to insert in the database the code works fine only my loop does not give the right values for one column name main_image which should be set to 1 or 0 based on the condition from the select statement.
+Here is the previous code.
+
+    //see if listing already has main image set if not set image as main
+	$sql = ""SELECT COUNT(*) FROM listimages WHERE listingid = "" . $listingid . "" AND  mainimage =1"";
+	$res = sqlQuery($sql); if(sqlErrorReturn())   sqlDebug(__FILE__,__LINE__,sqlErrorReturn());
+	$num = sqlFetchRow($res);
+
+    	if ($num['0'] > 0) {
+		if (!empty($save_path)) {
+			$sql = ""INSERT INTO listimages (imagepath,imagethumbpath,mainimage,listingid,owner,approved) VALUES ('"" . $save_path . ""','"" . $save_thumb_path . ""',0, "" . $listingid . "", '"" . $owner . ""', "" . $approved . "")"";
+			$res = sqlQuery($sql); if(sqlErrorReturn()) sqlDebug(__FILE__,__LINE__,sqlErrorReturn());
+			return 99;
+		}
+	} else {
+		if (!empty($save_path)) {
+			$sql = ""INSERT INTO listimages (imagepath,imagethumbpath,mainimage,listingid,owner,approved) VALUES ('"" . $save_path . ""','"" . $save_thumb_path . ""',1, "" . $listingid . "", '"" . $owner . ""', "" . $approved . "")"";
+			$res = sqlQuery($sql); if(sqlErrorReturn()) sqlDebug(__FILE__,__LINE__,sqlErrorReturn());
+			return 99;
+		}
+	}
+
+And here is my Yii code
+
+    //See if listing already has main_image set if not set image as main
+             $sql = ""SELECT COUNT(*) FROM {{auto_listing_images}} WHERE listing_id = :listingId AND main_image = :mainImage"";
+             $command = Yii::app()->db->createCommand($sql);
+             $command->bindValue("":listingId"", $listing_id, PDO::PARAM_INT);
+             $command->bindValue("":mainImage"", 1, PDO::PARAM_INT);
+             $result = $command->queryAll();
+              foreach($result as $num){
+             //$num = $command->queryAll($result);
+             //write image file on the database with respect to number
+             if(isset($num['0']) > 0) {
+               if(!empty($save_path)){
+             $sql = ""INSERT INTO {{auto_listing_images}} (image_path, image_thumb_path, main_image, listing_id, create_time, author_id)
+                                 VALUES(:imagePath, :imageThumbPath, :mainImage, :listingId, :createTime, :authorId)"";
+             $command = Yii::app()->db->createCommand($sql);
+             $command->bindValue("":imagePath"", $save_path, PDO::PARAM_STR);
+             $command->bindValue("":imageThumbPath"", $thumbDestName, PDO::PARAM_STR);
+             $command->bindValue("":mainImage"", 0, PDO::PARAM_INT);
+             $command->bindValue("":listingId"", $listing_id, PDO::PARAM_INT);
+             $command->bindValue("":createTime"", time(), PDO::PARAM_INT);
+             $command->bindValue("":authorId"", Yii::app()->user->id, PDO::PARAM_INT);
+             return $command->execute();
+                 }
+             } else {
+                if(!empty($save_path))
+                {
+             //write image file on the database
+             $sql = ""INSERT INTO {{auto_listing_images}} (image_path, image_thumb_path, main_image, listing_id, create_time, author_id)
+                                 VALUES(:imagePath, :imageThumbPath, :mainImage, :listingId, :createTime, :authorId)"";
+             $command = Yii::app()->db->createCommand($sql);
+             $command->bindValue("":imagePath"", $save_path, PDO::PARAM_STR);
+             $command->bindValue("":imageThumbPath"", $thumbDestName, PDO::PARAM_STR);
+             $command->bindValue("":mainImage"", 1, PDO::PARAM_INT);
+             $command->bindValue("":listingId"", $listing_id, PDO::PARAM_INT);
+             $command->bindValue("":createTime"", time(), PDO::PARAM_INT);
+             $command->bindValue("":authorId"", Yii::app()->user->id, PDO::PARAM_INT);
+             $command->execute();
+                }
+           
+             }
+            }
+Am just confused as with the previous query assign query to $res variable then fetch the row as this is called return record/result set in mysql. in yii i thought it will be queryAll then just use foreach to go through each row. Please help as the way my code is and try to run it always insert 1 in the main_image whatever how many times I run it. Again is only the main_image section not being inserted correctly with the condition.",xcode,image,yii,,,08/31/2011 02:59:51,too localized,1,974,12,"Converting previous website code to YII framework code for images data record Thanks guys for this useful resources. I have this code for inserting the image information in a database from my previous website and am converting it to to use Yii. as part of uploading the files and getting the data to insert in the database the code works fine only my loop does not give the right values for one column name main_image which should be set to 1 or 0 based on the condition from the select statement.
+Here is the previous code.
+
+    //see if listing already has main image set if not set image as main
+	$sql = ""SELECT COUNT(*) FROM listimages WHERE listingid = "" . $listingid . "" AND  mainimage =1"";
+	$res = sqlQuery($sql); if(sqlErrorReturn())   sqlDebug(__FILE__,__LINE__,sqlErrorReturn());
+	$num = sqlFetchRow($res);
+
+    	if ($num['0'] > 0) {
+		if (!empty($save_path)) {
+			$sql = ""INSERT INTO listimages (imagepath,imagethumbpath,mainimage,listingid,owner,approved) VALUES ('"" . $save_path . ""','"" . $save_thumb_path . ""',0, "" . $listingid . "", '"" . $owner . ""', "" . $approved . "")"";
+			$res = sqlQuery($sql); if(sqlErrorReturn()) sqlDebug(__FILE__,__LINE__,sqlErrorReturn());
+			return 99;
+		}
+	} else {
+		if (!empty($save_path)) {
+			$sql = ""INSERT INTO listimages (imagepath,imagethumbpath,mainimage,listingid,owner,approved) VALUES ('"" . $save_path . ""','"" . $save_thumb_path . ""',1, "" . $listingid . "", '"" . $owner . ""', "" . $approved . "")"";
+			$res = sqlQuery($sql); if(sqlErrorReturn()) sqlDebug(__FILE__,__LINE__,sqlErrorReturn());
+			return 99;
+		}
+	}
+
+And here is my Yii code
+
+    //See if listing already has main_image set if not set image as main
+             $sql = ""SELECT COUNT(*) FROM {{auto_listing_images}} WHERE listing_id = :listingId AND main_image = :mainImage"";
+             $command = Yii::app()->db->createCommand($sql);
+             $command->bindValue("":listingId"", $listing_id, PDO::PARAM_INT);
+             $command->bindValue("":mainImage"", 1, PDO::PARAM_INT);
+             $result = $command->queryAll();
+              foreach($result as $num){
+             //$num = $command->queryAll($result);
+             //write image file on the database with respect to number
+             if(isset($num['0']) > 0) {
+               if(!empty($save_path)){
+             $sql = ""INSERT INTO {{auto_listing_images}} (image_path, image_thumb_path, main_image, listing_id, create_time, author_id)
+                                 VALUES(:imagePath, :imageThumbPath, :mainImage, :listingId, :createTime, :authorId)"";
+             $command = Yii::app()->db->createCommand($sql);
+             $command->bindValue("":imagePath"", $save_path, PDO::PARAM_STR);
+             $command->bindValue("":imageThumbPath"", $thumbDestName, PDO::PARAM_STR);
+             $command->bindValue("":mainImage"", 0, PDO::PARAM_INT);
+             $command->bindValue("":listingId"", $listing_id, PDO::PARAM_INT);
+             $command->bindValue("":createTime"", time(), PDO::PARAM_INT);
+             $command->bindValue("":authorId"", Yii::app()->user->id, PDO::PARAM_INT);
+             return $command->execute();
+                 }
+             } else {
+                if(!empty($save_path))
+                {
+             //write image file on the database
+             $sql = ""INSERT INTO {{auto_listing_images}} (image_path, image_thumb_path, main_image, listing_id, create_time, author_id)
+                                 VALUES(:imagePath, :imageThumbPath, :mainImage, :listingId, :createTime, :authorId)"";
+             $command = Yii::app()->db->createCommand($sql);
+             $command->bindValue("":imagePath"", $save_path, PDO::PARAM_STR);
+             $command->bindValue("":imageThumbPath"", $thumbDestName, PDO::PARAM_STR);
+             $command->bindValue("":mainImage"", 1, PDO::PARAM_INT);
+             $command->bindValue("":listingId"", $listing_id, PDO::PARAM_INT);
+             $command->bindValue("":createTime"", time(), PDO::PARAM_INT);
+             $command->bindValue("":authorId"", Yii::app()->user->id, PDO::PARAM_INT);
+             $command->execute();
+                }
+           
+             }
+            }
+Am just confused as with the previous query assign query to $res variable then fetch the row as this is called return record/result set in mysql. in yii i thought it will be queryAll then just use foreach to go through each row. Please help as the way my code is and try to run it always insert 1 in the main_image whatever how many times I run it. Again is only the main_image section not being inserted correctly with the condition.",3
+9251266,02/12/2012 18:10:43,1204906,02/12/2012 09:22:29,3,0,xcode 4.2.1 - storyboard - Moving from different view using modal and having Tab bar visible,"In xcode storyboard, I have created a Tab Bar Controller that goes to 4 different tabs. One of the tabs is the main menu that has the same links available at the Tab bar. When I use the tab bar to move to the tabs, I do have the tab bar visible. But when I use the main menu links it goes fine to the different views but I lose the tab bar. How can I go from view to other view without losing the tab bar.
+
+I have no header files in my project everything is done through storyboard.",xcode,storyboard,xcode4.2.1,,,,open,0,99,16,"xcode 4.2.1 - storyboard - Moving from different view using modal and having Tab bar visible In xcode storyboard, I have created a Tab Bar Controller that goes to 4 different tabs. One of the tabs is the main menu that has the same links available at the Tab bar. When I use the tab bar to move to the tabs, I do have the tab bar visible. But when I use the main menu links it goes fine to the different views but I lose the tab bar. How can I go from view to other view without losing the tab bar.
+
+I have no header files in my project everything is done through storyboard.",3
+10780019,05/28/2012 06:07:08,146603,07/28/2009 18:33:58,2203,47,What is XCode schemes and targets?,"Is there any tutorial/documentation out there explaining what is xCode **schemes** and **targets** to a newbie to xcode and its practical usage while doing iOS programming?
+
+Thanks.",xcode,xcode4,xcode4.2,targets,,05/29/2012 04:28:55,not constructive,1,26,6,"What is XCode schemes and targets? Is there any tutorial/documentation out there explaining what is xCode **schemes** and **targets** to a newbie to xcode and its practical usage while doing iOS programming?
+
+Thanks.",4
+8042485,11/07/2011 20:54:14,1034502,11/07/2011 20:51:08,1,0,"expected identifier before ""{"" token","#pragma mark CLLocationManagerDelegate Methods 
+
+-(void)locationmanager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation  *)newLocation fromLocation:(CLLocation *) {   **error expected identifier before  ""{""  token** 
+
+MKCoordinateSpan span; 
+span.latitudeDelta = 0,2;
+span.longitudeDelta = 0,2;
+
+MKCoordinateRegion region; 
+region.span = span;
+region.center = newLocation.coordinate;
+
+[viewController.mapview setRegion:region animated:YES];
+viewController.mapview.showsUserLocation = YES;
+
+viewController.latitude.text =[NSString stringWithFormat:@""Xf"", newLocation.coordinate.latitude]
+viewController.longitude.text =[NSString stringWithFormat:@""Xf"", newLocation.coordinate.longitude]
+
+}
+
+@end
+",xcode,,,,,11/25/2011 21:31:57,too localized,1,45,5,"expected identifier before ""{"" token #pragma mark CLLocationManagerDelegate Methods 
+
+-(void)locationmanager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation  *)newLocation fromLocation:(CLLocation *) {   **error expected identifier before  ""{""  token** 
+
+MKCoordinateSpan span; 
+span.latitudeDelta = 0,2;
+span.longitudeDelta = 0,2;
+
+MKCoordinateRegion region; 
+region.span = span;
+region.center = newLocation.coordinate;
+
+[viewController.mapview setRegion:region animated:YES];
+viewController.mapview.showsUserLocation = YES;
+
+viewController.latitude.text =[NSString stringWithFormat:@""Xf"", newLocation.coordinate.latitude]
+viewController.longitude.text =[NSString stringWithFormat:@""Xf"", newLocation.coordinate.longitude]
+
+}
+
+@end
+",1
+3837556,10/01/2010 08:26:12,431764,08/26/2010 11:01:31,3,0,Navigation application in mac,"i am new to mac development, i have to create an application which will have multiple views/windows like in installation wizard( where few option are selected one after other etc). Can any one provide me a link for any such tutorial or where can i refer them. sample app will be very much appreciated.",xcode,navigation,osx,,,,open,0,54,4,"Navigation application in mac i am new to mac development, i have to create an application which will have multiple views/windows like in installation wizard( where few option are selected one after other etc). Can any one provide me a link for any such tutorial or where can i refer them. sample app will be very much appreciated.",3
+7862148,10/22/2011 19:46:00,244329,01/05/2010 22:52:56,34,4,Data relationships in xcode 4.2,"How to I set a one-to-many relationship in xcode 4.2?
+How do I set the delete rule?",xcode,sdk,,,,10/23/2011 19:52:19,too localized,1,16,5,"Data relationships in xcode 4.2 How to I set a one-to-many relationship in xcode 4.2?
+How do I set the delete rule?",2
+8633002,12/26/2011 04:54:07,123011,06/15/2009 09:54:08,1710,71,Use the aggregate target to sign and deploy multiple apps,"I have an XCode project with multiple target that compiles some shared source code file, in addition to specific .xib files. Basically each target builds a different app, but under the hood, most of the code is shared.
+
+I would like a way to automate the deployement of these apps. Currently, I need to select the target in the scheme drop down, select Product > Archive, click share, select the appropriate code signing certificate and a location, then deploy my .ipa.
+
+I think I need to use an Aggregate that builds all my targets and [use `xcrun` as seen in this question on StackOverflow][1] as a script run in the build phase of each target, but I'm blocked at the code signing part. I found the `CODE_SIGN_IDENTITY` in the Build Setting section of the [Xcode Build Setting Reference][2]. **How can I programmatically access the Provisionning Profile specified in each target's Build Settings ?** 
+
+I guess a last resort would be to store the profiles in a know directory relative to my source code path
+
+  [1]: http://stackoverflow.com/questions/2664885/xcode-build-and-archive-from-command-line
+  [2]: http://developer.apple.com/library/mac/#documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html",xcode,,,,,,open,0,178,10,"Use the aggregate target to sign and deploy multiple apps I have an XCode project with multiple target that compiles some shared source code file, in addition to specific .xib files. Basically each target builds a different app, but under the hood, most of the code is shared.
+
+I would like a way to automate the deployement of these apps. Currently, I need to select the target in the scheme drop down, select Product > Archive, click share, select the appropriate code signing certificate and a location, then deploy my .ipa.
+
+I think I need to use an Aggregate that builds all my targets and [use `xcrun` as seen in this question on StackOverflow][1] as a script run in the build phase of each target, but I'm blocked at the code signing part. I found the `CODE_SIGN_IDENTITY` in the Build Setting section of the [Xcode Build Setting Reference][2]. **How can I programmatically access the Provisionning Profile specified in each target's Build Settings ?** 
+
+I guess a last resort would be to store the profiles in a know directory relative to my source code path
+
+  [1]: http://stackoverflow.com/questions/2664885/xcode-build-and-archive-from-command-line
+  [2]: http://developer.apple.com/library/mac/#documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html",1
+7795399,10/17/2011 14:41:15,812710,06/23/2011 17:11:28,23,1,XCode & Phonegap with $.get function,"I have a problem, I created a Webapps into HTML and JavaScript to create a native iPhone with PhoneGap. This works properly on Safari browser and iPhone, when compiling with xcode, I have a problem with the $.get function that does not receive data from my external server.
+example code:
+
+    $.get('http://www.mydomain.com/retriveinfo.php', function(data) {
+	    document.getElementById(""result"").innerHTML='data';
+	    jQT.goTo($('#page-result),'slideleft');
+    });
+
+you can not use $. get? there an alternative? IOS Simulator bug? Please Help Me.",xcode,get,phonegap,jqtouch,,,open,0,81,6,"XCode & Phonegap with $.get function I have a problem, I created a Webapps into HTML and JavaScript to create a native iPhone with PhoneGap. This works properly on Safari browser and iPhone, when compiling with xcode, I have a problem with the $.get function that does not receive data from my external server.
+example code:
+
+    $.get('http://www.mydomain.com/retriveinfo.php', function(data) {
+	    document.getElementById(""result"").innerHTML='data';
+	    jQT.goTo($('#page-result),'slideleft');
+    });
+
+you can not use $. get? there an alternative? IOS Simulator bug? Please Help Me.",4
+8815727,01/11/2012 07:36:12,1074781,12/01/2011 05:22:18,6,0,how to add attachment with MailCore frameWork,"Hello I am new and I am making an application with send and recieve mail through smtp ,MailCore is working with simple mail trasfer and recieving but I am not able to attach any file ,please tell me if anyone knows how to add attachment.please tell me if there is any source code..
+
+
+
+Thanks in Advance",xcode,cocoa,mailcore,,,01/12/2012 16:20:50,not a real question,1,55,7,"how to add attachment with MailCore frameWork Hello I am new and I am making an application with send and recieve mail through smtp ,MailCore is working with simple mail trasfer and recieving but I am not able to attach any file ,please tell me if anyone knows how to add attachment.please tell me if there is any source code..
+
+
+
+Thanks in Advance",3
+9193502,02/08/2012 12:42:07,1196885,02/08/2012 10:17:27,1,0,xcoder 4.2 how do i create a drop down menu?,"Hey everyone i have been trying to create this drop down menu for ages now but i can't seem to find a way can you help me.??? 
+
+[1]: http://www.youtube.com/watch?v=-V7P5syqXjc
+========================================================================",xcode,application,,,,02/08/2012 12:47:34,not a real question,1,29,10,"xcoder 4.2 how do i create a drop down menu? Hey everyone i have been trying to create this drop down menu for ages now but i can't seem to find a way can you help me.??? 
+
+[1]: http://www.youtube.com/watch?v=-V7P5syqXjc
+========================================================================",2
+2300867,02/20/2010 03:08:53,144776,07/24/2009 21:54:38,32,2,"How can I avoid ""duplicate symbol"" errors in xcode with shared static libraries?","I have static libraries A, B and C organized into xCode projects.  A and B depend on C.  When I build an iPhone project that depends on A and B, I get a linker error that a duplicate symbol (from C) was detected in A and B.  How can I organize these three static libraries so I can include them in other xCode projects without experiencing this error?",xcode,objective-c,,,,,open,0,71,13,"How can I avoid ""duplicate symbol"" errors in xcode with shared static libraries? I have static libraries A, B and C organized into xCode projects.  A and B depend on C.  When I build an iPhone project that depends on A and B, I get a linker error that a duplicate symbol (from C) was detected in A and B.  How can I organize these three static libraries so I can include them in other xCode projects without experiencing this error?",2
+9595574,03/07/2012 03:52:24,1152384,01/16/2012 17:47:09,3,0,Upload JPG image to Twitter AHHHHHHHH,"I'm at my wits end... I'm simply trying to upload a jpg image to twitter. I can upload the @""icon.png"" as many times as I want but cannot seem to ever get a jpg to upload. I always get error 403 back from twitter. Please help. Thank you in advance! This is my code,
+
+    ACAccount *twitterAccount = [arrayOfAccounts objectAtIndex:0];
+    
+    
+    UIImage *image =[UIImage imageNamed:file]; //file is the name of a jpg image. If replaced with @""icon.png"" the upload works
+    
+    
+    TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@""https://upload.twitter.com/1/statuses/update_with_media.json""] 
+                                                 parameters:[NSDictionary dictionaryWithObject:@""Hello. This is a tweet."" forKey:@""status""] requestMethod:TWRequestMethodPOST];
+    
+    [postRequest addMultiPartData:UIImagePNGRepresentation(image) withName:@""media"" type:@""multipart/png""]; //I've tried this with UIImageJPEGRepresentation(image, 80) and multipart/jpg and jpeg to no avail
+    
+    
+    // Set the account used to post the tweet.
+    [postRequest setAccount:twitterAccount];
+    
+    [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) 
+     {
+         NSLog(@""Twitter response, HTTP response: %i"", [urlResponse statusCode]);
+     }];",xcode,image,twitter,upload,jpg,,open,0,256,6,"Upload JPG image to Twitter AHHHHHHHH I'm at my wits end... I'm simply trying to upload a jpg image to twitter. I can upload the @""icon.png"" as many times as I want but cannot seem to ever get a jpg to upload. I always get error 403 back from twitter. Please help. Thank you in advance! This is my code,
+
+    ACAccount *twitterAccount = [arrayOfAccounts objectAtIndex:0];
+    
+    
+    UIImage *image =[UIImage imageNamed:file]; //file is the name of a jpg image. If replaced with @""icon.png"" the upload works
+    
+    
+    TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@""https://upload.twitter.com/1/statuses/update_with_media.json""] 
+                                                 parameters:[NSDictionary dictionaryWithObject:@""Hello. This is a tweet."" forKey:@""status""] requestMethod:TWRequestMethodPOST];
+    
+    [postRequest addMultiPartData:UIImagePNGRepresentation(image) withName:@""media"" type:@""multipart/png""]; //I've tried this with UIImageJPEGRepresentation(image, 80) and multipart/jpg and jpeg to no avail
+    
+    
+    // Set the account used to post the tweet.
+    [postRequest setAccount:twitterAccount];
+    
+    [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) 
+     {
+         NSLog(@""Twitter response, HTTP response: %i"", [urlResponse statusCode]);
+     }];",5
+3871061,10/06/2010 09:18:31,461690,09/29/2010 12:00:17,11,0,How to exit app while enter background,I need to exit my app while my app enter into background,xcode,,,,,10/06/2010 18:52:05,not a real question,1,12,7,How to exit app while enter background I need to exit my app while my app enter into background,1
+2786571,05/07/2010 06:16:24,207713,11/10/2009 11:16:46,3,2,HElp for Https???,"i want to send request on Https  so do i need to install the SSL certificate as the steps are given for apple push notification 
+
+please help me i am new and i have never worked on OpenSSL",xcode,iphone,objective-c,,,,open,0,39,3,"HElp for Https??? i want to send request on Https  so do i need to install the SSL certificate as the steps are given for apple push notification 
+
+please help me i am new and i have never worked on OpenSSL",3
+9963605,04/01/2012 10:16:18,1179229,01/31/2012 00:00:19,1,0,All these text editors and other tools,"I know the war between which text editor is better - emacs vs. vim, Visual Studio vs. dev-c++ etc. And I know I have to choose what I like and stay with it, because that's the best way to learn the tool. That's fine, but I want to know one thing - is it really such a big difference between one or another? I don't mean UI or ease to use - that's a personal preference. What I want to know is that if it's really like emacs is more powerful than xcode or whatever? Why did I meet so many vim and emacs fans/fanatics and hardly any fanatic of xcode/visual studio/code::blocks/eclipse/dev-cpp/whatever? I don't get it. Could anyone explain me if there is anything wrong in being programmer and not knowing any of this hardcore ones (emacs/vim), just using for example xcode for writing a game in objective-c and c++, textwrangler for ruby, js, and so on? I know emacs/vim are really old and, what comes with that, more 'experienced', but are they **better** anyhow?
+
+PS. Don't get me wrong, I'm not against using emacs/vim - I'm currently experimenting with one and another and I'm not underestimating their power :) I just want to know what's wrong with these 'modern' IDEs.",xcode,vim,emacs,text-editor,,04/01/2012 10:54:59,not constructive,1,210,7,"All these text editors and other tools I know the war between which text editor is better - emacs vs. vim, Visual Studio vs. dev-c++ etc. And I know I have to choose what I like and stay with it, because that's the best way to learn the tool. That's fine, but I want to know one thing - is it really such a big difference between one or another? I don't mean UI or ease to use - that's a personal preference. What I want to know is that if it's really like emacs is more powerful than xcode or whatever? Why did I meet so many vim and emacs fans/fanatics and hardly any fanatic of xcode/visual studio/code::blocks/eclipse/dev-cpp/whatever? I don't get it. Could anyone explain me if there is anything wrong in being programmer and not knowing any of this hardcore ones (emacs/vim), just using for example xcode for writing a game in objective-c and c++, textwrangler for ruby, js, and so on? I know emacs/vim are really old and, what comes with that, more 'experienced', but are they **better** anyhow?
+
+PS. Don't get me wrong, I'm not against using emacs/vim - I'm currently experimenting with one and another and I'm not underestimating their power :) I just want to know what's wrong with these 'modern' IDEs.",4
+10251828,04/20/2012 18:48:31,1037407,11/09/2011 10:10:09,217,7,Mac GUI application without Xcode,"How to create a GUI application for Mac without using Xcode?
+
+I found http://cocoawithlove.com/2010/09/minimalist-cocoa-programming.html but would like to know more details, like:
+
+- how to add an icon to it?
+
+- how to create a bundle?
+
+- what's in a nib anyway and how to re-create its functionality via code?
+
+- what else is the example above missing from a similarly simple app created in Xcode?
+
+In other words, where can I find out more on how a graphical application works and what does this ""Xcode Cocoa application template""?",xcode,osx,gui,,,04/21/2012 18:36:21,not constructive,1,83,5,"Mac GUI application without Xcode How to create a GUI application for Mac without using Xcode?
+
+I found http://cocoawithlove.com/2010/09/minimalist-cocoa-programming.html but would like to know more details, like:
+
+- how to add an icon to it?
+
+- how to create a bundle?
+
+- what's in a nib anyway and how to re-create its functionality via code?
+
+- what else is the example above missing from a similarly simple app created in Xcode?
+
+In other words, where can I find out more on how a graphical application works and what does this ""Xcode Cocoa application template""?",3
+3693482,09/12/2010 02:15:18,123269,06/15/2009 18:24:22,1290,50,How do I remove a build configuration from an Xcode project from a script?,"I'm currently using AppleScript to clean up an Xcode project. I'd like my script to remove some build configurations that won't be relevant to other developers on my team.
+
+For example, if I have ""Debug"", ""DebugTest"", and ""Release"", I would like the script to remove ""DebugTest"".
+
+I'm currently using the following script:
+
+    tell application ""Xcode""
+	open myXcodeProject
+	    set targetProject to project of active project document
+	    set targetConfigurations to build configurations of targetProject
+	    repeat with c in targetConfigurations
+	        if (name of c is equal to ""DebugTest"") then
+		        delete c
+	        end if
+	    end repeat
+    end tell
+
+However, I'm getting the following error when I run the script, which leads me to beleive that I'm not deleting the configuration correctly:
+
+`Xcode got an error: AppleEvent handler failed. (-10000)`
+
+Thanks!
+
+",xcode,scripting,applescript,,,,open,0,159,14,"How do I remove a build configuration from an Xcode project from a script? I'm currently using AppleScript to clean up an Xcode project. I'd like my script to remove some build configurations that won't be relevant to other developers on my team.
+
+For example, if I have ""Debug"", ""DebugTest"", and ""Release"", I would like the script to remove ""DebugTest"".
+
+I'm currently using the following script:
+
+    tell application ""Xcode""
+	open myXcodeProject
+	    set targetProject to project of active project document
+	    set targetConfigurations to build configurations of targetProject
+	    repeat with c in targetConfigurations
+	        if (name of c is equal to ""DebugTest"") then
+		        delete c
+	        end if
+	    end repeat
+    end tell
+
+However, I'm getting the following error when I run the script, which leads me to beleive that I'm not deleting the configuration correctly:
+
+`Xcode got an error: AppleEvent handler failed. (-10000)`
+
+Thanks!
+
+",3
+9530244,03/02/2012 08:36:05,913740,08/26/2011 09:03:41,1,0,How to create custom calendar in xcode?,In my app i have a main view. When i push button i go to other view where is a navigation bar and under it i want to set a calendar (month view) and button for displaying year view . Could anybody to give answer to this question?,xcode,calendar,,,,,open,0,48,7,How to create custom calendar in xcode? In my app i have a main view. When i push button i go to other view where is a navigation bar and under it i want to set a calendar (month view) and button for displaying year view . Could anybody to give answer to this question?,2
+10084925,04/10/2012 07:39:30,1134766,01/06/2012 17:00:09,89,0,Read json and parse,"I was looking for the answer on my isseu  :
+
+I want to read an JSON file and parse it in a tableview like: http://i.imgur.com/ProQK.png 
+This is not the problem but when a user taps the UITableCell i want to display the whole message like: http://imgur.com/nxH20.png
+
+What is the best way to do that? Could somebody push me to the right way?
+
+I just want to display the message and load the images etcetra 
+",xcode,,,,,04/10/2012 08:28:06,too localized,1,73,4,"Read json and parse I was looking for the answer on my isseu  :
+
+I want to read an JSON file and parse it in a tableview like: http://i.imgur.com/ProQK.png 
+This is not the problem but when a user taps the UITableCell i want to display the whole message like: http://imgur.com/nxH20.png
+
+What is the best way to do that? Could somebody push me to the right way?
+
+I just want to display the message and load the images etcetra 
+",1
+3063176,06/17/2010 15:35:19,369470,06/17/2010 15:17:46,1,0,Core Data - Entity Relationships Not Working as expected,"I have set up my data model in xcode like so
+
+EntityA
+
+ AttA1
+ AttA2
+
+EntityB
+
+ AttB1
+ AttB2
+ AttB3
+
+I then set up the relationships
+
+EntityA
+
+Name:  rlpToEntityB
+
+Destination: EntityB
+
+Inverse: rlpToEntityA
+
+To Many:  Checked
+
+EntityB
+
+Name:  rlpToEntityA
+
+Destination: EntityA
+
+Inverse: rlpToEntityB
+
+To Many:  UnChecked
+
+i.e. relationship between the two where Each one of EntityA can have many EntityB's
+
+It is my understanding that if i fetch a subset of EntityB's I can then retrieve the values for the related EntityA's.
+
+I have this working so that i can retrieve the EntityB values using 
+
+
+NSManagedObject *objMO = [fetchedResultsController objectAtIndexPath:indexPath];
+
+strValueFromEntityB = [objMO valueForKey:@""AttB1""];
+
+However, if I try to retrieve a related value from EntityA by doing the following
+
+strValueFromEntityA = [objMO valueForKey:@""AttA1""];
+
+I get the error ""The entity EntityB is not Key value coding-compliant for the key Atta1""
+
+
+Not surprisingly i suppose if i switch things around to fetch from EntityA i cannot access attributes of EntityB So it appears the defined relationshipare being ignored.
+
+Can anyone spot what i am doing wrong?
+
+I confess im very new to iPhone programming and especially to Core Data so please go easy on me and provide verbose explanations or point me in the direction a specific resource. I have downloaded the apple sample apps (Core Data Books, Top Songs and recipes) but I still can't work this out.
+
+Thanks in advance,
+Nev.
+
+
+
+
+
+
+
+",xcode,data,core,relationships,,,open,0,208,9,"Core Data - Entity Relationships Not Working as expected I have set up my data model in xcode like so
+
+EntityA
+
+ AttA1
+ AttA2
+
+EntityB
+
+ AttB1
+ AttB2
+ AttB3
+
+I then set up the relationships
+
+EntityA
+
+Name:  rlpToEntityB
+
+Destination: EntityB
+
+Inverse: rlpToEntityA
+
+To Many:  Checked
+
+EntityB
+
+Name:  rlpToEntityA
+
+Destination: EntityA
+
+Inverse: rlpToEntityB
+
+To Many:  UnChecked
+
+i.e. relationship between the two where Each one of EntityA can have many EntityB's
+
+It is my understanding that if i fetch a subset of EntityB's I can then retrieve the values for the related EntityA's.
+
+I have this working so that i can retrieve the EntityB values using 
+
+
+NSManagedObject *objMO = [fetchedResultsController objectAtIndexPath:indexPath];
+
+strValueFromEntityB = [objMO valueForKey:@""AttB1""];
+
+However, if I try to retrieve a related value from EntityA by doing the following
+
+strValueFromEntityA = [objMO valueForKey:@""AttA1""];
+
+I get the error ""The entity EntityB is not Key value coding-compliant for the key Atta1""
+
+
+Not surprisingly i suppose if i switch things around to fetch from EntityA i cannot access attributes of EntityB So it appears the defined relationshipare being ignored.
+
+Can anyone spot what i am doing wrong?
+
+I confess im very new to iPhone programming and especially to Core Data so please go easy on me and provide verbose explanations or point me in the direction a specific resource. I have downloaded the apple sample apps (Core Data Books, Top Songs and recipes) but I still can't work this out.
+
+Thanks in advance,
+Nev.
+
+
+
+
+
+
+
+",4
+2241067,02/10/2010 23:16:38,270687,02/10/2010 23:16:38,1,0,xcode location (installation path) help,"I am new to mac os. I started to deveople Iphone appliactions and it was strange to me cause I had to look in finder everytime to open xcode so I moved it in applications folder. 
+But is not working anymore and I dont know where was the prevoius location in order to move there again.
+
+Where should i put?
+
+Plzz help",xcode,osx,,,,,open,0,60,5,"xcode location (installation path) help I am new to mac os. I started to deveople Iphone appliactions and it was strange to me cause I had to look in finder everytime to open xcode so I moved it in applications folder. 
+But is not working anymore and I dont know where was the prevoius location in order to move there again.
+
+Where should i put?
+
+Plzz help",2
+4846248,01/30/2011 23:17:42,188081,10/11/2009 19:42:46,620,27,iDevice for Dummies: Can a device be assigned multiple provisions (Personal/Enterprise)?,"Is it possible to assign multiple provisions to an iDevice? To be honest, I'm not sure if I'm using the correct terminology, but basically, I'm developing an iPad app for a company and I've only been testing it in the simulator because I don't have a registration to the developer program and they haven't setup their enterprise registration yet either. And I'm sure you all know how limited the simulator is...
+
+I don't really care about the $99 it costs to join, but what I'm worried about is having my iDevices locked permanently to my personal registration and unable to switch back and forth to the enterprise registration.
+
+I'd appreciate it if someone can explain to me how the registrations work. And keep in mind, I'm a dummy. :)
+
+Thanks in advance!",xcode,ios,apple,,,01/06/2012 14:49:18,too localized,1,129,11,"iDevice for Dummies: Can a device be assigned multiple provisions (Personal/Enterprise)? Is it possible to assign multiple provisions to an iDevice? To be honest, I'm not sure if I'm using the correct terminology, but basically, I'm developing an iPad app for a company and I've only been testing it in the simulator because I don't have a registration to the developer program and they haven't setup their enterprise registration yet either. And I'm sure you all know how limited the simulator is...
+
+I don't really care about the $99 it costs to join, but what I'm worried about is having my iDevices locked permanently to my personal registration and unable to switch back and forth to the enterprise registration.
+
+I'd appreciate it if someone can explain to me how the registrations work. And keep in mind, I'm a dummy. :)
+
+Thanks in advance!",3
+9893652,03/27/2012 16:24:34,817767,06/27/2011 16:25:23,424,14,XCode debug wrong Target,"**Short problem description:**
+
+XCode 4.2 install right Target on device, but debug (run) always only one of them.
+
+**Preconditions:**
+
+XCode 4.2 on MAC, iPad as target device
+
+I have two Targets: **PRO** & **FREE**. They both:
+
+- have different info.plist file (set in build settings)
+
+![enter image description here][1]
+
+- have different **bundle id**, different icons and different prefix headers
+
+- have different schemes (autocreated)
+
+![enter image description here][2]
+
+**Problem:**
+
+I can't debug FREE version, because it is always run PRO version. I follow steps:
+
+1) Switch to FREE. Clean build. Run. It install FREE version, but failed to run it.
+
+![enter image description here][3]
+![enter image description here][4]
+
+2) Switch to PRO. Clean build. Run. It install PRO version and run it OK.
+
+
+3) Repeat step 1. Now there are no errors, but it run PRO version instead of FREE.
+
+  [1]: http://i.stack.imgur.com/ywv2g.png
+  [2]: http://i.stack.imgur.com/rT5NX.png
+  [3]: http://i.stack.imgur.com/9xdX2.png
+  [4]: http://i.stack.imgur.com/f7bvy.png",xcode,debugging,targets,,,,open,0,137,4,"XCode debug wrong Target **Short problem description:**
+
+XCode 4.2 install right Target on device, but debug (run) always only one of them.
+
+**Preconditions:**
+
+XCode 4.2 on MAC, iPad as target device
+
+I have two Targets: **PRO** & **FREE**. They both:
+
+- have different info.plist file (set in build settings)
+
+![enter image description here][1]
+
+- have different **bundle id**, different icons and different prefix headers
+
+- have different schemes (autocreated)
+
+![enter image description here][2]
+
+**Problem:**
+
+I can't debug FREE version, because it is always run PRO version. I follow steps:
+
+1) Switch to FREE. Clean build. Run. It install FREE version, but failed to run it.
+
+![enter image description here][3]
+![enter image description here][4]
+
+2) Switch to PRO. Clean build. Run. It install PRO version and run it OK.
+
+
+3) Repeat step 1. Now there are no errors, but it run PRO version instead of FREE.
+
+  [1]: http://i.stack.imgur.com/ywv2g.png
+  [2]: http://i.stack.imgur.com/rT5NX.png
+  [3]: http://i.stack.imgur.com/9xdX2.png
+  [4]: http://i.stack.imgur.com/f7bvy.png",3
+9796034,03/20/2012 22:34:21,899347,08/17/2011 19:35:19,61,0,Run/Stop buttons hidden in XCode 4,"I cannot get to the run and stop buttons outside of full screen mode in Xcode 4. Does anyone know how to get out of this view?
+
+It is absurd that this is wasting my time. I should have never upgraded. 
+
+Thanks.",xcode,button,view,run,,,open,0,41,6,"Run/Stop buttons hidden in XCode 4 I cannot get to the run and stop buttons outside of full screen mode in Xcode 4. Does anyone know how to get out of this view?
+
+It is absurd that this is wasting my time. I should have never upgraded. 
+
+Thanks.",4
+10685386,05/21/2012 12:36:32,1321507,04/09/2012 08:58:18,75,1,Send the selected value of NSPopUpButton to entity,"I have a NSPopUpButton that through binding takes the data from an entity. The scheme of binging is the following: Content (bind to:country, arrangedObjects), Content Values (bind to:country, arrangedObjects, model key:country), Selected Index (bind to:country, selectionIndex). Now I would that once the user has selected the value with NSPopUpButton, the value is passed to the field of another entity. I looked everywhere but can not get it.",xcode,core-data,,,,,open,0,67,8,"Send the selected value of NSPopUpButton to entity I have a NSPopUpButton that through binding takes the data from an entity. The scheme of binging is the following: Content (bind to:country, arrangedObjects), Content Values (bind to:country, arrangedObjects, model key:country), Selected Index (bind to:country, selectionIndex). Now I would that once the user has selected the value with NSPopUpButton, the value is passed to the field of another entity. I looked everywhere but can not get it.",2
+11110421,06/19/2012 22:30:44,1386029,05/10/2012 02:47:10,83,8,Is there a way to skip over the machine calls when using breakpoints in Xcode 4?,"Question is in the title, is there a way to skip machine calls like:
+
+    0x294509e:  pushl  %esi
+
+When skipping through Xcode calls using breakpoints?",xcode,breakpoints,,,,,open,0,28,16,"Is there a way to skip over the machine calls when using breakpoints in Xcode 4? Question is in the title, is there a way to skip machine calls like:
+
+    0x294509e:  pushl  %esi
+
+When skipping through Xcode calls using breakpoints?",2
+3737875,09/17/2010 18:16:38,251687,01/15/2010 16:18:00,3,0,XCode instruments not reporting any data,"I'm trying to debug in XCode using the instruments but most of them are not showing any data.  I tried this from my home machine and it worked fine, but on my work iMac the following instruments report no data at all:
+
+- Activity Monitor
+- Allocations
+- Memory Monitor
+
+The Leaks instrument seems to be working fine.
+
+I am developing an iPad app and am trying to run the instruments with the simulator.
+
+XCode version 3.2.3 64-bit
+
+Xcode IDE: 1688.0
+
+Xcode Core: 1691.0
+
+ToolSupport: 1591.0
+
+Instruments Version 2.7 (2529)
+
+
+Any ideas on how I can resolve this?",xcode,ipad,debugging,instruments,,,open,0,88,6,"XCode instruments not reporting any data I'm trying to debug in XCode using the instruments but most of them are not showing any data.  I tried this from my home machine and it worked fine, but on my work iMac the following instruments report no data at all:
+
+- Activity Monitor
+- Allocations
+- Memory Monitor
+
+The Leaks instrument seems to be working fine.
+
+I am developing an iPad app and am trying to run the instruments with the simulator.
+
+XCode version 3.2.3 64-bit
+
+Xcode IDE: 1688.0
+
+Xcode Core: 1691.0
+
+ToolSupport: 1591.0
+
+Instruments Version 2.7 (2529)
+
+
+Any ideas on how I can resolve this?",4
+7510068,09/22/2011 05:47:56,533500,12/07/2010 10:13:03,45,0,How to generate xcode project using qmake with QT,"using 
+
+    qmake -spec macx-xcode
+    
+can only generate older version test.pbproj and can not open in xcode 4
+
+How to generate test.xcodeproj",xcode,qt,qmake,,,09/22/2011 16:24:54,not a real question,1,27,9,"How to generate xcode project using qmake with QT using 
+
+    qmake -spec macx-xcode
+    
+can only generate older version test.pbproj and can not open in xcode 4
+
+How to generate test.xcodeproj",3
