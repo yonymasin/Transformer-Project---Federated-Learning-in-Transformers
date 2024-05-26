@@ -92,11 +92,11 @@ class ShakesHyper(nn.Module):
 
 class LoraHyper(nn.Module):
 
-    def __init__(self, n_nodes, embedding_dim, hidden_dim, dim, client_sample, heads=8, dim_head=64, n_hidden=1, depth=6,
+    def __init__(self, n_nodes, embedding_dim, hidden_dim, bert_emb_dim, client_sample, lora_rank=8, n_hidden=1, depth=6,
                  spec_norm=False):
         super(LoraHyper, self).__init__()
-        self.dim = dim
-        self.inner_dim = dim_head * heads
+        self.dim = bert_emb_dim
+        self.inner_dim = lora_rank
         self.depth = depth
         self.client_sample = client_sample
         # embedding layer
@@ -122,14 +122,14 @@ class LoraHyper(nn.Module):
         self.wbvs_value_list = nn.ModuleList([])
 
         for d in range(self.depth):
-            waq_value = nn.Linear(hidden_dim, dim * heads * dim_head)
-            wbq_value = nn.Linear(hidden_dim, dim * heads * dim_head)
+            waq_value = nn.Linear(hidden_dim, bert_emb_dim * lora_rank)
+            wbq_value = nn.Linear(hidden_dim, bert_emb_dim * lora_rank)
 
-            wak_value = nn.Linear(hidden_dim, dim * heads * dim_head)
-            wbk_value = nn.Linear(hidden_dim, dim * heads * dim_head)
+            wak_value = nn.Linear(hidden_dim, bert_emb_dim * lora_rank)
+            wbk_value = nn.Linear(hidden_dim, bert_emb_dim * lora_rank)
 
-            wav_value = nn.Linear(hidden_dim, dim * heads * dim_head)
-            wbv_value = nn.Linear(hidden_dim, dim * heads * dim_head)
+            wav_value = nn.Linear(hidden_dim, bert_emb_dim * lora_rank)
+            wbv_value = nn.Linear(hidden_dim, bert_emb_dim * lora_rank)
 
             self.waqs_value_list.append(waq_value)
             self.wbqs_value_list.append(wbq_value)
@@ -147,19 +147,19 @@ class LoraHyper(nn.Module):
             layer_d_q_a_value_hyper = self.waqs_value_list[d]
             layer_d_q_a_value = layer_d_q_a_value_hyper(features).view(self.inner_dim, self.dim)
             layer_d_q_b_value_hyper = self.wbqs_value_list[d]
-            layer_d_q_b_value = layer_d_q_b_value_hyper(features).view(self.inner_dim, self.dim)
+            layer_d_q_b_value = layer_d_q_b_value_hyper(features).view(self.dim, self.inner_dim)
 
             # Hyper-network Key LoRA weights
             layer_d_k_a_value_hyper = self.waks_value_list[d]
             layer_d_k_a_value = layer_d_k_a_value_hyper(features).view(self.inner_dim, self.dim)
             layer_d_k_b_value_hyper = self.wbks_value_list[d]
-            layer_d_k_b_value = layer_d_k_b_value_hyper(features).view(self.inner_dim, self.dim)
+            layer_d_k_b_value = layer_d_k_b_value_hyper(features).view(self.dim, self.inner_dim)
 
             # Hyper-network Value LoRA weights
             layer_d_v_a_value_hyper = self.wavs_value_list[d]
             layer_d_v_a_value = layer_d_v_a_value_hyper(features).view(self.inner_dim, self.dim)
             layer_d_v_b_value_hyper = self.wbvs_value_list[d]
-            layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(self.inner_dim, self.dim)
+            layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(self.dim, self.inner_dim)
 
             weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.weight"] = layer_d_q_a_value
             weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_B.weight"] = layer_d_q_b_value
@@ -180,19 +180,19 @@ class LoraHyper(nn.Module):
                 layer_d_q_a_value_hyper = self.waqs_value_list[d]
                 layer_d_q_a_value = layer_d_q_a_value_hyper(features).view(-1, self.inner_dim, self.dim)
                 layer_d_q_b_value_hyper = self.wbqs_value_list[d]
-                layer_d_q_b_value = layer_d_q_b_value_hyper(features).view(-1, self.inner_dim, self.dim)
+                layer_d_q_b_value = layer_d_q_b_value_hyper(features).view(-1, self.dim, self.inner_dim)
 
                 # Hyper-network Key LoRA weights
                 layer_d_k_a_value_hyper = self.waks_value_list[d]
                 layer_d_k_a_value = layer_d_k_a_value_hyper(features).view(-1, self.inner_dim, self.dim)
                 layer_d_k_b_value_hyper = self.wbks_value_list[d]
-                layer_d_k_b_value = layer_d_k_b_value_hyper(features).view(-1, self.inner_dim, self.dim)
+                layer_d_k_b_value = layer_d_k_b_value_hyper(features).view(-1, self.dim, self.inner_dim)
 
                 # Hyper-network Value LoRA weights
                 layer_d_v_a_value_hyper = self.wavs_value_list[d]
                 layer_d_v_a_value = layer_d_v_a_value_hyper(features).view(-1, self.inner_dim, self.dim)
                 layer_d_v_b_value_hyper = self.wbvs_value_list[d]
-                layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(-1, self.inner_dim, self.dim)
+                layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(-1, self.dim, self.inner_dim)
 
                 for nn in range(self.client_sample):
                     weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.weight"] = layer_d_q_a_value[nn]
@@ -208,19 +208,19 @@ class LoraHyper(nn.Module):
                 layer_d_q_a_value_hyper = self.waqs_value_list[d]
                 layer_d_q_a_value = layer_d_q_a_value_hyper(features).view(self.inner_dim, self.dim)
                 layer_d_q_b_value_hyper = self.wbqs_value_list[d]
-                layer_d_q_b_value = layer_d_q_b_value_hyper(features).view(self.inner_dim, self.dim)
+                layer_d_q_b_value = layer_d_q_b_value_hyper(features).view(self.dim, self.inner_dim)
 
                 # Hyper-network Key LoRA weights
                 layer_d_k_a_value_hyper = self.waks_value_list[d]
                 layer_d_k_a_value = layer_d_k_a_value_hyper(features).view(self.inner_dim, self.dim)
                 layer_d_k_b_value_hyper = self.wbks_value_list[d]
-                layer_d_k_b_value = layer_d_k_b_value_hyper(features).view(self.inner_dim, self.dim)
+                layer_d_k_b_value = layer_d_k_b_value_hyper(features).view(self.dim, self.inner_dim)
 
                 # Hyper-network Value LoRA weights
                 layer_d_v_a_value_hyper = self.wavs_value_list[d]
                 layer_d_v_a_value = layer_d_v_a_value_hyper(features).view(self.inner_dim, self.dim)
                 layer_d_v_b_value_hyper = self.wbvs_value_list[d]
-                layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(self.inner_dim, self.dim)
+                layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(self.dim, self.inner_dim)
 
                 weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.weight"] = layer_d_q_a_value
                 weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_B.weight"] = layer_d_q_b_value
