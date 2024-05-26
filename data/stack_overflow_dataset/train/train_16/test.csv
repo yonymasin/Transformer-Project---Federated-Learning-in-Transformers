@@ -1,0 +1,1104 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+10091826,04/10/2012 15:37:39,1324419,04/10/2012 15:21:02,1,0,How to run a web project checked out from SVN,"I have checked out the Dynamic web project from the SVN.
+It is also showing as a web project. But when i'm trying to run it, It is not showing RUN ON SERVER option.only run JAVA application showing. I configured the server also. But when i started server it is also not showing any web  project to run on the server but still i was on the same workspace. so how to configure the server to the web project after the project is checked out from the SVN and how to run?
+
+Thanks in advance.
+Earlier Reply Highly Appreciated...",svn,web,project,checked,out,04/10/2012 15:47:17,not a real question,1,97,10,"How to run a web project checked out from SVN I have checked out the Dynamic web project from the SVN.
+It is also showing as a web project. But when i'm trying to run it, It is not showing RUN ON SERVER option.only run JAVA application showing. I configured the server also. But when i started server it is also not showing any web  project to run on the server but still i was on the same workspace. so how to configure the server to the web project after the project is checked out from the SVN and how to run?
+
+Thanks in advance.
+Earlier Reply Highly Appreciated...",5
+10567494,05/12/2012 21:21:18,1084280,12/06/2011 20:05:35,14,0,svn commit looks didn't work,"I do svn commit from the directory I want to commit, it looks it accepts the command but when I checked out the same directory it gives me the previous copy of the directory so any updates were not reflected.",svn,commit,,,,05/14/2012 02:35:25,not a real question,1,40,5,"svn commit looks didn't work I do svn commit from the directory I want to commit, it looks it accepts the command but when I checked out the same directory it gives me the previous copy of the directory so any updates were not reflected.",2
+1269404,08/13/2009 00:16:03,148473,07/31/2009 13:01:56,337,26,Delet files from SVN in Visual Studio,"I am using AnkhSVN in Visual Studio.  
+
+How can I delete all files from SVN as I delete them from Visual Studio (**files ARE NOT included in projects**).  
+
+Ideally I would like to do:  
+
+1. Press ""Show All Files"" In Visual Studio (shows the files not included in projects).
+2. Delete selected files (the ones not included in projects) from VS Solution Explorer.
+3. Commit (Deletes the files in SVN)
+
+But this is not possible and I have to delete files directly from Repository OR delete missing files from TortoiseSVN.
+
+
+Cheers,  
+Dmitriy.
+",svn,visual-studio,tortoisesvn,,,,open,0,92,7,"Delet files from SVN in Visual Studio I am using AnkhSVN in Visual Studio.  
+
+How can I delete all files from SVN as I delete them from Visual Studio (**files ARE NOT included in projects**).  
+
+Ideally I would like to do:  
+
+1. Press ""Show All Files"" In Visual Studio (shows the files not included in projects).
+2. Delete selected files (the ones not included in projects) from VS Solution Explorer.
+3. Commit (Deletes the files in SVN)
+
+But this is not possible and I have to delete files directly from Repository OR delete missing files from TortoiseSVN.
+
+
+Cheers,  
+Dmitriy.
+",3
+8883779,01/16/2012 17:23:17,1133306,01/05/2012 23:50:22,28,0,How to setup SVN on live Magento site on Shared Hosting,"I've got a live magento store running. I've determined that I definitely need to learn and use SVN immediately. My hosting (Hostgator) only supports the client, not repos with my package. I am going to be the only developer for the longevity of this owning this store (as far as I know). I do not want to pay a separate repo hosting fee and am ok with hosting a repo locally on my dev machine. In your experiences, what is my best plan of attack from this point? My goal is : 1) Be able to host a dev site (dev.domain.com). 2) Work locally on files and commit them to dev site for testing. 3) Publish dev files to live environment.  I've just began reading on basics of SVN so be gently with me :) Thanks!",svn,magento,setup,,,,open,0,137,11,"How to setup SVN on live Magento site on Shared Hosting I've got a live magento store running. I've determined that I definitely need to learn and use SVN immediately. My hosting (Hostgator) only supports the client, not repos with my package. I am going to be the only developer for the longevity of this owning this store (as far as I know). I do not want to pay a separate repo hosting fee and am ok with hosting a repo locally on my dev machine. In your experiences, what is my best plan of attack from this point? My goal is : 1) Be able to host a dev site (dev.domain.com). 2) Work locally on files and commit them to dev site for testing. 3) Publish dev files to live environment.  I've just began reading on basics of SVN so be gently with me :) Thanks!",3
+4206369,11/17/2010 16:02:10,234451,12/18/2009 10:14:57,2057,164,Tortoise client on VisualSVN server,"I've been trying to figure out how to browse the root of the server using the Tortoise svn 'Repo browser'. When I go to the root, it doesn't list any folders, and I just get a message, 
+
+    OPTIONS of 'http://example.com:8443':200 OK (http://example.com:8443)
+
+Rather than a full list of the folders on the server. I've had a quick poke around on the Visual SVN site and I can't see anything for this. I spend way more time in my project's in Explorer than I do opening new tabs for browsing a server in my browser, just to paste it back into my svn client.
+
+Can anyone point me in the right directions please?",svn,tortoisesvn,visualsvn,,,,open,0,114,5,"Tortoise client on VisualSVN server I've been trying to figure out how to browse the root of the server using the Tortoise svn 'Repo browser'. When I go to the root, it doesn't list any folders, and I just get a message, 
+
+    OPTIONS of 'http://example.com:8443':200 OK (http://example.com:8443)
+
+Rather than a full list of the folders on the server. I've had a quick poke around on the Visual SVN site and I can't see anything for this. I spend way more time in my project's in Explorer than I do opening new tabs for browsing a server in my browser, just to paste it back into my svn client.
+
+Can anyone point me in the right directions please?",3
+1105753,07/09/2009 18:38:46,107176,05/14/2009 15:52:06,233,11,Using svnversion with svn:keywords,"I'm using Visual SVN on my Windows Box.
+
+I have Repository `Application`, which has `Framework` as an svn:external. All well and good.
+
+When I make a checkout of `Application`, I'd like to have the version of `Application` and `Framework` for inclusion in a footer file. This way I could have something like:
+
+    Application Version $ApplicationVersion$, Framework Version $FrameworkVersion$
+
+Ordinarily, I understand I could use svn:keywords and add the revision - but as I understand it, svn:keywords apply on a per-file basis. A few sites have suggested using `svnversion` to produce the output for each variable, but I'm not entirely sure how to go about this.
+
+Once again, on a Windows Box, using VisualSVN. I also develop on a Mac using Versions.app if it provides a more familiar interface for people to answer :)
+
+Thanks!",svn,visualsvn,revision,keywords,,,open,0,132,4,"Using svnversion with svn:keywords I'm using Visual SVN on my Windows Box.
+
+I have Repository `Application`, which has `Framework` as an svn:external. All well and good.
+
+When I make a checkout of `Application`, I'd like to have the version of `Application` and `Framework` for inclusion in a footer file. This way I could have something like:
+
+    Application Version $ApplicationVersion$, Framework Version $FrameworkVersion$
+
+Ordinarily, I understand I could use svn:keywords and add the revision - but as I understand it, svn:keywords apply on a per-file basis. A few sites have suggested using `svnversion` to produce the output for each variable, but I'm not entirely sure how to go about this.
+
+Once again, on a Windows Box, using VisualSVN. I also develop on a Mac using Versions.app if it provides a more familiar interface for people to answer :)
+
+Thanks!",4
+8182764,11/18/2011 12:55:47,1014844,10/26/2011 15:01:50,98,26,Free SVN 1.7 Client for mac,"I've seen a number of threads talking about SVN clients for mac... However, I need one that's SVN 1.7 compliant. Any suggestions? ",svn,,,,,11/21/2011 23:54:27,not constructive,1,23,6,"Free SVN 1.7 Client for mac I've seen a number of threads talking about SVN clients for mac... However, I need one that's SVN 1.7 compliant. Any suggestions? ",1
+8942227,01/20/2012 13:36:37,1133306,01/05/2012 23:50:22,51,0,deploy svn branch without version folder,"Using Beanstalkapp, I deploy a branch to my staging environment. The branch has a name of ""Version_1.0.0"". I ftp into my staging environment and see that a ""Version_1.0.0"" folder has been created here also. How do I deploy files without having a branch name or version appear? Maybe I went about naming the branch in a wrong way, I just don't know.",svn,deployment,branch,,,01/22/2012 16:28:24,not a real question,1,62,6,"deploy svn branch without version folder Using Beanstalkapp, I deploy a branch to my staging environment. The branch has a name of ""Version_1.0.0"". I ftp into my staging environment and see that a ""Version_1.0.0"" folder has been created here also. How do I deploy files without having a branch name or version appear? Maybe I went about naming the branch in a wrong way, I just don't know.",3
+6857731,07/28/2011 10:48:49,47646,12/19/2008 04:05:53,399,9,Jenkins svn connection refused,"Tried to configured Jenkins to connect to a remote svn for build job but failed. The error is `""svn: OPTIONS /svnpath failed""`, due to `connection refused`.
+
+I'm behind proxy. Here is the configuration and observation:
+
+* `~/.subversion/servers` has proxy configured
+* `/etc/sysconfig/jenkins` has proxy configured `JENKINS_JAVA_OPTIONS=""-Djava.awt.headless=true -Dhttp.proxyHost=[ip] -DhttpProxyPort=[port] -Dhttp.auth.preference=Basic""`
+* in console, can do `svn checkout https://company.com/svnpath` without problem
+* tried use svnkit and run `svn checkout https://company.com/svnpath`, no problem either
+
+I'm getting confused. Is it proxy problem? Or some other settings in Jenkins I need to set?
+",svn,proxy,jenkins,,,,open,0,82,4,"Jenkins svn connection refused Tried to configured Jenkins to connect to a remote svn for build job but failed. The error is `""svn: OPTIONS /svnpath failed""`, due to `connection refused`.
+
+I'm behind proxy. Here is the configuration and observation:
+
+* `~/.subversion/servers` has proxy configured
+* `/etc/sysconfig/jenkins` has proxy configured `JENKINS_JAVA_OPTIONS=""-Djava.awt.headless=true -Dhttp.proxyHost=[ip] -DhttpProxyPort=[port] -Dhttp.auth.preference=Basic""`
+* in console, can do `svn checkout https://company.com/svnpath` without problem
+* tried use svnkit and run `svn checkout https://company.com/svnpath`, no problem either
+
+I'm getting confused. Is it proxy problem? Or some other settings in Jenkins I need to set?
+",3
+924547,05/29/2009 05:41:10,83664,03/27/2009 15:01:03,2248,154,SVN log not showing all the revisions made to a file,"I've started using SVN before a few weeks. I am facing a weird problem right now. We have a file, which was added by me to the repository. Another developer checked it out yesterday, made some modifications to it, and comitted it to the repository. Today, I made some modifications to that file and comitted it to the repository. But it didn't ask me to merge the changes when I comitted that file, so now I only have the version which I had modified, and the changes done by the other developer are not even showing up in the log.
+
+What am I missing here? How should I go about merging both the changes? We are using TortoiseSVN as a client.",svn,tortoisesvn,,,,,open,0,120,11,"SVN log not showing all the revisions made to a file I've started using SVN before a few weeks. I am facing a weird problem right now. We have a file, which was added by me to the repository. Another developer checked it out yesterday, made some modifications to it, and comitted it to the repository. Today, I made some modifications to that file and comitted it to the repository. But it didn't ask me to merge the changes when I comitted that file, so now I only have the version which I had modified, and the changes done by the other developer are not even showing up in the log.
+
+What am I missing here? How should I go about merging both the changes? We are using TortoiseSVN as a client.",2
+2655279,04/16/2010 18:22:21,316030,04/14/2010 00:09:02,3,0,How do I unlock svn?,"I am trying to check in a project to svn. However, I get an error message stating that this is locked. I am the only user. I tried to ""clean"" my project. No change.
+
+Is there a way to force unlock?
+
+",svn,visual-studio-2010,,,,,open,0,40,5,"How do I unlock svn? I am trying to check in a project to svn. However, I get an error message stating that this is locked. I am the only user. I tried to ""clean"" my project. No change.
+
+Is there a way to force unlock?
+
+",2
+8326854,11/30/2011 13:41:25,481061,10/19/2010 22:11:10,1051,16,How do I adjust the server path for my working copy in TortoiseSVN?,"I have had a repository with the following layout:
+
+    //server/wrongname/superfluousdir/trunk/...
+
+Now I have moved `trunk` to the root of the repository (using the TortoiseSVN repo browser) and changed the repository name (using SVNManager):
+
+    //server/correctname/trunk/...
+
+I have a working copy folder which contains everything in `trunk`. It has several changed files. I could tell TortoiseSVN to use the new repository name with the `Relocate...` command.
+
+However, if I try to do a commit now, it will still commit to 
+
+    //server/correctname/superfluousdir/trunk/...
+
+How do I correct the path to which it should commit?",svn,tortoisesvn,commit,,,,open,0,96,13,"How do I adjust the server path for my working copy in TortoiseSVN? I have had a repository with the following layout:
+
+    //server/wrongname/superfluousdir/trunk/...
+
+Now I have moved `trunk` to the root of the repository (using the TortoiseSVN repo browser) and changed the repository name (using SVNManager):
+
+    //server/correctname/trunk/...
+
+I have a working copy folder which contains everything in `trunk`. It has several changed files. I could tell TortoiseSVN to use the new repository name with the `Relocate...` command.
+
+However, if I try to do a commit now, it will still commit to 
+
+    //server/correctname/superfluousdir/trunk/...
+
+How do I correct the path to which it should commit?",3
+2422820,03/11/2010 05:42:40,291208,03/11/2010 05:42:40,1,0,What is the difference between the following while using Tortoise SVN,"What is the difference between the following while using Tortoise SVN
+
+ 1. SVN Checkout (in context menu)
+ 2. Export (in context menu)
+ 3. Save as (in Repo Browser)
+ 4. Copy to.. (in Repo Browser)
+ 5. Copy to working copy.. (in Repo Browser)",svn,tortoisesvn,,,,,open,0,42,11,"What is the difference between the following while using Tortoise SVN What is the difference between the following while using Tortoise SVN
+
+ 1. SVN Checkout (in context menu)
+ 2. Export (in context menu)
+ 3. Save as (in Repo Browser)
+ 4. Copy to.. (in Repo Browser)
+ 5. Copy to working copy.. (in Repo Browser)",2
+8515718,12/15/2011 05:53:37,1093326,12/12/2011 08:11:10,4,0,Execution of Hook Script from server,Im using tortoise plink to access the server.if i need to place my new scripts in repository/hooks ...what are the commands should be given?,svn,tortoisesvn,,,,12/16/2011 06:13:50,not a real question,1,24,6,Execution of Hook Script from server Im using tortoise plink to access the server.if i need to place my new scripts in repository/hooks ...what are the commands should be given?,2
+7048634,08/13/2011 04:44:29,567447,01/07/2011 20:28:52,11,0,SVN repository size relative to committed binary files,"In an attempt to better understand how SVN handles binary files I tried a little experiment.  I was hoping to find that SVN would recognize the same binary in different locations and not create multiple copies of the same file.  What I found raised more questions than it answered.  I'm hoping there's an SVN expert out there who can help me understand this.
+
+Note 1:  MyTest.dll is 2,108 kb
+
+Note 2:  I realize that SVN is doing some compression behind the scenes, it still doesn't explain the results.
+
+Here's the experiment:
+
+1.) I created a new repo
+
+2.) I added MyTest.dll to trunk & committed -> repo size = 66 k
+
+3.) Added /1/ and /1/MyTest.dll & committed -> repo size = 735 k
+
+4.) Added /2/ and /2/MyTest.dll & committed -> repo size = 2 mb
+
+5.) Added /3/ and /3/MyTest.dll & committed -> repo size = 2.1 mb
+
+6.) Added /4/ and /4/MyTest.dll & committed -> repo size =3.4 mb
+
+Can anyone out there explain why the change in repo size with each commit appears so random relative to the actual content of the commit?
+
+Thanks!",svn,,,,,,open,0,182,8,"SVN repository size relative to committed binary files In an attempt to better understand how SVN handles binary files I tried a little experiment.  I was hoping to find that SVN would recognize the same binary in different locations and not create multiple copies of the same file.  What I found raised more questions than it answered.  I'm hoping there's an SVN expert out there who can help me understand this.
+
+Note 1:  MyTest.dll is 2,108 kb
+
+Note 2:  I realize that SVN is doing some compression behind the scenes, it still doesn't explain the results.
+
+Here's the experiment:
+
+1.) I created a new repo
+
+2.) I added MyTest.dll to trunk & committed -> repo size = 66 k
+
+3.) Added /1/ and /1/MyTest.dll & committed -> repo size = 735 k
+
+4.) Added /2/ and /2/MyTest.dll & committed -> repo size = 2 mb
+
+5.) Added /3/ and /3/MyTest.dll & committed -> repo size = 2.1 mb
+
+6.) Added /4/ and /4/MyTest.dll & committed -> repo size =3.4 mb
+
+Can anyone out there explain why the change in repo size with each commit appears so random relative to the actual content of the commit?
+
+Thanks!",1
+69384,09/16/2008 04:28:32,10333,09/15/2008 22:28:36,41,1,Opinion of Hosted SVN providers?,"What is your opinion of the various online Hosted SVN providers?  How do they all compare?  I'm looking for thoughts on Assembla, Unfuddle, BeanStalk, CVSDude, ProjectLocker, and any others that I forgot to mention.  Thanks for your insight and input.",svn,,,,,10/05/2011 06:10:02,off topic,1,43,5,"Opinion of Hosted SVN providers? What is your opinion of the various online Hosted SVN providers?  How do they all compare?  I'm looking for thoughts on Assembla, Unfuddle, BeanStalk, CVSDude, ProjectLocker, and any others that I forgot to mention.  Thanks for your insight and input.",1
+11162473,06/22/2012 18:56:53,456578,09/23/2010 19:37:30,872,33,How do I create a Tab from an old revision in Subversion when using Assembla?,"I use Assembla to manage my Subversion repository.  I have started some major revisions to my codebase and want to create a Tab of my most recent production revision ( which I forgot to do when I pushed that rev live to production a few weeks ago ).
+
+I'm currently on revision 588, and want to create a Tab of revision 577.  How do I go about doing this from the command line using Subversion within Assembla?
+
+Assume my Assembla SVN URL is: https://subversion.assembla.com/svn/my_assembla_svn_directory/",svn,branch,assembla,,,,open,0,84,15,"How do I create a Tab from an old revision in Subversion when using Assembla? I use Assembla to manage my Subversion repository.  I have started some major revisions to my codebase and want to create a Tab of my most recent production revision ( which I forgot to do when I pushed that rev live to production a few weeks ago ).
+
+I'm currently on revision 588, and want to create a Tab of revision 577.  How do I go about doing this from the command line using Subversion within Assembla?
+
+Assume my Assembla SVN URL is: https://subversion.assembla.com/svn/my_assembla_svn_directory/",3
+4374923,12/07/2010 09:01:27,268387,02/08/2010 02:35:46,50,4,svn problem - cannot work with my project anymore,"I got blue screen of death while working with my SVN repos. 
+
+Now i can browse through repos in browser 
+but i cannot perform checkout, checkout, synch of my project... 
+
+I got ""General server errors"" for anything I try.
+
+Is this some locking problem?
+
+How can i recover? 
+
+
+
+
+",svn,,,,,,open,0,47,9,"svn problem - cannot work with my project anymore I got blue screen of death while working with my SVN repos. 
+
+Now i can browse through repos in browser 
+but i cannot perform checkout, checkout, synch of my project... 
+
+I got ""General server errors"" for anything I try.
+
+Is this some locking problem?
+
+How can i recover? 
+
+
+
+
+",1
+6903577,08/01/2011 19:47:20,873389,08/01/2011 19:45:34,1,0,Native EOL-Style with Using Auto-Props,"I've found that trying to explicitly define all the possible auto-props file filters in .subversion/config can become unruly. For instance after writing a script to analyze the files for an embedded Linux kernel there were over 400 filters.
+
+The SVN manual states that, unless the mime-type property is set, it assumes a file is human readable text.
+
+Is there a way to work with SVN such that any file without a binary mime-type will have its end-of-line style handled in a native way?
+
+If I can do this then I need only define filters for binary files which is much easier to maintain.
+
+Thanks,
+
+Kenny
+",svn,properties,native,,,,open,0,100,5,"Native EOL-Style with Using Auto-Props I've found that trying to explicitly define all the possible auto-props file filters in .subversion/config can become unruly. For instance after writing a script to analyze the files for an embedded Linux kernel there were over 400 filters.
+
+The SVN manual states that, unless the mime-type property is set, it assumes a file is human readable text.
+
+Is there a way to work with SVN such that any file without a binary mime-type will have its end-of-line style handled in a native way?
+
+If I can do this then I need only define filters for binary files which is much easier to maintain.
+
+Thanks,
+
+Kenny
+",3
+5397099,03/22/2011 20:02:17,527583,12/02/2010 06:10:18,44,4,While I do a commit in SVN I get an error...,"When I try to commit a File in SVN using eclipse i get the following error
+
+ 
+
+      Path is not a working copy directory
+    svn: Commit failed (details follow):
+    svn: '.' is not a working copy
+
+My workspace: c:\my_workspace\
+
+
+My project is in: c:\my_workspace\project1",svn,,,,,,open,0,53,11,"While I do a commit in SVN I get an error... When I try to commit a File in SVN using eclipse i get the following error
+
+ 
+
+      Path is not a working copy directory
+    svn: Commit failed (details follow):
+    svn: '.' is not a working copy
+
+My workspace: c:\my_workspace\
+
+
+My project is in: c:\my_workspace\project1",1
+6733944,07/18/2011 13:50:59,492624,10/31/2010 07:47:36,752,69,Handling multi-user work on Version Control Systems,"I can imagine system of how can multiple programmers work intensive on same codebase in same time.
+
+  - I think the Version Control System on server should be able to lock one file for editing when one of programmers connected to codebase starts editing it
+
+  - Live notification about changes in codebase and pushing updated files to others (via notification or automatic updating)
+
+  - Chatting about changesets on fly, showing commits and diffs (some integrated source history browser like Trac has or similar would be fine too)
+
+  - Solution integrated with some featured IDE (like Netbeans or Eclipse)
+
+But what is some cheap (perfect would be opensource) solution for this?  
+What systems have you tested and can recommend me to use?
+
+Thanks
+Marek 
+",svn,version-control,ide,cvs,workgroup,01/04/2012 14:17:56,not constructive,1,126,7,"Handling multi-user work on Version Control Systems I can imagine system of how can multiple programmers work intensive on same codebase in same time.
+
+  - I think the Version Control System on server should be able to lock one file for editing when one of programmers connected to codebase starts editing it
+
+  - Live notification about changes in codebase and pushing updated files to others (via notification or automatic updating)
+
+  - Chatting about changesets on fly, showing commits and diffs (some integrated source history browser like Trac has or similar would be fine too)
+
+  - Solution integrated with some featured IDE (like Netbeans or Eclipse)
+
+But what is some cheap (perfect would be opensource) solution for this?  
+What systems have you tested and can recommend me to use?
+
+Thanks
+Marek 
+",5
+1008681,06/17/2009 18:06:57,123320,06/15/2009 20:03:32,1,0,SVN - unable to merge branch back into trunk - numerous tree-conflicts,"I have what I thought was a simple scenario - using TortoiseSVN:
+
+1) I made a branch (B2) of an application (to work on implementing image sprites & JAWR).
+
+2) Testing & development went on as normal on the trunk.
+
+3) I re-based the branch a couple of times over the last few days by:
+
+3.1) Merged trunk (by range of revisions) to my branch-b2 working copy, resolving conflicts during the merge.
+
+3.2) (after testing branch-b2), I commit the re-based branch-b2.
+
+This all worked as I expected.  But merging the branch back into the trunk is having its way with me:
+
+4) After all updates committed in branch-b2; I make sure I do an SVN Update on trunk and branch-b2.
+
+5) Then, I try to merge (range of revisions) from branch-b2 into the trunk.  However, for any new file that had been added to the trunk, and subsequently added to branch-b2 when I rebased it, I get a tree-conflict.  I'm not sure what the proper way is to resolve these conflicts.
+
+
+The most typical advice I've seen is to either delete the tree-conflict files from the trunk, then merge the branch over; or delete the entire trunk, copy the branch files over, and then commit them as a new version in the trunk.  Neither of those options seems like a good idea- first one is a pain, and both seem like they would lose file revision histories.
+
+What'd I do wrong, and how do I fix it?",svn,merge,tree-conflict,,,,open,0,241,12,"SVN - unable to merge branch back into trunk - numerous tree-conflicts I have what I thought was a simple scenario - using TortoiseSVN:
+
+1) I made a branch (B2) of an application (to work on implementing image sprites & JAWR).
+
+2) Testing & development went on as normal on the trunk.
+
+3) I re-based the branch a couple of times over the last few days by:
+
+3.1) Merged trunk (by range of revisions) to my branch-b2 working copy, resolving conflicts during the merge.
+
+3.2) (after testing branch-b2), I commit the re-based branch-b2.
+
+This all worked as I expected.  But merging the branch back into the trunk is having its way with me:
+
+4) After all updates committed in branch-b2; I make sure I do an SVN Update on trunk and branch-b2.
+
+5) Then, I try to merge (range of revisions) from branch-b2 into the trunk.  However, for any new file that had been added to the trunk, and subsequently added to branch-b2 when I rebased it, I get a tree-conflict.  I'm not sure what the proper way is to resolve these conflicts.
+
+
+The most typical advice I've seen is to either delete the tree-conflict files from the trunk, then merge the branch over; or delete the entire trunk, copy the branch files over, and then commit them as a new version in the trunk.  Neither of those options seems like a good idea- first one is a pain, and both seem like they would lose file revision histories.
+
+What'd I do wrong, and how do I fix it?",3
+1517101,10/04/2009 18:51:21,166251,08/31/2009 21:40:12,228,14,subversion e-mail notification,"I would like my subversion to send me an e-mail (and my co-workers) on every commit.  There are many solutions to this, but I didn't find any that will enable me to use wildcard/regexp match on svn URL and use it to notify different group of people.
+
+Anyone done that?",svn,notifications,hook,email,,,open,0,50,3,"subversion e-mail notification I would like my subversion to send me an e-mail (and my co-workers) on every commit.  There are many solutions to this, but I didn't find any that will enable me to use wildcard/regexp match on svn URL and use it to notify different group of people.
+
+Anyone done that?",4
+7992034,11/03/2011 08:37:09,810430,06/22/2011 13:25:49,179,5,SVN upgrade working copy,"I cannot do commit for error:
+
+    org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+    svn: Working copy 'C:\.... is too old (format 10, created by Subversion 1.6)
+
+How it can be fixed?
+Thanks.",svn,copy,version,working,,,open,0,37,4,"SVN upgrade working copy I cannot do commit for error:
+
+    org.apache.subversion.javahl.ClientException: The working copy needs to be upgraded
+    svn: Working copy 'C:\.... is too old (format 10, created by Subversion 1.6)
+
+How it can be fixed?
+Thanks.",4
+2274191,02/16/2010 16:00:42,82320,03/25/2009 00:56:36,1603,81,Subversion version of GitHub?,"I'd like to host some open source code on a public repository, and I really like how pretty GitHub makes this kind of sharing.
+
+Unfortunately, Git is not an option for these projects, for the most part because I'm developing for/on Windows, and Git support on Windows is not anywhere near where Subversion's support is.
+
+I'd like to have something exactly like GitHub, but one where I could use Subversion instead. Does such a service exist?",svn,github,git,version-control,,01/18/2012 12:37:36,not constructive,1,74,4,"Subversion version of GitHub? I'd like to host some open source code on a public repository, and I really like how pretty GitHub makes this kind of sharing.
+
+Unfortunately, Git is not an option for these projects, for the most part because I'm developing for/on Windows, and Git support on Windows is not anywhere near where Subversion's support is.
+
+I'd like to have something exactly like GitHub, but one where I could use Subversion instead. Does such a service exist?",4
+2272365,02/16/2010 11:10:46,118644,06/06/2009 20:40:11,828,8,DLL Config in Mono,"I'm trying to pick up Svn.NET (http://www.pumacode.org/projects/svndotnet/) library for use in my Mono project. I tried compiling its mockapp -> svnmockapp project (http://www.pumacode.org/projects/svndotnet/browser/trunk/SvnMockApp) , I am able to get the references right and get it compiled right.
+
+I understand that it references 2 other modules libapr (libapr-1.so.0) and svn_client (libsvn_client-1.so.0) , by which I've created PumaCode.SvnDotNet.dll.config in <svndotnet proj folder>/bin/Debug .
+
+That is all I've done to tried to try to get the mockapp at least outputting something to show that it is indeed interfacing SVN. Nevertheless, it is not working. 
+
+Commands that are entered that doesn't interface SVN works fine:
+
+    $ mono SvnTest.exe -usage
+    Usage: SvnTest <subcommand> [options]
+    Short Options: ~?.V
+    Subcommands: add, checkout[co], status[st], update[up]
+    For help on subcommands, use the -?/--help subcommand option.
+
+Commands that tries to access SVN throws an exception:
+
+    $ mono SvnTest.exe st
+    An exception was thrown by the type initializer for PumaCode.SvnDotNet.AprSharp.Apr
+    
+    Unhandled Exception: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+      at PumaCode.SvnDotNet.SubversionSharp.SvnMockApp.CmdBase.Run (PumaCode.SvnDotNet.SubversionSharp.SvnMockApp.SubCommand sc, System.String[] args) [0x00000]
+      at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&)
+      at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000]
+      --- End of inner exception stack trace ---
+      at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000]
+      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000]
+      at PumaCode.SvnDotNet.SubversionSharp.SvnMockApp.Application.Run (System.String[] args) [0x00000]
+      at PumaCode.SvnDotNet.SubversionSharp.SvnMockApp.Application.Main (System.String[] args) [0x00000]
+
+Using MONO_DEBUG_LEVEL=""debug"", we get the following log pasted [here](http://pastebin.com/m33fc35eb).
+
+At the tail end of the log, we see this:
+
+    .
+    .
+    .
+    Mono-INFO: DllImport attempting to load: 'libapr-1'.
+    Mono-INFO: DllImport loading location: 'libapr-1.so'.
+    Mono-INFO: DllImport error loading library: 'libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading library: './libapr-1.so'.
+    Mono-INFO: DllImport error loading library './libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading: 'libapr-1'.
+    Mono-INFO: DllImport error loading library 'libapr-1: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport attempting to load: 'libapr-1'.
+    Mono-INFO: DllImport loading location: 'libapr-1.so'.
+    Mono-INFO: DllImport error loading library: 'libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading library: './libapr-1.so'.
+    Mono-INFO: DllImport error loading library './libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading: 'libapr-1'.
+    Mono-INFO: DllImport error loading library 'libapr-1: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport attempting to load: 'libapr-1'.
+    Mono-INFO: DllImport loading location: 'libapr-1.so'.
+    Mono-INFO: DllImport error loading library: 'libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading library: './libapr-1.so'.
+    Mono-INFO: DllImport error loading library './libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading: 'libapr-1'.
+    Mono-INFO: DllImport error loading library 'libapr-1: cannot open shared object file: No such file or directory'.
+    An exception was thrown by the type initializer for PumaCode.SvnDotNet.AprSharp.Apr
+
+I've tried to symlink the appropriate modules in the directory where SvnTest.exe exists, but this still persist.
+
+How can I fix this?
+
+Did I place the PumaCode.SvnDotNet.dll.config in the wrong folder? (I placed it at <proj>/bin/Debug and also tried <proj>/bin)
+
+What can I do to remedy this?
+
+Thank you for your kind help! Much appreciated!",svn,mono,c#,c#-2.0,,,open,0,661,4,"DLL Config in Mono I'm trying to pick up Svn.NET (http://www.pumacode.org/projects/svndotnet/) library for use in my Mono project. I tried compiling its mockapp -> svnmockapp project (http://www.pumacode.org/projects/svndotnet/browser/trunk/SvnMockApp) , I am able to get the references right and get it compiled right.
+
+I understand that it references 2 other modules libapr (libapr-1.so.0) and svn_client (libsvn_client-1.so.0) , by which I've created PumaCode.SvnDotNet.dll.config in <svndotnet proj folder>/bin/Debug .
+
+That is all I've done to tried to try to get the mockapp at least outputting something to show that it is indeed interfacing SVN. Nevertheless, it is not working. 
+
+Commands that are entered that doesn't interface SVN works fine:
+
+    $ mono SvnTest.exe -usage
+    Usage: SvnTest <subcommand> [options]
+    Short Options: ~?.V
+    Subcommands: add, checkout[co], status[st], update[up]
+    For help on subcommands, use the -?/--help subcommand option.
+
+Commands that tries to access SVN throws an exception:
+
+    $ mono SvnTest.exe st
+    An exception was thrown by the type initializer for PumaCode.SvnDotNet.AprSharp.Apr
+    
+    Unhandled Exception: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+      at PumaCode.SvnDotNet.SubversionSharp.SvnMockApp.CmdBase.Run (PumaCode.SvnDotNet.SubversionSharp.SvnMockApp.SubCommand sc, System.String[] args) [0x00000]
+      at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&)
+      at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000]
+      --- End of inner exception stack trace ---
+      at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000]
+      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000]
+      at PumaCode.SvnDotNet.SubversionSharp.SvnMockApp.Application.Run (System.String[] args) [0x00000]
+      at PumaCode.SvnDotNet.SubversionSharp.SvnMockApp.Application.Main (System.String[] args) [0x00000]
+
+Using MONO_DEBUG_LEVEL=""debug"", we get the following log pasted [here](http://pastebin.com/m33fc35eb).
+
+At the tail end of the log, we see this:
+
+    .
+    .
+    .
+    Mono-INFO: DllImport attempting to load: 'libapr-1'.
+    Mono-INFO: DllImport loading location: 'libapr-1.so'.
+    Mono-INFO: DllImport error loading library: 'libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading library: './libapr-1.so'.
+    Mono-INFO: DllImport error loading library './libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading: 'libapr-1'.
+    Mono-INFO: DllImport error loading library 'libapr-1: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport attempting to load: 'libapr-1'.
+    Mono-INFO: DllImport loading location: 'libapr-1.so'.
+    Mono-INFO: DllImport error loading library: 'libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading library: './libapr-1.so'.
+    Mono-INFO: DllImport error loading library './libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading: 'libapr-1'.
+    Mono-INFO: DllImport error loading library 'libapr-1: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport attempting to load: 'libapr-1'.
+    Mono-INFO: DllImport loading location: 'libapr-1.so'.
+    Mono-INFO: DllImport error loading library: 'libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading library: './libapr-1.so'.
+    Mono-INFO: DllImport error loading library './libapr-1.so: cannot open shared object file: No such file or directory'.
+    Mono-INFO: DllImport loading: 'libapr-1'.
+    Mono-INFO: DllImport error loading library 'libapr-1: cannot open shared object file: No such file or directory'.
+    An exception was thrown by the type initializer for PumaCode.SvnDotNet.AprSharp.Apr
+
+I've tried to symlink the appropriate modules in the directory where SvnTest.exe exists, but this still persist.
+
+How can I fix this?
+
+Did I place the PumaCode.SvnDotNet.dll.config in the wrong folder? (I placed it at <proj>/bin/Debug and also tried <proj>/bin)
+
+What can I do to remedy this?
+
+Thank you for your kind help! Much appreciated!",4
+2288810,02/18/2010 13:15:18,38940,11/19/2008 14:04:14,1142,30,How to restrict SVN repository user account to one directory?,"I have a SVN repository with a user in passwd:
+
+
+    [users]
+    Mark = 8d9""'8V2;
+
+Now i would like to restrict this user privilages (permissions) only to commit and update this directories:
+
+    /CurrentProject/Printer
+    /CurrentProject/Scanner
+    /CurrentProject/Documentation
+
+How to acomplish this?",svn,tortoisesvn,privileges,repository,,,open,0,51,10,"How to restrict SVN repository user account to one directory? I have a SVN repository with a user in passwd:
+
+
+    [users]
+    Mark = 8d9""'8V2;
+
+Now i would like to restrict this user privilages (permissions) only to commit and update this directories:
+
+    /CurrentProject/Printer
+    /CurrentProject/Scanner
+    /CurrentProject/Documentation
+
+How to acomplish this?",4
+3282141,07/19/2010 14:47:55,47573,12/18/2008 22:22:16,581,19,"How do I import an existing GIT project into SVN, preserving GIT history on master branch?","I've a project developed with GIT and have a few hundred commits. I only have one master branch and the commits are linear.
+
+Now I'm asked to put the source into an existing SVN and ultimately I'd like to preserve the master commit history (the messages and the diffs, author is preset by SVN access).
+
+It's like I need to replay the whole commit history into SVN. Is there a way from GIT to do this more or less automatic?
+
+One idea came to my mind, but I've no clue how to approach it: I create a new empty `trunk/` in SVN, clone it with GIT (i.e. an empty GIT SVN clone) and replay my master changes into it and than dcommit it.
+
+In the future I'll do further work with my GIT branch and synchronize it with SVN.",svn,git,import,,,,open,0,135,16,"How do I import an existing GIT project into SVN, preserving GIT history on master branch? I've a project developed with GIT and have a few hundred commits. I only have one master branch and the commits are linear.
+
+Now I'm asked to put the source into an existing SVN and ultimately I'd like to preserve the master commit history (the messages and the diffs, author is preset by SVN access).
+
+It's like I need to replay the whole commit history into SVN. Is there a way from GIT to do this more or less automatic?
+
+One idea came to my mind, but I've no clue how to approach it: I create a new empty `trunk/` in SVN, clone it with GIT (i.e. an empty GIT SVN clone) and replay my master changes into it and than dcommit it.
+
+In the future I'll do further work with my GIT branch and synchronize it with SVN.",3
+5914988,05/06/2011 17:37:35,396931,07/20/2010 14:52:36,6,1,How to setup intelliJ 10 to work with SVN!,"I was struggling for hours now to setup IntelliJ 10 to work with SVN.
+None of the Subversion options worked for me.
+The answer in the end was: 
+File -> Settings (CTRL+ALT+S) -> Version Control -> On the right panel: Add -> **Directory** is the local directory you checked out from the repository and **VCS** is Subversion.
+
+Hope it helps (I Was going crazy, so I had to share)",svn,intellij-idea,,,,05/06/2011 20:40:38,not a real question,1,66,9,"How to setup intelliJ 10 to work with SVN! I was struggling for hours now to setup IntelliJ 10 to work with SVN.
+None of the Subversion options worked for me.
+The answer in the end was: 
+File -> Settings (CTRL+ALT+S) -> Version Control -> On the right panel: Add -> **Directory** is the local directory you checked out from the repository and **VCS** is Subversion.
+
+Hope it helps (I Was going crazy, so I had to share)",2
+8747094,01/05/2012 17:43:00,411290,08/04/2010 21:12:20,97,2,Switch working copy to a branch without commiting to the original location,"I have a slight problem with SVN:
+
+I added some new folders and files to my working copy and wanted to commit those new elements to a developer branch instead of to the real location implied by the folder structure.
+
+With TortoiseSVN I did a ""Branch/Tag..."" and specified the option ""Working copy"" in the group ""Create copy in the repository from:"". The elements got committed to the branch location, but unfortunately, I cannot switch my working copy to this new branch because a commit to the real location hasn't been done yet. My intention was to do further commits to the developer branch and to finally merge the branch with the trunk.
+
+Is there a way around this problem?",svn,tortoisesvn,branch,switch,working-copy,,open,0,116,12,"Switch working copy to a branch without commiting to the original location I have a slight problem with SVN:
+
+I added some new folders and files to my working copy and wanted to commit those new elements to a developer branch instead of to the real location implied by the folder structure.
+
+With TortoiseSVN I did a ""Branch/Tag..."" and specified the option ""Working copy"" in the group ""Create copy in the repository from:"". The elements got committed to the branch location, but unfortunately, I cannot switch my working copy to this new branch because a commit to the real location hasn't been done yet. My intention was to do further commits to the developer branch and to finally merge the branch with the trunk.
+
+Is there a way around this problem?",5
+4499581,12/21/2010 13:11:25,197141,10/27/2009 08:05:28,90,1,SVN: How to resolve evil twins tree conflict by accepting incoming add (removing local add),"In SVN I have a tree conflict upon merging two branches. The tree conflict arises because I have added a the same file or the same directory in both branches. Much the same  question is asked here:
+
+[Other Stackoverflow Question on evil twins tree-conflict][1]
+
+However I need to accept the incoming add. Subversion will only allow me to accept the working state of the repository. So I would expect I can do the merge from B1 to B2, delete locally added file in B2, tell svn to add (remerge?) the file from B1 into B2, and then commit the merge. Is it possible to resolve an evil twin conflict to the incoming version?
+
+The point here is to accept the incoming version so that when merging the next time from B1 to B2 I will get the changes merged automatically, without having to ever do the opposite B2->B1 merge.
+
+
+  [1]: http://stackoverflow.com/questions/767763/svn-how-to-resolve-new-tree-conflicts-when-file-is-added-on-two-branches",svn,merge,tree-conflict,,,,open,0,150,15,"SVN: How to resolve evil twins tree conflict by accepting incoming add (removing local add) In SVN I have a tree conflict upon merging two branches. The tree conflict arises because I have added a the same file or the same directory in both branches. Much the same  question is asked here:
+
+[Other Stackoverflow Question on evil twins tree-conflict][1]
+
+However I need to accept the incoming add. Subversion will only allow me to accept the working state of the repository. So I would expect I can do the merge from B1 to B2, delete locally added file in B2, tell svn to add (remerge?) the file from B1 into B2, and then commit the merge. Is it possible to resolve an evil twin conflict to the incoming version?
+
+The point here is to accept the incoming version so that when merging the next time from B1 to B2 I will get the changes merged automatically, without having to ever do the opposite B2->B1 merge.
+
+
+  [1]: http://stackoverflow.com/questions/767763/svn-how-to-resolve-new-tree-conflicts-when-file-is-added-on-two-branches",3
+6984438,08/08/2011 15:22:18,251161,01/14/2010 23:39:09,32,0,Trying to understand SVN,"Recently i have tried to work out in a machine and svn is also part of it, but no clue at all how do i connect that to main repository,
+
+along with all other machine.",svn,tortoisesvn,,,,08/08/2011 15:59:22,not a real question,1,34,4,"Trying to understand SVN Recently i have tried to work out in a machine and svn is also part of it, but no clue at all how do i connect that to main repository,
+
+along with all other machine.",2
+2953504,06/01/2010 21:33:15,34571,11/05/2008 06:28:15,225,3,Can I tag in svn with nant?,"I'm needing to build multiple environments and tag them in subversion using a nant script. Is there a way that I can use nant to create the tags in svn with a variable I supply?
+
+Thanks.",svn,tags,nant,build-script,,,open,0,35,7,"Can I tag in svn with nant? I'm needing to build multiple environments and tag them in subversion using a nant script. Is there a way that I can use nant to create the tags in svn with a variable I supply?
+
+Thanks.",4
+9987209,04/03/2012 04:39:33,483409,10/21/2010 18:39:53,89,0,if svn update messes up my local environment how to rollback?,"I am interested in the workflow that is usually followed with svn. If I do an update (this is in an environment without continuous integration or automated regression tests) to get changes of others checkins, sometimes things go horribly wrong. Some piece of functionality 
+is broken which may even take a lot of time tracking down who is responsible or to backout of changes... In such cases i just want to have my ""before update"" environment back...
+
+What is the norm in this case ? I hope my question is clear enough.",svn,,,,,,open,0,91,11,"if svn update messes up my local environment how to rollback? I am interested in the workflow that is usually followed with svn. If I do an update (this is in an environment without continuous integration or automated regression tests) to get changes of others checkins, sometimes things go horribly wrong. Some piece of functionality 
+is broken which may even take a lot of time tracking down who is responsible or to backout of changes... In such cases i just want to have my ""before update"" environment back...
+
+What is the norm in this case ? I hope my question is clear enough.",1
+10449557,05/04/2012 13:13:42,1338497,04/17/2012 10:39:30,35,0,Error Occured in SVN Repository,"While accessing `SVN` repository via a browser the error occurred after entering username and password. Below is the error 
+
+    Redirect Cycle detected for URL http://localhost/svn/repos 
+
+Please help me. I am new user and don't have any idea about it.
+",svn,tortoisesvn,visualsvn,ankhsvn,,,open,0,43,5,"Error Occured in SVN Repository While accessing `SVN` repository via a browser the error occurred after entering username and password. Below is the error 
+
+    Redirect Cycle detected for URL http://localhost/svn/repos 
+
+Please help me. I am new user and don't have any idea about it.
+",4
+747635,04/14/2009 13:47:11,5517,09/10/2008 08:17:12,78,4,How can I set up a network 'reference directory/folder' with Subversion?,"We're moving over to using Subversion (Windows platform, TortoiseSVN as the client) as our version control system. With tools we've used previously, it's been possible to set up a 'reference directory' or folder on the network which stores the latest revision of everything that's been checked in, so that people can easily browse the latest versions without having to use a dedicated tool. Is it possible to configure Subversion to do this?
+
+Ideally, it would update this reference directory on each check-in. Failing that, a daily update would be sufficient.
+",svn,,,,,,open,0,89,11,"How can I set up a network 'reference directory/folder' with Subversion? We're moving over to using Subversion (Windows platform, TortoiseSVN as the client) as our version control system. With tools we've used previously, it's been possible to set up a 'reference directory' or folder on the network which stores the latest revision of everything that's been checked in, so that people can easily browse the latest versions without having to use a dedicated tool. Is it possible to configure Subversion to do this?
+
+Ideally, it would update this reference directory on each check-in. Failing that, a daily update would be sufficient.
+",1
+2153833,01/28/2010 10:40:15,39428,11/20/2008 19:07:15,1055,32,SVN view commits between tag and trunk,"With SVN is there an easy way to get a list of all the commits between a tag (usually the most recent) and the current trunk, so you can see what (if anything) has changed?
+
+Likewise, can you do the same to compare the commits between two tags.
+
+Cheers, 
+Jack",svn,tags,trunk,subversion,,,open,0,48,7,"SVN view commits between tag and trunk With SVN is there an easy way to get a list of all the commits between a tag (usually the most recent) and the current trunk, so you can see what (if anything) has changed?
+
+Likewise, can you do the same to compare the commits between two tags.
+
+Cheers, 
+Jack",4
+6474198,06/24/2011 21:58:18,379495,01/07/2010 01:39:21,113,8,SVN - Get commit size in start-commit hook ?,"Actually, I check the size of a commit in the pre-commit hook. But all the files are commited before I can refuse the commit in pre-commit.
+
+For example, if the size limit is 10 MB and the user sends 1 GB file, the 1 GB will be completely transfered to my server and then the pre-commit hook will refuse the transaction.
+
+I want to refuse the transaction if the commit size is greater that the repository limit before all the files are transfered to the server.
+
+How is this possible?",svn,commit,pre-commit-hook,pre-commit,,,open,0,87,9,"SVN - Get commit size in start-commit hook ? Actually, I check the size of a commit in the pre-commit hook. But all the files are commited before I can refuse the commit in pre-commit.
+
+For example, if the size limit is 10 MB and the user sends 1 GB file, the 1 GB will be completely transfered to my server and then the pre-commit hook will refuse the transaction.
+
+I want to refuse the transaction if the commit size is greater that the repository limit before all the files are transfered to the server.
+
+How is this possible?",4
+570824,02/20/2009 19:02:03,23093,09/27/2008 23:51:13,13,2,SVN Problem,"When I go to update, I keep getting a locking error on a folder that no longer exists.  My first thought is to go use svn-cleanup to fix whatever has broken.  Instead, cleanup throws an error also: 
+
+`Problem running log
+svn: In directory ""C:\xxxxx\xxx\""
+svn: Error rocessing command ""append"" in ""C:\xxxxx\xxx\""
+svn: Missing ""xyz"" attribute in C:\xxxxx\xxx\""`
+
+Any ideas to clean this mess up besides re-downloading the entire project again?",svn,,,,,,open,0,68,2,"SVN Problem When I go to update, I keep getting a locking error on a folder that no longer exists.  My first thought is to go use svn-cleanup to fix whatever has broken.  Instead, cleanup throws an error also: 
+
+`Problem running log
+svn: In directory ""C:\xxxxx\xxx\""
+svn: Error rocessing command ""append"" in ""C:\xxxxx\xxx\""
+svn: Missing ""xyz"" attribute in C:\xxxxx\xxx\""`
+
+Any ideas to clean this mess up besides re-downloading the entire project again?",1
+5749848,04/21/2011 21:13:25,250391,01/14/2010 02:16:43,1,0,"What Maven multi module project structure for Subversion, Hudson, GWT Google Plugin, M2Eclipse?","I setup a flat Maven project layout with a relative path from parent to modules in the POM files. This builds fine in Maven and the Google Plugin for Eclipse runs the GWT web application. But then I couldn't find a clear explanation for configuring Hudson to find the modules from the parent. Also, a developer objected to each module having its own trunk/branch/tags Subversion layout.
+
+I re-factored, putting modules under the parent. M2Eclipse created a project for each module. But this is confusing; the parent project also has the module code. They don't seem to be links, so the same code is in two places. 
+
+Adding the parent with modules to Subversion and then checking it in turns the module projects into mere folders; the Google Plugin can't find a web application to run but it does build in Maven.
+
+I tried checking out the GWT module as a project but running as a web application fails because it's in a different directory.
+
+So, I am trying to put make these things work together in a standard-ish way. How do I configure Hudson for a flat layout Maven multi module project? Or. How do I use a nested layout that allows me to use the GWT Google Plugin?",svn,gwt,hudson,m2eclipse,,,open,0,206,13,"What Maven multi module project structure for Subversion, Hudson, GWT Google Plugin, M2Eclipse? I setup a flat Maven project layout with a relative path from parent to modules in the POM files. This builds fine in Maven and the Google Plugin for Eclipse runs the GWT web application. But then I couldn't find a clear explanation for configuring Hudson to find the modules from the parent. Also, a developer objected to each module having its own trunk/branch/tags Subversion layout.
+
+I re-factored, putting modules under the parent. M2Eclipse created a project for each module. But this is confusing; the parent project also has the module code. They don't seem to be links, so the same code is in two places. 
+
+Adding the parent with modules to Subversion and then checking it in turns the module projects into mere folders; the Google Plugin can't find a web application to run but it does build in Maven.
+
+I tried checking out the GWT module as a project but running as a web application fails because it's in a different directory.
+
+So, I am trying to put make these things work together in a standard-ish way. How do I configure Hudson for a flat layout Maven multi module project? Or. How do I use a nested layout that allows me to use the GWT Google Plugin?",4
+3404480,08/04/2010 10:07:32,410624,08/04/2010 10:07:32,1,0,Repository info (SVN) integration with Excel,"i'm new to this kind of things. Kinda the first post ever regarding programming, since till now i managed to google everything that i needed. Thanks for your patience:) .
+
+About my problem/goal:
+On our project we will have to have some kind of documentation management control. We will have around 160 .docx files (all files are already known), for version control we will use SVN. Those files will be saved in different folders (further on i will make repository structure), folders will have the function of a phase we are currently on in our project (we will have around 12 folders). When a phase is done, tag aka. official release will be made.
+Every file will have it's place in MS Excel WorkSheet Column with data like: Phase, Name, Revision, Tag, Hyperlink ..
+
+What i have to do is:
+Macro that will search for the file on repository, if found read it's revision,tag (latest) .. write it in excel sheet and also make a hyperlink to that file in another column.
+
+Repository structure:
+
+ - trunk
+   - System_Development
+     - System_Requirements_Specifications.docx
+     - System_Architecture_Description.docx
+     - System_Safety_Plan.docx
+     - ...
+   - Software Planing
+     - Software_Quality_Assurance_Plan.docx
+     - Software_Configuration_Management_Plan.docx
+     - ...
+   - ...
+ - branches (probably won't get used, not sure yet)
+ - tags
+   - 1
+      - System_Development
+         - System_Requirements_Specifications.docx
+         - System_Architecture_Description.docx
+         - System_Safety_Plan.docx
+         - ...
+   - 2
+     - System_Development
+         - System_Requirements_Specifications.docx
+         - System_Architecture_Description.docx
+         - System_Safety_Plan.docx
+         - ...
+     - Software Planing
+         - Software_Quality_Assurance_Plan.docx
+         - Software_Configuration_Management_Plan.docx
+         - ...
+
+I already made a macro that does the exact thing, but the problem is it's very slow. How and why? 
+
+I was using `ShellAndWait(""cmd.exe /c svn list --verbose http:\\localhost\trunk > text.txt"")`, parse that text file to get folders in trunk, then checked witch files are in those folders (with another ShellAndWait for each folder), if they were found get revision number and so on .. 
+
+As you see in the end, in my code svn command was executed 13 times so file in repository was found. With svn list --verbose i also got revision number. For svn command to execute it lasts around 0.15-0.20 of a second, so my revision number gathering lasts around 2 seconds. Witch is not a problem. 
+
+Getting tag is a problem, as i have folder in folder, so in the end we could have around 40 or even more svn executes, witch would make my tag function very slow.
+
+
+I have no clue how to access repository in any other way then with svn.exe. I am thinking about accessing repository remotely and querying database or what ever, still researching that part.
+
+
+Hope you understand my problem, for any more informations i am avail whole day! Thanks for your help!
+",svn,excel,vba,,,,open,0,575,6,"Repository info (SVN) integration with Excel i'm new to this kind of things. Kinda the first post ever regarding programming, since till now i managed to google everything that i needed. Thanks for your patience:) .
+
+About my problem/goal:
+On our project we will have to have some kind of documentation management control. We will have around 160 .docx files (all files are already known), for version control we will use SVN. Those files will be saved in different folders (further on i will make repository structure), folders will have the function of a phase we are currently on in our project (we will have around 12 folders). When a phase is done, tag aka. official release will be made.
+Every file will have it's place in MS Excel WorkSheet Column with data like: Phase, Name, Revision, Tag, Hyperlink ..
+
+What i have to do is:
+Macro that will search for the file on repository, if found read it's revision,tag (latest) .. write it in excel sheet and also make a hyperlink to that file in another column.
+
+Repository structure:
+
+ - trunk
+   - System_Development
+     - System_Requirements_Specifications.docx
+     - System_Architecture_Description.docx
+     - System_Safety_Plan.docx
+     - ...
+   - Software Planing
+     - Software_Quality_Assurance_Plan.docx
+     - Software_Configuration_Management_Plan.docx
+     - ...
+   - ...
+ - branches (probably won't get used, not sure yet)
+ - tags
+   - 1
+      - System_Development
+         - System_Requirements_Specifications.docx
+         - System_Architecture_Description.docx
+         - System_Safety_Plan.docx
+         - ...
+   - 2
+     - System_Development
+         - System_Requirements_Specifications.docx
+         - System_Architecture_Description.docx
+         - System_Safety_Plan.docx
+         - ...
+     - Software Planing
+         - Software_Quality_Assurance_Plan.docx
+         - Software_Configuration_Management_Plan.docx
+         - ...
+
+I already made a macro that does the exact thing, but the problem is it's very slow. How and why? 
+
+I was using `ShellAndWait(""cmd.exe /c svn list --verbose http:\\localhost\trunk > text.txt"")`, parse that text file to get folders in trunk, then checked witch files are in those folders (with another ShellAndWait for each folder), if they were found get revision number and so on .. 
+
+As you see in the end, in my code svn command was executed 13 times so file in repository was found. With svn list --verbose i also got revision number. For svn command to execute it lasts around 0.15-0.20 of a second, so my revision number gathering lasts around 2 seconds. Witch is not a problem. 
+
+Getting tag is a problem, as i have folder in folder, so in the end we could have around 40 or even more svn executes, witch would make my tag function very slow.
+
+
+I have no clue how to access repository in any other way then with svn.exe. I am thinking about accessing repository remotely and querying database or what ever, still researching that part.
+
+
+Hope you understand my problem, for any more informations i am avail whole day! Thanks for your help!
+",3
+2549924,03/31/2010 01:45:50,224922,12/04/2009 16:51:10,181,2,how to update a web server's content to the new svn changes?,"i use netbeans to check out projects from svn repo, then i edit the files and commit the changes. but how should i do to update the live web server content (in /var/www)?
+
+should i in my ubuntu server use ""svn checkout"" and check it out to /var/www or should i use netbeans to check out to a local folder and then upload the files to /var/www with ftp or webdav (and which one of them should i use)?",svn,apache,,,,,open,0,78,12,"how to update a web server's content to the new svn changes? i use netbeans to check out projects from svn repo, then i edit the files and commit the changes. but how should i do to update the live web server content (in /var/www)?
+
+should i in my ubuntu server use ""svn checkout"" and check it out to /var/www or should i use netbeans to check out to a local folder and then upload the files to /var/www with ftp or webdav (and which one of them should i use)?",2
+15504,08/19/2008 01:44:28,1463,08/15/2008 17:26:44,120,11,Use SVN instead of CVS on SourceForge,"I've just setup a new project on SourceForge and the admins set it up with CVS as the SCM, however, I want to use SVN. There is NO code in this project yet - empty directory.
+
+How do I change this project from using CVS to SVN?",svn,cvs,sourceforge,,,,open,0,46,7,"Use SVN instead of CVS on SourceForge I've just setup a new project on SourceForge and the admins set it up with CVS as the SCM, however, I want to use SVN. There is NO code in this project yet - empty directory.
+
+How do I change this project from using CVS to SVN?",3
+4579233,01/02/2011 16:15:26,347722,05/22/2010 08:44:07,1,1,what's the most famous source control,"بسم الله الرحمن الرحيم 
+hi 
+I am about to start a big project and i want use the most used source control to use it. 
+that will help me to get a nice number of developers 
+
+thanks in advance.",svn,version-control,tortoisesvn,,,01/02/2011 16:22:15,not constructive,1,39,6,"what's the most famous source control بسم الله الرحمن الرحيم 
+hi 
+I am about to start a big project and i want use the most used source control to use it. 
+that will help me to get a nice number of developers 
+
+thanks in advance.",3
+7513203,09/22/2011 10:18:40,775618,05/30/2011 01:33:57,16,3,Automatic approve New Register user,"i have installed gforge5 on centos,
+
+i was configure it so that versioning running well on it.
+but i have problem on registering user.
+
+i want to make new user can approve automatically by mail activation from server not approve by administrator.
+
+how to solve this ?
+
+
+Tks",svn,centos,activation,,,09/23/2011 00:42:07,off topic,1,43,5,"Automatic approve New Register user i have installed gforge5 on centos,
+
+i was configure it so that versioning running well on it.
+but i have problem on registering user.
+
+i want to make new user can approve automatically by mail activation from server not approve by administrator.
+
+how to solve this ?
+
+
+Tks",3
+5516700,04/01/2011 17:22:24,680594,03/28/2011 16:36:56,8,0,Best free alternative to Trac with SVN integration,What is the best free alternative to Trac with easy integration to Subversion?,svn,project-management,trac,tracker,,04/02/2011 00:31:04,off topic,1,13,8,Best free alternative to Trac with SVN integration What is the best free alternative to Trac with easy integration to Subversion?,4
+9308164,02/16/2012 08:56:35,1213337,02/16/2012 08:20:23,1,0,SVN: branch of read only repository?,"I have access to a read-only SVN repository of a certain project.
+
+I want to extent this project with my own modifications/additions. If I had full access to this repo, i could simply make my own development branch. However, I have not (and won't get write access).
+
+I would like to have my modifications stored in an (internal) repository so I can keep track of my own developments.
+
+Is it possible to set up a construction using SVN that can deal with this?
+
+Initially I was thinking about creating an (internal) SVN repository with a the structure as below:
+
+ - **trunk**  
+   - containing a copy of the external repo making use of svn:externals
+   
+ -  **branch**  
+   - my development branch based upon the trunk
+
+However, I quickly found out that it is not straightforward (if not impossible?) to create a branch based upon an 'external' folder.
+I also want to be able to merge changes in the external repository into my own development branch. I also doubt whether this is possible using this construction.
+
+Is it possible to get this construction working? Or should I deal with this in a completely different way? Any advice on this issue is greatly appreciated.
+
+thanks
+
+peter",svn,svn-externals,,,,,open,0,205,6,"SVN: branch of read only repository? I have access to a read-only SVN repository of a certain project.
+
+I want to extent this project with my own modifications/additions. If I had full access to this repo, i could simply make my own development branch. However, I have not (and won't get write access).
+
+I would like to have my modifications stored in an (internal) repository so I can keep track of my own developments.
+
+Is it possible to set up a construction using SVN that can deal with this?
+
+Initially I was thinking about creating an (internal) SVN repository with a the structure as below:
+
+ - **trunk**  
+   - containing a copy of the external repo making use of svn:externals
+   
+ -  **branch**  
+   - my development branch based upon the trunk
+
+However, I quickly found out that it is not straightforward (if not impossible?) to create a branch based upon an 'external' folder.
+I also want to be able to merge changes in the external repository into my own development branch. I also doubt whether this is possible using this construction.
+
+Is it possible to get this construction working? Or should I deal with this in a completely different way? Any advice on this issue is greatly appreciated.
+
+thanks
+
+peter",2
+10480240,05/07/2012 10:08:48,1367360,05/01/2012 07:42:05,1,0,TortoiseSVN diff command in Msbuild,"I am using TortoiseSVN.
+Now i want to show difference of all file's data between the last svn revision and current svn revision number. so i am using msbuild fo executing this script. 
+
+So can u tell me how can i execute this diff command that can compare all the file of previous and current revision number.
+
+Thanks in advance.
+",svn,msbuild,tortoisesvn,cruisecontrol.net,,,open,0,58,5,"TortoiseSVN diff command in Msbuild I am using TortoiseSVN.
+Now i want to show difference of all file's data between the last svn revision and current svn revision number. so i am using msbuild fo executing this script. 
+
+So can u tell me how can i execute this diff command that can compare all the file of previous and current revision number.
+
+Thanks in advance.
+",4
+8045535,11/08/2011 03:17:36,1030575,11/04/2011 23:22:17,13,0,Cornerstone SVN Error - Cant commit files,"Do users under passwd in subversion have certain permissions?
+
+I can download all the files from my subversion repository using Cornerstone on mac.
+
+But, if I make a change to a file and try to commit the file back to the repository...
+
+Cornerstone gives me this:
+
+
+    Description : You are not authorized to access the files in the repository.
+     Suggestion : You might be required to provide a user name and password when prompted before being allowed to access the repository.
+     
+    Technical Information
+    =====================
+    
+          Error : V4AuthorizationError
+      Exception : ZSVNAuthorizationException
+    
+    Causal Information
+    ==================
+    
+    Description : Commit failed (details follow):
+         Status : 170001
+           File : subversion/libsvn_client/commit.c, 867
+    
+    Description : Authorization failed
+         Status : 170001
+           File : subversion/svnserve/serve.c, 167
+
+It doesnt prompt me for a username and password...
+
+Anyone??",svn,version-control,cornerstone,,,,open,0,218,7,"Cornerstone SVN Error - Cant commit files Do users under passwd in subversion have certain permissions?
+
+I can download all the files from my subversion repository using Cornerstone on mac.
+
+But, if I make a change to a file and try to commit the file back to the repository...
+
+Cornerstone gives me this:
+
+
+    Description : You are not authorized to access the files in the repository.
+     Suggestion : You might be required to provide a user name and password when prompted before being allowed to access the repository.
+     
+    Technical Information
+    =====================
+    
+          Error : V4AuthorizationError
+      Exception : ZSVNAuthorizationException
+    
+    Causal Information
+    ==================
+    
+    Description : Commit failed (details follow):
+         Status : 170001
+           File : subversion/libsvn_client/commit.c, 867
+    
+    Description : Authorization failed
+         Status : 170001
+           File : subversion/svnserve/serve.c, 167
+
+It doesnt prompt me for a username and password...
+
+Anyone??",3
+5691557,04/17/2011 04:51:51,144695,07/24/2009 18:53:31,1416,21,git: Keeping my branch up to date with master,"I have a bug fix in my master, and I also want my branch to get that bug fix.  What git command do I use?",svn,git,github,,,,open,0,26,9,"git: Keeping my branch up to date with master I have a bug fix in my master, and I also want my branch to get that bug fix.  What git command do I use?",3
+11657749,07/25/2012 20:04:56,229853,12/11/2009 18:14:59,1247,4,Mountain Lion - SVN Missing,"I upgraded to Mac OS X Mountain Lion and found out SVN is no longer present. I use netbeans 6.9.1 in conjunction with Apache's SVN. How can I get it back and working?
+
+Thanks",svn,netbeans-6.9,osx-mountain-lion,,,07/30/2012 06:34:04,off topic,1,33,5,"Mountain Lion - SVN Missing I upgraded to Mac OS X Mountain Lion and found out SVN is no longer present. I use netbeans 6.9.1 in conjunction with Apache's SVN. How can I get it back and working?
+
+Thanks",3
+8841379,01/12/2012 19:52:28,1002972,10/19/2011 10:52:29,229,3,What to store on SVN?,"What do you think has to be kept on SVN when working in Java with Eclipse and Maven?
+Why?
+
+I'm talking about the Eclipse specific files, Maven files, and other files.
+
+This question is general and applies to all version control system.
+
+Thanks",svn,version-control,,,,01/13/2012 03:14:29,not a real question,1,39,5,"What to store on SVN? What do you think has to be kept on SVN when working in Java with Eclipse and Maven?
+Why?
+
+I'm talking about the Eclipse specific files, Maven files, and other files.
+
+This question is general and applies to all version control system.
+
+Thanks",2
+10586481,05/14/2012 15:34:54,991052,10/12/2011 08:41:16,1,0,"Atpana Studio 3 - Commit missing ""Out of date"" warning","I have a problem with SVN on Aptana Studio 3 because it doesn't show me any alert of ""Out of date"" when I commit a file which was edited after my update command.
+For example:
+
+FIRST PC
+
+ - Launch Update
+ - edit the file ""MyFile.php""
+ - Commit the file
+ - All OK
+
+SECOND PC
+
+- Doesn't launch Update (so it's working on an out of date version)
+- edit the file ""MyFile.php"" (out of date file..)
+- Commit the file
+- Aptana completed commit without any warnings!
+
+Is it normal? ",svn,aptana,commit,,,05/15/2012 15:52:32,off topic,1,83,10,"Atpana Studio 3 - Commit missing ""Out of date"" warning I have a problem with SVN on Aptana Studio 3 because it doesn't show me any alert of ""Out of date"" when I commit a file which was edited after my update command.
+For example:
+
+FIRST PC
+
+ - Launch Update
+ - edit the file ""MyFile.php""
+ - Commit the file
+ - All OK
+
+SECOND PC
+
+- Doesn't launch Update (so it's working on an out of date version)
+- edit the file ""MyFile.php"" (out of date file..)
+- Commit the file
+- Aptana completed commit without any warnings!
+
+Is it normal? ",3
+323462,11/27/2008 10:53:30,9236,09/15/2008 18:09:29,2353,70,Subversion auto-props woes,"This is driving me nuts so any advice from fellow users would be welcome.  I am using Subversion, with a copy of VisualSVN 1.6.1 installed on a Windows server.  On my PC I am using a combination of TortoiseSVN and the wonderful AnkhSVN Visual Studio plugin.  Everything works like a dream, but now I am trying use the `svn:keywords` feature so I can include `$Id$` at the top of all my source files.  Now, for existing files I can edit the SVN properties and add this keyword and it all works fine, but I want this done automatically for new files - and I cannot make it work.
+
+According to the documentation you need to edit a special Subversion Config file located in your `C:\Documents and Settings\<user>\Application Data\Subversion` folder.  My PC already had a copy of this file, so I changed it to look like this:
+
+    [miscellany]
+    enable-auto-props = yes
+    
+    [auto-props]
+    *.cpp = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.hpp = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.rc = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.rc2 = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.cc = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.c = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.h = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.wsf = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.js = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.htm = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.html = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.css = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+
+I then added a new file to an existing Visual Studio project (from within Visual Studio), added `$Id$` to the top and committed it - but, alas, the `svn:keywords` property is not being set.
+
+Does anyone know how to get this working?  I even tried adding settings to the registry (in `HKEY_CURRENT_USER\Software\Tigris.org\Subversion\Config`) but still no joy.  I then tried messing with Config files on the SVN server itself, but nothing seems to work.
+
+I have obviously missed something blindingly obvious!
+",svn,windows,,,,,open,0,367,3,"Subversion auto-props woes This is driving me nuts so any advice from fellow users would be welcome.  I am using Subversion, with a copy of VisualSVN 1.6.1 installed on a Windows server.  On my PC I am using a combination of TortoiseSVN and the wonderful AnkhSVN Visual Studio plugin.  Everything works like a dream, but now I am trying use the `svn:keywords` feature so I can include `$Id$` at the top of all my source files.  Now, for existing files I can edit the SVN properties and add this keyword and it all works fine, but I want this done automatically for new files - and I cannot make it work.
+
+According to the documentation you need to edit a special Subversion Config file located in your `C:\Documents and Settings\<user>\Application Data\Subversion` folder.  My PC already had a copy of this file, so I changed it to look like this:
+
+    [miscellany]
+    enable-auto-props = yes
+    
+    [auto-props]
+    *.cpp = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.hpp = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.rc = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.rc2 = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.cc = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.c = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.h = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.wsf = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.js = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.htm = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.html = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+    *.css = svn:eol-style=native;svn:keywords=Author Date Id HeadURL Revision
+
+I then added a new file to an existing Visual Studio project (from within Visual Studio), added `$Id$` to the top and committed it - but, alas, the `svn:keywords` property is not being set.
+
+Does anyone know how to get this working?  I even tried adding settings to the registry (in `HKEY_CURRENT_USER\Software\Tigris.org\Subversion\Config`) but still no joy.  I then tried messing with Config files on the SVN server itself, but nothing seems to work.
+
+I have obviously missed something blindingly obvious!
+",2
+2924264,05/27/2010 19:33:23,352309,05/27/2010 19:33:23,1,0,"Configuring Apache, Tomcat, & SVN on Snow Leopard Server","I have a Mac mini with Snow Leopard Server installed on it.  I need to have Tomcat, Apache, and SVN running on this system, with Apache configured to pass JSP through to Tomcat, and SVN accessible through Apache.  I've tried all sorts of things, and googled extensively, but can't find the right combination that works.  I've been able to get svn://myname@localhost to work, but svn://myname@myserver.com won't work.  Nor will Apache pass through to Tomcat if I connect to the server at port 80.  All I get is the text of the JSP file.
+
+I have a router in front of the server, with a fixed IP, and am using port forwarding to connect the outside world to the server.  If I forward port 80 to 8080 internally, then JSP pages load fine.  But passing 80 to 80 returns the above behavior.
+
+Are there any how-to's that address this particular combination?  Is there anyone here who has experience with this?  Any help would be most appreciated.
+
+I'm running OS X 10.6.3 Server.  Tomcat 6.0.26. Apache is what came installed on Snow Leopard Server.  SVN is the latest binary download (don't remember off hand, but it was within the last couple of weeks).  I've enabled the jk_module, dav_svn_module, and authz_svn_module modules in Server Admin.
+
+Please help.  This has had me totally wrapped around the axle for the last week now.",svn,apache,tomcat,osx-snow-leopard,,,open,0,237,9,"Configuring Apache, Tomcat, & SVN on Snow Leopard Server I have a Mac mini with Snow Leopard Server installed on it.  I need to have Tomcat, Apache, and SVN running on this system, with Apache configured to pass JSP through to Tomcat, and SVN accessible through Apache.  I've tried all sorts of things, and googled extensively, but can't find the right combination that works.  I've been able to get svn://myname@localhost to work, but svn://myname@myserver.com won't work.  Nor will Apache pass through to Tomcat if I connect to the server at port 80.  All I get is the text of the JSP file.
+
+I have a router in front of the server, with a fixed IP, and am using port forwarding to connect the outside world to the server.  If I forward port 80 to 8080 internally, then JSP pages load fine.  But passing 80 to 80 returns the above behavior.
+
+Are there any how-to's that address this particular combination?  Is there anyone here who has experience with this?  Any help would be most appreciated.
+
+I'm running OS X 10.6.3 Server.  Tomcat 6.0.26. Apache is what came installed on Snow Leopard Server.  SVN is the latest binary download (don't remember off hand, but it was within the last couple of weeks).  I've enabled the jk_module, dav_svn_module, and authz_svn_module modules in Server Admin.
+
+Please help.  This has had me totally wrapped around the axle for the last week now.",4

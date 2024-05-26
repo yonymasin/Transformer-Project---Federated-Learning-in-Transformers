@@ -1,0 +1,909 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+186264,10/09/2008 07:31:27,11249,09/16/2008 06:34:23,221,23,Is it time to start using HTML5?,"Is it time to start using HTML5? Someone has to start sometime but is now the time?
+
+Is it possible to to use the new HTML5 tags and code in such a way as to degrade gracefully?",html5,design,,,,10/05/2011 05:54:41,too localized,1,36,7,"Is it time to start using HTML5? Is it time to start using HTML5? Someone has to start sometime but is now the time?
+
+Is it possible to to use the new HTML5 tags and code in such a way as to degrade gracefully?",2
+10756207,05/25/2012 14:27:41,1340362,05/24/2010 10:47:16,222,7,cross platform web application,"I am going to start some projects, basically the web application that will be accessible cross-platform(IOS, Andrioid , Blackberry , windows phone,safari ,windows browser chrome and mozilla etc)
+after surfing some websites and suggetions I found out, I can use HTML5,CSS3 and JQueryMobile to create such pages, those page will be accessible on all platform.
+
+But still I am not clear about the other players like Sencha, Phone-Gap, Application-Craft and all. as per my understanding, these frameworks are providing us environment to create the deploy-able application on IOS, android and other platform. 
+
+Please suggest and contribute some ideas and what platform we should use if we need to create cross platfrom web application, and what we should not use also.
+
+any input will be valuable as I am zero currently.
+
+and is there any way to test this web application on windows environment.",html5,jquery-mobile,sencha,,,05/25/2012 16:42:41,not a real question,1,139,4,"cross platform web application I am going to start some projects, basically the web application that will be accessible cross-platform(IOS, Andrioid , Blackberry , windows phone,safari ,windows browser chrome and mozilla etc)
+after surfing some websites and suggetions I found out, I can use HTML5,CSS3 and JQueryMobile to create such pages, those page will be accessible on all platform.
+
+But still I am not clear about the other players like Sencha, Phone-Gap, Application-Craft and all. as per my understanding, these frameworks are providing us environment to create the deploy-able application on IOS, android and other platform. 
+
+Please suggest and contribute some ideas and what platform we should use if we need to create cross platfrom web application, and what we should not use also.
+
+any input will be valuable as I am zero currently.
+
+and is there any way to test this web application on windows environment.",3
+3281827,07/19/2010 14:12:41,292291,03/12/2010 10:53:07,458,6,HTML5 Cache Manifest: Fallback section & Network *,"from [Dive into HTML5: Cache Manifest: Fallback section][1]
+
+    CACHE MANIFEST
+    FALLBACK:
+    / /offline.html
+    NETWORK:
+    *
+
+i dont understand from the URL given what this block of code exactly does. does the fallback section mean when anything is not found, show the `offline.html` page
+
+then `network: *` all resources will be cached? it says also 
+
+> It uses common CSS, JavaScript, and
+> images on each page. Each of these
+> resources would need to be listed
+> explicitly in the `CACHE`
+
+this seems to conflict to `network: *` where it seems to say cache everything?
+
+  [1]: http://diveintohtml5.org/offline.html#fallback
+
+",html5,,,,,,open,0,107,8,"HTML5 Cache Manifest: Fallback section & Network * from [Dive into HTML5: Cache Manifest: Fallback section][1]
+
+    CACHE MANIFEST
+    FALLBACK:
+    / /offline.html
+    NETWORK:
+    *
+
+i dont understand from the URL given what this block of code exactly does. does the fallback section mean when anything is not found, show the `offline.html` page
+
+then `network: *` all resources will be cached? it says also 
+
+> It uses common CSS, JavaScript, and
+> images on each page. Each of these
+> resources would need to be listed
+> explicitly in the `CACHE`
+
+this seems to conflict to `network: *` where it seems to say cache everything?
+
+  [1]: http://diveintohtml5.org/offline.html#fallback
+
+",1
+10197287,04/17/2012 18:53:38,103753,05/08/2009 18:31:30,1692,31,Simple HTML as blog,"I've fooled with many blogging platforms, and develop in Ruby right now...I'm tired of dealing with databases and upgrading applications--so for my personal blog, I'd like to stick with pure html. 
+
+**Is this a bad idea?**
+
+The only dilemma is if I have a lot of entries...
+
+If you were to do something like this (given that you answered 'no' to the previous question), how would you go about formatting it and how would you deal with many entries?",html5,example,practical,,,05/01/2012 14:26:19,not constructive,1,77,4,"Simple HTML as blog I've fooled with many blogging platforms, and develop in Ruby right now...I'm tired of dealing with databases and upgrading applications--so for my personal blog, I'd like to stick with pure html. 
+
+**Is this a bad idea?**
+
+The only dilemma is if I have a lot of entries...
+
+If you were to do something like this (given that you answered 'no' to the previous question), how would you go about formatting it and how would you deal with many entries?",3
+11539585,07/18/2012 10:45:36,1534475,07/18/2012 10:36:54,1,0,HTML5 video and image tag,"i am creating one application in that i have to stream many videos one after the other using html5.How to do this?Similarly i need to display many images one after other .Please help me out in this situation.
+Thank you.:)",html5,html5-video,,,,07/20/2012 02:05:38,not a real question,1,39,5,"HTML5 video and image tag i am creating one application in that i have to stream many videos one after the other using html5.How to do this?Similarly i need to display many images one after other .Please help me out in this situation.
+Thank you.:)",2
+4278668,11/25/2010 15:36:12,519097,11/24/2010 16:28:06,1,0,Zooming an image in canvas,I have drawn an image using canvas and want to zoom it within canvas.. How can i do that??.. I DONT WANT TO SCALE.. I WANT TO ZOOM IN AND ZOOM OUT...,html5,canvas,,,,,open,0,32,5,Zooming an image in canvas I have drawn an image using canvas and want to zoom it within canvas.. How can i do that??.. I DONT WANT TO SCALE.. I WANT TO ZOOM IN AND ZOOM OUT...,2
+6184887,05/31/2011 08:30:17,6992,09/15/2008 12:58:25,495,11,Simple HTML5/CSS3 background image transition on mouse hover,"I'm trying to understand the _simplest_ background transition possible using _only_ __`HTML5`__ and __`CSS3`__. Searching through stackoverflow I've learned it can be easily implemented using external libraries such as `jQuery` but for this project I've decided not relying on any of those.
+
+__Markup__
+
+    <nav> 
+      <ul> 
+        <li><a class=""foo"" href=""http://www.google.com/search?q=foobar"">Foo</a></li>
+        <li><a class=""bar"" href=""http://www.google.com/search?q=foobar"">Bar</a></li>
+      </ul> 
+    </nav> 
+	
+__Styles__
+
+    body {
+      background: url('background.png') no-repeat 4em 4em;
+    }
+    nav a:hover { /* TODO */ }
+    .foo { /* TODO */ }
+    .bar { /* TODO */ }",html5,css3,stylesheet,markup,transitions,,open,0,133,8,"Simple HTML5/CSS3 background image transition on mouse hover I'm trying to understand the _simplest_ background transition possible using _only_ __`HTML5`__ and __`CSS3`__. Searching through stackoverflow I've learned it can be easily implemented using external libraries such as `jQuery` but for this project I've decided not relying on any of those.
+
+__Markup__
+
+    <nav> 
+      <ul> 
+        <li><a class=""foo"" href=""http://www.google.com/search?q=foobar"">Foo</a></li>
+        <li><a class=""bar"" href=""http://www.google.com/search?q=foobar"">Bar</a></li>
+      </ul> 
+    </nav> 
+	
+__Styles__
+
+    body {
+      background: url('background.png') no-repeat 4em 4em;
+    }
+    nav a:hover { /* TODO */ }
+    .foo { /* TODO */ }
+    .bar { /* TODO */ }",5
+6553767,07/01/2011 22:23:23,331000,05/02/2010 21:44:58,96,4,Javascript browser MMORPG,"How do you think - is it possible to make (in HTML5 canvas) MMORPG game ?
+If yes - what technologies on server-side whould you use?
+How would you manage high loads?",html5,canvas,mmorpg,,,07/03/2011 12:43:26,not constructive,1,30,3,"Javascript browser MMORPG How do you think - is it possible to make (in HTML5 canvas) MMORPG game ?
+If yes - what technologies on server-side whould you use?
+How would you manage high loads?",3
+7521653,09/22/2011 21:20:17,893730,08/14/2011 08:47:53,106,1,What can you use HTML5's local storage for?,"I was wondering what are some of the most creative and useful use cases of HTML5's local storage capabilities.
+
+Have you ever encountered any website that uses that feature in a cool way?
+
+In other words, what are some of the examples of places where storing user data in a browser indefinitely can be used?
+
+Any ideas are appreciated
+
+",html5,local-storage,,,,09/23/2011 07:48:20,not a real question,1,56,8,"What can you use HTML5's local storage for? I was wondering what are some of the most creative and useful use cases of HTML5's local storage capabilities.
+
+Have you ever encountered any website that uses that feature in a cool way?
+
+In other words, what are some of the examples of places where storing user data in a browser indefinitely can be used?
+
+Any ideas are appreciated
+
+",2
+6073444,05/20/2011 14:34:26,644165,03/04/2011 05:24:24,48,3,How can I get html5 to work with older versions of IE?,"I've tried using `<script src=""http://html5shim.googlecode.com/svn/trunk/html5.js""></script>` but still does not work. please help.
+
+thanks",html5,,,,,05/21/2011 02:09:56,not a real question,1,12,12,"How can I get html5 to work with older versions of IE? I've tried using `<script src=""http://html5shim.googlecode.com/svn/trunk/html5.js""></script>` but still does not work. please help.
+
+thanks",1
+5087687,02/23/2011 06:22:28,577436,01/16/2011 11:19:51,354,25,HOWTO: encode WebM using command line VLC?,"I found 1 command line, which claims do the transcode job. but for some reason there is something slightly wrong, it just send ASCII art via terminal, can anyone kindly tell me how to do the transcode via CLI and silently?
+
+    cvlc aVeryNiceMovie.avi -–sout ""#transcode{vcodec=VP80,vb=800,scale=1,acodec=vorbis,ab=128,channels=2}:std{access=file,mux='ffmpeg{mux=webm}',dst=aVeryNiceMoive.webm}""
+
+BTW, I'm on Ubuntu 10.10, VLC ver = 
+
+    c2h2@ip-10-128-145-204:~$ vlc -v
+    VLC media player 1.1.4 The Luggage (revision exported)
+
+",html5,ubuntu,vlc,webm,,05/10/2011 22:41:48,off topic,1,73,7,"HOWTO: encode WebM using command line VLC? I found 1 command line, which claims do the transcode job. but for some reason there is something slightly wrong, it just send ASCII art via terminal, can anyone kindly tell me how to do the transcode via CLI and silently?
+
+    cvlc aVeryNiceMovie.avi -–sout ""#transcode{vcodec=VP80,vb=800,scale=1,acodec=vorbis,ab=128,channels=2}:std{access=file,mux='ffmpeg{mux=webm}',dst=aVeryNiceMoive.webm}""
+
+BTW, I'm on Ubuntu 10.10, VLC ver = 
+
+    c2h2@ip-10-128-145-204:~$ vlc -v
+    VLC media player 1.1.4 The Luggage (revision exported)
+
+",4
+7399016,09/13/2011 08:40:44,939902,09/12/2011 05:08:08,1,0,HTML5: Where to start?,I wanted to learn and start serious commercial working on HTML5. But I am not getting where to start with. Can somebody give links that can serve as the starting point for starting serious use and development of HTML5?,html5,,,,,01/16/2012 15:32:12,not constructive,1,39,4,HTML5: Where to start? I wanted to learn and start serious commercial working on HTML5. But I am not getting where to start with. Can somebody give links that can serve as the starting point for starting serious use and development of HTML5?,1
+8425340,12/08/2011 02:18:35,795453,06/13/2011 05:58:37,18,1,CakePHP offline mobile web app,"We're building a simple photo sharing mobile web app which lets users to choose photo from their mobile photo gallery, write a text on it, and post it to our CakePHP site.
+
+Few requirements:
+
+- Mobile web app build with HTML5
+- Support for popular Google devices (Apple has no filesystem access from the browser, therefore not possible?) 
+- CakePHP platform as a backend
+- Restful app - HTML5 offline support 
+- if user is offline, user can choose photo and write the text, data is saved on mobile until the user is connected again and then it'll be posted to CakePHP backend
+  
+Do you think it is realistic to create usable app like this ?",html5,cakephp,web-applications,mobile,offline,12/09/2011 15:35:07,not constructive,1,113,5,"CakePHP offline mobile web app We're building a simple photo sharing mobile web app which lets users to choose photo from their mobile photo gallery, write a text on it, and post it to our CakePHP site.
+
+Few requirements:
+
+- Mobile web app build with HTML5
+- Support for popular Google devices (Apple has no filesystem access from the browser, therefore not possible?) 
+- CakePHP platform as a backend
+- Restful app - HTML5 offline support 
+- if user is offline, user can choose photo and write the text, data is saved on mobile until the user is connected again and then it'll be posted to CakePHP backend
+  
+Do you think it is realistic to create usable app like this ?",5
+8463694,12/11/2011 11:44:00,1092150,12/11/2011 11:22:57,1,1,Plupload (Html5 runtime) upload to S3 direclty,"I saw in one a previous post (http://stackoverflow.com/questions/4639471/how-do-i-make-plupload-upload-directly-to-amazon-s3), that this is possible to direct upload from Pluplod Html5 runtime to S3.
+
+I tried your approach by hosting my ""pluploader"" into my S3 bucket but i am still receiving error from amazon
+
+
+Failed to load resource: the server responded with a status of 405 (Method Not Allowed)
+XMLHttpRequest cannot load http://xxxxxxxxx.s3.amazonaws.com/. Origin http://s3.amazonaws.com is not allowed by Access-Control-Allow-Origin
+
+
+Is there someone thar can help me ? Thanks
+",html5,amazon-s3,plupload,,,12/12/2011 01:51:40,not a real question,1,72,7,"Plupload (Html5 runtime) upload to S3 direclty I saw in one a previous post (http://stackoverflow.com/questions/4639471/how-do-i-make-plupload-upload-directly-to-amazon-s3), that this is possible to direct upload from Pluplod Html5 runtime to S3.
+
+I tried your approach by hosting my ""pluploader"" into my S3 bucket but i am still receiving error from amazon
+
+
+Failed to load resource: the server responded with a status of 405 (Method Not Allowed)
+XMLHttpRequest cannot load http://xxxxxxxxx.s3.amazonaws.com/. Origin http://s3.amazonaws.com is not allowed by Access-Control-Allow-Origin
+
+
+Is there someone thar can help me ? Thanks
+",3
+7395956,09/13/2011 01:48:15,351548,05/27/2010 03:14:04,1463,87,Which mobile devices/platform to support for web,"We are building an **Enterprise Web** application that can be accessed **publicly** and we need to support ***most** mobile devices (more than 90% on the market). Specifically a part of it is an **E-book** viewer and **Audio / Video** streaming and viewer. 
+
+Requirements specifically says:
+
+1. Should support Blackberry and Android
+
+2. Should support more than 90% of mobile devices. The requirements were written when there was no iPad/iPhone yet, so it is a must that we support it now.
+
+Questions:
+
+ 1. **Which specific platform/device to support for this service?** 
+
+ - Requirement #2 is a bit vague so I think it can be negotiated. But any idea which specific platform to support aside from Android, BB, iOS. Maybe you could share some statistics if you have the information.
+
+ 2. **And what strategy/technology to use to save effort for supporting both mobile and desktop web.**
+
+ - I.e. Is it better to have separate development for mobile and desktop support? Or use a framework (any recommendation?) that unifies both desktop / mobile web application. I know this question is a bit vague, maybe some of you already had a similar experience that you could share.
+
+ - For technology, ebook and a/v viewer are arguably mostly built on Flash. One major problem: iOS and older mobile support. Youtube and Vimeo are already in a ""transitional state"" for HTML5 for video. Is this the trend/future? How about 3GP, is it still a must? Greatly appreciate if you could share your experiences. Thanks!
+
+Still in the very early stages so this is more of a brainstorming prior to SA&D.
+
+Technologies: Wowza, DSpace, Liferay, Flash, HTML5",html5,mobile,,,,09/13/2011 10:25:48,not constructive,1,266,7,"Which mobile devices/platform to support for web We are building an **Enterprise Web** application that can be accessed **publicly** and we need to support ***most** mobile devices (more than 90% on the market). Specifically a part of it is an **E-book** viewer and **Audio / Video** streaming and viewer. 
+
+Requirements specifically says:
+
+1. Should support Blackberry and Android
+
+2. Should support more than 90% of mobile devices. The requirements were written when there was no iPad/iPhone yet, so it is a must that we support it now.
+
+Questions:
+
+ 1. **Which specific platform/device to support for this service?** 
+
+ - Requirement #2 is a bit vague so I think it can be negotiated. But any idea which specific platform to support aside from Android, BB, iOS. Maybe you could share some statistics if you have the information.
+
+ 2. **And what strategy/technology to use to save effort for supporting both mobile and desktop web.**
+
+ - I.e. Is it better to have separate development for mobile and desktop support? Or use a framework (any recommendation?) that unifies both desktop / mobile web application. I know this question is a bit vague, maybe some of you already had a similar experience that you could share.
+
+ - For technology, ebook and a/v viewer are arguably mostly built on Flash. One major problem: iOS and older mobile support. Youtube and Vimeo are already in a ""transitional state"" for HTML5 for video. Is this the trend/future? How about 3GP, is it still a must? Greatly appreciate if you could share your experiences. Thanks!
+
+Still in the very early stages so this is more of a brainstorming prior to SA&D.
+
+Technologies: Wowza, DSpace, Liferay, Flash, HTML5",2
+7561415,09/26/2011 21:15:02,950893,09/18/2011 04:18:22,1,0,HTML5 the future of all programming?,Hi my teacher was lecturing today and he was talking about HTML 5 and how all content will be heading towards the web. He basically described a world where OS's are irrelevant because all programs (except legacy) will be made in html 5 on the web so that they can be accessed anywhere. He was describing games like World of Warcraft to desktop apps like MS Office all being made for the web. Do you guys think this could be the future of programming?,html5,,,,,09/26/2011 21:16:47,not constructive,1,84,6,HTML5 the future of all programming? Hi my teacher was lecturing today and he was talking about HTML 5 and how all content will be heading towards the web. He basically described a world where OS's are irrelevant because all programs (except legacy) will be made in html 5 on the web so that they can be accessed anywhere. He was describing games like World of Warcraft to desktop apps like MS Office all being made for the web. Do you guys think this could be the future of programming?,1
+9162368,02/06/2012 15:21:03,855643,07/21/2011 09:55:09,265,42,What's the limitations of HTML5 compared to native app?,"HTML5 becomes more and more popular in these days, even someone claims that HTML5 will replace native app in next a few years, but someone don't think so.
+
+Who can give me some concrete reasons on this issue, and tell me what's the 'real' ceiling of HTML5?",html5,,,,,02/07/2012 01:48:58,not constructive,1,46,9,"What's the limitations of HTML5 compared to native app? HTML5 becomes more and more popular in these days, even someone claims that HTML5 will replace native app in next a few years, but someone don't think so.
+
+Who can give me some concrete reasons on this issue, and tell me what's the 'real' ceiling of HTML5?",1
+11656487,07/25/2012 18:44:44,92297,04/17/2009 19:06:23,814,40,"Is there something like an equivalent of a ""Go get Flash"" link for HTML5?","I'm building a website that requires HTML5 features in order to run.  If the features are not present in the browser we display a message to the user that they need to upgrade their browser in order to fully view the content.  What I would like to do is provide a link to a site with some information on what HTML5 is and what browsers support it etc.  We'd prefer not have to build out our HTML5 information pages and just link to something ""official"" instead.  Similar to the ""Go get Flash"" link (to http://get.adobe.com/flashplayer/) that is usually used to direct the user to Adobe if Flash isn't present.  Does such a site exist?  ",html5,,,,,07/26/2012 07:36:11,off topic,1,121,14,"Is there something like an equivalent of a ""Go get Flash"" link for HTML5? I'm building a website that requires HTML5 features in order to run.  If the features are not present in the browser we display a message to the user that they need to upgrade their browser in order to fully view the content.  What I would like to do is provide a link to a site with some information on what HTML5 is and what browsers support it etc.  We'd prefer not have to build out our HTML5 information pages and just link to something ""official"" instead.  Similar to the ""Go get Flash"" link (to http://get.adobe.com/flashplayer/) that is usually used to direct the user to Adobe if Flash isn't present.  Does such a site exist?  ",1
+9282649,02/14/2012 19:04:18,1146259,01/12/2012 19:08:52,494,16,What property is treated differently in Firefox that is preventing it from displaying this properly,"Okay, I've been working on creating a drop-down menu which has been working well on Google's Chrome. I recently expanded to check the site on Opera, Firefox & Safari.
+
+Safari looks identical to Chrome but Opera and Firefox are showing the 'hidden' text of my drop-down menu. Opera is also not seeming to register paddings at all but my question is:
+
+Q: What element is not being displayed in Firefox the same as it is in Chrome and Safari? 
+
+The way I am hiding my menu is by setting the height equal to 0px and then on hover setting it to the proper 30px. I choose this manner as it can be transitioned to have the menu glide up and down. 
+
+The HTML:
+
+    <nav>
+		<ul>
+			<li><a href=""services.html"" class=""glow"">Services</a>
+				<ul>
+					<li><a href=""researchDevelopment.html"" class=""glow"">Research &amp; Development</a></li>
+					<li><a href=""designAudit.html"" class=""glow"">Design Auditing</a></li>
+					<li><a href=""training.html"" class=""glow"">Training</a></li>
+					<li><a href=""licensing.html"" class=""glow"">Licensing</a></li>
+					<li><a href=""troubleshooting.html"" class=""glow"">Troubleshooting &amp; Performance Analysis</a></li>
+				</ul>
+			</li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Products</a></li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Training</a></li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Technology</a></li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Clients</a></li>
+			<li><a href=""publications.html"" class=""glow"">Publications</a></li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Contact Us</a></li>
+		</ul>
+	</nav>
+
+The CSS: 
+
+    /*--- Nav Bar ---*/
+    nav { float: left; margin: 4px 0 0 137px; }
+    nav li { list-style: none; float: left; width: 113px; height: 56px; text-align: center; position: relative; }
+    nav li:hover { background: url(images/buttonSprite.png) 0 -90px; }
+    nav a { display: block; width: 113px; height: 37px; }
+    nav a:link { padding-top: 19px; }
+    /*--- Creates a delayed glowing effect on the links on hover. ---*/
+    nav a.glow, nav a.glow:hover, nav a.glow:focus { text-shadow: none; -webkit-transition: 300ms linear 0s; -moz-transition: 300ms linear 0s; -o-transition: 300ms linear 0s; transition: 300ms linear 0s;  outline: 0 none; }  
+    nav a.glow:hover, nav a.glow:focus { color: #fff; text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff; }
+    /*--- Drop Down Functionality. ---*/
+    nav li ul { list-style: none; height: 0px;}
+    nav li ul li, nav li ul li a { height: 0px; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; tranistion: all 0.2s ease-in-out; }
+    nav li ul li { float: none; width: 263px; background: url(images/buttonSprite.png) 0 -30px; }
+    nav li ul a:link { display: block; white-space: nowrap; padding-top: 0px; width: 100%; margin: -10px 0 0 0; }
+    /*--- Show drop-down on hover. ---*/
+    nav li:hover ul li { height: 30px; } 
+    nav li:hover ul a:link { padding-top: 6px; width: 100%; height: 100%; margin: 0 0 0 0; }
+    nav li ul li:hover{ background: url(images/buttonSprite.png) 0 -60px; }
+
+The drop-down 'subMenu' is contained as an unordered list within its parent list item. After toying with the code, I found that setting 
+
+`nav li ul li { display: block }` 
+
+Will cause chrome and Safari to reveal the text as well. As a helper here is pictures of what I'm talking about.
+
+Chrome: What I want:
+
+![enter image description here][1]
+
+Firefox: Not so much:
+
+![enter image description here][2]
+
+Menu down, working on all browsers I've tested: 
+
+![enter image description here][3]
+
+Thanks in advance. And also, I'm quite new with this stuff so if there is formatting conventions or unnecessary code please let me know so I can write better code. I took the CSS formatting style from Apple.com's styleSheets as it seems slightly nicer than the
+
+    itemReference {
+        attribute: setting;
+    }
+
+style
+
+
+  [1]: http://i.stack.imgur.com/UAGFk.png
+  [2]: http://i.stack.imgur.com/tfT3i.png
+  [3]: http://i.stack.imgur.com/xntrS.png",html5,firefox,google-chrome,css3,website,,open,0,590,15,"What property is treated differently in Firefox that is preventing it from displaying this properly Okay, I've been working on creating a drop-down menu which has been working well on Google's Chrome. I recently expanded to check the site on Opera, Firefox & Safari.
+
+Safari looks identical to Chrome but Opera and Firefox are showing the 'hidden' text of my drop-down menu. Opera is also not seeming to register paddings at all but my question is:
+
+Q: What element is not being displayed in Firefox the same as it is in Chrome and Safari? 
+
+The way I am hiding my menu is by setting the height equal to 0px and then on hover setting it to the proper 30px. I choose this manner as it can be transitioned to have the menu glide up and down. 
+
+The HTML:
+
+    <nav>
+		<ul>
+			<li><a href=""services.html"" class=""glow"">Services</a>
+				<ul>
+					<li><a href=""researchDevelopment.html"" class=""glow"">Research &amp; Development</a></li>
+					<li><a href=""designAudit.html"" class=""glow"">Design Auditing</a></li>
+					<li><a href=""training.html"" class=""glow"">Training</a></li>
+					<li><a href=""licensing.html"" class=""glow"">Licensing</a></li>
+					<li><a href=""troubleshooting.html"" class=""glow"">Troubleshooting &amp; Performance Analysis</a></li>
+				</ul>
+			</li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Products</a></li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Training</a></li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Technology</a></li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Clients</a></li>
+			<li><a href=""publications.html"" class=""glow"">Publications</a></li>
+			<li><a href=""pageTemplate.html"" class=""glow"">Contact Us</a></li>
+		</ul>
+	</nav>
+
+The CSS: 
+
+    /*--- Nav Bar ---*/
+    nav { float: left; margin: 4px 0 0 137px; }
+    nav li { list-style: none; float: left; width: 113px; height: 56px; text-align: center; position: relative; }
+    nav li:hover { background: url(images/buttonSprite.png) 0 -90px; }
+    nav a { display: block; width: 113px; height: 37px; }
+    nav a:link { padding-top: 19px; }
+    /*--- Creates a delayed glowing effect on the links on hover. ---*/
+    nav a.glow, nav a.glow:hover, nav a.glow:focus { text-shadow: none; -webkit-transition: 300ms linear 0s; -moz-transition: 300ms linear 0s; -o-transition: 300ms linear 0s; transition: 300ms linear 0s;  outline: 0 none; }  
+    nav a.glow:hover, nav a.glow:focus { color: #fff; text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff; }
+    /*--- Drop Down Functionality. ---*/
+    nav li ul { list-style: none; height: 0px;}
+    nav li ul li, nav li ul li a { height: 0px; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; tranistion: all 0.2s ease-in-out; }
+    nav li ul li { float: none; width: 263px; background: url(images/buttonSprite.png) 0 -30px; }
+    nav li ul a:link { display: block; white-space: nowrap; padding-top: 0px; width: 100%; margin: -10px 0 0 0; }
+    /*--- Show drop-down on hover. ---*/
+    nav li:hover ul li { height: 30px; } 
+    nav li:hover ul a:link { padding-top: 6px; width: 100%; height: 100%; margin: 0 0 0 0; }
+    nav li ul li:hover{ background: url(images/buttonSprite.png) 0 -60px; }
+
+The drop-down 'subMenu' is contained as an unordered list within its parent list item. After toying with the code, I found that setting 
+
+`nav li ul li { display: block }` 
+
+Will cause chrome and Safari to reveal the text as well. As a helper here is pictures of what I'm talking about.
+
+Chrome: What I want:
+
+![enter image description here][1]
+
+Firefox: Not so much:
+
+![enter image description here][2]
+
+Menu down, working on all browsers I've tested: 
+
+![enter image description here][3]
+
+Thanks in advance. And also, I'm quite new with this stuff so if there is formatting conventions or unnecessary code please let me know so I can write better code. I took the CSS formatting style from Apple.com's styleSheets as it seems slightly nicer than the
+
+    itemReference {
+        attribute: setting;
+    }
+
+style
+
+
+  [1]: http://i.stack.imgur.com/UAGFk.png
+  [2]: http://i.stack.imgur.com/tfT3i.png
+  [3]: http://i.stack.imgur.com/xntrS.png",5
+10856765,06/01/2012 20:14:03,1082555,12/05/2011 23:55:10,44,2,EU Cookie law - is HTML5 Local Storage covered,"I know this is a question which I already kwow the answer to, but I wanted to check. 
+
+Re the new Cookie law set by the EU, does this also cover HTML5 local storage, it all seams a bit weird to me. Firstly if you ask a users permission to store cookies, then without being able to store data on the computer how are you meant to remember that setting in the future? And if HTML5 Local storage isn't covered, then surely that is a bit of a waste of time as everyone in time will switch, or just run a JavaScript, find out their browser and if it supports HTML5 use that method and if not ask for cookies?
+
+",html5,cookies,law,,,06/01/2012 20:25:58,off topic,1,120,9,"EU Cookie law - is HTML5 Local Storage covered I know this is a question which I already kwow the answer to, but I wanted to check. 
+
+Re the new Cookie law set by the EU, does this also cover HTML5 local storage, it all seams a bit weird to me. Firstly if you ask a users permission to store cookies, then without being able to store data on the computer how are you meant to remember that setting in the future? And if HTML5 Local storage isn't covered, then surely that is a bit of a waste of time as everyone in time will switch, or just run a JavaScript, find out their browser and if it supports HTML5 use that method and if not ask for cookies?
+
+",3
+10856473,06/01/2012 19:47:23,856634,07/21/2011 18:39:01,96,6,Difference between the Client Side MVC framework and the HTML5 framework,"What are the differences between a client side MVC framework and the Html5 framework, and if they are different, can we use them together.",html5,mvc,javascript-framework,,,06/16/2012 13:18:39,not constructive,1,24,11,"Difference between the Client Side MVC framework and the HTML5 framework What are the differences between a client side MVC framework and the Html5 framework, and if they are different, can we use them together.",3
+4534482,12/26/2010 16:10:08,48082,12/21/2008 03:44:34,26866,1142,Should I be learning HTML5?  What's the big draw?,"I've used html since 1995.  I know javascript and can manage css and jQuery.  
+
+Do I need to start learning HTML5?  Is this going to be real, or is it going to be like VRML or some other odd ""standard"" that never really took off? 
+
+If it is going to be real, WHY?  What's the fundamental advance?
+
+If I do need to learn it, what's the best way forward, for an experienced developer? 
+I'm most comfortable using a text editor (emacs) to do development. ",html5,career-development,,,,01/23/2012 22:59:44,off topic,1,88,10,"Should I be learning HTML5?  What's the big draw? I've used html since 1995.  I know javascript and can manage css and jQuery.  
+
+Do I need to start learning HTML5?  Is this going to be real, or is it going to be like VRML or some other odd ""standard"" that never really took off? 
+
+If it is going to be real, WHY?  What's the fundamental advance?
+
+If I do need to learn it, what's the best way forward, for an experienced developer? 
+I'm most comfortable using a text editor (emacs) to do development. ",2
+11495521,07/15/2012 20:51:22,1527445,07/15/2012 20:44:55,1,0,how do I place a file on an html5 website for visitors to download?,"Im trying to build my online CV website, and I'd like to place a PDF version of the CV on it.
+I tried some stuff but nothing worked so far...
+
+Im using Tumult Hype 1.5 (HTML5) to build my website.
+
+any thoughts or suggestions?",html5,pdf,file-download,,,07/15/2012 20:55:08,off topic,1,41,14,"how do I place a file on an html5 website for visitors to download? Im trying to build my online CV website, and I'd like to place a PDF version of the CV on it.
+I tried some stuff but nothing worked so far...
+
+Im using Tumult Hype 1.5 (HTML5) to build my website.
+
+any thoughts or suggestions?",3
+2901510,05/25/2010 01:54:11,335113,05/07/2010 05:48:29,11,2,Can some one expalin me whats basically HTML 5 and hows its different ?,What are the main new features of HTML 5 ?,html5,,,,,05/25/2010 03:06:11,not a real question,1,10,14,Can some one expalin me whats basically HTML 5 and hows its different ? What are the main new features of HTML 5 ?,1
+9794803,03/20/2012 20:57:12,1215791,02/17/2012 08:53:23,17,0,"Where can I find some cool graphics webites (html5, svg, css3)?","I would like to know where i could find some cool looking websites that use html5 (canvas for example) or SVG elements, combined with CSS3 (animation, gradients etc).
+I found a lot of examples, animation demos and so on, but I want to see some websites that put these elements together, with a purpose (not just to show what html5 can do)
+For example, the Google+ UI (normal and mobile versions are very cool looking), or Google Zeitgeist.",html5,animation,graphics,website,,03/21/2012 14:58:45,off topic,1,76,11,"Where can I find some cool graphics webites (html5, svg, css3)? I would like to know where i could find some cool looking websites that use html5 (canvas for example) or SVG elements, combined with CSS3 (animation, gradients etc).
+I found a lot of examples, animation demos and so on, but I want to see some websites that put these elements together, with a purpose (not just to show what html5 can do)
+For example, the Google+ UI (normal and mobile versions are very cool looking), or Google Zeitgeist.",4
+8358712,12/02/2011 15:36:13,142018,07/21/2009 13:41:49,356,4,"Firefox 8 still doesn't support multiline titles or alt-text (""tooltips"")?","Despite this documentation:
+
+https://developer.mozilla.org/en/HTML/Global_attributes#attr-title
+
+and HTML5 having a spec for multiline
+
+http://dev.w3.org/html5/spec/elements.html#the-title-attribute
+
+I cannot reproduce that behavior in Firefox 8.
+
+Just wanted to make sure I am not missing something.
+
+All other modern browsers support multiline except Firefox? Seriously?",html5,firefox,multiline,tooltips,,,open,0,33,10,"Firefox 8 still doesn't support multiline titles or alt-text (""tooltips"")? Despite this documentation:
+
+https://developer.mozilla.org/en/HTML/Global_attributes#attr-title
+
+and HTML5 having a spec for multiline
+
+http://dev.w3.org/html5/spec/elements.html#the-title-attribute
+
+I cannot reproduce that behavior in Firefox 8.
+
+Just wanted to make sure I am not missing something.
+
+All other modern browsers support multiline except Firefox? Seriously?",4
+7461483,09/18/2011 12:26:17,940571,09/12/2011 12:52:19,1,0,Is it possible to get my HTML5 website to work on all browsers?,"Is it possible to get my HTML5 & CSS3 website to work on all browsers? 
+
+It works on the newer browsers but doesn't work on IE.",html5,css3,browser-compatibility,,,09/19/2011 11:09:47,not a real question,1,26,13,"Is it possible to get my HTML5 website to work on all browsers? Is it possible to get my HTML5 & CSS3 website to work on all browsers? 
+
+It works on the newer browsers but doesn't work on IE.",3
+8674531,12/29/2011 23:06:32,263957,02/02/2010 00:14:50,490,3,Photoshop and CSS3 background shadow,"There is a regular psd file only with the background. http://imwox.com/test.psd
+
+I have Photoshop CS 5.1, ran into a problem: I do not know how to cut out the background or the background to be two main background was such a stretch greens here at 100%, while the other (which is at the center of the white glow) was like in the center of the future site. I was just trying not to cut. Either cut out the curve, or the background is not inserted.
+
+In short it is necessary that the central part of the site was a white shadow:)
+
+Sorry for bad english",html5,css3,photoshop,,,01/04/2012 17:48:22,off topic,1,102,5,"Photoshop and CSS3 background shadow There is a regular psd file only with the background. http://imwox.com/test.psd
+
+I have Photoshop CS 5.1, ran into a problem: I do not know how to cut out the background or the background to be two main background was such a stretch greens here at 100%, while the other (which is at the center of the white glow) was like in the center of the future site. I was just trying not to cut. Either cut out the curve, or the background is not inserted.
+
+In short it is necessary that the central part of the site was a white shadow:)
+
+Sorry for bad english",3
+6376405,06/16/2011 17:57:20,706071,04/13/2011 12:49:27,40,0,Is Interfacing both java.awt.Graphics2D and Html5 Context in GWT feasible?,"I have a java library which heavily uses java.awt.Graphics2d.
+
+I want to port my library to html5 canvas by using gwt.
+
+So I'm planning to write an interface (or just a class), say common.Graphics2d, 
+an adapter class, say com.test.awt.Graphics2d, implements IGraphics2d and uses java.awt.Graphics2d
+
+and another adapter class, say com.test.gwt.Graphics2d, implements common.Graphics2d and uses com.google.gwt.canvas.dom.client.Context2d.
+
+Then I will replace all java.awt.Graphics2d with common.Graphics2d.
+So after that, my library will work on both gwt and java.
+
+The problem here is to implement graphics2d methods, and configuration by canvas context 2d. Is it feasible to implement same functionality with canvas?
+
+
+
+
+
+
+",html5,gwt,canvas,awt,graphics2d,,open,0,92,10,"Is Interfacing both java.awt.Graphics2D and Html5 Context in GWT feasible? I have a java library which heavily uses java.awt.Graphics2d.
+
+I want to port my library to html5 canvas by using gwt.
+
+So I'm planning to write an interface (or just a class), say common.Graphics2d, 
+an adapter class, say com.test.awt.Graphics2d, implements IGraphics2d and uses java.awt.Graphics2d
+
+and another adapter class, say com.test.gwt.Graphics2d, implements common.Graphics2d and uses com.google.gwt.canvas.dom.client.Context2d.
+
+Then I will replace all java.awt.Graphics2d with common.Graphics2d.
+So after that, my library will work on both gwt and java.
+
+The problem here is to implement graphics2d methods, and configuration by canvas context 2d. Is it feasible to implement same functionality with canvas?
+
+
+
+
+
+
+",5
+8965919,01/23/2012 00:06:43,162381,08/25/2009 00:44:47,1023,64,jquerymoblie like w7p live tiles style layout,Anyone here developed a 'live tiles' style layout using jquery mobile? Mind sharing tips or links on how to acheive this?,html5,css3,jquery-mobile,phonegap,live-tile,07/12/2012 11:40:50,not constructive,1,21,7,jquerymoblie like w7p live tiles style layout Anyone here developed a 'live tiles' style layout using jquery mobile? Mind sharing tips or links on how to acheive this?,5
+8690255,12/31/2011 19:56:29,979830,10/05/2011 06:56:57,10,0,Youtube Adio only HTML5 player,"is it possible to play the **audio only** from a YouTube video using html5 and javascript?
+ 
+",html5,audio,youtube,,,,open,0,17,5,"Youtube Adio only HTML5 player is it possible to play the **audio only** from a YouTube video using html5 and javascript?
+ 
+",3
+3008003,06/09/2010 16:54:28,115608,06/01/2009 19:31:12,175,13,localstorage vs html5?,"What's the difference between local/html5 on this page:
+
+http://code.google.com/p/jquery-jstore/wiki/DefaultEngines
+
+I was under the impression that I could use localstorage on Chrome, but looks like that's not the case?
+
+Some elucidation would be greatly appreciated.
+
+Thanks.",html5,local-storage,,,,,open,0,31,3,"localstorage vs html5? What's the difference between local/html5 on this page:
+
+http://code.google.com/p/jquery-jstore/wiki/DefaultEngines
+
+I was under the impression that I could use localstorage on Chrome, but looks like that's not the case?
+
+Some elucidation would be greatly appreciated.
+
+Thanks.",2
+10198811,04/17/2012 20:41:37,1240803,02/29/2012 17:09:35,50,0,"HTML5 Game, user movement concept","I just started learning HTML5 canvas and Google App Engine's Channel API.
+
+I build a simple game demo based on a isometric map. Right now I want to implement character movement, but I am wondering how I should implement it.
+
+current demo: http://cheukalex.appspot.com
+
+This is how I think it would be implemented:
+
+The client will handle the movement. Once the arrow keys are pressed, the client will do the movement, then sends the new coordination to the server which then will be broadcast to other users on the server to update the location of your character.
+
+Problems I thought of:
+
+ 1. What if I want to implement ""movement speed"", as in how fast can the
+   user walk five squares for example. The delay between each movement
+   will be done on the client side. But will that be safe? since
+   javascripts are easily edited.
+      
+ 2. How do I deal with latency? If i built a simple chase-tag game, how would I sync up the users so situations where, one person looks like they ""tag"" another user, but the other user see him 1-2 squares behind, wont happen?
+
+",html5,google-app-engine,canvas,channel-api,,04/19/2012 13:16:06,not a real question,1,193,5,"HTML5 Game, user movement concept I just started learning HTML5 canvas and Google App Engine's Channel API.
+
+I build a simple game demo based on a isometric map. Right now I want to implement character movement, but I am wondering how I should implement it.
+
+current demo: http://cheukalex.appspot.com
+
+This is how I think it would be implemented:
+
+The client will handle the movement. Once the arrow keys are pressed, the client will do the movement, then sends the new coordination to the server which then will be broadcast to other users on the server to update the location of your character.
+
+Problems I thought of:
+
+ 1. What if I want to implement ""movement speed"", as in how fast can the
+   user walk five squares for example. The delay between each movement
+   will be done on the client side. But will that be safe? since
+   javascripts are easily edited.
+      
+ 2. How do I deal with latency? If i built a simple chase-tag game, how would I sync up the users so situations where, one person looks like they ""tag"" another user, but the other user see him 1-2 squares behind, wont happen?
+
+",4
+9619012,03/08/2012 14:16:14,1045299,11/14/2011 09:34:37,53,9,"Mobile website, using correct css file","The website I am working on needs an other css for mobile devices. How do I do this. I have tried:
+
+    	<link REL=""stylesheet"" TYPE=""text/css"" MEDIA=""print, handheld"" HREF=""mobile.css"" />
+	<link REL=""stylesheet"" TYPE=""text/css"" MEDIA=""screen"" HREF=""style.css"" />
+
+In my style.css first line is: @media screen{
+In my mobile.css first line is: @media print, handheld{
+
+I have tested this on a Samsung Galaxy Nexus (chrome beta and default browser) and a Samsung Galaxy S. Both take the style.css
+
+How to fix this?",html5,mobile,css3,web,,,open,0,76,6,"Mobile website, using correct css file The website I am working on needs an other css for mobile devices. How do I do this. I have tried:
+
+    	<link REL=""stylesheet"" TYPE=""text/css"" MEDIA=""print, handheld"" HREF=""mobile.css"" />
+	<link REL=""stylesheet"" TYPE=""text/css"" MEDIA=""screen"" HREF=""style.css"" />
+
+In my style.css first line is: @media screen{
+In my mobile.css first line is: @media print, handheld{
+
+I have tested this on a Samsung Galaxy Nexus (chrome beta and default browser) and a Samsung Galaxy S. Both take the style.css
+
+How to fix this?",4
+11315183,07/03/2012 16:25:11,966898,09/27/2011 11:12:32,93,9,how can i set space between divs?,"this is my html/css code:
+[JsFiddle code][1]
+
+
+  [1]: http://jsfiddle.net/8nW7V/  
+how can i set space between  
+
+    nav id=""section-navi""
+    section class=""section"" 
+    div id=""footer-main""",html5,div,css3,,,,open,0,34,7,"how can i set space between divs? this is my html/css code:
+[JsFiddle code][1]
+
+
+  [1]: http://jsfiddle.net/8nW7V/  
+how can i set space between  
+
+    nav id=""section-navi""
+    section class=""section"" 
+    div id=""footer-main""",3
+8745509,01/05/2012 15:59:46,84201,03/29/2009 07:46:24,10566,181,Do you use <hr> in your HTML?,"Use of `<hr>` is still valid in HTML5 but do you think it's semantically correct and it's a part of content?
+
+**Are you using it in your projects?**
+
+I find it diffult when to add any `<hr>` we need to go to html code every time. using `hr` is mixing presentation with content.
+
+",html5,semantic-markup,web-standards,,,01/05/2012 22:47:44,not constructive,1,51,7,"Do you use <hr> in your HTML? Use of `<hr>` is still valid in HTML5 but do you think it's semantically correct and it's a part of content?
+
+**Are you using it in your projects?**
+
+I find it diffult when to add any `<hr>` we need to go to html code every time. using `hr` is mixing presentation with content.
+
+",3
+10397142,05/01/2012 11:39:48,129899,06/27/2009 19:32:51,583,22,HTML5 preloaders under 10k that also account for scripts?,"I'm trying to create a preloader for my site that would account for all assets, not just binary images and is under 10k in code. 
+Before I try and reinvent the wheel can anyone share their favourrote loading strategies and/or point me to any good, lightweight HTML5 preloaders online?",html5,preloader,,,,,open,0,49,9,"HTML5 preloaders under 10k that also account for scripts? I'm trying to create a preloader for my site that would account for all assets, not just binary images and is under 10k in code. 
+Before I try and reinvent the wheel can anyone share their favourrote loading strategies and/or point me to any good, lightweight HTML5 preloaders online?",2
+5426400,03/24/2011 22:37:07,629305,02/22/2011 23:58:40,58,0,How to know/ find best websites based on the web technology,"I'm preparing for interviews..I wanna do some research before going to one..When I was reading, there were questions like ""what's your favorite website? and why?"" I guess answer they would expecting be based on the technology used rather than just look and feel..(correct me if I'm wrong). If based on technology..how to find them..There were trillion and trillion of pages online and its hard to go and look its source code..Any insight?? ",html5,css3,,,,03/25/2011 01:12:31,off topic,1,73,11,"How to know/ find best websites based on the web technology I'm preparing for interviews..I wanna do some research before going to one..When I was reading, there were questions like ""what's your favorite website? and why?"" I guess answer they would expecting be based on the technology used rather than just look and feel..(correct me if I'm wrong). If based on technology..how to find them..There were trillion and trillion of pages online and its hard to go and look its source code..Any insight?? ",2
+11063886,06/16/2012 13:36:28,1391724,05/13/2012 02:46:23,3,0,Can anyone show me some good sites about HTML5?,"As the great development of HTML5,I think it is the right time to learn much more about HTML5, so can you tell me some good sites which introduce much knowledge about HTML5. thx a millious,my friends",html5,,,,,06/16/2012 13:45:21,not constructive,1,36,9,"Can anyone show me some good sites about HTML5? As the great development of HTML5,I think it is the right time to learn much more about HTML5, so can you tell me some good sites which introduce much knowledge about HTML5. thx a millious,my friends",1
+7333033,09/07/2011 11:24:33,590517,01/26/2011 11:32:12,14,0,Google Analytics Visualisation,"I would like to have some nice visualizations of my google analytics data on my website. Just wondering if anyone had done anything like this before and if they have any recommendations of chart or graph libraries to use and tutorials. 
+
+I would like it to be done using HTML5 and SVG but if anyone has any suggestions that would be great. I've had a look at Protovis.
+
+ ",html5,google,google-analytics,,,09/07/2011 18:14:46,off topic,1,69,3,"Google Analytics Visualisation I would like to have some nice visualizations of my google analytics data on my website. Just wondering if anyone had done anything like this before and if they have any recommendations of chart or graph libraries to use and tutorials. 
+
+I would like it to be done using HTML5 and SVG but if anyone has any suggestions that would be great. I've had a look at Protovis.
+
+ ",3
+7959955,10/31/2011 21:27:10,506234,11/12/2010 20:27:53,6,2,HTML5 input validation doesn't work in IE8,"Hello kind people of the internet,
+I've been hacking at this for a while...and have seen several similar postings, but I can't seem to figure this out:
+
+The HTML5 input field validation CSS works in Firefox, Chrome...but alas, not in IE8...and much of my target audience will be using IE8.
+
+...and yes: I'm using Modernizr, and I used Initializr to get the page template and CSS...I'm a bit confused why I can't get things working properly in IE8.
+
+Here's a link to my test page:
+[Test html5 page][1]
+
+
+  [1]: http://www.msa.saccounty.net/utilitybilling/streetview/TestHTML5pagev6.aspx
+
+The input field is red before proper entry, then validation simply turns green when input a valid account number, such as:
+50011111111
+
+The HTML5 code is as follows:
+
+    <label for=""account"">Account Number: </label> 
+    <input id=""account"" name=""inputAccount"" 
+      placeholder=""input billing account number"" 
+      pattern=""/(^500)|^\d{11}"" 
+      required
+      autofocus
+      type=""text""/>
+
+Any suggestions on what is probably a fairly simple thing to fix would be mucho appreciated!
+
+
+",html5,internet-explorer-8,modernizr,,,,open,0,176,7,"HTML5 input validation doesn't work in IE8 Hello kind people of the internet,
+I've been hacking at this for a while...and have seen several similar postings, but I can't seem to figure this out:
+
+The HTML5 input field validation CSS works in Firefox, Chrome...but alas, not in IE8...and much of my target audience will be using IE8.
+
+...and yes: I'm using Modernizr, and I used Initializr to get the page template and CSS...I'm a bit confused why I can't get things working properly in IE8.
+
+Here's a link to my test page:
+[Test html5 page][1]
+
+
+  [1]: http://www.msa.saccounty.net/utilitybilling/streetview/TestHTML5pagev6.aspx
+
+The input field is red before proper entry, then validation simply turns green when input a valid account number, such as:
+50011111111
+
+The HTML5 code is as follows:
+
+    <label for=""account"">Account Number: </label> 
+    <input id=""account"" name=""inputAccount"" 
+      placeholder=""input billing account number"" 
+      pattern=""/(^500)|^\d{11}"" 
+      required
+      autofocus
+      type=""text""/>
+
+Any suggestions on what is probably a fairly simple thing to fix would be mucho appreciated!
+
+
+",3
+4509761,12/22/2010 13:46:09,111243,05/22/2009 18:47:43,55,4,What's the best semantic way to wrap a search area?,"I'd like to take advantage of the improved semantics of html5. I'm creating a search area, and the search area should have a background and contain search related things, like autocomplete and search hints.
+
+Is there some consensus around what type of element something like a search area should be wrapped in?
+
+* Should it be a NAV because searching is a method of navigation?
+* Should it be a SECTION because it's a discreet section of the page?
+* Should it be a DIV because the wrapping of search related elements has no clear semantics?
+
+The markup is something like this:
+
+    <?whatElement?>
+      <input type=""search"" placeholder=""Search for a name or ID..."" required />
+      <a href=""#"" class=""search button"">Search</a>
+    </?whatElement?>
+
+Thanks for your thoughts.",html5,markup,semantic-markup,,,,open,0,132,10,"What's the best semantic way to wrap a search area? I'd like to take advantage of the improved semantics of html5. I'm creating a search area, and the search area should have a background and contain search related things, like autocomplete and search hints.
+
+Is there some consensus around what type of element something like a search area should be wrapped in?
+
+* Should it be a NAV because searching is a method of navigation?
+* Should it be a SECTION because it's a discreet section of the page?
+* Should it be a DIV because the wrapping of search related elements has no clear semantics?
+
+The markup is something like this:
+
+    <?whatElement?>
+      <input type=""search"" placeholder=""Search for a name or ID..."" required />
+      <a href=""#"" class=""search button"">Search</a>
+    </?whatElement?>
+
+Thanks for your thoughts.",3
+9050712,01/29/2012 03:34:28,1149830,01/14/2012 22:28:18,1,0,"How to set color in HTML5 ""please wait"" spinner?","I'm wanting to use the HTML5 capability to have a ""please wait"" spinner.  An example of this can be found at the article [Loading spinner animation using CSS and WebKit][1], illustrated through this sub-page [(no title, but a working example of the prior link)][2].
+
+I've no trouble in copying the code (from a different link than the one I gave here) and making it run in my own web page.  My difficulty is in making it the correct color.  For example, in the example I used the dial segments are all colored red.  I see no color setter, no ""color"", ""background"" or ""background-color"" in the CSS for the spinner or set explicitly in the DIV.  Or at least no setting of these that actually changes the color of the segment.
+
+Can someone give me a clue?
+
+Thanks,
+Jerome.
+
+
+  [1]: http://37signals.com/svn/posts/2577-loading-spinner-animation-using-css-and-webkit
+  [2]: http://s3.amazonaws.com/37assets/svn/462-png_spinner.html ""Loading spinner animation using CSS and WebKit""",html5,css3,,,,,open,0,152,9,"How to set color in HTML5 ""please wait"" spinner? I'm wanting to use the HTML5 capability to have a ""please wait"" spinner.  An example of this can be found at the article [Loading spinner animation using CSS and WebKit][1], illustrated through this sub-page [(no title, but a working example of the prior link)][2].
+
+I've no trouble in copying the code (from a different link than the one I gave here) and making it run in my own web page.  My difficulty is in making it the correct color.  For example, in the example I used the dial segments are all colored red.  I see no color setter, no ""color"", ""background"" or ""background-color"" in the CSS for the spinner or set explicitly in the DIV.  Or at least no setting of these that actually changes the color of the segment.
+
+Can someone give me a clue?
+
+Thanks,
+Jerome.
+
+
+  [1]: http://37signals.com/svn/posts/2577-loading-spinner-animation-using-css-and-webkit
+  [2]: http://s3.amazonaws.com/37assets/svn/462-png_spinner.html ""Loading spinner animation using CSS and WebKit""",2
+10974541,06/11/2012 04:35:21,894334,08/14/2011 23:51:50,1,0,"Document conversion and viewing, what are the cutting edge solutions?","Goal: building a web application where a user can:
+
+1. Upload a document (doc, docx, pdf, additional office formats a +)
+2. View that document in a browser, preferably in html
+3. Download the document (in doc, pdf, additional open formats a +)
+
+Current solution:
+
+- Ruby on Rails Application on Rackspace
+- Users can upload doc and pdf files (AWS)
+- Files can be downloaded in the format in which they were uploaded 
+- Thumbnail generation ([doc, pdf] -> pdf -> png) is done through AbiWord. Certain doc files do not convert well.
+- Documents can be viewed in embedded Google docs viewer (https://docs.google.com/viewer). Certain doc files cannot be displayed. Little flexibility.
+
+Potential improvements:
+
+- Document viewing in pdf through [pdf.js][1]
+- Viewing in html (+ annotation) through [Crocodoc][2]
+
+I'd be glad to hear other users' experiences, and will add good recommendations to this list.
+
+  [1]: https://addons.mozilla.org/en-US/firefox/addon/pdfjs/
+  [2]: https://crocodoc.com/",html5,pdf,converter,docx,doc,06/11/2012 13:48:08,not constructive,1,140,10,"Document conversion and viewing, what are the cutting edge solutions? Goal: building a web application where a user can:
+
+1. Upload a document (doc, docx, pdf, additional office formats a +)
+2. View that document in a browser, preferably in html
+3. Download the document (in doc, pdf, additional open formats a +)
+
+Current solution:
+
+- Ruby on Rails Application on Rackspace
+- Users can upload doc and pdf files (AWS)
+- Files can be downloaded in the format in which they were uploaded 
+- Thumbnail generation ([doc, pdf] -> pdf -> png) is done through AbiWord. Certain doc files do not convert well.
+- Documents can be viewed in embedded Google docs viewer (https://docs.google.com/viewer). Certain doc files cannot be displayed. Little flexibility.
+
+Potential improvements:
+
+- Document viewing in pdf through [pdf.js][1]
+- Viewing in html (+ annotation) through [Crocodoc][2]
+
+I'd be glad to hear other users' experiences, and will add good recommendations to this list.
+
+  [1]: https://addons.mozilla.org/en-US/firefox/addon/pdfjs/
+  [2]: https://crocodoc.com/",5
+9507080,02/29/2012 21:40:04,791657,06/09/2011 20:06:14,37,2,handling refresh using pushState or PJAX like github,"I am attempting to build a treeslider to navigate on a site's content, and have had some success, i have a test page utilizing PJAX, a separate version using history.js, and a third version using jquery functions calling pushState/replaceState HTML 5 api
+
+My issue is refresh handling, or direct link to a secondary page...if the original page has not been loaded, all that is displayed is the snippet
+
+heres a pjax example: http://ur.nd.edu/pjax/
+
+navigating to the links loads via pjax fine, but refreshing the page shows only the snippet, which i expect, i just want to know how to handle refreshes and direct links to include header formatting 
+
+gthub handles this beautifully, I just don't know where to begin",html5,pushstate,history.js,pjax,,,open,0,116,8,"handling refresh using pushState or PJAX like github I am attempting to build a treeslider to navigate on a site's content, and have had some success, i have a test page utilizing PJAX, a separate version using history.js, and a third version using jquery functions calling pushState/replaceState HTML 5 api
+
+My issue is refresh handling, or direct link to a secondary page...if the original page has not been loaded, all that is displayed is the snippet
+
+heres a pjax example: http://ur.nd.edu/pjax/
+
+navigating to the links loads via pjax fine, but refreshing the page shows only the snippet, which i expect, i just want to know how to handle refreshes and direct links to include header formatting 
+
+gthub handles this beautifully, I just don't know where to begin",4
+10445800,05/04/2012 09:00:43,1374388,05/04/2012 07:41:44,1,0,HTML 5 web page is loadign slowly how to improve performance,I have web page its performance is verly its taking long time to load images and other things.how to improve the loading performance.,html5,,,,,05/04/2012 23:44:05,not a real question,1,23,11,HTML 5 web page is loadign slowly how to improve performance I have web page its performance is verly its taking long time to load images and other things.how to improve the loading performance.,1
+11498033,07/16/2012 04:19:09,1497689,07/03/2012 04:21:26,28,0,How can we write form as user input in html5,"I am a beginner to Html5 Could anyone tell me how to create a user input like username password in html5 using KineticJs
+
+Or else please suggest which is the best one to opt
+
+Thanks in adavance i expect any kind of sample or resources to learn buddies",html5,,,,,07/16/2012 17:37:03,not a real question,1,46,10,"How can we write form as user input in html5 I am a beginner to Html5 Could anyone tell me how to create a user input like username password in html5 using KineticJs
+
+Or else please suggest which is the best one to opt
+
+Thanks in adavance i expect any kind of sample or resources to learn buddies",1
+11115437,06/20/2012 08:17:56,1424896,05/29/2012 23:50:59,13,0,HTML 5 with salesforce,"I an new to HTML 5. I want to use HTML 5 in salesforce. I wanted to see how salesforec supports HTML5.
+
+Do any body know how to use. Please help me to solve this problem. 
+
+Thanks
+Anu",html5,salesforce,apex-code,,,06/21/2012 00:51:45,not a real question,1,36,4,"HTML 5 with salesforce I an new to HTML 5. I want to use HTML 5 in salesforce. I wanted to see how salesforec supports HTML5.
+
+Do any body know how to use. Please help me to solve this problem. 
+
+Thanks
+Anu",3
+7737601,10/12/2011 09:01:42,259731,01/27/2010 02:23:52,435,13,html5rocks.com and the latest Safari,"Today I was looking for a HTML5 ""AUDIO"" tag sample for Safari and discovered that html5rocks.com doesn't work in the latest Safari 5 (I cannot manage slides, no slide is shown). The same with another computer. Nevertheless, FF works well. Earlier (I remember) the site used to be working in Safari as well. Why? Is Safari not supporting something in HTML5, that html5rocks.com uses or it's a temporary problem with the site?
+
+Regards,",html5,safari,,,,,open,0,72,5,"html5rocks.com and the latest Safari Today I was looking for a HTML5 ""AUDIO"" tag sample for Safari and discovered that html5rocks.com doesn't work in the latest Safari 5 (I cannot manage slides, no slide is shown). The same with another computer. Nevertheless, FF works well. Earlier (I remember) the site used to be working in Safari as well. Why? Is Safari not supporting something in HTML5, that html5rocks.com uses or it's a temporary problem with the site?
+
+Regards,",2
+11116613,06/20/2012 09:31:26,1468732,06/20/2012 09:24:42,1,0,Convert canvas coordinates to pixels,"I'm trying to convert the xy coordinates of angry birds online, but I can't figure out how to calculate y coordinate!
+
+Here is the data from the game:
+http://120403-1305-dot-latest-dot-project-slingshot-hr.appspot.com/fowl/json/Level1-1.json
+
+the x coordinate is calculated by x - item width / 2, and every object gets the right left position.
+
+I can't figure out how to calculate the y coord to pixels.
+
+any help would be greatly appreciated!",html5,canvas,,,,,open,0,62,5,"Convert canvas coordinates to pixels I'm trying to convert the xy coordinates of angry birds online, but I can't figure out how to calculate y coordinate!
+
+Here is the data from the game:
+http://120403-1305-dot-latest-dot-project-slingshot-hr.appspot.com/fowl/json/Level1-1.json
+
+the x coordinate is calculated by x - item width / 2, and every object gets the right left position.
+
+I can't figure out how to calculate the y coord to pixels.
+
+any help would be greatly appreciated!",2
+11112992,06/20/2012 04:50:01,990635,10/12/2011 02:40:49,203,3,How to start using html5?,"It might be an obvious question, but I was wondering how do you start using new technology?  
+I saw all the new tags etc. but probably if I'll just start using it, it won't recognize it.  
+Do I need to install something/ define something/ etc to be able to start using it?
+
+All the guides concentrate of how to use the tags and syntax inside html5, but not how to enable it...",html5,,,,,,open,0,73,5,"How to start using html5? It might be an obvious question, but I was wondering how do you start using new technology?  
+I saw all the new tags etc. but probably if I'll just start using it, it won't recognize it.  
+Do I need to install something/ define something/ etc to be able to start using it?
+
+All the guides concentrate of how to use the tags and syntax inside html5, but not how to enable it...",1
+8314305,11/29/2011 16:36:18,266590,02/04/2010 21:43:06,73,1,Why my HTML5 script is not working in IE9?,"I have the follow html5 page which simply set`s the background for the canvas, it works in Chrome and Firefox but it`s not working in IE9. Please help me to figure out
+my script: http://www.tutorialswindow.com/Jatek/index.html",html5,,,,,,open,0,34,9,"Why my HTML5 script is not working in IE9? I have the follow html5 page which simply set`s the background for the canvas, it works in Chrome and Firefox but it`s not working in IE9. Please help me to figure out
+my script: http://www.tutorialswindow.com/Jatek/index.html",1
