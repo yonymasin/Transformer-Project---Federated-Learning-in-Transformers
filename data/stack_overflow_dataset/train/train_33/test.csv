@@ -1,0 +1,2496 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+3859486,10/04/2010 22:02:12,360533,06/07/2010 15:00:19,142,2,Slow DataGridView Drawing\Rendering,"I'm using a DataGridView to load data from a DataTable. This DataGridView is located on a tab (Forms.TabPage). When clicking this tab the datagrid takes a second or two to draw from the top down, regardless of wheather data is being loaded or not. 
+
+Is there anything I can do to speed up the Drawing\Rendering when clicking the Tab? 
+
+I Don't think the actual population of the DGV is causing this, as it's filled during form load so by the time the tabs click it would have loaded the few rows (20 - 30) it displays.
+
+
+    Using cn As New SqlConnection(connectionString)
+                Using cmd As SqlCommand = cn.CreateCommand()
+
+                    cmd.CommandType = System.Data.CommandType.Text
+                    cmd.CommandText = _
+                        "" SELECT [finish_time], [file_name], [transfer_status]"" & _
+                        "" FROM dbo.[transfer_log]""
+
+                    cmd.Notification = Nothing
+                   
+                    cn.Open()
+                   
+
+                    Dim columnSpec = New DataColumn()
+                    With columnSpec
+                        .DataType = GetType(System.String)
+                        .ColumnName = ""ClmFinishTime""
+                    End With
+                    Datatable1.Columns.Add(columnSpec)
+
+                    Dim columnSpec2 = New DataColumn()
+                    With columnSpec2
+                        .DataType = GetType(System.String)
+                        .ColumnName = ""ClmFilename""
+                    End With
+                    Datatable1.Columns.Add(columnSpec2)
+               
+                    Dim columnSpec3 = New DataColumn()
+                    With columnSpec3
+                        .DataType = GetType(System.Byte())
+                        .ColumnName = ""ClmStatus""
+                    End With
+                    Datatable1.Columns.Add(columnSpec3)
+
+                    Using dr As SqlDataReader = cmd.ExecuteReader()
+                        While dr.Read()
+                    
+                            Dim row As DataRow = Datatable1.NewRow
+                            row(""ClmFinishTime"") = dr.Item(""finish_time"")
+                            row(""ClmFilename"") = dr.Item(""file_name"")
+                                    
+                            Select Case dr.Item(""transfer_status"")
+                                Case 0
+                                    row(""ClmStatus"") = ConvertToByte(My.Resources.accept)
+                                Case 1
+                                    row(""ClmStatus"") = ConvertToByte(My.Resources.remove)
+                            End Select
+
+                            Datatable1.Rows.Add(row)
+
+                        End While
+                    End Using
+			End Using
+                    DataGridView2.AutoGenerateColumns = False
+                    DataGridView2.DataSource = Datatable1",vb.net,,,,,,open,0,1253,3,"Slow DataGridView Drawing\Rendering I'm using a DataGridView to load data from a DataTable. This DataGridView is located on a tab (Forms.TabPage). When clicking this tab the datagrid takes a second or two to draw from the top down, regardless of wheather data is being loaded or not. 
+
+Is there anything I can do to speed up the Drawing\Rendering when clicking the Tab? 
+
+I Don't think the actual population of the DGV is causing this, as it's filled during form load so by the time the tabs click it would have loaded the few rows (20 - 30) it displays.
+
+
+    Using cn As New SqlConnection(connectionString)
+                Using cmd As SqlCommand = cn.CreateCommand()
+
+                    cmd.CommandType = System.Data.CommandType.Text
+                    cmd.CommandText = _
+                        "" SELECT [finish_time], [file_name], [transfer_status]"" & _
+                        "" FROM dbo.[transfer_log]""
+
+                    cmd.Notification = Nothing
+                   
+                    cn.Open()
+                   
+
+                    Dim columnSpec = New DataColumn()
+                    With columnSpec
+                        .DataType = GetType(System.String)
+                        .ColumnName = ""ClmFinishTime""
+                    End With
+                    Datatable1.Columns.Add(columnSpec)
+
+                    Dim columnSpec2 = New DataColumn()
+                    With columnSpec2
+                        .DataType = GetType(System.String)
+                        .ColumnName = ""ClmFilename""
+                    End With
+                    Datatable1.Columns.Add(columnSpec2)
+               
+                    Dim columnSpec3 = New DataColumn()
+                    With columnSpec3
+                        .DataType = GetType(System.Byte())
+                        .ColumnName = ""ClmStatus""
+                    End With
+                    Datatable1.Columns.Add(columnSpec3)
+
+                    Using dr As SqlDataReader = cmd.ExecuteReader()
+                        While dr.Read()
+                    
+                            Dim row As DataRow = Datatable1.NewRow
+                            row(""ClmFinishTime"") = dr.Item(""finish_time"")
+                            row(""ClmFilename"") = dr.Item(""file_name"")
+                                    
+                            Select Case dr.Item(""transfer_status"")
+                                Case 0
+                                    row(""ClmStatus"") = ConvertToByte(My.Resources.accept)
+                                Case 1
+                                    row(""ClmStatus"") = ConvertToByte(My.Resources.remove)
+                            End Select
+
+                            Datatable1.Rows.Add(row)
+
+                        End While
+                    End Using
+			End Using
+                    DataGridView2.AutoGenerateColumns = False
+                    DataGridView2.DataSource = Datatable1",1
+9061140,01/30/2012 08:27:38,992947,10/13/2011 07:43:55,56,0,image and video brouwser for local intranet?,"Hi I would like to make my own browser application for a home intranet which allows me to search the local network for media like photos or videos and displays thumbnails of the image on a results page (just like Googel only I want to have the feature in a browser I’m building to suit my situation).
+
+I use VB.NET to create the brouwser
+
+How can this be done?
+",vb.net,image,browser,intranet,,01/31/2012 15:35:03,not a real question,1,67,7,"image and video brouwser for local intranet? Hi I would like to make my own browser application for a home intranet which allows me to search the local network for media like photos or videos and displays thumbnails of the image on a results page (just like Googel only I want to have the feature in a browser I’m building to suit my situation).
+
+I use VB.NET to create the brouwser
+
+How can this be done?
+",4
+3192444,07/07/2010 06:36:55,124069,06/17/2009 04:10:08,2493,160,ASP.NET MVC2 lowercase Routes in Visual Basic,"I have found 4 or 5 examples of ""lowercase routes"" in C# however when I use the telerik code converter, I get a bunch of errors.
+
+Namely something to do with `""extension methods can be defined only in modules.""`
+
+Does anyone have any good resources on how to map routes to lowercase in VB?
+
+EDIT:
+====
+here is an example of some converted code that is erroring
+
+    Imports System
+    Imports System.Web.Mvc
+    Imports System.Web.Routing
+    
+    Namespace MyMvcApplication.App.Helpers
+        Public Class LowercaseRoute
+            Inherits System.Web.Routing.Route
+            Public Sub New(ByVal url As String, ByVal routeHandler As IRouteHandler)
+                MyBase.New(url, routeHandler)
+            End Sub
+            Public Sub New(ByVal url As String, ByVal defaults As RouteValueDictionary, ByVal routeHandler As IRouteHandler)
+                MyBase.New(url, defaults, routeHandler)
+            End Sub
+            Public Sub New(ByVal url As String, ByVal defaults As RouteValueDictionary, ByVal constraints As RouteValueDictionary, ByVal routeHandler As IRouteHandler)
+                MyBase.New(url, defaults, constraints, routeHandler)
+            End Sub
+            Public Sub New(ByVal url As String, ByVal defaults As RouteValueDictionary, ByVal constraints As RouteValueDictionary, ByVal dataTokens As RouteValueDictionary, ByVal routeHandler As IRouteHandler)
+                MyBase.New(url, defaults, constraints, dataTokens, routeHandler)
+            End Sub
+    
+            Public Overrides Function GetVirtualPath(ByVal requestContext As RequestContext, ByVal values As RouteValueDictionary) As VirtualPathData
+                Dim path As VirtualPathData = MyBase.GetVirtualPath(requestContext, values)
+    
+                If path IsNot Nothing Then
+                    path.VirtualPath = path.VirtualPath.ToLowerInvariant()
+                End If
+    
+                Return path
+            End Function
+        End Class
+    
+        Public NotInheritable Class RouteCollectionExtensions
+            Private Sub New()
+            End Sub
+            <System.Runtime.CompilerServices.Extension()> _
+            Public Shared Sub MapRouteLowercase(ByVal routes As RouteCollection, ByVal name As String, ByVal url As String, ByVal defaults As Object)
+                routes.MapRouteLowercase(name, url, defaults, Nothing)
+            End Sub
+    
+            <System.Runtime.CompilerServices.Extension()> _
+            Public Shared Sub MapRouteLowercase(ByVal routes As RouteCollection, ByVal name As String, ByVal url As String, ByVal defaults As Object, ByVal constraints As Object)
+                If routes Is Nothing Then
+                    Throw New ArgumentNullException(""routes"")
+                End If
+    
+                If url Is Nothing Then
+                    Throw New ArgumentNullException(""url"")
+                End If
+    
+                Dim route = New LowercaseRoute(url, New MvcRouteHandler()) With { _
+                 .Defaults = New RouteValueDictionary(defaults), _
+                 .Constraints = New RouteValueDictionary(constraints) _
+                }
+    
+                If [String].IsNullOrEmpty(name) Then
+                    routes.Add(route)
+                Else
+                    routes.Add(name, route)
+                End If
+            End Sub
+        End Class
+    End Namespace",vb.net,asp.net-mvc-2,routing,vb,routes,,open,0,999,7,"ASP.NET MVC2 lowercase Routes in Visual Basic I have found 4 or 5 examples of ""lowercase routes"" in C# however when I use the telerik code converter, I get a bunch of errors.
+
+Namely something to do with `""extension methods can be defined only in modules.""`
+
+Does anyone have any good resources on how to map routes to lowercase in VB?
+
+EDIT:
+====
+here is an example of some converted code that is erroring
+
+    Imports System
+    Imports System.Web.Mvc
+    Imports System.Web.Routing
+    
+    Namespace MyMvcApplication.App.Helpers
+        Public Class LowercaseRoute
+            Inherits System.Web.Routing.Route
+            Public Sub New(ByVal url As String, ByVal routeHandler As IRouteHandler)
+                MyBase.New(url, routeHandler)
+            End Sub
+            Public Sub New(ByVal url As String, ByVal defaults As RouteValueDictionary, ByVal routeHandler As IRouteHandler)
+                MyBase.New(url, defaults, routeHandler)
+            End Sub
+            Public Sub New(ByVal url As String, ByVal defaults As RouteValueDictionary, ByVal constraints As RouteValueDictionary, ByVal routeHandler As IRouteHandler)
+                MyBase.New(url, defaults, constraints, routeHandler)
+            End Sub
+            Public Sub New(ByVal url As String, ByVal defaults As RouteValueDictionary, ByVal constraints As RouteValueDictionary, ByVal dataTokens As RouteValueDictionary, ByVal routeHandler As IRouteHandler)
+                MyBase.New(url, defaults, constraints, dataTokens, routeHandler)
+            End Sub
+    
+            Public Overrides Function GetVirtualPath(ByVal requestContext As RequestContext, ByVal values As RouteValueDictionary) As VirtualPathData
+                Dim path As VirtualPathData = MyBase.GetVirtualPath(requestContext, values)
+    
+                If path IsNot Nothing Then
+                    path.VirtualPath = path.VirtualPath.ToLowerInvariant()
+                End If
+    
+                Return path
+            End Function
+        End Class
+    
+        Public NotInheritable Class RouteCollectionExtensions
+            Private Sub New()
+            End Sub
+            <System.Runtime.CompilerServices.Extension()> _
+            Public Shared Sub MapRouteLowercase(ByVal routes As RouteCollection, ByVal name As String, ByVal url As String, ByVal defaults As Object)
+                routes.MapRouteLowercase(name, url, defaults, Nothing)
+            End Sub
+    
+            <System.Runtime.CompilerServices.Extension()> _
+            Public Shared Sub MapRouteLowercase(ByVal routes As RouteCollection, ByVal name As String, ByVal url As String, ByVal defaults As Object, ByVal constraints As Object)
+                If routes Is Nothing Then
+                    Throw New ArgumentNullException(""routes"")
+                End If
+    
+                If url Is Nothing Then
+                    Throw New ArgumentNullException(""url"")
+                End If
+    
+                Dim route = New LowercaseRoute(url, New MvcRouteHandler()) With { _
+                 .Defaults = New RouteValueDictionary(defaults), _
+                 .Constraints = New RouteValueDictionary(constraints) _
+                }
+    
+                If [String].IsNullOrEmpty(name) Then
+                    routes.Add(route)
+                Else
+                    routes.Add(name, route)
+                End If
+            End Sub
+        End Class
+    End Namespace",5
+6902121,08/01/2011 17:31:06,873191,08/01/2011 17:31:06,1,0,VB.Net changing Button image by selecting Combobox item,"I'm pretty sure that it _must_ work but I don't get it working. 
+
+So maybe you can help me. 
+
+I got a Combobox with some items (item1-item3) to select and a Button. Everytime another item in the Combobox is selected, I'd like the Button to change it's Image. The Select Case works pretty fine but how do I change the Button Image per item ?
+
+Thanks for any suggestion.",vb.net,image,button,combobox,change,,open,0,68,8,"VB.Net changing Button image by selecting Combobox item I'm pretty sure that it _must_ work but I don't get it working. 
+
+So maybe you can help me. 
+
+I got a Combobox with some items (item1-item3) to select and a Button. Everytime another item in the Combobox is selected, I'd like the Button to change it's Image. The Select Case works pretty fine but how do I change the Button Image per item ?
+
+Thanks for any suggestion.",5
+4097957,11/04/2010 14:58:46,301795,03/25/2010 15:04:37,38,3,Generic Linq query on a DataGridView Datasource,"I would like to implement a generic Linq query on a DataGridView.DataSource to retreive a row whith an idField. I did search MSDN, StackOverflow, etc... but didn't quite find what I'm looking for. Does anyone have an idea on how I could implement it ?  
+
+This is the non-generic code, but I would like to make it work whatever the type of the DataSource is (as long as it implements IEnumerable I guess) and the name and type of the key field.
+
+    Dim query = (From note In notesList _
+                Where note.IdNote = mIdNoteSelectionne _
+                Select note).FirstOrDefault()
+
+    Dim ancienIndex As Integer = notesList.IndexOf(query)
+
+
+noteList is a List(Of Note), Note is a simple entity class I created, with just members and properties
+
+This is in VB, but feel free to send some C# code, I'll translate it.
+
+ ",vb.net,linq,generics,linq-to-objects,,,open,0,172,7,"Generic Linq query on a DataGridView Datasource I would like to implement a generic Linq query on a DataGridView.DataSource to retreive a row whith an idField. I did search MSDN, StackOverflow, etc... but didn't quite find what I'm looking for. Does anyone have an idea on how I could implement it ?  
+
+This is the non-generic code, but I would like to make it work whatever the type of the DataSource is (as long as it implements IEnumerable I guess) and the name and type of the key field.
+
+    Dim query = (From note In notesList _
+                Where note.IdNote = mIdNoteSelectionne _
+                Select note).FirstOrDefault()
+
+    Dim ancienIndex As Integer = notesList.IndexOf(query)
+
+
+noteList is a List(Of Note), Note is a simple entity class I created, with just members and properties
+
+This is in VB, but feel free to send some C# code, I'll translate it.
+
+ ",4
+3886187,10/07/2010 22:01:55,446820,09/13/2010 22:09:22,43,1,"VB.NET Trying to modify a generic Invoke method to a generic BeginInvoke method, having unexpected problems","VB.NET 2010, .NET 4
+
+Hello,
+
+I have been using a pretty slick generic invoke method for UI updating from background threads.  I forget where I copied it from (converted it to VB.NET from C#), but here it is:
+
+    Public Sub InvokeControl(Of T As Control)(ByVal Control As t, ByVal Action As Action(Of t))
+        If Control.InvokeRequired Then
+            Try
+                Control.Invoke(New Action(Of T, Action(Of T))(AddressOf InvokeControl), New Object() {Control, Action})
+            Catch ex As Exception
+            End Try
+        Else
+            Action(Control)
+        End If
+    End Sub
+
+Now, I want to modify this to make a function that returns Nothing if no invoke was required (or an exception was thrown) or the IAsyncResult returned from BeginInvoke if invoke was required.  Here's what I have:
+
+    Public Function InvokeControl(Of T As Control)(ByVal Control As t, ByVal Action As Action(Of t)) As IAsyncResult
+        If Control.InvokeRequired Then
+            Try
+                Return Control.BeginInvoke(New Action(Of T, Action(Of T))(AddressOf InvokeControl), New Object() {Control, Action})
+            Catch ex As Exception
+                Return Nothing
+            End Try
+        Else
+            Action(Control)
+            Return Nothing
+        End If
+    End Function
+
+I wanted to do this primarily to avoid blocking.  The problem is that I now get errors when making calls such as this:
+
+
+    InvokeControl(SomeTextBox, Sub(x) x.Text = ""Some text"")
+
+This worked fine with the original Invoke (rather than BeginInvoke) method.  Now I get a ""Object reference not set to an instance of an object"" exception.  If I put a watch on SomeTextBox, it says
+
+    SomeTextBox {Text = (Text) threw an exception of type Microsoft.VisualStudio.Debugger.Runtime.CrossThreadMessagingException.}
+
+It might be relevant that such InvokeControl calls come from within a System.Timers.Timer's Elapsed event.  Its Interval is 500ms, which should be more than long enough for the UI updates to complete (if that matters).  What is going on?
+
+Thanks in advance for the help!",vb.net,multithreading,asynchronous,timer,marshalling,,open,0,485,16,"VB.NET Trying to modify a generic Invoke method to a generic BeginInvoke method, having unexpected problems VB.NET 2010, .NET 4
+
+Hello,
+
+I have been using a pretty slick generic invoke method for UI updating from background threads.  I forget where I copied it from (converted it to VB.NET from C#), but here it is:
+
+    Public Sub InvokeControl(Of T As Control)(ByVal Control As t, ByVal Action As Action(Of t))
+        If Control.InvokeRequired Then
+            Try
+                Control.Invoke(New Action(Of T, Action(Of T))(AddressOf InvokeControl), New Object() {Control, Action})
+            Catch ex As Exception
+            End Try
+        Else
+            Action(Control)
+        End If
+    End Sub
+
+Now, I want to modify this to make a function that returns Nothing if no invoke was required (or an exception was thrown) or the IAsyncResult returned from BeginInvoke if invoke was required.  Here's what I have:
+
+    Public Function InvokeControl(Of T As Control)(ByVal Control As t, ByVal Action As Action(Of t)) As IAsyncResult
+        If Control.InvokeRequired Then
+            Try
+                Return Control.BeginInvoke(New Action(Of T, Action(Of T))(AddressOf InvokeControl), New Object() {Control, Action})
+            Catch ex As Exception
+                Return Nothing
+            End Try
+        Else
+            Action(Control)
+            Return Nothing
+        End If
+    End Function
+
+I wanted to do this primarily to avoid blocking.  The problem is that I now get errors when making calls such as this:
+
+
+    InvokeControl(SomeTextBox, Sub(x) x.Text = ""Some text"")
+
+This worked fine with the original Invoke (rather than BeginInvoke) method.  Now I get a ""Object reference not set to an instance of an object"" exception.  If I put a watch on SomeTextBox, it says
+
+    SomeTextBox {Text = (Text) threw an exception of type Microsoft.VisualStudio.Debugger.Runtime.CrossThreadMessagingException.}
+
+It might be relevant that such InvokeControl calls come from within a System.Timers.Timer's Elapsed event.  Its Interval is 500ms, which should be more than long enough for the UI updates to complete (if that matters).  What is going on?
+
+Thanks in advance for the help!",5
+3240721,07/13/2010 19:29:38,242076,01/01/2010 22:53:54,176,7,Custom date format from Linq to SQL query,"Im using the folowing function to return a SelectList. I need a custom format on Descr, but replacing Key.ToString() to Key.ToString(""DD/MM/YY"") render me the error ""Method 'System.String ToString(System.String)' has no supported translation to SQL."". How could i use a custom date format on Descr?
+
+		Public Function ReturnDates(ByVal Param_Pesq_Cod As Integer) As SelectList
+			Dim Qry = From E In DB.Execs _
+			Where E.Pesq_Cod = Param_Pesq_Cod _
+			Group E By Key = E.DataHora.Date _
+			Into Group Order By Key Select New With {.Descr = Key.ToString(), .Val = Key}
+
+			Return New SelectList(Qry, ""Val"", ""Descr"")
+		End Function
+",vb.net,linq-to-sql,date,,,,open,0,86,8,"Custom date format from Linq to SQL query Im using the folowing function to return a SelectList. I need a custom format on Descr, but replacing Key.ToString() to Key.ToString(""DD/MM/YY"") render me the error ""Method 'System.String ToString(System.String)' has no supported translation to SQL."". How could i use a custom date format on Descr?
+
+		Public Function ReturnDates(ByVal Param_Pesq_Cod As Integer) As SelectList
+			Dim Qry = From E In DB.Execs _
+			Where E.Pesq_Cod = Param_Pesq_Cod _
+			Group E By Key = E.DataHora.Date _
+			Into Group Order By Key Select New With {.Descr = Key.ToString(), .Val = Key}
+
+			Return New SelectList(Qry, ""Val"", ""Descr"")
+		End Function
+",3
+10835702,05/31/2012 14:35:05,1426517,05/30/2012 16:16:44,3,0,how to get duplicate items from a list in vb.net,"I have a List(of String). For example: {""C1"", ""C12"", ""C10"", ""C1"", ""C6"", ""C22"", ""C1"", ""C6""}. I am trying to write a function to give me a list of duplicates: {""C1"", ""C6""} in the list. Each duplicate will be listed only once. The function I wrote does give me anything back at all. I can't figure out why. Any help or alternative approaches are appreciated. FYI, I see a very similar question in C# but I don't know how to translate that syntax into VB.net since I am not up to speed on LINQ yet. It is here: <http://stackoverflow.com/questions/3811464/how-to-get-duplicate-items-from-a-list-using-linq>
+
+        ''' <summary>
+        ''' Given a List(Of String), returns a list of items that are duplicated in the list.
+        ''' Each duplicate returned is unique.
+        ''' </summary>
+        ''' <param name=""Set1""></param>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
+        Public Shared Function GetDuplicateItems(ByVal Set1 As List(Of String)) As List(Of String)
+            Dim DistinctItems As IEnumerable(Of String)
+            'Dim DistinctResults As New List(Of String)
+            Dim DuplicateItems As IEnumerable(Of String)
+            Dim ItemsToReturn As New List(Of String)
+
+            'Get a set of unique items in the list
+            DistinctItems = Set1.Select(Function(x) x).Distinct()
+            'Do I need to enumerate the result in order to force the thing to execute?
+            'See remarks section of http://msdn.microsoft.com/en-us/library/bb300779.aspx
+            'For Each Item As String In DistinctItems
+            '    DistinctResults.Add(Item)
+            'Next
+            'Do a set subtraction (Set1 - UniqueItems)
+            DuplicateItems = Set1.Except(DistinctItems)
+
+            For Each Item As String In DuplicateItems
+                ItemsToReturn.Add(Item)
+            Next
+
+            Return ItemsToReturn
+        End Function",vb.net,,,,,,open,0,487,10,"how to get duplicate items from a list in vb.net I have a List(of String). For example: {""C1"", ""C12"", ""C10"", ""C1"", ""C6"", ""C22"", ""C1"", ""C6""}. I am trying to write a function to give me a list of duplicates: {""C1"", ""C6""} in the list. Each duplicate will be listed only once. The function I wrote does give me anything back at all. I can't figure out why. Any help or alternative approaches are appreciated. FYI, I see a very similar question in C# but I don't know how to translate that syntax into VB.net since I am not up to speed on LINQ yet. It is here: <http://stackoverflow.com/questions/3811464/how-to-get-duplicate-items-from-a-list-using-linq>
+
+        ''' <summary>
+        ''' Given a List(Of String), returns a list of items that are duplicated in the list.
+        ''' Each duplicate returned is unique.
+        ''' </summary>
+        ''' <param name=""Set1""></param>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
+        Public Shared Function GetDuplicateItems(ByVal Set1 As List(Of String)) As List(Of String)
+            Dim DistinctItems As IEnumerable(Of String)
+            'Dim DistinctResults As New List(Of String)
+            Dim DuplicateItems As IEnumerable(Of String)
+            Dim ItemsToReturn As New List(Of String)
+
+            'Get a set of unique items in the list
+            DistinctItems = Set1.Select(Function(x) x).Distinct()
+            'Do I need to enumerate the result in order to force the thing to execute?
+            'See remarks section of http://msdn.microsoft.com/en-us/library/bb300779.aspx
+            'For Each Item As String In DistinctItems
+            '    DistinctResults.Add(Item)
+            'Next
+            'Do a set subtraction (Set1 - UniqueItems)
+            DuplicateItems = Set1.Except(DistinctItems)
+
+            For Each Item As String In DuplicateItems
+                ItemsToReturn.Add(Item)
+            Next
+
+            Return ItemsToReturn
+        End Function",1
+8813623,01/11/2012 02:57:21,1037735,11/09/2011 13:23:35,1,0,How can I send data i.e. create a post on my facebook wall from a vb.net desktop application,"I have written a vb.net desktop application for pipe collectors and one of the requests that seems popular is to be able to post pipe details (text) and an image of the pipe onto the user's facebook wall.
+
+Basically the user will bring up their pipe details of choice and be able to click a 'Post To Wall"" button which would then post the pipe details onto their wall.
+
+If anyone can help it would be much appreciated.
+
+Thanks in advance.",vb.net,facebook,facebook-wall,,,01/11/2012 19:59:30,not a real question,1,78,18,"How can I send data i.e. create a post on my facebook wall from a vb.net desktop application I have written a vb.net desktop application for pipe collectors and one of the requests that seems popular is to be able to post pipe details (text) and an image of the pipe onto the user's facebook wall.
+
+Basically the user will bring up their pipe details of choice and be able to click a 'Post To Wall"" button which would then post the pipe details onto their wall.
+
+If anyone can help it would be much appreciated.
+
+Thanks in advance.",3
+5817796,04/28/2011 11:22:34,502068,11/08/2010 09:55:52,15,1,how to print out line number during application run in VB.net,"I would like to print out my debug message with line number in VB.net application.
+I did like this,
+
+    Dim st As StackTrace
+    Dim sf As StackFramee
+    st = New StackTrace(New StackFrame(True))
+    sf = st.GetFrame(0)
+    Console.WriteLine.(""Line "" & sf.GetFileLineNumber()）
+
+I wanna put the snippet to a class, everytime I call logMsg method to log my message with line number in source code.
+But I found if I put the snippet above into a class, the line number was always same, that's the line which I new 'st'.
+
+The function is exact same with __LINE_ macro in C++. Actually I am C++ programmer.
+
+Anyway to fix this problem? thanks.
+
+
+
+",vb.net,line,,,,,open,0,118,11,"how to print out line number during application run in VB.net I would like to print out my debug message with line number in VB.net application.
+I did like this,
+
+    Dim st As StackTrace
+    Dim sf As StackFramee
+    st = New StackTrace(New StackFrame(True))
+    sf = st.GetFrame(0)
+    Console.WriteLine.(""Line "" & sf.GetFileLineNumber()）
+
+I wanna put the snippet to a class, everytime I call logMsg method to log my message with line number in source code.
+But I found if I put the snippet above into a class, the line number was always same, that's the line which I new 'st'.
+
+The function is exact same with __LINE_ macro in C++. Actually I am C++ programmer.
+
+Anyway to fix this problem? thanks.
+
+
+
+",2
+7835289,10/20/2011 11:32:24,365752,06/13/2010 15:37:24,335,48,vb.net Report Viewer,"I've got a report in vb.net 2010... It works fine, I've now added in some columns into the database and refersehed the datasources which the columns appear.
+
+But when I go to build the code it reports that the fields don't exist within dataset1 which is really starting to annoy me now. I can't find where the dataset1 is to refresh the data.
+
+Can somebody please advise?",vb.net,visual-studio,visual-studio-2010,reportviewer,,,open,0,65,3,"vb.net Report Viewer I've got a report in vb.net 2010... It works fine, I've now added in some columns into the database and refersehed the datasources which the columns appear.
+
+But when I go to build the code it reports that the fields don't exist within dataset1 which is really starting to annoy me now. I can't find where the dataset1 is to refresh the data.
+
+Can somebody please advise?",4
+9438284,02/24/2012 21:26:10,112895,05/27/2009 04:20:37,57,0,Rewriting <html> tag on the fly with vb,"I have over 11,000 pages in a site and need to change the <html> tag on every page. I interact with production through horribly slow tool so doing a global search and replace is out of the question. The site is in a .net environment and I utilize vb so I am wondering if I could rewrite the <html> tag sitewide on the fly with a class?
+
+Thanks  ",vb.net,vb,,,,,open,0,69,8,"Rewriting <html> tag on the fly with vb I have over 11,000 pages in a site and need to change the <html> tag on every page. I interact with production through horribly slow tool so doing a global search and replace is out of the question. The site is in a .net environment and I utilize vb so I am wondering if I could rewrite the <html> tag sitewide on the fly with a class?
+
+Thanks  ",2
+7413256,09/14/2011 08:18:11,944142,09/14/2011 08:18:11,1,0,How to extract/convert values from JSON response to a VB.NET Object and vice versa?,I'm getting a JSON response after accessing a web service with my window application written in VB.NET. How can I convert the JSON response to a VB.NET object and vice versa? Any help will be appreciated! Thanks!,vb.net,json,,,,,open,0,37,14,How to extract/convert values from JSON response to a VB.NET Object and vice versa? I'm getting a JSON response after accessing a web service with my window application written in VB.NET. How can I convert the JSON response to a VB.NET object and vice versa? Any help will be appreciated! Thanks!,2
+1533751,10/07/2009 19:42:10,176550,09/21/2009 12:46:53,82,1,Learning VB.Net using Sharpdevelop,"
+I’m new to *visual basic.net*. I have experience in C++ programming, but never created gui with it so learning vb.net for some quick gui development. and i want to learn vb.net. *I can’t install visual basic express on computer cause i’m on shared computer* and such huge install is not possible on that computer. So i picked up sharpdevelop. 
+
+After searching most of the tutorial, i found out that most of tutorial written for visual studio IDE for vb and vb.net. I’m trying to learn vb.net in depth from command line to gui programs. Any good recommendation of tutorials, book ? I searched google but very few results so far. I’m looking for good learning tutorials that can help learn with sharpdevelop. 
+
+any suggestion for tutorial and books that mentions sharpdevelop in their tutorial/guide ? 
+",vb.net,sharpdevelop,tutorials,,,,open,0,136,4,"Learning VB.Net using Sharpdevelop 
+I’m new to *visual basic.net*. I have experience in C++ programming, but never created gui with it so learning vb.net for some quick gui development. and i want to learn vb.net. *I can’t install visual basic express on computer cause i’m on shared computer* and such huge install is not possible on that computer. So i picked up sharpdevelop. 
+
+After searching most of the tutorial, i found out that most of tutorial written for visual studio IDE for vb and vb.net. I’m trying to learn vb.net in depth from command line to gui programs. Any good recommendation of tutorials, book ? I searched google but very few results so far. I’m looking for good learning tutorials that can help learn with sharpdevelop. 
+
+any suggestion for tutorial and books that mentions sharpdevelop in their tutorial/guide ? 
+",3
+6707612,07/15/2011 13:20:48,438981,09/02/2010 13:57:08,91,0,Check memory consume of vb.net application,"I am getting a System.OutOfMemoryException from my vb.net application, it happened from one certain user. I am trying to figure out whether my application takes too much memory space or the PC has low memory. But she just upgraded her desktop as i3 Intel CPU and higher memory.
+
+Is there any tool that I check memory consumption when code is executed as go through lines?
+
+By the way, it is developed by vs2010.
+",vb.net,visual-studio-2010,,,,,open,0,71,6,"Check memory consume of vb.net application I am getting a System.OutOfMemoryException from my vb.net application, it happened from one certain user. I am trying to figure out whether my application takes too much memory space or the PC has low memory. But she just upgraded her desktop as i3 Intel CPU and higher memory.
+
+Is there any tool that I check memory consumption when code is executed as go through lines?
+
+By the way, it is developed by vs2010.
+",2
+7461559,09/18/2011 12:47:17,951222,09/18/2011 12:47:17,1,0,Downloading a file using internet explorer credentials in VB.NET,"I want to download a file in VB.net from a website that requires credentials, all my users have their credentials to this website saved in their IE settings.
+Is there a way to download a file from this website using the IE credentials? I'm trying to avoid from asking my users for their credentials.
+
+thanks.",vb.net,,,,,,open,0,53,9,"Downloading a file using internet explorer credentials in VB.NET I want to download a file in VB.net from a website that requires credentials, all my users have their credentials to this website saved in their IE settings.
+Is there a way to download a file from this website using the IE credentials? I'm trying to avoid from asking my users for their credentials.
+
+thanks.",1
+7686677,10/07/2011 11:36:36,889492,05/20/2010 05:12:07,1,0,How to remove all duplicates in a data table in vb.net?,"Consider my data table
+ID Name
+1  AAA
+2  BBB
+3  CCC
+1  AAA
+4  DDD
+
+Final Output is
+2 BBB
+3 CCC
+4 DDD
+
+How can i remove the rows in the data table  using Vb.Net
+Any help is appreciated.",vb.net,,,,,,open,0,35,11,"How to remove all duplicates in a data table in vb.net? Consider my data table
+ID Name
+1  AAA
+2  BBB
+3  CCC
+1  AAA
+4  DDD
+
+Final Output is
+2 BBB
+3 CCC
+4 DDD
+
+How can i remove the rows in the data table  using Vb.Net
+Any help is appreciated.",1
+9520221,03/01/2012 16:38:13,782880,06/03/2011 14:45:19,66,1,Sorting a list of <Object> with VB and LINQ,"I'm trying out some LINQ expressions and can't get them to work with the List class.   Basically I want to be able to sort a list of custom objects by property type, however the C# LINQ syntax is KILLING me and I can't figure out how to convert it to VB
+
+
+    Class Foo
+        Sub New(Name As String, Position As Integer)
+            Me.Name = Name
+            Me.Position = Position
+        End Sub
+        Public Name As String
+        Public Position As Integer
+    End Class
+
+    Sub Main()
+        Dim l As New List(Of Foo)
+        l.Add(New Foo(""C"", 3))
+        l.Add(New Foo(""B"", 2))
+        l.Add(New Foo(""A"", 1))
+
+        Dim asc = ..... (sort l by position asecnding)
+        Dim desc = ..... (sort l by position descending)
+
+    End Sub
+",vb.net,linq,,,,,open,0,221,9,"Sorting a list of <Object> with VB and LINQ I'm trying out some LINQ expressions and can't get them to work with the List class.   Basically I want to be able to sort a list of custom objects by property type, however the C# LINQ syntax is KILLING me and I can't figure out how to convert it to VB
+
+
+    Class Foo
+        Sub New(Name As String, Position As Integer)
+            Me.Name = Name
+            Me.Position = Position
+        End Sub
+        Public Name As String
+        Public Position As Integer
+    End Class
+
+    Sub Main()
+        Dim l As New List(Of Foo)
+        l.Add(New Foo(""C"", 3))
+        l.Add(New Foo(""B"", 2))
+        l.Add(New Foo(""A"", 1))
+
+        Dim asc = ..... (sort l by position asecnding)
+        Dim desc = ..... (sort l by position descending)
+
+    End Sub
+",2
+3522838,08/19/2010 14:34:34,210697,11/13/2009 19:34:32,338,15,[VB.Net] Using System.IO namespace for FTP operations,"I have a few syncing routines that I'd like to use for FTP uploads. However they all use the functions in the IO namespace, and I was wondering whether I could use it to access distant files stored on an FTP server.
+
+Maybe should I mount the distant server as a network drive? Is there a way to do this programatically?
+
+Thanks,  
+CFP.",vb.net,ftp,io,,,,open,0,62,7,"[VB.Net] Using System.IO namespace for FTP operations I have a few syncing routines that I'd like to use for FTP uploads. However they all use the functions in the IO namespace, and I was wondering whether I could use it to access distant files stored on an FTP server.
+
+Maybe should I mount the distant server as a network drive? Is there a way to do this programatically?
+
+Thanks,  
+CFP.",3
+8613937,12/23/2011 08:51:58,722000,04/23/2011 18:41:47,163,1,Gallery Control for VB.net programs,"Are there any free gallery control which I can use in my VB.net applications (WinForms) so that I could enlist thumbnails of all the images in my computer.
+
+I am looking for something similar to this http://www.dhtmlsite.com/zenphoto.jpg
+
+",vb.net,winforms,gallery,,,,open,0,36,5,"Gallery Control for VB.net programs Are there any free gallery control which I can use in my VB.net applications (WinForms) so that I could enlist thumbnails of all the images in my computer.
+
+I am looking for something similar to this http://www.dhtmlsite.com/zenphoto.jpg
+
+",3
+8467605,12/11/2011 21:26:24,802406,06/16/2011 22:44:10,16,1,runing a program through complete adress VB.NET,"i am trying to run a .vbs script that is not in the same directory as the program is in
+
+<code>
+
+    Dim CustomInstalaionPath As String = ""C:\Users\user\Desktop\Test""
+    Process.Start(CustomInstalationPath + ""/run.vbs"")
+
+</code>
+
+the program is running in the normal directory for de-bugging 
+
+C:\Users\user\Documents\Visual Studio 2010\Projects...
+
+nothing i have tried is working 
+
+any help would be awesome
+thanks",vb.net,visual-studio,running,,,12/12/2011 05:39:07,not a real question,1,57,7,"runing a program through complete adress VB.NET i am trying to run a .vbs script that is not in the same directory as the program is in
+
+<code>
+
+    Dim CustomInstalaionPath As String = ""C:\Users\user\Desktop\Test""
+    Process.Start(CustomInstalationPath + ""/run.vbs"")
+
+</code>
+
+the program is running in the normal directory for de-bugging 
+
+C:\Users\user\Documents\Visual Studio 2010\Projects...
+
+nothing i have tried is working 
+
+any help would be awesome
+thanks",3
+5094187,02/23/2011 17:03:11,25961,10/07/2008 21:19:52,367,16,Err.Number vs try-catch in VB.net,"I have inherited an old VB.net-project. The code mostly uses try-catch for error-handling. However in some places I have found `If Err.Number <> 0 Then`.
+
+If an error occurs, what decides if an `Exception` should be thrown, or just setting `Err`?
+
+I don't want to handle error both ways... ",vb.net,try-catch,,,,,open,0,48,5,"Err.Number vs try-catch in VB.net I have inherited an old VB.net-project. The code mostly uses try-catch for error-handling. However in some places I have found `If Err.Number <> 0 Then`.
+
+If an error occurs, what decides if an `Exception` should be thrown, or just setting `Err`?
+
+I don't want to handle error both ways... ",2
+841310,05/08/2009 19:01:31,98094,04/29/2009 23:27:36,14,4,HTML Parser,"Anyone know of an HTML parser for VB.NET or C#? I know .NET has a lot of XML support, like XMLReader and XMLWriter. Is there an HTMLWriter or HTMLReader?
+
+Ultimately what I'd like is a library that will parser an HTML file and raise events based on the tags it finds. Anyone know of a library to do this?
+
+",vb.net,c#,html,parsing,,,open,0,58,2,"HTML Parser Anyone know of an HTML parser for VB.NET or C#? I know .NET has a lot of XML support, like XMLReader and XMLWriter. Is there an HTMLWriter or HTMLReader?
+
+Ultimately what I'd like is a library that will parser an HTML file and raise events based on the tags it finds. Anyone know of a library to do this?
+
+",4
+7356465,09/09/2011 02:09:52,928119,09/05/2011 01:26:54,1,0,How to set into configuration settings?,Guys can you help me where is the configuration of vb.net? because I Need to set a User for the checker Role before go to verifier .. my boss told me if i will set it to config or i will hardcode it to set a new checker ... thanks ,vb.net,,,,,09/09/2011 14:50:13,not a real question,1,51,6,How to set into configuration settings? Guys can you help me where is the configuration of vb.net? because I Need to set a User for the checker Role before go to verifier .. my boss told me if i will set it to config or i will hardcode it to set a new checker ... thanks ,1
+9406698,02/23/2012 03:24:15,1090894,12/10/2011 05:34:45,1,0,"Clicking a random link out of all the page links in a webbrowser, vb.net","Im Trying to click on a random link in a webbrowser page. I have this code so far but i  get an error ""Object reference not set to an instance of an object."" Any help would be great.
+
+
+    If WebBrowser1.ReadyState = WebBrowserReadyState.Complete Then
+                Dim links As String
+                Dim count As String
+                links = WebBrowser1.Document.Links.Count
+                count = RandomNumber(links, 0)
+                WebBrowser1.Document.Links.Item(count).InvokeMember(""click"")
+        End If",vb.net,webbrowser-control,,,,,open,0,147,14,"Clicking a random link out of all the page links in a webbrowser, vb.net Im Trying to click on a random link in a webbrowser page. I have this code so far but i  get an error ""Object reference not set to an instance of an object."" Any help would be great.
+
+
+    If WebBrowser1.ReadyState = WebBrowserReadyState.Complete Then
+                Dim links As String
+                Dim count As String
+                links = WebBrowser1.Document.Links.Count
+                count = RandomNumber(links, 0)
+                WebBrowser1.Document.Links.Item(count).InvokeMember(""click"")
+        End If",2
+7065320,08/15/2011 13:12:02,123348,06/15/2009 20:46:01,526,10,How to populate VB.NET multidimensional dropdownlist,"I am trying to initialize a dropdownlist in VB.NET but my dropdownlist is not populating any values.  I want the DataTextField to be different from DataValues in the dropdownlist.  Dropdownlist should display series of strings; DataValues should only be numbers.  How can I implement this?  Here is my code excerpt right now:
+
+	        Dim ProductList As New ArrayList()
+	        Dim ProdCodeSearch As String
+	        Dim InstrumentSearch As String
+
+	        pcSQL = "" select distinct instrument_name AS [instrument_name], product_code AS [product_code] from FRUD.tblXref order by instrument_name ""
+	        Dim DBConn As SqlConnection
+	        DBConn = New SqlConnection(ConfigurationManager.AppSettings(""AMDMetricsDevConnectionString""))
+	        DBConn.Open()
+	        Dim reader As SqlDataReader
+		    Dim DBCommand As New SqlCommand(pcSQL, DBConn)       
+	        reader = DBCommand.ExecuteReader()
+
+	        While reader.Read()
+	        End While
+
+	        dProdCodeSearch.Items.Add(reader(0))
+	        dProdCodeSearch.DataTextField = ""instrument_name""
+	        dProdCodeSearch.DataValueField = ""product_code""
+	        dProdCodeSearch.DataBind()
+	        reader.Close()
+",vb.net,drop-down-menu,executereader,,,,open,0,243,6,"How to populate VB.NET multidimensional dropdownlist I am trying to initialize a dropdownlist in VB.NET but my dropdownlist is not populating any values.  I want the DataTextField to be different from DataValues in the dropdownlist.  Dropdownlist should display series of strings; DataValues should only be numbers.  How can I implement this?  Here is my code excerpt right now:
+
+	        Dim ProductList As New ArrayList()
+	        Dim ProdCodeSearch As String
+	        Dim InstrumentSearch As String
+
+	        pcSQL = "" select distinct instrument_name AS [instrument_name], product_code AS [product_code] from FRUD.tblXref order by instrument_name ""
+	        Dim DBConn As SqlConnection
+	        DBConn = New SqlConnection(ConfigurationManager.AppSettings(""AMDMetricsDevConnectionString""))
+	        DBConn.Open()
+	        Dim reader As SqlDataReader
+		    Dim DBCommand As New SqlCommand(pcSQL, DBConn)       
+	        reader = DBCommand.ExecuteReader()
+
+	        While reader.Read()
+	        End While
+
+	        dProdCodeSearch.Items.Add(reader(0))
+	        dProdCodeSearch.DataTextField = ""instrument_name""
+	        dProdCodeSearch.DataValueField = ""product_code""
+	        dProdCodeSearch.DataBind()
+	        reader.Close()
+",3
+10279074,04/23/2012 10:46:13,1336635,04/16/2012 15:13:28,6,0,High CPU usage webbrowser control,"Im using webbrowser control to navigate to a page and it uses a lot of cpu 30% sometimes even 50% but thats ok cause I only navigate on the startup of the program. 
+
+The problem is the refreshing becaouse its happening more often (every 10 seconds) is there a way to refresh just a part of the website for example between a div tag?
+Would this reduce the cpu usage or I need to upgrade my hardware??",vb.net,,,,,04/25/2012 11:48:07,not a real question,1,76,5,"High CPU usage webbrowser control Im using webbrowser control to navigate to a page and it uses a lot of cpu 30% sometimes even 50% but thats ok cause I only navigate on the startup of the program. 
+
+The problem is the refreshing becaouse its happening more often (every 10 seconds) is there a way to refresh just a part of the website for example between a div tag?
+Would this reduce the cpu usage or I need to upgrade my hardware??",1
+11581217,07/20/2012 14:17:57,1509552,07/08/2012 04:09:19,8,0,VB.NET How to use TimeSpan to add time to another TimeSpan,"My first timespan is: `""00:01:03,160""`
+<Br>
+and my second timespan is: `""00:00:01,100""`
+<br>
+i want to do an addition or subtraction between **00:01:03,160** to **00:00:01,100**
+<br>
+
+    00:01:03,160 + 00:00:01,100 = 00:01:04,260
+
+i think that the format is : hh\:mm\:ss\,fff
+<br>
+",vb.net,winforms,timespan,,,07/20/2012 20:31:23,not a real question,1,36,11,"VB.NET How to use TimeSpan to add time to another TimeSpan My first timespan is: `""00:01:03,160""`
+<Br>
+and my second timespan is: `""00:00:01,100""`
+<br>
+i want to do an addition or subtraction between **00:01:03,160** to **00:00:01,100**
+<br>
+
+    00:01:03,160 + 00:00:01,100 = 00:01:04,260
+
+i think that the format is : hh\:mm\:ss\,fff
+<br>
+",3
+10166219,04/15/2012 21:20:37,577981,01/17/2011 02:09:00,1069,74,WP7 MVVM how do I call me.setfocus() from the ViewModel?,"I'm attempting to improve my MVVM abilities in my next WP7 App (which is written in Vb.NET).  I have a textbox that has been given focus and has a WP7 keyboard displayed.  I am using command binding and a xyzzer's bindable Application bar (which is excellent).
+
+http://bindableapplicationb.codeplex.com/
+
+I want to be able to cancel the focus of the TextBox from the ViewModel, by setting focus on the form.  Normally (Non MVVM) I would do this from within the form by calling:
+
+      Me.Focus()
+
+But I can't do this from the ViewModel (and I shouldn't).  At the moment I am raising an event out of the ViewModel and catching it on the form but its nasty.  Is there a MVVM Friendly way of doing it?  I haven't been using a Toolkit so far as there are limited examples in vb.net.  
+
+I have been using command binding.",vb.net,windows-phone-7,mvvm,vb.net-2010,windows-phone-7.1.1,,open,0,153,10,"WP7 MVVM how do I call me.setfocus() from the ViewModel? I'm attempting to improve my MVVM abilities in my next WP7 App (which is written in Vb.NET).  I have a textbox that has been given focus and has a WP7 keyboard displayed.  I am using command binding and a xyzzer's bindable Application bar (which is excellent).
+
+http://bindableapplicationb.codeplex.com/
+
+I want to be able to cancel the focus of the TextBox from the ViewModel, by setting focus on the form.  Normally (Non MVVM) I would do this from within the form by calling:
+
+      Me.Focus()
+
+But I can't do this from the ViewModel (and I shouldn't).  At the moment I am raising an event out of the ViewModel and catching it on the form but its nasty.  Is there a MVVM Friendly way of doing it?  I haven't been using a Toolkit so far as there are limited examples in vb.net.  
+
+I have been using command binding.",5
+2256909,02/13/2010 08:10:15,257944,01/24/2010 19:55:00,22,4,VB.NET: MessageBox with YesNoCancel - No & Cancel triggers same event,"I have a message box with `YesNoCancel` button..
+
+Pressing `Yes` will do some action and close the app - works fine,
+Pressing `No` will do nothing and close the app - (see below),
+Pressing `Cancel` will Do nothing and keep the app open - (see below).
+
+I'm using `DialogResult.No` for No button and `DialogResult.Cancel` for cancel button.
+But pressing either of them triggers `DialogResult.Cancel` event. Whats the problem?",vb.net,button,messagebox,,,,open,0,63,11,"VB.NET: MessageBox with YesNoCancel - No & Cancel triggers same event I have a message box with `YesNoCancel` button..
+
+Pressing `Yes` will do some action and close the app - works fine,
+Pressing `No` will do nothing and close the app - (see below),
+Pressing `Cancel` will Do nothing and keep the app open - (see below).
+
+I'm using `DialogResult.No` for No button and `DialogResult.Cancel` for cancel button.
+But pressing either of them triggers `DialogResult.Cancel` event. Whats the problem?",3
+9002402,01/25/2012 12:04:35,415037,08/09/2010 11:55:28,619,8,"Suggestion about using a database type, VB.Net","My problem is I need to develop a sales application to be used on 5 computers.  The database needs to stay on a main computer and other computers should connect with that over LAN.
+I donot want to use SQL Server as it is too complicated to give permissions, setting up firewalls etc. for the end user.
+
+Is that any type of database that could serve my purpose, without giving sharing violation error?
+
+Thanks for your helo.",vb.net,,,,,01/31/2012 15:56:05,not constructive,1,75,7,"Suggestion about using a database type, VB.Net My problem is I need to develop a sales application to be used on 5 computers.  The database needs to stay on a main computer and other computers should connect with that over LAN.
+I donot want to use SQL Server as it is too complicated to give permissions, setting up firewalls etc. for the end user.
+
+Is that any type of database that could serve my purpose, without giving sharing violation error?
+
+Thanks for your helo.",1
+4375572,12/07/2010 10:22:54,533488,12/07/2010 10:03:44,1,0,how can i insert an avi file in v.b in .net ,"how to write?
+inserting an avi file in visual basic on .net
+what is the syntax?
+thanks boaz",vb.net,,,,,12/08/2010 17:09:28,not a real question,1,15,12,"how can i insert an avi file in v.b in .net  how to write?
+inserting an avi file in visual basic on .net
+what is the syntax?
+thanks boaz",1
+2031666,01/09/2010 00:08:37,246832,01/09/2010 00:08:37,1,0,vb.net now.year,"i am new to vb.net and just wanted to clarify something.
+i have this code -
+ Dim i As Integer
+            For i = Now.Year To Now.Year
+
+            Next
+
+for the code ""For i = Now.Year To Now.Year"", when the month changes to say May 2010, will the now.year to now.year change the 11 records to May 2011. or will it be may 2010 again?",vb.net,year,,,,,open,0,83,2,"vb.net now.year i am new to vb.net and just wanted to clarify something.
+i have this code -
+ Dim i As Integer
+            For i = Now.Year To Now.Year
+
+            Next
+
+for the code ""For i = Now.Year To Now.Year"", when the month changes to say May 2010, will the now.year to now.year change the 11 records to May 2011. or will it be may 2010 again?",2
+11400928,07/09/2012 18:27:28,621698,02/17/2011 16:00:58,82,0,Custom validation for from and to date in vb.net?,"
+i am developing web application in vb.net, using Custom validation how to validate the from date and To date..
+ 
+i need to validate the Date in the asp:textbox should be ""dd/mm/yyyy"" format and i have two date like from date and Todate. So the Todate should not be less then start date, Can anyone please help me,
+ 
+Thanks in advance. ",vb.net,dateformat,customvalidator,custom-validators,,,open,0,61,9,"Custom validation for from and to date in vb.net? 
+i am developing web application in vb.net, using Custom validation how to validate the from date and To date..
+ 
+i need to validate the Date in the asp:textbox should be ""dd/mm/yyyy"" format and i have two date like from date and Todate. So the Todate should not be less then start date, Can anyone please help me,
+ 
+Thanks in advance. ",4
+794679,04/27/2009 18:28:01,63731,02/07/2009 20:10:54,10,0,Question inheriting from List(of T) class,"I want to implement a priority queue class. When an item is added at a higher priority it is pushed to the front of the queue instead adding to the end of queue.
+
+Simple few lines of code
+
+    Public Class PriorityQueue(Of T)
+        Inherits List(Of T)
+    
+        Private _list As New List(Of T)
+    
+        Public Sub Enque(ByVal item As T, Optional ByVal pushToFront As Boolean = False)
+            If pushToFront = True Then
+                _list.Insert(0, item)
+            Else
+                _list.Add(item)
+            End If
+        End Sub
+        Public Function Deque() As T
+            If _list.Count <> 0 Then
+                Dim item As T = _list(0)
+                _list.RemoveAt(0)
+                Return item
+            Else
+                Throw New InvalidOperationException
+            End If
+        End Function
+       End Class
+
+-----------------
+
+Now the the calling function tries to find the elements in the queue thus
+....
+
+dim _q as new PriorityQueue(Of integer)
+_q.Enque(1)
+_q.Enque(2)
+msgbox(_q.Count())
+
+.....
+
+the program prints out 0! If add a Count() property then everything is fine.
+I would have thought the inherited class should call the base class's Count function.
+Note that the Count shows up in intellisense even if I have no implementation in the derived class.
+",vb.net,.net,inheritance,list,,,open,0,381,6,"Question inheriting from List(of T) class I want to implement a priority queue class. When an item is added at a higher priority it is pushed to the front of the queue instead adding to the end of queue.
+
+Simple few lines of code
+
+    Public Class PriorityQueue(Of T)
+        Inherits List(Of T)
+    
+        Private _list As New List(Of T)
+    
+        Public Sub Enque(ByVal item As T, Optional ByVal pushToFront As Boolean = False)
+            If pushToFront = True Then
+                _list.Insert(0, item)
+            Else
+                _list.Add(item)
+            End If
+        End Sub
+        Public Function Deque() As T
+            If _list.Count <> 0 Then
+                Dim item As T = _list(0)
+                _list.RemoveAt(0)
+                Return item
+            Else
+                Throw New InvalidOperationException
+            End If
+        End Function
+       End Class
+
+-----------------
+
+Now the the calling function tries to find the elements in the queue thus
+....
+
+dim _q as new PriorityQueue(Of integer)
+_q.Enque(1)
+_q.Enque(2)
+msgbox(_q.Count())
+
+.....
+
+the program prints out 0! If add a Count() property then everything is fine.
+I would have thought the inherited class should call the base class's Count function.
+Note that the Count shows up in intellisense even if I have no implementation in the derived class.
+",4
+6864444,07/28/2011 19:18:13,868169,07/28/2011 19:18:13,1,0,Encrypt in VB.NET With AES-256 and Decrypt in Air,"I am trying to encrypt a zip in VB.NET to send to an android device using Air. Then once its on the device, decrypt it using the key and IV.
+
+Here is part of my VB.NET Code:
+
+         Private Sub EncryptBytes(ByVal fileIn As String, ByVal fileOut As String, ByVal pass As String, ByVal ivString As String)
+    
+            Dim crypt As New RijndaelManaged
+            crypt.KeySize = 256
+            crypt.BlockSize = 256
+            crypt.Padding = PaddingMode.PKCS7
+            crypt.Mode = CipherMode.CFB
+    
+            Dim data As Byte() = ReadByteArray(fileIn)
+            Dim iv As Byte() = System.Text.Encoding.UTF8.GetBytes(ivString)
+            Dim key As Byte() = System.Text.Encoding.UTF8.GetBytes(pass)
+            Dim encryptor As ICryptoTransform = crypt.CreateEncryptor(key, iv)
+    
+            Using ms As New System.IO.MemoryStream
+    
+                Using cs As New CryptoStream(ms, encryptor, CryptoStreamMode.Write)
+    
+                    Debug.Print(""data len: "" & data.Length)
+    
+                    cs.Write(data, 0, data.Length)
+                    cs.FlushFinalBlock()
+    
+                End Using
+    
+                WriteByteArray(fileOut, ms.ToArray)
+    
+            End Using
+    
+        End Sub
+
+
+Two things, first I don't want to sue PaddingMode.PKCS7 but when I change it to PaddingMode.None I get an error which says ""Length of the data to encrypt is invalid"".
+
+Second, I have a decryption SUB and it still works if I send it a bogus IV. Why is the IV not effecting the decryption process.
+
+### DECRYPTION ###
+
+In Air I'm using the com.hurlant.crypto package I found. Here is my function:
+
+    public static function decryptZip(src:ByteArray, k:String):ByteArray {
+    
+    	var key:ByteArray = Hex.toArray(Hex.fromString(k));	
+    	var iv:ByteArray = Hex.toArray(Hex.fromString(k));	
+    
+    	var mode:CFBMode = new CFBMode(new AESKey(key), new PKCS7(256));
+    	mode.IV = iv;
+    
+    	mode.decrypt(src);
+    
+    	return src;
+    
+    }
+
+This is not working ... Note that I tried to write a PKCS7 class based on a Java class I found. The hurlant package I downloaded only had PKCS5. VB.NET did not provide any of the same padding classes as hurlant comes with. I wish I could using ""None"" but I couldn't get passed the error in VB.
+
+Please help!",vb.net,encryption,air,aes,,,open,0,602,9,"Encrypt in VB.NET With AES-256 and Decrypt in Air I am trying to encrypt a zip in VB.NET to send to an android device using Air. Then once its on the device, decrypt it using the key and IV.
+
+Here is part of my VB.NET Code:
+
+         Private Sub EncryptBytes(ByVal fileIn As String, ByVal fileOut As String, ByVal pass As String, ByVal ivString As String)
+    
+            Dim crypt As New RijndaelManaged
+            crypt.KeySize = 256
+            crypt.BlockSize = 256
+            crypt.Padding = PaddingMode.PKCS7
+            crypt.Mode = CipherMode.CFB
+    
+            Dim data As Byte() = ReadByteArray(fileIn)
+            Dim iv As Byte() = System.Text.Encoding.UTF8.GetBytes(ivString)
+            Dim key As Byte() = System.Text.Encoding.UTF8.GetBytes(pass)
+            Dim encryptor As ICryptoTransform = crypt.CreateEncryptor(key, iv)
+    
+            Using ms As New System.IO.MemoryStream
+    
+                Using cs As New CryptoStream(ms, encryptor, CryptoStreamMode.Write)
+    
+                    Debug.Print(""data len: "" & data.Length)
+    
+                    cs.Write(data, 0, data.Length)
+                    cs.FlushFinalBlock()
+    
+                End Using
+    
+                WriteByteArray(fileOut, ms.ToArray)
+    
+            End Using
+    
+        End Sub
+
+
+Two things, first I don't want to sue PaddingMode.PKCS7 but when I change it to PaddingMode.None I get an error which says ""Length of the data to encrypt is invalid"".
+
+Second, I have a decryption SUB and it still works if I send it a bogus IV. Why is the IV not effecting the decryption process.
+
+### DECRYPTION ###
+
+In Air I'm using the com.hurlant.crypto package I found. Here is my function:
+
+    public static function decryptZip(src:ByteArray, k:String):ByteArray {
+    
+    	var key:ByteArray = Hex.toArray(Hex.fromString(k));	
+    	var iv:ByteArray = Hex.toArray(Hex.fromString(k));	
+    
+    	var mode:CFBMode = new CFBMode(new AESKey(key), new PKCS7(256));
+    	mode.IV = iv;
+    
+    	mode.decrypt(src);
+    
+    	return src;
+    
+    }
+
+This is not working ... Note that I tried to write a PKCS7 class based on a Java class I found. The hurlant package I downloaded only had PKCS5. VB.NET did not provide any of the same padding classes as hurlant comes with. I wish I could using ""None"" but I couldn't get passed the error in VB.
+
+Please help!",4
+3145760,06/30/2010 00:37:04,379583,06/30/2010 00:37:04,1,0,how to convert a string to a datatimepicker box,"i have a datetimepicker box on a form that gets its value from a datagrid (only date)
+i am trying to assign the string date value from the grid to the datetimepicker box, but is not working
+
+",vb.net,,,,,05/03/2012 20:57:16,not a real question,1,36,9,"how to convert a string to a datatimepicker box i have a datetimepicker box on a form that gets its value from a datagrid (only date)
+i am trying to assign the string date value from the grid to the datetimepicker box, but is not working
+
+",1
+1409411,09/11/2009 07:08:49,137520,07/13/2009 15:44:44,45,1,VB.Net how does one call a function name retrieved from a table?," In VB.Net how does one call a Parameterised function name retrieved from a table?
+
+My Parameterised Function Name is below
+
+procTextToDBTemp(Application.StartupPath & ""\"" & strFileName)
+
+
+from above function i Stored procTextToDBTemp into the SQL Table
+
+How can call that function in the Vb.net
+
+How can i do that
+
+Please help me
+
+Thanx in Advance",vb.net,,,,,,open,0,48,12,"VB.Net how does one call a function name retrieved from a table?  In VB.Net how does one call a Parameterised function name retrieved from a table?
+
+My Parameterised Function Name is below
+
+procTextToDBTemp(Application.StartupPath & ""\"" & strFileName)
+
+
+from above function i Stored procTextToDBTemp into the SQL Table
+
+How can call that function in the Vb.net
+
+How can i do that
+
+Please help me
+
+Thanx in Advance",1
+11208271,06/26/2012 13:23:42,1319372,04/07/2012 17:07:56,30,0,Reset Application VB.NET,"I'm developing a game and I'm there a lot of things that change after a few minutes, so I created a New Game button where I use Application.Restart() to clean everything and get a new fresh game, but the problem is that this exits the game and starts a new one. What I want to do is to restart a game, but without the players noticing that the game exits. How do I do this?
+
+best regards, joao.
+",vb.net,application,reset,,,06/28/2012 11:12:15,not a real question,1,77,3,"Reset Application VB.NET I'm developing a game and I'm there a lot of things that change after a few minutes, so I created a New Game button where I use Application.Restart() to clean everything and get a new fresh game, but the problem is that this exits the game and starts a new one. What I want to do is to restart a game, but without the players noticing that the game exits. How do I do this?
+
+best regards, joao.
+",3
+820725,05/04/2009 16:07:20,4241,09/02/2008 13:53:20,88,6,Convert HTML in a database to XHTML using ASP.NET,"I have a large amount of non-compliant HTML stored in database tables that I need to make validate. 
+
+I thought of pulling it into an inline editor like X-Standard that would do a conversion, but is there an easier way to do this via VB.NET?",vb.net,validation,,,,,open,0,45,9,"Convert HTML in a database to XHTML using ASP.NET I have a large amount of non-compliant HTML stored in database tables that I need to make validate. 
+
+I thought of pulling it into an inline editor like X-Standard that would do a conversion, but is there an easier way to do this via VB.NET?",2
+2710496,04/26/2010 00:18:20,314039,04/11/2010 18:56:19,8,0,how do you convert an array from one data type to another in vb.net?,"I'm using vb.net 2008 edition and i was wondering if there a way to convert an array type to another array type.  For instance say i dim an array as string and then want to convert the array to the integer data type for sorting, how would i go about this?",vb.net,arrays,,,,,open,0,52,14,"how do you convert an array from one data type to another in vb.net? I'm using vb.net 2008 edition and i was wondering if there a way to convert an array type to another array type.  For instance say i dim an array as string and then want to convert the array to the integer data type for sorting, how would i go about this?",2
+7830779,10/20/2011 03:23:23,1004395,10/20/2011 03:18:45,1,0,"VB program, looping for iterations and excel writing","I'm writing a program for an internship and need some advice. I've done my research but have mostly returned fruitless... I need to loop the ""buttonOneClick for one second iterations. The program will send a ""P"" character, wait one second, send a p, wait one second, etc... Also I need to write the information it receives to an excel spreadsheet. Any help/critiquing of existing code would be greatly appreciated.
+
+Here's what I have:
+
+    Public Class Form2
+
+    Dim buttonOnePush As Boolean = False
+    Dim buttonTwoPush As Boolean = False
+   
+
+ 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        ' Send strings to a serial port.
+
+        Using com5 As IO.Ports.SerialPort =
+                My.Computer.Ports.OpenSerialPort(""COM5"")
+            com5.WriteLine(""P"")
+
+        End Using
+
+    End Sub
+
+    Function ReceiveSerialData() As String
+        ' Receive strings from a serial port.
+        Dim returnStr As String = """"
+
+        Dim com5 As IO.Ports.SerialPort = Nothing
+        Try
+            com5 = My.Computer.Ports.OpenSerialPort(""COM5"")
+            com5.ReadTimeout = 10000
+            Do
+                Dim Incoming As String = com5.ReadLine()
+                If Incoming Is Nothing Then
+                    Exit Do
+                Else
+                    returnStr &= Incoming & vbCrLf
+                End If
+            Loop
+        Catch ex As TimeoutException
+            returnStr = ""Error: Serial Port read timed out.""
+        Finally
+            If com5 IsNot Nothing Then com5.Close()
+        End Try
+
+        Return returnStr
+    End Function
+
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        If IsNumeric(TextBox1.Text) AndAlso IsNumeric(TextBox2.Text) Then
+            TextBox1.Text = CDec(TextBox2.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox6.TextChanged
+        If IsNumeric(TextBox6.Text) AndAlso IsNumeric(TextBox3.Text) Then
+            TextBox6.Text = CDec(TextBox3.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox7_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox7.TextChanged
+        If IsNumeric(TextBox7.Text) AndAlso IsNumeric(TextBox4.Text) Then
+            TextBox7.Text = CDec(TextBox4.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox8_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox8.TextChanged
+        If IsNumeric(TextBox8.Text) AndAlso IsNumeric(TextBox5.Text) Then
+            TextBox8.Text = CDec(TextBox5.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox15_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox15.TextChanged
+        If IsNumeric(TextBox15.Text) AndAlso IsNumeric(TextBox16.Text) Then
+            TextBox15.Text = Hex(TextBox16.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox14_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox14.TextChanged
+        If IsNumeric(TextBox14.Text) AndAlso IsNumeric(TextBox11.Text) Then
+            TextBox14.Text = Hex(TextBox11.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox13_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox13.TextChanged
+        If IsNumeric(TextBox13.Text) AndAlso IsNumeric(TextBox10.Text) Then
+            TextBox13.Text = Hex(TextBox10.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox12.TextChanged
+        If IsNumeric(TextBox12.Text) AndAlso IsNumeric(TextBox9.Text) Then
+            TextBox12.Text = Hex(TextBox9.Text)
+        End If
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        buttonTwoPush = True
+        buttonOnePush = False
+
+        Me.Close()
+        Form1.Close()
+
+    End Sub
+
+End Class",vb.net,,,,,,open,0,984,8,"VB program, looping for iterations and excel writing I'm writing a program for an internship and need some advice. I've done my research but have mostly returned fruitless... I need to loop the ""buttonOneClick for one second iterations. The program will send a ""P"" character, wait one second, send a p, wait one second, etc... Also I need to write the information it receives to an excel spreadsheet. Any help/critiquing of existing code would be greatly appreciated.
+
+Here's what I have:
+
+    Public Class Form2
+
+    Dim buttonOnePush As Boolean = False
+    Dim buttonTwoPush As Boolean = False
+   
+
+ 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        ' Send strings to a serial port.
+
+        Using com5 As IO.Ports.SerialPort =
+                My.Computer.Ports.OpenSerialPort(""COM5"")
+            com5.WriteLine(""P"")
+
+        End Using
+
+    End Sub
+
+    Function ReceiveSerialData() As String
+        ' Receive strings from a serial port.
+        Dim returnStr As String = """"
+
+        Dim com5 As IO.Ports.SerialPort = Nothing
+        Try
+            com5 = My.Computer.Ports.OpenSerialPort(""COM5"")
+            com5.ReadTimeout = 10000
+            Do
+                Dim Incoming As String = com5.ReadLine()
+                If Incoming Is Nothing Then
+                    Exit Do
+                Else
+                    returnStr &= Incoming & vbCrLf
+                End If
+            Loop
+        Catch ex As TimeoutException
+            returnStr = ""Error: Serial Port read timed out.""
+        Finally
+            If com5 IsNot Nothing Then com5.Close()
+        End Try
+
+        Return returnStr
+    End Function
+
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        If IsNumeric(TextBox1.Text) AndAlso IsNumeric(TextBox2.Text) Then
+            TextBox1.Text = CDec(TextBox2.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox6.TextChanged
+        If IsNumeric(TextBox6.Text) AndAlso IsNumeric(TextBox3.Text) Then
+            TextBox6.Text = CDec(TextBox3.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox7_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox7.TextChanged
+        If IsNumeric(TextBox7.Text) AndAlso IsNumeric(TextBox4.Text) Then
+            TextBox7.Text = CDec(TextBox4.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox8_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox8.TextChanged
+        If IsNumeric(TextBox8.Text) AndAlso IsNumeric(TextBox5.Text) Then
+            TextBox8.Text = CDec(TextBox5.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox15_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox15.TextChanged
+        If IsNumeric(TextBox15.Text) AndAlso IsNumeric(TextBox16.Text) Then
+            TextBox15.Text = Hex(TextBox16.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox14_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox14.TextChanged
+        If IsNumeric(TextBox14.Text) AndAlso IsNumeric(TextBox11.Text) Then
+            TextBox14.Text = Hex(TextBox11.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox13_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox13.TextChanged
+        If IsNumeric(TextBox13.Text) AndAlso IsNumeric(TextBox10.Text) Then
+            TextBox13.Text = Hex(TextBox10.Text)
+        End If
+    End Sub
+
+    Private Sub TextBox12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox12.TextChanged
+        If IsNumeric(TextBox12.Text) AndAlso IsNumeric(TextBox9.Text) Then
+            TextBox12.Text = Hex(TextBox9.Text)
+        End If
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        buttonTwoPush = True
+        buttonOnePush = False
+
+        Me.Close()
+        Form1.Close()
+
+    End Sub
+
+End Class",1
+7366884,09/09/2011 20:06:57,937481,09/09/2011 20:06:57,1,0,cannot set capabilities of scanner through twain driver,"I have been working with TWAIN driver for few days. I have learnt how to connect to the scanner or get the working scanners connected to the machine. I am having a problem now, eventhough i get connected to the scanner, I am not able to set the capabilities from my application. The scanner scans using the capabilities that are set on it but not from my application. I have looked at the sample code given with twain pro but even that doesnt set the capabilities of the scanner. For example if the scanner is set to 300 dpi and I set 200dpi from my application, the scanner scans with 300 dpi. It gives me an error saying that the value given is out of range. Can anyone help me with this. I am using vb.net.
+
+Thanks in advance",vb.net,,,,,,open,0,138,8,"cannot set capabilities of scanner through twain driver I have been working with TWAIN driver for few days. I have learnt how to connect to the scanner or get the working scanners connected to the machine. I am having a problem now, eventhough i get connected to the scanner, I am not able to set the capabilities from my application. The scanner scans using the capabilities that are set on it but not from my application. I have looked at the sample code given with twain pro but even that doesnt set the capabilities of the scanner. For example if the scanner is set to 300 dpi and I set 200dpi from my application, the scanner scans with 300 dpi. It gives me an error saying that the value given is out of range. Can anyone help me with this. I am using vb.net.
+
+Thanks in advance",1
+1409952,09/11/2009 09:31:27,30394,10/22/2008 14:48:19,133,4,How to maintain paging on page load,"I am using vb.net code in which I am having a gridview control. Please see the below code
+
+    <asp:GridView ID=""GridView1"" runat=""server"" AllowPaging=""True"" AllowSorting=""True""
+    	AutoGenerateColumns=""False"" CssClass=""innerGridTable"" DataKeyNames=""OrgID"" DataSourceID=""OrgGridViewDataSource"">
+    	<Columns>
+    		<asp:CommandField ShowSelectButton=""True"" ButtonType=""Button"" SelectText=""Select""
+    			ControlStyle-CssClass=""Button"">
+    			<ControlStyle CssClass=""Button""></ControlStyle>
+    		</asp:CommandField>
+    		<asp:BoundField DataField=""OrgName"" HeaderText=""Organisation Name"" SortExpression=""OrgName"">
+    		</asp:BoundField>
+    		<asp:BoundField DataField=""Type"" HeaderText=""Type"" SortExpression=""Type""></asp:BoundField>
+    		<asp:BoundField Visible=""true"" DataField=""OrgID"" HeaderText=""OrgID"" InsertVisible=""False""
+    			ReadOnly=""True"" SortExpression=""OrgID""></asp:BoundField>
+    		<asp:TemplateField Visible=""false"" HeaderText=""RAOG ID"">
+    			<ItemTemplate>
+    				<asp:Label ID=""lblRAOGID"" runat=""server"" Text='<%# Bind(""RAOGID"") %>'></asp:Label>
+    			</ItemTemplate>
+    		</asp:TemplateField>
+    		<asp:TemplateField Visible=""false"" HeaderText=""RAO ID"">
+    			<ItemTemplate>
+    				<asp:Label ID=""lblRAOID"" runat=""server"" Text='<%# Bind(""RAOID"") %>'></asp:Label>
+    			</ItemTemplate>
+    		</asp:TemplateField>
+    		<asp:BoundField Visible=""false"" DataField=""Name"" HeaderText=""Name"" SortExpression=""Name"">
+    		</asp:BoundField>
+    	</Columns>
+    </asp:GridView>
+
+Now in paging if user opens a record from 3rd page, it opens perfectally. The problem is that when he comes back to this page again it starts showing first page, infact it would have shown the 3rd page of gridview.
+
+Please suggest the code the same!
+
+Thanks
+
+Best Regards,
+MS",vb.net,,,,,,open,0,211,7,"How to maintain paging on page load I am using vb.net code in which I am having a gridview control. Please see the below code
+
+    <asp:GridView ID=""GridView1"" runat=""server"" AllowPaging=""True"" AllowSorting=""True""
+    	AutoGenerateColumns=""False"" CssClass=""innerGridTable"" DataKeyNames=""OrgID"" DataSourceID=""OrgGridViewDataSource"">
+    	<Columns>
+    		<asp:CommandField ShowSelectButton=""True"" ButtonType=""Button"" SelectText=""Select""
+    			ControlStyle-CssClass=""Button"">
+    			<ControlStyle CssClass=""Button""></ControlStyle>
+    		</asp:CommandField>
+    		<asp:BoundField DataField=""OrgName"" HeaderText=""Organisation Name"" SortExpression=""OrgName"">
+    		</asp:BoundField>
+    		<asp:BoundField DataField=""Type"" HeaderText=""Type"" SortExpression=""Type""></asp:BoundField>
+    		<asp:BoundField Visible=""true"" DataField=""OrgID"" HeaderText=""OrgID"" InsertVisible=""False""
+    			ReadOnly=""True"" SortExpression=""OrgID""></asp:BoundField>
+    		<asp:TemplateField Visible=""false"" HeaderText=""RAOG ID"">
+    			<ItemTemplate>
+    				<asp:Label ID=""lblRAOGID"" runat=""server"" Text='<%# Bind(""RAOGID"") %>'></asp:Label>
+    			</ItemTemplate>
+    		</asp:TemplateField>
+    		<asp:TemplateField Visible=""false"" HeaderText=""RAO ID"">
+    			<ItemTemplate>
+    				<asp:Label ID=""lblRAOID"" runat=""server"" Text='<%# Bind(""RAOID"") %>'></asp:Label>
+    			</ItemTemplate>
+    		</asp:TemplateField>
+    		<asp:BoundField Visible=""false"" DataField=""Name"" HeaderText=""Name"" SortExpression=""Name"">
+    		</asp:BoundField>
+    	</Columns>
+    </asp:GridView>
+
+Now in paging if user opens a record from 3rd page, it opens perfectally. The problem is that when he comes back to this page again it starts showing first page, infact it would have shown the 3rd page of gridview.
+
+Please suggest the code the same!
+
+Thanks
+
+Best Regards,
+MS",1
+11499237,07/16/2012 06:40:21,1528069,07/16/2012 06:32:23,1,0,Combox in datagridview in vb.net,"I have datagridviw on with datagridvewicomobox which fill with product table. I want if i select apple form datagridvewicomoboxcombox its rate should appeared on next column of datagridview.
+
+Thanks
+
+Nandan",vb.net,,,,,,open,0,28,5,"Combox in datagridview in vb.net I have datagridviw on with datagridvewicomobox which fill with product table. I want if i select apple form datagridvewicomoboxcombox its rate should appeared on next column of datagridview.
+
+Thanks
+
+Nandan",1
+6125126,05/25/2011 13:22:32,77153,03/12/2009 11:07:32,61,8,Invalid Conversion error,"I recently upgraded a VB 6 project to .net. I'm having a problem  with this block of code:
+
+        Dim CtrlName As System.Windows.Forms.MenuItem
+
+        For Each CtrlName In Form1.Controls
+
+        'Some code here
+
+        Next CtrlName
+
+Now this code compiles but throws the following runtime error:
+
+Unable to cast object of type 'System.Windows.Forms.Panel' to type 'System.Windows.Forms.MenuItem.
+
+I have a panel control on the subject form. How do I resolve this?
+Thanks.
+
+                ",vb.net,,,,,,open,0,108,3,"Invalid Conversion error I recently upgraded a VB 6 project to .net. I'm having a problem  with this block of code:
+
+        Dim CtrlName As System.Windows.Forms.MenuItem
+
+        For Each CtrlName In Form1.Controls
+
+        'Some code here
+
+        Next CtrlName
+
+Now this code compiles but throws the following runtime error:
+
+Unable to cast object of type 'System.Windows.Forms.Panel' to type 'System.Windows.Forms.MenuItem.
+
+I have a panel control on the subject form. How do I resolve this?
+Thanks.
+
+                ",1
+528095,02/09/2009 13:14:54,20048,09/21/2008 19:58:01,166,16,Controls on an MDI parent background,"Is it a good idea to place controls on the background of an MID parent window? I've added a split container to the MDI window which displays as expected however when I try to open any other forms in the same window they show BEHIND the SplitContainer. The only way to get them to popup is if I use ShowDialog to display them. Unfortunately I need to be able to have multiple windows open at once so this is not a practical solution.
+
+Have I approached this the wrong way?
+",vb.net,winforms,visual-studio-2005,,,,open,0,89,6,"Controls on an MDI parent background Is it a good idea to place controls on the background of an MID parent window? I've added a split container to the MDI window which displays as expected however when I try to open any other forms in the same window they show BEHIND the SplitContainer. The only way to get them to popup is if I use ShowDialog to display them. Unfortunately I need to be able to have multiple windows open at once so this is not a practical solution.
+
+Have I approached this the wrong way?
+",3
+11490872,07/15/2012 09:33:36,1525702,07/14/2012 14:53:06,1,0,How to add arraylist data to a text file (.txt),"I have a program that reads from a text file it reads contacts data (Name,Address,Age...)
+it edits the data enter new data delete current data too
+the problem is it saves the changes in the random access memory (RAM) not in the text file i knew that i have to choose the FormClosing properties and enter the code that comma separate the texts and add it to the text file how to do that
+HELP PLEASE !!!",vb.net,vb.net-2010,,,,07/18/2012 02:47:54,not a real question,1,74,10,"How to add arraylist data to a text file (.txt) I have a program that reads from a text file it reads contacts data (Name,Address,Age...)
+it edits the data enter new data delete current data too
+the problem is it saves the changes in the random access memory (RAM) not in the text file i knew that i have to choose the FormClosing properties and enter the code that comma separate the texts and add it to the text file how to do that
+HELP PLEASE !!!",2
+5150440,03/01/2011 04:26:04,113004,05/27/2009 08:54:33,139,8,Copy selected columns from one DataTable to another,"I have a scenario where-in I have a DataTable with certain columns ""Col1, Col2, Col3"". I want to copy just ""Col2, Col3"" into another DataTable which has a primary key ""ID"". What is the best way to copy them. There are 5000+ records and performance is a key factor.
+
+I tried with Select, DefaultView.RowsFilter but no success. I know one option is to loop through all records an copy data one by one in second DataTable. But wanted to know a better way.",vb.net,datatable,,,,,open,0,82,8,"Copy selected columns from one DataTable to another I have a scenario where-in I have a DataTable with certain columns ""Col1, Col2, Col3"". I want to copy just ""Col2, Col3"" into another DataTable which has a primary key ""ID"". What is the best way to copy them. There are 5000+ records and performance is a key factor.
+
+I tried with Select, DefaultView.RowsFilter but no success. I know one option is to loop through all records an copy data one by one in second DataTable. But wanted to know a better way.",2
+10800181,05/29/2012 13:30:09,1423787,05/29/2012 13:27:00,1,0,Tabbing Through Google Search Results In Visual Basic,"Does anyone know the Visual Basic command for ""tab"" and ""down arrow"". I would like to tab through Google search results in IE.  Pressing tab once, the selection cursor will be on the first search result. You'll then be able to navigate to the search result you want by pressing down arrow. Does anyone know the VB equivalant of pressing the tab button and the down arrow button? ",vb.net,vba,google,internet-explorer-9,,05/29/2012 19:44:47,not a real question,1,70,8,"Tabbing Through Google Search Results In Visual Basic Does anyone know the Visual Basic command for ""tab"" and ""down arrow"". I would like to tab through Google search results in IE.  Pressing tab once, the selection cursor will be on the first search result. You'll then be able to navigate to the search result you want by pressing down arrow. Does anyone know the VB equivalant of pressing the tab button and the down arrow button? ",4
+5258570,03/10/2011 10:46:49,653347,03/10/2011 10:34:28,1,0,How to get income called id,"This is sekar.  I am developing Restaurant POS Application with home devliery module. Customer call to restaurant and give the order. so whenever customer calls comes i need to show the pop-up on my desktop application with particular customer information. Please guide me how to do this. 
+
+I am using visual studio 2008 (vb.net)
+
+Thanks
+
+Sekar.M",vb.net,integration,desktop,callstack,,03/11/2011 19:00:23,not a real question,1,55,6,"How to get income called id This is sekar.  I am developing Restaurant POS Application with home devliery module. Customer call to restaurant and give the order. so whenever customer calls comes i need to show the pop-up on my desktop application with particular customer information. Please guide me how to do this. 
+
+I am using visual studio 2008 (vb.net)
+
+Thanks
+
+Sekar.M",4
+3434861,08/08/2010 15:27:53,414428,08/08/2010 15:27:53,1,0,How can I delete items with forbidden words?,"how can I delete items with forbidden words?
+
+thanks",vb.net,,,,,08/08/2010 15:41:53,not a real question,1,8,8,"How can I delete items with forbidden words? how can I delete items with forbidden words?
+
+thanks",1
+6489957,06/27/2011 07:47:17,174188,09/16/2009 07:43:35,36,4,DateDiff giving me the wrong answer,"The function for getting the difference in days between two days is giving me a wrong answer here...What could i be doing wrong???
+
+        DateDiff(DateInterval.Day, CDate(""28/1/2011""), CDate(""31/1/2011""))
+
+",vb.net,,,,,,open,0,33,6,"DateDiff giving me the wrong answer The function for getting the difference in days between two days is giving me a wrong answer here...What could i be doing wrong???
+
+        DateDiff(DateInterval.Day, CDate(""28/1/2011""), CDate(""31/1/2011""))
+
+",1
+4613090,01/06/2011 08:33:54,309834,01/13/2009 12:14:25,171,2,Click is not working in selenium,"            selenium.Click(""Search"")
+            selenium.Click(""Display"")
+            selenium.WaitForPageToLoad(""30000"")
+            Assert.IsTrue(selenium.GetTitle() = ""Display"")
+            selenium.ChooseOkOnNextConfirmation()
+''Tried all the following possible solutions to click a button but all failed to do so. Page timeout after some time.
+
+            selenium.FireEvent(""Cancel"", ""click"")
+            'selenium.FireEvent(""Cancel"", ""keypress"")
+            'selenium.Submit(""Cancel"")
+            'selenium.FireEvent(""Cancel"", ""click"")
+            'selenium.MouseDownAt(""Cancel"", ""Click"")
+            'selenium.MouseUpAt(""Cancel"", ""Click"")
+            'selenium.MouseDown(""Cancel"")
+            'selenium.KeyPress(""Cancel"", ""Click"")
+            'selenium.FireEvent(""id=Cancel"", ""Click"")
+            'selenium.Click(""Cancel"")
+            System.Threading.Thread.Sleep(7000)
+            Assert.IsTrue(Regex.IsMatch(selenium.GetConfirmation(), ""Are you sure you want to cancel?""))
+
+There is a confirm dialog box on clicking the cancel button. But selenium is not clicking it at all. Any idea how to do this",vb.net,automation,selenium,mstest,,,open,0,265,6,"Click is not working in selenium             selenium.Click(""Search"")
+            selenium.Click(""Display"")
+            selenium.WaitForPageToLoad(""30000"")
+            Assert.IsTrue(selenium.GetTitle() = ""Display"")
+            selenium.ChooseOkOnNextConfirmation()
+''Tried all the following possible solutions to click a button but all failed to do so. Page timeout after some time.
+
+            selenium.FireEvent(""Cancel"", ""click"")
+            'selenium.FireEvent(""Cancel"", ""keypress"")
+            'selenium.Submit(""Cancel"")
+            'selenium.FireEvent(""Cancel"", ""click"")
+            'selenium.MouseDownAt(""Cancel"", ""Click"")
+            'selenium.MouseUpAt(""Cancel"", ""Click"")
+            'selenium.MouseDown(""Cancel"")
+            'selenium.KeyPress(""Cancel"", ""Click"")
+            'selenium.FireEvent(""id=Cancel"", ""Click"")
+            'selenium.Click(""Cancel"")
+            System.Threading.Thread.Sleep(7000)
+            Assert.IsTrue(Regex.IsMatch(selenium.GetConfirmation(), ""Are you sure you want to cancel?""))
+
+There is a confirm dialog box on clicking the cancel button. But selenium is not clicking it at all. Any idea how to do this",4
+1495143,09/29/2009 21:50:47,113419,05/27/2009 21:47:45,399,11,Binding & connecting using sockets in vb.net,"Here is an issue with a socket I am having:
+
+    Public Sub Connect(ByVal server As String, ByVal port As Integer)
+            Dim IP As IPAddress = IPAddress.Parse(server)
+            Dim EP As IPEndPoint = New IPEndPoint(IP, port)
+            sock.Bind(EP)
+            sock.Connect(server, port)
+        End Sub
+The socket is declared like this, at the top of the code:
+
+    Dim sock As Socket
+
+What is wrong here? It says Object reference not set to an instance of an object, which is a NullReferenceException.
+
+Thanks for your help! This is in vb.net by the way, and I have imported the proper namespaces.",vb.net,sockets,,,,,open,0,147,7,"Binding & connecting using sockets in vb.net Here is an issue with a socket I am having:
+
+    Public Sub Connect(ByVal server As String, ByVal port As Integer)
+            Dim IP As IPAddress = IPAddress.Parse(server)
+            Dim EP As IPEndPoint = New IPEndPoint(IP, port)
+            sock.Bind(EP)
+            sock.Connect(server, port)
+        End Sub
+The socket is declared like this, at the top of the code:
+
+    Dim sock As Socket
+
+What is wrong here? It says Object reference not set to an instance of an object, which is a NullReferenceException.
+
+Thanks for your help! This is in vb.net by the way, and I have imported the proper namespaces.",2
+10818195,05/30/2012 14:21:19,1295053,03/27/2012 09:03:44,1,0,How to create an array of bytes?,"I have a bluetooth pen that I need to send an array of bytes too, can somebody offer advice on how i create an array of bytes for the following:
+
+0x68 0x00 0x02 0xFF 0x0A (in the guide this is the array of bytes I need to send)
+
+Thanks.",vb.net,arrays,byte,,,05/31/2012 18:51:05,not a real question,1,47,7,"How to create an array of bytes? I have a bluetooth pen that I need to send an array of bytes too, can somebody offer advice on how i create an array of bytes for the following:
+
+0x68 0x00 0x02 0xFF 0x0A (in the guide this is the array of bytes I need to send)
+
+Thanks.",3
+8335989,12/01/2011 02:50:08,1074626,12/01/2011 02:30:45,1,0,Deploy Vb.net 2005 with Crystal Report 9 on Windows Server R2 2008 x64,"Need Help..
+
+My problem is, when deploy vb.net 2005 with crystal report on Windows Server R2 2008, the report can't load it show blank. i'm using AxCRViewer91 component.
+
+the DLL's;
+
+AxInterop.CRVIEWER9Lib.dll
+Interop.CRAXDRT.dll
+
+Is it compatible on Windows Server R2 2008 x64?
+
+Anyone can help me..",vb.net,crystal-reports,x64,,,12/01/2011 04:11:47,not a real question,1,39,13,"Deploy Vb.net 2005 with Crystal Report 9 on Windows Server R2 2008 x64 Need Help..
+
+My problem is, when deploy vb.net 2005 with crystal report on Windows Server R2 2008, the report can't load it show blank. i'm using AxCRViewer91 component.
+
+the DLL's;
+
+AxInterop.CRVIEWER9Lib.dll
+Interop.CRAXDRT.dll
+
+Is it compatible on Windows Server R2 2008 x64?
+
+Anyone can help me..",3
+4845704,01/30/2011 21:38:53,596049,01/30/2011 20:18:20,1,0,"ASPxGridview - Enable a specific columns ""AllowHeaderFilter"" property to true code behind?","I'm very frustrated as I can't seem to figure out how to turn on allowheaderfilter property to true for a specific column. It appears that I can only do this in design view. I must be able to do it code behind as I have certain conditions when this can be done.  
+
+Is this possibe?
+
+Thanks,
+
+Timothy",vb.net,visual-studio-2008,devexpress,aspxgridview,,,open,0,56,12,"ASPxGridview - Enable a specific columns ""AllowHeaderFilter"" property to true code behind? I'm very frustrated as I can't seem to figure out how to turn on allowheaderfilter property to true for a specific column. It appears that I can only do this in design view. I must be able to do it code behind as I have certain conditions when this can be done.  
+
+Is this possibe?
+
+Thanks,
+
+Timothy",4
+9081268,01/31/2012 14:33:14,1180507,01/31/2012 14:14:47,1,0,Can I simplify this VB.net code so I don't have to repeat so much?,"I am creating a scheduling algorithm.  My code is getting very long. Can anyone suggest how can I make my code shorter as I have to repeat the same thing many times below and where the outer else is 4 or 5 I have to repeat it even more:
+
+Here's an example of just part of my code:
+
+     ElseIf Val(jobs_txt.Text) = 3 Then
+                If (a < b And b < c) Then
+                    awt1_lbl.Text = Val(0)
+                    awt2_lbl.Text = a
+                    awt3_lbl.Text = a + b
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (a < c And c < b) Then
+                    awt1_lbl.Text = Val(0)
+                    awt2_lbl.Text = a + b
+                    awt3_lbl.Text = a
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (b < a And a < c) Then
+                    awt1_lbl.Text = a
+                    awt2_lbl.Text = Val(0)
+                    awt3_lbl.Text = a + b
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (b < c And c < a) Then
+                    awt1_lbl.Text = a + b
+                    awt2_lbl.Text = Val(0)
+                    awt3_lbl.Text = a
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (c < a And a < b) Then
+                    awt1_lbl.Text = a
+                    awt2_lbl.Text = a + b
+                    awt3_lbl.Text = Val(0)
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (c < b And b < a) Then
+                    awt1_lbl.Text = a + b
+                    awt2_lbl.Text = a
+                    awt3_lbl.Text = Val(0)
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                End If
+
+",vb.net,,,,,02/01/2012 14:05:48,off topic,1,936,14,"Can I simplify this VB.net code so I don't have to repeat so much? I am creating a scheduling algorithm.  My code is getting very long. Can anyone suggest how can I make my code shorter as I have to repeat the same thing many times below and where the outer else is 4 or 5 I have to repeat it even more:
+
+Here's an example of just part of my code:
+
+     ElseIf Val(jobs_txt.Text) = 3 Then
+                If (a < b And b < c) Then
+                    awt1_lbl.Text = Val(0)
+                    awt2_lbl.Text = a
+                    awt3_lbl.Text = a + b
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (a < c And c < b) Then
+                    awt1_lbl.Text = Val(0)
+                    awt2_lbl.Text = a + b
+                    awt3_lbl.Text = a
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (b < a And a < c) Then
+                    awt1_lbl.Text = a
+                    awt2_lbl.Text = Val(0)
+                    awt3_lbl.Text = a + b
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (b < c And c < a) Then
+                    awt1_lbl.Text = a + b
+                    awt2_lbl.Text = Val(0)
+                    awt3_lbl.Text = a
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (c < a And a < b) Then
+                    awt1_lbl.Text = a
+                    awt2_lbl.Text = a + b
+                    awt3_lbl.Text = Val(0)
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                ElseIf (c < b And b < a) Then
+                    awt1_lbl.Text = a + b
+                    awt2_lbl.Text = a
+                    awt3_lbl.Text = Val(0)
+                    y = (Val(awt1_lbl.Text) + Val(awt2_lbl.Text) + Val(awt3_lbl.Text)) / 3
+                    awt_ans.Text = y
+                End If
+
+",1
+6281327,06/08/2011 15:28:14,789461,06/08/2011 15:28:14,1,0,[VB.net] Run console hidden,"I'm trying to run a console window hidden while using CreateProcess(I can't use the ProcessStartInfo class because I have to run it with some other special settings)
+
+I have tried to use the CREATE_NO_WINDOWS flag, but somehow, the console still pops up. This is the code I have:
+
+    Dim ProzessInfo = New Process_Information
+    Dim StartInfo = New Startup_Information, PS = New Security_Flags, TS = New Security_Flags
+    
+    If CreateProcess(Nothing, target, PS, TS, False, PROCESS_CREATION_FLAG.CREATE_NO_WINDOW, Nothing, Nothing, StartInfo, ProzessInfo) = 0 Then MsgBox(""Couln't start application"")
+
+What have I missed to run it hidden?",vb.net,console,hidden,,,,open,0,102,4,"[VB.net] Run console hidden I'm trying to run a console window hidden while using CreateProcess(I can't use the ProcessStartInfo class because I have to run it with some other special settings)
+
+I have tried to use the CREATE_NO_WINDOWS flag, but somehow, the console still pops up. This is the code I have:
+
+    Dim ProzessInfo = New Process_Information
+    Dim StartInfo = New Startup_Information, PS = New Security_Flags, TS = New Security_Flags
+    
+    If CreateProcess(Nothing, target, PS, TS, False, PROCESS_CREATION_FLAG.CREATE_NO_WINDOW, Nothing, Nothing, StartInfo, ProzessInfo) = 0 Then MsgBox(""Couln't start application"")
+
+What have I missed to run it hidden?",3
+5216598,03/07/2011 06:35:53,647704,03/07/2011 06:35:53,1,0,i need an alternate in vb.net whose functionality is jst as control arrays,"i wntd 2 use d concept of control arrays in my project wrk dvlpd using vb.net.  
+bt i lrnt dat vb.net does not support this concept.
+pls giv me a solution to this prblm in detail.",vb.net,,,,,03/07/2011 11:09:15,not a real question,1,36,13,"i need an alternate in vb.net whose functionality is jst as control arrays i wntd 2 use d concept of control arrays in my project wrk dvlpd using vb.net.  
+bt i lrnt dat vb.net does not support this concept.
+pls giv me a solution to this prblm in detail.",1
+9096539,02/01/2012 13:25:08,979099,10/04/2011 18:47:18,6,0,Pinging a list of machines in VB.net,"I have a list of machines, 1 per line in a file called devices.txt.
+
+What I need to be able to do is to ping each of these machines, and then output each machine that is online to another text file called machines.txt
+
+The files need to just be the machine name and have 1 machine per line.
+
+Would anyone be able to help me? ",vb.net,,,,,02/02/2012 14:26:24,not a real question,1,63,7,"Pinging a list of machines in VB.net I have a list of machines, 1 per line in a file called devices.txt.
+
+What I need to be able to do is to ping each of these machines, and then output each machine that is online to another text file called machines.txt
+
+The files need to just be the machine name and have 1 machine per line.
+
+Would anyone be able to help me? ",1
+9499557,02/29/2012 12:55:31,1240284,02/29/2012 12:49:58,1,0,How to open the same table out of multiplt tables in access using vb.net,I have created 3 tables in one access database. On user input in vb.net application I need to open one of the tables. But on next load of application the same table should be opened. How do i do that ??? ,vb.net,ms-access,,,,02/29/2012 19:06:45,not a real question,1,42,14,How to open the same table out of multiplt tables in access using vb.net I have created 3 tables in one access database. On user input in vb.net application I need to open one of the tables. But on next load of application the same table should be opened. How do i do that ??? ,2
+8267024,11/25/2011 09:28:58,500974,11/08/2010 17:48:59,1494,135,Bug with IsNumeric function?,"I had a strange error in a VB6 app this morning and it all stems from the fact that IsNumeric is not working as I expected. Can someone shed some light on why? To me this seems like a bug.
+
+This code displays `4.15877E+62` in a message box:
+
+    Dim strMessage As String
+    strMessage = ""0415877D57""
+    If IsNumeric(strMessage) Then
+        MsgBox CDbl(strMessage)
+    Else
+        MsgBox ""not numeric""
+    End If
+
+I am guessing that the runtime engine is incorrectly thinking that the D is in fact an E?
+I think this is a bug though as the exact same code in VB.NET outputs `not numeric`
+Is this a known issue with IsNumeric?",vb.net,vb6,bugs,numeric,,,open,0,133,4,"Bug with IsNumeric function? I had a strange error in a VB6 app this morning and it all stems from the fact that IsNumeric is not working as I expected. Can someone shed some light on why? To me this seems like a bug.
+
+This code displays `4.15877E+62` in a message box:
+
+    Dim strMessage As String
+    strMessage = ""0415877D57""
+    If IsNumeric(strMessage) Then
+        MsgBox CDbl(strMessage)
+    Else
+        MsgBox ""not numeric""
+    End If
+
+I am guessing that the runtime engine is incorrectly thinking that the D is in fact an E?
+I think this is a bug though as the exact same code in VB.NET outputs `not numeric`
+Is this a known issue with IsNumeric?",4
+8783573,01/09/2012 03:20:19,1136865,01/08/2012 08:47:30,1,0,Webbrowser1_newwindow advanced,"Sorry, I posted this earlier, but in the wrong section.  I am really stressed out, haven't gotten anywhere with this after days of searching everywhere I could think of.
+
+I have no problem opening new windows when a link is clicked.  (e.cancel=true then you can see the code I've been using below).  But I am making a custom webbrowser for work, for just one website.  On that site is a form, and when the use clicks submit, an IE window still opens and New Form 2 just won't open on that one.
+
+My code looks like this:
+
+       Dim thiselement3 As HtmlElement = WebBrowser1.Document.Window.Frames(""main"").Document.ActiveElement     
+       Dim targeturl3 As String = thiselement3.GetAttribute(""href"")
+      If targeturl3.Contains(""locverfy.asp"") Then
+         Dim Window As New Form1
+         Window.Show()
+         Window.WebBrowser1.Navigate(targeturl3)
+         Window.Timer3.Enabled = False
+      End If 
+
+Which is refrencing a submit button on a form that begins then ends with the following two lines respectively.
+
+    <form class=""clsFORM"" method=""post"" name=""CREFORM"" onSubmit=""return CheckForm()""> 
+Then:
+
+    <input type=""Submit"" name=""SubmitCreateEvent"" value=""Submit"">
+
+The <a href=""http://www.textbin.com/show_text.php?id=p5758"">code for CheckForm() can be found at this link</a>.
+
+I've tried about 1,000 things, mostly like changing my code to thiselement3.getattribute(""newurl"") or (""urL""), etc.  I am using vb.net 2010.  Any help would be greatly appreciated.  I'm really killing myself on this one.  Thanks!",vb.net,webbrowser,submit,newwindow,,01/10/2012 14:12:45,too localized,1,268,2,"Webbrowser1_newwindow advanced Sorry, I posted this earlier, but in the wrong section.  I am really stressed out, haven't gotten anywhere with this after days of searching everywhere I could think of.
+
+I have no problem opening new windows when a link is clicked.  (e.cancel=true then you can see the code I've been using below).  But I am making a custom webbrowser for work, for just one website.  On that site is a form, and when the use clicks submit, an IE window still opens and New Form 2 just won't open on that one.
+
+My code looks like this:
+
+       Dim thiselement3 As HtmlElement = WebBrowser1.Document.Window.Frames(""main"").Document.ActiveElement     
+       Dim targeturl3 As String = thiselement3.GetAttribute(""href"")
+      If targeturl3.Contains(""locverfy.asp"") Then
+         Dim Window As New Form1
+         Window.Show()
+         Window.WebBrowser1.Navigate(targeturl3)
+         Window.Timer3.Enabled = False
+      End If 
+
+Which is refrencing a submit button on a form that begins then ends with the following two lines respectively.
+
+    <form class=""clsFORM"" method=""post"" name=""CREFORM"" onSubmit=""return CheckForm()""> 
+Then:
+
+    <input type=""Submit"" name=""SubmitCreateEvent"" value=""Submit"">
+
+The <a href=""http://www.textbin.com/show_text.php?id=p5758"">code for CheckForm() can be found at this link</a>.
+
+I've tried about 1,000 things, mostly like changing my code to thiselement3.getattribute(""newurl"") or (""urL""), etc.  I am using vb.net 2010.  Any help would be greatly appreciated.  I'm really killing myself on this one.  Thanks!",4
+11561892,07/19/2012 13:26:54,1538007,07/19/2012 13:18:49,1,0,"vbs script for ""Uploading documents to QC test lab""","we need to take document from specified location and need to upload it in QC test lab .....
+I need vbs script for doin same",vb.net,shell,vbscript,programming-pearls,,07/19/2012 18:10:53,not a real question,1,24,9,"vbs script for ""Uploading documents to QC test lab"" we need to take document from specified location and need to upload it in QC test lab .....
+I need vbs script for doin same",4
+4295363,11/28/2010 04:23:26,518372,11/24/2010 06:04:35,1,0,how to store data from vb.net to access a database,"hallo, saya mau minta sedikit bantuan. saya menggunakan access sebagai database dan vb.net 2010. saya ada buat di db access itu title,datein,dateout dan roomnymber tapi di vb.net 2010 saya buat yg title=combobox, datein dan dateout = DateTimePicker, dan sewaktu saya klik F5, muncul error Syntax Error In INSERT INTO statment. berikut scriptnya
+
+  
+
+    Dim sql As String
+      sql = ""INSERT INTO tcekin(title,firstname,lastname,address,country,company,roomnumber,datein,dateout,rommtype,note)"" & ""VALUES('"" & ComboBox1.Text & _
+      ""','"" & txtFirstName.Text & ""','"" & txtLastName.Text & ""','"" & txtAddress.Text & ""','"" & cboCountry.Text & ""','"" & txtCompany.Text & ""','"" & txtNumber.Text & _
+      ""','"" & dptDateIn.Text & ""','"" & dptDateOut.Text & ""','"" & cboRoom.Text & ""','"" & txtNotes.Text & ""')""
+      cmmd = New OleDbCommand(sql, cnn)
+
+I desperately need help from my friends all, because it is very urgent. please",vb.net,ms-access,,,,,open,0,152,10,"how to store data from vb.net to access a database hallo, saya mau minta sedikit bantuan. saya menggunakan access sebagai database dan vb.net 2010. saya ada buat di db access itu title,datein,dateout dan roomnymber tapi di vb.net 2010 saya buat yg title=combobox, datein dan dateout = DateTimePicker, dan sewaktu saya klik F5, muncul error Syntax Error In INSERT INTO statment. berikut scriptnya
+
+  
+
+    Dim sql As String
+      sql = ""INSERT INTO tcekin(title,firstname,lastname,address,country,company,roomnumber,datein,dateout,rommtype,note)"" & ""VALUES('"" & ComboBox1.Text & _
+      ""','"" & txtFirstName.Text & ""','"" & txtLastName.Text & ""','"" & txtAddress.Text & ""','"" & cboCountry.Text & ""','"" & txtCompany.Text & ""','"" & txtNumber.Text & _
+      ""','"" & dptDateIn.Text & ""','"" & dptDateOut.Text & ""','"" & cboRoom.Text & ""','"" & txtNotes.Text & ""')""
+      cmmd = New OleDbCommand(sql, cnn)
+
+I desperately need help from my friends all, because it is very urgent. please",2
+6234119,06/04/2011 01:34:25,783539,06/04/2011 01:17:42,1,0,VB.Net Replacing Specific Values in a Large Text File,"I have some large csv files (1.5gb each) where I need to replace specific values.  The method I'm currently using is terribly slow and I'm fairly certain that there should be a way to speed this up but I'm just not experienced enough to know what I should be doing.  This is my first post and I tried searching through to find something relevant but didn't come across anything.  Any help would be appreciated.
+
+My other thought would be to break the file into chunks so that I can read the entire thing into memory, do all of the replacements there and then output to a consolidated file.  I tried this but the way I did it actually ended up seeming slower than my current method.
+
+Thanks!
+
+        Sub Main()
+        Dim fName As String = ""2009.csv""
+        Dim wrtFile As String = ""2009.1.csv""
+        Dim lRead
+        Dim lwrite As String
+        Dim strRead As New System.IO.StreamReader(fName)
+        Dim strWrite As New System.IO.StreamWriter(wrtFile)
+        Dim bulkWrite As String
+
+        bulkWrite = """"
+        Do While strRead.Peek <> -1
+            lRead = Split(strRead.ReadLine(), "","")
+            If lRead(9) = ""5MM+"" Then lRead(9) = ""5000000""
+            If lRead(9) = ""1MM+"" Then lRead(9) = ""1000000""
+
+            lwrite = """"
+            For i = LBound(lRead) To UBound(lRead)
+                lwrite = lwrite & lRead(i) & "",""
+            Next
+            strWrite.WriteLine(lwrite)
+         Loop
+
+        strRead.Close()
+        strWrite.Close()
+    End Sub
+
+
+",vb.net,streamwriter,,,,,open,0,401,9,"VB.Net Replacing Specific Values in a Large Text File I have some large csv files (1.5gb each) where I need to replace specific values.  The method I'm currently using is terribly slow and I'm fairly certain that there should be a way to speed this up but I'm just not experienced enough to know what I should be doing.  This is my first post and I tried searching through to find something relevant but didn't come across anything.  Any help would be appreciated.
+
+My other thought would be to break the file into chunks so that I can read the entire thing into memory, do all of the replacements there and then output to a consolidated file.  I tried this but the way I did it actually ended up seeming slower than my current method.
+
+Thanks!
+
+        Sub Main()
+        Dim fName As String = ""2009.csv""
+        Dim wrtFile As String = ""2009.1.csv""
+        Dim lRead
+        Dim lwrite As String
+        Dim strRead As New System.IO.StreamReader(fName)
+        Dim strWrite As New System.IO.StreamWriter(wrtFile)
+        Dim bulkWrite As String
+
+        bulkWrite = """"
+        Do While strRead.Peek <> -1
+            lRead = Split(strRead.ReadLine(), "","")
+            If lRead(9) = ""5MM+"" Then lRead(9) = ""5000000""
+            If lRead(9) = ""1MM+"" Then lRead(9) = ""1000000""
+
+            lwrite = """"
+            For i = LBound(lRead) To UBound(lRead)
+                lwrite = lwrite & lRead(i) & "",""
+            Next
+            strWrite.WriteLine(lwrite)
+         Loop
+
+        strRead.Close()
+        strWrite.Close()
+    End Sub
+
+
+",2
+8507341,12/14/2011 15:45:18,821742,06/29/2011 18:51:48,87,1,Are Vb.net delegates strongly typed/Why does the compiler accept this 'loosely typed' delegate?,"I'm learning delegates in VB.NET and am confused about delegate types. In reading about delegates, I learned that delegates are a data type that can refer to a method with a particular kind of signature. So in the same way that a String can refer to characters, a delegate can refer to a method (for instance) that takes an integer as input and returns an integer as output. But in playing around with delegates, I found that this was not the case. The code below compiles and runs--even though I don't obey the 'typing' in my delegate signature. I'm confused. Am I missing something? 
+
+    Public Delegate Function myDelegate(ByVal i As Integer) As Integer' int in, rtrn int
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim md As myDelegate  'should be of type int in, rtrn int
+        md = New myDelegate(AddressOf squared) 'allows assign to string in, string out
+        MsgBox(md(""3"")) 
+    End Sub
+
+    Private Function squared(ByVal i As String) As String
+        Return i * i
+    End Function",vb.net,programming-languages,delegates,,,,open,0,216,13,"Are Vb.net delegates strongly typed/Why does the compiler accept this 'loosely typed' delegate? I'm learning delegates in VB.NET and am confused about delegate types. In reading about delegates, I learned that delegates are a data type that can refer to a method with a particular kind of signature. So in the same way that a String can refer to characters, a delegate can refer to a method (for instance) that takes an integer as input and returns an integer as output. But in playing around with delegates, I found that this was not the case. The code below compiles and runs--even though I don't obey the 'typing' in my delegate signature. I'm confused. Am I missing something? 
+
+    Public Delegate Function myDelegate(ByVal i As Integer) As Integer' int in, rtrn int
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim md As myDelegate  'should be of type int in, rtrn int
+        md = New myDelegate(AddressOf squared) 'allows assign to string in, string out
+        MsgBox(md(""3"")) 
+    End Sub
+
+    Private Function squared(ByVal i As String) As String
+        Return i * i
+    End Function",3
+7405988,09/13/2011 17:31:14,798183,06/14/2011 17:34:15,401,7,Using dll's in SSRS,"I am grabbing a bunch of fields from a database for use in an SSRS report. One of these fields is encrypted in the database. I have a class designed in VB.NET that takes a byte() (array of byte) type and decrypts this value to return an interger.
+
+I have imported the dll for this class (along with all other project dependencies). Since I am in the debugging phase right now I have also copied these dll's to 
+""C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies"" for use (which is dependent upon the file location you choose upon installation)
+
+When trying to display the decrypted value or the encrypted field in the report table i am designing I am trying to use an expression using the encrypted field. The decryption method in the class i am trying to use is a static ( or shared in VB.NET) method so in expression I am qualifying the namespace.class.method({args}) like ....
+
+    =namespaceCryptography.Cryptography.Decrypt(Fields!FederalTaxID.Value)
+     
+
+When I try to run this report I get an error saying ""The value expression for the textrun 'FederalTaxID.Paragraphs[0].TextRuns[0]' contains an error: [BC30201] Expression expected.
+
+I also notice that if I try to display 
+    =Fields!FederalTaxID.Value"" 
+
+I get an #Error as a value in the field. I am assuming there is a problem with returning a data type of byte() (byte[] for our c# people) but am having trouble trying to find a true solution or root of the problem. 
+
+Any ideas out there?",vb.net,reporting-services,assemblies,,,,open,0,248,4,"Using dll's in SSRS I am grabbing a bunch of fields from a database for use in an SSRS report. One of these fields is encrypted in the database. I have a class designed in VB.NET that takes a byte() (array of byte) type and decrypts this value to return an interger.
+
+I have imported the dll for this class (along with all other project dependencies). Since I am in the debugging phase right now I have also copied these dll's to 
+""C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies"" for use (which is dependent upon the file location you choose upon installation)
+
+When trying to display the decrypted value or the encrypted field in the report table i am designing I am trying to use an expression using the encrypted field. The decryption method in the class i am trying to use is a static ( or shared in VB.NET) method so in expression I am qualifying the namespace.class.method({args}) like ....
+
+    =namespaceCryptography.Cryptography.Decrypt(Fields!FederalTaxID.Value)
+     
+
+When I try to run this report I get an error saying ""The value expression for the textrun 'FederalTaxID.Paragraphs[0].TextRuns[0]' contains an error: [BC30201] Expression expected.
+
+I also notice that if I try to display 
+    =Fields!FederalTaxID.Value"" 
+
+I get an #Error as a value in the field. I am assuming there is a problem with returning a data type of byte() (byte[] for our c# people) but am having trouble trying to find a true solution or root of the problem. 
+
+Any ideas out there?",3
+10408529,05/02/2012 06:06:33,1302996,03/30/2012 10:15:40,6,0,setup user profiles using the SharePoint User Profile Service in sp2010,"I am developing a website in sharepoint 2010,
+i m very much new to sharepoint, 
+i am asked to create user profiles in sharepoint,
+
+so i went to 
+Central administration-> Application Management -> Manage Service Applications
+->new -> create new user profile services applicaton.
+
+but my problem is how to proceed further,
+
+what to fill in the new pop up,
+
+
+can you please guide me since i want to do it without any mistake,
+
+thanks 
+
+shradha
+",vb.net,sharepoint2010,user-profile,,,05/03/2012 19:15:44,not a real question,1,69,11,"setup user profiles using the SharePoint User Profile Service in sp2010 I am developing a website in sharepoint 2010,
+i m very much new to sharepoint, 
+i am asked to create user profiles in sharepoint,
+
+so i went to 
+Central administration-> Application Management -> Manage Service Applications
+->new -> create new user profile services applicaton.
+
+but my problem is how to proceed further,
+
+what to fill in the new pop up,
+
+
+can you please guide me since i want to do it without any mistake,
+
+thanks 
+
+shradha
+",3
+6831531,07/26/2011 14:22:55,491243,10/29/2010 11:47:10,41,0,VBNET smtp retry send failed email address,"hello fellow :) i am having a trouble on how  can i retry sending failed email recipients. i am trying to make an application in vbnet where i can send emails to multiple address. 
+
+some code snippet:
+
+    Dim SmtpServer As New SmtpClient()
+    SmtpServer.Credentials = New Net.NetworkCredential(xInformation(0), xInformation(1))
+    SmtpServer.Port = CInt(xInformation(2))
+    SmtpServer.Host = xInformation(3) 
+    SmtpServer.EnableSsl = True
+
+    Dim mail As New MailMessage()
+    mail = New MailMessage
+    mail.From = New MailAddress(xInformation(4), ""Display Name"")
+    mail.CC.Add(xInformation(5))  ' i will make a loop here to add recipients
+    mail.Subject = xInformation(6)
+    mail.IsBodyHtml = True
+    mail.Body = xInformation(7)
+
+    SmtpServer.Send(mail)
+
+**question arises:**
+
+    1.) if i have to send, for instance, email to 5 recipients, and only 
+            3 emails have been successfully sent, how can i know the 
+            failed email addresses?
+    2.) where is the failed email address stored?
+    3.) what exceptions are needed to trapped this error?",vb.net,smtp,sendmail,,,,open,0,213,7,"VBNET smtp retry send failed email address hello fellow :) i am having a trouble on how  can i retry sending failed email recipients. i am trying to make an application in vbnet where i can send emails to multiple address. 
+
+some code snippet:
+
+    Dim SmtpServer As New SmtpClient()
+    SmtpServer.Credentials = New Net.NetworkCredential(xInformation(0), xInformation(1))
+    SmtpServer.Port = CInt(xInformation(2))
+    SmtpServer.Host = xInformation(3) 
+    SmtpServer.EnableSsl = True
+
+    Dim mail As New MailMessage()
+    mail = New MailMessage
+    mail.From = New MailAddress(xInformation(4), ""Display Name"")
+    mail.CC.Add(xInformation(5))  ' i will make a loop here to add recipients
+    mail.Subject = xInformation(6)
+    mail.IsBodyHtml = True
+    mail.Body = xInformation(7)
+
+    SmtpServer.Send(mail)
+
+**question arises:**
+
+    1.) if i have to send, for instance, email to 5 recipients, and only 
+            3 emails have been successfully sent, how can i know the 
+            failed email addresses?
+    2.) where is the failed email address stored?
+    3.) what exceptions are needed to trapped this error?",3
+9161564,02/06/2012 14:23:26,457148,09/24/2010 10:15:21,1124,23,vb.net if statement using the value of hash in URL,"I have a page with a URL that includes a hash value (www.mysite.com/#123).
+
+What I want to do is use that value to determine what is displayed on the page - much like using a querystring.
+
+I am using the hash value because the content on the page can be changed client side (I am avoiding page reloads where possible) - if the user then links to another page and uses the back button to return, I need to use the hash value to display the page as it was when they left it.
+
+So I'm looking for an if statement that will look something like this:
+
+    if hashvalue = 123 then
+        Do this
+    else
+        do that
+    End if
+
+Any ideas?
+
+",vb.net,anchor-tag,,,,,open,0,140,10,"vb.net if statement using the value of hash in URL I have a page with a URL that includes a hash value (www.mysite.com/#123).
+
+What I want to do is use that value to determine what is displayed on the page - much like using a querystring.
+
+I am using the hash value because the content on the page can be changed client side (I am avoiding page reloads where possible) - if the user then links to another page and uses the back button to return, I need to use the hash value to display the page as it was when they left it.
+
+So I'm looking for an if statement that will look something like this:
+
+    if hashvalue = 123 then
+        Do this
+    else
+        do that
+    End if
+
+Any ideas?
+
+",2
+8092208,11/11/2011 09:49:40,41403,11/27/2008 16:05:08,418,18,Enum mapping in LINQ to SQL and VB.NET,"We have a LINQ-to-SQL datacontext with some int columns we want to map to Enum values. This is in VB.NET and we tried the ""Global."" prefix trick that works in C#, where global:: maps a field to an enum [see other StackOverflow references on this].
+
+The problem is that SQL metal doesn't generate the code properly for VB.NET and instead creates code like this:
+
+    Private _OrderStatusID As [Global].Anvil.Mobile.MobileOrderStates
+
+This won't compile so we have to manually fix by removing the brackets so that the generated code compiles. If we remove the Global. prefix we get the DBML1005 Anyone know a fix/workaround?
+
+",vb.net,linq-to-sql,enums,mapping,,,open,0,102,8,"Enum mapping in LINQ to SQL and VB.NET We have a LINQ-to-SQL datacontext with some int columns we want to map to Enum values. This is in VB.NET and we tried the ""Global."" prefix trick that works in C#, where global:: maps a field to an enum [see other StackOverflow references on this].
+
+The problem is that SQL metal doesn't generate the code properly for VB.NET and instead creates code like this:
+
+    Private _OrderStatusID As [Global].Anvil.Mobile.MobileOrderStates
+
+This won't compile so we have to manually fix by removing the brackets so that the generated code compiles. If we remove the Global. prefix we get the DBML1005 Anyone know a fix/workaround?
+
+",4
+9036375,01/27/2012 16:08:30,803332,06/17/2011 13:49:49,65,2,Override datagridviewCell methods for all derived cell types,"(using VS2010) I want to override the GetValue, SetValue (and a few other methods) of the datagridviewcell object, which is allowed since they are overridable:  
+
+     Class MyTextBoxCell
+            Inherits DataGridViewTextBoxCell 
+ 
+            Protected Overrides Function GetValue(ByVal rowIndex As Integer) As Object
+            End Function
+            Protected Overrides Function SetValue(ByVal rowIndex As Integer, ByVal value As Object) As Boolean
+            End Function
+        End Class
+
+... with custom code inside the methods.  However, though I can do this for the dgvtextboxcell, I'd want to use this overridden logic in any of the many derived dgvcell types - comboboxcell, checkboxcell, etc.  Right now it looks I'd have create a new class and inherit from each cell type, then copy my methods into the class definitions.  That could add to a lot of repeated code, and will only get worse with any additional logic.  Is there a more elegant way for me to create and use instances of any existing dgvcell type, yet have them employ my overriding methods?  ",vb.net,visual-studio-2010,inheritance,datagridview,,,open,0,234,8,"Override datagridviewCell methods for all derived cell types (using VS2010) I want to override the GetValue, SetValue (and a few other methods) of the datagridviewcell object, which is allowed since they are overridable:  
+
+     Class MyTextBoxCell
+            Inherits DataGridViewTextBoxCell 
+ 
+            Protected Overrides Function GetValue(ByVal rowIndex As Integer) As Object
+            End Function
+            Protected Overrides Function SetValue(ByVal rowIndex As Integer, ByVal value As Object) As Boolean
+            End Function
+        End Class
+
+... with custom code inside the methods.  However, though I can do this for the dgvtextboxcell, I'd want to use this overridden logic in any of the many derived dgvcell types - comboboxcell, checkboxcell, etc.  Right now it looks I'd have create a new class and inherit from each cell type, then copy my methods into the class definitions.  That could add to a lot of repeated code, and will only get worse with any additional logic.  Is there a more elegant way for me to create and use instances of any existing dgvcell type, yet have them employ my overriding methods?  ",4
+11718563,07/30/2012 09:21:21,1410647,05/22/2012 15:50:27,148,6,Get date of monday given week number vb.net 4,I've been trying to to returnnnn$$,vb.net,,,,,07/30/2012 10:58:15,not a real question,1,6,9,Get date of monday given week number vb.net 4 I've been trying to to returnnnn$$,1
+4460650,12/16/2010 12:16:46,326129,04/26/2010 15:30:46,89,2,VB .NET Winforms loop through treeview nodes to delete empty nodes (nodes that do not contain child nodes with a certain tag).,"Hello and thanks in advance for your help.
+
+I have a treeview that is populated from a HDD folder collection. Its structure is similar to the following (however the structure is dynamic):
+
+    My Disk:
+    |
+    |--folder1(tag:folder)
+    |  |--subfolder1(tag:folder)
+    |--folder2(tag:folder)
+    |--folder3(tag:folder)
+    |  |--subfolder1(tag:folder)
+    |  |  |--file1(tag:file)
+    |  |--subfolder2(tag:folder)
+    |--folder4(tag:folder)
+       |file1(tag:file)
+
+   
+I would like to delete all nodes from the tree that do not contain nodes with the tag ""file"" (basically empty folders). I would like the resulting tree structure to look like this:
+
+    My Disk:
+    |
+    |--folder3(tag:folder)
+    |  |--subfolder1(tag:folder)
+    |     |--file1(tag:file)
+    |--folder4(tag:folder)
+       |file1(tag:file)
+
+   
+The best that I have come up with is the following:
+
+    Private Sub deleteNode(byval nc as TreeNodeCollection)
+     For Each tn As TreeNode In nc
+      'delete node if it applies
+            If tn.Tag = ""folder"" Then
+                If tn.Nodes.Count = 0 Then
+                     nc.Remove(tn)
+                End If
+            End If
+    
+            If tn.Nodes.Count > 0 Then
+                 deleteNode(tn.Nodes)
+            End If
+        Next
+    End Sub
+
+I call the sub as follows:
+
+    deleteNode(treeview1.Nodes(0).Nodes)
+
+However, the above is not working properly. It deletes only some nodes and not all the targeted nodes. Could you please help me out by fixing my sub?
+
+Many thanks",vb.net,recursion,treeview,delete,node,,open,0,393,22,"VB .NET Winforms loop through treeview nodes to delete empty nodes (nodes that do not contain child nodes with a certain tag). Hello and thanks in advance for your help.
+
+I have a treeview that is populated from a HDD folder collection. Its structure is similar to the following (however the structure is dynamic):
+
+    My Disk:
+    |
+    |--folder1(tag:folder)
+    |  |--subfolder1(tag:folder)
+    |--folder2(tag:folder)
+    |--folder3(tag:folder)
+    |  |--subfolder1(tag:folder)
+    |  |  |--file1(tag:file)
+    |  |--subfolder2(tag:folder)
+    |--folder4(tag:folder)
+       |file1(tag:file)
+
+   
+I would like to delete all nodes from the tree that do not contain nodes with the tag ""file"" (basically empty folders). I would like the resulting tree structure to look like this:
+
+    My Disk:
+    |
+    |--folder3(tag:folder)
+    |  |--subfolder1(tag:folder)
+    |     |--file1(tag:file)
+    |--folder4(tag:folder)
+       |file1(tag:file)
+
+   
+The best that I have come up with is the following:
+
+    Private Sub deleteNode(byval nc as TreeNodeCollection)
+     For Each tn As TreeNode In nc
+      'delete node if it applies
+            If tn.Tag = ""folder"" Then
+                If tn.Nodes.Count = 0 Then
+                     nc.Remove(tn)
+                End If
+            End If
+    
+            If tn.Nodes.Count > 0 Then
+                 deleteNode(tn.Nodes)
+            End If
+        Next
+    End Sub
+
+I call the sub as follows:
+
+    deleteNode(treeview1.Nodes(0).Nodes)
+
+However, the above is not working properly. It deletes only some nodes and not all the targeted nodes. Could you please help me out by fixing my sub?
+
+Many thanks",5
+2975705,06/04/2010 15:47:48,358614,06/04/2010 15:36:17,1,0,Trying to construct a 3D object from a stack of 2D images in VB.NET,I have a stack of 2D dicom images and want to convert to a 3D object using VB.NET. I suppose I can solve it using openGL but any clue would help a lot. Do you know a free (or at least cheap) pack to do it? Would you help me to think my own solution. Thanks...,vb.net,opengl,3d,dicom,,,open,0,56,14,Trying to construct a 3D object from a stack of 2D images in VB.NET I have a stack of 2D dicom images and want to convert to a 3D object using VB.NET. I suppose I can solve it using openGL but any clue would help a lot. Do you know a free (or at least cheap) pack to do it? Would you help me to think my own solution. Thanks...,4
+6661411,07/12/2011 08:29:05,799478,06/15/2011 11:26:04,87,1,vb.net - clicking on button to display .CHM help file,"I want to display a .CHM help file when clicking on a button in vb.net. Could anyone show me code how to do this?
+
+    Private Sub cmdHelp_Click(ByVal sender As System.Objects, Byval e As System.EventArgs)Handles cmdHelp.Click
+       'Please help provide some code
+    End Sub
+
+Thanks",vb.net,chm,help,,,,open,0,54,10,"vb.net - clicking on button to display .CHM help file I want to display a .CHM help file when clicking on a button in vb.net. Could anyone show me code how to do this?
+
+    Private Sub cmdHelp_Click(ByVal sender As System.Objects, Byval e As System.EventArgs)Handles cmdHelp.Click
+       'Please help provide some code
+    End Sub
+
+Thanks",3
+8821636,01/11/2012 15:13:50,239961,12/29/2009 04:04:08,10,2,prep tool suite and X-FILE,"Im writting an application for editing pdf files with this library:
+
+http://www.pdf-tools.com/pdf/pdf-prep-tool-suite-manipulate.aspx
+
+The problem is that i had to format pc because a virus and when since that moment every time i try to continue my project I CAN'T use the library. The code its the same as it was before formating, but when i compile the code and the application runs i get an exception every time I try to use a library function.
+
+I've already registered the 2 COM components, but there's no way to move on, and this is driving me crazy.
+
+Any help on this please?? Thanks",vb.net,,,,,01/12/2012 02:52:48,not a real question,1,97,5,"prep tool suite and X-FILE Im writting an application for editing pdf files with this library:
+
+http://www.pdf-tools.com/pdf/pdf-prep-tool-suite-manipulate.aspx
+
+The problem is that i had to format pc because a virus and when since that moment every time i try to continue my project I CAN'T use the library. The code its the same as it was before formating, but when i compile the code and the application runs i get an exception every time I try to use a library function.
+
+I've already registered the 2 COM components, but there's no way to move on, and this is driving me crazy.
+
+Any help on this please?? Thanks",1
+3182842,07/06/2010 00:28:30,384074,07/06/2010 00:28:30,1,0,Index was outside the bounds of the array (VB.NET),"I am getting ""Index was outside the bounds of the array."" error when using this code:
+
+    Dim RandomA As String = ""aAÀàÁâÄäÅåĀāĂăĄąǞǟǺǻÃãÄ""
+    TextBox1.Text = TextBox1.Text.Replace(""a"", RandomA((Int(Rnd() * RandomA.Count)) - 1))
+
+I fail to see how the (random) index can be out of bounds?",vb.net,arrays,index,out,bounds,,open,0,48,9,"Index was outside the bounds of the array (VB.NET) I am getting ""Index was outside the bounds of the array."" error when using this code:
+
+    Dim RandomA As String = ""aAÀàÁâÄäÅåĀāĂăĄąǞǟǺǻÃãÄ""
+    TextBox1.Text = TextBox1.Text.Replace(""a"", RandomA((Int(Rnd() * RandomA.Count)) - 1))
+
+I fail to see how the (random) index can be out of bounds?",5
+6419759,06/21/2011 02:36:30,308962,04/05/2010 02:53:19,158,5,Which is faster? ORDER BY Timestamp or WHERE Timestamp =,"I'm setting up a sqlite database that will monitor a number of physical sensors. A separate application is saving data for several months... This application will just monitor that data acquisition. I want to make sure my query is as efficient as possible.
+
+I would like to pull the last few readings from the sensors. There will be about 20 different types of sensors, each with a different sensor ID.
+
+This is just for monitoring purposes, so it doesn't have to precisely capture all the data, just display recent values.
+
+
+
+
+Which of these would be faster? why?
+
+    sqlCommString = ""SELECT * FROM Samples WHERE Timestamp = '"" + DateTime10SecondsAgo + ""'
+
+    sqlCommString = ""SELECT * FROM Samples ORDER BY Timestamp DESC LIMIT 20""
+
+",vb.net,sqlite,,,,,open,0,126,10,"Which is faster? ORDER BY Timestamp or WHERE Timestamp = I'm setting up a sqlite database that will monitor a number of physical sensors. A separate application is saving data for several months... This application will just monitor that data acquisition. I want to make sure my query is as efficient as possible.
+
+I would like to pull the last few readings from the sensors. There will be about 20 different types of sensors, each with a different sensor ID.
+
+This is just for monitoring purposes, so it doesn't have to precisely capture all the data, just display recent values.
+
+
+
+
+Which of these would be faster? why?
+
+    sqlCommString = ""SELECT * FROM Samples WHERE Timestamp = '"" + DateTime10SecondsAgo + ""'
+
+    sqlCommString = ""SELECT * FROM Samples ORDER BY Timestamp DESC LIMIT 20""
+
+",2
+3996945,10/22/2010 12:52:50,484201,10/22/2010 12:27:10,1,0,Converting Gridview into CSV,Is this possible to take delimeter other than comma for converting into CSV file....because in my scenario my gridview cell contains data with commas.,vb.net,csv,,,,,open,0,24,4,Converting Gridview into CSV Is this possible to take delimeter other than comma for converting into CSV file....because in my scenario my gridview cell contains data with commas.,2
+9313223,02/16/2012 14:40:48,1168402,01/25/2012 03:25:44,11,0,Find a Value in Two Dimensional Array on VB.NET,"I declared my Array:
+
+    Dim invoice_discountitems(100, 100) As String
+
+
+Set Values into array:
+
+    For i As Int16 = 0 To data_set.Tables(""discount_items"").Rows.Count - 1
+                            invoice_discountitems(i, 1) = data_set.Tables(""discount_items"").Rows(0).Item(""item_code"")
+                            invoice_discountitems(i, 2) = data_set.Tables(""discount_items"").Rows(0).Item(""discountitem_average"")
+                        Next
+
+
+Now i tryed to find and single value:
+
+    Dim res As String
+    res = Array.IndexOf(invoice_discountitems, ""FO1506"")
+    MsgBox(res)
+
+But, i get this error :(
+
+    ""Only single dimension arrays are supported here""
+
+",vb.net,arrays,find,,,,open,0,154,9,"Find a Value in Two Dimensional Array on VB.NET I declared my Array:
+
+    Dim invoice_discountitems(100, 100) As String
+
+
+Set Values into array:
+
+    For i As Int16 = 0 To data_set.Tables(""discount_items"").Rows.Count - 1
+                            invoice_discountitems(i, 1) = data_set.Tables(""discount_items"").Rows(0).Item(""item_code"")
+                            invoice_discountitems(i, 2) = data_set.Tables(""discount_items"").Rows(0).Item(""discountitem_average"")
+                        Next
+
+
+Now i tryed to find and single value:
+
+    Dim res As String
+    res = Array.IndexOf(invoice_discountitems, ""FO1506"")
+    MsgBox(res)
+
+But, i get this error :(
+
+    ""Only single dimension arrays are supported here""
+
+",3
+6765774,07/20/2011 17:13:39,853851,12/06/2010 12:34:18,1,1,How to send sms from vb.net,"I need to setup an application with the purpose of sending an sms . Already know the sms gateway type . But i really want to integrate with sim . i need to send via a sim ( which was connected to pc through COM port). Please help me ...
+
+
+                                       Thank you ",vb.net,vb,,,,,open,0,91,6,"How to send sms from vb.net I need to setup an application with the purpose of sending an sms . Already know the sms gateway type . But i really want to integrate with sim . i need to send via a sim ( which was connected to pc through COM port). Please help me ...
+
+
+                                       Thank you ",2
+299509,11/18/2008 17:39:32,9431,09/15/2008 18:47:51,186,1,Refactor menu item for VB.NET projects in VS2008,Is there any way to use the VS2008 built-in Refactoring functionality on VB.NET projects? ,vb.net,refactoring,vs2008,,,,open,0,15,8,Refactor menu item for VB.NET projects in VS2008 Is there any way to use the VS2008 built-in Refactoring functionality on VB.NET projects? ,3
+7341620,09/07/2011 23:30:41,933781,09/07/2011 23:30:41,1,0,VB.NET Updating Problems,"I recently had to format my PC, So I moved my project files and build files to my External Hard Drive, and continued to work on my project..
+
+I started to receive emails saying that the application is saying ""Cannot download the application. The application is missing required files. Contact  application vendor for assistance."" After clicked view details, I found this:
+
+      + Downloading file:///C:/Users/myuser/Downloads/Browser.application 
+      did not succeed.
+
+I was confused, the .application file is not in Downloads, its supposed to download it from my website. And if I were to open my project on a computer with it already installed, it won't check for updates - it opens really quick without the ""Viewing Application Requirments"" window.
+
+Please help with this situation, Thanks!",vb.net,,,,,09/08/2011 20:24:03,not a real question,1,131,3,"VB.NET Updating Problems I recently had to format my PC, So I moved my project files and build files to my External Hard Drive, and continued to work on my project..
+
+I started to receive emails saying that the application is saying ""Cannot download the application. The application is missing required files. Contact  application vendor for assistance."" After clicked view details, I found this:
+
+      + Downloading file:///C:/Users/myuser/Downloads/Browser.application 
+      did not succeed.
+
+I was confused, the .application file is not in Downloads, its supposed to download it from my website. And if I were to open my project on a computer with it already installed, it won't check for updates - it opens really quick without the ""Viewing Application Requirments"" window.
+
+Please help with this situation, Thanks!",1
+8592351,12/21/2011 15:37:59,766497,05/23/2011 18:28:28,36,3,Declaring variable dynamically in VB.net,"Is there way I can declare 70 different variables in a loop instead of declaring each one?
+
+I wanted to do something like below
+--
+    For i AS Integer =0 To 70
+         Dim Para + i  AS OracleParameter
+    Next
+
+
+Instead of declaring as below
+---
+    Dim Param1 AS OracleParameter
+    Dim Param2 AS OracleParameter
+    Dim Param3 AS OracleParameter
+    …
+    Dim Param70 AS OracleParameter
+",vb.net,variables,for-loop,declare,,,open,0,88,5,"Declaring variable dynamically in VB.net Is there way I can declare 70 different variables in a loop instead of declaring each one?
+
+I wanted to do something like below
+--
+    For i AS Integer =0 To 70
+         Dim Para + i  AS OracleParameter
+    Next
+
+
+Instead of declaring as below
+---
+    Dim Param1 AS OracleParameter
+    Dim Param2 AS OracleParameter
+    Dim Param3 AS OracleParameter
+    …
+    Dim Param70 AS OracleParameter
+",4
+11214744,06/26/2012 19:36:23,576262,01/14/2011 21:57:44,102,2,(How c| C)an I use Graphics.CopyFromScreen to enable alpha transparent controls?,"I am trying to use (and this may be my problem already) e.Graphics.CopyFromScreen() in the OnPaint() method of my control to prepare a background onto which I can draw the content of the control. The goal is a tool-tip with rounded corners and other specific features to replace the default Windows tool tip.
+
+Ideally the tool tip could be antialiased and blended into the backdrop, however at a pinch I could tolerate an aliased boundary. This may also be necessary as the control will often be covering a control with an OpenGL overlay and the whole blending procedure may end up a nightmare.
+
+I have created a custom user control, a persistent instance of which belonds to my applications's main form, overriding the OnPaint and OnPaintBackground methods. The application of transparency however is challenging. As I understand, the graphics object passed to the paint method starts with a copy of the current VisibleClipBounds, where generally the first move is to clear the control with a solid colour and start drawing the main features. My first thought was to bypass the fill and start drawing on the captured background. For the first redraw this works fine, but subsequent redraws keep the previous content instead of re-capturing the backdrop. I hoped that CopyFromScreen would specifically eliminate the currently drawing control from its capture so as to start from a clean base but this is not the case, it captures the rectangle of the new location including the image of the previous location if it is in the bounds.
+
+Other solutions and permutations thereof such as
+
+    SetStyle(ControlStyles.SupportsTransparentBackColor, True)
+
+    Me.BackColor = Color.Transparent
+
+    e.Graphics.Clear(Color.FromArgb(0,0,0,0))
+
+have to-date yielded no appropriate results.
+
+I started with a  transparent form using the transparent key colour. This worked with aliasing but using a form as a tool tip seemed excessive and caused annoying artifacts (some of which could be overcome) such as the temporary presence of the taskbar button, focus loss of underlying form with subsequent visual feedback in the host form's title bar colour. The control is much lighter weight but I am struggling to make it work even as well as the form.
+
+At this point I simply ask how to achieve the desired result and whether CopyFromScreen is a part of that solution.",vb.net,winforms,transparency,alpha-transparency,,,open,0,380,11,"(How c| C)an I use Graphics.CopyFromScreen to enable alpha transparent controls? I am trying to use (and this may be my problem already) e.Graphics.CopyFromScreen() in the OnPaint() method of my control to prepare a background onto which I can draw the content of the control. The goal is a tool-tip with rounded corners and other specific features to replace the default Windows tool tip.
+
+Ideally the tool tip could be antialiased and blended into the backdrop, however at a pinch I could tolerate an aliased boundary. This may also be necessary as the control will often be covering a control with an OpenGL overlay and the whole blending procedure may end up a nightmare.
+
+I have created a custom user control, a persistent instance of which belonds to my applications's main form, overriding the OnPaint and OnPaintBackground methods. The application of transparency however is challenging. As I understand, the graphics object passed to the paint method starts with a copy of the current VisibleClipBounds, where generally the first move is to clear the control with a solid colour and start drawing the main features. My first thought was to bypass the fill and start drawing on the captured background. For the first redraw this works fine, but subsequent redraws keep the previous content instead of re-capturing the backdrop. I hoped that CopyFromScreen would specifically eliminate the currently drawing control from its capture so as to start from a clean base but this is not the case, it captures the rectangle of the new location including the image of the previous location if it is in the bounds.
+
+Other solutions and permutations thereof such as
+
+    SetStyle(ControlStyles.SupportsTransparentBackColor, True)
+
+    Me.BackColor = Color.Transparent
+
+    e.Graphics.Clear(Color.FromArgb(0,0,0,0))
+
+have to-date yielded no appropriate results.
+
+I started with a  transparent form using the transparent key colour. This worked with aliasing but using a form as a tool tip seemed excessive and caused annoying artifacts (some of which could be overcome) such as the temporary presence of the taskbar button, focus loss of underlying form with subsequent visual feedback in the host form's title bar colour. The control is much lighter weight but I am struggling to make it work even as well as the form.
+
+At this point I simply ask how to achieve the desired result and whether CopyFromScreen is a part of that solution.",4

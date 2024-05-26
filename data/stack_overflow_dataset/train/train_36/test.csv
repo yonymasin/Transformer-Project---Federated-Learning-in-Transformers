@@ -1,0 +1,800 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+8728133,01/04/2012 14:02:18,1043071,11/12/2011 11:45:36,305,3,when choose OSPF and when RIP,"A question asked in Cisco Interview :
+
+Which routing protocol will you use if you have 50 nodes in each area? Choose between OSPF , RIP and explain.",networking,routing,cisco,ospf,,01/04/2012 22:46:01,off topic,1,27,6,"when choose OSPF and when RIP A question asked in Cisco Interview :
+
+Which routing protocol will you use if you have 50 nodes in each area? Choose between OSPF , RIP and explain.",4
+11290408,07/02/2012 08:45:56,1388345,05/10/2012 23:57:27,1,0,Python networking,I am attempting to make a simple python program that will have a server and multiple clients and it has to communicate a string over LAN. How do I send the string over the LAN?,networking,network-programming,python-2.7,,,07/03/2012 03:31:28,not a real question,1,35,2,Python networking I am attempting to make a simple python program that will have a server and multiple clients and it has to communicate a string over LAN. How do I send the string over the LAN?,3
+11634898,07/24/2012 16:05:51,794473,06/12/2011 04:00:44,477,16,TURN server XOR-RELAYED-ADDRESS IP different from its own public IP,"Suppose I am running a TURN server bound to a public IP (say 100.0.0.1). When the server creates a relay port for a create allocation request, is it ever the case that the server would send back an IP address that is different from whatever it is bound to (100.0.0.1 in this case) in the XOR-RELAYED-ADDRESS attribute? I'm not familiar enough with networking to know all possible scenarios, and the <a href=""http://tools.ietf.org/html/rfc5766#section-6.2"">RFC 5766</a> doesn't really say anything specific (as far as I can tell).
+
+Phrased another way, is the IP address in the XOR-RELAYED-ADDRESS redundant? In all cases I have considered, the client only needs to know the port allocated, and could completely ignore the IP of XOR-RELAYED-ADDRESS. As long as the client knows the relay port, it can always send relay data to the TURN server public IP (it already knows the IP since it had to connect initially...) at the relay port.
+
+Any comments?",networking,nat-traversal,stun,,,,open,0,154,10,"TURN server XOR-RELAYED-ADDRESS IP different from its own public IP Suppose I am running a TURN server bound to a public IP (say 100.0.0.1). When the server creates a relay port for a create allocation request, is it ever the case that the server would send back an IP address that is different from whatever it is bound to (100.0.0.1 in this case) in the XOR-RELAYED-ADDRESS attribute? I'm not familiar enough with networking to know all possible scenarios, and the <a href=""http://tools.ietf.org/html/rfc5766#section-6.2"">RFC 5766</a> doesn't really say anything specific (as far as I can tell).
+
+Phrased another way, is the IP address in the XOR-RELAYED-ADDRESS redundant? In all cases I have considered, the client only needs to know the port allocated, and could completely ignore the IP of XOR-RELAYED-ADDRESS. As long as the client knows the relay port, it can always send relay data to the TURN server public IP (it already knows the IP since it had to connect initially...) at the relay port.
+
+Any comments?",3
+9808653,03/21/2012 16:19:20,1283910,03/21/2012 16:06:45,1,0,Network routing depending URL Alias,"I have 2 websites :
+
+ - **www.AAAAAAAA.com**
+ - **www.AAAAAAAA.com/BBBBB**
+
+Each one reply on a different IP
+
+ - **www.AAAAAAAA.com** >> 192.168.0.111
+ - **www.AAAAAAAA.com/BBBBB**  >> 192.168.0.222
+
+How can I configure my local DNS / Hosts file / gateway / vhosts to make the difference between each site and automaticaly solve www.AAAAAAAA.com with the good IP ? (depending if there is /BBBBB in the URL)",networking,routing,dns,gateway,vhosts,,open,0,61,5,"Network routing depending URL Alias I have 2 websites :
+
+ - **www.AAAAAAAA.com**
+ - **www.AAAAAAAA.com/BBBBB**
+
+Each one reply on a different IP
+
+ - **www.AAAAAAAA.com** >> 192.168.0.111
+ - **www.AAAAAAAA.com/BBBBB**  >> 192.168.0.222
+
+How can I configure my local DNS / Hosts file / gateway / vhosts to make the difference between each site and automaticaly solve www.AAAAAAAA.com with the good IP ? (depending if there is /BBBBB in the URL)",5
+10098628,04/11/2012 01:14:39,667657,03/19/2011 20:26:01,55,0,network sniffing in promiscuous mode,"Consider there are two wi-fk networks A & B using the same channel and they overlap with each other. I have a node (with one NIC) sitting in the overlapping area. Now this should be able to see both the network traffic (if the networks are not secured) not necessarily the same time.
+
+My question is if the network interface is put in promiscuous mode can the node sniff traffic from both the networks the same time? even though the node will be connected to just one of the networks (since just one NIC) at any time since both the networks operate in the same channel and the NIC is put into promiscuous mode can it sniff packets belonging to both the network?
+
+Thanks in advance",networking,,,,,04/12/2012 15:00:04,off topic,1,124,5,"network sniffing in promiscuous mode Consider there are two wi-fk networks A & B using the same channel and they overlap with each other. I have a node (with one NIC) sitting in the overlapping area. Now this should be able to see both the network traffic (if the networks are not secured) not necessarily the same time.
+
+My question is if the network interface is put in promiscuous mode can the node sniff traffic from both the networks the same time? even though the node will be connected to just one of the networks (since just one NIC) at any time since both the networks operate in the same channel and the NIC is put into promiscuous mode can it sniff packets belonging to both the network?
+
+Thanks in advance",1
+8479293,12/12/2011 18:50:30,1055796,11/19/2011 22:26:08,6,0,Redirect Network Traffic locally,"currently I am looking for a possibility to redirect local network traffic by IP on a Windows XP machine. If the operating system receives traffic from a certain IP, the port should be altered to make my application catch it (data from a certain IP should go to port 1234) . And if any local application tries to send data to that same IP it should be redirected locally (like 127.0.0.1:1234).
+
+I am looking for registry hacks, network setting, application, or even java libraries / code
+
+
+Thank you for your time.",networking,port,,,,12/12/2011 19:36:23,off topic,1,89,4,"Redirect Network Traffic locally currently I am looking for a possibility to redirect local network traffic by IP on a Windows XP machine. If the operating system receives traffic from a certain IP, the port should be altered to make my application catch it (data from a certain IP should go to port 1234) . And if any local application tries to send data to that same IP it should be redirected locally (like 127.0.0.1:1234).
+
+I am looking for registry hacks, network setting, application, or even java libraries / code
+
+
+Thank you for your time.",2
+2989395,06/07/2010 12:24:21,344398,05/18/2010 19:14:24,236,15,zigbee vs bluetooth,"We all know about bluetooth cos its more popular. But why is it popular? After reading about Zigbee i found out that it has lower power consumption, higher range in terms of distance and costs lower and is simpler! So why dont we have Zigbee enable phones?
+
+Also I would like to know a per device cost estimation between bluetooth and Zigbee, lets say we have a small handheld device which needs an ad-hoc n/w, how much wud it cost me per device to implement zigbee and how much for bluetooth?",networking,bluetooth,network-protocols,zigbee,,06/07/2010 13:34:40,off topic,1,90,3,"zigbee vs bluetooth We all know about bluetooth cos its more popular. But why is it popular? After reading about Zigbee i found out that it has lower power consumption, higher range in terms of distance and costs lower and is simpler! So why dont we have Zigbee enable phones?
+
+Also I would like to know a per device cost estimation between bluetooth and Zigbee, lets say we have a small handheld device which needs an ad-hoc n/w, how much wud it cost me per device to implement zigbee and how much for bluetooth?",4
+10448412,05/04/2012 11:57:43,1300317,03/29/2012 09:00:15,1,1,Implemented algorithms in network gateways?,"Any one knows which algorithms are implemented on network gateways ?
+
+Thanks ",networking,gateway,,,,05/04/2012 12:53:04,not a real question,1,12,5,"Implemented algorithms in network gateways? Any one knows which algorithms are implemented on network gateways ?
+
+Thanks ",2
+9366783,02/20/2012 18:56:12,634472,02/25/2011 16:22:00,21,1,Do Internet service providers prioritize HTTP traffic over ICMP?,Do Internet service providers prioritize HTTP traffic over ICMP?(via QOS) I have heard that this is the case from people in passing but can not find any hard evidence to back it up. It would stand to reason that they would in order to make user connections seem as fast as possible.,networking,internet,,,,02/24/2012 15:49:57,off topic,1,52,9,Do Internet service providers prioritize HTTP traffic over ICMP? Do Internet service providers prioritize HTTP traffic over ICMP?(via QOS) I have heard that this is the case from people in passing but can not find any hard evidence to back it up. It would stand to reason that they would in order to make user connections seem as fast as possible.,2
+11295429,07/02/2012 14:12:29,1176648,01/29/2012 16:11:29,12,0,how to get ip address of systems connected to a network?,How can I get the IP address and Name of the Systems connected to same network that can be a wifi network or LAN ? Also Is there any way of retrieving the IP address of systems connected to a same network from command prompt using their name ? ,networking,cmd,ip,wifi,windows-7-x64,07/03/2012 02:46:22,off topic,1,50,11,how to get ip address of systems connected to a network? How can I get the IP address and Name of the Systems connected to same network that can be a wifi network or LAN ? Also Is there any way of retrieving the IP address of systems connected to a same network from command prompt using their name ? ,5
+365591,12/13/2008 19:17:18,32032,10/28/2008 11:09:47,99,18,"Flex famous 2048 security violation error, cross domain.","I thought 2048 security violation error were mean to happen when trying to access other domains. 
+
+I got:
+
+**""Security sandbox violation: http://127.0.0.1/site_media/main.swf cannot load data from 127.0.0.1:80""**,  isn it the same domain? what is the solution ?
+
+on doing
+
+    var loader:MultipartLoader = new MultipartLoader(""http://127.0.0.1/create/"");
+
+Did i miss something ?",networking,flex,apache,flash,,,open,0,50,8,"Flex famous 2048 security violation error, cross domain. I thought 2048 security violation error were mean to happen when trying to access other domains. 
+
+I got:
+
+**""Security sandbox violation: http://127.0.0.1/site_media/main.swf cannot load data from 127.0.0.1:80""**,  isn it the same domain? what is the solution ?
+
+on doing
+
+    var loader:MultipartLoader = new MultipartLoader(""http://127.0.0.1/create/"");
+
+Did i miss something ?",4
+11265082,06/29/2012 15:56:06,1467394,06/19/2012 19:28:38,12,0,Port forwarding Issue with ADSL router,"I usually know how to forward ports in my router, however I have a new router and I just cant figure how to open ports in it..
+this is an image of the page
+![enter image description here][1]
+
+
+I need lets say open µTorrent port 61027 or MineCraft port 25565.
+
+My local IP I believe comes from the ipconfig which is 192.168.0.170
+
+And what do I do in the Remote IP? Put IP like in [CanYouSeeMe][2]
+
+
+  [1]: http://i.stack.imgur.com/thxgv.png
+  [2]: http://www.canyouseeme.org/
+
+Which protocol either. :) Thanks.",networking,portforwarding,adsl,,,06/30/2012 02:24:05,off topic,1,81,6,"Port forwarding Issue with ADSL router I usually know how to forward ports in my router, however I have a new router and I just cant figure how to open ports in it..
+this is an image of the page
+![enter image description here][1]
+
+
+I need lets say open µTorrent port 61027 or MineCraft port 25565.
+
+My local IP I believe comes from the ipconfig which is 192.168.0.170
+
+And what do I do in the Remote IP? Put IP like in [CanYouSeeMe][2]
+
+
+  [1]: http://i.stack.imgur.com/thxgv.png
+  [2]: http://www.canyouseeme.org/
+
+Which protocol either. :) Thanks.",3
+3396497,08/03/2010 12:38:07,377419,05/08/2010 00:27:07,250,2,Books on Networking,"Can you recommend a book that explains packets sockets and network protocols. Really anything retaining to how data is sent and received over the web.
+
+I'm a desktop only background and only really understand anything other than TCP Handshakes. 
+But I want a book that is basic but goes in depths and explains alot.
+
+Thanks!",networking,network-programming,,,,09/24/2011 14:55:41,not constructive,1,53,3,"Books on Networking Can you recommend a book that explains packets sockets and network protocols. Really anything retaining to how data is sent and received over the web.
+
+I'm a desktop only background and only really understand anything other than TCP Handshakes. 
+But I want a book that is basic but goes in depths and explains alot.
+
+Thanks!",2
+10639207,05/17/2012 15:58:11,1364191,04/29/2012 13:31:26,1,0,Cisco Duplicate IP,"I do not have DHCP set up on my network. Currently, if someone sets their IP address to the same address as the gateway, then the network will go down. It's a cisco switch (unmanaged) and router.
+
+How can I prevent this conflict from happening? ",networking,cisco,,,,05/18/2012 13:53:49,off topic,1,45,3,"Cisco Duplicate IP I do not have DHCP set up on my network. Currently, if someone sets their IP address to the same address as the gateway, then the network will go down. It's a cisco switch (unmanaged) and router.
+
+How can I prevent this conflict from happening? ",2
+8980267,01/23/2012 23:47:57,1166020,01/23/2012 23:42:20,1,0,how to install windows xp from network,"i have an old laptop doesn't have cd drive and can't boot from usb flash 
+
+so , i want to install windows xp from an external drive in other laptop (which has windows 7) so how can i do this and what the programs should be installed in the laptop with windows 7
+
+thanxx 
+",networking,windows-7,windows-xp,install,,01/24/2012 00:53:52,off topic,1,54,7,"how to install windows xp from network i have an old laptop doesn't have cd drive and can't boot from usb flash 
+
+so , i want to install windows xp from an external drive in other laptop (which has windows 7) so how can i do this and what the programs should be installed in the laptop with windows 7
+
+thanxx 
+",4
+8158247,11/16/2011 20:31:28,1050455,11/16/2011 20:16:48,1,0,"internet connection playing up ( Router, network, ISP? )","I have got a problem with either my router or my IPs provider. Please let me know if you can work out what could be wrong.
+
+My observation:
+
+- downloading large files (over .5 GB ) works well, download speed is quite good
+- when I browse websites, some websites are really slow and some don't load 100% especially images. But when I refresh sometimes they load fine, but most of the time the page reloads with no images again
+- occasionally I get an error saying: DNS lookup failed
+- also I noticed that when I turn on another pc in the same network, the internet goes down on both, and I have to run the troubleshoot-repair thing (windows 7)
+
+I phoned up my IPs (BT Business broadband), they checked the logs and said that they can't see anything wrong , no disconnections or anything else.
+
+If it is the problem with the router, are there any tests I could run to find out where exactly is the problem?
+
+If you have any questions please please ask, I will try to help you help me.
+
+Many thanks in advance. 
+",networking,router,isp,broadband,,11/17/2011 13:54:57,off topic,1,182,9,"internet connection playing up ( Router, network, ISP? ) I have got a problem with either my router or my IPs provider. Please let me know if you can work out what could be wrong.
+
+My observation:
+
+- downloading large files (over .5 GB ) works well, download speed is quite good
+- when I browse websites, some websites are really slow and some don't load 100% especially images. But when I refresh sometimes they load fine, but most of the time the page reloads with no images again
+- occasionally I get an error saying: DNS lookup failed
+- also I noticed that when I turn on another pc in the same network, the internet goes down on both, and I have to run the troubleshoot-repair thing (windows 7)
+
+I phoned up my IPs (BT Business broadband), they checked the logs and said that they can't see anything wrong , no disconnections or anything else.
+
+If it is the problem with the router, are there any tests I could run to find out where exactly is the problem?
+
+If you have any questions please please ask, I will try to help you help me.
+
+Many thanks in advance. 
+",4
+7808616,10/18/2011 14:11:08,509555,11/16/2010 13:21:25,255,11,What to work on when network goes down?,"If you are working on a project highly reliant on the internet or internal network, what's the first thing you go for when the network/internet connection goes down? (and it is out of your control)
+
+e.g.<br />
+- Code refactoring?<br />
+- Getting on with new code even if existing code can't be checked as working?<br />
+- Sit and wait?
+
+I'm trying to make an informed decision of what programming task to do...
+",networking,refactoring,working,,,10/18/2011 17:05:36,off topic,1,69,8,"What to work on when network goes down? If you are working on a project highly reliant on the internet or internal network, what's the first thing you go for when the network/internet connection goes down? (and it is out of your control)
+
+e.g.<br />
+- Code refactoring?<br />
+- Getting on with new code even if existing code can't be checked as working?<br />
+- Sit and wait?
+
+I'm trying to make an informed decision of what programming task to do...
+",3
+9663492,03/12/2012 08:03:17,661433,03/15/2011 21:32:48,1,0,Error when trying to compile the 802.11s standard,"I am a new user in the networking field, I am working on testbed mesh network and what I want to do is to compile the IEEE 802.11s standard since it supports the concept of the mesh networking. After searching in the Internet, what I understand is that I have to compile the source code of 802.11s as a kernel module which called mac80211.
+
+I installed the compact-wireless ""linux-2.6-allstable compat-wireless releases "" in order to insure that I have the last updated version of packages as suggested by [1]: http://open80211s.org/trac/wiki/HOWTO-0.5
+
+but when I came to the step of the compilation, I got an the following error :
+
+
+[root@localhost compat-wireless-2012-03-10]# make 
+
+make -C /lib/modules/2.6.33.7-desktop-2mnb/build M=/home/amr/Downloads/compat-wireless-2012-03-10 modules
+
+make: *** /lib/modules/2.6.33.7-desktop-2mnb/build: No such file or directory.Stop.
+
+make: *** [modules] Error 2
+
+
+I am using madriva 10.2 distribution which I don't know whether this is affecting the process of installation, the mesh nodes equipped with Wistron DNMA-92 miniPCI and madwifi driver installation.
+
+so any Ideas regarding this error or on how to compile the 802.11s standard on the mesh nodes.
+
+Thanks for your help in advance.
+
+Regards",networking,linux-kernel,kernel,ieee,,03/12/2012 13:10:35,off topic,1,174,8,"Error when trying to compile the 802.11s standard I am a new user in the networking field, I am working on testbed mesh network and what I want to do is to compile the IEEE 802.11s standard since it supports the concept of the mesh networking. After searching in the Internet, what I understand is that I have to compile the source code of 802.11s as a kernel module which called mac80211.
+
+I installed the compact-wireless ""linux-2.6-allstable compat-wireless releases "" in order to insure that I have the last updated version of packages as suggested by [1]: http://open80211s.org/trac/wiki/HOWTO-0.5
+
+but when I came to the step of the compilation, I got an the following error :
+
+
+[root@localhost compat-wireless-2012-03-10]# make 
+
+make -C /lib/modules/2.6.33.7-desktop-2mnb/build M=/home/amr/Downloads/compat-wireless-2012-03-10 modules
+
+make: *** /lib/modules/2.6.33.7-desktop-2mnb/build: No such file or directory.Stop.
+
+make: *** [modules] Error 2
+
+
+I am using madriva 10.2 distribution which I don't know whether this is affecting the process of installation, the mesh nodes equipped with Wistron DNMA-92 miniPCI and madwifi driver installation.
+
+so any Ideas regarding this error or on how to compile the 802.11s standard on the mesh nodes.
+
+Thanks for your help in advance.
+
+Regards",4
+3681567,09/10/2010 00:39:02,439653,09/04/2010 14:57:34,6,0,How does the home wireless perform if it connects to a public access point?,"Assuming that there is a access point(hotspot) covering a dozen of houses. Besides, these houses also have their own wireless network. So, if everyone in each house connect to the Internet at the same time, will problems happen? The performance of this network will be reduced or not?",networking,wifi,network-protocols,hotspot,,09/10/2010 00:57:49,off topic,1,48,14,"How does the home wireless perform if it connects to a public access point? Assuming that there is a access point(hotspot) covering a dozen of houses. Besides, these houses also have their own wireless network. So, if everyone in each house connect to the Internet at the same time, will problems happen? The performance of this network will be reduced or not?",4
+8311507,11/29/2011 13:26:46,844123,07/14/2011 08:28:20,13,0,"My new flat has ethernet sockets, but don't connect. Do I need a switch","My flat, where I am a tennant, has ethernet sockets. I was delighted when I saw this, as my HUMAX Freesat box has ethernet and not WiFi and also my old Linux Box does not have a wireless card. 
+
+I also want to buy a NAS and stream files over the wired network. I assumed my BT HomeHub would work as a switch, so I have plugged it in to one socket and my other devices into other sockets. However, I cannot ping the router.
+
+Is it just that I need to add a switch between the router and the network, or is it possible that the sockets are not working?
+
+Thanks",networking,hardware,ethernet,,,11/29/2011 13:36:07,off topic,1,110,14,"My new flat has ethernet sockets, but don't connect. Do I need a switch My flat, where I am a tennant, has ethernet sockets. I was delighted when I saw this, as my HUMAX Freesat box has ethernet and not WiFi and also my old Linux Box does not have a wireless card. 
+
+I also want to buy a NAS and stream files over the wired network. I assumed my BT HomeHub would work as a switch, so I have plugged it in to one socket and my other devices into other sockets. However, I cannot ping the router.
+
+Is it just that I need to add a switch between the router and the network, or is it possible that the sockets are not working?
+
+Thanks",3
+5407905,03/23/2011 15:46:24,614367,02/12/2011 16:48:18,6,0,what requirements would i need to build a small businesses network structure?,"what equipment would i need to build a network for about 400 people so that they could conect to the internet and intranet. also the company is seperated into two buildings with a distance of about 450M between them, so what equipment would i need and how can i build this?
+
+",networking,,,,,03/23/2011 16:05:48,off topic,1,51,12,"what requirements would i need to build a small businesses network structure? what equipment would i need to build a network for about 400 people so that they could conect to the internet and intranet. also the company is seperated into two buildings with a distance of about 450M between them, so what equipment would i need and how can i build this?
+
+",1
+7910733,10/27/2011 01:17:57,707157,04/14/2011 02:23:18,1,0,Serialization Delay Across Variable Speed Network,"I'm working with a network where there the inbound line is a fast, 1 gig line, which hits an edge switch and is then routed via a T1 to a separate internal 1 gig switch, with a 1 gig line output. Something like this:
+
+[outside] (1 gig line) -> [edge device] (T1 line) -> [1 gig switch] (1 gig line) -> end
+
+I'm working with mostly max frame packets, 1500 bytes -- I understand that the first serialization to the T1 line costs about 12 ms, but does this serialization delay occur once or twice? At the second switch, the 1 gig device, to serialize the packet onto the 1 gig line, does it cost on the order of 12ms again or is it done at the 1gig speed of only about 10ish us?",networking,udp,switch,latency,,,open,0,132,6,"Serialization Delay Across Variable Speed Network I'm working with a network where there the inbound line is a fast, 1 gig line, which hits an edge switch and is then routed via a T1 to a separate internal 1 gig switch, with a 1 gig line output. Something like this:
+
+[outside] (1 gig line) -> [edge device] (T1 line) -> [1 gig switch] (1 gig line) -> end
+
+I'm working with mostly max frame packets, 1500 bytes -- I understand that the first serialization to the T1 line costs about 12 ms, but does this serialization delay occur once or twice? At the second switch, the 1 gig device, to serialize the packet onto the 1 gig line, does it cost on the order of 12ms again or is it done at the 1gig speed of only about 10ish us?",4
+7867460,10/23/2011 16:29:16,626347,02/21/2011 10:08:44,1,0,How i can set external IP on my server interface on windows 2008 r2 when external ip is used by router,"Ip alias is not a right way. It must be ""first on network interface"" but how i can configure router? Use DMZ?",networking,ip,external,router,,10/24/2011 02:14:01,off topic,1,22,21,"How i can set external IP on my server interface on windows 2008 r2 when external ip is used by router Ip alias is not a right way. It must be ""first on network interface"" but how i can configure router? Use DMZ?",4
+11608042,07/23/2012 07:24:44,1470116,06/20/2012 18:11:04,1,0,Network Administrator in Linux RedHat,"can you suggest any E-Books or Reference to Become Mastering in Network Administrator..
+
+And Please provide some tips to Become Network Admin
+
+* Is it enough to study TCP/IP ?
+* Which books i have to study ?",networking,admin,redhat,ebook,,07/31/2012 10:54:40,off topic,1,35,5,"Network Administrator in Linux RedHat can you suggest any E-Books or Reference to Become Mastering in Network Administrator..
+
+And Please provide some tips to Become Network Admin
+
+* Is it enough to study TCP/IP ?
+* Which books i have to study ?",4
+10883332,06/04/2012 14:50:43,793908,06/11/2011 11:39:32,20,0,Procurve learning book,"I work with HP procurve devices and I am interesting in knowing it, for this reason I looking for a good book, can anyone recommend one?
+
+I only find manuals, not any book...",networking,routing,switch-statement,hp,,,open,0,32,3,"Procurve learning book I work with HP procurve devices and I am interesting in knowing it, for this reason I looking for a good book, can anyone recommend one?
+
+I only find manuals, not any book...",4
+3051036,06/16/2010 06:02:25,289829,03/09/2010 16:40:12,134,1,"differnce between LAN,WAN and MAN","please specify me the differnces in between LAN,WAN and MAN.",networking,,,,,06/16/2010 06:06:02,off topic,1,10,5,"differnce between LAN,WAN and MAN please specify me the differnces in between LAN,WAN and MAN.",1
+9753800,03/17/2012 21:15:42,732629,04/30/2011 18:05:22,73,0,how to calculate the load of network?,"I have a network with the following topology:
+ 
+ - N host (nodes), and One server, and there are links between the server and hosts, (we don’t take in consideration routers or switches) . We can consider that the delay is 0.
+ - Each host has a set of activities, it can send a request to a server, send a message to subscribe or to unsubscribe, and so on, in total each host has 5 types of actions. The host send a request to a server (to ask it to do something, depend to the type of action) and size of request (number of packets) is depend to the type of request, for example a request to update some information may be larger ( in terms of parquets) than a request to unsubscribe…. 
+
+ - A server is in a service of all hosts, so it executes for each type of request its adequate service, and it receives and put each type of request in a particular queue ( there is a queue for each type of service )…
+
+Ps. the politic of scheduling is FIFO
+My question is:
+
+ 1. How can I calculate the load of my network at the instance t? ( to test the congestion of my network)
+ 2. is the load of network means the amount of traffic ?
+ 
+ 3. How can calculate the amount of work on a server at the instant t? ( to test the bottleneck) 
+
+
+  ![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/cFqW4.jpg",networking,load,traffic-measurement,,,03/19/2012 00:18:32,off topic,1,251,7,"how to calculate the load of network? I have a network with the following topology:
+ 
+ - N host (nodes), and One server, and there are links between the server and hosts, (we don’t take in consideration routers or switches) . We can consider that the delay is 0.
+ - Each host has a set of activities, it can send a request to a server, send a message to subscribe or to unsubscribe, and so on, in total each host has 5 types of actions. The host send a request to a server (to ask it to do something, depend to the type of action) and size of request (number of packets) is depend to the type of request, for example a request to update some information may be larger ( in terms of parquets) than a request to unsubscribe…. 
+
+ - A server is in a service of all hosts, so it executes for each type of request its adequate service, and it receives and put each type of request in a particular queue ( there is a queue for each type of service )…
+
+Ps. the politic of scheduling is FIFO
+My question is:
+
+ 1. How can I calculate the load of my network at the instance t? ( to test the congestion of my network)
+ 2. is the load of network means the amount of traffic ?
+ 
+ 3. How can calculate the amount of work on a server at the instant t? ( to test the bottleneck) 
+
+
+  ![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/cFqW4.jpg",3
+8598419,12/22/2011 01:22:59,351545,05/27/2010 03:03:07,269,6,www.baidu.com can be visited but unable to be ping or tracert,"My computer is in intranet. I can visit www.baidu.com , see 
+![enter image description here][1]
+
+But it is unable to ping  or tracert , see 
+![enter image description here][2]
+
+![enter image description here][3]
+
+Could anyone explain why  ?
+
+  [1]: http://i.stack.imgur.com/etiFd.png
+  [2]: http://i.stack.imgur.com/t8P8e.png
+  [3]: http://i.stack.imgur.com/znud7.png",networking,tcp,ping,jtracert,,12/22/2011 07:06:46,off topic,1,46,11,"www.baidu.com can be visited but unable to be ping or tracert My computer is in intranet. I can visit www.baidu.com , see 
+![enter image description here][1]
+
+But it is unable to ping  or tracert , see 
+![enter image description here][2]
+
+![enter image description here][3]
+
+Could anyone explain why  ?
+
+  [1]: http://i.stack.imgur.com/etiFd.png
+  [2]: http://i.stack.imgur.com/t8P8e.png
+  [3]: http://i.stack.imgur.com/znud7.png",4
+10693088,05/21/2012 21:45:38,79708,03/18/2009 20:16:19,2694,100,Passing edge weights to graphviz_layout in networkx,"everybody cannot find how to pass name of property of list of weights to graphviz_layout in networkx. Something like this:
+
+    nx.spring_layout(G, weight='weight.sum')
+
+but with `nx.graphviz_layout(G, ...)`. Maybe somebody will know?",networking,layout,graph,graphviz,networkx,,open,0,32,7,"Passing edge weights to graphviz_layout in networkx everybody cannot find how to pass name of property of list of weights to graphviz_layout in networkx. Something like this:
+
+    nx.spring_layout(G, weight='weight.sum')
+
+but with `nx.graphviz_layout(G, ...)`. Maybe somebody will know?",5
+8492857,12/13/2011 16:44:59,893039,08/13/2011 12:32:31,159,0,good book for basics of networking and os,"i need good book for basics of networking and about os. I am first year cse student, I want to get into hacking world so need to get knowledge of networking and working of os. right now I have no knowledge of this, so can u please suggest some good book for starting on these topics. thaks.",networking,operating-system,,,,,open,0,57,8,"good book for basics of networking and os i need good book for basics of networking and about os. I am first year cse student, I want to get into hacking world so need to get knowledge of networking and working of os. right now I have no knowledge of this, so can u please suggest some good book for starting on these topics. thaks.",2
+9822804,03/22/2012 13:00:35,1282252,03/21/2012 00:45:47,1,0,Looking for a grapher to look at storage space across a network,"I've played around with tools like Graphite in the past, but it's not really what I'm looking for in this application.
+
+I'm looking for a decent tool I can customize for our (the company I work for) needs:
+
+ 1. Visualization of available storage space on different machines across network.  It has to make sense for non computer people as most people using this tool will be artists who are not stoked about using the terminal.
+ 2. Ability to transfer, upload, download files across the network.
+
+The tool doesn't have to be free, but free would be preferable.
+
+This is not job essential for me, but I've been hearing complaints about artists not knowing how much storage space is available and I want to surprise them with a cool solution.",networking,application,storage,,,03/22/2012 13:40:34,not constructive,1,127,12,"Looking for a grapher to look at storage space across a network I've played around with tools like Graphite in the past, but it's not really what I'm looking for in this application.
+
+I'm looking for a decent tool I can customize for our (the company I work for) needs:
+
+ 1. Visualization of available storage space on different machines across network.  It has to make sense for non computer people as most people using this tool will be artists who are not stoked about using the terminal.
+ 2. Ability to transfer, upload, download files across the network.
+
+The tool doesn't have to be free, but free would be preferable.
+
+This is not job essential for me, but I've been hearing complaints about artists not knowing how much storage space is available and I want to surprise them with a cool solution.",3
+10376893,04/29/2012 23:22:48,1364787,04/29/2012 23:18:40,1,0,Opensource pastie/pastepin,Is there a opensource pastie or pastebin like software that I could install on my VPS as I would like to use it for internal purposes as i do a lot of coding and would like to know that I have them all stored and easily accessible from anywhere I go.,networking,open-source,install,pastebin,pastie,05/02/2012 13:03:42,off topic,1,51,2,Opensource pastie/pastepin Is there a opensource pastie or pastebin like software that I could install on my VPS as I would like to use it for internal purposes as i do a lot of coding and would like to know that I have them all stored and easily accessible from anywhere I go.,5
+6637973,07/09/2011 22:45:41,230453,12/12/2009 22:16:59,104,3,Network Not Connecting to another computer but works in 127.0.0.1,"hi everyone like i said on the title ive got a program that can connect 127.0.0.1 so im guessing my network logic is actually working but when i try to connect to another IP its just not connecting somehow and ive got no idea what that is any ideas?
+the firewalls are off ",networking,network-programming,,,,07/12/2011 02:36:55,not a real question,1,53,10,"Network Not Connecting to another computer but works in 127.0.0.1 hi everyone like i said on the title ive got a program that can connect 127.0.0.1 so im guessing my network logic is actually working but when i try to connect to another IP its just not connecting somehow and ive got no idea what that is any ideas?
+the firewalls are off ",2
+11697673,07/28/2012 02:10:21,1120799,10/30/2011 06:28:07,616,40,Divert TCP connection,"I am trying to divert a TCP connection. Given a client (C) which is connected to a router R and two servers (S1 and S2) are connected to the router, C initially connects to S1. I am trying to write an iptables rule in the router to divert all traffic to S2. But the problem is, S2 keeps on sending RST messages and the connection is never established. I ran wireshark on all the boxes and noticed this: C sets up a TCP connection with S1 and when my iptable rule starts is active, it sends an ACK to S2 which sends back a RST and then they loop on this for time. Is there a way to divert TCP connections like this?
+",networking,tcp,routing,wireshark,,07/29/2012 19:01:49,off topic,1,123,3,"Divert TCP connection I am trying to divert a TCP connection. Given a client (C) which is connected to a router R and two servers (S1 and S2) are connected to the router, C initially connects to S1. I am trying to write an iptables rule in the router to divert all traffic to S2. But the problem is, S2 keeps on sending RST messages and the connection is never established. I ran wireshark on all the boxes and noticed this: C sets up a TCP connection with S1 and when my iptable rule starts is active, it sends an ACK to S2 which sends back a RST and then they loop on this for time. Is there a way to divert TCP connections like this?
+",4
+8194007,11/19/2011 12:19:51,530439,12/04/2010 13:21:01,288,0,Is there any protocol for reverse traceroute?,"Say i'm communicating with a computer A in a remote network .
+
+Is it possible to know what are the hops that he is going through?
+
+In other word, is it possible to detect what is computer A route to my computer?
+
+I know that A might have a various routes to my computer , it just want to find a route. My whole problem begins with that fact that some networks  ""hides"" there inside computer ( like NAT ) and just give you the gateway ip.
+
+(I'm not talking about my route to his computer that can be easly achived by traceroute)
+
+thanks!",networking,routing,protocols,nat,,11/20/2011 00:13:43,off topic,1,100,7,"Is there any protocol for reverse traceroute? Say i'm communicating with a computer A in a remote network .
+
+Is it possible to know what are the hops that he is going through?
+
+In other word, is it possible to detect what is computer A route to my computer?
+
+I know that A might have a various routes to my computer , it just want to find a route. My whole problem begins with that fact that some networks  ""hides"" there inside computer ( like NAT ) and just give you the gateway ip.
+
+(I'm not talking about my route to his computer that can be easly achived by traceroute)
+
+thanks!",4
+6400702,06/19/2011 05:12:08,805076,06/19/2011 05:12:08,1,0,"Send user comment to twitter, fb, linkedin","Im not sure if this is the place for this question but here goes. 
+
+I have a member based site with a facebook like wall that works the same way as facebooks does. I would like to give the user an option to send what ever they share on the site to twitter, fb, and linked with check boxes like...
+
+Type your message here. 
+This is a user msg
+Check here if you would like to share on twitter, fb, linked
+
+----------
+
+user can then decide which boxs to tick and then hit send. 
+
+after submission to the site the same msg is also posted to what ever sites they ticked. 
+
+I dont expect full code but i would like to know what to start with i.e. what should i google?
+thanks much!
+",networking,send,box,social,tick,06/23/2011 07:47:00,not a real question,1,128,7,"Send user comment to twitter, fb, linkedin Im not sure if this is the place for this question but here goes. 
+
+I have a member based site with a facebook like wall that works the same way as facebooks does. I would like to give the user an option to send what ever they share on the site to twitter, fb, and linked with check boxes like...
+
+Type your message here. 
+This is a user msg
+Check here if you would like to share on twitter, fb, linked
+
+----------
+
+user can then decide which boxs to tick and then hit send. 
+
+after submission to the site the same msg is also posted to what ever sites they ticked. 
+
+I dont expect full code but i would like to know what to start with i.e. what should i google?
+thanks much!
+",5
+11657619,07/25/2012 19:56:57,1399519,05/16/2012 19:52:36,1,0,constant network crashes,"ok, so I have a network, and it has had serious trouble since before I started working on it. It continues to be problematic at best, and down right broken at worse. I'm pretty much at my wits end with it!
+
+Here's the setup- We have internet traffic being sent in, then split between a router, a netgear prosafe FVG 318 (regular internet) and an edgewater SIP phone system. The netgear plugs into a 24 port POE switch which then serves the building.
+
+Here's the problem- The network is insanely spotty. People are constantly loosing connection off the wireless, and I finally decided to assign everyone (including our SIP phones) static ip's, which seems to stabilize the connections some what. However, when attempting to use DHCP to connect, often users will not be able to authenticate and receive a valid IP address. This happens for both wired and wireless connections. The weird thing is that some times it works, and other times it does not. the DHCP is not allowed to assign ips in the ranges assigned for static ips. While monitoring the connection with ping -t, about every 20th result returns either unreachable or times out.
+
+resetting the router/WAP seems to help these problems, but they come back quickly. At one time there were two DHCP servers running on the network, and I disabled the other server, and let the router serve the IPs.
+
+Lastly, we just got in two WAP's to extend our wireless network to the far ends of the building, but I don't want to install them until I find out what is wrong with the rest of the network, or else I""ll just be making a bad situation worse.
+
+So here are my two questions:
+1) What is causing the DHCP server to not serve IP addresses correctly?
+2) How should I set up the wireless? Does having it on the same subnet cause IP conflicts, and if so, should I create a second subnet?",networking,ip,router,,,07/25/2012 22:06:03,off topic,1,323,3,"constant network crashes ok, so I have a network, and it has had serious trouble since before I started working on it. It continues to be problematic at best, and down right broken at worse. I'm pretty much at my wits end with it!
+
+Here's the setup- We have internet traffic being sent in, then split between a router, a netgear prosafe FVG 318 (regular internet) and an edgewater SIP phone system. The netgear plugs into a 24 port POE switch which then serves the building.
+
+Here's the problem- The network is insanely spotty. People are constantly loosing connection off the wireless, and I finally decided to assign everyone (including our SIP phones) static ip's, which seems to stabilize the connections some what. However, when attempting to use DHCP to connect, often users will not be able to authenticate and receive a valid IP address. This happens for both wired and wireless connections. The weird thing is that some times it works, and other times it does not. the DHCP is not allowed to assign ips in the ranges assigned for static ips. While monitoring the connection with ping -t, about every 20th result returns either unreachable or times out.
+
+resetting the router/WAP seems to help these problems, but they come back quickly. At one time there were two DHCP servers running on the network, and I disabled the other server, and let the router serve the IPs.
+
+Lastly, we just got in two WAP's to extend our wireless network to the far ends of the building, but I don't want to install them until I find out what is wrong with the rest of the network, or else I""ll just be making a bad situation worse.
+
+So here are my two questions:
+1) What is causing the DHCP server to not serve IP addresses correctly?
+2) How should I set up the wireless? Does having it on the same subnet cause IP conflicts, and if so, should I create a second subnet?",3
+11342120,07/05/2012 10:09:56,945871,09/15/2011 02:26:35,54,2,Can't connect to the web,"ALL,
+I have 2 laptops. One is Windows 7 PC, another is Apple.
+I also have a DSL modem and a router.
+
+The problem is I can't connect from the Windows 7 but can from Apple.
+I can ping the router without any problems from Windows machine, but can't do
+
+    ping 127.0.0.1
+
+Does this mean my network card is failing?
+
+Thank you.
+",networking,tcp,ip,ping,,07/05/2012 14:20:44,off topic,1,59,5,"Can't connect to the web ALL,
+I have 2 laptops. One is Windows 7 PC, another is Apple.
+I also have a DSL modem and a router.
+
+The problem is I can't connect from the Windows 7 but can from Apple.
+I can ping the router without any problems from Windows machine, but can't do
+
+    ping 127.0.0.1
+
+Does this mean my network card is failing?
+
+Thank you.
+",4
+7744020,10/12/2011 17:24:46,501945,11/09/2010 13:39:58,76,17,Why 192.168.x.y for local ips?,"Since this is the most common ip sequence in the world, why did we choose 192.168.x.y over 1.1 .x.y or something simple like that ? What is special about this ?",networking,ip,standards,web,,10/12/2011 18:07:18,off topic,1,31,5,"Why 192.168.x.y for local ips? Since this is the most common ip sequence in the world, why did we choose 192.168.x.y over 1.1 .x.y or something simple like that ? What is special about this ?",4
+9854649,03/24/2012 19:08:30,1298805,03/24/2012 18:43:15,1,0,"""time 2002ms"" in ping response","I would like to know, in this ping reply 
+
+    64 bytes from xxxxxxxx: icmp_req=1 ttl=51 time=51.1 ms
+    64 bytes from xxxxxxxx: icmp_req=2 ttl=51 time=50.1 ms
+    64 bytes from xxxxxxxx: icmp_req=3 ttl=51 time=50.6 ms
+
+    --- xxxxxxx ping statistics ---
+    3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+    rtt min/avg/max/mdev = 50.112/50.614/51.101/0.480 ms
+
+what is ""time 2002ms""? 
+Why is it usually omitted? I have never seen it in other ping tests",networking,,,,,03/26/2012 16:35:52,off topic,1,89,5,"""time 2002ms"" in ping response I would like to know, in this ping reply 
+
+    64 bytes from xxxxxxxx: icmp_req=1 ttl=51 time=51.1 ms
+    64 bytes from xxxxxxxx: icmp_req=2 ttl=51 time=50.1 ms
+    64 bytes from xxxxxxxx: icmp_req=3 ttl=51 time=50.6 ms
+
+    --- xxxxxxx ping statistics ---
+    3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+    rtt min/avg/max/mdev = 50.112/50.614/51.101/0.480 ms
+
+what is ""time 2002ms""? 
+Why is it usually omitted? I have never seen it in other ping tests",1
+11485032,07/14/2012 15:35:30,1512821,07/09/2012 18:29:34,8,0,Qustion about load balancers,"I'm using a lot of load balancers in my workplace and I was wondering if there is a good open source one?
+
+By good I mean one that can be used in an enterprise, and also is it efficient to use that software with regular PC?
+
+BTW, I've been searching the internet a lot and found a few but not sure which one is better than the other one, I need your expertise.",networking,load-balancing,,,,07/15/2012 00:00:00,off topic,1,71,4,"Qustion about load balancers I'm using a lot of load balancers in my workplace and I was wondering if there is a good open source one?
+
+By good I mean one that can be used in an enterprise, and also is it efficient to use that software with regular PC?
+
+BTW, I've been searching the internet a lot and found a few but not sure which one is better than the other one, I need your expertise.",2
+10527780,05/10/2012 05:03:14,990288,10/11/2011 20:34:16,13,1,How to set up bridged networking for KVM using Ubuntu 12.04?,"On my Ubuntu 12.04 host system, I am trying to run a KVM (which also runs Ubuntu 12.04) with a bridged networking configuration, but it is not working. Specifically, I am able to get an IP on the LAN, but I cannot ping anybody (cannot ping the computers on the LAN and cannot ping computers on the Internet).
+
+I have disabled ufw, and set all the net.bridge.bridge-nf-call-* sysctl's to 0 (to prevent bridged traffic from being processed by iptables rules). I can't figure out why ICMP is being blocked here, and I've run out of leads.
+
+### Setup Details ###
+
+My /etc/network/interfaces bridge setup is very simple and looks like this:
+
+    auto lo
+        iface lo inet loopback
+
+    auto br0
+    iface br0 inet dhcp
+        bridge_ports eth0
+        bridge_stp on
+        bridge_fd 0
+        bridge_maxwait 0
+
+In my virtual machine configuration file (which I access via virsh edit vmname), I specify bridged networking as follows:
+
+      <interface type='bridge'>
+          <mac address='52:54:00:c5:4e:81'/>
+          <source bridge='br0'/>
+      </interface>
+
+### Additional Notes ###
+
+There are lots of online guides that describe how to set this up, but most of them are dated or incorrect. Any help you might offer would be greatly appreciated. ",networking,ubuntu,virtualization,bridge,kvm,05/30/2012 23:42:39,off topic,1,258,11,"How to set up bridged networking for KVM using Ubuntu 12.04? On my Ubuntu 12.04 host system, I am trying to run a KVM (which also runs Ubuntu 12.04) with a bridged networking configuration, but it is not working. Specifically, I am able to get an IP on the LAN, but I cannot ping anybody (cannot ping the computers on the LAN and cannot ping computers on the Internet).
+
+I have disabled ufw, and set all the net.bridge.bridge-nf-call-* sysctl's to 0 (to prevent bridged traffic from being processed by iptables rules). I can't figure out why ICMP is being blocked here, and I've run out of leads.
+
+### Setup Details ###
+
+My /etc/network/interfaces bridge setup is very simple and looks like this:
+
+    auto lo
+        iface lo inet loopback
+
+    auto br0
+    iface br0 inet dhcp
+        bridge_ports eth0
+        bridge_stp on
+        bridge_fd 0
+        bridge_maxwait 0
+
+In my virtual machine configuration file (which I access via virsh edit vmname), I specify bridged networking as follows:
+
+      <interface type='bridge'>
+          <mac address='52:54:00:c5:4e:81'/>
+          <source bridge='br0'/>
+      </interface>
+
+### Additional Notes ###
+
+There are lots of online guides that describe how to set this up, but most of them are dated or incorrect. Any help you might offer would be greatly appreciated. ",5
+11573862,07/20/2012 06:20:58,1452681,06/13/2012 03:02:49,20,2,what is max number computer in lan?,"I want know the number max PC, I can set up same LAN with Window7. Thanks How many PC's can theoretically be setup on a Windows 7 Lan, assuming you had an infinite number of switches and cables. I think the answer is 100. But I'm not sure - it might be unlimited. Can any networking experts tell me?
+------------------------------------------------------------------------
+
+",networking,window,technologies,,,07/23/2012 05:46:54,off topic,1,59,7,"what is max number computer in lan? I want know the number max PC, I can set up same LAN with Window7. Thanks How many PC's can theoretically be setup on a Windows 7 Lan, assuming you had an infinite number of switches and cables. I think the answer is 100. But I'm not sure - it might be unlimited. Can any networking experts tell me?
+------------------------------------------------------------------------
+
+",3
+9966734,04/01/2012 17:50:12,1146399,01/12/2012 20:38:58,8,0,Multiplayer billiards game physics simulation,"I’m building an online multiplayer billiards game and I’m struggling to think of the best approach to multiplayer physics simulation. I have thought of a three possible scenarios, each having its own advantages and disadvantages and I would like to hear some opinion of those that either have implemented something similar already or have experience in multiplayer online games.
+
+**1st Scenario:** Physics simulation on the clients: The player in turn to take a shot sends the angle of the shot and power to the server, and the sever updates all clients with these values so they can simulate the shot independently.
+
+*Advantages:*
+
+1. Low server overheat
+
+*Disadvantages:*
+
+1.	Problems with synchronization. Clients must simulate the exact simulation regardless of their frame rate. (Possible to solve with some clever algorithm like one described [here](http://gafferongames.com/game-physics/fix-your-timestep/))
+2.	Cheating. Players can cheat by tweaking the physics engine. (Possible to determine when making a comparison at the end of the shot with other players ball positions. If only two players are at the table (i.e. not spectaculars) then who the cheater is?)
+
+**2nd Scenario:** 
+
+Physics simulation on one (i.e. “master”) client (e.g. who ever takes the shot) and then broadcast each physics step to everyone else.
+
+*Advantages:*
+
+1.	No problems with synchronization.
+
+*Disadvantages:*
+
+1.	Server overheat. Each time step the “master” client will be sending the coordinates of all balls to the server, and the server will have to broadcast them to everyone else in the room.
+2.	Cheating by the “master” player is still possible.
+
+
+**3rd Scenario:** The physics will be simulated on the server. 
+
+
+*Advantage:*
+
+1.	No possibility to cheat as the simulation is run independent of clients.
+2.	No synchronization issues, one simulation means everyone will see the same result (event if not at the same time because of network lag)
+
+*Disadvantages:*
+
+1.	Huge server overload. Not only the server will have to calculate physics 30/60 times every second for every table (there might be 100 tables at the same time) but also will have to broadcast all the coordinates to everyone in the rooms.
+",networking,game-physics,,,,04/01/2012 22:12:09,not constructive,1,318,5,"Multiplayer billiards game physics simulation I’m building an online multiplayer billiards game and I’m struggling to think of the best approach to multiplayer physics simulation. I have thought of a three possible scenarios, each having its own advantages and disadvantages and I would like to hear some opinion of those that either have implemented something similar already or have experience in multiplayer online games.
+
+**1st Scenario:** Physics simulation on the clients: The player in turn to take a shot sends the angle of the shot and power to the server, and the sever updates all clients with these values so they can simulate the shot independently.
+
+*Advantages:*
+
+1. Low server overheat
+
+*Disadvantages:*
+
+1.	Problems with synchronization. Clients must simulate the exact simulation regardless of their frame rate. (Possible to solve with some clever algorithm like one described [here](http://gafferongames.com/game-physics/fix-your-timestep/))
+2.	Cheating. Players can cheat by tweaking the physics engine. (Possible to determine when making a comparison at the end of the shot with other players ball positions. If only two players are at the table (i.e. not spectaculars) then who the cheater is?)
+
+**2nd Scenario:** 
+
+Physics simulation on one (i.e. “master”) client (e.g. who ever takes the shot) and then broadcast each physics step to everyone else.
+
+*Advantages:*
+
+1.	No problems with synchronization.
+
+*Disadvantages:*
+
+1.	Server overheat. Each time step the “master” client will be sending the coordinates of all balls to the server, and the server will have to broadcast them to everyone else in the room.
+2.	Cheating by the “master” player is still possible.
+
+
+**3rd Scenario:** The physics will be simulated on the server. 
+
+
+*Advantage:*
+
+1.	No possibility to cheat as the simulation is run independent of clients.
+2.	No synchronization issues, one simulation means everyone will see the same result (event if not at the same time because of network lag)
+
+*Disadvantages:*
+
+1.	Huge server overload. Not only the server will have to calculate physics 30/60 times every second for every table (there might be 100 tables at the same time) but also will have to broadcast all the coordinates to everyone in the rooms.
+",2
+10963511,06/09/2012 18:27:08,784597,06/05/2011 09:07:37,820,3,Load Balancer : Is Load Balancer possible in this case?,"Our Web Application will be in production soon .
+We are going to use Load Balancing for this war for more redundancy .
+
+
+I am a java develoer ,so please excuse if my question with respect to load balancing is basic .
+
+Right now the war is deployed on these two Linux  servers  ( Server A and Server B ).These two servers(Server A and Server B) has  tomcat installed with the similar directory  structure on them . 
+
+The war will be using some property file defined under tomcat/bin directory and this property value is different for these two servers .
+
+These two servers (Server A  and Server B ) have different IP's .
+
+
+Please let me know if Load Balancing will be any issue in this case ?? 
+",networking,tomcat,load-balancing,,,06/09/2012 23:30:15,not a real question,1,129,10,"Load Balancer : Is Load Balancer possible in this case? Our Web Application will be in production soon .
+We are going to use Load Balancing for this war for more redundancy .
+
+
+I am a java develoer ,so please excuse if my question with respect to load balancing is basic .
+
+Right now the war is deployed on these two Linux  servers  ( Server A and Server B ).These two servers(Server A and Server B) has  tomcat installed with the similar directory  structure on them . 
+
+The war will be using some property file defined under tomcat/bin directory and this property value is different for these two servers .
+
+These two servers (Server A  and Server B ) have different IP's .
+
+
+Please let me know if Load Balancing will be any issue in this case ?? 
+",3
+11680051,07/27/2012 00:45:59,1242261,03/01/2012 09:28:17,1,0,Tool to calculate traffic amount per IP,"Is there a tool that would show me how much data have been exchanged per IP address over time?
+
+I am on Windows, but if you have something on linux I will manage.
+
+Thanks!",networking,ip,network-traffic,,,07/28/2012 23:59:58,not constructive,1,32,7,"Tool to calculate traffic amount per IP Is there a tool that would show me how much data have been exchanged per IP address over time?
+
+I am on Windows, but if you have something on linux I will manage.
+
+Thanks!",3
+11062477,06/16/2012 10:00:23,985409,10/08/2011 13:57:48,7,0,configure freedns forward to webserver located at ethernet connected pc,"i have set a freedns account and i am using Inadyn (UBUNTU) in order to connect my pc (say PCa) with a static address.
+
+Now what i want is that visitors of my static address 
+abcd.mooo.com
+get redirected to a apache server located at **another** pc that is connected through ethernet with the PCa.
+I cab access the web server from PCa with the ethernet address.
+I tried using rinetd with no luck,
+could you please point me how to achieve it?
+
+thanks
+",networking,forwarding,,,,06/16/2012 20:58:41,off topic,1,77,10,"configure freedns forward to webserver located at ethernet connected pc i have set a freedns account and i am using Inadyn (UBUNTU) in order to connect my pc (say PCa) with a static address.
+
+Now what i want is that visitors of my static address 
+abcd.mooo.com
+get redirected to a apache server located at **another** pc that is connected through ethernet with the PCa.
+I cab access the web server from PCa with the ethernet address.
+I tried using rinetd with no luck,
+could you please point me how to achieve it?
+
+thanks
+",2
+11698316,07/28/2012 04:35:53,1291010,03/25/2012 08:07:58,22,0,Monitor applications that use internet in a wireless network,How can i monitor the applications in other pcs that use my wireless network to access internet? I am using window 7 32bit,networking,windows-7,network-programming,router,wireless-connection,07/30/2012 06:43:01,off topic,1,23,9,Monitor applications that use internet in a wireless network How can i monitor the applications in other pcs that use my wireless network to access internet? I am using window 7 32bit,5
+7307804,09/05/2011 12:04:26,928822,09/05/2011 12:04:26,1,0,Windows 2008 r2 Domain Controller for a home LAB with Hyper-V,"Has anyone come across a good blog on how to setup Windows 2008 r2 Server as a domain controller running Hyper-V for a home lab network setup? 
+
+Here are the network devises I have and a run down on what I’d like to do:
+1) Server with 8GB RAM which I'd like to setup as a Windows 2008 r2 Domain Controller. I'd also like to host a Windows 2008 r2 Member Server in Hyper-V to run SQL2K8r2, SharePoint 2010 and CRM 2011. Note: CRM 2011 is actually the only piece of software that requires a full blown domain up and running in order to do development (can’t use local users and groups) 
+2) Client Windows 7 Ultimate 64bit PC - Want to use as my Development PC
+3) Client Windows 7 Ultimate 64Bit PC - Wife’s PC 
+4) Sony PlayStation 3
+5) NetGear all in one style router/ADSL model (DGND3300v2) 
+6) Power over LAN connector
+
+Pretty happy for everything to have to log onto the domain, if it has to; assume the PS3 won’t be able to log onto the network, but it would be nice if it could still get out to the internet 
+Things that I’m a wee bit confused about:
+1) Do I need to switch off the DHCP on the router so only the DC Windows DHCP assigns IP Addresses; do I have to do this, what headaches do I avoid if I switch the router DHCP off entirely? 
+2) Should I setup DNS prior to running DCPromo
+3) Do I need 2 physical NICs on the server?
+4) What considerations/issues will I have when I run Hyper-V Virtual Network Management, is that going to stuff up my DCPromo on the host server. I need the hyper-v member server to be able to access the internet, one of the pain points I’m having at the moment.
+5) Believe Windows 2008 r2 Firewall turns off everything by default, do I need to allow the standard ports for the network. I’ve a script that allows SQL Ports on the member server that works pretty well.
+6) How do I get DNS forwarders to work in Windows 2008 DNS, I’ve tried this but whatever I do I can’t end up getting out to the internet in the host OS. 
+7) Do I need to worry about the functional level of the domain?
+
+Any help advice anyone has to offer would be really, really appreciated. If you have come across a nice blog where someone has listed all the steps out that would be fantastic. 
+
+Cheers
+Geoff",networking,windows-server-2008,home,hyper-v,,09/15/2011 13:03:35,off topic,1,416,11,"Windows 2008 r2 Domain Controller for a home LAB with Hyper-V Has anyone come across a good blog on how to setup Windows 2008 r2 Server as a domain controller running Hyper-V for a home lab network setup? 
+
+Here are the network devises I have and a run down on what I’d like to do:
+1) Server with 8GB RAM which I'd like to setup as a Windows 2008 r2 Domain Controller. I'd also like to host a Windows 2008 r2 Member Server in Hyper-V to run SQL2K8r2, SharePoint 2010 and CRM 2011. Note: CRM 2011 is actually the only piece of software that requires a full blown domain up and running in order to do development (can’t use local users and groups) 
+2) Client Windows 7 Ultimate 64bit PC - Want to use as my Development PC
+3) Client Windows 7 Ultimate 64Bit PC - Wife’s PC 
+4) Sony PlayStation 3
+5) NetGear all in one style router/ADSL model (DGND3300v2) 
+6) Power over LAN connector
+
+Pretty happy for everything to have to log onto the domain, if it has to; assume the PS3 won’t be able to log onto the network, but it would be nice if it could still get out to the internet 
+Things that I’m a wee bit confused about:
+1) Do I need to switch off the DHCP on the router so only the DC Windows DHCP assigns IP Addresses; do I have to do this, what headaches do I avoid if I switch the router DHCP off entirely? 
+2) Should I setup DNS prior to running DCPromo
+3) Do I need 2 physical NICs on the server?
+4) What considerations/issues will I have when I run Hyper-V Virtual Network Management, is that going to stuff up my DCPromo on the host server. I need the hyper-v member server to be able to access the internet, one of the pain points I’m having at the moment.
+5) Believe Windows 2008 r2 Firewall turns off everything by default, do I need to allow the standard ports for the network. I’ve a script that allows SQL Ports on the member server that works pretty well.
+6) How do I get DNS forwarders to work in Windows 2008 DNS, I’ve tried this but whatever I do I can’t end up getting out to the internet in the host OS. 
+7) Do I need to worry about the functional level of the domain?
+
+Any help advice anyone has to offer would be really, really appreciated. If you have come across a nice blog where someone has listed all the steps out that would be fantastic. 
+
+Cheers
+Geoff",4
+11238484,06/28/2012 05:22:25,566453,07/16/2010 06:27:44,18,1,Windows network identity migration?,The basic idea here is to be able to migrate the full network identity of one windows device to another. Any ideas on how to go about doing the same?,networking,migration,,,,06/28/2012 23:12:19,off topic,1,30,4,Windows network identity migration? The basic idea here is to be able to migrate the full network identity of one windows device to another. Any ideas on how to go about doing the same?,2
+10764643,05/26/2012 08:03:30,847200,07/15/2011 21:13:18,1070,30,A good way to learn to use Wireshark,"I'm new to wireshark, and I'd like to learn how to use it properly. There was a similar request [here][1], but to me it seems that it went nowhere.
+
+I'm going to use wireshark to reverse-engineer communication protocols of applications, and I'd like to see an applied sample on how to do this.
+
+I've tried to use Wireshark to reverse engeneer communication between zynga pocker client, and the server, and I run into a problem: how can I know, which packets belong to which applications?
+
+Also, can anyone recommend/write a tutorial, which concerns itself with reverse engeneering protocols?
+
+
+  [1]: http://stackoverflow.com/questions/589185/what-are-some-good-wireshark-tutorials",networking,reverse-engineering,wireshark,,,05/26/2012 11:13:36,off topic,1,98,8,"A good way to learn to use Wireshark I'm new to wireshark, and I'd like to learn how to use it properly. There was a similar request [here][1], but to me it seems that it went nowhere.
+
+I'm going to use wireshark to reverse-engineer communication protocols of applications, and I'd like to see an applied sample on how to do this.
+
+I've tried to use Wireshark to reverse engeneer communication between zynga pocker client, and the server, and I run into a problem: how can I know, which packets belong to which applications?
+
+Also, can anyone recommend/write a tutorial, which concerns itself with reverse engeneering protocols?
+
+
+  [1]: http://stackoverflow.com/questions/589185/what-are-some-good-wireshark-tutorials",3
+11500705,07/16/2012 08:37:10,573167,01/12/2011 18:21:46,163,4,How to create LAN segments in qemu,"I could successfully connect two different virtual machine ports directly using LAN segment feature in VMware workstation using the LAN segment feature.
+Is there a way to do the same on qemu ?",networking,vmware,lan,qemu,segment,07/18/2012 19:44:29,off topic,1,32,7,"How to create LAN segments in qemu I could successfully connect two different virtual machine ports directly using LAN segment feature in VMware workstation using the LAN segment feature.
+Is there a way to do the same on qemu ?",5
+6867491,07/29/2011 00:52:32,594649,01/29/2011 02:22:49,64,1,Copy file from a network group,"My teacher put a folder in school computer, then ask us to login through vpn, he also provided an adress like path:\\server.abc.edu/computing$  now i can login vpn to the school network, but wat is the meaning of path:\\server.abc.edu/computing$  what shall i do to copy the files in computing folder
+
+Thanks",networking,,,,,07/29/2011 12:05:55,off topic,1,51,6,"Copy file from a network group My teacher put a folder in school computer, then ask us to login through vpn, he also provided an adress like path:\\server.abc.edu/computing$  now i can login vpn to the school network, but wat is the meaning of path:\\server.abc.edu/computing$  what shall i do to copy the files in computing folder
+
+Thanks",1

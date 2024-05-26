@@ -1,0 +1,2883 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+2296364,02/19/2010 12:55:50,24443,10/02/2008 09:26:53,577,55,How do i create a Hibernate Criteria to order by some properties of collection,"Say, i have an entity that has a history of operations as a collection. I want to sort entities by the date of the latest operation (it's the first element of history).
+
+i'd like to do something like this:
+
+    criteria.addOrder(Order(""history[0].date""))
+
+is this possible?",hibernate,detachedcriteria,hibernate-criteria,,,,open,0,44,14,"How do i create a Hibernate Criteria to order by some properties of collection Say, i have an entity that has a history of operations as a collection. I want to sort entities by the date of the latest operation (it's the first element of history).
+
+i'd like to do something like this:
+
+    criteria.addOrder(Order(""history[0].date""))
+
+is this possible?",3
+8680390,12/30/2011 14:18:40,980889,10/05/2011 17:33:52,12,0,Java Hibernate Jsf Spring all together,"I read a lot of tutorials about Hibernate, Spring and Jsf. I want to work with all of them together. I've found a lot of tutorials on the Internet about how to use them 
+
+together but most of them doesn't give you the .jar libraries needed so (i think) this is because i put incompatible versions of the framework jars. So I thought that this is the reason of my ""errors"".
+
+
+Do you have a small example  that uses Hibernate3 + Spring3 or Jsf2.0+Spring3 or Hibernate3+Jsf or all together.
+I know Ant and I work with Eclipse but this is not a problem, I can learn Maven or other build tools.
+
+
+Thank's very much!",hibernate,spring,jsf,,,01/10/2012 03:51:58,not a real question,1,112,6,"Java Hibernate Jsf Spring all together I read a lot of tutorials about Hibernate, Spring and Jsf. I want to work with all of them together. I've found a lot of tutorials on the Internet about how to use them 
+
+together but most of them doesn't give you the .jar libraries needed so (i think) this is because i put incompatible versions of the framework jars. So I thought that this is the reason of my ""errors"".
+
+
+Do you have a small example  that uses Hibernate3 + Spring3 or Jsf2.0+Spring3 or Hibernate3+Jsf or all together.
+I know Ant and I work with Eclipse but this is not a problem, I can learn Maven or other build tools.
+
+
+Thank's very much!",3
+5129552,02/26/2011 20:30:45,455120,09/22/2010 00:58:43,60,1,@GeneratedValue(strategy = GenerationType.AUTO) not working as thought.,"I'm trying to persist an object to a database.  Keep getting 'Column ID cannot accept null value error'.  My object looks like this:
+
+    @Entity
+public class TestTable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id = 0;
+	
+	@Column(nullable=false, length=256)
+	private String data = """";
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+	
+}
+
+
+My persist function: 
+
+    	public static synchronized boolean persistObject(Object obj){
+		boolean success = true;
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		try{
+			em = getEmf().createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			em.persist(obj);
+			tx.commit();
+			
+		} catch (Exception e){
+			success = false;
+		} finally{
+			try{
+				em.close();
+			} catch(Exception e){
+				//nothing
+			}
+		}
+		return success;
+	}
+
+
+  ",hibernate,jboss,derby,,,,open,0,99,7,"@GeneratedValue(strategy = GenerationType.AUTO) not working as thought. I'm trying to persist an object to a database.  Keep getting 'Column ID cannot accept null value error'.  My object looks like this:
+
+    @Entity
+public class TestTable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id = 0;
+	
+	@Column(nullable=false, length=256)
+	private String data = """";
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+	
+}
+
+
+My persist function: 
+
+    	public static synchronized boolean persistObject(Object obj){
+		boolean success = true;
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		try{
+			em = getEmf().createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			em.persist(obj);
+			tx.commit();
+			
+		} catch (Exception e){
+			success = false;
+		} finally{
+			try{
+				em.close();
+			} catch(Exception e){
+				//nothing
+			}
+		}
+		return success;
+	}
+
+
+  ",3
+2734971,04/29/2010 05:31:04,253714,01/19/2010 04:17:58,174,0,hibernate3-maven-plugin dependencies for newer version of hibernate,"I would like to use hibernate-3.5-1.Final along with this plugin, what should be my dependencies here. It seems to be picking up a older set of jars and failing right now.
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>hibernate3-maven-plugin</artifactId>
+                    <version>2.2</version>
+                </plugin>
+
+EDIT1:
+
+    [INFO] class org.hibernate.cfg.ExtendedMappings has interface org.hibernate
+    .cfg.Mappings as super class
+    [INFO] --------------------------------------------------------------------
+    ----
+    [INFO] Trace
+    java.lang.IncompatibleClassChangeError: class org.hibernate.cfg.ExtendedMap
+    pings has interface org.hibernate.cfg.Mappings as super class
+            at java.lang.ClassLoader.defineClass1(Native Method)
+            at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
+            at java.security.SecureClassLoader.defineClass(SecureClassLoader.ja
+    va:124)
+            at java.net.URLClassLoader.defineClass(URLClassLoader.java:260)
+            at java.net.URLClassLoader.access$000(URLClassLoader.java:56)
+            at java.net.URLClassLoader$1.run(URLClassLoader.java:195)
+            at java.security.AccessController.doPrivileged(Native Method)
+            at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+            at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+            at org.codehaus.classworlds.RealmClassLoader.loadClassDirect(RealmC
+    lassLoader.java:195)
+            at org.codehaus.classworlds.DefaultClassRealm.loadClass(DefaultClas
+    sRealm.java:255)
+            at org.codehaus.classworlds.RealmClassLoader.loadClass(RealmClassLo
+    ader.java:214)
+            at java.lang.ClassLoader.loadClass(ClassLoader.java:252)
+            at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:320)
+            at org.hibernate.cfg.AnnotationConfiguration.createExtendedMappings
+    (AnnotationConfiguration.java:187)
+            at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(Anno
+    tationConfiguration.java:277)
+            at org.hibernate.cfg.Configuration.buildMappings(Configuration.java
+    :1206)
+            at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configurat
+    ion.java:1226)
+            at org.hibernate.ejb.EventListenerConfigurator.configure(EventListe
+    nerConfigurator.java:173)
+            at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.
+    java:854)
+            at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.
+    java:191)
+            at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.
+    java:253)",hibernate,maven-2,hibernate3,,,,open,0,505,7,"hibernate3-maven-plugin dependencies for newer version of hibernate I would like to use hibernate-3.5-1.Final along with this plugin, what should be my dependencies here. It seems to be picking up a older set of jars and failing right now.
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>hibernate3-maven-plugin</artifactId>
+                    <version>2.2</version>
+                </plugin>
+
+EDIT1:
+
+    [INFO] class org.hibernate.cfg.ExtendedMappings has interface org.hibernate
+    .cfg.Mappings as super class
+    [INFO] --------------------------------------------------------------------
+    ----
+    [INFO] Trace
+    java.lang.IncompatibleClassChangeError: class org.hibernate.cfg.ExtendedMap
+    pings has interface org.hibernate.cfg.Mappings as super class
+            at java.lang.ClassLoader.defineClass1(Native Method)
+            at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
+            at java.security.SecureClassLoader.defineClass(SecureClassLoader.ja
+    va:124)
+            at java.net.URLClassLoader.defineClass(URLClassLoader.java:260)
+            at java.net.URLClassLoader.access$000(URLClassLoader.java:56)
+            at java.net.URLClassLoader$1.run(URLClassLoader.java:195)
+            at java.security.AccessController.doPrivileged(Native Method)
+            at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+            at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+            at org.codehaus.classworlds.RealmClassLoader.loadClassDirect(RealmC
+    lassLoader.java:195)
+            at org.codehaus.classworlds.DefaultClassRealm.loadClass(DefaultClas
+    sRealm.java:255)
+            at org.codehaus.classworlds.RealmClassLoader.loadClass(RealmClassLo
+    ader.java:214)
+            at java.lang.ClassLoader.loadClass(ClassLoader.java:252)
+            at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:320)
+            at org.hibernate.cfg.AnnotationConfiguration.createExtendedMappings
+    (AnnotationConfiguration.java:187)
+            at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(Anno
+    tationConfiguration.java:277)
+            at org.hibernate.cfg.Configuration.buildMappings(Configuration.java
+    :1206)
+            at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configurat
+    ion.java:1226)
+            at org.hibernate.ejb.EventListenerConfigurator.configure(EventListe
+    nerConfigurator.java:173)
+            at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.
+    java:854)
+            at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.
+    java:191)
+            at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.
+    java:253)",3
+2521519,03/26/2010 06:43:11,260654,01/28/2010 04:50:41,90,0,Example for creating a configuration,"i am facing some difficulties in creating a session. Can anyone provide me an example or link where a configuration is created by using an external file by giving url,like 
+
+Configuration config = new Configuration.configure(url);
+the cinfig file is in another hibernate project.
+is there anything that i should add to classpath or store the config file. My app is just getting hanged there at that statement.Help",hibernate,java,,,,,open,0,65,5,"Example for creating a configuration i am facing some difficulties in creating a session. Can anyone provide me an example or link where a configuration is created by using an external file by giving url,like 
+
+Configuration config = new Configuration.configure(url);
+the cinfig file is in another hibernate project.
+is there anything that i should add to classpath or store the config file. My app is just getting hanged there at that statement.Help",2
+8492173,12/13/2011 15:58:06,1095694,12/13/2011 12:05:12,1,0,Cannot initialize context because there is already a root application context present,"My project uses tapestry 5.3.0,spring 3.0.6.RELEASE,hibernate 3.6.8.FINAL and maven.When
+I intruct jetty to start the project with mvn jetty:run, I get the following:
+
+    2011-12-13 16:15:42.947:WARN::failed app: java.lang.RuntimeException: Exception     constructing service 'ApplicationContext': Cannot initialize context because there is  already a root application context present - check whether you have multiple ContextLoader*  definitions in your web.xml!
+    2011-12-13 16:15:42.948:WARN::Failed startup of context  org.mortbay.jetty.plugin.Jetty6PluginWebAppContext@98062f{/projektni,/home/borislav/eclipse_ workspace/web_apps/projektni/src/main/webapp}
+    java.lang.RuntimeException: Exception constructing service 'ApplicationContext': Cannot  initialize context because there is already a root application context present - check  whether you have multiple ContextLoader* definitions in your web.xml!
+    at  org.apache.tapestry5.ioc.internal.services.JustInTimeObjectCreator.obtainObjectFromCreator(J ustInTimeObjectCreator.java:78)
+    at   org.apache.tapestry5.ioc.internal.services.JustInTimeObjectCreator.createObject(JustInTimeOb jectCreator.java:56)
+    at $ConfigurableWebApplicationContext_10f23e440970.delegate(Unknown Source)
+    at $ConfigurableWebApplicationContext_10f23e440970.getBeanDefinitionCount(Unknown  Source)
+    at  org.apache.tapestry5.spring.SpringModule$1.initializeApplication(SpringModule.java:58)
+    at $ApplicationInitializer_10f23e440987.initializeApplication(Unknown Source)
+    at  org.apache.tapestry5.services.TapestryModule$39.initializeApplication(TapestryModule.java:25 55)
+    at $ApplicationInitializer_10f23e440987.initializeApplication(Unknown Source)
+    at $ApplicationInitializer_10f23e440983.initializeApplication(Unknown Source)
+    at  org.apache.tapestry5.services.TapestryModule$ServletApplicationInitializerTerminator.initial izeApplication(TapestryModule.java:411)
+    at $ServletApplicationInitializer_10f23e440969.initializeApplication(Unknown Source)
+    at org.apache.tapestry5.TapestryFilter.init(TapestryFilter.java:102)
+    at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+    at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+    at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+    at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+    at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+    at  org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:11 5)
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+    at  org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156 )
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+    at org.mortbay.jetty.Server.doStart(Server.java:224)
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+    at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:454)
+    at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:396)
+    at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+    at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+    at    org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java :107)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+    at  org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuild er.java:84)
+    at  org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuild er.java:59)
+    at  org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.ja va:183)
+    at  org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+    at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:319)
+    at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+    at org.apache.maven.cli.MavenCli.execute(MavenCli.java:534)
+    at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+    at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:616)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+    2011-12-13 16:15:43.009:INFO::Started SelectChannelConnector@0.0.0.0:8080[INFO] 
+    Started Jetty Server
+
+Web.xml looks like this:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <!DOCTYPE web-app
+        PUBLIC ""-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN""
+        ""http://java.sun.com/dtd/web-app_2_3.dtd"">
+    <web-app>
+	<display-name>projektni Tapestry 5 Application</display-name>
+
+	<context-param>
+		<!-- The only significant configuration for Tapestry 5, this informs Tapestry 
+			of where to look for pages, components and mixins. -->
+		<param-name>tapestry.app-package</param-name>
+		<param-value>org.prikic.projektni</param-value>
+	</context-param>
+	<!-- Specify some additional Modules for two different execution modes: 
+		development and qa. Remember that the default execution mode is production -->
+	<context-param>
+		<param-name>tapestry.development-modules</param-name>
+		<param-value>
+			org.prikic.projektni.services.DevelopmentModule
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>tapestry.qa-modules</param-name>
+		<param-value>
+			org.prikic.projektni.services.QaModule
+		</param-value>
+	</context-param>
+
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+
+			<!-- /WEB-INF/application_context_dao.xml -->
+			<!--  /WEB-INF/application_context*.xml -->
+			classpath:application_context*.xml
+			
+		</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>app</filter-name>
+		<!-- Special filter that adds in a T5 IoC module derived from the Spring 
+			WebApplicationContext. -->
+		<filter-class>org.apache.tapestry5.spring.TapestrySpringFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>app</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<listener> <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> 
+		</listener> 
+
+	<!-- <servlet>
+		<servlet-name>context</servlet-name>
+		<servlet-class>org.springframework.web.context.ContextLoaderServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>  -->
+
+	<welcome-file-list>
+		<welcome-file>Index</welcome-file>
+	</welcome-file-list>
+
+</web-app>
+
+If you need anything else of the source code files,tell me and I'll post them
+
+Ideas,anyone?",hibernate,spring,maven,jetty,tapestry,,open,0,551,12,"Cannot initialize context because there is already a root application context present My project uses tapestry 5.3.0,spring 3.0.6.RELEASE,hibernate 3.6.8.FINAL and maven.When
+I intruct jetty to start the project with mvn jetty:run, I get the following:
+
+    2011-12-13 16:15:42.947:WARN::failed app: java.lang.RuntimeException: Exception     constructing service 'ApplicationContext': Cannot initialize context because there is  already a root application context present - check whether you have multiple ContextLoader*  definitions in your web.xml!
+    2011-12-13 16:15:42.948:WARN::Failed startup of context  org.mortbay.jetty.plugin.Jetty6PluginWebAppContext@98062f{/projektni,/home/borislav/eclipse_ workspace/web_apps/projektni/src/main/webapp}
+    java.lang.RuntimeException: Exception constructing service 'ApplicationContext': Cannot  initialize context because there is already a root application context present - check  whether you have multiple ContextLoader* definitions in your web.xml!
+    at  org.apache.tapestry5.ioc.internal.services.JustInTimeObjectCreator.obtainObjectFromCreator(J ustInTimeObjectCreator.java:78)
+    at   org.apache.tapestry5.ioc.internal.services.JustInTimeObjectCreator.createObject(JustInTimeOb jectCreator.java:56)
+    at $ConfigurableWebApplicationContext_10f23e440970.delegate(Unknown Source)
+    at $ConfigurableWebApplicationContext_10f23e440970.getBeanDefinitionCount(Unknown  Source)
+    at  org.apache.tapestry5.spring.SpringModule$1.initializeApplication(SpringModule.java:58)
+    at $ApplicationInitializer_10f23e440987.initializeApplication(Unknown Source)
+    at  org.apache.tapestry5.services.TapestryModule$39.initializeApplication(TapestryModule.java:25 55)
+    at $ApplicationInitializer_10f23e440987.initializeApplication(Unknown Source)
+    at $ApplicationInitializer_10f23e440983.initializeApplication(Unknown Source)
+    at  org.apache.tapestry5.services.TapestryModule$ServletApplicationInitializerTerminator.initial izeApplication(TapestryModule.java:411)
+    at $ServletApplicationInitializer_10f23e440969.initializeApplication(Unknown Source)
+    at org.apache.tapestry5.TapestryFilter.init(TapestryFilter.java:102)
+    at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+    at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+    at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+    at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+    at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+    at  org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:11 5)
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+    at  org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156 )
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+    at org.mortbay.jetty.Server.doStart(Server.java:224)
+    at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+    at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+    at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:454)
+    at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:396)
+    at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+    at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+    at    org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java :107)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+    at  org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuild er.java:84)
+    at  org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuild er.java:59)
+    at  org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.ja va:183)
+    at  org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+    at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:319)
+    at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+    at org.apache.maven.cli.MavenCli.execute(MavenCli.java:534)
+    at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+    at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:616)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+    2011-12-13 16:15:43.009:INFO::Started SelectChannelConnector@0.0.0.0:8080[INFO] 
+    Started Jetty Server
+
+Web.xml looks like this:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <!DOCTYPE web-app
+        PUBLIC ""-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN""
+        ""http://java.sun.com/dtd/web-app_2_3.dtd"">
+    <web-app>
+	<display-name>projektni Tapestry 5 Application</display-name>
+
+	<context-param>
+		<!-- The only significant configuration for Tapestry 5, this informs Tapestry 
+			of where to look for pages, components and mixins. -->
+		<param-name>tapestry.app-package</param-name>
+		<param-value>org.prikic.projektni</param-value>
+	</context-param>
+	<!-- Specify some additional Modules for two different execution modes: 
+		development and qa. Remember that the default execution mode is production -->
+	<context-param>
+		<param-name>tapestry.development-modules</param-name>
+		<param-value>
+			org.prikic.projektni.services.DevelopmentModule
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>tapestry.qa-modules</param-name>
+		<param-value>
+			org.prikic.projektni.services.QaModule
+		</param-value>
+	</context-param>
+
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+
+			<!-- /WEB-INF/application_context_dao.xml -->
+			<!--  /WEB-INF/application_context*.xml -->
+			classpath:application_context*.xml
+			
+		</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>app</filter-name>
+		<!-- Special filter that adds in a T5 IoC module derived from the Spring 
+			WebApplicationContext. -->
+		<filter-class>org.apache.tapestry5.spring.TapestrySpringFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>app</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<listener> <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> 
+		</listener> 
+
+	<!-- <servlet>
+		<servlet-name>context</servlet-name>
+		<servlet-class>org.springframework.web.context.ContextLoaderServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>  -->
+
+	<welcome-file-list>
+		<welcome-file>Index</welcome-file>
+	</welcome-file-list>
+
+</web-app>
+
+If you need anything else of the source code files,tell me and I'll post them
+
+Ideas,anyone?",5
+3569860,08/25/2010 20:14:15,431159,08/25/2010 20:14:14,1,0,"Two queries instead of one, when using LockOption.UPGRADE","I have two entities with one-directional OneToOne relationship. EAGER fetch type is specified.
+When I load parent entity by id, one sql inner join query is executed. This is right behavior.
+But when I specify LockOption.UPGRADE, the parent and child entities are loaded in two different queries instead of one. Why this happens?",hibernate,,,,,,open,0,51,8,"Two queries instead of one, when using LockOption.UPGRADE I have two entities with one-directional OneToOne relationship. EAGER fetch type is specified.
+When I load parent entity by id, one sql inner join query is executed. This is right behavior.
+But when I specify LockOption.UPGRADE, the parent and child entities are loaded in two different queries instead of one. Why this happens?",1
+7503615,09/21/2011 16:53:58,569825,01/10/2011 12:29:03,133,7,Should I convert my Grails domain relations to use Hibernate Bags?,"In **Grails 1.3.7** I've spent quite some time to convert my domain class relations according to Burt's suggestions in http://www.infoq.com/presentations/GORM-Performance
+
+Now, **Grails 2** supports Hibernate's Bags and I am considering to revert my changes back to `hasMany`/`belongsTo`.
+
+ 1. **With which option will I be more future-proof?**
+ 2. **Which problems might arise if I stick to the manual/explicit implementation?**
+ 3. **Which problems might arise if I switch to Bags?**
+
+*Note that the application will see long-term improvements over many years (so no 'deploy-and-forget' :).*",hibernate,grails,persistence,gorm,grails-domain-class,09/22/2011 14:06:40,not a real question,1,81,11,"Should I convert my Grails domain relations to use Hibernate Bags? In **Grails 1.3.7** I've spent quite some time to convert my domain class relations according to Burt's suggestions in http://www.infoq.com/presentations/GORM-Performance
+
+Now, **Grails 2** supports Hibernate's Bags and I am considering to revert my changes back to `hasMany`/`belongsTo`.
+
+ 1. **With which option will I be more future-proof?**
+ 2. **Which problems might arise if I stick to the manual/explicit implementation?**
+ 3. **Which problems might arise if I switch to Bags?**
+
+*Note that the application will see long-term improvements over many years (so no 'deploy-and-forget' :).*",5
+7347240,09/08/2011 11:21:10,934672,09/08/2011 11:21:10,1,0,Not in clause in Hibernate,"How do I achieve something like -->
+
+    Select sm.memCd, sm.entityName from MemberSBandAP sm 
+    where sm.memStatus='Active' and  sm.entityType='M'  
+    and  sm.memCd not in (select l.userName from Login l) 
+    order by sm.entityName DESC, sm.memCd""
+
+
+basically how do I write a not in clause in hibernate? 
+
+I was referring to [this tutorial section 14.10 Expressions ][1]
+
+
+  [1]: http://docs.jboss.org/hibernate/core/3.3/reference/en/html/queryhql.html
+
+in there they say that a not in can be directly used in the query string, but the query is not returning any records. Goggled for other examples but most of the places it says that we need to criteria class. Is it really required? Can't we directly write a sub query and use not in? Any help will be greatly appreciated.
+
+
+Thanks in advance
+
+Sweta",hibernate,hql,,,,,open,0,135,5,"Not in clause in Hibernate How do I achieve something like -->
+
+    Select sm.memCd, sm.entityName from MemberSBandAP sm 
+    where sm.memStatus='Active' and  sm.entityType='M'  
+    and  sm.memCd not in (select l.userName from Login l) 
+    order by sm.entityName DESC, sm.memCd""
+
+
+basically how do I write a not in clause in hibernate? 
+
+I was referring to [this tutorial section 14.10 Expressions ][1]
+
+
+  [1]: http://docs.jboss.org/hibernate/core/3.3/reference/en/html/queryhql.html
+
+in there they say that a not in can be directly used in the query string, but the query is not returning any records. Goggled for other examples but most of the places it says that we need to criteria class. Is it really required? Can't we directly write a sub query and use not in? Any help will be greatly appreciated.
+
+
+Thanks in advance
+
+Sweta",2
+8574037,12/20/2011 10:30:03,1101334,12/16/2011 06:01:00,9,4,hibernate vs struts2,"Please clarify me regarding the needs to migrate from **struts2** to **hibernate** or the vice-versa.. Under what requirement should one choose between those technologies.
+
+Thanks in advance",hibernate,struts2,,,,12/24/2011 01:37:49,not a real question,1,26,3,"hibernate vs struts2 Please clarify me regarding the needs to migrate from **struts2** to **hibernate** or the vice-versa.. Under what requirement should one choose between those technologies.
+
+Thanks in advance",2
+4464928,12/16/2010 20:12:16,258109,01/25/2010 02:28:15,20,0,"With log4j, is it possible to hide JDBC returned column values with org.hibernate.type TRACE logging enabled?","I'm tracking Hibernate's generated SQL statements and their bound parameters using log4j on a Seam Framework project. Currently I have the below configuration:
+
+**jboss-log4j.xml**:
+<pre>
+&lt;log4j:configuration xmlns:log4j=""http://jakarta.apache.org/log4j/"" debug=""false""&gt;
+
+...
+
+   &lt;appender name=""SQL"" class=""org.jboss.logging.appender.DailyRollingFileAppender""&gt;
+      &lt;errorHandler class=""org.jboss.logging.util.OnlyOnceErrorHandler""/&gt;
+      &lt;param name=""File"" value=""${jboss.server.log.dir}/sql.log""/&gt;
+      &lt;param name=""Append"" value=""true""/&gt;
+      &lt;layout class=""org.apache.log4j.PatternLayout""&gt;
+         &lt;param name=""ConversionPattern"" value=""%d{ABSOLUTE} [%c{1}] %X{username} %m%n""/&gt;
+      &lt;/layout&gt;
+   &lt;/appender&gt;
+
+   &lt;category name=""org.hibernate""&gt;
+       &lt;priority value=""INFO""/&gt;
+       &lt;appender-ref ref=""SQL""/&gt;
+   &lt;/category&gt;
+
+   &lt;category name=""org.hibernate.SQL"" additivity=""false""&gt;
+       &lt;priority value=""DEBUG""/&gt;
+       &lt;appender-ref ref=""SQL""/&gt;
+   &lt;/category&gt;
+
+   &lt;category name=""org.hibernate.HQL"" additivity=""false""&gt;
+       &lt;priority value=""DEBUG""/&gt;
+       &lt;appender-ref ref=""SQL""/&gt;
+   &lt;/category&gt;
+
+   &lt;category name=""org.hibernate.type"" additivity=""false""&gt;
+       &lt;priority value=""TRACE""/&gt;
+       &lt;appender-ref ref=""SQL""/&gt;
+   &lt;/category&gt;
+
+&lt;/log4j:configuration&gt;
+</pre>
+
+The problem is the generated sql.log file becomes too unwieldy as at least 100k of text is appended to the log on each page visit. I would like to filter out the JDBC messages for ""returning <value> as column <column>"" but can't find such an option in Hibernate or log4j's documentation. Removing these lines using a manual scripting process isn't desirable since I want to reduce disk reads/writes on the web server.
+
+Is it possible to stop these returned JDBC values from being added to the log file while keeping the parameter value bindings?",hibernate,jdbc,log4j,,,,open,0,270,16,"With log4j, is it possible to hide JDBC returned column values with org.hibernate.type TRACE logging enabled? I'm tracking Hibernate's generated SQL statements and their bound parameters using log4j on a Seam Framework project. Currently I have the below configuration:
+
+**jboss-log4j.xml**:
+<pre>
+&lt;log4j:configuration xmlns:log4j=""http://jakarta.apache.org/log4j/"" debug=""false""&gt;
+
+...
+
+   &lt;appender name=""SQL"" class=""org.jboss.logging.appender.DailyRollingFileAppender""&gt;
+      &lt;errorHandler class=""org.jboss.logging.util.OnlyOnceErrorHandler""/&gt;
+      &lt;param name=""File"" value=""${jboss.server.log.dir}/sql.log""/&gt;
+      &lt;param name=""Append"" value=""true""/&gt;
+      &lt;layout class=""org.apache.log4j.PatternLayout""&gt;
+         &lt;param name=""ConversionPattern"" value=""%d{ABSOLUTE} [%c{1}] %X{username} %m%n""/&gt;
+      &lt;/layout&gt;
+   &lt;/appender&gt;
+
+   &lt;category name=""org.hibernate""&gt;
+       &lt;priority value=""INFO""/&gt;
+       &lt;appender-ref ref=""SQL""/&gt;
+   &lt;/category&gt;
+
+   &lt;category name=""org.hibernate.SQL"" additivity=""false""&gt;
+       &lt;priority value=""DEBUG""/&gt;
+       &lt;appender-ref ref=""SQL""/&gt;
+   &lt;/category&gt;
+
+   &lt;category name=""org.hibernate.HQL"" additivity=""false""&gt;
+       &lt;priority value=""DEBUG""/&gt;
+       &lt;appender-ref ref=""SQL""/&gt;
+   &lt;/category&gt;
+
+   &lt;category name=""org.hibernate.type"" additivity=""false""&gt;
+       &lt;priority value=""TRACE""/&gt;
+       &lt;appender-ref ref=""SQL""/&gt;
+   &lt;/category&gt;
+
+&lt;/log4j:configuration&gt;
+</pre>
+
+The problem is the generated sql.log file becomes too unwieldy as at least 100k of text is appended to the log on each page visit. I would like to filter out the JDBC messages for ""returning <value> as column <column>"" but can't find such an option in Hibernate or log4j's documentation. Removing these lines using a manual scripting process isn't desirable since I want to reduce disk reads/writes on the web server.
+
+Is it possible to stop these returned JDBC values from being added to the log file while keeping the parameter value bindings?",3
+2784629,05/06/2010 21:25:32,135630,07/09/2009 12:53:32,31,1,Hibernate: update on parent-child relationship causes duplicate children,"I have a parent child relationship in which the parent has a collection of children (a set to be specific). The child collection is setup with cascade=""all-delete-orphan"". When I initially save the parent element everything works as expected. However, when I update the parent and save again, all the children are re-saved.
+
+This behavior leads me to believe that the parent is losing its reference to the collection of children, and therefore when persisting all the children are re-saved. It seems the only way to fix this is to not use the setter method of this child collection, but unfortunately this setter is called implicitly in my application (Spring MVC is used to bind a multi-select form element to this collection, and the setter is called by spring on the form submission). Overwriting this setter to not lose the reference (ie, do a colleciton.clear() and collection.addAll(newCollection) rather than collection = newCollection) is apparently a hibernate no-no, as is pointed out here: https://forum.hibernate.org/viewtopic.php?t=956859
+
+Does anyone know how to circumvent this problem? I've posted some of my code below.
+
+The parent hibernate configuration:
+
+	<hibernate-mapping package=""org.fstrf.masterpk.domain"">
+	<class name=""ReportCriteriaBean"" table=""masterPkReportCriteria"">
+		
+		<id name=""id"" column=""id"">
+			<generator class=""org.hibernate.id.IncrementGenerator"" />
+		</id>
+	
+		<set name=""treatmentArms"" table=""masterPkTreatmentArms"" 
+			 sort=""org.fstrf.masterpk.domain.RxCodeComparator"" lazy=""false"" cascade=""all-delete-orphan"" inverse=""true"">
+			<key column=""runid""/>
+			<one-to-many class=""TreatmentArm""/>
+		</set>
+	</class>
+	</hibernate-mapping>
+
+The parent object:
+
+	public class ReportCriteriaBean{
+	
+		private Integer id;
+		private Set<TreatmentArm> treatmentArms;
+	
+		public Integer getId() {
+			return id;
+		}
+		public void setId(Integer id) {
+			this.id = id;
+		}
+		
+		public Set<TreatmentArm> getTreatmentArms() {
+			return treatmentArms;
+		}
+		public void setTreatmentArms(Set<TreatmentArm> treatmentArms) {
+			this.treatmentArms = treatmentArms;
+			if(this.treatmentArms != null){
+			for(TreatmentArm treatmentArm : this.treatmentArms){
+				treatmentArm.setReportCriteriaBean(this);
+			}
+		}
+	}
+
+The child hibernate configuration:
+
+	<hibernate-mapping package=""org.fstrf.masterpk.domain"">
+		<class name=""TreatmentArm"" table=""masterPkTreatmentArms"">
+			<id name=""id"" column=""id"">
+				<generator class=""org.hibernate.id.IncrementGenerator"" />
+			</id>
+			
+			<many-to-one name=""reportCriteriaBean"" class=""ReportCriteriaBean"" column=""runId"" not-null=""true"" />
+			
+			<property name=""rxCode"" column=""rxCode"" not-null=""true""/>
+		</class>
+	</hibernate-mapping>
+
+The child object:
+
+	public class TreatmentArm {
+	
+		private Integer id;
+		private ReportCriteriaBean reportCriteriaBean;
+		private String rxCode;
+		
+		public Integer getId() {
+			return id;
+		}
+		public void setId(Integer id) {
+			this.id = id;
+		}
+		public ReportCriteriaBean getReportCriteriaBean() {
+			return reportCriteriaBean;
+		}
+		public void setReportCriteriaBean(ReportCriteriaBean reportCriteriaBean) {
+			this.reportCriteriaBean = reportCriteriaBean;
+		}
+		public String getRxCode() {
+			return rxCode;
+		}
+		public void setRxCode(String rxCode) {
+			this.rxCode = rxCode;
+		}
+	}
+",hibernate,spring-mvc,,,,,open,0,286,8,"Hibernate: update on parent-child relationship causes duplicate children I have a parent child relationship in which the parent has a collection of children (a set to be specific). The child collection is setup with cascade=""all-delete-orphan"". When I initially save the parent element everything works as expected. However, when I update the parent and save again, all the children are re-saved.
+
+This behavior leads me to believe that the parent is losing its reference to the collection of children, and therefore when persisting all the children are re-saved. It seems the only way to fix this is to not use the setter method of this child collection, but unfortunately this setter is called implicitly in my application (Spring MVC is used to bind a multi-select form element to this collection, and the setter is called by spring on the form submission). Overwriting this setter to not lose the reference (ie, do a colleciton.clear() and collection.addAll(newCollection) rather than collection = newCollection) is apparently a hibernate no-no, as is pointed out here: https://forum.hibernate.org/viewtopic.php?t=956859
+
+Does anyone know how to circumvent this problem? I've posted some of my code below.
+
+The parent hibernate configuration:
+
+	<hibernate-mapping package=""org.fstrf.masterpk.domain"">
+	<class name=""ReportCriteriaBean"" table=""masterPkReportCriteria"">
+		
+		<id name=""id"" column=""id"">
+			<generator class=""org.hibernate.id.IncrementGenerator"" />
+		</id>
+	
+		<set name=""treatmentArms"" table=""masterPkTreatmentArms"" 
+			 sort=""org.fstrf.masterpk.domain.RxCodeComparator"" lazy=""false"" cascade=""all-delete-orphan"" inverse=""true"">
+			<key column=""runid""/>
+			<one-to-many class=""TreatmentArm""/>
+		</set>
+	</class>
+	</hibernate-mapping>
+
+The parent object:
+
+	public class ReportCriteriaBean{
+	
+		private Integer id;
+		private Set<TreatmentArm> treatmentArms;
+	
+		public Integer getId() {
+			return id;
+		}
+		public void setId(Integer id) {
+			this.id = id;
+		}
+		
+		public Set<TreatmentArm> getTreatmentArms() {
+			return treatmentArms;
+		}
+		public void setTreatmentArms(Set<TreatmentArm> treatmentArms) {
+			this.treatmentArms = treatmentArms;
+			if(this.treatmentArms != null){
+			for(TreatmentArm treatmentArm : this.treatmentArms){
+				treatmentArm.setReportCriteriaBean(this);
+			}
+		}
+	}
+
+The child hibernate configuration:
+
+	<hibernate-mapping package=""org.fstrf.masterpk.domain"">
+		<class name=""TreatmentArm"" table=""masterPkTreatmentArms"">
+			<id name=""id"" column=""id"">
+				<generator class=""org.hibernate.id.IncrementGenerator"" />
+			</id>
+			
+			<many-to-one name=""reportCriteriaBean"" class=""ReportCriteriaBean"" column=""runId"" not-null=""true"" />
+			
+			<property name=""rxCode"" column=""rxCode"" not-null=""true""/>
+		</class>
+	</hibernate-mapping>
+
+The child object:
+
+	public class TreatmentArm {
+	
+		private Integer id;
+		private ReportCriteriaBean reportCriteriaBean;
+		private String rxCode;
+		
+		public Integer getId() {
+			return id;
+		}
+		public void setId(Integer id) {
+			this.id = id;
+		}
+		public ReportCriteriaBean getReportCriteriaBean() {
+			return reportCriteriaBean;
+		}
+		public void setReportCriteriaBean(ReportCriteriaBean reportCriteriaBean) {
+			this.reportCriteriaBean = reportCriteriaBean;
+		}
+		public String getRxCode() {
+			return rxCode;
+		}
+		public void setRxCode(String rxCode) {
+			this.rxCode = rxCode;
+		}
+	}
+",2
+10321761,04/25/2012 18:37:19,396812,07/20/2010 12:50:52,1,0,Starting new JEE project,"I was hoping to get a bit of an insight into where JEE dev has headed in the past few months. I've been out for 6 months and the last project I worked on was JBoss 5/hibernate 3/spring and flex but those design decisions were made over 2.5 years ago now. We reverse engineered the model using a hibernate tool. I'm looking to rapidly prototype up a small project and was wondering if any new more useful tools have emerged that help ramp up a new project in the JEE area. I'd prefer to remain within the same web stack if possible. Any instruction would be really appreciated. 
+
+Thanks,
+Mark.",hibernate,java-ee,model,,,04/26/2012 05:57:52,off topic,1,109,4,"Starting new JEE project I was hoping to get a bit of an insight into where JEE dev has headed in the past few months. I've been out for 6 months and the last project I worked on was JBoss 5/hibernate 3/spring and flex but those design decisions were made over 2.5 years ago now. We reverse engineered the model using a hibernate tool. I'm looking to rapidly prototype up a small project and was wondering if any new more useful tools have emerged that help ramp up a new project in the JEE area. I'd prefer to remain within the same web stack if possible. Any instruction would be really appreciated. 
+
+Thanks,
+Mark.",3
+8695017,01/01/2012 19:33:53,1125337,01/01/2012 19:13:58,1,0,Need suggestion for some e books on JEE frameworks,"I m comfortable with JSE, have also done some raw JEE (JSP & Servlet). And now I m entering the real development world. I need to learn some frameworks. Suggest me good resources for effectively learn Spring, Struts2 & Hibernate. I m focusing on web base app development using MVC paradigm.
+
+Suggest me some good ebooks which  both clearly explain underlying concepts and with practical guides (with torrent or direct links if possible!) ",hibernate,spring,mvc,struts2,ebook,01/01/2012 20:08:14,not constructive,1,74,9,"Need suggestion for some e books on JEE frameworks I m comfortable with JSE, have also done some raw JEE (JSP & Servlet). And now I m entering the real development world. I need to learn some frameworks. Suggest me good resources for effectively learn Spring, Struts2 & Hibernate. I m focusing on web base app development using MVC paradigm.
+
+Suggest me some good ebooks which  both clearly explain underlying concepts and with practical guides (with torrent or direct links if possible!) ",5
+7789192,10/17/2011 03:50:04,856877,07/21/2011 21:20:33,44,2,Error in mapping hibernate call using annotations,"I am getting this ewrror. 
+
+    Oct 15, 2011 6:30:11 PM org.apache.catalina.core.StandardWrapperValve invoke
+    SEVERE: Servlet.service() for servlet [appServlet] in context with path [/AdministrativeApplication] threw exception [Request processing failed; nested exception is org.hibernate.hql.ast.QuerySyntaxException: tbluser is not mapped [FROM  tbluser]] with root cause
+    org.hibernate.hql.ast.QuerySyntaxException: tbluser is not mapped [FROM  tbluser]
+    	at org.hibernate.hql.ast.util.SessionFactoryHelper.requireClassPersister(SessionFactoryHelper.java:180)
+
+The way I use the hibernate annotation class is as follows.
+
+
+    package test.user;
+    
+    import java.io.Serializable;
+    import java.sql.Date;
+    
+    import javax.persistence.Entity;
+    import javax.persistence.GeneratedValue;
+    import javax.persistence.Id;
+    import javax.persistence.Table;
+    import javax.persistence.Column;
+    import javax.persistence.GenerationType;
+    import javax.validation.constraints.Size;
+    
+    import org.hibernate.validator.constraints.NotEmpty;
+    import org.springframework.beans.factory.annotation.Autowired;
+    /**
+     * For a complete reference see
+     * <a href=""http://docs.jboss.org/hibernate/stable/annotations/reference/en/html_single/"">
+     * Hibernate Annotations Communit Documentations</a>
+     */
+    @Entity
+    @Table(name = ""tbluser"")
+    public class User implements Serializable{
+    
+    	
+    	@Column
+    private String password;
+    	@Column
+    private String firstName;
+    	@Column
+    private String middleName;
+    	@Column
+    private String lastName;
+    	@Column
+    	private String emailAddress;
+    	@Column
+    	private Date lastLoginDate;
+    		
+    /**
+    	 * @return the emailAddress
+    	 */
+    	public String getEmailAddress() {
+    		return emailAddress;
+    	}
+    	/**
+    	 * @param emailAddress the emailAddress to set
+    	 */
+    	public void setEmailAddress(String emailAddress) {
+    		this.emailAddress = emailAddress;
+    	}
+    	/**
+    	 * @return the lastLoginDate
+    	 */
+    	public Date getLastLoginDate() {
+    		return lastLoginDate;
+    	}
+    	/**
+    	 * @param lastLoginDate the lastLoginDate to set
+    	 */
+    	public void setLastLoginDate(Date lastLoginDate) {
+    		this.lastLoginDate = lastLoginDate;
+    	}
+    @Id
+    @NotEmpty
+    @Column(name=""userId"")
+    private String userId;
+
+
+
+
+
+
+    import java.util.List;
+     
+    import javax.annotation.Resource;
+     
+    import org.apache.log4j.Logger;
+    import org.hibernate.Query;
+    import org.hibernate.Session;
+    import org.hibernate.SessionFactory;
+    import org.springframework.stereotype.Service;
+    import org.springframework.transaction.annotation.Transactional;
+    import org.swamahiman.apps.user.User;
+     
+    /**
+     * Service for processing Users
+     *
+     */
+    @Service(""userService"")
+    @Transactional
+    public class UserService {
+     
+     protected static Logger logger = Logger.getLogger(""service"");
+      
+     @Resource(name=""sessionFactory"")
+     private SessionFactory sessionFactory;
+      
+     /**
+      * Retrieves all Users
+      *
+      * @return a list of Users
+      */
+     public List<User> getAll() {
+      logger.debug(""Retrieving all Users"");
+       
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Create a Hibernate query (HQL)
+      Query query = session.createQuery(""FROM  tbluser"");
+       
+      // Retrieve all
+      return  query.list();
+     }
+      
+     /**
+      * Retrieves a single User
+      */
+     public User get( Integer id ) {
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Retrieve existing User first
+      User User = (User) session.get(User.class, id);
+       
+      return User;
+     }
+     /**
+      * Adds a new User
+      */
+     public void add(User User) {
+      logger.debug(""Adding new User"");
+       
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Save
+      session.save(User);
+     }
+      
+     /**
+      * Deletes an existing User
+      * @param id the id of the existing User
+      */
+     public void delete(Integer id) {
+      logger.debug(""Deleting existing User"");
+       
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Retrieve existing User first
+      User User = (User) session.get(User.class, id);
+       
+      // Delete
+      session.delete(User);
+     }
+      
+     /**
+      * Edits an existing User
+      */
+     public void edit(User User) {
+      logger.debug(""Editing existing User"");
+       
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Retrieve existing User via id
+      User existingUser = (User) session.get(User.class, User.getUserId());
+       
+      // Assign updated values to this User
+      existingUser.setFirstName(User.getFirstName());
+      existingUser.setLastName(existingUser.getLastName());
+      existingUser.setPassword(existingUser.getPassword());
+     
+      // Save updates
+      session.save(existingUser);
+     }
+    }
+
+
+
+and this is the way I invoke the hibernate calls. 
+
+    	    @RequestMapping(value=""/home"" , method = RequestMethod.GET)
+    	//@ModelAttribute(""user"")
+    	    public String process(@ModelAttribute(""user"") User user,
+    BindingResult result, Model model){
+    	   // public String get(final ModelMap model) {
+    	    	System.out.println(""inside here get returning model .."");
+    		     List<User> users = userService.getAll();
+    		      User userObj= null;
+    		     // Attach users to the Model
+    		     //model.addAttribute(""users"", users);
+    		    Iterator<User> iterate= users.iterator();
+    		    while(iterate.hasNext()) {
+    		    	userObj=iterate.next();
+    		    	if (userObj.getUserId().equals(""sjoe"")){
+    		    		break;
+    		    	}
+    		    	
+    		    }
+    		    
+    	  model.addAttribute(""user"", userObj);
+       return ""home"";
+    	    }
+
+My tbluser tables has. 
+
+firstName
+lastName
+middleName
+lastLoginUpdate
+password
+userId fields. 
+
+Thanks
+
+Dhiren
+
+
+
+",hibernate,spring-mvc,,,,,open,0,1422,7,"Error in mapping hibernate call using annotations I am getting this ewrror. 
+
+    Oct 15, 2011 6:30:11 PM org.apache.catalina.core.StandardWrapperValve invoke
+    SEVERE: Servlet.service() for servlet [appServlet] in context with path [/AdministrativeApplication] threw exception [Request processing failed; nested exception is org.hibernate.hql.ast.QuerySyntaxException: tbluser is not mapped [FROM  tbluser]] with root cause
+    org.hibernate.hql.ast.QuerySyntaxException: tbluser is not mapped [FROM  tbluser]
+    	at org.hibernate.hql.ast.util.SessionFactoryHelper.requireClassPersister(SessionFactoryHelper.java:180)
+
+The way I use the hibernate annotation class is as follows.
+
+
+    package test.user;
+    
+    import java.io.Serializable;
+    import java.sql.Date;
+    
+    import javax.persistence.Entity;
+    import javax.persistence.GeneratedValue;
+    import javax.persistence.Id;
+    import javax.persistence.Table;
+    import javax.persistence.Column;
+    import javax.persistence.GenerationType;
+    import javax.validation.constraints.Size;
+    
+    import org.hibernate.validator.constraints.NotEmpty;
+    import org.springframework.beans.factory.annotation.Autowired;
+    /**
+     * For a complete reference see
+     * <a href=""http://docs.jboss.org/hibernate/stable/annotations/reference/en/html_single/"">
+     * Hibernate Annotations Communit Documentations</a>
+     */
+    @Entity
+    @Table(name = ""tbluser"")
+    public class User implements Serializable{
+    
+    	
+    	@Column
+    private String password;
+    	@Column
+    private String firstName;
+    	@Column
+    private String middleName;
+    	@Column
+    private String lastName;
+    	@Column
+    	private String emailAddress;
+    	@Column
+    	private Date lastLoginDate;
+    		
+    /**
+    	 * @return the emailAddress
+    	 */
+    	public String getEmailAddress() {
+    		return emailAddress;
+    	}
+    	/**
+    	 * @param emailAddress the emailAddress to set
+    	 */
+    	public void setEmailAddress(String emailAddress) {
+    		this.emailAddress = emailAddress;
+    	}
+    	/**
+    	 * @return the lastLoginDate
+    	 */
+    	public Date getLastLoginDate() {
+    		return lastLoginDate;
+    	}
+    	/**
+    	 * @param lastLoginDate the lastLoginDate to set
+    	 */
+    	public void setLastLoginDate(Date lastLoginDate) {
+    		this.lastLoginDate = lastLoginDate;
+    	}
+    @Id
+    @NotEmpty
+    @Column(name=""userId"")
+    private String userId;
+
+
+
+
+
+
+    import java.util.List;
+     
+    import javax.annotation.Resource;
+     
+    import org.apache.log4j.Logger;
+    import org.hibernate.Query;
+    import org.hibernate.Session;
+    import org.hibernate.SessionFactory;
+    import org.springframework.stereotype.Service;
+    import org.springframework.transaction.annotation.Transactional;
+    import org.swamahiman.apps.user.User;
+     
+    /**
+     * Service for processing Users
+     *
+     */
+    @Service(""userService"")
+    @Transactional
+    public class UserService {
+     
+     protected static Logger logger = Logger.getLogger(""service"");
+      
+     @Resource(name=""sessionFactory"")
+     private SessionFactory sessionFactory;
+      
+     /**
+      * Retrieves all Users
+      *
+      * @return a list of Users
+      */
+     public List<User> getAll() {
+      logger.debug(""Retrieving all Users"");
+       
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Create a Hibernate query (HQL)
+      Query query = session.createQuery(""FROM  tbluser"");
+       
+      // Retrieve all
+      return  query.list();
+     }
+      
+     /**
+      * Retrieves a single User
+      */
+     public User get( Integer id ) {
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Retrieve existing User first
+      User User = (User) session.get(User.class, id);
+       
+      return User;
+     }
+     /**
+      * Adds a new User
+      */
+     public void add(User User) {
+      logger.debug(""Adding new User"");
+       
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Save
+      session.save(User);
+     }
+      
+     /**
+      * Deletes an existing User
+      * @param id the id of the existing User
+      */
+     public void delete(Integer id) {
+      logger.debug(""Deleting existing User"");
+       
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Retrieve existing User first
+      User User = (User) session.get(User.class, id);
+       
+      // Delete
+      session.delete(User);
+     }
+      
+     /**
+      * Edits an existing User
+      */
+     public void edit(User User) {
+      logger.debug(""Editing existing User"");
+       
+      // Retrieve session from Hibernate
+      Session session = sessionFactory.getCurrentSession();
+       
+      // Retrieve existing User via id
+      User existingUser = (User) session.get(User.class, User.getUserId());
+       
+      // Assign updated values to this User
+      existingUser.setFirstName(User.getFirstName());
+      existingUser.setLastName(existingUser.getLastName());
+      existingUser.setPassword(existingUser.getPassword());
+     
+      // Save updates
+      session.save(existingUser);
+     }
+    }
+
+
+
+and this is the way I invoke the hibernate calls. 
+
+    	    @RequestMapping(value=""/home"" , method = RequestMethod.GET)
+    	//@ModelAttribute(""user"")
+    	    public String process(@ModelAttribute(""user"") User user,
+    BindingResult result, Model model){
+    	   // public String get(final ModelMap model) {
+    	    	System.out.println(""inside here get returning model .."");
+    		     List<User> users = userService.getAll();
+    		      User userObj= null;
+    		     // Attach users to the Model
+    		     //model.addAttribute(""users"", users);
+    		    Iterator<User> iterate= users.iterator();
+    		    while(iterate.hasNext()) {
+    		    	userObj=iterate.next();
+    		    	if (userObj.getUserId().equals(""sjoe"")){
+    		    		break;
+    		    	}
+    		    	
+    		    }
+    		    
+    	  model.addAttribute(""user"", userObj);
+       return ""home"";
+    	    }
+
+My tbluser tables has. 
+
+firstName
+lastName
+middleName
+lastLoginUpdate
+password
+userId fields. 
+
+Thanks
+
+Dhiren
+
+
+
+",2
+11629513,07/24/2012 11:04:18,1548377,07/24/2012 10:28:48,1,0,Create and find a jpa entity in the same transaction?,"I'm using JBoss 7.1.1 and the default implementation of Hibernate that comes with it (4.0.1).
+I have a message driven bean, that in the same transaction creates an entity and persists it using the entity manager. After that (still the same transaction) I find the newly created entity and try to use the entity manager to lock it with PESSIMISTIC_WRITE, but I get an OptimisticLockException. Its root is as follows:
+
+Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [some.package.name.EntityName#aaa1a1a0-d568-11e1-9f99-d5a00a0a12b6]
+	at org.hibernate.dialect.lock.PessimisticWriteSelectLockingStrategy.lock(PessimisticWriteSelectLockingStrategy.java:95)
+	at org.hibernate.persister.entity.AbstractEntityPersister.lock(AbstractEntityPersister.java:1785)
+	at org.hibernate.event.internal.AbstractLockUpgradeEventListener.upgradeLock(AbstractLockUpgradeEventListener.java:99)
+	at org.hibernate.event.internal.DefaultLockEventListener.onLock(DefaultLockEventListener.java:85)
+	at org.hibernate.internal.SessionImpl.fireLock(SessionImpl.java:693)
+	at org.hibernate.internal.SessionImpl.fireLock(SessionImpl.java:686)
+	at org.hibernate.internal.SessionImpl.access$1100(SessionImpl.java:160)
+	at org.hibernate.internal.SessionImpl$LockRequestImpl.lock(SessionImpl.java:2164)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.lock(AbstractEntityManagerImpl.java:1093)
+	... 202 more
+
+Any ideas why I can't look up the newly created entity? Also, how can I make it available for searching right after it is created? Using the merge method of the EM doesn't seem to help ...",hibernate,jpa,jboss7.x,,,,open,0,132,10,"Create and find a jpa entity in the same transaction? I'm using JBoss 7.1.1 and the default implementation of Hibernate that comes with it (4.0.1).
+I have a message driven bean, that in the same transaction creates an entity and persists it using the entity manager. After that (still the same transaction) I find the newly created entity and try to use the entity manager to lock it with PESSIMISTIC_WRITE, but I get an OptimisticLockException. Its root is as follows:
+
+Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [some.package.name.EntityName#aaa1a1a0-d568-11e1-9f99-d5a00a0a12b6]
+	at org.hibernate.dialect.lock.PessimisticWriteSelectLockingStrategy.lock(PessimisticWriteSelectLockingStrategy.java:95)
+	at org.hibernate.persister.entity.AbstractEntityPersister.lock(AbstractEntityPersister.java:1785)
+	at org.hibernate.event.internal.AbstractLockUpgradeEventListener.upgradeLock(AbstractLockUpgradeEventListener.java:99)
+	at org.hibernate.event.internal.DefaultLockEventListener.onLock(DefaultLockEventListener.java:85)
+	at org.hibernate.internal.SessionImpl.fireLock(SessionImpl.java:693)
+	at org.hibernate.internal.SessionImpl.fireLock(SessionImpl.java:686)
+	at org.hibernate.internal.SessionImpl.access$1100(SessionImpl.java:160)
+	at org.hibernate.internal.SessionImpl$LockRequestImpl.lock(SessionImpl.java:2164)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.lock(AbstractEntityManagerImpl.java:1093)
+	... 202 more
+
+Any ideas why I can't look up the newly created entity? Also, how can I make it available for searching right after it is created? Using the merge method of the EM doesn't seem to help ...",3
+4012473,10/25/2010 07:06:00,159793,08/20/2009 06:28:39,1000,15,Hibernate using multiple databases,"I need to have multiple databases for different customers. How can I handle multiple databases with Hibernate? Are there any good examples how to do this?
+
+I could create Configuration object and then build SessionFactory, but that would create always a new session factory which wouldn't be very wise. ",hibernate,spring,multiple-databases,,,,open,0,49,4,"Hibernate using multiple databases I need to have multiple databases for different customers. How can I handle multiple databases with Hibernate? Are there any good examples how to do this?
+
+I could create Configuration object and then build SessionFactory, but that would create always a new session factory which wouldn't be very wise. ",3
+4496521,12/21/2010 05:25:13,549514,12/21/2010 05:25:13,1,0,best practices for hibernate 3.6 and spring 3?,"any good examples of integrating the latest versions of hibernate and spring? template pros and cons?
+",hibernate,spring,,,,12/21/2010 05:41:38,not a real question,1,16,8,"best practices for hibernate 3.6 and spring 3? any good examples of integrating the latest versions of hibernate and spring? template pros and cons?
+",2
+9084097,01/31/2012 17:29:34,1180910,01/31/2012 17:21:51,1,0,hibernate criteria query with extra left outer join,"I have two objects, Program and Classification, with a one Program to many Classifications relationship.
+Here is my criteria query:
+
+
+    Criteria crit2 = sessionFactory.getCurrentSession()
+             .createCriteria(Program.class)
+                .add(Restrictions.eq(""code"", input.getCode()))
+                .createAlias(""classifications"", ""cl"")
+                   .add(Restrictions.eq(""cl.id"", 3249023L));
+                
+             List<Program> programs2 = crit2.list();
+
+and the SQL it generates has an additional left outer join which I cannot understand the purpose of?
+
+    Hibernate:
+        select
+            this_.id as id16_2_,
+            this_.created as created16_2_,
+            this_.modified as modified16_2_,
+            this_.version as version16_2_,
+            this_.active as active16_2_,
+            this_.adminProgramId as adminPro6_16_2_,
+            this_.code as code16_2_,
+            this_.deletable as deletable16_2_,
+            this_.desciption as desciption16_2_,
+            this_.discontinued as discont10_16_2_,
+            this_.effectiveDate as effecti11_16_2_,
+            this_.expirationDate as expirat12_16_2_,
+            this_.name as name16_2_,
+            this_.programVersion as program14_16_2_,
+            cl1_.id as id1_0_,
+            cl1_.created as created1_0_,
+            cl1_.modified as modified1_0_,
+            cl1_.version as version1_0_,
+            cl1_.causeOfLoss as causeOfL5_1_0_,
+            cl1_.code as code1_0_,
+            cl1_.description as descript7_1_0_,
+            cl1_.lobCode as lobCode1_0_,
+            cl1_.lobName as lobName1_0_,
+            cl1_.premiumBaseCode as premium10_1_0_,
+            cl1_.premiumBaseDesc as premium11_1_0_,
+            cl1_.premiumBaseValue as premium12_1_0_,
+            cl1_.program_id as program13_1_0_,
+            program4_.id as id16_1_,
+            program4_.created as created16_1_,
+            program4_.modified as modified16_1_,
+            program4_.version as version16_1_,
+            program4_.active as active16_1_,
+            program4_.adminProgramId as adminPro6_16_1_,
+            program4_.code as code16_1_,
+            program4_.deletable as deletable16_1_,
+            program4_.desciption as desciption16_1_,
+            program4_.discontinued as discont10_16_1_,
+            program4_.effectiveDate as effecti11_16_1_,
+            program4_.expirationDate as expirat12_16_1_,
+            program4_.name as name16_1_,
+            program4_.programVersion as program14_16_1_
+        from
+            Program this_
+        inner join
+            Classification cl1_
+                on this_.id=cl1_.program_id
+        left outer join
+            Program program4_
+                on cl1_.program_id=program4_.id
+        where
+            this_.code=?
+            and cl1_.id=?
+
+Does anyone know why this block is there:
+
+
+    left outer join
+            Program program4_
+                on cl1_.program_id=program4_.id
+
+how can I get rid of it as additional joins will impact performance.
+
+thanks,
+Peter
+
+
+
+
+",hibernate,,,,,,open,0,916,8,"hibernate criteria query with extra left outer join I have two objects, Program and Classification, with a one Program to many Classifications relationship.
+Here is my criteria query:
+
+
+    Criteria crit2 = sessionFactory.getCurrentSession()
+             .createCriteria(Program.class)
+                .add(Restrictions.eq(""code"", input.getCode()))
+                .createAlias(""classifications"", ""cl"")
+                   .add(Restrictions.eq(""cl.id"", 3249023L));
+                
+             List<Program> programs2 = crit2.list();
+
+and the SQL it generates has an additional left outer join which I cannot understand the purpose of?
+
+    Hibernate:
+        select
+            this_.id as id16_2_,
+            this_.created as created16_2_,
+            this_.modified as modified16_2_,
+            this_.version as version16_2_,
+            this_.active as active16_2_,
+            this_.adminProgramId as adminPro6_16_2_,
+            this_.code as code16_2_,
+            this_.deletable as deletable16_2_,
+            this_.desciption as desciption16_2_,
+            this_.discontinued as discont10_16_2_,
+            this_.effectiveDate as effecti11_16_2_,
+            this_.expirationDate as expirat12_16_2_,
+            this_.name as name16_2_,
+            this_.programVersion as program14_16_2_,
+            cl1_.id as id1_0_,
+            cl1_.created as created1_0_,
+            cl1_.modified as modified1_0_,
+            cl1_.version as version1_0_,
+            cl1_.causeOfLoss as causeOfL5_1_0_,
+            cl1_.code as code1_0_,
+            cl1_.description as descript7_1_0_,
+            cl1_.lobCode as lobCode1_0_,
+            cl1_.lobName as lobName1_0_,
+            cl1_.premiumBaseCode as premium10_1_0_,
+            cl1_.premiumBaseDesc as premium11_1_0_,
+            cl1_.premiumBaseValue as premium12_1_0_,
+            cl1_.program_id as program13_1_0_,
+            program4_.id as id16_1_,
+            program4_.created as created16_1_,
+            program4_.modified as modified16_1_,
+            program4_.version as version16_1_,
+            program4_.active as active16_1_,
+            program4_.adminProgramId as adminPro6_16_1_,
+            program4_.code as code16_1_,
+            program4_.deletable as deletable16_1_,
+            program4_.desciption as desciption16_1_,
+            program4_.discontinued as discont10_16_1_,
+            program4_.effectiveDate as effecti11_16_1_,
+            program4_.expirationDate as expirat12_16_1_,
+            program4_.name as name16_1_,
+            program4_.programVersion as program14_16_1_
+        from
+            Program this_
+        inner join
+            Classification cl1_
+                on this_.id=cl1_.program_id
+        left outer join
+            Program program4_
+                on cl1_.program_id=program4_.id
+        where
+            this_.code=?
+            and cl1_.id=?
+
+Does anyone know why this block is there:
+
+
+    left outer join
+            Program program4_
+                on cl1_.program_id=program4_.id
+
+how can I get rid of it as additional joins will impact performance.
+
+thanks,
+Peter
+
+
+
+
+",1
+3117666,06/25/2010 11:42:45,291486,03/11/2010 13:09:25,153,5,Hibernate custom SQL query with join - avoiding returning a list of arrays,"I have a custom SQL query in Hibernate (3.5.2) in which I want to return a mapped object, and an associated (joined) object. However, Hibernate seems to be giving me a list of arrays rather than a list of objects.
+
+To simplify my situation a bit :-
+
+Entity1 contains a foreign key to Entity2, and the mapped objects are set up so that Entity1 has an object property referencing Entity2. I want to retrieve a list of Entity1 objects, but with the associated object reference already initialised (so that the associated object has been loaded).
+
+Now, I can do this with a custom SQL query like this:
+
+    final SQLQuery qry = hibernateSession.createSQLQuery(
+        ""select {entity1.*}, {entity2.*} from entity1 inner join entity2 on entity1.fk = entity2.id "");
+
+    qry.setReadOnly(true);
+    qry.addEntity(""entity1"", Entity1.class);
+    qry.addJoin(""entity2"", ""entity1.entity2"");
+
+    List list = qry.list();  // Returns list of arrays!!
+
+This works, in that all the Entity1 objects are correctly initialised. However, the list that I get back IS NOT a plain list of Entity1 objects. It is in fact a list of arrays, where each array contains 2 elements - Entity1 and Entity2.  I'm assuming this is because I've put two alias entries in the SELECT clause.
+
+If I remove the second alias (for Entity2), I just get ""column not found"" errors - presumably because Hibernate can't find the fields to initialise entity2 from.
+
+Any ideas? I have a query that can return the fields for the primary and associated object, but I want the List returned to just be a list of Entity1 objects. 
+
+Pre-emptive comment: Yes, I know I could probably re-structure this and do the query a different way (criteria API etc). But this is what I'm stuck with at the moment. In this particular situation I'm constrained by some other factors, so was hoping there was just some way of telling Hibernate what I want!
+
+Thanks.",hibernate,,,,,,open,0,327,13,"Hibernate custom SQL query with join - avoiding returning a list of arrays I have a custom SQL query in Hibernate (3.5.2) in which I want to return a mapped object, and an associated (joined) object. However, Hibernate seems to be giving me a list of arrays rather than a list of objects.
+
+To simplify my situation a bit :-
+
+Entity1 contains a foreign key to Entity2, and the mapped objects are set up so that Entity1 has an object property referencing Entity2. I want to retrieve a list of Entity1 objects, but with the associated object reference already initialised (so that the associated object has been loaded).
+
+Now, I can do this with a custom SQL query like this:
+
+    final SQLQuery qry = hibernateSession.createSQLQuery(
+        ""select {entity1.*}, {entity2.*} from entity1 inner join entity2 on entity1.fk = entity2.id "");
+
+    qry.setReadOnly(true);
+    qry.addEntity(""entity1"", Entity1.class);
+    qry.addJoin(""entity2"", ""entity1.entity2"");
+
+    List list = qry.list();  // Returns list of arrays!!
+
+This works, in that all the Entity1 objects are correctly initialised. However, the list that I get back IS NOT a plain list of Entity1 objects. It is in fact a list of arrays, where each array contains 2 elements - Entity1 and Entity2.  I'm assuming this is because I've put two alias entries in the SELECT clause.
+
+If I remove the second alias (for Entity2), I just get ""column not found"" errors - presumably because Hibernate can't find the fields to initialise entity2 from.
+
+Any ideas? I have a query that can return the fields for the primary and associated object, but I want the List returned to just be a list of Entity1 objects. 
+
+Pre-emptive comment: Yes, I know I could probably re-structure this and do the query a different way (criteria API etc). But this is what I'm stuck with at the moment. In this particular situation I'm constrained by some other factors, so was hoping there was just some way of telling Hibernate what I want!
+
+Thanks.",1
+11649249,07/25/2012 12:03:31,429377,05/18/2010 13:03:58,2024,62,deleted object would be re-saved by cascade (remove deleted object from associations),"i have the following two entities:
+
+**1- PlayList:**
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = ""playlist"", orphanRemoval = true, cascade =   CascadeType.ALL)
+    @OrderBy(""adOrder"")
+    private Set<PlaylistadMap> PlaylistadMaps = new HashSet<PlaylistadMap>(0);
+
+- **CascadeType.ALL**: is needed for save and update on the PlaylistadMap collection when saving or updating the playlist entity.
+- **orphanRemoval = true**: is needed when deleting the playlist entity, the PlaylistadMap references should be deleteed too.
+
+
+**2- PlaylistadMap:**
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = ""fk_playlist"", referencedColumnName = ""pkid"", nullable = false)
+    private Playlist playlist;
+
+when deleting a playlist by using `getCurrentSession().delete();` i am getting the following exception:
+
+    org.springframework.dao.InvalidDataAccessApiUsageException: deleted object would be re-saved by cascade (remove deleted object from associations): [com.xeno.advertisingsuite.web.domain.PlaylistadMap#6]; nested exception is org.hibernate.ObjectDeletedException: deleted object would be re-saved by cascade (remove deleted object from associations): [com.xeno.advertisingsuite.web.domain.PlaylistadMap#6]
+    	at org.springframework.orm.hibernate3.SessionFactoryUtils.convertHibernateAccessException(SessionFactoryUtils.java:657)
+    	at org.springframework.orm.hibernate3.HibernateTransactionManager.convertHibernateAccessException(HibernateTransactionManager.java:793)
+    	at org.springframework.orm.hibernate3.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:664)
+    	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:754)
+    	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:723)
+    	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:393)
+    	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:120)
+    	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+    	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+    	at $Proxy54.deletePlayList(Unknown Source)
+    	at com.xeno.advertisingsuite.web.beans.PlayListBean.deletePlaylist(PlayListBean.java:282)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    	at java.lang.reflect.Method.invoke(Method.java:597)
+    	at org.apache.el.parser.AstValue.invoke(AstValue.java:262)
+    	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:278)
+    	at com.sun.faces.facelets.el.TagMethodExpression.invoke(TagMethodExpression.java:105)
+    	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:88)
+    	... 103 more
+    Caused by: org.hibernate.ObjectDeletedException: deleted object would be re-saved by cascade (remove deleted object from associations): [com.xeno.advertisingsuite.web.domain.PlaylistadMap#6]
+    	at org.hibernate.impl.SessionImpl.forceFlush(SessionImpl.java:1220)
+    	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:188)
+    	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:117)
+    	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)
+    	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:677)
+    	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:669)
+    	at org.hibernate.engine.CascadingAction$5.cascade(CascadingAction.java:252)
+    	at org.hibernate.engine.Cascade.cascadeToOne(Cascade.java:392)
+    	at org.hibernate.engine.Cascade.cascadeAssociation(Cascade.java:335)
+    	at org.hibernate.engine.Cascade.cascadeProperty(Cascade.java:204)
+    	at org.hibernate.engine.Cascade.cascadeCollectionElements(Cascade.java:425)
+    	at org.hibernate.engine.Cascade.cascadeCollection(Cascade.java:362)
+    	at org.hibernate.engine.Cascade.cascadeAssociation(Cascade.java:338)
+    	at org.hibernate.engine.Cascade.cascadeProperty(Cascade.java:204)
+    	at org.hibernate.engine.Cascade.cascade(Cascade.java:161)
+    	at org.hibernate.event.def.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:154)
+    	at org.hibernate.event.def.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:145)
+    	at org.hibernate.event.def.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:88)
+    	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+    	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+    	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+    	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+    	at org.springframework.orm.hibernate3.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:656)
+
+please advise how to fix this exception.",hibernate,java-ee,jpa,one-to-many,,,open,0,386,12,"deleted object would be re-saved by cascade (remove deleted object from associations) i have the following two entities:
+
+**1- PlayList:**
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = ""playlist"", orphanRemoval = true, cascade =   CascadeType.ALL)
+    @OrderBy(""adOrder"")
+    private Set<PlaylistadMap> PlaylistadMaps = new HashSet<PlaylistadMap>(0);
+
+- **CascadeType.ALL**: is needed for save and update on the PlaylistadMap collection when saving or updating the playlist entity.
+- **orphanRemoval = true**: is needed when deleting the playlist entity, the PlaylistadMap references should be deleteed too.
+
+
+**2- PlaylistadMap:**
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = ""fk_playlist"", referencedColumnName = ""pkid"", nullable = false)
+    private Playlist playlist;
+
+when deleting a playlist by using `getCurrentSession().delete();` i am getting the following exception:
+
+    org.springframework.dao.InvalidDataAccessApiUsageException: deleted object would be re-saved by cascade (remove deleted object from associations): [com.xeno.advertisingsuite.web.domain.PlaylistadMap#6]; nested exception is org.hibernate.ObjectDeletedException: deleted object would be re-saved by cascade (remove deleted object from associations): [com.xeno.advertisingsuite.web.domain.PlaylistadMap#6]
+    	at org.springframework.orm.hibernate3.SessionFactoryUtils.convertHibernateAccessException(SessionFactoryUtils.java:657)
+    	at org.springframework.orm.hibernate3.HibernateTransactionManager.convertHibernateAccessException(HibernateTransactionManager.java:793)
+    	at org.springframework.orm.hibernate3.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:664)
+    	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:754)
+    	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:723)
+    	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:393)
+    	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:120)
+    	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+    	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+    	at $Proxy54.deletePlayList(Unknown Source)
+    	at com.xeno.advertisingsuite.web.beans.PlayListBean.deletePlaylist(PlayListBean.java:282)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    	at java.lang.reflect.Method.invoke(Method.java:597)
+    	at org.apache.el.parser.AstValue.invoke(AstValue.java:262)
+    	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:278)
+    	at com.sun.faces.facelets.el.TagMethodExpression.invoke(TagMethodExpression.java:105)
+    	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:88)
+    	... 103 more
+    Caused by: org.hibernate.ObjectDeletedException: deleted object would be re-saved by cascade (remove deleted object from associations): [com.xeno.advertisingsuite.web.domain.PlaylistadMap#6]
+    	at org.hibernate.impl.SessionImpl.forceFlush(SessionImpl.java:1220)
+    	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:188)
+    	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:117)
+    	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)
+    	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:677)
+    	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:669)
+    	at org.hibernate.engine.CascadingAction$5.cascade(CascadingAction.java:252)
+    	at org.hibernate.engine.Cascade.cascadeToOne(Cascade.java:392)
+    	at org.hibernate.engine.Cascade.cascadeAssociation(Cascade.java:335)
+    	at org.hibernate.engine.Cascade.cascadeProperty(Cascade.java:204)
+    	at org.hibernate.engine.Cascade.cascadeCollectionElements(Cascade.java:425)
+    	at org.hibernate.engine.Cascade.cascadeCollection(Cascade.java:362)
+    	at org.hibernate.engine.Cascade.cascadeAssociation(Cascade.java:338)
+    	at org.hibernate.engine.Cascade.cascadeProperty(Cascade.java:204)
+    	at org.hibernate.engine.Cascade.cascade(Cascade.java:161)
+    	at org.hibernate.event.def.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:154)
+    	at org.hibernate.event.def.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:145)
+    	at org.hibernate.event.def.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:88)
+    	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+    	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+    	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+    	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+    	at org.springframework.orm.hibernate3.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:656)
+
+please advise how to fix this exception.",4
+8613686,12/23/2011 08:16:30,956098,09/21/2011 04:15:23,28,3,What is the source of this error org.hibernate.AssertionFailure: collection was processed twice by flush() and how to prevent it?,"Im getting this kind of error that said.
+
+> org.hibernate.AssertionFailure: collection was processed twice by
+> flush()
+
+When do this error raised, and how to avoid it.
+
+Im using hibernate 3 + seam 2 in my web apps..
+Thanks in advanced.",hibernate,search,,,,,open,0,36,19,"What is the source of this error org.hibernate.AssertionFailure: collection was processed twice by flush() and how to prevent it? Im getting this kind of error that said.
+
+> org.hibernate.AssertionFailure: collection was processed twice by
+> flush()
+
+When do this error raised, and how to avoid it.
+
+Im using hibernate 3 + seam 2 in my web apps..
+Thanks in advanced.",2
+4033414,10/27/2010 12:55:31,488844,10/27/2010 12:55:31,1,0,Hibernate Named Query with Join issue,"I am trying to create a named query which joins a two tables based on an id. I am getting a HibernateException saying ""errors in named queries: Users.getAllUsers
+
+the Users bean has a private Set<UserImages> image variable. The UserImages bean is mapped to a table with the images for all the users. This is my named query.
+
+    @NamedQueries ({
+        @NamedQuery(name = ""Users.getUserImage"",
+        query(""from Users as users INNER JOIN fetch users.image as image WHERE users.userId = image.userId"" AND users.userId =: passedId)
+    })
+
+I pass in the variable one as the passedId argument in the named query.
+
+I am pretty new to hibernate but I was told to use the fetch command for this since I have a set within the User bean which holds a bunch of UserImage bean objects. Anyone see why this would not work? The actual SQL query that I am basing this off of which works in my sql editor is
+
+  SELECT * FROM users as u WHERE INNER JOIN user_images as images ON users.userId = images.userId AND users.userId = 1;
+",hibernate,,,,,,open,0,192,6,"Hibernate Named Query with Join issue I am trying to create a named query which joins a two tables based on an id. I am getting a HibernateException saying ""errors in named queries: Users.getAllUsers
+
+the Users bean has a private Set<UserImages> image variable. The UserImages bean is mapped to a table with the images for all the users. This is my named query.
+
+    @NamedQueries ({
+        @NamedQuery(name = ""Users.getUserImage"",
+        query(""from Users as users INNER JOIN fetch users.image as image WHERE users.userId = image.userId"" AND users.userId =: passedId)
+    })
+
+I pass in the variable one as the passedId argument in the named query.
+
+I am pretty new to hibernate but I was told to use the fetch command for this since I have a set within the User bean which holds a bunch of UserImage bean objects. Anyone see why this would not work? The actual SQL query that I am basing this off of which works in my sql editor is
+
+  SELECT * FROM users as u WHERE INNER JOIN user_images as images ON users.userId = images.userId AND users.userId = 1;
+",1
+8769839,01/07/2012 12:54:52,553739,12/25/2010 08:13:52,309,4,Hibernate Association,"i am using hibernate. i have two tables : Job and Company.
+
+Company.hbm.xml is :
+
+<?xml version=""1.0""?>
+<!DOCTYPE hibernate-mapping PUBLIC
+""-//Hibernate/Hibernate Mapping DTD 3.0//EN""
+""http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"">
+<hibernate-mapping>
+
+	<class name=""com.jobs.admin.data.Company"" table=""S_COMPANY"">
+		<id name=""companyKid"" column=""COMPANY_KID"" type=""integer"">
+			<generator class=""sequence"">
+				<param name=""sequence"">company_sequence</param>
+			</generator>
+		</id>
+		<property name=""companyName"" column=""COMPANY_NAME"" length=""200"" type=""string"" unique=""true""/>
+		<property name=""companyDesc"" column=""COMPANY_DESC"" type=""string"" length=""1000"" unique=""true""  />
+		<property name=""companySName"" column=""COMPANY_SNAME"" type=""string"" length=""100""/>
+		<property name=""companyMail"" column=""COMPANY_MAIL"" type=""string"" length=""200""/>
+		<property name=""companyPhone"" column=""COMPANY_PHONE"" type=""string"" length=""200""/>
+	</class>
+	
+</hibernate-mapping>
+
+
+My Job.hbm.xml is :
+
+    <?xml version=""1.0""?>
+    <!DOCTYPE hibernate-mapping PUBLIC
+    ""-//Hibernate/Hibernate Mapping DTD 3.0//EN""
+    ""http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"">
+    <hibernate-mapping>
+    
+    	<class name=""com.jobs.admin.data.Job"" table=""S_JOBS"">
+    		<id name=""jobKid"" column=""JOB_KID"" type=""integer"">
+    			<generator class=""sequence"">
+    				<param name=""sequence"">job_sequence</param>
+    			</generator>
+    		</id>
+    		<property name=""jobTitle"" column=""JOB_TITLE"" type=""string""/>
+    		<property name=""jobDesc"" column=""JOB_DESC"" type=""string""></property>
+    <!--		<property name=""jobCompany"" column=""JOB_COMPANY"" type=""integer""></property>-->
+    		<property name=""jobCity"" column=""JOB_CITY"" type=""integer""></property>
+    		<property name=""jobExp"" column=""JOB_EXP"" type=""integer""></property>
+    		<property name=""jobCat"" column=""JOB_CAT"" type=""integer""></property>
+    		<property name=""jobStartDate"" column=""JOB_STARTDATE"" type=""string""></property>
+    		<property name=""jobEndDate"" column=""JOB_ENDDATE"" type=""string""></property>
+    		<many-to-one name=""jobCompany"" class=""com.jobs.admin.data.Company"" column=""JOB_COMPANY"" property-ref=""companyKid"" ></many-to-one>
+    	
+    	</class>
+    	
+    </hibernate-mapping>
+
+This is my method code which is joing these tables
+
+          
+
+     List<com.jobs.admin.data.JobCat> jobCat= null;
+    		db_session= HibernateSessionFactory.getSessionFactory().openSession();
+    		transaction=null;
+    		try{
+    			transaction = db_session.beginTransaction();
+    			jobCat = db_session.createQuery(""from Job as job inner join job.jobCompany as company"").list();
+    			transaction.commit();
+    		}
+    		catch (HibernateException e) {
+    			transaction.rollback();
+    			e.printStackTrace();
+    			} finally {
+    			db_session.close();
+    			}
+    		return jobCat;
+
+
+When i am running it is giving me following exception :
+
+
+
+    java.lang.NullPointerException
+    	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:1662)
+    	at org.hibernate.type.EntityType.loadByUniqueKey(EntityType.java:641)
+    	at org.hibernate.type.EntityType.resolve(EntityType.java:415)
+    	at org.hibernate.engine.TwoPhaseLoad.initializeEntity(TwoPhaseLoad.java:139)
+    	at org.hibernate.loader.Loader.initializeEntitiesAndCollections(Loader.java:877)
+    	at org.hibernate.loader.Loader.doQuery(Loader.java:752)
+    	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:259)
+    	at org.hibernate.loader.Loader.doList(Loader.java:2232)
+    	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2129)
+    	at org.hibernate.loader.Loader.list(Loader.java:2124)
+    	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:401)
+    	at org.hibernate.hql.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:363)
+    	at org.hibernate.engine.query.HQLQueryPlan.performList(HQLQueryPlan.java:196)
+    	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1149)
+    	at org.hibernate.impl.QueryImpl.list(QueryImpl.java:102)
+    	at com.jobs.admin.service.JobImpl.getJobs(JobImpl.java:91)
+    	at com.jobs.admin.controller.JobController.showViewJobs(JobController.java:64)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    	at java.lang.reflect.Method.invoke(Method.java:597)
+    	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.doInvokeMethod(HandlerMethodInvoker.java:710)
+    	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:167)
+    	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:414)
+    	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:402)
+    	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:771)
+    	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:716)
+    	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:647)
+    	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:552)
+    	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+    	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230)
+    	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+    	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:104)
+    	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:261)
+    	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+    	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:581)
+    	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+    	at java.lang.Thread.run(Thread.java:619)
+
+
+
+please suggest me , what is my error ?",hibernate,,,,,,open,0,535,2,"Hibernate Association i am using hibernate. i have two tables : Job and Company.
+
+Company.hbm.xml is :
+
+<?xml version=""1.0""?>
+<!DOCTYPE hibernate-mapping PUBLIC
+""-//Hibernate/Hibernate Mapping DTD 3.0//EN""
+""http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"">
+<hibernate-mapping>
+
+	<class name=""com.jobs.admin.data.Company"" table=""S_COMPANY"">
+		<id name=""companyKid"" column=""COMPANY_KID"" type=""integer"">
+			<generator class=""sequence"">
+				<param name=""sequence"">company_sequence</param>
+			</generator>
+		</id>
+		<property name=""companyName"" column=""COMPANY_NAME"" length=""200"" type=""string"" unique=""true""/>
+		<property name=""companyDesc"" column=""COMPANY_DESC"" type=""string"" length=""1000"" unique=""true""  />
+		<property name=""companySName"" column=""COMPANY_SNAME"" type=""string"" length=""100""/>
+		<property name=""companyMail"" column=""COMPANY_MAIL"" type=""string"" length=""200""/>
+		<property name=""companyPhone"" column=""COMPANY_PHONE"" type=""string"" length=""200""/>
+	</class>
+	
+</hibernate-mapping>
+
+
+My Job.hbm.xml is :
+
+    <?xml version=""1.0""?>
+    <!DOCTYPE hibernate-mapping PUBLIC
+    ""-//Hibernate/Hibernate Mapping DTD 3.0//EN""
+    ""http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"">
+    <hibernate-mapping>
+    
+    	<class name=""com.jobs.admin.data.Job"" table=""S_JOBS"">
+    		<id name=""jobKid"" column=""JOB_KID"" type=""integer"">
+    			<generator class=""sequence"">
+    				<param name=""sequence"">job_sequence</param>
+    			</generator>
+    		</id>
+    		<property name=""jobTitle"" column=""JOB_TITLE"" type=""string""/>
+    		<property name=""jobDesc"" column=""JOB_DESC"" type=""string""></property>
+    <!--		<property name=""jobCompany"" column=""JOB_COMPANY"" type=""integer""></property>-->
+    		<property name=""jobCity"" column=""JOB_CITY"" type=""integer""></property>
+    		<property name=""jobExp"" column=""JOB_EXP"" type=""integer""></property>
+    		<property name=""jobCat"" column=""JOB_CAT"" type=""integer""></property>
+    		<property name=""jobStartDate"" column=""JOB_STARTDATE"" type=""string""></property>
+    		<property name=""jobEndDate"" column=""JOB_ENDDATE"" type=""string""></property>
+    		<many-to-one name=""jobCompany"" class=""com.jobs.admin.data.Company"" column=""JOB_COMPANY"" property-ref=""companyKid"" ></many-to-one>
+    	
+    	</class>
+    	
+    </hibernate-mapping>
+
+This is my method code which is joing these tables
+
+          
+
+     List<com.jobs.admin.data.JobCat> jobCat= null;
+    		db_session= HibernateSessionFactory.getSessionFactory().openSession();
+    		transaction=null;
+    		try{
+    			transaction = db_session.beginTransaction();
+    			jobCat = db_session.createQuery(""from Job as job inner join job.jobCompany as company"").list();
+    			transaction.commit();
+    		}
+    		catch (HibernateException e) {
+    			transaction.rollback();
+    			e.printStackTrace();
+    			} finally {
+    			db_session.close();
+    			}
+    		return jobCat;
+
+
+When i am running it is giving me following exception :
+
+
+
+    java.lang.NullPointerException
+    	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:1662)
+    	at org.hibernate.type.EntityType.loadByUniqueKey(EntityType.java:641)
+    	at org.hibernate.type.EntityType.resolve(EntityType.java:415)
+    	at org.hibernate.engine.TwoPhaseLoad.initializeEntity(TwoPhaseLoad.java:139)
+    	at org.hibernate.loader.Loader.initializeEntitiesAndCollections(Loader.java:877)
+    	at org.hibernate.loader.Loader.doQuery(Loader.java:752)
+    	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:259)
+    	at org.hibernate.loader.Loader.doList(Loader.java:2232)
+    	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2129)
+    	at org.hibernate.loader.Loader.list(Loader.java:2124)
+    	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:401)
+    	at org.hibernate.hql.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:363)
+    	at org.hibernate.engine.query.HQLQueryPlan.performList(HQLQueryPlan.java:196)
+    	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1149)
+    	at org.hibernate.impl.QueryImpl.list(QueryImpl.java:102)
+    	at com.jobs.admin.service.JobImpl.getJobs(JobImpl.java:91)
+    	at com.jobs.admin.controller.JobController.showViewJobs(JobController.java:64)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    	at java.lang.reflect.Method.invoke(Method.java:597)
+    	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.doInvokeMethod(HandlerMethodInvoker.java:710)
+    	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:167)
+    	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:414)
+    	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:402)
+    	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:771)
+    	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:716)
+    	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:647)
+    	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:552)
+    	at javax.servlet.http.HttpServlet.service(HttpServlet.java:690)
+    	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+    	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230)
+    	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+    	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+    	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:104)
+    	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+    	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:261)
+    	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+    	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:581)
+    	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+    	at java.lang.Thread.run(Thread.java:619)
+
+
+
+please suggest me , what is my error ?",1
+9282356,02/14/2012 18:42:06,1150227,01/15/2012 09:37:17,1,0,hibernate last record id,"I wanted to change staus from ""inserting"" to ""Finish"" when data insertion is complete usinmg hibernate.
+I have tables as USER and another DETAILS.They have relation as one-to-many.
+Initially I am inserting USER values as first name,status. Then his DETAILS values as phno.
+
+while I inserting into USER table I want to keep status as 'inserting'  when I enter values in  DETAILS I want to change status to ""Finish"".
+
+I am doing as ,
+
+    //Parent table
+    USER user = new USER();
+    user.setFirstName(""A"");
+    user.setStatus(""inserting"");
+    session.save(user);
+    //Child table
+    DETAILS details = new DETAILS();
+    details.setPhone(""12345"");  
+
+    details.setManyToOne(""user"");
+    user.getdetailSet().add(details);
+    session.save(details);
+
+How can I achive to change status to ""Finish"" from ""inserting"" after above code.
+
+Thanks in advance.
+       
+",hibernate,record,last,,,,open,0,150,4,"hibernate last record id I wanted to change staus from ""inserting"" to ""Finish"" when data insertion is complete usinmg hibernate.
+I have tables as USER and another DETAILS.They have relation as one-to-many.
+Initially I am inserting USER values as first name,status. Then his DETAILS values as phno.
+
+while I inserting into USER table I want to keep status as 'inserting'  when I enter values in  DETAILS I want to change status to ""Finish"".
+
+I am doing as ,
+
+    //Parent table
+    USER user = new USER();
+    user.setFirstName(""A"");
+    user.setStatus(""inserting"");
+    session.save(user);
+    //Child table
+    DETAILS details = new DETAILS();
+    details.setPhone(""12345"");  
+
+    details.setManyToOne(""user"");
+    user.getdetailSet().add(details);
+    session.save(details);
+
+How can I achive to change status to ""Finish"" from ""inserting"" after above code.
+
+Thanks in advance.
+       
+",3
+8324431,11/30/2011 10:26:17,1073089,11/30/2011 10:09:05,1,0,Hibernate and Axis2,"I am using hibernate with axis2.
+I have any question?
+
+How to imitate hibernate in axis2 service?
+How to manage hibernate session in axis2 service?
+
+",hibernate,axis2,,,,01/03/2012 03:11:01,not a real question,1,22,3,"Hibernate and Axis2 I am using hibernate with axis2.
+I have any question?
+
+How to imitate hibernate in axis2 service?
+How to manage hibernate session in axis2 service?
+
+",2
+10440154,05/03/2012 22:26:31,1260893,03/10/2012 10:39:48,1,1,Try to join two tables in Hibernate,"I'm trying to join data from two tables with Hibernate Criteria. The problem comes when I try to get the relationship by the primary key:
+
+    sessionFactory.getCurrentSession().get(Class.class, id);
+
+In my hbm, I have defined a ""many-to-one"" relationship and fetch=""join"". As I can see in the log, the select executed it is not a join, just get the parent entity.
+
+I don't know what I'm doing wrong. is it possible to join tables this way?
+
+Regards.
+JB",hibernate,,,,,,open,0,74,7,"Try to join two tables in Hibernate I'm trying to join data from two tables with Hibernate Criteria. The problem comes when I try to get the relationship by the primary key:
+
+    sessionFactory.getCurrentSession().get(Class.class, id);
+
+In my hbm, I have defined a ""many-to-one"" relationship and fetch=""join"". As I can see in the log, the select executed it is not a join, just get the parent entity.
+
+I don't know what I'm doing wrong. is it possible to join tables this way?
+
+Regards.
+JB",1
+2602490,04/08/2010 18:34:35,6305,09/13/2008 21:33:24,1086,17,Hibernate Criteria: Perform JOIN in Subquery/DetachedCriteria,"I'm running into an issue with adding JOIN's to a subquery using DetachedCriteria. The code looks roughly like this:
+
+    Criteria criteria = createCacheableCriteria(ProductLine.class, ""productLine"");
+    criteria.add(Expression.eq(""productLine.active"", ""Y""));
+    
+    DetachedCriteria subCriteria = DetachedCriteria.forClass(Models.class, ""model"");
+    subCriteria.setProjection(Projections.rowCount());
+    subCriteria.createAlias(""model.language"", ""modelLang"");
+    criteria.add(Expression.eq(""modelLang.language"", ""EN""));
+    subCriteria.add(Restrictions.eqProperty(""model.productLine.id"",""productLine.id""));
+    criteria.add(Subqueries.lt(0, subCriteria));
+
+But the logged SQL does not contain the JOIN in the subquery, but does include the alias which is throwing an error
+
+    SELECT *
+    FROM PRODUCT_LINES this_
+    WHERE this_.ACTIVE=?
+    AND ?                  <
+      (SELECT COUNT(*) AS y0_
+      FROM MODELS this0__
+      WHERE modelLang3_.LANGUAGE      ='EN'
+      AND this0__.PRODUCT_LINE_ID     =this_.ID
+      )
+
+How can I add the joins to the DetachedCriteria?
+",hibernate,java,criteria,detachedcriteria,join,,open,0,183,6,"Hibernate Criteria: Perform JOIN in Subquery/DetachedCriteria I'm running into an issue with adding JOIN's to a subquery using DetachedCriteria. The code looks roughly like this:
+
+    Criteria criteria = createCacheableCriteria(ProductLine.class, ""productLine"");
+    criteria.add(Expression.eq(""productLine.active"", ""Y""));
+    
+    DetachedCriteria subCriteria = DetachedCriteria.forClass(Models.class, ""model"");
+    subCriteria.setProjection(Projections.rowCount());
+    subCriteria.createAlias(""model.language"", ""modelLang"");
+    criteria.add(Expression.eq(""modelLang.language"", ""EN""));
+    subCriteria.add(Restrictions.eqProperty(""model.productLine.id"",""productLine.id""));
+    criteria.add(Subqueries.lt(0, subCriteria));
+
+But the logged SQL does not contain the JOIN in the subquery, but does include the alias which is throwing an error
+
+    SELECT *
+    FROM PRODUCT_LINES this_
+    WHERE this_.ACTIVE=?
+    AND ?                  <
+      (SELECT COUNT(*) AS y0_
+      FROM MODELS this0__
+      WHERE modelLang3_.LANGUAGE      ='EN'
+      AND this0__.PRODUCT_LINE_ID     =this_.ID
+      )
+
+How can I add the joins to the DetachedCriteria?
+",5
+10987638,06/11/2012 21:16:02,34372,11/04/2008 19:35:59,1311,36,What is killing JPA query performance in JBoss 7.1.1 (Hibernate 4.x)?,"I have a Query which runs fine in JBoss 6.1 (Hibernate 3.6).  It's a simple two table join that returns 955 records.  When I deploy the same .war file in JBoss 7.1.1 the performance suffers dramatically (at least an order of magnitude).  Here is the query:
+
+    SELECT c.uid, c.name, -1, c.file_Id, cs.error, cs.is_Error, c.parent_Uid, c.job_Id, c.description 
+    FROM stage.Classification_Status cs, stage.Classification c 
+    WHERE cs.is_Error = true AND cs.classification_Id = c.id AND c.job_Id = 3001;    
+
+I haven't been able to tell which version of Hibernate is bundled in JBoss 7.1.1 so I don't know which verion to file a bug against.
+
+Has anyone else seen this kind of performance hit moving from Hibernate 3.6 to 4.x?  Any ideas what is causing it?
+",hibernate,jboss,jpa-2.0,,,,open,0,137,11,"What is killing JPA query performance in JBoss 7.1.1 (Hibernate 4.x)? I have a Query which runs fine in JBoss 6.1 (Hibernate 3.6).  It's a simple two table join that returns 955 records.  When I deploy the same .war file in JBoss 7.1.1 the performance suffers dramatically (at least an order of magnitude).  Here is the query:
+
+    SELECT c.uid, c.name, -1, c.file_Id, cs.error, cs.is_Error, c.parent_Uid, c.job_Id, c.description 
+    FROM stage.Classification_Status cs, stage.Classification c 
+    WHERE cs.is_Error = true AND cs.classification_Id = c.id AND c.job_Id = 3001;    
+
+I haven't been able to tell which version of Hibernate is bundled in JBoss 7.1.1 so I don't know which verion to file a bug against.
+
+Has anyone else seen this kind of performance hit moving from Hibernate 3.6 to 4.x?  Any ideas what is causing it?
+",3
+10050927,04/07/2012 01:22:05,725337,04/26/2011 12:14:07,73,1,Configure Hibernate with Vaadin JPAContainer2.0,"Im trying to convert the Vaadin demo for JPAContainer to use hibernate instead of eclipselink.  But I cannot seem to get it working.
+
+Here is the documentation I am referencing https://vaadin.com/book/-/page/jpacontainer.html
+
+This is the stack trace when trying to run the app:
+
+
+    description The server encountered an internal error () that prevented it from   fulfilling this request.
+
+    exception
+
+    javax.servlet.ServletException: java.lang.ExceptionInInitializerError
+	   com.vaadin.terminal.gwt.server.AbstractApplicationServlet.handleServiceException(AbstractApplicationServlet.java:1004)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:548)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+    root cause
+
+    java.lang.ExceptionInInitializerError
+	sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	    sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	    sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	java.lang.reflect.Constructor.newInstance(Constructor.java:532)
+	java.lang.Class.newInstance0(Class.java:372)
+	java.lang.Class.newInstance(Class.java:325)
+	com.vaadin.terminal.gwt.server.ApplicationServlet.getNewApplication(ApplicationServlet.java:82)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.createApplication(AbstractApplicationServlet.java:978)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.findApplicationInstance(AbstractApplicationServlet.java:801)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:456)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+    root cause
+
+    javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Could not open connection
+	    org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1365)
+	    org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1293)
+	org.hibernate.ejb.AbstractEntityManagerImpl.throwPersistenceException(AbstractEntityManagerImpl.java:1375)
+	org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:62)
+	com.vaadin.demo.jpaaddressbook.DemoDataGenerator.create(DemoDataGenerator.java:55)
+	com.vaadin.demo.jpaaddressbook.JpaAddressbookApplication.<clinit>(JpaAddressbookApplication.java:11)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	java.lang.reflect.Constructor.newInstance(Constructor.java:532)
+	java.lang.Class.newInstance0(Class.java:372)
+	java.lang.Class.newInstance(Class.java:325)
+	    com.vaadin.terminal.gwt.server.ApplicationServlet.getNewApplication(ApplicationServlet.java:82)
+	    com.vaadin.terminal.gwt.server.AbstractApplicationServlet.createApplication(AbstractApplicationServlet.java:978)
+	    com.vaadin.terminal.gwt.server.AbstractApplicationServlet.findApplicationInstance(AbstractApplicationServlet.java:801)
+	    com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:456)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+    root cause
+
+    org.hibernate.exception.JDBCConnectionException: Could not open connection
+	    org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:131)
+	    org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	    org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	    org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:304)
+	    org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl    .java:169)
+    	    org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doBegin(JdbcTransaction.java:    67)
+	org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
+	org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1363)
+	org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:59)
+	com.vaadin.demo.jpaaddressbook.DemoDataGenerator.create(DemoDataGenerator.java:55)
+	com.vaadin.demo.jpaaddressbook.JpaAddressbookApplication.<clinit>(JpaAddressbookApplication.java:11)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	java.lang.reflect.Constructor.newInstance(Constructor.java:532)
+	java.lang.Class.newInstance0(Class.java:372)
+	java.lang.Class.newInstance(Class.java:325)
+	com.vaadin.terminal.gwt.server.ApplicationServlet.getNewApplication(ApplicationServlet.java:82)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.createApplication(AbstractApplicationServlet.java:978)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.findApplicationInstance(AbstractApplicationServlet.java:801)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:456)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+    root cause
+
+    java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/grails_sandbox
+	java.sql.DriverManager.getConnection(DriverManager.java:640)
+	java.sql.DriverManager.getConnection(DriverManager.java:169)
+	    org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:192)
+	    org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:278)
+	        org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:297)
+	    org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:169)
+	org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doBegin(JdbcTransaction.java:67)
+	org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
+	org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1363)
+	org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:59)
+	com.vaadin.demo.jpaaddressbook.DemoDataGenerator.create(DemoDataGenerator.java:55)
+	com.vaadin.demo.jpaaddressbook.JpaAddressbookApplication.<clinit>(JpaAddressbookApplication.java:11)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	java.lang.reflect.Constructor.newInstance(Constructor.java:532)
+	java.lang.Class.newInstance0(Class.java:372)
+	java.lang.Class.newInstance(Class.java:325)
+	com.vaadin.terminal.gwt.server.ApplicationServlet.getNewApplication(ApplicationServlet.java:82)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.createApplication(AbstractApplicationServlet.java:978)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.findApplicationInstance(AbstractApplicationServlet.java:801)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:456)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+
+here is my persistence.xml located in /WEB-INF/classes/META-INF/
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <persistence xmlns=""http://java.sun.com/xml/ns/persistence""
+    	xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+    	xsi:schemaLocation=""http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd""
+    	version=""2.0"">
+    
+    	<persistence-unit name=""addressbook"">
+            <provider>org.hibernate.ejb.HibernatePersistence</provider>
+            <properties>
+                    <property name=""hibernate.archive.autodetection"" value=""class"" />
+                    <property name=""hibernate.format_sql"" value=""false"" />
+                    <property name=""hibernate.show_sql"" value=""false"" />
+                    <property name=""hibernate.hbm2ddl.auto"" value=""create-update"" />
+                    <property name=""hibernate.connection.driver_class"" value=""com.mysql.jdbc.Driver"" />
+                    <property name=""hibernate.dialect"" value=""org.hibernate.dialect.MySQL5InnoDBDialect"" />
+                    <property name=""hibernate.connection.username"" value=""root"" />
+                    <property name=""hibernate.connection.password"" value=""Shadow13"" />
+                    <property name=""hibernate.connection.url"" value=""jdbc:mysql://localhost:3306/grails_sandbox"" />
+            </properties>
+    	</persistence-unit>
+        
+    </persistence>
+
+Ive included the hibernate library along with mysql connector in /WEB-INF/lib/
+
+I have been messing with this almost the entire day and getting no where with it. Any helper would be appreciated. ",hibernate,jpa,vaadin,,,,open,0,545,5,"Configure Hibernate with Vaadin JPAContainer2.0 Im trying to convert the Vaadin demo for JPAContainer to use hibernate instead of eclipselink.  But I cannot seem to get it working.
+
+Here is the documentation I am referencing https://vaadin.com/book/-/page/jpacontainer.html
+
+This is the stack trace when trying to run the app:
+
+
+    description The server encountered an internal error () that prevented it from   fulfilling this request.
+
+    exception
+
+    javax.servlet.ServletException: java.lang.ExceptionInInitializerError
+	   com.vaadin.terminal.gwt.server.AbstractApplicationServlet.handleServiceException(AbstractApplicationServlet.java:1004)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:548)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+    root cause
+
+    java.lang.ExceptionInInitializerError
+	sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	    sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	    sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	java.lang.reflect.Constructor.newInstance(Constructor.java:532)
+	java.lang.Class.newInstance0(Class.java:372)
+	java.lang.Class.newInstance(Class.java:325)
+	com.vaadin.terminal.gwt.server.ApplicationServlet.getNewApplication(ApplicationServlet.java:82)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.createApplication(AbstractApplicationServlet.java:978)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.findApplicationInstance(AbstractApplicationServlet.java:801)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:456)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+    root cause
+
+    javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Could not open connection
+	    org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1365)
+	    org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1293)
+	org.hibernate.ejb.AbstractEntityManagerImpl.throwPersistenceException(AbstractEntityManagerImpl.java:1375)
+	org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:62)
+	com.vaadin.demo.jpaaddressbook.DemoDataGenerator.create(DemoDataGenerator.java:55)
+	com.vaadin.demo.jpaaddressbook.JpaAddressbookApplication.<clinit>(JpaAddressbookApplication.java:11)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	java.lang.reflect.Constructor.newInstance(Constructor.java:532)
+	java.lang.Class.newInstance0(Class.java:372)
+	java.lang.Class.newInstance(Class.java:325)
+	    com.vaadin.terminal.gwt.server.ApplicationServlet.getNewApplication(ApplicationServlet.java:82)
+	    com.vaadin.terminal.gwt.server.AbstractApplicationServlet.createApplication(AbstractApplicationServlet.java:978)
+	    com.vaadin.terminal.gwt.server.AbstractApplicationServlet.findApplicationInstance(AbstractApplicationServlet.java:801)
+	    com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:456)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+    root cause
+
+    org.hibernate.exception.JDBCConnectionException: Could not open connection
+	    org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:131)
+	    org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	    org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	    org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:304)
+	    org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl    .java:169)
+    	    org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doBegin(JdbcTransaction.java:    67)
+	org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
+	org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1363)
+	org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:59)
+	com.vaadin.demo.jpaaddressbook.DemoDataGenerator.create(DemoDataGenerator.java:55)
+	com.vaadin.demo.jpaaddressbook.JpaAddressbookApplication.<clinit>(JpaAddressbookApplication.java:11)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	java.lang.reflect.Constructor.newInstance(Constructor.java:532)
+	java.lang.Class.newInstance0(Class.java:372)
+	java.lang.Class.newInstance(Class.java:325)
+	com.vaadin.terminal.gwt.server.ApplicationServlet.getNewApplication(ApplicationServlet.java:82)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.createApplication(AbstractApplicationServlet.java:978)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.findApplicationInstance(AbstractApplicationServlet.java:801)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:456)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+    root cause
+
+    java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/grails_sandbox
+	java.sql.DriverManager.getConnection(DriverManager.java:640)
+	java.sql.DriverManager.getConnection(DriverManager.java:169)
+	    org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:192)
+	    org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:278)
+	        org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:297)
+	    org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:169)
+	org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doBegin(JdbcTransaction.java:67)
+	org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
+	org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1363)
+	org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:59)
+	com.vaadin.demo.jpaaddressbook.DemoDataGenerator.create(DemoDataGenerator.java:55)
+	com.vaadin.demo.jpaaddressbook.JpaAddressbookApplication.<clinit>(JpaAddressbookApplication.java:11)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	java.lang.reflect.Constructor.newInstance(Constructor.java:532)
+	java.lang.Class.newInstance0(Class.java:372)
+	java.lang.Class.newInstance(Class.java:325)
+	com.vaadin.terminal.gwt.server.ApplicationServlet.getNewApplication(ApplicationServlet.java:82)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.createApplication(AbstractApplicationServlet.java:978)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.findApplicationInstance(AbstractApplicationServlet.java:801)
+	com.vaadin.terminal.gwt.server.AbstractApplicationServlet.service(AbstractApplicationServlet.java:456)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+
+
+here is my persistence.xml located in /WEB-INF/classes/META-INF/
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <persistence xmlns=""http://java.sun.com/xml/ns/persistence""
+    	xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""
+    	xsi:schemaLocation=""http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd""
+    	version=""2.0"">
+    
+    	<persistence-unit name=""addressbook"">
+            <provider>org.hibernate.ejb.HibernatePersistence</provider>
+            <properties>
+                    <property name=""hibernate.archive.autodetection"" value=""class"" />
+                    <property name=""hibernate.format_sql"" value=""false"" />
+                    <property name=""hibernate.show_sql"" value=""false"" />
+                    <property name=""hibernate.hbm2ddl.auto"" value=""create-update"" />
+                    <property name=""hibernate.connection.driver_class"" value=""com.mysql.jdbc.Driver"" />
+                    <property name=""hibernate.dialect"" value=""org.hibernate.dialect.MySQL5InnoDBDialect"" />
+                    <property name=""hibernate.connection.username"" value=""root"" />
+                    <property name=""hibernate.connection.password"" value=""Shadow13"" />
+                    <property name=""hibernate.connection.url"" value=""jdbc:mysql://localhost:3306/grails_sandbox"" />
+            </properties>
+    	</persistence-unit>
+        
+    </persistence>
+
+Ive included the hibernate library along with mysql connector in /WEB-INF/lib/
+
+I have been messing with this almost the entire day and getting no where with it. Any helper would be appreciated. ",3
+11339748,07/05/2012 07:35:10,1228193,02/23/2012 11:20:54,17,0,Is there a way to work with vaadin and jpa without JpaContainer?,"I'm trying to do a simple prove of concept with Vaadin and JPA Persistence layer. 
+
+I have a Bean with @OneToMany relationships with fetchType = Lazy and when I trying to add a collection of this beans into a table with my DAO. I have the next exception:
+
+    Caused by: org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: common.domain.Bill.detail, no session or session was closed
+
+Is there a way to work with Vaadin and JPA without a JPAContainer?
+
+Thanks.",hibernate,jpa,vaadin,,,,open,0,81,12,"Is there a way to work with vaadin and jpa without JpaContainer? I'm trying to do a simple prove of concept with Vaadin and JPA Persistence layer. 
+
+I have a Bean with @OneToMany relationships with fetchType = Lazy and when I trying to add a collection of this beans into a table with my DAO. I have the next exception:
+
+    Caused by: org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: common.domain.Bill.detail, no session or session was closed
+
+Is there a way to work with Vaadin and JPA without a JPAContainer?
+
+Thanks.",3
+10641016,05/17/2012 17:59:36,906511,08/22/2011 19:16:30,51,3,Hiberante and SQL Server Column name,"I have a database that uses ""-"" in it's columns names.
+
+Example
+
+    system-test-id
+
+I mapped the table in Hibernate, but when I try to select all, for example, I get this error:
+
+    Invalid column name ""system""
+
+Notice that only the first word is taken as column name. 
+
+Option show_sql in hibernate shows me this:
+
+    select this_.system-test-id as system1_0_0_ (...)
+
+
+
+",hibernate,sql-server-2005,columns,,,,open,0,65,6,"Hiberante and SQL Server Column name I have a database that uses ""-"" in it's columns names.
+
+Example
+
+    system-test-id
+
+I mapped the table in Hibernate, but when I try to select all, for example, I get this error:
+
+    Invalid column name ""system""
+
+Notice that only the first word is taken as column name. 
+
+Option show_sql in hibernate shows me this:
+
+    select this_.system-test-id as system1_0_0_ (...)
+
+
+
+",3
+11309936,07/03/2012 11:27:28,1121497,12/29/2011 15:56:28,13,0,Distributed inserts cause duplicates with hibernate,"We have several threads/machines saving (inserting) new objects concurrently. Sometimes two threads/machines try to insert the same object, causing an error.
+
+Is there a known way to handle this situation? I suppose this is quite common.
+
+Thank you,
+Ferran",hibernate,concurrency,insert,distributed,,07/07/2012 14:51:05,not a real question,1,36,6,"Distributed inserts cause duplicates with hibernate We have several threads/machines saving (inserting) new objects concurrently. Sometimes two threads/machines try to insert the same object, causing an error.
+
+Is there a known way to handle this situation? I suppose this is quite common.
+
+Thank you,
+Ferran",4
+6744725,07/19/2011 09:05:27,851635,07/19/2011 09:05:27,1,0,Play framework JPA query nested object not available,"I have three objects that are related to eachother.
+
+    @Entity
+    class Club extends Model
+
+       @OneToMany(cascade = CascadeType.ALL, mappedBy = ""club"")
+       public Set<Car> cars;
+
+    @Entity
+    class Car extends Model
+
+       @ManyToOne(cascade = CascadeType.PERSIST)
+       public Club club;
+
+    @Entity
+    class Booking extends Model
+
+       public Date startTime;
+       
+       @ManyToOne(cascade = CascadeType.PERSIST)
+       public Car car;
+       
+       public static Collection<Booking> bookingsForClubInPeriod(Club club, Date start, Date end){
+          return Booking.find(""startTime > ? and startTime < ? and car.club = ?"", start, end, club).fetch();
+       }
+
+I can search for Bookings that start between two times, but when I add car.club to the query, I get zero results.
+
+I also tried changing the query to:
+     find(""startTime > ? and startTime < ? and car in ?"", start, end, club.cars) but with no luck (that gave me this message: <i>Could not get a field value by reflection getter of models.Car.id</i>
+
+Another try was to add FetchType.EAGER to both cars and club, but that didn't help either.
+
+Also if I do a find on Car I can get the club, and the other way around. It's just in this query I can't find it.
+The model objects are simplified, but should provide enough information to explain my problem.
+
+Any Ideas why I can't query based on the nested object club?
+
+ ",hibernate,query,jpa,playframework,,,open,0,299,8,"Play framework JPA query nested object not available I have three objects that are related to eachother.
+
+    @Entity
+    class Club extends Model
+
+       @OneToMany(cascade = CascadeType.ALL, mappedBy = ""club"")
+       public Set<Car> cars;
+
+    @Entity
+    class Car extends Model
+
+       @ManyToOne(cascade = CascadeType.PERSIST)
+       public Club club;
+
+    @Entity
+    class Booking extends Model
+
+       public Date startTime;
+       
+       @ManyToOne(cascade = CascadeType.PERSIST)
+       public Car car;
+       
+       public static Collection<Booking> bookingsForClubInPeriod(Club club, Date start, Date end){
+          return Booking.find(""startTime > ? and startTime < ? and car.club = ?"", start, end, club).fetch();
+       }
+
+I can search for Bookings that start between two times, but when I add car.club to the query, I get zero results.
+
+I also tried changing the query to:
+     find(""startTime > ? and startTime < ? and car in ?"", start, end, club.cars) but with no luck (that gave me this message: <i>Could not get a field value by reflection getter of models.Car.id</i>
+
+Another try was to add FetchType.EAGER to both cars and club, but that didn't help either.
+
+Also if I do a find on Car I can get the club, and the other way around. It's just in this query I can't find it.
+The model objects are simplified, but should provide enough information to explain my problem.
+
+Any Ideas why I can't query based on the nested object club?
+
+ ",4
+4133999,11/09/2010 13:12:13,253924,01/19/2010 10:56:30,135,6,"Hibernate not saving foreign key, but with junit it's ok","I have this strange problem. In a J2ee webapp with spring, smartgwt and hibernate, it happens that I have a class A wich has a set of class B, both of them mapped to table A and table B.
+
+I wrote a simple test case for testing the service manager which is supposed to do insert, update, delete and everything work as expected especially during insert. In the end I have one record in A and records in B with foreign key to A.
+
+But when I try to call the service from the web app, the entity in B are saved without a foreign key reference.
+
+I am sure that the service is the same. One thing I noticed is that enabling hibernate logging, seems that when the service is called from the application, one more update is made:
+
+ - insert A 
+ - insert B
+ - update A
+ - update B
+ - update B (foreign key only)
+ - update A <--- ??? 
+ - update B <--- ???
+
+Instead, when junit test case is run, the update is as follows:
+
+ - insert A 
+ - insert B
+ - update A
+ - update B
+ - update B (foreign key only)
+
+I suppose the latest update is what is causing the erroe, maybe it is overwriting values.
+Considering that the app is using spring, with the well known mechanism of DAO + Manager, where can I investigate to solve this issue ? Someone told me that the session is not closed, so hibernate would do one more update before release the objects by itself.
+
+I am pretty sure that all the configuration hbm, xml, and the rest are fine...but I maybe wrong.
+
+thanks
+",hibernate,foreign-key-relationship,,,,,open,0,275,10,"Hibernate not saving foreign key, but with junit it's ok I have this strange problem. In a J2ee webapp with spring, smartgwt and hibernate, it happens that I have a class A wich has a set of class B, both of them mapped to table A and table B.
+
+I wrote a simple test case for testing the service manager which is supposed to do insert, update, delete and everything work as expected especially during insert. In the end I have one record in A and records in B with foreign key to A.
+
+But when I try to call the service from the web app, the entity in B are saved without a foreign key reference.
+
+I am sure that the service is the same. One thing I noticed is that enabling hibernate logging, seems that when the service is called from the application, one more update is made:
+
+ - insert A 
+ - insert B
+ - update A
+ - update B
+ - update B (foreign key only)
+ - update A <--- ??? 
+ - update B <--- ???
+
+Instead, when junit test case is run, the update is as follows:
+
+ - insert A 
+ - insert B
+ - update A
+ - update B
+ - update B (foreign key only)
+
+I suppose the latest update is what is causing the erroe, maybe it is overwriting values.
+Considering that the app is using spring, with the well known mechanism of DAO + Manager, where can I investigate to solve this issue ? Someone told me that the session is not closed, so hibernate would do one more update before release the objects by itself.
+
+I am pretty sure that all the configuration hbm, xml, and the rest are fine...but I maybe wrong.
+
+thanks
+",2
+11008631,06/13/2012 05:21:24,1452830,06/13/2012 05:14:49,1,0,Moving from plain jdbc to hibernate,"Right now we support only oracle, requirment has come up to support postgres too. This has led me towards ORMs - which would be db vendor independent.
+
+How difficult is it to move from plain jdbc to some ORM say Hibernate?",hibernate,jdbc,,,,06/13/2012 07:13:34,not a real question,1,40,6,"Moving from plain jdbc to hibernate Right now we support only oracle, requirment has come up to support postgres too. This has led me towards ORMs - which would be db vendor independent.
+
+How difficult is it to move from plain jdbc to some ORM say Hibernate?",2
+6408958,06/20/2011 09:07:23,806337,06/20/2011 09:07:23,1,0,map three database in the same time,"I have to map Three database on my project (Web application),using Hibernate/JPA ,so my question is how can I configure persistance.xml to support the three connections
+this are my files :
+ **persistance.xml**
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <persistence version=""2.0"" xmlns=""http://java.sun.com/xml/ns/persistence"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""  xsi:schemaLocation=""http://java.sun.com/xml/ns/persistence  http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"">
+    <persistence-unit name=""JiraMapPU"" transaction-type=""RESOURCE_LOCAL"">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>DTOKpi.AssociationKpiProfil</class>  //from  database1
+    <class>DTOKpi.Kpi</class>                  //database1
+    <class>DTOKpi.ProfilUser</class>          //  database1
+    <class>DTOJIRA.Resolution</class>         //  database2
+    <class>DTOJIRA.Project</class>           //  database2
+    <class>DTOJIRA.Issuestatus</class>
+    <class>DTOJIRA.Jiraissue</class>
+    <class>DTOJIRA.Priority</class>
+    <class>DTOJIRA.Component</class>
+    <class>DTOJIRA.Issuetype</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name=""javax.persistence.jdbc.url"" value=""jdbc:mysql://localhost:3306/jiradb""/>
+      <property name=""javax.persistence.jdbc.password"" value=""root""/>
+      <property name=""javax.persistence.jdbc.driver"" value=""com.mysql.jdbc.Driver""/>
+      <property name=""javax.persistence.jdbc.user"" value=""root""/>
+    </properties>
+  </persistence-unit>
+</persistence>
+
+
+**My hibernate.cfg.xml**
+
+
+
+    <!DOCTYPE hibernate-configuration PUBLIC ""-//Hibernate/Hibernate Configuration DTD  3.0//EN"" ""http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"">
+    <hibernate-configuration>
+    <session-factory>
+    <property name=""hibernate.dialect"">org.hibernate.dialect.MySQLDialect</property>
+    <property name=""hibernate.connection.driver_class"">com.mysql.jdbc.Driver</property>
+    <property name=""hibernate.connection.url"">jdbc:mysql://localhost:3306/jiradb</property>
+    <property name=""hibernate.connection.username"">root</property>
+    <mapping resource=""DTOTest/issuestatus.hbm.xml""/>
+    <mapping resource=""hibernate.hbm.xml""/>
+    </session-factory>
+    </hibernate-configuration>",hibernate,jpa,,,,,open,0,261,7,"map three database in the same time I have to map Three database on my project (Web application),using Hibernate/JPA ,so my question is how can I configure persistance.xml to support the three connections
+this are my files :
+ **persistance.xml**
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <persistence version=""2.0"" xmlns=""http://java.sun.com/xml/ns/persistence"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""  xsi:schemaLocation=""http://java.sun.com/xml/ns/persistence  http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"">
+    <persistence-unit name=""JiraMapPU"" transaction-type=""RESOURCE_LOCAL"">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>DTOKpi.AssociationKpiProfil</class>  //from  database1
+    <class>DTOKpi.Kpi</class>                  //database1
+    <class>DTOKpi.ProfilUser</class>          //  database1
+    <class>DTOJIRA.Resolution</class>         //  database2
+    <class>DTOJIRA.Project</class>           //  database2
+    <class>DTOJIRA.Issuestatus</class>
+    <class>DTOJIRA.Jiraissue</class>
+    <class>DTOJIRA.Priority</class>
+    <class>DTOJIRA.Component</class>
+    <class>DTOJIRA.Issuetype</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name=""javax.persistence.jdbc.url"" value=""jdbc:mysql://localhost:3306/jiradb""/>
+      <property name=""javax.persistence.jdbc.password"" value=""root""/>
+      <property name=""javax.persistence.jdbc.driver"" value=""com.mysql.jdbc.Driver""/>
+      <property name=""javax.persistence.jdbc.user"" value=""root""/>
+    </properties>
+  </persistence-unit>
+</persistence>
+
+
+**My hibernate.cfg.xml**
+
+
+
+    <!DOCTYPE hibernate-configuration PUBLIC ""-//Hibernate/Hibernate Configuration DTD  3.0//EN"" ""http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"">
+    <hibernate-configuration>
+    <session-factory>
+    <property name=""hibernate.dialect"">org.hibernate.dialect.MySQLDialect</property>
+    <property name=""hibernate.connection.driver_class"">com.mysql.jdbc.Driver</property>
+    <property name=""hibernate.connection.url"">jdbc:mysql://localhost:3306/jiradb</property>
+    <property name=""hibernate.connection.username"">root</property>
+    <mapping resource=""DTOTest/issuestatus.hbm.xml""/>
+    <mapping resource=""hibernate.hbm.xml""/>
+    </session-factory>
+    </hibernate-configuration>",2
+6113436,05/24/2011 16:10:16,657745,03/13/2011 18:08:08,60,4,enabling grails hibernate filters,"Hi I am using the [Grails filter plugin][1]
+
+
+  [1]: http://www.grails.org/plugin/hibernate-filter
+
+I am trying to define a default filter as below
+
+    // Defined inside the Book entity
+    static hibernateFilters = {
+        activeFilter(condition:'active=1', default:true)
+    }
+
+
+When i run my integration tests the filter does not apply for dynamic finder methods like 
+
+    Book.findAll()
+
+
+If I add the below line in the BootStrap.groovy class
+
+    Book.enableHibernateFilter('activeFilter')
+
+Then the filter is applied.
+
+However when the application is run the filter is never applied, with or without the above code in BootStrap.groovy
+
+Any ideas ?",hibernate,grails,filter,,,,open,0,106,4,"enabling grails hibernate filters Hi I am using the [Grails filter plugin][1]
+
+
+  [1]: http://www.grails.org/plugin/hibernate-filter
+
+I am trying to define a default filter as below
+
+    // Defined inside the Book entity
+    static hibernateFilters = {
+        activeFilter(condition:'active=1', default:true)
+    }
+
+
+When i run my integration tests the filter does not apply for dynamic finder methods like 
+
+    Book.findAll()
+
+
+If I add the below line in the BootStrap.groovy class
+
+    Book.enableHibernateFilter('activeFilter')
+
+Then the filter is applied.
+
+However when the application is run the filter is never applied, with or without the above code in BootStrap.groovy
+
+Any ideas ?",3
+4491949,12/20/2010 17:02:53,153721,08/10/2009 13:23:30,6,3,Dozer: Hibernate PersistentMap is not mapped to java.util.HashMap,"I have a Hibernate annotated entity with a field: 
+
+    @OneToMany(mappedBy=""templateInstance"", fetch = FetchType.EAGER) 
+    @MapKey(name = ""attributeName"") 
+    private Map<String, Component> components; 
+
+Hibernate makes a PersistentMap out of this. 
+Then I want Dozer to map this to an object with such a field: 
+
+    private Map<String, ComponentDto> components; 
+
+After having LazyInitializationExceptions and some debugging, I found out, that it´s not a problem of a closed Hibernate session, but that Dozer tries not to map to a HashMap but to a PersistentMap! And therefore when Dozer accesses the target map the PersistentMap throws the Exception, because it has no session of course. 
+
+So, I thought that the intented behaviour of Dozer is to map to a HashMap. Now the question: am I doing something wrong or Dozer and how can I get Dozer to map the PersistentMap to normal Java standard map?
+
+I had no problems when using a List<Component> before. Has anybody else used Dozer for mapping Hibernate PersistentMap?
+
+Regards,
+Konsumierer",hibernate,hashmap,dozer,,,,open,0,171,8,"Dozer: Hibernate PersistentMap is not mapped to java.util.HashMap I have a Hibernate annotated entity with a field: 
+
+    @OneToMany(mappedBy=""templateInstance"", fetch = FetchType.EAGER) 
+    @MapKey(name = ""attributeName"") 
+    private Map<String, Component> components; 
+
+Hibernate makes a PersistentMap out of this. 
+Then I want Dozer to map this to an object with such a field: 
+
+    private Map<String, ComponentDto> components; 
+
+After having LazyInitializationExceptions and some debugging, I found out, that it´s not a problem of a closed Hibernate session, but that Dozer tries not to map to a HashMap but to a PersistentMap! And therefore when Dozer accesses the target map the PersistentMap throws the Exception, because it has no session of course. 
+
+So, I thought that the intented behaviour of Dozer is to map to a HashMap. Now the question: am I doing something wrong or Dozer and how can I get Dozer to map the PersistentMap to normal Java standard map?
+
+I had no problems when using a List<Component> before. Has anybody else used Dozer for mapping Hibernate PersistentMap?
+
+Regards,
+Konsumierer",3
+3854687,10/04/2010 11:12:42,341106,05/14/2010 09:20:45,172,17,Metamodel attributes not populated -- NullPointerException,"I would like to use JPA2 Criteria API with metamodel objects, which seems to be pretty easy:
+
+    ...
+    Root<JPAAlbum> albm = cq.from(JPAAlbum.class);
+    ... albm.get(JPAAlbum_.theme) ... ;
+
+but this Root.get always throws a `NullPointerException`. `JPAAlbum_.theme` was automatically generated by Hibernate and looks like
+
+    public static volatile SingularAttribute<JPAAlbum, JPATheme> theme;
+
+but it's obviously never populated.
+
+Am I missing a step in the initialization of the framework ?",hibernate,nullpointerexception,jpa-2.0,criteria-api,,,open,0,74,6,"Metamodel attributes not populated -- NullPointerException I would like to use JPA2 Criteria API with metamodel objects, which seems to be pretty easy:
+
+    ...
+    Root<JPAAlbum> albm = cq.from(JPAAlbum.class);
+    ... albm.get(JPAAlbum_.theme) ... ;
+
+but this Root.get always throws a `NullPointerException`. `JPAAlbum_.theme` was automatically generated by Hibernate and looks like
+
+    public static volatile SingularAttribute<JPAAlbum, JPATheme> theme;
+
+but it's obviously never populated.
+
+Am I missing a step in the initialization of the framework ?",4
+10881281,06/04/2012 12:28:52,1286060,03/22/2012 13:38:28,1,2,Book - Hibernate using annotations,"I want to learn hibernate using annotations, please suggest some good books that explains it well. Level of explanation should be Intermediate to Advanced.
+
+Note : I know of ""Hibernate Made Easy"" by Cameron Mackenzie.
+
+Thanks in advance.
+
+",hibernate,books,ebook,hibernate-annotations,,08/01/2012 03:21:42,off topic,1,36,5,"Book - Hibernate using annotations I want to learn hibernate using annotations, please suggest some good books that explains it well. Level of explanation should be Intermediate to Advanced.
+
+Note : I know of ""Hibernate Made Easy"" by Cameron Mackenzie.
+
+Thanks in advance.
+
+",4
+1000910,06/16/2009 11:33:19,93796,04/21/2009 13:34:22,69,1,hibernate cascade deletion ,"i have one class called course and one class called tutorials
+in class i hav set of tutorials .Wnen i delete course i want all tutorials associaed with that course to be deleted . But presently the tutorials are  not geting deleted when i delete the owner course
+i am using folloing code
+ cascade=""delete-orphan,all""
+",hibernate,,,,,,open,0,53,4,"hibernate cascade deletion  i have one class called course and one class called tutorials
+in class i hav set of tutorials .Wnen i delete course i want all tutorials associaed with that course to be deleted . But presently the tutorials are  not geting deleted when i delete the owner course
+i am using folloing code
+ cascade=""delete-orphan,all""
+",1

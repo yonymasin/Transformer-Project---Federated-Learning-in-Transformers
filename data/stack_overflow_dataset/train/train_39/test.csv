@@ -1,0 +1,2511 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+11522119,07/17/2012 12:06:51,233421,12/17/2009 00:41:31,1585,0,Best way to make a category into a page in wordpress with SEO in mind?,"Best way to make a category into a page in wordpress with SEO in mind?
+
+
+Thanks in advance ;-)",wordpress,seo,wordpress-plugin,wordpress-theming,seo-friendly,07/18/2012 15:02:08,off topic,1,18,15,"Best way to make a category into a page in wordpress with SEO in mind? Best way to make a category into a page in wordpress with SEO in mind?
+
+
+Thanks in advance ;-)",5
+11230919,06/27/2012 16:28:51,616643,02/14/2011 18:18:02,472,21,Wordpress - display the page content without <p> wrapper,"How to display the content for given page ID withot the `<p></p>` wrapper?
+
+The method I'm currently using is: 
+
+    <?php 
+    $id=21; 
+    $post = get_page($id); 
+    $content = apply_filters('the_content', $post->post_content); 
+    echo $content;  
+    ?>
+
+
+
+For example `page ID = 21` has the following content: `Some content`
+
+What the wordpress echo is `<p>Some content</p>`
+
+
+Any suggestion much appreciated.",wordpress,wordpress-theming,,,,06/28/2012 02:01:52,off topic,1,75,9,"Wordpress - display the page content without <p> wrapper How to display the content for given page ID withot the `<p></p>` wrapper?
+
+The method I'm currently using is: 
+
+    <?php 
+    $id=21; 
+    $post = get_page($id); 
+    $content = apply_filters('the_content', $post->post_content); 
+    echo $content;  
+    ?>
+
+
+
+For example `page ID = 21` has the following content: `Some content`
+
+What the wordpress echo is `<p>Some content</p>`
+
+
+Any suggestion much appreciated.",2
+6711823,07/15/2011 18:50:22,514072,11/19/2010 22:54:04,61,10,How do I add a confirmation dialog to the Wordpress publish button?,"I'm developing a wordpress plugin which creates a custom post type ""knowledgebase article"" with some special fields. I'd like the publish button to warn the user if they are missing fields before they commit. How do I do this? Is there an appropriate hook to insert this behavior?",wordpress,wordpress-plugin,wordpress-plugin-dev,,,07/16/2011 13:38:53,not a real question,1,48,12,"How do I add a confirmation dialog to the Wordpress publish button? I'm developing a wordpress plugin which creates a custom post type ""knowledgebase article"" with some special fields. I'd like the publish button to warn the user if they are missing fields before they commit. How do I do this? Is there an appropriate hook to insert this behavior?",3
+4936375,02/08/2011 17:41:43,643594,02/04/2011 18:57:40,1,0,change the page/menu order in Wordpress,"back to another issue my company site is http://fiestainsurance.com/wordpress we are trying to change the menu section in a better order where ""Welcome"" tab should be the first one instead of ""About Us""  i went to wp backend and re-arange the the order under ""page attributes"" but nothing happens.
+
+help will be appreciated
+Sincerely
+
+Jim",wordpress,menu,tabs,order,,03/25/2011 12:11:22,too localized,1,53,6,"change the page/menu order in Wordpress back to another issue my company site is http://fiestainsurance.com/wordpress we are trying to change the menu section in a better order where ""Welcome"" tab should be the first one instead of ""About Us""  i went to wp backend and re-arange the the order under ""page attributes"" but nothing happens.
+
+help will be appreciated
+Sincerely
+
+Jim",4
+8530772,12/16/2011 06:53:41,1101409,12/16/2011 06:50:49,1,0,can open source CMS do this?,"I would like to ask if there's an open source CMS out there that can do this...
+
+Registered user can upload files (zip, rar, jpeg, png). Then at the frontend, it displays list of registered users with their uploaded files and has an option to download it?
+if there is what CMS (if plugins needed) has this features?
+
+thx.",wordpress,drupal,joomla,,,05/22/2012 12:59:46,off topic,1,56,6,"can open source CMS do this? I would like to ask if there's an open source CMS out there that can do this...
+
+Registered user can upload files (zip, rar, jpeg, png). Then at the frontend, it displays list of registered users with their uploaded files and has an option to download it?
+if there is what CMS (if plugins needed) has this features?
+
+thx.",3
+7746655,10/12/2011 21:12:21,266012,02/04/2010 08:42:17,287,0,wordpress plugin to manage the layout/design of a theme,"I want to use a plugin that will allow me to manage the layout/design of a wordpress site.  Is there such a plugin?
+",wordpress,design,layout,plugins,themes,10/13/2011 12:10:54,off topic,1,24,9,"wordpress plugin to manage the layout/design of a theme I want to use a plugin that will allow me to manage the layout/design of a wordpress site.  Is there such a plugin?
+",5
+11355206,07/06/2012 02:47:22,1505586,07/06/2012 02:26:02,1,0,"WordPress hack/plugin needed for hover over link, show image in DIV (gallery)","I am developing a WordPress site for an art gallery. Client wants an artists roster image gallery exactly like this one: http://www.walkercontemporary.com/artists/
+
+I have created a custom post type that generates a list, links to an artist's specific content. Now I need an effect that displays a sample image in an adjacent DIV on mouseover of the link. Based on viewing the source code of the above site, I am certain that this is a Dreamweaver feature. I would like for my solution to be integrated into the easy to use CMS capabilities of WordPress. Otherwise I will advise the client to seek another solution. They don't have the chops to maintain a large roster of artists doing manual coding, and they do not want thumbnails for visitors to hover over (which is how many other solutions approach it).
+
+Ideally, I would like some kind of REL value or automatically generated onmouseover values to be generated in the list items that calls the Featured Image associated with each artist in the custom post type. Is this possible? -thx - Steve
+",wordpress,wordpress-plugin,gallery,jquery-hover,,,open,0,178,12,"WordPress hack/plugin needed for hover over link, show image in DIV (gallery) I am developing a WordPress site for an art gallery. Client wants an artists roster image gallery exactly like this one: http://www.walkercontemporary.com/artists/
+
+I have created a custom post type that generates a list, links to an artist's specific content. Now I need an effect that displays a sample image in an adjacent DIV on mouseover of the link. Based on viewing the source code of the above site, I am certain that this is a Dreamweaver feature. I would like for my solution to be integrated into the easy to use CMS capabilities of WordPress. Otherwise I will advise the client to seek another solution. They don't have the chops to maintain a large roster of artists doing manual coding, and they do not want thumbnails for visitors to hover over (which is how many other solutions approach it).
+
+Ideally, I would like some kind of REL value or automatically generated onmouseover values to be generated in the list items that calls the Featured Image associated with each artist in the custom post type. Is this possible? -thx - Steve
+",4
+7787560,10/16/2011 21:48:14,809135,06/21/2011 19:30:01,1,0,Inline Javascript Audio Player/ Sound Manager 2,"I would like to implement this audio player,
+
+http://www.schillmania.com/projects/soundmanager2/
+
+into my band website that I am working on
+
+http://thewintonsbluegrass.com.
+
+It is a Wordpress site running on the Thesis Theme framework. I looked through the players documentation but I couldn't figure the thing out. :D Anyone know how to do it?
+
+Thanks!
+
+J Winton",wordpress,thesis,soundmanager2,,,,open,0,47,7,"Inline Javascript Audio Player/ Sound Manager 2 I would like to implement this audio player,
+
+http://www.schillmania.com/projects/soundmanager2/
+
+into my band website that I am working on
+
+http://thewintonsbluegrass.com.
+
+It is a Wordpress site running on the Thesis Theme framework. I looked through the players documentation but I couldn't figure the thing out. :D Anyone know how to do it?
+
+Thanks!
+
+J Winton",3
+5948561,05/10/2011 10:18:30,746604,05/10/2011 10:03:27,1,0,Buy a script for multi-sites,"Looking to buy a script that will handle multiple sub-domains on one installation like the one Wordpress Networks (MU) does. I would want to buy a web-application similar to software on handling these different sub-directories like thes[http://www.echinacities.com/shanghai/][1], [http://www.echinacities.com/beijing/][2] .
+
+I know I can use Wordpress Networks to do that but I want to have my own brand. Can anybody recommend any software application that I can buy? Thanks
+
+
+  [1]: http://www.echinacities.com/shanghai/
+  [2]: http://www.echinacities.com/beijing/",wordpress,subdomains,sites,mu,,05/12/2011 23:49:56,off topic,1,73,5,"Buy a script for multi-sites Looking to buy a script that will handle multiple sub-domains on one installation like the one Wordpress Networks (MU) does. I would want to buy a web-application similar to software on handling these different sub-directories like thes[http://www.echinacities.com/shanghai/][1], [http://www.echinacities.com/beijing/][2] .
+
+I know I can use Wordpress Networks to do that but I want to have my own brand. Can anybody recommend any software application that I can buy? Thanks
+
+
+  [1]: http://www.echinacities.com/shanghai/
+  [2]: http://www.echinacities.com/beijing/",4
+11318085,07/03/2012 19:45:36,127896,06/23/2009 22:33:32,364,1,IE9 displaying all text as bold,I have a wordpress project and when viewed in IE9 all of the text is bold no matter what it's actually set to. I have tried fixing the font files but nothing changed. Why is this only happening in IE? How do I fix it?,wordpress,internet-explorer-9,font-bold,,,07/04/2012 20:44:53,off topic,1,45,6,IE9 displaying all text as bold I have a wordpress project and when viewed in IE9 all of the text is bold no matter what it's actually set to. I have tried fixing the font files but nothing changed. Why is this only happening in IE? How do I fix it?,3
+7191803,08/25/2011 14:06:40,912238,08/25/2011 13:53:48,1,0,Retrieve custom field value in wordpress,"Any one post the code for retrieving  value from customn field in wp_post table
+",wordpress,,,,,08/25/2011 15:37:59,not a real question,1,15,6,"Retrieve custom field value in wordpress Any one post the code for retrieving  value from customn field in wp_post table
+",1
+11242385,06/28/2012 10:11:58,1475124,06/22/2012 14:32:47,1,0,Wordpress Fancybox plugin newbie,"I am having a problem with Wordpress and fancybox plugin and am looking for directions. I have installed the fancybox plugin in wordpress and have activated it but do not know where to go from here.
+
+-Do I have to code some lines, if so where?
+-Where do I have to link the plugin to my images to make it work?
+
+Can anyone plz help me....
+
+",wordpress,wordpress-plugin,,,,07/02/2012 11:35:37,not a real question,1,63,4,"Wordpress Fancybox plugin newbie I am having a problem with Wordpress and fancybox plugin and am looking for directions. I have installed the fancybox plugin in wordpress and have activated it but do not know where to go from here.
+
+-Do I have to code some lines, if so where?
+-Where do I have to link the plugin to my images to make it work?
+
+Can anyone plz help me....
+
+",2
+3852290,10/04/2010 01:24:04,303832,03/28/2010 23:10:02,58,5,Wordpress get_image_tag filter - change image attributes ?,"Greetings,
+We can edit image attributes with this get_image_tag filter when we are adding images,but is there any similar filter or action that can we use to edit these attributes when post is added or edited - updated?
+
+Here is the link I found.
+
+http://www.webtechwise.com/wordpress-filter-examples-changing-attributes-when-adding-images-to-posts/
+
+Thanks in advance.",wordpress,wordpress-plugin,,,,,open,0,44,8,"Wordpress get_image_tag filter - change image attributes ? Greetings,
+We can edit image attributes with this get_image_tag filter when we are adding images,but is there any similar filter or action that can we use to edit these attributes when post is added or edited - updated?
+
+Here is the link I found.
+
+http://www.webtechwise.com/wordpress-filter-examples-changing-attributes-when-adding-images-to-posts/
+
+Thanks in advance.",2
+11285094,07/01/2012 19:43:05,1493417,06/30/2012 18:41:16,3,0,Wordpress custom /page/2/ template (different from index.php),"I'm trying to create a custom page 2 template that's different from the main index.php. For example, the main index page would display the latest news + a lot of features like a magazine. When readers click to read on to page 2, 3, 4 etc of the news posts, they are taken to a more regular news page. Kinda like something on theverge.com (at the bottom, click ""next page"" and see what I mean).
+
+Anyone have any ideas on how to do this? I know it's possible to create archive pages for categories and tags, but I'm not sure how to do it for the index.php.
+
+Thanks!",wordpress,,,,,07/01/2012 23:20:29,off topic,1,106,7,"Wordpress custom /page/2/ template (different from index.php) I'm trying to create a custom page 2 template that's different from the main index.php. For example, the main index page would display the latest news + a lot of features like a magazine. When readers click to read on to page 2, 3, 4 etc of the news posts, they are taken to a more regular news page. Kinda like something on theverge.com (at the bottom, click ""next page"" and see what I mean).
+
+Anyone have any ideas on how to do this? I know it's possible to create archive pages for categories and tags, but I'm not sure how to do it for the index.php.
+
+Thanks!",1
+6237921,06/04/2011 16:25:43,590329,01/26/2011 09:01:40,142,1,How can I make a login just like on wordpress.org?,"The page I am talking about is this: http://wordpress.org/extend/plugins/
+It is simple and perfect in my opinion. Can anyone help me?",wordpress,login-script,,,,06/04/2011 20:03:34,not a real question,1,20,10,"How can I make a login just like on wordpress.org? The page I am talking about is this: http://wordpress.org/extend/plugins/
+It is simple and perfect in my opinion. Can anyone help me?",2
+7733324,10/11/2011 22:31:25,99686,05/02/2009 00:28:16,91,1,Sticky Post Between Featured Gallery and Post Excerpts,"I'm a newbie to WordPress. Please help me if you can.
+
+I've a sticky post on my blog. But the theme I'm using is coded to show the post excerpts immediately after the featured gallery and hence it is not showing my sticky post. Now what I want is (on the home page) to show my sticky post immediately after the featured gallery and before the post excerpts. I want this to be shown exactly as it shows as a single post but in between the featured gallery and post excerpts.
+
+I'm pasting the whole index.php file here - 
+
+    <?php get_header(); ?>
+
+				<div id=""content_area""><!--content_area-->
+                	<div class=""banner"">
+						<?php include (ABSPATH . '/wp-content/plugins/featured-content-gallery/gallery.php'); ?>
+                    </div>
+
+                    	<div class=""review_title""><h2>Reviews</h2></div>
+                        	 <?php
+								$limit = get_option('posts_per_page');
+								$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+								$args=array(
+								'meta_key' => 'dbt_show',
+								'meta_value' => 1,
+								'showposts'=> $limit,
+								'paged' => $paged,
+								);
+								query_posts($args);
+								global $more;
+								$more = 0;
+							?>
+                         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <div class=""post""><!--post-->
+                            <div class=""img_box"">
+                            	<?php $thumb_img = get_post_meta($post->ID, 'dbt_thumb', true);?>
+                                <?php if($thumb_img) : ?><img src=""<?php bloginfo( 'template_url' ); ?>/tools/timthumb.php?src=<?php echo $thumb_img; ?>&w=148&h=148&zc=1"" alt="""" /><?php else : $thumb_img =  get_bloginfo('template_url').'/images/img_01.jpg';  ?><img src=""<?php bloginfo( 'template_url' ); ?>/tools/timthumb.php?src=<?php echo $thumb_img; ?>&w=148&h=148&zc=1"" alt="""" /><?php endif ?>
+                            </div>
+                            <div class=""review_box_title"">
+                                <h2><a href=""<?php the_permalink(); ?>"" title=""Permanent Link to <?php the_title_attribute(); ?>""><?php the_title(); ?></a></h2>
+                                <div class=""star_box"">
+                                	<?php $rating = get_post_meta($post->ID, 'dbt_stars', true);
+										for($i=0; $i<$rating; $i++)
+										{ ?>
+											<img src=""<?php bloginfo('template_url');?>/images/star_img.jpg"" alt="""" />
+										<?php }
+									?>
+                                </div>
+                            </div>
+                            <div class=""review_entry"" style="" border:1px solid red;""><!--review_entry-->
+                                <?php the_excerpt(''); ?>
+                                <div class=""button_box_area""><!--button_box_area-->
+                                    <div class=""button_box_lft"">
+                                        <a href=""<?php the_permalink(); ?>"" title=""""><span><span>READ REVIEW</span></span></a>
+                                    </div>
+                                    <div class=""button_box_rgt"">
+                                        <a href=""<?php echo get_post_meta($post->ID, 'dbt_website', true); ?>"" title=""""><span><span>VIEW</span></span></a>
+                                    </div>
+                                </div><!--/button_box_area-->
+                            </div><!--/review_entry-->
+                    	</div><!--/post-->
+                        <?php endwhile; ?>
+							<div class=""navigation"">
+								<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+							</div>
+						<?php endif; wp_reset_query(); ?>
+                </div><!--/content_area-->
+
+                <?php include(TEMPLATEPATH.'/sidebar.php') ?>
+
+<?php get_footer(); ?>
+
+
+
+
+Thanks in advance ",wordpress,,,,,,open,0,1126,8,"Sticky Post Between Featured Gallery and Post Excerpts I'm a newbie to WordPress. Please help me if you can.
+
+I've a sticky post on my blog. But the theme I'm using is coded to show the post excerpts immediately after the featured gallery and hence it is not showing my sticky post. Now what I want is (on the home page) to show my sticky post immediately after the featured gallery and before the post excerpts. I want this to be shown exactly as it shows as a single post but in between the featured gallery and post excerpts.
+
+I'm pasting the whole index.php file here - 
+
+    <?php get_header(); ?>
+
+				<div id=""content_area""><!--content_area-->
+                	<div class=""banner"">
+						<?php include (ABSPATH . '/wp-content/plugins/featured-content-gallery/gallery.php'); ?>
+                    </div>
+
+                    	<div class=""review_title""><h2>Reviews</h2></div>
+                        	 <?php
+								$limit = get_option('posts_per_page');
+								$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+								$args=array(
+								'meta_key' => 'dbt_show',
+								'meta_value' => 1,
+								'showposts'=> $limit,
+								'paged' => $paged,
+								);
+								query_posts($args);
+								global $more;
+								$more = 0;
+							?>
+                         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <div class=""post""><!--post-->
+                            <div class=""img_box"">
+                            	<?php $thumb_img = get_post_meta($post->ID, 'dbt_thumb', true);?>
+                                <?php if($thumb_img) : ?><img src=""<?php bloginfo( 'template_url' ); ?>/tools/timthumb.php?src=<?php echo $thumb_img; ?>&w=148&h=148&zc=1"" alt="""" /><?php else : $thumb_img =  get_bloginfo('template_url').'/images/img_01.jpg';  ?><img src=""<?php bloginfo( 'template_url' ); ?>/tools/timthumb.php?src=<?php echo $thumb_img; ?>&w=148&h=148&zc=1"" alt="""" /><?php endif ?>
+                            </div>
+                            <div class=""review_box_title"">
+                                <h2><a href=""<?php the_permalink(); ?>"" title=""Permanent Link to <?php the_title_attribute(); ?>""><?php the_title(); ?></a></h2>
+                                <div class=""star_box"">
+                                	<?php $rating = get_post_meta($post->ID, 'dbt_stars', true);
+										for($i=0; $i<$rating; $i++)
+										{ ?>
+											<img src=""<?php bloginfo('template_url');?>/images/star_img.jpg"" alt="""" />
+										<?php }
+									?>
+                                </div>
+                            </div>
+                            <div class=""review_entry"" style="" border:1px solid red;""><!--review_entry-->
+                                <?php the_excerpt(''); ?>
+                                <div class=""button_box_area""><!--button_box_area-->
+                                    <div class=""button_box_lft"">
+                                        <a href=""<?php the_permalink(); ?>"" title=""""><span><span>READ REVIEW</span></span></a>
+                                    </div>
+                                    <div class=""button_box_rgt"">
+                                        <a href=""<?php echo get_post_meta($post->ID, 'dbt_website', true); ?>"" title=""""><span><span>VIEW</span></span></a>
+                                    </div>
+                                </div><!--/button_box_area-->
+                            </div><!--/review_entry-->
+                    	</div><!--/post-->
+                        <?php endwhile; ?>
+							<div class=""navigation"">
+								<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+							</div>
+						<?php endif; wp_reset_query(); ?>
+                </div><!--/content_area-->
+
+                <?php include(TEMPLATEPATH.'/sidebar.php') ?>
+
+<?php get_footer(); ?>
+
+
+
+
+Thanks in advance ",1
+6422592,06/21/2011 08:45:33,94962,04/23/2009 13:28:50,95,3,a strange problem: wordpress theme doesn't show up,"wp 3.1
+
+**before:**
+
+I click themes, twentyten theme is one of Available Themes
+
+**after:**
+
+I rename default theme folder twentyten to yoyo, and change some value in style.css, then click themes link, yoyo doesn't show up. 
+
+if I rename yoyo back to twentyten, then twentyten show up again.
+
+PS: I check permission with yoyo, it is readable to everyone.",wordpress,themes,,,,,open,0,54,8,"a strange problem: wordpress theme doesn't show up wp 3.1
+
+**before:**
+
+I click themes, twentyten theme is one of Available Themes
+
+**after:**
+
+I rename default theme folder twentyten to yoyo, and change some value in style.css, then click themes link, yoyo doesn't show up. 
+
+if I rename yoyo back to twentyten, then twentyten show up again.
+
+PS: I check permission with yoyo, it is readable to everyone.",2
+6581096,07/05/2011 10:19:00,829470,07/05/2011 10:19:00,1,0,How to Show or Hidden Categories on page in Wordpress ?,"I have a problem to resolve. I have wordpress site with 2 pages : Food and Cooking.
+
+I have categories : food_categories (1) and cooking_categories (2). 
+
+I want to show only (1) on Food page and only (2) on Cooking page.
+
+Please help me to resolve it . Thanks all.",wordpress,,,,,07/05/2011 13:11:21,off topic,1,48,11,"How to Show or Hidden Categories on page in Wordpress ? I have a problem to resolve. I have wordpress site with 2 pages : Food and Cooking.
+
+I have categories : food_categories (1) and cooking_categories (2). 
+
+I want to show only (1) on Food page and only (2) on Cooking page.
+
+Please help me to resolve it . Thanks all.",1
+10631508,05/17/2012 07:21:55,649489,03/08/2011 08:30:07,30,1,wordpress post thumbnail image from a smaller file?,"I have an issue with my Worpress post thumbnail, that it always loads the big image more than 2000x1500px that I used in the post, and it is too big (filesize-bandwidth) for the thumbnail which should be 190px high. 
+
+The codes I use:
+functions.php
+
+    add_theme_support( 'post-thumbnails' );    
+    add_image_size( 'home-thumb', 0, 190, false ); 
+
+
+on the homepage:
+
+    <?php if ( has_post_thumbnail() ) {
+    the_post_thumbnail( 'home-thumb' );
+    }
+
+
+How can I make WP use the smaller version of the picture for the post-thumbnail?
+
+BR-:G",wordpress,,,,,05/18/2012 11:21:09,too localized,1,98,8,"wordpress post thumbnail image from a smaller file? I have an issue with my Worpress post thumbnail, that it always loads the big image more than 2000x1500px that I used in the post, and it is too big (filesize-bandwidth) for the thumbnail which should be 190px high. 
+
+The codes I use:
+functions.php
+
+    add_theme_support( 'post-thumbnails' );    
+    add_image_size( 'home-thumb', 0, 190, false ); 
+
+
+on the homepage:
+
+    <?php if ( has_post_thumbnail() ) {
+    the_post_thumbnail( 'home-thumb' );
+    }
+
+
+How can I make WP use the smaller version of the picture for the post-thumbnail?
+
+BR-:G",1
+5313005,03/15/2011 14:12:13,585213,01/21/2011 23:51:56,19,1,wp_generate_password returns password but can't login using it,"Im creating a simple login/registration page incorporating user moderation and bootstrapping wp for the heavy lifting.
+
+I can get the new user added to the db and a password gets created and hashed and all, but when i go to login w/ that account the password won't work. i'm stumped...
+
+Anyone see anything i'm missing?
+
+
+require_once( ABSPATH . WPINC . '/registration.php' );
+$user_pass = wp_generate_password();
+$userdata = array(
+  'user_pass' => $user_pass,
+  'user_login' => esc_attr( $_POST['user_email'] ),
+  'user_email' => esc_attr( $_POST['user_email'] ),
+);
+
+if( !$userdata['user_login'] )
+  $error .= __('An Email Address is required for registration.', 'frontendprofile');
+elseif ( username_exists( $userdata['user_login'] ) )
+  $error .= __('Sorry, that Email Address is already in use for another account.', 'frontendprofile');
+elseif ( !is_email( $userdata['user_email'] ) )
+  $error .= __('You must enter a valid Email Address.', 'frontendprofile');
+elseif ( email_exists( $userdata['user_email'] ) )
+  $error .= __('Sorry, that Email Address is already for another account.', 'frontendprofile');
+
+else{
+  $new_user = wp_update_user( $userdata );
+}
+",wordpress,wordpress-login,,,,,open,0,152,8,"wp_generate_password returns password but can't login using it Im creating a simple login/registration page incorporating user moderation and bootstrapping wp for the heavy lifting.
+
+I can get the new user added to the db and a password gets created and hashed and all, but when i go to login w/ that account the password won't work. i'm stumped...
+
+Anyone see anything i'm missing?
+
+
+require_once( ABSPATH . WPINC . '/registration.php' );
+$user_pass = wp_generate_password();
+$userdata = array(
+  'user_pass' => $user_pass,
+  'user_login' => esc_attr( $_POST['user_email'] ),
+  'user_email' => esc_attr( $_POST['user_email'] ),
+);
+
+if( !$userdata['user_login'] )
+  $error .= __('An Email Address is required for registration.', 'frontendprofile');
+elseif ( username_exists( $userdata['user_login'] ) )
+  $error .= __('Sorry, that Email Address is already in use for another account.', 'frontendprofile');
+elseif ( !is_email( $userdata['user_email'] ) )
+  $error .= __('You must enter a valid Email Address.', 'frontendprofile');
+elseif ( email_exists( $userdata['user_email'] ) )
+  $error .= __('Sorry, that Email Address is already for another account.', 'frontendprofile');
+
+else{
+  $new_user = wp_update_user( $userdata );
+}
+",2
+10223204,04/19/2012 07:08:03,879002,08/04/2011 16:11:29,37,0,Way to add content below the admin menus in wordpress,"I want to ask if there is a way to add a content below the admin menus(not the admin bar) without editing the core?
+
+Lets say i want to display an ad code that outputs random advertisements for example the oiopublisher ad code script below the admin menus..
+
+I want to add,
+`<script type=""text/javascript"" src=""http://web.com/wp-content/plugins/oiopub-direct/js.php?type=banner&align=center&zone=1""></script>`
+
+below the
+`<div id=""adminmenu""></div>`
+
+Please help.",wordpress,div,script,,,,open,0,55,10,"Way to add content below the admin menus in wordpress I want to ask if there is a way to add a content below the admin menus(not the admin bar) without editing the core?
+
+Lets say i want to display an ad code that outputs random advertisements for example the oiopublisher ad code script below the admin menus..
+
+I want to add,
+`<script type=""text/javascript"" src=""http://web.com/wp-content/plugins/oiopub-direct/js.php?type=banner&align=center&zone=1""></script>`
+
+below the
+`<div id=""adminmenu""></div>`
+
+Please help.",3
+11406289,07/10/2012 03:43:13,176846,09/21/2009 23:05:21,70,7,Create a minisite in Wordpress,"I'm trying to find out the smartest way to create an embedded minisite inside my wordpress site. Basically we have our normal site (www.lazygamer.net) and now for an upcoming event I want to create (www.lazygamer.net/gamescom2012) which will only show posts tagged with a certain category but also using an altered layout.
+
+I want the header and footer to stay but will be dropping the sidebar and changing the way the posts are displayed in the loop.
+
+I do want the loop and all my custom functions to be available though so I don't want a second theme.
+
+We're going to be doing this for many events moving forward so I'm hoping it's possible to do this in some generic way?
+
+Anyone got any pointers?",wordpress,,,,,07/10/2012 03:44:40,not a real question,1,120,5,"Create a minisite in Wordpress I'm trying to find out the smartest way to create an embedded minisite inside my wordpress site. Basically we have our normal site (www.lazygamer.net) and now for an upcoming event I want to create (www.lazygamer.net/gamescom2012) which will only show posts tagged with a certain category but also using an altered layout.
+
+I want the header and footer to stay but will be dropping the sidebar and changing the way the posts are displayed in the loop.
+
+I do want the loop and all my custom functions to be available though so I don't want a second theme.
+
+We're going to be doing this for many events moving forward so I'm hoping it's possible to do this in some generic way?
+
+Anyone got any pointers?",1
+10189383,04/17/2012 10:22:57,1167530,01/24/2012 16:57:46,8,0,Which is best platform for eduction driectory or big site,"	
+I am creating educational directory. plz suggest me which techno is best suited to create this kind of website. I am thinking about the wordpress or codeigniter.",wordpress,,,,,04/18/2012 12:09:42,not constructive,1,27,10,"Which is best platform for eduction driectory or big site 	
+I am creating educational directory. plz suggest me which techno is best suited to create this kind of website. I am thinking about the wordpress or codeigniter.",1
+4748396,01/20/2011 14:01:57,412106,08/05/2010 15:16:56,195,12,Offline iPad Web App - Database/Wordpress Question,"I'm building an iPad web app that will be a showcase of products. It will include images and pdfs of over 100 products so the size will be fairly large.
+
+I have read that the offline data storage for the iPad is only 5mb, which could be an issue since Wordpress alone is 10mb. I may have to use a custom CMS to limit the application size.
+
+Most of all I need a helping hand with the client-side database. HTML5 is supposed to have a feature to take advantage of user cache, but all of the articles I have found just talk about it and don't show examples. Any ideas?
+
+Thanks,",wordpress,database,ipad,,,,open,0,108,7,"Offline iPad Web App - Database/Wordpress Question I'm building an iPad web app that will be a showcase of products. It will include images and pdfs of over 100 products so the size will be fairly large.
+
+I have read that the offline data storage for the iPad is only 5mb, which could be an issue since Wordpress alone is 10mb. I may have to use a custom CMS to limit the application size.
+
+Most of all I need a helping hand with the client-side database. HTML5 is supposed to have a feature to take advantage of user cache, but all of the articles I have found just talk about it and don't show examples. Any ideas?
+
+Thanks,",3
+7923822,10/27/2011 23:58:17,1017449,10/27/2011 22:46:45,1,0,Like count on my website posts differs from like count in facebook,"I have a Wordpress-based blog with like button integration.
+
+After creating a new post on the blog I always share it on my FB profile and get some likes and comments there (see 24 total likes in this <a href=""http://www.manuelmedina.com.mx/images/FB-Like-error-1.png"">image</a>) but those won't show in the blog post (in this <a href=""http://www.manuelmedina.com.mx/images/FB-Like-error-2.png"">image</a> you can see only 5 total likes for the same post; both screenshots were taken simultaneously).
+
+I'm having this problem 2 or 3 weeks ago, the like count was working fine previously.
+
+This other post (http://www.manuelmedina.com.mx/images/FB-Like-error-3.png) is showing zero likes in my blog, but I know for sure it had +100 likes before all this began. In my FB profile, this same post shows 7 likes, 2 shares, and a comment (http://www.manuelmedina.com.mx/images/FB-Like-error-4.png). Many friends copy-pasted the link  on their own profiles, letting it grow to up to 100 total likes, which were visible in the post page on my blog, but now it's back to zero and that makes me crazy.
+
+I'm not sure of this but I think the like count shown in my blog is counting only like button clicks, and not considering likes made in FB profiles.
+
+I'm sure you'll had figured this out but I'm a novice in FB development, so I need some serious help.
+
+Thanks in advance and please excuse me if my english is not perfect.",wordpress,facebook-like,,,,,open,0,220,12,"Like count on my website posts differs from like count in facebook I have a Wordpress-based blog with like button integration.
+
+After creating a new post on the blog I always share it on my FB profile and get some likes and comments there (see 24 total likes in this <a href=""http://www.manuelmedina.com.mx/images/FB-Like-error-1.png"">image</a>) but those won't show in the blog post (in this <a href=""http://www.manuelmedina.com.mx/images/FB-Like-error-2.png"">image</a> you can see only 5 total likes for the same post; both screenshots were taken simultaneously).
+
+I'm having this problem 2 or 3 weeks ago, the like count was working fine previously.
+
+This other post (http://www.manuelmedina.com.mx/images/FB-Like-error-3.png) is showing zero likes in my blog, but I know for sure it had +100 likes before all this began. In my FB profile, this same post shows 7 likes, 2 shares, and a comment (http://www.manuelmedina.com.mx/images/FB-Like-error-4.png). Many friends copy-pasted the link  on their own profiles, letting it grow to up to 100 total likes, which were visible in the post page on my blog, but now it's back to zero and that makes me crazy.
+
+I'm not sure of this but I think the like count shown in my blog is counting only like button clicks, and not considering likes made in FB profiles.
+
+I'm sure you'll had figured this out but I'm a novice in FB development, so I need some serious help.
+
+Thanks in advance and please excuse me if my english is not perfect.",2
+10070417,04/09/2012 07:49:54,1321222,04/09/2012 05:19:12,3,0,Information regarding Wordpress Q and A plugin,"I need information regarding Wordpress Q and A (or FAQ) plugin which has following features: `collapsible content`, `scroll bar`, `share on social network icons` and `categories`. I tried searching it but couldn't find the right plugin. 
+
+Please help me find the right plugin.",wordpress,wordpress-plugin,,,,04/19/2012 14:49:37,off topic,1,43,7,"Information regarding Wordpress Q and A plugin I need information regarding Wordpress Q and A (or FAQ) plugin which has following features: `collapsible content`, `scroll bar`, `share on social network icons` and `categories`. I tried searching it but couldn't find the right plugin. 
+
+Please help me find the right plugin.",2
+4902914,02/04/2011 21:04:05,485701,10/24/2010 16:22:36,56,6,Wordpress search post_title only,"I'm trying to limit a search on Wordpress (3.0.4) only to the post_title.
+Is there a way to do that without modifying the core files?
+
+Thanks for your help!
+Cheers",wordpress,,,,,,open,0,27,4,"Wordpress search post_title only I'm trying to limit a search on Wordpress (3.0.4) only to the post_title.
+Is there a way to do that without modifying the core files?
+
+Thanks for your help!
+Cheers",1
+11276792,06/30/2012 18:56:19,1493417,06/30/2012 18:41:16,1,0,WordPress most commented posts of last X days,"I'm working on implementing a WP feature that shows the most commented posts from the last X days (e.g. lat 2 days). I've used the following code I found on the web (and here on SO), which does the job:
+
+    <ul>
+    <?php
+    function filter_where($where = '') {
+    //posts in the last 30 days
+    $where .= "" AND post_date > '"" . date('Y-m-d', strtotime('-10 days')) . ""'"";
+    return $where;
+    }
+
+    add_filter('posts_where', 'filter_where');
+
+    query_posts('post_type=post&posts_per_page=5&orderby=comment_count&order=DESC');
+
+    while (have_posts()): the_post(); ?>
+    <li><a href=""<?php the_permalink(); ?>""><?php the_title(); ?></a></li>
+    <?php
+
+    endwhile;
+
+    wp_reset_query();
+    ?>
+    </ul>
+
+The problem that occurs is that the wp_reset_querry apparently doesn't work, as all category listings, tag cloud etc after the above code are messed up -- what happens is that if there's another WP code that lists posts in a category, it'll list only the X days that the above code mentions, despite having wp_reset_querry. 
+
+I'm trying to figure out why that is and what I'm doing wrong here? I'd appreciate any help. Also, if there's an easier or better way of displaying the most commented posts over the last X days, please let me know.
+
+Thanks!
+",wordpress,comments,,,,07/02/2012 13:22:54,off topic,1,230,8,"WordPress most commented posts of last X days I'm working on implementing a WP feature that shows the most commented posts from the last X days (e.g. lat 2 days). I've used the following code I found on the web (and here on SO), which does the job:
+
+    <ul>
+    <?php
+    function filter_where($where = '') {
+    //posts in the last 30 days
+    $where .= "" AND post_date > '"" . date('Y-m-d', strtotime('-10 days')) . ""'"";
+    return $where;
+    }
+
+    add_filter('posts_where', 'filter_where');
+
+    query_posts('post_type=post&posts_per_page=5&orderby=comment_count&order=DESC');
+
+    while (have_posts()): the_post(); ?>
+    <li><a href=""<?php the_permalink(); ?>""><?php the_title(); ?></a></li>
+    <?php
+
+    endwhile;
+
+    wp_reset_query();
+    ?>
+    </ul>
+
+The problem that occurs is that the wp_reset_querry apparently doesn't work, as all category listings, tag cloud etc after the above code are messed up -- what happens is that if there's another WP code that lists posts in a category, it'll list only the X days that the above code mentions, despite having wp_reset_querry. 
+
+I'm trying to figure out why that is and what I'm doing wrong here? I'd appreciate any help. Also, if there's an easier or better way of displaying the most commented posts over the last X days, please let me know.
+
+Thanks!
+",2
+6101342,05/23/2011 18:32:18,713923,04/18/2011 18:12:10,1,0,Is there any WordPress plugin that is very equal to stackoverflow commenting system?,Please see the title.  The title explains question clearly.  At first i thought to use same engine that stackoverflow.com uses.  But i am not sure what CMS or engine the backend is running.  Hence i thought i could use WordPress and commenting system like stackoverflow could help me too.,wordpress,plugins,stackoverflow,,,05/23/2011 20:19:22,off topic,1,53,13,Is there any WordPress plugin that is very equal to stackoverflow commenting system? Please see the title.  The title explains question clearly.  At first i thought to use same engine that stackoverflow.com uses.  But i am not sure what CMS or engine the backend is running.  Hence i thought i could use WordPress and commenting system like stackoverflow could help me too.,3
+11386109,07/08/2012 19:46:42,1389930,05/11/2012 16:44:10,8,0,Wordpress Gravity Forms Function for Calculating an Endtime,"I am a code beginner and have been trying to create some sort of way to create a hook that will dynamically create an endtime for an event based on a predetermined start time (standard number field) and a chosen start time. This is my first attempt at creating a custom hook and I have been struggling...
+
+The form I started with came from here: http://anthonydispezio.com/blog/gf-ecp-frontend-submission/ 
+
+
+
+`add_filter('gform_field_value_end_time', 'populate_end_time');
+function populate_end_time($value){
+}
+
+$start_time = get_gform_field_value_start_time();
+$duration = get_gform_field_value_duration();`
+
+The duration would be in hours so I thought there might be some way to add that number to the starttime hh field?",wordpress,function,time,hook,calculation,,open,0,94,8,"Wordpress Gravity Forms Function for Calculating an Endtime I am a code beginner and have been trying to create some sort of way to create a hook that will dynamically create an endtime for an event based on a predetermined start time (standard number field) and a chosen start time. This is my first attempt at creating a custom hook and I have been struggling...
+
+The form I started with came from here: http://anthonydispezio.com/blog/gf-ecp-frontend-submission/ 
+
+
+
+`add_filter('gform_field_value_end_time', 'populate_end_time');
+function populate_end_time($value){
+}
+
+$start_time = get_gform_field_value_start_time();
+$duration = get_gform_field_value_duration();`
+
+The duration would be in hours so I thought there might be some way to add that number to the starttime hh field?",5
+9601477,03/07/2012 12:25:19,934836,09/08/2011 12:59:57,957,32,Add javascript to theme,"I'm trying to add the Nivo-slider code (not the WP plugin) to a theme. I've done it by adding this to the functions.php: 
+
+    /* Add scripts for theme to work*/
+    function theme_add_scripts() {
+      wp_enqueue_script('jquery'); //omit if jQuery already included
+      wp_enqueue_script('nivoslider',  bloginfo('stylesheet_url') . '/wp-content/themes/pingst/nivo-slider/jquery.nivo.slider.pack.js', 'jquery', '2.7.1');
+      }
+    add_action('init', 'theme_add_scripts');
+
+It seems like it should work but there are two problems.
+
+1. When I manually added the script like this `<script src=""<?php bloginfo('template_url'); ?>/nivo-slider/jquery.nivo.slider.pack.js"" type=""text/javascript""></script>` inside the head tags, Nivo-slider did show up. Now it won't start. I know it finds the jquery.nivo.slider.pack.js because when I load it in the browser and look at the source the link to that js file is correct.
+
+2. This adds this text `http://example.com/wp-content/themes/pingst` (well except it's the domain the site is placed on and not example.com) before the doctype and any thing else when looking at the source in the browser.
+
+This is the complete output (got tired of change the domain-name to example.com, it's no secret anyway).
+
+    http://example.com/wp-content/themes/pingst<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN""
+        ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"">
+    
+    <html xmlns=""http://www.w3.org/1999/xhtml"" dir=""ltr"" lang=""sv-SE"">
+    
+    <head>
+      <meta http-equiv=""Content-Type"" content=""text/html; charset=utf-8"" />
+      <title> Pingstförsamlingen Mörlunda</title>
+      <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css' />
+    
+      
+      <link rel=""stylesheet"" href=""http://pingstwp.theninth.se/wp-content/themes/pingst/nivo-slider/nivo-slider.css"" type=""text/css"" media=""screen"" />
+      <link rel=""stylesheet"" href=""http://pingstwp.theninth.se/wp-content/themes/pingst/nivo-slider/themes/default/default.css"" type=""text/css"" media=""screen"" />
+    
+      <link rel=""stylesheet"" href=""http://pingstwp.theninth.se/wp-content/themes/pingst/style.css"" type=""text/css"" media=""screen"" />
+      <link rel=""pingback"" href=""http://pingstwp.theninth.se/xmlrpc.php"" />
+    
+      <!--   <script src=""http://pingstwp.theninth.se/wp-content/themes/pingst/nivo-slider/jquery.nivo.slider.pack.js"" type=""text/javascript""></script> -->
+      <meta name='robots' content='noindex,nofollow' />
+    <link rel=""alternate"" type=""application/rss+xml"" title=""Pingstförsamlingen Mörlunda &raquo; Hem kommentarsflöde"" href=""http://pingstwp.theninth.se/?feed=rss2&#038;page_id=39"" />
+    <link rel='stylesheet' id='gce_styles-css'  href='http://pingstwp.theninth.se/wp-content/plugins/google-calendar-events/css/gce-style.css?ver=3.3.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='gce_custom_styles-css'  href='https://www.google.com/calendar/feeds/gr368o4ds072hbqilbmuaj1md8%40group.calendar.google.com/public/basic?ver=3.3.1' type='text/css' media='all' />
+    <script type='text/javascript' src='http://pingstwp.theninth.se/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+    <script type='text/javascript' src='http://pingstwp.theninth.se/nivo-slider/jquery.nivo.slider.pack.js?ver=2.1'></script>
+    <script type='text/javascript' src='http://pingstwp.theninth.se/wp-includes/js/comment-reply.js?ver=20090102'></script>
+    
+    <script type='text/javascript' src='http://pingstwp.theninth.se/wp-content/plugins/google-calendar-events/js/jquery-qtip.js'></script>
+    <script type='text/javascript'>
+    /* <![CDATA[ */
+    var GoogleCalendarEvents = {""ajaxurl"":""http:\/\/pingstwp.theninth.se\/wp-admin\/admin-ajax.php"",""loading"":""Loading...""};
+    /* ]]> */
+    </script>
+    <script type='text/javascript' src='http://pingstwp.theninth.se/wp-content/plugins/google-calendar-events/js/gce-script.js'></script>
+    <link rel=""EditURI"" type=""application/rsd+xml"" title=""RSD"" href=""http://pingstwp.theninth.se/xmlrpc.php?rsd"" />
+    <link rel=""wlwmanifest"" type=""application/wlwmanifest+xml"" href=""http://pingstwp.theninth.se/wp-includes/wlwmanifest.xml"" /> 
+    <link rel='prev' title='Bockara' href='http://pingstwp.theninth.se/?page_id=33' />
+    <meta name=""generator"" content=""WordPress 3.3.1"" />
+    <link rel='canonical' href='http://pingstwp.theninth.se/' />
+    
+      <!-- Nivo-slider -->
+      <script type=""text/javascript"">
+        $(window).load(function() {
+          $('#slider').nivoSlider({
+            effect: 'sliceDown'
+          });
+        });
+      </script>
+    
+    </head>
+    
+    <body>
+      <!-- Whole width -->
+      <div id=""container"">
+        <div id=""header"">
+          <a href=""http://pingstwp.theninth.se/"">
+            <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/logotype.png"" alt=""logotype"" />
+          </a>
+        </div>
+    
+        <!-- Dropdown menu -->
+        <div id=""nav"">
+          <ul id=""menu-huvudmeny"" class=""menu""><li id=""menu-item-14"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-14""><a href=""http://pingstwp.theninth.se/?page_id=9"">Barn</a></li>
+    <li id=""menu-item-13"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-13""><a href=""http://pingstwp.theninth.se/?page_id=11"">Församlingen</a>
+    <ul class=""sub-menu"">
+    	<li id=""menu-item-38"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-38""><a href=""http://pingstwp.theninth.se/?page_id=26"">Historia</a></li>
+    	<li id=""menu-item-36"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-36""><a href=""http://pingstwp.theninth.se/?page_id=31"">Stöd församlingen</a></li>
+    
+    	<li id=""menu-item-37"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-37""><a href=""http://pingstwp.theninth.se/?page_id=28"">Kristen tro</a></li>
+    </ul>
+    </li>
+    <li id=""menu-item-35"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-35""><a href=""http://pingstwp.theninth.se/?page_id=33"">Bockara</a></li>
+    <li id=""menu-item-15"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-15""><a href=""http://pingstwp.theninth.se/?page_id=7"">Ungdomar</a></li>
+    <li id=""menu-item-16"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-16""><a href=""http://pingstwp.theninth.se/?page_id=5"">Kalender</a></li>
+    <li id=""menu-item-17"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-17""><a href=""http://pingstwp.theninth.se/?page_id=2"">Kontakt</a></li>
+    </ul>    </div>
+    
+        <!-- Left sidebar -->
+    
+        <div id=""sidebar"">
+                <!-- Frame no 1 -->
+          <div class=""frame-leftside"">
+    <div class=""cal-presentation"">
+    <h2 class=""widgettitle"">Kalender</h2>
+    <p class=""cal-eventname"">&raquo; Smågrupp</p>
+    <p class=""cal-date"">Onsdag 2012-03-07 17:30</p><br />
+    
+    <h3 class=""cal-category"">Barn</h3>
+    
+    <p class=""cal-eventname"">&raquo; Söndagsskola</p>
+    <p class=""cal-date"">Söndag 2012-03-11 10:00</p><br />
+    
+    <h3 class=""cal-category"">Ungdom</h3>
+    <p class=""cal-eventname"">&raquo; Tonår</p>
+    <p class=""cal-date"">Lördag 2012-03-10 17:00</p><br />
+    
+    </div>
+    </div>
+          <!-- Frame no 2 -->
+    
+                
+          <!-- Frame no 3 -->
+                
+          <!-- Frame no 4 -->
+                
+          <!-- Frame no 5 (Post it) -->
+          <div class=""post-it""><h2 class=""Post-it"">Dagens bibelord</h2>			<div class=""textwidget"">Stilla din harm, låt din vrede slockna,
+    reta inte upp dig, det leder bara till ont.
+    
+    Ps 37:8</div>
+    		</div>    </div>
+    
+        <!-- Main - This is right column with the real content -->
+    
+        <div id=""main"">
+          <!-- Slideshow frame -->
+          <div class=""frame-fullsize"">
+            <div class=""slider-wrapper theme-default"">
+              <div class=""ribbon""></div>
+              <div id=""slider"" class=""nivoSlider"">
+                <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/kyrkan.jpg"" alt="""" />
+                <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/kyrkan3.jpg"" alt="""" />
+                <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/kyrkan4.jpg"" alt="""" />
+    
+                <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/kyrkan2.jpg"" alt="""" />
+              </div>
+    	</div>
+            <div id=""htmlcaption"" class=""nivo-html-caption"">
+              <strong>This</strong> is an example of a <em>HTML</em> caption with <a href=""#"">a link</a>.
+            </div>
+    
+          </div>
+    
+          <!-- Content frame -->
+          <div id=""content-frame"" class=""frame-fullsize"">
+    
+    	<!-- Actual side content  -->
+            <div id=""content"">
+                                        <div class=""post"">
+                    <h2 class=""blogtitle""><a href=""http://pingstwp.theninth.se/"">Hem</a></h2>
+    
+                      <div class=""entry"">
+                        <p>Pingstförsamlingen i Mörlunda finns till för vanliga<br />
+    människor, som du och jag. Med våra förtjänster och våra<br />
+    dåliga sidor. Både ung, gammal och de som är någonstans mitt<br />
+    i mellan. Människorna som delar församlingsgemenskapen är på<br />
+    många sätt olika. Men det som förenar är tron på Jesus, inte<br />
+    bara som historisk person, utan framförallt levande<br />
+    idag. Jesus är den som ger människan ett liv med mål och<br />
+    
+    mening.</p>
+    <p>&nbsp;</p>
+    <p>Vi kan uppleva många saker i livet som meningsfullt;<br />
+    relationer, barn, barnbarn och så vidare. Men innerst inne<br />
+    längtar vi alla efter något mer. Vi brottas med frågan om<br />
+    den den yttersta meningen med tillvaron, om våra liv<br />
+    verkligen spelar roll och vad som händer efter<br />
+    döden. Predikaren säger om Gud att ”evigheten har han lagt i<br />
+    människornas hjärtan.” Vi kan vara så upptagna i livet med<br />
+    
+    annat att vi inte hör frågorna från djupet av våra hjärtan,<br />
+    men likväl finns de där. I Jesus Kristus kan dessa frågor få<br />
+    ett svar.</p>
+    <p>&nbsp;</p>
+    <p>Välkommen att vara med på en gudstjänst, cafékväll,<br />
+    tonår eller något annat som händer.</p>
+    <p>&nbsp;</p>
+    <p>I församlingen finns också människor som är beredda att<br />
+    samtala med dig som vill det. Det finns inga utbildade<br />
+    terapeuter, men medmänniskor som vill ta dig på allvar och<br />
+    
+    är beredda att både lyssna på dig och dela sina egna<br />
+    erfarenheter om livet tillsammans med Jesus.</p>
+                        <p class=""postmetadata"">
+                                              </p>
+                      </div>
+                  </div>
+                              <div class=""navigation"">
+                                  </div>
+                      </div>
+    
+            <!-- Right sidebar -->
+            <div id=""rightbar"">
+    
+              <!-- Frame no 1 -->
+              <div class=""frame-rightside"">			<div class=""textwidget""><img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/akti.gif"" class=""iconbox-icon"" alt=""""/> 
+    <div class=""iconbox-text"">
+    <h2>Kalender</h2>
+    <a href=""#"">Vad händer i församlingen? &gt;&gt;</a>
+    </div></div>
+    
+    		</div>
+              <!-- Frame no 2 -->
+              <div class=""frame-rightside"">			<div class=""textwidget""><img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/fragetecken.gif"" class=""iconbox-icon"" alt=""""/> 
+    <div class=""iconbox-text"">
+    <h2>Frågor</h2>
+    <a href=""#"">Har du funderingar, kontakta oss här &gt;&gt;</a>
+    </div></div>
+    		</div>
+              <!-- Frame no 3 -->
+    
+                        
+            </div>
+          </div>
+        </div>
+        <div id=""footer"">
+          Design: <a href=""http://www.anxtreme.se"">AnXtreme Foto &amp; Grafisk Produktion</a> | <a href=""http://www.anxtreme.se"">www.anxtreme.se</a> | <a href=""http://www.andersholm.se"">www.andersholm.se</a>
+    
+        </div>
+      </div></body>
+    </html>
+
+",wordpress,wordpress-theming,,,,,open,0,2352,4,"Add javascript to theme I'm trying to add the Nivo-slider code (not the WP plugin) to a theme. I've done it by adding this to the functions.php: 
+
+    /* Add scripts for theme to work*/
+    function theme_add_scripts() {
+      wp_enqueue_script('jquery'); //omit if jQuery already included
+      wp_enqueue_script('nivoslider',  bloginfo('stylesheet_url') . '/wp-content/themes/pingst/nivo-slider/jquery.nivo.slider.pack.js', 'jquery', '2.7.1');
+      }
+    add_action('init', 'theme_add_scripts');
+
+It seems like it should work but there are two problems.
+
+1. When I manually added the script like this `<script src=""<?php bloginfo('template_url'); ?>/nivo-slider/jquery.nivo.slider.pack.js"" type=""text/javascript""></script>` inside the head tags, Nivo-slider did show up. Now it won't start. I know it finds the jquery.nivo.slider.pack.js because when I load it in the browser and look at the source the link to that js file is correct.
+
+2. This adds this text `http://example.com/wp-content/themes/pingst` (well except it's the domain the site is placed on and not example.com) before the doctype and any thing else when looking at the source in the browser.
+
+This is the complete output (got tired of change the domain-name to example.com, it's no secret anyway).
+
+    http://example.com/wp-content/themes/pingst<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN""
+        ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"">
+    
+    <html xmlns=""http://www.w3.org/1999/xhtml"" dir=""ltr"" lang=""sv-SE"">
+    
+    <head>
+      <meta http-equiv=""Content-Type"" content=""text/html; charset=utf-8"" />
+      <title> Pingstförsamlingen Mörlunda</title>
+      <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css' />
+    
+      
+      <link rel=""stylesheet"" href=""http://pingstwp.theninth.se/wp-content/themes/pingst/nivo-slider/nivo-slider.css"" type=""text/css"" media=""screen"" />
+      <link rel=""stylesheet"" href=""http://pingstwp.theninth.se/wp-content/themes/pingst/nivo-slider/themes/default/default.css"" type=""text/css"" media=""screen"" />
+    
+      <link rel=""stylesheet"" href=""http://pingstwp.theninth.se/wp-content/themes/pingst/style.css"" type=""text/css"" media=""screen"" />
+      <link rel=""pingback"" href=""http://pingstwp.theninth.se/xmlrpc.php"" />
+    
+      <!--   <script src=""http://pingstwp.theninth.se/wp-content/themes/pingst/nivo-slider/jquery.nivo.slider.pack.js"" type=""text/javascript""></script> -->
+      <meta name='robots' content='noindex,nofollow' />
+    <link rel=""alternate"" type=""application/rss+xml"" title=""Pingstförsamlingen Mörlunda &raquo; Hem kommentarsflöde"" href=""http://pingstwp.theninth.se/?feed=rss2&#038;page_id=39"" />
+    <link rel='stylesheet' id='gce_styles-css'  href='http://pingstwp.theninth.se/wp-content/plugins/google-calendar-events/css/gce-style.css?ver=3.3.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='gce_custom_styles-css'  href='https://www.google.com/calendar/feeds/gr368o4ds072hbqilbmuaj1md8%40group.calendar.google.com/public/basic?ver=3.3.1' type='text/css' media='all' />
+    <script type='text/javascript' src='http://pingstwp.theninth.se/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+    <script type='text/javascript' src='http://pingstwp.theninth.se/nivo-slider/jquery.nivo.slider.pack.js?ver=2.1'></script>
+    <script type='text/javascript' src='http://pingstwp.theninth.se/wp-includes/js/comment-reply.js?ver=20090102'></script>
+    
+    <script type='text/javascript' src='http://pingstwp.theninth.se/wp-content/plugins/google-calendar-events/js/jquery-qtip.js'></script>
+    <script type='text/javascript'>
+    /* <![CDATA[ */
+    var GoogleCalendarEvents = {""ajaxurl"":""http:\/\/pingstwp.theninth.se\/wp-admin\/admin-ajax.php"",""loading"":""Loading...""};
+    /* ]]> */
+    </script>
+    <script type='text/javascript' src='http://pingstwp.theninth.se/wp-content/plugins/google-calendar-events/js/gce-script.js'></script>
+    <link rel=""EditURI"" type=""application/rsd+xml"" title=""RSD"" href=""http://pingstwp.theninth.se/xmlrpc.php?rsd"" />
+    <link rel=""wlwmanifest"" type=""application/wlwmanifest+xml"" href=""http://pingstwp.theninth.se/wp-includes/wlwmanifest.xml"" /> 
+    <link rel='prev' title='Bockara' href='http://pingstwp.theninth.se/?page_id=33' />
+    <meta name=""generator"" content=""WordPress 3.3.1"" />
+    <link rel='canonical' href='http://pingstwp.theninth.se/' />
+    
+      <!-- Nivo-slider -->
+      <script type=""text/javascript"">
+        $(window).load(function() {
+          $('#slider').nivoSlider({
+            effect: 'sliceDown'
+          });
+        });
+      </script>
+    
+    </head>
+    
+    <body>
+      <!-- Whole width -->
+      <div id=""container"">
+        <div id=""header"">
+          <a href=""http://pingstwp.theninth.se/"">
+            <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/logotype.png"" alt=""logotype"" />
+          </a>
+        </div>
+    
+        <!-- Dropdown menu -->
+        <div id=""nav"">
+          <ul id=""menu-huvudmeny"" class=""menu""><li id=""menu-item-14"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-14""><a href=""http://pingstwp.theninth.se/?page_id=9"">Barn</a></li>
+    <li id=""menu-item-13"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-13""><a href=""http://pingstwp.theninth.se/?page_id=11"">Församlingen</a>
+    <ul class=""sub-menu"">
+    	<li id=""menu-item-38"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-38""><a href=""http://pingstwp.theninth.se/?page_id=26"">Historia</a></li>
+    	<li id=""menu-item-36"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-36""><a href=""http://pingstwp.theninth.se/?page_id=31"">Stöd församlingen</a></li>
+    
+    	<li id=""menu-item-37"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-37""><a href=""http://pingstwp.theninth.se/?page_id=28"">Kristen tro</a></li>
+    </ul>
+    </li>
+    <li id=""menu-item-35"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-35""><a href=""http://pingstwp.theninth.se/?page_id=33"">Bockara</a></li>
+    <li id=""menu-item-15"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-15""><a href=""http://pingstwp.theninth.se/?page_id=7"">Ungdomar</a></li>
+    <li id=""menu-item-16"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-16""><a href=""http://pingstwp.theninth.se/?page_id=5"">Kalender</a></li>
+    <li id=""menu-item-17"" class=""menu-item menu-item-type-post_type menu-item-object-page menu-item-17""><a href=""http://pingstwp.theninth.se/?page_id=2"">Kontakt</a></li>
+    </ul>    </div>
+    
+        <!-- Left sidebar -->
+    
+        <div id=""sidebar"">
+                <!-- Frame no 1 -->
+          <div class=""frame-leftside"">
+    <div class=""cal-presentation"">
+    <h2 class=""widgettitle"">Kalender</h2>
+    <p class=""cal-eventname"">&raquo; Smågrupp</p>
+    <p class=""cal-date"">Onsdag 2012-03-07 17:30</p><br />
+    
+    <h3 class=""cal-category"">Barn</h3>
+    
+    <p class=""cal-eventname"">&raquo; Söndagsskola</p>
+    <p class=""cal-date"">Söndag 2012-03-11 10:00</p><br />
+    
+    <h3 class=""cal-category"">Ungdom</h3>
+    <p class=""cal-eventname"">&raquo; Tonår</p>
+    <p class=""cal-date"">Lördag 2012-03-10 17:00</p><br />
+    
+    </div>
+    </div>
+          <!-- Frame no 2 -->
+    
+                
+          <!-- Frame no 3 -->
+                
+          <!-- Frame no 4 -->
+                
+          <!-- Frame no 5 (Post it) -->
+          <div class=""post-it""><h2 class=""Post-it"">Dagens bibelord</h2>			<div class=""textwidget"">Stilla din harm, låt din vrede slockna,
+    reta inte upp dig, det leder bara till ont.
+    
+    Ps 37:8</div>
+    		</div>    </div>
+    
+        <!-- Main - This is right column with the real content -->
+    
+        <div id=""main"">
+          <!-- Slideshow frame -->
+          <div class=""frame-fullsize"">
+            <div class=""slider-wrapper theme-default"">
+              <div class=""ribbon""></div>
+              <div id=""slider"" class=""nivoSlider"">
+                <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/kyrkan.jpg"" alt="""" />
+                <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/kyrkan3.jpg"" alt="""" />
+                <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/kyrkan4.jpg"" alt="""" />
+    
+                <img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/kyrkan2.jpg"" alt="""" />
+              </div>
+    	</div>
+            <div id=""htmlcaption"" class=""nivo-html-caption"">
+              <strong>This</strong> is an example of a <em>HTML</em> caption with <a href=""#"">a link</a>.
+            </div>
+    
+          </div>
+    
+          <!-- Content frame -->
+          <div id=""content-frame"" class=""frame-fullsize"">
+    
+    	<!-- Actual side content  -->
+            <div id=""content"">
+                                        <div class=""post"">
+                    <h2 class=""blogtitle""><a href=""http://pingstwp.theninth.se/"">Hem</a></h2>
+    
+                      <div class=""entry"">
+                        <p>Pingstförsamlingen i Mörlunda finns till för vanliga<br />
+    människor, som du och jag. Med våra förtjänster och våra<br />
+    dåliga sidor. Både ung, gammal och de som är någonstans mitt<br />
+    i mellan. Människorna som delar församlingsgemenskapen är på<br />
+    många sätt olika. Men det som förenar är tron på Jesus, inte<br />
+    bara som historisk person, utan framförallt levande<br />
+    idag. Jesus är den som ger människan ett liv med mål och<br />
+    
+    mening.</p>
+    <p>&nbsp;</p>
+    <p>Vi kan uppleva många saker i livet som meningsfullt;<br />
+    relationer, barn, barnbarn och så vidare. Men innerst inne<br />
+    längtar vi alla efter något mer. Vi brottas med frågan om<br />
+    den den yttersta meningen med tillvaron, om våra liv<br />
+    verkligen spelar roll och vad som händer efter<br />
+    döden. Predikaren säger om Gud att ”evigheten har han lagt i<br />
+    människornas hjärtan.” Vi kan vara så upptagna i livet med<br />
+    
+    annat att vi inte hör frågorna från djupet av våra hjärtan,<br />
+    men likväl finns de där. I Jesus Kristus kan dessa frågor få<br />
+    ett svar.</p>
+    <p>&nbsp;</p>
+    <p>Välkommen att vara med på en gudstjänst, cafékväll,<br />
+    tonår eller något annat som händer.</p>
+    <p>&nbsp;</p>
+    <p>I församlingen finns också människor som är beredda att<br />
+    samtala med dig som vill det. Det finns inga utbildade<br />
+    terapeuter, men medmänniskor som vill ta dig på allvar och<br />
+    
+    är beredda att både lyssna på dig och dela sina egna<br />
+    erfarenheter om livet tillsammans med Jesus.</p>
+                        <p class=""postmetadata"">
+                                              </p>
+                      </div>
+                  </div>
+                              <div class=""navigation"">
+                                  </div>
+                      </div>
+    
+            <!-- Right sidebar -->
+            <div id=""rightbar"">
+    
+              <!-- Frame no 1 -->
+              <div class=""frame-rightside"">			<div class=""textwidget""><img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/akti.gif"" class=""iconbox-icon"" alt=""""/> 
+    <div class=""iconbox-text"">
+    <h2>Kalender</h2>
+    <a href=""#"">Vad händer i församlingen? &gt;&gt;</a>
+    </div></div>
+    
+    		</div>
+              <!-- Frame no 2 -->
+              <div class=""frame-rightside"">			<div class=""textwidget""><img src=""http://pingstwp.theninth.se/wp-content/themes/pingst/images/fragetecken.gif"" class=""iconbox-icon"" alt=""""/> 
+    <div class=""iconbox-text"">
+    <h2>Frågor</h2>
+    <a href=""#"">Har du funderingar, kontakta oss här &gt;&gt;</a>
+    </div></div>
+    		</div>
+              <!-- Frame no 3 -->
+    
+                        
+            </div>
+          </div>
+        </div>
+        <div id=""footer"">
+          Design: <a href=""http://www.anxtreme.se"">AnXtreme Foto &amp; Grafisk Produktion</a> | <a href=""http://www.anxtreme.se"">www.anxtreme.se</a> | <a href=""http://www.andersholm.se"">www.andersholm.se</a>
+    
+        </div>
+      </div></body>
+    </html>
+
+",2
+5990986,05/13/2011 11:06:34,451952,09/19/2010 13:51:38,1,2,Wordpress meta_query key array,"I am using the: http://www.farinspace.com/how-to-create-custom-wordpress-meta-box/ function to create some custom meta boxes.
+
+My WP_Query looks like this:
+
+                $args = array(
+                    'post_type' => 'testimonials',
+                    'post_status' => 'publish',
+                    'orderby' => checked((bool) $instance['testimonials_random'], true, false) ? 'rand' : 'id',
+                    'posts_per_page' => $testimonials_number,
+                    'paged' => get_query_var('page'),
+                    'meta_query' => array(
+                        array(
+                            'key' => '_my_meta[""addtosidebar""]',
+                            'value' => 'on',
+                            'compare' => 'LIKE'
+                        )
+                    )
+                );
+                $query = new WP_Query($args);
+
+The input checkbox addtosidebar looks like this:
+`<input type=""checkbox"" name=""_my_meta[addtosidebar]"" <?php checked((bool) $meta['addtosidebar'], true); ?> class=""checkbox"" />`
+
+Do you have any idea how can I access the key in the meta_query?
+
+Thanks,
+Cip
+",wordpress,wordpress-loop,,,,,open,0,394,4,"Wordpress meta_query key array I am using the: http://www.farinspace.com/how-to-create-custom-wordpress-meta-box/ function to create some custom meta boxes.
+
+My WP_Query looks like this:
+
+                $args = array(
+                    'post_type' => 'testimonials',
+                    'post_status' => 'publish',
+                    'orderby' => checked((bool) $instance['testimonials_random'], true, false) ? 'rand' : 'id',
+                    'posts_per_page' => $testimonials_number,
+                    'paged' => get_query_var('page'),
+                    'meta_query' => array(
+                        array(
+                            'key' => '_my_meta[""addtosidebar""]',
+                            'value' => 'on',
+                            'compare' => 'LIKE'
+                        )
+                    )
+                );
+                $query = new WP_Query($args);
+
+The input checkbox addtosidebar looks like this:
+`<input type=""checkbox"" name=""_my_meta[addtosidebar]"" <?php checked((bool) $meta['addtosidebar'], true); ?> class=""checkbox"" />`
+
+Do you have any idea how can I access the key in the meta_query?
+
+Thanks,
+Cip
+",2
+6512961,06/28/2011 20:54:35,667776,03/19/2011 23:14:26,320,61,How can I Optimize my WordPress Blog ?,"WordPress broke my server and i want to ask:
+
+How can i optimizate or cache my wordpress blog?
+
+Can i use some plugin like ""WP Super Cache"" or ""W3 Total Cache"" and which is the best?",wordpress,caching,optimization,performance,,06/30/2011 10:40:29,off topic,1,34,8,"How can I Optimize my WordPress Blog ? WordPress broke my server and i want to ask:
+
+How can i optimizate or cache my wordpress blog?
+
+Can i use some plugin like ""WP Super Cache"" or ""W3 Total Cache"" and which is the best?",4
+6948571,08/04/2011 21:11:32,801009,06/16/2011 07:37:49,6,0,wordpress categories and tags search based,I am working on an auto search website ( http://wotobe.com) and I am looking for the way to introduce simple search option based on categories and tags. I would like to be able to select the desired car's make and then select the model based on existing entries. ,wordpress,,,,,08/28/2011 20:01:03,not a real question,1,49,6,wordpress categories and tags search based I am working on an auto search website ( http://wotobe.com) and I am looking for the way to introduce simple search option based on categories and tags. I would like to be able to select the desired car's make and then select the model based on existing entries. ,1
+7508625,09/22/2011 01:41:45,958120,09/22/2011 01:36:47,1,0,"How can i change my ""read more"" to an image with hover effect?","I'm currently editing my premade layout downloaded in the internet and i would like to edit the ""Read More"" link to an image.
+
+The best example that i want to achieve is like in the website of 
+[www.hongkiat.com][1]. When you hover Continue Reading, the background changes.
+
+my code in the template is this:
+
+    <div class=""entry"">
+    <p><?php the_content('Read More...'); ?></p>
+    </div><!--entry-->
+
+Thank you very much in advance!
+
+
+  [1]: http://hongkiat.com",wordpress,readmore,,,,,open,0,75,13,"How can i change my ""read more"" to an image with hover effect? I'm currently editing my premade layout downloaded in the internet and i would like to edit the ""Read More"" link to an image.
+
+The best example that i want to achieve is like in the website of 
+[www.hongkiat.com][1]. When you hover Continue Reading, the background changes.
+
+my code in the template is this:
+
+    <div class=""entry"">
+    <p><?php the_content('Read More...'); ?></p>
+    </div><!--entry-->
+
+Thank you very much in advance!
+
+
+  [1]: http://hongkiat.com",2
+7105556,08/18/2011 09:54:55,559742,01/01/2011 11:13:47,501,28,Wordpress theme and language pack,"I am building a Wordpress blog system in Spanish and I'd like to have the default theme also translated to ""es_ES"". I am already running this Wordpress installation in Spanish. What I'd like to know is how to do the same with the default theme (twenty-eleven).
+
+This site allows us to download the po file with the translation: http://translate.wordpress.org/projects/wp/3.2.x/twentyeleven/es/default
+
+But I don't know what to do next.
+
+Thanks.
+",wordpress,language,wordpress-theming,po,,,open,0,65,5,"Wordpress theme and language pack I am building a Wordpress blog system in Spanish and I'd like to have the default theme also translated to ""es_ES"". I am already running this Wordpress installation in Spanish. What I'd like to know is how to do the same with the default theme (twenty-eleven).
+
+This site allows us to download the po file with the translation: http://translate.wordpress.org/projects/wp/3.2.x/twentyeleven/es/default
+
+But I don't know what to do next.
+
+Thanks.
+",4
+9100047,02/01/2012 17:08:32,333061,05/05/2010 04:31:45,795,69,Wordpress or Codeigniter for an e-learning website?,"One client wants an e-learning website. It will contain 3rd party functionality via API. He is WP fan. By my side I have build a lot of WP plugins but I do not think that WP be a good platform for all. I would prefer do it with codeigniter.  
+But I am not entirely sure about it.  
+So the question is: knowing that WP is a CMS with a lot of ready to use functionality  and CI is a real multi-purpose framework, which is best option to build an e-learning website: Wordpress or Codeigniter?
+
+I consider this a technical question that's why I did not asked in [http://webmasters.stackexchange.com/][1]
+
+
+  [1]: http://webmasters.stackexchange.com/",wordpress,codeigniter,platform,,,02/05/2012 04:55:25,not constructive,1,113,7,"Wordpress or Codeigniter for an e-learning website? One client wants an e-learning website. It will contain 3rd party functionality via API. He is WP fan. By my side I have build a lot of WP plugins but I do not think that WP be a good platform for all. I would prefer do it with codeigniter.  
+But I am not entirely sure about it.  
+So the question is: knowing that WP is a CMS with a lot of ready to use functionality  and CI is a real multi-purpose framework, which is best option to build an e-learning website: Wordpress or Codeigniter?
+
+I consider this a technical question that's why I did not asked in [http://webmasters.stackexchange.com/][1]
+
+
+  [1]: http://webmasters.stackexchange.com/",3
+10382020,04/30/2012 10:19:02,1365269,04/30/2012 07:29:47,2,0,how to create a wordpress theme looking like inkfruit,I want to create a theme in wordpress. This theme is looking like inkfruit and all the feature will be same like inkfruit Is it possable to create and how many time take it to create in this theme. Its a shopping cart site then how many pluging used in it.,wordpress,wordpress-plugin,wordpress-theming,,,05/08/2012 18:18:21,not a real question,1,51,9,how to create a wordpress theme looking like inkfruit I want to create a theme in wordpress. This theme is looking like inkfruit and all the feature will be same like inkfruit Is it possable to create and how many time take it to create in this theme. Its a shopping cart site then how many pluging used in it.,3
+3024545,06/11/2010 16:39:40,27305,10/13/2008 03:41:50,1320,13,wordpress extended_valid_elements for script tag?,"Can someone tell me how to tell Wordpress' tinymce editor to NOT strip out script tags?  I looked in wp-admin/includes/post.php and added 
+
+    'extended_valid_elements'=>'script[charset|defer|language|src|type]',
+
+to the $initArray.
+
+When I do a view source on the CMS post editor, I see taht it does show up like so:
+
+    <script type=""text/javascript"">
+    /* <![CDATA[ */
+    tinyMCEPreInit = {
+    	base : ""http://dev.esolar.ca/wp-includes/js/tinymce"",
+    	suffix : """",
+    	query : ""ver=327-1235"",
+    	mceInit : {mode:""specific_textareas"", editor_selector:""theEditor"", width:""100%"", theme:""advanced"", skin:""wp_theme"", theme_advanced_buttons1:""bold,italic,strikethrough,|,bullist,numlist,blockquote,|,justifyleft,justifycenter,justifyright,|,link,unlink,wp_more,|,spellchecker,fullscreen,wp_adv"", theme_advanced_buttons2:""formatselect,underline,justifyfull,forecolor,|,pastetext,pasteword,removeformat,|,charmap,|,outdent,indent,|,undo,redo,wp_help"", theme_advanced_buttons3:"""", theme_advanced_buttons4:"""", language:""en"", spellchecker_languages:""+English=en,Danish=da,Dutch=nl,Finnish=fi,French=fr,German=de,Italian=it,Polish=pl,Portuguese=pt,Spanish=es,Swedish=sv"", theme_advanced_toolbar_location:""top"", theme_advanced_toolbar_align:""left"", theme_advanced_statusbar_location:""bottom"", theme_advanced_resizing:""1"", theme_advanced_resize_horizontal:"""", dialog_type:""modal"", relative_urls:"""", remove_script_host:"""", convert_urls:"""", apply_source_formatting:"""", remove_linebreaks:""1"", gecko_spellcheck:""1"", entities:""38,amp,60,lt,62,gt"", accessibility_focus:""1"", tabfocus_elements:""major-publishing-actions"", media_strict:"""", paste_remove_styles:""1"", paste_remove_spans:""1"", paste_strip_class_attributes:""all"", wpeditimage_disable_captions:"""", plugins:""safari,inlinepopups,spellchecker,paste,wordpress,media,fullscreen,wpeditimage,wpgallery,tabfocus""},
+    	load_ext : function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+    };
+    /* ]]> */
+    </script>
+
+
+But for some reason ,my editor still doesn't save `<script>` tags.  What am I doing wrong?",wordpress,tinymce,,,,,open,0,158,5,"wordpress extended_valid_elements for script tag? Can someone tell me how to tell Wordpress' tinymce editor to NOT strip out script tags?  I looked in wp-admin/includes/post.php and added 
+
+    'extended_valid_elements'=>'script[charset|defer|language|src|type]',
+
+to the $initArray.
+
+When I do a view source on the CMS post editor, I see taht it does show up like so:
+
+    <script type=""text/javascript"">
+    /* <![CDATA[ */
+    tinyMCEPreInit = {
+    	base : ""http://dev.esolar.ca/wp-includes/js/tinymce"",
+    	suffix : """",
+    	query : ""ver=327-1235"",
+    	mceInit : {mode:""specific_textareas"", editor_selector:""theEditor"", width:""100%"", theme:""advanced"", skin:""wp_theme"", theme_advanced_buttons1:""bold,italic,strikethrough,|,bullist,numlist,blockquote,|,justifyleft,justifycenter,justifyright,|,link,unlink,wp_more,|,spellchecker,fullscreen,wp_adv"", theme_advanced_buttons2:""formatselect,underline,justifyfull,forecolor,|,pastetext,pasteword,removeformat,|,charmap,|,outdent,indent,|,undo,redo,wp_help"", theme_advanced_buttons3:"""", theme_advanced_buttons4:"""", language:""en"", spellchecker_languages:""+English=en,Danish=da,Dutch=nl,Finnish=fi,French=fr,German=de,Italian=it,Polish=pl,Portuguese=pt,Spanish=es,Swedish=sv"", theme_advanced_toolbar_location:""top"", theme_advanced_toolbar_align:""left"", theme_advanced_statusbar_location:""bottom"", theme_advanced_resizing:""1"", theme_advanced_resize_horizontal:"""", dialog_type:""modal"", relative_urls:"""", remove_script_host:"""", convert_urls:"""", apply_source_formatting:"""", remove_linebreaks:""1"", gecko_spellcheck:""1"", entities:""38,amp,60,lt,62,gt"", accessibility_focus:""1"", tabfocus_elements:""major-publishing-actions"", media_strict:"""", paste_remove_styles:""1"", paste_remove_spans:""1"", paste_strip_class_attributes:""all"", wpeditimage_disable_captions:"""", plugins:""safari,inlinepopups,spellchecker,paste,wordpress,media,fullscreen,wpeditimage,wpgallery,tabfocus""},
+    	load_ext : function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+    };
+    /* ]]> */
+    </script>
+
+
+But for some reason ,my editor still doesn't save `<script>` tags.  What am I doing wrong?",2
+7016598,08/10/2011 19:28:12,853477,07/20/2011 07:55:41,10,0,How to add a wordpress blog to my website,"Ive designed a website for my college tech fest, and need to add a blog. What is the simplest way to install Wordpress ( or something similar, if better) ? Im pretty good with HTML , CSS and js but am clueless about PHP, although we have a php coder on the team if the need arises.
+
+Im looking for something that'll look somewhat similar to the website ( thus I should be able to modify the CSS ).
+ ",wordpress,blogs,,,,08/10/2011 21:40:14,off topic,1,79,9,"How to add a wordpress blog to my website Ive designed a website for my college tech fest, and need to add a blog. What is the simplest way to install Wordpress ( or something similar, if better) ? Im pretty good with HTML , CSS and js but am clueless about PHP, although we have a php coder on the team if the need arises.
+
+Im looking for something that'll look somewhat similar to the website ( thus I should be able to modify the CSS ).
+ ",2
+2711019,04/26/2010 03:37:36,82330,03/25/2009 01:31:24,448,21,"With wordpress, is there a statement like current_user_can except show something if a user does not have specific access?","I am trying to show a custom css depending on user permissions with a function like :
+
+	 <?php
+	if ( !current_user_can( 'install_themes' ) ) { ?>
+	<link media=""all"" type=""text/css"" href=""<?php bloginfo( 'template_directory' ); ?>/library/styles/customAdmin.css"" rel=""stylesheet"">
+	<?php }
+
+Perhaps I am being dense about this but I want to do the reverse and show specific CSS if a user can not, in this case, install_themes.  I am doing it this way because the css hides parts of the admin area that I do not want hidden globally.  I could probably do this with liberal use of !important in my style sheetsbut I was hoping there was an easier way to write this in the function.
+
+Or is there a way to write 
+
+    <?php if ( current_user_can('level_7') ) : ?>
+
+with something like if < level_7  ?
+
+",wordpress,php,css,,,,open,0,136,19,"With wordpress, is there a statement like current_user_can except show something if a user does not have specific access? I am trying to show a custom css depending on user permissions with a function like :
+
+	 <?php
+	if ( !current_user_can( 'install_themes' ) ) { ?>
+	<link media=""all"" type=""text/css"" href=""<?php bloginfo( 'template_directory' ); ?>/library/styles/customAdmin.css"" rel=""stylesheet"">
+	<?php }
+
+Perhaps I am being dense about this but I want to do the reverse and show specific CSS if a user can not, in this case, install_themes.  I am doing it this way because the css hides parts of the admin area that I do not want hidden globally.  I could probably do this with liberal use of !important in my style sheetsbut I was hoping there was an easier way to write this in the function.
+
+Or is there a way to write 
+
+    <?php if ( current_user_can('level_7') ) : ?>
+
+with something like if < level_7  ?
+
+",3
+3075546,06/19/2010 12:56:20,368007,06/16/2010 07:53:33,1,1,Online Comic Reader with Wordpress,"I Want To Start a Comic Reader Online with Wordpress Power.
+If Can like this http://www.onemanga.com/
+How Do this ?",wordpress,plugins,online,reader,,06/20/2010 03:23:47,not a real question,1,18,5,"Online Comic Reader with Wordpress I Want To Start a Comic Reader Online with Wordpress Power.
+If Can like this http://www.onemanga.com/
+How Do this ?",4
+5068878,02/21/2011 17:03:37,592428,01/27/2011 15:16:35,1,0,Wordpress- pdf viewer,i want to make an pdf viewer in wordpress,wordpress,,,,,02/22/2011 02:40:10,not a real question,1,9,3,Wordpress- pdf viewer i want to make an pdf viewer in wordpress,1
+7234886,08/29/2011 19:29:33,918434,08/29/2011 19:29:33,1,0,Ajax wordpress comments,"I need my wordpress comments to work like on this website: http://aurgasm.us/
+
+Does anyone knows which plugin is him using?
+
+I have searched throught a few plugins, but all the ones i've found seem to work only inside the post page, and not from the main page, like this one
+
+
+Any help is highly appreciated!!
+
+thanks for now :)",wordpress,wordpress-plugin,,,,08/30/2011 01:48:39,off topic,1,55,3,"Ajax wordpress comments I need my wordpress comments to work like on this website: http://aurgasm.us/
+
+Does anyone knows which plugin is him using?
+
+I have searched throught a few plugins, but all the ones i've found seem to work only inside the post page, and not from the main page, like this one
+
+
+Any help is highly appreciated!!
+
+thanks for now :)",2
+11118609,06/20/2012 11:32:23,1407281,05/21/2012 07:24:14,20,1,"Mastered In WordPress, Would Magento be easier For Me","I have been working on WordPress platform for about an year and a half, i also have worked on some PHP based projects. Now i have a few e-commerce based projects lining up in from of me, so it looks like i have to look towards Magento as my next stop. 
+
+I would like to ask, will it be easier for a WordPress developer to have complete command over Mangento in 10 days? Will it be not very difficult for me? 
+
+I have never worked on Magento, but i have heard that it is the most difficult of all CMS.
+
+Please bear with me if you find this question too silly, I need to know about Magento..
+Also some good tutorials if you can share.",wordpress,magento,,,,06/21/2012 13:04:33,not a real question,1,123,9,"Mastered In WordPress, Would Magento be easier For Me I have been working on WordPress platform for about an year and a half, i also have worked on some PHP based projects. Now i have a few e-commerce based projects lining up in from of me, so it looks like i have to look towards Magento as my next stop. 
+
+I would like to ask, will it be easier for a WordPress developer to have complete command over Mangento in 10 days? Will it be not very difficult for me? 
+
+I have never worked on Magento, but i have heard that it is the most difficult of all CMS.
+
+Please bear with me if you find this question too silly, I need to know about Magento..
+Also some good tutorials if you can share.",2
+9644773,03/10/2012 07:36:24,1053190,11/18/2011 05:42:53,119,13,Wordpress + Jquery UI: Slider for Wordpress Theme Option,"I am creating Jquery Ui slider for wordpress theme option panel. I am using a ready script for wordpress theme option panel got from some tutorial. I found most the theme using same types of script to create option panel. Sample code is below.
+
+    break;
+    case 'text':
+    ?>
+    
+    	<div class=""options_input options_text"">
+    		<div class=""options_desc""><?php echo $value['desc']; ?></div>
+    		<span class=""labels""><label for=""<?php echo $value['id']; ?>""><?php echo $value['name']; ?></label></span>
+    		<input name=""<?php echo $value['id']; ?>"" id=""<?php echo $value['id']; ?>"" type=""<?php echo $value['type']; ?>"" value=""<?php if ( get_option( $value['id'] ) != """") { echo stripslashes(get_option( $value['id'])  ); } else { echo $value['std']; } ?>"" placeholder=""<?php echo $value['placeholder']; ?>"" />
+    	</div>
+    
+    <?php
+    break;
+
+But for the slider I have no idea how to create and implement with my script. I am completely new and making slider very first time. I have tried many tutorial but all are showing how to create slider but not how to store into the database so you can use for this type of theme option panel.
+
+I need you expert great help to add slider into my theme option panel. I would really appreciate your help.",wordpress,jquery-ui,slider,wordpress-theming,,,open,0,221,9,"Wordpress + Jquery UI: Slider for Wordpress Theme Option I am creating Jquery Ui slider for wordpress theme option panel. I am using a ready script for wordpress theme option panel got from some tutorial. I found most the theme using same types of script to create option panel. Sample code is below.
+
+    break;
+    case 'text':
+    ?>
+    
+    	<div class=""options_input options_text"">
+    		<div class=""options_desc""><?php echo $value['desc']; ?></div>
+    		<span class=""labels""><label for=""<?php echo $value['id']; ?>""><?php echo $value['name']; ?></label></span>
+    		<input name=""<?php echo $value['id']; ?>"" id=""<?php echo $value['id']; ?>"" type=""<?php echo $value['type']; ?>"" value=""<?php if ( get_option( $value['id'] ) != """") { echo stripslashes(get_option( $value['id'])  ); } else { echo $value['std']; } ?>"" placeholder=""<?php echo $value['placeholder']; ?>"" />
+    	</div>
+    
+    <?php
+    break;
+
+But for the slider I have no idea how to create and implement with my script. I am completely new and making slider very first time. I have tried many tutorial but all are showing how to create slider but not how to store into the database so you can use for this type of theme option panel.
+
+I need you expert great help to add slider into my theme option panel. I would really appreciate your help.",4
+11600969,07/22/2012 14:11:01,233679,12/17/2009 10:13:45,1169,48,Wordpress free plugin for Membership,"Is there such WP free plugin for membership by which user could register after submitting the charges for selected Membership package.
+
+Like admin could create as many Membership packages as he can then a user could select package pay for that membership and then become member.
+
+Payment gatways include all most common (Paypal, 2CO, GoogleChecout, etc) 
+
+Before asking I googled & found **s2Member** 
+but the features I need is not available in free version also they did not guide how the admin create different membership packages and how user could facilitate.
+ 
+",wordpress,,,,,07/22/2012 21:55:26,off topic,1,90,5,"Wordpress free plugin for Membership Is there such WP free plugin for membership by which user could register after submitting the charges for selected Membership package.
+
+Like admin could create as many Membership packages as he can then a user could select package pay for that membership and then become member.
+
+Payment gatways include all most common (Paypal, 2CO, GoogleChecout, etc) 
+
+Before asking I googled & found **s2Member** 
+but the features I need is not available in free version also they did not guide how the admin create different membership packages and how user could facilitate.
+ 
+",1
+3895721,10/09/2010 04:38:17,4653,09/05/2008 00:53:33,1370,76,what is the easiest way to migrate my wordpress site from one hosting provider to another?,i have a windows hosting provider and i am moving to another one.  what is the best way to migrate a wordpress blog from one hosting provider to another ?,wordpress,,,,,10/09/2010 15:50:16,off topic,1,31,16,what is the easiest way to migrate my wordpress site from one hosting provider to another? i have a windows hosting provider and i am moving to another one.  what is the best way to migrate a wordpress blog from one hosting provider to another ?,1
+2648489,04/15/2010 19:47:10,142410,07/21/2009 23:11:39,173,14,Which CMS do I need? Needs to be easy to post a certain kind of post,"I'm creating a site for a video store and it needs to be CMS. I'm doing this for free so I need to use a free CMS like Wordpress, Drupal or Joomla.
+
+Do I need a new CMS, a plugin or some PHP of my own?
+
+What I need:
+User accounts
+Categories
+Custom post
+
+Here's the site as it stands with WP: http://sundancevideo.ca. Right now an experimental site to try to work this out.
+
+What I've done now, is created a ""Draft"" that includes a template table with images and text and so on. The user would then have to copy everything, past into a new post and replace necessary. This really isn't working well. As you may notice by the condition of the posts.
+
+What I would prefer is if it was integrated into the WP UI. Like a field for ""Description"" and field for ""Image"" where they can upload the images as necessary. This would then generate post, with a table including all the information and images, for as many movies that were added in the UI.
+
+Please ask if I'm not being clear.
+
+Please help, any suggestions are welcome.
+
+Thank you,  
+Vian
+",wordpress,content-management-system,php,post,,,open,0,185,16,"Which CMS do I need? Needs to be easy to post a certain kind of post I'm creating a site for a video store and it needs to be CMS. I'm doing this for free so I need to use a free CMS like Wordpress, Drupal or Joomla.
+
+Do I need a new CMS, a plugin or some PHP of my own?
+
+What I need:
+User accounts
+Categories
+Custom post
+
+Here's the site as it stands with WP: http://sundancevideo.ca. Right now an experimental site to try to work this out.
+
+What I've done now, is created a ""Draft"" that includes a template table with images and text and so on. The user would then have to copy everything, past into a new post and replace necessary. This really isn't working well. As you may notice by the condition of the posts.
+
+What I would prefer is if it was integrated into the WP UI. Like a field for ""Description"" and field for ""Image"" where they can upload the images as necessary. This would then generate post, with a table including all the information and images, for as many movies that were added in the UI.
+
+Please ask if I'm not being clear.
+
+Please help, any suggestions are welcome.
+
+Thank you,  
+Vian
+",4
+376514,12/18/2008 00:13:20,47252,12/18/2008 00:03:06,1,0,"Are There Any ""Blank"" Wordpress Designs?","I'm currently about to enter a web design contest at my school along with a friend, and together we wanted to create a Wordpress blog theme. But so far... none seem to just be barebones, without and CSS Code, just the PHP code already there. Just if you know of a ""blank"" Wordpress theme... thanks.",wordpress,themes,css,,,12/29/2008 19:34:48,off topic,1,55,6,"Are There Any ""Blank"" Wordpress Designs? I'm currently about to enter a web design contest at my school along with a friend, and together we wanted to create a Wordpress blog theme. But so far... none seem to just be barebones, without and CSS Code, just the PHP code already there. Just if you know of a ""blank"" Wordpress theme... thanks.",3
+3073873,06/19/2010 00:43:23,370788,06/19/2010 00:43:22,1,0,Can't Login to Wordpress?,"Getting the below error when trying to reach my WP login page....I have tried to look for whitespaces like crazy (2 days) and unable to correct the issue...still can't login...My site is up and running just fine...Someone please help...What other options do I have?
+
+Warning: Cannot modify header information - headers already sent by (output started at /home/wesleysoccer/webapps/wp/wp-content/themes/infocus/functions.php:1) in /home/wesleysoccer/webapps/wp/wp-includes/pluggable.php on line 868",wordpress,,,,,06/21/2010 02:38:02,off topic,1,62,4,"Can't Login to Wordpress? Getting the below error when trying to reach my WP login page....I have tried to look for whitespaces like crazy (2 days) and unable to correct the issue...still can't login...My site is up and running just fine...Someone please help...What other options do I have?
+
+Warning: Cannot modify header information - headers already sent by (output started at /home/wesleysoccer/webapps/wp/wp-content/themes/infocus/functions.php:1) in /home/wesleysoccer/webapps/wp/wp-includes/pluggable.php on line 868",1
+3720669,09/15/2010 18:35:31,390364,07/13/2010 10:45:47,13,1,date in wordpress,"and thanks your support.
+
+i want to make a list of category that order by date,
+but i need it look by month and year.
+
+for example:
+
+August 2010
+--posts
+-----
+-----
+----
+July 2010
+-posts
+---
+--
+December 2009
+--posts
+----
+---
+----
+
+how can  i do it ?
+thanks.
+
+
+
+",wordpress,date,,,,09/16/2010 10:43:14,not a real question,1,33,3,"date in wordpress and thanks your support.
+
+i want to make a list of category that order by date,
+but i need it look by month and year.
+
+for example:
+
+August 2010
+--posts
+-----
+-----
+----
+July 2010
+-posts
+---
+--
+December 2009
+--posts
+----
+---
+----
+
+how can  i do it ?
+thanks.
+
+
+
+",2
+8851163,01/13/2012 13:15:02,894609,08/15/2011 07:34:01,26,0,Which is the best way to built a wordpress theme,"1.Should I make a static website using xhtml, css and javascript first and then convert it to a wordpress theme.
+OR
+2.Should I directly start building the theme from scratch.
+OR
+3.Should I use any framework
+OR
+4.Combination of the above.
+",wordpress,wordpress-theming,,,,01/14/2012 21:57:26,not constructive,1,35,10,"Which is the best way to built a wordpress theme 1.Should I make a static website using xhtml, css and javascript first and then convert it to a wordpress theme.
+OR
+2.Should I directly start building the theme from scratch.
+OR
+3.Should I use any framework
+OR
+4.Combination of the above.
+",2
+6961109,08/05/2011 18:40:54,752895,05/13/2011 18:57:03,21,0,Menu highlighting for a post within a page?,"In my Wordpress site, I use the built-in menu tool that handles the creation and populating of my navigation menu.  The navigation menu entries are pages in my site, not categories.
+
+When I'm in a page listed in the navigation menu, that menu entry will become highlighted.  However, when I go to a post that appears in that page, that menu entry doesn't get highlighted anymore.
+
+To be more specific (Here's the site/page: http://c1test.c3a.ca/featured-events-showcase/):
+In this page, the menu entry is highlighted.  However, when clicking one one of the posts, no menu entry is highlighted.
+
+How can I change the behaviour so it will handle the menu highlighting for any of the entries in that page when you go to them?
+
+Thanks,
+Andrei",wordpress,menu,highlighting,,,,open,0,120,8,"Menu highlighting for a post within a page? In my Wordpress site, I use the built-in menu tool that handles the creation and populating of my navigation menu.  The navigation menu entries are pages in my site, not categories.
+
+When I'm in a page listed in the navigation menu, that menu entry will become highlighted.  However, when I go to a post that appears in that page, that menu entry doesn't get highlighted anymore.
+
+To be more specific (Here's the site/page: http://c1test.c3a.ca/featured-events-showcase/):
+In this page, the menu entry is highlighted.  However, when clicking one one of the posts, no menu entry is highlighted.
+
+How can I change the behaviour so it will handle the menu highlighting for any of the entries in that page when you go to them?
+
+Thanks,
+Andrei",3
+5634269,04/12/2011 11:15:05,703934,04/12/2011 11:15:05,1,0,Question about wordpress blog,"I have started a wordpress blog hosted on (free)wordpress.com. Now it has good alexa ranking. I post after two or three days. I want to earn from this blog via google adsense. What is the best way to earn money. Please Give Suggestions.
+
+Thanks.",wordpress,,,,,04/12/2011 11:28:41,off topic,1,43,4,"Question about wordpress blog I have started a wordpress blog hosted on (free)wordpress.com. Now it has good alexa ranking. I post after two or three days. I want to earn from this blog via google adsense. What is the best way to earn money. Please Give Suggestions.
+
+Thanks.",1
+6037215,05/17/2011 21:14:35,490337,10/28/2010 16:07:45,100,3,Is it better to create a Blog on Wordpress / Blogger domain or client domain?,"I know that `Wordpress` will permit the creation of a `Blog` on an already purchased domain or subdomain. They also will host the blog for free, like `Blogger` does, resulting in the blog being under their domain. 
+
+If I host the blog, meaning I put the blog on the client's domain, they can have something like <i>myblog.myclientsite.com</i>, vs. <i>myblog.blogger.com</i> or <i>myblog.wordpress.com</i>.
+
+I read that web crawlers LOVE blogs. So I've been looking into how I would offer and setup a Blog for a client.
+
+<b><u>Question</u> - Which method is best? Put the Blog on the client's domain or let Wordpress/Blogger host it?</b>
+
+I ask because I want to know if letting Wordpress/Blogger host it is going to be less advantageous when it comes to SEO for a client's site. I know I'll be linking to the blog from the client's site, but <b>is it better to have the blog on the client's domain??? Does any of this matter?</b>
+
+I definitely need some insight and expert advice on this...your input is greatly appreciated:)",wordpress,seo,blogs,blogger,,05/18/2011 12:09:39,off topic,1,168,15,"Is it better to create a Blog on Wordpress / Blogger domain or client domain? I know that `Wordpress` will permit the creation of a `Blog` on an already purchased domain or subdomain. They also will host the blog for free, like `Blogger` does, resulting in the blog being under their domain. 
+
+If I host the blog, meaning I put the blog on the client's domain, they can have something like <i>myblog.myclientsite.com</i>, vs. <i>myblog.blogger.com</i> or <i>myblog.wordpress.com</i>.
+
+I read that web crawlers LOVE blogs. So I've been looking into how I would offer and setup a Blog for a client.
+
+<b><u>Question</u> - Which method is best? Put the Blog on the client's domain or let Wordpress/Blogger host it?</b>
+
+I ask because I want to know if letting Wordpress/Blogger host it is going to be less advantageous when it comes to SEO for a client's site. I know I'll be linking to the blog from the client's site, but <b>is it better to have the blog on the client's domain??? Does any of this matter?</b>
+
+I definitely need some insight and expert advice on this...your input is greatly appreciated:)",4
+9703538,03/14/2012 14:07:48,1269195,03/14/2012 14:04:21,1,0,how to footer of wordpress this line,"http://www.gujaratrojgar.in/
+
+
+this is my web site and i would like to remove this footer that is as under
+
+
+Powered by WordPress | Designed by: SharePoint Site | Thanks to Virtual Server, Email Hosting and Rent Server",wordpress,,,,,03/15/2012 12:37:13,not a real question,1,34,7,"how to footer of wordpress this line http://www.gujaratrojgar.in/
+
+
+this is my web site and i would like to remove this footer that is as under
+
+
+Powered by WordPress | Designed by: SharePoint Site | Thanks to Virtual Server, Email Hosting and Rent Server",1
+4190713,11/16/2010 02:34:37,25315,10/05/2008 19:10:11,953,40,Part of Firefox is Not Working,"I downloaded the Atahualpa 3.4.9 theme for Wordpress.  I got it loaded on my computer yesterday.  I had to use port 3006 because the BitNami installation package could not load it using port 80.  Everything worked ok yesterday, but today, I see that some things are not working correctly.  The header image which rotates automatically does not show an image.  It relies on some code that looks like this:
+<code>    <div style=""background: url(&quot;http://localhost:3006/wordpress/wp-content /themes/atahualpa/images/header/IMG_1496.jpg&quot;) no-repeat scroll center top transparent;"" class=""header-image-container"" id=""imagecontainer""><div class=""clickable""><a href=""http://localhost:3006/wordpress/"" title=""Lightspeed Payroll"" class=""divclick"">&nbsp;</a></div></div>
+<code/>
+Also, the post editor does not show any text even though it will display it on the front end.  If I open the site in Internet Explorer, it shows up fine and the post editor works ok.  It seems like something is broken in Firefox but I don't know what.  I have tried re-installing the theme and re-installing Firefox.  Any ideas on what I need to do?",wordpress,,,,,11/16/2010 02:51:57,off topic,1,163,6,"Part of Firefox is Not Working I downloaded the Atahualpa 3.4.9 theme for Wordpress.  I got it loaded on my computer yesterday.  I had to use port 3006 because the BitNami installation package could not load it using port 80.  Everything worked ok yesterday, but today, I see that some things are not working correctly.  The header image which rotates automatically does not show an image.  It relies on some code that looks like this:
+<code>    <div style=""background: url(&quot;http://localhost:3006/wordpress/wp-content /themes/atahualpa/images/header/IMG_1496.jpg&quot;) no-repeat scroll center top transparent;"" class=""header-image-container"" id=""imagecontainer""><div class=""clickable""><a href=""http://localhost:3006/wordpress/"" title=""Lightspeed Payroll"" class=""divclick"">&nbsp;</a></div></div>
+<code/>
+Also, the post editor does not show any text even though it will display it on the front end.  If I open the site in Internet Explorer, it shows up fine and the post editor works ok.  It seems like something is broken in Firefox but I don't know what.  I have tried re-installing the theme and re-installing Firefox.  Any ideas on what I need to do?",1
+4954848,02/10/2011 08:29:14,113418,05/27/2009 21:44:59,15,4,Wordpress: Your favorite permalinks structure - efficient / seo friendly,"I am using wordpress permalink format: */year/month/postname* in my [wordpress blog][1]. Most of the blog posts that I write are tutorials / how-tos. So it doesn't make sense to organize on based of date.
+
+I would like to know your comments / suggestions on how do you organize your urls in wordpress. I know wordpress does not recommended permalink based on category name: /category/postname, but I would like to organize urls based on categories without affecting blob performance.
+
+ - /year/month/postname -> good
+ - /postid/postname     -> good
+ - /category/postname   -> bad
+ - /author/postname     -> bad
+
+Please give your feedback on your favorite permalink structure keeping both performance and seo in mind.
+
+Thanks
+
+
+  [1]: http://viralpatel.net",wordpress,performance,seo-friendly,permalinks,,04/27/2011 03:35:52,off topic,1,121,10,"Wordpress: Your favorite permalinks structure - efficient / seo friendly I am using wordpress permalink format: */year/month/postname* in my [wordpress blog][1]. Most of the blog posts that I write are tutorials / how-tos. So it doesn't make sense to organize on based of date.
+
+I would like to know your comments / suggestions on how do you organize your urls in wordpress. I know wordpress does not recommended permalink based on category name: /category/postname, but I would like to organize urls based on categories without affecting blob performance.
+
+ - /year/month/postname -> good
+ - /postid/postname     -> good
+ - /category/postname   -> bad
+ - /author/postname     -> bad
+
+Please give your feedback on your favorite permalink structure keeping both performance and seo in mind.
+
+Thanks
+
+
+  [1]: http://viralpatel.net",4
+3314194,07/22/2010 23:00:32,369185,06/17/2010 09:50:24,7,1,WordPress: Managing subfolders in media library,"I'm working on a site for a client that uses a large number of images and we concluded that it's necessary to use subfolders within the media library, also being able to give these custom names (no auto-generated date based folders). I guess it's possible to make some sort of function for this or use a plugin but haven't found any solution. What would you recommend?",wordpress,media,,,,,open,0,66,6,"WordPress: Managing subfolders in media library I'm working on a site for a client that uses a large number of images and we concluded that it's necessary to use subfolders within the media library, also being able to give these custom names (no auto-generated date based folders). I guess it's possible to make some sort of function for this or use a plugin but haven't found any solution. What would you recommend?",2
+5830579,04/29/2011 09:54:05,357218,06/03/2010 07:56:11,12,0,"Wordpress 404 keeps kill me after wp3,0 and higher","what have you done since wp3.0 , all direct php files are not working in wp, all are returning 404 page not found, I have created one plugin, it's loading /wp-content/plugins/myplugin/direct.php file and what am I seeing now :( , it shows me my wp site with title ""PAGE NOT FOUND 404"", help me please I can't work with WP any more, all direct php files are not accessible and tracked as 404.
+What should I do to turn off that terrible 404 or get my php files loaded.
+
+btw, wp up to 3,0 had never such problem
+
+Thanks
+",wordpress,http-status-code-404,,,,,open,0,96,9,"Wordpress 404 keeps kill me after wp3,0 and higher what have you done since wp3.0 , all direct php files are not working in wp, all are returning 404 page not found, I have created one plugin, it's loading /wp-content/plugins/myplugin/direct.php file and what am I seeing now :( , it shows me my wp site with title ""PAGE NOT FOUND 404"", help me please I can't work with WP any more, all direct php files are not accessible and tracked as 404.
+What should I do to turn off that terrible 404 or get my php files loaded.
+
+btw, wp up to 3,0 had never such problem
+
+Thanks
+",2
+8254180,11/24/2011 08:41:36,1041368,11/11/2011 09:05:56,1,0,How to add manual deals from non-wordpress area to particular wordpress page,"I am building one site at wordpress and i just want to add some manual deals from outside of wordpress blog. I have an admin section where the user will add the manual deals and i just need help how to display these deals to a particular page of wordpress. And also need some suggestion to adding a option at admin side. Please do the needful for adding a deal from the database to page dynamically at wordpress blog.
+
+",wordpress,,,,,11/25/2011 04:28:48,not a real question,1,79,12,"How to add manual deals from non-wordpress area to particular wordpress page I am building one site at wordpress and i just want to add some manual deals from outside of wordpress blog. I have an admin section where the user will add the manual deals and i just need help how to display these deals to a particular page of wordpress. And also need some suggestion to adding a option at admin side. Please do the needful for adding a deal from the database to page dynamically at wordpress blog.
+
+",1
+7803527,10/18/2011 06:59:23,839628,07/11/2011 20:37:17,134,17,Email Management System wordpress,"I wanted to integrate a email management system onto my website. 
+
+Basically what I want is to: 
+
+1. create subscription forms
+2. send emails out to all registered users or subscribers of a subscription campaigns
+3. Would be nice if It could cross reference if a subscriber has become a registered user and take them off the subscriber list.
+
+Looking for any advice or someone who has used one and liked it.  Willing to spend some dough if it has all right features...
+
+
+I am using wordpress for the CMS, but any thing you have used or like to recommend would be great thanks!",wordpress,email,system,management,,03/26/2012 16:41:02,not constructive,1,101,4,"Email Management System wordpress I wanted to integrate a email management system onto my website. 
+
+Basically what I want is to: 
+
+1. create subscription forms
+2. send emails out to all registered users or subscribers of a subscription campaigns
+3. Would be nice if It could cross reference if a subscriber has become a registered user and take them off the subscriber list.
+
+Looking for any advice or someone who has used one and liked it.  Willing to spend some dough if it has all right features...
+
+
+I am using wordpress for the CMS, but any thing you have used or like to recommend would be great thanks!",4
+4217884,11/18/2010 17:47:08,443957,09/10/2010 01:36:40,224,6,Wordpress Widget options saving doesn't work.,"I want to have changeable widget title via Options Panel in wp-admin > Appearance > Widgets.
+
+It doesn't seem to work, after clicking ""SAVE"" it always gives back the default instead of saving stuff.
+
+Widgets control panel is very simplistic:
+
+    function myplugin_control() {
+
+        echo '<p>
+               <label for=""myplugin_title"">Title:</label>
+               <input id=""myplugin_title"" name=""myplugin_title"" type=""text"" value=""Default title:""/>
+            </p>
+            <p>
+               <label for=""myplugin_number"">Number of items to show:</label>
+               <input id=""myplugin_number"" name=""myplugin_number"" type=""text"" value=""5"" size=""3""/>';  
+            
+            $myplugin_title = ($_POST[""myplugin_title""]);
+            $myplugin_number = ($_POST[""myplugin_number""]);
+        
+            update_option('myplugin_widget', $myplugin_number , $myplugin_title); 
+
+    }
+
+And plugin goes like:
+
+    (...)
+        function widget_myplugin($args) {
+          extract($args);
+          echo $before_widget;
+          echo $before_title . $myplugin_title . $after_title;
+          myplugin();
+          echo $after_widget;     
+        }",wordpress,widget,,,,,open,0,310,6,"Wordpress Widget options saving doesn't work. I want to have changeable widget title via Options Panel in wp-admin > Appearance > Widgets.
+
+It doesn't seem to work, after clicking ""SAVE"" it always gives back the default instead of saving stuff.
+
+Widgets control panel is very simplistic:
+
+    function myplugin_control() {
+
+        echo '<p>
+               <label for=""myplugin_title"">Title:</label>
+               <input id=""myplugin_title"" name=""myplugin_title"" type=""text"" value=""Default title:""/>
+            </p>
+            <p>
+               <label for=""myplugin_number"">Number of items to show:</label>
+               <input id=""myplugin_number"" name=""myplugin_number"" type=""text"" value=""5"" size=""3""/>';  
+            
+            $myplugin_title = ($_POST[""myplugin_title""]);
+            $myplugin_number = ($_POST[""myplugin_number""]);
+        
+            update_option('myplugin_widget', $myplugin_number , $myplugin_title); 
+
+    }
+
+And plugin goes like:
+
+    (...)
+        function widget_myplugin($args) {
+          extract($args);
+          echo $before_widget;
+          echo $before_title . $myplugin_title . $after_title;
+          myplugin();
+          echo $after_widget;     
+        }",2
+3889623,10/08/2010 10:22:03,426266,08/20/2010 11:10:46,25,3,Tags and Categories in Wordpress,"I would like to discuss the right usage of tags and categories.
+
+I have a review site with over 1000 reviews of bars and clubs.
+I have set up post categories like this: Bar, Club, General Article.
+Since this is a very much geo-based review site, I have added Tags for each post, like for example this: Madrid, Spain.
+I store the exact location in a custom field (""street, country, city"").
+
+The problem now is that I would like to offer country-based browsing on my site. Visitors should have the option to ""browse by country"" or ""browse by city"".
+It would work out great to set up parent categories like ""city"" and ""country"" and add the countries and cities as sub-categories there.
+On the other hand, the way I have set things up right now makes more sense. There are three different kinds of posts and they should have their own category.
+
+How would you solve this problem? Convert all the tags into categories and vice versa?",wordpress,tags,category,categories,,11/23/2011 06:23:36,off topic,1,159,5,"Tags and Categories in Wordpress I would like to discuss the right usage of tags and categories.
+
+I have a review site with over 1000 reviews of bars and clubs.
+I have set up post categories like this: Bar, Club, General Article.
+Since this is a very much geo-based review site, I have added Tags for each post, like for example this: Madrid, Spain.
+I store the exact location in a custom field (""street, country, city"").
+
+The problem now is that I would like to offer country-based browsing on my site. Visitors should have the option to ""browse by country"" or ""browse by city"".
+It would work out great to set up parent categories like ""city"" and ""country"" and add the countries and cities as sub-categories there.
+On the other hand, the way I have set things up right now makes more sense. There are three different kinds of posts and they should have their own category.
+
+How would you solve this problem? Convert all the tags into categories and vice versa?",4
+2763353,05/04/2010 06:51:58,291143,03/11/2010 03:29:53,28,2,WordPress SQL Query on Category/Terms,"i am modifying a plugin slightly to meet my needs, and need to change this query to return post ID's of just one category. I know it has something to do with INNER JOIN, but cant get the query right. 
+
+Here is the original query
+
+    $query = ""SELECT ID as PID FROM $wpdb->posts"";
+    $results = $wpdb->get_results($querydetails,ARRAY_A);",wordpress,sql,query,,,02/23/2012 01:12:31,too localized,1,62,5,"WordPress SQL Query on Category/Terms i am modifying a plugin slightly to meet my needs, and need to change this query to return post ID's of just one category. I know it has something to do with INNER JOIN, but cant get the query right. 
+
+Here is the original query
+
+    $query = ""SELECT ID as PID FROM $wpdb->posts"";
+    $results = $wpdb->get_results($querydetails,ARRAY_A);",3
+7708797,10/10/2011 05:17:33,302760,03/26/2010 17:55:36,149,9,advice on cms + e-commerce,"I'm building an estimate for a potential client. I'll do some more research if I get the project, but need some ideas for now. I'm trying to figure out a good solution that won't take several months to develop but will still provide good flexibility for future enhancements.
+
+My options I believe are:
+
+    cms+e-commerce plugin (e.g. drupal+ubercart)
+    e-commerce platform that is extendable (e.g. magento)
+    framework+e-commerce platform (e.g. ci+magento)
+    cms+e-commerce (e.g. wordpress+magento)
+
+The site will be similar to etsy where users can have items that they sell with their own portfolio page. The client wants to add many custom features as well. Also, the site will serve up a lot of images and audio.
+
+I'm concerned that using strictly a e-commerce platform will give me a lot of obstacles to overcome rather than use just a cart+framework. I know Magento is written on Zend, but while I have used Magento, I'm not very familiar with Zend and it seems to take quite a while to learn.
+
+I have never used ubercart,wp e-commerce, or virtuemart, so I'm not sure of the limitations. The products will not need to be configurable. But we will need to store financial information. I'm thinking braintree's vault or authorize.net cim.
+
+I'd like to do the framework+ecommerce platform route. But the client would also like a lower price option, I'm leaning towards drupal+ubercart.
+
+Just would like some opinions from personal experience.
+
+Thanks!
+
+
+",wordpress,drupal,e-commerce,ubercart,virtuemart,,open,0,239,5,"advice on cms + e-commerce I'm building an estimate for a potential client. I'll do some more research if I get the project, but need some ideas for now. I'm trying to figure out a good solution that won't take several months to develop but will still provide good flexibility for future enhancements.
+
+My options I believe are:
+
+    cms+e-commerce plugin (e.g. drupal+ubercart)
+    e-commerce platform that is extendable (e.g. magento)
+    framework+e-commerce platform (e.g. ci+magento)
+    cms+e-commerce (e.g. wordpress+magento)
+
+The site will be similar to etsy where users can have items that they sell with their own portfolio page. The client wants to add many custom features as well. Also, the site will serve up a lot of images and audio.
+
+I'm concerned that using strictly a e-commerce platform will give me a lot of obstacles to overcome rather than use just a cart+framework. I know Magento is written on Zend, but while I have used Magento, I'm not very familiar with Zend and it seems to take quite a while to learn.
+
+I have never used ubercart,wp e-commerce, or virtuemart, so I'm not sure of the limitations. The products will not need to be configurable. But we will need to store financial information. I'm thinking braintree's vault or authorize.net cim.
+
+I'd like to do the framework+ecommerce platform route. But the client would also like a lower price option, I'm leaning towards drupal+ubercart.
+
+Just would like some opinions from personal experience.
+
+Thanks!
+
+
+",5
+6673759,07/13/2011 03:30:36,260737,01/28/2010 07:22:36,6,0,"“headers already sent” message, problem in worpress plugin","I have created a wordpress plugin. while i am going to activate the plugin facing following error:
+
+""The plugin generated 250 characters of unexpected output during activation. If you notice “headers already sent” messages, problems with syndication feeds or other issues, try deactivating or removing this plugin.""
+
+I have checked for white spaces and characters before the PHP starting tag and closing tag.
+But error remains. 
+
+Thanks in advance.",wordpress,plugins,,,,,open,0,66,8,"“headers already sent” message, problem in worpress plugin I have created a wordpress plugin. while i am going to activate the plugin facing following error:
+
+""The plugin generated 250 characters of unexpected output during activation. If you notice “headers already sent” messages, problems with syndication feeds or other issues, try deactivating or removing this plugin.""
+
+I have checked for white spaces and characters before the PHP starting tag and closing tag.
+But error remains. 
+
+Thanks in advance.",2
+4531613,12/25/2010 20:41:19,553590,12/24/2010 22:23:18,1,0,What's the best configuration for Robots Meta plugin?,"I need to know the best configuration for Robots Meta. That is a wordpress plugin for seo.
+",wordpress,seo,wordpress-plugin,,,11/29/2011 05:43:48,off topic,1,17,8,"What's the best configuration for Robots Meta plugin? I need to know the best configuration for Robots Meta. That is a wordpress plugin for seo.
+",3
+9232514,02/10/2012 18:00:41,1201044,02/10/2012 01:36:39,3,0,How do I use the LIKE keyword in WORDPRESS QUERY,"I saw this post : 
+http://stackoverflow.com/questions/8362807/wordpress-wp-query-like-statement
+
+HOWEVER, when I implement the layzend_posts_where function, it returns a query. 
+
+For example, if I search for "" apples "" , I get 
+
+apples AND (myposts.post_title LIKE '%apples%' )
+
+SO how do I **complete the process** and actually query WordPress to get posts that match that search criteria ? I'm lost. 
+
+",wordpress,query,like-operator,,,,open,0,56,10,"How do I use the LIKE keyword in WORDPRESS QUERY I saw this post : 
+http://stackoverflow.com/questions/8362807/wordpress-wp-query-like-statement
+
+HOWEVER, when I implement the layzend_posts_where function, it returns a query. 
+
+For example, if I search for "" apples "" , I get 
+
+apples AND (myposts.post_title LIKE '%apples%' )
+
+SO how do I **complete the process** and actually query WordPress to get posts that match that search criteria ? I'm lost. 
+
+",3
+11630350,07/24/2012 11:57:20,1254009,03/07/2012 06:54:26,24,0,Wordpress Theme Suggestion,"I would like to display a wordpress blog in the following fashion: 
+
+
+http://plone.org/documentation/kb/
+
+Like you can expand the categories and articles. 
+
+Any suggestions regarding themes for achieving this? Or should I write my own? I would not like to maintain it, so I am a bit afraid of writing my own.",wordpress,themes,blogs,,,07/29/2012 01:19:52,not constructive,1,50,3,"Wordpress Theme Suggestion I would like to display a wordpress blog in the following fashion: 
+
+
+http://plone.org/documentation/kb/
+
+Like you can expand the categories and articles. 
+
+Any suggestions regarding themes for achieving this? Or should I write my own? I would not like to maintain it, so I am a bit afraid of writing my own.",3
+6399604,06/18/2011 23:44:06,796390,06/13/2011 18:01:11,1,0,Make individual attachments private? Wordpress 3.1.3,Is there any way to make individual attachments private inside Wordpress? I've looked through various plugins but nothing that I need is showing up.,wordpress,,,,,06/19/2011 03:38:13,off topic,1,24,6,Make individual attachments private? Wordpress 3.1.3 Is there any way to make individual attachments private inside Wordpress? I've looked through various plugins but nothing that I need is showing up.,1
+1165803,07/22/2009 14:44:50,142233,07/21/2009 18:56:26,1,0,WordPress extreme oddity with broken images,"Can you tell me your opinion of this, and possibly see if you can recreate it:
+
+Currently, the $post->post_content variable contains:
+
+    ""before <img src=""/path/to/valid_img.gif"" /> after""
+
+This code placed at the top of the theme header.php...
+
+    ------ Code --------
+        1: $str = $post->post_content;
+        2: assert( isset( $str ) );
+        3: assert( is_string( $str ) );
+        4: echo $str;
+        5: $str = 'before <img src=""/path/to/nonexistant.gif"" /> after';
+        6: assert( isset( $str ) );
+        7: echo $str;
+    --------------------
+
+Outputs this...
+
+    ------ Output ------
+    before <img src=""/path/to/valid_img.gif"" /> after
+    before <img src=""/path/to/nonexistant.gif"" /> after
+    --------------------
+
+With these warnings...
+
+    --- PHP Warnings ---
+    PHP Warning:  assert() [<a href='function.assert'>function.assert</a>]: Assertion
+    failed in /path/to/header.php on line 2
+    PHP Warning:  assert() [<a href='function.assert'>function.assert</a>]: Assertion
+    failed in /path/to/header.php on line 3
+    --------------------
+
+Why would line 4 properly echo the $str if assert() fails twice when I KNOW 100% it should succeed?
+
+What does a broken image src have to do with setting or unsetting the variable $str?  WordPress bug/oddity?
+
+**Now the crazy part...**
+
+When lines 5-7 are commented out, thus eliminating the nonexistant.gif, the assert() warning does NOT appear and the output STILL properly produces this...
+
+    ------ Output ------
+    before <img src=""/path/to/valid_img.gif"" /> after
+    --------------------
+
+Any chance you can reproduce this and tell me what you think? I'm new to PHP, but I'm pretty sure this is crazyness. :)",wordpress,php,,,,,open,0,312,6,"WordPress extreme oddity with broken images Can you tell me your opinion of this, and possibly see if you can recreate it:
+
+Currently, the $post->post_content variable contains:
+
+    ""before <img src=""/path/to/valid_img.gif"" /> after""
+
+This code placed at the top of the theme header.php...
+
+    ------ Code --------
+        1: $str = $post->post_content;
+        2: assert( isset( $str ) );
+        3: assert( is_string( $str ) );
+        4: echo $str;
+        5: $str = 'before <img src=""/path/to/nonexistant.gif"" /> after';
+        6: assert( isset( $str ) );
+        7: echo $str;
+    --------------------
+
+Outputs this...
+
+    ------ Output ------
+    before <img src=""/path/to/valid_img.gif"" /> after
+    before <img src=""/path/to/nonexistant.gif"" /> after
+    --------------------
+
+With these warnings...
+
+    --- PHP Warnings ---
+    PHP Warning:  assert() [<a href='function.assert'>function.assert</a>]: Assertion
+    failed in /path/to/header.php on line 2
+    PHP Warning:  assert() [<a href='function.assert'>function.assert</a>]: Assertion
+    failed in /path/to/header.php on line 3
+    --------------------
+
+Why would line 4 properly echo the $str if assert() fails twice when I KNOW 100% it should succeed?
+
+What does a broken image src have to do with setting or unsetting the variable $str?  WordPress bug/oddity?
+
+**Now the crazy part...**
+
+When lines 5-7 are commented out, thus eliminating the nonexistant.gif, the assert() warning does NOT appear and the output STILL properly produces this...
+
+    ------ Output ------
+    before <img src=""/path/to/valid_img.gif"" /> after
+    --------------------
+
+Any chance you can reproduce this and tell me what you think? I'm new to PHP, but I'm pretty sure this is crazyness. :)",2
+11528171,07/17/2012 17:58:01,1087980,12/08/2011 14:55:01,84,7,WordPress: Imposing a new URL structure using htaccess,"The best way to describe the request is: breadcrumb-y URLs. 
+
+Currently the structure is fairly standard
+
+myWPsite.com/post-name-1
+
+What has been request is:
+
+Note: These are only examples so please don't get hung up on how legit they might be)
+
+myWPsite.com/home/about/post-name-1
+
+myWPsite.com/home/contact/post-name-1
+
+myWPsite.com/about/some-category/post-name-1
+
+The point is, we'd like to superimpose a dynamic (?) URL structure (as the theme lists links) over top of the traditional WP structure and then use htaccess to ""decode"" those requests and render the proper content. 
+
+I've tried using an htaccess RewriteRule and it works...almost. BUT!! The deal breaker is that WP eventually imposes its will on the browser. In other words, the requesting URL (e.g., myWPsite.com/home/about/post-name-1) eventually ends up as myWPsite.com/post-name-1. I can't get the breadcrumb-y URL to ""stick"". 
+
+I've done some poking around and found others who have faced the same dilemma. I don't think I'm alone. Unfortunately, I haven't been able to find a solution. So here I am, again.
+
+",wordpress,.htaccess,,,,07/19/2012 02:04:20,off topic,1,149,8,"WordPress: Imposing a new URL structure using htaccess The best way to describe the request is: breadcrumb-y URLs. 
+
+Currently the structure is fairly standard
+
+myWPsite.com/post-name-1
+
+What has been request is:
+
+Note: These are only examples so please don't get hung up on how legit they might be)
+
+myWPsite.com/home/about/post-name-1
+
+myWPsite.com/home/contact/post-name-1
+
+myWPsite.com/about/some-category/post-name-1
+
+The point is, we'd like to superimpose a dynamic (?) URL structure (as the theme lists links) over top of the traditional WP structure and then use htaccess to ""decode"" those requests and render the proper content. 
+
+I've tried using an htaccess RewriteRule and it works...almost. BUT!! The deal breaker is that WP eventually imposes its will on the browser. In other words, the requesting URL (e.g., myWPsite.com/home/about/post-name-1) eventually ends up as myWPsite.com/post-name-1. I can't get the breadcrumb-y URL to ""stick"". 
+
+I've done some poking around and found others who have faced the same dilemma. I don't think I'm alone. Unfortunately, I haven't been able to find a solution. So here I am, again.
+
+",2
+6795298,07/22/2011 19:50:02,64323,02/09/2009 20:51:23,124,5,My description is not showing up in Google search listings?,"As stated above, when I search for my website on Google, the search listing come's up without the META description that i've given it. Furthermore, Google doesn't seem to read or recognise the META keywords that I have given it. The website in question is [www.i-likeitalot.com][1]. I believe as a result of this, my SEO is catastrophic so you'll have to type the entire search into Google to see what i'm saying.
+
+I was would be so thankful if someone could point me in the right direction.
+
+Seedorf
+
+  [1]: http://www.i-likeitalot.com",wordpress,seo,keywords,meta,description,07/23/2011 00:40:07,off topic,1,89,10,"My description is not showing up in Google search listings? As stated above, when I search for my website on Google, the search listing come's up without the META description that i've given it. Furthermore, Google doesn't seem to read or recognise the META keywords that I have given it. The website in question is [www.i-likeitalot.com][1]. I believe as a result of this, my SEO is catastrophic so you'll have to type the entire search into Google to see what i'm saying.
+
+I was would be so thankful if someone could point me in the right direction.
+
+Seedorf
+
+  [1]: http://www.i-likeitalot.com",5
+9871226,03/26/2012 11:25:05,1270967,03/15/2012 07:37:08,3,0,Fancybox doesnt make galleries cyclic,"I have recently installed Fancybox on my website, the problem that galleries are not cyclic! here is the link to my page
+http://arch2o.com/?p=905
+Im not an expert so please go easy on me ! I don't know the details that I have to provide you from the code.
+Appreciate your patience ",wordpress,fancybox,,,,03/27/2012 20:28:46,too localized,1,49,5,"Fancybox doesnt make galleries cyclic I have recently installed Fancybox on my website, the problem that galleries are not cyclic! here is the link to my page
+http://arch2o.com/?p=905
+Im not an expert so please go easy on me ! I don't know the details that I have to provide you from the code.
+Appreciate your patience ",2
+6634433,07/09/2011 11:23:23,216464,11/22/2009 13:33:32,11,0,Get statistics for a given URL from a GAPI class,"We have a Wordpress site that we would like to enhance with a list of most popular pages for the last 7 days.<br/>
+For that we're using a plugin that implements the GAPI class, but unfortunately it returns the list of pages from the whole indexed pool and since the Google doesn't know the actual date the page was published we can't filter it out.<br/>
+So, what I was thinking is to go the other way around and get all the posts from the last 7 days and 'ping' analytics for pageviews of a given URL, then sort them. Is it possible with GAPI class 1.3, or any other way?",wordpress,analytics,pageviews,,,07/09/2011 18:15:50,off topic,1,108,10,"Get statistics for a given URL from a GAPI class We have a Wordpress site that we would like to enhance with a list of most popular pages for the last 7 days.<br/>
+For that we're using a plugin that implements the GAPI class, but unfortunately it returns the list of pages from the whole indexed pool and since the Google doesn't know the actual date the page was published we can't filter it out.<br/>
+So, what I was thinking is to go the other way around and get all the posts from the last 7 days and 'ping' analytics for pageviews of a given URL, then sort them. Is it possible with GAPI class 1.3, or any other way?",3
+2251975,02/12/2010 13:16:46,209102,11/11/2009 22:30:22,138,2,Wordpress: add a custom field option that's available to all posts,"As part of my theme install, I'd like to add a set of custom field options to the wordpress database that would be available to all posts as long as my theme is active.
+
+For example, I'd like to add these fields:
+
+custom-image-1
+custom-image-2
+custom-image-3
+
+And also these
+
+custom-image-1-link
+custom-image-2-link
+custom-image-3-link
+
+And then when a user goes to add or edit a post, they can insert values for each of these fields if they choose to...
+",wordpress,,,,,,open,0,67,11,"Wordpress: add a custom field option that's available to all posts As part of my theme install, I'd like to add a set of custom field options to the wordpress database that would be available to all posts as long as my theme is active.
+
+For example, I'd like to add these fields:
+
+custom-image-1
+custom-image-2
+custom-image-3
+
+And also these
+
+custom-image-1-link
+custom-image-2-link
+custom-image-3-link
+
+And then when a user goes to add or edit a post, they can insert values for each of these fields if they choose to...
+",1
+10495185,05/08/2012 08:31:09,1356481,04/25/2012 14:30:39,20,0,Displaying Meta Description On A Page,"I'm using Wordpress Yoast Seo plugin to generate automatic meta and description tags of all posts. I need to display meta description generated by Yoast seo on the post page. I found this code on the Internet.
+
+    <?php echo get_post_meta($post->ID, '_yoast_wpseo_metadesc', true); ?>
+
+So wherever I place this php code, it displays the meta description of the post.
+
+Now the problem is most of the posts in my blog don't have meta description in their custom field on the post editor. I use auto meta tags using the plugin by going to Seo > Title Settings > Meta Description Template. I went through the editor of the plugin and found wpseo_metadesc_template in it . So I tried this code.
+
+    <?php echo get_post_meta($post->ID, 'wpseo_metadesc_template', true); ?>
+
+But it displays nothing. Someone please help me out on this.",wordpress,wordpress-plugin,,,,,open,0,139,6,"Displaying Meta Description On A Page I'm using Wordpress Yoast Seo plugin to generate automatic meta and description tags of all posts. I need to display meta description generated by Yoast seo on the post page. I found this code on the Internet.
+
+    <?php echo get_post_meta($post->ID, '_yoast_wpseo_metadesc', true); ?>
+
+So wherever I place this php code, it displays the meta description of the post.
+
+Now the problem is most of the posts in my blog don't have meta description in their custom field on the post editor. I use auto meta tags using the plugin by going to Seo > Title Settings > Meta Description Template. I went through the editor of the plugin and found wpseo_metadesc_template in it . So I tried this code.
+
+    <?php echo get_post_meta($post->ID, 'wpseo_metadesc_template', true); ?>
+
+But it displays nothing. Someone please help me out on this.",2
+7660107,10/05/2011 10:47:25,478144,10/16/2010 20:24:18,4825,276,Get the current category inside the WordPress Loop,"I have this loop:
+
+    <?php while (have_posts()) : the_post(); ?>
+		<li><h2 class=""titles""><a href=""<?php the_permalink() ?>""><?php the_title(); ?></a></h2></li>
+		<li><span class=""post-date"">Posted <?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?></span><span class=""post-cat"">Filed under: <?php the_category(', ') ?> by <?php the_author(); ?></span></li>
+	    <li><p><?php the_excerpt(); ?></p></li>
+	   <div class=""voting""><?php DisplayVotes(get_the_ID()); ?></div>
+	<?php endwhile;?>
+
+I only want to put this line `<div class=""voting""><?php DisplayVotes(get_the_ID()); ?></div>` in only if the loop is referencing a certain category, ie. if (category== 'birthdays') then output this line.
+
+I know how to do an if statement but what condition do i put in?",wordpress,,,,,,open,0,95,8,"Get the current category inside the WordPress Loop I have this loop:
+
+    <?php while (have_posts()) : the_post(); ?>
+		<li><h2 class=""titles""><a href=""<?php the_permalink() ?>""><?php the_title(); ?></a></h2></li>
+		<li><span class=""post-date"">Posted <?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?></span><span class=""post-cat"">Filed under: <?php the_category(', ') ?> by <?php the_author(); ?></span></li>
+	    <li><p><?php the_excerpt(); ?></p></li>
+	   <div class=""voting""><?php DisplayVotes(get_the_ID()); ?></div>
+	<?php endwhile;?>
+
+I only want to put this line `<div class=""voting""><?php DisplayVotes(get_the_ID()); ?></div>` in only if the loop is referencing a certain category, ie. if (category== 'birthdays') then output this line.
+
+I know how to do an if statement but what condition do i put in?",1
+11659824,07/25/2012 22:48:47,1141918,08/27/2011 22:20:31,324,30,No globals defined in my Wordpress plugin,"The plugin I'm writing defines a class whose constructer adds a couple hooks/actions:
+
+
+	add_filter('query_vars', array($this, 'add_query_vars'), 0);
+	add_action('parse_request', array($this, 'sniff_requests'), 0);
+	add_action('init', array($this, 'add_endpoint'), 0);
+
+For some reason none of the globals ($post, $current_user, etc) are defined, even after init. Any idea why this would be?
+
+I just need to check whether the current user is logged in or not. None of the relevant functions seem to be working either (`wp_is_user_logged_in()`, etc)",wordpress,wordpress-plugin,,,,07/27/2012 00:34:04,off topic,1,67,7,"No globals defined in my Wordpress plugin The plugin I'm writing defines a class whose constructer adds a couple hooks/actions:
+
+
+	add_filter('query_vars', array($this, 'add_query_vars'), 0);
+	add_action('parse_request', array($this, 'sniff_requests'), 0);
+	add_action('init', array($this, 'add_endpoint'), 0);
+
+For some reason none of the globals ($post, $current_user, etc) are defined, even after init. Any idea why this would be?
+
+I just need to check whether the current user is logged in or not. None of the relevant functions seem to be working either (`wp_is_user_logged_in()`, etc)",2
+8022838,11/05/2011 19:52:02,1031501,11/05/2011 19:39:45,1,0,Bloginfo Description not showing,"Hi I have looked everywhere for help topics on this and not had any luck, I currently run a fan based website. I'm using wordpress and designed my own theme, when I view the page source I know that my description in the < title > tag is not showing. In the dashboard settings I have the tagline filled in, so I'm not sure why it's not showing in the code. Below is what I have coded myself in the <title> tag area:
+
+    <title><?php bloginfo('name'); ?> <?php wp_title('&laquo;', true, 'right'); ?> | <?php bloginfo('description'); ?></title>
+
+I would appreciate any help on this, as I've been stuck on this for weeks now lol
+
+Antony",wordpress,title,description,,,,open,0,114,4,"Bloginfo Description not showing Hi I have looked everywhere for help topics on this and not had any luck, I currently run a fan based website. I'm using wordpress and designed my own theme, when I view the page source I know that my description in the < title > tag is not showing. In the dashboard settings I have the tagline filled in, so I'm not sure why it's not showing in the code. Below is what I have coded myself in the <title> tag area:
+
+    <title><?php bloginfo('name'); ?> <?php wp_title('&laquo;', true, 'right'); ?> | <?php bloginfo('description'); ?></title>
+
+I would appreciate any help on this, as I've been stuck on this for weeks now lol
+
+Antony",3
+10652621,05/18/2012 12:25:23,1218181,02/18/2012 14:57:29,1,0,deal aggregator in wordpress,"I am building a deal aggregator site in wordpress. Deal aggregator collects deals from deal sites and present them in one site. Each deal has:
+
+1) A short title
+2) A description
+3) A photo
+4) A category (Services / Beauty / Spa)
+5) A Price
+6) An expiration date
+7) An area (New York / Manhattan)
+8) Deal shop name
+8) URL of the deal link
+
+I need to display those deals in a portfolio-like page using the ability to users to filter by category, by area, price range (10$ - 100$) or view deals expiring today.
+There is no shopping cart, everytime you click the button ""Buy"" you direct to the deal shop URL link to buy it directly from the deal site.
+
+So, actually my website is just one front page, no inner pages.
+
+What you suggest me, to build this in a clean wordpress using custom fields? Or build the site on top of a plugin (ecommerce or something) ?
+
+Please give me advices.",wordpress,wordpress-plugin,wordpress-plugin-dev,,,05/20/2012 23:00:31,not constructive,1,154,4,"deal aggregator in wordpress I am building a deal aggregator site in wordpress. Deal aggregator collects deals from deal sites and present them in one site. Each deal has:
+
+1) A short title
+2) A description
+3) A photo
+4) A category (Services / Beauty / Spa)
+5) A Price
+6) An expiration date
+7) An area (New York / Manhattan)
+8) Deal shop name
+8) URL of the deal link
+
+I need to display those deals in a portfolio-like page using the ability to users to filter by category, by area, price range (10$ - 100$) or view deals expiring today.
+There is no shopping cart, everytime you click the button ""Buy"" you direct to the deal shop URL link to buy it directly from the deal site.
+
+So, actually my website is just one front page, no inner pages.
+
+What you suggest me, to build this in a clean wordpress using custom fields? Or build the site on top of a plugin (ecommerce or something) ?
+
+Please give me advices.",3
+8763707,01/06/2012 19:59:41,797336,06/14/2011 09:02:47,55,3,Usage of Googmonify AdSense plugin for WordPress,"I want to put AdSense on top of my WP site and after each page and post title. After some research I have tried Googmonify, by considering the best for my needs and still not sure that it is. Anyway, in order to put Ads on top of my site I have tries to add 
+
+    [googmonify]slot:align:width:height[/googmonify]
+
+in index.php of the template after
+
+    <?php
+    get_header(); ?>
+
+and also tried in header.php in body tag, but it does not show the AdSense instead the same code figures in the place I put it. Whereas if I put it in the html code of the post, it works perfectly. Why? How to fix the problem. Is this the best plugin for my need at all??? :)",wordpress,wordpress-plugin,adsense,,,,open,0,131,7,"Usage of Googmonify AdSense plugin for WordPress I want to put AdSense on top of my WP site and after each page and post title. After some research I have tried Googmonify, by considering the best for my needs and still not sure that it is. Anyway, in order to put Ads on top of my site I have tries to add 
+
+    [googmonify]slot:align:width:height[/googmonify]
+
+in index.php of the template after
+
+    <?php
+    get_header(); ?>
+
+and also tried in header.php in body tag, but it does not show the AdSense instead the same code figures in the place I put it. Whereas if I put it in the html code of the post, it works perfectly. Why? How to fix the problem. Is this the best plugin for my need at all??? :)",3
+9640909,03/09/2012 20:58:00,1221770,02/20/2012 18:45:30,3,0,Adding in_same_cat option to a post nav link using Smarter Navigation plugin,"I need to add the in_same_cat option to my navigation code, but when I add it, what comes up as the title of the post is ""1"".
+
+Here's the code:
+
+    <nav id=""nav-single"">
+      <?php $prev_post = get_previous_post(); ?>
+      	<span class=""nav-previous""><?php next_post_smart( __( '%link') ); ?><?php next_post_smart(__('<span id=""prevlink"">Previous Project:<br />%link</span>') ); ?></span>
+    
+      <?php $next_post = get_next_post(); ?>
+      	<span class=""nav-next""><?php previous_post_smart( __('%link')); ?><?php previous_post_smart(__('<span id=""nextlink"">Next Project:<br />%link</span>') ); ?></span>
+      </nav><!-- #nav-single -->
+
+Here's what I did to add the in_same_cat option in the first link:
+
+    <?php $prev_post = get_previous_post(); ?>
+      	<span class=""nav-previous""><?php next_post_smart( $format = '%link', $in_same_cat = true ); ?><?php next_post_smart($format = '<span id=""prevlink"">Previous Project:<br />%link</span>', $in_same_cat = true ); ?></span>
+
+Alas, that didn't work. Can someone shine a light on what I'm doing wrong here?
+
+Thanks!",wordpress,wordpress-plugin,wordpress-theming,,,,open,0,161,12,"Adding in_same_cat option to a post nav link using Smarter Navigation plugin I need to add the in_same_cat option to my navigation code, but when I add it, what comes up as the title of the post is ""1"".
+
+Here's the code:
+
+    <nav id=""nav-single"">
+      <?php $prev_post = get_previous_post(); ?>
+      	<span class=""nav-previous""><?php next_post_smart( __( '%link') ); ?><?php next_post_smart(__('<span id=""prevlink"">Previous Project:<br />%link</span>') ); ?></span>
+    
+      <?php $next_post = get_next_post(); ?>
+      	<span class=""nav-next""><?php previous_post_smart( __('%link')); ?><?php previous_post_smart(__('<span id=""nextlink"">Next Project:<br />%link</span>') ); ?></span>
+      </nav><!-- #nav-single -->
+
+Here's what I did to add the in_same_cat option in the first link:
+
+    <?php $prev_post = get_previous_post(); ?>
+      	<span class=""nav-previous""><?php next_post_smart( $format = '%link', $in_same_cat = true ); ?><?php next_post_smart($format = '<span id=""prevlink"">Previous Project:<br />%link</span>', $in_same_cat = true ); ?></span>
+
+Alas, that didn't work. Can someone shine a light on what I'm doing wrong here?
+
+Thanks!",3
+5070205,02/21/2011 19:16:56,643594,02/04/2011 18:57:40,1,0,my menu on IE looks way down,"hello My menu showing on IE looks very way down , different than Firefox,
+
+site: http://www.fiestafranchise.com/wordpress  take a look at the menu on IE
+
+any help will be appreciated  it
+
+Sincerely
+
+Jim",wordpress,menu,bar,,,03/25/2011 12:11:12,too localized,1,30,7,"my menu on IE looks way down hello My menu showing on IE looks very way down , different than Firefox,
+
+site: http://www.fiestafranchise.com/wordpress  take a look at the menu on IE
+
+any help will be appreciated  it
+
+Sincerely
+
+Jim",3
+10819992,05/30/2012 16:03:09,1051221,11/17/2011 07:17:33,12,1,User name should not be unique,"Guys i am working on classified system in wordpress by using classipress & i am trying to figure out two things mentioned below, kindly help me if you have any ideas...
+
+ 1. I want that user name should not be unique so the user like from facebook registration or want any specific user name so the the wordpress donot restrict it..
+
+**Guys, can you guide me how can i achieve it or is there any plugin for it???**
+
+ 2. second i want to send a message on user's cell phone number when user login & register..or atleast login...For this may be i can put plugin cell number field on registration page so when user put their cell number in that field it subscribe to that...& when user login it send message to their cell phone...
+
+**so is there any plugin for it??**
+
+",wordpress,wordpress-plugin,app-themes,,,06/02/2012 06:32:15,not a real question,1,140,6,"User name should not be unique Guys i am working on classified system in wordpress by using classipress & i am trying to figure out two things mentioned below, kindly help me if you have any ideas...
+
+ 1. I want that user name should not be unique so the user like from facebook registration or want any specific user name so the the wordpress donot restrict it..
+
+**Guys, can you guide me how can i achieve it or is there any plugin for it???**
+
+ 2. second i want to send a message on user's cell phone number when user login & register..or atleast login...For this may be i can put plugin cell number field on registration page so when user put their cell number in that field it subscribe to that...& when user login it send message to their cell phone...
+
+**so is there any plugin for it??**
+
+",3
+10491394,05/08/2012 01:37:27,1380891,05/08/2012 00:04:27,1,0,"Migration of Wordpress sites to a local WAMPserver, now the pages cannot be found","Recently at our agency we needed to do a serious overhaul of our servers, so I've had to migrate the sites onto a local host machine so that I could work on them in the meantime. I used WAMPserver to host the sites, and the sites are powered by Wordpress. When the move was complete, I checked the sites on my local host to see how they looked. The front pages looked perfectly fine, but whenever I tried to navigate to the inner pages, I was met with nothing but 404s. My supervisor believes it might be connection issue, but I wanted to check here first to see if anyone else had similar problems.
+
+**OS:** Windows 7  
+**WAMPserver version:** 2.2
+
+**Steps already taken**
+
+ - I made sure that the local databases were named exactly as they were on the original server, and I double-checked with the wp-config file.
+ - I made sure to obtain the SQL files for the databases and imported
+   them in phpmyadmin.
+ - I went into the SQL files and changed all of the links (changed all instances of http://www.sitename.com to http://localhost/sitename)
+ - I logged into the Wordpress admin dashboard to check if all of the content was actually there. Everything was intact, but even clicking on ""view post/page"" on each individual post/page resulted in a 404.
+ - I tried returning the permalink options to default and then changing them back, but that didn't work.
+
+Unfortunately, I cannot provide any more information as I am no longer in the office. I hope that I can receive some help by the time I go back in tomorrow morning.",wordpress,wamp,wampserver,,,,open,0,270,14,"Migration of Wordpress sites to a local WAMPserver, now the pages cannot be found Recently at our agency we needed to do a serious overhaul of our servers, so I've had to migrate the sites onto a local host machine so that I could work on them in the meantime. I used WAMPserver to host the sites, and the sites are powered by Wordpress. When the move was complete, I checked the sites on my local host to see how they looked. The front pages looked perfectly fine, but whenever I tried to navigate to the inner pages, I was met with nothing but 404s. My supervisor believes it might be connection issue, but I wanted to check here first to see if anyone else had similar problems.
+
+**OS:** Windows 7  
+**WAMPserver version:** 2.2
+
+**Steps already taken**
+
+ - I made sure that the local databases were named exactly as they were on the original server, and I double-checked with the wp-config file.
+ - I made sure to obtain the SQL files for the databases and imported
+   them in phpmyadmin.
+ - I went into the SQL files and changed all of the links (changed all instances of http://www.sitename.com to http://localhost/sitename)
+ - I logged into the Wordpress admin dashboard to check if all of the content was actually there. Everything was intact, but even clicking on ""view post/page"" on each individual post/page resulted in a 404.
+ - I tried returning the permalink options to default and then changing them back, but that didn't work.
+
+Unfortunately, I cannot provide any more information as I am no longer in the office. I hope that I can receive some help by the time I go back in tomorrow morning.",3
+8455950,12/10/2011 10:46:43,242893,01/04/2010 00:16:33,534,29,Export/Import Wordpress Widgets,"I am trying to automate the process of replicating the widgets.
+
+We normally develop wordpress theme and we deliver it with dummy content but we are unable to fill it with the dummy widget content.
+
+Thanks
+-Shak",wordpress,wordpress-theming,,,,12/10/2011 20:50:31,not a real question,1,34,3,"Export/Import Wordpress Widgets I am trying to automate the process of replicating the widgets.
+
+We normally develop wordpress theme and we deliver it with dummy content but we are unable to fill it with the dummy widget content.
+
+Thanks
+-Shak",2
+6476754,06/25/2011 08:35:59,798363,06/14/2011 19:32:50,1,0,wordpress capabilities,"I'm trying to figure out whether wordpress can handle the following requirements for a site:
+
+1. incorporating yahoo weather api (and other widgets etc)
+
+2. testimonial page (user inputs, which have to be moderated back-end and approved)
+
+3. image gallery (with back-end manager)
+
+4. video gallery (basically youtube video links - with backend manager)
+
+5. extremely custom design
+
+I know WP is powerful, but can it handle these requirements? How easy/difficult is it to integrate plugins to handle this functionality? 
+
+Thanks.
+
+PS. I know this is not a programming question per se, but there are several such ""capabilities"" questions on the stack!
+
+",wordpress,wordpress-plugin,,,,06/25/2011 10:10:39,off topic,1,95,2,"wordpress capabilities I'm trying to figure out whether wordpress can handle the following requirements for a site:
+
+1. incorporating yahoo weather api (and other widgets etc)
+
+2. testimonial page (user inputs, which have to be moderated back-end and approved)
+
+3. image gallery (with back-end manager)
+
+4. video gallery (basically youtube video links - with backend manager)
+
+5. extremely custom design
+
+I know WP is powerful, but can it handle these requirements? How easy/difficult is it to integrate plugins to handle this functionality? 
+
+Thanks.
+
+PS. I know this is not a programming question per se, but there are several such ""capabilities"" questions on the stack!
+
+",2
+7651878,10/04/2011 17:41:15,912354,08/25/2011 14:42:23,8,0,Wordpress custom taxanomy and post type rewrite,"i need to custom post types rewrite rules.
+
+I have classifieds project, and links need to be done like this.
+
+.com/category-class/sub-category-class/adverts-title/
+
+at the moment rewrite are ads/adverts-title/
+
+This need be done, like simply wordpress post /%category%/%postname%
+
+But the custom post types, dont wont make defoult rewrite rule. 
+
+",wordpress,,,,,10/06/2011 08:50:21,off topic,1,43,7,"Wordpress custom taxanomy and post type rewrite i need to custom post types rewrite rules.
+
+I have classifieds project, and links need to be done like this.
+
+.com/category-class/sub-category-class/adverts-title/
+
+at the moment rewrite are ads/adverts-title/
+
+This need be done, like simply wordpress post /%category%/%postname%
+
+But the custom post types, dont wont make defoult rewrite rule. 
+
+",1
+11728807,07/30/2012 20:06:43,1340383,04/18/2012 05:07:11,1,0,adsense account for wordpress,"My site is [www.tricky-photoshop.com][1]. I got first approval for adsense 3-4 days ago and than posted the script in my site. Can anyone tell me when will I get the full approval?
+  [1]: http://www.tricky-photoshop.com",wordpress,photo,adsense,,,08/01/2012 03:43:14,off topic,1,35,4,"adsense account for wordpress My site is [www.tricky-photoshop.com][1]. I got first approval for adsense 3-4 days ago and than posted the script in my site. Can anyone tell me when will I get the full approval?
+  [1]: http://www.tricky-photoshop.com",3
+11489083,07/15/2012 03:09:15,1526392,07/15/2012 02:55:02,1,0,changing multiple author query for wordpress,"I have a wordpress url that creates a query that pulls all posts by specific authors its ""/?author=54,228,19,24,44,48,56,15,18,47,30"" how would I simply change this to ""/reporter-archive"" 
+
+i know there are similar posts that address something close to this but when I tried it didnt work correctly.
+
+Thank you!!",wordpress,url-rewriting,archive,,,07/17/2012 17:46:47,not a real question,1,47,6,"changing multiple author query for wordpress I have a wordpress url that creates a query that pulls all posts by specific authors its ""/?author=54,228,19,24,44,48,56,15,18,47,30"" how would I simply change this to ""/reporter-archive"" 
+
+i know there are similar posts that address something close to this but when I tried it didnt work correctly.
+
+Thank you!!",3
+11353949,07/05/2012 23:31:27,1505404,07/05/2012 23:25:46,1,0,Facebook plugin don't work (wordpress),"I have just installed the facebook plugin for wordpress and it doesnt want to work.
+I have done the step by step guide and nothing. The coment's isnt showing, the recommendation doesnt work ( those 2 tings i need most) Any idea ? ",wordpress,facebook-graph-api,,,,07/06/2012 11:46:42,off topic,1,43,5,"Facebook plugin don't work (wordpress) I have just installed the facebook plugin for wordpress and it doesnt want to work.
+I have done the step by step guide and nothing. The coment's isnt showing, the recommendation doesnt work ( those 2 tings i need most) Any idea ? ",2
+11457701,07/12/2012 17:54:22,320700,04/19/2010 19:30:14,9834,367,WordPress return all custom post types within given categories,"In a project, we have a search form where the user can select different combination of categories and click the ""Search"" button. It is expected to return all the ""products"" (custom post type) matching at least one of all selected categories.
+
+I haven't worked much with WordPress and so I am unsure how to do this. Here is what I actually have, but it doesn't seem to work and seem to require the `s` URL param to contain a value (which is not desired since all products should be listed).
+
+Note that I use the `s` URL parameter to activate the `is_search` condition and to detect if we are submitting an custom search form for a custom post type.
+
+
+###function.php of a custom theme
+
+    /* [snip] */
+
+    function SearchFilter($wp_query) {
+        if ($wp_query->is_search()) {
+            $defaults = array(
+                'cat' => array(),
+            );
+            $args = wp_parse_args($_GET, $defaults);
+            
+            $post_type = get_post_type_object($args['s']);
+            if ($post_type) {
+                $categories = array();
+                // 'cat' is an array of checkboxes in our form
+                // some checkbox may have values like ""4"" others ""2,6,10"", etc.
+                foreach ($args['cat'] as $catId) {
+                    $categories = array_map('intval', array_merge($categories, explode(',', $catId)));
+                }
+                $desired_cat = implode(',', array_unique($categories));
+                //$excluded = get_categories(""hide_empty=false&exclude={$desired_cat}"");
+    
+                //$wp_query->query_vars['cat'] = ""-{$excluded}"";
+                $wp_query->query_vars['cat'] = $desired_cat;
+    
+                //$wp_query->query_vars['s'] = '';
+                
+                // debug line
+                //header('Content-type:text/plain'); var_dump($wp_query); exit;
+            }
+        }
+        return $wp_query;
+    }
+     
+    add_filter('pre_get_posts','SearchFilter');
+
+My first idea was to simply modify the `WP_Query` object and re-inject it in the ""normal"" process. Is this the right approach? or do I need to customize something else?
+
+There will also be a search box, in a separate search form, to perform search by product (custom post type) tags, etc. If the information may be useful.",wordpress,search,categories,,,07/14/2012 00:09:56,off topic,1,621,9,"WordPress return all custom post types within given categories In a project, we have a search form where the user can select different combination of categories and click the ""Search"" button. It is expected to return all the ""products"" (custom post type) matching at least one of all selected categories.
+
+I haven't worked much with WordPress and so I am unsure how to do this. Here is what I actually have, but it doesn't seem to work and seem to require the `s` URL param to contain a value (which is not desired since all products should be listed).
+
+Note that I use the `s` URL parameter to activate the `is_search` condition and to detect if we are submitting an custom search form for a custom post type.
+
+
+###function.php of a custom theme
+
+    /* [snip] */
+
+    function SearchFilter($wp_query) {
+        if ($wp_query->is_search()) {
+            $defaults = array(
+                'cat' => array(),
+            );
+            $args = wp_parse_args($_GET, $defaults);
+            
+            $post_type = get_post_type_object($args['s']);
+            if ($post_type) {
+                $categories = array();
+                // 'cat' is an array of checkboxes in our form
+                // some checkbox may have values like ""4"" others ""2,6,10"", etc.
+                foreach ($args['cat'] as $catId) {
+                    $categories = array_map('intval', array_merge($categories, explode(',', $catId)));
+                }
+                $desired_cat = implode(',', array_unique($categories));
+                //$excluded = get_categories(""hide_empty=false&exclude={$desired_cat}"");
+    
+                //$wp_query->query_vars['cat'] = ""-{$excluded}"";
+                $wp_query->query_vars['cat'] = $desired_cat;
+    
+                //$wp_query->query_vars['s'] = '';
+                
+                // debug line
+                //header('Content-type:text/plain'); var_dump($wp_query); exit;
+            }
+        }
+        return $wp_query;
+    }
+     
+    add_filter('pre_get_posts','SearchFilter');
+
+My first idea was to simply modify the `WP_Query` object and re-inject it in the ""normal"" process. Is this the right approach? or do I need to customize something else?
+
+There will also be a search box, in a separate search form, to perform search by product (custom post type) tags, etc. If the information may be useful.",3
+10873325,06/03/2012 19:35:45,516762,11/22/2010 23:06:41,125,1,WP: query_posts with CPT in a Category,"i am sure this is simple as hell but i cant find the problem.
+
+I want to display all Articles within a Custom Post Type that are in a special Category.
+
+So i wrote this down in my category.php
+
+    query_posts( ""post_type=produkte&"".$query_string );
+	    if( have_posts() ) { 
+			while( have_posts() ) {
+				the_post();
+				the_title();
+			}
+		}
+
+In query_string there is something like this ""category_name=werbeklassiker%2Fkugelschreiber-kunststoff"" what is absolutely right.
+And now i want to display in this Category only the Posts of the CPT ""produkte"" which have this Category.
+
+I hopfe you understand what i mean.
+
+Thanks in Advance,
+Jings",wordpress,post,types,category,custom,06/21/2012 13:53:45,not a real question,1,92,7,"WP: query_posts with CPT in a Category i am sure this is simple as hell but i cant find the problem.
+
+I want to display all Articles within a Custom Post Type that are in a special Category.
+
+So i wrote this down in my category.php
+
+    query_posts( ""post_type=produkte&"".$query_string );
+	    if( have_posts() ) { 
+			while( have_posts() ) {
+				the_post();
+				the_title();
+			}
+		}
+
+In query_string there is something like this ""category_name=werbeklassiker%2Fkugelschreiber-kunststoff"" what is absolutely right.
+And now i want to display in this Category only the Posts of the CPT ""produkte"" which have this Category.
+
+I hopfe you understand what i mean.
+
+Thanks in Advance,
+Jings",5
+5923388,05/07/2011 19:13:28,743322,05/07/2011 18:48:54,1,0,Displaying WordPress page number/count in relation to siblings,"I want to add a page number to a part on my page. Something like <i>7 of 22</i>. I've found a ton of ways to do something similar to this, but not quite this...
+
+First, this is for Pages, not Posts. Secondly, this will be in the sidebar. The second number must be the total number of sibling pages and the first number should be the current page's position from menu_order.
+
+What's the easiest way to do this?
+
+Thanks
+",wordpress,count,wordpress-theming,,,,open,0,76,8,"Displaying WordPress page number/count in relation to siblings I want to add a page number to a part on my page. Something like <i>7 of 22</i>. I've found a ton of ways to do something similar to this, but not quite this...
+
+First, this is for Pages, not Posts. Secondly, this will be in the sidebar. The second number must be the total number of sibling pages and the first number should be the current page's position from menu_order.
+
+What's the easiest way to do this?
+
+Thanks
+",3
+11371308,07/07/2012 00:30:59,1131141,01/05/2012 01:12:21,1,0,creating a wordpress dev enviornment and uploading to production,"I am an old school java developer who is considering a using wordpress. I'm used to developing locally on my PC (yeah yeah not even a mac) and then ftping my files up to a production environment on a remote server. My high level review of wordpress gives me the impression that typically there is no concept of lower environments and that all updates occur directly in production. Is this the case? If not, can someone explain how one goes about uploading the files to a web site?
+
+Thanks,
+
+Jeff",wordpress,production,environments,,,,open,0,88,9,"creating a wordpress dev enviornment and uploading to production I am an old school java developer who is considering a using wordpress. I'm used to developing locally on my PC (yeah yeah not even a mac) and then ftping my files up to a production environment on a remote server. My high level review of wordpress gives me the impression that typically there is no concept of lower environments and that all updates occur directly in production. Is this the case? If not, can someone explain how one goes about uploading the files to a web site?
+
+Thanks,
+
+Jeff",3

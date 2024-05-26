@@ -1,0 +1,1509 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+11121175,06/20/2012 13:53:26,1469365,06/20/2012 13:18:20,1,0,SOLVED: Groupon offer on Magento site with Paypal Website Payments Pro Hosted - Subtotal zero -Rejected,"I'm sharing this after spending days trying to find a solution online but couldn't find anything. Hopefully my solution may help others struggling with the same problem and my apologise in advance if this has already been covered elsewhere but I (and therefore probably others) couldn't find it.
+
+
+A client is running a Groupon promotion on the site that I manage which runs Magento 1.7. All payments go through Papal Website Payments Pro hosted which was rejecting the Groupon coupon orders.
+
+The Groupon coupon code discounts the product value by 100% and there is only a shipping charge remaining. This is sent to Paypal and is rejected with the message ""Subtotal amount is not valid."" because the subtotal is zero even though shipping and tax have a value.
+
+Here's the log file:
+
+            [L_BUTTONVAR0] => subtotal=0.00
+            [L_BUTTONVAR1] => tax=2.50
+            [L_BUTTONVAR2] => shipping=12.50
+
+The very simple solution that took me days to find was to edit this file:
+
+    /app/code/core/Mage/Paypal/Model/Hostedpro/Request.php
+
+Replace this (it's near the bottom):
+
+    protected function _getOrderData(Mage_Sales_Model_Order $order)
+    {
+        $request = array(
+            'subtotal'      => $this->_formatPrice(
+                $this->_formatPrice($order->getPayment()->getBaseAmountAuthorized()) -
+                $this->_formatPrice($order->getBaseTaxAmount()) -
+                $this->_formatPrice($order->getBaseShippingAmount())
+            ),
+            'tax'           => $this->_formatPrice($order->getBaseTaxAmount()),
+            'shipping'      => $this->_formatPrice($order->getBaseShippingAmount()),
+            'invoice'       => $order->getIncrementId(),
+            'address_override' => 'false',
+            'currency_code'    => $order->getBaseCurrencyCode(),
+            'buyer_email'      => $order->getCustomerEmail()
+        );
+
+with this:
+
+    protected function _getOrderData(Mage_Sales_Model_Order $order)
+    {
+        $request = array(
+            'subtotal'      => $this->_formatPrice(
+                $this->_formatPrice($order->getPayment()->getBaseAmountAuthorized()) 
+            ),
+            'invoice'       => $order->getIncrementId(),
+            'address_override' => 'false',
+            'currency_code'    => $order->getBaseCurrencyCode(),
+            'buyer_email'      => $order->getCustomerEmail()
+        );
+
+
+This sends Paypal the total amount in the subtotal field so that it doesn't reject the order.
+
+I would be really interested in any feedback from other people around this.
+",magento,paypal,,,,06/20/2012 23:17:40,not a real question,1,593,16,"SOLVED: Groupon offer on Magento site with Paypal Website Payments Pro Hosted - Subtotal zero -Rejected I'm sharing this after spending days trying to find a solution online but couldn't find anything. Hopefully my solution may help others struggling with the same problem and my apologise in advance if this has already been covered elsewhere but I (and therefore probably others) couldn't find it.
+
+
+A client is running a Groupon promotion on the site that I manage which runs Magento 1.7. All payments go through Papal Website Payments Pro hosted which was rejecting the Groupon coupon orders.
+
+The Groupon coupon code discounts the product value by 100% and there is only a shipping charge remaining. This is sent to Paypal and is rejected with the message ""Subtotal amount is not valid."" because the subtotal is zero even though shipping and tax have a value.
+
+Here's the log file:
+
+            [L_BUTTONVAR0] => subtotal=0.00
+            [L_BUTTONVAR1] => tax=2.50
+            [L_BUTTONVAR2] => shipping=12.50
+
+The very simple solution that took me days to find was to edit this file:
+
+    /app/code/core/Mage/Paypal/Model/Hostedpro/Request.php
+
+Replace this (it's near the bottom):
+
+    protected function _getOrderData(Mage_Sales_Model_Order $order)
+    {
+        $request = array(
+            'subtotal'      => $this->_formatPrice(
+                $this->_formatPrice($order->getPayment()->getBaseAmountAuthorized()) -
+                $this->_formatPrice($order->getBaseTaxAmount()) -
+                $this->_formatPrice($order->getBaseShippingAmount())
+            ),
+            'tax'           => $this->_formatPrice($order->getBaseTaxAmount()),
+            'shipping'      => $this->_formatPrice($order->getBaseShippingAmount()),
+            'invoice'       => $order->getIncrementId(),
+            'address_override' => 'false',
+            'currency_code'    => $order->getBaseCurrencyCode(),
+            'buyer_email'      => $order->getCustomerEmail()
+        );
+
+with this:
+
+    protected function _getOrderData(Mage_Sales_Model_Order $order)
+    {
+        $request = array(
+            'subtotal'      => $this->_formatPrice(
+                $this->_formatPrice($order->getPayment()->getBaseAmountAuthorized()) 
+            ),
+            'invoice'       => $order->getIncrementId(),
+            'address_override' => 'false',
+            'currency_code'    => $order->getBaseCurrencyCode(),
+            'buyer_email'      => $order->getCustomerEmail()
+        );
+
+
+This sends Paypal the total amount in the subtotal field so that it doesn't reject the order.
+
+I would be really interested in any feedback from other people around this.
+",2
+11172683,06/23/2012 20:19:54,887385,08/10/2011 07:26:54,151,78,How to update shipping address using customer_save_after event?,"I am trying to create or update default shipping address for a customer using `customer_save_after` event (based on some custom registration fields) when customer tries to create new account or edit his account.
+
+Here goes the portion of the Observer model code:
+
+    ...
+    $customer	= $observer->getEvent()->getCustomer();
+    if ($customer->getId() && $otherConditionIsValid){
+    	$dataShipping = array(
+    		'firstname' => $someFixedFirstName,
+    		'lastname'	=> $someFixedLastName,
+    		'street'	=> array($someFixedStreetLine),
+    		'city'		=> $someFixedCity,
+    		'region'	=> $someFixedState,
+    		'region_id' => '',
+    		'postcode'  => $someFixedZipcode,
+    		'country_id' => $someFixedCountry,
+    		'telephone' => $someFixedTelephone,
+    	);
+    	$customerAddress = Mage::getModel('customer/address');
+    	if($defaultShippingId = $customer->getDefaultShipping()){ //if customer already has default shipping address
+    		$customerAddress->load($defaultShippingId);
+    	}
+    	$customerAddress->setData($dataShipping)
+    					->setCustomerId($customer->getId())
+    					->setIsDefaultShipping('1')
+    					->setSaveInAddressBook('1');
+    	$customer->addAddress($customerAddress); #setting Shipping Address to be added/updated
+    	//When i try to use below commented code, script gets called for infinite times, finally running out of memory
+    	/*try{
+    		$customerAddress->save();
+    	}catch(Exception $e){
+    		Mage::log('Address Save Error::' . $e->getMessage());
+    	}*/
+    }
+    ...
+
+Above code works fine when customer creates a new account. However default shipping address don't get updated when customer tries to edit the custom registration field from `My Account > Account Information`
+
+So my main concern is how to update the shipping address using `$customer` object or any other code using `customer_save_after` event.",magento,,,,,,open,0,277,8,"How to update shipping address using customer_save_after event? I am trying to create or update default shipping address for a customer using `customer_save_after` event (based on some custom registration fields) when customer tries to create new account or edit his account.
+
+Here goes the portion of the Observer model code:
+
+    ...
+    $customer	= $observer->getEvent()->getCustomer();
+    if ($customer->getId() && $otherConditionIsValid){
+    	$dataShipping = array(
+    		'firstname' => $someFixedFirstName,
+    		'lastname'	=> $someFixedLastName,
+    		'street'	=> array($someFixedStreetLine),
+    		'city'		=> $someFixedCity,
+    		'region'	=> $someFixedState,
+    		'region_id' => '',
+    		'postcode'  => $someFixedZipcode,
+    		'country_id' => $someFixedCountry,
+    		'telephone' => $someFixedTelephone,
+    	);
+    	$customerAddress = Mage::getModel('customer/address');
+    	if($defaultShippingId = $customer->getDefaultShipping()){ //if customer already has default shipping address
+    		$customerAddress->load($defaultShippingId);
+    	}
+    	$customerAddress->setData($dataShipping)
+    					->setCustomerId($customer->getId())
+    					->setIsDefaultShipping('1')
+    					->setSaveInAddressBook('1');
+    	$customer->addAddress($customerAddress); #setting Shipping Address to be added/updated
+    	//When i try to use below commented code, script gets called for infinite times, finally running out of memory
+    	/*try{
+    		$customerAddress->save();
+    	}catch(Exception $e){
+    		Mage::log('Address Save Error::' . $e->getMessage());
+    	}*/
+    }
+    ...
+
+Above code works fine when customer creates a new account. However default shipping address don't get updated when customer tries to edit the custom registration field from `My Account > Account Information`
+
+So my main concern is how to update the shipping address using `$customer` object or any other code using `customer_save_after` event.",1
+3386414,08/02/2010 09:14:53,70774,02/25/2009 10:34:47,187,1,how to add options for the drop down menu  (magento),"i had to add custom options automatically when a product is added , the code works fine but i need to create a drop down menu with options and i dont know how to add options to the drop down created ,
+  my code is 
+
+          public function Add_CustomOptions_Automatically($observer) {
+        $product = $observer->getEvent()->getProduct();
+        $save = false; if (!$product->getOptions()) $save = true;
+        
+  $optionData = array(
+                     'previous_group'    => 'text',
+                    'title'                => 'Size',
+            'type'                => 'drop_down',
+            'is_require'        => 0,
+            'sort_order'        => 0,
+            'price'                => 0,
+            'price_type'        => 'fixed');    
+           
+               
+        if($save):
+            $product->setHasOptions(1)->save();
+            $option = Mage::getModel('catalog/product_option')
+                        ->setProductId($product->getId())
+                        ->setStoreId($product->getStoreId())
+                      
+                        ->addData($optionData);
+            $option->save();
+            $product->addOption($option);
+        endif;
+    }
+}
+
+
+i've created 'type' => 'drop_down' but how can i add option , i have no idea how to add the options,
+
+ any help would be very much appreciated 
+thanks,",magento,,,,,,open,0,503,11,"how to add options for the drop down menu  (magento) i had to add custom options automatically when a product is added , the code works fine but i need to create a drop down menu with options and i dont know how to add options to the drop down created ,
+  my code is 
+
+          public function Add_CustomOptions_Automatically($observer) {
+        $product = $observer->getEvent()->getProduct();
+        $save = false; if (!$product->getOptions()) $save = true;
+        
+  $optionData = array(
+                     'previous_group'    => 'text',
+                    'title'                => 'Size',
+            'type'                => 'drop_down',
+            'is_require'        => 0,
+            'sort_order'        => 0,
+            'price'                => 0,
+            'price_type'        => 'fixed');    
+           
+               
+        if($save):
+            $product->setHasOptions(1)->save();
+            $option = Mage::getModel('catalog/product_option')
+                        ->setProductId($product->getId())
+                        ->setStoreId($product->getStoreId())
+                      
+                        ->addData($optionData);
+            $option->save();
+            $product->addOption($option);
+        endif;
+    }
+}
+
+
+i've created 'type' => 'drop_down' but how can i add option , i have no idea how to add the options,
+
+ any help would be very much appreciated 
+thanks,",1
+7344909,09/08/2011 08:01:08,601260,02/03/2011 09:39:44,279,20,Dynamic Price changes (add/subtract) - Bundled Products,"I’ve been playing with Magento now for a few months and I’m stuck. I’m wondering if Magento can do Dynamic pricing. I have a bundled product with several options. I’d like, instead of the set price, to have that price change depending on whats selected. For instance…
+
+Option 1 + $100 
+Option 2 + $200 
+Option 3 + $300
+
+Is what I have right now, no matter what you select it always says + ‘Static Price’. What I’d like is if you selected Option 2, Option 1 would then say ’Subtract $100‘ and Option 3 would say ‘Add $100’.
+
+Does anyone know how to do this? I’m more than willing to pay for the module if it exists. It seems like a somewhat simple thing.
+
+Thanks in advance for the help!",magento,,,,,10/10/2011 10:56:41,not a real question,1,127,7,"Dynamic Price changes (add/subtract) - Bundled Products I’ve been playing with Magento now for a few months and I’m stuck. I’m wondering if Magento can do Dynamic pricing. I have a bundled product with several options. I’d like, instead of the set price, to have that price change depending on whats selected. For instance…
+
+Option 1 + $100 
+Option 2 + $200 
+Option 3 + $300
+
+Is what I have right now, no matter what you select it always says + ‘Static Price’. What I’d like is if you selected Option 2, Option 1 would then say ’Subtract $100‘ and Option 3 would say ‘Add $100’.
+
+Does anyone know how to do this? I’m more than willing to pay for the module if it exists. It seems like a somewhat simple thing.
+
+Thanks in advance for the help!",1
+8646041,12/27/2011 15:01:17,514434,11/20/2010 12:20:41,19,0,"How to change ""shipping information"" label in magento while registration and checkout process","I want to change ""Billing Information"" label text to ""Shipping and Billing Information"". I tried using Mage_Checkout.csv but this didn't help.
+
+Kindly suggest the solution!
+
+Thank you!",magento,,,,,,open,0,25,13,"How to change ""shipping information"" label in magento while registration and checkout process I want to change ""Billing Information"" label text to ""Shipping and Billing Information"". I tried using Mage_Checkout.csv but this didn't help.
+
+Kindly suggest the solution!
+
+Thank you!",1
+6035467,05/17/2011 18:31:51,531507,12/05/2010 22:00:50,322,18,"Redirect inteferring with search, how do I figure out which redirect?",We have over 1400 redirects on our server. When I do a search for a particular product it goes into an endless redirect loop. How do I figure out which redirect is causing it?,magento,,,,,05/18/2011 18:11:36,not a real question,1,34,11,"Redirect inteferring with search, how do I figure out which redirect? We have over 1400 redirects on our server. When I do a search for a particular product it goes into an endless redirect loop. How do I figure out which redirect is causing it?",1
+11074409,06/17/2012 20:07:35,1462195,06/17/2012 18:09:06,15,0,Mage+ - Are there any examples of product sites using Mage+,"Are there any live sites out there using Mage+ yet?
+
+Im like the idea of the project but am a bit wary of using it in a product environment, and i suspect more people will feel the same.
+
+Therefore, it would be good to know of any examples of sites actively using it.
+
+",magento,,,,,06/18/2012 16:55:25,off topic,1,51,11,"Mage+ - Are there any examples of product sites using Mage+ Are there any live sites out there using Mage+ yet?
+
+Im like the idea of the project but am a bit wary of using it in a product environment, and i suspect more people will feel the same.
+
+Therefore, it would be good to know of any examples of sites actively using it.
+
+",1
+3090527,06/22/2010 05:38:35,70774,02/25/2009 10:34:47,160,1,how to get the attribute group in magento,"I need to get the attribute group of a certain attribute set , how can i do this ?
+
+i think i got the attribute group id but i can't seem to get the attributes of that group.
+
+        $attributes = $_product->getAttributes();
+        
+        foreach($attributes as $attribute)
+        {
+        $group_id =  $attribute->getData('attribute_set_info/' . $_product->getAttributeSetId() . '/group_id'); 
+        print_r($group_id);          
+              
+        }  
+
+I would really appreciate if somebody could help me out , thanx ;)",magento,,,,,,open,0,143,8,"how to get the attribute group in magento I need to get the attribute group of a certain attribute set , how can i do this ?
+
+i think i got the attribute group id but i can't seem to get the attributes of that group.
+
+        $attributes = $_product->getAttributes();
+        
+        foreach($attributes as $attribute)
+        {
+        $group_id =  $attribute->getData('attribute_set_info/' . $_product->getAttributeSetId() . '/group_id'); 
+        print_r($group_id);          
+              
+        }  
+
+I would really appreciate if somebody could help me out , thanx ;)",1
+9945239,03/30/2012 14:46:26,1173670,01/27/2012 14:25:11,37,4,Magento checkout broken in IE9 and IE8 for that matter,"
+Magento checkout broken in IE9 and IE8 for that matter
+
+When testing our checkout in Magento we ran into this strange error with IE9 when opening the following page (maybe first select a product)
+
+http://shirtsofholland.com/checkout/onepage/
+
+SAME AS: http://www.magentocommerce.com/boards/viewthread/267307/
+
+Any help appreciated, debugged alotta things. No solution yet",magento,prototype,,,,,open,0,43,10,"Magento checkout broken in IE9 and IE8 for that matter 
+Magento checkout broken in IE9 and IE8 for that matter
+
+When testing our checkout in Magento we ran into this strange error with IE9 when opening the following page (maybe first select a product)
+
+http://shirtsofholland.com/checkout/onepage/
+
+SAME AS: http://www.magentocommerce.com/boards/viewthread/267307/
+
+Any help appreciated, debugged alotta things. No solution yet",2
+5170401,03/02/2011 16:26:39,641560,03/02/2011 16:26:03,1,0,Magento libraries working with jQuery issue?,"Hi I am working with magento at the moment and want to integrate a jquery slideshow, and rounded corners also using jquery however im having a problem using jquery with the others even though i have wrapped my code in:
+
+(function($) {
+		  
+$(document).ready(function(){
+
+// code here
+
+});	
+    
+})(jQuery);
+
+You can find a link to my js file here:
+http://www.getbranded.co/magento/js/jquery.corner.js
+
+I am calling jquery-latest from the jquery site/cdn
+
+the theme is default, any much help would be appreciated.
+
+thanks
+Graham",magento,,,,,,open,0,74,6,"Magento libraries working with jQuery issue? Hi I am working with magento at the moment and want to integrate a jquery slideshow, and rounded corners also using jquery however im having a problem using jquery with the others even though i have wrapped my code in:
+
+(function($) {
+		  
+$(document).ready(function(){
+
+// code here
+
+});	
+    
+})(jQuery);
+
+You can find a link to my js file here:
+http://www.getbranded.co/magento/js/jquery.corner.js
+
+I am calling jquery-latest from the jquery site/cdn
+
+the theme is default, any much help would be appreciated.
+
+thanks
+Graham",1
+8526643,12/15/2011 21:11:18,912895,08/25/2011 19:58:43,316,6,Can Magento manage revenue splits?,"Let's say I have a Magento website that will sell WordPress Templates.
+
+I want to assign roles. For example, partners that will upload their templates. And I would like to split the revenue: 30% for site owner and 70% for partner.
+
+Is it possible to do this with Magento?",magento,e-commerce,,,,12/15/2011 21:16:03,off topic,1,47,5,"Can Magento manage revenue splits? Let's say I have a Magento website that will sell WordPress Templates.
+
+I want to assign roles. For example, partners that will upload their templates. And I would like to split the revenue: 30% for site owner and 70% for partner.
+
+Is it possible to do this with Magento?",2
+8706277,01/02/2012 23:12:03,1125628,01/02/2012 02:58:50,1,0,"Magento - Online Store - Made multiple stores, I want all of the stores to use only ONE CART + REMEMBER THE USERNAME","first of all i'd like to thank everyone who has been trying to help me previously. 
+I have a store, i have devided it to many deifferent stores, such as
+
+    STORE.COM -> CARS | ELECTRICS | TOYS
+      |
+     store.com     |         |       |
+                   cars.store.com
+                    electrics.store.com
+                         toys.store.com
+
+Now, if i am currently in store.com, ive got a cart with 1 item, and i'm logged in.
+If i go to cars, my cart is empty, and im not logged in, so i log in, say i buy a car a chevy'2004, i now have 1 item in my cart. But then i go to electrics, my cart is empty again.
+
+HOW DO I MAKE THIS CART COMMON TO ALL STORES? 
+HOW DO I KEEP THE COOKIES AND THE USER IS LOGGED/OFF/IN THROWOUT THE ENTIRE WEB?",magento,csv,store,online,cart,01/04/2012 14:15:32,not a real question,1,220,23,"Magento - Online Store - Made multiple stores, I want all of the stores to use only ONE CART + REMEMBER THE USERNAME first of all i'd like to thank everyone who has been trying to help me previously. 
+I have a store, i have devided it to many deifferent stores, such as
+
+    STORE.COM -> CARS | ELECTRICS | TOYS
+      |
+     store.com     |         |       |
+                   cars.store.com
+                    electrics.store.com
+                         toys.store.com
+
+Now, if i am currently in store.com, ive got a cart with 1 item, and i'm logged in.
+If i go to cars, my cart is empty, and im not logged in, so i log in, say i buy a car a chevy'2004, i now have 1 item in my cart. But then i go to electrics, my cart is empty again.
+
+HOW DO I MAKE THIS CART COMMON TO ALL STORES? 
+HOW DO I KEEP THE COOKIES AND THE USER IS LOGGED/OFF/IN THROWOUT THE ENTIRE WEB?",5
+8527689,12/15/2011 22:44:38,627263,02/21/2011 20:27:17,886,57,Create custom order statuses in magento 1.5,"I'm trying to add a custom order status to my magento install.  I've found several tutorial detailing how to do this (such as http://www.stephenrhoades.com/?p=350) and they all have you editing `app/code/core/Mage/Sales/etc/config.xml`
+
+But, when I look at that file it contains the statement:
+`@depraceted after 1.4.2, statuses are saved into sales_order_status table`
+
+And I'm unsure how to add a new status to the DB.
+
+It looks as if all I need to do is insert a new row into `sales_order_status` with my status's code and frontend label, then associate that status to a state by adding a row to `sales_order_status_state` with the status's code and the code of all the states I wan't the status to be available for.
+
+But I'm a little hazy on the state/status relationship, and I've been burned in the past by using raw SQL with a magento installation.  So, I'm wondering if anyone else has added custom status in 1.5, and how  they did it.",magento,magento-1.5,,,,,open,0,157,7,"Create custom order statuses in magento 1.5 I'm trying to add a custom order status to my magento install.  I've found several tutorial detailing how to do this (such as http://www.stephenrhoades.com/?p=350) and they all have you editing `app/code/core/Mage/Sales/etc/config.xml`
+
+But, when I look at that file it contains the statement:
+`@depraceted after 1.4.2, statuses are saved into sales_order_status table`
+
+And I'm unsure how to add a new status to the DB.
+
+It looks as if all I need to do is insert a new row into `sales_order_status` with my status's code and frontend label, then associate that status to a state by adding a row to `sales_order_status_state` with the status's code and the code of all the states I wan't the status to be available for.
+
+But I'm a little hazy on the state/status relationship, and I've been burned in the past by using raw SQL with a magento installation.  So, I'm wondering if anyone else has added custom status in 1.5, and how  they did it.",2
+11073850,06/17/2012 18:39:00,1462195,06/17/2012 18:09:06,6,0,Using Symfony 2 Components in Magento,"How easy would it be to integrate some Symfony 2 components/bundles to the Magento framework?
+
+I am thinking in particular the twig templating engine, though the question will generally apply to any components? ",magento,symfony-2.0,,,,,open,0,33,6,"Using Symfony 2 Components in Magento How easy would it be to integrate some Symfony 2 components/bundles to the Magento framework?
+
+I am thinking in particular the twig templating engine, though the question will generally apply to any components? ",2
+8812666,01/11/2012 00:40:42,582084,01/19/2011 20:43:58,1,1,how to set $default store id or default website in magento,how can I set the default store or website in magento at a global level. If I am already in a magento website then I can set the default store for that website however I want to set it at a global level above that. I have a geoip api and using this I want to set which website is default depending on where the customer is coming from I have tried to use getDefaultStore() but this seems to only be useable if I already know which website we are in ,magento,,,,,,open,0,92,11,how to set $default store id or default website in magento how can I set the default store or website in magento at a global level. If I am already in a magento website then I can set the default store for that website however I want to set it at a global level above that. I have a geoip api and using this I want to set which website is default depending on where the customer is coming from I have tried to use getDefaultStore() but this seems to only be useable if I already know which website we are in ,1
+10102921,04/11/2012 09:04:44,1266559,03/13/2012 13:21:47,11,1,How can override Mage_Catalog_Model_Category_Attribute_Source_Mode in MAGENTO?,"How can override ATTRIBUTE SOURCE in CMS Magento ?
+Tried standard method but not working.
+
+
+> **I think that this unreal :(**",magento,model,attributes,,,,open,0,20,6,"How can override Mage_Catalog_Model_Category_Attribute_Source_Mode in MAGENTO? How can override ATTRIBUTE SOURCE in CMS Magento ?
+Tried standard method but not working.
+
+
+> **I think that this unreal :(**",3
+6157794,05/27/2011 21:17:45,717495,04/20/2011 16:12:57,6,0,Can't Update Magento - Install Help,"I am trying to update to the latest stable Magento but am having some problems with permissions etc. We were basically given a blank slate server running CentOS and it's taken forever to get Magento installed. Now I find I can't update running either Magento Connect or SHH. With Connect I get permissions errors on the Magento directory, when trying to run ./pear install magento-core/Mage_All_Latest I get ""-bash: ./pear: No such file or directory
+"". Just running the command 'pear' shows options so I believe pear is installed on the system.
+
+I am a little bit of a loss on how to proceed. The hosting service is no help. 
+
+Any tips appreciated!
+
+",magento,centos,pear,,,05/28/2011 15:19:43,off topic,1,110,6,"Can't Update Magento - Install Help I am trying to update to the latest stable Magento but am having some problems with permissions etc. We were basically given a blank slate server running CentOS and it's taken forever to get Magento installed. Now I find I can't update running either Magento Connect or SHH. With Connect I get permissions errors on the Magento directory, when trying to run ./pear install magento-core/Mage_All_Latest I get ""-bash: ./pear: No such file or directory
+"". Just running the command 'pear' shows options so I believe pear is installed on the system.
+
+I am a little bit of a loss on how to proceed. The hosting service is no help. 
+
+Any tips appreciated!
+
+",3
+11670328,07/26/2012 13:25:41,1340418,04/18/2012 05:31:09,17,2,Decode the magento Code,"I did not wants to give all the files to the hosting provider, how could i decode the `magento code` and give that `magento code` to hosting provider ? Any process we can follow ?",magento,,,,,07/27/2012 11:15:04,not a real question,1,35,4,"Decode the magento Code I did not wants to give all the files to the hosting provider, how could i decode the `magento code` and give that `magento code` to hosting provider ? Any process we can follow ?",1
+11309085,07/03/2012 10:33:30,1221783,02/20/2012 18:52:01,27,0,"How do I display ""News"" on the Home page? (Mgento)","I need news articles to be displayed on the front page but the standart way, to put this code `{{block type=""profile/profile"" name=""profile"" template=""profile/news-front.phtml""}}` in the editor on backend doesn't work, even though I have created file `news-front.phtml` in the `template/profile`. I really-really need help with this. The output in `system.log` is `Not valid template file:frontend/base/default/template/profile/news-front.phtml`",magento,,,,,,open,0,55,10,"How do I display ""News"" on the Home page? (Mgento) I need news articles to be displayed on the front page but the standart way, to put this code `{{block type=""profile/profile"" name=""profile"" template=""profile/news-front.phtml""}}` in the editor on backend doesn't work, even though I have created file `news-front.phtml` in the `template/profile`. I really-really need help with this. The output in `system.log` is `Not valid template file:frontend/base/default/template/profile/news-front.phtml`",1
+4373575,12/07/2010 05:04:52,508372,11/15/2010 14:42:13,1,0,recently purchased products,How to display recently purchased products on dashboard after login in magento?,magento,,,,,,open,0,12,3,recently purchased products How to display recently purchased products on dashboard after login in magento?,1
+2216688,02/07/2010 10:35:34,213042,11/17/2009 16:36:48,436,16,Is there a PHP IDE that can handle Magento's code base?,"Magento has a large code base (6000+ php files), uses a complex autoloading logic, and has a lot of configuration in XML.  I'm looking for an IDE that can get it's little brain around this code base - show me where a function is declared, where it's called, etc. Is there any IDE that can handle this beast?  ",magento,php,ide,,,,open,0,61,11,"Is there a PHP IDE that can handle Magento's code base? Magento has a large code base (6000+ php files), uses a complex autoloading logic, and has a lot of configuration in XML.  I'm looking for an IDE that can get it's little brain around this code base - show me where a function is declared, where it's called, etc. Is there any IDE that can handle this beast?  ",3
+7139826,08/21/2011 17:21:39,832620,07/07/2011 00:47:37,1,0,Is there a reason why newsletter subscription in Magento is global?,"I would expect a newsletter subscription in Magento to be website or store specific, but when
+a customer unsubscribes from a store (view) this also unsubscribes him from other stores. I know it is because in the code subscriptions are maintained in the database per email and not per email-website-store or similar. But what is the reasoning behind it?
+
+I am working on an extension to integrate PHPlist into Magento, so before doing major rework because of this issue, I'd like to understand why it is so.
+
+Thanks in advance!
+
+Jeroen",magento,,,,,08/23/2011 16:34:03,off topic,1,87,11,"Is there a reason why newsletter subscription in Magento is global? I would expect a newsletter subscription in Magento to be website or store specific, but when
+a customer unsubscribes from a store (view) this also unsubscribes him from other stores. I know it is because in the code subscriptions are maintained in the database per email and not per email-website-store or similar. But what is the reasoning behind it?
+
+I am working on an extension to integrate PHPlist into Magento, so before doing major rework because of this issue, I'd like to understand why it is so.
+
+Thanks in advance!
+
+Jeroen",1
+6505523,06/28/2011 11:13:15,777426,05/31/2011 09:44:28,31,1,add filter by attribuit on product listing page in magento ?,"I have Added a drop down attribute ring type and add all option from Manage attribute and assigned attribute set. 
+
+I want to use this attribute as a filter on product listing page like sort by.
+
+like this site :http://www.reeds.com/Rings-cat6.html
+thanks  ",magento,attributes,filter,,,07/16/2011 15:12:21,not a real question,1,41,11,"add filter by attribuit on product listing page in magento ? I have Added a drop down attribute ring type and add all option from Manage attribute and assigned attribute set. 
+
+I want to use this attribute as a filter on product listing page like sort by.
+
+like this site :http://www.reeds.com/Rings-cat6.html
+thanks  ",3
+4772976,01/23/2011 08:42:11,286389,03/04/2010 15:48:54,61,1,Magento paypal currency error,"Im using jamaican currency for my magento shopping cart.And i use paypal Express checkout with website payment standard.
+I set up the currency in the admin panel and also the paypal settings etc are done.
+My problem is when i click the button with Checkout with paypal i get the folowing error 
+
+""PayPal gateway has rejected request. Currency is not supported (#10605""
+I go to paypal the paypal does not support the jamaican dollar.
+It would be great if some one can provide insights.
+
+Thannks
+",magento,,,,,,open,0,80,4,"Magento paypal currency error Im using jamaican currency for my magento shopping cart.And i use paypal Express checkout with website payment standard.
+I set up the currency in the admin panel and also the paypal settings etc are done.
+My problem is when i click the button with Checkout with paypal i get the folowing error 
+
+""PayPal gateway has rejected request. Currency is not supported (#10605""
+I go to paypal the paypal does not support the jamaican dollar.
+It would be great if some one can provide insights.
+
+Thannks
+",1
+11578962,07/20/2012 12:01:25,867453,07/28/2011 12:28:48,11,0,Magneto products to ebay store,"I want import all my magento products to my eBay store 
+
+Is that possible if yes please suggest??
+
+Regards
+
+Gurpreet Singh
+",magento,import,ebay,,,07/20/2012 21:25:35,off topic,1,19,5,"Magneto products to ebay store I want import all my magento products to my eBay store 
+
+Is that possible if yes please suggest??
+
+Regards
+
+Gurpreet Singh
+",3
+10279086,04/23/2012 10:47:17,1039674,11/10/2011 11:38:56,62,19,"Either Table Rates or Shopping Cart Rule should be used for ""free shipping based on zip code"" to work with all methods","I want to give free shipping for certain regions with specified zip codes. How will i achieve this functionality ?
+
+
+I have two options of ""Table Rates"" and ""Shopping Cart Rule"". Now which one will work for me in all shipping methods such USPS and Paypal etc.",magento,magento-1.5,magento-admin,magento-1.6,,04/25/2012 11:34:30,not constructive,1,46,22,"Either Table Rates or Shopping Cart Rule should be used for ""free shipping based on zip code"" to work with all methods I want to give free shipping for certain regions with specified zip codes. How will i achieve this functionality ?
+
+
+I have two options of ""Table Rates"" and ""Shopping Cart Rule"". Now which one will work for me in all shipping methods such USPS and Paypal etc.",4
+11127782,06/20/2012 20:36:57,334922,05/06/2010 22:52:54,1,0,Magento can't reindex products,"Hy, after i delete all products from my magento store i can't reindex anymore, i try many and many possibles but can get nothing and i don't have shl acess
+
+i'm running this script:
+
+http://snipt.org/vahgi6
+
+and get this error:
+
+Fatal error: Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cambuist_l`.<result 2 when explaining filename '#sql-ff396_32d80c'>, CONSTRAINT `FK_CAT_PRD_FLAT_1_ENTT_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_product_entity` )' in /home/cambuist/public_html/loja/lib/Zend/Db/Statement/Pdo.php:228 Stack trace: #0 /home/cambuist/public_html/loja/lib/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array) #1 /home/cambuist/public_html/loja/lib/Varien/Db/Statement/Pdo/Mysql.php(110): Zend_Db_Statement_Pdo->_execute(Array) #2 /home/cambuist/public_html/loja/lib/Zend/Db/Statement.php(300): Varien_Db_Statement_Pdo_Mysql->_execute(Array) #3 /home/cambuist/public_html/loja/lib/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array) #4 /home/cambuist/public_html/loja/lib/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('ALTER TABLE `ca...', Array) in /home/cambuist/public_html/loja/lib/Zend/Db/Statement/Pdo.php on line 228
+",magento,,,,,06/22/2012 11:59:39,not a real question,1,100,4,"Magento can't reindex products Hy, after i delete all products from my magento store i can't reindex anymore, i try many and many possibles but can get nothing and i don't have shl acess
+
+i'm running this script:
+
+http://snipt.org/vahgi6
+
+and get this error:
+
+Fatal error: Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cambuist_l`.<result 2 when explaining filename '#sql-ff396_32d80c'>, CONSTRAINT `FK_CAT_PRD_FLAT_1_ENTT_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_product_entity` )' in /home/cambuist/public_html/loja/lib/Zend/Db/Statement/Pdo.php:228 Stack trace: #0 /home/cambuist/public_html/loja/lib/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array) #1 /home/cambuist/public_html/loja/lib/Varien/Db/Statement/Pdo/Mysql.php(110): Zend_Db_Statement_Pdo->_execute(Array) #2 /home/cambuist/public_html/loja/lib/Zend/Db/Statement.php(300): Varien_Db_Statement_Pdo_Mysql->_execute(Array) #3 /home/cambuist/public_html/loja/lib/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array) #4 /home/cambuist/public_html/loja/lib/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('ALTER TABLE `ca...', Array) in /home/cambuist/public_html/loja/lib/Zend/Db/Statement/Pdo.php on line 228
+",1
+11200902,06/26/2012 04:47:35,1481638,06/26/2012 04:24:31,1,0,Magento & WYMeditor integration,"I quite simply wanted to check if anyone has tried integrating Wymeditor in Magento and if yes, I'd be very happy to hear how you went about it and what your general experience was?
+
+Thanks in advance
+
+Peter",magento,wymeditor,,,,06/27/2012 11:51:31,not constructive,1,36,4,"Magento & WYMeditor integration I quite simply wanted to check if anyone has tried integrating Wymeditor in Magento and if yes, I'd be very happy to hear how you went about it and what your general experience was?
+
+Thanks in advance
+
+Peter",2
+11481268,07/14/2012 05:12:54,882370,11/23/2010 17:53:07,46,9,Magento Getting :: Fatal error: Call to a member function setLayer() on a non-object,"I have rewritten Mage_Catalog_Block_Layer_View class but the this class has got nothing extra modification yet. But I am getting error like 
+
+Fatal error: Call to a member function setLayer() on a non-object in code/core/Mage/Catalog/Block/Layer/View.php on line 134 
+
+I am using magento enterprise 1.2.0.1. This stuff was working on community version 1.4
+
+Suggestion needed, I spent so many hours to solve this but not success yet.
+
+Looking forward to hear.
+
+Thanks",magento,,,,,,open,0,67,14,"Magento Getting :: Fatal error: Call to a member function setLayer() on a non-object I have rewritten Mage_Catalog_Block_Layer_View class but the this class has got nothing extra modification yet. But I am getting error like 
+
+Fatal error: Call to a member function setLayer() on a non-object in code/core/Mage/Catalog/Block/Layer/View.php on line 134 
+
+I am using magento enterprise 1.2.0.1. This stuff was working on community version 1.4
+
+Suggestion needed, I spent so many hours to solve this but not success yet.
+
+Looking forward to hear.
+
+Thanks",1
+9505305,02/29/2012 19:22:56,1241046,02/29/2012 19:19:44,1,0,How to add New Div in Particullar Magento Block,I want to insert new div in product-options-bottom div. How can i do it?,magento,,,,,03/01/2012 18:56:09,not a real question,1,14,9,How to add New Div in Particullar Magento Block I want to insert new div in product-options-bottom div. How can i do it?,1
+7163618,08/23/2011 15:32:04,908032,08/23/2011 15:32:04,1,0,Magento Custom Variables / Template Pages - need guru sage advice,"I have a question about something I need to do in Magento.
+
+Let’s just say I own a painting company, and have painters nationwide.
+
+**I am trying to create a directory that will fan out like this:** <br>
+mypaintingsite.com/directory/
+
+**On this directory page will be a link to every single state in the country** (aka 50 links on one page) <br>
+Example: NY Painting -links to mypaintingsite.com/directory/ny/painting/ <br>
+Example: CA Painting -links to mypaintingsite.com/directory/ca/painting/
+
+**Realistically it would also be nice to break the directory down into major cities and provinces like:** <br>
+Example: Hartford, CT Painting -links to mypaintingsite.com/directory/ct-connecticut/colulmbus/painting/ <br>
+Example: Columbus, OH Painting - links to mypaintingsite.com/directory/oh-ohio/colulmbus/painting/
+
+**MY QUESTION IS:** <br>
+What is the -easiest- way to create 50 different pages in Magento?  Ideally, I would like one template page that I can drop variables into, like {{city}},{{state}}, and somehow specify those variables maybe in the top portion of the page, etc.  That way all 50 pages use the same template, and if I make a change I wouldn’t have to do it to ALL 50 state pages.  I’m familiar with Magento Pages, Static Blocks, Widgets, etc.  but I’m looking for the post possible way to do this. 
+
+Any professional advice would be supremely helpful.
+
+Thank you!
+
+Regards, 
+Dave",magento,magento-1.5,,,,08/23/2011 16:27:04,off topic,1,201,11,"Magento Custom Variables / Template Pages - need guru sage advice I have a question about something I need to do in Magento.
+
+Let’s just say I own a painting company, and have painters nationwide.
+
+**I am trying to create a directory that will fan out like this:** <br>
+mypaintingsite.com/directory/
+
+**On this directory page will be a link to every single state in the country** (aka 50 links on one page) <br>
+Example: NY Painting -links to mypaintingsite.com/directory/ny/painting/ <br>
+Example: CA Painting -links to mypaintingsite.com/directory/ca/painting/
+
+**Realistically it would also be nice to break the directory down into major cities and provinces like:** <br>
+Example: Hartford, CT Painting -links to mypaintingsite.com/directory/ct-connecticut/colulmbus/painting/ <br>
+Example: Columbus, OH Painting - links to mypaintingsite.com/directory/oh-ohio/colulmbus/painting/
+
+**MY QUESTION IS:** <br>
+What is the -easiest- way to create 50 different pages in Magento?  Ideally, I would like one template page that I can drop variables into, like {{city}},{{state}}, and somehow specify those variables maybe in the top portion of the page, etc.  That way all 50 pages use the same template, and if I make a change I wouldn’t have to do it to ALL 50 state pages.  I’m familiar with Magento Pages, Static Blocks, Widgets, etc.  but I’m looking for the post possible way to do this. 
+
+Any professional advice would be supremely helpful.
+
+Thank you!
+
+Regards, 
+Dave",2
+8253629,11/24/2011 07:43:46,527595,12/02/2010 06:27:04,280,30,Magento: Get products collection which have atleast one category,"I want to get products collection that have at-least one category. Actually I want to ignore that products which are not in any category. Can anyone help???
+
+Thanks, ",magento,,,,,,open,0,28,9,"Magento: Get products collection which have atleast one category I want to get products collection that have at-least one category. Actually I want to ignore that products which are not in any category. Can anyone help???
+
+Thanks, ",1
+8328491,11/30/2011 15:33:45,1064708,11/24/2011 22:06:14,1,1,Magento: Referencing a custom block does not work,"I'm trying to reference a block from an other custom module to add a child block via layout file but it does not work.
+
+The first layout file contains
+
+    <catalog_product_view>
+    	<reference name=""content"">
+    		<block type=""core/template"" name=""tabcontainer"" as=""tabcontainer""
+    			template=""store/tabcontainer.phtml"" >
+    			<block type=""catalog/product_list_related"" name=""kitparts""
+    				template=""store/product/kitparts.phtml""/>
+    		</block>
+    	</reference>
+    </catalog_product_view>
+
+and in the second one I try to reference the `tabcontainer` block 
+
+    <catalog_product_view>
+    	<reference name=""tabcontainer"">
+    		<block type=""productshippinginfo/productshipping"" name=""productshippinginfo""
+    			template=""productshippinginfo/productshipping.phtml"" after=""kitparts""/>
+    	</reference>
+    </catalog_product_view>
+
+but the `productshippinginfo` block is not displayed while it is definitely included in the layout (using Alan Storm's layoutviewer plugin). If I reference `content` it is displayed.
+
+What is wrong? Isn't it possible to add a child to a custom block from a custom extension?
+
+Thanks for your help!
+
+(I'm using Magento 1.6.1.0)",magento,layout,module,extension,,,open,0,160,8,"Magento: Referencing a custom block does not work I'm trying to reference a block from an other custom module to add a child block via layout file but it does not work.
+
+The first layout file contains
+
+    <catalog_product_view>
+    	<reference name=""content"">
+    		<block type=""core/template"" name=""tabcontainer"" as=""tabcontainer""
+    			template=""store/tabcontainer.phtml"" >
+    			<block type=""catalog/product_list_related"" name=""kitparts""
+    				template=""store/product/kitparts.phtml""/>
+    		</block>
+    	</reference>
+    </catalog_product_view>
+
+and in the second one I try to reference the `tabcontainer` block 
+
+    <catalog_product_view>
+    	<reference name=""tabcontainer"">
+    		<block type=""productshippinginfo/productshipping"" name=""productshippinginfo""
+    			template=""productshippinginfo/productshipping.phtml"" after=""kitparts""/>
+    	</reference>
+    </catalog_product_view>
+
+but the `productshippinginfo` block is not displayed while it is definitely included in the layout (using Alan Storm's layoutviewer plugin). If I reference `content` it is displayed.
+
+What is wrong? Isn't it possible to add a child to a custom block from a custom extension?
+
+Thanks for your help!
+
+(I'm using Magento 1.6.1.0)",4
+11473409,07/13/2012 15:19:51,1370946,05/02/2012 19:48:12,1,0,sales_order_place_after observer insert into external database,"How can I get certain information insert into an external database in my sales_order_place_after observer?  I currently have the observer creating a log, and that is working just can't get it to insert into a database.
+
+Here is my observer without the database insert: 
+
+    class Chipdrive_OrderSalesperson_Model_Observer
+    {
+
+        public function logUpdate(Varien_Event_Observer $observer)
+        {
+        	
+            // Retrieve the product being updated from the event observer
+            $product = $observer->getEvent()->getOrder();
+            $UserInfo = Mage::getSingleton('admin/session')->getUser();
+            
+            
+            $Name = $product->getId();
+            $UserName=$UserInfo->getUsername();
+            
+            
+            // Write a new line to var/log/sales-order.log
+            Mage::log(
+                ""{$Name} ({$UserName}) placed"",
+                null, 
+                'sales-order.log'
+            );            
+            
+        }
+    }",magento,,,,,07/14/2012 02:54:38,not a real question,1,333,6,"sales_order_place_after observer insert into external database How can I get certain information insert into an external database in my sales_order_place_after observer?  I currently have the observer creating a log, and that is working just can't get it to insert into a database.
+
+Here is my observer without the database insert: 
+
+    class Chipdrive_OrderSalesperson_Model_Observer
+    {
+
+        public function logUpdate(Varien_Event_Observer $observer)
+        {
+        	
+            // Retrieve the product being updated from the event observer
+            $product = $observer->getEvent()->getOrder();
+            $UserInfo = Mage::getSingleton('admin/session')->getUser();
+            
+            
+            $Name = $product->getId();
+            $UserName=$UserInfo->getUsername();
+            
+            
+            // Write a new line to var/log/sales-order.log
+            Mage::log(
+                ""{$Name} ({$UserName}) placed"",
+                null, 
+                'sales-order.log'
+            );            
+            
+        }
+    }",1
+6633307,07/09/2011 07:08:06,801662,03/15/2011 05:24:54,8,0,Understanding Magento Block and Block Type,"I just wanna understand the meaning of
+
+block type=""page/html"" name=""root"" output=""toHtml"" template=""example/view.phtml"" 
+
+i got many references from google and understood many thinks about it but i am still unable to understand the formation of *type=""page/html""* how to form a type for my custom module. 
+
+please explain
+
+type=""A/B""
+
+let me know where this A and B come from ??
+
+i would be very graceful to you.
+
+
+Thanks in Advance
+
+",magento,block,,,,,open,0,63,6,"Understanding Magento Block and Block Type I just wanna understand the meaning of
+
+block type=""page/html"" name=""root"" output=""toHtml"" template=""example/view.phtml"" 
+
+i got many references from google and understood many thinks about it but i am still unable to understand the formation of *type=""page/html""* how to form a type for my custom module. 
+
+please explain
+
+type=""A/B""
+
+let me know where this A and B come from ??
+
+i would be very graceful to you.
+
+
+Thanks in Advance
+
+",2
+10608203,05/15/2012 20:16:24,312672,04/09/2010 10:00:39,11,0,Magento admin issue,"Hi I'm creating my first admin section for my extension. I've created a menu which links to a page displaying a grid. The problem is when you click through to edit the record, its displaying this error 
+
+> Fatal error: Call to a member function setData() on a non-object in /Applications/MAMP/htdocs/theBookClub/app/code/core/Mage/Adminhtml/Block/Widget/Form/Container.php on line 129
+
+For the life of me I can't see any reference in any of the relevant files
+
+    class Namespace_Bookshelf_Block_Adminhtml_Bookshelf_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
+    {
+       public function __construct()
+    {
+        parent::__construct();
+ 
+        $this->_objectId = 'id';
+        $this->_blockGroup = 'bookshelf';
+        $this->_controller = 'bookshelf_admin';
+        $this->_mode = 'edit';
+ 
+        $this->_addButton('save_and_continue', array(
+                  'label' => Mage::helper('adminhtml')->__('Save And Continue Edit'),
+                  'onclick' => 'saveAndContinueEdit()',
+                  'class' => 'save',
+        ), -100);
+        $this->_updateButton('save', 'label', Mage::helper('bookshelf')->__('Save Example'));
+ 
+        $this->_formScripts[] = ""
+            function toggleEditor() {
+                if (tinyMCE.getInstanceById('form_content') == null) {
+                    tinyMCE.execCommand('mceAddControl', false, 'edit_form');
+                } else {
+                    tinyMCE.execCommand('mceRemoveControl', false, 'edit_form');
+                }
+            }
+ 
+            function saveAndContinueEdit(){
+                editForm.submit($('edit_form').action+'back/edit/');
+            }
+        "";
+    }
+ 
+    public function getHeaderText()
+    {
+        if (Mage::registry('example_data') && Mage::registry('example_data')->getId())
+        {
+            return Mage::helper('bookshelf')->__('Edit Example ""%s""', $this->htmlEscape(Mage::registry('example_data')->getName()));
+        } else {
+            return Mage::helper('bookshelf')->__('New Example');
+        }
+    }
+
+and this
+
+
+    class Namespace_Bookshelf_Block_Adminhtml_Bookshelf_Grid extends                Mage_Adminhtml_Block_Widget_Grid {
+
+    public function __construct() {
+        parent::__construct();
+        $this->setId('bookshelf_grid');
+        $this->setDefaultSort('bookshelf_id');
+        $this->setDefaultDir('desc');
+        $this->setSaveParametersInSession(true);
+    }
+
+    protected function _prepareCollection() {
+        $collection = Mage::getModel('bookshelf/bookshelf')->getCollection();
+        $this->setCollection($collection);
+        return parent::_prepareCollection();
+    }
+    
+    protected function _prepareColumns() {
+        $this->addColumn('bookshelf_id', array(
+            'header' => Mage::helper('bookshelf')->__('ID'),
+            'align' => 'right',
+            'width' => '50px',
+            'index' => 'bookshelf_id',
+        ));
+
+        $this->addColumn('customer_id', array(
+            'header' => Mage::helper('bookshelf')->__('Name'),
+            'align' => 'left',
+            'index' => 'customer_id',
+        ));
+
+        $this->addColumn('bookshelf_name', array(
+            'header' => Mage::helper('bookshelf')->__('Name'),
+            'align' => 'left',
+            'index' => 'bookshelf_name',
+        ));
+
+        
+
+        return parent::_prepareColumns();
+    }
+    
+    
+
+    
+
+    public function getRowUrl($row) {
+        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
+    }
+
+}
+
+
+and this
+
+    class Newdaymedia_Bookshelf_Block_Adminhtml_Bookshelf extends
+	Mage_Adminhtml_Block_Widget_Grid_Container
+    {
+    public function __construct()
+    {
+    $this->_controller = 'bookshelf_admin';
+    $this->_blockGroup = 'bookshelf';
+    $this->_headerText = Mage::helper('bookshelf')->__('Item Manager');
+    $this->_addButtonLabel = Mage::helper('bookshelf')->__('Add Item');
+    parent::__construct();
+    }
+  
+    protected function _prepareLayout()
+     {
+       $this->setChild( 'grid',
+           $this->getLayout()->createBlock( $this->_blockGroup.'/' . $this->_controller . '_grid',
+           $this->_controller . '.grid')->setSaveParametersInSession(true) );
+       return parent::_prepareLayout();
+     }
+    }
+
+
+Any help would be gratefully received!",magento,,,,,,open,0,1005,3,"Magento admin issue Hi I'm creating my first admin section for my extension. I've created a menu which links to a page displaying a grid. The problem is when you click through to edit the record, its displaying this error 
+
+> Fatal error: Call to a member function setData() on a non-object in /Applications/MAMP/htdocs/theBookClub/app/code/core/Mage/Adminhtml/Block/Widget/Form/Container.php on line 129
+
+For the life of me I can't see any reference in any of the relevant files
+
+    class Namespace_Bookshelf_Block_Adminhtml_Bookshelf_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
+    {
+       public function __construct()
+    {
+        parent::__construct();
+ 
+        $this->_objectId = 'id';
+        $this->_blockGroup = 'bookshelf';
+        $this->_controller = 'bookshelf_admin';
+        $this->_mode = 'edit';
+ 
+        $this->_addButton('save_and_continue', array(
+                  'label' => Mage::helper('adminhtml')->__('Save And Continue Edit'),
+                  'onclick' => 'saveAndContinueEdit()',
+                  'class' => 'save',
+        ), -100);
+        $this->_updateButton('save', 'label', Mage::helper('bookshelf')->__('Save Example'));
+ 
+        $this->_formScripts[] = ""
+            function toggleEditor() {
+                if (tinyMCE.getInstanceById('form_content') == null) {
+                    tinyMCE.execCommand('mceAddControl', false, 'edit_form');
+                } else {
+                    tinyMCE.execCommand('mceRemoveControl', false, 'edit_form');
+                }
+            }
+ 
+            function saveAndContinueEdit(){
+                editForm.submit($('edit_form').action+'back/edit/');
+            }
+        "";
+    }
+ 
+    public function getHeaderText()
+    {
+        if (Mage::registry('example_data') && Mage::registry('example_data')->getId())
+        {
+            return Mage::helper('bookshelf')->__('Edit Example ""%s""', $this->htmlEscape(Mage::registry('example_data')->getName()));
+        } else {
+            return Mage::helper('bookshelf')->__('New Example');
+        }
+    }
+
+and this
+
+
+    class Namespace_Bookshelf_Block_Adminhtml_Bookshelf_Grid extends                Mage_Adminhtml_Block_Widget_Grid {
+
+    public function __construct() {
+        parent::__construct();
+        $this->setId('bookshelf_grid');
+        $this->setDefaultSort('bookshelf_id');
+        $this->setDefaultDir('desc');
+        $this->setSaveParametersInSession(true);
+    }
+
+    protected function _prepareCollection() {
+        $collection = Mage::getModel('bookshelf/bookshelf')->getCollection();
+        $this->setCollection($collection);
+        return parent::_prepareCollection();
+    }
+    
+    protected function _prepareColumns() {
+        $this->addColumn('bookshelf_id', array(
+            'header' => Mage::helper('bookshelf')->__('ID'),
+            'align' => 'right',
+            'width' => '50px',
+            'index' => 'bookshelf_id',
+        ));
+
+        $this->addColumn('customer_id', array(
+            'header' => Mage::helper('bookshelf')->__('Name'),
+            'align' => 'left',
+            'index' => 'customer_id',
+        ));
+
+        $this->addColumn('bookshelf_name', array(
+            'header' => Mage::helper('bookshelf')->__('Name'),
+            'align' => 'left',
+            'index' => 'bookshelf_name',
+        ));
+
+        
+
+        return parent::_prepareColumns();
+    }
+    
+    
+
+    
+
+    public function getRowUrl($row) {
+        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
+    }
+
+}
+
+
+and this
+
+    class Newdaymedia_Bookshelf_Block_Adminhtml_Bookshelf extends
+	Mage_Adminhtml_Block_Widget_Grid_Container
+    {
+    public function __construct()
+    {
+    $this->_controller = 'bookshelf_admin';
+    $this->_blockGroup = 'bookshelf';
+    $this->_headerText = Mage::helper('bookshelf')->__('Item Manager');
+    $this->_addButtonLabel = Mage::helper('bookshelf')->__('Add Item');
+    parent::__construct();
+    }
+  
+    protected function _prepareLayout()
+     {
+       $this->setChild( 'grid',
+           $this->getLayout()->createBlock( $this->_blockGroup.'/' . $this->_controller . '_grid',
+           $this->_controller . '.grid')->setSaveParametersInSession(true) );
+       return parent::_prepareLayout();
+     }
+    }
+
+
+Any help would be gratefully received!",1
+10275541,04/23/2012 06:01:01,1350584,04/23/2012 05:53:01,1,0,How to add a custom vairable in Magento to Inventory form in Admin panel,"I want to add a custom field in the inventory form. So that i can ask the admin to insertstock item in the field. Later i want another user to get this field authenticated, Once the user authenticate the custom variable field value will be added to the stock item of that particular product.
+
+I already know how to create custom vairable.
+But finding it difficult to find the files and where to attach that custom variable to the form...",magento,,,,,04/23/2012 08:19:30,too localized,1,78,14,"How to add a custom vairable in Magento to Inventory form in Admin panel I want to add a custom field in the inventory form. So that i can ask the admin to insertstock item in the field. Later i want another user to get this field authenticated, Once the user authenticate the custom variable field value will be added to the stock item of that particular product.
+
+I already know how to create custom vairable.
+But finding it difficult to find the files and where to attach that custom variable to the form...",1
+7413696,09/14/2011 08:55:21,606130,02/07/2011 08:43:31,6,1,Place order per product in Magento,"I have two product and need 1 product add to cart and submit order then 2nd product add to cart and submit order.
+
+How can I do this?
+
+I add to cart first one then submit successfully order but when add to cart second one then no quote create and no product add to cart, previous product retain and place duplicate of previous order.
+
+Thanks,
+
+Sohel",magento,submit,order,,,04/25/2012 17:46:19,not a real question,1,62,6,"Place order per product in Magento I have two product and need 1 product add to cart and submit order then 2nd product add to cart and submit order.
+
+How can I do this?
+
+I add to cart first one then submit successfully order but when add to cart second one then no quote create and no product add to cart, previous product retain and place duplicate of previous order.
+
+Thanks,
+
+Sohel",3
+4942700,02/09/2011 08:28:43,372972,06/22/2010 09:03:49,1,0,create a new page in admin side with admin layout..,create a new page in admin side with admin layout.,magento,admin,,,,02/09/2011 15:15:04,not a real question,1,10,10,create a new page in admin side with admin layout.. create a new page in admin side with admin layout.,2
+9173564,02/07/2012 09:09:49,1004859,10/20/2011 09:20:12,3,0,Magento Enterprise CatalogEvent,"I'm working on an extension that will receive CatalogEvent information from Magento (Enterprise) when saved and do custom processing on the information.
+
+Here's the code I use to listen to the event:
+
+    <?xml version=""1.0""?>
+    <config>
+      <global>
+        <models>
+            <mage4ucustomredirect>
+                 <class>Mage4u_Customredirect</class>
+            </mage4ucustomredirect>
+        </models>
+        <events>
+           <enterprise_catalogevent_event>
+                <observers>
+                    <abc>
+                        <type>singleton</type>
+                        <class>Mage4u_Customredirect_Model_Observer</class>
+                        <method>on_enterprise_catalogevent_event</method>
+                    </abc>
+                </observers>
+           </enterprise_catalogevent_event>
+        </events>
+      </global>
+    </config>
+
+
+and this is the observer:
+
+    class Mage4u_Customredirect_Model_Observer
+    {
+        public function on_enterprise_catalogevent_event(Varien_Event_Observer $observer)
+        {  
+            Mage::log( ""on_enterprise_catalogevent_event"" );
+        }
+    
+    }
+    ?>
+    
+When I save the CatalogEvent, I do not receive the call. Can you spot any problems with my code?
+",magento,enterprise,,,,,open,0,385,3,"Magento Enterprise CatalogEvent I'm working on an extension that will receive CatalogEvent information from Magento (Enterprise) when saved and do custom processing on the information.
+
+Here's the code I use to listen to the event:
+
+    <?xml version=""1.0""?>
+    <config>
+      <global>
+        <models>
+            <mage4ucustomredirect>
+                 <class>Mage4u_Customredirect</class>
+            </mage4ucustomredirect>
+        </models>
+        <events>
+           <enterprise_catalogevent_event>
+                <observers>
+                    <abc>
+                        <type>singleton</type>
+                        <class>Mage4u_Customredirect_Model_Observer</class>
+                        <method>on_enterprise_catalogevent_event</method>
+                    </abc>
+                </observers>
+           </enterprise_catalogevent_event>
+        </events>
+      </global>
+    </config>
+
+
+and this is the observer:
+
+    class Mage4u_Customredirect_Model_Observer
+    {
+        public function on_enterprise_catalogevent_event(Varien_Event_Observer $observer)
+        {  
+            Mage::log( ""on_enterprise_catalogevent_event"" );
+        }
+    
+    }
+    ?>
+    
+When I save the CatalogEvent, I do not receive the call. Can you spot any problems with my code?
+",2
+6575956,07/04/2011 20:50:24,796496,06/13/2011 19:23:18,22,2,"Locked out of admin, I changed default admin URL","I changed the default URL for logging into the back-end of Magento in the configuration settings and now when i browse to it i get a 404.
+
+I was careful to put in the trailing slash as advised and i have tried everything i can find on the net but to no avail.
+
+Any help greatly appreciated.",magento,phpmyadmin,,,,07/04/2011 22:16:42,off topic,1,55,9,"Locked out of admin, I changed default admin URL I changed the default URL for logging into the back-end of Magento in the configuration settings and now when i browse to it i get a 404.
+
+I was careful to put in the trailing slash as advised and i have tried everything i can find on the net but to no avail.
+
+Any help greatly appreciated.",2
+5265080,03/10/2011 19:51:04,525501,11/30/2010 17:17:44,13,0,"magento, how to set associated products when i add a new product.","Here my code:
+
+    $newProduct = Mage::getModel('catalog/product');
+				$newProduct->setSku('testsku');
+				$newProduct->setPrice(100);
+				$newProduct->setAttributeSetId(4); 
+				$newProduct->setCategoryIds(array(3,4));
+				$newProduct->setTypeId(""grouped"");
+				$newProduct->setName('Product Name');
+				$newProduct->setDescription('The Product Description');
+				$newProduct->setShortDescription('Brief Description');
+				$newProduct->setStatus(1);
+				$newProduct->setTaxClassId('2');			
+				$newProduct->setCreatedAt(strtotime('now'));
+				$newProduct->save();
+But I don't know, how can i add associated products to my new product.
+I tried this code:
+
+    $ass_product = Mage::getResourceModel('catalog/product_type_grouped')
+            ->setUsedProducts($newProduct->getId(), array(7390));
+It is not correct. I hope somebody can help me.
+
+Greetings, Rapi",magento,add,products,associate,,,open,0,59,12,"magento, how to set associated products when i add a new product. Here my code:
+
+    $newProduct = Mage::getModel('catalog/product');
+				$newProduct->setSku('testsku');
+				$newProduct->setPrice(100);
+				$newProduct->setAttributeSetId(4); 
+				$newProduct->setCategoryIds(array(3,4));
+				$newProduct->setTypeId(""grouped"");
+				$newProduct->setName('Product Name');
+				$newProduct->setDescription('The Product Description');
+				$newProduct->setShortDescription('Brief Description');
+				$newProduct->setStatus(1);
+				$newProduct->setTaxClassId('2');			
+				$newProduct->setCreatedAt(strtotime('now'));
+				$newProduct->save();
+But I don't know, how can i add associated products to my new product.
+I tried this code:
+
+    $ass_product = Mage::getResourceModel('catalog/product_type_grouped')
+            ->setUsedProducts($newProduct->getId(), array(7390));
+It is not correct. I hope somebody can help me.
+
+Greetings, Rapi",4
+2420455,03/10/2010 20:46:45,240689,12/30/2009 06:57:24,1,0,How is Magento when it comes to adding custom functionality?,"How is working with Magento when it comes to adding custom functionality?  
+
+From an outsiders view the framework looks very complicated and it's hard to gage what is and is not possible.  What are your experiences?  Is it a difficult framework to get it to do what you want? Are there things that simply cannot be customized in Magento?  How difficult is it to manage customizations when upgrading to latest versions,etc..
+
+Any feedback/personal experiences would be great.  Examples of highly customized Magento sites would be great too.  Thanks for your help.",magento,,,,,06/06/2012 20:52:45,not constructive,1,96,10,"How is Magento when it comes to adding custom functionality? How is working with Magento when it comes to adding custom functionality?  
+
+From an outsiders view the framework looks very complicated and it's hard to gage what is and is not possible.  What are your experiences?  Is it a difficult framework to get it to do what you want? Are there things that simply cannot be customized in Magento?  How difficult is it to manage customizations when upgrading to latest versions,etc..
+
+Any feedback/personal experiences would be great.  Examples of highly customized Magento sites would be great too.  Thanks for your help.",1
+7148082,08/22/2011 13:18:31,905899,08/22/2011 12:57:43,1,0,How do I implement the Store-View selection for custom-built EAV objects in my own Magento module?,"I have implemented a custom Magento module with an EAV model.  The module manages what my client calls 'promo-boxes'.  Promo-boxes are similar to products in many ways -- they belong to 0:many categories.  They also apply to 0:many Store-Views.  
+
+I have my module storing its data, and category selection from the category tree (similar to 'Manage Products') however I need to implement the 'Store View' selection seen throughout Magento's back-end.
+
+Does anyone know where to begin with this?",magento,module,backend,entity-attribute-value,custom-backend,08/23/2011 16:30:24,off topic,1,81,16,"How do I implement the Store-View selection for custom-built EAV objects in my own Magento module? I have implemented a custom Magento module with an EAV model.  The module manages what my client calls 'promo-boxes'.  Promo-boxes are similar to products in many ways -- they belong to 0:many categories.  They also apply to 0:many Store-Views.  
+
+I have my module storing its data, and category selection from the category tree (similar to 'Manage Products') however I need to implement the 'Store View' selection seen throughout Magento's back-end.
+
+Does anyone know where to begin with this?",5
+7772313,10/14/2011 19:00:16,995974,10/14/2011 18:30:17,1,0,Magento inventory tracking - t-shirt stock,"I sell t-shirts. I buy blank white shirts, and print on them.
+In Magento v1.6 I use configurable products with associated simple products
+
+example configurable: 1234-CSS  (where 1234 is a design like ""flowers"", CSS is a style of shirt CrewShortSleeve )
+
+associated simple:
+1234-CSS-XL (where XL is size attribute - extra large)
+
+Magento tracks stock of all my associated simple products - however - my ""real"" stock is not 1234-CSS-XL, nor is it the configurable product 1234-CSS, it is actually CSS-XL. remember, I buy blank white shirts and print designs on them. 
+
+I have a manual way to track my stock via exports and imports to stock. I create what I call a ""sister product for inventory"" , for example, CSS-XL. 
+i export all the items ordered, then in spreadsheet I aggregate the associated simple products according to the ""real"" stock, and subract that from the sister product stock.
+(then zero out the simple product stock that was purchased so I can easily do it again later)
+
+thus when someone buys a 1234-CSS-XL and 5678-CSS-XL ,  this means that the sister product, CSS-XL, should have 2 deducted from its stock. 
+
+**is there anyway to do this automatically in magento?** 
+
+like, can I bundle the associated simple product with a ""sister"", but hide that sister one and make sure it doesn't show to the customer? 
+
+or, is there some sort of multiple parents setup where the associated simple products that are purchased can deduct from another parent - (my sister product) ? 
+
+or, can I make the associated simple product have an attribute that can be tracked in stock?
+
+am I missing something obvious in Magento? should I arrange my products differently? 
+
+I have used volusion, and there they just have a product attribute called ""SharesStockStatusWith"" which very easily accomplishes my goal. 
+
+thanks all. 
+",magento,,,,,10/19/2011 17:28:59,off topic,1,298,6,"Magento inventory tracking - t-shirt stock I sell t-shirts. I buy blank white shirts, and print on them.
+In Magento v1.6 I use configurable products with associated simple products
+
+example configurable: 1234-CSS  (where 1234 is a design like ""flowers"", CSS is a style of shirt CrewShortSleeve )
+
+associated simple:
+1234-CSS-XL (where XL is size attribute - extra large)
+
+Magento tracks stock of all my associated simple products - however - my ""real"" stock is not 1234-CSS-XL, nor is it the configurable product 1234-CSS, it is actually CSS-XL. remember, I buy blank white shirts and print designs on them. 
+
+I have a manual way to track my stock via exports and imports to stock. I create what I call a ""sister product for inventory"" , for example, CSS-XL. 
+i export all the items ordered, then in spreadsheet I aggregate the associated simple products according to the ""real"" stock, and subract that from the sister product stock.
+(then zero out the simple product stock that was purchased so I can easily do it again later)
+
+thus when someone buys a 1234-CSS-XL and 5678-CSS-XL ,  this means that the sister product, CSS-XL, should have 2 deducted from its stock. 
+
+**is there anyway to do this automatically in magento?** 
+
+like, can I bundle the associated simple product with a ""sister"", but hide that sister one and make sure it doesn't show to the customer? 
+
+or, is there some sort of multiple parents setup where the associated simple products that are purchased can deduct from another parent - (my sister product) ? 
+
+or, can I make the associated simple product have an attribute that can be tracked in stock?
+
+am I missing something obvious in Magento? should I arrange my products differently? 
+
+I have used volusion, and there they just have a product attribute called ""SharesStockStatusWith"" which very easily accomplishes my goal. 
+
+thanks all. 
+",1
+5343641,03/17/2011 18:37:47,664922,03/17/2011 18:37:47,1,0,Magento build reasonable project turnaround time,"As a new project manager joining a team where ecomerce sites are developed using magento, I have very little experience estimating project times. 
+
+What would a reasonable turnaround time be for a typical magento site with some customisations be?
+
+Customisations in terms of custom modules and a completely custom theme. 
+
+I'm thinking in terms of 1 or 2 developers per project. 
+
+",magento,,,,,03/20/2011 13:47:38,off topic,1,61,6,"Magento build reasonable project turnaround time As a new project manager joining a team where ecomerce sites are developed using magento, I have very little experience estimating project times. 
+
+What would a reasonable turnaround time be for a typical magento site with some customisations be?
+
+Customisations in terms of custom modules and a completely custom theme. 
+
+I'm thinking in terms of 1 or 2 developers per project. 
+
+",1
+6353591,06/15/2011 05:49:41,186136,10/08/2009 05:22:24,624,12,How can I add a url path prefix to my product and category URLs in Magento?,"I would like my magento category and product URLs to be something like the following:
+
+    www.example.com/products/category-slug/
+    www.example.com/products/category-slug/product-slug/
+
+By default, with Catalog URL rewrites enabled, I get urls like:
+
+    www.example.com/category-slug/
+    www.example.com/category-slug/product-slug/
+
+I want to keep category url rewrites enabled, for the SEO benefits.
+
+Context:
+--------
+
+I am building a site where I need to integrate Magento and a 3rd party content management system. I am doing this by defining a new default root block for the `cms_index_defaultnoroute` layout handle that handles non-magento pages by fetching content from the CMS (as described on [this magento wiki page][1]). By putting the catalog urls at a different url path, I avoid possible url path collisions with pages managed by the CMS.
+
+  [1]: http://www.magentocommerce.com/blog/comments/tutorial-integrating-3rd-party-cms-content-within-magento/",magento,,,,,,open,0,127,16,"How can I add a url path prefix to my product and category URLs in Magento? I would like my magento category and product URLs to be something like the following:
+
+    www.example.com/products/category-slug/
+    www.example.com/products/category-slug/product-slug/
+
+By default, with Catalog URL rewrites enabled, I get urls like:
+
+    www.example.com/category-slug/
+    www.example.com/category-slug/product-slug/
+
+I want to keep category url rewrites enabled, for the SEO benefits.
+
+Context:
+--------
+
+I am building a site where I need to integrate Magento and a 3rd party content management system. I am doing this by defining a new default root block for the `cms_index_defaultnoroute` layout handle that handles non-magento pages by fetching content from the CMS (as described on [this magento wiki page][1]). By putting the catalog urls at a different url path, I avoid possible url path collisions with pages managed by the CMS.
+
+  [1]: http://www.magentocommerce.com/blog/comments/tutorial-integrating-3rd-party-cms-content-within-magento/",1
+10961247,06/09/2012 13:03:34,1005244,10/20/2011 13:01:49,116,11,Installing Magento automaticaly,I'm thinking about installing magento in automatical way. I suppose that I need to create some script or something... but I guess I'm not first person whom need it. So do you know about any good resource or solution how to it? It would work in Windows and Linux OS. Thanks. Jaro.,magento,,,,,,open,0,52,3,Installing Magento automaticaly I'm thinking about installing magento in automatical way. I suppose that I need to create some script or something... but I guess I'm not first person whom need it. So do you know about any good resource or solution how to it? It would work in Windows and Linux OS. Thanks. Jaro.,1
+8750174,01/05/2012 21:35:44,147437,07/29/2009 21:26:37,1034,94,Customer Specific Price,"Our management board wants to make customer specific price ( no discount ) for high volume customers. The price should same always when customer returns the store ( no one time).
+
+As a result, discount or promotion mechanism of magento does not meet our necessity. So, what is the best way to make such a thing? If you have any sample, please be so kindly share with me? Thanks",magento,,,,,01/07/2012 04:11:32,off topic,1,68,3,"Customer Specific Price Our management board wants to make customer specific price ( no discount ) for high volume customers. The price should same always when customer returns the store ( no one time).
+
+As a result, discount or promotion mechanism of magento does not meet our necessity. So, what is the best way to make such a thing? If you have any sample, please be so kindly share with me? Thanks",1
+10398202,05/01/2012 13:17:24,1137306,01/08/2012 16:46:28,11,0,Downloadable product versioning in Magento,"When offering downloadable products in Magento, buyers will always get the downloadable product that they bought. Even when updating to newer versions ,they still will get the old version. How to prevent that?",magento,,,,,,open,0,33,5,"Downloadable product versioning in Magento When offering downloadable products in Magento, buyers will always get the downloadable product that they bought. Even when updating to newer versions ,they still will get the old version. How to prevent that?",1
+11563681,07/19/2012 15:02:59,1527429,07/15/2012 20:29:05,23,0,Magento: Default Category or Root Category?,"I've come across some Magento documentation which states: ""Only those Anchor Categories
+that are children of the Default Category will appear in your Navigation Menu"". However,
+I am running Magento version 1.7.0.2 and when I go to the backend's Admin Panel I see no
+Default Category. Instead I see a ""Root Category"". Has the Default Category changed name
+to Root Category and are there any other changes I should watch out for in Magento's
+Cataloging system as far as for example, categories are concerned, etc... or does
+everything else function more or less the same in this area?
+
+Thanks,
+
+John Goche
+
+",magento,,,,,07/22/2012 03:14:55,off topic,1,93,6,"Magento: Default Category or Root Category? I've come across some Magento documentation which states: ""Only those Anchor Categories
+that are children of the Default Category will appear in your Navigation Menu"". However,
+I am running Magento version 1.7.0.2 and when I go to the backend's Admin Panel I see no
+Default Category. Instead I see a ""Root Category"". Has the Default Category changed name
+to Root Category and are there any other changes I should watch out for in Magento's
+Cataloging system as far as for example, categories are concerned, etc... or does
+everything else function more or less the same in this area?
+
+Thanks,
+
+John Goche
+
+",1
+4895927,02/04/2011 08:26:01,510467,11/17/2010 07:10:46,106,4,How to call our design css and js for magento,"I am new in Magento.I am trying to implement a theme according to our design.But for my new theme css and images not call i don't understand what the issue here?
+
+I have copied the `modern` folder and after that renamed this folder with our theme name `Brace`
+
+`Location:/app/design/frontend/defaul/Brace`
+
+For css and Js
+
+I have copied the `modern` folder and after that renamed this folder with our theme name `Brace`
+
+`Location:/skin/frontend/defaul/Brace`
+
+After that i have copied my all images in `/skin/frontend/defaul/Brace/images ` folder.
+and then copy my stylesheet in `/skin/frontend/defaul/Brace/css/style.css `.
+
+When i Change theme name from admin it not reflect css and images on frontend.
+
+
+PLease help me.
+I have searched from net but all solution different that confusing me.
+
+I shall be very thanful to you all.
+",magento,,,,,,open,0,118,10,"How to call our design css and js for magento I am new in Magento.I am trying to implement a theme according to our design.But for my new theme css and images not call i don't understand what the issue here?
+
+I have copied the `modern` folder and after that renamed this folder with our theme name `Brace`
+
+`Location:/app/design/frontend/defaul/Brace`
+
+For css and Js
+
+I have copied the `modern` folder and after that renamed this folder with our theme name `Brace`
+
+`Location:/skin/frontend/defaul/Brace`
+
+After that i have copied my all images in `/skin/frontend/defaul/Brace/images ` folder.
+and then copy my stylesheet in `/skin/frontend/defaul/Brace/css/style.css `.
+
+When i Change theme name from admin it not reflect css and images on frontend.
+
+
+PLease help me.
+I have searched from net but all solution different that confusing me.
+
+I shall be very thanful to you all.
+",1
+4953652,02/10/2011 05:18:46,510467,11/17/2010 07:10:46,108,5,How to redirect in magento,"I am new on magento.I am facing some problem when open the site in browser.
+
+I am having two site.
+1.)  http://www.diamondjewelryhub.com
+2.)  http://musicalinstruments101.com/
+
+
+I have download the `code and database` of http://www.diamondjewelryhub.com.I want to upload  this code and database on the server of  http://musicalinstruments101.com/.
+
+After download the data base I searched for  this `http://www.diamondjewelryhub.com` and replace with `http://musicalinstruments101.com/`.
+
+After that i have Import the database file on the server of `http://musicalinstruments101.com/`
+
+
+When I am trying to open `http://musicalinstruments101.com/` it redirecting on the site ` http://www.diamondjewelryhub.com`
+
+Is there any change needed because it redirect wrong.Please help me its very very urgent.
+
+I shall be very thankful to you all
+
+Thanks 
+Shalu Pundir
+
+",magento,,,,,,open,0,107,5,"How to redirect in magento I am new on magento.I am facing some problem when open the site in browser.
+
+I am having two site.
+1.)  http://www.diamondjewelryhub.com
+2.)  http://musicalinstruments101.com/
+
+
+I have download the `code and database` of http://www.diamondjewelryhub.com.I want to upload  this code and database on the server of  http://musicalinstruments101.com/.
+
+After download the data base I searched for  this `http://www.diamondjewelryhub.com` and replace with `http://musicalinstruments101.com/`.
+
+After that i have Import the database file on the server of `http://musicalinstruments101.com/`
+
+
+When I am trying to open `http://musicalinstruments101.com/` it redirecting on the site ` http://www.diamondjewelryhub.com`
+
+Is there any change needed because it redirect wrong.Please help me its very very urgent.
+
+I shall be very thankful to you all
+
+Thanks 
+Shalu Pundir
+
+",1
+10882211,06/04/2012 13:30:35,1117623,12/27/2011 12:27:57,10,0,Magento shipping order export in backend,"I need to export shipping order under dashboard --> sales --> Shipments in magento admin panel with following fileds. 
+
+1. Order Number
+2. Shipping Address
+3. Shipping City
+4. Shipping State
+5. Shipping Zip
+6. Phone Number
+7. COD amount - this will be nil if it is a credit card payment
+8. A blank column for weight - will manually fill out if needed
+9. Mode - COD or Already paid
+10. Tracking Number
+11. A blank column with title ""Remarks""
+
+1) Any options in admin panel to export with above fields?  
+2) or any custom module for shipping order export?
+
+can anyone give me the guidence for this one. or any other reference link?
+
+thanks 
+
+Prakash
+",magento,,,,,06/13/2012 00:54:20,off topic,1,106,6,"Magento shipping order export in backend I need to export shipping order under dashboard --> sales --> Shipments in magento admin panel with following fileds. 
+
+1. Order Number
+2. Shipping Address
+3. Shipping City
+4. Shipping State
+5. Shipping Zip
+6. Phone Number
+7. COD amount - this will be nil if it is a credit card payment
+8. A blank column for weight - will manually fill out if needed
+9. Mode - COD or Already paid
+10. Tracking Number
+11. A blank column with title ""Remarks""
+
+1) Any options in admin panel to export with above fields?  
+2) or any custom module for shipping order export?
+
+can anyone give me the guidence for this one. or any other reference link?
+
+thanks 
+
+Prakash
+",1

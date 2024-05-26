@@ -1,0 +1,1651 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+3931979,10/14/2010 09:52:57,33584,11/03/2008 07:45:07,699,22,Replace default search box in SharePoint 2010 with custom one,"On every new SharePoint 2010 site you get the default search box (In the MasterPage) that allows you to just do a normal search.
+
+I would like to replace this with some item that will allow you to pick Advanced or People Search, something like this.........
+
+![alt text][1]
+
+
+  [1]: http://i.stack.imgur.com/t5mBf.png
+
+Is it possible to replace/alter the default search box in the MasterPage?",sharepoint,sharepoint2010,sharepoint-designer,,,,open,0,60,10,"Replace default search box in SharePoint 2010 with custom one On every new SharePoint 2010 site you get the default search box (In the MasterPage) that allows you to just do a normal search.
+
+I would like to replace this with some item that will allow you to pick Advanced or People Search, something like this.........
+
+![alt text][1]
+
+
+  [1]: http://i.stack.imgur.com/t5mBf.png
+
+Is it possible to replace/alter the default search box in the MasterPage?",3
+8723324,01/04/2012 07:17:22,939053,09/11/2011 10:04:14,8,0,SharePoint alert mail language,"Is it possible to change language of SharePoint (2010) alert emails?
+Priority for out-of-box solutions.",sharepoint,email,sharepoint2010,alerts,,01/04/2012 13:28:57,off topic,1,14,4,"SharePoint alert mail language Is it possible to change language of SharePoint (2010) alert emails?
+Priority for out-of-box solutions.",4
+6904140,08/01/2011 20:36:37,125292,06/18/2009 18:14:48,345,17,Edit a SharePoint lookup field from the linked record,"I have two lists in SharePoint, one each for projects and tasks, that I need to relate through the use of a lookup field.
+
+If I create the lookup field in the project list then I can assign multiple tasks to the project and easily see what tasks are assigned to the project and click through to the project. I cannot, however, see what project tasks are assigned to in the task views.
+
+If I create the lookup field in the task list, then I can easily choose which project to assign it to and I can sort or filter the task list view by project, but I can't easily see which tasks are assigned to any given project in the project list view.
+
+If I have to choose one or the other, the latter is the better option since the lookup list is shorter and I can always filter on the project column in the task list view.
+
+Ideally, however, I would like to easily be able to see which tasks are assigned to a project from within the project list view, and maybe even edit the relationship from there.
+
+Is there any way to do this in SharePoint?
+
+Thanks!",sharepoint,lookup-field,,,,,open,0,195,9,"Edit a SharePoint lookup field from the linked record I have two lists in SharePoint, one each for projects and tasks, that I need to relate through the use of a lookup field.
+
+If I create the lookup field in the project list then I can assign multiple tasks to the project and easily see what tasks are assigned to the project and click through to the project. I cannot, however, see what project tasks are assigned to in the task views.
+
+If I create the lookup field in the task list, then I can easily choose which project to assign it to and I can sort or filter the task list view by project, but I can't easily see which tasks are assigned to any given project in the project list view.
+
+If I have to choose one or the other, the latter is the better option since the lookup list is shorter and I can always filter on the project column in the task list view.
+
+Ideally, however, I would like to easily be able to see which tasks are assigned to a project from within the project list view, and maybe even edit the relationship from there.
+
+Is there any way to do this in SharePoint?
+
+Thanks!",2
+2320016,02/23/2010 16:50:50,239599,12/28/2009 14:26:48,4730,243,How to get distinct values of a managed property through SharePoint search?,"I am building a phone catalog of my organization (an AJAX application which accesses the search.asmx web service).
+I'd like to show a list box where the user could select a department (which is stored in managed property `Department`). To fill the list box with values, I need to somehow select all the distinct values of that property. 
+Is it possible through search.asmx web service? 
+
+What I've found:
+
+  - an article, [which states that it is possible](http://blog.robgarrett.com/2009/09/23/pre-search-facets-in-moss-2007/), but it does not use the web service interface
+  - a Microsoft's [white paper](http://download.microsoft.com/download/8/5/8/858F2155-D48D-4C68-9205-29460FD7698F/%5BMS-SEARCH%5D.pdf) which states that ""If the protocol client specifies at least one property, it MUST also specify the Path property. If it does not, the protocol server MUST return the status code ""ERROR_BAD_QUERY"".""
+
+The two findings are somewhat inconsistent. (and, yes the search really returns ERROR_BAD_QUERY).
+
+",sharepoint,search,mssqlft,,,,open,0,136,12,"How to get distinct values of a managed property through SharePoint search? I am building a phone catalog of my organization (an AJAX application which accesses the search.asmx web service).
+I'd like to show a list box where the user could select a department (which is stored in managed property `Department`). To fill the list box with values, I need to somehow select all the distinct values of that property. 
+Is it possible through search.asmx web service? 
+
+What I've found:
+
+  - an article, [which states that it is possible](http://blog.robgarrett.com/2009/09/23/pre-search-facets-in-moss-2007/), but it does not use the web service interface
+  - a Microsoft's [white paper](http://download.microsoft.com/download/8/5/8/858F2155-D48D-4C68-9205-29460FD7698F/%5BMS-SEARCH%5D.pdf) which states that ""If the protocol client specifies at least one property, it MUST also specify the Path property. If it does not, the protocol server MUST return the status code ""ERROR_BAD_QUERY"".""
+
+The two findings are somewhat inconsistent. (and, yes the search really returns ERROR_BAD_QUERY).
+
+",3
+6383004,06/17/2011 08:05:48,553836,12/25/2010 13:56:31,46,1,Sharepoint 2010 Blog Creation,"I am using sharepoint 2010. And I want to create blog site, but i cant. Which feature activation provides me to create blogs? Thanks",sharepoint,blogs,features,,,,open,0,24,4,"Sharepoint 2010 Blog Creation I am using sharepoint 2010. And I want to create blog site, but i cant. Which feature activation provides me to create blogs? Thanks",3
+11146871,06/21/2012 21:14:50,1456899,06/14/2012 17:26:59,8,1,One small q on checking the file's name (Powershell),"    $list = $web.Lists[$folder.ParentListId]
+    $itemCollection = $list.GetItems($query)
+    foreach ($item in $itemCollection){
+    Write-Host $item.Name
+    }
+
+I wanna check if the file starts with ""MDNSO"", how can I write?",sharepoint,powershell,,,,06/22/2012 16:43:46,not a real question,1,41,9,"One small q on checking the file's name (Powershell)     $list = $web.Lists[$folder.ParentListId]
+    $itemCollection = $list.GetItems($query)
+    foreach ($item in $itemCollection){
+    Write-Host $item.Name
+    }
+
+I wanna check if the file starts with ""MDNSO"", how can I write?",2
+8395482,12/06/2011 04:50:24,182228,10/01/2009 02:43:59,57,0,SharePoint Foundation Setup in 32bit,I have Windows 7 Professional Version OS and i want to Setup SharePoint Foundation in my pc but Sharepoint so can anybody help me to do this ? I need to setup Sharepoint in 32 bit windows7 professional edition.,sharepoint,,,,,12/06/2011 05:10:51,off topic,1,39,5,SharePoint Foundation Setup in 32bit I have Windows 7 Professional Version OS and i want to Setup SharePoint Foundation in my pc but Sharepoint so can anybody help me to do this ? I need to setup Sharepoint in 32 bit windows7 professional edition.,1
+10480088,05/07/2012 09:58:48,132209,07/02/2009 10:29:53,85,8,SharePoint extranet Forms Based Authentication using AD LDS or SQL Server membership provider,"
+What is the best approch for provide clients acces to SharePoint sites.
+Forms Based Authentication using SQL Server membership provider or AD LDS (Active Directory Lightweight Directory Services )?",sharepoint,fba,,,,05/14/2012 02:32:37,not constructive,1,28,13,"SharePoint extranet Forms Based Authentication using AD LDS or SQL Server membership provider 
+What is the best approch for provide clients acces to SharePoint sites.
+Forms Based Authentication using SQL Server membership provider or AD LDS (Active Directory Lightweight Directory Services )?",2
+8527002,12/15/2011 21:39:55,1100783,12/15/2011 21:09:24,1,0,How to use data from a IWebPartRow connection in a usercontrol. Provider is always null,"I’m not sure how to explain my problem
+I’m trying to implement a WebPart with a webpart connection to listview webparts. For the connection I use the IWebPartRow interface. 
+Here is what I want to achieve:
+In the list view webpart I can select an Item. In my WebPart details are displayed. In the usercontrol that is added to the webpart there is a Fileupload button when this button is clicked a file is uploaded to a document library and details from the connection are used to populate properties. Here the webpart code:
+
+    using System;
+    using System.ComponentModel;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+    using System.Web.UI.WebControls.WebParts;
+    using Microsoft.SharePoint;
+    using Microsoft.SharePoint.WebControls;
+    using System.Data;
+    using System.Text;
+    
+    namespace ConnectedFilesWebPart.VisualWebPart1
+    {
+        [ToolboxItemAttribute(false)]
+        public class VisualWebPart1 : Microsoft.SharePoint.WebPartPages.WebPart
+        {
+            // Visual Studio might automatically update this path when you change the Visual Web Part project item.
+            #region variables
+            private const string _ascxPath = @""~/_CONTROLTEMPLATES/ConnectedFilesWebPart/VisualWebPart1/VisualWebPart1UserControl.ascx"";
+    
+            private IWebPartRow provider;
+            
+            private readonly StringBuilder _sb = new StringBuilder();
+            private int lookupId;
+    
+            [Personalizable(PersonalizationScope.Shared), WebBrowsable(false)]
+            public int LookupId
+            {
+                get { return lookupId; }
+                set { lookupId = value; }
+            }
+            private DataRowView _dataRow;
+    
+            [Personalizable(PersonalizationScope.Shared), WebBrowsable(false)]
+            public DataRowView DataRow
+            {
+                get { return _dataRow; }
+                set { _dataRow = value; }
+            }
+    
+            #endregion
+    
+    
+            protected override void CreateChildControls()
+            {
+                _sb.AppendFormat(""CreateChildControls Begin\n"");
+                if (provider != null)
+                    provider.GetRowData(GetRowData);
+    
+                    VisualWebPart1UserControl control = (VisualWebPart1UserControl)Page.LoadControl(_ascxPath);
+                    control.DataRow = DataRow;
+                    //control.Inttest = 
+                    Controls.Add(control);
+                    _sb.AppendFormat(""CreateChildControls End\n"");
+            }
+    
+            private void GetRowData(object rowData)
+            {
+                _sb.AppendFormat(""GetRowData Begin\n"");
+                try
+                {
+                    _dataRow = (DataRowView)rowData;
+                }
+                catch
+                {
+                    _dataRow = null;
+                }
+                _sb.AppendFormat(""GetRowData End\n"");
+    
+            }
+    
+            protected override void OnPreRender(EventArgs e)
+            {
+                _sb.AppendFormat(""OnPreRender Begin\n"");
+    
+                if (provider != null)
+                    provider.GetRowData(new RowCallback(GetRowData));
+                _sb.AppendFormat(""OnPreRender End\n"");
+                
+            }
+    
+            /* This is a callback method called by the provider */
+            [ConnectionConsumer(""Row"", AllowsMultipleConnections = true)]
+            public void ReceiveProvider(IWebPartRow p)
+            {
+                _sb.AppendFormat(""ReceiveProvider Begin\n"");
+    
+                provider = p;
+                _sb.AppendFormat(""ReceiveProvider End\n"");
+    
+            }
+            protected override void Render(HtmlTextWriter writer)
+            {
+                base.Render(writer);
+            }
+            protected override void RenderContents(HtmlTextWriter writer)
+            {
+                _sb.AppendFormat(""RenderContents Begin\n"");
+    
+                base.RenderContents(writer);
+                if (_dataRow != null)
+                {
+                    DataRow providerRow = _dataRow.Row;
+                    foreach (DataColumn column in providerRow.Table.Columns)
+                        _sb.AppendFormat(""- data column: {0} = {1}\n"", column.ColumnName ?? ""n/a"", providerRow[column]);
+                    _sb.Append(""\n"");
+                    PropertyDescriptorCollection schemaProps = provider.Schema;
+                    foreach (PropertyDescriptor prop in schemaProps)
+                        _sb.AppendFormat(""- schema entry: {0} is {1}\n"", prop.Name, prop.PropertyType);
+                    //try
+                    //{
+                    this.LookupId = Int32.Parse(DataRow.Row[""ID""].ToString());
+                    //}
+                    _sb.AppendFormat(""<input type='text' />"");
+                    
+                    writer.Write(_sb.ToString().Replace(""\n"", ""<br>""));
+                }
+                _sb.AppendFormat(""RenderContents End\n"");
+    
+            }
+    
+        }
+    }
+
+Here the user control code:
+
+    using System;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+    using System.Web.UI.WebControls.WebParts;
+    using Microsoft.SharePoint;
+    using System.Data;
+    
+    namespace ConnectedFilesWebPart.VisualWebPart1
+    {   
+        [System.ComponentModel.Description(""ConnectionFilesUserControl"")]
+        public partial class VisualWebPart1UserControl : UserControl
+        {
+    
+            #region variable
+            private DataRowView dataRow;
+    
+            [System.ComponentModel.Browsable(true), System.ComponentModel.Description(""DataRow"")]
+            public DataRowView DataRow
+            {
+                get { return dataRow; }
+                set { dataRow = value; }
+            }
+    
+    
+            #endregion
+    
+            protected void Page_Load(object sender, EventArgs e)
+            {
+                
+                DataRow = ((VisualWebPart1)this.Parent).DataRow;
+            }
+    
+            protected void btn_Upload_Click(object sender, EventArgs e)
+            {
+    
+                String fileToUpload = FileUpload1.FileName;
+                String documentLibraryName = ""Meine Dokumente"";
+    
+                SPFolder myLibrary = SPContext.Current.Web.Folders[documentLibraryName];
+                SPFile spFile = myLibrary.Files.Add(FileUpload1.FileName, FileUpload1.FileContent, true);
+                if (dataRow != null)
+                {
+                    int lookupId = Int32.Parse(dataRow[""ID""].ToString());
+                    string title = dataRow[""Title""].ToString();
+                    spFile.Item[""Manager""] = new SPFieldLookupValue(lookupId, title);
+                    spFile.Update();
+                }
+            }
+        }
+    }
+
+Now the connections works fine, the file upload works fine to. The problem is when the upload button is clicked and the btn_Upload_Click is executed (in the user control) the DataRow object is always null. It seems to me as if the webpart is loaded again but the provide is not called this time.
+",sharepoint,usercontrols,webparts,,,,open,0,2425,15,"How to use data from a IWebPartRow connection in a usercontrol. Provider is always null I’m not sure how to explain my problem
+I’m trying to implement a WebPart with a webpart connection to listview webparts. For the connection I use the IWebPartRow interface. 
+Here is what I want to achieve:
+In the list view webpart I can select an Item. In my WebPart details are displayed. In the usercontrol that is added to the webpart there is a Fileupload button when this button is clicked a file is uploaded to a document library and details from the connection are used to populate properties. Here the webpart code:
+
+    using System;
+    using System.ComponentModel;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+    using System.Web.UI.WebControls.WebParts;
+    using Microsoft.SharePoint;
+    using Microsoft.SharePoint.WebControls;
+    using System.Data;
+    using System.Text;
+    
+    namespace ConnectedFilesWebPart.VisualWebPart1
+    {
+        [ToolboxItemAttribute(false)]
+        public class VisualWebPart1 : Microsoft.SharePoint.WebPartPages.WebPart
+        {
+            // Visual Studio might automatically update this path when you change the Visual Web Part project item.
+            #region variables
+            private const string _ascxPath = @""~/_CONTROLTEMPLATES/ConnectedFilesWebPart/VisualWebPart1/VisualWebPart1UserControl.ascx"";
+    
+            private IWebPartRow provider;
+            
+            private readonly StringBuilder _sb = new StringBuilder();
+            private int lookupId;
+    
+            [Personalizable(PersonalizationScope.Shared), WebBrowsable(false)]
+            public int LookupId
+            {
+                get { return lookupId; }
+                set { lookupId = value; }
+            }
+            private DataRowView _dataRow;
+    
+            [Personalizable(PersonalizationScope.Shared), WebBrowsable(false)]
+            public DataRowView DataRow
+            {
+                get { return _dataRow; }
+                set { _dataRow = value; }
+            }
+    
+            #endregion
+    
+    
+            protected override void CreateChildControls()
+            {
+                _sb.AppendFormat(""CreateChildControls Begin\n"");
+                if (provider != null)
+                    provider.GetRowData(GetRowData);
+    
+                    VisualWebPart1UserControl control = (VisualWebPart1UserControl)Page.LoadControl(_ascxPath);
+                    control.DataRow = DataRow;
+                    //control.Inttest = 
+                    Controls.Add(control);
+                    _sb.AppendFormat(""CreateChildControls End\n"");
+            }
+    
+            private void GetRowData(object rowData)
+            {
+                _sb.AppendFormat(""GetRowData Begin\n"");
+                try
+                {
+                    _dataRow = (DataRowView)rowData;
+                }
+                catch
+                {
+                    _dataRow = null;
+                }
+                _sb.AppendFormat(""GetRowData End\n"");
+    
+            }
+    
+            protected override void OnPreRender(EventArgs e)
+            {
+                _sb.AppendFormat(""OnPreRender Begin\n"");
+    
+                if (provider != null)
+                    provider.GetRowData(new RowCallback(GetRowData));
+                _sb.AppendFormat(""OnPreRender End\n"");
+                
+            }
+    
+            /* This is a callback method called by the provider */
+            [ConnectionConsumer(""Row"", AllowsMultipleConnections = true)]
+            public void ReceiveProvider(IWebPartRow p)
+            {
+                _sb.AppendFormat(""ReceiveProvider Begin\n"");
+    
+                provider = p;
+                _sb.AppendFormat(""ReceiveProvider End\n"");
+    
+            }
+            protected override void Render(HtmlTextWriter writer)
+            {
+                base.Render(writer);
+            }
+            protected override void RenderContents(HtmlTextWriter writer)
+            {
+                _sb.AppendFormat(""RenderContents Begin\n"");
+    
+                base.RenderContents(writer);
+                if (_dataRow != null)
+                {
+                    DataRow providerRow = _dataRow.Row;
+                    foreach (DataColumn column in providerRow.Table.Columns)
+                        _sb.AppendFormat(""- data column: {0} = {1}\n"", column.ColumnName ?? ""n/a"", providerRow[column]);
+                    _sb.Append(""\n"");
+                    PropertyDescriptorCollection schemaProps = provider.Schema;
+                    foreach (PropertyDescriptor prop in schemaProps)
+                        _sb.AppendFormat(""- schema entry: {0} is {1}\n"", prop.Name, prop.PropertyType);
+                    //try
+                    //{
+                    this.LookupId = Int32.Parse(DataRow.Row[""ID""].ToString());
+                    //}
+                    _sb.AppendFormat(""<input type='text' />"");
+                    
+                    writer.Write(_sb.ToString().Replace(""\n"", ""<br>""));
+                }
+                _sb.AppendFormat(""RenderContents End\n"");
+    
+            }
+    
+        }
+    }
+
+Here the user control code:
+
+    using System;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+    using System.Web.UI.WebControls.WebParts;
+    using Microsoft.SharePoint;
+    using System.Data;
+    
+    namespace ConnectedFilesWebPart.VisualWebPart1
+    {   
+        [System.ComponentModel.Description(""ConnectionFilesUserControl"")]
+        public partial class VisualWebPart1UserControl : UserControl
+        {
+    
+            #region variable
+            private DataRowView dataRow;
+    
+            [System.ComponentModel.Browsable(true), System.ComponentModel.Description(""DataRow"")]
+            public DataRowView DataRow
+            {
+                get { return dataRow; }
+                set { dataRow = value; }
+            }
+    
+    
+            #endregion
+    
+            protected void Page_Load(object sender, EventArgs e)
+            {
+                
+                DataRow = ((VisualWebPart1)this.Parent).DataRow;
+            }
+    
+            protected void btn_Upload_Click(object sender, EventArgs e)
+            {
+    
+                String fileToUpload = FileUpload1.FileName;
+                String documentLibraryName = ""Meine Dokumente"";
+    
+                SPFolder myLibrary = SPContext.Current.Web.Folders[documentLibraryName];
+                SPFile spFile = myLibrary.Files.Add(FileUpload1.FileName, FileUpload1.FileContent, true);
+                if (dataRow != null)
+                {
+                    int lookupId = Int32.Parse(dataRow[""ID""].ToString());
+                    string title = dataRow[""Title""].ToString();
+                    spFile.Item[""Manager""] = new SPFieldLookupValue(lookupId, title);
+                    spFile.Update();
+                }
+            }
+        }
+    }
+
+Now the connections works fine, the file upload works fine to. The problem is when the upload button is clicked and the btn_Upload_Click is executed (in the user control) the DataRow object is always null. It seems to me as if the webpart is loaded again but the provide is not called this time.
+",3
+11307092,07/03/2012 08:24:18,1498136,07/03/2012 08:16:34,1,0,"Sharepoint default page, central page not loading?","i am using windows 7 home premium and installed sharepoint 2010 enterprise version. i have tried all the necessary steps for clean installation. after successfully installation and configuration of products. the sharepoint default page is not loading nor giving any errors? i have tried central administration also and same is the case with it. i have already installed all possible prerequisites of it but all in vain. please help me with it.
+",sharepoint,loading,enterprise-portal,,,07/03/2012 14:36:14,off topic,1,72,7,"Sharepoint default page, central page not loading? i am using windows 7 home premium and installed sharepoint 2010 enterprise version. i have tried all the necessary steps for clean installation. after successfully installation and configuration of products. the sharepoint default page is not loading nor giving any errors? i have tried central administration also and same is the case with it. i have already installed all possible prerequisites of it but all in vain. please help me with it.
+",3
+9291096,02/15/2012 09:49:21,930446,09/06/2011 10:35:46,1,0,MOSS 2007 KPIs: How to calculate a KPI from 2 differente SP Lists?,"I don't really know if this is possible 'cause I couldn't find anything on the subject elsewhere.
+
+How can I manage to set a KPI on aggregated data from 2 different Lists? So to speak: A Client has 2 lists and he wants to make a union on common fields and set a KPI based on those fields. I know that you could easily do that in SP2010, but I could find a way/workaround to achieve that in MOSS2007
+
+Any idea?
+
+Thank you guys in advance.
+
+",sharepoint,moss,kpi,,,02/16/2012 21:19:05,off topic,1,83,13,"MOSS 2007 KPIs: How to calculate a KPI from 2 differente SP Lists? I don't really know if this is possible 'cause I couldn't find anything on the subject elsewhere.
+
+How can I manage to set a KPI on aggregated data from 2 different Lists? So to speak: A Client has 2 lists and he wants to make a union on common fields and set a KPI based on those fields. I know that you could easily do that in SP2010, but I could find a way/workaround to achieve that in MOSS2007
+
+Any idea?
+
+Thank you guys in advance.
+
+",3
+2958224,06/02/2010 13:40:11,356487,06/02/2010 13:40:11,1,0,Why does my sharepoint web part event handler lose the sender value on postback?,"I have a web part which is going to be a part of pair of connected web parts. For simplicity, I am just describing the consumer web part. 
+
+This web part has 10 link buttons on it. And they are rendered in the Render method instead ofCreateChildControls as this webpart will be receiving values based on input from the provider web part. Each Link Button has a text which is decided dynamically based on the input from provider web part. 
+
+When I click on any of the Link Buttons, the event handler is triggered but the text on the Link Button shows up as the one set in CreateChildControls. When I trace the code, I see that the CreateChildControls gets called before the event handler (and i think that resets my Link Buttons). How do I get the event handler to show me the dynamic text instead?
+
+Here is the code...
+
+    public class consWebPart : Microsoft.SharePoint.WebPartPages.WebPart
+    {
+        private bool _error = false;
+        private LinkButton[] lkDocument = null;
+
+        public consWebPart()
+        {
+            this.ExportMode = WebPartExportMode.All;
+        }
+
+        protected override void CreateChildControls()
+        {
+            if (!_error)
+            {
+                try
+                {
+                    base.CreateChildControls();
+
+                    lkDocument = new LinkButton[101];
+                    for (int i = 0; i < 10; i++)
+                    {
+                        lkDocument[i] = new LinkButton();
+                        lkDocument[i].ID = ""lkDocument"" + i;
+                        lkDocument[i].Text = ""Initial Text"";
+                        lkDocument[i].Style.Add(""margin"", ""10 10 10 10px"");
+                        this.Controls.Add(lkDocument[i]);
+                        lkDocument[i].Click += new EventHandler(lkDocument_Click);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HandleException(ex);
+                }
+            }
+        }
+
+        protected override void Render(HtmlTextWriter writer)
+        {
+            writer.Write(""<table><tr>"");
+            for (int i = 0; i < 10; i++)
+            {
+                writer.Write(""<tr>"");
+                lkDocument[i].Text = ""LinkButton"" + i;
+                writer.Write(""<td>"");
+                lkDocument[i].RenderControl(writer);
+                writer.Write(""</td>"");
+                writer.Write(""</tr>"");
+            }
+            writer.Write(""</table>"");
+        }
+
+        protected void lkDocument_Click(object sender, EventArgs e)
+        {
+            string strsender = sender.ToString();
+            LinkButton lk = (LinkButton)sender;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            if (!_error)
+            {
+                try
+                {
+                    base.OnLoad(e);
+                    this.EnsureChildControls();
+                }
+                catch (Exception ex)
+                {
+                    HandleException(ex);
+                }
+            }
+        }
+
+        private void HandleException(Exception ex)
+        {
+            this._error = true;
+            this.Controls.Clear();
+            this.Controls.Add(new LiteralControl(ex.Message));
+        }
+    }
+
+ 
+
+ 
+
+ 
+
+  
+",sharepoint,event-handling,part,,,,open,0,1232,14,"Why does my sharepoint web part event handler lose the sender value on postback? I have a web part which is going to be a part of pair of connected web parts. For simplicity, I am just describing the consumer web part. 
+
+This web part has 10 link buttons on it. And they are rendered in the Render method instead ofCreateChildControls as this webpart will be receiving values based on input from the provider web part. Each Link Button has a text which is decided dynamically based on the input from provider web part. 
+
+When I click on any of the Link Buttons, the event handler is triggered but the text on the Link Button shows up as the one set in CreateChildControls. When I trace the code, I see that the CreateChildControls gets called before the event handler (and i think that resets my Link Buttons). How do I get the event handler to show me the dynamic text instead?
+
+Here is the code...
+
+    public class consWebPart : Microsoft.SharePoint.WebPartPages.WebPart
+    {
+        private bool _error = false;
+        private LinkButton[] lkDocument = null;
+
+        public consWebPart()
+        {
+            this.ExportMode = WebPartExportMode.All;
+        }
+
+        protected override void CreateChildControls()
+        {
+            if (!_error)
+            {
+                try
+                {
+                    base.CreateChildControls();
+
+                    lkDocument = new LinkButton[101];
+                    for (int i = 0; i < 10; i++)
+                    {
+                        lkDocument[i] = new LinkButton();
+                        lkDocument[i].ID = ""lkDocument"" + i;
+                        lkDocument[i].Text = ""Initial Text"";
+                        lkDocument[i].Style.Add(""margin"", ""10 10 10 10px"");
+                        this.Controls.Add(lkDocument[i]);
+                        lkDocument[i].Click += new EventHandler(lkDocument_Click);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HandleException(ex);
+                }
+            }
+        }
+
+        protected override void Render(HtmlTextWriter writer)
+        {
+            writer.Write(""<table><tr>"");
+            for (int i = 0; i < 10; i++)
+            {
+                writer.Write(""<tr>"");
+                lkDocument[i].Text = ""LinkButton"" + i;
+                writer.Write(""<td>"");
+                lkDocument[i].RenderControl(writer);
+                writer.Write(""</td>"");
+                writer.Write(""</tr>"");
+            }
+            writer.Write(""</table>"");
+        }
+
+        protected void lkDocument_Click(object sender, EventArgs e)
+        {
+            string strsender = sender.ToString();
+            LinkButton lk = (LinkButton)sender;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            if (!_error)
+            {
+                try
+                {
+                    base.OnLoad(e);
+                    this.EnsureChildControls();
+                }
+                catch (Exception ex)
+                {
+                    HandleException(ex);
+                }
+            }
+        }
+
+        private void HandleException(Exception ex)
+        {
+            this._error = true;
+            this.Controls.Clear();
+            this.Controls.Add(new LiteralControl(ex.Message));
+        }
+    }
+
+ 
+
+ 
+
+ 
+
+  
+",3
+1638720,10/28/2009 17:14:09,16868,09/17/2008 21:43:09,452,30,What kinds of problems have there been using Access databases with SharePoint?,"Just curious what the experience has been in uploading MS Access tables to SharePoint 2007 list.  We've been planning on doing so, but I seem to recall issues with SharePoint mangling Access tables in the resulting lists and generally the migrations not going so well.  Your experiences?  Best practices and recommendations? I'm particularly concerned on its ability to migrate forms and reports as well if it can do so.  Thanks!",sharepoint,ms-access,migration,sharepoint-list,,,open,0,74,12,"What kinds of problems have there been using Access databases with SharePoint? Just curious what the experience has been in uploading MS Access tables to SharePoint 2007 list.  We've been planning on doing so, but I seem to recall issues with SharePoint mangling Access tables in the resulting lists and generally the migrations not going so well.  Your experiences?  Best practices and recommendations? I'm particularly concerned on its ability to migrate forms and reports as well if it can do so.  Thanks!",4
+1096698,07/08/2009 07:59:55,121166,06/11/2009 08:49:49,6,0,Sharepoint: Custom SiteMapProvider for custom list,"I need to customise the title property for SiteMapNodes.
+
+I am using WSS, and have created a custom document library. While navigating through this library I want to change the names of the nodes in the breadcrumb displayed above the list name.
+
+So far I have:
+
+ - created a class inheriting from
+   System.Web.SiteMapProvider,
+ - added my class to the web.config,
+ - changed the sharepoint
+   default.master page sitemappath (in
+   PlaceHolderTitleBreadcrumb) to point
+   to my new site map provider.
+
+I then overwrote the CurrentNode property to edit the CurrentNode.title with the desired name. 
+
+My problem is all the previous nodes (parent nodes) revert back to their original names. How do I edit the breadcrumb so that all the nodes navigated through keep their new title?
+
+Any advice or direction would be appreciated.
+
+",sharepoint,sitemapprovider,breadcrumbs,,,,open,0,134,6,"Sharepoint: Custom SiteMapProvider for custom list I need to customise the title property for SiteMapNodes.
+
+I am using WSS, and have created a custom document library. While navigating through this library I want to change the names of the nodes in the breadcrumb displayed above the list name.
+
+So far I have:
+
+ - created a class inheriting from
+   System.Web.SiteMapProvider,
+ - added my class to the web.config,
+ - changed the sharepoint
+   default.master page sitemappath (in
+   PlaceHolderTitleBreadcrumb) to point
+   to my new site map provider.
+
+I then overwrote the CurrentNode property to edit the CurrentNode.title with the desired name. 
+
+My problem is all the previous nodes (parent nodes) revert back to their original names. How do I edit the breadcrumb so that all the nodes navigated through keep their new title?
+
+Any advice or direction would be appreciated.
+
+",3
+1117931,07/13/2009 06:23:54,120303,06/10/2009 05:14:18,501,53,Best Practice for Accessing SharePoint List Item through Object Model,"I would like to know the best Practice that you guys follow when it comes to access the SharePoint List Items / Doc Lib using Object Model. To start let me share few things I have found.
+
+ 1. Limit the number of Items Per container to 2K items.
+ 2. Use ProcessWebData method of SPWeb to do Update/Insert of Large items
+
+
+",sharepoint,,,,,,open,0,60,10,"Best Practice for Accessing SharePoint List Item through Object Model I would like to know the best Practice that you guys follow when it comes to access the SharePoint List Items / Doc Lib using Object Model. To start let me share few things I have found.
+
+ 1. Limit the number of Items Per container to 2K items.
+ 2. Use ProcessWebData method of SPWeb to do Update/Insert of Large items
+
+
+",1
+9417414,02/23/2012 16:50:51,1108057,12/20/2011 14:41:10,5,2,Alternative to disable-output-escaping for SharePoint?,"I'm using a Content Query Web Part and ItemStyle.xsl to pull in content from a rich text field.  Unfortunately, it escapes the code so it doesn't render HTML tags.  Disable-output-escaping doesn't work in FF (weird) so I can't use it. Any alternatives?  Does SP have a different way to unescape the characters?  ",sharepoint,xslt,,,,02/24/2012 02:43:19,not a real question,1,57,5,"Alternative to disable-output-escaping for SharePoint? I'm using a Content Query Web Part and ItemStyle.xsl to pull in content from a rich text field.  Unfortunately, it escapes the code so it doesn't render HTML tags.  Disable-output-escaping doesn't work in FF (weird) so I can't use it. Any alternatives?  Does SP have a different way to unescape the characters?  ",2
+694441,03/29/2009 10:39:49,32718,10/30/2008 10:56:58,83,6,MySite and profile language,"**Hi Gyes,**
+
+My problem is 
+I installed sharepoint language pack (**arabic**), it works will, I created mysite in arabic and it also works will, but when I navigate to my Profile it's shown in **English**, I want my Profile to be shown in **Arabic** too.
+
+**Does anyone have a solution**
+
+**Thanks**",sharepoint,mysite,profile,,,03/27/2012 21:59:08,off topic,1,48,4,"MySite and profile language **Hi Gyes,**
+
+My problem is 
+I installed sharepoint language pack (**arabic**), it works will, I created mysite in arabic and it also works will, but when I navigate to my Profile it's shown in **English**, I want my Profile to be shown in **Arabic** too.
+
+**Does anyone have a solution**
+
+**Thanks**",3
+445274,01/15/2009 00:55:03,50381,12/31/2008 03:08:47,11,3,"SharePoint Lists, GetListItems, XML, and VBA - I just want to crossreference!","I have a SharePoint list with, among other things, two columns that I care about; in Excel-ese, I want to match value X in column 1, and return the corresponding value in column 2. I'm able to use a variant of code at <http://guruj.net/node/63> to dump a pile of information that I suspect is the list, but it's all tied up in a deeply obfuscated XML tree, and the examples I find online all reference System.XML.XMLDocument (or a .SelectSingleNode method which also isn't working out for me) or .NET, the former throwing unknown identifier (I've tried adding references to most Microsoft XML DLLs) and the latter not being my environment.
+
+The only other option I've found using the great oracle of our age, Google, is to download and install something from Microsoft's website, which is not an option in my environment. Speaking of, I'm using an Office 2007 product that seems to be using VBA (Office 2003?) - Office 2003 was installed, then some hand-picked applications from 2007 overlayed.
+
+Any help? I don't even know what to be searching for; and unfortunately terms like ""reference"" as in, what reference should I add to qualify System.*, and ""lookup"", as in, ""how do I perform a lookup"" have become uselessly and hopelessly overloaded in meaning across Microsoft's products (even within just SharePoint...)",sharepoint,xml,vba,,,,open,0,218,12,"SharePoint Lists, GetListItems, XML, and VBA - I just want to crossreference! I have a SharePoint list with, among other things, two columns that I care about; in Excel-ese, I want to match value X in column 1, and return the corresponding value in column 2. I'm able to use a variant of code at <http://guruj.net/node/63> to dump a pile of information that I suspect is the list, but it's all tied up in a deeply obfuscated XML tree, and the examples I find online all reference System.XML.XMLDocument (or a .SelectSingleNode method which also isn't working out for me) or .NET, the former throwing unknown identifier (I've tried adding references to most Microsoft XML DLLs) and the latter not being my environment.
+
+The only other option I've found using the great oracle of our age, Google, is to download and install something from Microsoft's website, which is not an option in my environment. Speaking of, I'm using an Office 2007 product that seems to be using VBA (Office 2003?) - Office 2003 was installed, then some hand-picked applications from 2007 overlayed.
+
+Any help? I don't even know what to be searching for; and unfortunately terms like ""reference"" as in, what reference should I add to qualify System.*, and ""lookup"", as in, ""how do I perform a lookup"" have become uselessly and hopelessly overloaded in meaning across Microsoft's products (even within just SharePoint...)",3
+9670726,03/12/2012 16:15:52,125953,06/19/2009 20:19:32,937,1,SharePoint 2010 Relationships between lists - difference with referencing custom list column,"Just curious, if I try to create a look up (relationship) from source list that is based on a custom list template, I can't access columns that users have defined on the list level (within the list). however, this doesn't seem to be the case with any other content type selection that was made to create the list from. for example, if they selected contacts content type, and define a new column on the list level, it will.....
+
+just a bit confused here.",sharepoint,sharepoint2010,sharepoint-list,,,,open,0,82,12,"SharePoint 2010 Relationships between lists - difference with referencing custom list column Just curious, if I try to create a look up (relationship) from source list that is based on a custom list template, I can't access columns that users have defined on the list level (within the list). however, this doesn't seem to be the case with any other content type selection that was made to create the list from. for example, if they selected contacts content type, and define a new column on the list level, it will.....
+
+just a bit confused here.",3
+8634552,12/26/2011 09:41:46,866912,07/28/2011 07:14:44,1,0,"SP2010, delete is not appearing in Document Library","I am site collection administrator.
+
+I am creating a Document Library and uploaded some docs in it.
+but when i again opened that Library i am not able to delete any docs.
+when i select any document neither delete button on ECB menu nor in Ribbon button appears 
+
+pls help ...",sharepoint,sharepoint2010,,,,12/26/2011 23:16:13,off topic,1,48,8,"SP2010, delete is not appearing in Document Library I am site collection administrator.
+
+I am creating a Document Library and uploaded some docs in it.
+but when i again opened that Library i am not able to delete any docs.
+when i select any document neither delete button on ECB menu nor in Ribbon button appears 
+
+pls help ...",2
+11117683,06/20/2012 10:31:15,1397560,05/16/2012 02:33:34,1,0,Check in shottern file of document library in sharepoint,"i don't check in file have status is Shorttern of document library in sharepoint.
+
+Please help me resolve it :|
+Thank for support",sharepoint,,,,,06/21/2012 08:05:01,not a real question,1,21,9,"Check in shottern file of document library in sharepoint i don't check in file have status is Shorttern of document library in sharepoint.
+
+Please help me resolve it :|
+Thank for support",1
+11141015,06/21/2012 15:01:50,1456899,06/14/2012 17:26:59,1,1,how to find files in a library(I'm a starter),"I wanna use powershell to get all the file in sharepoint library ""EM_DOC_LIBRARY"" and their file names. But I totally have no ideas about how to do that, can anybody help me?",sharepoint,powershell,powershell-v2.0,,,06/22/2012 16:44:11,not a real question,1,32,9,"how to find files in a library(I'm a starter) I wanna use powershell to get all the file in sharepoint library ""EM_DOC_LIBRARY"" and their file names. But I totally have no ideas about how to do that, can anybody help me?",3
+6401099,06/19/2011 07:09:36,309343,04/05/2010 16:18:19,289,10,SharePoint: Common mistakes,"Recently I figured out one terrible thing I was not supposed to do when doing SharePoint development:
+
+    using (var spSite = SPContext.Context.Current.Site)
+    {
+        // do something
+    }
+
+Of course now I do know that the code above disposes my current SP context. I spent a lot of time to figure it out and learned it the hard way.
+
+This urges me to question if there are any other such common mistakes that I or any other SharePoint developer should not be making?",sharepoint,sharepoint2010,sharepoint2007,sharepoint-api,,06/19/2011 15:37:59,not constructive,1,96,3,"SharePoint: Common mistakes Recently I figured out one terrible thing I was not supposed to do when doing SharePoint development:
+
+    using (var spSite = SPContext.Context.Current.Site)
+    {
+        // do something
+    }
+
+Of course now I do know that the code above disposes my current SP context. I spent a lot of time to figure it out and learned it the hard way.
+
+This urges me to question if there are any other such common mistakes that I or any other SharePoint developer should not be making?",4
+5220933,03/07/2011 14:36:09,648312,03/07/2011 14:34:14,1,0,Sharepoint 2007 Workflow Question,"I'm new to SP.  I have done tons of reading and am a .Net developer but I'm looking for the best, out of the box, way to do the following (any guidance would be greatly appreciated as I'm always looking for the BEST way to do things):
+
+- Daily personnel accountability by section
+- One admin per section would go into SP each morning
+- They would have a list of personel in their section (this list can be hand editted--doesn't have to pull from AD)
+- They would mark each person on their list as Present, Absent, Sick, etc...
+- Reports could then be generated for all sections individually or together for the whole organization.  Daily records would be stored so that history reports can be run.
+- KPI indicators could be used against this data in a Dashboard for the whole org, then drill down by section, then to detail
+
+I have played around with the lists, the Access grid, etc.  But those aren't storing the daily record.  Should I think of this in terms of InfoPath forms being submitted each day?
+
+Thanks!",sharepoint,sharepoint2007,workflow,,,03/07/2011 15:52:55,off topic,1,181,4,"Sharepoint 2007 Workflow Question I'm new to SP.  I have done tons of reading and am a .Net developer but I'm looking for the best, out of the box, way to do the following (any guidance would be greatly appreciated as I'm always looking for the BEST way to do things):
+
+- Daily personnel accountability by section
+- One admin per section would go into SP each morning
+- They would have a list of personel in their section (this list can be hand editted--doesn't have to pull from AD)
+- They would mark each person on their list as Present, Absent, Sick, etc...
+- Reports could then be generated for all sections individually or together for the whole organization.  Daily records would be stored so that history reports can be run.
+- KPI indicators could be used against this data in a Dashboard for the whole org, then drill down by section, then to detail
+
+I have played around with the lists, the Access grid, etc.  But those aren't storing the daily record.  Should I think of this in terms of InfoPath forms being submitted each day?
+
+Thanks!",3
+6030790,05/17/2011 12:30:53,737602,05/04/2011 08:30:05,1,0,SharePoint 2010 Installer,"Once the installer is started I can't click Install Prerequisites or Install SharePoint Foundation. The links doesn't work. Other links (e.x. Read the installaiotn Guide) works fine. No messages, no further screens just nothing. What happends? 
+I tried to run Enterprise version and behavior is the same.
+I do this on virtual machine with Win Svr 2008 and MS SQL 2008.",sharepoint,sharepoint2007,sharepoint2010,,,05/18/2011 16:09:28,off topic,1,60,3,"SharePoint 2010 Installer Once the installer is started I can't click Install Prerequisites or Install SharePoint Foundation. The links doesn't work. Other links (e.x. Read the installaiotn Guide) works fine. No messages, no further screens just nothing. What happends? 
+I tried to run Enterprise version and behavior is the same.
+I do this on virtual machine with Win Svr 2008 and MS SQL 2008.",3
+4214067,11/18/2010 11:05:56,279474,02/23/2010 12:53:23,8,4,alternative to sharepoint in c# and open source,do you know any alternative to sharepoint in c# and open source ?,sharepoint,,,,,11/18/2010 15:26:18,off topic,1,13,8,alternative to sharepoint in c# and open source do you know any alternative to sharepoint in c# and open source ?,1
+8118562,11/14/2011 07:36:37,571431,01/11/2011 15:08:47,33,1,Sending data from excel/word to Sharepoint List,"I have question - Is there any possibility to import data from excel/word files to list in sharepoint (online version)?
+
+I have import data from sharepoint list to word files.
+
+Thanks,
+
+ripperus
+",sharepoint,ms-office,bcs,,,,open,0,29,7,"Sending data from excel/word to Sharepoint List I have question - Is there any possibility to import data from excel/word files to list in sharepoint (online version)?
+
+I have import data from sharepoint list to word files.
+
+Thanks,
+
+ripperus
+",3
+918293,05/27/2009 22:17:36,34253,11/04/2008 16:50:21,30,2,ERROR: request not found in the TrackedRequests. We might be creating and closing webs on different threads.,"This is an error I receive from Sharepoint when I deploy a custom workflow to a forms library.  The workflow is very straightforward and doesn't do anything fancy.  I was reading from the an infopath form, but have since stripped down all non-essential code to see if I can get it working.  As far as I can tell, other workflows are fine (I've developed others on the same box and they are intact and functioning).  The design view of the workflow is as follows:
+
+![alt text][1]
+
+
+  [1]: http://img5.imageshack.us/img5/7231/workflowv.jpg
+
+The error occurs after a task is successfully created.  This leads me to believe that there is an issue with the while loop, which is waiting for a boolean variable to become true (which is initially set to false).  Normally, when the task is altered in any way, the changed event will fire and change the variable to true, then the workflow will continue.  I receive this error on the start of this workflow:
+
+> ERROR: request not found in the
+> TrackedRequests. We might be creating
+> and closing webs on different threads.
+> ThreadId = 9, Free call stack =    at
+> Microsoft.SharePoint.SPRequestManager.Release(SPRequest
+> request)     at
+> Microsoft.SharePoint.SPSite.Close()   
+> at
+> Microsoft.SharePoint.SPSite.Dispose() 
+> at
+> Microsoft.SharePoint.Workflow.SPWorkflowAutostartEventReceiver.AutoStartWorkflow(SPItemEventProperties
+> properties, Boolean bCreate, Boolean
+> bChange, AssocType atyp)     at
+> Microsoft.SharePoint.Workflow.SPWorkflowAutostartEventReceiver.AutoStartWorkflow(SPItemEventProperties
+> properties, Boolean bCreate, Boolean
+> bChange)     at
+> Microsoft.SharePoint.Workflow.SPWorkflowAutostartEventReceiver.ItemAdded(SPItemEventProperties
+> properties)     at
+> Microsoft.SharePoint.SPEventManager.RunItemEventRec...	
+> ...eiver(SPItemEventReceiver receiver,
+> SPItemEventProperties properties,
+> SPEventContext context, String
+> receiverData)     at
+> Microsoft.SharePoint.SPEventManager.RunItemEventReceiverHelper(Object
+> receiver, Object properties,
+> SPEventContext context, String
+> receiverData)     at
+> Microsoft.SharePoint.SPEventManager.<>c__DisplayClass8`1.<InvokeEventReceivers>b__0()
+> at
+> Microsoft.SharePoint.SPSecurity.CodeToRunElevatedWrapper(Object
+> state)     at
+> Microsoft.SharePoint.SPSecurity.RunAsUser(SPUserToken
+> userToken, Boolean bResetContext,
+> WaitCallback code, Object param)    
+> at
+> Microsoft.SharePoint.SPSecurity.RunAsUser(SPUserToken
+> userToken, CodeToRunElevated code)    
+> at
+> Microsoft.SharePoint.SPEventManager.InvokeEventReceivers[ReceiverType](SPUserToken
+> userToken, RunEventReceiver
+> runEventReceiver, Obj...	  ...ect
+> receivers, Object properties, Boolean
+> checkCancel)     at
+> Microsoft.SharePoint.SPEventManager.InvokeEventReceivers[ReceiverType](Byte[]
+> userTokenBytes, RunEventReceiver
+> runEventReceiver, Object receivers,
+> Object properties, Boolean
+> checkCancel)     at
+> Microsoft.SharePoint.SPEventManager.HandleEventCallback[ReceiverType,PropertiesType](Object
+> callbackData)     at
+> Microsoft.SharePoint.Utilities.SPThreadPool.WaitCallbackWrapper(Object
+> state)     at
+> System.Threading._ThreadPoolWaitCallback.WaitCallback_Context(Object
+> state)     at
+> System.Threading.ExecutionContext.runTryCode(Object
+> userData)     at
+> System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode
+> code, CleanupCode backoutCode, Object
+> userData)     at
+> System.Threading.ExecutionContext.RunInternal(Execu..
+
+I've searched high and low for an explanation, but cannot find anything that concretely fixes this problem.  It really is a straightforward workflow, with nothing special going on...maybe it's the form library it's attached to?
+",sharepoint,workflow,infopath,,,,open,0,407,17,"ERROR: request not found in the TrackedRequests. We might be creating and closing webs on different threads. This is an error I receive from Sharepoint when I deploy a custom workflow to a forms library.  The workflow is very straightforward and doesn't do anything fancy.  I was reading from the an infopath form, but have since stripped down all non-essential code to see if I can get it working.  As far as I can tell, other workflows are fine (I've developed others on the same box and they are intact and functioning).  The design view of the workflow is as follows:
+
+![alt text][1]
+
+
+  [1]: http://img5.imageshack.us/img5/7231/workflowv.jpg
+
+The error occurs after a task is successfully created.  This leads me to believe that there is an issue with the while loop, which is waiting for a boolean variable to become true (which is initially set to false).  Normally, when the task is altered in any way, the changed event will fire and change the variable to true, then the workflow will continue.  I receive this error on the start of this workflow:
+
+> ERROR: request not found in the
+> TrackedRequests. We might be creating
+> and closing webs on different threads.
+> ThreadId = 9, Free call stack =    at
+> Microsoft.SharePoint.SPRequestManager.Release(SPRequest
+> request)     at
+> Microsoft.SharePoint.SPSite.Close()   
+> at
+> Microsoft.SharePoint.SPSite.Dispose() 
+> at
+> Microsoft.SharePoint.Workflow.SPWorkflowAutostartEventReceiver.AutoStartWorkflow(SPItemEventProperties
+> properties, Boolean bCreate, Boolean
+> bChange, AssocType atyp)     at
+> Microsoft.SharePoint.Workflow.SPWorkflowAutostartEventReceiver.AutoStartWorkflow(SPItemEventProperties
+> properties, Boolean bCreate, Boolean
+> bChange)     at
+> Microsoft.SharePoint.Workflow.SPWorkflowAutostartEventReceiver.ItemAdded(SPItemEventProperties
+> properties)     at
+> Microsoft.SharePoint.SPEventManager.RunItemEventRec...	
+> ...eiver(SPItemEventReceiver receiver,
+> SPItemEventProperties properties,
+> SPEventContext context, String
+> receiverData)     at
+> Microsoft.SharePoint.SPEventManager.RunItemEventReceiverHelper(Object
+> receiver, Object properties,
+> SPEventContext context, String
+> receiverData)     at
+> Microsoft.SharePoint.SPEventManager.<>c__DisplayClass8`1.<InvokeEventReceivers>b__0()
+> at
+> Microsoft.SharePoint.SPSecurity.CodeToRunElevatedWrapper(Object
+> state)     at
+> Microsoft.SharePoint.SPSecurity.RunAsUser(SPUserToken
+> userToken, Boolean bResetContext,
+> WaitCallback code, Object param)    
+> at
+> Microsoft.SharePoint.SPSecurity.RunAsUser(SPUserToken
+> userToken, CodeToRunElevated code)    
+> at
+> Microsoft.SharePoint.SPEventManager.InvokeEventReceivers[ReceiverType](SPUserToken
+> userToken, RunEventReceiver
+> runEventReceiver, Obj...	  ...ect
+> receivers, Object properties, Boolean
+> checkCancel)     at
+> Microsoft.SharePoint.SPEventManager.InvokeEventReceivers[ReceiverType](Byte[]
+> userTokenBytes, RunEventReceiver
+> runEventReceiver, Object receivers,
+> Object properties, Boolean
+> checkCancel)     at
+> Microsoft.SharePoint.SPEventManager.HandleEventCallback[ReceiverType,PropertiesType](Object
+> callbackData)     at
+> Microsoft.SharePoint.Utilities.SPThreadPool.WaitCallbackWrapper(Object
+> state)     at
+> System.Threading._ThreadPoolWaitCallback.WaitCallback_Context(Object
+> state)     at
+> System.Threading.ExecutionContext.runTryCode(Object
+> userData)     at
+> System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode
+> code, CleanupCode backoutCode, Object
+> userData)     at
+> System.Threading.ExecutionContext.RunInternal(Execu..
+
+I've searched high and low for an explanation, but cannot find anything that concretely fixes this problem.  It really is a straightforward workflow, with nothing special going on...maybe it's the form library it's attached to?
+",3
+1735140,11/14/2009 18:31:57,127671,06/23/2009 15:49:06,32,6,"SharePoint 2003 Extranet Sites Returning ""Operation Aborted"" and ""Render Failed"" errors","For my company, we have a few extranet sites built in SharePoint Portal 2003 for vendors to collaborate on documents with us. We have the database's on on server and the sites hosted on another server (so two servers are involved). However, recently they started receiving ""Operation Aborted"" errors when going to the site and/or ""Render Failed"" errors on web parts or when opening document libraries.  Creating a new site collection with a new database gets the same errors, creating a new config database on another server pointing to another virtual server to host the sites, still returns the error.  No data in the Windows Event logs, SharePoint logs, Fiddler results, or NETMON traces.  Our networking team monitored the firewall as the two servers were communicating and did not find any issues.  
+
+Any Ideas?  We can't think of anything left to look for...",sharepoint,extranet,sharepoint2003,ssp,,,open,0,148,11,"SharePoint 2003 Extranet Sites Returning ""Operation Aborted"" and ""Render Failed"" errors For my company, we have a few extranet sites built in SharePoint Portal 2003 for vendors to collaborate on documents with us. We have the database's on on server and the sites hosted on another server (so two servers are involved). However, recently they started receiving ""Operation Aborted"" errors when going to the site and/or ""Render Failed"" errors on web parts or when opening document libraries.  Creating a new site collection with a new database gets the same errors, creating a new config database on another server pointing to another virtual server to host the sites, still returns the error.  No data in the Windows Event logs, SharePoint logs, Fiddler results, or NETMON traces.  Our networking team monitored the firewall as the two servers were communicating and did not find any issues.  
+
+Any Ideas?  We can't think of anything left to look for...",4
+10597086,05/15/2012 08:43:15,1388725,05/11/2012 06:13:00,1,0,Sharepoint chart webpart,"I am trying to add a chart webpart user control from the sharepoint webparts. I am able to see the chart webpart but when i try to add it an alert is displayed with a message ""**Cannot Import chart webpart**"". Please help me.
+Thanks in advance.",sharepoint,sharepoint2010,sharepoint-api,,,05/16/2012 19:51:38,off topic,1,45,3,"Sharepoint chart webpart I am trying to add a chart webpart user control from the sharepoint webparts. I am able to see the chart webpart but when i try to add it an alert is displayed with a message ""**Cannot Import chart webpart**"". Please help me.
+Thanks in advance.",3
+135496,09/25/2008 19:35:06,18413,09/19/2008 01:06:46,69,13,Sharepoint: Deploy Custom Lists and New Columns in lists,"I've created a custom list & also added a column in the Announcement List.  Question is, how can I include those newly created items when I create a fresh Web Application (like a script, feature or something)?
+
+TIA!",sharepoint,list,deployment,,,,open,0,38,9,"Sharepoint: Deploy Custom Lists and New Columns in lists I've created a custom list & also added a column in the Announcement List.  Question is, how can I include those newly created items when I create a fresh Web Application (like a script, feature or something)?
+
+TIA!",3
+528235,02/09/2009 14:02:09,12318,09/16/2008 13:58:03,114,17,Backup and Restore SSP on MOSS 2007 fails due to missing .mdf files,"I've used the central admin backup facility to backup our Shared Services Provider. The backup location was a drive on a new server.
+
+I then try to restore the SSP via central admin on the new server. It fails with an error relating to the fact that it cant find the .mdf files that it requires. It is looking in the location that they were on the original server.
+
+Does the backup not take care of moving these .mdf files as part of the backup restore process?
+
+Would appreciate anyone's suggestions.
+
+ ",sharepoint,moss,backup,restore,,,open,0,89,13,"Backup and Restore SSP on MOSS 2007 fails due to missing .mdf files I've used the central admin backup facility to backup our Shared Services Provider. The backup location was a drive on a new server.
+
+I then try to restore the SSP via central admin on the new server. It fails with an error relating to the fact that it cant find the .mdf files that it requires. It is looking in the location that they were on the original server.
+
+Does the backup not take care of moving these .mdf files as part of the backup restore process?
+
+Would appreciate anyone's suggestions.
+
+ ",4
+4687734,01/14/2011 03:30:55,118967,06/07/2009 23:55:43,60,7,SharePoint List Control in a custom WebPart and C#,"All,
+
+I am trying to replace a DataGrid that I have with the SPList control in Visual Studio 2010 C#, but where does this control live, and how can I use it?
+
+Are there examples?
+
+Bill.",sharepoint,webparts,,,,,open,0,33,9,"SharePoint List Control in a custom WebPart and C# All,
+
+I am trying to replace a DataGrid that I have with the SPList control in Visual Studio 2010 C#, but where does this control live, and how can I use it?
+
+Are there examples?
+
+Bill.",2
+8609964,12/22/2011 21:33:23,951819,09/19/2011 01:34:31,13,0,How to see all site collections in a specific content DB,"How can I see all site collections associated in a specific Content db in SharePoint 2010? 
+
+Any advice or suggestion is highly appreciated.",sharepoint,sharepoint2010,,,,,open,0,23,11,"How to see all site collections in a specific content DB How can I see all site collections associated in a specific Content db in SharePoint 2010? 
+
+Any advice or suggestion is highly appreciated.",2
+1907959,12/15/2009 14:50:23,144721,07/24/2009 19:51:33,171,19,What are some quality books for planning a Sharepoint site?,"I'm looking for recommendations for books to help my two-man team in planning our Sharepoint intranet site.  I have worked with Sharepoint some before, but for a site with only about 30 users. This one is going to end up with about 1500 and my head spins trying to think of where to start.
+
+It seems like there are dozens of books out there telling me the ""how to's"" of Sharepoint but what I really need to know is the ""why's"", as in ""Why use a Publishing Site instead of a Team Site?"" or ""Why use multiple site collections instead of one site collection with a lot of subsites?""
+
+Any and all recommendations are greatly appreciated.
+
+Z",sharepoint,books,planning,,,10/01/2011 20:53:42,off topic,1,115,10,"What are some quality books for planning a Sharepoint site? I'm looking for recommendations for books to help my two-man team in planning our Sharepoint intranet site.  I have worked with Sharepoint some before, but for a site with only about 30 users. This one is going to end up with about 1500 and my head spins trying to think of where to start.
+
+It seems like there are dozens of books out there telling me the ""how to's"" of Sharepoint but what I really need to know is the ""why's"", as in ""Why use a Publishing Site instead of a Team Site?"" or ""Why use multiple site collections instead of one site collection with a lot of subsites?""
+
+Any and all recommendations are greatly appreciated.
+
+Z",3
+9664961,03/12/2012 09:59:30,1263770,03/12/2012 09:44:07,1,0,Sharepoint 2007 Web Front server installation without active directory in DMZ,"We have an existing SharePoint 2007 installation in our corporate intranet network zone. 
+ We are having a requirement to extend the existing SharePoint 2007 to internet using our DMZ zone. In the DMZ we plan to install only the web server without domain controller or active directory. Also we do not plan to install any new AD in DMZ.
+ I have gone through Jeremy Taylor blog for installation without AD, however I still have doubts for installing Web Server in DMZ and DB in corporate intranet zone. 
+Can SharePoint gurus point me out to right installation steps.",sharepoint,sharepoint2007,,,,03/13/2012 13:13:03,off topic,1,98,11,"Sharepoint 2007 Web Front server installation without active directory in DMZ We have an existing SharePoint 2007 installation in our corporate intranet network zone. 
+ We are having a requirement to extend the existing SharePoint 2007 to internet using our DMZ zone. In the DMZ we plan to install only the web server without domain controller or active directory. Also we do not plan to install any new AD in DMZ.
+ I have gone through Jeremy Taylor blog for installation without AD, however I still have doubts for installing Web Server in DMZ and DB in corporate intranet zone. 
+Can SharePoint gurus point me out to right installation steps.",2
+7335863,09/07/2011 14:45:45,932966,09/07/2011 14:36:34,1,0,Sharepoint 2010 Permissions Help,"Im a total noob when it comes to Sharepoint 2010 but have been tasked with setting up a Sharepoint site at work.
+
+I have setup a private subsite within each departmental site, which should only be accessed by members of each department, but all users have read access and I can't figure out why.
+
+I have removed users from the built in sharepoint groups (just myself remaining) and have even setup a sharepoint group configured for no access containing domain users.
+
+here is a copy of the results when I check permissions for one of the sub sites:-
+
+ 
+Permission levels given to Chloe Jones (WASADMIN\chloe jones)  
+
+None  
+The following factors also affect the level of access for Chloe Jones (WASADMIN\chloe jones)  
+ 
+Allow  
+ View Web Analytics Data  
+ View reports on Web site usage.  
+ 
+Allow  
+ Browse Directories  
+ Enumerate files and folders in a Web site using SharePoint Designer and Web DAV interfaces.  
+ 
+Allow  
+ View Items  
+ View items in lists and documents in document libraries.  
+ 
+Allow  
+ View Pages  
+ View pages in a Web site.  
+ 
+Allow  
+ Enumerate Permissions  
+ Enumerate permissions on the Web site, list, folder, document, or list item.  
+ 
+Allow  
+ Open Items  
+ View the source of documents with server-side file handlers.  
+ 
+Allow  
+ View Versions  
+ View past versions of a list item or document.  
+ 
+Allow  
+ Browse User Information  
+ View information about users of the Web site.  
+ 
+Allow  
+ View Application Pages  
+ View forms, views, and application pages. Enumerate lists.  
+ 
+Allow  
+ Use Remote Interfaces  
+ Use SOAP, Web DAV, the Client Object Model or SharePoint Designer interfaces to access the Web site.  
+ 
+Allow  
+ Use Client Integration Features  
+ Use features which launch client applications. Without this permission, users will have to work on documents locally and upload their changes.  
+ 
+Allow  
+ Open  
+ Allows users to open a Web site, list, or folder in order to access items inside that container.  
+ 
+ 
+Even though my user Chloe shows as having no access in the first line, she is picking up permissions from somewhere else and I have no idea where!
+
+Can anyone offer advice?
+
+Thanks",sharepoint,sharepoint2010,,,,09/08/2011 07:43:36,off topic,1,406,4,"Sharepoint 2010 Permissions Help Im a total noob when it comes to Sharepoint 2010 but have been tasked with setting up a Sharepoint site at work.
+
+I have setup a private subsite within each departmental site, which should only be accessed by members of each department, but all users have read access and I can't figure out why.
+
+I have removed users from the built in sharepoint groups (just myself remaining) and have even setup a sharepoint group configured for no access containing domain users.
+
+here is a copy of the results when I check permissions for one of the sub sites:-
+
+ 
+Permission levels given to Chloe Jones (WASADMIN\chloe jones)  
+
+None  
+The following factors also affect the level of access for Chloe Jones (WASADMIN\chloe jones)  
+ 
+Allow  
+ View Web Analytics Data  
+ View reports on Web site usage.  
+ 
+Allow  
+ Browse Directories  
+ Enumerate files and folders in a Web site using SharePoint Designer and Web DAV interfaces.  
+ 
+Allow  
+ View Items  
+ View items in lists and documents in document libraries.  
+ 
+Allow  
+ View Pages  
+ View pages in a Web site.  
+ 
+Allow  
+ Enumerate Permissions  
+ Enumerate permissions on the Web site, list, folder, document, or list item.  
+ 
+Allow  
+ Open Items  
+ View the source of documents with server-side file handlers.  
+ 
+Allow  
+ View Versions  
+ View past versions of a list item or document.  
+ 
+Allow  
+ Browse User Information  
+ View information about users of the Web site.  
+ 
+Allow  
+ View Application Pages  
+ View forms, views, and application pages. Enumerate lists.  
+ 
+Allow  
+ Use Remote Interfaces  
+ Use SOAP, Web DAV, the Client Object Model or SharePoint Designer interfaces to access the Web site.  
+ 
+Allow  
+ Use Client Integration Features  
+ Use features which launch client applications. Without this permission, users will have to work on documents locally and upload their changes.  
+ 
+Allow  
+ Open  
+ Allows users to open a Web site, list, or folder in order to access items inside that container.  
+ 
+ 
+Even though my user Chloe shows as having no access in the first line, she is picking up permissions from somewhere else and I have no idea where!
+
+Can anyone offer advice?
+
+Thanks",2
+8658054,12/28/2011 15:52:02,118464,06/06/2009 08:23:34,2322,141,SharePoint 2010: adding colleagues in a mutual fashion,"In SharePoint 2010, is there a way to add B as a colleague of A and, automatically, end up with A as a colleague of B?
+
+Scenario is, you got a group of N people that have to be colleagues with each other... we are talking about N (N - 1) calls versus, if above is possible, (N - 1) calls :-)
+
+Thanks!",sharepoint,sharepoint2010,,,,,open,0,61,8,"SharePoint 2010: adding colleagues in a mutual fashion In SharePoint 2010, is there a way to add B as a colleague of A and, automatically, end up with A as a colleague of B?
+
+Scenario is, you got a group of N people that have to be colleagues with each other... we are talking about N (N - 1) calls versus, if above is possible, (N - 1) calls :-)
+
+Thanks!",2
+6730543,07/18/2011 08:53:55,849656,07/18/2011 08:38:29,1,0,Problem re-installing SharePoint Server 2010,"I have SharePoint Server 2010 trial version installed on a server. Recently, I installed updates for SharePoint and these updates caused problems in my web application and site collections. 
+
+I couldn't get rid of the problems so I removed SharePoint using an uninstaller tool + manual methods because the normal setup file was corrupt and didn't work no matter what I tried. I removed all sites, databases and files. I also made sure the Registry is clean.
+
+Of course that was a wrong move. Now, when I try to reinstall SharePoint Server 2010, I get a message that says: trial editions and licensed editions of sharepoint cannot be installed on the same server. 
+
+So I'd be so grateful if someone would suggest any solution to overcome this problem. I don't want to format the server just because of this issue.
+
+Thank you!",sharepoint,sharepoint2010,installation,,,07/18/2011 15:24:10,off topic,1,140,5,"Problem re-installing SharePoint Server 2010 I have SharePoint Server 2010 trial version installed on a server. Recently, I installed updates for SharePoint and these updates caused problems in my web application and site collections. 
+
+I couldn't get rid of the problems so I removed SharePoint using an uninstaller tool + manual methods because the normal setup file was corrupt and didn't work no matter what I tried. I removed all sites, databases and files. I also made sure the Registry is clean.
+
+Of course that was a wrong move. Now, when I try to reinstall SharePoint Server 2010, I get a message that says: trial editions and licensed editions of sharepoint cannot be installed on the same server. 
+
+So I'd be so grateful if someone would suggest any solution to overcome this problem. I don't want to format the server just because of this issue.
+
+Thank you!",3
+1926152,12/18/2009 03:43:34,164336,08/27/2009 16:37:26,12,0,Deactivating site collection feature on MySite,"We have a custom master page that is deployed to the MySite web application per these instructions - 
+http://www.sharepointblog.com/2008/07/sp2007-custom-master-pages-on-subsites.html
+
+However, we require the ability to deactivate the feature on all the site collections that are within the MySite webapplication. The feature is built as a site collection scope. How would we deactivate them on an application that has potentially 3000+ MySites? 
+
+",sharepoint,mysite,,,,,open,0,61,6,"Deactivating site collection feature on MySite We have a custom master page that is deployed to the MySite web application per these instructions - 
+http://www.sharepointblog.com/2008/07/sp2007-custom-master-pages-on-subsites.html
+
+However, we require the ability to deactivate the feature on all the site collections that are within the MySite webapplication. The feature is built as a site collection scope. How would we deactivate them on an application that has potentially 3000+ MySites? 
+
+",2
+2996844,06/08/2010 11:27:46,361276,06/08/2010 11:15:46,1,0,Using Visual Studio to create web application in Sharepoint 2010,"I am looking for pointers, examples, etc. to create a basic application in sharepoint 2010 using visual studio. The application would show a list on page 1 (driven by linq entities). When you click a row, it shows a details page. I've gone through the tutorials but could not find a basic crud-like example as explained above. 
+
+Any help would be greatly appreciated. If I missed something in one of the tutorials, please let me know. 
+
+To summarize, in a very generic way; I am looking for information on how to display two web application pages and have the user click a link or control to move through pages. 
+
+Regards,
+Bryan",sharepoint,,,,,,open,0,110,10,"Using Visual Studio to create web application in Sharepoint 2010 I am looking for pointers, examples, etc. to create a basic application in sharepoint 2010 using visual studio. The application would show a list on page 1 (driven by linq entities). When you click a row, it shows a details page. I've gone through the tutorials but could not find a basic crud-like example as explained above. 
+
+Any help would be greatly appreciated. If I missed something in one of the tutorials, please let me know. 
+
+To summarize, in a very generic way; I am looking for information on how to display two web application pages and have the user click a link or control to move through pages. 
+
+Regards,
+Bryan",1
+5734423,04/20/2011 17:44:33,205052,07/30/2009 19:17:29,112,14,SharePoint Designer Workflow - Get data from a list column for which the workflow was generated,"I have a Document Library called ATC, and have defined a Person or Group type column called Author. Author is required, single selection only, people only, choose from All Users.
+
+I am designing a workflow in SharePoint Designer 2007 that cannot be manually started, but is automatically started when a new item is created.
+
+The desired affect is to send an email to the user defined as the Author of the ATC list item for which the workflow was generated. Any ideas are appreciated. Thanks in advance.",sharepoint,workflow,sharepoint-designer,,,04/21/2011 20:59:33,off topic,1,85,16,"SharePoint Designer Workflow - Get data from a list column for which the workflow was generated I have a Document Library called ATC, and have defined a Person or Group type column called Author. Author is required, single selection only, people only, choose from All Users.
+
+I am designing a workflow in SharePoint Designer 2007 that cannot be manually started, but is automatically started when a new item is created.
+
+The desired affect is to send an email to the user defined as the Author of the ATC list item for which the workflow was generated. Any ideas are appreciated. Thanks in advance.",3
+493312,01/29/2009 20:40:21,466531,01/29/2009 16:28:34,26,2,How is SharePoint perceived in your Organisation?,"We have an issue within our working environment where the perception of SharePoint is either:
+
+a) The golden bullet, the answer to all our problems.
+
+b) An application which either does or does not solve a specific problem.
+
+Now in my opinion SharePoint (or more specifically in our case Microsoft Office SharePoint Server 2007) is a framework on top of various lower level Micorosoft technologies (IIS, ASP.Net, WSS 3.0, .Net Framework, Windows Workflow Foundation amongst others) and as such can be developed to do most anything (given time and resources).
+
+The attitudes that have been formed in my organisation (and others I'm sure) is a combination of the Microsoft Marketing Machine and an organisatons desire to get the 'golden bullet' in front of as many people as possible wihtout saying 'What for?' or 'Why?' or in some cases even 'How?'  
+
+Is this an attitude and perception shared by other SharePoint devs?",sharepoint,development,web-applications,moss,,03/23/2012 17:02:37,not constructive,1,148,7,"How is SharePoint perceived in your Organisation? We have an issue within our working environment where the perception of SharePoint is either:
+
+a) The golden bullet, the answer to all our problems.
+
+b) An application which either does or does not solve a specific problem.
+
+Now in my opinion SharePoint (or more specifically in our case Microsoft Office SharePoint Server 2007) is a framework on top of various lower level Micorosoft technologies (IIS, ASP.Net, WSS 3.0, .Net Framework, Windows Workflow Foundation amongst others) and as such can be developed to do most anything (given time and resources).
+
+The attitudes that have been formed in my organisation (and others I'm sure) is a combination of the Microsoft Marketing Machine and an organisatons desire to get the 'golden bullet' in front of as many people as possible wihtout saying 'What for?' or 'Why?' or in some cases even 'How?'  
+
+Is this an attitude and perception shared by other SharePoint devs?",4
+1884178,12/10/2009 21:31:04,229167,12/10/2009 21:31:04,1,0,sharepoint search server not installed on wss 3.0 box how do i add it?,"I have wss 3.0 set up and in use, but the search is not working.  most of the  troubleshooting starts with ""open central administration, click Operations then Services On Server, then start and stop WSS Search Server"".. but there is no search server listed.. only services are central admin, help search, incoming email, and web app.
+
+any ideas?
+
+thanks!!",sharepoint,wss-3.0,,,,09/22/2010 13:34:36,off topic,1,59,14,"sharepoint search server not installed on wss 3.0 box how do i add it? I have wss 3.0 set up and in use, but the search is not working.  most of the  troubleshooting starts with ""open central administration, click Operations then Services On Server, then start and stop WSS Search Server"".. but there is no search server listed.. only services are central admin, help search, incoming email, and web app.
+
+any ideas?
+
+thanks!!",2
+10633104,05/17/2012 09:34:49,533738,12/07/2010 13:48:12,192,18,Sharepoint 2010 cannot open Word document in browser,"We have a Sharepoint 2010 (Enterprise Client Access) server installed and running. I've tried to upload some document on it include Word and Excel. I open Excel document in browser, it show up but lack of tool in ribbon (only File and Data tab). But I cannot open Word document in browser. Do we have to install something on server to open those document?",sharepoint,sharepoint2010,,,,05/18/2012 17:18:46,off topic,1,64,8,"Sharepoint 2010 cannot open Word document in browser We have a Sharepoint 2010 (Enterprise Client Access) server installed and running. I've tried to upload some document on it include Word and Excel. I open Excel document in browser, it show up but lack of tool in ribbon (only File and Data tab). But I cannot open Word document in browser. Do we have to install something on server to open those document?",2
+11309782,07/03/2012 11:16:29,1498578,07/03/2012 11:10:42,1,0,Validation of dates in different fields in sharepoint,"My question is on validation of dates in sharepoint… 
+If i have two date fields – start date(& time) and end date(&time). How do i validate these, so that a person cannot pick a time in between these? For example, if someone picks friday, 15th of June, 8-11am, another wont be able to pick friday 15th of June, 8-12pm or 8:30 – 10:00am or any time in between.
+ 
+This involves comparing the current column with previously entered ones, how do i do this? I just got started on sharepoint.
+ 
+Thanks in anticipation and kind regards
+",sharepoint,,,,,07/03/2012 14:35:43,off topic,1,95,8,"Validation of dates in different fields in sharepoint My question is on validation of dates in sharepoint… 
+If i have two date fields – start date(& time) and end date(&time). How do i validate these, so that a person cannot pick a time in between these? For example, if someone picks friday, 15th of June, 8-11am, another wont be able to pick friday 15th of June, 8-12pm or 8:30 – 10:00am or any time in between.
+ 
+This involves comparing the current column with previously entered ones, how do i do this? I just got started on sharepoint.
+ 
+Thanks in anticipation and kind regards
+",1
+8118020,11/14/2011 06:23:01,845622,07/15/2011 00:28:10,15,1,"In SharePoint,how to show the title of a ToolPart in the center?","![title of my toolpart][1]
+
+
+  [1]: http://i.stack.imgur.com/6zcR1.png
+
+It should be showed in the center,how can I make it?Thanks!",sharepoint,,,,,11/15/2011 01:30:23,not a real question,1,17,12,"In SharePoint,how to show the title of a ToolPart in the center? ![title of my toolpart][1]
+
+
+  [1]: http://i.stack.imgur.com/6zcR1.png
+
+It should be showed in the center,how can I make it?Thanks!",1
+10847350,06/01/2012 09:01:06,1430294,06/01/2012 08:57:02,1,0,Need Filenet to SharePoint 2010 migration tools,"I would like to know the methodologies and tools available for Filenet to SharePoint migration. 
+
+I am not interested in any consulting services but only the tools I would like to know. ",sharepoint,migration,filenet,,,06/01/2012 14:58:14,off topic,1,33,7,"Need Filenet to SharePoint 2010 migration tools I would like to know the methodologies and tools available for Filenet to SharePoint migration. 
+
+I am not interested in any consulting services but only the tools I would like to know. ",3
+3271953,07/17/2010 14:47:06,261708,01/29/2010 09:43:55,71,1,How to track the Http Protocol on the Server,"We do have many client specific tools (i.e. Httpwatch, Wfetch...) to track the Http Protocol however I want to track http protocol (headers) on the server end.
+
+Please let me know if we have any tool to do this on the server end.",sharepoint,iis,,,,,open,0,42,9,"How to track the Http Protocol on the Server We do have many client specific tools (i.e. Httpwatch, Wfetch...) to track the Http Protocol however I want to track http protocol (headers) on the server end.
+
+Please let me know if we have any tool to do this on the server end.",2
+4336951,12/02/2010 15:57:54,528208,12/02/2010 15:50:06,1,0,Error Publishing Infopath form to MOSS 2007 Site,"I'm currently tryign to get Infopath form services working on our farm however am running into a problem. 
+
+Doing some homework I found this thread:
+http://efreedom.com/Question/1-2299595/Error-Publishing-InfoPath-Forms-SharePoint-Site
+
+Unfortunatly there is no date, but we are currently fully patched up to the latest CU and have infopath 2010 RTM installed on the web front end server (a neccessity for one of our farm features). 
+
+We recieve a generic error from Central Admin when we attempt to upload the form template to infopath server:
+
+    Method 'get_ServerInfo' in type 'Microsoft.Office.InfoPath.Server.SolutionLifetime.XmlFormProxy' from assembly 'Microsoft.Office.InfoPath.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' does not have an implementation. 
+
+Has anyone run into this before and/or found a solution? We are attempting to get a very basic infopath 2007 web form template uploaded (made it in infopath 2010 and saved it with the compatibility flags set for 2007 web forms).",sharepoint,infopath,,,,,open,0,139,8,"Error Publishing Infopath form to MOSS 2007 Site I'm currently tryign to get Infopath form services working on our farm however am running into a problem. 
+
+Doing some homework I found this thread:
+http://efreedom.com/Question/1-2299595/Error-Publishing-InfoPath-Forms-SharePoint-Site
+
+Unfortunatly there is no date, but we are currently fully patched up to the latest CU and have infopath 2010 RTM installed on the web front end server (a neccessity for one of our farm features). 
+
+We recieve a generic error from Central Admin when we attempt to upload the form template to infopath server:
+
+    Method 'get_ServerInfo' in type 'Microsoft.Office.InfoPath.Server.SolutionLifetime.XmlFormProxy' from assembly 'Microsoft.Office.InfoPath.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' does not have an implementation. 
+
+Has anyone run into this before and/or found a solution? We are attempting to get a very basic infopath 2007 web form template uploaded (made it in infopath 2010 and saved it with the compatibility flags set for 2007 web forms).",2
+10025793,04/05/2012 09:11:30,1314826,04/05/2012 09:06:48,1,0,Sharepoint Books,"I am new to SharePoint. I want to learn sharepoint, but the problem is i am not from a developer's background. So can you suggest some books which help me to learn sharepoint right from the scratch.",sharepoint,,,,,04/05/2012 18:13:59,not constructive,1,37,2,"Sharepoint Books I am new to SharePoint. I want to learn sharepoint, but the problem is i am not from a developer's background. So can you suggest some books which help me to learn sharepoint right from the scratch.",1
+10851035,06/01/2012 13:15:56,61996,02/03/2009 15:51:53,753,6,Workflow in sharepoint designer 2010 doesn't resume after pause,"I'm working on a workflow that needs to pause for a few minutes and then resume. My problem is that it never resumes after the pause. This is the workflow I'm testing it on.
+    
+    Log start to the workflow history list
+    Pause for 0 days 0 hours 5 minutes
+    Log stop to the workflow history list
+    Stop the workflow and log completed
+
+It never logs *stop*.
+If I remove the pause the workflow works correctly.
+
+I've read about a hotfix that has to do with timer in sharepoint http://www.microsoft.com/en-us/download/details.aspx?id=21066 . But I wasn't able to install it so I think it doesn't apply to my version of SPD.
+
+Any ideas?",sharepoint,sharepoint2010,workflow,sharepoint-designer,,06/02/2012 20:22:49,off topic,1,122,9,"Workflow in sharepoint designer 2010 doesn't resume after pause I'm working on a workflow that needs to pause for a few minutes and then resume. My problem is that it never resumes after the pause. This is the workflow I'm testing it on.
+    
+    Log start to the workflow history list
+    Pause for 0 days 0 hours 5 minutes
+    Log stop to the workflow history list
+    Stop the workflow and log completed
+
+It never logs *stop*.
+If I remove the pause the workflow works correctly.
+
+I've read about a hotfix that has to do with timer in sharepoint http://www.microsoft.com/en-us/download/details.aspx?id=21066 . But I wasn't able to install it so I think it doesn't apply to my version of SPD.
+
+Any ideas?",4
+3063147,06/17/2010 15:32:24,369493,06/17/2010 15:32:24,1,0,"Sharepoint Content Query Web Part: Show items from ""events"" list that are set to occur or reoccur within a month","I've been reading this msdn post:
+http://msdn.microsoft.com/en-us/library/aa981241.aspx
+
+trying to edit the content query web part to only show items from the event list which either occur within 30 days or reoccur within 30 days. It is straight forward to deal with events which do not reoccur because I can compare [Start Date] to [Today]+30 with the modify this shared web part configuration, but for reocurring events it seems that [Start Date] and [End Date] describe the period over which the reocurring event is to occur, and I don't know what to do to determine the soonest upcoming reoccurance of an event. The cqwp only takes three filter items, so I can't deal with both recurring and single occurance items without overriding the query.
+
+I think the field I need to use for reoccurrance is one of these:
+msdn-microsoft-com/en-us/library/microsoft.sharepoint.spfieldrecurrence_members.aspx
+but none of them seem appropriate.
+
+How do you deal with the ""fourth day of the month"" reocurrance
+msdn-microsoft-com/en-us/library/microsoft.sharepoint.weekofmonth.aspx
+
+Basically, how do you override the query to filter reocurring and single occurance events to show only those which occur within a week?
+   ",sharepoint,query,webparts,caml,recurring,,open,0,175,20,"Sharepoint Content Query Web Part: Show items from ""events"" list that are set to occur or reoccur within a month I've been reading this msdn post:
+http://msdn.microsoft.com/en-us/library/aa981241.aspx
+
+trying to edit the content query web part to only show items from the event list which either occur within 30 days or reoccur within 30 days. It is straight forward to deal with events which do not reoccur because I can compare [Start Date] to [Today]+30 with the modify this shared web part configuration, but for reocurring events it seems that [Start Date] and [End Date] describe the period over which the reocurring event is to occur, and I don't know what to do to determine the soonest upcoming reoccurance of an event. The cqwp only takes three filter items, so I can't deal with both recurring and single occurance items without overriding the query.
+
+I think the field I need to use for reoccurrance is one of these:
+msdn-microsoft-com/en-us/library/microsoft.sharepoint.spfieldrecurrence_members.aspx
+but none of them seem appropriate.
+
+How do you deal with the ""fourth day of the month"" reocurrance
+msdn-microsoft-com/en-us/library/microsoft.sharepoint.weekofmonth.aspx
+
+Basically, how do you override the query to filter reocurring and single occurance events to show only those which occur within a week?
+   ",5
+1719217,11/12/2009 01:08:45,6291,09/13/2008 18:02:58,215,15,Invoke Workflow through Custom Sequential Workflow in SharePoint,"I've created a SharePoint 2007 Sequential Workflow and am trying to activate two workflows (one approval and one feedback) programmatically.
+
+    workflowProperties.Site.WorkflowManager.StartWorkflow(workflowProperties.Item, association, association.AssociationData, true);
+
+I use this code to start the work flow and the association is created on the fly. The problem arises when I am trying to access the other lists in order to create the association object.
+
+    SPList approvalsList = workflowProperties.Web.Lists[""Tasks""];
+    SPList historyList = workflowProperties.Web.Lists[""Workflow History""];
+
+This is what I get:
+
+    Unable to cast COM object of type 'Microsoft.SharePoint.Library.SPRequestInternalClass' to interface type 'Microsoft.SharePoint.Library.ISPRequest'. This operation failed because the QueryInterface call on the COM component for the interface with IID '{BDEADEBE-C265-11D0-BCED-00A0C90AB50F}' failed due to the following error: Bad variable type. (Exception from HRESULT: 0x80020008 (DISP_E_BADVARTYPE)).
+
+The only list that is accessible is through workflowProperties.List. How do I make this work, or are there any better ways to invoke another workflow in a custom workflow?",sharepoint,c#,workflows,,,,open,0,155,8,"Invoke Workflow through Custom Sequential Workflow in SharePoint I've created a SharePoint 2007 Sequential Workflow and am trying to activate two workflows (one approval and one feedback) programmatically.
+
+    workflowProperties.Site.WorkflowManager.StartWorkflow(workflowProperties.Item, association, association.AssociationData, true);
+
+I use this code to start the work flow and the association is created on the fly. The problem arises when I am trying to access the other lists in order to create the association object.
+
+    SPList approvalsList = workflowProperties.Web.Lists[""Tasks""];
+    SPList historyList = workflowProperties.Web.Lists[""Workflow History""];
+
+This is what I get:
+
+    Unable to cast COM object of type 'Microsoft.SharePoint.Library.SPRequestInternalClass' to interface type 'Microsoft.SharePoint.Library.ISPRequest'. This operation failed because the QueryInterface call on the COM component for the interface with IID '{BDEADEBE-C265-11D0-BCED-00A0C90AB50F}' failed due to the following error: Bad variable type. (Exception from HRESULT: 0x80020008 (DISP_E_BADVARTYPE)).
+
+The only list that is accessible is through workflowProperties.List. How do I make this work, or are there any better ways to invoke another workflow in a custom workflow?",3
+4596845,01/04/2011 18:07:27,562948,01/04/2011 18:07:27,1,0,basic sharepoint workflow access denied even though I'm admin and owner,"I have created a very basic workflow in SPD 2007 - for testing, I've narrowed it down to 1 step, "" if 1 equals 1, send an email to myself.""  also tried having it just update a field on that listitem.  Very simple!  I then save it, but when I go to a list item to run the workflow manually, I get an Access Denied error, currently signed in as myself.  
+
+This is weird because the account that access is denied is 1)site collection admin, 2) member of owners group, 3) the account that created and saved the workflow.
+
+I am completely stumped!  All ideas are welcome.
+
+Thank you!!",sharepoint,permissions,workflow,wss-3.0,,,open,0,112,11,"basic sharepoint workflow access denied even though I'm admin and owner I have created a very basic workflow in SPD 2007 - for testing, I've narrowed it down to 1 step, "" if 1 equals 1, send an email to myself.""  also tried having it just update a field on that listitem.  Very simple!  I then save it, but when I go to a list item to run the workflow manually, I get an Access Denied error, currently signed in as myself.  
+
+This is weird because the account that access is denied is 1)site collection admin, 2) member of owners group, 3) the account that created and saved the workflow.
+
+I am completely stumped!  All ideas are welcome.
+
+Thank you!!",4
+7101619,08/18/2011 02:05:50,493643,05/31/2010 13:22:39,304,33,Issue with Sharepoint 2010 and Google Chrome where the scrolling and ribbon do not work sometimes,"Is this a known issue with Google Chrome not being supported by SharePoint 2010 because it seems to work 50% of the time and the other 50% it doesn't work. When it loads, the scroll bar is greyed out and the ribbon buttons don't work. When you click the ""System Settings"" button on the top right, it only has 3 things: My Settings, Sign in as Different User and Sign Out.
+
+After clicking on ""My Settings"" and then going back, it will start working again. Now it will have 5 items with the addition of My Site and My Profile. 
+
+I think this is an **authentication issue with Google Chrome and Sharepoint 2010** Can anyone confirm if this is true.
+",sharepoint,sharepoint2010,,,,08/18/2011 09:38:33,off topic,1,119,16,"Issue with Sharepoint 2010 and Google Chrome where the scrolling and ribbon do not work sometimes Is this a known issue with Google Chrome not being supported by SharePoint 2010 because it seems to work 50% of the time and the other 50% it doesn't work. When it loads, the scroll bar is greyed out and the ribbon buttons don't work. When you click the ""System Settings"" button on the top right, it only has 3 things: My Settings, Sign in as Different User and Sign Out.
+
+After clicking on ""My Settings"" and then going back, it will start working again. Now it will have 5 items with the addition of My Site and My Profile. 
+
+I think this is an **authentication issue with Google Chrome and Sharepoint 2010** Can anyone confirm if this is true.
+",2
+177929,10/07/2008 10:52:55,18833,09/19/2008 13:22:22,1,0,Users not showing up in Sharepoint Audiences,"We are running MOSS 2007 with profiles coming from our active directory. One feature we use is ""Audiences"" which get compiled based on specific AD groups. We have problems with very few of the accounts where they do not get included in the audience. We have for example AD group of ""Procurement"" where 15 out of 16 users get included in the audience that uses membership in the ""Procurement"" group as its criteria.
+
+It seems to be something specific to that account, but I can't see anything about the account that is distinct from any other. The AD accesss is being done by an account with full rights to read and write to AD.
+
+Any ideas on what could be the cause? I'm not sure where even to look as the audience compliation doesn't throw any errors.
+
+
+
+",sharepoint,active-directory,moss,,,,open,0,135,7,"Users not showing up in Sharepoint Audiences We are running MOSS 2007 with profiles coming from our active directory. One feature we use is ""Audiences"" which get compiled based on specific AD groups. We have problems with very few of the accounts where they do not get included in the audience. We have for example AD group of ""Procurement"" where 15 out of 16 users get included in the audience that uses membership in the ""Procurement"" group as its criteria.
+
+It seems to be something specific to that account, but I can't see anything about the account that is distinct from any other. The AD accesss is being done by an account with full rights to read and write to AD.
+
+Any ideas on what could be the cause? I'm not sure where even to look as the audience compliation doesn't throw any errors.
+
+
+
+",3
+10161596,04/15/2012 11:24:23,940800,09/12/2011 14:44:44,1,3,SharePoint 2010 Content Deployment Job,"dear experts!
+
+I am trying to test how Content Deployment process works across separate SharePoint 2010 farms.
+
+There are 4 virtual servers in my test lab running on Hyper-V:
+Farm1:
+Demo1DC1 192.168.0.140 (DomainController Demo1.local.ru)
+Demo1SP1 192.168.0.141 (SharePoint 2010 Enterprise SP1 + SQL Server 2008 R2 Standard)
+ 
+Farm2:
+Demo2DC1 192.168.0.160 (DomainController Demo2.local.ru)
+Demo2SP1 192.168.0.161 (SharePoint 2010 Enterprise SP1 + SQL Server 2008 R2 Standard)
+There is not trust relationship between DC's and I don't think there should be one, according to MSDN articles on Content deployment.
+
+
+When I'm running the Conent Deployment timer job - I receive the error in ULS like this one:
+
+
+*Publishing: Content deployment job failed. Error: 'System.Web.Services.Protocols.SoapException: Unable to connect to the remote server ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond ***82.98.86.161:8080***    
+ at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)    
+ at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)     -
+ -- End of inner exception stack trace ---    
+ at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)    
+ at System.Net.HttpWebRequest.GetRequestStream()    
+ at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)    
+ at Microsoft.SharePoint.Publishing.Internal.Administration.ContentDeploymentRemoteImportSoapClient.InvokeInternal(String methodName, Object[] parameters)     -
+ -- End of inner exception stack trace ---    
+ at Microsoft.SharePoint.Publishing.Internal.Administration.ContentDeploymentRemoteImportSoapClient.InvokeInternal(String methodName, Object[] parameters)    
+ at Microsoft.SharePoint.Publishing.Internal.Administration.ContentDeploymentRemoteImportSoapClient.CreateJob(String description, Guid sourceId, String destinationServerUrl, String destinationSiteCollection, SPIncludeSecurity includeSecurity, SPImportUserInfoDateTimeOption includeUserInfoDateTime, Boolean enableEventReceivers, Boolean fileCompression)    
+ at Microsoft.SharePoint.Publishing.Administration.ContentDeploymentJob.DoServerToServer()    
+ at Microsoft.SharePoint.Publishing.Administration.ContentDeploymentJob.ExecuteJob(String callingTimerJobName, Guid timerJobId)    
+ at Microsoft.SharePoint.Publishing.Administration.ContentDeploymentJob.InternalRun(Boolean runAsynchronously, String timerJobName, Guid timerJobId)'*
+
+I have no idea why my provider Farm is trying to access this weird IP address instead of the farm I've specified, although the port 8080 matches the right one. 
+
+I have configured Content deployment without encryption. 
+Receiving Site collection was created without specifying Site template.
+I have added the line for host files explicitly mapping IP address to the destination name.
+Consuming Farm allows incoming deployment jobs.
+I can successfully access both CA sites from both farms.
+Firewall on all servers is turned off.
+ping command works for all servers from any server.
+I've tried adding Alternative Access Mapping for Central Admin and Content applications in both farms.
+I have removed all Alternative DNS' from network adapter settings leaving only Farm's domain controllers.
+
+Any help will be greatly appreciated!
+
+
+",sharepoint,sharepoint2010,,,,04/17/2012 13:49:23,off topic,1,413,5,"SharePoint 2010 Content Deployment Job dear experts!
+
+I am trying to test how Content Deployment process works across separate SharePoint 2010 farms.
+
+There are 4 virtual servers in my test lab running on Hyper-V:
+Farm1:
+Demo1DC1 192.168.0.140 (DomainController Demo1.local.ru)
+Demo1SP1 192.168.0.141 (SharePoint 2010 Enterprise SP1 + SQL Server 2008 R2 Standard)
+ 
+Farm2:
+Demo2DC1 192.168.0.160 (DomainController Demo2.local.ru)
+Demo2SP1 192.168.0.161 (SharePoint 2010 Enterprise SP1 + SQL Server 2008 R2 Standard)
+There is not trust relationship between DC's and I don't think there should be one, according to MSDN articles on Content deployment.
+
+
+When I'm running the Conent Deployment timer job - I receive the error in ULS like this one:
+
+
+*Publishing: Content deployment job failed. Error: 'System.Web.Services.Protocols.SoapException: Unable to connect to the remote server ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond ***82.98.86.161:8080***    
+ at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)    
+ at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)     -
+ -- End of inner exception stack trace ---    
+ at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)    
+ at System.Net.HttpWebRequest.GetRequestStream()    
+ at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)    
+ at Microsoft.SharePoint.Publishing.Internal.Administration.ContentDeploymentRemoteImportSoapClient.InvokeInternal(String methodName, Object[] parameters)     -
+ -- End of inner exception stack trace ---    
+ at Microsoft.SharePoint.Publishing.Internal.Administration.ContentDeploymentRemoteImportSoapClient.InvokeInternal(String methodName, Object[] parameters)    
+ at Microsoft.SharePoint.Publishing.Internal.Administration.ContentDeploymentRemoteImportSoapClient.CreateJob(String description, Guid sourceId, String destinationServerUrl, String destinationSiteCollection, SPIncludeSecurity includeSecurity, SPImportUserInfoDateTimeOption includeUserInfoDateTime, Boolean enableEventReceivers, Boolean fileCompression)    
+ at Microsoft.SharePoint.Publishing.Administration.ContentDeploymentJob.DoServerToServer()    
+ at Microsoft.SharePoint.Publishing.Administration.ContentDeploymentJob.ExecuteJob(String callingTimerJobName, Guid timerJobId)    
+ at Microsoft.SharePoint.Publishing.Administration.ContentDeploymentJob.InternalRun(Boolean runAsynchronously, String timerJobName, Guid timerJobId)'*
+
+I have no idea why my provider Farm is trying to access this weird IP address instead of the farm I've specified, although the port 8080 matches the right one. 
+
+I have configured Content deployment without encryption. 
+Receiving Site collection was created without specifying Site template.
+I have added the line for host files explicitly mapping IP address to the destination name.
+Consuming Farm allows incoming deployment jobs.
+I can successfully access both CA sites from both farms.
+Firewall on all servers is turned off.
+ping command works for all servers from any server.
+I've tried adding Alternative Access Mapping for Central Admin and Content applications in both farms.
+I have removed all Alternative DNS' from network adapter settings leaving only Farm's domain controllers.
+
+Any help will be greatly appreciated!
+
+
+",2
+4927123,02/07/2011 21:59:15,607210,02/07/2011 21:59:15,1,0,SPFieldMultiChoice - can there be an underlying value?,"With Sharepoint's SPFieldMultiChoice, there is a [stringcollection] ""Choices"" property and a [string] ""Mappings"" property.  These can come from a [schema.xml file][1].  I have not seen where the out of the box functionality provides for usage of the values stored in <Mappings/>.  In other words, rendering a ListControl with Display text and underlying values.  Easy enough to create, but just checking to see what i'm missing.
+
+
+  [1]: http://msdn.microsoft.com/en-us/library/ms459356.aspx",sharepoint,,,,,,open,0,72,8,"SPFieldMultiChoice - can there be an underlying value? With Sharepoint's SPFieldMultiChoice, there is a [stringcollection] ""Choices"" property and a [string] ""Mappings"" property.  These can come from a [schema.xml file][1].  I have not seen where the out of the box functionality provides for usage of the values stored in <Mappings/>.  In other words, rendering a ListControl with Display text and underlying values.  Easy enough to create, but just checking to see what i'm missing.
+
+
+  [1]: http://msdn.microsoft.com/en-us/library/ms459356.aspx",1
+5249379,03/09/2011 17:03:31,652012,03/09/2011 17:03:32,1,0,How to make a Sharepoint Survey window open on page load,"I've been working on looking for an answer to this issue for several days. I've created a survey on a Sharepoint 2010 site, and the person who I made it for wants it to open in a modal window on page load, instead of having to click ""Respond to Survey"" for this to happen.
+
+I've tried multiple javascript based solutions, and so far I've gotten nothing. Is there any way to do this? And, if there is, is it possible that this solution could be ported to other pages, so that I can make other surveys or other sharepoint pages open in a modal window (on page load) instead of on a separate page?",sharepoint,modal-dialog,,,,,open,0,113,11,"How to make a Sharepoint Survey window open on page load I've been working on looking for an answer to this issue for several days. I've created a survey on a Sharepoint 2010 site, and the person who I made it for wants it to open in a modal window on page load, instead of having to click ""Respond to Survey"" for this to happen.
+
+I've tried multiple javascript based solutions, and so far I've gotten nothing. Is there any way to do this? And, if there is, is it possible that this solution could be ported to other pages, so that I can make other surveys or other sharepoint pages open in a modal window (on page load) instead of on a separate page?",2
+10017757,04/04/2012 19:14:53,1224031,02/21/2012 18:03:44,1,0,Sharepoint and Visual Basic,"I'm new to Sharepoint Developer and making a .aspx page. I have used Visual Studio before with visual basic or C# programming editor. In sharepoint developer, Where is the programming-code editor??",sharepoint,basic,visual,,,04/05/2012 09:16:24,not a real question,1,31,4,"Sharepoint and Visual Basic I'm new to Sharepoint Developer and making a .aspx page. I have used Visual Studio before with visual basic or C# programming editor. In sharepoint developer, Where is the programming-code editor??",3
+654318,03/17/2009 13:45:28,76220,03/10/2009 16:08:11,50,6,What knowledge should a software architect have about SharePoint?,"At our company we are currenty trying to define the basic things our software architects have to know about SharePoint for them to architect and/or lead a SharePoint implementation project. Many architects in our company have a .NET developer background and know a lot about .NET development and the various framework components and tooling. However, they currently lack SharePoint knowledge. In fact they don't even want to know the nitty gritty details. They want to know just enough about it to make the right architectural decisions and apply proven patterns. If more specific knowledge is required they'll ask a SharePoint expert.
+
+So What would is the basic set of SharePoint knowledge / skills that an architect would need to have?",sharepoint,architecture,knowledge,,,,open,0,119,9,"What knowledge should a software architect have about SharePoint? At our company we are currenty trying to define the basic things our software architects have to know about SharePoint for them to architect and/or lead a SharePoint implementation project. Many architects in our company have a .NET developer background and know a lot about .NET development and the various framework components and tooling. However, they currently lack SharePoint knowledge. In fact they don't even want to know the nitty gritty details. They want to know just enough about it to make the right architectural decisions and apply proven patterns. If more specific knowledge is required they'll ask a SharePoint expert.
+
+So What would is the basic set of SharePoint knowledge / skills that an architect would need to have?",3
+10575645,05/13/2012 22:08:37,523521,11/29/2010 06:08:46,17,0,SharePoint photo gallery - querystring to individual image,"We're using Sharepoint 2007. We're using the photo gallery, however the issue is that when you click through the individual images in the photo gallery the url does not change, this means it's not straight forward to link to an individual image in the gallery.
+
+I need to be able to link to individual images so I guess I need to create a querystring:
+
+The url that doesn't change is:
+
+[a link] (http://mysharepointsite/news/features/forms/slideshow.aspx?ViewStyle=slideshow)
+
+I want to directly link to this image in the photo gallery:
+
+sunset.jpg
+
+
+Thanks
+Can anyone help me with the querystring to be able to do this?
+",sharepoint,sharepoint2007,,,,,open,0,93,8,"SharePoint photo gallery - querystring to individual image We're using Sharepoint 2007. We're using the photo gallery, however the issue is that when you click through the individual images in the photo gallery the url does not change, this means it's not straight forward to link to an individual image in the gallery.
+
+I need to be able to link to individual images so I guess I need to create a querystring:
+
+The url that doesn't change is:
+
+[a link] (http://mysharepointsite/news/features/forms/slideshow.aspx?ViewStyle=slideshow)
+
+I want to directly link to this image in the photo gallery:
+
+sunset.jpg
+
+
+Thanks
+Can anyone help me with the querystring to be able to do this?
+",2
+7677196,10/06/2011 16:06:21,786487,06/06/2011 20:25:12,46,0,SharePoint EditModePanel displaying content at all times,"Very simply I have some Javascript I only want to load in display mode, because the click event interferes with clicking into content editor web parts. Currently, the script loads in both display and edit mode with the following tag:
+
+    <PublishingWebControls:EditModePanel runat=server PageDisplayMode=""Display"">
+    	<script type=""text/javascript"" src=""../_scripts/metroUI.js""></script>
+    </PublishingWebControls:EditModePanel>
+
+And here are my namespaces:
+
+
+    <%@ Import Namespace=""Microsoft.SharePoint"" %> 
+    <%@ Register tagprefix=""SharePointWebControls"" namespace=""Microsoft.SharePoint.WebControls"" assembly=""Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""WebPartPages"" Namespace=""Microsoft.SharePoint.WebPartPages"" Assembly=""Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""PublishingWebControls"" Namespace=""Microsoft.SharePoint.Publishing.WebControls"" Assembly=""Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""SharePointPortalControls"" Namespace=""Microsoft.SharePoint.Portal.WebControls"" Assembly=""Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register tagprefix=""cmsc"" namespace=""Microsoft.SharePoint.Publishing.WebControls"" assembly=""Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register TagPrefix=""WpNs1"" Namespace=""Microsoft.SharePoint.Portal.WebControls"" Assembly=""Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register tagprefix=""WebControls"" namespace=""Microsoft.SharePoint.Publishing.WebControls"" assembly=""Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""Taxonomy"" Namespace=""Microsoft.SharePoint.Taxonomy"" Assembly=""Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""SharePoint"" Namespace=""Microsoft.SharePoint.WebControls"" Assembly=""Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %> 
+    <%@ Register Tagprefix=""Utilities"" Namespace=""Microsoft.SharePoint.Utilities"" Assembly=""Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %> 
+
+
+What am I missing?
+
+EDIT: Also, if I switch the page to PageDisplayMode=""Edit"", the script doesn't load in either place.",sharepoint,,,,,,open,0,208,7,"SharePoint EditModePanel displaying content at all times Very simply I have some Javascript I only want to load in display mode, because the click event interferes with clicking into content editor web parts. Currently, the script loads in both display and edit mode with the following tag:
+
+    <PublishingWebControls:EditModePanel runat=server PageDisplayMode=""Display"">
+    	<script type=""text/javascript"" src=""../_scripts/metroUI.js""></script>
+    </PublishingWebControls:EditModePanel>
+
+And here are my namespaces:
+
+
+    <%@ Import Namespace=""Microsoft.SharePoint"" %> 
+    <%@ Register tagprefix=""SharePointWebControls"" namespace=""Microsoft.SharePoint.WebControls"" assembly=""Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""WebPartPages"" Namespace=""Microsoft.SharePoint.WebPartPages"" Assembly=""Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""PublishingWebControls"" Namespace=""Microsoft.SharePoint.Publishing.WebControls"" Assembly=""Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""SharePointPortalControls"" Namespace=""Microsoft.SharePoint.Portal.WebControls"" Assembly=""Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register tagprefix=""cmsc"" namespace=""Microsoft.SharePoint.Publishing.WebControls"" assembly=""Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register TagPrefix=""WpNs1"" Namespace=""Microsoft.SharePoint.Portal.WebControls"" Assembly=""Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register tagprefix=""WebControls"" namespace=""Microsoft.SharePoint.Publishing.WebControls"" assembly=""Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""Taxonomy"" Namespace=""Microsoft.SharePoint.Taxonomy"" Assembly=""Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %>
+    <%@ Register Tagprefix=""SharePoint"" Namespace=""Microsoft.SharePoint.WebControls"" Assembly=""Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %> 
+    <%@ Register Tagprefix=""Utilities"" Namespace=""Microsoft.SharePoint.Utilities"" Assembly=""Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" %> 
+
+
+What am I missing?
+
+EDIT: Also, if I switch the page to PageDisplayMode=""Edit"", the script doesn't load in either place.",1

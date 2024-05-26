@@ -1,0 +1,1736 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+6481575,06/26/2011 01:26:37,442078,09/08/2010 05:31:02,367,7,Undo pull request?,"Someone accepted a pull request which they shouldn't have. Now we have a bunch of broken code merged in. How do you undo a pull request? I was just going to revert the changes to the commit just before the merge, but I noticed that it merged in a bunch of commits. So now there are all these commits from this person from days before the merge. How do you undo this?",git,github,,,,,open,0,72,3,"Undo pull request? Someone accepted a pull request which they shouldn't have. Now we have a bunch of broken code merged in. How do you undo a pull request? I was just going to revert the changes to the commit just before the merge, but I noticed that it merged in a bunch of commits. So now there are all these commits from this person from days before the merge. How do you undo this?",2
+9609275,03/07/2012 21:22:40,123800,06/16/2009 16:47:18,56,0,git origin not showing the pushed changes,"We have a team working in Asia who are 13 hours ahead of us (Eastern USA). Recently we noticed that team members in Asia are pushing their changes but we in US are not seeing these commits the same day. Next day however, we are able to pull them.
+
+The repository is in East Coast and developers are in Asia Pacific. We have not changed anything in terms of configuration anywhere...
+
+Would time difference (they being 13 hours in to the future of git server in US) causing this? Can you guys think of any other factor to why this may be the case?
+
+Thanks
+
+",git,,,,,03/08/2012 08:01:48,off topic,1,102,7,"git origin not showing the pushed changes We have a team working in Asia who are 13 hours ahead of us (Eastern USA). Recently we noticed that team members in Asia are pushing their changes but we in US are not seeing these commits the same day. Next day however, we are able to pull them.
+
+The repository is in East Coast and developers are in Asia Pacific. We have not changed anything in terms of configuration anywhere...
+
+Would time difference (they being 13 hours in to the future of git server in US) causing this? Can you guys think of any other factor to why this may be the case?
+
+Thanks
+
+",1
+2589295,04/07/2010 00:40:57,1190,08/13/2008 12:15:38,7532,236,"What does ""warning: unable to unlink website: Operation not permitted"" mean when checking out a Git branch?","I'm trying to create a local branch that tracks a remote branch. Here's what I get:
+
+    > git checkout master
+    
+    > git push origin origin:refs/heads/myBranch
+    Total 0 (delta 0), reused 0 (delta 0)
+    To git@github.com:myrepo/myproject.git
+    * [new branch]      origin/HEAD -> myBranch
+
+    > git fetch origin
+    
+    > git checkout --track -b myBranch origin/myBranch
+    warning: unable to unlink website: Operation not permitted
+    Branch myBranch set up to track remote branch myBranch from origin.
+    Switched to a new branch 'myBranch'
+
+What does ""warning: unable to unlink website: Operation not permitted"" mean? Did everything work fine?
+",git,,,,,,open,0,134,17,"What does ""warning: unable to unlink website: Operation not permitted"" mean when checking out a Git branch? I'm trying to create a local branch that tracks a remote branch. Here's what I get:
+
+    > git checkout master
+    
+    > git push origin origin:refs/heads/myBranch
+    Total 0 (delta 0), reused 0 (delta 0)
+    To git@github.com:myrepo/myproject.git
+    * [new branch]      origin/HEAD -> myBranch
+
+    > git fetch origin
+    
+    > git checkout --track -b myBranch origin/myBranch
+    warning: unable to unlink website: Operation not permitted
+    Branch myBranch set up to track remote branch myBranch from origin.
+    Switched to a new branch 'myBranch'
+
+What does ""warning: unable to unlink website: Operation not permitted"" mean? Did everything work fine?
+",1
+8307737,11/29/2011 08:23:47,860421,07/24/2011 17:03:17,32,3,How to access a stash(git) saved with `git stash save --patch name` ?,"I am able to `stash` a patch of changes
+by doing `git stash save --patch name`
+, which gets listed when I do `git stash list`.
+
+Now how do I refer to this stash using the name?",git,git-stash,,,,,open,0,34,13,"How to access a stash(git) saved with `git stash save --patch name` ? I am able to `stash` a patch of changes
+by doing `git stash save --patch name`
+, which gets listed when I do `git stash list`.
+
+Now how do I refer to this stash using the name?",2
+2244020,02/11/2010 11:17:01,52444,01/07/2009 14:03:09,4163,142,git changes modification time of files,"In the [GitFaq](http://git.wiki.kernel.org/index.php/GitFaq#Why_isn.27t_Git_preserving_modification_time_on_files.3F) I can read, that
+
+> Git sets the current time as the timestamp on every file it modifies, but only those.
+
+However, I tried this command sequence:
+
+    $ ls -la tests/BusTests.*
+    -r--r--r--    1 exxxxxxx Administ     3209 Nov 26 18:39 tests/BusTests.c
+    -r--r--r--    1 exxxxxxx Administ      118 Nov 26 18:39 tests/BusTests.h
+
+    $ git status -a
+    # On branch master
+    # Changes to be committed:
+    #   (use ""git reset HEAD <file>..."" to unstage)
+    #
+    #       modified:   tests/BusTests.c
+    #
+
+    $ git checkout .
+
+    $ ls -la tests/BusTests.*
+    -rw-r--r--    1 exxxxxxx Administ     3209 Feb 11 11:21 tests/BusTests.c
+    -rw-r--r--    1 exxxxxxx Administ      118 Feb 11 11:21 tests/BusTests.h
+
+Now my question: Why did git change the timestamp of the headerfile (`tests/BusTests.h`)? I'd expect the timestamp to be unchanged.
+
+Are my commands causing a problem?  
+Maybe it is possible to do something like a `git checkout . --modified` instead?
+
+I am using `git version 1.6.5.1.1367.gcd48` under mingw32/windows xp.",git,,,,,,open,0,231,6,"git changes modification time of files In the [GitFaq](http://git.wiki.kernel.org/index.php/GitFaq#Why_isn.27t_Git_preserving_modification_time_on_files.3F) I can read, that
+
+> Git sets the current time as the timestamp on every file it modifies, but only those.
+
+However, I tried this command sequence:
+
+    $ ls -la tests/BusTests.*
+    -r--r--r--    1 exxxxxxx Administ     3209 Nov 26 18:39 tests/BusTests.c
+    -r--r--r--    1 exxxxxxx Administ      118 Nov 26 18:39 tests/BusTests.h
+
+    $ git status -a
+    # On branch master
+    # Changes to be committed:
+    #   (use ""git reset HEAD <file>..."" to unstage)
+    #
+    #       modified:   tests/BusTests.c
+    #
+
+    $ git checkout .
+
+    $ ls -la tests/BusTests.*
+    -rw-r--r--    1 exxxxxxx Administ     3209 Feb 11 11:21 tests/BusTests.c
+    -rw-r--r--    1 exxxxxxx Administ      118 Feb 11 11:21 tests/BusTests.h
+
+Now my question: Why did git change the timestamp of the headerfile (`tests/BusTests.h`)? I'd expect the timestamp to be unchanged.
+
+Are my commands causing a problem?  
+Maybe it is possible to do something like a `git checkout . --modified` instead?
+
+I am using `git version 1.6.5.1.1367.gcd48` under mingw32/windows xp.",1
+3166713,07/02/2010 14:44:36,343223,05/17/2010 15:58:22,24,0,Git: How to ignore fast forward and revert origin [branch] to earlier commit?,"I used 
+<pre>
+git reset --hard dc082bc... </pre>to revert to the branch back to a required previous state, due to some bad commits.  This has rewound my local branch fine.  However, I want to rewind the branch on 'origin' to the same commit so that I can start again.  Could anyone tell me how to revert the origin branch (not master) to this commit?  
+
+I've tried git push origin master, but it gives the following error
+
+<pre>
+ ! [rejected]        branch -> branch (non-fast-forward)
+error: failed to push some refs to 'git@github.com:xxx/xxx.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes before pushing again.  See the 'Note about
+fast-forwards' section of 'git push --help' for details.
+</pre>",git,commit,reverting,,,,open,0,126,13,"Git: How to ignore fast forward and revert origin [branch] to earlier commit? I used 
+<pre>
+git reset --hard dc082bc... </pre>to revert to the branch back to a required previous state, due to some bad commits.  This has rewound my local branch fine.  However, I want to rewind the branch on 'origin' to the same commit so that I can start again.  Could anyone tell me how to revert the origin branch (not master) to this commit?  
+
+I've tried git push origin master, but it gives the following error
+
+<pre>
+ ! [rejected]        branch -> branch (non-fast-forward)
+error: failed to push some refs to 'git@github.com:xxx/xxx.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes before pushing again.  See the 'Note about
+fast-forwards' section of 'git push --help' for details.
+</pre>",3
+10816578,05/30/2012 12:44:18,21728,09/24/2008 15:30:26,1811,39,Can Git show history for selected lines?,"I have a large file where, somewhere in the middle, there is a function that I know has been modified several times. `git annotate` or `blame` will show the most recent commit for each line but if I'm right, it will show *only* the most recent one, not a list of other commits that affected that line before.
+
+So is there a command in Git where I could say something like **show me commits that affected lines 250..260 in file XYZ**?",git,,,,,,open,0,80,7,"Can Git show history for selected lines? I have a large file where, somewhere in the middle, there is a function that I know has been modified several times. `git annotate` or `blame` will show the most recent commit for each line but if I'm right, it will show *only* the most recent one, not a list of other commits that affected that line before.
+
+So is there a command in Git where I could say something like **show me commits that affected lines 250..260 in file XYZ**?",1
+4658451,01/11/2011 14:06:36,113719,05/28/2009 12:43:17,84,4,Can a local Git clone be considered a complete backup of the repo it was cloned from?,"Suppose I have cloned a Git repository to my local disk using:
+
+    git clone username@git.example.com:someproject.git
+
+Now suppose that `git.example.com` is not being backed up, and it goes down in a blaze of glory.  Does my clone contain everything necessary to rebuild the remote repo that was lost?  The [Ultimate Backups](http://www-cs-students.stanford.edu/~blynn/gitmagic/book.html#_ultimate_backups>) section of [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/) suggests that the answer is ""yes,"" but it isn't clear to me.
+
+Note that I'm not asking ""is my local clone a sufficient backup of the `master` branch?""  I'm asking whether my local clone can be considered a _complete_ backup of _everything_ that was contained in the remote repo; all branches, all tags, _everything_.  For example, what about remote branches that aren't tracked in the local repo?
+
+To futher confuse the issue, the existence of `git clone --mirror` suggests to me that my local clone should _not_ be considered a complete backup of the remote repo.",git,,,,,,open,0,154,17,"Can a local Git clone be considered a complete backup of the repo it was cloned from? Suppose I have cloned a Git repository to my local disk using:
+
+    git clone username@git.example.com:someproject.git
+
+Now suppose that `git.example.com` is not being backed up, and it goes down in a blaze of glory.  Does my clone contain everything necessary to rebuild the remote repo that was lost?  The [Ultimate Backups](http://www-cs-students.stanford.edu/~blynn/gitmagic/book.html#_ultimate_backups>) section of [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/) suggests that the answer is ""yes,"" but it isn't clear to me.
+
+Note that I'm not asking ""is my local clone a sufficient backup of the `master` branch?""  I'm asking whether my local clone can be considered a _complete_ backup of _everything_ that was contained in the remote repo; all branches, all tags, _everything_.  For example, what about remote branches that aren't tracked in the local repo?
+
+To futher confuse the issue, the existence of `git clone --mirror` suggests to me that my local clone should _not_ be considered a complete backup of the remote repo.",1
+7971614,11/01/2011 19:14:41,1024337,11/01/2011 19:05:20,1,0,"What are reasons a git pull command may return ""fatal:"" with no additional output (not even a newline)?",I am pulling from a gitolite server.  The ssh keys seem to be working properly as git clone and git fetch both function normally.  The error is particularly perplexing because it is not a new repo.  I have been pushing and pulling without the error in the past and the .git/config file has not changed.  I cannot think of any changes to my system since it was operating properly.  How can I obtain more diagnostic information to try to understand what is going wrong?,git,gitolite,,,,,open,0,89,18,"What are reasons a git pull command may return ""fatal:"" with no additional output (not even a newline)? I am pulling from a gitolite server.  The ssh keys seem to be working properly as git clone and git fetch both function normally.  The error is particularly perplexing because it is not a new repo.  I have been pushing and pulling without the error in the past and the .git/config file has not changed.  I cannot think of any changes to my system since it was operating properly.  How can I obtain more diagnostic information to try to understand what is going wrong?",2
+10504547,05/08/2012 18:44:21,187812,10/10/2009 22:29:26,541,21,How do you preserve code that DIDN'T work?,"While developing, I will sometimes try a technique or method that doesn't pan out right away.  Once I decide to move on to another task or try another technique for the same task, I'm never sure what to do with the non-working code.  I want to keep it as a record of what I tried, so I know what didn't work or even as a starting place for trying to make it work again.
+
+Usually I just leave the code in place, commented out and uncommitted to VCS, for some length of time. This becomes a pain however as it clutters code and has to be dodged on VCS commits.  I happen to be using git which has a ""stash"" function for temporary storage, but I'm not sure if that's an appropriate use.
+
+How do you handle code you want saved for posterity, but don't want as part of your mainstream code base?",git,version-control,,,,05/10/2012 21:23:04,not constructive,1,154,8,"How do you preserve code that DIDN'T work? While developing, I will sometimes try a technique or method that doesn't pan out right away.  Once I decide to move on to another task or try another technique for the same task, I'm never sure what to do with the non-working code.  I want to keep it as a record of what I tried, so I know what didn't work or even as a starting place for trying to make it work again.
+
+Usually I just leave the code in place, commented out and uncommitted to VCS, for some length of time. This becomes a pain however as it clutters code and has to be dodged on VCS commits.  I happen to be using git which has a ""stash"" function for temporary storage, but I'm not sure if that's an appropriate use.
+
+How do you handle code you want saved for posterity, but don't want as part of your mainstream code base?",2
+10181927,04/16/2012 19:59:42,318306,04/16/2010 08:26:56,741,45,Choosing commits for separate branches of one repository,"I have a documentation project at http://readthedocs.org/, which takes source from github repo. Since I'm not sure of the syntax it might need for one or another file I created a separate branch at github to push as many commits as I need there to see the result at http://readthedocs.org/.
+
+I would like to be able to choose commits later on and push them to `master` branch where from I will make PRs. Is there such a way or it is bad approach and there is something more appropriate for that?",git,,,,,,open,0,90,8,"Choosing commits for separate branches of one repository I have a documentation project at http://readthedocs.org/, which takes source from github repo. Since I'm not sure of the syntax it might need for one or another file I created a separate branch at github to push as many commits as I need there to see the result at http://readthedocs.org/.
+
+I would like to be able to choose commits later on and push them to `master` branch where from I will make PRs. Is there such a way or it is bad approach and there is something more appropriate for that?",1
+7336966,09/07/2011 16:02:53,219931,11/27/2009 09:33:17,1659,77,Git interactive unstage,"There's `git add -p` to stage changes and `git checkout -p` to discard changes interactively. Why isn't there `git unstage -p` ? (I mean, `git reset HEAD -p`) to unstage changes from index by hunks.",git,,,,,09/08/2011 04:27:10,not constructive,1,35,3,"Git interactive unstage There's `git add -p` to stage changes and `git checkout -p` to discard changes interactively. Why isn't there `git unstage -p` ? (I mean, `git reset HEAD -p`) to unstage changes from index by hunks.",1
+5526251,04/02/2011 22:14:13,111804,05/24/2009 17:04:11,491,41,Biggest projects using Git?,What are some of the biggest projects using git as a dvcs? Open source or not.,git,dvcs,,,,04/03/2011 06:02:47,off topic,1,16,4,Biggest projects using Git? What are some of the biggest projects using git as a dvcs? Open source or not.,2
+9440476,02/25/2012 01:58:22,1002260,10/19/2011 01:34:38,185,11,"Change ""primary"" branch of a git commit?","On GitHub my network graph looks like this
+
+    ---o---o---o--------------o---o master
+                \
+                 o-----o test
+                  \
+                   o---o------o----------o devel
+<br>
+Whereas in ""spirit"" it should look more like this.
+
+
+    ---o---o---o--------------o---o master
+                \
+                 o----o-----o-----o-----------o devel
+                  \
+                   o test
+
+The `test` branch was just a test of a new feature, from the first graph it makes it look like `devel` is a branch from `test`",git,branch,commit,,,,open,0,195,7,"Change ""primary"" branch of a git commit? On GitHub my network graph looks like this
+
+    ---o---o---o--------------o---o master
+                \
+                 o-----o test
+                  \
+                   o---o------o----------o devel
+<br>
+Whereas in ""spirit"" it should look more like this.
+
+
+    ---o---o---o--------------o---o master
+                \
+                 o----o-----o-----o-----------o devel
+                  \
+                   o test
+
+The `test` branch was just a test of a new feature, from the first graph it makes it look like `devel` is a branch from `test`",3
+10390817,04/30/2012 21:26:45,683216,03/30/2011 03:37:45,125,13,Most Flexible Open Office Word Document Format (Not MS Word) For Git Versioning and Collaboration,"I am looking to start a collaborative word document in Git, and want to know what is the best format? 
+
+**Some loose requirements I have for this document are**: potential to easily add some simple markup, like bold, italics, maybe some font sizes or highlighting (nothing too technical). Ability to work seamlessly in git without too many complicated commands, as not everybody on the project will be a git guru, or may even be first time users. Something that is light  
+
+I'm already biased against Microsoft Word because I don't want to pay for it, and it has a lot of the bells and whistles I don't need, and frankly find annoying. 
+
+I'm already leaning towards using OpenOffice Writer with ODF formatting. Has anybody done this, or have any suggestions on why this is not a good idea? There are a lot of formats to choose from, like this picture:![enter image description here][1]
+
+That is sorta overwhelming.
+
+My reasoning for using OpenOffice is that it's free, it can install on most computers, and it is open source. This project is open source as well, and it seems like using open source tools is true to the spirit.
+
+I know this is not a discussion forum, and I truly am looking for a definitive answer on file type, or some suggestions from anybody who has experience versioning word / text documents in Git. It's totally out of the question to use SVN in this project, mainly because it sucks. Thanks!
+
+
+  [1]: http://i.stack.imgur.com/YP2v7.png",git,github,openoffice.org,openoffice-writer,,07/16/2012 12:04:05,off topic,1,250,15,"Most Flexible Open Office Word Document Format (Not MS Word) For Git Versioning and Collaboration I am looking to start a collaborative word document in Git, and want to know what is the best format? 
+
+**Some loose requirements I have for this document are**: potential to easily add some simple markup, like bold, italics, maybe some font sizes or highlighting (nothing too technical). Ability to work seamlessly in git without too many complicated commands, as not everybody on the project will be a git guru, or may even be first time users. Something that is light  
+
+I'm already biased against Microsoft Word because I don't want to pay for it, and it has a lot of the bells and whistles I don't need, and frankly find annoying. 
+
+I'm already leaning towards using OpenOffice Writer with ODF formatting. Has anybody done this, or have any suggestions on why this is not a good idea? There are a lot of formats to choose from, like this picture:![enter image description here][1]
+
+That is sorta overwhelming.
+
+My reasoning for using OpenOffice is that it's free, it can install on most computers, and it is open source. This project is open source as well, and it seems like using open source tools is true to the spirit.
+
+I know this is not a discussion forum, and I truly am looking for a definitive answer on file type, or some suggestions from anybody who has experience versioning word / text documents in Git. It's totally out of the question to use SVN in this project, mainly because it sucks. Thanks!
+
+
+  [1]: http://i.stack.imgur.com/YP2v7.png",4
+2825428,05/13/2010 08:50:11,328936,04/29/2010 13:37:55,1,1,Why should I use core.autocrlf in Git?,"I have a Git repository that is accessed from both Windows and OS X, and that I know already contains some files with CRLF line-endings. As far as I can tell, there are two ways to deal with this:
+
+1. Set <code>core.autocrlf</code> to <code>false</code> everywhere,
+
+2. Follow the instructions [here](http://stackoverflow.com/questions/1510798/trying-to-fix-line-endings-with-git-filter-branch-but-having-no-luck/1511273#1511273) (echoed on GitHub's help pages) to convert the repository to contain only LF line-endings, and thereafter set <code>core.autocrlf</code> to <code>true</code> on Windows and <code>input</code> on OS X. The problem with doing this is that if I have any binary files in the repository that: a). are not correctly marked as binary in gitattributes, and b). happen to contain both CRLFs and LFs, they will be corrupted. It is possible my repository contains such files.
+
+So why shouldn't I just turn off Git's line-ending conversion? There are a lot of vague warnings on the web about having <code>core.autocrlf</code> switched off causing problems, but very few *specific* ones; the only that I've found so far are that kdiff3 cannot handle CRLF endings (not a problem for me), and that some text editors have line-ending issues (also not a problem for me).
+
+The repository is internal to my company, and so I don't need to worry about sharing it with people with different autocrlf settings or line-ending requirements.
+
+Are there any other problems with just leaving line-endings as-is that I am unaware of?
+",git,line-endings,,,,,open,0,225,7,"Why should I use core.autocrlf in Git? I have a Git repository that is accessed from both Windows and OS X, and that I know already contains some files with CRLF line-endings. As far as I can tell, there are two ways to deal with this:
+
+1. Set <code>core.autocrlf</code> to <code>false</code> everywhere,
+
+2. Follow the instructions [here](http://stackoverflow.com/questions/1510798/trying-to-fix-line-endings-with-git-filter-branch-but-having-no-luck/1511273#1511273) (echoed on GitHub's help pages) to convert the repository to contain only LF line-endings, and thereafter set <code>core.autocrlf</code> to <code>true</code> on Windows and <code>input</code> on OS X. The problem with doing this is that if I have any binary files in the repository that: a). are not correctly marked as binary in gitattributes, and b). happen to contain both CRLFs and LFs, they will be corrupted. It is possible my repository contains such files.
+
+So why shouldn't I just turn off Git's line-ending conversion? There are a lot of vague warnings on the web about having <code>core.autocrlf</code> switched off causing problems, but very few *specific* ones; the only that I've found so far are that kdiff3 cannot handle CRLF endings (not a problem for me), and that some text editors have line-ending issues (also not a problem for me).
+
+The repository is internal to my company, and so I don't need to worry about sharing it with people with different autocrlf settings or line-ending requirements.
+
+Are there any other problems with just leaving line-endings as-is that I am unaware of?
+",2
+8782080,01/08/2012 22:48:02,187676,10/10/2009 14:58:07,1283,56,Commit reword without interactive rebase?,Is it possible to run an automatic reword of a commit (identified by hash) without using interactive mode? What I aim for is a one-liner for rewording because I need to invoke from code.,git,,,,,,open,0,34,5,Commit reword without interactive rebase? Is it possible to run an automatic reword of a commit (identified by hash) without using interactive mode? What I aim for is a one-liner for rewording because I need to invoke from code.,1
+8161455,11/17/2011 02:43:05,714232,04/18/2011 22:14:24,31,1,Hg-Git and the Current Version (2) of Mercurial?,"Any compatibility or stability issues with using Hg-Git with version 2 of Mercurial? I am tempted to use Hg-Git to allow me to use Hg but use Github as my repository. Most web chatter about both seems to be about earlier versions. Any current stability or compatibility concerns?
+
+Thanks.",git,version-control,mercurial,github,hg-git,11/18/2011 03:31:19,too localized,1,48,8,"Hg-Git and the Current Version (2) of Mercurial? Any compatibility or stability issues with using Hg-Git with version 2 of Mercurial? I am tempted to use Hg-Git to allow me to use Hg but use Github as my repository. Most web chatter about both seems to be about earlier versions. Any current stability or compatibility concerns?
+
+Thanks.",5
+8394532,12/06/2011 02:10:21,359862,06/06/2010 19:55:32,2115,28,"How to ""rebuild"" git repo?","I have something strange going on with some of my repos .. Xcode seems to think i have uncommitted changes whereas `git status` affirms all is well. 
+
+What would be the cleanest way to:
+
+1. Delete existing repo
+2. Add all project files to new repo
+
+I suppose i can copy all the files into new directory and
+
+    1. git init .
+    2. git add . 
+    3. git commit -a -m ""initial commit""
+
+But before I do this, i'd like a second opinion.",git,,,,,,open,0,89,5,"How to ""rebuild"" git repo? I have something strange going on with some of my repos .. Xcode seems to think i have uncommitted changes whereas `git status` affirms all is well. 
+
+What would be the cleanest way to:
+
+1. Delete existing repo
+2. Add all project files to new repo
+
+I suppose i can copy all the files into new directory and
+
+    1. git init .
+    2. git add . 
+    3. git commit -a -m ""initial commit""
+
+But before I do this, i'd like a second opinion.",1
+5859569,05/02/2011 16:20:59,82330,03/25/2009 01:31:24,679,30,Repair a broken git repo,"I am somewhat of a newbie with git and was frustrated with how my repo was working.. or in this case note working.. so I deleted it off of git hub, deleted the git folder on the project and was planning to start fresh. 
+
+Now when i try and set up a fresh repo I am getting a lot of messages like : 
+
+warning: You appear to be on a branch yet to be born.
+warning. Forcing checkout of HEAD
+
+when I try and run the first commit I see :
+
+error: invalid object 8bcb4b5fd612e3ad55fb07e4bed087c55afd0861
+fatal: git-write-tree: error building trees
+
+I ran git fsck and see that I am missing a bunch of blobs.  
+
+How can I just wipe the slate clean and try again?",git,repository,,,,,open,0,121,5,"Repair a broken git repo I am somewhat of a newbie with git and was frustrated with how my repo was working.. or in this case note working.. so I deleted it off of git hub, deleted the git folder on the project and was planning to start fresh. 
+
+Now when i try and set up a fresh repo I am getting a lot of messages like : 
+
+warning: You appear to be on a branch yet to be born.
+warning. Forcing checkout of HEAD
+
+when I try and run the first commit I see :
+
+error: invalid object 8bcb4b5fd612e3ad55fb07e4bed087c55afd0861
+fatal: git-write-tree: error building trees
+
+I ran git fsck and see that I am missing a bunch of blobs.  
+
+How can I just wipe the slate clean and try again?",2
+11597738,07/22/2012 04:18:04,1188008,02/03/2012 16:41:32,36,4,"Git error ""non-monotonic index""","My git setup has a central repository to which I push. Today I decided to look at the central repository using Git Extensions, and it said that the repo has no commits (almost as if the repo was never created). Investigating this issue, I tried to clone the repo, and it gave me some weird errors I've never seen:
+
+
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index .git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    fatal: unable to read tree cc90183a1571664f80712c0376f59afeb681303f
+
+
+I have searched Google about this issue, and there's also another question on StackOverlow regarding this issue but it remains unanswered (http://stackoverflow.com/questions/10707690/git-non-monotonic-index). Anyone able to shed light on this issue? Thanks",git,git-extensions,,,,,open,0,252,4,"Git error ""non-monotonic index"" My git setup has a central repository to which I push. Today I decided to look at the central repository using Git Extensions, and it said that the repo has no commits (almost as if the repo was never created). Investigating this issue, I tried to clone the repo, and it gave me some weird errors I've never seen:
+
+
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index .git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    error: non-monotonic index C:/Temp/N1/Netduino/.git/objects/pack/pack-29a18084cf61cd0322a6e9cfd485ce0977348c53.idx
+    fatal: unable to read tree cc90183a1571664f80712c0376f59afeb681303f
+
+
+I have searched Google about this issue, and there's also another question on StackOverlow regarding this issue but it remains unanswered (http://stackoverflow.com/questions/10707690/git-non-monotonic-index). Anyone able to shed light on this issue? Thanks",2
+7430815,09/15/2011 12:28:41,926415,09/03/2011 08:20:50,8,0,Working with repos,"When working with repos (I have github in mind), should we also commit third party libraries? For example, boost and poco compile to 5G with samples. Should we upload all that to github? If not, then how do we keep the libraries in sync with other people?
+
+Sorry about lack of capitalization and grammar. I am on my phone and it is difficult to type.",git,svn,mercurial,cvs,,,open,0,64,3,"Working with repos When working with repos (I have github in mind), should we also commit third party libraries? For example, boost and poco compile to 5G with samples. Should we upload all that to github? If not, then how do we keep the libraries in sync with other people?
+
+Sorry about lack of capitalization and grammar. I am on my phone and it is difficult to type.",4
+8746159,01/05/2012 16:39:52,753341,05/14/2011 05:48:17,1248,23,How do I delete *ALL* files and directories from a git repository?,"I have a repo on github and I need to complete reset it , i.e start uploading from scratch. How exactly do I remove all files and directories in the repository using git?",git,github,,,,,open,0,33,12,"How do I delete *ALL* files and directories from a git repository? I have a repo on github and I need to complete reset it , i.e start uploading from scratch. How exactly do I remove all files and directories in the repository using git?",2
+8775399,01/08/2012 04:33:19,845081,07/14/2011 17:17:41,171,0,Why I cannot push my code to github?,"$git push origin master
+To git@github.com:dimitar9/first_app.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:%USERNAME/first_app.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+",git,github,,,,,open,0,55,8,"Why I cannot push my code to github? $git push origin master
+To git@github.com:dimitar9/first_app.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:%USERNAME/first_app.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+",2
+7825279,10/19/2011 17:15:21,731218,04/29/2011 14:13:56,149,1,What is your diff workflow?,"When you have a merge conflict, what is your workflow?",git,,,,,11/07/2011 12:27:00,not constructive,1,10,5,"What is your diff workflow? When you have a merge conflict, what is your workflow?",1
+2586518,04/06/2010 16:28:11,11559,09/16/2008 09:09:14,1308,53,"How to best work with a ""forked"" a git repo, and push some new features back to origin","I'm having a blog-project on GibHub, where a friend of mine, wants to base his code on.
+He will make some changes to some files that he do not wish to commit back to me (maybe stylesheets and images), but he will maybe implement a new feature that he would like to push back to my project. 
+
+He should also be able to get new code from me, where he would like to get all new stuff.
+
+I've looked around, and it seams that Rebase is the way to go for him, to get updates from me, but how can he most easily push a feature back to me? (He is just learning Git, as well as me)",git,,,,,,open,0,116,18,"How to best work with a ""forked"" a git repo, and push some new features back to origin I'm having a blog-project on GibHub, where a friend of mine, wants to base his code on.
+He will make some changes to some files that he do not wish to commit back to me (maybe stylesheets and images), but he will maybe implement a new feature that he would like to push back to my project. 
+
+He should also be able to get new code from me, where he would like to get all new stuff.
+
+I've looked around, and it seams that Rebase is the way to go for him, to get updates from me, but how can he most easily push a feature back to me? (He is just learning Git, as well as me)",1
+10341324,04/26/2012 20:57:06,1359701,04/26/2012 20:47:40,1,0,NEED HELP IN WORKING WITH GIT & GITHUB - NEWBIE,"Ok, So I've decided to do some programming and want to keep my code organized and tight nit. So therefore, I decided that github was a great tool in allowing me to work on my work from anywhere as along as I have access to the code I'm working on. 
+
+I set up my account and created a repo with a directory named 'accountname'/ccg-calendar
+
+Now I have pushed this directory to my account and that is all. But now its a new day i've just relogged into my computer with a fresh start and im trying to upload/push some files up to my account so that I can create the structure I need in order to get started with my work. Wish that said I'm trying to include two other folders [with subfolders + files already in it] within this ccg-calendar folder but I keep running to problems.. So I want the end result to look like this: 
+
+'username'/ccg-calendar/ScrollingGallery/'included subfolders'/
+'username'/ccg-calendar/ScrollingThumbs/'included subfolders'/
+
+Then have another folder with a final version of the product that will be a merged folder of ""ScrollingGallery"" & ""ScrollingThumbs"" files
+
+so the third directory should be 
+
+'username'/ccg-calendar/FINAL/'included subfolders'/
+
+
+Can anyone help with this? It would greatly be appreciated. ",git,github,,,,04/26/2012 21:56:56,not a real question,1,198,10,"NEED HELP IN WORKING WITH GIT & GITHUB - NEWBIE Ok, So I've decided to do some programming and want to keep my code organized and tight nit. So therefore, I decided that github was a great tool in allowing me to work on my work from anywhere as along as I have access to the code I'm working on. 
+
+I set up my account and created a repo with a directory named 'accountname'/ccg-calendar
+
+Now I have pushed this directory to my account and that is all. But now its a new day i've just relogged into my computer with a fresh start and im trying to upload/push some files up to my account so that I can create the structure I need in order to get started with my work. Wish that said I'm trying to include two other folders [with subfolders + files already in it] within this ccg-calendar folder but I keep running to problems.. So I want the end result to look like this: 
+
+'username'/ccg-calendar/ScrollingGallery/'included subfolders'/
+'username'/ccg-calendar/ScrollingThumbs/'included subfolders'/
+
+Then have another folder with a final version of the product that will be a merged folder of ""ScrollingGallery"" & ""ScrollingThumbs"" files
+
+so the third directory should be 
+
+'username'/ccg-calendar/FINAL/'included subfolders'/
+
+
+Can anyone help with this? It would greatly be appreciated. ",2
+455698,01/18/2009 18:53:33,56461,01/18/2009 18:31:37,1,2,Best visual client for Git on Mac OS X?,"I'm looking for a nice, Mac OS X-like, client for Git.  As an example, I use Versions for Subversion and it's exactly what I'd like to purchase for Git access.  Suggestions?
+
+[Versions link][1]
+
+
+  [1]: http://versionsapp.com/",git,versions,version-control,osx,,10/12/2011 02:57:45,not constructive,1,37,9,"Best visual client for Git on Mac OS X? I'm looking for a nice, Mac OS X-like, client for Git.  As an example, I use Versions for Subversion and it's exactly what I'd like to purchase for Git access.  Suggestions?
+
+[Versions link][1]
+
+
+  [1]: http://versionsapp.com/",4
+9185122,02/07/2012 22:41:07,1032864,11/06/2011 22:38:42,1,0,How to reinitialize git in Netbeans 7.1,"I searched through a few posts and couldn't find a suitable answer, so I thought I'd go ahead and ask here.
+
+I'm trying to create a Github repository for my project, but when I intialized it in Netbeans I accidentally connected to someone *else's* repo, because I'm using some of their code in my own project. Now I can't seem to get rid of the settings and start over. How do I do that, and then upload my project to Github?",git,netbeans,,,,,open,0,80,7,"How to reinitialize git in Netbeans 7.1 I searched through a few posts and couldn't find a suitable answer, so I thought I'd go ahead and ask here.
+
+I'm trying to create a Github repository for my project, but when I intialized it in Netbeans I accidentally connected to someone *else's* repo, because I'm using some of their code in my own project. Now I can't seem to get rid of the settings and start over. How do I do that, and then upload my project to Github?",2
+183918,10/08/2008 17:33:48,23896,09/30/2008 19:18:05,255,19,Any good git tutorials?,"Are there any good git tutorials available somewhere, except for [the official tutorial][1]?
+
+I like [the mercurial book][2], but haven't found anything similar for git. I would like to start using git in some projects, and would therefore be able to point my colleagues to some good reading material. In this particular case, they are still mostly used to RCS and CVS. 
+
+
+  [1]: http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html
+  [2]: http://hgbook.red-bean.com/hgbook.html",git,dvcs,tutorials,,,05/10/2012 19:20:56,not constructive,1,68,4,"Any good git tutorials? Are there any good git tutorials available somewhere, except for [the official tutorial][1]?
+
+I like [the mercurial book][2], but haven't found anything similar for git. I would like to start using git in some projects, and would therefore be able to point my colleagues to some good reading material. In this particular case, they are still mostly used to RCS and CVS. 
+
+
+  [1]: http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html
+  [2]: http://hgbook.red-bean.com/hgbook.html",3
+5824804,04/28/2011 20:47:55,303726,03/28/2010 19:00:05,714,57,Git for personnal backups?,"I am looking for a way to make personnal backups (mostly photos & videos) using a solution existing in whatever OS. That's why git sounds interesting.
+
+The thing is that I don't want to keep track of everything pushed in the repository, I would like to disable the versioning functionality so that when I delete a photo and sync the folder with my server, this photo is actually deleted and not saved in revision n - 1.
+
+Is there any way to do this with git? Or maybe do someone know a good multi platform & open source solution for backups?
+
+Thank you.
+",git,backup,,,,,open,0,100,4,"Git for personnal backups? I am looking for a way to make personnal backups (mostly photos & videos) using a solution existing in whatever OS. That's why git sounds interesting.
+
+The thing is that I don't want to keep track of everything pushed in the repository, I would like to disable the versioning functionality so that when I delete a photo and sync the folder with my server, this photo is actually deleted and not saved in revision n - 1.
+
+Is there any way to do this with git? Or maybe do someone know a good multi platform & open source solution for backups?
+
+Thank you.
+",2
+8302479,11/28/2011 21:20:44,741099,05/06/2011 05:03:32,968,5,Installing Git on CentOS failed?,"I am new to this, trying to install git on my VPS running on CentOS. 
+
+I tried `yum install git-core` and `yum install git` and both resulted in `No package git-core available.
+Nothing to do`. I guess `git` in not in the CentOs repos.
+
+I tried another method here: http://www.lunix.com.au/blog/install-gitosis-on-centos5/.
+
+Running `rpm -Uvh http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-3.noarch.rpm` gives me the message:
+
+`error: skipping http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-3.noarch.rpm - transfer failed - Unknown or unexpected error
+warning: u 0x9079f18 ctrl 0x907ad30 nrefs != 0 (download.fedora.redhat.com http)`
+
+Is there another way to install `git`?
+
+",git,centos,,,,11/29/2011 05:34:45,off topic,1,80,5,"Installing Git on CentOS failed? I am new to this, trying to install git on my VPS running on CentOS. 
+
+I tried `yum install git-core` and `yum install git` and both resulted in `No package git-core available.
+Nothing to do`. I guess `git` in not in the CentOs repos.
+
+I tried another method here: http://www.lunix.com.au/blog/install-gitosis-on-centos5/.
+
+Running `rpm -Uvh http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-3.noarch.rpm` gives me the message:
+
+`error: skipping http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-3.noarch.rpm - transfer failed - Unknown or unexpected error
+warning: u 0x9079f18 ctrl 0x907ad30 nrefs != 0 (download.fedora.redhat.com http)`
+
+Is there another way to install `git`?
+
+",2
+10220063,04/19/2012 00:34:38,388023,07/09/2010 18:30:55,1,0,Git: How to prevent committing files that were modified just for debugging purposes?,"A lot of times, I like to modify some lines of code in order to make debugging easier, but I don't actually want to commit them.  For instance, I'll disable some annoying features (like ads) by commenting out some lines of code, or I'll set the log levels and filters to only the ones I care about, or I'll force a conditional to be true just so the block of code I want to run actually runs all the time. 
+
+In Perforce, I would have created a ""changelist"" for these files and labeled it as ""DON'T COMMIT!"".  What would be the equivalent of this in Git?  A branch doesn't work because these debug-only modifications need to exist with other changes I'm currently making.",git,perforce,,,,,open,0,126,13,"Git: How to prevent committing files that were modified just for debugging purposes? A lot of times, I like to modify some lines of code in order to make debugging easier, but I don't actually want to commit them.  For instance, I'll disable some annoying features (like ads) by commenting out some lines of code, or I'll set the log levels and filters to only the ones I care about, or I'll force a conditional to be true just so the block of code I want to run actually runs all the time. 
+
+In Perforce, I would have created a ""changelist"" for these files and labeled it as ""DON'T COMMIT!"".  What would be the equivalent of this in Git?  A branch doesn't work because these debug-only modifications need to exist with other changes I'm currently making.",2
+7517216,09/22/2011 15:18:39,635027,02/25/2011 23:31:37,121,4,GitHub - Private vs Public Collaborators,"New to GitHub and a bit confused by private vs public collaborators.
+
+If I do a Micro account with one private collaborator but have 5 total team members wanting to contribute, how would the remaining four apply?  I see it has unlimited public collaborators.  
+
+So what is the difference between Private vs Public Collaborators on GitHub?",git,version-control,github,,,09/22/2011 22:53:08,off topic,1,57,6,"GitHub - Private vs Public Collaborators New to GitHub and a bit confused by private vs public collaborators.
+
+If I do a Micro account with one private collaborator but have 5 total team members wanting to contribute, how would the remaining four apply?  I see it has unlimited public collaborators.  
+
+So what is the difference between Private vs Public Collaborators on GitHub?",3
+763099,04/18/2009 07:45:39,92457,04/18/2009 07:43:00,1,0,Flexible vs static branching (GIT vs Clearcase/Accurev),"My question is about the way in which GIT handles branches: whenever you branch from a commit, this branch won’t ever receive changes from the parent branch unless you *force* it with a merge.
+
+But in other systems such us Clearcase or Accurev, you can specify how branches get filled with *some sort of inheritance mechanism*: I mean, with Clearcase, using a config_spec, you can say “get all the files modified on branch /main/issue001 and then continue with the ones on /main or with this specific baseline”.
+
+In Accurev you also have a similar mechanism which let’s streams receive changes from upper branches (streams how they call them) without merging or creating a new commit on the branch.
+
+Don’t you miss this while using GIT? Can you enumerate scenarios where this *inheritance* is a must?
+
+Thanks
+",git,clearcase,version-control,,,,open,0,132,7,"Flexible vs static branching (GIT vs Clearcase/Accurev) My question is about the way in which GIT handles branches: whenever you branch from a commit, this branch won’t ever receive changes from the parent branch unless you *force* it with a merge.
+
+But in other systems such us Clearcase or Accurev, you can specify how branches get filled with *some sort of inheritance mechanism*: I mean, with Clearcase, using a config_spec, you can say “get all the files modified on branch /main/issue001 and then continue with the ones on /main or with this specific baseline”.
+
+In Accurev you also have a similar mechanism which let’s streams receive changes from upper branches (streams how they call them) without merging or creating a new commit on the branch.
+
+Don’t you miss this while using GIT? Can you enumerate scenarios where this *inheritance* is a must?
+
+Thanks
+",3
+8511176,12/14/2011 20:26:40,854739,07/20/2011 20:29:21,98,1,Pushing to Github via R,"I want to start using github for source control of my scripts.  I know you can use the command line/terminal to push a repository, but have been unable to find a package for git.  Any suggestion for one?
+
+Alternatively, I could use the `system` command:
+
+`system(""git push"")`
+
+Can anyone suggest a better/more elegant way to do this?  
+
+Thanks",git,r,github,,,03/20/2012 18:23:29,not constructive,1,58,5,"Pushing to Github via R I want to start using github for source control of my scripts.  I know you can use the command line/terminal to push a repository, but have been unable to find a package for git.  Any suggestion for one?
+
+Alternatively, I could use the `system` command:
+
+`system(""git push"")`
+
+Can anyone suggest a better/more elegant way to do this?  
+
+Thanks",3
+8962753,01/22/2012 16:51:19,39677,11/03/2008 21:48:03,12222,7,Want to make previous commit into a separate branch,"My previous commit has changes that I should have made in a separate branch.
+
+    >git log
+    
+    
+    commit b123...
+    
+    commit a123
+
+Commit b123 has the files that I want pushed into a branch, and I want trunk to be still at a123.
+
+Is this possible?
+
+So trunk (origin/master) should be at commit a123, and anything after that point should be in a feature-branch.
+
+
+",git,,,,,,open,0,80,9,"Want to make previous commit into a separate branch My previous commit has changes that I should have made in a separate branch.
+
+    >git log
+    
+    
+    commit b123...
+    
+    commit a123
+
+Commit b123 has the files that I want pushed into a branch, and I want trunk to be still at a123.
+
+Is this possible?
+
+So trunk (origin/master) should be at commit a123, and anything after that point should be in a feature-branch.
+
+
+",1
+7275328,09/01/2011 19:17:52,31610,10/26/2008 17:16:50,12678,347,"Can I ever lose commited work, in git?","Is it ever possible to lose work in git? Let's assume all my work is commited, and I didn't run `git gc`.
+If I try some ""funky command"" ( NOT `rm -rf .git` ), and something strange happens to my project, could I recover from it?
+Is there something in particular I should avoid doing? Or clone the repository elsewhere before attempting it?",git,,,,,,open,0,61,8,"Can I ever lose commited work, in git? Is it ever possible to lose work in git? Let's assume all my work is commited, and I didn't run `git gc`.
+If I try some ""funky command"" ( NOT `rm -rf .git` ), and something strange happens to my project, could I recover from it?
+Is there something in particular I should avoid doing? Or clone the repository elsewhere before attempting it?",1
+7874262,10/24/2011 10:28:04,247243,01/09/2010 21:16:54,4157,16,Git Video Tutorials,"Could you please point to some Git **video** tutorials?
+
+I couldn't find good video tutorials neither [here][1] not [here][2].
+
+I'm interested to understand how git works, i.e. it's data storage system and what the (basic) commands actually does to the repository.
+
+
+
+  [1]: http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide
+  [2]: http://stackoverflow.com/questions/183918/any-good-git-tutorials",git,tutorials,video-tutorials,,,,open,0,45,3,"Git Video Tutorials Could you please point to some Git **video** tutorials?
+
+I couldn't find good video tutorials neither [here][1] not [here][2].
+
+I'm interested to understand how git works, i.e. it's data storage system and what the (basic) commands actually does to the repository.
+
+
+
+  [1]: http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide
+  [2]: http://stackoverflow.com/questions/183918/any-good-git-tutorials",3
+8364738,12/03/2011 01:25:15,242933,01/04/2010 02:28:02,4733,179,Bash: Git submodule foreach?,"I have `sup` aliased to `submodule foreach 'git co master; git up'` (`co` & `up` are aliases for `checkout` & `pull --rebase`, respectively.).
+
+How do add a condition so that if the submodule name is `Libraries/JSONKit`, it checks out the branch named `experimental`, instead of `master`?",git,bash,foreach,git-submodules,,,open,0,45,4,"Bash: Git submodule foreach? I have `sup` aliased to `submodule foreach 'git co master; git up'` (`co` & `up` are aliases for `checkout` & `pull --rebase`, respectively.).
+
+How do add a condition so that if the submodule name is `Libraries/JSONKit`, it checks out the branch named `experimental`, instead of `master`?",4
+11076817,06/18/2012 04:07:20,1099531,12/15/2011 09:29:57,726,18,Updating bare repo files to git,"I have a bare repo and I edited the files directly without doing a `git commit -a -m ` command because I was rushing, is it possible to update the git to know the changes I have made? Because when I do a `git status` on the bare repo I get a:
+
+
+    fatal: This operation must be run in a work tree
+",git,,,,,06/18/2012 16:02:09,not a real question,1,65,6,"Updating bare repo files to git I have a bare repo and I edited the files directly without doing a `git commit -a -m ` command because I was rushing, is it possible to update the git to know the changes I have made? Because when I do a `git status` on the bare repo I get a:
+
+
+    fatal: This operation must be run in a work tree
+",1
+10570153,05/13/2012 07:55:02,531116,12/05/2010 10:29:10,142,6,"Which is better,review board or gerrit","I just set up review board on git,also used the pre-commit hook srcipts in git for sending review request to review board.  
+But it seems that there is no way to force all developers to send review request before pushing their codes into git remote server.  
+Any one can do this using review board with git?  
+I never tried gerrit,could it do this?  
+",git,review,gerrit,,,05/14/2012 06:14:54,not constructive,1,68,6,"Which is better,review board or gerrit I just set up review board on git,also used the pre-commit hook srcipts in git for sending review request to review board.  
+But it seems that there is no way to force all developers to send review request before pushing their codes into git remote server.  
+Any one can do this using review board with git?  
+I never tried gerrit,could it do this?  
+",3
+10721622,05/23/2012 14:04:50,673526,03/23/2011 17:04:44,38,5,Xcode 4.3.2 problems using git,"Hello Stackoverflow fellows,
+
+Since I installed Xcode 4.3.2 I'm having a lot of problems using git. The File->Source Controls commands doesn't work properly, but if I use git on console then things work well.
+
+So I decided to not check ""Create local go repository for this project"" for my new projects. To my surprise Xcode start to complain when:
+
+ - I try to delete files with the message ""fatal: Not a git repository (or any the parent directories):.git""
+ - I try to rename a file with the message ""fatal: Not a git repository (or any the parent directories):.git""
+ - I try to refactory->rename a class with the message ""Unable to rename Class.m to Cl.m""
+
+Anybody knows what I'm doing wrong ?
+
+Thanks in advanced,
+
+Gazolla
+
+ ",git,version-control,xcode4.3,,,,open,0,121,5,"Xcode 4.3.2 problems using git Hello Stackoverflow fellows,
+
+Since I installed Xcode 4.3.2 I'm having a lot of problems using git. The File->Source Controls commands doesn't work properly, but if I use git on console then things work well.
+
+So I decided to not check ""Create local go repository for this project"" for my new projects. To my surprise Xcode start to complain when:
+
+ - I try to delete files with the message ""fatal: Not a git repository (or any the parent directories):.git""
+ - I try to rename a file with the message ""fatal: Not a git repository (or any the parent directories):.git""
+ - I try to refactory->rename a class with the message ""Unable to rename Class.m to Cl.m""
+
+Anybody knows what I'm doing wrong ?
+
+Thanks in advanced,
+
+Gazolla
+
+ ",3
+7343179,09/08/2011 04:40:51,884995,08/08/2011 23:39:46,88,1,Is it possible to remove a github account,"I created an account on github.com.
+
+Now i want to delete it.
+
+I want to create another account.
+
+Is it possible ?",git,github,,,,09/08/2011 05:44:19,off topic,1,19,8,"Is it possible to remove a github account I created an account on github.com.
+
+Now i want to delete it.
+
+I want to create another account.
+
+Is it possible ?",2
+4955946,02/10/2011 10:30:06,289715,03/09/2010 14:05:36,122,0,Gerrit Code Review error - you are not committer,"I have a local clone with my commits showing author and email id as UserA since i have configured my clone with git config.
+
+I fetched and merged some commits from my colleague's clone (UserB) whoc is also working on the same project, to my clone instead of fetching and merging from the parent project.
+
+My Git log, shows commits made by me and commits made by my colleague.
+
+Question i have here is 
+
+1)Gerrit code review recognizes commit in the parent project. So when i push from my local clone, the commits i pulled from my colleague as not recognized and i get this error
+
+
+! [remote rejected] HEAD -> refs/for/project1 (you are not committer UserB@xyz.com)
+
+Can someone help me with this Gerrit error?
+
+
+
+2)How can i identify whether a commit that has my colleague's name is pull from the parent project or pulled directly from my colleague's clone
+
+
+
+",git,git-push,gerrit,,,,open,0,144,9,"Gerrit Code Review error - you are not committer I have a local clone with my commits showing author and email id as UserA since i have configured my clone with git config.
+
+I fetched and merged some commits from my colleague's clone (UserB) whoc is also working on the same project, to my clone instead of fetching and merging from the parent project.
+
+My Git log, shows commits made by me and commits made by my colleague.
+
+Question i have here is 
+
+1)Gerrit code review recognizes commit in the parent project. So when i push from my local clone, the commits i pulled from my colleague as not recognized and i get this error
+
+
+! [remote rejected] HEAD -> refs/for/project1 (you are not committer UserB@xyz.com)
+
+Can someone help me with this Gerrit error?
+
+
+
+2)How can i identify whether a commit that has my colleague's name is pull from the parent project or pulled directly from my colleague's clone
+
+
+
+",3
+1807036,11/27/2009 06:07:21,110274,05/21/2009 01:30:44,705,39,Git: merging public and private branches while while keeping certain files intact in both branches,"I've read a few git questions here (will post some good links in a bit), but could not find an answer to this one:
+
+I have a public and a private branches where I want to allow certain files to diverge.
+
+Those are configuration files with passwords and my local customizations. 
+
+I do want to be able to merge the branches both ways: from private to public and back, but I do not want to ever have those specific files merged automatically.
+
+Is there a way to set up git this way?
+
+Thanks!",git,merge,,,,,open,0,89,15,"Git: merging public and private branches while while keeping certain files intact in both branches I've read a few git questions here (will post some good links in a bit), but could not find an answer to this one:
+
+I have a public and a private branches where I want to allow certain files to diverge.
+
+Those are configuration files with passwords and my local customizations. 
+
+I do want to be able to merge the branches both ways: from private to public and back, but I do not want to ever have those specific files merged automatically.
+
+Is there a way to set up git this way?
+
+Thanks!",2
+9666981,03/12/2012 12:26:46,801042,06/16/2011 08:01:29,2701,195,Git Integration Manager Workflow -- one or multiple repositories?,"I've read about the [Integration Manager Workflow][1], and it looks very suitable for our development process (one lead developer for the project, who reviews the work of fellow developers before it's committed to the project's repository). 
+
+However, one thing is unclear to me. In [this visualization][2] in the Pro Git book (and the text with it) it appears as though each developer has his own (remote) repository to push to. In [this chapter][3] (section ""Private Small Team""), though, they seem to be using branches to achieve the same kind of workflow.
+
+Is this correct? Which tactic should we use; branches or multiple repositories? I'm guessing it's harder to maintain a timeline of commits if you pull work in from a different repository?
+
+
+  [1]: http://progit.org/book/ch5-1.html
+  [2]: http://progit.org/figures/ch5/18333fig0502-tn.png
+  [3]: http://progit.org/book/ch5-2.html",git,workflow,integration,,,,open,0,130,9,"Git Integration Manager Workflow -- one or multiple repositories? I've read about the [Integration Manager Workflow][1], and it looks very suitable for our development process (one lead developer for the project, who reviews the work of fellow developers before it's committed to the project's repository). 
+
+However, one thing is unclear to me. In [this visualization][2] in the Pro Git book (and the text with it) it appears as though each developer has his own (remote) repository to push to. In [this chapter][3] (section ""Private Small Team""), though, they seem to be using branches to achieve the same kind of workflow.
+
+Is this correct? Which tactic should we use; branches or multiple repositories? I'm guessing it's harder to maintain a timeline of commits if you pull work in from a different repository?
+
+
+  [1]: http://progit.org/book/ch5-1.html
+  [2]: http://progit.org/figures/ch5/18333fig0502-tn.png
+  [3]: http://progit.org/book/ch5-2.html",3
+10636938,05/17/2012 13:45:41,597495,01/31/2011 21:15:37,233,20,Git ignore and unversioned local files,"There are a lot of questions out there covering ignoring things in git, but none seem to work for my particular situation. I have a project that looks like this:
+
+    proj
+    |-foo/
+    |--project-file.txt
+    |-bar/
+    |--project-file2.txt
+    |-temp/
+    |--machine-specific-file.txt
+    |--machine-specific-file2.txt
+
+My project has several branches, all of which have different machine-specific files in them. My problem is this: since I'm not tracking the machine-specific files (no reason to check them in, because they're only useful here), every time I switch branches and try to open my project, the machine-specific files get overwritten. This is a problem, because it takes my software about 10 minutes to generate them - annoying when I'm switching branches 5 or 6 times a day. Is there any way to somehow keep track of the machine-specific files for each branch, without having to store them on the server?
+
+Things I've tried:
+
+* creating a new local branch for each branch that I need to work in, saving the machine-specific files there, and when I need to merge my work, merge it first with the original branch (simple, since it's a fast forward), and then go about merging with everything else. Problems: it works, but it's messy, and sometimes takes a while to do the first merge, due to differences in .gitignore. Maybe this is the right way to go about it? It seems like there should be a better solution.
+
+* making submodules - I don't think I understand this process, because I keep not being able to get it to work the way I want. Since the file has to be named the same thing, in each of the folders, I don't think I'm correctly specifying where the repository I want is.
+
+Let me know if you have any pointers! Thanks.
+",git,git-branch,gitignore,,,,open,0,313,6,"Git ignore and unversioned local files There are a lot of questions out there covering ignoring things in git, but none seem to work for my particular situation. I have a project that looks like this:
+
+    proj
+    |-foo/
+    |--project-file.txt
+    |-bar/
+    |--project-file2.txt
+    |-temp/
+    |--machine-specific-file.txt
+    |--machine-specific-file2.txt
+
+My project has several branches, all of which have different machine-specific files in them. My problem is this: since I'm not tracking the machine-specific files (no reason to check them in, because they're only useful here), every time I switch branches and try to open my project, the machine-specific files get overwritten. This is a problem, because it takes my software about 10 minutes to generate them - annoying when I'm switching branches 5 or 6 times a day. Is there any way to somehow keep track of the machine-specific files for each branch, without having to store them on the server?
+
+Things I've tried:
+
+* creating a new local branch for each branch that I need to work in, saving the machine-specific files there, and when I need to merge my work, merge it first with the original branch (simple, since it's a fast forward), and then go about merging with everything else. Problems: it works, but it's messy, and sometimes takes a while to do the first merge, due to differences in .gitignore. Maybe this is the right way to go about it? It seems like there should be a better solution.
+
+* making submodules - I don't think I understand this process, because I keep not being able to get it to work the way I want. Since the file has to be named the same thing, in each of the folders, I don't think I'm correctly specifying where the repository I want is.
+
+Let me know if you have any pointers! Thanks.
+",3
+3124024,06/26/2010 13:31:38,370764,06/18/2010 23:21:19,6,1,Git: how to work with multiple repositories?,"I have a remote read-only git repository `A`, which I have cloned in my local filesystem. `A` is updated periodically, and I pull and merge the updated code in my system after each update.
+
+I want to collaborate with my team members on the files of `A`, for which, I have create a new remote repository `B`.
+
+How do I manage to sync `B` with my local repository? I would like to learn the proper command sequence and configuration options to achieve my goals. Here are the scenarios I would like to be able to solve:
+1. Pull from A after there are updates, push it to B.
+2. Pull from A, merge it with my local files, then push it to B, merging with the repo on B.
+3. I would like all of A, my local repo and B to have identical branches.
+
+I would be thankful for any help.
+If my question is not very clear, please mention it, and I will try to edit it.
+Thanks.",git,repositories,,,,,open,0,162,7,"Git: how to work with multiple repositories? I have a remote read-only git repository `A`, which I have cloned in my local filesystem. `A` is updated periodically, and I pull and merge the updated code in my system after each update.
+
+I want to collaborate with my team members on the files of `A`, for which, I have create a new remote repository `B`.
+
+How do I manage to sync `B` with my local repository? I would like to learn the proper command sequence and configuration options to achieve my goals. Here are the scenarios I would like to be able to solve:
+1. Pull from A after there are updates, push it to B.
+2. Pull from A, merge it with my local files, then push it to B, merging with the repo on B.
+3. I would like all of A, my local repo and B to have identical branches.
+
+I would be thankful for any help.
+If my question is not very clear, please mention it, and I will try to edit it.
+Thanks.",2
+11633974,07/24/2012 15:15:57,1019830,10/29/2011 14:04:54,167,1,How to ignore everything except hidden subdir?,"I'm using this `.gitignore` file for excluding everything in the current dir and subdirs, except the `!` prefixed entries:
+
+    *
+    !.profile
+    !.vim/snippets
+    !.vimrc
+The `.profile` and `.vimrc` files are showing up as untracked in `git status` but not the `.vim/snippets` file. Ant idea how to include/unexclude this file as well? Thanks
+",git,syntax,gitignore,,,,open,0,62,7,"How to ignore everything except hidden subdir? I'm using this `.gitignore` file for excluding everything in the current dir and subdirs, except the `!` prefixed entries:
+
+    *
+    !.profile
+    !.vim/snippets
+    !.vimrc
+The `.profile` and `.vimrc` files are showing up as untracked in `git status` but not the `.vim/snippets` file. Ant idea how to include/unexclude this file as well? Thanks
+",3
+9947490,03/30/2012 17:12:58,1027498,11/03/2011 10:56:44,21,1,Git repositories on shared hosting with ssh access - multiple users / one ssh account,"I'm part of a small team trying to start coding on a project. I've decided it's time to give git a chance (no more svn) and was trying to see if we could use our shared web hosting to deploy a ""public"" repository there so that we can easily push/pull to/from it and keep up-to-date with each others changes.
+
+The problem I'm having now is that we only have a single ssh account for that hosting. Having used svn in the past, I could enforce a svn username on a given pair of ssh keys, however I don't seem to be able to do something similar with git (in other words tie the ssh keypair to a specific dev). I don't mind everybody having read/write permissions everywhere, since anything that is private should stay on each others machine. Finally, solutions such as gitosis can not be used.
+
+I guess my question to you is how is accountability to git pushes given? Is it tied to the ssh account being used, or the email address given in git config? Can I create different ssh keys for every developer (for the same ssh account though), and just send them to the devs?",git,ssh,repository,,,,open,0,198,15,"Git repositories on shared hosting with ssh access - multiple users / one ssh account I'm part of a small team trying to start coding on a project. I've decided it's time to give git a chance (no more svn) and was trying to see if we could use our shared web hosting to deploy a ""public"" repository there so that we can easily push/pull to/from it and keep up-to-date with each others changes.
+
+The problem I'm having now is that we only have a single ssh account for that hosting. Having used svn in the past, I could enforce a svn username on a given pair of ssh keys, however I don't seem to be able to do something similar with git (in other words tie the ssh keypair to a specific dev). I don't mind everybody having read/write permissions everywhere, since anything that is private should stay on each others machine. Finally, solutions such as gitosis can not be used.
+
+I guess my question to you is how is accountability to git pushes given? Is it tied to the ssh account being used, or the email address given in git config? Can I create different ssh keys for every developer (for the same ssh account though), and just send them to the devs?",3
+6503489,06/28/2011 08:12:31,743464,05/07/2011 21:57:09,58,4,"Mercurial show number of commits ahead of ""origin""","I'm thinking in git terms here ... is it possible to see how many local commits you have made ahead of the origin? As in git, if you type `git status` it will tell you
+
+    Your branch is ahead of blah by blah blah
+
+Is there a similar thing in Mercurial? I know there is hg outgoing but I don't want a command that hits the server as I want to put the output in my prompt (like the commonly implemented bashrc funciton `num_git_commits_ahead`)",git,bash,mercurial,,,,open,0,86,8,"Mercurial show number of commits ahead of ""origin"" I'm thinking in git terms here ... is it possible to see how many local commits you have made ahead of the origin? As in git, if you type `git status` it will tell you
+
+    Your branch is ahead of blah by blah blah
+
+Is there a similar thing in Mercurial? I know there is hg outgoing but I don't want a command that hits the server as I want to put the output in my prompt (like the commonly implemented bashrc funciton `num_git_commits_ahead`)",3
+9537914,03/02/2012 17:44:42,901666,08/19/2011 02:08:22,188,21,How do I get the git init command to be a valid command on my server,"I have installed git on my server. 
+
+When I try to do git init, it says git command 'init' not found. Does anyone know why? or if there is a solution to this.",git,version-control,,,,03/13/2012 16:24:31,off topic,1,33,16,"How do I get the git init command to be a valid command on my server I have installed git on my server. 
+
+When I try to do git init, it says git command 'init' not found. Does anyone know why? or if there is a solution to this.",2
+7376463,09/11/2011 05:26:46,932114,09/07/2011 06:32:20,6,1,"Why not use forums like PHPBB, VBulletin as Bug tracking tool?","I just started using Git; and I looked at several bug tracking tools to go along with my repository - LightHouseApp, FogBugz, BugZilla, Trac and so on. When I create bugs, I often put screenshots with my comments inside screenshot itselfs. I circle parts of screenshot, I add comments and so on. But with all thse bug-tracking tools, I am not really able to add ""image"" in-line. The attachment is usually separate. **There is no simple way to just insert an image in-line**. First you upload an image, then you find it's path and then link it in-line. Or worse, you upload an image at some external image sharing site and then link to it. Instead of a simple upload button.
+
+So, I figured, why don't I use a ""**forum**"" software? After all this is all I need to do is this:
+
+1. create an issue (this can be done by opening a new topic/thread in forum)
+(There are some mods available to mark a topic [unsolved] or [solved])
+
+2. After creating an issue, simply post your message. Even insert images in-line.
+
+3. When the issue is solved, mark it as solved. You can even subscribe to forums and get a digest of all new topics posted and so on. 
+
+It lacks robust notification feature. Because, after all, it's a ""forum"" software. But it allows me the freedom to insert screenshot wherever needed. Because we are only 3-developers, we can do without a robust notification engine for now.
+
+
+",git,bug-tracking,phpbb,issue-tracking,vbulletin,09/11/2011 16:08:36,off topic,1,243,11,"Why not use forums like PHPBB, VBulletin as Bug tracking tool? I just started using Git; and I looked at several bug tracking tools to go along with my repository - LightHouseApp, FogBugz, BugZilla, Trac and so on. When I create bugs, I often put screenshots with my comments inside screenshot itselfs. I circle parts of screenshot, I add comments and so on. But with all thse bug-tracking tools, I am not really able to add ""image"" in-line. The attachment is usually separate. **There is no simple way to just insert an image in-line**. First you upload an image, then you find it's path and then link it in-line. Or worse, you upload an image at some external image sharing site and then link to it. Instead of a simple upload button.
+
+So, I figured, why don't I use a ""**forum**"" software? After all this is all I need to do is this:
+
+1. create an issue (this can be done by opening a new topic/thread in forum)
+(There are some mods available to mark a topic [unsolved] or [solved])
+
+2. After creating an issue, simply post your message. Even insert images in-line.
+
+3. When the issue is solved, mark it as solved. You can even subscribe to forums and get a digest of all new topics posted and so on. 
+
+It lacks robust notification feature. Because, after all, it's a ""forum"" software. But it allows me the freedom to insert screenshot wherever needed. Because we are only 3-developers, we can do without a robust notification engine for now.
+
+
+",5
+3038422,06/14/2010 15:20:56,342896,05/17/2010 09:33:48,16,0,"Git: after preparing a real merge commit, how to create a simple commit?","After invoking `git merge --no-commit <commit>`, performing a commit will result in a *merge commit* with two (or more) parents. What command to invoke to create a *simple commit* instead (without having to re-perform the merge command with the `--squash` option)?",git,git-merge,,,,,open,0,41,13,"Git: after preparing a real merge commit, how to create a simple commit? After invoking `git merge --no-commit <commit>`, performing a commit will result in a *merge commit* with two (or more) parents. What command to invoke to create a *simple commit* instead (without having to re-perform the merge command with the `--squash` option)?",2
+4004026,10/23/2010 12:49:29,457480,09/24/2010 15:44:08,1,1,GIT - getting 'receive.denyCurrentBranch' pushing to bare repo,"Have a remote git bare repo that onto which I've pushed a branch from one machine, and pulled to another machine.
+
+Made some changes on the other machine, trying to push those changes back to the remote bare repo, and I get the 'receive.denyCurrentBranch' error.
+
+What's going on?
+
+This isn't supposed to happen on a bare repo - there's nothing checked out on it.
+
+
+The branches as seen from machine 2 are:
+
+    Fix
+    dev1
+    dev2
+    remotes/origin/HEAD -> origin/dev1
+    remotes/origin/Fix
+    remotes/origin/dev1
+    remotes/origin/dev2
+    remotes/origin/master
+
+'Fix' is the current branch on both dev machines.
+
+When I originally pulled that branch on machine 2, I did:
+
+    git pull
+    git checkout -b Fix origin/Fix
+
+
+I'm suspicious of the first 'remotes' line - seems that the HEAD should be pointing to my current branch, but it isn't.  Think I'm missing something, here..",git,remote,push,,,,open,0,160,8,"GIT - getting 'receive.denyCurrentBranch' pushing to bare repo Have a remote git bare repo that onto which I've pushed a branch from one machine, and pulled to another machine.
+
+Made some changes on the other machine, trying to push those changes back to the remote bare repo, and I get the 'receive.denyCurrentBranch' error.
+
+What's going on?
+
+This isn't supposed to happen on a bare repo - there's nothing checked out on it.
+
+
+The branches as seen from machine 2 are:
+
+    Fix
+    dev1
+    dev2
+    remotes/origin/HEAD -> origin/dev1
+    remotes/origin/Fix
+    remotes/origin/dev1
+    remotes/origin/dev2
+    remotes/origin/master
+
+'Fix' is the current branch on both dev machines.
+
+When I originally pulled that branch on machine 2, I did:
+
+    git pull
+    git checkout -b Fix origin/Fix
+
+
+I'm suspicious of the first 'remotes' line - seems that the HEAD should be pointing to my current branch, but it isn't.  Think I'm missing something, here..",3
+9664492,03/12/2012 09:27:07,324853,04/24/2010 09:31:35,2386,47,How to suspend a git branch?,"    [~] $ git branch
+    * callgraph
+      master
+
+How to ""suspend"" a git branch. For instance, the branch ""master"" is not up to date, but at this time I want all the team to use the branch ""callgraph"" - so working on this branch should be disable in order to avoid mistakes.
+
+Then later, I will merge the callgraph with the master and re-activate this branch...
+",git,,,,,,open,0,75,6,"How to suspend a git branch?     [~] $ git branch
+    * callgraph
+      master
+
+How to ""suspend"" a git branch. For instance, the branch ""master"" is not up to date, but at this time I want all the team to use the branch ""callgraph"" - so working on this branch should be disable in order to avoid mistakes.
+
+Then later, I will merge the callgraph with the master and re-activate this branch...
+",1
+10229501,04/19/2012 13:48:40,407356,07/31/2010 08:14:36,104,7,CVS to GIT seems silly. Am I missing something?,"Good afternoon,
+
+I have recently started a new project at home.  I wont bore you with details as they dont matter.  Point is, I thought I would take the time to look into all this hype about GIT.  A lot of the libraries I end up using seem to be on GitHub and so I thought it would be beneficial to learn it.
+
+So I done some reading.  Lots of blog articles, lots of Stackoverflow questions.  Also adopted GIT in my most recent project at home just to get a feel for it.  Now before I get flamed for poo-poo'ing GIT, all my considerations for this question are for **changing from CVS to GIT**.  That is to say, we already have a project up and running with a stable HEAD and 3-4 branches for different clients and configurations that a small team of 3-6 people are using without too many issues. If you are sitting at square 1 waiting to start a project and wondering what source control system to use, I understand entirely why you would go for GIT.
+
+With that bit out the way, let me actually ask my question.  I have been asked to see if there are any real business advantages to moving from CVS to GIT.  After a few weeks of reading, I still cannot really find anything that would make a real compelling case to actually make the switch.  As I say I have been doing a lot of reading and for the most part, GIT-Fans seem to be pushing it based on 3 main advantages; speed, easy-branching and a handful of features that SVN just doesn't offer (partial file commits, stging ect).  After reading in relative detail about each of these issues, i'm still left thinking 'so what?'
+
+
+**Speed:**
+
+I'm not saying the following links is a particularly comprehensive argument for switching to GIT but it highlight all the points i'm going to make in this post and its open now on a tab so its easy to link.
+
+http://thinkvitamin.com/code/why-you-should-switch-from-subversion-to-git/
+
+So this guy does a few crude benchmarks of creating a branch and switching to it in both GIT and SVN.  He concludes that it takes 1/3rd of a second in GIT and 13 seconds in SVN. Now I don't know what kind of a team you readers work in but, mine can certainly spare 13 seconds every now and again to create a branch if need be.  We have a pretty fancy coffee machine here and that fails to produce a cup in less than 13 seconds so this is hardly a game-changer.   I appreciate he details that branching is quite a lightweight process so lets consider **my** use-case.  I do a load of work during the day and commit the stable stuff in the evening before I go home.  On a big commit, where I have added several hundred files as well as changed, moved and re-factored existing ones, CVS will of performed the commit before I can put my coat on and tidy my desk or wrapper and cups so GIT's super speed is not really selling it to me here.
+
+**Easy branching:**
+
+Again, referring to the above link he paints a picture of absolute hatred when using branches in SVN/CVS.  Surely people aren't finding it that difficult ?  When I want to try out an idea, I right click my project node in Eclipse, select ""Switch to different branch"", select ""new"", type the name and i'm away, committing and updating without 'polluting the mainline' as CVS apparent does.  Now, i'm not the only one that doesn't consider this process on-parr with rocket science surely !?  Likewise, when I have decided that the new ideas in this branch are stable and good, I right click the project again, select ""merge with another branch or version"", select HEAD and wait my obligatory 13seconds and we are back in HEAD but with working changes implemented...happy days, all without GIT.  
+
+Yes, fair enough this process may not go as smoothly if someone has made a few changes to associated files in the mean time, but this only adds a few more right-clicks to the process where I have to tell the system which lines of the file to use and which to discard/move.  I understand the process is the same with GIT so there is no real +/- here, just the same.
+
+**Truly distributed**
+
+The aforementioned post also details a scary scenario where you repository provider sustains a hard-disk corruption and you loose your online repository.  He then goes on to detail that because GIT is has a local repository, this would be no more of an inconvenience than to simply push to a new / repaired server and your away again. Now I consider it standard practice for the first thing to do in the morning is check the repository for any changes made over-night and do an update/merge if needed so, should I go home tonight and find my repository has been burnt to the ground in the morning, I would of lost...well...nothing.  I would create a new repo, commit my local files to the server, the other 5 employees would do the same, there would maybe be a bit of merge fuss but no more than there would of been had we of been committing our local changes to an already existing server and we are away once more.  No big deal.
+
+**GIT Staging**
+
+Another feature touted as wonderful that you cannot achieve using SVN/CVS is staging where you 'craft your commit' to include on the files you want.  This is apparently unachievable using SVN/CVS.  May I introduce these people to change-sets ?
+
+----
+
+Now i'm not ignorant enough to think that I am the only person on the internet that is able to see through all these comparisons to see GIT as simply another version control system and really, nothing special. So I can only conclude that I must be missing or misunderstanding something and would appreciate others' input for this exact reason.  I must present in a meeting in a little over a week, a case for moving from CVS to GIT and really, at this point I don't see there is one.  I don't think GIT could bring anything beneficial to the table over CVS other than helping those that don't like leaving branches on CVS for the rest of the team to see.  What's more, I see some real **disadvantages** in using GIT.  
+
+Lets reverse the idea of loosing a central repository.  You have been working on 101 fancy new ideas over the weekend and been committing like a mad-man to your wonderfully fast, localised repository, excited by the idea of getting the new features reviewed and cleared to push up to the server.  But wait, what's this?  And irreversible BSOD error? An entire cup-o-coffee over your CPU ?  Laptop stolen, lost, ran over ?  All of these issues, while extremely annoying in an SVN setup would only result in me loosing a bit of tech, all my work would have been safely stored on the server each time I did a commit to my little test-branch.  However, using GIT, all those changes were local and now, you may as well of watched TV all weekend because all that work, all those commits are now gone and the outside world has no record of it what-so-ever!  Now all those little 13 second branch-times seem a little more appealing eh ? 
+
+What's more about this 'offline-mode' stuff.  I can't remember the last time I was actually without an internet connection.  Even walking the dog in the forest, if I absolutely **had** to do some work, I could commit to on line repository using edge / 3G signal, would take about 5mins sure, but I could if I wanted to.  Has anyone actually ever been doing serious work without an internet connection of some description in the last...I don't know...3-5 years ?
+
+Thank you for reading this wall of text and I look forward to hearing your views.  While it does seem to me that it is a case of a community getting over-excited about a new, shiny technology,  I actually do really like these newer features of GIT, I just don't think it creates a strong enough case to move from CVS to GIT in a functioning business environment.  If someone could open my eyes in this respect, I would be eternally grateful. ",git,svn,version-control,cvs,,04/19/2012 14:58:26,not a real question,1,1436,9,"CVS to GIT seems silly. Am I missing something? Good afternoon,
+
+I have recently started a new project at home.  I wont bore you with details as they dont matter.  Point is, I thought I would take the time to look into all this hype about GIT.  A lot of the libraries I end up using seem to be on GitHub and so I thought it would be beneficial to learn it.
+
+So I done some reading.  Lots of blog articles, lots of Stackoverflow questions.  Also adopted GIT in my most recent project at home just to get a feel for it.  Now before I get flamed for poo-poo'ing GIT, all my considerations for this question are for **changing from CVS to GIT**.  That is to say, we already have a project up and running with a stable HEAD and 3-4 branches for different clients and configurations that a small team of 3-6 people are using without too many issues. If you are sitting at square 1 waiting to start a project and wondering what source control system to use, I understand entirely why you would go for GIT.
+
+With that bit out the way, let me actually ask my question.  I have been asked to see if there are any real business advantages to moving from CVS to GIT.  After a few weeks of reading, I still cannot really find anything that would make a real compelling case to actually make the switch.  As I say I have been doing a lot of reading and for the most part, GIT-Fans seem to be pushing it based on 3 main advantages; speed, easy-branching and a handful of features that SVN just doesn't offer (partial file commits, stging ect).  After reading in relative detail about each of these issues, i'm still left thinking 'so what?'
+
+
+**Speed:**
+
+I'm not saying the following links is a particularly comprehensive argument for switching to GIT but it highlight all the points i'm going to make in this post and its open now on a tab so its easy to link.
+
+http://thinkvitamin.com/code/why-you-should-switch-from-subversion-to-git/
+
+So this guy does a few crude benchmarks of creating a branch and switching to it in both GIT and SVN.  He concludes that it takes 1/3rd of a second in GIT and 13 seconds in SVN. Now I don't know what kind of a team you readers work in but, mine can certainly spare 13 seconds every now and again to create a branch if need be.  We have a pretty fancy coffee machine here and that fails to produce a cup in less than 13 seconds so this is hardly a game-changer.   I appreciate he details that branching is quite a lightweight process so lets consider **my** use-case.  I do a load of work during the day and commit the stable stuff in the evening before I go home.  On a big commit, where I have added several hundred files as well as changed, moved and re-factored existing ones, CVS will of performed the commit before I can put my coat on and tidy my desk or wrapper and cups so GIT's super speed is not really selling it to me here.
+
+**Easy branching:**
+
+Again, referring to the above link he paints a picture of absolute hatred when using branches in SVN/CVS.  Surely people aren't finding it that difficult ?  When I want to try out an idea, I right click my project node in Eclipse, select ""Switch to different branch"", select ""new"", type the name and i'm away, committing and updating without 'polluting the mainline' as CVS apparent does.  Now, i'm not the only one that doesn't consider this process on-parr with rocket science surely !?  Likewise, when I have decided that the new ideas in this branch are stable and good, I right click the project again, select ""merge with another branch or version"", select HEAD and wait my obligatory 13seconds and we are back in HEAD but with working changes implemented...happy days, all without GIT.  
+
+Yes, fair enough this process may not go as smoothly if someone has made a few changes to associated files in the mean time, but this only adds a few more right-clicks to the process where I have to tell the system which lines of the file to use and which to discard/move.  I understand the process is the same with GIT so there is no real +/- here, just the same.
+
+**Truly distributed**
+
+The aforementioned post also details a scary scenario where you repository provider sustains a hard-disk corruption and you loose your online repository.  He then goes on to detail that because GIT is has a local repository, this would be no more of an inconvenience than to simply push to a new / repaired server and your away again. Now I consider it standard practice for the first thing to do in the morning is check the repository for any changes made over-night and do an update/merge if needed so, should I go home tonight and find my repository has been burnt to the ground in the morning, I would of lost...well...nothing.  I would create a new repo, commit my local files to the server, the other 5 employees would do the same, there would maybe be a bit of merge fuss but no more than there would of been had we of been committing our local changes to an already existing server and we are away once more.  No big deal.
+
+**GIT Staging**
+
+Another feature touted as wonderful that you cannot achieve using SVN/CVS is staging where you 'craft your commit' to include on the files you want.  This is apparently unachievable using SVN/CVS.  May I introduce these people to change-sets ?
+
+----
+
+Now i'm not ignorant enough to think that I am the only person on the internet that is able to see through all these comparisons to see GIT as simply another version control system and really, nothing special. So I can only conclude that I must be missing or misunderstanding something and would appreciate others' input for this exact reason.  I must present in a meeting in a little over a week, a case for moving from CVS to GIT and really, at this point I don't see there is one.  I don't think GIT could bring anything beneficial to the table over CVS other than helping those that don't like leaving branches on CVS for the rest of the team to see.  What's more, I see some real **disadvantages** in using GIT.  
+
+Lets reverse the idea of loosing a central repository.  You have been working on 101 fancy new ideas over the weekend and been committing like a mad-man to your wonderfully fast, localised repository, excited by the idea of getting the new features reviewed and cleared to push up to the server.  But wait, what's this?  And irreversible BSOD error? An entire cup-o-coffee over your CPU ?  Laptop stolen, lost, ran over ?  All of these issues, while extremely annoying in an SVN setup would only result in me loosing a bit of tech, all my work would have been safely stored on the server each time I did a commit to my little test-branch.  However, using GIT, all those changes were local and now, you may as well of watched TV all weekend because all that work, all those commits are now gone and the outside world has no record of it what-so-ever!  Now all those little 13 second branch-times seem a little more appealing eh ? 
+
+What's more about this 'offline-mode' stuff.  I can't remember the last time I was actually without an internet connection.  Even walking the dog in the forest, if I absolutely **had** to do some work, I could commit to on line repository using edge / 3G signal, would take about 5mins sure, but I could if I wanted to.  Has anyone actually ever been doing serious work without an internet connection of some description in the last...I don't know...3-5 years ?
+
+Thank you for reading this wall of text and I look forward to hearing your views.  While it does seem to me that it is a case of a community getting over-excited about a new, shiny technology,  I actually do really like these newer features of GIT, I just don't think it creates a strong enough case to move from CVS to GIT in a functioning business environment.  If someone could open my eyes in this respect, I would be eternally grateful. ",4
+10484846,05/07/2012 15:33:42,281485,02/25/2010 18:17:41,1313,53,When using a DVCS in front of Subversion should I merge or rebase before pushing?,"My company uses Subversion officially, but I'm using Mercurial with the hgsubversion plugin for my daily work.
+
+I tend to have more than one local feature branch (hg bookmark) going at a time. When I complete work on a branch I'll rebase it to the tip of the Subversion trunk and push the whole branch history into the Subversion repository.
+
+I like that all of my granular changes get into the main repository - my coworkers can see why I make a change and not just the end result. But pushing to Subversion rewrites my commits, changing the timestamps to the moment of push, so I'm losing a little bit of fidelity from my work history.
+
+I'm beginning to wonder if I should just be merging my local branches for the push to SVN and maintain my local commit history in branches in my Hg repository. If I move to a merge-oriented workflow, am I hurting my team? Is it realistically possible to sum up the changes that went into a merge with a single commit message?
+
+Does Git->Subversion have this same sort of dichotomy? Aside from this philosophical issue, I'm quite happy with the Hg->Subversion workflow. But any Git users I've talked to seem to abhor the idea of using Git as a frontend for SVN for anything more than brief checkouts and patch submissions to open source projects.",git,svn,mercurial,workflow,dvcs,05/07/2012 17:48:03,not constructive,1,226,15,"When using a DVCS in front of Subversion should I merge or rebase before pushing? My company uses Subversion officially, but I'm using Mercurial with the hgsubversion plugin for my daily work.
+
+I tend to have more than one local feature branch (hg bookmark) going at a time. When I complete work on a branch I'll rebase it to the tip of the Subversion trunk and push the whole branch history into the Subversion repository.
+
+I like that all of my granular changes get into the main repository - my coworkers can see why I make a change and not just the end result. But pushing to Subversion rewrites my commits, changing the timestamps to the moment of push, so I'm losing a little bit of fidelity from my work history.
+
+I'm beginning to wonder if I should just be merging my local branches for the push to SVN and maintain my local commit history in branches in my Hg repository. If I move to a merge-oriented workflow, am I hurting my team? Is it realistically possible to sum up the changes that went into a merge with a single commit message?
+
+Does Git->Subversion have this same sort of dichotomy? Aside from this philosophical issue, I'm quite happy with the Hg->Subversion workflow. But any Git users I've talked to seem to abhor the idea of using Git as a frontend for SVN for anything more than brief checkouts and patch submissions to open source projects.",5
+1854328,12/06/2009 04:13:05,107178,05/14/2009 15:54:53,23,1,"Codaset, Codebasehq, Unfuddle, Trac or Redmine?","I have a handful of small Git repositories I would like to host remotely. They're all private projects, most of them in Java.
+
+Codaset, Codebasehq, Unfuddle, Trac, Redmine..
+There seems to be an abundance of solutions out there. They're all packed with features and useful functionality.
+
+Putting aside pricing and the glossy layouts, what is the best way of comparing these options?",git,repository,redmine,trac,,05/22/2011 10:48:28,off topic,1,59,6,"Codaset, Codebasehq, Unfuddle, Trac or Redmine? I have a handful of small Git repositories I would like to host remotely. They're all private projects, most of them in Java.
+
+Codaset, Codebasehq, Unfuddle, Trac, Redmine..
+There seems to be an abundance of solutions out there. They're all packed with features and useful functionality.
+
+Putting aside pricing and the glossy layouts, what is the best way of comparing these options?",4
+6238590,06/04/2011 18:25:32,242933,01/04/2010 02:28:02,2086,114,Set Git submodule to shallow clone & sparse checkout?,"Many vendor Objective-C libraries (e.g., `facebook-ios-sdk`) instruct you to copy a certain subset of its repo's files/dirs into your Xcode project. One problem with this is then you do not know what revision of the vendor code you have. Another is that if you make changes to the vendor code, it's not easy to contribute your changes via Git.
+
+As a solution, I want to add each vendor library as a Git submodule of my project's repo with some extra settings (say, in the `.gitmodules` file). This way, if another person clones my project and does `git submodule update --init`, their repo & submodules will have the same state as mine because they'll be using the same default settings I set:
+
+1. Sparse checkout: Only check out certain files of the submodule.
+2. Shallow clone: Only clone a certain SHA1 of the submodule.
+
+How do I set the above settings for a Git submodule?",git,github,clone,git-submodules,sparse-checkout,,open,0,150,9,"Set Git submodule to shallow clone & sparse checkout? Many vendor Objective-C libraries (e.g., `facebook-ios-sdk`) instruct you to copy a certain subset of its repo's files/dirs into your Xcode project. One problem with this is then you do not know what revision of the vendor code you have. Another is that if you make changes to the vendor code, it's not easy to contribute your changes via Git.
+
+As a solution, I want to add each vendor library as a Git submodule of my project's repo with some extra settings (say, in the `.gitmodules` file). This way, if another person clones my project and does `git submodule update --init`, their repo & submodules will have the same state as mine because they'll be using the same default settings I set:
+
+1. Sparse checkout: Only check out certain files of the submodule.
+2. Shallow clone: Only clone a certain SHA1 of the submodule.
+
+How do I set the above settings for a Git submodule?",5
+11114027,06/20/2012 06:33:23,238232,12/24/2009 13:41:39,3749,37,What is the most sane method to keep repository history small?,"I understand that storage history is something that is better to keep for vcs and I know that git allows to clone not the full history log but:
+
+ - I afraid GitHub space is limited (main reason)
+ - it's auto-commits processing by script
+ - I'm interesting only in last 10 or 5 commits in history
+ - server space could be limited
+
+For now I found only that tricky way to clean all the history using git rebase
+
+    git checkout --orphan temp $1
+    git commit -m ""Truncated history""
+    git rebase --onto temp $1 origin/master
+    git checkout master
+    git branch -D temp
+
+But that is as complex as useless, it's easier to create new repository and push files directly there. So need something to keep git repository history small.",git,history,gtihub,,,06/21/2012 13:27:44,not constructive,1,140,11,"What is the most sane method to keep repository history small? I understand that storage history is something that is better to keep for vcs and I know that git allows to clone not the full history log but:
+
+ - I afraid GitHub space is limited (main reason)
+ - it's auto-commits processing by script
+ - I'm interesting only in last 10 or 5 commits in history
+ - server space could be limited
+
+For now I found only that tricky way to clean all the history using git rebase
+
+    git checkout --orphan temp $1
+    git commit -m ""Truncated history""
+    git rebase --onto temp $1 origin/master
+    git checkout master
+    git branch -D temp
+
+But that is as complex as useless, it's easier to create new repository and push files directly there. So need something to keep git repository history small.",3
+2721463,04/27/2010 13:14:38,89021,04/09/2009 10:35:29,342,15,How to use git feature branches with live updates and merge back to master?,"I have a production website where master is checked out and a development webiste where I develop in feature branches.
+
+When a feature is merged into master I do this on the development site:
+
+    (currently on the new-feature branch)
+    $ git commit -m""new feature finished""
+    $ git push
+    $ git checkout master
+    $ git merge new-feature
+    $ git push
+
+And on the production site:
+
+    (currently on master branch)
+    $git pull
+
+This works for me. But sometimes the client calls and needs a small change on the website quickly. I can do this on production on master and push master and this works fine.
+
+But when I use a feature branch for the small change I get a gap:
+
+    (On production on branch master)
+    $ git branch quick-feature
+    $ git checkout quick-feature
+    $ git push origin quick-feature
+    $ edit files...
+    $ git add .
+    $ git commit -m""quick changes""
+    $ git push # until this point the changes are live
+    $ git checkout master #now the changes are not live anymore GAP
+    $ git merge quick-feature # now the changes are live again
+    $ git push
+
+I hope I could make clear the intention of this workflow. Can you recommend something better?",git,production-environment,,,,,open,0,253,14,"How to use git feature branches with live updates and merge back to master? I have a production website where master is checked out and a development webiste where I develop in feature branches.
+
+When a feature is merged into master I do this on the development site:
+
+    (currently on the new-feature branch)
+    $ git commit -m""new feature finished""
+    $ git push
+    $ git checkout master
+    $ git merge new-feature
+    $ git push
+
+And on the production site:
+
+    (currently on master branch)
+    $git pull
+
+This works for me. But sometimes the client calls and needs a small change on the website quickly. I can do this on production on master and push master and this works fine.
+
+But when I use a feature branch for the small change I get a gap:
+
+    (On production on branch master)
+    $ git branch quick-feature
+    $ git checkout quick-feature
+    $ git push origin quick-feature
+    $ edit files...
+    $ git add .
+    $ git commit -m""quick changes""
+    $ git push # until this point the changes are live
+    $ git checkout master #now the changes are not live anymore GAP
+    $ git merge quick-feature # now the changes are live again
+    $ git push
+
+I hope I could make clear the intention of this workflow. Can you recommend something better?",2
+10251126,04/20/2012 17:55:02,1347172,04/20/2012 17:35:14,1,0,git: using object shas in a pre-commit hook,"Is there a way to determine the new git sha of a file (or ideally of a tree), BEFORE committing the changes?
+
+Background:
+
+I'm trying to automatically change a string in one file in my repo to a unique value, every time any files in another directory of the repo are changed.
+
+I was thinking that an easy way to do this would be to write a git hook that just uses the sha of the subdirectory tree as the unique string. This seems like it would be straightforward to do as a post-commit hook with git ls-tree, but that would require an extra dummy commit to commit the string each time, generating extra noise.
+
+So far I've determined that this might be possible by running git hash-object, but I'd have to write a mildly complex script to recursively build up the hashes of the files in the directory in order to eventually compute the hash of the directory (tree). I'm wondering if there is a simpler option.",git,,,,,,open,0,164,8,"git: using object shas in a pre-commit hook Is there a way to determine the new git sha of a file (or ideally of a tree), BEFORE committing the changes?
+
+Background:
+
+I'm trying to automatically change a string in one file in my repo to a unique value, every time any files in another directory of the repo are changed.
+
+I was thinking that an easy way to do this would be to write a git hook that just uses the sha of the subdirectory tree as the unique string. This seems like it would be straightforward to do as a post-commit hook with git ls-tree, but that would require an extra dummy commit to commit the string each time, generating extra noise.
+
+So far I've determined that this might be possible by running git hash-object, but I'd have to write a mildly complex script to recursively build up the hashes of the files in the directory in order to eventually compute the hash of the directory (tree). I'm wondering if there is a simpler option.",1
+9674684,03/12/2012 20:56:06,1070314,11/28/2011 23:11:38,1,0,Git commit resulting in a missing tree error,"So I have a newly created repo and I attempted to commit my newly created code but I got an error. So I ran 'git fsck' on my repo and I got this error.
+
+>broken link from    tree 9da8f3ce1355d9bdf03734d42ab15e50e5cf6361
+              to    tree 64a40fc17140c1ce37720675d327d59aa9105ef1
+missing tree 64a40fc17140c1ce37720675d327d59aa9105ef1
+
+I am new to git, so I was wondering what can I do to fix this error?
+
+Thanks!
+
+I looked at : http://stackoverflow.com/questions/5049603/git-missing-commit-error and I didn't understand it.",git,github,git-commit,broken-links,,,open,0,87,8,"Git commit resulting in a missing tree error So I have a newly created repo and I attempted to commit my newly created code but I got an error. So I ran 'git fsck' on my repo and I got this error.
+
+>broken link from    tree 9da8f3ce1355d9bdf03734d42ab15e50e5cf6361
+              to    tree 64a40fc17140c1ce37720675d327d59aa9105ef1
+missing tree 64a40fc17140c1ce37720675d327d59aa9105ef1
+
+I am new to git, so I was wondering what can I do to fix this error?
+
+Thanks!
+
+I looked at : http://stackoverflow.com/questions/5049603/git-missing-commit-error and I didn't understand it.",4
+137102,09/26/2008 00:27:35,21482,09/24/2008 03:28:47,1,1,What's the best visual merge tool for Git?,"Title says it. What's the best tool for viewing and editing a merge in Git? I'd like to get a 3-way merge view, with ""mine"", ""theirs"" and ""output"" in separate panels.
+
+Also, instructions for invoking said tool would be great. (I still haven't figure out how to start kdiff3 in such a way that it doesn't give me an error)",git,sourcecontrol,merge,,,02/16/2012 03:04:47,not constructive,1,59,8,"What's the best visual merge tool for Git? Title says it. What's the best tool for viewing and editing a merge in Git? I'd like to get a 3-way merge view, with ""mine"", ""theirs"" and ""output"" in separate panels.
+
+Also, instructions for invoking said tool would be great. (I still haven't figure out how to start kdiff3 in such a way that it doesn't give me an error)",3
+4878230,02/02/2011 18:18:11,365738,06/13/2010 15:09:10,1967,139,public repository with gitolite,"I installed an configured gitolite and it works for some other projects I'm working on. However, I want to set up a public repo that anyone call clone from (but not push). 
+
+I've searched everywhere and cannot find a way to do this? Has anyone managed to do this with gitoite?",git,ubuntu-10.04,gitolite,,,,open,0,51,4,"public repository with gitolite I installed an configured gitolite and it works for some other projects I'm working on. However, I want to set up a public repo that anyone call clone from (but not push). 
+
+I've searched everywhere and cannot find a way to do this? Has anyone managed to do this with gitoite?",3
+83789,09/17/2008 14:25:47,16050,09/17/2008 14:20:56,1,0,What is the best Git GUI on OSX?,"What is the best GUI on OSX for viewing a repository, and (optionally) manipulating it?",git,version-control,osx,,,08/24/2011 09:51:44,not constructive,1,15,8,"What is the best Git GUI on OSX? What is the best GUI on OSX for viewing a repository, and (optionally) manipulating it?",3
+1598709,10/21/2009 04:23:54,143397,07/23/2009 04:26:50,50,1,"git & Cygwin - trailing whitespace causes ""not uptodate""","Git on Windows w/ Cygwin is fraught with dangers. However there's one that's really starting to bug me.
+
+It's related to the core.autocrlf=true behaviour. After spending a week trawling the 'net it became clear that the problems you'll encounter are less bad with this set. However, if a file has a line with trailing whitespace on the end, it appears to create a major problem.
+
+The problem is that git thinks the file has local modifications, even though it does not. For example, after a brand-new fresh clone, a 'git status' or 'git diff' will immediately show any such files as modified. A 'git reset --hard' does its thing, but then those files still show as modified. 'git diff' shows the differences as being ""an empty line removed, an empty line added"".
+
+The problem is, this blocks a git pull!
+
+    $ git pull
+    Updating 73bcc56..dba6253
+    error: Entry 'foo.py' not uptodate. Cannot merge.
+    $ git reset --hard
+    HEAD is now at 73bcc56 ...
+    $ git diff
+    diff --git a/foo.py b/foo.py
+    index 4cc3854..ccde3f6 100644
+    --- a/foo.py
+    +++ b/foo.py
+    @@ -14,7 +14,7 @@ class TestHelpFunctions(unittest.TestCase):
+         def testVersion(self):
+             v = sendCommand(""version"")
+             self.assertEqual(len(v), 2)
+    -
+    +
+
+
+Ok, I think - there's a local change in the way. What if I stash it? Nope - after git stash it still shows this file as locally changed.
+
+Ok, what if I add it? Of course this still blocks a pull:
+
+    $ git add foo.py
+    $ git pull
+    Updating 73bcc56..dba6253
+    error: Entry 'foo.py' would be overwritten by merge. Cannot merge.
+
+Ok, one last try - let's just commit it and be done with it. Oh great it's conflicted on this file. But the amazing thing is, the file has no conflict markers! Unfortunately 'git pull' now complains that I'm in the middle of a conflicted merge, even though there's no conflict marked.
+
+The fix, I've discovered, is to never commit a file with trailing whitespace before a newline. It just causes git to think the file is modified when it's not, probably due to the DOS-UNIX line ending logic that's obviously broken.
+
+Anyway, I'm not really looking for an answer, because in the end I just nuked the entire thing and recloned. What I'd really like to know is how anyone maintains their sanity while trying to use git with Cygwin.
+
+Don't get me started on 'git add foo/a foo/b FOO/c' when the directory is called ""FOO""...
+
+
+",git,cygwin,merge,line-endings,,10/21/2009 08:24:32,not a real question,1,473,9,"git & Cygwin - trailing whitespace causes ""not uptodate"" Git on Windows w/ Cygwin is fraught with dangers. However there's one that's really starting to bug me.
+
+It's related to the core.autocrlf=true behaviour. After spending a week trawling the 'net it became clear that the problems you'll encounter are less bad with this set. However, if a file has a line with trailing whitespace on the end, it appears to create a major problem.
+
+The problem is that git thinks the file has local modifications, even though it does not. For example, after a brand-new fresh clone, a 'git status' or 'git diff' will immediately show any such files as modified. A 'git reset --hard' does its thing, but then those files still show as modified. 'git diff' shows the differences as being ""an empty line removed, an empty line added"".
+
+The problem is, this blocks a git pull!
+
+    $ git pull
+    Updating 73bcc56..dba6253
+    error: Entry 'foo.py' not uptodate. Cannot merge.
+    $ git reset --hard
+    HEAD is now at 73bcc56 ...
+    $ git diff
+    diff --git a/foo.py b/foo.py
+    index 4cc3854..ccde3f6 100644
+    --- a/foo.py
+    +++ b/foo.py
+    @@ -14,7 +14,7 @@ class TestHelpFunctions(unittest.TestCase):
+         def testVersion(self):
+             v = sendCommand(""version"")
+             self.assertEqual(len(v), 2)
+    -
+    +
+
+
+Ok, I think - there's a local change in the way. What if I stash it? Nope - after git stash it still shows this file as locally changed.
+
+Ok, what if I add it? Of course this still blocks a pull:
+
+    $ git add foo.py
+    $ git pull
+    Updating 73bcc56..dba6253
+    error: Entry 'foo.py' would be overwritten by merge. Cannot merge.
+
+Ok, one last try - let's just commit it and be done with it. Oh great it's conflicted on this file. But the amazing thing is, the file has no conflict markers! Unfortunately 'git pull' now complains that I'm in the middle of a conflicted merge, even though there's no conflict marked.
+
+The fix, I've discovered, is to never commit a file with trailing whitespace before a newline. It just causes git to think the file is modified when it's not, probably due to the DOS-UNIX line ending logic that's obviously broken.
+
+Anyway, I'm not really looking for an answer, because in the end I just nuked the entire thing and recloned. What I'd really like to know is how anyone maintains their sanity while trying to use git with Cygwin.
+
+Don't get me started on 'git add foo/a foo/b FOO/c' when the directory is called ""FOO""...
+
+
+",4
+8482980,12/13/2011 00:42:55,306572,04/01/2010 04:53:34,1,0,How to develop an online code repository?,"I basically want to create a code-repository on my server, where a few of my friends and I can share code snippets. However, I cannot afford to spend on the already available ones.And the free ones wont allow me to keep my code to myself.
+Please help me out here. ",git,repository,,,,12/13/2011 17:54:56,off topic,1,50,7,"How to develop an online code repository? I basically want to create a code-repository on my server, where a few of my friends and I can share code snippets. However, I cannot afford to spend on the already available ones.And the free ones wont allow me to keep my code to myself.
+Please help me out here. ",2
+4944376,02/09/2011 11:42:59,235453,02/25/2009 07:17:54,152,11,How to check real git diff before merging from remote branch?,"I want to check the real diff between remote branch and local branch. How can I do that?
+
+Issuing the below command partially works, but it shows the diff of lines which may not going to merge too.
+
+    git diff remote/branch
+",git,diff,,,,,open,0,43,11,"How to check real git diff before merging from remote branch? I want to check the real diff between remote branch and local branch. How can I do that?
+
+Issuing the below command partially works, but it shows the diff of lines which may not going to merge too.
+
+    git diff remote/branch
+",2
+900560,05/23/2009 00:47:44,40882,11/26/2008 01:40:12,25,0,Git: checking out a file from a previous commit and amending it to HEAD,"I recently committed a file to the HEAD of my branch which has errors in it. I need to do the following things:
+
+<ul>
+  <li> Get that file from one commit previous to HEAD </li><br />
+  <li> Commit that file back into HEAD </li><br />
+</ul>
+
+What's the best way of going about that?",git,version-control,,,,,open,0,53,14,"Git: checking out a file from a previous commit and amending it to HEAD I recently committed a file to the HEAD of my branch which has errors in it. I need to do the following things:
+
+<ul>
+  <li> Get that file from one commit previous to HEAD </li><br />
+  <li> Commit that file back into HEAD </li><br />
+</ul>
+
+What's the best way of going about that?",2
+4200387,11/17/2010 00:14:22,13760,09/16/2008 20:47:33,938,26,Git: Is there a short way to setup a new branch to track a remote branch?,"The usual command is:
+
+    git checkout origin/branch_i_want -b branch_i_want
+
+Git responds with:
+
+    Branch branch_i_want setup to track remote branch branch_i_want from origin.
+
+This is fine. 
+
+My question is simple. Most of the time, the locally created branch has the same name as the remote branch. Is there a git command that does this so I do not need to type the branch name twice?
+
+In other words, is there something like:
+
+git checkout --autocreate-tracking origin/branch_i_want
+
+Which would, in theory create a local branch named branch_i_want and set it up to track origin/branch_i_want ?",git,branch,remote,tracking,,,open,0,94,16,"Git: Is there a short way to setup a new branch to track a remote branch? The usual command is:
+
+    git checkout origin/branch_i_want -b branch_i_want
+
+Git responds with:
+
+    Branch branch_i_want setup to track remote branch branch_i_want from origin.
+
+This is fine. 
+
+My question is simple. Most of the time, the locally created branch has the same name as the remote branch. Is there a git command that does this so I do not need to type the branch name twice?
+
+In other words, is there something like:
+
+git checkout --autocreate-tracking origin/branch_i_want
+
+Which would, in theory create a local branch named branch_i_want and set it up to track origin/branch_i_want ?",4
+11281181,07/01/2012 10:20:40,1442283,02/26/2010 13:39:35,122,12,Deployment strategy for Scrum,"Accroding to Scrum at the end of sprint we have to create working solution(build, concept, code). For example sprint duration is 1 week and accroding to priority we need to pick up an issue that may take more then one week. We are using strategy to commit everything to master branch and don't use branches for issues, it's done to avoid double testing of issue. We can split big issue into small tasks but still at the end of sprint we won't get working solution. So only way for such issue to develop it at separate brahch. Maybe you have any other ideas, propositions?",git,deployment,scrum,,,07/02/2012 20:25:01,not constructive,1,104,4,"Deployment strategy for Scrum Accroding to Scrum at the end of sprint we have to create working solution(build, concept, code). For example sprint duration is 1 week and accroding to priority we need to pick up an issue that may take more then one week. We are using strategy to commit everything to master branch and don't use branches for issues, it's done to avoid double testing of issue. We can split big issue into small tasks but still at the end of sprint we won't get working solution. So only way for such issue to develop it at separate brahch. Maybe you have any other ideas, propositions?",3
+7545672,09/25/2011 13:07:41,963617,09/25/2011 13:03:33,1,0,git: work with git-svn when there are merges,"As far as I understand, git-svn does not support pushing merge commits.
+
+Is there a way to make it work with such commits?
+
+We have tried to use rebase to create a linear history. However, this fails with conflicts on whitespace errors. Is there a way of linearizing the history so there are no conflicts?",git,svn,,,,,open,0,53,8,"git: work with git-svn when there are merges As far as I understand, git-svn does not support pushing merge commits.
+
+Is there a way to make it work with such commits?
+
+We have tried to use rebase to create a linear history. However, this fails with conflicts on whitespace errors. Is there a way of linearizing the history so there are no conflicts?",2
+6767518,07/20/2011 19:41:51,558423,12/30/2010 15:26:33,377,4,What is the difference between github and gist ?,What is the purpose of gist and how is it different from regular code sharing/maintaining using github?  ,git,github,repository,gist,,07/20/2011 20:43:50,off topic,1,19,9,What is the difference between github and gist ? What is the purpose of gist and how is it different from regular code sharing/maintaining using github?  ,4
+5689960,04/16/2011 22:11:25,648855,03/07/2011 21:19:01,13,0,How do I create a commit without a parent in Git?,"I have a small project I was working on without any kind of version control software, and I ended up with three different versions of the same script, where each one does something slightly different from the others. I initialized a git repo with one of the versions, and I'd really like to commit each of the other two without parents. That way, I can merge the differences as though each of the three versions of the script were the tips of different branches.
+
+I'm not even sure whether this is necessarily a sane or reasonable way to go about solving this problem... Any advice on how to do things this way, or advice on a better way to handle this situation would be much appreciated.",git,,,,,,open,0,125,11,"How do I create a commit without a parent in Git? I have a small project I was working on without any kind of version control software, and I ended up with three different versions of the same script, where each one does something slightly different from the others. I initialized a git repo with one of the versions, and I'd really like to commit each of the other two without parents. That way, I can merge the differences as though each of the three versions of the script were the tips of different branches.
+
+I'm not even sure whether this is necessarily a sane or reasonable way to go about solving this problem... Any advice on how to do things this way, or advice on a better way to handle this situation would be much appreciated.",1
+1595631,10/20/2009 15:51:54,972,08/11/2008 08:49:11,1146,48,How to get a list of all blobs in a repository in GIT,"How can I list all versions of all files in a git repository?
+
+(For example for listing all files that ever contained a certain string)
+
+This list could be used to cat the file.",git,,,,,,open,0,32,13,"How to get a list of all blobs in a repository in GIT How can I list all versions of all files in a git repository?
+
+(For example for listing all files that ever contained a certain string)
+
+This list could be used to cat the file.",1
+1989735,01/01/2010 21:37:24,20003,09/21/2008 17:08:29,3554,223,commit & push to remote git repo via webhook?,"I want to commit to a git repo from app-engine via webhooks. I cannot install git on appengine. Possible?
+
+I think it should be on GitHub, because they have a browser based text editor which can commit via the browser. E.g. [go here](http://github.com/dustingetz/autodoc/blob/master/todo.txt) and click the `edit` button.
+
+[GitHub api docs][1] imply read-only operations which doesn't seem to be true.
+
+Also, is this a bad idea? I Know it'll be tough to scale.
+
+
+  [1]: http://github.com/guides/the-github-api",git,github,python,app-engine,,,open,0,73,9,"commit & push to remote git repo via webhook? I want to commit to a git repo from app-engine via webhooks. I cannot install git on appengine. Possible?
+
+I think it should be on GitHub, because they have a browser based text editor which can commit via the browser. E.g. [go here](http://github.com/dustingetz/autodoc/blob/master/todo.txt) and click the `edit` button.
+
+[GitHub api docs][1] imply read-only operations which doesn't seem to be true.
+
+Also, is this a bad idea? I Know it'll be tough to scale.
+
+
+  [1]: http://github.com/guides/the-github-api",4
+7374069,09/10/2011 19:28:59,762896,05/20/2011 14:23:13,23,3,Undo git reset --hard,"I am trying to recover my work. I stupidly did `git reset --hard`, but before that I've done only `get add .` and didn't do `git commit`. Please help! Here is my log:
+
+    MacBookPro:api user$ git status
+    # On branch master
+    # Changes to be committed:
+    #   (use ""git reset HEAD <file>..."" to unstage)
+    
+    #   modified:   .gitignore
+    ...
+
+
+    MacBookPro:api user$ git reset --hard
+    HEAD is now at ff546fa added new strucuture for api
+
+Is it possible to undo `git reset --hard` in this situation?",git,undo,git-commit,git-reset,git-add,,open,0,117,4,"Undo git reset --hard I am trying to recover my work. I stupidly did `git reset --hard`, but before that I've done only `get add .` and didn't do `git commit`. Please help! Here is my log:
+
+    MacBookPro:api user$ git status
+    # On branch master
+    # Changes to be committed:
+    #   (use ""git reset HEAD <file>..."" to unstage)
+    
+    #   modified:   .gitignore
+    ...
+
+
+    MacBookPro:api user$ git reset --hard
+    HEAD is now at ff546fa added new strucuture for api
+
+Is it possible to undo `git reset --hard` in this situation?",5
+7232394,08/29/2011 15:41:32,918105,08/29/2011 15:36:30,1,0,GIT ERROR: remote: fatal: Invalid revision range,"I get the below error while DELETING a branch on the remote repo:
+
+$ git push origin :test1
+remote: Firing Pre - receive hook
+remote: 54706a4dba7c0499205a75414172aec4435f60c4 0000000000000000000000000000000
+000000000 refs/heads/test1
+remote:
+remote: fatal: Invalid revision range 54706a4dba7c0499205a75414172aec4435f60c4..
+0000000000000000000000000000000000000000
+To ssh://git@cmegit/git_demo.git
+ - [deleted]         test1",git,githooks,,,,08/29/2011 19:02:45,not a real question,1,42,7,"GIT ERROR: remote: fatal: Invalid revision range I get the below error while DELETING a branch on the remote repo:
+
+$ git push origin :test1
+remote: Firing Pre - receive hook
+remote: 54706a4dba7c0499205a75414172aec4435f60c4 0000000000000000000000000000000
+000000000 refs/heads/test1
+remote:
+remote: fatal: Invalid revision range 54706a4dba7c0499205a75414172aec4435f60c4..
+0000000000000000000000000000000000000000
+To ssh://git@cmegit/git_demo.git
+ - [deleted]         test1",2
+10330425,04/26/2012 09:10:47,1250250,03/05/2012 16:05:28,48,4,How do I export a git log to a text file?,"I want to export all the commits in a repo to a text file, is there any way to do this?",git,,,,,04/27/2012 15:12:20,not a real question,1,21,11,"How do I export a git log to a text file? I want to export all the commits in a repo to a text file, is there any way to do this?",1
+10583746,05/14/2012 12:54:14,1143492,01/11/2012 15:26:06,1,0,"git merge prompt ""fatal: empty ident""","when I want to merge change from the ""cl"" branch using git, I typed:
+
+    git merge ""merge"" HEAD cl
+
+I got the following anwser:
+
+> *** Please tell me who you are.
+> 
+> Run
+> 
+>   git config --global user.email ""you@example.com""   git config
+> --global user.name ""Your Name""
+> 
+> to set your account's default identity. Omit --global to set the
+> identity only in this repository.
+> 
+> fatal: empty ident  <chandler@host_7-84.(none)> not allowed
+
+So, I typed:
+
+    git config  chandler.chen ""chen lei""
+
+however, after config the account information, merge still get the former result.",git,merge,,,,05/15/2012 16:46:49,not a real question,1,98,6,"git merge prompt ""fatal: empty ident"" when I want to merge change from the ""cl"" branch using git, I typed:
+
+    git merge ""merge"" HEAD cl
+
+I got the following anwser:
+
+> *** Please tell me who you are.
+> 
+> Run
+> 
+>   git config --global user.email ""you@example.com""   git config
+> --global user.name ""Your Name""
+> 
+> to set your account's default identity. Omit --global to set the
+> identity only in this repository.
+> 
+> fatal: empty ident  <chandler@host_7-84.(none)> not allowed
+
+So, I typed:
+
+    git config  chandler.chen ""chen lei""
+
+however, after config the account information, merge still get the former result.",2
+7932092,10/28/2011 16:31:04,3191,08/27/2008 12:32:21,13306,355,Can I add a string to my commit messages before sending them to SVN in git-svn?,"My org has some silly requirements that you must put ""admin"" at the end of every SVN commit message in order to get around some decision made by the SVN gatekeepers that every commit should have an associated bug number. (Everyone on the team bypasses this requirement similarly.)
+
+I'm trying to use git SVN, but I'd like to avoid putting ""admin"" at the end of my frequent git-svn commits.
+
+Is there a way to have git SVN do this for me?",git,svn,git-svn,,,,open,0,79,16,"Can I add a string to my commit messages before sending them to SVN in git-svn? My org has some silly requirements that you must put ""admin"" at the end of every SVN commit message in order to get around some decision made by the SVN gatekeepers that every commit should have an associated bug number. (Everyone on the team bypasses this requirement similarly.)
+
+I'm trying to use git SVN, but I'd like to avoid putting ""admin"" at the end of my frequent git-svn commits.
+
+Is there a way to have git SVN do this for me?",3
+5053679,02/19/2011 21:33:06,80559,03/20/2009 16:10:20,205,6,Git switch to master and bring untacked files along.,"While I was working on a feature_branch I ended up fixing a bug for the whole site. I want to commit the bug fix to master, not my feature_branch. The fix involved adding some new files so when I try to checkout master it aborts and warns me that the untracked files would be overwritten.
+
+How can I switch to master and bring untracked files with me?",git,,,,,,open,0,66,9,"Git switch to master and bring untacked files along. While I was working on a feature_branch I ended up fixing a bug for the whole site. I want to commit the bug fix to master, not my feature_branch. The fix involved adding some new files so when I try to checkout master it aborts and warns me that the untracked files would be overwritten.
+
+How can I switch to master and bring untracked files with me?",1
+8875451,01/16/2012 03:20:29,10608,09/16/2008 00:21:54,1629,60,running git reset --hard manually,"Question
+---
+Is there a way to perform the operations of `git reset --hard` manually -- either through direct bash commands, vim editing, or even just ""lower-level"" git commands?
+
+Reason
+-- 
+The reason I ask this is because
+
+1. I am working on a machine with very low RAM, and that command returns `fatal: inflateInit: out of memory (no message)`
+2. for educational purposes so that I can learn what is actually happening.
+
+If you know how to get around problem #1 (example: some config option which forces git to use lower memory), then please place those as comments since I am also interested in the answer for educational purposes and for the posterity of googlers who find this question later.
+",git,,,,,01/22/2012 20:28:27,too localized,1,114,5,"running git reset --hard manually Question
+---
+Is there a way to perform the operations of `git reset --hard` manually -- either through direct bash commands, vim editing, or even just ""lower-level"" git commands?
+
+Reason
+-- 
+The reason I ask this is because
+
+1. I am working on a machine with very low RAM, and that command returns `fatal: inflateInit: out of memory (no message)`
+2. for educational purposes so that I can learn what is actually happening.
+
+If you know how to get around problem #1 (example: some config option which forces git to use lower memory), then please place those as comments since I am also interested in the answer for educational purposes and for the posterity of googlers who find this question later.
+",1
+6115519,05/24/2011 19:06:28,173773,09/15/2009 14:58:40,2099,98,Is there a git implementation that runs on top of couchdb?,"I've seen this old (defunct) bit of news here: http://news.ycombinator.com/item?id=573699 speaking about an implementation of couchdb using git and bash. I wonder, has anyone tried doing the reverse - implementing git on top of couchdb?",git,couchdb,,,,05/25/2011 08:10:20,not a real question,1,35,11,"Is there a git implementation that runs on top of couchdb? I've seen this old (defunct) bit of news here: http://news.ycombinator.com/item?id=573699 speaking about an implementation of couchdb using git and bash. I wonder, has anyone tried doing the reverse - implementing git on top of couchdb?",2
+5540803,04/04/2011 15:32:04,334545,05/06/2010 14:56:30,2226,196,Is using git gui looked down on by other developers?,"While I was learning git, I was taught to use git gui. I have used this in conjunction with other git gui commands in the command line and I now can choose when to use it or not. My question is, some people I know prefer to use the good ol' command line and it seems that they somewhat think of git gui as something that are for noobs(something like people using VIM ""looking down"" on people using IDEs like TextMate or Eclipse).
+
+I myself think that I can use git gui for fast committing a lot of changes(since i can just view the diffs as I go along quickly) rather than doing git add -p and going through all those uncommitted changes.
+
+While I'm trying to avoid stirring a hornet's nest(or opening a can of worms) I really am just curious as what the general consensus on git gui is. Maybe provide links on articles that support your claim? (if this is too subjective, please flag or close it down as appropriately needed)",git,gui,git-gui,,,04/04/2011 15:37:15,not constructive,1,172,10,"Is using git gui looked down on by other developers? While I was learning git, I was taught to use git gui. I have used this in conjunction with other git gui commands in the command line and I now can choose when to use it or not. My question is, some people I know prefer to use the good ol' command line and it seems that they somewhat think of git gui as something that are for noobs(something like people using VIM ""looking down"" on people using IDEs like TextMate or Eclipse).
+
+I myself think that I can use git gui for fast committing a lot of changes(since i can just view the diffs as I go along quickly) rather than doing git add -p and going through all those uncommitted changes.
+
+While I'm trying to avoid stirring a hornet's nest(or opening a can of worms) I really am just curious as what the general consensus on git gui is. Maybe provide links on articles that support your claim? (if this is too subjective, please flag or close it down as appropriately needed)",3
+6769220,07/20/2011 22:16:52,817925,06/27/2011 18:29:17,68,0,How to force a pull to a file in git?,"I am having a merge conflict, and I can usually just rename the file and pull from the repo ti resolve or manually edit the edit. This time, I committed changes to a file that has conflicts, and it is in the staging area.
+I tried using `git reset HEAD <file>`and then using `git pull` again, but I still get merge conflicts.
+Is there a way to force the overwrite of the troublesome file?
+Thanks.",git,github,,,,,open,0,72,10,"How to force a pull to a file in git? I am having a merge conflict, and I can usually just rename the file and pull from the repo ti resolve or manually edit the edit. This time, I committed changes to a file that has conflicts, and it is in the staging area.
+I tried using `git reset HEAD <file>`and then using `git pull` again, but I still get merge conflicts.
+Is there a way to force the overwrite of the troublesome file?
+Thanks.",2
+5374994,03/21/2011 07:46:11,238232,12/24/2009 13:41:39,643,9,Can I work on github with opened source code on commercial project and how ?,"I really want to work with my project on GitHub and then Sell it (binary).
+
+is that possible ?
+
+what license I must to chose / create for it ?",git,licensing,github,,,03/21/2011 12:08:42,off topic,1,28,15,"Can I work on github with opened source code on commercial project and how ? I really want to work with my project on GitHub and then Sell it (binary).
+
+is that possible ?
+
+what license I must to chose / create for it ?",3
+9591804,03/06/2012 20:58:30,960956,09/23/2011 10:44:31,175,9,brew won't link git,"when i install git or upgrade git via brew i can't link it with brew link git.
+If i try sudo brew link git i get: ""cowardly refusing to sudo brew link"".
+
+it says that i have to check the permissions on:
+
+usr/local/share/gitk/lib
+
+/usr/local/share/git-gui/lib
+
+/usr/local/share/git-core/templates
+
+/usr/local/share/git-core/templates/hooks
+
+/usr/local/share/git-core 
+
+I chmod everything to 777 but i'm not sure if it is good.
+
+I can now link git. Should I change the permission to something less permissive?
+
+Cheers",git,brew,,,,03/06/2012 22:07:42,off topic,1,66,4,"brew won't link git when i install git or upgrade git via brew i can't link it with brew link git.
+If i try sudo brew link git i get: ""cowardly refusing to sudo brew link"".
+
+it says that i have to check the permissions on:
+
+usr/local/share/gitk/lib
+
+/usr/local/share/git-gui/lib
+
+/usr/local/share/git-core/templates
+
+/usr/local/share/git-core/templates/hooks
+
+/usr/local/share/git-core 
+
+I chmod everything to 777 but i'm not sure if it is good.
+
+I can now link git. Should I change the permission to something less permissive?
+
+Cheers",2
+1112490,07/10/2009 23:56:25,98151,04/30/2009 01:08:25,118,12,GIT diff GUI.,"I have a rather large diff of 2 GIT branches and would like to open them in some sort of nice UI side by side.
+Something that shows me the diff's easily, and hopefully that I can merge differences
+one by one.
+git diff is rather hard to work with.
+ ",git,version-control,diff,,,,open,0,48,3,"GIT diff GUI. I have a rather large diff of 2 GIT branches and would like to open them in some sort of nice UI side by side.
+Something that shows me the diff's easily, and hopefully that I can merge differences
+one by one.
+git diff is rather hard to work with.
+ ",3
+10163176,04/15/2012 15:03:28,63523,02/06/2009 22:00:54,5968,325,"Using remote host as working directory, git extensions","Instead of cloning a repository and developing & testing locally, our project has to be hosted on the server and tested there, due to licensing restrictions (operate on particular domain, within a specific path, specific IP allowed, etc)
+
+Therefore we cannot setup local test environments, we have to use a central repository and use that as a sort of ""remote working directory""
+
+The development team would like to use <a href=""http://code.google.com/p/gitextensions/"">`git extensions (gui)`</a>
+
+Is there anyway of setting up git extensions to open a remote as a working directory and act on it, instead of a local one? When any changes are made to the server test repository, they should appear in the staging area.
+
+Please see the picture <a href=""http://i.stack.imgur.com/Nbcl5.jpg"">below (large)</a> for example
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/Nbcl5.jpg",git,git-extensions,,,,,open,0,126,8,"Using remote host as working directory, git extensions Instead of cloning a repository and developing & testing locally, our project has to be hosted on the server and tested there, due to licensing restrictions (operate on particular domain, within a specific path, specific IP allowed, etc)
+
+Therefore we cannot setup local test environments, we have to use a central repository and use that as a sort of ""remote working directory""
+
+The development team would like to use <a href=""http://code.google.com/p/gitextensions/"">`git extensions (gui)`</a>
+
+Is there anyway of setting up git extensions to open a remote as a working directory and act on it, instead of a local one? When any changes are made to the server test repository, they should appear in the staging area.
+
+Please see the picture <a href=""http://i.stack.imgur.com/Nbcl5.jpg"">below (large)</a> for example
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/Nbcl5.jpg",2
+7894541,10/25/2011 19:11:48,969251,09/28/2011 14:09:28,32,5,Ignore changes to a file in Git without removing it from the Repo?,"This is the situation: We have several configuration files, and when a user clones the repo it is expected they will modify these configuration files. The files themselves are structured to make this quick, simple, and easy - but it means that any user doing a ""git add *"" or ""git commit -a"" ends up sending them back to the server with the changes already made!
+
+Not only does this break things for the next person next time he pulls (he'll need to merge every time and handle the conflicts for a file he shouldn't even need), it means a user can very easily accidentally break the continuous integration testing we've got going.
+
+What I want is the effect of git ignore (it doesn't care if it gets changed, it won't commit it), but without having to remove the file completely. It would be nice if we could also force a change to the file somehow.
+
+I know there are ways to do this in SVN, I figure Git must have an equivalent.
+
+And this isn't actually programming related, I just realized, so if there's a better stackexchange site to move it to...",git,,,,,,open,0,189,13,"Ignore changes to a file in Git without removing it from the Repo? This is the situation: We have several configuration files, and when a user clones the repo it is expected they will modify these configuration files. The files themselves are structured to make this quick, simple, and easy - but it means that any user doing a ""git add *"" or ""git commit -a"" ends up sending them back to the server with the changes already made!
+
+Not only does this break things for the next person next time he pulls (he'll need to merge every time and handle the conflicts for a file he shouldn't even need), it means a user can very easily accidentally break the continuous integration testing we've got going.
+
+What I want is the effect of git ignore (it doesn't care if it gets changed, it won't commit it), but without having to remove the file completely. It would be nice if we could also force a change to the file somehow.
+
+I know there are ways to do this in SVN, I figure Git must have an equivalent.
+
+And this isn't actually programming related, I just realized, so if there's a better stackexchange site to move it to...",1
+6273512,06/08/2011 02:12:48,602532,02/04/2011 02:17:35,1,0,GIT RM a file with a leading whitespace character in filename,"I need help with a git issue.
+
+I have managed to create a file with a space at the beginning of it's name. 
+I also have the same file without the space. When I first created the file with the single space I added it and committed it to my local repo.
+
+if I do a git rm it deletes the file I want to kepp not the file I want to get rid of..
+
+How can I get rid of the version with the leading single space character in the file name..
+
+Regards
+
+Gus Denton 
+Uni of New South Wales  ",git,,,,,,open,0,98,11,"GIT RM a file with a leading whitespace character in filename I need help with a git issue.
+
+I have managed to create a file with a space at the beginning of it's name. 
+I also have the same file without the space. When I first created the file with the single space I added it and committed it to my local repo.
+
+if I do a git rm it deletes the file I want to kepp not the file I want to get rid of..
+
+How can I get rid of the version with the leading single space character in the file name..
+
+Regards
+
+Gus Denton 
+Uni of New South Wales  ",1

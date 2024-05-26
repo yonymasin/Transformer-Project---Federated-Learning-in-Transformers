@@ -1,0 +1,2009 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+10336295,04/26/2012 15:13:24,1295337,03/27/2012 11:10:39,14,0,Find the value inside of boudary using array,"I need your help on this.
+
+
+I have a table. in that table heading one cell name is ""TOD Status"". the same row end with cell value of ""Grand total"". the same column down also end with call value of ""Grand total"". in the table above mentioned three cell names as boundary and inside of table if any numbers find, shuold be change as ""BOLD"" format. 
+
+Have to use the array here.
+
+Please anybody help me on this.
+
+Thanks in advance.",arrays,excel-vba,excel-vba-mac,,,07/09/2012 18:49:58,not a real question,1,78,8,"Find the value inside of boudary using array I need your help on this.
+
+
+I have a table. in that table heading one cell name is ""TOD Status"". the same row end with cell value of ""Grand total"". the same column down also end with call value of ""Grand total"". in the table above mentioned three cell names as boundary and inside of table if any numbers find, shuold be change as ""BOLD"" format. 
+
+Have to use the array here.
+
+Please anybody help me on this.
+
+Thanks in advance.",3
+4742754,01/20/2011 01:52:00,147915,07/30/2009 15:48:14,437,42,Select a random number from an array and then remove that number,"Say I have an array:
+
+    myList:Array = new Array();
+    myList = [1,2,3,4,5,6,7,8,9];
+    
+    myRandomList:Array = new Array();
+    
+    for (var i:uint = 0; i < myList; i++) {
+                var item:Number = Math.floor(Math.random() * myList.length-1) + 1;
+                myRandomList.push(item);
+          }
+
+The only thing is, I'd like myRandomList to not have any duplicate numbers...is there a way to select a random number from the first list and then SUBTRACT it so I don't select that number twice?",arrays,,,,,,open,0,130,12,"Select a random number from an array and then remove that number Say I have an array:
+
+    myList:Array = new Array();
+    myList = [1,2,3,4,5,6,7,8,9];
+    
+    myRandomList:Array = new Array();
+    
+    for (var i:uint = 0; i < myList; i++) {
+                var item:Number = Math.floor(Math.random() * myList.length-1) + 1;
+                myRandomList.push(item);
+          }
+
+The only thing is, I'd like myRandomList to not have any duplicate numbers...is there a way to select a random number from the first list and then SUBTRACT it so I don't select that number twice?",1
+8380459,12/05/2011 02:40:36,1021118,10/30/2011 21:30:57,1,0,Mips jump back to a branch statement,"I'm having a lot of trouble trying to figure out how to implement this in the Mips/Mars architecture.
+
+I'm making a Battleship game and storing the board as an array that can hold 100 ints.
+
+I need to loop through the player's array and convert the information stored in each 'cell' to graphical data for the purpose of displaying the board to the user.
+
+My troubles stem from the fact that the characters being displayed to the user are based on what values are in each cell of the array.
+
+If the value is 0 (empty) - print '[ ]', if 1 (guessed and empty) print - '[O]', and if 2 (guessed and hit) print - '[X]'.
+
+So as I'm looping through each cell in the array, I need to check the value and branch to the appropriate print function.
+
+My problem is that if I branch to the print statement, how do I jump back to where the branch statement was?
+
+Pseudo code:
+Looping through array, 'ArrayCell' = value at current array location
+branch if equal ArrayCell, 0, print empty
+branch if equal ArrayCell, 1, print miss
+branch if equal ArrayCell, 2, print hit
+increment array
+
+print empty:
+print then jump back to loop
+print miss:
+print then jump back to loop
+print hit:
+print then jump back to loop
+
+How do you jump back to the branch statement after printing to preserve where you are in the array?
+
+Many thanks!
+",arrays,assembly,return,mips,mars,,open,0,222,7,"Mips jump back to a branch statement I'm having a lot of trouble trying to figure out how to implement this in the Mips/Mars architecture.
+
+I'm making a Battleship game and storing the board as an array that can hold 100 ints.
+
+I need to loop through the player's array and convert the information stored in each 'cell' to graphical data for the purpose of displaying the board to the user.
+
+My troubles stem from the fact that the characters being displayed to the user are based on what values are in each cell of the array.
+
+If the value is 0 (empty) - print '[ ]', if 1 (guessed and empty) print - '[O]', and if 2 (guessed and hit) print - '[X]'.
+
+So as I'm looping through each cell in the array, I need to check the value and branch to the appropriate print function.
+
+My problem is that if I branch to the print statement, how do I jump back to where the branch statement was?
+
+Pseudo code:
+Looping through array, 'ArrayCell' = value at current array location
+branch if equal ArrayCell, 0, print empty
+branch if equal ArrayCell, 1, print miss
+branch if equal ArrayCell, 2, print hit
+increment array
+
+print empty:
+print then jump back to loop
+print miss:
+print then jump back to loop
+print hit:
+print then jump back to loop
+
+How do you jump back to the branch statement after printing to preserve where you are in the array?
+
+Many thanks!
+",5
+8652849,12/28/2011 06:57:04,1118831,12/28/2011 06:48:23,1,1,Where to declare arrays when you have a main form that uses many class programs in C#,"Pls, i have an issue and will be very glad if you can help solve it. I have an assignment due for submission anytime soon. The issue is in the assignment I'm required to make use of class programs and database. I absolutely have no problem with the database, just the class. The classes are discountClothingSale class, and clothingSale. The main form uses either of the classes depending on whether the discount check box is checked. If the check box is checked it makes use of the discountClothingSale class to get the price due or otherwisw. My issue now is I want to declare a set of array that holds some values such as the product ID, product name, quantity, product price, the discount given if discount is checked, the amount due after discount, and the total. also i want to include an array that holds some details of the customer gotten from the customer database whose fields are displayed on the form. The structure will include customer name, address, postcode, state and phone no. At the end of the order, i want to be able to print an invoice that has the customer details from the array on the top of the invoice / receipt, and below will be the order details like the product and prices e.t.c. Now I do not know where to declare the array structure, whether in the main form or in the other classes. Please Help. Thanks",arrays,,,,,12/28/2011 14:30:00,not a real question,1,243,17,"Where to declare arrays when you have a main form that uses many class programs in C# Pls, i have an issue and will be very glad if you can help solve it. I have an assignment due for submission anytime soon. The issue is in the assignment I'm required to make use of class programs and database. I absolutely have no problem with the database, just the class. The classes are discountClothingSale class, and clothingSale. The main form uses either of the classes depending on whether the discount check box is checked. If the check box is checked it makes use of the discountClothingSale class to get the price due or otherwisw. My issue now is I want to declare a set of array that holds some values such as the product ID, product name, quantity, product price, the discount given if discount is checked, the amount due after discount, and the total. also i want to include an array that holds some details of the customer gotten from the customer database whose fields are displayed on the form. The structure will include customer name, address, postcode, state and phone no. At the end of the order, i want to be able to print an invoice that has the customer details from the array on the top of the invoice / receipt, and below will be the order details like the product and prices e.t.c. Now I do not know where to declare the array structure, whether in the main form or in the other classes. Please Help. Thanks",1
+5263764,03/10/2011 18:00:15,648341,03/07/2011 15:07:34,1,0,"xcode - leaks from nowhere, what am I doing wrong?","I am having real trouble with release and leaks. I have an array that just wont stop leaking! here is my code:
+I have declared otherValuesArray in the .h
+I have tried hundreds of different ways, including autorelease.
+
+Can someone tell me what I am doing wrong?? Thanks
+
+    otherValuesArray = [[NSMutableArray array] retain]; //89% leak
+
+    NSString *tempString;
+    tempString = [[NSString stringWithFormat:@""%d"",challengeID] autorelease];
+    [otherValuesArray addObject:[NSString stringWithString:tempString]]; // 11% leak
+    tempString=nil;
+    
+    tempString = [[NSString stringWithFormat:@""%d"",scoreMultiQuant] autorelease];
+    [otherValuesArray addObject:[NSString stringWithString:tempString]];
+    tempString=nil;
+
+    int challengeDoneTemp = [challenges otherValues:otherValuesArray];
+
+    tempString=nil;
+    [tempString release];
+
+    otherValuesArray = nil;
+    [otherValuesArray release];",arrays,xcode,memory,nsmutablearray,leak,,open,0,131,10,"xcode - leaks from nowhere, what am I doing wrong? I am having real trouble with release and leaks. I have an array that just wont stop leaking! here is my code:
+I have declared otherValuesArray in the .h
+I have tried hundreds of different ways, including autorelease.
+
+Can someone tell me what I am doing wrong?? Thanks
+
+    otherValuesArray = [[NSMutableArray array] retain]; //89% leak
+
+    NSString *tempString;
+    tempString = [[NSString stringWithFormat:@""%d"",challengeID] autorelease];
+    [otherValuesArray addObject:[NSString stringWithString:tempString]]; // 11% leak
+    tempString=nil;
+    
+    tempString = [[NSString stringWithFormat:@""%d"",scoreMultiQuant] autorelease];
+    [otherValuesArray addObject:[NSString stringWithString:tempString]];
+    tempString=nil;
+
+    int challengeDoneTemp = [challenges otherValues:otherValuesArray];
+
+    tempString=nil;
+    [tempString release];
+
+    otherValuesArray = nil;
+    [otherValuesArray release];",5
+7564247,09/27/2011 04:37:04,796490,06/13/2011 19:19:17,120,3,Adding items to Rails 3 array onclick,"I'm working on a Rails 3 app where a user's profile `has_many :todos`. The user has two categories of `:todos` through a join model `:profile_todos` with `t.string`.
+
+What I want to do is count the `:todos` and add to (and list) the items in the categories, which are `:todos_outside` and `:todos_inside`.
+
+**Profile Model:**
+
+    class Profile < ActiveRecord::Base
+      belongs_to :user
+      has_many :todos, :through => :profile_todos
+      has_many :profile_todos
+
+      def add_todo_inside_item(item)
+        self.profile_todos.build :category => 'inside'
+      end
+
+      def add_todo_outside_item(item)
+        self.profile_todos.build :category => 'outside'
+      end
+
+**ProfileTodo Model:**
+
+    class ProfileTodo < ActiveRecord::Base
+      belongs_to :profile
+      belongs_to :todo
+    end
+
+**Todo Model:**
+
+    class Todos < ActiveRecord::Base
+      belongs_to :profile
+    end
+
+What would be the best method to:
+
+ 1. Add values to the user's `:profile_todos` categories? (If it's best to use onclick can you provide an example on a `<%= link_to %>`? Though I see onclick was removed from Rails 3.)
+ 2. List the values in those categories in the user's profile?
+
+Any help would be much appreciated as I'm a beginner.",arrays,ruby-on-rails-3,,,,,open,0,234,7,"Adding items to Rails 3 array onclick I'm working on a Rails 3 app where a user's profile `has_many :todos`. The user has two categories of `:todos` through a join model `:profile_todos` with `t.string`.
+
+What I want to do is count the `:todos` and add to (and list) the items in the categories, which are `:todos_outside` and `:todos_inside`.
+
+**Profile Model:**
+
+    class Profile < ActiveRecord::Base
+      belongs_to :user
+      has_many :todos, :through => :profile_todos
+      has_many :profile_todos
+
+      def add_todo_inside_item(item)
+        self.profile_todos.build :category => 'inside'
+      end
+
+      def add_todo_outside_item(item)
+        self.profile_todos.build :category => 'outside'
+      end
+
+**ProfileTodo Model:**
+
+    class ProfileTodo < ActiveRecord::Base
+      belongs_to :profile
+      belongs_to :todo
+    end
+
+**Todo Model:**
+
+    class Todos < ActiveRecord::Base
+      belongs_to :profile
+    end
+
+What would be the best method to:
+
+ 1. Add values to the user's `:profile_todos` categories? (If it's best to use onclick can you provide an example on a `<%= link_to %>`? Though I see onclick was removed from Rails 3.)
+ 2. List the values in those categories in the user's profile?
+
+Any help would be much appreciated as I'm a beginner.",2
+6296178,06/09/2011 16:31:09,791290,06/09/2011 15:57:20,1,0,Finding contiguous blocks in a 2D array,"Say you had an array in the form:
+
+    [ 
+      [2, 2, 3, 4],
+      [2, 3, 5, 5],
+      [2, 2, 2, 5],
+      [3, 2, 2, 4],
+    ]
+
+and wanted to find coordinates of numerically contiguous blocks, in this case:
+
+    [
+      # the 2s:
+      [(0,0), (0,1), (1,0), (2,0), (2,1), (2,2), (3,1), (3,2)],
+      # and the 5s:
+      [(1,2), (1,3), (2,3)]
+    ]
+
+how would you do it?
+",arrays,search,2d,,,,open,0,114,7,"Finding contiguous blocks in a 2D array Say you had an array in the form:
+
+    [ 
+      [2, 2, 3, 4],
+      [2, 3, 5, 5],
+      [2, 2, 2, 5],
+      [3, 2, 2, 4],
+    ]
+
+and wanted to find coordinates of numerically contiguous blocks, in this case:
+
+    [
+      # the 2s:
+      [(0,0), (0,1), (1,0), (2,0), (2,1), (2,2), (3,1), (3,2)],
+      # and the 5s:
+      [(1,2), (1,3), (2,3)]
+    ]
+
+how would you do it?
+",3
+9612031,03/08/2012 02:16:07,506912,11/13/2010 19:01:37,14,0,Matlab structure arrays treated as vectors,"I'd like my program to not treat this:
+
+    {0:1000}
+    {ones(1,1000)}
+
+not as vectors when I input them for my structure array. Any idea on how to do this? Thanks in advance.",arrays,matlab,structure,,,,open,0,36,6,"Matlab structure arrays treated as vectors I'd like my program to not treat this:
+
+    {0:1000}
+    {ones(1,1000)}
+
+not as vectors when I input them for my structure array. Any idea on how to do this? Thanks in advance.",3
+7698921,10/08/2011 18:33:06,985654,10/08/2011 18:15:32,1,0,How Two Iterate Over Two Arrays In A Strongly Typed Language?,"I have had this question in many languages, but I never happened to pursue the question. I only googled the questions, but rarely got results.
+
+I figured it out, but I just wanna make sure this is the best way to go.
+
+Lets take an Example: (i'll make it as general as possible so that it hopefully works in every language.)
+
+
+    firstArray[0] = 1;
+    firstArray[1] = 2;
+    firstArray[2] = 3;
+
+    secondArray[0] = a;
+    secondArray[1] = b;
+    secondArray[2] = c;
+
+Now lets imagine if both these arrays are endless.
+
+If I wanted to get these results:
+
+    1a
+    2b
+    3c
+
+Then can I write this?:
+
+    for (int i=0; i < 3; i++)
+    {
+    print(firstArray[i] + secondArray[i]
+    }
+
+
+
+
+",arrays,strong-typing,,,,,open,0,149,11,"How Two Iterate Over Two Arrays In A Strongly Typed Language? I have had this question in many languages, but I never happened to pursue the question. I only googled the questions, but rarely got results.
+
+I figured it out, but I just wanna make sure this is the best way to go.
+
+Lets take an Example: (i'll make it as general as possible so that it hopefully works in every language.)
+
+
+    firstArray[0] = 1;
+    firstArray[1] = 2;
+    firstArray[2] = 3;
+
+    secondArray[0] = a;
+    secondArray[1] = b;
+    secondArray[2] = c;
+
+Now lets imagine if both these arrays are endless.
+
+If I wanted to get these results:
+
+    1a
+    2b
+    3c
+
+Then can I write this?:
+
+    for (int i=0; i < 3; i++)
+    {
+    print(firstArray[i] + secondArray[i]
+    }
+
+
+
+
+",2
+9237777,02/11/2012 04:18:56,1056912,11/20/2011 23:08:46,1,0,Checking a 5x5 grid in linear time O(n),Is it possible to check a 5x5 grid/array/matrix in linear time. Its obvious it can be done in quadratic. Any ideas?,arrays,time,grid,linear,quadratic,02/11/2012 15:27:18,not a real question,1,21,8,Checking a 5x5 grid in linear time O(n) Is it possible to check a 5x5 grid/array/matrix in linear time. Its obvious it can be done in quadratic. Any ideas?,5
+10918484,06/06/2012 16:44:02,1440283,06/06/2012 16:27:55,1,0,MYSQL array will not update PHP,"I have a problem with a form that will not run the update script. I have used similar code before and have it working well. I am sure this is something I missed, but a fresh set of eyes would be appreciated. I have been stuck for a few hours on this one.
+
+   
+
+         <!DOCTYPE HTML>
+        <head>
+        <link href=""CSS/Level3_3.css"" rel=""stylesheet"" type=""text/css"">
+        <? $prop_id=$_REQUEST['prop_id']; 
+        $x=0;
+        include""db.php"";
+        if(isset($_REQUEST['prop_id'])){
+       $prop_id=$_REQUEST['prop_id'];
+        mysql_select_db($database_DB, $SDB);
+        if(isset($_REQUEST['sorts'])){
+    	$sort=$_REQUEST['sorts'];
+    	$dir="" ASC"";
+    	$sorts=$sort.' '.$dir;
+    	$areas_query=""SELECT * FROM TIncludes WHERE propid= '$prop_id' AND archived='0' ORDER BY $sorts  "";
+        } else {
+        $sorts='';
+        $areas_query = ""SELECT * FROM TIncludes WHERE propid = '$prop_id' AND archived='0' ORDER BY added DESC "";
+        }
+        $area = mysql_query($areas_query, $SALESDB) or die(mysql_error());
+        ?>
+        </head>
+        <body>
+       <div id=""title"">
+       <h3>Edit Includes (Macros) in Proposal</h3></div>
+        <div id=""form""><form method=""post"" action=""?prop_id=<? echo $prop_id; ?>&do=update&sorts=<? echo $sort; ?>"">
+        <input name=""prop_id"" type=""hidden"" value=""<? echo $prop_id; ?>"" />
+       <div>
+      <table width=""120%"" border=""1"">
+        <tr class=""title"">
+          <td><strong><a href=""?prop_id=<? echo $prop_id; ?>&sorts=macronum"">Macro Number</a>
+        </strong></td>
+          <td><strong><a href=""?prop_id=<? echo $prop_id; ?>&sorts=macro"">Macro</a>
+            <input type=""submit"" name=""submit"" id=""submit"" value=""Submit"" />
+          </strong></td>
+          <td><strong><a href=""?prop_id=<? echo $prop_id; ?>&sorts=sort"">Sort #</a></strong></td>
+          <td><strong>Remove</strong></td>
+        </tr><tr><? do { ?>
+        
+        <? $x++; ?>
+          <td><input name=""macronum[]"" type=""text"" disabled=""disabled"" value=""<? echo $areas['macronum']; ?>"" size=""20"" readonly/></td>
+          <td><textarea name=""macro[]"" cols=""50"" rows=""5""><? echo $areas['macro']; ?></textarea></td>
+          <td><input name=""sort[]"" type=""text""  size=""5"" value=""<? echo $areas['sort']; ?>"" />
+          <input type=""hidden"" name=""t_id[]"" value=""<? $areas['t_id']; ?>""  /></td>
+          <td><input <?php if (!(strcmp($areas['archived'],1))) {echo ""checked=\""checked\"""";} ?> name=""archived[]"" type=""checkbox"" id=""archived"" value=""1"" /></td>
+        </tr><tr>
+        <?  } while($areas=mysql_fetch_array($area)or die(mysql_error()));
+        ?></tr>
+        </table>
+       <p>&nbsp;</p>
+         <p>
+        <label> </label>  
+        </div>
+        </form></div>
+        <? 
+        if($_REQUEST['do']=='update'){	
+    	$count=mysql_num_rows($area);
+    	for($i=0;$i<$count;$i++){
+    	$sort[$i]=$_POST['sort'][$i];
+    	$macro[$i]= mysql_real_escape_string($_POST['macro'][$i]);
+    	$archived[$i]=$_POST['archived'][$i];
+    	$t_id[$i]=$_POST['t_id'][$i];
+    	$updater=(""UPDATE TIncludes SET macro='{$macro[$i]}',archived={$archived[$i]},sort={$sort[$i]} WHERE t_id={$t_id[$i]} "");	
+    	$upres=mysql_query($updater, $SALESDB)or die(mysql_error());
+        echo $upres;
+    	 if ($upres === FALSE) {
+            die(mysql_error());
+        } 
+      	} // END OF COUNT FOR STATEMENT
+        } // END UPDATE FUNCTIONS 
+        } 
+        ?><br>
+        </body>
+        </html>
+        
+
+
+Thanks in advance for looking at it. Any suggests will be taken to heart!
+
+
+",arrays,,,,,06/06/2012 17:06:31,not a real question,1,801,6,"MYSQL array will not update PHP I have a problem with a form that will not run the update script. I have used similar code before and have it working well. I am sure this is something I missed, but a fresh set of eyes would be appreciated. I have been stuck for a few hours on this one.
+
+   
+
+         <!DOCTYPE HTML>
+        <head>
+        <link href=""CSS/Level3_3.css"" rel=""stylesheet"" type=""text/css"">
+        <? $prop_id=$_REQUEST['prop_id']; 
+        $x=0;
+        include""db.php"";
+        if(isset($_REQUEST['prop_id'])){
+       $prop_id=$_REQUEST['prop_id'];
+        mysql_select_db($database_DB, $SDB);
+        if(isset($_REQUEST['sorts'])){
+    	$sort=$_REQUEST['sorts'];
+    	$dir="" ASC"";
+    	$sorts=$sort.' '.$dir;
+    	$areas_query=""SELECT * FROM TIncludes WHERE propid= '$prop_id' AND archived='0' ORDER BY $sorts  "";
+        } else {
+        $sorts='';
+        $areas_query = ""SELECT * FROM TIncludes WHERE propid = '$prop_id' AND archived='0' ORDER BY added DESC "";
+        }
+        $area = mysql_query($areas_query, $SALESDB) or die(mysql_error());
+        ?>
+        </head>
+        <body>
+       <div id=""title"">
+       <h3>Edit Includes (Macros) in Proposal</h3></div>
+        <div id=""form""><form method=""post"" action=""?prop_id=<? echo $prop_id; ?>&do=update&sorts=<? echo $sort; ?>"">
+        <input name=""prop_id"" type=""hidden"" value=""<? echo $prop_id; ?>"" />
+       <div>
+      <table width=""120%"" border=""1"">
+        <tr class=""title"">
+          <td><strong><a href=""?prop_id=<? echo $prop_id; ?>&sorts=macronum"">Macro Number</a>
+        </strong></td>
+          <td><strong><a href=""?prop_id=<? echo $prop_id; ?>&sorts=macro"">Macro</a>
+            <input type=""submit"" name=""submit"" id=""submit"" value=""Submit"" />
+          </strong></td>
+          <td><strong><a href=""?prop_id=<? echo $prop_id; ?>&sorts=sort"">Sort #</a></strong></td>
+          <td><strong>Remove</strong></td>
+        </tr><tr><? do { ?>
+        
+        <? $x++; ?>
+          <td><input name=""macronum[]"" type=""text"" disabled=""disabled"" value=""<? echo $areas['macronum']; ?>"" size=""20"" readonly/></td>
+          <td><textarea name=""macro[]"" cols=""50"" rows=""5""><? echo $areas['macro']; ?></textarea></td>
+          <td><input name=""sort[]"" type=""text""  size=""5"" value=""<? echo $areas['sort']; ?>"" />
+          <input type=""hidden"" name=""t_id[]"" value=""<? $areas['t_id']; ?>""  /></td>
+          <td><input <?php if (!(strcmp($areas['archived'],1))) {echo ""checked=\""checked\"""";} ?> name=""archived[]"" type=""checkbox"" id=""archived"" value=""1"" /></td>
+        </tr><tr>
+        <?  } while($areas=mysql_fetch_array($area)or die(mysql_error()));
+        ?></tr>
+        </table>
+       <p>&nbsp;</p>
+         <p>
+        <label> </label>  
+        </div>
+        </form></div>
+        <? 
+        if($_REQUEST['do']=='update'){	
+    	$count=mysql_num_rows($area);
+    	for($i=0;$i<$count;$i++){
+    	$sort[$i]=$_POST['sort'][$i];
+    	$macro[$i]= mysql_real_escape_string($_POST['macro'][$i]);
+    	$archived[$i]=$_POST['archived'][$i];
+    	$t_id[$i]=$_POST['t_id'][$i];
+    	$updater=(""UPDATE TIncludes SET macro='{$macro[$i]}',archived={$archived[$i]},sort={$sort[$i]} WHERE t_id={$t_id[$i]} "");	
+    	$upres=mysql_query($updater, $SALESDB)or die(mysql_error());
+        echo $upres;
+    	 if ($upres === FALSE) {
+            die(mysql_error());
+        } 
+      	} // END OF COUNT FOR STATEMENT
+        } // END UPDATE FUNCTIONS 
+        } 
+        ?><br>
+        </body>
+        </html>
+        
+
+
+Thanks in advance for looking at it. Any suggests will be taken to heart!
+
+
+",1
+9476692,02/28/2012 05:05:47,589897,01/25/2011 23:38:58,27,0,Time complexity of Array Manipulation,"Couple very basic time complexity related questions here:
+
+1. What is the time complexity of array initialization in java? e.g., 
+
+    <pre>int arr[] = new int[5000];</pre>
+
+   I am guessing it to be O(n) or does the JVM invokes some crazy hardware voodoo magic that it takes only O(1)?
+
+2. What about inserting or retrieving elements using array index?
+
+    <pre>
+    void setNumber(int number, int arrIndex) {
+      arr[arrIndex] = number;
+    }
+
+    int getNumber(int arrIndex) {
+      return arr[arrIndex];
+    }
+    </pre>
+   I am guessing this to be O(1). But say if arrIndex is 4999 then, wouldn't the pointer that is pointing to the head of the array calculates that the item to be retrieved is at head+(size of int)*arrIndex and 'moves' n (~5000) position to retrieve that item thus making the complexity O(n) and not O(1). 
+
+   Perhaps we do not consider things at hardware level and conveniently call it the 'constant' associated with the time complexity? Could someone please clarify? Thanks!
+",arrays,time,complexity,big-o,,,open,0,193,5,"Time complexity of Array Manipulation Couple very basic time complexity related questions here:
+
+1. What is the time complexity of array initialization in java? e.g., 
+
+    <pre>int arr[] = new int[5000];</pre>
+
+   I am guessing it to be O(n) or does the JVM invokes some crazy hardware voodoo magic that it takes only O(1)?
+
+2. What about inserting or retrieving elements using array index?
+
+    <pre>
+    void setNumber(int number, int arrIndex) {
+      arr[arrIndex] = number;
+    }
+
+    int getNumber(int arrIndex) {
+      return arr[arrIndex];
+    }
+    </pre>
+   I am guessing this to be O(1). But say if arrIndex is 4999 then, wouldn't the pointer that is pointing to the head of the array calculates that the item to be retrieved is at head+(size of int)*arrIndex and 'moves' n (~5000) position to retrieve that item thus making the complexity O(n) and not O(1). 
+
+   Perhaps we do not consider things at hardware level and conveniently call it the 'constant' associated with the time complexity? Could someone please clarify? Thanks!
+",4
+11417341,07/10/2012 16:02:11,1480041,06/25/2012 12:54:53,17,0,Find a string in an array PERL,"So I have a file that lists a bunch of IP Addresses. I want to set that file up as an array and then run a loop that picks out each line that contains a number and then *. So 0* or 1* or 2* or 3* or 4* ....
+
+so far I have...
+
+        #!/usr/bin/perl
+
+        @ipadr=`cat /opt/DIFF/filedrive/conf/filedrive.hosts`;
+
+        foreach $line (@ipadr) {
+",arrays,string,perl,,,07/11/2012 02:21:03,not constructive,1,81,7,"Find a string in an array PERL So I have a file that lists a bunch of IP Addresses. I want to set that file up as an array and then run a loop that picks out each line that contains a number and then *. So 0* or 1* or 2* or 3* or 4* ....
+
+so far I have...
+
+        #!/usr/bin/perl
+
+        @ipadr=`cat /opt/DIFF/filedrive/conf/filedrive.hosts`;
+
+        foreach $line (@ipadr) {
+",3
+7275946,09/01/2011 20:12:53,910882,08/24/2011 23:52:15,1,0,how to make php array tree recursion,"Array
+(
+    [0] => Array
+        (
+            [0] => 1
+            [id] => 1
+            [1] => mobile
+            [name] => mobile
+            [2] => 
+            [parent_id] => 
+        )
+
+    [1] => Array
+        (
+            [0] => 2
+            [id] => 2
+            [1] => car
+            [name] => car
+            [2] => 
+            [parent_id] => 
+        )
+
+    [2] => Array
+        (
+            [0] => 3
+            [id] => 3
+            [1] => shirt
+            [name] => shirt
+            [2] => 
+            [parent_id] => 
+        )
+
+    [3] => Array
+        (
+            [0] => 4
+            [id] => 4
+            [1] => tshirt
+            [name] => tshirt
+            [2] => 
+            [parent_id] => 
+        )
+
+    [4] => Array
+        (
+            [0] => 5
+            [id] => 5
+            [1] => nokia
+            [name] => nokia
+            [2] => 1
+            [parent_id] => 1
+        )
+
+    [5] => Array
+        (
+            [0] => 6
+            [id] => 6
+            [1] => samsung
+            [name] => samsung
+            [2] => 1
+            [parent_id] => 1
+        )
+
+    [6] => Array
+        (
+            [0] => 7
+            [id] => 7
+            [1] => n95
+            [name] => n95
+            [2] => 5
+            [parent_id] => 5
+        )
+
+    [7] => Array
+        (
+            [0] => 8
+            [id] => 8
+            [1] => lenova
+            [name] => lenova
+            [2] => 2
+            [parent_id] => 2
+        )
+
+    [8] => Array
+        (
+            [0] => 9
+            [id] => 9
+            [1] => maruti
+            [name] => maruti
+            [2] => 2
+            [parent_id] => 2
+        )
+
+    [9] => Array
+        (
+            [0] => 10
+            [id] => 10
+            [1] => secondhand
+            [name] => secondhand
+            [2] => 9
+            [parent_id] => 9
+        )
+
+    [10] => Array
+        (
+            [0] => 11
+            [id] => 11
+            [1] => brandnew
+            [name] => brandnew
+            [2] => 9
+            [parent_id] => 9
+        )
+
+    [11] => Array
+        (
+            [0] => 12
+            [id] => 12
+            [1] => n44
+            [name] => n44
+            [2] => 7
+            [parent_id] => 7
+        )
+
+)
+
+
+how to make above array nested tree recursion.
+please expert people help me to solve this problem.",arrays,recursion,,,,09/02/2011 11:16:31,not a real question,1,1288,7,"how to make php array tree recursion Array
+(
+    [0] => Array
+        (
+            [0] => 1
+            [id] => 1
+            [1] => mobile
+            [name] => mobile
+            [2] => 
+            [parent_id] => 
+        )
+
+    [1] => Array
+        (
+            [0] => 2
+            [id] => 2
+            [1] => car
+            [name] => car
+            [2] => 
+            [parent_id] => 
+        )
+
+    [2] => Array
+        (
+            [0] => 3
+            [id] => 3
+            [1] => shirt
+            [name] => shirt
+            [2] => 
+            [parent_id] => 
+        )
+
+    [3] => Array
+        (
+            [0] => 4
+            [id] => 4
+            [1] => tshirt
+            [name] => tshirt
+            [2] => 
+            [parent_id] => 
+        )
+
+    [4] => Array
+        (
+            [0] => 5
+            [id] => 5
+            [1] => nokia
+            [name] => nokia
+            [2] => 1
+            [parent_id] => 1
+        )
+
+    [5] => Array
+        (
+            [0] => 6
+            [id] => 6
+            [1] => samsung
+            [name] => samsung
+            [2] => 1
+            [parent_id] => 1
+        )
+
+    [6] => Array
+        (
+            [0] => 7
+            [id] => 7
+            [1] => n95
+            [name] => n95
+            [2] => 5
+            [parent_id] => 5
+        )
+
+    [7] => Array
+        (
+            [0] => 8
+            [id] => 8
+            [1] => lenova
+            [name] => lenova
+            [2] => 2
+            [parent_id] => 2
+        )
+
+    [8] => Array
+        (
+            [0] => 9
+            [id] => 9
+            [1] => maruti
+            [name] => maruti
+            [2] => 2
+            [parent_id] => 2
+        )
+
+    [9] => Array
+        (
+            [0] => 10
+            [id] => 10
+            [1] => secondhand
+            [name] => secondhand
+            [2] => 9
+            [parent_id] => 9
+        )
+
+    [10] => Array
+        (
+            [0] => 11
+            [id] => 11
+            [1] => brandnew
+            [name] => brandnew
+            [2] => 9
+            [parent_id] => 9
+        )
+
+    [11] => Array
+        (
+            [0] => 12
+            [id] => 12
+            [1] => n44
+            [name] => n44
+            [2] => 7
+            [parent_id] => 7
+        )
+
+)
+
+
+how to make above array nested tree recursion.
+please expert people help me to solve this problem.",2
+5143884,02/28/2011 15:24:05,348380,05/23/2010 17:06:42,98,11,Scoping Issue with PHP Arrays,"I'm trying to solve this problem where I have a unique array of values within a specific range. Take this scenario: Generate a fixed value array (90) with unique entries. If you find a duplicate, remove, reindex, and fill the void. I'm running into the problem that conditional statements do not allow you to interact with an array outside of it's scope. I'm aware of `array_unique` but it doesn't refill those gaps, just makes them. How do I refill those gaps?",arrays,php5,,,,,open,0,81,5,"Scoping Issue with PHP Arrays I'm trying to solve this problem where I have a unique array of values within a specific range. Take this scenario: Generate a fixed value array (90) with unique entries. If you find a duplicate, remove, reindex, and fill the void. I'm running into the problem that conditional statements do not allow you to interact with an array outside of it's scope. I'm aware of `array_unique` but it doesn't refill those gaps, just makes them. How do I refill those gaps?",2
+5973709,05/12/2011 05:35:08,314661,04/12/2010 15:22:23,1476,19,Retrieving Binary data from SQL in VB6,"If you have a column of type binary in SQL and return it using ADODB in VB6 even if the column contains only 1 byte of data it must be stored as a byte array.
+
+So for example:
+
+
+    Dim cm As ADODB.Command
+    Dim rs As ADODB.Recordset
+
+    Set cm = New ADODB.Command
+    Set rs = New ADODB.Recordset
+
+    With cm
+        .ActiveConnection = cn
+        .CommandTimeout = 30
+        .CommandType = adCmdText
+        .CommandText = ""SELECT * FROM Table WHERE RowID = ?""
+        .Parameters.Append .CreateParameter(""TableID"", adInteger, adParamInput, , TableID)
+    End With
+    
+    RecordsetOpen cn, rs, cm, , adOpenForwardOnly, adLockReadOnly
+
+    With rs
+        If .State = adStateOpen Then
+            If .RecordCount > 0 Then
+                Dim tempArray() As Byte
+                tempArray = .Fields(""BinaryColumn"")
+                ''Success! Returns array containing 1 Byte in it
+
+                Dim value as Byte
+                value = .Fields(""BinaryColumn"")
+                ''Fails! Run-Time error '13' Type Mismatch
+            End If
+        End If
+    End With
+
+Allot of people would look at that and say ""So what? Its failing with a type mismatch because you have a Byte() and are trying to set a Byte!"".
+
+My argument is Fields.Value is a property of Type Variant and given VB6s liberal policies on typecasting I would have figured something like this would work.
+
+Could someone explain why this fails?
+
+    ",arrays,vb6,casting,byte,bytearray,,open,0,391,7,"Retrieving Binary data from SQL in VB6 If you have a column of type binary in SQL and return it using ADODB in VB6 even if the column contains only 1 byte of data it must be stored as a byte array.
+
+So for example:
+
+
+    Dim cm As ADODB.Command
+    Dim rs As ADODB.Recordset
+
+    Set cm = New ADODB.Command
+    Set rs = New ADODB.Recordset
+
+    With cm
+        .ActiveConnection = cn
+        .CommandTimeout = 30
+        .CommandType = adCmdText
+        .CommandText = ""SELECT * FROM Table WHERE RowID = ?""
+        .Parameters.Append .CreateParameter(""TableID"", adInteger, adParamInput, , TableID)
+    End With
+    
+    RecordsetOpen cn, rs, cm, , adOpenForwardOnly, adLockReadOnly
+
+    With rs
+        If .State = adStateOpen Then
+            If .RecordCount > 0 Then
+                Dim tempArray() As Byte
+                tempArray = .Fields(""BinaryColumn"")
+                ''Success! Returns array containing 1 Byte in it
+
+                Dim value as Byte
+                value = .Fields(""BinaryColumn"")
+                ''Fails! Run-Time error '13' Type Mismatch
+            End If
+        End If
+    End With
+
+Allot of people would look at that and say ""So what? Its failing with a type mismatch because you have a Byte() and are trying to set a Byte!"".
+
+My argument is Fields.Value is a property of Type Variant and given VB6s liberal policies on typecasting I would have figured something like this would work.
+
+Could someone explain why this fails?
+
+    ",5
+6166450,05/29/2011 07:26:40,774937,05/29/2011 07:26:40,1,0,"why I get [1, 2, 3],[1, 2, 3] instead of [1, 2, 3],[11, 2, 3]","sublista = [1, 2, 3]
+lista = [sublista]
+nsublista = sublista
+nsublista[0] = sublista[0]+10
+lista.append(nsublista)
+print lista
+
+thks SS
+    ",arrays,,,,,05/30/2011 01:31:33,not a real question,1,17,15,"why I get [1, 2, 3],[1, 2, 3] instead of [1, 2, 3],[11, 2, 3] sublista = [1, 2, 3]
+lista = [sublista]
+nsublista = sublista
+nsublista[0] = sublista[0]+10
+lista.append(nsublista)
+print lista
+
+thks SS
+    ",1
+6881816,07/30/2011 07:34:57,676231,03/25/2011 06:27:43,47,1,change multidimensional array to single array,"i want to use split() method in my array.but, i cant use single array.this is my code:
+
+    Arraylist<String> output_list = new ArrayList<String>();
+    String[][] test = new String[output_list.size()][];
+    for(int i=0; i<output_list.size();i++)
+    {
+       String temp = output_list.get(i);
+       test[i] = temp.split("" "");
+    }
+
+i want to use only single array test[].and the the item in output_list will be insert into test[] after we split the data using .split(). but the problem is when i change String test[][] to test[]; 
+i got incompatible type error.anyone can tell me why its happened?
+
+",arrays,,,,,03/29/2012 12:27:25,not a real question,1,113,6,"change multidimensional array to single array i want to use split() method in my array.but, i cant use single array.this is my code:
+
+    Arraylist<String> output_list = new ArrayList<String>();
+    String[][] test = new String[output_list.size()][];
+    for(int i=0; i<output_list.size();i++)
+    {
+       String temp = output_list.get(i);
+       test[i] = temp.split("" "");
+    }
+
+i want to use only single array test[].and the the item in output_list will be insert into test[] after we split the data using .split(). but the problem is when i change String test[][] to test[]; 
+i got incompatible type error.anyone can tell me why its happened?
+
+",1
+7280275,09/02/2011 07:17:39,452580,09/20/2010 10:02:55,233,1,Recursive array correct method of display,"Sorry guys back again with my recursive array which does work but I cannot get the ""layout"" right what I am after is a ""proper"" tree structure using `<ul>`,`<li>` so you end up like this:
+
+<ul>
+<li>Item
+<ul>
+<li>Child
+<ul>
+<li>Child of child
+<ul>
+<li>Etc...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+My function looks like this - whilst the function works the ""layout"" does not suggestions please.
+
+    function recursive_array($results,$tbl) {
+	global $DBH;
+	$tbl = $tbl;
+	if (count($results)) {
+		foreach($results as $res) {
+			if( $res->ParentID == 0 ) { 
+			echo '<ul class=""recursive"">';
+			echo '<li>';	
+			echo $res->Name;
+			echo $res->Description;
+			echo $res->date_added;
+			echo '<ul>'; 
+			}
+			
+			if( $res->ParentID != 0 ) { 
+			echo '<li>';
+				 echo $res->Name;
+				 echo $res->Description;
+				 echo $res->date_added;
+			echo '</li>';
+			}
+			
+		
+			$STH = $DBH->query(""SELECT * FROM "".$tbl."" WHERE ParentID  = '"".$res->ID.""'"");
+			$fquerycount = $STH->rowCount();
+			$STH->setFetchMode(PDO::FETCH_OBJ);
+			recursive_array($STH,$tbl);
+			if( $res->ParentID == 0 ) { 
+			echo '</ul></li></ul>';
+			}		
+		}
+	}
+}
+
+Thanks in advance",arrays,layout,recursive-query,,,,open,0,115,6,"Recursive array correct method of display Sorry guys back again with my recursive array which does work but I cannot get the ""layout"" right what I am after is a ""proper"" tree structure using `<ul>`,`<li>` so you end up like this:
+
+<ul>
+<li>Item
+<ul>
+<li>Child
+<ul>
+<li>Child of child
+<ul>
+<li>Etc...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+My function looks like this - whilst the function works the ""layout"" does not suggestions please.
+
+    function recursive_array($results,$tbl) {
+	global $DBH;
+	$tbl = $tbl;
+	if (count($results)) {
+		foreach($results as $res) {
+			if( $res->ParentID == 0 ) { 
+			echo '<ul class=""recursive"">';
+			echo '<li>';	
+			echo $res->Name;
+			echo $res->Description;
+			echo $res->date_added;
+			echo '<ul>'; 
+			}
+			
+			if( $res->ParentID != 0 ) { 
+			echo '<li>';
+				 echo $res->Name;
+				 echo $res->Description;
+				 echo $res->date_added;
+			echo '</li>';
+			}
+			
+		
+			$STH = $DBH->query(""SELECT * FROM "".$tbl."" WHERE ParentID  = '"".$res->ID.""'"");
+			$fquerycount = $STH->rowCount();
+			$STH->setFetchMode(PDO::FETCH_OBJ);
+			recursive_array($STH,$tbl);
+			if( $res->ParentID == 0 ) { 
+			echo '</ul></li></ul>';
+			}		
+		}
+	}
+}
+
+Thanks in advance",3
+8709727,01/03/2012 08:42:26,203256,11/05/2009 08:10:15,350,24,php session &array,"I have problem with session variables.
+
+When i am in root folder 
+
+    www.domain.com/index.php
+    array(2) { [""sessionvariables""]=> array(6) {......}
+
+and print_r SESSION i see the vars without & in front 
+
+when i am in a directory
+
+    www.domain.com/directory/index.php
+    array(2) { [""sessionvariables""]=> &array(6) {......}
+
+and print_r SESSION i see the vars WITH & in front 
+
+As far as i know this is happening (the & in front of var) when register_global is On but in my case is Off
+
+This is cause me problems because it seems that session variables are register and confused with other variables in my code
+
+Any help appreciated. ",arrays,session,,,,01/03/2012 16:18:34,not a real question,1,109,3,"php session &array I have problem with session variables.
+
+When i am in root folder 
+
+    www.domain.com/index.php
+    array(2) { [""sessionvariables""]=> array(6) {......}
+
+and print_r SESSION i see the vars without & in front 
+
+when i am in a directory
+
+    www.domain.com/directory/index.php
+    array(2) { [""sessionvariables""]=> &array(6) {......}
+
+and print_r SESSION i see the vars WITH & in front 
+
+As far as i know this is happening (the & in front of var) when register_global is On but in my case is Off
+
+This is cause me problems because it seems that session variables are register and confused with other variables in my code
+
+Any help appreciated. ",2
+8972457,01/23/2012 13:34:41,711083,04/16/2011 11:15:02,6,0,How can loop through perl constant,"I want to do the same as below 
+
+    my @nucleotides = ('A', 'C', 'G', 'T');
+    foreach (@nucleotides) {
+        print $_;
+    }
+
+but using
+
+    use constant NUCLEOTIDES => ['A', 'C', 'G', 'T'];
+
+How can I do that ?",arrays,perl,loops,constants,,,open,0,55,6,"How can loop through perl constant I want to do the same as below 
+
+    my @nucleotides = ('A', 'C', 'G', 'T');
+    foreach (@nucleotides) {
+        print $_;
+    }
+
+but using
+
+    use constant NUCLEOTIDES => ['A', 'C', 'G', 'T'];
+
+How can I do that ?",4
+10250325,04/20/2012 16:51:13,1257852,03/08/2012 19:36:36,38,0,CUDA shared memory not faster than global?,"Hi i have kernel function, where i need to compare bytes. Area where i want to search is divided into blocks, so array of 4k bytes is divided to 4k/256 = 16 blocks. Each thread in block reads array on idx and compare it with another array, where is what i want to search. I've done this by two ways:
+
+1.Compare data in global memory, but often threads in block need to read the same address. 
+
+2.Copy data from global memory to shared memory, and compare bytes in shared memory in the same way as mentioned above. Still problem with same address read.
+Copy to shared memory looks like this: 
+
+    myArray[idx] = global[someIndex-idx];
+    whatToSearch[idx] = global[someIndex+idx];
+
+Rest of the code is the same. Only operations on data in example 2 are performed in shared arrays.
+
+But first option is about 10% faster, than that with the shared memory, why?? Thank you for explanations.",arrays,cuda,find,compare,shared,,open,0,156,7,"CUDA shared memory not faster than global? Hi i have kernel function, where i need to compare bytes. Area where i want to search is divided into blocks, so array of 4k bytes is divided to 4k/256 = 16 blocks. Each thread in block reads array on idx and compare it with another array, where is what i want to search. I've done this by two ways:
+
+1.Compare data in global memory, but often threads in block need to read the same address. 
+
+2.Copy data from global memory to shared memory, and compare bytes in shared memory in the same way as mentioned above. Still problem with same address read.
+Copy to shared memory looks like this: 
+
+    myArray[idx] = global[someIndex-idx];
+    whatToSearch[idx] = global[someIndex+idx];
+
+Rest of the code is the same. Only operations on data in example 2 are performed in shared arrays.
+
+But first option is about 10% faster, than that with the shared memory, why?? Thank you for explanations.",5
+9598684,03/07/2012 09:22:44,1225922,02/22/2012 13:19:10,25,0,How to add an array values into another array?,"I have two array of values and their keys...<br>
+**First array**<br>
+
+    Array
+    (
+    [0] => Array
+        (
+            [10] => A1
+            [11] => A2
+        )
+
+    [1] => Array
+        (
+            [12] => B1
+            [13] => B2
+        )
+
+)
+
+**Second array**<br>
+
+    Array
+    (
+      [1] => Z1
+      [2] => Z2
+    )
+
+I want to group these two array into a single array. I mean the array format should be.
+
+    Array
+    (
+    [0] => Array
+        (
+            [1] => Z1
+            [10] => A1
+            [11] => A2
+        )
+
+    [1] => Array
+        (
+            [2] => Z2
+            [12] => B1
+            [13] => B2
+        )
+     )
+
+I tried with array_push but add the entire array in the [0] position or in the [2] position in the second array.<br>
+Anyone has any ideas?
+
+thanks
+",arrays,multidimensional-array,for-loop,foreach,,,open,0,329,9,"How to add an array values into another array? I have two array of values and their keys...<br>
+**First array**<br>
+
+    Array
+    (
+    [0] => Array
+        (
+            [10] => A1
+            [11] => A2
+        )
+
+    [1] => Array
+        (
+            [12] => B1
+            [13] => B2
+        )
+
+)
+
+**Second array**<br>
+
+    Array
+    (
+      [1] => Z1
+      [2] => Z2
+    )
+
+I want to group these two array into a single array. I mean the array format should be.
+
+    Array
+    (
+    [0] => Array
+        (
+            [1] => Z1
+            [10] => A1
+            [11] => A2
+        )
+
+    [1] => Array
+        (
+            [2] => Z2
+            [12] => B1
+            [13] => B2
+        )
+     )
+
+I tried with array_push but add the entire array in the [0] position or in the [2] position in the second array.<br>
+Anyone has any ideas?
+
+thanks
+",4
+10049147,04/06/2012 20:55:07,1261394,03/10/2012 18:36:27,1,0,"Java: how do icheck if a certain character is within a string, then print out the position it is in relative to the string?","What I am trying to do, is create a method, that has a string and a character as parameters, the method then takes the string and searches for the given character. If the string contains that character, it returns an array of integers of where the character showed up. Here is what I have so far:
+
+    public class Sheet {
+	public static void main(String[] args) {
+		String string = ""bbnnbb"";
+		String complete = null;
+		//*******
+		for(int i = 0; i < string.length(); i++){
+			complete = StringSearch(string,'n').toString();
+		}
+                //********
+	}
+
+	public static int[] StringSearch(String string, char lookfor) {
+		int[]num = new int[string.length()];
+		for(int i = 0; i < num.length; i++){
+			if(string.charAt(i)== lookfor){
+				num[i] = i;
+			}
+		}
+		return num;
+	}
+}
+
+The method works fine, and returns this:
+
+0
+0
+2
+3
+0
+0
+
+What I am trying to do, is make those into 1 string so it would look like this ""002300"".
+Is there any possible way of doing this? I have tried to do it in the starred area of the code, but I have had no success.
+
+Thanks
+Any help would be greatly appreciated",arrays,string,search,char,,,open,0,175,24,"Java: how do icheck if a certain character is within a string, then print out the position it is in relative to the string? What I am trying to do, is create a method, that has a string and a character as parameters, the method then takes the string and searches for the given character. If the string contains that character, it returns an array of integers of where the character showed up. Here is what I have so far:
+
+    public class Sheet {
+	public static void main(String[] args) {
+		String string = ""bbnnbb"";
+		String complete = null;
+		//*******
+		for(int i = 0; i < string.length(); i++){
+			complete = StringSearch(string,'n').toString();
+		}
+                //********
+	}
+
+	public static int[] StringSearch(String string, char lookfor) {
+		int[]num = new int[string.length()];
+		for(int i = 0; i < num.length; i++){
+			if(string.charAt(i)== lookfor){
+				num[i] = i;
+			}
+		}
+		return num;
+	}
+}
+
+The method works fine, and returns this:
+
+0
+0
+2
+3
+0
+0
+
+What I am trying to do, is make those into 1 string so it would look like this ""002300"".
+Is there any possible way of doing this? I have tried to do it in the starred area of the code, but I have had no success.
+
+Thanks
+Any help would be greatly appreciated",4
+9589413,03/06/2012 18:08:51,1252931,03/06/2012 18:06:34,1,0,"2D array , then sum the rows , & set result in 1D array ? :(","how to answer this Q. ?
+
+
+
+Create two-dimensional array and the sum of each row set in the array of one dimension ?!
+
+",arrays,2d,,,,03/06/2012 22:45:41,not a real question,1,22,16,"2D array , then sum the rows , & set result in 1D array ? :( how to answer this Q. ?
+
+
+
+Create two-dimensional array and the sum of each row set in the array of one dimension ?!
+
+",2
+10340725,04/26/2012 20:10:23,1327755,04/11/2012 22:37:41,515,57,Resetting / Reordering KEYS for array in actionscript,"I'm using Flex And I have created an array to feed into a datagrid, here is a small piece. I have deleted certain elements of the array, and now it is showing up with spaces in between non-deleted elements on the datagrid. I simply want to reorder the KEYS (not the elements themselves) of the array, so it will show up without spaces on the datagrid.
+
+			[Bindable]	
+			public var initDG:ArrayCollection;
+			public function loaderComplete(event: Event):void {
+					var fileString:String = event.target.data;
+					var dataArray:Array = fileString.split(""\n"");
+					var gridArray:Array = new Array();
+						for(var i:int = 0; i < dataArray.length; i++) {
+							
+							var valueArray:Array = dataArray[i].split("","");
+							gridArray.push({PON:valueArray[0], VER:valueArray[1], DATE:valueArray[2], XML:valueArray[3], 
+								  DOC:valueArray[4], SENT:valueArray[5]});
+
+
+						}
+						
+				var verizonArray:Array = gridArray;
+				
+				for(i = 0; i < verizonArray.length; i++) {
+					var myPattern:RegExp = /^6006/;   
+					var result:Object = myPattern.exec(verizonArray[i][""PON""].toString());
+					if(result == null) {
+						delete verizonArray[i];
+					}
+				}
+				
+				// here I need to reorder the keys
+
+				gridArray.shift();
+				initDG=new ArrayCollection(verizonArray);
+				
+			}
+
+**TL;DR: How to reset the keys of an array in actionscript looking like [0] => 'value', [3] => 'value', [6] => 'value' to [0] => 'value', [1] => 'value', [2] => 'value' without reordering the array itself**",arrays,actionscript,flex4,,,,open,0,167,8,"Resetting / Reordering KEYS for array in actionscript I'm using Flex And I have created an array to feed into a datagrid, here is a small piece. I have deleted certain elements of the array, and now it is showing up with spaces in between non-deleted elements on the datagrid. I simply want to reorder the KEYS (not the elements themselves) of the array, so it will show up without spaces on the datagrid.
+
+			[Bindable]	
+			public var initDG:ArrayCollection;
+			public function loaderComplete(event: Event):void {
+					var fileString:String = event.target.data;
+					var dataArray:Array = fileString.split(""\n"");
+					var gridArray:Array = new Array();
+						for(var i:int = 0; i < dataArray.length; i++) {
+							
+							var valueArray:Array = dataArray[i].split("","");
+							gridArray.push({PON:valueArray[0], VER:valueArray[1], DATE:valueArray[2], XML:valueArray[3], 
+								  DOC:valueArray[4], SENT:valueArray[5]});
+
+
+						}
+						
+				var verizonArray:Array = gridArray;
+				
+				for(i = 0; i < verizonArray.length; i++) {
+					var myPattern:RegExp = /^6006/;   
+					var result:Object = myPattern.exec(verizonArray[i][""PON""].toString());
+					if(result == null) {
+						delete verizonArray[i];
+					}
+				}
+				
+				// here I need to reorder the keys
+
+				gridArray.shift();
+				initDG=new ArrayCollection(verizonArray);
+				
+			}
+
+**TL;DR: How to reset the keys of an array in actionscript looking like [0] => 'value', [3] => 'value', [6] => 'value' to [0] => 'value', [1] => 'value', [2] => 'value' without reordering the array itself**",3
+11452508,07/12/2012 13:07:07,635347,02/26/2011 08:50:11,11,0,How to handle with arrays withing different loops in XSLT,"I have a problem with processing following xml code:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <searchresult>
+      <head>
+        <heading>
+          <title>Column1</title>
+          <dataType>TEXT</dataType>
+        </heading>
+        <heading>
+          <title>Column2</title>
+          <dataType>DATE</dataType>
+          <dataFormat>SHORT_DATE</dataFormat>
+        </heading>
+        <heading>
+          <title>Column1</title>
+          <dataType>DATE</dataType>
+          <dataFormat>DATETIME</dataFormat>
+        </heading>
+        <heading>
+          <title>Column1</title>
+          <dataType>NUMBER</dataType>
+        </heading>
+      </head>
+      <data>
+        <row>
+          <column>
+            <value>Hello</value>
+          <column>
+          <column>
+            <value>2012-07-12</value>
+          <column>
+          <column>
+            <value>2012-07-12 - 14:12:31</value>
+          <column>
+          <column>
+            <value>31.5</value>
+          <column>
+        </row>
+        <row>
+          <column>
+            <value>Good bye</value>
+          <column>
+          <column>
+            <value>2012-07-12</value>
+          <column>
+          <column>
+            <value>2012-07-12 - 14:15:11</value>
+          <column>
+          <column>
+            <value>0</value>
+          <column>
+        </row>
+      </data>
+    </searchresult>
+
+I need to transform this xml to EXCEL compatible file (I use urn:schemas-microsoft-com:office:office, urn:schemas-microsoft-com:office:excel and urn:schemas-microsoft-com:office:spreadsheet namespaces for it)
+
+Problem is that I don't know how to apply information from head/heading elements dataType + dataFormat (if available) on row/column/value. This will help Excel to recognize which datatype is inside its cells.
+It is obvious that i need to preserve order so. Number of columns and its metadata is dynamic and each XML may differ.
+
+I need to get something like this:
+
+    <?xml version=""1.0"" encoding=""ISO-8859-1""?>
+    <Workbook xmlns=""urn:schemas-microsoft-com:office:spreadsheet"" 
+              xmlns:user=""urn:my-scripts"" 
+              xmlns:msxsl=""urn:schemas-microsoft-com:xslt""
+              xmlns:html=""http://www.w3.org/TR/REC-html40"" 
+              xmlns:ss=""urn:schemas-microsoft-com:office:spreadsheet"" 
+              xmlns:x=""urn:schemas-microsoft-com:office:excel"" 
+              xmlns:o=""urn:schemas-microsoft-com:office:office"">
+    <Styles>
+      <Style ss:Name=""Normal"" ss:ID=""Default"">
+        <Alignment ss:WrapText=""1"" ss:Vertical=""Bottom""/>
+        <Borders/><Font/><Interior/><NumberFormat/><Protection/>
+      </Style>
+    </Styles>
+
+    <Worksheet ss:Name=""SearchResult"">
+      <Table x:FullRows=""1"" x:FullColumns=""1"">
+        <Row ss:Height=""12.75"">
+          <Cell>
+            <Data ss:Type=""String"">Column1</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""String"">Column2</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""String"">Column3</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""String"">Column4</Data>
+          </Cell>
+        </Row>
+        <Row ss:Height=""12.75"">
+          <Cell>
+            <Data ss:Type=""String"">Hello : TEXT</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">2012-07-12 : DATE - SHORT_DATE</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">2012-07-12 - 14:12:31 : DATE - DATETIME</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">31.5 : NUMBER</Data>
+          </Cell>
+        </Row>
+        <Row ss:Height=""12.75"">
+          <Cell>
+            <Data ss:Type=""String"">Good bye : TEXT</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">2012-07-12 : DATE - SHORT_DATE</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">2012-07-12 - 14:15:11 : DATE - DATETIME</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">0 : NUMBER</Data>
+          </Cell>
+        </Row>
+      </Table>
+    </Worksheet>    
+    </Workbook>
+
+I  tried a few times create something useful and working but all my attempts fail. Current version is here:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <xsl:stylesheet version=""1.0""
+         xmlns=""urn:schemas-microsoft-com:office:spreadsheet""
+         xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" 
+         xmlns:msxsl=""urn:schemas-microsoft-com:xslt""
+         xmlns:user=""urn:my-scripts""
+         xmlns:o=""urn:schemas-microsoft-com:office:office""
+         xmlns:x=""urn:schemas-microsoft-com:office:excel""
+         xmlns:ss=""urn:schemas-microsoft-com:office:spreadsheet"" > 
+
+      <xsl:template match=""/"">
+	<Workbook xmlns=""urn:schemas-microsoft-com:office:spreadsheet""
+		  xmlns:o=""urn:schemas-microsoft-com:office:office""
+		  xmlns:x=""urn:schemas-microsoft-com:office:excel""
+		  xmlns:ss=""urn:schemas-microsoft-com:office:spreadsheet""
+		  xmlns:html=""http://www.w3.org/TR/REC-html40"">
+	  <xsl:apply-templates/>
+	</Workbook>
+      </xsl:template>
+	
+      <xsl:template match=""searchresult"">
+        <Styles>
+          <Style ss:ID=""Default"" ss:Name=""Normal"">
+            <Alignment ss:Vertical=""Bottom"" ss:WrapText=""1""/>
+            <Borders/>
+            <Font/>
+            <Interior/>
+            <NumberFormat/>
+            <Protection/>
+          </Style>
+        </Styles>
+	<Worksheet>
+          <xsl:attribute name=""ss:Name"">
+	    <xsl:text>SearchResult</xsl:text>
+	  </xsl:attribute>
+	  <xsl:text>&#xa;</xsl:text>
+	  <Table x:FullColumns=""1"" x:FullRows=""1"">
+	    <xsl:apply-templates select=""head"" />
+	    <xsl:apply-templates select=""elements/row""/>
+	  </Table>
+	  <xsl:text>&#xa;</xsl:text>
+	</Worksheet>
+      </xsl:template>
+	
+      <xsl:template match=""head"">		
+	<xsl:text>&#xa;</xsl:text>
+	  <Row ss:Height=""12.75"">
+	    <xsl:for-each select=""*"">
+	      <!-- resolve data-type and remember it as variable -->
+	      <xsl:variable name=""concat('dataType', position())"" select=""dataType"">
+	        <xsl:choose>
+		  <xsl:when test=""TEXT"">
+		    <xsl:value-of select=""."">String</xsl:value-of>
+		  </xsl:when>
+		  <xsl:when test=""NUMBER"">
+		    <xsl:value-of select=""."">Number</xsl:value-of>
+		  </xsl:when>
+		  <xsl:when test=""DATE"">
+		    <xsl:value-of select=""."">DateTime</xsl:value-of>
+		  </xsl:when>
+		</xsl:choose>
+              </xsl:variable>
+	      <xsl:variable name=""concat('dataFormat', position())"" select=""dataFormatter"" >
+	        <!-- create style IDs for different formats -->
+              </xsl:variable>
+              <Cell>
+	        <Data ss:Type=""String"">
+	          <xsl:value-of select=""title/."" />
+                </Data>
+              </Cell>
+	    </xsl:for-each>
+	  </Row>				
+	</xsl:template>
+	
+	<xsl:template match=""elements/row"">
+	  <xsl:text>&#xa;</xsl:text>
+	  <Row ss:Height=""12.75"">
+	    <xsl:apply-templates/>
+	  </Row>
+	</xsl:template>
+	
+	<xsl:template match=""elements/row/column"">
+	  <xsl:for-each select=""values"">
+	    <Cell>
+              <!-- resolve order within loop and pick correct data-type variable -->
+	      <xsl:variable name=""type"" select=""concat('$dataType', position())"" />
+              <xsl:variable name=""format"" select=""concat('$dataFormat', position())"" />
+              <Data ss:Type=""$type"">
+	        <!-- check empty values -->
+                <xsl:choose>
+	          <!-- non-empty value -->
+	          <xsl:when test=""not(normalize-space(.))"">
+		    <xsl:value-of select=""concat(normalize-space(.),' : ', $type)""/>
+                    <!-- check if data format is set -->
+                    <xsl:if test=""//TODO"">
+                      <xsl:value-of select=""concat(' - ', $format)"" />
+                    </xsl:if>
+		  </xsl:when>
+		  <!-- empty or white-spaced only value -->
+		  <xsl:otherwise>
+		    <!-- no value inserted -->
+		  </xsl:otherwise>
+		</xsl:choose>
+	      </Data>
+	    </Cell>
+	  </xsl:for-each>
+	</xsl:template>
+    </xsl:stylesheet>
+
+This version is useless because I cannot use as name of variable any variable value, it must  be constant value. Parsing whole data works somehow,  but when I tried to implement datatype and data format it broke.",arrays,xslt,xsl-variable,,,,open,0,2029,10,"How to handle with arrays withing different loops in XSLT I have a problem with processing following xml code:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <searchresult>
+      <head>
+        <heading>
+          <title>Column1</title>
+          <dataType>TEXT</dataType>
+        </heading>
+        <heading>
+          <title>Column2</title>
+          <dataType>DATE</dataType>
+          <dataFormat>SHORT_DATE</dataFormat>
+        </heading>
+        <heading>
+          <title>Column1</title>
+          <dataType>DATE</dataType>
+          <dataFormat>DATETIME</dataFormat>
+        </heading>
+        <heading>
+          <title>Column1</title>
+          <dataType>NUMBER</dataType>
+        </heading>
+      </head>
+      <data>
+        <row>
+          <column>
+            <value>Hello</value>
+          <column>
+          <column>
+            <value>2012-07-12</value>
+          <column>
+          <column>
+            <value>2012-07-12 - 14:12:31</value>
+          <column>
+          <column>
+            <value>31.5</value>
+          <column>
+        </row>
+        <row>
+          <column>
+            <value>Good bye</value>
+          <column>
+          <column>
+            <value>2012-07-12</value>
+          <column>
+          <column>
+            <value>2012-07-12 - 14:15:11</value>
+          <column>
+          <column>
+            <value>0</value>
+          <column>
+        </row>
+      </data>
+    </searchresult>
+
+I need to transform this xml to EXCEL compatible file (I use urn:schemas-microsoft-com:office:office, urn:schemas-microsoft-com:office:excel and urn:schemas-microsoft-com:office:spreadsheet namespaces for it)
+
+Problem is that I don't know how to apply information from head/heading elements dataType + dataFormat (if available) on row/column/value. This will help Excel to recognize which datatype is inside its cells.
+It is obvious that i need to preserve order so. Number of columns and its metadata is dynamic and each XML may differ.
+
+I need to get something like this:
+
+    <?xml version=""1.0"" encoding=""ISO-8859-1""?>
+    <Workbook xmlns=""urn:schemas-microsoft-com:office:spreadsheet"" 
+              xmlns:user=""urn:my-scripts"" 
+              xmlns:msxsl=""urn:schemas-microsoft-com:xslt""
+              xmlns:html=""http://www.w3.org/TR/REC-html40"" 
+              xmlns:ss=""urn:schemas-microsoft-com:office:spreadsheet"" 
+              xmlns:x=""urn:schemas-microsoft-com:office:excel"" 
+              xmlns:o=""urn:schemas-microsoft-com:office:office"">
+    <Styles>
+      <Style ss:Name=""Normal"" ss:ID=""Default"">
+        <Alignment ss:WrapText=""1"" ss:Vertical=""Bottom""/>
+        <Borders/><Font/><Interior/><NumberFormat/><Protection/>
+      </Style>
+    </Styles>
+
+    <Worksheet ss:Name=""SearchResult"">
+      <Table x:FullRows=""1"" x:FullColumns=""1"">
+        <Row ss:Height=""12.75"">
+          <Cell>
+            <Data ss:Type=""String"">Column1</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""String"">Column2</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""String"">Column3</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""String"">Column4</Data>
+          </Cell>
+        </Row>
+        <Row ss:Height=""12.75"">
+          <Cell>
+            <Data ss:Type=""String"">Hello : TEXT</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">2012-07-12 : DATE - SHORT_DATE</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">2012-07-12 - 14:12:31 : DATE - DATETIME</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">31.5 : NUMBER</Data>
+          </Cell>
+        </Row>
+        <Row ss:Height=""12.75"">
+          <Cell>
+            <Data ss:Type=""String"">Good bye : TEXT</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">2012-07-12 : DATE - SHORT_DATE</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">2012-07-12 - 14:15:11 : DATE - DATETIME</Data>
+          </Cell>
+          <Cell>
+            <Data ss:Type=""Date"">0 : NUMBER</Data>
+          </Cell>
+        </Row>
+      </Table>
+    </Worksheet>    
+    </Workbook>
+
+I  tried a few times create something useful and working but all my attempts fail. Current version is here:
+
+    <?xml version=""1.0"" encoding=""UTF-8""?>
+    <xsl:stylesheet version=""1.0""
+         xmlns=""urn:schemas-microsoft-com:office:spreadsheet""
+         xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" 
+         xmlns:msxsl=""urn:schemas-microsoft-com:xslt""
+         xmlns:user=""urn:my-scripts""
+         xmlns:o=""urn:schemas-microsoft-com:office:office""
+         xmlns:x=""urn:schemas-microsoft-com:office:excel""
+         xmlns:ss=""urn:schemas-microsoft-com:office:spreadsheet"" > 
+
+      <xsl:template match=""/"">
+	<Workbook xmlns=""urn:schemas-microsoft-com:office:spreadsheet""
+		  xmlns:o=""urn:schemas-microsoft-com:office:office""
+		  xmlns:x=""urn:schemas-microsoft-com:office:excel""
+		  xmlns:ss=""urn:schemas-microsoft-com:office:spreadsheet""
+		  xmlns:html=""http://www.w3.org/TR/REC-html40"">
+	  <xsl:apply-templates/>
+	</Workbook>
+      </xsl:template>
+	
+      <xsl:template match=""searchresult"">
+        <Styles>
+          <Style ss:ID=""Default"" ss:Name=""Normal"">
+            <Alignment ss:Vertical=""Bottom"" ss:WrapText=""1""/>
+            <Borders/>
+            <Font/>
+            <Interior/>
+            <NumberFormat/>
+            <Protection/>
+          </Style>
+        </Styles>
+	<Worksheet>
+          <xsl:attribute name=""ss:Name"">
+	    <xsl:text>SearchResult</xsl:text>
+	  </xsl:attribute>
+	  <xsl:text>&#xa;</xsl:text>
+	  <Table x:FullColumns=""1"" x:FullRows=""1"">
+	    <xsl:apply-templates select=""head"" />
+	    <xsl:apply-templates select=""elements/row""/>
+	  </Table>
+	  <xsl:text>&#xa;</xsl:text>
+	</Worksheet>
+      </xsl:template>
+	
+      <xsl:template match=""head"">		
+	<xsl:text>&#xa;</xsl:text>
+	  <Row ss:Height=""12.75"">
+	    <xsl:for-each select=""*"">
+	      <!-- resolve data-type and remember it as variable -->
+	      <xsl:variable name=""concat('dataType', position())"" select=""dataType"">
+	        <xsl:choose>
+		  <xsl:when test=""TEXT"">
+		    <xsl:value-of select=""."">String</xsl:value-of>
+		  </xsl:when>
+		  <xsl:when test=""NUMBER"">
+		    <xsl:value-of select=""."">Number</xsl:value-of>
+		  </xsl:when>
+		  <xsl:when test=""DATE"">
+		    <xsl:value-of select=""."">DateTime</xsl:value-of>
+		  </xsl:when>
+		</xsl:choose>
+              </xsl:variable>
+	      <xsl:variable name=""concat('dataFormat', position())"" select=""dataFormatter"" >
+	        <!-- create style IDs for different formats -->
+              </xsl:variable>
+              <Cell>
+	        <Data ss:Type=""String"">
+	          <xsl:value-of select=""title/."" />
+                </Data>
+              </Cell>
+	    </xsl:for-each>
+	  </Row>				
+	</xsl:template>
+	
+	<xsl:template match=""elements/row"">
+	  <xsl:text>&#xa;</xsl:text>
+	  <Row ss:Height=""12.75"">
+	    <xsl:apply-templates/>
+	  </Row>
+	</xsl:template>
+	
+	<xsl:template match=""elements/row/column"">
+	  <xsl:for-each select=""values"">
+	    <Cell>
+              <!-- resolve order within loop and pick correct data-type variable -->
+	      <xsl:variable name=""type"" select=""concat('$dataType', position())"" />
+              <xsl:variable name=""format"" select=""concat('$dataFormat', position())"" />
+              <Data ss:Type=""$type"">
+	        <!-- check empty values -->
+                <xsl:choose>
+	          <!-- non-empty value -->
+	          <xsl:when test=""not(normalize-space(.))"">
+		    <xsl:value-of select=""concat(normalize-space(.),' : ', $type)""/>
+                    <!-- check if data format is set -->
+                    <xsl:if test=""//TODO"">
+                      <xsl:value-of select=""concat(' - ', $format)"" />
+                    </xsl:if>
+		  </xsl:when>
+		  <!-- empty or white-spaced only value -->
+		  <xsl:otherwise>
+		    <!-- no value inserted -->
+		  </xsl:otherwise>
+		</xsl:choose>
+	      </Data>
+	    </Cell>
+	  </xsl:for-each>
+	</xsl:template>
+    </xsl:stylesheet>
+
+This version is useless because I cannot use as name of variable any variable value, it must  be constant value. Parsing whole data works somehow,  but when I tried to implement datatype and data format it broke.",3
+10094386,04/10/2012 18:31:05,1156174,01/18/2012 12:10:45,16,2,Array subgroups,"I have an arbitrary array of lego bricks. I also have some figures made of 3 lego bricks. I want to find out how many combinations of figures I can create of the current array of lego bricks.
+
+Anybody have some references for me, so I can solve this problem?
+
+Which algorithms can I use? Any theory I can use?
+
+Thank you in advance for any help you can provide.
+
+/Hans",arrays,algorithm,group,combinations,,04/11/2012 18:23:06,off topic,1,67,2,"Array subgroups I have an arbitrary array of lego bricks. I also have some figures made of 3 lego bricks. I want to find out how many combinations of figures I can create of the current array of lego bricks.
+
+Anybody have some references for me, so I can solve this problem?
+
+Which algorithms can I use? Any theory I can use?
+
+Thank you in advance for any help you can provide.
+
+/Hans",4
+10216605,04/18/2012 19:31:37,990666,10/12/2011 03:10:06,56,1,How can I convert indexes into a mutable array into state references in Haskell?,"I'm recoding the game I asked a question, ""[How can I iterate over a quadruple linked 2-dimensional grid of data as if it were a 2-dimensional array?](http://stackoverflow.com/questions/10097583/how-can-i-iterate-over-a-quadruple-linked-2-dimensional-grid-of-data-as-if-it-we)"", for in Haskell.
+
+In order to create the grid of data in the first place I used a very imperative style algorithm, shown below. The key feature it relies upon is that I can take an index into an array and create a reference out of it. An example, ""&array[x][y]"".
+
+I need to be able to take an index into a mutable array and make a state reference out of it in Haskell. The type signature might therefore be
+
+    convertToSTRef :: i -> STArray s i a -> ST s (STRef s a)
+
+I have looked over the documentation, tried both hoogle and hayoo, and not found a way to accomplish this.
+
+P.S. Alternatively, if someone had a different algorithm that I could use, that would be great.
+
+P.S.S. The simple imperative algorithm.
+
+    const size_t rows = 20;
+    const size_t columns = 59;
+
+    block tiles[columns][rows];
+    block * const start = &tiles[columns/2][rows/2];
+
+    for (size_t x = 0; x < columns; ++x)
+     for (size_t y = 0; y < rows; ++y)
+     {
+      tiles[x][y].floor = '^';
+      tiles[x][y].inhabitant = WALL;
+      tiles[x][y].side_block[EAST] = (x + 1 < columns) ? &tiles[x + 1][y] : NULL;
+      tiles[x][y].side_block[SOUTH] = (y + 1 < rows) ? &tiles[x][y + 1] : NULL;
+      tiles[x][y].side_block[WEST] = (x > 0) ? &tiles[x - 1][y] : NULL;
+      tiles[x][y].side_block[NORTH] = (y > 0) ? &tiles[x][y - 1] : NULL;
+     }",arrays,haskell,functional-programming,state,mutable,,open,0,307,14,"How can I convert indexes into a mutable array into state references in Haskell? I'm recoding the game I asked a question, ""[How can I iterate over a quadruple linked 2-dimensional grid of data as if it were a 2-dimensional array?](http://stackoverflow.com/questions/10097583/how-can-i-iterate-over-a-quadruple-linked-2-dimensional-grid-of-data-as-if-it-we)"", for in Haskell.
+
+In order to create the grid of data in the first place I used a very imperative style algorithm, shown below. The key feature it relies upon is that I can take an index into an array and create a reference out of it. An example, ""&array[x][y]"".
+
+I need to be able to take an index into a mutable array and make a state reference out of it in Haskell. The type signature might therefore be
+
+    convertToSTRef :: i -> STArray s i a -> ST s (STRef s a)
+
+I have looked over the documentation, tried both hoogle and hayoo, and not found a way to accomplish this.
+
+P.S. Alternatively, if someone had a different algorithm that I could use, that would be great.
+
+P.S.S. The simple imperative algorithm.
+
+    const size_t rows = 20;
+    const size_t columns = 59;
+
+    block tiles[columns][rows];
+    block * const start = &tiles[columns/2][rows/2];
+
+    for (size_t x = 0; x < columns; ++x)
+     for (size_t y = 0; y < rows; ++y)
+     {
+      tiles[x][y].floor = '^';
+      tiles[x][y].inhabitant = WALL;
+      tiles[x][y].side_block[EAST] = (x + 1 < columns) ? &tiles[x + 1][y] : NULL;
+      tiles[x][y].side_block[SOUTH] = (y + 1 < rows) ? &tiles[x][y + 1] : NULL;
+      tiles[x][y].side_block[WEST] = (x > 0) ? &tiles[x - 1][y] : NULL;
+      tiles[x][y].side_block[NORTH] = (y > 0) ? &tiles[x][y - 1] : NULL;
+     }",5
+7007294,08/10/2011 07:31:16,565807,01/06/2011 17:27:56,3,2,Swapping elements of two distinct arrays in C without using temporary variable,"i have two array's say int array1[6] = { 2, 4, 5, 7, 9 }; & int array2[6] = {0 ,5 ,6 , 7, 3}
+
+I will pass these to a function swap(array1,array2)
+
+I am currently trying to do it as below
+
+    index =0;
+    while(array1[index] && array2[index] != NULL)
+    {
+        array1[index] = array1[index] ^ array2[index];
+        array2[index] = array1[index] ^ array2[index];
+        array1[index] = array1[index] ^ array2[index]; 
+        index++;
+    }
+    
+
+Is my approach correct? Please let me know your views
+
+
+Thanks
+",arrays,,,,,,open,0,119,12,"Swapping elements of two distinct arrays in C without using temporary variable i have two array's say int array1[6] = { 2, 4, 5, 7, 9 }; & int array2[6] = {0 ,5 ,6 , 7, 3}
+
+I will pass these to a function swap(array1,array2)
+
+I am currently trying to do it as below
+
+    index =0;
+    while(array1[index] && array2[index] != NULL)
+    {
+        array1[index] = array1[index] ^ array2[index];
+        array2[index] = array1[index] ^ array2[index];
+        array1[index] = array1[index] ^ array2[index]; 
+        index++;
+    }
+    
+
+Is my approach correct? Please let me know your views
+
+
+Thanks
+",1

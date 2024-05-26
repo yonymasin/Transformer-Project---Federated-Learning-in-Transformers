@@ -1,0 +1,1099 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+7934338,10/28/2011 20:06:43,543572,07/28/2010 20:27:47,303,31,A scripting language for web services apis for handling documents?,"I'm investigating using a scripting language in order to call a web service that handles documents in a repository database.  I'm thinking about powershell or perl, but I don't have much experience with using scripts to call web services.
+
+As far as the api's, they are mostly just get/put operations for the files and the files are xml based.  
+
+We are looking at scripts as something that would be easy to use, compact code, portable, and rapid implementation.
+
+Does anyone have any experience with this and has a recommendation, based on the above items?",web-services,perl,scripting,powershell,xmldocument,,open,0,94,10,"A scripting language for web services apis for handling documents? I'm investigating using a scripting language in order to call a web service that handles documents in a repository database.  I'm thinking about powershell or perl, but I don't have much experience with using scripts to call web services.
+
+As far as the api's, they are mostly just get/put operations for the files and the files are xml based.  
+
+We are looking at scripts as something that would be easy to use, compact code, portable, and rapid implementation.
+
+Does anyone have any experience with this and has a recommendation, based on the above items?",5
+108025,09/20/2008 12:24:11,7028,09/15/2008 13:02:20,399,38,Weather web service for Europe?,"We are looking for a reliable ""current weather"" web service for Europe, with city resolution. We only need the current weather. 
+
+Since it is for a commercial web site, we don't mind paying a reasonable fee for the service.
+
+What are our options? What service would you recommend or avoid based on previous experience?
+
+Note: SOAP Web Service, XML RPC, REST, all are fine. ",web-services,rest,xml-rpc,provider,weather,12/05/2011 04:38:24,not constructive,1,63,5,"Weather web service for Europe? We are looking for a reliable ""current weather"" web service for Europe, with city resolution. We only need the current weather. 
+
+Since it is for a commercial web site, we don't mind paying a reasonable fee for the service.
+
+What are our options? What service would you recommend or avoid based on previous experience?
+
+Note: SOAP Web Service, XML RPC, REST, all are fine. ",5
+8353724,12/02/2011 08:41:21,670637,03/22/2011 05:31:42,114,5,How often the semantic changes occur in web?,"How often can the semantic changes occur in web?
+
+Is there any studies related to this?",web-services,rest,web,semantic-web,,12/02/2011 21:43:21,not a real question,1,15,8,"How often the semantic changes occur in web? How often can the semantic changes occur in web?
+
+Is there any studies related to this?",4
+4002965,10/23/2010 07:29:46,484923,10/23/2010 07:29:47,1,0,"""Remote name could not be resolved""","While accessing a wsdl file as webservice I am getting this Exception. ""Remote name could not be resolved""
+
+",web-services,,,,,,open,0,18,6,"""Remote name could not be resolved"" While accessing a wsdl file as webservice I am getting this Exception. ""Remote name could not be resolved""
+
+",1
+7154466,08/22/2011 22:42:07,801423,06/16/2011 12:17:09,30,0,"What kind of webhost, server etc to choose?","I recently built a REST- Webservice and it's responding slow to request. I'm considering getting a new webhost. I just need some advice on what kind of webhost to choose(maybe even a own server if necessary). The website that i'm planning to built needs a webservice with cakephp that will serve request for both mobile(Apps) and PC users, so it needs to respond fast to alot of requests that will be maid. ",web-services,rest,hosting,web-hosting,,08/22/2011 23:22:43,off topic,1,73,8,"What kind of webhost, server etc to choose? I recently built a REST- Webservice and it's responding slow to request. I'm considering getting a new webhost. I just need some advice on what kind of webhost to choose(maybe even a own server if necessary). The website that i'm planning to built needs a webservice with cakephp that will serve request for both mobile(Apps) and PC users, so it needs to respond fast to alot of requests that will be maid. ",4
+9315039,02/16/2012 16:27:22,5440,09/09/2008 15:34:12,1249,12,Consume SSL Web Service using Domino 8.0.2,"Working on a project where I need to consume a web service over HTTPS (SSL) using Domino 8.0.2.
+
+Was able to create the script library to consume the web service.
+
+Created a simple button to test consuming it with this code:
+
+    Use ""AA-FEED""
+
+    Sub Click(Source As Button)
+    Dim ws1 As New IAccountService_n1
+    Dim r1 As New  ArrayOfValidSystem_n2
+
+    Set r1 = ws1.GetValidSystemsList()
+
+    End Sub
+
+When called, Notes prompts for me to Cross Certify with your server, which I do.
+
+That is to be expected.  
+
+Click on 'Cross Certify"" button and then the web service is contacted and returns an error message:
+
+""The Web Service IAccountService_n1 method GetValidSystemsList has returned a fault.""
+
+So...
+
+The provider of the web serivce says when it is consumed in Java, they add certifier information to the soap header.
+
+Not sure if the Cross Certify actions in Lotus would do equlivent in LotusScript.",web-services,lotus,lotusscript,,,,open,0,158,7,"Consume SSL Web Service using Domino 8.0.2 Working on a project where I need to consume a web service over HTTPS (SSL) using Domino 8.0.2.
+
+Was able to create the script library to consume the web service.
+
+Created a simple button to test consuming it with this code:
+
+    Use ""AA-FEED""
+
+    Sub Click(Source As Button)
+    Dim ws1 As New IAccountService_n1
+    Dim r1 As New  ArrayOfValidSystem_n2
+
+    Set r1 = ws1.GetValidSystemsList()
+
+    End Sub
+
+When called, Notes prompts for me to Cross Certify with your server, which I do.
+
+That is to be expected.  
+
+Click on 'Cross Certify"" button and then the web service is contacted and returns an error message:
+
+""The Web Service IAccountService_n1 method GetValidSystemsList has returned a fault.""
+
+So...
+
+The provider of the web serivce says when it is consumed in Java, they add certifier information to the soap header.
+
+Not sure if the Cross Certify actions in Lotus would do equlivent in LotusScript.",3
+11703638,07/28/2012 18:33:14,1559767,07/28/2012 15:10:17,1,0,Glassfish - JMS Request/Response - message doesn't go on queue,"I'm trying to implement a web service in Glassfish 3.1.2, using the included OpenMQ JMS queue, that implements a synchronous JMS Request-Response using Temporary queuing for the response. It sends a message that is picked up off the main queue by a remote client job (runs outside of container), and receives back a response on the temporary queue.
+
+In a basic Java POC, this works. But once I put the server-side code into the container, it doesn't work. 
+
+I turned off the job so that the messages would just go to the queue and not be picked up, and I follow the queue with QBrowser. 
+
+If I simply send the message from the producer, **it gets onto the queue and could be read by the job.**
+
+But once I add in the code to receive() the response, **the message is not readable on the queue.** QBrowser says that there is 1 message on the queue, but it is marked UnAck and the queue appears empty (e.g. message is not readable).
+
+connectionFactory and requestQueue are injected as @Resource from glassfish. Main queue is defined in glassfish.
+
+Web Service innards:
+
+    connection = connectionFactory .createConnection();
+    connection.start();
+
+    session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+
+    MessageProducer producer = session.createProducer(requestQueue);
+    producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+    
+    MyObject myObj=new MyObject();
+    Message message=session.createObjectMessage(myObj);
+
+    TemporaryQueue responseQueue = session.createTemporaryQueue();
+    MessageConsumer consumer = session.createConsumer(responseQueue);
+
+    message.setJMSReplyTo(responseQueue);
+
+    producer.send(message);
+
+    //if I comment out the next line, the message appears on the queue. If I leave it in, it will behave as described above.
+    Message response=consumer.receive();
+
+
+    
+I've tried various approaches, including separate connections and sessions and asynchronous consumer, and attempted a Transacted session for the producer but only got stacktraces when trying to commit. 
+
+What am I missing to make this get to the queue properly?
+
+Thanks in advance!",web-services,glassfish,jms,openmq,,,open,0,327,10,"Glassfish - JMS Request/Response - message doesn't go on queue I'm trying to implement a web service in Glassfish 3.1.2, using the included OpenMQ JMS queue, that implements a synchronous JMS Request-Response using Temporary queuing for the response. It sends a message that is picked up off the main queue by a remote client job (runs outside of container), and receives back a response on the temporary queue.
+
+In a basic Java POC, this works. But once I put the server-side code into the container, it doesn't work. 
+
+I turned off the job so that the messages would just go to the queue and not be picked up, and I follow the queue with QBrowser. 
+
+If I simply send the message from the producer, **it gets onto the queue and could be read by the job.**
+
+But once I add in the code to receive() the response, **the message is not readable on the queue.** QBrowser says that there is 1 message on the queue, but it is marked UnAck and the queue appears empty (e.g. message is not readable).
+
+connectionFactory and requestQueue are injected as @Resource from glassfish. Main queue is defined in glassfish.
+
+Web Service innards:
+
+    connection = connectionFactory .createConnection();
+    connection.start();
+
+    session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+
+    MessageProducer producer = session.createProducer(requestQueue);
+    producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+    
+    MyObject myObj=new MyObject();
+    Message message=session.createObjectMessage(myObj);
+
+    TemporaryQueue responseQueue = session.createTemporaryQueue();
+    MessageConsumer consumer = session.createConsumer(responseQueue);
+
+    message.setJMSReplyTo(responseQueue);
+
+    producer.send(message);
+
+    //if I comment out the next line, the message appears on the queue. If I leave it in, it will behave as described above.
+    Message response=consumer.receive();
+
+
+    
+I've tried various approaches, including separate connections and sessions and asynchronous consumer, and attempted a Transacted session for the producer but only got stacktraces when trying to commit. 
+
+What am I missing to make this get to the queue properly?
+
+Thanks in advance!",4
+10985700,06/11/2012 18:38:27,1429169,05/31/2012 18:21:14,1,0,Making a REST call,"I am using Struts-2 framework to design a web interface. API is already implemented in scala and play framework.
+Is there a way HttpURLConnection or HttpClient can be used to make REST call in jsp? 
+If yes can someone give me an example? Any reference of any book or site would also help.
+
+
+",web-services,rest,web-applications,struts2,,,open,0,52,4,"Making a REST call I am using Struts-2 framework to design a web interface. API is already implemented in scala and play framework.
+Is there a way HttpURLConnection or HttpClient can be used to make REST call in jsp? 
+If yes can someone give me an example? Any reference of any book or site would also help.
+
+
+",4
+6287612,06/09/2011 02:53:40,748287,05/11/2011 08:34:57,3,0,how do i display data in new line in webservice,"im knew to this webservice i need some assistance,when i run my webservice and input the is display horizontally instead of vertically down.im not sure how i can do this,me,i tink im missing some coe which i not sure what is it...
+
+return CALL_ID + ('\n') + CASE_ID + ('\n') + KPI_FLAG + ('\n') + INCIDENT_FLAG + ('\n') + INCIDENT_CAT + ('\n') + INCIDENT_DATETIME + ('\n') + REPORTED_DATETIME + ('\n') + STATUS + ('\n') + ('\n') + SEVERITY +
+('\n') + REPORTING_OFFICER + ('\n') + CLOSED_DATETIME + ('\n') + LOCATION + ('\n') + DESCRIPTION + ('\n') + FOLLOWUP_ACTION + ('\n') + USER_ID + ('\n') + PASSWORD;
+
+i inserted ('\n') to create a space,but im not sure how to put it to a new line",web-services,,,,,06/09/2011 05:12:59,not a real question,1,121,10,"how do i display data in new line in webservice im knew to this webservice i need some assistance,when i run my webservice and input the is display horizontally instead of vertically down.im not sure how i can do this,me,i tink im missing some coe which i not sure what is it...
+
+return CALL_ID + ('\n') + CASE_ID + ('\n') + KPI_FLAG + ('\n') + INCIDENT_FLAG + ('\n') + INCIDENT_CAT + ('\n') + INCIDENT_DATETIME + ('\n') + REPORTED_DATETIME + ('\n') + STATUS + ('\n') + ('\n') + SEVERITY +
+('\n') + REPORTING_OFFICER + ('\n') + CLOSED_DATETIME + ('\n') + LOCATION + ('\n') + DESCRIPTION + ('\n') + FOLLOWUP_ACTION + ('\n') + USER_ID + ('\n') + PASSWORD;
+
+i inserted ('\n') to create a space,but im not sure how to put it to a new line",1
+5372756,03/21/2011 00:48:05,657934,03/13/2011 21:44:35,6,0,Is Facebook & LinkedIn Considered Saas?,If they aren't Saas how would you label them? thx,web-services,web-applications,internet,saas,,03/21/2011 01:05:34,not a real question,1,10,6,Is Facebook & LinkedIn Considered Saas? If they aren't Saas how would you label them? thx,4
+6254728,06/06/2011 15:58:25,704004,04/12/2011 11:52:52,1,0,Choosing a java web framework 2011,"My question is based on the following question: http://stackoverflow.com/questions/2084169/choosing-a-java-web-framework-now
+..only one year later. 
+
+The reason for my question is that plenty has happened in one year, play framework has matured etc., and I want to know whats the hot thing today. What are the advantages and disadvantages of todays frameworks.
+",web-services,web-applications,spring-mvc,playframework,,09/03/2011 12:01:11,not constructive,1,49,6,"Choosing a java web framework 2011 My question is based on the following question: http://stackoverflow.com/questions/2084169/choosing-a-java-web-framework-now
+..only one year later. 
+
+The reason for my question is that plenty has happened in one year, play framework has matured etc., and I want to know whats the hot thing today. What are the advantages and disadvantages of todays frameworks.
+",4
+3618127,09/01/2010 12:50:37,149956,08/03/2009 19:28:05,765,38,Why would one use RDF in a Web service definition?,"I've been looking at the [resources definition of the Change Management module of the OSLC][1]. What's the point for them to use RDF? 
+
+Is this use related to semantic Web services?
+
+Thanks
+
+  [1]: http://open-services.net/bin/view/Main/CmResourceDefinitionsV1",web-services,rdf,semantic-web,,,,open,0,34,10,"Why would one use RDF in a Web service definition? I've been looking at the [resources definition of the Change Management module of the OSLC][1]. What's the point for them to use RDF? 
+
+Is this use related to semantic Web services?
+
+Thanks
+
+  [1]: http://open-services.net/bin/view/Main/CmResourceDefinitionsV1",3
+4447747,12/15/2010 07:42:40,163216,08/26/2009 02:37:21,92,3,Rating service for any web content,"I doubt that is there any web service provides rating system for my web content, like Disqus that provides online comment services. I try gogling but don't find any clue.
+
+Thanks,",web-services,,,,,12/15/2010 16:01:09,off topic,1,30,6,"Rating service for any web content I doubt that is there any web service provides rating system for my web content, like Disqus that provides online comment services. I try gogling but don't find any clue.
+
+Thanks,",1
+8332268,11/30/2011 20:06:33,1072837,11/30/2011 07:25:48,6,0,What is best way to test smartServer servlets?,"Hi I have the following Servlet method which I want to create test for it using junit or Cactus.I've tried Junit but in testing implementation classes but I'm a newbie in testing WebServices so I will really appreciate any help.
+
+    public DSResponse executeFetch(DSRequest req) throws Exception { 
+    DSResponse resp = new DSResponse(); 
+ 
+    String maID = (String) req.getCriteria().get(""memberActivityID""); 
+    MemberActivityImpl memberImpl = new MemberActivityImpl(); 
+ 
+    MemberActivity memberAct = new MemberActivity(); 
+ 
+    if (req.getDataSourceName().equals(""memberActivity"")) { 
+    if (maID != null) { 
+    // Fetch the MemberActivity based on the memberActivityID criteria 
+    memberAct = memberImpl.getMemberActivity(maID); 
+ 
+    List<Map> resultList = new LinkedList<Map>(); 
+ 
+    if( memberAct != null && memberAct.getMemberID() != null ) 
+        // Pass the memberAct to the client 
+        Map<String, Object> result = new HashMap<String, Object>(); 
+        result.put(""name"", memberAct.getName()); 
+        result.put(""type"", memberAct.getType()); 
+        result.put(""memberID"", memberAct.getMemberID()); 
+        if (memberAct.getGoal() != null) { 
+            result.put(""goal"", memberAct.getGoal());} 
+            resultList.add(result); 
+        } 
+        resp.setData(resultList); 
+    } else { 
+        resp.setFailure(); 
+    } 
+`
+    ",web-services,,,,,,open,0,293,8,"What is best way to test smartServer servlets? Hi I have the following Servlet method which I want to create test for it using junit or Cactus.I've tried Junit but in testing implementation classes but I'm a newbie in testing WebServices so I will really appreciate any help.
+
+    public DSResponse executeFetch(DSRequest req) throws Exception { 
+    DSResponse resp = new DSResponse(); 
+ 
+    String maID = (String) req.getCriteria().get(""memberActivityID""); 
+    MemberActivityImpl memberImpl = new MemberActivityImpl(); 
+ 
+    MemberActivity memberAct = new MemberActivity(); 
+ 
+    if (req.getDataSourceName().equals(""memberActivity"")) { 
+    if (maID != null) { 
+    // Fetch the MemberActivity based on the memberActivityID criteria 
+    memberAct = memberImpl.getMemberActivity(maID); 
+ 
+    List<Map> resultList = new LinkedList<Map>(); 
+ 
+    if( memberAct != null && memberAct.getMemberID() != null ) 
+        // Pass the memberAct to the client 
+        Map<String, Object> result = new HashMap<String, Object>(); 
+        result.put(""name"", memberAct.getName()); 
+        result.put(""type"", memberAct.getType()); 
+        result.put(""memberID"", memberAct.getMemberID()); 
+        if (memberAct.getGoal() != null) { 
+            result.put(""goal"", memberAct.getGoal());} 
+            resultList.add(result); 
+        } 
+        resp.setData(resultList); 
+    } else { 
+        resp.setFailure(); 
+    } 
+`
+    ",1
+5851547,05/01/2011 21:31:10,574122,01/13/2011 11:05:13,244,0,What Java library that would auto-generate all the boiler-plate code for calling Web Service?,"There is wsimport command that generates all the types referenced in WSDL. But this does not do anything with all the remaining boilerplate of calling a web service method, parsing XML into Java objects etc.
+
+Suppose a web service as defined by the service provider WSDL called CustomerService provides an operation getCustomerAddress(String CustomerID) and returns object of type CustomerAddress.
+wsimport only generates types such as CustomerAddress. What I am looking for is auto-generated code like:
+
+    String AppID = """" ;  // autogenerated (if there was such parameter specified in WSDL)
+    String endpointA = ""some end point"";
+    CustomerAddress getCustomerAddress(String customerID) {
+    
+    // all the bolierplate of actaully calling the webservice, unmarshalling the XML response 
+    // including error/exception handling etc.
+    
+    
+    return result;
+    }
+
+",web-services,,,,,,open,0,154,14,"What Java library that would auto-generate all the boiler-plate code for calling Web Service? There is wsimport command that generates all the types referenced in WSDL. But this does not do anything with all the remaining boilerplate of calling a web service method, parsing XML into Java objects etc.
+
+Suppose a web service as defined by the service provider WSDL called CustomerService provides an operation getCustomerAddress(String CustomerID) and returns object of type CustomerAddress.
+wsimport only generates types such as CustomerAddress. What I am looking for is auto-generated code like:
+
+    String AppID = """" ;  // autogenerated (if there was such parameter specified in WSDL)
+    String endpointA = ""some end point"";
+    CustomerAddress getCustomerAddress(String customerID) {
+    
+    // all the bolierplate of actaully calling the webservice, unmarshalling the XML response 
+    // including error/exception handling etc.
+    
+    
+    return result;
+    }
+
+",1
+7867128,10/23/2011 15:37:37,393135,07/15/2010 19:26:34,105,7,Direct IP to IP call,"I could set up my own PC as a host (using Xitami application and opening port 80), so that people could type in (http://my-ip-address) and they would log into my site (on my pc). What I would like to know is there a possibility to set up a direct IP to IP connection of some sort to make a voice call (VoIP)? I don't want Skype at all because I have to log into their server but I already have my own server I don't need them and I don't need their application, I want to find out if it's possible to set up my own. Any suggestions?",web-services,ip,chat,voip,,10/24/2011 02:27:51,off topic,1,108,5,"Direct IP to IP call I could set up my own PC as a host (using Xitami application and opening port 80), so that people could type in (http://my-ip-address) and they would log into my site (on my pc). What I would like to know is there a possibility to set up a direct IP to IP connection of some sort to make a voice call (VoIP)? I don't want Skype at all because I have to log into their server but I already have my own server I don't need them and I don't need their application, I want to find out if it's possible to set up my own. Any suggestions?",4
+11358565,07/06/2012 08:27:12,1215940,02/17/2012 10:08:44,20,1,Unable to call web service from web service using dotnetopenauth,"I am currently setting up a wcf SOAP web service, which uses OAuth v1 (DotNetOpenAuth) to autorize users. I'm hosting the site on a remote server via IIS7. Recently I've succeedded at getting the webservice to return the user's timetable, which works like a charm. 
+
+However, now I also need to be able to retrieve a user's test results via this web service. To do this, my web service calls *another*, existing web service to retrieve the results, then formats them and returns them to the user. 
+
+I first created a test webservice to do this, which works perfectly- I load my web service's wsdl file in SoapUI, and it returns the desired results (by calling the other webservice). 
+
+However, when implementing the method into the actual project, it fails. Apparently there's a hickup caused by elements in the web.config file;
+
+    <configuration>
+      ...
+      <applicationSettings>
+        <OAuthServiceProvider.Properties.Settings>
+          <setting name=""OAuthServiceProvider_Zuyd_OsirisService"" serializeAs=""String"">
+            <value>http://.../OsirisServices-OsirisServices/OsirisServicePort</value>
+          </setting>
+        </OAuthServiceProvider.Properties.Settings>
+      </applicationSettings>
+    </configuration>
+
+
+With ... being the IP address and port number. When I include this piece of code (which is automatically generated by adding the web reference), I get an error saying ""The remote server returned an error: (500) Internal Server Error"" whenever I try to access the web reference (or any other file on the site, for that matter). If I don't include it then I can access the files on the site just fine, but, well, then I'm obviously unable to call the second web service.
+
+Am I doing something wrong with this block of code? Or is there something else that I'm missing?
+
+I've included the full error text below;
+
+    Server Error in '/consumerexample/v3' Application.
+    --------------------------------------------------------------------------------
+    
+    The remote server returned an error: (500) Internal Server Error. 
+    Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. 
+    
+    Exception Details: System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+    
+    Source Error: 
+    
+    An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.  
+    
+    Stack Trace: 
+    
+    
+    [WebException: The remote server returned an error: (500) Internal Server Error.]
+       System.Net.HttpWebRequest.GetResponse() +1485
+       DotNetOpenAuth.Messaging.StandardWebRequestHandler.GetResponse(HttpWebRequest request, DirectWebRequestOptions options) +508
+    
+    [ProtocolException: Error occurred while sending a direct message or getting the response.]
+       DotNetOpenAuth.Messaging.StandardWebRequestHandler.GetResponse(HttpWebRequest request, DirectWebRequestOptions options) +1911
+       DotNetOpenAuth.Messaging.StandardWebRequestHandler.GetResponse(HttpWebRequest request) +63
+       DotNetOpenAuth.Messaging.Channel.GetDirectResponse(HttpWebRequest webRequest) +72
+       DotNetOpenAuth.Messaging.Channel.RequestCore(IDirectedProtocolMessage request) +349
+       DotNetOpenAuth.Messaging.Channel.Request(IDirectedProtocolMessage requestMessage) +154
+       DotNetOpenAuth.Messaging.Channel.Request(IDirectedProtocolMessage requestMessage) +69
+       DotNetOpenAuth.OAuth.ConsumerBase.PrepareRequestUserAuthorization(Uri callback, IDictionary`2 requestParameters, IDictionary`2 redirectParameters, String& requestToken) +193
+       DotNetOpenAuth.OAuth.WebConsumer.PrepareRequestUserAuthorization(Uri callback, IDictionary`2 requestParameters, IDictionary`2 redirectParameters) +28
+       OAuthConsumer.GetTimeTable.getAuthorizationButton_Click(Object sender, EventArgs e) in C:\Program Files\TimeTableWebService\consumer4\OAuthConsumer\GetTimeTable.aspx.cs:54
+       System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument) +154
+       System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +3394
+    
+    --------------------------------------------------------------------------------
+    Version Information: Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.0.30319.272 ",web-services,soap,dotnetopenauth,,,,open,0,667,10,"Unable to call web service from web service using dotnetopenauth I am currently setting up a wcf SOAP web service, which uses OAuth v1 (DotNetOpenAuth) to autorize users. I'm hosting the site on a remote server via IIS7. Recently I've succeedded at getting the webservice to return the user's timetable, which works like a charm. 
+
+However, now I also need to be able to retrieve a user's test results via this web service. To do this, my web service calls *another*, existing web service to retrieve the results, then formats them and returns them to the user. 
+
+I first created a test webservice to do this, which works perfectly- I load my web service's wsdl file in SoapUI, and it returns the desired results (by calling the other webservice). 
+
+However, when implementing the method into the actual project, it fails. Apparently there's a hickup caused by elements in the web.config file;
+
+    <configuration>
+      ...
+      <applicationSettings>
+        <OAuthServiceProvider.Properties.Settings>
+          <setting name=""OAuthServiceProvider_Zuyd_OsirisService"" serializeAs=""String"">
+            <value>http://.../OsirisServices-OsirisServices/OsirisServicePort</value>
+          </setting>
+        </OAuthServiceProvider.Properties.Settings>
+      </applicationSettings>
+    </configuration>
+
+
+With ... being the IP address and port number. When I include this piece of code (which is automatically generated by adding the web reference), I get an error saying ""The remote server returned an error: (500) Internal Server Error"" whenever I try to access the web reference (or any other file on the site, for that matter). If I don't include it then I can access the files on the site just fine, but, well, then I'm obviously unable to call the second web service.
+
+Am I doing something wrong with this block of code? Or is there something else that I'm missing?
+
+I've included the full error text below;
+
+    Server Error in '/consumerexample/v3' Application.
+    --------------------------------------------------------------------------------
+    
+    The remote server returned an error: (500) Internal Server Error. 
+    Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. 
+    
+    Exception Details: System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+    
+    Source Error: 
+    
+    An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.  
+    
+    Stack Trace: 
+    
+    
+    [WebException: The remote server returned an error: (500) Internal Server Error.]
+       System.Net.HttpWebRequest.GetResponse() +1485
+       DotNetOpenAuth.Messaging.StandardWebRequestHandler.GetResponse(HttpWebRequest request, DirectWebRequestOptions options) +508
+    
+    [ProtocolException: Error occurred while sending a direct message or getting the response.]
+       DotNetOpenAuth.Messaging.StandardWebRequestHandler.GetResponse(HttpWebRequest request, DirectWebRequestOptions options) +1911
+       DotNetOpenAuth.Messaging.StandardWebRequestHandler.GetResponse(HttpWebRequest request) +63
+       DotNetOpenAuth.Messaging.Channel.GetDirectResponse(HttpWebRequest webRequest) +72
+       DotNetOpenAuth.Messaging.Channel.RequestCore(IDirectedProtocolMessage request) +349
+       DotNetOpenAuth.Messaging.Channel.Request(IDirectedProtocolMessage requestMessage) +154
+       DotNetOpenAuth.Messaging.Channel.Request(IDirectedProtocolMessage requestMessage) +69
+       DotNetOpenAuth.OAuth.ConsumerBase.PrepareRequestUserAuthorization(Uri callback, IDictionary`2 requestParameters, IDictionary`2 redirectParameters, String& requestToken) +193
+       DotNetOpenAuth.OAuth.WebConsumer.PrepareRequestUserAuthorization(Uri callback, IDictionary`2 requestParameters, IDictionary`2 redirectParameters) +28
+       OAuthConsumer.GetTimeTable.getAuthorizationButton_Click(Object sender, EventArgs e) in C:\Program Files\TimeTableWebService\consumer4\OAuthConsumer\GetTimeTable.aspx.cs:54
+       System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument) +154
+       System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +3394
+    
+    --------------------------------------------------------------------------------
+    Version Information: Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.0.30319.272 ",3
+9308587,02/16/2012 09:27:36,1035420,11/08/2011 10:45:32,18,1,how to Use Membership.GetUser() in web service,"I have used Membership.GetUser() in my web-service but I am getting null as return.
+
+Here I have attached my code. Give some suggestion on that...
+
+    Guid currUserId = new Guid();
+            var membershipUser = Membership.GetUser();
+            if (membershipUser != null)
+                if (membershipUser.ProviderUserKey != null)
+                    currUserId = new Guid(membershipUser.ProviderUserKey.ToString());
+
+I have used SQL Membership provider.",web-services,,,,,,open,0,109,7,"how to Use Membership.GetUser() in web service I have used Membership.GetUser() in my web-service but I am getting null as return.
+
+Here I have attached my code. Give some suggestion on that...
+
+    Guid currUserId = new Guid();
+            var membershipUser = Membership.GetUser();
+            if (membershipUser != null)
+                if (membershipUser.ProviderUserKey != null)
+                    currUserId = new Guid(membershipUser.ProviderUserKey.ToString());
+
+I have used SQL Membership provider.",1
+6656457,07/11/2011 20:56:46,250254,01/13/2010 21:54:45,85,12,"Custom Sharepoint webservice requires web.config to be ""touched"" regularly","We have a site running on MOSS 2007 which makes calls to custom web service asmx methods on the same domain from the client.
+
+At first everything works fine, but after a bit of time has passed the service will start to fail with:
+
+http://[domain]/_layouts/error.aspx?ErrorText=**Request format is unrecognized for URL unexpectedly ending in %27%2FIsSuspectWaterLevel%27**.
+
+Interestingly enough
+http://[Domain]/_vti_bin/Custom/CustomFunctionality.asmx**?op=IsSuspectWaterLevel**
+is still available, but a call to
+http://[Domain]/_vti_bin/Custom/CustomFunctionality.asmx**/IsSuspectWaterLevel**
+will fail as described.
+
+We've found that ""touching"" C:\Program Files\Common Files\microsoft shared\Web Server Extensions\12\ISAPI\ **web.config** will bring the webservice back to life.
+
+The asmx file lives at
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\ISAPI\ECan\MyECan_ComplianceWaterUsage.asmx
+
+Any ideas of what might be going on here?",web-services,sharepoint2007,asmx,,,,open,0,96,9,"Custom Sharepoint webservice requires web.config to be ""touched"" regularly We have a site running on MOSS 2007 which makes calls to custom web service asmx methods on the same domain from the client.
+
+At first everything works fine, but after a bit of time has passed the service will start to fail with:
+
+http://[domain]/_layouts/error.aspx?ErrorText=**Request format is unrecognized for URL unexpectedly ending in %27%2FIsSuspectWaterLevel%27**.
+
+Interestingly enough
+http://[Domain]/_vti_bin/Custom/CustomFunctionality.asmx**?op=IsSuspectWaterLevel**
+is still available, but a call to
+http://[Domain]/_vti_bin/Custom/CustomFunctionality.asmx**/IsSuspectWaterLevel**
+will fail as described.
+
+We've found that ""touching"" C:\Program Files\Common Files\microsoft shared\Web Server Extensions\12\ISAPI\ **web.config** will bring the webservice back to life.
+
+The asmx file lives at
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\ISAPI\ECan\MyECan_ComplianceWaterUsage.asmx
+
+Any ideas of what might be going on here?",3
+3174719,07/04/2010 12:54:29,378912,06/29/2010 10:50:11,31,0,yahoo take my domain name what i doning?,"i Reserves a hosting from yahoo for one year
+when the year finished >>yahoo keep the domain name for its own
+now i need that domain name without yahoo hosting
+what can i do?",web-services,,,,,07/04/2010 13:25:26,off topic,1,31,8,"yahoo take my domain name what i doning? i Reserves a hosting from yahoo for one year
+when the year finished >>yahoo keep the domain name for its own
+now i need that domain name without yahoo hosting
+what can i do?",1
+11424827,07/11/2012 02:46:55,1516455,07/11/2012 02:36:02,1,0,DHCP (server) laptop,"I want to make my laptop as a DHCP server to assign IPs for a switch.
+
+how to set up my laptop to do it.
+
+Thank you
+
+my laptop use window XP
+",web-services,,,,,07/11/2012 05:57:19,off topic,1,29,3,"DHCP (server) laptop I want to make my laptop as a DHCP server to assign IPs for a switch.
+
+how to set up my laptop to do it.
+
+Thank you
+
+my laptop use window XP
+",1
+10172534,04/16/2012 10:36:50,1269033,03/14/2012 12:58:06,7,0,Where do I start making a web service for wp7 to windows azure db,"I'm writing an app which I need to store user details, location and connections in azure db but have no experience with cloud storage. I have created my azure database but not sure how to communicate with the wp7 app. Any thoughts on where to start with the web service,
+Thanks, MH",web-services,windows-phone-7,windows-azure-storage,,,,open,0,51,14,"Where do I start making a web service for wp7 to windows azure db I'm writing an app which I need to store user details, location and connections in azure db but have no experience with cloud storage. I have created my azure database but not sure how to communicate with the wp7 app. Any thoughts on where to start with the web service,
+Thanks, MH",3
+519576,02/06/2009 08:44:51,62353,02/04/2009 10:51:06,23,2,Would you use Metro instead of Axis2?,"For a starting project, why would you use [Metro][1] instead of [Axis2][2]?
+
+What should be considred?
+Performace?
+Easiness?
+Tools/IDE/Plugins availability?
+
+  [1]: https://metro.dev.java.net/discover/
+  [2]: http://ws.apache.org/axis2/",web-services,axis2,metro,java,,08/30/2011 19:34:39,not constructive,1,22,7,"Would you use Metro instead of Axis2? For a starting project, why would you use [Metro][1] instead of [Axis2][2]?
+
+What should be considred?
+Performace?
+Easiness?
+Tools/IDE/Plugins availability?
+
+  [1]: https://metro.dev.java.net/discover/
+  [2]: http://ws.apache.org/axis2/",4
+11116708,06/20/2012 09:36:51,733644,05/01/2011 20:32:15,849,1,What does RESTful web applications mean?,"A web service is a function that can be accessed by other programs over the web (Http). To clarify a bit, when you create a website in PHP that outputs HTML its target is the browser and by extension the human being reading the page in the browser. A web service is not targeted at humans but rather at other programs.
+
+ 1. SOAP and REST are two ways of creating WebServices. Correct me if i
+    am wrong?
+ 2. What are other ways i can create a WebService?
+ 3. What does it mean fully RESTful web Application?
+
+
+
+",web-services,php5,rest,,,06/21/2012 13:07:46,not constructive,1,99,6,"What does RESTful web applications mean? A web service is a function that can be accessed by other programs over the web (Http). To clarify a bit, when you create a website in PHP that outputs HTML its target is the browser and by extension the human being reading the page in the browser. A web service is not targeted at humans but rather at other programs.
+
+ 1. SOAP and REST are two ways of creating WebServices. Correct me if i
+    am wrong?
+ 2. What are other ways i can create a WebService?
+ 3. What does it mean fully RESTful web Application?
+
+
+
+",3
+10628131,05/16/2012 23:32:55,1396816,05/15/2012 17:21:41,3,0,"Getting illegal characters , how to resolve this?","<br>
+We are getting illegal character when we pull thru our code, but when we call the webservice it is returning the xml in which it display as ""-"" but when we retrieve using our java code it is giving ""?"" character and we cannot filter it also as the values will be dynamic , and just for the record our application is UTF-8. Can anybody please guide. <br>
+Thanks",web-services,java-ee,,,,05/17/2012 21:47:32,not constructive,1,68,8,"Getting illegal characters , how to resolve this? <br>
+We are getting illegal character when we pull thru our code, but when we call the webservice it is returning the xml in which it display as ""-"" but when we retrieve using our java code it is giving ""?"" character and we cannot filter it also as the values will be dynamic , and just for the record our application is UTF-8. Can anybody please guide. <br>
+Thanks",2
+9092374,02/01/2012 07:34:57,70293,09/17/2008 12:37:47,1399,37,Are there any GitHub complementary services?,"I'm looking for web services which use GitHub's API to implement additional functionality missing the the GitHub.
+ 
+Know only two of them:
+
+ - [CodeShelver][1] — A service to bookmark repositories.
+ - [Calendar About Nothing][2] — A motivating service which build a calendar of your commitment to opensource.
+
+The question. Are there any other such services?
+
+
+  [1]: https://www.codeshelver.com/
+  [2]: http://calendaraboutnothing.com/",web-services,git,github,,,02/04/2012 16:35:12,not constructive,1,60,6,"Are there any GitHub complementary services? I'm looking for web services which use GitHub's API to implement additional functionality missing the the GitHub.
+ 
+Know only two of them:
+
+ - [CodeShelver][1] — A service to bookmark repositories.
+ - [Calendar About Nothing][2] — A motivating service which build a calendar of your commitment to opensource.
+
+The question. Are there any other such services?
+
+
+  [1]: https://www.codeshelver.com/
+  [2]: http://calendaraboutnothing.com/",3
+10154664,04/14/2012 15:13:30,1332815,04/14/2012 03:26:19,1,0,Web Services - the modifier public is not valid for this item,"Okay, so I am having problems calling the method GetClassAverage() from the interfacce (the windows form displaying the data). I get the following error too 
+""The modifier public is not valid for this item""... this is the code on my IService.cs file
+
+    [ServiceContract]
+    public interface IClassRollService
+    {
+    	[OperationContract]
+        List<Student> GetStudentList(int semester);
+        [OperationContract]    
+        public double GetClassAverage(int anything);
+    }
+
+In my Service.cs file I have
+
+    public double GetClassAverage()
+    {
+        double sum = 0.0;
+        double total;
+        foreach (Student S in Students)
+        {
+            sum += S.Average;
+        }
+        return total = sum / Students.Count();
+    }
+
+On my windows form I fill a gridview by calling client.GetStudentList() but it does not work for GetClassAverage()
+
+What am I doing wrong or what am I missing?
+",web-services,interface,,,,,open,0,217,12,"Web Services - the modifier public is not valid for this item Okay, so I am having problems calling the method GetClassAverage() from the interfacce (the windows form displaying the data). I get the following error too 
+""The modifier public is not valid for this item""... this is the code on my IService.cs file
+
+    [ServiceContract]
+    public interface IClassRollService
+    {
+    	[OperationContract]
+        List<Student> GetStudentList(int semester);
+        [OperationContract]    
+        public double GetClassAverage(int anything);
+    }
+
+In my Service.cs file I have
+
+    public double GetClassAverage()
+    {
+        double sum = 0.0;
+        double total;
+        foreach (Student S in Students)
+        {
+            sum += S.Average;
+        }
+        return total = sum / Students.Count();
+    }
+
+On my windows form I fill a gridview by calling client.GetStudentList() but it does not work for GetClassAverage()
+
+What am I doing wrong or what am I missing?
+",2
+11646286,07/25/2012 09:07:30,1551066,07/25/2012 08:59:29,1,0,"web-service returning US states, cities, schools","everyone.
+
+Is there any available web-service which can return all US states, cities(according to state), schools (according to city)?
+
+Basically, I need something like this: http://nces.ed.gov/globallocator/, but this website doesn't have such a web-service.
+
+Thanks",web-services,,,,,,open,0,32,6,"web-service returning US states, cities, schools everyone.
+
+Is there any available web-service which can return all US states, cities(according to state), schools (according to city)?
+
+Basically, I need something like this: http://nces.ed.gov/globallocator/, but this website doesn't have such a web-service.
+
+Thanks",1
+4607290,01/05/2011 17:40:34,80559,03/20/2009 16:10:20,145,6,Lookup product category from UPC Code,"Is there a way to get a product's category from its UPC code?
+
+For instance I want to use the upc code to determine if a food item is, frozen food, dairy bread, alcohol, etc...
+
+Is there a web service that will do this?",web-services,upc,,,,02/16/2012 21:11:20,not a real question,1,42,6,"Lookup product category from UPC Code Is there a way to get a product's category from its UPC code?
+
+For instance I want to use the upc code to determine if a food item is, frozen food, dairy bread, alcohol, etc...
+
+Is there a web service that will do this?",2
+8221704,11/22/2011 03:41:59,789665,06/08/2011 17:51:30,18,1,Verify Business Identity,"I'm developing a web application that involves businesses signing up. What is the best way to verify a businesses identity? How do I know the person signing up for ""Pizza Hut"" really works for Pizza Hut? Are there web services I can utilize?
+
+Thanks in advance.",web-services,validation,business-logic,,,11/22/2011 21:23:20,not a real question,1,45,3,"Verify Business Identity I'm developing a web application that involves businesses signing up. What is the best way to verify a businesses identity? How do I know the person signing up for ""Pizza Hut"" really works for Pizza Hut? Are there web services I can utilize?
+
+Thanks in advance.",3
+6571416,07/04/2011 12:22:52,817236,06/27/2011 11:19:26,1,0,EWS Managed api: Get the mailbox and the name of all of the participant of an appointement,"Hello I am working with exchange web service and i want to get the mailbox and the name of all the participants of an appointements.
+
+I do this
+
+ foreach (Attendee participant in appointment.RequiredAttendees)
+
+                    {
+
+                        Console.WriteLine(""Attendee {0}"", participant.Name);
+
+                       
+
+                    }
+
+
+and it returns me nothing
+
+
+
+Thank for help",web-services,exchange,,,,,open,0,127,17,"EWS Managed api: Get the mailbox and the name of all of the participant of an appointement Hello I am working with exchange web service and i want to get the mailbox and the name of all the participants of an appointements.
+
+I do this
+
+ foreach (Attendee participant in appointment.RequiredAttendees)
+
+                    {
+
+                        Console.WriteLine(""Attendee {0}"", participant.Name);
+
+                       
+
+                    }
+
+
+and it returns me nothing
+
+
+
+Thank for help",2
+7235592,08/29/2011 20:30:24,519795,11/25/2010 07:36:34,1,0,Proper use of PictureMarkerSymbol using ExportImageData - Arcgis 10 SOAP API,"I've been trying to export map image with custom graphics using arcgis MapServer SOAP API. My goal is to export map image with custom graphics. We need to put some markers on the map image, but so far I was unable to create a PictureMarkerSymbol that would show up on the exported image.
+
+Has anyone succeeded where I've failed?",web-services,api,soap,arcgis,,,open,0,58,11,"Proper use of PictureMarkerSymbol using ExportImageData - Arcgis 10 SOAP API I've been trying to export map image with custom graphics using arcgis MapServer SOAP API. My goal is to export map image with custom graphics. We need to put some markers on the map image, but so far I was unable to create a PictureMarkerSymbol that would show up on the exported image.
+
+Has anyone succeeded where I've failed?",4
+9888438,03/27/2012 11:09:56,849632,07/18/2011 08:23:37,58,7,WSGEN tool : ClassNotFoundException,"I invoked wsgen tool against my WS classfile. The classfile is created by eclipse and all the lib folder configurations are done in eclipse
+
+But because I run the wsgen tool from command prompt, it is not able to recognize the lib folder and thus throwing ClassNotFoundException
+
+My project location is in 
+
+    D:\eclipseWorkspace\20-FEB-2012\JAXWS_PROJECT
+
+i used the below command
+
+    wsgen -verbose -keep -cp . com.testing.jaxws.TestServiceWS
+
+I know that CP command has no classpath. But still even if i give classpath its not identifying all the libs
+
+Is there any way to configure wsgen in eclipse itself ?",web-services,eclipse-plugin,jax-ws,wsgen,,,open,0,98,4,"WSGEN tool : ClassNotFoundException I invoked wsgen tool against my WS classfile. The classfile is created by eclipse and all the lib folder configurations are done in eclipse
+
+But because I run the wsgen tool from command prompt, it is not able to recognize the lib folder and thus throwing ClassNotFoundException
+
+My project location is in 
+
+    D:\eclipseWorkspace\20-FEB-2012\JAXWS_PROJECT
+
+i used the below command
+
+    wsgen -verbose -keep -cp . com.testing.jaxws.TestServiceWS
+
+I know that CP command has no classpath. But still even if i give classpath its not identifying all the libs
+
+Is there any way to configure wsgen in eclipse itself ?",4
+11339829,07/05/2012 07:40:01,1344102,04/19/2012 13:24:12,18,1,Restricting access to certain URLs in a webapp running on Tomcat (6.0.x),"Hi my new problem is as follows: I have a web application running on Tomcat 6.0.x, it's behind an Apache HTTPD reverse proxy, there are other machines behind it one of the supposed to communicate with a certain web service (http://bla.com/**restricted**/stuff/...) while users(that connect from the internet side of the reverse proxy) and other machines should not be able to invoke those methods, preferably not even to know they exist.
+
+ 1. Well I know I could use RemoteAddrFilter and filter the IP and although it's spoof-able it could be ""close enough"" but unfortunately I'm stuck with version 6 of Tomcat.
+ 2. If I had complete freedom I could setup this service on a different port and then just use iptables to restrict it but unfortunately it has to be same instance of Tomcat and same web application and I am not familiar with a way to restrict a connector to certain areas in a web app.
+ 3. The application manages it's own security system which cannot be used for authenticating the ""caller machine"" for ""historical"" reasons that said making several security constraints is fine but [specification][1] here says that one can have only one login-config element so even if I write a different constraint for the restricted URLs I will not be able to block it by requiring a user certificate for example(thus identifying the calling machine) because I already have a login-config. 
+
+This more of a ""how to do it best"" question rather then ""I don't know how to do it"" because there are plenty of hacky ways to set this up but we don't want to slip to the dark side now do we? 
+
+I must say I did try to research the subject but I haven't found any obvious solutions and yet if I missed something elegant and obvious I will be more then happy to hear about it(non trivial solutions are very welcome too :) ) , so thanks for any ideas.
+
+
+  [1]: http://download.oracle.com/otn-pub/jcp/servlet-2.4-fr-spec-oth-JSpec/servlet-2_4-fr-spec.pdf%20specification",web-services,security,authentication,tomcat,restriction,,open,0,329,12,"Restricting access to certain URLs in a webapp running on Tomcat (6.0.x) Hi my new problem is as follows: I have a web application running on Tomcat 6.0.x, it's behind an Apache HTTPD reverse proxy, there are other machines behind it one of the supposed to communicate with a certain web service (http://bla.com/**restricted**/stuff/...) while users(that connect from the internet side of the reverse proxy) and other machines should not be able to invoke those methods, preferably not even to know they exist.
+
+ 1. Well I know I could use RemoteAddrFilter and filter the IP and although it's spoof-able it could be ""close enough"" but unfortunately I'm stuck with version 6 of Tomcat.
+ 2. If I had complete freedom I could setup this service on a different port and then just use iptables to restrict it but unfortunately it has to be same instance of Tomcat and same web application and I am not familiar with a way to restrict a connector to certain areas in a web app.
+ 3. The application manages it's own security system which cannot be used for authenticating the ""caller machine"" for ""historical"" reasons that said making several security constraints is fine but [specification][1] here says that one can have only one login-config element so even if I write a different constraint for the restricted URLs I will not be able to block it by requiring a user certificate for example(thus identifying the calling machine) because I already have a login-config. 
+
+This more of a ""how to do it best"" question rather then ""I don't know how to do it"" because there are plenty of hacky ways to set this up but we don't want to slip to the dark side now do we? 
+
+I must say I did try to research the subject but I haven't found any obvious solutions and yet if I missed something elegant and obvious I will be more then happy to hear about it(non trivial solutions are very welcome too :) ) , so thanks for any ideas.
+
+
+  [1]: http://download.oracle.com/otn-pub/jcp/servlet-2.4-fr-spec-oth-JSpec/servlet-2_4-fr-spec.pdf%20specification",5
+11675145,07/26/2012 17:53:39,357587,06/03/2010 14:28:11,447,8,Deploy modified WSDL,"I have a web service currently deployed on my local weblogic server.
+
+The WSDL that was generated is fine, but I needed to make some modifications.
+
+I have made the edits and it has been validated in eclipese, however I don't know how to deploy it to the server inside of my webservice.",web-services,wsdl,weblogic,,,,open,0,51,3,"Deploy modified WSDL I have a web service currently deployed on my local weblogic server.
+
+The WSDL that was generated is fine, but I needed to make some modifications.
+
+I have made the edits and it has been validated in eclipese, however I don't know how to deploy it to the server inside of my webservice.",3
+7511471,09/22/2011 07:58:51,481656,10/20/2010 12:11:07,165,11,Looking to use a MVC website to service tablets,"I'm doing a scenario where the project deadline is just around the corner. sad-lol. The situation requires a number of tablets constantly communicating with the database. The database needs to be invisible so all the functions that a tablet can do like: 
+
+ - Login
+ - Retrieve jobs/Submit completed Jobs 
+ - Submit Images related to job (evidence)
+ - Retrieve messages/Submit Feedback/Messages
+ - Retrieve latest instruction PDFs/Read then and confirm through a ""sign""
+ - Submit tablet location periodically
+
+Now, on the administration side, once an employee is hired, he is assigned a tablet from the pol and a GUID is generated on the server database that bind the employee to the tablet.
+
+Upon login from tablet, I need to send a simple request like
+http://www.holylollypop.com/tablet/login/*?EmployeeID* and *?GUID*
+
+Receiving this, the MVC site goes back to the actual DB and replies if login is granted or not. If success, tablet then sends GPS data as a JSON.
+http://www.holylollypop.com/tablet/gps/*?EmployeeID* and *?GUID* and *?GPS JSON*
+
+As you can see, I'm just using a token/API system here. I'm not doing any through sessions or compression or detecting if the tablet died or still active. All is just On-demand.
+
+Now, I have been looking at a number of tutorials and it seems that most people are adding/attaching WCF service into their MVC site. The MVC site I'm attempting doesn't entertain with web pages. Unless there is a valid token, there will be a simple index page telling user to go away.
+
+I must admit I lack knowledge of web services but at the same time, I just need a push in the right direction here with some code and I'll figure out the Model-View-Controller thing. Currently, I have a ASP MVC 3 Razer project in my solution that is able to access my DataAccessProxy project which in turn has access to the actual LINQ DBML.
+
+Any kind of help will be greatly appreciated!
+
+Regards.",web-services,asp.net-mvc-3,c#-4.0,,,06/29/2012 03:12:47,not a real question,1,309,9,"Looking to use a MVC website to service tablets I'm doing a scenario where the project deadline is just around the corner. sad-lol. The situation requires a number of tablets constantly communicating with the database. The database needs to be invisible so all the functions that a tablet can do like: 
+
+ - Login
+ - Retrieve jobs/Submit completed Jobs 
+ - Submit Images related to job (evidence)
+ - Retrieve messages/Submit Feedback/Messages
+ - Retrieve latest instruction PDFs/Read then and confirm through a ""sign""
+ - Submit tablet location periodically
+
+Now, on the administration side, once an employee is hired, he is assigned a tablet from the pol and a GUID is generated on the server database that bind the employee to the tablet.
+
+Upon login from tablet, I need to send a simple request like
+http://www.holylollypop.com/tablet/login/*?EmployeeID* and *?GUID*
+
+Receiving this, the MVC site goes back to the actual DB and replies if login is granted or not. If success, tablet then sends GPS data as a JSON.
+http://www.holylollypop.com/tablet/gps/*?EmployeeID* and *?GUID* and *?GPS JSON*
+
+As you can see, I'm just using a token/API system here. I'm not doing any through sessions or compression or detecting if the tablet died or still active. All is just On-demand.
+
+Now, I have been looking at a number of tutorials and it seems that most people are adding/attaching WCF service into their MVC site. The MVC site I'm attempting doesn't entertain with web pages. Unless there is a valid token, there will be a simple index page telling user to go away.
+
+I must admit I lack knowledge of web services but at the same time, I just need a push in the right direction here with some code and I'll figure out the Model-View-Controller thing. Currently, I have a ASP MVC 3 Razer project in my solution that is able to access my DataAccessProxy project which in turn has access to the actual LINQ DBML.
+
+Any kind of help will be greatly appreciated!
+
+Regards.",3
+4412886,12/10/2010 20:12:30,165673,08/30/2009 18:28:44,726,18,Web service for PDF generation,Is anyone familiar with a RESTful web service for PDF generation?,web-services,pdf,rest,pdf-generation,,12/10/2010 22:33:24,not a real question,1,11,5,Web service for PDF generation Is anyone familiar with a RESTful web service for PDF generation?,4
+4527552,12/24/2010 17:30:12,264052,02/02/2010 04:03:26,1395,7,How does IE downloading is achieved?,"I often click on a file link in the IE and a download box just pops out. But what happens behind this scene? I know that IE always talks to web server with HTTP protocol, and HTTP is **text based**.
+
+So is IE download achieved with HTTP protocol? If so, how could arbitrary file format be downloaded over a text based protocol?
+
+And I am currently trying to make a web app which will direct my customer to download some file. My current design is to implement a web service. Customer will call this web service and the web service will return the file download URL. But then I don't know what to do with the URL. Could I just use something like File.Copy to copy the file from the URL to local disk? Or how should I treat the URL? If there's a better design, please teach me. 
+
+
+Many thanks...",web-services,internet-explorer,download,,,,open,0,149,6,"How does IE downloading is achieved? I often click on a file link in the IE and a download box just pops out. But what happens behind this scene? I know that IE always talks to web server with HTTP protocol, and HTTP is **text based**.
+
+So is IE download achieved with HTTP protocol? If so, how could arbitrary file format be downloaded over a text based protocol?
+
+And I am currently trying to make a web app which will direct my customer to download some file. My current design is to implement a web service. Customer will call this web service and the web service will return the file download URL. But then I don't know what to do with the URL. Could I just use something like File.Copy to copy the file from the URL to local disk? Or how should I treat the URL? If there's a better design, please teach me. 
+
+
+Many thanks...",3
+2977823,06/04/2010 21:11:16,84424,03/30/2009 02:54:02,1117,54,Consuming a ASP.NET MVC 2 JsonResult like a web service in a web forms C# application?,"A friend wants to consume my ASP.NET MVC 2 application in a similar fashion as adding a web reference to it, accessing my functions, and using my model objects from a .Net web form from a separate website.
+
+Any links out there that could explain how to ""dress"" my MVC responses so that his server to server consumption would be similar in experience to a web service?
+
+I suggested using System.Net.WebClient to pull the results in to a variable then deserialize the JSON result, but maybe there's a better approach out there?",web-services,json,asp.net-mvc-2,,,,open,0,90,16,"Consuming a ASP.NET MVC 2 JsonResult like a web service in a web forms C# application? A friend wants to consume my ASP.NET MVC 2 application in a similar fashion as adding a web reference to it, accessing my functions, and using my model objects from a .Net web form from a separate website.
+
+Any links out there that could explain how to ""dress"" my MVC responses so that his server to server consumption would be similar in experience to a web service?
+
+I suggested using System.Net.WebClient to pull the results in to a variable then deserialize the JSON result, but maybe there's a better approach out there?",3
+11679187,07/26/2012 22:53:10,487243,10/26/2010 06:16:11,46,3,Is it bad to use many web services on a business web application,"I'm the sole developer on a web application project that a friend and I started up. I'm handling development and my friend is handling the business side. It's a guerrilla operation and with what our application is trying to achieve I could never develop it on my own in a reasonable time. So I'm planning on using many services to run the application. AppFog for hosting and deployment, MongoHQ for the database, Searchify for document indexing, Filepicker.io for file uploads, and AWS for misc utility needs. Besides the obvious worry about one of these companies going under, are there any other reasons why I should absolutely not be doing this?
+
+I figure if our application actually takes off and we make any kind of revenue, at that point,   I could then put resources into building solutions to take the place of different web services I'm currently using.",web-services,web-applications,,,,07/26/2012 22:58:48,off topic,1,148,13,"Is it bad to use many web services on a business web application I'm the sole developer on a web application project that a friend and I started up. I'm handling development and my friend is handling the business side. It's a guerrilla operation and with what our application is trying to achieve I could never develop it on my own in a reasonable time. So I'm planning on using many services to run the application. AppFog for hosting and deployment, MongoHQ for the database, Searchify for document indexing, Filepicker.io for file uploads, and AWS for misc utility needs. Besides the obvious worry about one of these companies going under, are there any other reasons why I should absolutely not be doing this?
+
+I figure if our application actually takes off and we make any kind of revenue, at that point,   I could then put resources into building solutions to take the place of different web services I'm currently using.",2
+11498607,07/16/2012 05:37:02,1526363,07/15/2012 02:15:36,1,0,Books for web services certification,"I am preparing for OCP, Java EE Web Services Developer certification. Is the training material provided by epractize labs a good source of reference for getting certified? Does it cover all the exam topics in detail? Would you recommend purchasing these material?
+
+http://www.epractizelabs.com/certification/sun/scdjws-exam-5.html
+http://www.epractizelabs.com/certification/sun/oce-webservices-exam-6.html",web-services,certification,,,,07/18/2012 21:29:15,not constructive,1,42,5,"Books for web services certification I am preparing for OCP, Java EE Web Services Developer certification. Is the training material provided by epractize labs a good source of reference for getting certified? Does it cover all the exam topics in detail? Would you recommend purchasing these material?
+
+http://www.epractizelabs.com/certification/sun/scdjws-exam-5.html
+http://www.epractizelabs.com/certification/sun/oce-webservices-exam-6.html",2
+5059457,02/20/2011 19:32:59,563243,01/04/2011 22:48:52,61,7,Business model for web plateform,"I'm building a web plateform that will provide services. The kind of services will be like www.colorblender.com and will offer some web-services as well.
+
+What kind of business model would you use ? 
+
+If I use smth like google ads, I have in mind that 1000 display make +- 1 usd.
+
+What's your experience on it ?
+
+Cheers,
+
+Olivier
+
+
+
+",web-services,internet,business-model,,,02/22/2011 02:30:24,off topic,1,55,5,"Business model for web plateform I'm building a web plateform that will provide services. The kind of services will be like www.colorblender.com and will offer some web-services as well.
+
+What kind of business model would you use ? 
+
+If I use smth like google ads, I have in mind that 1000 display make +- 1 usd.
+
+What's your experience on it ?
+
+Cheers,
+
+Olivier
+
+
+
+",3
+9660230,03/12/2012 00:10:38,873286,08/01/2011 18:29:44,118,0,How to creat wiki like web site,"Hello Guys! Maybe this question is strange (I do not know whether it is or not :) ). I want to create web site for special community, and I want it to be like wikipedia. For example anyone can change, edit, add article. But this is only for the members of website. So my question is it possible to get wikipedia template or there is some copyrights? Any answers will be great (because have no any idea about it)",web-services,web,wiki,wikipedia-api,,05/16/2012 12:32:25,not a real question,1,79,7,"How to creat wiki like web site Hello Guys! Maybe this question is strange (I do not know whether it is or not :) ). I want to create web site for special community, and I want it to be like wikipedia. For example anyone can change, edit, add article. But this is only for the members of website. So my question is it possible to get wikipedia template or there is some copyrights? Any answers will be great (because have no any idea about it)",4
+11031412,06/14/2012 10:42:37,353624,05/29/2010 14:31:20,54,1,"I want to offer a download service,how to statistic of the user traffic for accounting?","I think amazon s3 is a good chooice for me,Do you have any articles about this demand?thank you.",web-services,amazon-s3,amazon,,,06/15/2012 11:05:50,not constructive,1,18,15,"I want to offer a download service,how to statistic of the user traffic for accounting? I think amazon s3 is a good chooice for me,Do you have any articles about this demand?thank you.",3
+8590474,12/21/2011 13:22:13,737406,05/04/2011 06:00:15,16,0,connecting to apache axis web service,"I want to know how to connect to a web service that is created using apache axis 2. 
+
+I want some sample code in java that connects to such web service.
+
+Thank You   ",web-services,apache-axis,,,,,open,0,35,6,"connecting to apache axis web service I want to know how to connect to a web service that is created using apache axis 2. 
+
+I want some sample code in java that connects to such web service.
+
+Thank You   ",2
+3571856,08/26/2010 03:32:59,348056,05/22/2010 23:41:58,568,10,So am I talking about a SOA here?,"For a government contract we will be proposing to build a traffic monitoring architecture.  We will have the following components:
+
+ - Video camera's set up around the area of interest. The cameras will be aware of their location and orientation and viewing parameters.
+ - A GIS map server which can be queried for streets, building, etc.
+ - An algorithm the takes in raw video and street location information and outputs car locations.
+ - Another algorithm takes in car locations and very low level street information and provides information about which cars are driving anomalously.
+ - Another database takes in information about car locations and anomaly reports over time and  can be queried for this later.
+ - A proxy (or perhaps more accurately, a facade) is set up over the archive database and the real-time algorithms in order to provide a unified interface to the information.
+ - A client attaches to the proxy and to the street server and paints various representations of the traffic situation on the screen.
+
+I'm just now learning what an SOA is.  Is this an ideal candidate of a Service Oriented Architecture SOA?  I had heard that SOA services should be stateless (or is that only RESTful services?)  I had also heard that it was inadvisable to pipe one service to the next to the next because it increases hidden complexity, and that there was something you should do to make this situation better (an ""orchestration""?).  The services above do appear to be modular and reusable.  For instance, there will be plenty of cameras, various types of vehicle detection and anomaly algorithms, distributed databases, and plenty of clients.
+
+If this isn't ideally implemented by a SOA, then where else should I be looking.  If this is ideal for a SOA, then where should I start when designing this? (And I'm starting basically from having read Wikipedia's SOA page.)",web-services,architecture,soa,,,,open,0,318,8,"So am I talking about a SOA here? For a government contract we will be proposing to build a traffic monitoring architecture.  We will have the following components:
+
+ - Video camera's set up around the area of interest. The cameras will be aware of their location and orientation and viewing parameters.
+ - A GIS map server which can be queried for streets, building, etc.
+ - An algorithm the takes in raw video and street location information and outputs car locations.
+ - Another algorithm takes in car locations and very low level street information and provides information about which cars are driving anomalously.
+ - Another database takes in information about car locations and anomaly reports over time and  can be queried for this later.
+ - A proxy (or perhaps more accurately, a facade) is set up over the archive database and the real-time algorithms in order to provide a unified interface to the information.
+ - A client attaches to the proxy and to the street server and paints various representations of the traffic situation on the screen.
+
+I'm just now learning what an SOA is.  Is this an ideal candidate of a Service Oriented Architecture SOA?  I had heard that SOA services should be stateless (or is that only RESTful services?)  I had also heard that it was inadvisable to pipe one service to the next to the next because it increases hidden complexity, and that there was something you should do to make this situation better (an ""orchestration""?).  The services above do appear to be modular and reusable.  For instance, there will be plenty of cameras, various types of vehicle detection and anomaly algorithms, distributed databases, and plenty of clients.
+
+If this isn't ideally implemented by a SOA, then where else should I be looking.  If this is ideal for a SOA, then where should I start when designing this? (And I'm starting basically from having read Wikipedia's SOA page.)",3
+8368112,12/03/2011 13:54:19,656172,03/12/2011 00:00:09,1065,41,Correct descriptions of REST HTTP actions?,"Having read numerous websites that define various interpretations of GET/POST/PUT/DELETE I am left somewhat confused. After thorough reading I believe that I now understand but it would be useful if somebody could confirm whether I am on the right track or not.
+
+The following explains my understanding of REST actions:
+
+    GET    - get data
+    POST   - create or update **entire or part** resource at non-specific entity URI
+    PUT    - create or update **entire** resource at specific entity URI
+    DELETE - delete entity at specific entity URI
+
+Some examples of REST URIs:
+
+    /api/user
+        POST   - create a new user and respond with unique user ID
+
+    /api/user/{id}
+        GET    - get data for specific user
+        POST   - update some or all user data
+        PUT    - create or replace entire user
+        DELETE - delete specific user
+
+    /api/user/{id}/profile
+        GET    - get data for user profile
+        POST   - update some or all user profile data
+        PUT    - create or replace entire user profile
+
+    /api/users
+        GET    - perform query to retrieve listing of user data
+
+Am I along the right lines? is there anything important that I should know / read?",web-services,http,rest,,,,open,0,297,6,"Correct descriptions of REST HTTP actions? Having read numerous websites that define various interpretations of GET/POST/PUT/DELETE I am left somewhat confused. After thorough reading I believe that I now understand but it would be useful if somebody could confirm whether I am on the right track or not.
+
+The following explains my understanding of REST actions:
+
+    GET    - get data
+    POST   - create or update **entire or part** resource at non-specific entity URI
+    PUT    - create or update **entire** resource at specific entity URI
+    DELETE - delete entity at specific entity URI
+
+Some examples of REST URIs:
+
+    /api/user
+        POST   - create a new user and respond with unique user ID
+
+    /api/user/{id}
+        GET    - get data for specific user
+        POST   - update some or all user data
+        PUT    - create or replace entire user
+        DELETE - delete specific user
+
+    /api/user/{id}/profile
+        GET    - get data for user profile
+        POST   - update some or all user profile data
+        PUT    - create or replace entire user profile
+
+    /api/users
+        GET    - perform query to retrieve listing of user data
+
+Am I along the right lines? is there anything important that I should know / read?",3
+5888562,05/04/2011 19:04:29,105035,05/11/2009 21:40:38,1393,18,How can I increase performance calling to a web service from Windows 2008 Server?,"Good Morning All,    
+I'm trying to help out a co-worker here.  We are using the same code base however I'm running Win7 Ultimate and she Windows Server 2008. When I call a webservice, using the Stopwatch class, it's taking my call about 320ms, when she does the exact same call with the same payload etc... it's taking about 3,500ms. Any idea as to why this would be happening? This code is running an XQuery against an XML database...
+
+     using (MarkLogicHttpReader reader = (MarkLogicHttpReader)cmd.ExecuteHttpReader())
+     {
+          var watch = Stopwatch.StartNew();
+          response.Xml.Value = reader.GetXml();
+          watch.Stop();
+          Debug.WriteLine(""The call took : {0} ms"", watch.Elapsed.TotalMilliseconds);
+          response.Xml.HasData = HasData(response.Xml.Value);
+      }
+
+Any ideas how I can perhaps tweak her network settings or something to get the same throughput I'm getting. She's quite a good friend and I'd like to help her out if I can.  I was thinking maybe it's something to do with packet sizes or something? Anyways any ideas or tips are certainly appreciated. I know this is a programming forum and perhaps this is a networking question, but honestly we're both devs running the same piece of code. I'm just curious why it's so much slower on her machine.  
+
+Thanks for any help,    
+~ck in San Diego",web-services,tcp,windows-server-2008,packet,,,open,0,268,14,"How can I increase performance calling to a web service from Windows 2008 Server? Good Morning All,    
+I'm trying to help out a co-worker here.  We are using the same code base however I'm running Win7 Ultimate and she Windows Server 2008. When I call a webservice, using the Stopwatch class, it's taking my call about 320ms, when she does the exact same call with the same payload etc... it's taking about 3,500ms. Any idea as to why this would be happening? This code is running an XQuery against an XML database...
+
+     using (MarkLogicHttpReader reader = (MarkLogicHttpReader)cmd.ExecuteHttpReader())
+     {
+          var watch = Stopwatch.StartNew();
+          response.Xml.Value = reader.GetXml();
+          watch.Stop();
+          Debug.WriteLine(""The call took : {0} ms"", watch.Elapsed.TotalMilliseconds);
+          response.Xml.HasData = HasData(response.Xml.Value);
+      }
+
+Any ideas how I can perhaps tweak her network settings or something to get the same throughput I'm getting. She's quite a good friend and I'd like to help her out if I can.  I was thinking maybe it's something to do with packet sizes or something? Anyways any ideas or tips are certainly appreciated. I know this is a programming forum and perhaps this is a networking question, but honestly we're both devs running the same piece of code. I'm just curious why it's so much slower on her machine.  
+
+Thanks for any help,    
+~ck in San Diego",4
+999987,06/16/2009 07:26:19,42272,12/01/2008 22:19:04,83,2,Why does a webservice specify all request and response types as a string?,"I am working with a legacy webservice, and they supplied us their WSDL to work with.
+
+Now my problem is, that *every* function specifies the same argument and return type. And this type is then specified as being *string*!
+
+Example:
+
+    <definitions targetNamespace=""java:the.custom.namespace"" xmlns=""http://schemas.xmlsoap.org/wsdl/"" xmlns:tns=""java:the.custom.namespace"" xmlns:xsi=""http://www.w3.org/1999/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/1999/XMLSchema"" xmlns:soap=""http://schemas.xmlsoap.org/wsdl/soap/"">
+     <types>
+        <schema targetNamespace=""java:the.custom.namespace"" xmlns=""http://www.w3.org/1999/XMLSchema"" /> 
+      </types>
+      <message name=""LegacySystemRequest"">
+        <part name=""arg0"" type=""xsd:string"" /> 
+      </message>
+      <message name=""LegacySystemResponse"">
+        <part name=""return"" type=""xsd:string"" /> 
+      </message>
+      <portType name=""LegacySystemPortType"">
+        <operation name=""HelloWorld"">
+         <input message=""tns:LegacySystemRequest"" /> 
+         <output message=""tns:LegacySystemResponse"" /> 
+        </operation>
+    </types>
+
+
+I am not familiar with creating webservices in Java, but is there an obvious thing they could be doing wrong since they are not exposing the structure of their DTOs? I know from examples that they are complex, so I do not want to write to hardcode them all into my code. Is there any technical hints I could give them?",web-services,wsdl,java,,,,open,0,233,13,"Why does a webservice specify all request and response types as a string? I am working with a legacy webservice, and they supplied us their WSDL to work with.
+
+Now my problem is, that *every* function specifies the same argument and return type. And this type is then specified as being *string*!
+
+Example:
+
+    <definitions targetNamespace=""java:the.custom.namespace"" xmlns=""http://schemas.xmlsoap.org/wsdl/"" xmlns:tns=""java:the.custom.namespace"" xmlns:xsi=""http://www.w3.org/1999/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/1999/XMLSchema"" xmlns:soap=""http://schemas.xmlsoap.org/wsdl/soap/"">
+     <types>
+        <schema targetNamespace=""java:the.custom.namespace"" xmlns=""http://www.w3.org/1999/XMLSchema"" /> 
+      </types>
+      <message name=""LegacySystemRequest"">
+        <part name=""arg0"" type=""xsd:string"" /> 
+      </message>
+      <message name=""LegacySystemResponse"">
+        <part name=""return"" type=""xsd:string"" /> 
+      </message>
+      <portType name=""LegacySystemPortType"">
+        <operation name=""HelloWorld"">
+         <input message=""tns:LegacySystemRequest"" /> 
+         <output message=""tns:LegacySystemResponse"" /> 
+        </operation>
+    </types>
+
+
+I am not familiar with creating webservices in Java, but is there an obvious thing they could be doing wrong since they are not exposing the structure of their DTOs? I know from examples that they are complex, so I do not want to write to hardcode them all into my code. Is there any technical hints I could give them?",3
+5022236,02/16/2011 21:19:00,620380,02/16/2011 21:19:00,1,0,US Web Host that hosts websites that end in .net.au,"I am trying to find a cheap web host (in Australia they are pretty expensive) in the US that can host a website that has a domain that ends with .net.au, & can support/run python scripts.
+
+Does anyone know of any US web hosts that can do these things?",web-services,web-hosting,,,,02/16/2011 22:20:45,off topic,1,48,10,"US Web Host that hosts websites that end in .net.au I am trying to find a cheap web host (in Australia they are pretty expensive) in the US that can host a website that has a domain that ends with .net.au, & can support/run python scripts.
+
+Does anyone know of any US web hosts that can do these things?",2
+6580074,07/05/2011 08:50:54,829310,07/05/2011 08:48:10,1,0,Webservice VS DLL,"Why should we use a webservice if we can create a class library instead, and refer the DLL in the corresponding application?
+Is there any specific purpose for using webservice?",web-services,,,,,07/06/2011 01:26:37,not a real question,1,29,3,"Webservice VS DLL Why should we use a webservice if we can create a class library instead, and refer the DLL in the corresponding application?
+Is there any specific purpose for using webservice?",1
+332694,12/02/2008 00:36:44,10557,09/15/2008 23:54:45,108,9,What is the best book to learn web services?,What is the best book to learn web services?,web-services,,,,,08/01/2012 02:23:20,not constructive,1,9,9,What is the best book to learn web services? What is the best book to learn web services?,1
+7637967,10/03/2011 16:40:20,227026,12/08/2009 09:43:46,1124,41,"J2EE webservices, which one?","I would like to build a J2EE server, that server many different kind of clients. Most of them are mobile clients, but there also can be a browser application.
+
+I would like to choose between REST and SOAP web services. What do you think? Which is better for this approach? Which is more optimal. I would like to see pros/cons if you know.
+
+What do you think about this?",web-services,java-ee,rest,soap,,10/03/2011 23:13:11,not constructive,1,67,4,"J2EE webservices, which one? I would like to build a J2EE server, that server many different kind of clients. Most of them are mobile clients, but there also can be a browser application.
+
+I would like to choose between REST and SOAP web services. What do you think? Which is better for this approach? Which is more optimal. I would like to see pros/cons if you know.
+
+What do you think about this?",4
+5284008,03/12/2011 17:04:46,505075,11/11/2010 21:26:51,182,3,What is the point of web services?,"I really don't see the point of making EJB's into web services.  The first thing that comes to mind is security.  How do I keep the entire world from using my business methods?  How would you authenticate a user to use a service.  The second it seems hard to pass objects or if it's even possible to pass lists into a web service.
+
+I can see some justifications such as having services for multiple applications that use the same methods.  But why not just have a library or deploy an ear with all the business methods?
+
+Thanks for your help.
+",web-services,rest,java-ee-6,glassfish-3,ejb-3.1,03/12/2011 23:35:05,not a real question,1,103,7,"What is the point of web services? I really don't see the point of making EJB's into web services.  The first thing that comes to mind is security.  How do I keep the entire world from using my business methods?  How would you authenticate a user to use a service.  The second it seems hard to pass objects or if it's even possible to pass lists into a web service.
+
+I can see some justifications such as having services for multiple applications that use the same methods.  But why not just have a library or deploy an ear with all the business methods?
+
+Thanks for your help.
+",5
