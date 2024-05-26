@@ -1,0 +1,3031 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+6819857,07/25/2011 17:15:09,27457,10/13/2008 15:01:44,3285,138,Recursive INSERT query for a grouped sequence,"I have two tables like this:
+
+    Table1ID               Table2ID    Table1ID  SomeDate
+    --------               ------------------------------
+    1                      1           1         2011-01-01
+    2                      2           1         2011-01-02
+    3                      3           2         2011-01-01
+    4                      4           3         2011-01-01
+                           5           3         2011-01-02
+                           6           3         2011-01-03
+                           7           4         2011-01-01
+                           8           4         2011-01-02
+
+I need to insert values into a third table that give me both values from Table2, as well as a ""sequence"" value grouped on Table1ID.  I tried this, but I'm always getting a value of 1 for the sequence.
+
+    ;WITH Sequences AS (
+        SELECT t1.Table1ID,
+               MAX(ISNULL(t3.Sequence, 0)) AS [MaxSequence]
+        FROM Table1 t1
+        LEFT JOIN Table3 t3 (NOLOCK) ON t1.Table1ID = t3.Table1ID
+        GROUP BY t1.Table1ID
+    )
+    INSERT INTO Table3 ( Table1ID, Table2ID, Sequence )
+    SELECT t1.Table1ID,
+           t2.Table2ID,
+           s.MaxSequence + 1
+    FROM Table1 t1 (NOLOCK)
+    JOIN Table2 t2 (NOLOCK) ON t1.Table1ID = t2.Table2ID
+    JOIN Sequences s ON t2.Table1ID = s.Table1ID
+    ORDER BY t2.SomeDate
+    
+What I want is a result-set like this:
+
+    Table2ID    Table1ID  Sequence
+    ------------------------------
+    1           1         1
+    2           1         2
+    3           2         1
+    4           3         1
+    5           3         2
+    6           3         3
+    7           4         1
+    8           4         2
+
+I know I'm probably missing something stupidly simple here, but I'm stuck.
+",sql-server,tsql,recursive-query,,,,open,0,837,7,"Recursive INSERT query for a grouped sequence I have two tables like this:
+
+    Table1ID               Table2ID    Table1ID  SomeDate
+    --------               ------------------------------
+    1                      1           1         2011-01-01
+    2                      2           1         2011-01-02
+    3                      3           2         2011-01-01
+    4                      4           3         2011-01-01
+                           5           3         2011-01-02
+                           6           3         2011-01-03
+                           7           4         2011-01-01
+                           8           4         2011-01-02
+
+I need to insert values into a third table that give me both values from Table2, as well as a ""sequence"" value grouped on Table1ID.  I tried this, but I'm always getting a value of 1 for the sequence.
+
+    ;WITH Sequences AS (
+        SELECT t1.Table1ID,
+               MAX(ISNULL(t3.Sequence, 0)) AS [MaxSequence]
+        FROM Table1 t1
+        LEFT JOIN Table3 t3 (NOLOCK) ON t1.Table1ID = t3.Table1ID
+        GROUP BY t1.Table1ID
+    )
+    INSERT INTO Table3 ( Table1ID, Table2ID, Sequence )
+    SELECT t1.Table1ID,
+           t2.Table2ID,
+           s.MaxSequence + 1
+    FROM Table1 t1 (NOLOCK)
+    JOIN Table2 t2 (NOLOCK) ON t1.Table1ID = t2.Table2ID
+    JOIN Sequences s ON t2.Table1ID = s.Table1ID
+    ORDER BY t2.SomeDate
+    
+What I want is a result-set like this:
+
+    Table2ID    Table1ID  Sequence
+    ------------------------------
+    1           1         1
+    2           1         2
+    3           2         1
+    4           3         1
+    5           3         2
+    6           3         3
+    7           4         1
+    8           4         2
+
+I know I'm probably missing something stupidly simple here, but I'm stuck.
+",3
+5419377,03/24/2011 12:49:36,650492,03/08/2011 20:53:44,76,15,IsNumeric does not work in SQL server,"Getting very annoyed with this simple query...  
+I need to add an offset to a varchar, if it's a number and do nothing is it is not.  
+For this reason I've created the following function in SQL-server.
+I then extract the answer with:
+<code>select dbo.OffsetKPL(""100"",200)</code>
+
+However this does not work, I get the error
+
+> Msg 207, Level 16, State 1, Line 1  
+Invalid column name '100'.
+
+
+The code for the function is as follows...
+
+    ALTER FUNCTION [dbo].[OffsetKPL](
+      @kpl varchar(20)
+      ,@offset int = 0
+    )
+    RETURNS varchar(20)
+    AS
+    BEGIN	
+      DECLARE @uitkomst varchar(20);
+
+      set @uitkomst = @kpl;
+      if not(@offset = 0) begin
+        if (IsNumeric(@uitkomst) = 1) begin
+          set @uitkomst = cast((cast(@kpl as int) + @offset) as varchar);
+        end;
+    end;
+   
+    RETURN @uitkomst;
+
+    END
+
+What's wrong? nowhere does it state that IsNumeric does not accept a variable.",sql-server,stored-procedures,isnumeric,,,,open,0,206,7,"IsNumeric does not work in SQL server Getting very annoyed with this simple query...  
+I need to add an offset to a varchar, if it's a number and do nothing is it is not.  
+For this reason I've created the following function in SQL-server.
+I then extract the answer with:
+<code>select dbo.OffsetKPL(""100"",200)</code>
+
+However this does not work, I get the error
+
+> Msg 207, Level 16, State 1, Line 1  
+Invalid column name '100'.
+
+
+The code for the function is as follows...
+
+    ALTER FUNCTION [dbo].[OffsetKPL](
+      @kpl varchar(20)
+      ,@offset int = 0
+    )
+    RETURNS varchar(20)
+    AS
+    BEGIN	
+      DECLARE @uitkomst varchar(20);
+
+      set @uitkomst = @kpl;
+      if not(@offset = 0) begin
+        if (IsNumeric(@uitkomst) = 1) begin
+          set @uitkomst = cast((cast(@kpl as int) + @offset) as varchar);
+        end;
+    end;
+   
+    RETURN @uitkomst;
+
+    END
+
+What's wrong? nowhere does it state that IsNumeric does not accept a variable.",3
+8595709,12/21/2011 20:10:58,105407,05/12/2009 14:25:38,1078,19,Can I use a column calculated in a sqlserver View later on in that same View?,"Can I use a column calculated in a sqlserver View later on in that same View?
+
+Let's say I have the following view:
+
+Select t1.StartMile, t2.EndMile,  t2.EndMile- t1.StartMile as TotMile
+from 
+TableStarts as t1 
+inner join 
+TableEnds as t2 
+on t1.Id = t2.Id  
+
+Is there a way to edit the view to do the following
+Select t1.StartMile, t2.EndMile,  t2.EndMile- t1.StartMile as TotMile, TotMile + 30  as EvenMoreMiles
+
+I tried this and got err: Invalid column name 'TotMile'
+
+Please don't tell me to use  t2.EndMile- t1.StartMile  + 30  as EvenMoreMiles. TotMiles is a long case statement in my actual code. 
+
+I rather not have to create an intermediate view. 
+
+I am using SqlServer 2005.
+",sql-server,sql-server-2005,tsql,view,,,open,0,114,16,"Can I use a column calculated in a sqlserver View later on in that same View? Can I use a column calculated in a sqlserver View later on in that same View?
+
+Let's say I have the following view:
+
+Select t1.StartMile, t2.EndMile,  t2.EndMile- t1.StartMile as TotMile
+from 
+TableStarts as t1 
+inner join 
+TableEnds as t2 
+on t1.Id = t2.Id  
+
+Is there a way to edit the view to do the following
+Select t1.StartMile, t2.EndMile,  t2.EndMile- t1.StartMile as TotMile, TotMile + 30  as EvenMoreMiles
+
+I tried this and got err: Invalid column name 'TotMile'
+
+Please don't tell me to use  t2.EndMile- t1.StartMile  + 30  as EvenMoreMiles. TotMiles is a long case statement in my actual code. 
+
+I rather not have to create an intermediate view. 
+
+I am using SqlServer 2005.
+",4
+6989522,08/08/2011 22:45:43,629699,02/23/2011 07:00:15,3,0,Conversion failed when converting from a character string to uniqueidentifier error in SQL Server,"I've been getting the error ""Conversion failed when converting from a character string to uniqueidentifier"" and am finally at the end of my rope. I've narrowed down my problem to as small as possible while keeping the error in tact. Install the CSV splitter from here first if you want to reproduce: 
+
+http://www.sqlservercentral.com/articles/Tally+Table/72993/
+
+
+Here's the test code. I'm on SQL 2008R2 but in a database that is SQL 2005 compatible:
+
+    IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ZZZTESTTABLE]') AND type in (N'U'))
+    DROP TABLE [dbo].[ZZZTESTTABLE]
+    GO
+    
+    CREATE TABLE [dbo].[ZZZTESTTABLE](
+    	[Col1] [uniqueidentifier] NOT NULL,
+     CONSTRAINT [PK_ZZZTESTTABLE] PRIMARY KEY CLUSTERED 
+    (
+    	[Col1] ASC
+    )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+    ) ON [PRIMARY]
+    
+    -- Test table that I would like to check my values against
+    insert dbo.ZZZTESTTABLE(Col1) values('85B049B7-CDD0-4995-B582-5A74523039C0')
+    
+    -- Test string that will be split into table in the DelimitedSplit8k function
+    declare @temp varchar(max) = '918E809E-EA7A-44B5-B230-776C42594D91,6F8DBB54-5159-4C22-9B0A-7842464360A5'
+    
+    -- I'm trying to delete all data in the ZZZTESTTABLE that is not in my string but I get the error 
+    delete dbo.ZZZTESTTABLE
+    where Col1 not in 
+    (
+    -- ERROR OCCURS HERE
+    	select cast(Item as uniqueidentifier) from dbo.DelimitedSplit8K(@temp, ',')
+    )
+
+",sql-server,tsql,,,,,open,0,284,14,"Conversion failed when converting from a character string to uniqueidentifier error in SQL Server I've been getting the error ""Conversion failed when converting from a character string to uniqueidentifier"" and am finally at the end of my rope. I've narrowed down my problem to as small as possible while keeping the error in tact. Install the CSV splitter from here first if you want to reproduce: 
+
+http://www.sqlservercentral.com/articles/Tally+Table/72993/
+
+
+Here's the test code. I'm on SQL 2008R2 but in a database that is SQL 2005 compatible:
+
+    IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ZZZTESTTABLE]') AND type in (N'U'))
+    DROP TABLE [dbo].[ZZZTESTTABLE]
+    GO
+    
+    CREATE TABLE [dbo].[ZZZTESTTABLE](
+    	[Col1] [uniqueidentifier] NOT NULL,
+     CONSTRAINT [PK_ZZZTESTTABLE] PRIMARY KEY CLUSTERED 
+    (
+    	[Col1] ASC
+    )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+    ) ON [PRIMARY]
+    
+    -- Test table that I would like to check my values against
+    insert dbo.ZZZTESTTABLE(Col1) values('85B049B7-CDD0-4995-B582-5A74523039C0')
+    
+    -- Test string that will be split into table in the DelimitedSplit8k function
+    declare @temp varchar(max) = '918E809E-EA7A-44B5-B230-776C42594D91,6F8DBB54-5159-4C22-9B0A-7842464360A5'
+    
+    -- I'm trying to delete all data in the ZZZTESTTABLE that is not in my string but I get the error 
+    delete dbo.ZZZTESTTABLE
+    where Col1 not in 
+    (
+    -- ERROR OCCURS HERE
+    	select cast(Item as uniqueidentifier) from dbo.DelimitedSplit8K(@temp, ',')
+    )
+
+",2
+7138306,08/21/2011 12:37:34,904568,08/21/2011 12:37:34,1,0,transfer data from table in sql server,"I have  a table with fields ( date_to,  bil_id,  member_pay,  yot)  I need to transfer the data from fields 
+(bil_id,  member_pay,  yot)  to  another  table ,the fields in the second table (bil_id,  member_pay,  yot  bil_id,    date_of_ ) and then delete the data from the first table.
+How can I do it?
+",sql-server,,,,,07/06/2012 22:07:09,too localized,1,66,7,"transfer data from table in sql server I have  a table with fields ( date_to,  bil_id,  member_pay,  yot)  I need to transfer the data from fields 
+(bil_id,  member_pay,  yot)  to  another  table ,the fields in the second table (bil_id,  member_pay,  yot  bil_id,    date_of_ ) and then delete the data from the first table.
+How can I do it?
+",1
+10662447,05/19/2012 05:01:20,1404670,05/19/2012 04:57:44,1,0,Saving Euro currency value in database,"I want to store euro value as in format like  12.230,30 in database .If anyone have solution please help me
+
+thanks in advance",sql-server,,,,,05/22/2012 01:47:10,not a real question,1,23,6,"Saving Euro currency value in database I want to store euro value as in format like  12.230,30 in database .If anyone have solution please help me
+
+thanks in advance",1
+3358976,07/29/2010 02:05:15,85952,04/02/2009 00:53:40,679,8,Update lastest record for each key - SQL ,"Below is my Data
+
+    Key			Value		Date          STATUS
+    001			AAA	         2010-01-01       E
+    001            BBB          2010-02-01       E
+    001            CCC          2010-03-01       E
+    002			XXX			 2010-04-01       E
+    002            YYY          2010-05-01       E
+    002            ZZZ          2010-06-01       E
+    003			HHH			 2010-03-01       E
+    003            GGG          2010-04-01       E 
+
+I want to update the lastest record for given key with Status C (Current).
+
+How can this be acheived with Update Statement.
+
+Thanks
+",sql-server,update,,,,,open,0,248,9,"Update lastest record for each key - SQL  Below is my Data
+
+    Key			Value		Date          STATUS
+    001			AAA	         2010-01-01       E
+    001            BBB          2010-02-01       E
+    001            CCC          2010-03-01       E
+    002			XXX			 2010-04-01       E
+    002            YYY          2010-05-01       E
+    002            ZZZ          2010-06-01       E
+    003			HHH			 2010-03-01       E
+    003            GGG          2010-04-01       E 
+
+I want to update the lastest record for given key with Status C (Current).
+
+How can this be acheived with Update Statement.
+
+Thanks
+",2
+8834377,01/12/2012 11:33:05,767920,08/30/2009 07:49:27,955,17,Sql Query to get with day range issue,"    ID						DateTime
+    634004024169995257	2010-05-10 12:29:00.000
+    634004024169995257	2010-05-30 12:43:00.000
+    634004024169995257	2010-06-19 12:24:00.000
+    634004024169995257	2010-06-22 13:08:00.000
+    634004024169995257	2010-07-19 12:41:00.000
+    634004024169995257	2010-07-16 12:22:00.000
+    634004024169995257	2010-08-25 12:19:00.000
+    634004024169995257	2010-08-30 11:41:00.000
+    634004024169995257	2010-09-28 12:37:00.000
+    634004024169995257	2010-09-29 12:41:00.000
+    634004024169995257	2010-11-01 13:14:00.000
+
+Hi
+
+Here i have table like this here i need to get the records with this condition( where in between each transcation if there is an difference of 19 days
+i need to get those records only )
+
+can any one help me out  how  to  write this  condition in sql server query,
+any light on this would be  geat
+i hope  my Question is clear
+
+Thanks
+Prince",sql-server,,,,,,open,0,126,8,"Sql Query to get with day range issue     ID						DateTime
+    634004024169995257	2010-05-10 12:29:00.000
+    634004024169995257	2010-05-30 12:43:00.000
+    634004024169995257	2010-06-19 12:24:00.000
+    634004024169995257	2010-06-22 13:08:00.000
+    634004024169995257	2010-07-19 12:41:00.000
+    634004024169995257	2010-07-16 12:22:00.000
+    634004024169995257	2010-08-25 12:19:00.000
+    634004024169995257	2010-08-30 11:41:00.000
+    634004024169995257	2010-09-28 12:37:00.000
+    634004024169995257	2010-09-29 12:41:00.000
+    634004024169995257	2010-11-01 13:14:00.000
+
+Hi
+
+Here i have table like this here i need to get the records with this condition( where in between each transcation if there is an difference of 19 days
+i need to get those records only )
+
+can any one help me out  how  to  write this  condition in sql server query,
+any light on this would be  geat
+i hope  my Question is clear
+
+Thanks
+Prince",1
+11373782,07/07/2012 09:20:06,1081699,12/05/2011 14:10:30,1,0,how to mapping data or transfering data from one server to another server here i am using sql 2008 r2?," - here i am having   membertable with  5 column with  500 data s in 
+    one server1  
+    
+    and
+ - List item
+
+ now  i want  to  transfer data  only  to another server2   which
+    is having member table",sql-server,sql-server-2008,tsql,,,07/07/2012 19:27:59,not a real question,1,63,20,"how to mapping data or transfering data from one server to another server here i am using sql 2008 r2?  - here i am having   membertable with  5 column with  500 data s in 
+    one server1  
+    
+    and
+ - List item
+
+ now  i want  to  transfer data  only  to another server2   which
+    is having member table",3
+11471462,07/13/2012 13:27:56,1523641,07/13/2012 13:13:11,1,0,"SQL Server Management Studio Express 2012 ""ONLY""","I have installed SQL Server Express(SSMS) 2012 with management tools. After a few months, the Management studio has stopped working. The error is: 
+
+««
+Evaluation period has expired. For more on how to upgrade your evaluation software please go to
+http://www.microsoft.com/howtobuy
+»»
+
+I dont know why this happened with the express edition. Maybe the Management studio is not released as express edition. What should I do now to get SSMS work with SQL Server 2012?
+The earlier releases of SSMS do not work with SQL Server 2012 and I must use SSMS 2012.",sql-server,ssms,sql-server-2012-express,,,07/14/2012 16:21:09,off topic,1,88,7,"SQL Server Management Studio Express 2012 ""ONLY"" I have installed SQL Server Express(SSMS) 2012 with management tools. After a few months, the Management studio has stopped working. The error is: 
+
+««
+Evaluation period has expired. For more on how to upgrade your evaluation software please go to
+http://www.microsoft.com/howtobuy
+»»
+
+I dont know why this happened with the express edition. Maybe the Management studio is not released as express edition. What should I do now to get SSMS work with SQL Server 2012?
+The earlier releases of SSMS do not work with SQL Server 2012 and I must use SSMS 2012.",3
+10209658,04/18/2012 12:46:43,1341221,04/18/2012 11:47:50,1,0,Loading SQL Server SSIS assembly in Powershell background jobs,"I am trying to run a SQL Server SSIS packages as a background job in Powershell 2.0 but the necessary assemblies don't appear to load.
+
+I can load the DTS assembly without issue and run packages successfully in Powershell.
+    
+    >[System.Reflection.Assembly]::LoadWithPartialName(""Microsoft.SqlServer.ManagedDTS"")
+    GAC    Version        Location                                                                                                                      
+    ---    -------        --------                                                                                                                      
+    True   v2.0.50727     C:\WINDOWS\assembly\GAC_MSIL\Microsoft.SqlServer.ManagedDTS\9.0.242.0__89845dcd8080cc91\Microsoft.SqlServer.ManagedDTS.dll
+
+But when I try this in a background job it never complete and the job just continues in a running state.
+
+    $job=Start-Job -ScriptBlock {[System.Reflection.Assembly]::LoadWithPartialName(""Microsoft.SqlServer.ManagedDTS"")} 
+    Wait-Job $job
+    Receive-Job $job
+
+
+What differences are there between a normal Powershell runspace and the space where the background job runs?
+
+    >$PSVersionTable
+    Name                           Value
+    ----                           -----
+    CLRVersion                     2.0.50727.3625
+    BuildVersion                   6.0.6002.18111
+    PSVersion                      2.0
+    WSManStackVersion              2.0
+    PSCompatibleVersions           {1.0, 2.0}
+    SerializationVersion           1.1.0.1
+    PSRemotingProtocolVersion      2.1",sql-server,powershell,ssis,start-job,,,open,0,578,9,"Loading SQL Server SSIS assembly in Powershell background jobs I am trying to run a SQL Server SSIS packages as a background job in Powershell 2.0 but the necessary assemblies don't appear to load.
+
+I can load the DTS assembly without issue and run packages successfully in Powershell.
+    
+    >[System.Reflection.Assembly]::LoadWithPartialName(""Microsoft.SqlServer.ManagedDTS"")
+    GAC    Version        Location                                                                                                                      
+    ---    -------        --------                                                                                                                      
+    True   v2.0.50727     C:\WINDOWS\assembly\GAC_MSIL\Microsoft.SqlServer.ManagedDTS\9.0.242.0__89845dcd8080cc91\Microsoft.SqlServer.ManagedDTS.dll
+
+But when I try this in a background job it never complete and the job just continues in a running state.
+
+    $job=Start-Job -ScriptBlock {[System.Reflection.Assembly]::LoadWithPartialName(""Microsoft.SqlServer.ManagedDTS"")} 
+    Wait-Job $job
+    Receive-Job $job
+
+
+What differences are there between a normal Powershell runspace and the space where the background job runs?
+
+    >$PSVersionTable
+    Name                           Value
+    ----                           -----
+    CLRVersion                     2.0.50727.3625
+    BuildVersion                   6.0.6002.18111
+    PSVersion                      2.0
+    WSManStackVersion              2.0
+    PSCompatibleVersions           {1.0, 2.0}
+    SerializationVersion           1.1.0.1
+    PSRemotingProtocolVersion      2.1",4
+10472174,05/06/2012 16:28:04,772086,05/26/2011 21:26:21,65,3,How do I determine if text can be converted to Date?,"While converting and normalizing data from an Access database to a SQL Server database, I ran across an interesting issue: ISDATE() does not appear to successfully predict whether text can be cast to a date.
+  
+    SELECT 'This will return an error' =
+    	CASE
+    	WHEN ISDATE('1/1-2010') = 1 THEN CAST('1/1-2010' AS date)
+    	ELSE NULL
+    	END
+
+I thought this was a bit odd, as the [ISDATE() MSDN article](http://msdn.microsoft.com/en-us/library/ms187347.aspx) states that the function will return ""1 if the expression is a valid date, time, or datetime value; otherwise, 0.""
+
+From what I could tell, this error is not mitigated by playing with either SET DATEFORMAT or SET LANGUAGE.
+
+Nor does CONVERT() appear to have a different result than CAST().
+
+Fortunately, ISDATE() does successfully predict whether text can be converted to a *datetime*.
+
+    SELECT 'This will return a datetime' =
+    	CASE
+    	WHEN ISDATE('1/1-2010') = 1 THEN CAST('1/1-2010' AS datetime)
+    	ELSE NULL
+    	END
+
+So, I *could* use a workaround of casting to a datetime and then casting to a date.
+
+    SELECT 'This will return a date' =
+    	CASE
+    	WHEN ISDATE('1/1-2010') = 1 THEN CAST(CAST('1/1-2010' AS datetime) as date)
+    	ELSE NULL
+    	END
+
+However, I wonder if I am missing something. Is there a cleaner way to cast text to a date? As a corollary, is the ISDATE() function not defined correctly on MSDN (and actually therefore a bit of a misnomer)?
+",sql-server,datetime,,,,,open,0,266,11,"How do I determine if text can be converted to Date? While converting and normalizing data from an Access database to a SQL Server database, I ran across an interesting issue: ISDATE() does not appear to successfully predict whether text can be cast to a date.
+  
+    SELECT 'This will return an error' =
+    	CASE
+    	WHEN ISDATE('1/1-2010') = 1 THEN CAST('1/1-2010' AS date)
+    	ELSE NULL
+    	END
+
+I thought this was a bit odd, as the [ISDATE() MSDN article](http://msdn.microsoft.com/en-us/library/ms187347.aspx) states that the function will return ""1 if the expression is a valid date, time, or datetime value; otherwise, 0.""
+
+From what I could tell, this error is not mitigated by playing with either SET DATEFORMAT or SET LANGUAGE.
+
+Nor does CONVERT() appear to have a different result than CAST().
+
+Fortunately, ISDATE() does successfully predict whether text can be converted to a *datetime*.
+
+    SELECT 'This will return a datetime' =
+    	CASE
+    	WHEN ISDATE('1/1-2010') = 1 THEN CAST('1/1-2010' AS datetime)
+    	ELSE NULL
+    	END
+
+So, I *could* use a workaround of casting to a datetime and then casting to a date.
+
+    SELECT 'This will return a date' =
+    	CASE
+    	WHEN ISDATE('1/1-2010') = 1 THEN CAST(CAST('1/1-2010' AS datetime) as date)
+    	ELSE NULL
+    	END
+
+However, I wonder if I am missing something. Is there a cleaner way to cast text to a date? As a corollary, is the ISDATE() function not defined correctly on MSDN (and actually therefore a bit of a misnomer)?
+",2
+11276167,06/30/2012 17:33:22,650148,03/08/2011 16:31:32,59,5,I can't with install MS SQL Management Studio 2012,"I just installed MS SQL Server 2012 Express, I can connect with database from VS2012RC. Database is working :) I use Win7 SP1 64bit.<br/>
+I want to install Management Studio 2012, but after unpack installer has stopped. I see only for moment some console application. What could be cause? Where can I find any log file?",sql-server,database,installation,,,,open,0,55,9,"I can't with install MS SQL Management Studio 2012 I just installed MS SQL Server 2012 Express, I can connect with database from VS2012RC. Database is working :) I use Win7 SP1 64bit.<br/>
+I want to install Management Studio 2012, but after unpack installer has stopped. I see only for moment some console application. What could be cause? Where can I find any log file?",3
+1985475,12/31/2009 13:47:37,188547,10/12/2009 16:34:16,142,15,Is SQL Server changing to per core licensing?,"I heard a rumor that Microsoft was going to change SQL Server 2008 R2 to per core licensing, instead of per processor/socket.  Has anyone else heard this?  Is there any truth to this rumor?
+
+Please site a source if possible, especially if you believe this is changing.",sql-server,licensing,cpu,,,12/31/2009 15:45:26,off topic,1,48,8,"Is SQL Server changing to per core licensing? I heard a rumor that Microsoft was going to change SQL Server 2008 R2 to per core licensing, instead of per processor/socket.  Has anyone else heard this?  Is there any truth to this rumor?
+
+Please site a source if possible, especially if you believe this is changing.",3
+7851614,10/21/2011 15:23:45,536352,12/09/2010 11:38:07,642,42,SQL Server - Loop Performance,"In SQL server which one is best in terms of performance for loop operations.
+
+    1) While loop with Temp tables (# Tables)
+    2) While loop Memory tables (Table datatype)
+    3) Cursor
+
+How can we rank it based on performance?",sql-server,,,,,10/21/2011 17:30:38,not a real question,1,47,5,"SQL Server - Loop Performance In SQL server which one is best in terms of performance for loop operations.
+
+    1) While loop with Temp tables (# Tables)
+    2) While loop Memory tables (Table datatype)
+    3) Cursor
+
+How can we rank it based on performance?",1
+11391780,07/09/2012 08:51:24,838586,07/11/2011 09:26:00,978,2,How can I connect to SQL server by just using local ip address,Currently I am connecting to SQL server using `192.168.1.157\MyInstance`. I would like to connect to SQL server by just using `192.168.1.157` i.e if I type IP addressin SSMS it should connect properly using 1433 port number. How can I do so?,sql-server,sql-server-2008,,,,07/10/2012 10:43:49,off topic,1,41,13,How can I connect to SQL server by just using local ip address Currently I am connecting to SQL server using `192.168.1.157\MyInstance`. I would like to connect to SQL server by just using `192.168.1.157` i.e if I type IP addressin SSMS it should connect properly using 1433 port number. How can I do so?,2
+2265063,02/15/2010 09:53:01,182982,10/02/2009 09:00:33,175,5,SELECT SQL table retrieved by an IF statement,"Hella all, 
+
+What I want to do is something like that, I will have an SQL table depending on my parameter,
+
+    DECLARE @find varchar(30)
+    SET @find = 'no'
+    
+    SELECT * FROM
+    (
+    	
+    	if @find = 'yes'
+    	(
+    	SELECT * FROM myTable
+    	WHERE ID= '5882'
+    	)
+    	ELSE
+    	(
+    	SELECT * FROM myTable
+    	WHERE OLD_ID= '5882'
+    	)	
+    
+    ) X
+
+This is just a simple table that I gave as an example, my real sql query is much more bigger and so I don't think I can use dynamic sql within this query. So I need some other way.",sql-server,if-statement,dynamic-sql,sql-server-2000,tsql,,open,0,152,8,"SELECT SQL table retrieved by an IF statement Hella all, 
+
+What I want to do is something like that, I will have an SQL table depending on my parameter,
+
+    DECLARE @find varchar(30)
+    SET @find = 'no'
+    
+    SELECT * FROM
+    (
+    	
+    	if @find = 'yes'
+    	(
+    	SELECT * FROM myTable
+    	WHERE ID= '5882'
+    	)
+    	ELSE
+    	(
+    	SELECT * FROM myTable
+    	WHERE OLD_ID= '5882'
+    	)	
+    
+    ) X
+
+This is just a simple table that I gave as an example, my real sql query is much more bigger and so I don't think I can use dynamic sql within this query. So I need some other way.",5
+11179260,06/24/2012 16:43:13,1478364,06/24/2012 16:37:14,1,0,Requier Sql Server on Client Computer,"I am developing an application in Visual Studio 2010 that have sqlserver database in it. My Question is that, When I will install this application on the client computer, does that computer need to have sqlserver installed to work properly.",sql-server,,,,,06/25/2012 03:31:23,not a real question,1,40,6,"Requier Sql Server on Client Computer I am developing an application in Visual Studio 2010 that have sqlserver database in it. My Question is that, When I will install this application on the client computer, does that computer need to have sqlserver installed to work properly.",1
+8973957,01/23/2012 15:21:15,912102,08/25/2011 12:49:55,18,0,Decide that database is Sybase or MSSQL,"I would like to write an SQL script or query which can decide that the used database is MSSQL or Sybase.
+How can I do that?
+
+Thanks,
+Maestro",sql-server,query,tsql,script,sybase,,open,0,25,7,"Decide that database is Sybase or MSSQL I would like to write an SQL script or query which can decide that the used database is MSSQL or Sybase.
+How can I do that?
+
+Thanks,
+Maestro",5
+11435030,07/11/2012 14:35:35,1023554,11/01/2011 11:14:01,11,0,How to pass a date function in a dynamic sql query in sql server,"
+
+SELECT @sql='
+
+select 
+    *
+from (
+    select ''Ongoing'' AS Ongoing,
+    Coalesce(COUNT(project),0) AS project, Coalesce(COUNT(year(u.PlannedStartDate)),0) as [y]
+    from Projects u  WHERE 
+    u.actualstartdate IS  NULL 
+    AND u.Startdate < ''+GETDATE()+''
+    AND ID ='''+@ID+'''  
+   
+  ) Data
+PIVOT (
+  COUNT(project)
+  FOR [y]
+  IN (
+    ' + @Years + '
+  )
+) PivotTable
+'
+
+Here I want to pass the cur date but it's not working..
+this is because the value of GETDATE() is not coming in the string ",sql-server,,,,,,open,0,106,14,"How to pass a date function in a dynamic sql query in sql server 
+
+SELECT @sql='
+
+select 
+    *
+from (
+    select ''Ongoing'' AS Ongoing,
+    Coalesce(COUNT(project),0) AS project, Coalesce(COUNT(year(u.PlannedStartDate)),0) as [y]
+    from Projects u  WHERE 
+    u.actualstartdate IS  NULL 
+    AND u.Startdate < ''+GETDATE()+''
+    AND ID ='''+@ID+'''  
+   
+  ) Data
+PIVOT (
+  COUNT(project)
+  FOR [y]
+  IN (
+    ' + @Years + '
+  )
+) PivotTable
+'
+
+Here I want to pass the cur date but it's not working..
+this is because the value of GETDATE() is not coming in the string ",1
+7821538,10/19/2011 12:46:10,225799,12/06/2009 14:39:09,850,10,Entity Framework 4.2 Code First Features,"I would like to know what features are included in the newest release of `entity framework 4.2` using the `code first approach`?  I have searched and haven't found much.
+
+I am interested in using stored procedures.  Does EF 4.2 code first support this feature yet?  Any articles that I can read to help me on my way, I did Google and could not find much :)",sql-server,sql-server-2008,entity-framework,entity-framework-4,ado.net,,open,0,68,6,"Entity Framework 4.2 Code First Features I would like to know what features are included in the newest release of `entity framework 4.2` using the `code first approach`?  I have searched and haven't found much.
+
+I am interested in using stored procedures.  Does EF 4.2 code first support this feature yet?  Any articles that I can read to help me on my way, I did Google and could not find much :)",5
+11683189,07/27/2012 07:22:53,422737,08/17/2010 10:37:37,48,7,"Queue Service Stops often but, doesnt reflect in services","i have a issue with Queue service. Nothing would help here so far. Can any1 suggest what might be going wrong. I can see the below mentioned log in the eventvwr. Just to add More information Connection string is pointing to proper DB. Queue Services stops suddenly with out any intimation. When i check the services it shows still running but , i can see the logs in eventvwr. i have to restart the service so as it make it work.
+
+System.Data.SqlClient.SqlException: Invalid object name 'ENVIRONMENT'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Manh.WMFW.DataAccess.DataHelper.GetDataSet(CommandType cmdType, String cmdText, IDataParameter[] parameters)
+   at Manh.WMFW.DataAccess.DataHelper.GetTable(CommandType cmdType, String cmdText, IDataParameter[] parameters)
+   at Manh.WMW.Configs.General.EnvironmentRetrieval.GetEnvironments(ISession session)
+   at Manh.WMFW.Services.QueueScheduler.ProcRequests()
+   at Manh.WMFW.Services.QueueThread.Run()
+
+For more information, see Help and Support Center at http://go.microsoft.com/fwlink/events.asp.",sql-server,sql-server-2008,,,,07/27/2012 19:09:15,not a real question,1,263,9,"Queue Service Stops often but, doesnt reflect in services i have a issue with Queue service. Nothing would help here so far. Can any1 suggest what might be going wrong. I can see the below mentioned log in the eventvwr. Just to add More information Connection string is pointing to proper DB. Queue Services stops suddenly with out any intimation. When i check the services it shows still running but , i can see the logs in eventvwr. i have to restart the service so as it make it work.
+
+System.Data.SqlClient.SqlException: Invalid object name 'ENVIRONMENT'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Manh.WMFW.DataAccess.DataHelper.GetDataSet(CommandType cmdType, String cmdText, IDataParameter[] parameters)
+   at Manh.WMFW.DataAccess.DataHelper.GetTable(CommandType cmdType, String cmdText, IDataParameter[] parameters)
+   at Manh.WMW.Configs.General.EnvironmentRetrieval.GetEnvironments(ISession session)
+   at Manh.WMFW.Services.QueueScheduler.ProcRequests()
+   at Manh.WMFW.Services.QueueThread.Run()
+
+For more information, see Help and Support Center at http://go.microsoft.com/fwlink/events.asp.",2
+1705709,11/10/2009 04:59:39,153557,08/10/2009 07:16:04,27,0,SQL Server 2008 x64bit Mode,"I am attempting to query a SQL 2008 x64 database from a SQL 2008 x64 database. All attempts have failed, whether using Linked Server or OpenQuery. To create the Linked Server entry I have used the linked server dialog, the script it creates and the sp_AddLinkedServer procedure. The error occurs whether I use Windows Authentication or the SQL Authentication with sa user credentials. 
+
+In security tab i have selected the remote user name and password 
+
+in bottom of the page 4 options available
+
+Not be made
+
+Be made without using security context
+
+Be made using the login's current security context
+
+Be made using security context
+
+
+i have seleced the ""Be made without using security context"" this options
+
+It says The login failed 
+
+
+thanks
+
+",sql-server,,,,,,open,0,117,5,"SQL Server 2008 x64bit Mode I am attempting to query a SQL 2008 x64 database from a SQL 2008 x64 database. All attempts have failed, whether using Linked Server or OpenQuery. To create the Linked Server entry I have used the linked server dialog, the script it creates and the sp_AddLinkedServer procedure. The error occurs whether I use Windows Authentication or the SQL Authentication with sa user credentials. 
+
+In security tab i have selected the remote user name and password 
+
+in bottom of the page 4 options available
+
+Not be made
+
+Be made without using security context
+
+Be made using the login's current security context
+
+Be made using security context
+
+
+i have seleced the ""Be made without using security context"" this options
+
+It says The login failed 
+
+
+thanks
+
+",1
+3950961,10/16/2010 21:54:09,264557,02/02/2010 17:06:43,202,6,Entity Framework; updating DB from Model?,"In mySql Workbench there's a possibility to ""sync"" the model with the DB and vice versa. Is there a function like this in EF? I've added som entities and I'd like it to get reflected in the DB. Do I really have to regenerate the entire DB and loose data?
+
+Thanks",sql-server,entity-framework,,,,,open,0,50,6,"Entity Framework; updating DB from Model? In mySql Workbench there's a possibility to ""sync"" the model with the DB and vice versa. Is there a function like this in EF? I've added som entities and I'd like it to get reflected in the DB. Do I really have to regenerate the entire DB and loose data?
+
+Thanks",2
+2195058,02/03/2010 20:07:47,163534,08/26/2009 13:45:27,2531,186,Instead Of Triggers on Views - What's the Use Case?,"Our production database is 5-7 years old, and many people have had their hands in it making schema modifications during this time. I just discovered there are Instead Of triggers on some of our views. I didn't even know this was possible. For those of you who have used Instead of triggers on views, what use case were you trying to solve? I'm having a hard time seeing the benefit of this, given the maintainability of doing such a thing.
+
+Thanks very much.",sql-server,triggers,,,,,open,0,82,10,"Instead Of Triggers on Views - What's the Use Case? Our production database is 5-7 years old, and many people have had their hands in it making schema modifications during this time. I just discovered there are Instead Of triggers on some of our views. I didn't even know this was possible. For those of you who have used Instead of triggers on views, what use case were you trying to solve? I'm having a hard time seeing the benefit of this, given the maintainability of doing such a thing.
+
+Thanks very much.",2
+5874986,05/03/2011 19:59:15,291561,03/11/2010 14:42:05,47,4,"SQL Server large transaction, then occasional command timeouts","I have a batch process that imports large amounts of data.  I am doing this by reading in a large text file and, parsing, then executing inserts, updates and deletes as dictated by the data.  These are simple statements being executed as Stored Procedures.  The batch of stored procedure calls are wrapped inside a transaction to be sure the file is completely processed before moving on.  The batch import is done once a week.  If a client gets behind, there could be several large transactions in a row.  When this happens, I occasionally get command timeouts in transactions after the first one.  I have increased the command timeout to 120 seconds.  Works fine so far, but, on a slow computer, it might not.  I have noticed that the timeout often occurs on an:
+
+    Update <table> set <columns> where <pk = some value>
+
+I thought that perhaps SQL is still updating indexes in the background.  Any ideas on what is going on?
+
+I realize that I could use something like SqlBulkCopy, but, that is not an option right now.
+
+Thanks,
+Scott",sql-server,transactions,,,,,open,0,189,8,"SQL Server large transaction, then occasional command timeouts I have a batch process that imports large amounts of data.  I am doing this by reading in a large text file and, parsing, then executing inserts, updates and deletes as dictated by the data.  These are simple statements being executed as Stored Procedures.  The batch of stored procedure calls are wrapped inside a transaction to be sure the file is completely processed before moving on.  The batch import is done once a week.  If a client gets behind, there could be several large transactions in a row.  When this happens, I occasionally get command timeouts in transactions after the first one.  I have increased the command timeout to 120 seconds.  Works fine so far, but, on a slow computer, it might not.  I have noticed that the timeout often occurs on an:
+
+    Update <table> set <columns> where <pk = some value>
+
+I thought that perhaps SQL is still updating indexes in the background.  Any ideas on what is going on?
+
+I realize that I could use something like SqlBulkCopy, but, that is not an option right now.
+
+Thanks,
+Scott",2
+11668193,07/26/2012 11:21:54,398713,07/22/2010 04:49:07,177,0,Using variables in SQLCMD for Linux,"I'm running the Microsoft SQLCMD tool for Linux (CTP 11.0.1720.0) on a Linux box (Red Hat Enterprise Server 5.3 tikanga) with Korn shell. The tool is properly configured, and works in all cases except when using scripting variables.
+
+I have an SQL script, that looks like this.
+
+    SELECT COLUMN1 FROM TABLE WHERE COLUMN2 = '$(param1)';
+
+And I'm running the `sqlcmd` command like this.
+
+    sqlcmd -S server -d database -U user -P pass -i input.sql -v param1=""DUMMYVALUE""
+
+When I execute the above command, I get the following error.
+
+`Sqlcmd: 'param1=DUMMYVALUE': Invalid argument. Enter '-?' for help.`
+
+Help lists the below syntax.
+
+`[-v var = ""value""...]`
+
+Am I missing something here?",sql-server,linux,sqlcmd,,,,open,0,108,6,"Using variables in SQLCMD for Linux I'm running the Microsoft SQLCMD tool for Linux (CTP 11.0.1720.0) on a Linux box (Red Hat Enterprise Server 5.3 tikanga) with Korn shell. The tool is properly configured, and works in all cases except when using scripting variables.
+
+I have an SQL script, that looks like this.
+
+    SELECT COLUMN1 FROM TABLE WHERE COLUMN2 = '$(param1)';
+
+And I'm running the `sqlcmd` command like this.
+
+    sqlcmd -S server -d database -U user -P pass -i input.sql -v param1=""DUMMYVALUE""
+
+When I execute the above command, I get the following error.
+
+`Sqlcmd: 'param1=DUMMYVALUE': Invalid argument. Enter '-?' for help.`
+
+Help lists the below syntax.
+
+`[-v var = ""value""...]`
+
+Am I missing something here?",3
+3926037,10/13/2010 16:52:04,474759,10/13/2010 16:38:24,1,0,sql- how to arrange the data in a table without use of asc keyword ?,"i have a table called customer
+
+Name   Id
+----- ----
+
+vimal 34
+
+arun  56
+
+sasi  98
+
+if i need to arrange those data in an alphabetical order we usually use query
+""select * from customer where order by name asc ""
+similarly  to reverse we use the query
+""select * from customer where order by name desc ""
+without use of asc and desc keyword how to arrange or reverse the data's
+
+
+",sql-server,,,,,,open,0,67,15,"sql- how to arrange the data in a table without use of asc keyword ? i have a table called customer
+
+Name   Id
+----- ----
+
+vimal 34
+
+arun  56
+
+sasi  98
+
+if i need to arrange those data in an alphabetical order we usually use query
+""select * from customer where order by name asc ""
+similarly  to reverse we use the query
+""select * from customer where order by name desc ""
+without use of asc and desc keyword how to arrange or reverse the data's
+
+
+",1
+10379992,04/30/2012 07:28:41,1365248,04/30/2012 07:17:50,1,0,Stored Procedure to create table from two another table,"I have two tables Attribute(AttributeID,EntityID,AttributeName,DataType,IsNullable,SortDirection,SrcColumnName,Description) and Entity (EntityID,EntityName,EntityTableName,EntityDesc,EntityCollectionName).
+I need to create table for each entityID with columns,column datatype & column IsNullable property taken from attribute table .",sql-server,stored-procedures,,,,04/30/2012 11:19:18,not a real question,1,27,9,"Stored Procedure to create table from two another table I have two tables Attribute(AttributeID,EntityID,AttributeName,DataType,IsNullable,SortDirection,SrcColumnName,Description) and Entity (EntityID,EntityName,EntityTableName,EntityDesc,EntityCollectionName).
+I need to create table for each entityID with columns,column datatype & column IsNullable property taken from attribute table .",2
+9413970,02/23/2012 13:26:14,1228415,02/23/2012 13:08:13,1,0,javaEE and sql server,"I've been learning java and sql server (seperately) at university, and was wanting to make a java application that uses sql server rather than oracle or mySql.  Is there any easy to understand or good guides to help me do this.  There is no current module that covers this specific area and would like to know how to do this.
+
+I've searched around but most books or tutorials are for oracle or mySql when it comes to the database layer.  As I have four computers (2 laptops) in the house, I'd like to have one to house the database while the others house the application itself (although if the database computer can run the application, that would be a bonus).
+
+I am very new to databases and have a good understanding of java and a small portion of experience with javaEE, so if its the same to connect to an oracle database as with an SQLserver database, my bad.
+
+Also, if there are any good guides otu there for javaEE specifically applications on a LAN based network with a database layer, that would help too.
+
+I hope someone can help me, I'd like to do this before i leave for my placement.
+
+Brian.",sql-server,java-ee,sql-server-2008-r2,java-ee-6,,02/23/2012 16:33:02,not constructive,1,201,4,"javaEE and sql server I've been learning java and sql server (seperately) at university, and was wanting to make a java application that uses sql server rather than oracle or mySql.  Is there any easy to understand or good guides to help me do this.  There is no current module that covers this specific area and would like to know how to do this.
+
+I've searched around but most books or tutorials are for oracle or mySql when it comes to the database layer.  As I have four computers (2 laptops) in the house, I'd like to have one to house the database while the others house the application itself (although if the database computer can run the application, that would be a bonus).
+
+I am very new to databases and have a good understanding of java and a small portion of experience with javaEE, so if its the same to connect to an oracle database as with an SQLserver database, my bad.
+
+Also, if there are any good guides otu there for javaEE specifically applications on a LAN based network with a database layer, that would help too.
+
+I hope someone can help me, I'd like to do this before i leave for my placement.
+
+Brian.",4
+582797,02/24/2009 17:54:38,40667,11/25/2008 15:12:45,957,45,"Should you choose the MONEY or DECIMAL(x,y) datatypes in SQL Server?","I'm curious as to whether or not there is a real difference between the `money` datatype and something like `decimal(19,4)` (which is what money uses internally, I believe).
+
+I'm aware that `money` is specific to SQL Server.  What I want to know is if there is a compelling reason to choose one over the other; most SQL Server samples (e.g. the AdventureWorks database) use `money` and not `decimal` for things like price information.  
+
+Should I just continue to use the money datatype, or is there a benefit to using decimal instead?  Money is fewer characters to type but that's not a valid reason :)",sql-server,types,,,,,open,0,106,11,"Should you choose the MONEY or DECIMAL(x,y) datatypes in SQL Server? I'm curious as to whether or not there is a real difference between the `money` datatype and something like `decimal(19,4)` (which is what money uses internally, I believe).
+
+I'm aware that `money` is specific to SQL Server.  What I want to know is if there is a compelling reason to choose one over the other; most SQL Server samples (e.g. the AdventureWorks database) use `money` and not `decimal` for things like price information.  
+
+Should I just continue to use the money datatype, or is there a benefit to using decimal instead?  Money is fewer characters to type but that's not a valid reason :)",2
+6198936,06/01/2011 09:23:28,522964,11/28/2010 13:25:01,18,2,Help Request on Desgining DataBase structure,"My application has to track information of Devices, Device Logs, Device Types.
+
+every device has many logs.
+every device has a type.
+
+log of different device type has different formats. for example device's log of type1 has 20 fields and device's log of type2 has 25 fields.
+
+what is the best design.
+
+tanks in advance.",sql-server,database-design,,,,06/01/2011 14:15:15,not a real question,1,50,6,"Help Request on Desgining DataBase structure My application has to track information of Devices, Device Logs, Device Types.
+
+every device has many logs.
+every device has a type.
+
+log of different device type has different formats. for example device's log of type1 has 20 fields and device's log of type2 has 25 fields.
+
+what is the best design.
+
+tanks in advance.",2
+8992935,01/24/2012 19:35:19,1167701,01/24/2012 18:42:09,1,0,Can I lighten the load on my SQL server by accessing relational tables by a list of primary keys?,"I've always accessed related data on different tables by joins.  This was fast and good for small to moderate sized databases.  The problem is that when the tables that you are joining to might have a million rows, it makes sense to me to just store the index (the primary key) in a text field, and just find the related data that way.
+
+Traditionally, for example,
+
+Say you have:
+
+    [Aliens]
+    AlienID (primary key)
+    Name
+    AlienDynamicPropertyID
+    
+    [AlienDynamicProperty]
+    AlienDynamicPropertyID (Primary Key)
+    AlienID (Indexed)
+    PropertyName
+    PropertyValue
+
+Say I have about a hundred thousand aliens in the Aliens table, and each alien had about 5-15 dynamic properties.  That would make the AlienDynamicProperty table a million rows of data.
+
+To get all the dynamic properties for all aliens, I would do something like this.
+
+    select a.[Name], b.[PropertyName], b.[PropertyValue] from Aliens a inner join AlienDynamicProperty b on a.[AlienID] = b.[AlienID] where a.[AlienID] = 376851
+
+
+But I'm wondering whether if it would be better to do it this way
+
+Instead have:
+
+    [Aliens]
+    AlienID
+    Name
+    AlienDynamicPropertyIDs (text separated by |)
+    
+    [AlienDynamicProperty]
+    AlienDynamicPropertyID (Primary Key)
+    PropertyName
+    PropertyValue
+
+2 queries have to be run.
+
+    myIDs = runquery(""select Name, AlienDynamicPropertyIDs where AlienID = 376851"");
+    querypart = replace(myIDs, ""|"", "" or AlienDynamicProperty ID = "");
+    mydataset = getdataset(""select PropertyName, PropertyValue from AlienDynamicProperty where AlienDynamicPropertyID = "" + querypart;
+
+To me, that would seem like a more effiencient way to go instead of joining to a table with million rows of data.  But maybe the join will be no problem and having to run 2 queries after string manipulation would be more taxing on the server?  I would definitely appreciate some feedback.  Thanks in advance!
+
+",sql-server,,,,,,open,0,341,19,"Can I lighten the load on my SQL server by accessing relational tables by a list of primary keys? I've always accessed related data on different tables by joins.  This was fast and good for small to moderate sized databases.  The problem is that when the tables that you are joining to might have a million rows, it makes sense to me to just store the index (the primary key) in a text field, and just find the related data that way.
+
+Traditionally, for example,
+
+Say you have:
+
+    [Aliens]
+    AlienID (primary key)
+    Name
+    AlienDynamicPropertyID
+    
+    [AlienDynamicProperty]
+    AlienDynamicPropertyID (Primary Key)
+    AlienID (Indexed)
+    PropertyName
+    PropertyValue
+
+Say I have about a hundred thousand aliens in the Aliens table, and each alien had about 5-15 dynamic properties.  That would make the AlienDynamicProperty table a million rows of data.
+
+To get all the dynamic properties for all aliens, I would do something like this.
+
+    select a.[Name], b.[PropertyName], b.[PropertyValue] from Aliens a inner join AlienDynamicProperty b on a.[AlienID] = b.[AlienID] where a.[AlienID] = 376851
+
+
+But I'm wondering whether if it would be better to do it this way
+
+Instead have:
+
+    [Aliens]
+    AlienID
+    Name
+    AlienDynamicPropertyIDs (text separated by |)
+    
+    [AlienDynamicProperty]
+    AlienDynamicPropertyID (Primary Key)
+    PropertyName
+    PropertyValue
+
+2 queries have to be run.
+
+    myIDs = runquery(""select Name, AlienDynamicPropertyIDs where AlienID = 376851"");
+    querypart = replace(myIDs, ""|"", "" or AlienDynamicProperty ID = "");
+    mydataset = getdataset(""select PropertyName, PropertyValue from AlienDynamicProperty where AlienDynamicPropertyID = "" + querypart;
+
+To me, that would seem like a more effiencient way to go instead of joining to a table with million rows of data.  But maybe the join will be no problem and having to run 2 queries after string manipulation would be more taxing on the server?  I would definitely appreciate some feedback.  Thanks in advance!
+
+",1
+9115087,02/02/2012 15:35:39,415037,08/09/2010 11:55:28,623,9,How to programmatically connect with server instance through vb.net,"I need to connect my database, that resided in the MyData directory of my application folder, to the instance of SQL server on client's machine.  How to do it?
+
+Could any body give me vb.net code for that so my application does it when run for the first time?
+
+Thanks
+",sql-server,vb.net,,,,,open,0,49,9,"How to programmatically connect with server instance through vb.net I need to connect my database, that resided in the MyData directory of my application folder, to the instance of SQL server on client's machine.  How to do it?
+
+Could any body give me vb.net code for that so my application does it when run for the first time?
+
+Thanks
+",2
+8553308,12/18/2011 17:05:58,1054625,11/18/2011 21:22:54,6,0,DYNAMIC & FORWARD_ONLY CURSORS - SQL Server,"DYNAMIC CURSOR
+
+In dynamic cursor you can see any kind of changes happening i.e. either inserting new records or changes in the existing and even deletes - How ?
+
+Means: Does it points to BASE TABLE directly ? etc...
+
+FORWARD_ONLY CURSOR
+
+In forward_only cursor also you can see any kind of changes happening i.e. either inserting new records or changes in the existing and even deletes until you have specified ""STATIC"" or ""KEYSET"" - How ?
+
+Thanks",sql-server,tsql,cursors,,,12/19/2011 15:10:34,not a real question,1,72,7,"DYNAMIC & FORWARD_ONLY CURSORS - SQL Server DYNAMIC CURSOR
+
+In dynamic cursor you can see any kind of changes happening i.e. either inserting new records or changes in the existing and even deletes - How ?
+
+Means: Does it points to BASE TABLE directly ? etc...
+
+FORWARD_ONLY CURSOR
+
+In forward_only cursor also you can see any kind of changes happening i.e. either inserting new records or changes in the existing and even deletes until you have specified ""STATIC"" or ""KEYSET"" - How ?
+
+Thanks",3
+11660738,07/26/2012 00:33:44,1185374,02/02/2012 14:37:05,99,6,how to insert many transactions of similar detail in sql server,"I want to enter 100 transactions into a sql server DB that have the same address and phone number but a different name.
+Thanks 
+",sql-server,tsql,,,,07/27/2012 02:10:43,not constructive,1,24,11,"how to insert many transactions of similar detail in sql server I want to enter 100 transactions into a sql server DB that have the same address and phone number but a different name.
+Thanks 
+",2
+9069173,01/30/2012 18:56:05,776206,05/30/2011 11:57:23,34,1,MSSQL select query that has another another select,"I have 2 tables
+
+1. Invoices
+2. Receipts 
+
+An Invoice can have many receipts.
+I'm doing something like
+Select * from Invoices
+I need to have all the ReceiptID for this invoice into 1 column.
+
+How to do it??
+
+10x",sql-server,reporting-services,,,,01/30/2012 20:11:08,not a real question,1,33,8,"MSSQL select query that has another another select I have 2 tables
+
+1. Invoices
+2. Receipts 
+
+An Invoice can have many receipts.
+I'm doing something like
+Select * from Invoices
+I need to have all the ReceiptID for this invoice into 1 column.
+
+How to do it??
+
+10x",2
+10370557,04/29/2012 07:47:57,1363880,04/29/2012 07:40:35,1,0,Want to acces other database through any other machine over LAN (in sql server),"I have created a Database MusicStore on my desktop machine and now i want to access that database from my Laptop. 
+I am using Sql server Management Studio on both sides.
+
+Both systems are on LAN. So i need some way out to access the MusicStore database through my laptop.",sql-server,,,,,04/29/2012 07:55:05,not a real question,1,49,14,"Want to acces other database through any other machine over LAN (in sql server) I have created a Database MusicStore on my desktop machine and now i want to access that database from my Laptop. 
+I am using Sql server Management Studio on both sides.
+
+Both systems are on LAN. So i need some way out to access the MusicStore database through my laptop.",1
+6188353,05/31/2011 13:31:25,777731,05/31/2011 13:17:24,1,0,SUBSELECT contains an error - but sql statement continues,"I have the following example code:
+
+
+    create table #tempmembers (
+    	memberid int
+    )
+    
+    update Members set 
+    Member_EMail = NULL
+    where Member_ID in (select member_id from #tempmembers)
+
+The subselect contains an error - since #tempmembes does not contain a column named member_id - but the sql statements runs WITHOUT any errors and updates no rows.
+
+If I then add just ONE row to #tempmembers: 
+
+    create table #tempmembers (
+    	memberid int
+    )
+    insert into #tempmembers select 1
+        
+    update Members set 
+    Member_EMail = NULL
+    where Member_ID in (select member_id from #tempmembers)
+
+it still runs without any errors - but this time ALL records in Members will be affected.
+
+Why this behaviour??
+
+Why does the sql statement not fail completely? And if the failing subselect is evaluated to NULL - should the updating all rows in Member not only occur if it had been:
+
+    update Members set 
+    Member_EMail = NULL
+    where Member_ID not in (select member_id from #tempmembers)
+
+/Kresten Buch",sql-server,tsql,,,,,open,0,214,9,"SUBSELECT contains an error - but sql statement continues I have the following example code:
+
+
+    create table #tempmembers (
+    	memberid int
+    )
+    
+    update Members set 
+    Member_EMail = NULL
+    where Member_ID in (select member_id from #tempmembers)
+
+The subselect contains an error - since #tempmembes does not contain a column named member_id - but the sql statements runs WITHOUT any errors and updates no rows.
+
+If I then add just ONE row to #tempmembers: 
+
+    create table #tempmembers (
+    	memberid int
+    )
+    insert into #tempmembers select 1
+        
+    update Members set 
+    Member_EMail = NULL
+    where Member_ID in (select member_id from #tempmembers)
+
+it still runs without any errors - but this time ALL records in Members will be affected.
+
+Why this behaviour??
+
+Why does the sql statement not fail completely? And if the failing subselect is evaluated to NULL - should the updating all rows in Member not only occur if it had been:
+
+    update Members set 
+    Member_EMail = NULL
+    where Member_ID not in (select member_id from #tempmembers)
+
+/Kresten Buch",2
+11356459,07/06/2012 05:41:25,993105,10/13/2011 09:18:54,6,0,Stored procedure is taking more time to execute,"I have a stored procedure. when i execute it it takes more than 15 sec to complete but the same procedure when i execute in some other dev environment it takes only 4 secs
+
+The resultset returned is same in both the dev environments.
+
+Thanks,
+Amit",sql-server,stored-procedures,,,,07/06/2012 22:03:15,not a real question,1,43,8,"Stored procedure is taking more time to execute I have a stored procedure. when i execute it it takes more than 15 sec to complete but the same procedure when i execute in some other dev environment it takes only 4 secs
+
+The resultset returned is same in both the dev environments.
+
+Thanks,
+Amit",2
+5949916,05/10/2011 12:20:50,287100,03/05/2010 12:04:33,78,25,convert datetime to bigint,"is there a function to convert datetime to bigint in sql? 
+E.g. I have a date ""2010-11-02 00:00:00"" and i would like to get result as number ""20101102000000""
+
+Or do I need to write some custom function which will remove -,space,: from datetime?",sql-server,,,,,,open,0,42,4,"convert datetime to bigint is there a function to convert datetime to bigint in sql? 
+E.g. I have a date ""2010-11-02 00:00:00"" and i would like to get result as number ""20101102000000""
+
+Or do I need to write some custom function which will remove -,space,: from datetime?",1
+7820182,10/19/2011 10:53:01,1002898,10/19/2011 10:07:30,1,0,How to make a column in sql server 2008 generates an automatic pre-defined characters (like matriculation number),"I have column in my database named ""Registration Number"". I want to make this column to automatically generates characters in my own specified format for each entry.",sql-server,,,,,10/19/2011 14:06:38,not a real question,1,27,17,"How to make a column in sql server 2008 generates an automatic pre-defined characters (like matriculation number) I have column in my database named ""Registration Number"". I want to make this column to automatically generates characters in my own specified format for each entry.",1
+8400568,12/06/2011 13:20:04,859154,07/23/2011 09:23:42,5283,347,SQl server Logical File Name usages?,"I'm restoring a Bak file
+
+
+    RESTORE DATABASE WEbERP2 FROM DISK = 'c:\r\WEbERP_backup_201105210100.bak'
+    WITH REPLACE , MOVE 'WEbERP' TO 'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\WEbERP2.mdf',
+    MOVE 'WEbERP_log' TO 'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\WEbERP2_log.ldf',REPLACE
+
+Im restoring it AS **WEbERP2**             //2 !!!
+
+
+and it works.
+
+the Db is opened as a new Db named :**WEbERP2**
+
+But the logical name is still : **WebErp.** 
+
+I know that the functionality is fine .
+
+But still I'm having trouble to understand its usages.
+
+![enter image description here][1]
+
+I know I can change it by :
+
+    ALTER DATABASE xxx MODIFY FILE (NAME=N...
+
+But I want to understand its usages , and when its important to change it.
+
+
+  [1]: http://i.stack.imgur.com/lVcRI.jpg",sql-server,,,,,12/06/2011 14:31:31,off topic,1,126,6,"SQl server Logical File Name usages? I'm restoring a Bak file
+
+
+    RESTORE DATABASE WEbERP2 FROM DISK = 'c:\r\WEbERP_backup_201105210100.bak'
+    WITH REPLACE , MOVE 'WEbERP' TO 'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\WEbERP2.mdf',
+    MOVE 'WEbERP_log' TO 'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\WEbERP2_log.ldf',REPLACE
+
+Im restoring it AS **WEbERP2**             //2 !!!
+
+
+and it works.
+
+the Db is opened as a new Db named :**WEbERP2**
+
+But the logical name is still : **WebErp.** 
+
+I know that the functionality is fine .
+
+But still I'm having trouble to understand its usages.
+
+![enter image description here][1]
+
+I know I can change it by :
+
+    ALTER DATABASE xxx MODIFY FILE (NAME=N...
+
+But I want to understand its usages , and when its important to change it.
+
+
+  [1]: http://i.stack.imgur.com/lVcRI.jpg",1
+11436436,07/11/2012 15:46:24,1185374,02/02/2012 14:37:05,99,6,Date and time parameter In msrs report,"Hi I am looking to set up my report so the start date will always be say '14-09-2011 00:00:00'
+And the end date will always be '14-09-2011 23:59:59' Or in other words Start date will be 00:00 and end date will be 23:59 for what ever days I select.
+
+At the moment my parameters are 
+
+Startdate: =DateAdd(DateInterval.Day, -7, Today())
+
+End Date: =today()
+
+Thanks.",sql-server,reporting-services,,,,07/11/2012 18:59:10,off topic,1,59,7,"Date and time parameter In msrs report Hi I am looking to set up my report so the start date will always be say '14-09-2011 00:00:00'
+And the end date will always be '14-09-2011 23:59:59' Or in other words Start date will be 00:00 and end date will be 23:59 for what ever days I select.
+
+At the moment my parameters are 
+
+Startdate: =DateAdd(DateInterval.Day, -7, Today())
+
+End Date: =today()
+
+Thanks.",2
+6661505,07/12/2011 08:38:35,281136,02/25/2010 10:30:32,67,5,Declare variable in table valued function,"I want to declare a variable in table valued function. How can I do it?
+
+Please helpme!
+
+Thanks in advance.
+",sql-server,function,table,udf,,07/12/2011 17:15:14,not a real question,1,18,6,"Declare variable in table valued function I want to declare a variable in table valued function. How can I do it?
+
+Please helpme!
+
+Thanks in advance.
+",4
+11324066,07/04/2012 07:09:45,617696,02/15/2011 11:55:11,986,33,SQL Server 2008 log directory has too much dump file,"my sql server log directory have too many dump files. i have 3 databases on the server and no of the transactions on them is very small, i don't know what the problem?",sql-server,sql-server-2008,logfiles,,,07/05/2012 14:15:48,off topic,1,33,10,"SQL Server 2008 log directory has too much dump file my sql server log directory have too many dump files. i have 3 databases on the server and no of the transactions on them is very small, i don't know what the problem?",3
+3104186,06/23/2010 17:50:29,13140,09/16/2008 17:19:55,1131,36,"SqlServer: Is there an ""IF EXISTS"" tests for a linked server?","I want to be able to programatically (in T-SQL) check if a specific linked server already exists for my current server and database (so that if the link doesn't exist yet, I can create it).  I tried stuff like this:
+
+    IF OBJECT_ID('myserver\devdb_1') IS NULL
+    BEGIN
+      PRINT 'Does not exist, need to create link'
+      --EXEC master.dbo.sp_addlinkedserver @server = N'myserver\devdb_1', @srvproduct=N'SQL Server'
+    END
+    ELSE
+      PRINT 'Link already exists'
+
+But the OBJECT_ID test always returns null, even if the link already exists.  Any way to do this check in T-SQL, so that the rest of my code can assume the link always exists?",sql-server,tsql,linked-server,,,,open,0,128,11,"SqlServer: Is there an ""IF EXISTS"" tests for a linked server? I want to be able to programatically (in T-SQL) check if a specific linked server already exists for my current server and database (so that if the link doesn't exist yet, I can create it).  I tried stuff like this:
+
+    IF OBJECT_ID('myserver\devdb_1') IS NULL
+    BEGIN
+      PRINT 'Does not exist, need to create link'
+      --EXEC master.dbo.sp_addlinkedserver @server = N'myserver\devdb_1', @srvproduct=N'SQL Server'
+    END
+    ELSE
+      PRINT 'Link already exists'
+
+But the OBJECT_ID test always returns null, even if the link already exists.  Any way to do this check in T-SQL, so that the rest of my code can assume the link always exists?",3
+2449293,03/15/2010 17:56:25,213159,11/17/2009 18:55:37,1,0,Solving a SQL Server Deadlock situation,"I am trying to find a solution that will resolve a recurring deadlock situation in SQL server. I have done some analysis on the deadlock graph generated by the profiler trace and have come up with this information:
+
+The first process (spid 58) is running this query:
+
+    UPDATE cds.dbo.task_core SET nstate = 1 WHERE nmboxid = 89 AND ndrawerid = 1 AND nobjectid IN (SELECT 	nobjectid FROM ( SELECT nobjectid, count(nobjectid) AS counting FROM cds.dbo.task_core GROUP BY 	nobjectid) task_groups WHERE task_groups.counting > 1) 
+
+The second process (spid 86) is running this query:
+
+    INSERT INTO task_core (…) VALUES (…)
+
+**spid 58** is waiting for a **Shared Page lock** on CDS.dbo.task_core
+(spid 86 holds a conflicting **intent exclusive (IX)** lock)
+
+**spid 86** is waiting for an **Intent Exclusive (IX) page lock** on CDS.dbo.task_core
+(spid 58 holds a conflicting **Update** lock)
+
+",sql-server,deadlock,,,,,open,0,139,6,"Solving a SQL Server Deadlock situation I am trying to find a solution that will resolve a recurring deadlock situation in SQL server. I have done some analysis on the deadlock graph generated by the profiler trace and have come up with this information:
+
+The first process (spid 58) is running this query:
+
+    UPDATE cds.dbo.task_core SET nstate = 1 WHERE nmboxid = 89 AND ndrawerid = 1 AND nobjectid IN (SELECT 	nobjectid FROM ( SELECT nobjectid, count(nobjectid) AS counting FROM cds.dbo.task_core GROUP BY 	nobjectid) task_groups WHERE task_groups.counting > 1) 
+
+The second process (spid 86) is running this query:
+
+    INSERT INTO task_core (…) VALUES (…)
+
+**spid 58** is waiting for a **Shared Page lock** on CDS.dbo.task_core
+(spid 86 holds a conflicting **intent exclusive (IX)** lock)
+
+**spid 86** is waiting for an **Intent Exclusive (IX) page lock** on CDS.dbo.task_core
+(spid 58 holds a conflicting **Update** lock)
+
+",2
+52945,09/09/2008 21:23:46,1228,08/13/2008 13:58:55,1388,106,Best way to search data stored as XML in Sql Server?,"Say I have data structures stored as XML (XML data type) within Sql Server.  A user wishes to pull out a record if, within the data, a certain string is found.
+
+What are my options for implementing this, and which is the best way to do it?
+
+Note that each record can have different XML data structures",sql-server,xml,search,,,,open,0,56,11,"Best way to search data stored as XML in Sql Server? Say I have data structures stored as XML (XML data type) within Sql Server.  A user wishes to pull out a record if, within the data, a certain string is found.
+
+What are my options for implementing this, and which is the best way to do it?
+
+Note that each record can have different XML data structures",3
+6523944,06/29/2011 16:21:54,463785,10/01/2010 10:58:31,1097,90,a way of sending e-mail on sql server after trigger,"what is the best way of sending e-mail on sql server with `after` trigger? I have found some articles on that but they are seems to be a little old.
+
+My goal here is to send an e-mail to admin that some values are inserted into a table.
+
+I am on SQL Server 2008 R2 now.",sql-server,sql-server-2008,triggers,,,,open,0,54,10,"a way of sending e-mail on sql server after trigger what is the best way of sending e-mail on sql server with `after` trigger? I have found some articles on that but they are seems to be a little old.
+
+My goal here is to send an e-mail to admin that some values are inserted into a table.
+
+I am on SQL Server 2008 R2 now.",3
+858021,05/13/2009 13:43:43,62037,02/03/2009 17:20:56,108,5,What options are available for doing Source Control in SQL Server 2005 / 2008?,Title says it all really. What software is available for enabling Source Control in SQL Server 2005 and above. What are the downsides of doing Source Control in SQL Server if any?,sql-server,version-control,microsoft,,,,open,0,32,14,What options are available for doing Source Control in SQL Server 2005 / 2008? Title says it all really. What software is available for enabling Source Control in SQL Server 2005 and above. What are the downsides of doing Source Control in SQL Server if any?,3
+590857,02/26/2009 14:50:10,71395,02/26/2009 14:25:52,28,0,Query about designing relationships in Sql Server's management studio interface,"Imagine I have two tables: Manager, Player.This is for a football team, where several players can play for one manager only and a manager manages several (11) players.
+
+When designing the relationship in Sql Server, at the time the popup window comes up with the properties for the relationship, does it matter which side the tables are?
+
+So in other words is there a difference in connecting the key from Player to Manager or from Manager to Player?
+
+And how do I specify the relationship as 1:n or is it automatically decided as 1:n or 1:1?
+
+Thanks",sql-server,sql-server-2005,,,,,open,0,93,10,"Query about designing relationships in Sql Server's management studio interface Imagine I have two tables: Manager, Player.This is for a football team, where several players can play for one manager only and a manager manages several (11) players.
+
+When designing the relationship in Sql Server, at the time the popup window comes up with the properties for the relationship, does it matter which side the tables are?
+
+So in other words is there a difference in connecting the key from Player to Manager or from Manager to Player?
+
+And how do I specify the relationship as 1:n or is it automatically decided as 1:n or 1:1?
+
+Thanks",2
+59264,09/12/2008 15:19:33,4911,09/06/2008 14:52:31,11,2,Reading recommendations for: Microsoft SQL Server ,Please post your favorite book about Microsoft SQL Server (single book per comment) or vote it up if someone has already listed it.,sql-server,books,microsoft,,,12/28/2011 20:31:00,off topic,1,23,7,Reading recommendations for: Microsoft SQL Server  Please post your favorite book about Microsoft SQL Server (single book per comment) or vote it up if someone has already listed it.,3
+11308921,07/03/2012 10:23:43,1037859,11/09/2011 14:20:19,27,2,unable to change the password of sa in sql sql server 2008,"I am trying to change the password of sa account via sql server management studio , but its not changing it , i tried all the techniques describe here [http://blog.sqlauthority.com/2009/08/04/sql-server-forgot-the-password-of-username-sa/][1]
+
+
+  [1]: http://blog.sqlauthority.com/2009/08/04/sql-server-forgot-the-password-of-username-sa/",sql-server,sql-server-2008,,,,,open,0,33,12,"unable to change the password of sa in sql sql server 2008 I am trying to change the password of sa account via sql server management studio , but its not changing it , i tried all the techniques describe here [http://blog.sqlauthority.com/2009/08/04/sql-server-forgot-the-password-of-username-sa/][1]
+
+
+  [1]: http://blog.sqlauthority.com/2009/08/04/sql-server-forgot-the-password-of-username-sa/",2
+467482,01/21/2009 23:24:08,49251,12/26/2008 18:38:21,3,0,How do I programmatically retrieve SQL Server stored procedure source that is identical to the source returned by the SQL Server Management Studio gui?,"Any pointers on how I can programmatically get exactly the identical stored procedure source from SQL Server 2005, as when I right-click on that stored procedure in SQL Server Management Studio and select modify?
+
+I'm trying using SMO, but there are some textual differences.  The procedure always has CREATE, not ALTER, and there are some differences in the header, such as missing GOs in the version I'm getting programmatically.  I can fix these up, but perhaps there is a better way?
+
+Again, I'm in SQL Server 2005, using SMSE.  Using SMO via Visual Studio 8 2008.
+
+Thanks!",sql-server,stored-procedures,smo,,,,open,0,97,24,"How do I programmatically retrieve SQL Server stored procedure source that is identical to the source returned by the SQL Server Management Studio gui? Any pointers on how I can programmatically get exactly the identical stored procedure source from SQL Server 2005, as when I right-click on that stored procedure in SQL Server Management Studio and select modify?
+
+I'm trying using SMO, but there are some textual differences.  The procedure always has CREATE, not ALTER, and there are some differences in the header, such as missing GOs in the version I'm getting programmatically.  I can fix these up, but perhaps there is a better way?
+
+Again, I'm in SQL Server 2005, using SMSE.  Using SMO via Visual Studio 8 2008.
+
+Thanks!",3
+10819774,05/30/2012 15:49:10,763398,05/20/2011 20:47:47,64,0,"Copy/Paste Chinese character into SQL2005, displays as box","If I pull a character from one of the unicode character maps found on google and copy/paste that into SQL2005 it just displays as just a white box. The data is there because when I load the string into my app it displays as Chinese characters again, except in certain cases I am still seeing boxes in my app so that is why I need to get to the bottom of why I am seeing them in SQL2005. Ideas?
+
+",sql-server,localization,,,,,open,0,79,8,"Copy/Paste Chinese character into SQL2005, displays as box If I pull a character from one of the unicode character maps found on google and copy/paste that into SQL2005 it just displays as just a white box. The data is there because when I load the string into my app it displays as Chinese characters again, except in certain cases I am still seeing boxes in my app so that is why I need to get to the bottom of why I am seeing them in SQL2005. Ideas?
+
+",2
+2796225,05/09/2010 00:56:21,56998,01/20/2009 08:53:50,476,20,How do I return an empty result set from a procedure using T-SQL?,"I'm interested in returning an empty result set from SQL Server stored procedures in certain events.
+
+The intended behaviour is that a L2SQL `DataContext.SPName().SingleOrDefault()` will result in CLR null value.
+
+I'm presently using the following solution, but I'm unsure whether it would be considered bad practice, a performance hazard (*I could not find one by reading the execution plan*), or if there is simply a better way:
+
+    SELECT * FROM [dbo].[TableName]
+    WHERE 0 = 1;
+
+The execution plan is a constant scan with a trivial cost associated with it.
+
+The reason I am asking this instead of simply not running any SELECTs is because I'm concerned previous SELECT @scalar or SELECT INTO statements could cause unintended result sets to be served back to L2SQL.  Am I worrying over nothing?",sql-server,sql-server-2008,tsql,,,,open,0,132,13,"How do I return an empty result set from a procedure using T-SQL? I'm interested in returning an empty result set from SQL Server stored procedures in certain events.
+
+The intended behaviour is that a L2SQL `DataContext.SPName().SingleOrDefault()` will result in CLR null value.
+
+I'm presently using the following solution, but I'm unsure whether it would be considered bad practice, a performance hazard (*I could not find one by reading the execution plan*), or if there is simply a better way:
+
+    SELECT * FROM [dbo].[TableName]
+    WHERE 0 = 1;
+
+The execution plan is a constant scan with a trivial cost associated with it.
+
+The reason I am asking this instead of simply not running any SELECTs is because I'm concerned previous SELECT @scalar or SELECT INTO statements could cause unintended result sets to be served back to L2SQL.  Am I worrying over nothing?",3
+9016222,01/26/2012 09:43:24,1025915,11/02/2011 15:08:20,196,11,SSRS Gantt Chart - Change to date format,"As per attached image, i have dates running along the X axis that starts on the 1st Jan 2012 and then increases monthly.
+
+My problem is the format is displaying the month/day/year and I want day/month/year.
+
+I have looked at Horizontal Axis Properties and under 'Number' but Date does not seem to be there.
+
+Does anyone have any suggestions on changing the format.
+
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/oby9X.jpg",sql-server,reporting-services,ssrs-2008,dateformat,gantt-chart,,open,0,66,8,"SSRS Gantt Chart - Change to date format As per attached image, i have dates running along the X axis that starts on the 1st Jan 2012 and then increases monthly.
+
+My problem is the format is displaying the month/day/year and I want day/month/year.
+
+I have looked at Horizontal Axis Properties and under 'Number' but Date does not seem to be there.
+
+Does anyone have any suggestions on changing the format.
+
+
+![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/oby9X.jpg",5
+5587437,04/07/2011 20:46:39,113571,05/28/2009 07:15:16,295,12,Troubleshooting database performance issues,"I've a problem with database, and here is a scenario I'm dealing with every day: usually application can deal with traffic etc. but several times a day I'm dealing with performance issue. When it's happening stored procedures increase their execution time from 200%-1000% .  
+I have one, described here: http://stackoverflow.com/questions/5585726/query-with-large-table-joins-optimization-techniques . Usually its execution takes about 6-8seconds (I've already optimized it from 20seconds cos at the beginning I thought the procedure is the culprit), but when **something** is happening, that procedure can execute even 60seconds.  
+And today I realized that there are more places in application that freeze, and what is more, I accidentaly realized that sample queries issued from SQL Management Studio, that usually execute in the blink of an eye, start to slow down when **something** happens with database server. Good news is, that thanks to this finding I eliminated both application & web servers as bottlenecks.  
+It's database server that's not able to handle requests. I wonder is there a way to troubleshoot live database and spot slow queries or other action like rebiulding indexes, statistics, memory problems etc. or perhaps other issues that could result in described performance decline?
+
+Thanks, Pawel",sql-server,sql-server-2005,database-connection,,,,open,0,197,4,"Troubleshooting database performance issues I've a problem with database, and here is a scenario I'm dealing with every day: usually application can deal with traffic etc. but several times a day I'm dealing with performance issue. When it's happening stored procedures increase their execution time from 200%-1000% .  
+I have one, described here: http://stackoverflow.com/questions/5585726/query-with-large-table-joins-optimization-techniques . Usually its execution takes about 6-8seconds (I've already optimized it from 20seconds cos at the beginning I thought the procedure is the culprit), but when **something** is happening, that procedure can execute even 60seconds.  
+And today I realized that there are more places in application that freeze, and what is more, I accidentaly realized that sample queries issued from SQL Management Studio, that usually execute in the blink of an eye, start to slow down when **something** happens with database server. Good news is, that thanks to this finding I eliminated both application & web servers as bottlenecks.  
+It's database server that's not able to handle requests. I wonder is there a way to troubleshoot live database and spot slow queries or other action like rebiulding indexes, statistics, memory problems etc. or perhaps other issues that could result in described performance decline?
+
+Thanks, Pawel",3
+9663084,03/12/2012 07:20:34,415037,08/09/2010 11:55:28,880,11,Checking if Database is attached or not,"How can I check if my SQL Server Database is attached to the instance of SQL Server or not.  I want to check it at run time and if sa has detached it, I want to show a message.  Please give me Vb.Net code if possible.
+
+Thanks
+",sql-server,,,,,03/13/2012 02:29:39,not a real question,1,48,7,"Checking if Database is attached or not How can I check if my SQL Server Database is attached to the instance of SQL Server or not.  I want to check it at run time and if sa has detached it, I want to show a message.  Please give me Vb.Net code if possible.
+
+Thanks
+",1
+10246928,04/20/2012 13:11:02,1200185,02/09/2012 16:55:16,76,0,How do I count the number of instances from 2 columns where a given string appears?,"Here's an example table:
+
+    games_table
+    ----------------------------------------------------
+    |   home_team   |   away_team   |   game_outcome   |
+    ----------------------------------------------------
+    |    Chelsea    |    Arsenal    |     Home wins    |
+    ----------------------------------------------------
+    |    Everton    |   Liverpool   |     Away wins    |
+    ----------------------------------------------------
+    |    Arsenal    |    Chelsea    |     Home wins    |
+    ----------------------------------------------------
+
+What I need is the number of times 'Chelsea' appears WHERE the game_outcome = 'Home wins' which is 2 in this example.
+
+Normally this would be very easy but I'm stuck because I have to search 2 columns.
+I really need some insight. This is in SQL-Server 2008.
+",sql-server,,,,,,open,0,183,16,"How do I count the number of instances from 2 columns where a given string appears? Here's an example table:
+
+    games_table
+    ----------------------------------------------------
+    |   home_team   |   away_team   |   game_outcome   |
+    ----------------------------------------------------
+    |    Chelsea    |    Arsenal    |     Home wins    |
+    ----------------------------------------------------
+    |    Everton    |   Liverpool   |     Away wins    |
+    ----------------------------------------------------
+    |    Arsenal    |    Chelsea    |     Home wins    |
+    ----------------------------------------------------
+
+What I need is the number of times 'Chelsea' appears WHERE the game_outcome = 'Home wins' which is 2 in this example.
+
+Normally this would be very easy but I'm stuck because I have to search 2 columns.
+I really need some insight. This is in SQL-Server 2008.
+",1
+3800918,09/27/2010 03:27:03,200449,11/01/2009 10:59:52,110,13,what is index and can non-clustered index be non-unique?,"Subquestion to my question [1]:   
+
+All definitions of (MS SQL Server) index (that I could find) are ambiguous and all explanations, based on it, narrate something without defining terms.  
+What is the definition of index?  
+
+For ex., the most common definition of index from wiki (http://en.wikipedia.org/wiki/Index_(database) ) :  
+
+  - 1) ""A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of slower writes and increased storage space. Indexes can be created using one or more columns of a database table...""   
+  - 2) ""SQL server creates a clustered index on a primary key by default[1]. The data is present in random order, but the logical ordering is specified by the index. The data rows may be randomly spread throughout the table. The non-clustered index tree contains the index keys in sorted order, with the leaf level of the index containing the pointer to the page and the row number in the data page""    
+
+Well, it is ambiguous. One can understand under index:  
+
+  - 1) an ordered data structure, a tree, containing intermediate and leaf nodes;  
+  - 2) leaf node data containing values from indexed columns + ""pointer to the page and the row number in the data page""  
+
+Can non-clustered index be non-unique, considering 2)? or, even, 1) ?  
+It doesn't seem so to me ...
+
+But does TSQL imply existence of non-unique non-clustered index?  
+
+If yes, then What is understood by non-clustered index in ""CREATE INDEX (Transact-SQL)""[2] and to what the argument UNIQUE is applied there?  
+
+Is it:  
+
+  - 3) leaf node data containing values from indexed columns? i.e. like in 2) but without pointer + row number ) ? 
+
+
+If it is 3), then again question 1) arises - why to apply constraints to copy of real data in ""index"", instead of real data in-situ?  
+ 
+----  
+
+[1]   
+""UNIQUE argument for INDEX creation - what's for?""  
+http://stackoverflow.com/questions/3799095/unique-argument-for-index-creation-whats-for  
+
+[2]  
+[CREATE INDEX (Transact-SQL)]   
+http://msdn.microsoft.com/en-us/library/ms188783.aspx",sql-server,tsql,index,terminology,definition,,open,0,360,9,"what is index and can non-clustered index be non-unique? Subquestion to my question [1]:   
+
+All definitions of (MS SQL Server) index (that I could find) are ambiguous and all explanations, based on it, narrate something without defining terms.  
+What is the definition of index?  
+
+For ex., the most common definition of index from wiki (http://en.wikipedia.org/wiki/Index_(database) ) :  
+
+  - 1) ""A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of slower writes and increased storage space. Indexes can be created using one or more columns of a database table...""   
+  - 2) ""SQL server creates a clustered index on a primary key by default[1]. The data is present in random order, but the logical ordering is specified by the index. The data rows may be randomly spread throughout the table. The non-clustered index tree contains the index keys in sorted order, with the leaf level of the index containing the pointer to the page and the row number in the data page""    
+
+Well, it is ambiguous. One can understand under index:  
+
+  - 1) an ordered data structure, a tree, containing intermediate and leaf nodes;  
+  - 2) leaf node data containing values from indexed columns + ""pointer to the page and the row number in the data page""  
+
+Can non-clustered index be non-unique, considering 2)? or, even, 1) ?  
+It doesn't seem so to me ...
+
+But does TSQL imply existence of non-unique non-clustered index?  
+
+If yes, then What is understood by non-clustered index in ""CREATE INDEX (Transact-SQL)""[2] and to what the argument UNIQUE is applied there?  
+
+Is it:  
+
+  - 3) leaf node data containing values from indexed columns? i.e. like in 2) but without pointer + row number ) ? 
+
+
+If it is 3), then again question 1) arises - why to apply constraints to copy of real data in ""index"", instead of real data in-situ?  
+ 
+----  
+
+[1]   
+""UNIQUE argument for INDEX creation - what's for?""  
+http://stackoverflow.com/questions/3799095/unique-argument-for-index-creation-whats-for  
+
+[2]  
+[CREATE INDEX (Transact-SQL)]   
+http://msdn.microsoft.com/en-us/library/ms188783.aspx",5
+10465370,05/05/2012 19:43:44,554706,12/27/2010 06:26:39,1,0,Tracking a particular ports on my server,"on my apache server,want to track a particular port through my local pc at home so how is it possible with nmap ,suppose the port number is 3080.
+any commands?",sql-server,security,nmap,,,05/13/2012 04:20:03,off topic,1,29,7,"Tracking a particular ports on my server on my apache server,want to track a particular port through my local pc at home so how is it possible with nmap ,suppose the port number is 3080.
+any commands?",3
+9949581,03/30/2012 19:51:05,38461,11/18/2008 05:28:20,411,24,Provisioning a new schema from an existing one,"I have a template schema (dbo) in SqlServer 2008 R2 that we are using as a master schema for each customer's data.  How can I easily ""copy"" all of dbo's objects into a new schema?
+
+ALTER SCHEMA [target] TRANSFER [source].[objectname] removes the original source object and I need it for future copies.  
+
+I do have a VSTSDB build process so I could take its output and find/replace on dbo, but that feels like the build process as opposed to a provisioning process.
+
+Seems like this is typical process in the sharding world, yet I am not finding much in the way of tooling for this process.",sql-server,sql-server-2008,sharding,,,,open,0,106,8,"Provisioning a new schema from an existing one I have a template schema (dbo) in SqlServer 2008 R2 that we are using as a master schema for each customer's data.  How can I easily ""copy"" all of dbo's objects into a new schema?
+
+ALTER SCHEMA [target] TRANSFER [source].[objectname] removes the original source object and I need it for future copies.  
+
+I do have a VSTSDB build process so I could take its output and find/replace on dbo, but that feels like the build process as opposed to a provisioning process.
+
+Seems like this is typical process in the sharding world, yet I am not finding much in the way of tooling for this process.",3
+5199006,03/04/2011 20:37:46,265519,02/03/2010 18:06:08,460,11,Thread inside a Loop? SQL Server,"Can something like  [#pragma_omp][1] ([OpenMP][2]) in C for loops 
+
+    #pragma omp parallel for    
+    for (ii = 0; ii < nrows; ii++){      
+      for(jj = 0; jj < ncols; jj++){       
+        for (kk = 0; kk < nrows; kk++){
+           array[ii][jj] = array[ii]kk] * array[kk][jj];
+        }
+      }
+    }
+
+be applied to a loop in SQL Server?
+
+    WHILE (...) BEGIN
+    END
+
+Something to paralelize the loop, using threads, How??
+
+
+  [1]: http://publib.boulder.ibm.com/infocenter/comphelp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8a.doc%2Fcompiler%2Fref%2Fruompplf.htm
+  [2]: http://developers.sun.com/solaris/articles/openmp.html",sql-server,sql-server-2008,,,,,open,0,136,6,"Thread inside a Loop? SQL Server Can something like  [#pragma_omp][1] ([OpenMP][2]) in C for loops 
+
+    #pragma omp parallel for    
+    for (ii = 0; ii < nrows; ii++){      
+      for(jj = 0; jj < ncols; jj++){       
+        for (kk = 0; kk < nrows; kk++){
+           array[ii][jj] = array[ii]kk] * array[kk][jj];
+        }
+      }
+    }
+
+be applied to a loop in SQL Server?
+
+    WHILE (...) BEGIN
+    END
+
+Something to paralelize the loop, using threads, How??
+
+
+  [1]: http://publib.boulder.ibm.com/infocenter/comphelp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8a.doc%2Fcompiler%2Fref%2Fruompplf.htm
+  [2]: http://developers.sun.com/solaris/articles/openmp.html",2
+9627754,03/09/2012 01:31:59,1179945,01/31/2012 09:19:19,34,0,32-bit and 64-bit setup projects,How to create a single setup file which target both 32 and 64 bit system? It has dependencies on .net framework and third party dll. Also when the application run for first time there is a database installation procedure which install 32 bit sqlexpress. another problem is how to get existing(already installed)  sql server intance both 64 and 32 bit and select it.,sql-server,winforms,setup-project,,,,open,0,64,5,32-bit and 64-bit setup projects How to create a single setup file which target both 32 and 64 bit system? It has dependencies on .net framework and third party dll. Also when the application run for first time there is a database installation procedure which install 32 bit sqlexpress. another problem is how to get existing(already installed)  sql server intance both 64 and 32 bit and select it.,3
+2224673,02/08/2010 20:35:00,1755,08/18/2008 12:47:06,2527,135,How to set up a new SQL Server database to allow for possible replication in the future?,"I'm building a system which has the potential to require support for 500+ concurrent users, each making dozens of queries (selects, inserts AND updates) each minute.  Based on these requirements and tables with many millions of rows I suspect that there will be the need to use database replication in the future to reduce some of the query load.
+
+Having not used replication in the past, I am wondering if there is anything I need to consider in the schema design?
+
+For instance, I was once told that it is necessary to use GUIDs for primary keys to enable replication.  Is this true?  
+What special considerations or best practices for database design are there for a database that will be replicated?
+
+Due to time constraints on the project I don't want to waste any time by implementing replication when it may not be needed. (I have enough definite problems to overcome at the moment without worrying about having to solve possible ones.) However, I don't want to have to make potentially avoidable schema changes when/if replication is required in the future.
+
+Any other advice on this subject, including good places to learn about implementing replication, would also be appreciated.",sql-server,replication,database-design,,,,open,0,198,17,"How to set up a new SQL Server database to allow for possible replication in the future? I'm building a system which has the potential to require support for 500+ concurrent users, each making dozens of queries (selects, inserts AND updates) each minute.  Based on these requirements and tables with many millions of rows I suspect that there will be the need to use database replication in the future to reduce some of the query load.
+
+Having not used replication in the past, I am wondering if there is anything I need to consider in the schema design?
+
+For instance, I was once told that it is necessary to use GUIDs for primary keys to enable replication.  Is this true?  
+What special considerations or best practices for database design are there for a database that will be replicated?
+
+Due to time constraints on the project I don't want to waste any time by implementing replication when it may not be needed. (I have enough definite problems to overcome at the moment without worrying about having to solve possible ones.) However, I don't want to have to make potentially avoidable schema changes when/if replication is required in the future.
+
+Any other advice on this subject, including good places to learn about implementing replication, would also be appreciated.",3
+3917518,10/12/2010 17:48:08,245036,01/06/2010 20:26:20,84,2,Taking median of calculation in SQL Server,"MyTable in SQL Server contains _TimeStamp, Column1, Column2, and Column3, which have the following values:  
+_TimeStamp Column1 Column2 Column3  
+'2010-10-11 15:55:25.40' 10  3  0.5  
+'2010-10-11 15:55:25.50' 20  9  0.7  
+'2010-10-11 15:55:25.60' 15  2  1.3  
+'2010-10-11 15:55:25.70' 17  8  2.7  
+'2010-10-11 15:55:25.80' 42  6  3.6  
+'2010-10-11 15:55:25.90' 14  2  0.4  
+
+I would like to find the <a href=""http://en.wikipedia.org/wiki/Median"">median</a> value of 4*Column1*Column2*Column3.  The products for each row are:      
+           60  
+          504  
+          156  
+       1468.8  
+       3628.8  
+         44.8  
+Since there are an even number of entries, the median value is the average of the two 'middle' entries (156 and 504), or 330.  Also I only want to perform the median on values that fall within a chosen time range, and the solution can't alter the database which isn't mine.  I edited a <a href=""http://sqlblog.com/blogs/adam_machanic/archive/2006/12/18/medians-row-numbers-and-performance.aspx"">similar query</a> to get the query shown below, but it fails because a column name is invalid.  Any suggestions?  
+
+    SELECT
+      AVG(4*Column1*Column2*Column3)
+      FROM 
+    (
+      SELECT
+        4*Column1*Column2*Column3,
+        ROW_NUMBER() OVER (
+        ORDER BY 4*Column1*Column2*Column3 ASC, _TimeStamp ASC) AS RowAsc,
+        ROW_NUMBER() OVER (
+        ORDER BY 4*Column1*Column2*Column3 DESC, _TimeStamp DESC) AS RowDesc
+      FROM MyTable WHERE 
+       _TimeStamp BETWEEN '2010-10-11 15:55:25.40' AND '2010-10-11 15:55:25.90' 
+
+    ) x
+    WHERE 
+      RowAsc IN (RowDesc, RowDesc - 1, RowDesc + 1)
+
+",sql-server,median,,,,,open,0,369,7,"Taking median of calculation in SQL Server MyTable in SQL Server contains _TimeStamp, Column1, Column2, and Column3, which have the following values:  
+_TimeStamp Column1 Column2 Column3  
+'2010-10-11 15:55:25.40' 10  3  0.5  
+'2010-10-11 15:55:25.50' 20  9  0.7  
+'2010-10-11 15:55:25.60' 15  2  1.3  
+'2010-10-11 15:55:25.70' 17  8  2.7  
+'2010-10-11 15:55:25.80' 42  6  3.6  
+'2010-10-11 15:55:25.90' 14  2  0.4  
+
+I would like to find the <a href=""http://en.wikipedia.org/wiki/Median"">median</a> value of 4*Column1*Column2*Column3.  The products for each row are:      
+           60  
+          504  
+          156  
+       1468.8  
+       3628.8  
+         44.8  
+Since there are an even number of entries, the median value is the average of the two 'middle' entries (156 and 504), or 330.  Also I only want to perform the median on values that fall within a chosen time range, and the solution can't alter the database which isn't mine.  I edited a <a href=""http://sqlblog.com/blogs/adam_machanic/archive/2006/12/18/medians-row-numbers-and-performance.aspx"">similar query</a> to get the query shown below, but it fails because a column name is invalid.  Any suggestions?  
+
+    SELECT
+      AVG(4*Column1*Column2*Column3)
+      FROM 
+    (
+      SELECT
+        4*Column1*Column2*Column3,
+        ROW_NUMBER() OVER (
+        ORDER BY 4*Column1*Column2*Column3 ASC, _TimeStamp ASC) AS RowAsc,
+        ROW_NUMBER() OVER (
+        ORDER BY 4*Column1*Column2*Column3 DESC, _TimeStamp DESC) AS RowDesc
+      FROM MyTable WHERE 
+       _TimeStamp BETWEEN '2010-10-11 15:55:25.40' AND '2010-10-11 15:55:25.90' 
+
+    ) x
+    WHERE 
+      RowAsc IN (RowDesc, RowDesc - 1, RowDesc + 1)
+
+",2
+22499,08/22/2008 14:29:23,2494,08/22/2008 14:29:22,1,0,SQL 2005 Book For Optimization Techniques,"My knowledge of SQL has been mostly gathered through immediate need as opposed to formal training.  The project I'm working on now requires the next level of SQL (specifically SQL Server 2005) knowledge.  That is, I need to know techniques for optimizing the schema, writing optimized queries and even some information about replication and mirroring.  Is there a book that anyone here would recommend for that level of expertise as it pertains to SQL in general or SQL Server specifically?",sql-server,optimization,sql-server-2005,training,bookmarks,06/19/2012 19:15:30,off topic,1,83,6,"SQL 2005 Book For Optimization Techniques My knowledge of SQL has been mostly gathered through immediate need as opposed to formal training.  The project I'm working on now requires the next level of SQL (specifically SQL Server 2005) knowledge.  That is, I need to know techniques for optimizing the schema, writing optimized queries and even some information about replication and mirroring.  Is there a book that anyone here would recommend for that level of expertise as it pertains to SQL in general or SQL Server specifically?",5
+7781103,10/15/2011 22:35:41,343302,05/17/2010 17:43:03,55,4,SQL Server: set character set (not collation),"How does one set the default character set for fields when creating tables in MS SQL Server? In MySQL one does this:
+
+    CREATE TABLE tableName (
+        name VARCHAR(128) CHARACTER SET utf8
+    ) DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+
+Note that I set the character set twice here. It is redundant, I added both ways just to demonstrate. I set the collation also to demonstrate that collation is something different. I am _not_ asking about setting the collation. [Most](http://stackoverflow.com/questions/5182164/sql-server-default-character-encoding) [questions](http://stackoverflow.com/questions/7321159/determining-the-character-set-of-a-table-database) asking about character sets and encodings in SQL Server are answered with collation, which is _not_ the same thing.",sql-server,character-encoding,,,,,open,0,111,7,"SQL Server: set character set (not collation) How does one set the default character set for fields when creating tables in MS SQL Server? In MySQL one does this:
+
+    CREATE TABLE tableName (
+        name VARCHAR(128) CHARACTER SET utf8
+    ) DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+
+Note that I set the character set twice here. It is redundant, I added both ways just to demonstrate. I set the collation also to demonstrate that collation is something different. I am _not_ asking about setting the collation. [Most](http://stackoverflow.com/questions/5182164/sql-server-default-character-encoding) [questions](http://stackoverflow.com/questions/7321159/determining-the-character-set-of-a-table-database) asking about character sets and encodings in SQL Server are answered with collation, which is _not_ the same thing.",2
+8458293,12/10/2011 17:11:24,808648,06/21/2011 14:39:54,11,0,"Please help me, ot is imoirtant or me","I can connect to MS SQL from my program by the name of my computer, But when I write IP instead of computer name, it gives an error. Let me note that  IP is correct.",sql-server,,,,,12/11/2011 02:37:33,not a real question,1,36,8,"Please help me, ot is imoirtant or me I can connect to MS SQL from my program by the name of my computer, But when I write IP instead of computer name, it gives an error. Let me note that  IP is correct.",1
+248354,10/29/2008 20:47:11,42219,09/15/2008 16:21:29,442,25,How do I find out which line of which stored procedure an error occurred on?,"When I try to run a particular stored procedure on my MS SQL 2005 database, I get an error like the following:
+
+    Subquery returned more than 1 value. This is not permitted when
+    the subquery follows =, !=, <, <= , >, >= or when the subquery
+    is used as an expression
+
+The SP in query is very long and calls other SPs.  This error is obviously being produced by SQL itself, and returned all the way up the call stack, but without mentioning which SP or line number caused the problem.  How can I find out from where the error was thrown so I can debug it more easily?",sql-server,stored-procedures,,,,,open,0,120,15,"How do I find out which line of which stored procedure an error occurred on? When I try to run a particular stored procedure on my MS SQL 2005 database, I get an error like the following:
+
+    Subquery returned more than 1 value. This is not permitted when
+    the subquery follows =, !=, <, <= , >, >= or when the subquery
+    is used as an expression
+
+The SP in query is very long and calls other SPs.  This error is obviously being produced by SQL itself, and returned all the way up the call stack, but without mentioning which SP or line number caused the problem.  How can I find out from where the error was thrown so I can debug it more easily?",2
+2060856,01/13/2010 22:43:34,89566,04/10/2009 18:54:58,508,11,SQL Server trim() Question,"I have a varchar field in the database. I want to do a SQL to get the values in the field, and do like a substring on the result. I want to only return the words between some beginning and ending. For instance, for the field value ""We few, we happy few."", I want to return only ""we happy"".
+Does SQL Server have a function to do this?",sql-server,,,,,,open,0,67,4,"SQL Server trim() Question I have a varchar field in the database. I want to do a SQL to get the values in the field, and do like a substring on the result. I want to only return the words between some beginning and ending. For instance, for the field value ""We few, we happy few."", I want to return only ""we happy"".
+Does SQL Server have a function to do this?",1
+1063095,06/30/2009 11:07:32,34685,11/05/2008 14:09:21,768,22,Idiom for using SqlDataReader as a resource,"Following on from [this][1] question, I find myself writing the following code over and over again:
+
+    SqlCommand command = new SqlCommand();
+    // Code to initialze command with what we want to do
+    using (SqlConnection connection = openConnection())
+    {
+        command.Connection = connection;
+        using (SqlDataReader dataReader = thisCommand.ExecuteReader())
+        {
+            while (dataReader.Read())
+            {
+                // Do stuff with results
+            }
+        }
+    }
+
+It's rather tedious to have to nest the two using statements. Is there a way to *tell* SqlDataReader that it owns the command, and tell the command that it owns the connection? 
+
+If there was a way of doing that then I could write a helper method which could be called like so:
+
+    // buildAndExecuteCommand opens the connection, initializes the command
+    // with the connection and returns the SqlDataReader object. Dispose of the
+    // SqlDataReader to dispose of all resources that were acquired
+    using(SqlDataReader reader = buildAndExecuteCommand(...))
+    {
+        // Do stuff with reader
+    }
+
+
+Or do I have to bite the bullet and write my own wrapper over SqlDataReader?
+
+  [1]: http://stackoverflow.com/questions/1058591/net-sqlconnection-class-connection-pooling-and-reconnection-logic",sql-server,.net,sql,c#,,,open,0,284,7,"Idiom for using SqlDataReader as a resource Following on from [this][1] question, I find myself writing the following code over and over again:
+
+    SqlCommand command = new SqlCommand();
+    // Code to initialze command with what we want to do
+    using (SqlConnection connection = openConnection())
+    {
+        command.Connection = connection;
+        using (SqlDataReader dataReader = thisCommand.ExecuteReader())
+        {
+            while (dataReader.Read())
+            {
+                // Do stuff with results
+            }
+        }
+    }
+
+It's rather tedious to have to nest the two using statements. Is there a way to *tell* SqlDataReader that it owns the command, and tell the command that it owns the connection? 
+
+If there was a way of doing that then I could write a helper method which could be called like so:
+
+    // buildAndExecuteCommand opens the connection, initializes the command
+    // with the connection and returns the SqlDataReader object. Dispose of the
+    // SqlDataReader to dispose of all resources that were acquired
+    using(SqlDataReader reader = buildAndExecuteCommand(...))
+    {
+        // Do stuff with reader
+    }
+
+
+Or do I have to bite the bullet and write my own wrapper over SqlDataReader?
+
+  [1]: http://stackoverflow.com/questions/1058591/net-sqlconnection-class-connection-pooling-and-reconnection-logic",4
+10011357,04/04/2012 12:44:37,671977,03/22/2011 20:50:22,56,3,SQL Azure MVC3 Primary Key Violation Using INSTEAD OF trigger,"I have recently begun working on an MVC3 application with a SQL Server 2008R2 backend.  The application receives streaming data from a web query and then inserts the data into a table as and when new data is received.  The application can sometimes receive data that has already been inserted (the data being received includes a pre-generated primary key - this key has been generated before my application receives it) in the event of this i do not want to insert this into the table as it is already present.  I realise I could generate my own primary key, however I do not want any duplicate rows in the database.
+
+The easiest solution I could think of was an INSTEAD OF trigger on the table that fires on each insert and then ignores the insert if the row already exists (my thinking was then that the MVC app did not then need to check to see whether the record already existed before it attempted the insert).  
+
+This was working fine, however when I ported it to SQL Azure, I now receive a primary key violation error every time the MVC attempts to insert a row that already exists - as if the trigger is not functioning.  If I connect to the SQL Azure instance in SSMS and try and do the insert using a key that already exists in the table I receive no error, so I know that the trigger is present and functioning.
+
+In the MVC code I am using LINQ to SQL classes I generated from the database and the InsertOnSubmit method on those classes.
+
+Does anyone know why this might be happening? Or alternatively suggest a better solution for what I am trying to achieve (I am sure there is a probably a better way to do it in LINQ or something).  I am pretty new to Azure, LINQ and MVC so any suggestions welcome!
+
+Thanks in advance.",sql-server,asp.net-mvc,asp.net-mvc-3,linq-to-sql,sql-azure,,open,0,324,10,"SQL Azure MVC3 Primary Key Violation Using INSTEAD OF trigger I have recently begun working on an MVC3 application with a SQL Server 2008R2 backend.  The application receives streaming data from a web query and then inserts the data into a table as and when new data is received.  The application can sometimes receive data that has already been inserted (the data being received includes a pre-generated primary key - this key has been generated before my application receives it) in the event of this i do not want to insert this into the table as it is already present.  I realise I could generate my own primary key, however I do not want any duplicate rows in the database.
+
+The easiest solution I could think of was an INSTEAD OF trigger on the table that fires on each insert and then ignores the insert if the row already exists (my thinking was then that the MVC app did not then need to check to see whether the record already existed before it attempted the insert).  
+
+This was working fine, however when I ported it to SQL Azure, I now receive a primary key violation error every time the MVC attempts to insert a row that already exists - as if the trigger is not functioning.  If I connect to the SQL Azure instance in SSMS and try and do the insert using a key that already exists in the table I receive no error, so I know that the trigger is present and functioning.
+
+In the MVC code I am using LINQ to SQL classes I generated from the database and the InsertOnSubmit method on those classes.
+
+Does anyone know why this might be happening? Or alternatively suggest a better solution for what I am trying to achieve (I am sure there is a probably a better way to do it in LINQ or something).  I am pretty new to Azure, LINQ and MVC so any suggestions welcome!
+
+Thanks in advance.",5
+5666408,04/14/2011 16:26:23,708343,04/14/2011 16:26:23,1,0,SQL Server Express,"I downloaded SQLserver express edition, but when I try to open it, I get a pop up window that syas instalation center. What am I doing wrong",sql-server,,,,,04/14/2011 16:36:32,off topic,1,27,3,"SQL Server Express I downloaded SQLserver express edition, but when I try to open it, I get a pop up window that syas instalation center. What am I doing wrong",1
+7970610,11/01/2011 17:53:19,351900,05/27/2010 11:45:52,528,29,"What's the best performance SQL database for data storage on CentOS 246MB RAM, Apache and PHP?","What's the best performance SQL database for data storage on CentOS **246MB RAM**, Apache and PHP, json_encode() with using **less RAM as possible**?
+
+Maybe some [NoSQL][1] database, [UnQL][2]?
+
+
+  [1]: http://en.wikipedia.org/wiki/NoSQL
+  [2]: http://en.wikipedia.org/wiki/UnQL",sql-server,linux,performance,nosql,centos,11/02/2011 08:39:01,too localized,1,33,16,"What's the best performance SQL database for data storage on CentOS 246MB RAM, Apache and PHP? What's the best performance SQL database for data storage on CentOS **246MB RAM**, Apache and PHP, json_encode() with using **less RAM as possible**?
+
+Maybe some [NoSQL][1] database, [UnQL][2]?
+
+
+  [1]: http://en.wikipedia.org/wiki/NoSQL
+  [2]: http://en.wikipedia.org/wiki/UnQL",5
+576400,02/23/2009 02:57:36,44996,12/10/2008 14:10:29,387,8,What's the best way to diff two database backup files with MS Sql Server 2005?,"I have two database backup files. I would like to know if there is any difference between the two. I could go row by row, field by field and do a diff (I'm not looking for differences in schema but rather data, although I expect the schema to remain the same).
+
+Can I run some sort of checksum on the files, or do I have to go through the data itself to be 100% certain?",sql-server,sql-server-2005,,,,,open,0,74,15,"What's the best way to diff two database backup files with MS Sql Server 2005? I have two database backup files. I would like to know if there is any difference between the two. I could go row by row, field by field and do a diff (I'm not looking for differences in schema but rather data, although I expect the schema to remain the same).
+
+Can I run some sort of checksum on the files, or do I have to go through the data itself to be 100% certain?",2
+3372092,07/30/2010 13:51:06,30419,10/22/2008 15:39:54,2628,119,FileStream: T-SQL vs Win32,"One of our teams is building a database (and application) that will use the FileStream feature of SQL 2008 to store documents.  According to the MS best practices for filestream, the Win32 APIs are the preferred way to access FileStream data, vs using T-SQL.  
+
+However, using the Win32 APIs requires using integrated authentication to connect to the database.  This is a concern for the team because they do not want to give users direct access to the database.  They want the application to connect using a SQL username and password.
+
+What are the pros / cons of using Win32 vs T-SQL to access filestream data?  Are there any factors that would make using T-SQL impossible?",sql-server,sql-server-2008,filestream,,,,open,0,119,4,"FileStream: T-SQL vs Win32 One of our teams is building a database (and application) that will use the FileStream feature of SQL 2008 to store documents.  According to the MS best practices for filestream, the Win32 APIs are the preferred way to access FileStream data, vs using T-SQL.  
+
+However, using the Win32 APIs requires using integrated authentication to connect to the database.  This is a concern for the team because they do not want to give users direct access to the database.  They want the application to connect using a SQL username and password.
+
+What are the pros / cons of using Win32 vs T-SQL to access filestream data?  Are there any factors that would make using T-SQL impossible?",3
+7005404,08/10/2011 03:00:53,708305,04/14/2011 16:04:33,1344,91,business logic in database layer,"I hate to ask the classic question of ""business logic in database vs code"" again, but I need some concrete reasons to convince an older team of developers that business logic in code is better, because it's more maintainable, above all else. I used to have a lot of business logic in the DB, because I believed it was the single point of access. Maintenance is easy, if I was the only one doing the changing it. In my experience, the problems came when the projects got larger and complicated. Source Control for DB Stored Procs are not so advanced as the ones for newer IDEs, nor are the editors. Business logic in code can scale much better than in the DB, is what I've found in my recent experience. 
+
+So, just searching around stackoverflow, I found quite the opposite philosophy from its esteemed members:
+
+http://stackoverflow.com/search?q=business+logic+in+database
+
+I know there is no absolute for any situation, but for a given asp.net solution, which will use either sql server or oracle, for a not a particularly high traffic site, why would I put the logic in the DB?",sql-server,database,oracle,application,business-logic,,open,0,184,5,"business logic in database layer I hate to ask the classic question of ""business logic in database vs code"" again, but I need some concrete reasons to convince an older team of developers that business logic in code is better, because it's more maintainable, above all else. I used to have a lot of business logic in the DB, because I believed it was the single point of access. Maintenance is easy, if I was the only one doing the changing it. In my experience, the problems came when the projects got larger and complicated. Source Control for DB Stored Procs are not so advanced as the ones for newer IDEs, nor are the editors. Business logic in code can scale much better than in the DB, is what I've found in my recent experience. 
+
+So, just searching around stackoverflow, I found quite the opposite philosophy from its esteemed members:
+
+http://stackoverflow.com/search?q=business+logic+in+database
+
+I know there is no absolute for any situation, but for a given asp.net solution, which will use either sql server or oracle, for a not a particularly high traffic site, why would I put the logic in the DB?",5
+6459433,06/23/2011 19:15:29,653622,03/10/2011 13:33:09,445,4,which concurrency control is more efficient pessimistic or optimistic concurrency control,"I would like to know which concurrency control is more efficient, pessimistic or optimistic concurrency control? Is there a special reason why SQL Server 2005 uses pessimistic concurrency control as default? Is it for performance related reasons?
+
+Thanks in anticipation",sql-server,concurrency,,,,,open,0,39,11,"which concurrency control is more efficient pessimistic or optimistic concurrency control I would like to know which concurrency control is more efficient, pessimistic or optimistic concurrency control? Is there a special reason why SQL Server 2005 uses pessimistic concurrency control as default? Is it for performance related reasons?
+
+Thanks in anticipation",2
+6279677,06/08/2011 13:44:05,755934,05/16/2011 15:54:30,41,0,Recommended Remote (Online) SQL Server,"I work in a small business, and my boss recently asked me to find a good place where we can put our database. We run it with MySQL + PHP. We also need remote hosting (of our website). Our current server is 7 years old, and was crap when they first bought it. I'm looking for a place with a good amount of redundancy. Where do you guys have your databases, and would you recommend that place?",sql-server,,,,,06/10/2011 06:44:21,off topic,1,77,5,"Recommended Remote (Online) SQL Server I work in a small business, and my boss recently asked me to find a good place where we can put our database. We run it with MySQL + PHP. We also need remote hosting (of our website). Our current server is 7 years old, and was crap when they first bought it. I'm looking for a place with a good amount of redundancy. Where do you guys have your databases, and would you recommend that place?",1
+425475,01/08/2009 19:11:06,33178,10/31/2008 18:30:49,155,12,SQL Server: Listing all indexes,"I'm wondering what the easiest way to list all indexes for all tables in a database is.  Should I call sp_helpindex for each table and store the results in a temp table, or is there an easier way?
+Can anyone explain why constraints are stored in sysobjects but indexes are not?  ",sql-server,indexing,sysobjects,,,,open,0,53,5,"SQL Server: Listing all indexes I'm wondering what the easiest way to list all indexes for all tables in a database is.  Should I call sp_helpindex for each table and store the results in a temp table, or is there an easier way?
+Can anyone explain why constraints are stored in sysobjects but indexes are not?  ",3
+524001,02/07/2009 15:52:38,58314,01/23/2009 15:03:15,96,2,SQL Server 2K - Agent Jobs - Errors and Messages,"I have a job that runs every night. I do my own logging in my stored procedure so that I can tell what was going on if something fails. 
+
+Last night the job failed and I know where. When I ran the job manually it succeeded. So I went to the job history to see what I could find. 
+
+I selected the ""Show Step Details"" and can see the messages. So far so good but here is my problem.
+
+The box that displays the messages/errors is filled with a lot of information but the last part where it says ""The step failed"" has bee truncated by the rest of the messages which have no information on the error. Those other messages are normal. I use BCP quite a few times and expect them.
+
+My question is: is there any way to clear this within a stored procedure? What I woul do would be to clear this just before the part of the stpred procedure that fails so that I have a clear box
+
+OR
+
+Is there any way to see even more detail? I queried the sysjobhistory but it is basically the same info. Truncated / cut off and not much use. 
+
+
+OR
+
+Is there any way to turn off the messages that get logged during a job so that only errors are there.
+
+Thanks !!
+Thanks!
+",sql-server,sql-server-agent,,,,,open,0,220,10,"SQL Server 2K - Agent Jobs - Errors and Messages I have a job that runs every night. I do my own logging in my stored procedure so that I can tell what was going on if something fails. 
+
+Last night the job failed and I know where. When I ran the job manually it succeeded. So I went to the job history to see what I could find. 
+
+I selected the ""Show Step Details"" and can see the messages. So far so good but here is my problem.
+
+The box that displays the messages/errors is filled with a lot of information but the last part where it says ""The step failed"" has bee truncated by the rest of the messages which have no information on the error. Those other messages are normal. I use BCP quite a few times and expect them.
+
+My question is: is there any way to clear this within a stored procedure? What I woul do would be to clear this just before the part of the stpred procedure that fails so that I have a clear box
+
+OR
+
+Is there any way to see even more detail? I queried the sysjobhistory but it is basically the same info. Truncated / cut off and not much use. 
+
+
+OR
+
+Is there any way to turn off the messages that get logged during a job so that only errors are there.
+
+Thanks !!
+Thanks!
+",2
+7626383,10/02/2011 12:41:00,611023,02/10/2011 08:16:53,82,4,How to open pgsql file on Windows?,"I downloaded a 7 Gigabyte .pgsql file. 
+
+What do I need to download in order to open this file on my Windows 7 machine?
+
+I tried installing PostgreSQL 9.1 for Windows, but when I open the pgAdmin it keeps asking me for a server, and I don't have any. All I want is to open an existing file, how can I configure it?
+
+Thanks in advance!
+
+Nili",sql-server,database,postgresql,,,10/06/2011 07:16:22,off topic,1,64,7,"How to open pgsql file on Windows? I downloaded a 7 Gigabyte .pgsql file. 
+
+What do I need to download in order to open this file on my Windows 7 machine?
+
+I tried installing PostgreSQL 9.1 for Windows, but when I open the pgAdmin it keeps asking me for a server, and I don't have any. All I want is to open an existing file, how can I configure it?
+
+Thanks in advance!
+
+Nili",3
+11617351,07/23/2012 17:21:34,1373003,05/03/2012 15:58:47,19,0,Development To Staging to Production,"Tools that I have: SQL Server Database/SSIS/SSAS/SSRS
+Different servers for Dev/Stage/Prod
+Different DB for Dev/Stage/Prod (SSMS/SSAS)
+
+Goal: Create something in dev environment. Pass it to Staging. After verification, pass it to production.
+
+Question: How do I do that?
+
+once I make some tables, packages, cubes, packages in dev, how do i push it to staging server and finally production server?",sql-server,database,reporting-services,ssis,ssas,07/24/2012 13:09:58,off topic,1,55,5,"Development To Staging to Production Tools that I have: SQL Server Database/SSIS/SSAS/SSRS
+Different servers for Dev/Stage/Prod
+Different DB for Dev/Stage/Prod (SSMS/SSAS)
+
+Goal: Create something in dev environment. Pass it to Staging. After verification, pass it to production.
+
+Question: How do I do that?
+
+once I make some tables, packages, cubes, packages in dev, how do i push it to staging server and finally production server?",5
+2987938,06/07/2010 08:15:04,340183,05/13/2010 10:49:55,131,1,pronunciation of SQL SERVER,how to pronunce ms sql sever (is it sql server  or sequel server).,sql-server,,,,,06/07/2010 08:26:37,off topic,1,14,4,pronunciation of SQL SERVER how to pronunce ms sql sever (is it sql server  or sequel server).,1
+4228073,11/19/2010 18:12:56,118073,06/05/2009 15:17:00,262,15,Index autoincrement for Microsoft SQL Server 2008 R2,"I created a new table in SQL Server 2008 R2, and i would like that the index is on autoincrement.
+How to do that? There is no identity data type; i selected int",sql-server,,,,,,open,0,32,8,"Index autoincrement for Microsoft SQL Server 2008 R2 I created a new table in SQL Server 2008 R2, and i would like that the index is on autoincrement.
+How to do that? There is no identity data type; i selected int",1
+1976982,12/29/2009 21:13:46,122528,06/13/2009 18:06:38,145,1,Formatting Database Schema From SQL Server,"Ok I ve been asked to generate a schema for a database that contains 20+ tables
+
+I ve used SQLServer Management studio to extract out the database schema but cannot export it into word
+
+If I copy it as a diagram the tables are too small
+
+Does anyone know how to extract the schema from a sql server database so that it is presentable to a project manager",sql-server,database-design,,,,,open,0,65,6,"Formatting Database Schema From SQL Server Ok I ve been asked to generate a schema for a database that contains 20+ tables
+
+I ve used SQLServer Management studio to extract out the database schema but cannot export it into word
+
+If I copy it as a diagram the tables are too small
+
+Does anyone know how to extract the schema from a sql server database so that it is presentable to a project manager",2
+6800864,07/23/2011 13:59:42,632951,02/24/2011 19:10:47,1979,10,what rules does SQL Server use to determine which column/columns will the phantom clustered index be created on?,"The Definitive Guide to Scaling out SQL Server 2005:
+> if we create a nonclustered index and don’t already have a clustered
+> index, SQL Server creates a  “phantom” clustered index because
+> nonclustered indexes always point to clustered index keys.
+
+1. What rules does SQL Server use to determine which column/columns will the phantom clustered index be created on?
+
+2. If it is on the primary key of that table (quick guess), what rules does SQL Server use to determine which column/columns will the phantom clustered index be created on for a table without primary keys?
+
+(question targeted at any version of SQL Server 2005 and beyond)",sql-server,database,sql-server-2005,sql-server-2008,denali,11/12/2011 08:59:33,off topic,1,103,18,"what rules does SQL Server use to determine which column/columns will the phantom clustered index be created on? The Definitive Guide to Scaling out SQL Server 2005:
+> if we create a nonclustered index and don’t already have a clustered
+> index, SQL Server creates a  “phantom” clustered index because
+> nonclustered indexes always point to clustered index keys.
+
+1. What rules does SQL Server use to determine which column/columns will the phantom clustered index be created on?
+
+2. If it is on the primary key of that table (quick guess), what rules does SQL Server use to determine which column/columns will the phantom clustered index be created on for a table without primary keys?
+
+(question targeted at any version of SQL Server 2005 and beyond)",5
+7980705,11/02/2011 12:58:43,373266,06/22/2010 14:13:46,102,0,is there any full version of Microsoft sql server management studio,"search with keyword `Microsoft sql server management studio` (without `express`) I only can find *link to download the Express Version*, so is there any full version of **management studio** ?  
+I'm finding some *advanced* feature like a search box to quick navigate to a table/column which Microsoft SSMSE don't support, or something like MySQL Workbench....  
+
+----------
+p/s: I don't find [a free version like Hardbone][1] and I need to make my developer's life easier, so *I don't need Full Version of Server*,  **I need Full Version of studio**  
+Thanks and best regards!
+  [1]: http://stackoverflow.com/questions/6787377/is-there-an-alternative-tool-to-microsoft-sql-server-management-studio",sql-server,ssms,,,,11/02/2011 16:08:25,too localized,1,98,11,"is there any full version of Microsoft sql server management studio search with keyword `Microsoft sql server management studio` (without `express`) I only can find *link to download the Express Version*, so is there any full version of **management studio** ?  
+I'm finding some *advanced* feature like a search box to quick navigate to a table/column which Microsoft SSMSE don't support, or something like MySQL Workbench....  
+
+----------
+p/s: I don't find [a free version like Hardbone][1] and I need to make my developer's life easier, so *I don't need Full Version of Server*,  **I need Full Version of studio**  
+Thanks and best regards!
+  [1]: http://stackoverflow.com/questions/6787377/is-there-an-alternative-tool-to-microsoft-sql-server-management-studio",2
+9259136,02/13/2012 10:47:12,224636,12/04/2009 09:50:53,978,6,Upgrade SQL Server 2008 to 2008 R2,"I have currently installed SQL Server 2008 (dev edition) in my machine. I wish to upgrade to SQL Server 2008 R2. How is that possible? 
+
+Please support the same with screenshot to make understanding better.
+
+Thanks",sql-server,sql-server-2008,sql-server-2008-r2,upgrade,,02/13/2012 23:08:17,not a real question,1,35,7,"Upgrade SQL Server 2008 to 2008 R2 I have currently installed SQL Server 2008 (dev edition) in my machine. I wish to upgrade to SQL Server 2008 R2. How is that possible? 
+
+Please support the same with screenshot to make understanding better.
+
+Thanks",4
+3622105,09/01/2010 20:58:46,181969,09/30/2009 16:30:32,409,48,Find Which applications access my server using Profiler Trace with Application Name column,"I Need to find out what are all the applications that use my sql server.
+
+I'm using Profiler trace to do this (if there's another way to do this I would appreciate it)
+
+On Profiler I'm using a Replay template, and after looking at the trace result I see that there's a column called Application Name, I'm wondering if there's a way to get the distinct ones (the trace is on a .trc file). 
+
+(By the way is this supposed to be posted on stackoverflow or serverfault?)
+
+Thanks,
+Gabriel",sql-server,profiler,,,,,open,0,85,13,"Find Which applications access my server using Profiler Trace with Application Name column I Need to find out what are all the applications that use my sql server.
+
+I'm using Profiler trace to do this (if there's another way to do this I would appreciate it)
+
+On Profiler I'm using a Replay template, and after looking at the trace result I see that there's a column called Application Name, I'm wondering if there's a way to get the distinct ones (the trace is on a .trc file). 
+
+(By the way is this supposed to be posted on stackoverflow or serverfault?)
+
+Thanks,
+Gabriel",2
+4580490,01/02/2011 20:59:10,492941,10/31/2010 19:06:16,9,4,MSSQL summary calculation for different times,"I have the following example for which I'd like to calculate totals at each available time:
+
+timestamp  device value
+2010-12-30 00:00 1 5
+2010-12-30 00:05 1 5
+2010-12-30 00:05 2 10
+2010-12-30 00:13 1 23
+2010-12-30 00:16 3 11
+2010-12-30 00:30 1 22
+2010-12-30 00:40 2 55
+2010-12-30 00:40 3 12
+2010-12-30 00:45 2 12
+2010-12-30 10:00 3 33
+
+At the end the result should look like this:
+timestamp  Total
+2010-12-30 00:00 5
+2010-12-30 00:05 5
+2010-12-30 00:05 15
+2010-12-30 00:13 33
+2010-12-30 00:16 44
+2010-12-30 00:30 43
+2010-12-30 00:40 88
+2010-12-30 00:40 89
+2010-12-30 00:45 46
+2010-12-30 10:00 67
+
+The idea is that for each timestamp I need to get the last value for each device and then SUM up the values. For example:
+For timestamp 2010-12-30 00:13 I'd need to take the following entries and SUM them:
+2010-12-30 00:05 2 10
+2010-12-30 00:13 1 23
+The total would then be 26. For timestamp 2010-12-30 10:00 I'd need to take the following lines:
+2010-12-30 00:30 1 22
+2010-12-30 00:45 2 12
+2010-12-30 10:00 3 33
+Which gives 67 as the total.
+
+My idea was to create a query which would select latest values for each device for each timestamp, but I'm stuck already at selecting the latest values for each device for a specific timestamp, so I'd kindly ask for some support.
+
+Thanks!
+Mark
+
+",sql-server,group,totals,,,,open,0,192,6,"MSSQL summary calculation for different times I have the following example for which I'd like to calculate totals at each available time:
+
+timestamp  device value
+2010-12-30 00:00 1 5
+2010-12-30 00:05 1 5
+2010-12-30 00:05 2 10
+2010-12-30 00:13 1 23
+2010-12-30 00:16 3 11
+2010-12-30 00:30 1 22
+2010-12-30 00:40 2 55
+2010-12-30 00:40 3 12
+2010-12-30 00:45 2 12
+2010-12-30 10:00 3 33
+
+At the end the result should look like this:
+timestamp  Total
+2010-12-30 00:00 5
+2010-12-30 00:05 5
+2010-12-30 00:05 15
+2010-12-30 00:13 33
+2010-12-30 00:16 44
+2010-12-30 00:30 43
+2010-12-30 00:40 88
+2010-12-30 00:40 89
+2010-12-30 00:45 46
+2010-12-30 10:00 67
+
+The idea is that for each timestamp I need to get the last value for each device and then SUM up the values. For example:
+For timestamp 2010-12-30 00:13 I'd need to take the following entries and SUM them:
+2010-12-30 00:05 2 10
+2010-12-30 00:13 1 23
+The total would then be 26. For timestamp 2010-12-30 10:00 I'd need to take the following lines:
+2010-12-30 00:30 1 22
+2010-12-30 00:45 2 12
+2010-12-30 10:00 3 33
+Which gives 67 as the total.
+
+My idea was to create a query which would select latest values for each device for each timestamp, but I'm stuck already at selecting the latest values for each device for a specific timestamp, so I'd kindly ask for some support.
+
+Thanks!
+Mark
+
+",3
+10610412,05/15/2012 23:59:11,373721,06/22/2010 23:24:15,219,2,SQL Server 2008 - CASE (Contains) rather than equl statement,"Is there a method to use contain rather than equl in case statement?
+for example, I am checking a database table has an entry
+
+    lactulose, Lasix (furosemide), oxazepam, propranolol, rabeprazole, sertraline, 
+
+Can I use 
+
+    CASE When dbo.Table.Coulmn = 'lactulose' Then 'BP Medication' ELSE '' END AS 'BP Medication'
+
+This did not work.
+
+Thanks in advance",sql-server,,,,,,open,0,59,10,"SQL Server 2008 - CASE (Contains) rather than equl statement Is there a method to use contain rather than equl in case statement?
+for example, I am checking a database table has an entry
+
+    lactulose, Lasix (furosemide), oxazepam, propranolol, rabeprazole, sertraline, 
+
+Can I use 
+
+    CASE When dbo.Table.Coulmn = 'lactulose' Then 'BP Medication' ELSE '' END AS 'BP Medication'
+
+This did not work.
+
+Thanks in advance",1
+7694541,10/08/2011 03:08:02,743581,05/08/2011 02:45:09,15,0,Any book recommendations for improving my T-SQL kung fu?,"Anyone have any recommendations on a good book to improve my T-SQL kung fu?  I have been looking Joe at some of Joe Celko's books, but are there better ones out there?  I need to develop a better understanding of JOINS and some of the other more advanced topics.  I appreciate any recommendations.",sql-server,tsql,,,,10/08/2011 03:44:39,not constructive,1,56,9,"Any book recommendations for improving my T-SQL kung fu? Anyone have any recommendations on a good book to improve my T-SQL kung fu?  I have been looking Joe at some of Joe Celko's books, but are there better ones out there?  I need to develop a better understanding of JOINS and some of the other more advanced topics.  I appreciate any recommendations.",2
+9617637,03/08/2012 12:25:05,631328,02/23/2011 23:41:15,6,0,OSQL-32 is Causing an error every few seconds on MS SQL SERVER,"Hi i have  SQL SERVER EXPRESS EDITION R2. Using SQL Server profile i see that OSQL-32 is causing this error: ""Login failed for user 'sa'"". I have some performace problem and i think this is the cause. The problem appeared yesterday without a reason. Can you help me please?",sql-server,sql-server-2008,,,,03/08/2012 13:14:12,not a real question,1,50,12,"OSQL-32 is Causing an error every few seconds on MS SQL SERVER Hi i have  SQL SERVER EXPRESS EDITION R2. Using SQL Server profile i see that OSQL-32 is causing this error: ""Login failed for user 'sa'"". I have some performace problem and i think this is the cause. The problem appeared yesterday without a reason. Can you help me please?",2
+9295635,02/15/2012 14:57:00,789665,06/08/2011 17:51:30,36,3,SQL Server Forwarded Records/sec,"I'm struggling with interpreting the threshold for this performance metric. Documentation says that it should be < 10 per 100 batch requests/sec. I'm interpreting this as a 1:10 ratio. So if I have batch requests/sec at 1200, then I want my forward requests to be less than 120?
+
+Am I interpreting this correctly?",sql-server,performancecounter,database-performance,,,02/15/2012 22:15:30,off topic,1,52,4,"SQL Server Forwarded Records/sec I'm struggling with interpreting the threshold for this performance metric. Documentation says that it should be < 10 per 100 batch requests/sec. I'm interpreting this as a 1:10 ratio. So if I have batch requests/sec at 1200, then I want my forward requests to be less than 120?
+
+Am I interpreting this correctly?",3
+904405,05/24/2009 18:41:55,52529,01/07/2009 18:08:27,18,4,Sql Server: uniqueidentifier plus integer compound PK ... what type of index to use?,"I have a junction table in my SQL Server 2005 database that consist of two columns:
+
+ - object_id (uniqueidentifier)
+   
+ - property_id (integer)
+
+These values together make a compound primary key.
+
+**What's the best way to create this PK index for SELECT performance?**
+
+If the columns were two integers, I would just use a compound clustered index (the default). However, I've heard bad things about clustered indexes when uniqueidentifiers are involved.
+
+Anyone have experience with this situation?
+",sql-server,indexing,uniqueidentifier,primary-key,database,,open,0,75,14,"Sql Server: uniqueidentifier plus integer compound PK ... what type of index to use? I have a junction table in my SQL Server 2005 database that consist of two columns:
+
+ - object_id (uniqueidentifier)
+   
+ - property_id (integer)
+
+These values together make a compound primary key.
+
+**What's the best way to create this PK index for SELECT performance?**
+
+If the columns were two integers, I would just use a compound clustered index (the default). However, I've heard bad things about clustered indexes when uniqueidentifiers are involved.
+
+Anyone have experience with this situation?
+",5
+11522649,07/17/2012 12:41:05,1104823,12/18/2011 19:15:58,384,5,SSIS Excel Connection Manager Error,"I am trying to create an Excel Connection Manager from an Excel file that has 19,852 rows. After I select the file and the Excel Sheet and click ok, I get the following error:
+
+    value does not fall within the expected range
+
+How do I fix this error? Let me know if you need more information!
+
+Thanks",sql-server,excel,ssis,connection,bids,,open,0,58,5,"SSIS Excel Connection Manager Error I am trying to create an Excel Connection Manager from an Excel file that has 19,852 rows. After I select the file and the Excel Sheet and click ok, I get the following error:
+
+    value does not fall within the expected range
+
+How do I fix this error? Let me know if you need more information!
+
+Thanks",5
+4390653,12/08/2010 17:53:54,368537,06/16/2010 18:11:10,234,2,SQL Server: Trace Flag 4135,What is the Trace Flag 4135 in SQL Server and what is the purpose of this flage? Should it be enabled? How to enable it?,sql-server,sql-server-2005,sql-server-2008,,,,open,0,25,5,SQL Server: Trace Flag 4135 What is the Trace Flag 4135 in SQL Server and what is the purpose of this flage? Should it be enabled? How to enable it?,3
+6545602,07/01/2011 08:43:23,655293,03/11/2011 11:59:08,14,1,handling big apllications and big databases,"I allready have programmed some small applications, the database design was simple, just one normalized database containing all the datas I need for the application.
+
+Now I want to try to programm something bigger:
+
+There should be 4 websites build with MVC3. All the websites should use only one SQL-Membership-Database and some tables like contacts and so on should be shared between the diferent pages too.
+
+**Now my question is: how to start?** 
+
+**1.** Should I use one database for all the tables (each application needs up to 40 different tables) including the shared tables like the SQL-Membership-Database or should I create one database for Shared Data, one for Application 1, one for Application 2 and so on?
+
+**2.** Should I put all the Applications into one MVC3-application and just seperate them by using areas?
+
+**3.** All the applications need to save text and pictures, should I use one Table for pictures from Application 1/2/3... and choose them by an application ID or should I create a image-table for each application (same question for texts and descriptions and tooltipps...)?
+
+**4.** My idea was to work woth blob (MS sql 2008 R2) to save files, do you think a good choice? 
+
+Is there anyone who have got tipps ore experiances in creating huge (for me its huge ;-)) applications like this?
+
+lot of thanks and greetings HW",sql-server,database,sql-server-2008,asp.net-mvc-3,asp.net-mvc-3-areas,10/25/2011 17:13:28,not a real question,1,219,6,"handling big apllications and big databases I allready have programmed some small applications, the database design was simple, just one normalized database containing all the datas I need for the application.
+
+Now I want to try to programm something bigger:
+
+There should be 4 websites build with MVC3. All the websites should use only one SQL-Membership-Database and some tables like contacts and so on should be shared between the diferent pages too.
+
+**Now my question is: how to start?** 
+
+**1.** Should I use one database for all the tables (each application needs up to 40 different tables) including the shared tables like the SQL-Membership-Database or should I create one database for Shared Data, one for Application 1, one for Application 2 and so on?
+
+**2.** Should I put all the Applications into one MVC3-application and just seperate them by using areas?
+
+**3.** All the applications need to save text and pictures, should I use one Table for pictures from Application 1/2/3... and choose them by an application ID or should I create a image-table for each application (same question for texts and descriptions and tooltipps...)?
+
+**4.** My idea was to work woth blob (MS sql 2008 R2) to save files, do you think a good choice? 
+
+Is there anyone who have got tipps ore experiances in creating huge (for me its huge ;-)) applications like this?
+
+lot of thanks and greetings HW",5
+5714479,04/19/2011 09:45:37,377133,06/26/2010 21:13:01,176,2,Periodic event implementation.,"I have an ASP.NET MVC 2 web-site. All the buisnes is in the databse stored procedures (MS SQL SERVER 2008).  
+The task:  
+Some user creates record, using web-site. Appropriate row inserts into the table. This row has foreign key to another table, its value sets in the procedure. Then I want application to reassign record (change foreign key field) to another, if it was not handled during 1 minute.  
+For example:  
+1. User creates record `A(id = 1, adminId = 1)`.  
+2. Only administrator with id=1 see this record and he should handle it during 1 minute.  
+3. If admin 1 not handles record during 1 minute, it should be reassigned to another administrator. For example `A` updates to `(adminId = 3)`.  
+Which way would be better to do this? Parallel thread? Another application in background? Or...",sql-server,sql-server-2008,asp.net-mvc-2,,,,open,0,144,3,"Periodic event implementation. I have an ASP.NET MVC 2 web-site. All the buisnes is in the databse stored procedures (MS SQL SERVER 2008).  
+The task:  
+Some user creates record, using web-site. Appropriate row inserts into the table. This row has foreign key to another table, its value sets in the procedure. Then I want application to reassign record (change foreign key field) to another, if it was not handled during 1 minute.  
+For example:  
+1. User creates record `A(id = 1, adminId = 1)`.  
+2. Only administrator with id=1 see this record and he should handle it during 1 minute.  
+3. If admin 1 not handles record during 1 minute, it should be reassigned to another administrator. For example `A` updates to `(adminId = 3)`.  
+Which way would be better to do this? Parallel thread? Another application in background? Or...",3
+4362407,12/06/2010 01:11:00,531628,12/06/2010 01:02:29,1,0,mobile software sql client,"VS2008 designed with mobile software, sql client connects to servers using the SQL. SQL Server 2000 from SP3 to fasten down. 'm over this issue, but how can connect to SQL Server 2005 Express can not connect or I?",sql-server,sql-server-2005,compact-framework,,,07/11/2012 12:15:07,not a real question,1,39,4,"mobile software sql client VS2008 designed with mobile software, sql client connects to servers using the SQL. SQL Server 2000 from SP3 to fasten down. 'm over this issue, but how can connect to SQL Server 2005 Express can not connect or I?",3
+10326456,04/26/2012 02:32:05,1096822,12/13/2011 23:48:10,23,0,How Do I Configure SQL Server 2005 Backend?,"I am trying to develop an inventory/payroll system for a factory. The information will be stored on a server, Windows Server 2008 R2, and SQL Server 2005. I'm going to store the records on the server, but will develop several front-end client forms in MS Access 2010. The information is currently in an MS Access 2010 database(local), and I'll eventually need to get this data on the server. I currently have a remote desktop access with username and password, however I can't figure out how to get things set up. I have SQL Server 2005 installed on my computer as well. How do I start to make a few test tables, things like that, etc.
+
+Could one of you guys recommend an SQL Server 2005 tutorial? I'm just having a lot of trouble getting started on this project, not really sure what to do. I need to configure the database in such a way that it will allow MS Access 2010 to be the front end.
+
+Thanks for any help I receive, if I need to clarify something please just ask.",sql-server,ms-access,windows-server-2008,remote-desktop,create-table,04/26/2012 08:18:56,off topic,1,179,8,"How Do I Configure SQL Server 2005 Backend? I am trying to develop an inventory/payroll system for a factory. The information will be stored on a server, Windows Server 2008 R2, and SQL Server 2005. I'm going to store the records on the server, but will develop several front-end client forms in MS Access 2010. The information is currently in an MS Access 2010 database(local), and I'll eventually need to get this data on the server. I currently have a remote desktop access with username and password, however I can't figure out how to get things set up. I have SQL Server 2005 installed on my computer as well. How do I start to make a few test tables, things like that, etc.
+
+Could one of you guys recommend an SQL Server 2005 tutorial? I'm just having a lot of trouble getting started on this project, not really sure what to do. I need to configure the database in such a way that it will allow MS Access 2010 to be the front end.
+
+Thanks for any help I receive, if I need to clarify something please just ask.",5
+6426918,06/21/2011 14:26:04,5625,09/10/2008 15:10:53,333,13,DRY CLR table-valued functions,"I'm using a [CLR table-valued function](http://msdn.microsoft.com/en-us/library/ms131103(v=SQL.100).aspx) to SELECT and return the results of a complex database search which uses many variables.
+
+The documentation shows that you build such a function in a fashion similar to this:
+
+    public partial class UserDefinedFunctions
+    {
+        private class ResultRow
+        // This class holds a row which we want to return.
+        {
+            public SqlInt32 CustId;
+            public SqlString Name;
+    
+            public ResultRow(SqlInt32 custId_, SqlString name_)
+            {
+                CustId = custId_;
+                Name = name_;
+            }
+        }
+    
+        [SqlFunction(
+            DataAccess = DataAccessKind.Read,
+            FillRowMethodName = ""Test_FillRow"",
+            TableDefinition = ""CustId int"" +
+                              ""Name nvarchar(50)"")]
+        public static IEnumerable Test()
+        // This function contains the actual logic.
+        {
+            ArrayList results = new ArrayList();
+    
+            using (SqlConnection connection = new SqlConnection(""context connection=true""))
+            {
+                connection.Open();
+    
+                using (SqlCommand select = new SqlCommand(
+                    ""SELECT TOP 100 custid, name FROM Customers"",
+                    connection))
+                {
+                    using (SqlDataReader reader = select.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            results.Add(new ResultRow(
+                                reader.GetSqlInt32(0),  // CustId
+                                reader.GetSqlString(1)  // Name
+                            ));
+                        }
+                    }
+                }
+            }
+            return results;
+        }
+    
+        public static void Test_FillRow(
+            object resultsObj,
+            out SqlInt32 custid,
+            out SqlString name)
+        // This function takes a row and tells SQL Server what variables we want to 
+        // return from it and what types it contains.
+        {
+            ResultRow selectResults = (ResultRow)resultsObj;
+    
+            custid = selectResults.CustId;
+            name = selectResults.Name;
+        }
+    }
+
+The problem is, it's rather repetitive. First you define the table in the SqlFunction block. Then as you add or remove columns in the results you're returning, you have to make sure that you update it and
+
+- the definition in ResultRow
+- the arguments to the constructor in ResultRow
+- the assignment in ResultRow
+- the types grabbed from the reader in Test()
+- the out arguments in Test_FillRow()
+- the assignments in Test_FillRow()
+- and the SQL query itself, which is the only part you're really trying to think about to start with.
+
+I'm working on such a function which takes over twenty arguments, returns even more rows, and contains these eight possible places to make mistakes. *Eight*. All the mistakes are trivial and easily fixed, but it's very easy to make them because there's so many places in the code which I have to manually keep in sync.
+
+This is a violation of DRY, but I don't know how to eliminate the repetition. Is there a more concise way to write CLR table-valued functions?",sql-server,sqlclr,udf,,,,open,0,1113,4,"DRY CLR table-valued functions I'm using a [CLR table-valued function](http://msdn.microsoft.com/en-us/library/ms131103(v=SQL.100).aspx) to SELECT and return the results of a complex database search which uses many variables.
+
+The documentation shows that you build such a function in a fashion similar to this:
+
+    public partial class UserDefinedFunctions
+    {
+        private class ResultRow
+        // This class holds a row which we want to return.
+        {
+            public SqlInt32 CustId;
+            public SqlString Name;
+    
+            public ResultRow(SqlInt32 custId_, SqlString name_)
+            {
+                CustId = custId_;
+                Name = name_;
+            }
+        }
+    
+        [SqlFunction(
+            DataAccess = DataAccessKind.Read,
+            FillRowMethodName = ""Test_FillRow"",
+            TableDefinition = ""CustId int"" +
+                              ""Name nvarchar(50)"")]
+        public static IEnumerable Test()
+        // This function contains the actual logic.
+        {
+            ArrayList results = new ArrayList();
+    
+            using (SqlConnection connection = new SqlConnection(""context connection=true""))
+            {
+                connection.Open();
+    
+                using (SqlCommand select = new SqlCommand(
+                    ""SELECT TOP 100 custid, name FROM Customers"",
+                    connection))
+                {
+                    using (SqlDataReader reader = select.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            results.Add(new ResultRow(
+                                reader.GetSqlInt32(0),  // CustId
+                                reader.GetSqlString(1)  // Name
+                            ));
+                        }
+                    }
+                }
+            }
+            return results;
+        }
+    
+        public static void Test_FillRow(
+            object resultsObj,
+            out SqlInt32 custid,
+            out SqlString name)
+        // This function takes a row and tells SQL Server what variables we want to 
+        // return from it and what types it contains.
+        {
+            ResultRow selectResults = (ResultRow)resultsObj;
+    
+            custid = selectResults.CustId;
+            name = selectResults.Name;
+        }
+    }
+
+The problem is, it's rather repetitive. First you define the table in the SqlFunction block. Then as you add or remove columns in the results you're returning, you have to make sure that you update it and
+
+- the definition in ResultRow
+- the arguments to the constructor in ResultRow
+- the assignment in ResultRow
+- the types grabbed from the reader in Test()
+- the out arguments in Test_FillRow()
+- the assignments in Test_FillRow()
+- and the SQL query itself, which is the only part you're really trying to think about to start with.
+
+I'm working on such a function which takes over twenty arguments, returns even more rows, and contains these eight possible places to make mistakes. *Eight*. All the mistakes are trivial and easily fixed, but it's very easy to make them because there's so many places in the code which I have to manually keep in sync.
+
+This is a violation of DRY, but I don't know how to eliminate the repetition. Is there a more concise way to write CLR table-valued functions?",3
+4415987,12/11/2010 09:06:19,401584,07/25/2010 14:55:46,782,30,"The endless debate: atomic inserts, locking, & transactions in SQL Server. It ends here.","This is potentially a repeat of probably over 100 questions on SO. I've read an endless array of confusions and contradictions about the simple questions of atomic updates, locks, and concurrency.
+
+I see that blogs and experts disagree widely on these points. I don't have a specific question here, but rather I provide test code based on the various solutions people have advised, indicate the results, state my views, and invite your comment.
+
+Context: I'm running SQL Server 2008 Express SP2.
+
+I created the following test table:
+
+    create table dbo.Temp (Col int)
+
+The table deliberately has no constraints on it as we want to test the SQL code ideas, not constraints.
+
+I ran the following concurrently in 2 and then 3 query windows:
+
+    declare @i int
+    set @i = 0
+    
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	update dbo.temp set Col = (SELECT Col from dbo.Temp) + 1
+    end
+
+I did not use any explicit locking, as can be seen. All DB settings are default. I checked the value of Col and it was the desired number: 25,000. Nothing missed.
+
+Since SQL Server is ACID, the ""A"" tells us that a single statement is executed atomically. Therefore, based on the above, we could agree with those who say that locks are not needed for a simple update as above.
+
+Next, I ran the following concurrently in 3 query windows:
+
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	insert into dbo.temp select @i where not exists
+          (select 1 from dbo.temp where Col = @i)
+    end
+
+The results were **not** correct, despite the fact this is one statement. There were missing values, duplicate values, and > 5k rows.
+
+Next, I ran the following popular solution concurrently in 3 query windows:
+
+    declare @i int
+    set @i = 0
+
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	insert into dbo.temp select @i where not exists 
+          (select 1 from dbo.temp with (updlock) where Col = @i)
+    end
+
+The results were **not correct**. There were missing values, duplicate values, and > 5k rows.
+
+Next, for those who have doubts that SQL Server implicitly wraps single statements in a transaction (aka ""A"" in ACID):
+
+    declare @i int
+    set @i = 0
+    
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	begin tran
+    	insert into dbo.temp select @i where not exists 
+          (select 1 from dbo.temp with (updlock) where Col = @i)
+    	commit tran
+    end
+
+Same **incorrect** results.
+
+Next, I ran the following concurrently in 3 query windows:
+
+    declare @i int
+    set @i = 0
+    
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	insert into dbo.temp select @i where not exists 
+          (select 1 from dbo.temp with (XLOCK, ROWLOCK) where Col = @i)
+    end
+
+This **worked**. 5k unique values only.
+
+Next, the following in 3 windows:
+
+    declare @i int
+    set @i = 0
+    
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	merge dbo.temp as t
+    	using (select @i) as test (Col)
+    	ON (t.Col = test.Col)
+    	when not matched then
+    	    insert values (@i);
+    end
+
+This **worked**. 5k unique values only.
+
+My conclusions are:
+
+ 1. SQL Server is atomic for *single SQL operations*, not *groups of operations that appear as one statement*.
+ 2. UPDLOCK is *not* effective, as shown and as suggested by many, at providing the required locking needed to guarantee update integrity in a contentious environment.
+ 3. From a locking perspective, only XLOCK guarantees *concurrency integrity* and *atomicity in multi-statement operations as shown*.
+ 4. The MERGE command is a single command, and therefore is atomic.
+
+Please test this for yourself.
+
+Now, can someone explain to me why my first example worked? :-)
+",sql-server,sql-server-2008,concurrency,locking,query,12/12/2010 03:32:59,not a real question,1,772,14,"The endless debate: atomic inserts, locking, & transactions in SQL Server. It ends here. This is potentially a repeat of probably over 100 questions on SO. I've read an endless array of confusions and contradictions about the simple questions of atomic updates, locks, and concurrency.
+
+I see that blogs and experts disagree widely on these points. I don't have a specific question here, but rather I provide test code based on the various solutions people have advised, indicate the results, state my views, and invite your comment.
+
+Context: I'm running SQL Server 2008 Express SP2.
+
+I created the following test table:
+
+    create table dbo.Temp (Col int)
+
+The table deliberately has no constraints on it as we want to test the SQL code ideas, not constraints.
+
+I ran the following concurrently in 2 and then 3 query windows:
+
+    declare @i int
+    set @i = 0
+    
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	update dbo.temp set Col = (SELECT Col from dbo.Temp) + 1
+    end
+
+I did not use any explicit locking, as can be seen. All DB settings are default. I checked the value of Col and it was the desired number: 25,000. Nothing missed.
+
+Since SQL Server is ACID, the ""A"" tells us that a single statement is executed atomically. Therefore, based on the above, we could agree with those who say that locks are not needed for a simple update as above.
+
+Next, I ran the following concurrently in 3 query windows:
+
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	insert into dbo.temp select @i where not exists
+          (select 1 from dbo.temp where Col = @i)
+    end
+
+The results were **not** correct, despite the fact this is one statement. There were missing values, duplicate values, and > 5k rows.
+
+Next, I ran the following popular solution concurrently in 3 query windows:
+
+    declare @i int
+    set @i = 0
+
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	insert into dbo.temp select @i where not exists 
+          (select 1 from dbo.temp with (updlock) where Col = @i)
+    end
+
+The results were **not correct**. There were missing values, duplicate values, and > 5k rows.
+
+Next, for those who have doubts that SQL Server implicitly wraps single statements in a transaction (aka ""A"" in ACID):
+
+    declare @i int
+    set @i = 0
+    
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	begin tran
+    	insert into dbo.temp select @i where not exists 
+          (select 1 from dbo.temp with (updlock) where Col = @i)
+    	commit tran
+    end
+
+Same **incorrect** results.
+
+Next, I ran the following concurrently in 3 query windows:
+
+    declare @i int
+    set @i = 0
+    
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	insert into dbo.temp select @i where not exists 
+          (select 1 from dbo.temp with (XLOCK, ROWLOCK) where Col = @i)
+    end
+
+This **worked**. 5k unique values only.
+
+Next, the following in 3 windows:
+
+    declare @i int
+    set @i = 0
+    
+    while @i < 5000 begin
+    	set @i = @i + 1
+    	merge dbo.temp as t
+    	using (select @i) as test (Col)
+    	ON (t.Col = test.Col)
+    	when not matched then
+    	    insert values (@i);
+    end
+
+This **worked**. 5k unique values only.
+
+My conclusions are:
+
+ 1. SQL Server is atomic for *single SQL operations*, not *groups of operations that appear as one statement*.
+ 2. UPDLOCK is *not* effective, as shown and as suggested by many, at providing the required locking needed to guarantee update integrity in a contentious environment.
+ 3. From a locking perspective, only XLOCK guarantees *concurrency integrity* and *atomicity in multi-statement operations as shown*.
+ 4. The MERGE command is a single command, and therefore is atomic.
+
+Please test this for yourself.
+
+Now, can someone explain to me why my first example worked? :-)
+",5
+8961061,01/22/2012 12:31:54,186244,10/08/2009 09:45:39,145,8,filestream path error in sql server 2008 r2,"i am getting this error when i am trying to configure an existing database for
+ filestream
+
+    filestream error path specified is not valid msg 5001
+
+my o.s is windows 7 ultimate, sql server 2008 r2
+",sql-server,filestream,,,,01/22/2012 15:39:14,off topic,1,37,8,"filestream path error in sql server 2008 r2 i am getting this error when i am trying to configure an existing database for
+ filestream
+
+    filestream error path specified is not valid msg 5001
+
+my o.s is windows 7 ultimate, sql server 2008 r2
+",2
+1732063,11/13/2009 21:32:39,117079,06/04/2009 05:31:49,1623,85,Is there any way to extend the editor in SSMS?,"Can the SQL Server Management Studio text editor be extended? If it's possible, what kind of work & tools are involved?
+
+I find myself frequently jumping to other editors for certain kinds of text manipulation, and then jumping back to SSMS. If it were possible to extend the SSMS editor, I might do so. 
+
+The first feature I would add would be a ""column mode"" where you could operate on rectangles of text. UltraEdit, Emacs and few other editors have this feature. I find it invaluable for editing SQL.
+",sql-server,sql-server-2008,ssms,,,03/20/2012 19:14:56,not a real question,1,88,10,"Is there any way to extend the editor in SSMS? Can the SQL Server Management Studio text editor be extended? If it's possible, what kind of work & tools are involved?
+
+I find myself frequently jumping to other editors for certain kinds of text manipulation, and then jumping back to SSMS. If it were possible to extend the SSMS editor, I might do so. 
+
+The first feature I would add would be a ""column mode"" where you could operate on rectangles of text. UltraEdit, Emacs and few other editors have this feature. I find it invaluable for editing SQL.
+",3
+5989104,05/13/2011 08:14:55,136203,07/10/2009 11:03:07,49,1,ADo dot net passing the table datatype as parameter,what are the changes I need to for my DAL to support this. Kindly Help,sql-server,vb.net,ado.net,,,,open,0,15,9,ADo dot net passing the table datatype as parameter what are the changes I need to for my DAL to support this. Kindly Help,3
+4689658,01/14/2011 09:35:30,575473,01/14/2011 09:34:17,1,0,SQL Server Database,"I will need a SQL Server to be able to accept connections from 30 different IPs.  Is the licensing of the SQL Server based on the number of connections?
+
+James
+
+---------------------------
+
+Hi,
+
+Also, the SQL server will be hosting a table with a big database.  The table has columns like:
+
+
+PortID - int
+PortType - varchar(30)  (can have 30 different unique values)
+PortTime - datetime
+
+As the number of records will be large and the searches will always specify a PortType, can we somehow segment the table by PortType to facilitate the search speed?
+",sql-server,,,,,01/14/2011 09:40:29,not a real question,1,89,3,"SQL Server Database I will need a SQL Server to be able to accept connections from 30 different IPs.  Is the licensing of the SQL Server based on the number of connections?
+
+James
+
+---------------------------
+
+Hi,
+
+Also, the SQL server will be hosting a table with a big database.  The table has columns like:
+
+
+PortID - int
+PortType - varchar(30)  (can have 30 different unique values)
+PortTime - datetime
+
+As the number of records will be large and the searches will always specify a PortType, can we somehow segment the table by PortType to facilitate the search speed?
+",1
+582363,02/24/2009 16:07:37,40568,11/25/2008 09:42:47,115,18,Debugging CLR proc exception problem.,"I get a transactionabortedexception when I run a CLR proc in debug mode
+and no line number information or anything to help with 
+where the exception is.
+
+I am running VS2008 and SQL 2005.
+
+how do you debug it?
+
+Malcolm
+",sql-server,vs2008,,,,,open,0,36,5,"Debugging CLR proc exception problem. I get a transactionabortedexception when I run a CLR proc in debug mode
+and no line number information or anything to help with 
+where the exception is.
+
+I am running VS2008 and SQL 2005.
+
+how do you debug it?
+
+Malcolm
+",2
+8508195,12/14/2011 16:42:05,1033416,11/07/2011 08:30:19,3,0,Mac OS X + cakephp + SqlServer,"I am using Mac OS X, I am trying to connect to SqlServer from Cakephp2.0 application but it says ""Cake is NOT able to connect to the database.""
+
+When I looked into the Cakephp datasource classes, In Sqlserver.php, it was checking for the  the available drivers using PDO::getAvailableDrivers(), it was not returning the sqlsrv driver. 
+
+Is anyone tried connecting to Sql Server using sqlsrv (Provides access to Microsoft SQL Server database servers. developed, supported by Microsoft) using cakephp2.0 on Mac OS X.
+
+Thanks in advance. Any help will be appreciated.
+
+",sql-server,cakephp,osx-leopard,cakephp-2.0,,,open,0,89,7,"Mac OS X + cakephp + SqlServer I am using Mac OS X, I am trying to connect to SqlServer from Cakephp2.0 application but it says ""Cake is NOT able to connect to the database.""
+
+When I looked into the Cakephp datasource classes, In Sqlserver.php, it was checking for the  the available drivers using PDO::getAvailableDrivers(), it was not returning the sqlsrv driver. 
+
+Is anyone tried connecting to Sql Server using sqlsrv (Provides access to Microsoft SQL Server database servers. developed, supported by Microsoft) using cakephp2.0 on Mac OS X.
+
+Thanks in advance. Any help will be appreciated.
+
+",4
+7866173,10/23/2011 12:37:42,998026,10/16/2011 17:11:16,1,0,SqlServer Bak file with protection is beaten by SA user?,"
+In my work I have a `BAK` file (which im working on  in `SSMS`) and the system Admin gave me permissions via my `Active directory` .
+
+NOw , 
+
+If im taking the bak to another place  (e.g. home) , and im adding the sa user ( which is me , and i don't have Server Environment in my house) as full controller. 
+
+ - Should I be able to have `full control over it` (at home )?
+",sql-server,security,,,,11/13/2011 12:18:22,off topic,1,78,10,"SqlServer Bak file with protection is beaten by SA user? 
+In my work I have a `BAK` file (which im working on  in `SSMS`) and the system Admin gave me permissions via my `Active directory` .
+
+NOw , 
+
+If im taking the bak to another place  (e.g. home) , and im adding the sa user ( which is me , and i don't have Server Environment in my house) as full controller. 
+
+ - Should I be able to have `full control over it` (at home )?
+",2
+5187637,03/03/2011 22:54:22,296923,05/10/2009 18:19:21,719,42,MS SQL Server monitoring / debugging tools,"We are evaluating some of the SQL Server monitoring / debugging tools out there (Quest, Idera, Symantec etc.). Anyone here has war stories, opinions about tools that they might have used they want to share? Much appreciated.",sql-server,sql-server-2008,,,,03/03/2011 23:11:30,off topic,1,37,7,"MS SQL Server monitoring / debugging tools We are evaluating some of the SQL Server monitoring / debugging tools out there (Quest, Idera, Symantec etc.). Anyone here has war stories, opinions about tools that they might have used they want to share? Much appreciated.",2
+8911514,01/18/2012 14:09:32,493928,11/01/2010 18:36:47,7672,417,Variable number of arguments in MS SQL User-defined aggregation functions,"How can one create a custom aggregation function for MS SQL with variable number of arguments?
+
+    
+    public void Accumulate(SqlString value, params SqlInt32 [] ids)
+    {
+        // check for compatibility with the previous ids and sum if compatible
+    }
+
+When I deploy the assembly, I get the following error:
+
+    SqlClrDeploy:
+      Beginning deployment of assembly My.SQLExtensions.dll to server srvname : dbname
+      The following error might appear if you deploy a SQL CLR project that was built
+         for a version of the .NET Framework that is incompatible with the target
+         instance of SQL Server: ""Deploy error SQL01268: CREATE ASSEMBLY for assembly
+         failed because assembly failed verification"". To resolve this issue, 
+         open the properties for the project, and change the .NET Framework version.
+    path\to\assembly.dll : Deploy error : Could not create a type for parameter
+         System.Data.SqlTypes.SqlInt32[] ids
+
+If it is not possible to use custom aggregations with varargs, what would be a workround?",sql-server,aggregate-functions,,,,,open,0,224,10,"Variable number of arguments in MS SQL User-defined aggregation functions How can one create a custom aggregation function for MS SQL with variable number of arguments?
+
+    
+    public void Accumulate(SqlString value, params SqlInt32 [] ids)
+    {
+        // check for compatibility with the previous ids and sum if compatible
+    }
+
+When I deploy the assembly, I get the following error:
+
+    SqlClrDeploy:
+      Beginning deployment of assembly My.SQLExtensions.dll to server srvname : dbname
+      The following error might appear if you deploy a SQL CLR project that was built
+         for a version of the .NET Framework that is incompatible with the target
+         instance of SQL Server: ""Deploy error SQL01268: CREATE ASSEMBLY for assembly
+         failed because assembly failed verification"". To resolve this issue, 
+         open the properties for the project, and change the .NET Framework version.
+    path\to\assembly.dll : Deploy error : Could not create a type for parameter
+         System.Data.SqlTypes.SqlInt32[] ids
+
+If it is not possible to use custom aggregations with varargs, what would be a workround?",2
+1989817,01/01/2010 22:10:18,129164,06/26/2009 01:58:11,1549,83,ASP.NET MVC wants me to store my SQL Server database files in the App_Data folder -- should I?,"When creating a new database with SQL Server Express 2005, the database files (.mdf and .ldf) get stored in `C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data` by default.
+
+However, with the tutorials I've seen for ASP.NET MVC (e.g., Nerd Dinner), it seems to be common practice to keep the database files in the ASP.NET project's App_Data folder.
+
+**Questions**
+
+1. Is there any significance to the App_Data folder, or is it just a convenient place to store database files if you happen to use Visual Studio's designer to create a new database?
+1. Will there be any negative repercussions if I don't use or even delete the App_Data folder?",sql-server,sql-server-express,asp.net-mvc,asp.net,sql-server-2005,,open,0,101,18,"ASP.NET MVC wants me to store my SQL Server database files in the App_Data folder -- should I? When creating a new database with SQL Server Express 2005, the database files (.mdf and .ldf) get stored in `C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data` by default.
+
+However, with the tutorials I've seen for ASP.NET MVC (e.g., Nerd Dinner), it seems to be common practice to keep the database files in the ASP.NET project's App_Data folder.
+
+**Questions**
+
+1. Is there any significance to the App_Data folder, or is it just a convenient place to store database files if you happen to use Visual Studio's designer to create a new database?
+1. Will there be any negative repercussions if I don't use or even delete the App_Data folder?",5
+5799835,04/27/2011 05:37:18,441343,09/07/2010 10:34:49,74,2,hierarchyid sqlserver2008,"I want to store the regional information of a customer,
+ for this, i will create the following table
+     
+ 1. Country
+ 2. State
+ 3. District 
+
+But using hierarchyid in SqlServer 2008, I think I can store the information in a single table called Region. Am I right?
+
+",sql-server,hierarchical-data,,,,,open,0,51,2,"hierarchyid sqlserver2008 I want to store the regional information of a customer,
+ for this, i will create the following table
+     
+ 1. Country
+ 2. State
+ 3. District 
+
+But using hierarchyid in SqlServer 2008, I think I can store the information in a single table called Region. Am I right?
+
+",2
+11242860,06/28/2012 10:39:49,396757,07/20/2010 12:03:31,85,7,Steps to recreate SQL Server Instance,"I'm writing a disaster recovery protocol at work - a protocol that describes how to create a SQL Server instance from scratch in case that the PROD server will be unavailable.
+
+We have SQL Server 2008 Enterprise. 
+
+We have a valid backup procedure but I want to have a document that will describes all the steps.
+
+Do you know/encountered a link/s that specifies all the necessarily steps to create a duplicate SQL Server based on an old server?
+
+I need that it will be identical in all its components of the instance (I'm not talking about the installation of the Server / cluster)
+I'm talking about components such as:
+
+ - Database
+ - Jobs
+ - Server configuration attributes (sp_configure)
+ - Security objects - Logins, Users, Permission, Credentials and Audit configuration
+ - Other objects such as Linked servers, Mail profiles
+ - Replication information
+
+
+The reason I'm looking for such thing is becuase:
+
+ 1. I don't want to strat with nothing. I guess that the basic is written somewhere online.
+ 2. It's a good way to verify that I haven't forggoten anything.
+
+An example for a nice post I've found regarding Logins, Users and permissions:
+ http://johnsterrett.com/2012/01/24/8-steps-to-moving-database-users-from-sql-2005-to-sql-2008/
+
+Thanks in advance,
+
+Roni",sql-server,database,sql-server-2008,disaster-recovery,,06/28/2012 12:45:58,off topic,1,189,6,"Steps to recreate SQL Server Instance I'm writing a disaster recovery protocol at work - a protocol that describes how to create a SQL Server instance from scratch in case that the PROD server will be unavailable.
+
+We have SQL Server 2008 Enterprise. 
+
+We have a valid backup procedure but I want to have a document that will describes all the steps.
+
+Do you know/encountered a link/s that specifies all the necessarily steps to create a duplicate SQL Server based on an old server?
+
+I need that it will be identical in all its components of the instance (I'm not talking about the installation of the Server / cluster)
+I'm talking about components such as:
+
+ - Database
+ - Jobs
+ - Server configuration attributes (sp_configure)
+ - Security objects - Logins, Users, Permission, Credentials and Audit configuration
+ - Other objects such as Linked servers, Mail profiles
+ - Replication information
+
+
+The reason I'm looking for such thing is becuase:
+
+ 1. I don't want to strat with nothing. I guess that the basic is written somewhere online.
+ 2. It's a good way to verify that I haven't forggoten anything.
+
+An example for a nice post I've found regarding Logins, Users and permissions:
+ http://johnsterrett.com/2012/01/24/8-steps-to-moving-database-users-from-sql-2005-to-sql-2008/
+
+Thanks in advance,
+
+Roni",4
+3904870,10/11/2010 09:12:14,103089,05/07/2009 18:48:55,1312,29,Is the growth of a SqlServer database an intensive operation?,"we have a Sql 2005 database and we have set the growth of the data file to autogrowth, 'By 1 MB'
+
+We see that it does that approx every 10 minutes (its 9 GB now).
+
+Is it as simple as: just put it to 10 or 100, or are there other things to consider, or can we just leave it at this because it's just an easy operation?
+
+",sql-server,sql-server-2005,,,,,open,0,66,10,"Is the growth of a SqlServer database an intensive operation? we have a Sql 2005 database and we have set the growth of the data file to autogrowth, 'By 1 MB'
+
+We see that it does that approx every 10 minutes (its 9 GB now).
+
+Is it as simple as: just put it to 10 or 100, or are there other things to consider, or can we just leave it at this because it's just an easy operation?
+
+",2
+7793929,10/17/2011 12:45:53,888181,08/10/2011 15:11:17,54,5,Inner Join or UNION,"For ID =101 Data is coming from different TABLE
+
+All the TABLES have a ID column 
+
+		       Name		 Income		
+	Table_A	    a		 $6,868		
+	Table_B	    b		 $4,443	
+	Table_C  	c		 $6,726		
+	Table_D	    d		 $10,163	
+	Table_E	    e		 $4,853	
+	Table_F	    f		 $3,368	
+
+To get result like above Should I use UNION or Inner JOIN ?
+
+    ",sql-server,,,,,10/17/2011 15:33:16,not a real question,1,68,4,"Inner Join or UNION For ID =101 Data is coming from different TABLE
+
+All the TABLES have a ID column 
+
+		       Name		 Income		
+	Table_A	    a		 $6,868		
+	Table_B	    b		 $4,443	
+	Table_C  	c		 $6,726		
+	Table_D	    d		 $10,163	
+	Table_E	    e		 $4,853	
+	Table_F	    f		 $3,368	
+
+To get result like above Should I use UNION or Inner JOIN ?
+
+    ",1
+10681980,05/21/2012 08:40:55,1116747,12/26/2011 20:42:31,25,0,can i install sqlserver 2008 r2 standard edition if sqlexpress 2008 already installed,"in my windows xp maching i already had instaled sqlserver 2008 R2 advanced express edition
+now i want to install sqlserver 2008 R2 Standard Edition ,it is possible to both wil be in same machine can i install sqlserver 2008 r2 standard edition.",sql-server,sql-server-2008-r2,,,,05/27/2012 15:02:47,off topic,1,42,13,"can i install sqlserver 2008 r2 standard edition if sqlexpress 2008 already installed in my windows xp maching i already had instaled sqlserver 2008 R2 advanced express edition
+now i want to install sqlserver 2008 R2 Standard Edition ,it is possible to both wil be in same machine can i install sqlserver 2008 r2 standard edition.",2
+1004293,06/16/2009 22:42:37,112764,05/26/2009 20:58:23,31,2,TSQL ORDER-BY with a UNION of disparate datasets,"I have a query that UNIONs two somewhat similar datasets, but they both have some columns that are not present in the other -- i.e. the columns have NULL values in the resulting UNION.  The purpose of the UNION is to get the data in a friendly format for the software-side.
+
+The problem is, I need to ORDER the resulting data using those columns that only exist in one or the other set.
+
+For example: Table1 has fields ID, Cat, Price. Table2 has fields ID (same as in Table1), Name, Abbrv.
+
+My query looks like something like this:
+
+<code>
+SELECT t1.ID, t1.Cat, t1.Price, NULL as Name, NULL as Abbrv FROM t1  
+UNION  
+SELECT t2.ID, NULL as Cat, NULL as Price, t2.Name, t2.Abbrv FROM t2  
+ORDER BY Price DESC, Abbrv ASC  
+</code>
+
+The ORDER BY is where I'm stuck.  The data looks like this:  
+<code>
+100---Balls-----1.53----------------------  
+200---Bubbles---1.24----------------------  
+100---------------------RedBall----101RB--  
+100---------------------BlueBall---102BB--  
+200---------------------RedWand----201RW--  
+200---------------------BlueWand---202BW--  
+</code>  
+
+But I want it to look like this:  
+<code>
+100---Balls-----1.53----------------------  
+100---------------------RedBall----101RB--  
+100---------------------BlueBall---102BB--  
+200---Bubbles---1.24----------------------  
+200---------------------RedWand----201RW--  
+200---------------------BlueWand---202BW--  
+</code>  
+(apologies if those are hard to read--didn't know how else to show a table)  
+
+Keep in mind this is a **very** dumbed-down example and the proverbial ""use a JOIN!"" answer is not applicable (i.e. I already know how to JOIN them but that's not what I want in the end-result).
+
+It could very well be that the only way to achieve this is by manipulating the data in software once it comes back from the data-layer--if that's the case then so be it. But I'm hoping it can be done in TSQL.",sql-server,tsql,sql,,,,open,0,273,8,"TSQL ORDER-BY with a UNION of disparate datasets I have a query that UNIONs two somewhat similar datasets, but they both have some columns that are not present in the other -- i.e. the columns have NULL values in the resulting UNION.  The purpose of the UNION is to get the data in a friendly format for the software-side.
+
+The problem is, I need to ORDER the resulting data using those columns that only exist in one or the other set.
+
+For example: Table1 has fields ID, Cat, Price. Table2 has fields ID (same as in Table1), Name, Abbrv.
+
+My query looks like something like this:
+
+<code>
+SELECT t1.ID, t1.Cat, t1.Price, NULL as Name, NULL as Abbrv FROM t1  
+UNION  
+SELECT t2.ID, NULL as Cat, NULL as Price, t2.Name, t2.Abbrv FROM t2  
+ORDER BY Price DESC, Abbrv ASC  
+</code>
+
+The ORDER BY is where I'm stuck.  The data looks like this:  
+<code>
+100---Balls-----1.53----------------------  
+200---Bubbles---1.24----------------------  
+100---------------------RedBall----101RB--  
+100---------------------BlueBall---102BB--  
+200---------------------RedWand----201RW--  
+200---------------------BlueWand---202BW--  
+</code>  
+
+But I want it to look like this:  
+<code>
+100---Balls-----1.53----------------------  
+100---------------------RedBall----101RB--  
+100---------------------BlueBall---102BB--  
+200---Bubbles---1.24----------------------  
+200---------------------RedWand----201RW--  
+200---------------------BlueWand---202BW--  
+</code>  
+(apologies if those are hard to read--didn't know how else to show a table)  
+
+Keep in mind this is a **very** dumbed-down example and the proverbial ""use a JOIN!"" answer is not applicable (i.e. I already know how to JOIN them but that's not what I want in the end-result).
+
+It could very well be that the only way to achieve this is by manipulating the data in software once it comes back from the data-layer--if that's the case then so be it. But I'm hoping it can be done in TSQL.",3
+9513171,03/01/2012 08:51:02,209592,11/12/2009 13:21:38,34,2,Not able to restore Database in Sqlserver 2008 R2 Backup created on Sqlserver 2005,"I am in DB migration process so took backup of DB which is around 36 GB. I took the backup using maintenance plan with verify backup integrity checked. Backup is successful (checked even in SQL server log and Even viewer for errors but nothing). then copied the backup file to new server with Xcopy command with /v (verify after copy option) it also went correctly. But when i try to restore the DB it throws the following error.
+
+Processed 4471544 pages for database 'XXXXXX', file 'XXXXXX' on file 1.
+
+Processed 29089 pages for database 'XXXXXX', file 'XXXXXX_log' on file 1.
+
+Msg 824, Level 16, State 2, Line 1
+
+SQL Server detected a logical consistency-based I/O error: incorrect pageid (expected 1:3696343; actual 1:3696346). It occurred during a read of page (1:3696343) in database ID 29 at offset 0x0000070cdae000 in file 'F:\TFSDb\XXXXXX.mdf'.  Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.
+
+Msg 3013, Level 16, State 1, Line 1
+RESTORE DATABASE is terminating abnormally.
+
+The source server is Sql Server 2005 running on windows server 2003 and destination server is Sqlserver 2008 R2 running on Windows server 2008 R2.
+
+Please help.. Thanks in advance..
+
+",sql-server,sql-server-2008,database-migration,,,03/01/2012 22:44:27,off topic,1,231,14,"Not able to restore Database in Sqlserver 2008 R2 Backup created on Sqlserver 2005 I am in DB migration process so took backup of DB which is around 36 GB. I took the backup using maintenance plan with verify backup integrity checked. Backup is successful (checked even in SQL server log and Even viewer for errors but nothing). then copied the backup file to new server with Xcopy command with /v (verify after copy option) it also went correctly. But when i try to restore the DB it throws the following error.
+
+Processed 4471544 pages for database 'XXXXXX', file 'XXXXXX' on file 1.
+
+Processed 29089 pages for database 'XXXXXX', file 'XXXXXX_log' on file 1.
+
+Msg 824, Level 16, State 2, Line 1
+
+SQL Server detected a logical consistency-based I/O error: incorrect pageid (expected 1:3696343; actual 1:3696346). It occurred during a read of page (1:3696343) in database ID 29 at offset 0x0000070cdae000 in file 'F:\TFSDb\XXXXXX.mdf'.  Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.
+
+Msg 3013, Level 16, State 1, Line 1
+RESTORE DATABASE is terminating abnormally.
+
+The source server is Sql Server 2005 running on windows server 2003 and destination server is Sqlserver 2008 R2 running on Windows server 2008 R2.
+
+Please help.. Thanks in advance..
+
+",3
+4439236,12/14/2010 12:38:56,266387,02/04/2010 16:52:53,51,1,"SQL Server 2008, Server side trace disappears","What would cause a server side trace to disappear before I call exec sp_trace_setstatus @TraceID, 2?
+
+On a local database, I'm using SQL profiler to export a server side trace definition. 
+I'm setting the filename and running the generated script and the trace shows up as expected in 
+
+    SELECT * FROM ::fn_trace_getinfo(default)
+
+However, before my test harness finishes, fn_get_traceinfo shows the trace has disappeared and the trace file saved only matches the 1st half of the database workload.
+No errors are being thrown and I get the same results no matter what trace template I use. @@version is `Microsoft SQL Server 2008 R2 (RTM) - 10.50.1600.1 (X64)   Apr  2 2010 15:48:46   Copyright (c) Microsoft Corporation  Developer Edition (64-bit) on Windows NT 6.1 <X64> (Build 7600: ) `
+
+Thank you.",sql-server,profiler,trace,sql-server-2008-r2,,,open,0,135,7,"SQL Server 2008, Server side trace disappears What would cause a server side trace to disappear before I call exec sp_trace_setstatus @TraceID, 2?
+
+On a local database, I'm using SQL profiler to export a server side trace definition. 
+I'm setting the filename and running the generated script and the trace shows up as expected in 
+
+    SELECT * FROM ::fn_trace_getinfo(default)
+
+However, before my test harness finishes, fn_get_traceinfo shows the trace has disappeared and the trace file saved only matches the 1st half of the database workload.
+No errors are being thrown and I get the same results no matter what trace template I use. @@version is `Microsoft SQL Server 2008 R2 (RTM) - 10.50.1600.1 (X64)   Apr  2 2010 15:48:46   Copyright (c) Microsoft Corporation  Developer Edition (64-bit) on Windows NT 6.1 <X64> (Build 7600: ) `
+
+Thank you.",4
+6834515,07/26/2011 18:10:00,21218,09/23/2008 16:12:57,25,2,How to do a rull restore/refresh of a replicated SQL Server Database?,"I need to do a full refresh of a test database from a production database.  I am planning to simply do a restore of the production database over the existing database, but need to consider that the database is being replicated (transactional, one-way).
+
+My thoughts are to stop synchronizing, do the restore, and then reinitialize/take a new snapshot and start synchronizing again.
+
+Are those steps correct?  Is there anything else I need to consider?
+
+",sql-server,database-replication,,,,07/28/2011 19:02:26,off topic,1,74,12,"How to do a rull restore/refresh of a replicated SQL Server Database? I need to do a full refresh of a test database from a production database.  I am planning to simply do a restore of the production database over the existing database, but need to consider that the database is being replicated (transactional, one-way).
+
+My thoughts are to stop synchronizing, do the restore, and then reinitialize/take a new snapshot and start synchronizing again.
+
+Are those steps correct?  Is there anything else I need to consider?
+
+",2
+10963032,06/09/2012 17:23:51,289426,03/09/2010 07:17:22,251,4,Please help me to find answer for some SQL questions,"I have few questions which i have been asked in interview:
+
+1)Performance difference between delete and truncate?
+2)Delete duplicate data from a table which is not having any id column and should not use CTE.
+3)Why we are able to delete data using CTE? ",sql-server,,,,,06/10/2012 04:40:46,not constructive,1,42,10,"Please help me to find answer for some SQL questions I have few questions which i have been asked in interview:
+
+1)Performance difference between delete and truncate?
+2)Delete duplicate data from a table which is not having any id column and should not use CTE.
+3)Why we are able to delete data using CTE? ",1
+5228298,03/08/2011 04:19:32,363140,06/10/2010 05:59:49,64,6,why self referencing table?,"In what scenarios a self referencing table is used?
+",sql-server,,,,,03/08/2011 04:26:56,not a real question,1,9,4,"why self referencing table? In what scenarios a self referencing table is used?
+",1
