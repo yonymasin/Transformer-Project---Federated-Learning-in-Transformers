@@ -161,12 +161,12 @@ class LoraHyper(nn.Module):
             layer_d_v_b_value_hyper = self.wbvs_value_list[d]
             layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(self.inner_dim, self.dim)
 
-            weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.default.weight"] = layer_d_q_a_value
-            weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_B.default.weight"] = layer_d_q_b_value
-            weights["bert.encoder.layer." + str(d) + ".attention.self.key.lora_A.default.weight"] = layer_d_k_a_value
-            weights["bert.encoder.layer." + str(d) + ".attention.self.key.lora_B.default.weight"] = layer_d_k_b_value
-            weights["bert.encoder.layer." + str(d) + ".attention.self.value.lora_A.default.weight"] = layer_d_v_a_value
-            weights["bert.encoder.layer." + str(d) + ".attention.self.value.lora_B.default.weight"] = layer_d_v_b_value
+            weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.weight"] = layer_d_q_a_value
+            weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_B.weight"] = layer_d_q_b_value
+            weights["bert.encoder.layer." + str(d) + ".attention.self.key.lora_A.weight"] = layer_d_k_a_value
+            weights["bert.encoder.layer." + str(d) + ".attention.self.key.lora_B.weight"] = layer_d_k_b_value
+            weights["bert.encoder.layer." + str(d) + ".attention.self.value.lora_A.weight"] = layer_d_v_a_value
+            weights["bert.encoder.layer." + str(d) + ".attention.self.value.lora_B.weight"] = layer_d_v_b_value
         return weights
 
 
@@ -195,12 +195,12 @@ class LoraHyper(nn.Module):
                 layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(-1, self.inner_dim, self.dim)
 
                 for nn in range(self.client_sample):
-                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.default.weight"] = layer_d_q_a_value[nn]
-                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.query.lora_B.default.weight"] = layer_d_q_b_value[nn]
-                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.key.lora_A.default.weight"] = layer_d_k_a_value[nn]
-                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.key.lora_B.default.weight"] = layer_d_k_b_value[nn]
-                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.value.lora_A.default.weight"] = layer_d_v_a_value[nn]
-                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.value.lora_B.default.weight"] = layer_d_v_b_value[nn]
+                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.weight"] = layer_d_q_a_value[nn]
+                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.query.lora_B.weight"] = layer_d_q_b_value[nn]
+                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.key.lora_A.weight"] = layer_d_k_a_value[nn]
+                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.key.lora_B.weight"] = layer_d_k_b_value[nn]
+                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.value.lora_A.weight"] = layer_d_v_a_value[nn]
+                    weights[nn]["bert.encoder.layer." + str(d) + ".attention.self.value.lora_B.weight"] = layer_d_v_b_value[nn]
         else:
             weights = OrderedDict()
             for d in range(self.depth):
@@ -222,11 +222,11 @@ class LoraHyper(nn.Module):
                 layer_d_v_b_value_hyper = self.wbvs_value_list[d]
                 layer_d_v_b_value = layer_d_v_b_value_hyper(features).view(self.inner_dim, self.dim)
 
-                weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.default.weight"] = layer_d_q_a_value
-                weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_B.default.weight"] = layer_d_q_b_value
-                weights["bert.encoder.layer." + str(d) + ".attention.self.key.lora_A.default.weight"] = layer_d_k_a_value
-                weights["bert.encoder.layer." + str(d) + ".attention.self.key.lora_B.default.weight"] = layer_d_k_b_value
-                weights["bert.encoder.layer." + str(d) + ".attention.self.value.lora_A.default.weight"] = layer_d_v_a_value
-                weights["bert.encoder.layer." + str(d) + ".attention.self.value.lora_B.default.weight"] = layer_d_v_b_value
+                weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_A.weight"] = layer_d_q_a_value
+                weights["bert.encoder.layer." + str(d) + ".attention.self.query.lora_B.weight"] = layer_d_q_b_value
+                weights["bert.encoder.layer." + str(d) + ".attention.self.key.lora_A.weight"] = layer_d_k_a_value
+                weights["bert.encoder.layer." + str(d) + ".attention.self.key.lora_B.weight"] = layer_d_k_b_value
+                weights["bert.encoder.layer." + str(d) + ".attention.self.value.lora_A.weight"] = layer_d_v_a_value
+                weights["bert.encoder.layer." + str(d) + ".attention.self.value.lora_B.weight"] = layer_d_v_b_value
         return weights
 
