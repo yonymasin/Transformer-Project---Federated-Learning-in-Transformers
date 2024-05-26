@@ -1,0 +1,1810 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9315723,02/16/2012 17:10:19,1214361,02/16/2012 16:54:07,1,0,Oracle Coherence update cluster DB error,"Back gound Info:
+We have 4 Oracle database name as d1 d2 d3 d4
+We have Web-like interface Java program that was programmed to update/Save an Object through Oracle Coherence to this DB Cluster.
+
+Issue: 
+When Java program try to call putObjectIntoCache(Object.className,objectKey,Object) into Coherence.
+Only D1 or D2 or D3 get update with new Object . The rest of the DB log  error like ORA-00001 Unique Constraint violation. 
+
+Questions:
+
+We do not know the root cause for this issue ,
+ 
+ Any one has similar experience on this issue or 
+ Anyone have decent experience on Oracle Coherence and Database can give me a hint?
+
+
+I am appreciate for anyone's help 
+Thanks ",oracle,oracle11g,cluster-analysis,oracleforms,oracle-coherence,,open,0,108,6,"Oracle Coherence update cluster DB error Back gound Info:
+We have 4 Oracle database name as d1 d2 d3 d4
+We have Web-like interface Java program that was programmed to update/Save an Object through Oracle Coherence to this DB Cluster.
+
+Issue: 
+When Java program try to call putObjectIntoCache(Object.className,objectKey,Object) into Coherence.
+Only D1 or D2 or D3 get update with new Object . The rest of the DB log  error like ORA-00001 Unique Constraint violation. 
+
+Questions:
+
+We do not know the root cause for this issue ,
+ 
+ Any one has similar experience on this issue or 
+ Anyone have decent experience on Oracle Coherence and Database can give me a hint?
+
+
+I am appreciate for anyone's help 
+Thanks ",5
+7699086,10/08/2011 19:00:15,196210,10/25/2009 15:26:47,154,4,Oracle: What should I know about SGA?,What is SGA? Can you explain me in a simple manner?,oracle,plsql,,,,10/09/2011 04:27:54,not a real question,1,11,7,Oracle: What should I know about SGA? What is SGA? Can you explain me in a simple manner?,2
+1179432,07/24/2009 18:43:34,85682,04/01/2009 13:53:36,39,0,update sql in Oracle conversion from Sql Server,"I am trying to create an update statement in the Oracle. 
+here it is version in Sql Server  
+
+      UPDATE ev
+      SET   
+         (ev.station_type = t.st_type, ev.adt = t.adt  )
+      FROM  source ev 
+      JOIN  dataTbl t
+      ON ev.counterID = t.counterID
+
+There are two tables
+source table were counterID is primary key
+dataTBL table were counterID is Foreign key
+I am tring to get data from dataTBL to souce table.
+
+I would appreciate if someone helps to create an Oracle version of the update. 
+Thanks, 
+Greener",oracle,sql,update,,,,open,0,120,8,"update sql in Oracle conversion from Sql Server I am trying to create an update statement in the Oracle. 
+here it is version in Sql Server  
+
+      UPDATE ev
+      SET   
+         (ev.station_type = t.st_type, ev.adt = t.adt  )
+      FROM  source ev 
+      JOIN  dataTbl t
+      ON ev.counterID = t.counterID
+
+There are two tables
+source table were counterID is primary key
+dataTBL table were counterID is Foreign key
+I am tring to get data from dataTBL to souce table.
+
+I would appreciate if someone helps to create an Oracle version of the update. 
+Thanks, 
+Greener",3
+2608929,04/09/2010 16:00:30,110545,05/21/2009 14:37:29,37,2,Compare values in each column of two Oracle Types,"I've been playing around with the [pluto-test-framework][1] today, and I'd like to get some existing functions into a test harness with it.
+
+I have lots of functions with this type of specification.
+
+       FUNCTION DO_SOME_STUFF   (pOldSchedule       IN      SCHEDULE_OBJ,
+                                 pNewSchedule          OUT  SCHEDULE_OBJ,
+                                 pLoggerContext     IN OUT  LOGGER_CONTEXT_OBJ)
+       RETURN NUMBER;
+
+It takes pOldSchedule, does some stuff to it, and then returns pNewSchedule. The logger_context just does logging.
+
+As part of a test, I'd like to be able to compare the values in each of the columns of the type, without having to write individual IF statements.
+
+It'll need to return boolean to signify whether or not pOldSchedule and pNewSchedule match.
+
+Any ideas?
+
+
+  [1]: http://code.google.com/p/pluto-test-framework/",oracle,plsql,,,,,open,0,210,9,"Compare values in each column of two Oracle Types I've been playing around with the [pluto-test-framework][1] today, and I'd like to get some existing functions into a test harness with it.
+
+I have lots of functions with this type of specification.
+
+       FUNCTION DO_SOME_STUFF   (pOldSchedule       IN      SCHEDULE_OBJ,
+                                 pNewSchedule          OUT  SCHEDULE_OBJ,
+                                 pLoggerContext     IN OUT  LOGGER_CONTEXT_OBJ)
+       RETURN NUMBER;
+
+It takes pOldSchedule, does some stuff to it, and then returns pNewSchedule. The logger_context just does logging.
+
+As part of a test, I'd like to be able to compare the values in each of the columns of the type, without having to write individual IF statements.
+
+It'll need to return boolean to signify whether or not pOldSchedule and pNewSchedule match.
+
+Any ideas?
+
+
+  [1]: http://code.google.com/p/pluto-test-framework/",2
+7814202,10/18/2011 21:51:34,218121,11/24/2009 20:48:33,147,23,Oracle: Retrieve by TZNAME,"How can we find out which TZNAME we are under in our Database?
+
+If we do a 
+
+    select dbtimezone from dual
+
+I get dbtimezone = -04:00
+
+we retrieve the DBTIMEZONE which is the number representation of the timezone, but since there are many of them but in different places, we won't be able to be 100 % accurate. Example, currently we have -04:00 which can be Both EST CANADA and EST NY (or a date that doesn't involve daylights savings)
+
+Is there any way to retrieve the actual TZNAME of the database timezone rather than the actual time?
+
+Thank you",oracle,,,,,,open,0,99,4,"Oracle: Retrieve by TZNAME How can we find out which TZNAME we are under in our Database?
+
+If we do a 
+
+    select dbtimezone from dual
+
+I get dbtimezone = -04:00
+
+we retrieve the DBTIMEZONE which is the number representation of the timezone, but since there are many of them but in different places, we won't be able to be 100 % accurate. Example, currently we have -04:00 which can be Both EST CANADA and EST NY (or a date that doesn't involve daylights savings)
+
+Is there any way to retrieve the actual TZNAME of the database timezone rather than the actual time?
+
+Thank you",1
+11503037,07/16/2012 11:10:22,1382151,05/08/2012 13:11:35,22,7,IBM and Oracle private PaaS,"I have checked Oracle [blueprints][1] and IBM [pureSystem][2] Though I am not sure as they dont consist of good description whether it is just a software or is it an in-house offering, as such i mean that they come and provide all the hardware along with the software.
+
+so in short I was wondering if anyone knows whether IBM and Oracle have any private PaaS offerings, if so then how are they deployed and the scope of their offerings?
+
+Thanks a lot!
+
+
+  [1]: http://www.oracle.com/technetwork/topics/cloud/paas-blueprints-084482.html
+  [2]: http://www.ibm.com/ibm/puresystems/us/en/index.html",oracle,cloud,ibm,paas,,07/16/2012 16:27:12,off topic,1,86,5,"IBM and Oracle private PaaS I have checked Oracle [blueprints][1] and IBM [pureSystem][2] Though I am not sure as they dont consist of good description whether it is just a software or is it an in-house offering, as such i mean that they come and provide all the hardware along with the software.
+
+so in short I was wondering if anyone knows whether IBM and Oracle have any private PaaS offerings, if so then how are they deployed and the scope of their offerings?
+
+Thanks a lot!
+
+
+  [1]: http://www.oracle.com/technetwork/topics/cloud/paas-blueprints-084482.html
+  [2]: http://www.ibm.com/ibm/puresystems/us/en/index.html",4
+468990,01/22/2009 12:51:39,21047,09/23/2008 11:27:03,405,26,How can I combine multiple rows into a comma-delimited list in Oracle?,"I have a simple query:
+
+    select * from countries
+
+with the following results:
+
+    country_name
+    ------------
+    Albania
+    Andorra
+    Antigua
+    .....
+
+I would like to return the results in one row, so like this:
+
+    Albania, Andorra, Antigua, ...
+
+Of course, I can write a PL/SQL function to do the job (I already did in Oracle 10g), but is there a nicer, preferably non-Oracle-specific solution (or may be a built-in function) for this task?
+
+I would generally use it to avoid multiple rows in a sub-query, so if a person has more then one citizenship, I do not want her/him to be a duplicate in the list.
+
+
+My question is based on the similar question on [SQL server 2005][1].
+
+
+  [1]: http://stackoverflow.com/questions/180032/how-can-i-combine-multiple-rows-into-a-comma-delimited-list-in-sql-server-2005
+
+",oracle,concatenation,sql,,,,open,0,138,12,"How can I combine multiple rows into a comma-delimited list in Oracle? I have a simple query:
+
+    select * from countries
+
+with the following results:
+
+    country_name
+    ------------
+    Albania
+    Andorra
+    Antigua
+    .....
+
+I would like to return the results in one row, so like this:
+
+    Albania, Andorra, Antigua, ...
+
+Of course, I can write a PL/SQL function to do the job (I already did in Oracle 10g), but is there a nicer, preferably non-Oracle-specific solution (or may be a built-in function) for this task?
+
+I would generally use it to avoid multiple rows in a sub-query, so if a person has more then one citizenship, I do not want her/him to be a duplicate in the list.
+
+
+My question is based on the similar question on [SQL server 2005][1].
+
+
+  [1]: http://stackoverflow.com/questions/180032/how-can-i-combine-multiple-rows-into-a-comma-delimited-list-in-sql-server-2005
+
+",3
+491838,01/29/2009 14:40:11,25544,10/06/2008 16:35:25,506,105, Serialize Oracle row to XML,"I want to create a stored procedure that takes the name of a table and a row_id and can serialize it to an xml string.
+
+The table may contain clobs and blobs.
+
+Can I do this in PL/SQL, or do I have to use Java?
+
+The main objective for this is to have a table with all updates and deletes on some tables, keeping the X latest versions, or X days of Data (the table would include something like chg_date(default:sysdate), chg_type(U or D), chg_xml , and probably with some metadata about the user). 
+
+Possible uses:
+  - It could also keep all the data and be used as a log
+  - The ability to return the row to any previous value.
+  - The ability to do EDI in a specific format.
+
+I don't want to use Oracle's flashback queries to get there since there's no guarantee of the data's availability. 
+
+",oracle,serialization,xml,,,,open,0,149,6," Serialize Oracle row to XML I want to create a stored procedure that takes the name of a table and a row_id and can serialize it to an xml string.
+
+The table may contain clobs and blobs.
+
+Can I do this in PL/SQL, or do I have to use Java?
+
+The main objective for this is to have a table with all updates and deletes on some tables, keeping the X latest versions, or X days of Data (the table would include something like chg_date(default:sysdate), chg_type(U or D), chg_xml , and probably with some metadata about the user). 
+
+Possible uses:
+  - It could also keep all the data and be used as a log
+  - The ability to return the row to any previous value.
+  - The ability to do EDI in a specific format.
+
+I don't want to use Oracle's flashback queries to get there since there's no guarantee of the data's availability. 
+
+",3
+11550635,07/18/2012 21:27:44,1536113,07/18/2012 20:49:44,1,0,How to use a variable for a table name when running a For Loop within an Oracle pl/sql email send,"I am unable to complile this section of Oracle code as the compiler reports ""PL/SQL: ORA-00942: table or view does not exist""
+
+The Oracle table exists but this procedure must pass a table name to the For Loop procedure based on the ""Order_ID"" parameter. I am working within the Schema where the table exists so I am not addressing a schema name.
+
+Example: TEMP_TBL_123 exists in the database and by passing the order_ID of 123 I am attempting to use variable TMP_TBL_NM to hold the table name ""TEMP_TBL_123"".
+.................................................
+
+    enter code here
+
+    CREATE OR REPLACE PROCEDURE EMAIL_DEPT_BLAST_TEST (SUBJECT VARCHAR2,MAIL_FROM VARCHAR2, MAIL_TO VARCHAR2,
+                                                   L_MESSAGE VARCHAR2, L_MESSAGE2 VARCHAR2, ORDER_ID NUMBER)
+    IS
+    MAIL_HOST VARCHAR2(30):='XX.XX.XX.XX';
+    MAIL_CONN UTL_SMTP.CONNECTION;
+    TMP_TBL_NM VARCHAR2(30);
+
+    BEGIN
+
+    TMP_TBL_NM := 'TEMP_TBL_' || ORDER_ID;
+
+    MAIL_CONN := UTL_SMTP.OPEN_CONNECTION(MAIL_HOST, 25);
+    UTL_SMTP.HELO(MAIL_CONN, MAIL_HOST);
+    UTL_SMTP.MAIL(MAIL_CONN,'XXX@XXXXXX.com');
+    UTL_SMTP.RCPT(MAIL_CONN, MAIL_TO);
+    UTL_SMTP.OPEN_DATA(MAIL_CONN);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'Date: '||to_char(trunc(SYSDATE))||utl_tcp.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'From: '|| mail_from ||utl_tcp.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'To: '|| mail_to || utl_tcp.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'Subject: '||subject||utl_tcp.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, UTL_TCP.CRLF);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, ''|| L_MESSAGE || UTL_TCP.CRLF);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, UTL_TCP.CRLF);
+
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'Order details:' || UTL_TCP.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'Quantity - Location ID - Address' || UTL_TCP.crlf);
+
+    BEGIN
+        FOR I IN (SELECT LOCATION_ID, TRIM(TO_CHAR(COUNT(*),'9,999')) AS QUANTITY FROM TMP_TBL_NM GROUP BY LOCATION_ID)
+        LOOP 
+        UTL_SMTP.WRITE_DATA(MAIL_CONN, I.QUANTITY  || ' - ');
+        UTL_SMTP.WRITE_DATA(MAIL_CONN, I.LOCATION_ID || ' ');
+        UTL_SMTP.WRITE_DATA(MAIL_CONN,UTL_TCP.CRLF);
+        END LOOP;
+    END;
+
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, L_MESSAGE2 || UTL_TCP.CRLF);  
+
+    UTL_SMTP.WRITE_DATA(MAIL_CONN,UTL_TCP.CRLF);
+    UTL_SMTP.CLOSE_DATA(MAIL_CONN);
+    UTL_SMTP.QUIT(MAIL_CONN);
+
+    END SCT_CNTS_EMAIL_DEPT_BLAST_TEST;
+
+",oracle,oracle10g,,,,,open,0,390,20,"How to use a variable for a table name when running a For Loop within an Oracle pl/sql email send I am unable to complile this section of Oracle code as the compiler reports ""PL/SQL: ORA-00942: table or view does not exist""
+
+The Oracle table exists but this procedure must pass a table name to the For Loop procedure based on the ""Order_ID"" parameter. I am working within the Schema where the table exists so I am not addressing a schema name.
+
+Example: TEMP_TBL_123 exists in the database and by passing the order_ID of 123 I am attempting to use variable TMP_TBL_NM to hold the table name ""TEMP_TBL_123"".
+.................................................
+
+    enter code here
+
+    CREATE OR REPLACE PROCEDURE EMAIL_DEPT_BLAST_TEST (SUBJECT VARCHAR2,MAIL_FROM VARCHAR2, MAIL_TO VARCHAR2,
+                                                   L_MESSAGE VARCHAR2, L_MESSAGE2 VARCHAR2, ORDER_ID NUMBER)
+    IS
+    MAIL_HOST VARCHAR2(30):='XX.XX.XX.XX';
+    MAIL_CONN UTL_SMTP.CONNECTION;
+    TMP_TBL_NM VARCHAR2(30);
+
+    BEGIN
+
+    TMP_TBL_NM := 'TEMP_TBL_' || ORDER_ID;
+
+    MAIL_CONN := UTL_SMTP.OPEN_CONNECTION(MAIL_HOST, 25);
+    UTL_SMTP.HELO(MAIL_CONN, MAIL_HOST);
+    UTL_SMTP.MAIL(MAIL_CONN,'XXX@XXXXXX.com');
+    UTL_SMTP.RCPT(MAIL_CONN, MAIL_TO);
+    UTL_SMTP.OPEN_DATA(MAIL_CONN);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'Date: '||to_char(trunc(SYSDATE))||utl_tcp.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'From: '|| mail_from ||utl_tcp.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'To: '|| mail_to || utl_tcp.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'Subject: '||subject||utl_tcp.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, UTL_TCP.CRLF);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, ''|| L_MESSAGE || UTL_TCP.CRLF);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, UTL_TCP.CRLF);
+
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'Order details:' || UTL_TCP.crlf);
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, 'Quantity - Location ID - Address' || UTL_TCP.crlf);
+
+    BEGIN
+        FOR I IN (SELECT LOCATION_ID, TRIM(TO_CHAR(COUNT(*),'9,999')) AS QUANTITY FROM TMP_TBL_NM GROUP BY LOCATION_ID)
+        LOOP 
+        UTL_SMTP.WRITE_DATA(MAIL_CONN, I.QUANTITY  || ' - ');
+        UTL_SMTP.WRITE_DATA(MAIL_CONN, I.LOCATION_ID || ' ');
+        UTL_SMTP.WRITE_DATA(MAIL_CONN,UTL_TCP.CRLF);
+        END LOOP;
+    END;
+
+    UTL_SMTP.WRITE_DATA(MAIL_CONN, L_MESSAGE2 || UTL_TCP.CRLF);  
+
+    UTL_SMTP.WRITE_DATA(MAIL_CONN,UTL_TCP.CRLF);
+    UTL_SMTP.CLOSE_DATA(MAIL_CONN);
+    UTL_SMTP.QUIT(MAIL_CONN);
+
+    END SCT_CNTS_EMAIL_DEPT_BLAST_TEST;
+
+",2
+3903850,10/11/2010 06:15:53,449201,09/16/2010 07:11:07,1,0,how to generate report and save it to file using pl/sql oracle?,how to generate report and save it to file using pl/sql oracle?,oracle,plsql,,,,,open,0,12,12,how to generate report and save it to file using pl/sql oracle? how to generate report and save it to file using pl/sql oracle?,2
+11318105,07/03/2012 19:47:04,5295,09/08/2008 22:12:56,5272,198,Why am I getting an NPE in ValueOfCopyOfInterpreter when inserting a BLOB?,"To see the issue:
+
+1. Create a table in Oracle with:
+
+        create table ut_table_ut_service_pj (
+           PATH VARCHAR(80),
+           BINARY BLOB
+        );
+
+2. Paste the following pipeline in the XPL sandbox, you can access on `http://localhost:8080/orbeon/sandbox-transformations/xpl/`, replacing the database URI, username, and password as appropriate on your system:
+
+        <p:config xmlns:p=""http://www.orbeon.com/oxf/pipeline""
+                  xmlns:oxf=""http://www.orbeon.com/oxf/processors""
+                  xmlns:xforms=""http://www.w3.org/2002/xforms""
+                  xmlns:xsl=""http://www.w3.org/1999/XSL/Transform""
+                  xmlns:sql=""http://orbeon.org/oxf/xml/sql""
+                  xmlns:odt=""http://orbeon.org/oxf/xml/datatypes""
+                  xmlns:xs=""http://www.w3.org/2001/XMLSchema""
+                  xmlns:exist=""http://exist.sourceforge.net/NS/exist"">
+
+            <p:processor name=""oxf:url-generator"">
+                <p:input name=""config"">
+                    <config>
+                        <url>test.pdf</url>
+                        <mode>binary</mode>
+                    </config>
+                </p:input>
+                <p:output name=""data"" id=""document""/>
+            </p:processor>
+
+            <p:processor name=""oxf:sql"">
+                <p:input name=""datasource"">
+                    <datasource>
+                        <driver-class-name>oracle.jdbc.OracleDriver</driver-class-name>
+                        <uri>jdbc:oracle:thin:@//localhost:1522/globaldb</uri>
+                        <username>orbeon</username>
+                        <password>password</password>
+                    </datasource>
+                </p:input>
+                <p:input name=""data"" href=""#document""/>
+                <p:input name=""config"">
+                    <sql:config>
+                        <sql:connection>
+                            <sql:execute>
+                                <sql:update debug=""write"">
+                                    insert into ut_table_ut_service_pj
+                                    values('test.pdf',
+                                    <sql:param select=""/*""
+                                               type=""xs:base64Binary"" sql-type=""blob""/>
+                                    )
+                                </sql:update>
+                            </sql:execute>
+                        </sql:connection>
+                    </sql:config>
+                </p:input>
+            </p:processor>
+
+        </p:config>
+
+This leads to the following exception:
+
+    |----------------------------------------------------------------------------------------------------------------------|
+    |Exception: java.lang.NullPointerException                                                                             |
+    |----------------------------------------------------------------------------------------------------------------------|
+    |org.orbeon.oxf.processor.sql.interpreters.ValueOfCo|<init>                        |ValueOfCopyOfInterpreter.java |  48|
+    |org.orbeon.oxf.processor.sql.SQLProcessor$Interpret|addAllDefaultElementHandlers  |SQLProcessor.java             | 476|
+    |org.orbeon.oxf.processor.sql.interpreters.ConfigInt|start                         |ConfigInterpreter.java        |  32|
+    |org.orbeon.oxf.processor.sql.SQLProcessor$Interpret|startElement                  |SQLProcessor.java             | 503|
+    |org.orbeon.oxf.processor.sql.SQLProcessor$RootInter|startElement                  |SQLProcessor.java             | 280|
+
+
+Why is this happening?",oracle,nullpointerexception,orbeon,,,,open,0,1294,12,"Why am I getting an NPE in ValueOfCopyOfInterpreter when inserting a BLOB? To see the issue:
+
+1. Create a table in Oracle with:
+
+        create table ut_table_ut_service_pj (
+           PATH VARCHAR(80),
+           BINARY BLOB
+        );
+
+2. Paste the following pipeline in the XPL sandbox, you can access on `http://localhost:8080/orbeon/sandbox-transformations/xpl/`, replacing the database URI, username, and password as appropriate on your system:
+
+        <p:config xmlns:p=""http://www.orbeon.com/oxf/pipeline""
+                  xmlns:oxf=""http://www.orbeon.com/oxf/processors""
+                  xmlns:xforms=""http://www.w3.org/2002/xforms""
+                  xmlns:xsl=""http://www.w3.org/1999/XSL/Transform""
+                  xmlns:sql=""http://orbeon.org/oxf/xml/sql""
+                  xmlns:odt=""http://orbeon.org/oxf/xml/datatypes""
+                  xmlns:xs=""http://www.w3.org/2001/XMLSchema""
+                  xmlns:exist=""http://exist.sourceforge.net/NS/exist"">
+
+            <p:processor name=""oxf:url-generator"">
+                <p:input name=""config"">
+                    <config>
+                        <url>test.pdf</url>
+                        <mode>binary</mode>
+                    </config>
+                </p:input>
+                <p:output name=""data"" id=""document""/>
+            </p:processor>
+
+            <p:processor name=""oxf:sql"">
+                <p:input name=""datasource"">
+                    <datasource>
+                        <driver-class-name>oracle.jdbc.OracleDriver</driver-class-name>
+                        <uri>jdbc:oracle:thin:@//localhost:1522/globaldb</uri>
+                        <username>orbeon</username>
+                        <password>password</password>
+                    </datasource>
+                </p:input>
+                <p:input name=""data"" href=""#document""/>
+                <p:input name=""config"">
+                    <sql:config>
+                        <sql:connection>
+                            <sql:execute>
+                                <sql:update debug=""write"">
+                                    insert into ut_table_ut_service_pj
+                                    values('test.pdf',
+                                    <sql:param select=""/*""
+                                               type=""xs:base64Binary"" sql-type=""blob""/>
+                                    )
+                                </sql:update>
+                            </sql:execute>
+                        </sql:connection>
+                    </sql:config>
+                </p:input>
+            </p:processor>
+
+        </p:config>
+
+This leads to the following exception:
+
+    |----------------------------------------------------------------------------------------------------------------------|
+    |Exception: java.lang.NullPointerException                                                                             |
+    |----------------------------------------------------------------------------------------------------------------------|
+    |org.orbeon.oxf.processor.sql.interpreters.ValueOfCo|<init>                        |ValueOfCopyOfInterpreter.java |  48|
+    |org.orbeon.oxf.processor.sql.SQLProcessor$Interpret|addAllDefaultElementHandlers  |SQLProcessor.java             | 476|
+    |org.orbeon.oxf.processor.sql.interpreters.ConfigInt|start                         |ConfigInterpreter.java        |  32|
+    |org.orbeon.oxf.processor.sql.SQLProcessor$Interpret|startElement                  |SQLProcessor.java             | 503|
+    |org.orbeon.oxf.processor.sql.SQLProcessor$RootInter|startElement                  |SQLProcessor.java             | 280|
+
+
+Why is this happening?",3
+5265213,03/10/2011 20:01:07,654217,03/10/2011 20:01:07,1,0,Open source or free alternative to Oracle 11g,"I work in IT for a large multinational that spends millions of dollars on Oracle solutions.
+
+That got me wondering whether there was is a viable alternative to Oracle for enterprises. Can anyone suggest a free or opensource alternative to something like Oracle 11g 
+
+",oracle,,,,,12/17/2011 01:42:40,not constructive,1,44,8,"Open source or free alternative to Oracle 11g I work in IT for a large multinational that spends millions of dollars on Oracle solutions.
+
+That got me wondering whether there was is a viable alternative to Oracle for enterprises. Can anyone suggest a free or opensource alternative to something like Oracle 11g 
+
+",1
+2944250,05/31/2010 14:45:31,222159,12/01/2009 14:40:32,1203,32,EXPLAIN PLAN FOR in ORACLE,"I am making a test. I have all tests in rows, so my rows looks like this;
+
+    ID | TEST
+    1 | 'select sysdate from dual'
+    2 | 'select sysdatesss from dual'
+
+Now I read it row by row and I need to test it with `EXPLAIN PLAN FOR`
+
+so the for the first row it would be 
+
+    EXPLAIN PLAN FOR select sysdate from dual
+
+but I have problem converting the `TEST` field. Right now I use;
+
+    EXPLAIN PLAN FOR testing.TEST
+
+but it does not work.
+
+Any ideas?
+
+",oracle,,,,,,open,0,99,5,"EXPLAIN PLAN FOR in ORACLE I am making a test. I have all tests in rows, so my rows looks like this;
+
+    ID | TEST
+    1 | 'select sysdate from dual'
+    2 | 'select sysdatesss from dual'
+
+Now I read it row by row and I need to test it with `EXPLAIN PLAN FOR`
+
+so the for the first row it would be 
+
+    EXPLAIN PLAN FOR select sysdate from dual
+
+but I have problem converting the `TEST` field. Right now I use;
+
+    EXPLAIN PLAN FOR testing.TEST
+
+but it does not work.
+
+Any ideas?
+
+",1
+568251,02/20/2009 04:10:38,20625,09/22/2008 18:06:05,434,18,Is there a way of selecting the contents of a ref cursor as part of a SQL Select statement?,"I'd like to be able to take a ref cursor and transform it by selecting from it into another ref cursor. For example, something like this:
+
+    begin
+    declare c_cur sys_refcursor;
+            c_cur2 sys_refcursor;
+
+    open c_cur for 
+      select 1 from dual;
+    
+    open c_cur2 for
+      select 1
+        from c_cur
+       where 1 = 2;
+    
+    end;
+    /
+
+Is it possible in Oracle to select FROM the results of a ref cursor, in a SELECT statement?",oracle,sql,,,,,open,0,130,19,"Is there a way of selecting the contents of a ref cursor as part of a SQL Select statement? I'd like to be able to take a ref cursor and transform it by selecting from it into another ref cursor. For example, something like this:
+
+    begin
+    declare c_cur sys_refcursor;
+            c_cur2 sys_refcursor;
+
+    open c_cur for 
+      select 1 from dual;
+    
+    open c_cur2 for
+      select 1
+        from c_cur
+       where 1 = 2;
+    
+    end;
+    /
+
+Is it possible in Oracle to select FROM the results of a ref cursor, in a SELECT statement?",2
+6698487,07/14/2011 18:56:23,316738,04/14/2010 16:57:16,330,8,PlSql Translate function question,"Ok, I'm on my third day of trying to debug an annoyingly intermittent issue (my last 2 questions were related to this same issue). In my latest attempt, I've created a cursor to select the actual data, and loop through it outputting the raw value and the value after it was converted to a number. The application occasionally throws invalid number errors. Below is my test (not including the select statement)code and the output. 
+
+ 
+
+    loop
+            fetch myCursor into v_answer;
+            exit when myCursor%notfound;
+            
+          
+             DBMS_OUTPUT.PUT_LINE('Raw answer: ' || v_answer );
+             
+             v_instr := INSTR(v_answer, '.',1 , 2) ;
+             
+             v_number := to_number(REPLACE(TRANSLATE ( case  v_instr when 0 then UPPER(v_answer) else 0 end,'ABCDEFGHIJKLMNOPQURSTWVXYZ+<>:',' '), ' ',''));
+             
+             DBMS_output.put_line('As number: ' || v_number);
+
+Here is the output:
+
+    Raw answer: 4
+    As number: 4
+    Raw answer: 3
+    As number: 3
+    Raw answer: 1.00
+    As number: 1
+    Raw answer: <3
+
+I receive an  PL/SQL: numeric or value error: character to number conversion error. When the Raw answer is '<3'.
+
+Please note that the actual code used by the application looks like so:
+
+ 
+
+      AND to_number(REPLACE(TRANSLATE ( decode( INSTR(hra_ans.answer_text, '.',1 , 2), 0 , UPPER(hra_ans.answer_text) , 0),'ABCDEFGHIJKLMNOPQURSTWVXYZ+<>:',' '), ' ','')) 
+
+and is part of the where clause in a dynamic sql string. I've replaced the decode statement with the case statement because I was getting an function or pseudo-column 'DECODE' may be used inside a SQL statement only error. 
+
+Finally, my questions are these: 1. Why isn't the translate function replacing the less than sign and 2. What is the difference (in layman's terms) between the  ORA-1722 and ORA-06502 errors?
+
+As always, TIA!",oracle,plsql,oracle11g,,,,open,0,424,4,"PlSql Translate function question Ok, I'm on my third day of trying to debug an annoyingly intermittent issue (my last 2 questions were related to this same issue). In my latest attempt, I've created a cursor to select the actual data, and loop through it outputting the raw value and the value after it was converted to a number. The application occasionally throws invalid number errors. Below is my test (not including the select statement)code and the output. 
+
+ 
+
+    loop
+            fetch myCursor into v_answer;
+            exit when myCursor%notfound;
+            
+          
+             DBMS_OUTPUT.PUT_LINE('Raw answer: ' || v_answer );
+             
+             v_instr := INSTR(v_answer, '.',1 , 2) ;
+             
+             v_number := to_number(REPLACE(TRANSLATE ( case  v_instr when 0 then UPPER(v_answer) else 0 end,'ABCDEFGHIJKLMNOPQURSTWVXYZ+<>:',' '), ' ',''));
+             
+             DBMS_output.put_line('As number: ' || v_number);
+
+Here is the output:
+
+    Raw answer: 4
+    As number: 4
+    Raw answer: 3
+    As number: 3
+    Raw answer: 1.00
+    As number: 1
+    Raw answer: <3
+
+I receive an  PL/SQL: numeric or value error: character to number conversion error. When the Raw answer is '<3'.
+
+Please note that the actual code used by the application looks like so:
+
+ 
+
+      AND to_number(REPLACE(TRANSLATE ( decode( INSTR(hra_ans.answer_text, '.',1 , 2), 0 , UPPER(hra_ans.answer_text) , 0),'ABCDEFGHIJKLMNOPQURSTWVXYZ+<>:',' '), ' ','')) 
+
+and is part of the where clause in a dynamic sql string. I've replaced the decode statement with the case statement because I was getting an function or pseudo-column 'DECODE' may be used inside a SQL statement only error. 
+
+Finally, my questions are these: 1. Why isn't the translate function replacing the less than sign and 2. What is the difference (in layman's terms) between the  ORA-1722 and ORA-06502 errors?
+
+As always, TIA!",3
+11098610,06/19/2012 09:55:58,196210,10/25/2009 15:26:47,300,6,Oracle: how do I take a Job offline from PL/SQL?,"I need to look for a JOB by thw WHAT column. 
+Check if it is actually running. If not take it offline and put online again to make it start immediately.
+
+How can I do it?",oracle,jobs,,,,,open,0,35,10,"Oracle: how do I take a Job offline from PL/SQL? I need to look for a JOB by thw WHAT column. 
+Check if it is actually running. If not take it offline and put online again to make it start immediately.
+
+How can I do it?",2
+8313622,11/29/2011 15:47:17,920770,08/31/2011 01:17:14,24,0,Error when install Oracle 11g 64bit on Win Server 2003 64bit,"I get this error when install Oracl 11g 64bit on Win Server 2003 64bit:
+C:\Documents and Settings\Administrator\Local Settings\Temp\OraInstall2011-11-29_03-56-51PM\ext\bin\SetEnv.dll: This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem
+
+I reinstalled but fail again.
+
+P/s: I installed successfully this Oracle version on another computer(Win Server 2008) before.
+
+![Image1][1]
+![Image2][2]
+![This error][3]
+
+
+  [1]: http://i.stack.imgur.com/tTkOw.jpg
+  [2]: http://i.stack.imgur.com/ovjkC.jpg
+  [3]: http://i.stack.imgur.com/URHOS.jpg",oracle,installer,oracle11g,windows-server-2003,,11/29/2011 18:20:57,off topic,1,62,11,"Error when install Oracle 11g 64bit on Win Server 2003 64bit I get this error when install Oracl 11g 64bit on Win Server 2003 64bit:
+C:\Documents and Settings\Administrator\Local Settings\Temp\OraInstall2011-11-29_03-56-51PM\ext\bin\SetEnv.dll: This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem
+
+I reinstalled but fail again.
+
+P/s: I installed successfully this Oracle version on another computer(Win Server 2008) before.
+
+![Image1][1]
+![Image2][2]
+![This error][3]
+
+
+  [1]: http://i.stack.imgur.com/tTkOw.jpg
+  [2]: http://i.stack.imgur.com/ovjkC.jpg
+  [3]: http://i.stack.imgur.com/URHOS.jpg",4
+11433031,07/11/2012 12:49:44,323129,04/22/2010 10:00:52,713,9,Clean trace files on Oracle 11g,"The partition containing my Oracle 11g installation began to feel up with trace files and when I went looking for what are these I've found this [disturbing post][1] about how to disable the trace file generation.
+
+The two related questions I have are:
+
+ 1. Can I simply delete these trace files from my FS w/o consequence ? (I know, if they apeared one should probably look at them.. but won't happen and the database has no production use whatsoever. Going to have to happen another time.)
+ 2. What should be done to prevent it from appearing again?
+
+  [1]: http://coskan.wordpress.com/2009/06/03/too-many-trace_file-on-11g/",oracle,oracle11g,,,,07/26/2012 12:48:13,off topic,1,99,6,"Clean trace files on Oracle 11g The partition containing my Oracle 11g installation began to feel up with trace files and when I went looking for what are these I've found this [disturbing post][1] about how to disable the trace file generation.
+
+The two related questions I have are:
+
+ 1. Can I simply delete these trace files from my FS w/o consequence ? (I know, if they apeared one should probably look at them.. but won't happen and the database has no production use whatsoever. Going to have to happen another time.)
+ 2. What should be done to prevent it from appearing again?
+
+  [1]: http://coskan.wordpress.com/2009/06/03/too-many-trace_file-on-11g/",2
+5280792,03/12/2011 05:33:50,656337,03/12/2011 05:33:50,1,0,Oracle connection error,"java.sql.SQLException: Io exception: The Network Adapter could not establish the
+ connection at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java)
+
+I am getting this error when data in database is increased (nearly 3000). It works fine with limited data( say 100)
+
+",oracle,,,,,,open,0,33,3,"Oracle connection error java.sql.SQLException: Io exception: The Network Adapter could not establish the
+ connection at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java)
+
+I am getting this error when data in database is increased (nearly 3000). It works fine with limited data( say 100)
+
+",1
+11535047,07/18/2012 05:54:28,1210582,02/15/2012 05:56:22,13,0,oracle table is not listing in the Toad schema browser for the particular schema,"I have a table named TableA in oracle 11g database, i could able to select this table by using the particular user id in toad, but i dont find this table in the toad schema browser for that schema in the toad.  please advice me on why i couldnt able to find that table in the schema browser or how to find that table?. Let me know if any further information is required.",oracle,toad,,,,,open,0,74,14,"oracle table is not listing in the Toad schema browser for the particular schema I have a table named TableA in oracle 11g database, i could able to select this table by using the particular user id in toad, but i dont find this table in the toad schema browser for that schema in the toad.  please advice me on why i couldnt able to find that table in the schema browser or how to find that table?. Let me know if any further information is required.",2
+7978236,11/02/2011 09:39:32,625832,02/21/2011 00:58:38,1,0,Oracle VMWare Licensing,"We currently have an application written in Oracle.  Most of our customers wish to run on VMWare internally or via third party.
+
+My understanding of Oracle licensing is that you must licence against all the underlying hardware unless you use Oracle's own virtualisation software.  However, most hosting organisations use VMWare and any internal hosting will also use VMWare.
+
+How can we licence Oracle products without them looking uncompetitive to competing SQL Server products when the VMWare licensing causes problems?
+
+Thanks.",oracle,licensing,vmware,,,11/18/2011 16:06:22,off topic,1,79,3,"Oracle VMWare Licensing We currently have an application written in Oracle.  Most of our customers wish to run on VMWare internally or via third party.
+
+My understanding of Oracle licensing is that you must licence against all the underlying hardware unless you use Oracle's own virtualisation software.  However, most hosting organisations use VMWare and any internal hosting will also use VMWare.
+
+How can we licence Oracle products without them looking uncompetitive to competing SQL Server products when the VMWare licensing causes problems?
+
+Thanks.",3
+11092261,06/18/2012 22:59:28,1464975,06/18/2012 22:31:15,1,0,Oracle SID INS-35075 - Keep the same SID,"I search for al most 3 hours in entire internet and nothing about this issue!., so how i can mantein the same SID!?
+
+http://i.stack.imgur.com/hTahz.png",oracle,oracle11g,sid,,,,open,0,23,8,"Oracle SID INS-35075 - Keep the same SID I search for al most 3 hours in entire internet and nothing about this issue!., so how i can mantein the same SID!?
+
+http://i.stack.imgur.com/hTahz.png",3
+8294983,11/28/2011 11:13:08,751796,05/13/2011 05:21:27,737,41,What to pass as a SYS_REFCURSOR argument,"Here I have a stored procedure in Oracle:
+
+    CREATE OR REPLACE PROCEDURE StP_COMPS
+    IS
+     CV_1 SYS_REFCURSOR;
+    BEGIN
+     OPEN CV_1  FOR SELECT * FROM COMPUTERS;
+    END;
+
+When I execute the procedure like EXEC SP_COMPS I get no error, the SQL Developer just shows ""ananymous block completed"". Then I change the procedure to a
+    
+    CREATE OR REPLACE PROCEDURE SP_COMPS
+          (cv_1 OUT SYS_REFCURSOR)
+    IS
+    BEGIN
+     OPEN CV_1  FOR SELECT * FROM COMPUTERS;
+    END;
+
+and when I execute I get error stating that the number of type of the arguments are wrong. I'm very curious what I could send as an argument to the procedure if it's just an output parameter. I want to get the result set of the query run inside the procedure. What am I doing wrong here?
+
+  ",oracle,stored-procedures,cursor,arguments,,,open,0,178,7,"What to pass as a SYS_REFCURSOR argument Here I have a stored procedure in Oracle:
+
+    CREATE OR REPLACE PROCEDURE StP_COMPS
+    IS
+     CV_1 SYS_REFCURSOR;
+    BEGIN
+     OPEN CV_1  FOR SELECT * FROM COMPUTERS;
+    END;
+
+When I execute the procedure like EXEC SP_COMPS I get no error, the SQL Developer just shows ""ananymous block completed"". Then I change the procedure to a
+    
+    CREATE OR REPLACE PROCEDURE SP_COMPS
+          (cv_1 OUT SYS_REFCURSOR)
+    IS
+    BEGIN
+     OPEN CV_1  FOR SELECT * FROM COMPUTERS;
+    END;
+
+and when I execute I get error stating that the number of type of the arguments are wrong. I'm very curious what I could send as an argument to the procedure if it's just an output parameter. I want to get the result set of the query run inside the procedure. What am I doing wrong here?
+
+  ",4
+11056976,06/15/2012 19:26:04,1120323,12/29/2011 02:17:29,22,1,Deleting rows based on multiple values in another table,"This statement is returning error 00920- invalid relational operator.
+
+I am sure it is my syntax, but I am not seeing it.  If anycode could look it over and point me to getting it right, I would appreciate it.
+
+Thank you
+
+    DELETE FROM TABLE15 p
+
+      WHERE (p.item_id, p.product_id) IN
+
+               (SELECT S.item_id, S.product_id )
+
+                  FROM TABLE14 S);
+",oracle,oracle11g,,,,,open,0,94,9,"Deleting rows based on multiple values in another table This statement is returning error 00920- invalid relational operator.
+
+I am sure it is my syntax, but I am not seeing it.  If anycode could look it over and point me to getting it right, I would appreciate it.
+
+Thank you
+
+    DELETE FROM TABLE15 p
+
+      WHERE (p.item_id, p.product_id) IN
+
+               (SELECT S.item_id, S.product_id )
+
+                  FROM TABLE14 S);
+",2
+6617552,07/07/2011 21:49:19,454671,09/17/2010 04:17:12,725,17,Increae memory allocation in TOAD,"How to start TOAD with a bigger memory allocation. Whenver I try to execute a proc in TOAD that deals with large data sets, it hangs!",oracle,toad,,,,07/08/2011 19:04:37,off topic,1,26,5,"Increae memory allocation in TOAD How to start TOAD with a bigger memory allocation. Whenver I try to execute a proc in TOAD that deals with large data sets, it hangs!",2
+893118,05/21/2009 14:09:12,4782,09/05/2008 15:13:51,999,51,Oracle Hierarchical query: how to include top-level parent,"I have a hierarchical query to track a reporting structure.  This almost works, except that it's not reporting the very top level node, probably because the top-level people ""report"" to themselves.
+
+The query is:
+
+    select
+      level,
+      empid, 
+      parentid
+    from usertable
+    connect by nocycle prior parentid= empid
+    start with empid = 50
+
+This produces:
+
+    LEVEL  EMPID PARENTID               
+    ------ ----- --------  
+    1      50    258            
+    2      258   9555
+    3      9555  17839
+
+I'm not getting a level 4, since it would look like:
+
+    4      17839 17839
+
+
+Without changing data, is there a way to modify my query so that all 4 levels are returned?  The goal is to get the empids, so I can do a check for
+
+`id in (hierarchical subquery)`
+
+
+BTW, if I remove the nocycle from the query I get an error.
+
+
+",oracle,hierarchical-data,,,,,open,0,229,8,"Oracle Hierarchical query: how to include top-level parent I have a hierarchical query to track a reporting structure.  This almost works, except that it's not reporting the very top level node, probably because the top-level people ""report"" to themselves.
+
+The query is:
+
+    select
+      level,
+      empid, 
+      parentid
+    from usertable
+    connect by nocycle prior parentid= empid
+    start with empid = 50
+
+This produces:
+
+    LEVEL  EMPID PARENTID               
+    ------ ----- --------  
+    1      50    258            
+    2      258   9555
+    3      9555  17839
+
+I'm not getting a level 4, since it would look like:
+
+    4      17839 17839
+
+
+Without changing data, is there a way to modify my query so that all 4 levels are returned?  The goal is to get the empids, so I can do a check for
+
+`id in (hierarchical subquery)`
+
+
+BTW, if I remove the nocycle from the query I get an error.
+
+
+",2
+7663083,10/05/2011 14:39:39,28045,10/14/2008 22:11:31,3761,89,Can a direct path insert into a LOB column?,"If my target table has a BLOB column in it, can I use direct path?  I found this statement from Oracle:
+
+-	Supplemental logging is not enabled and the table does not have a LOB column
+
+http://download.oracle.com/docs/cd/B19306_01/server.102/b14200/statements_9014.htm
+
+
+I did not know if this was a statement with both conditions that need to be met at the same time or they just didn't put this on two sentences.
+
+Is the AND for both options?
+
+or does it mean:
+
+ - Supplemental logging is not enabled 
+ - the table does not have a LOB
+   column",oracle,direct-path,,,,,open,0,90,9,"Can a direct path insert into a LOB column? If my target table has a BLOB column in it, can I use direct path?  I found this statement from Oracle:
+
+-	Supplemental logging is not enabled and the table does not have a LOB column
+
+http://download.oracle.com/docs/cd/B19306_01/server.102/b14200/statements_9014.htm
+
+
+I did not know if this was a statement with both conditions that need to be met at the same time or they just didn't put this on two sentences.
+
+Is the AND for both options?
+
+or does it mean:
+
+ - Supplemental logging is not enabled 
+ - the table does not have a LOB
+   column",2
+482046,01/27/2009 01:31:43,40441,11/24/2008 23:28:29,867,38,Why do you hate sequences on Oracle?,"Some people don't like sequences on Oracle. Why? I think they are very easy to use and so nice. You can use them in select, inserts, update,...",oracle,sequences,hate,,,01/28/2009 02:24:42,not constructive,1,27,7,"Why do you hate sequences on Oracle? Some people don't like sequences on Oracle. Why? I think they are very easy to use and so nice. You can use them in select, inserts, update,...",3
+5137398,02/28/2011 01:30:19,251311,01/15/2010 05:58:53,17186,700,"Scheduler jobs, slave pid and sleep","I have 2 scheduler jobs, that run different scheduler programs. Each of scheduler program run the same procedure but with different arguments.
+
+There is a `dbms_lock.sleep(N);` in a procedure.
+
+I've noticed that when 1 scheduler jobs is going to sleep - another one sleeps too. Until first one wakes up.
+
+In the scheduler logs I've found, that both scheduler jons have different `session id`, but **the same** `Slave PID`.
+
+Can this be an issue? If so - how to run the jobs with different slave pids?",oracle,oracle11gr2,,,,,open,0,82,6,"Scheduler jobs, slave pid and sleep I have 2 scheduler jobs, that run different scheduler programs. Each of scheduler program run the same procedure but with different arguments.
+
+There is a `dbms_lock.sleep(N);` in a procedure.
+
+I've noticed that when 1 scheduler jobs is going to sleep - another one sleeps too. Until first one wakes up.
+
+In the scheduler logs I've found, that both scheduler jons have different `session id`, but **the same** `Slave PID`.
+
+Can this be an issue? If so - how to run the jobs with different slave pids?",2
+11456516,07/12/2012 16:37:26,1513086,07/09/2012 20:37:52,1,0,What is a best IDE for oracle?,"I Work on a ORACLE 8.0.I know how to run oracle SQL command's in SQLPLUS.<br>
+I searched to find a IDE such as SQL Server Management Studio but couldn't find it. 
+<br> what is best IDE for ORACLE?
+thanks ",oracle,ide,oracle10g,oracle11g,sqlplus,07/13/2012 09:09:45,not constructive,1,38,7,"What is a best IDE for oracle? I Work on a ORACLE 8.0.I know how to run oracle SQL command's in SQLPLUS.<br>
+I searched to find a IDE such as SQL Server Management Studio but couldn't find it. 
+<br> what is best IDE for ORACLE?
+thanks ",5
+9918714,03/29/2012 03:31:26,922834,09/01/2011 04:44:02,1,0,How to Generate PostgreSql queries from Oracle DB Backup File,How to Generate PostgreSql queries from Oracle DB Backup File.Is any free tool available??,oracle,query,postgresql,drupal,,,open,0,14,10,How to Generate PostgreSql queries from Oracle DB Backup File How to Generate PostgreSql queries from Oracle DB Backup File.Is any free tool available??,4
+8004645,11/04/2011 03:40:48,1025901,11/02/2011 15:02:24,28,0,How to get the week day name from a date?,"Given ""03/09/1982"" how can we say it is which week day. In this case it will be ""Tue"".
+
+Is it possible to get in a single query?
+
+Thanks",oracle,,,,,,open,0,26,10,"How to get the week day name from a date? Given ""03/09/1982"" how can we say it is which week day. In this case it will be ""Tue"".
+
+Is it possible to get in a single query?
+
+Thanks",1
+3565993,08/25/2010 12:54:11,30642,10/23/2008 04:36:47,106,7,Disadvantages of consolidating databases?,"In an organization that has two applications each with its own Oracle database instance, what are the disadvantages of consolidating the two databases into one database with two schemas? 
+
+Backups and replicating the database are bigger and slower, probably. What else?",oracle,database-design,,,,,open,0,41,4,"Disadvantages of consolidating databases? In an organization that has two applications each with its own Oracle database instance, what are the disadvantages of consolidating the two databases into one database with two schemas? 
+
+Backups and replicating the database are bigger and slower, probably. What else?",2
+296736,11/17/2008 20:12:45,38341,11/17/2008 19:57:06,1,0,How to recreate an oracle 9i database from backup files (ora files),"I'm a developer so I'm a little lost in the DBA world.  Our systems guys have given me a backup of an Oracle 9i database.  I have installed oracle 9i on my pc and am now trying to 'import' the backup files so I have a normal database to work with.
+
+The backup folder has on SNCF[SID].ora file and around 150 [SID]-[Date]-[counter]-[soemnumber].ora files.  The question is, how do I get this data into oracle so I can query it through sql?
+
+I have gotten as far as creating a database which matches the SID of the backed up database.  Google tells me that I need to go into rman and run ""database restore.""  But how does it know where the backfiles are located?
+
+Any ideas?  Thanks.",oracle,backup,restore,controlfile,,,open,0,129,12,"How to recreate an oracle 9i database from backup files (ora files) I'm a developer so I'm a little lost in the DBA world.  Our systems guys have given me a backup of an Oracle 9i database.  I have installed oracle 9i on my pc and am now trying to 'import' the backup files so I have a normal database to work with.
+
+The backup folder has on SNCF[SID].ora file and around 150 [SID]-[Date]-[counter]-[soemnumber].ora files.  The question is, how do I get this data into oracle so I can query it through sql?
+
+I have gotten as far as creating a database which matches the SID of the backed up database.  Google tells me that I need to go into rman and run ""database restore.""  But how does it know where the backfiles are located?
+
+Any ideas?  Thanks.",4
+9058809,01/30/2012 02:50:39,463300,09/30/2010 21:05:45,374,5,How to swap table name in oracle,"I have 2 oracle tables that are identical in definition just different in partition definition. I want to test one table vs another table design. Is there a way to swap the table name? I don't want to drop a table because they are big and takes a long time to load data into them.
+
+Thanks,
+
+Sean",oracle,,,,,,open,0,55,7,"How to swap table name in oracle I have 2 oracle tables that are identical in definition just different in partition definition. I want to test one table vs another table design. Is there a way to swap the table name? I don't want to drop a table because they are big and takes a long time to load data into them.
+
+Thanks,
+
+Sean",1
+2033063,01/09/2010 10:36:10,222159,12/01/2009 14:40:32,366,9,automatically populate date in oracle tabel,"I have created a table in oracle XE, and I have a field with type date. I would like if possible when I insert a row, that it automatically fills that field with the current date from the system.
+
+I am inserting the rows from the SQL promt.
+
+Thanx",oracle,time,timestamp,,,,open,0,47,6,"automatically populate date in oracle tabel I have created a table in oracle XE, and I have a field with type date. I would like if possible when I insert a row, that it automatically fills that field with the current date from the system.
+
+I am inserting the rows from the SQL promt.
+
+Thanx",3
+3853420,10/04/2010 07:41:49,214472,11/19/2009 10:17:51,35,1,Oracle Decode function results with different formats,"    SELECT DECODE (SYSDATE, SYSDATE + 1, NULL, SYSDATE)
+      FROM DUAL;
+
+  
+    SELECT DECODE (SYSDATE, SYSDATE + 1, TO_DATE (NULL), SYSDATE)
+      FROM DUAL;
+
+  
+
+why am i getting the results in different formats from the queries above?
+ 
+i am using Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bi
+",oracle,decode,,,,,open,0,66,7,"Oracle Decode function results with different formats     SELECT DECODE (SYSDATE, SYSDATE + 1, NULL, SYSDATE)
+      FROM DUAL;
+
+  
+    SELECT DECODE (SYSDATE, SYSDATE + 1, TO_DATE (NULL), SYSDATE)
+      FROM DUAL;
+
+  
+
+why am i getting the results in different formats from the queries above?
+ 
+i am using Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - 64bi
+",2
+10389696,04/30/2012 19:50:27,1366577,04/30/2012 19:44:33,1,0,How can i validate student_name that only alphabets can be entered in it not the numbers or any other symbol ????? plzz reply sooon,I am doing final year project in oracle 10g and i have tried allot to search that how can i validate student_name that only alphabets can be entered in it.plz help me out i have wasted my whole day on it help me out,oracle,,,,,05/01/2012 23:09:34,not a real question,1,44,24,How can i validate student_name that only alphabets can be entered in it not the numbers or any other symbol ????? plzz reply sooon I am doing final year project in oracle 10g and i have tried allot to search that how can i validate student_name that only alphabets can be entered in it.plz help me out i have wasted my whole day on it help me out,1
+11709787,07/29/2012 13:54:35,462563,09/30/2010 07:17:32,81,7,oracle decode with multiple values,"i want to decode the value like the below query:
+
+select id,name,val from table1 where id=decode(1,0,0,1,('''4'',''5'',''6'''));
+
+But i am getting no records (Records are actually available).
+Is the decode functionality like ""('''4'',''5'',''6''')"" will works?
+
+I tried but not working. Any alternative to do so?",oracle,,,,,07/31/2012 06:39:46,not a real question,1,40,5,"oracle decode with multiple values i want to decode the value like the below query:
+
+select id,name,val from table1 where id=decode(1,0,0,1,('''4'',''5'',''6'''));
+
+But i am getting no records (Records are actually available).
+Is the decode functionality like ""('''4'',''5'',''6''')"" will works?
+
+I tried but not working. Any alternative to do so?",1
+11014595,06/13/2012 12:14:08,758902,05/18/2011 09:19:02,569,13,Getting account is locked when trying to connect from ODBC Data source administrator,"I am trying to connect to my datasource using ODBC Data source administrator, but getting that the account ""system"" is **locked**, even though I logged in to the oracle server and was able to unlock it, and I can connect to it using SQL Plus from the oracle server! but back from the ODBC I am still getting that the account is locked
+
+Any body knows how to solve this issue?
+Thanks",oracle,oracle10g,odbc,,,,open,0,70,13,"Getting account is locked when trying to connect from ODBC Data source administrator I am trying to connect to my datasource using ODBC Data source administrator, but getting that the account ""system"" is **locked**, even though I logged in to the oracle server and was able to unlock it, and I can connect to it using SQL Plus from the oracle server! but back from the ODBC I am still getting that the account is locked
+
+Any body knows how to solve this issue?
+Thanks",3
+2189178,02/03/2010 02:10:02,229432,12/11/2009 07:08:13,13,0,"oracle db lock issue, commit","This is oracle 10g. if i issue a update on a table from sqlplus and not commit it. then i go open another sqlplus and do another chaneg to that same table and try to commit. It just hangs until i commit the first one. I know some would argue its teh locking mechanism but the application we have does the same thing and users are locked adnc anot login if sql please issus a commit statement in teh first session
+
+Whats the best way to avoid this issue?",oracle,locking,,,,,open,0,88,5,"oracle db lock issue, commit This is oracle 10g. if i issue a update on a table from sqlplus and not commit it. then i go open another sqlplus and do another chaneg to that same table and try to commit. It just hangs until i commit the first one. I know some would argue its teh locking mechanism but the application we have does the same thing and users are locked adnc anot login if sql please issus a commit statement in teh first session
+
+Whats the best way to avoid this issue?",2
+11668365,07/26/2012 11:33:18,1528686,07/16/2012 11:03:15,1,0,Alternate method for PIVOT - IN with sub-query support,"As per oracle documentation, PIVOT function doesn't support sub-query in the ""IN"" clause but it is possible in the PIVOT XML function.
+E.g.
+SELECT *
+FROM table_name
+PIVOT
+(
+  SUM(column_name_1)
+  FOR [column_name_2] IN (**['Output_Column1'],['Output_Column2']**)
+)
+AS aliasName
+
+I need to replace the ['Output_Column1'],['Output_Column2'] with sub-query.
+
+Is there some other function equivalent to PIVOT where we can supply sub-query instead hard coding the entire output columns or even in the PIVOT function itself?.",oracle,oracle11g,,,,,open,0,65,9,"Alternate method for PIVOT - IN with sub-query support As per oracle documentation, PIVOT function doesn't support sub-query in the ""IN"" clause but it is possible in the PIVOT XML function.
+E.g.
+SELECT *
+FROM table_name
+PIVOT
+(
+  SUM(column_name_1)
+  FOR [column_name_2] IN (**['Output_Column1'],['Output_Column2']**)
+)
+AS aliasName
+
+I need to replace the ['Output_Column1'],['Output_Column2'] with sub-query.
+
+Is there some other function equivalent to PIVOT where we can supply sub-query instead hard coding the entire output columns or even in the PIVOT function itself?.",2
+1101390,07/09/2009 01:26:39,116,08/02/2008 05:51:57,12413,326,Oracle SQL Developer: sharing configuration via Dropbox,"I would like to share my Oracle SQL Developer configuration across my several computers that use Dropbox.
+
+How can I do this?",oracle,sql-developer,dropbox,,,,open,0,21,7,"Oracle SQL Developer: sharing configuration via Dropbox I would like to share my Oracle SQL Developer configuration across my several computers that use Dropbox.
+
+How can I do this?",3
+11340872,07/05/2012 08:52:00,839393,07/11/2011 17:55:15,67,3,what is Oracle data integrator?,"What is ODI? what is the actual use of ODI? how oracle data integrator tool, helps with programming? what actually is the difference between an sql developer tool and an ODI tool? really fed up with the definitions found on some sites, it will be great if any one comes up with gud explanation..",oracle,,,,,,open,0,54,5,"what is Oracle data integrator? What is ODI? what is the actual use of ODI? how oracle data integrator tool, helps with programming? what actually is the difference between an sql developer tool and an ODI tool? really fed up with the definitions found on some sites, it will be great if any one comes up with gud explanation..",1
+8212605,11/21/2011 13:31:52,1057776,11/21/2011 12:22:54,1,0,Need steps to upgrade oracle database from 10g to 11g,"I am newbie in oracle database administration. I have been told to upgrade the oracle 10g database to 11g. As i have never done this before i would like to get some easy and safe method to upgrade from 10g to 11g.
+
+Regards.",oracle,oracle11g,upgrade,,,11/21/2011 15:04:47,too localized,1,42,10,"Need steps to upgrade oracle database from 10g to 11g I am newbie in oracle database administration. I have been told to upgrade the oracle 10g database to 11g. As i have never done this before i would like to get some easy and safe method to upgrade from 10g to 11g.
+
+Regards.",3
+11444185,07/12/2012 02:16:54,1511124,07/09/2012 06:02:01,1,0,how to create database using oracle enterprise manager,i already install oracle 11g r2. how to create database using the OEM? how to manage the oracle using this OEM?,oracle,oracle11g,enterprise,manager,,07/26/2012 22:38:09,not a real question,1,21,8,how to create database using oracle enterprise manager i already install oracle 11g r2. how to create database using the OEM? how to manage the oracle using this OEM?,4
+7570522,09/27/2011 14:07:49,203686,11/05/2009 16:17:40,120,9,Oracle as JMS Server: Any Feedback?,"We would select a queue server for a distributed architecture. Our DBA talked us about Oracle JMS Server? 
+What is your feeling?
+I got feedback with servers like RabbitMQ/HornetMQ/ActiveMQ? How would you compare it to Oracle JMS? ",oracle,jms,rabbitmq,mq,,09/27/2011 21:04:00,not constructive,1,37,6,"Oracle as JMS Server: Any Feedback? We would select a queue server for a distributed architecture. Our DBA talked us about Oracle JMS Server? 
+What is your feeling?
+I got feedback with servers like RabbitMQ/HornetMQ/ActiveMQ? How would you compare it to Oracle JMS? ",4
+1427918,09/15/2009 15:34:31,91769,04/16/2009 18:21:45,383,22,Oracle Duration Function,"Why isn't my PL/SQL duration function working correctly?  In the query below, I manually calculate the 'hh:mm' the same way as in the function below.  However, I get different results.
+
+Calling Query:
+
+    WITH durdays AS (SELECT SYSDATE - (SYSDATE - (95 / 1440)) AS durdays FROM DUAL)
+    SELECT TRUNC (24 * durdays) AS durhrs,
+           MOD (TRUNC (durdays * 1440), 60) AS durmin,
+           steven.duration (SYSDATE - (95 / 1400), SYSDATE) duration
+      FROM durdays
+
+Output:
+
+    durhrs:   1
+    durmin:   35
+    duration: '1:38'
+
+Function code:
+
+    CREATE OR REPLACE FUNCTION steven.duration (d1 IN DATE, d2 IN DATE)
+       RETURN VARCHAR2 IS
+       tmpvar   VARCHAR2 (30);
+       durdays   NUMBER (20,10); -- Days between two DATEs
+       durhrs   BINARY_INTEGER; -- Completed hours
+       durmin   BINARY_INTEGER; -- Completed minutes
+    BEGIN
+       durdays   := d2-d1; 
+       durhrs   := TRUNC(24 * durdays);   
+       durmin   := MOD (TRUNC(durdays * 1440), 60);
+       tmpvar   := durhrs || ':' || durmin;
+       RETURN tmpvar;
+    END duration;
+    /
+
+
+",oracle,plsql,duration,,,,open,0,279,3,"Oracle Duration Function Why isn't my PL/SQL duration function working correctly?  In the query below, I manually calculate the 'hh:mm' the same way as in the function below.  However, I get different results.
+
+Calling Query:
+
+    WITH durdays AS (SELECT SYSDATE - (SYSDATE - (95 / 1440)) AS durdays FROM DUAL)
+    SELECT TRUNC (24 * durdays) AS durhrs,
+           MOD (TRUNC (durdays * 1440), 60) AS durmin,
+           steven.duration (SYSDATE - (95 / 1400), SYSDATE) duration
+      FROM durdays
+
+Output:
+
+    durhrs:   1
+    durmin:   35
+    duration: '1:38'
+
+Function code:
+
+    CREATE OR REPLACE FUNCTION steven.duration (d1 IN DATE, d2 IN DATE)
+       RETURN VARCHAR2 IS
+       tmpvar   VARCHAR2 (30);
+       durdays   NUMBER (20,10); -- Days between two DATEs
+       durhrs   BINARY_INTEGER; -- Completed hours
+       durmin   BINARY_INTEGER; -- Completed minutes
+    BEGIN
+       durdays   := d2-d1; 
+       durhrs   := TRUNC(24 * durdays);   
+       durmin   := MOD (TRUNC(durdays * 1440), 60);
+       tmpvar   := durhrs || ':' || durmin;
+       RETURN tmpvar;
+    END duration;
+    /
+
+
+",3
+8868457,01/15/2012 08:34:09,1150185,01/15/2012 08:31:29,1,0,Consultation on APEX and Cloud,"I am glad to be with you guys here today 
+
+I am given a project which is very small project for small clinic which may be contains of five departments reception or registration and billing,pharmacy,store,laboratory,payroll so far ,
+
+and as you know most of the operations for this project would be like CRUD operations if we will take first module as example :
+
+for the first department ""Registration and billing ""
+there will be form which contains the details of the patient and then the billing part will contain the entry fee and then if the patient goes to Dr then goes to pharmacy his details should be there in the pharmacy page where the medicine that he is going to buy will be added to his profile and then print the receipt .
+
+
+My questions now are  :
+
+1. Can apex do this project .
+2. Can I use the bar code to get the product details.
+3. Can I add figure print machine for the employees attendance .
+4. Can I integrate apex with some pages from JSP in case if I have dynamic module needs more control driven mechanisms.
+
+Questions related to apex with 11g XE and cloud :
+1. Can I use apex and 11g xe for free and install them in server in my organization? If yes, so What are the limitations ?
+2. If am going to deploy it on cloud shall they will use Oracle 11g XE or Oracle SE or EE, or it depends on my request ?
+3. If I greed to start apex  and I would like to deploy it on cloud is there any requirements , like Do I have to first contact Oracle and ask them to give me the login to apex on cloud and work remotely , Or 
+Can first develop it here in my machine and then contact oracle and deploy it on cloud .
+
+If apex is not recommended for such projects please tell me before I start , and I will replace it with Java EE6
+
+Thanks dear friends I hope the post is clear and if someone got doubt about it I can clear it .",oracle,oracle-apex,,,,01/15/2012 19:54:56,not a real question,1,352,5,"Consultation on APEX and Cloud I am glad to be with you guys here today 
+
+I am given a project which is very small project for small clinic which may be contains of five departments reception or registration and billing,pharmacy,store,laboratory,payroll so far ,
+
+and as you know most of the operations for this project would be like CRUD operations if we will take first module as example :
+
+for the first department ""Registration and billing ""
+there will be form which contains the details of the patient and then the billing part will contain the entry fee and then if the patient goes to Dr then goes to pharmacy his details should be there in the pharmacy page where the medicine that he is going to buy will be added to his profile and then print the receipt .
+
+
+My questions now are  :
+
+1. Can apex do this project .
+2. Can I use the bar code to get the product details.
+3. Can I add figure print machine for the employees attendance .
+4. Can I integrate apex with some pages from JSP in case if I have dynamic module needs more control driven mechanisms.
+
+Questions related to apex with 11g XE and cloud :
+1. Can I use apex and 11g xe for free and install them in server in my organization? If yes, so What are the limitations ?
+2. If am going to deploy it on cloud shall they will use Oracle 11g XE or Oracle SE or EE, or it depends on my request ?
+3. If I greed to start apex  and I would like to deploy it on cloud is there any requirements , like Do I have to first contact Oracle and ask them to give me the login to apex on cloud and work remotely , Or 
+Can first develop it here in my machine and then contact oracle and deploy it on cloud .
+
+If apex is not recommended for such projects please tell me before I start , and I will replace it with Java EE6
+
+Thanks dear friends I hope the post is clear and if someone got doubt about it I can clear it .",2
+10426907,05/03/2012 07:24:44,460224,09/28/2010 05:45:16,768,38,unable to open oracle database .error ora-01122,"When i am trying to open oracle database after restore an i am getting below error
+
+    ORA-01122: database file 11 failed verification check
+    ORA-01110: data file 11: 'D:\oracle\oradata\DELORCL\boran.ora'
+    ORA-01203: wrong incarnation of this file - wrong creation SCN
+
+how can we solve this?",oracle,oracle9i,,,,05/03/2012 07:48:58,off topic,1,51,7,"unable to open oracle database .error ora-01122 When i am trying to open oracle database after restore an i am getting below error
+
+    ORA-01122: database file 11 failed verification check
+    ORA-01110: data file 11: 'D:\oracle\oradata\DELORCL\boran.ora'
+    ORA-01203: wrong incarnation of this file - wrong creation SCN
+
+how can we solve this?",2
+9689911,03/13/2012 18:30:28,722822,04/24/2011 18:18:06,199,10,a better way to handle cursors as to not get maxium cursors open exceed error,"So i have a stored procedure that i thought was caught in an infinite loop, but after taking it apart and running the various loops individually it turns out that my code is causing a 
+
+> ORA-01000: maximum open cursors exceeded
+
+The problem seems to occur with the way i am populating the first two cursors. This may seem like a dumb questions, but i was hoping someone could give me some advice on how to better handle the population of these cursors?
+
+Below you will find my procedure in full, and i will then break down the area that seems to be causing the problem.
+
+Full procedure:
+
+        procedure SplitIntrvlsAtShiftBoundaries is
+    
+    vRecCount number;
+    RC number;
+    vShiftIDAtIntervalStart number;
+    vShiftIDAtIntervalEnd number;
+    vDummyRecSecs number(6,4) := 0.0;
+    
+    vStartTimestamp timestamp with time zone;
+    vEndTimestamp timestamp with time zone;
+    
+    cCurs Sys_refcursor;
+    
+    vCurrentRec TMP_SHIFT_LIST_TBL%rowtype;
+    vCurrentInterval MACHINE_INTERVAL%rowtype;
+    vNewInterval MACHINE_INTERVAL%rowtype;
+    
+    lProcName    CONST.PBString;
+    
+    
+    vIntervalDOW smallint; -- intervals never span a midnite boundary 
+                           -- are split over midnite in prior steps.
+    
+    CURSOR C1 IS SELECT * FROM TMP_SHIFT_MI_TBL ORDER BY START_DATE_TIME ASC, MACHINE_ID;
+    CURSOR C2 IS SELECT * FROM TMP_SHIFT_LIST_TBL ORDER BY SHIFT_START_DAY ASC, SHIFT_START_TIME; 
+    
+    BEGIN
+     
+      lProcName := 'TRANSFORM_PROCESS_2.SplitIntrvlsAtShiftBoundaries';
+      pb_util.logdata(3, lProcName, 'Process Started ' );
+      
+      DELETE FROM TMP_SHIFT_MI_TBL;
+      DELETE FROM TMP_SHIFT_LIST_TBL;
+      
+      INSERT INTO TMP_SHIFT_MI_TBL
+      SELECT *
+      FROM MACHINE_INTERVAL
+      WHERE  interval_state = 0
+      AND start_date_time <> CONST.STARTDATE
+      AND  trunc(calc_end_time) < trunc( CONST.ENDDATE) - 144;
+      
+      BEGIN
+        FOR R1 IN C1
+          LOOP  
+           
+            -- gets the current interval from the machine interval table by using the interval id found from the tmp_table
+            SELECT * INTO vCurrentInterval 
+            FROM Machine_Interval MI 
+            WHERE R1.Machine_Interval_ID = MI.Machine_Interval_Id; 
+            
+            -- gets the shifts containning the start and end dates obtained from the machine interval
+            Shift_pkg.getShiftsContaining(R1.start_date_time, R1.calc_end_time, cCurs, vRecCount);
+            
+            FETCH cCurs INTO vCurrentRec;
+              LOOP
+               
+                -- populates the tmp_shift_list_tbl dynamically
+                BEGIN          
+                  EXIT WHEN cCurs%notfound;
+                  
+                  EXECUTE IMMEDIATE 'insert into tmp_shift_list_tbl
+                                     (shift_id_pk, shift_name, shift_start_day, shift_start_time, 
+                                      shift_end_day, shift_end_time, site_id_fk, shift_day_id,
+                                      startoffset, endoffset) 
+                               VALUES(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10)' 
+                               USING vCurrentRec.SHIFT_ID_PK, vCurrentRec.SHIFT_NAME,
+                                     vCurrentRec.SHIFT_START_DAY, vCurrentRec.SHIFT_START_TIME,
+                                     vCurrentRec.SHIFT_END_DAY, vCurrentRec.SHIFT_END_TIME,
+                                     vCurrentRec.SITE_ID_FK, vCurrentRec.SHIFT_DAY_ID, 
+                                     vCurrentRec.STARTOFFSET, vCurrentRec.ENDOFFSET;
+                                     
+                END;
+              END LOOP;  
+              pb_util.logdata(3, lProcName, 'FOUND: ', 'found ' || vRecCount ||
+                              ' shifts in machine interval: ' || R1.MACHINE_INTERVAL_ID);
+           
+            -- depending on the # of shifts found in vRecCount different cases are applied.
+            CASE
+            WHEN vRecCount = 1 -- apply shift id to interval   
+               THEN 
+                 BEGIN             
+                   FOR R2 IN C2
+                     LOOP
+                     
+                        UPDATE MACHINE_INTERVAL MI
+                        SET MI.SHIFT_ID = R2.SHIFT_ID_PK
+                        WHERE MI.MACHINE_INTERVAL_ID = R1.MACHINE_INTERVAL_ID;
+                     
+                     END LOOP;
+                 END;      
+            WHEN vRecCount > 1 -- split up the interval between the shifts i.e. create intervals
+               THEN 
+                BEGIN            
+                  FOR R2 IN C2
+                    LOOP  
+                    
+                      -- make copy of the current interval.
+                      vNewInterval := vCurrentInterval;
+                      -- set the new interval duration
+                      vCurrentInterval.Interval_Duration := pb_util.intervaltosecond(R2.shift_Start_Time - 
+                                                                                     vCurrentInterval.Start_Date_Time);
+                      -- set the new shift id for the machine interval table
+                      vCurrentInterval.Shift_ID := R2.Shift_ID_PK;
+                      
+                      -- update the record.
+                      DM.MachineIntervalRecordUpdate(MachineIntervalID => vCurrentInterval.Machine_Interval_ID,
+                                                     StartDateTime => vCurrentInterval.Start_Date_Time,                                                 
+                                                     IntervalDuration => vCurrentInterval.Interval_Duration,
+                                                     IntervalCategory => vCurrentInterval.INTERVAL_CATEGORY,
+                                                     NPTCategoryID => vCurrentInterval.NPT_CATEGORY_ID,
+                                                     NPTControlledID => vCurrentInterval.CATEGORYTYPENUMERIC,
+                                                     NPTOPStateID => vCurrentInterval.OPERATIONALSTATENUMERIC,
+                                                     pExecutionSecs => vDummyRecsecs);
+                      
+                      UPDATE MACHINE_INTERVAL MI
+                      SET MI.Shift_ID = vCurrentInterval.Shift_ID
+                      WHERE MI.Machine_Interval_ID = vCurrentInterval.Machine_Interval_ID;
+                      
+                       -- set new start date time & interval duration                              
+                      vNewInterval.Start_Date_Time := R2.Shift_End_Time;
+                      vNewInterval.Interval_Duration := pb_util.intervaltosecond(vNewInterval.Calc_End_Time - 
+                                                                                 vNewInterval.Start_Date_Time);
+                     
+                      -- create new record in interval table.
+                      RC := DM.MachineIntervalRecordInsert(MachineIntervalRecord_IN => vNewInterval, 
+                                                           pExecutionSecs => vDummyRecsecs);
+                                        
+                      -- set current interval to the newly created interval and loop.
+                      vCurrentInterval := vNewInterval;
+                    
+                    END LOOP;
+                END;      
+            ELSE -- if no shifts are found then set id to null
+            
+              UPDATE MACHINE_INTERVAL MI
+              SET SHIFT_ID = 0
+              WHERE MI.MACHINE_INTERVAL_ID = R1.MACHINE_INTERVAL_ID;
+            
+            END CASE;   
+          END LOOP;
+          pb_util.logdata(3, lProcName, 'Process Completed ' );
+          COMMIT;
+      END;
+      
+    exception when others then
+    pb_util.logdata(1, 'TRANSFORM_PROCESS_2.SplitIntrvlsAtShiftBoundaries', 'EXCEPTION THROWN (880B)', SQLERRM || ' STACK: ' || DBMS_UTILITY.FORMAT_ERROR_BACKTRACE);
+     
+    END SplitIntrvlsAtShiftBoundaries;
+
+The cursors that i'm pretty sure is causing the problem are these two:
+
+        CURSOR C1 IS SELECT * FROM TMP_SHIFT_MI_TBL ORDER BY START_DATE_TIME ASC, MACHINE_ID;
+    CURSOR C2 IS SELECT * FROM TMP_SHIFT_LIST_TBL ORDER BY SHIFT_START_DAY ASC, SHIFT_START_TIME; 
+
+The area that the procedure seems to hit the maximum cursor opened exceeds:
+
+ 
+
+     FOR R1 IN C1
+      LOOP  
+       
+        -- gets the current interval from the machine interval table by using the interval id found from the tmp_table
+        SELECT * INTO vCurrentInterval 
+        FROM Machine_Interval MI 
+        WHERE R1.Machine_Interval_ID = MI.Machine_Interval_Id; 
+        
+        -- gets the shifts containning the start and end dates obtained from the machine interval
+        Shift_pkg.getShiftsContaining(R1.start_date_time, R1.calc_end_time, cCurs, vRecCount);
+        
+        FETCH cCurs INTO vCurrentRec;
+          LOOP
+           
+            -- populates the tmp_shift_list_tbl dynamically
+            BEGIN          
+              EXIT WHEN cCurs%notfound;
+              
+              EXECUTE IMMEDIATE 'insert into tmp_shift_list_tbl
+                                 (shift_id_pk, shift_name, shift_start_day, shift_start_time, 
+                                  shift_end_day, shift_end_time, site_id_fk, shift_day_id,
+                                  startoffset, endoffset) 
+                           VALUES(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10)' 
+                           USING vCurrentRec.SHIFT_ID_PK, vCurrentRec.SHIFT_NAME,
+                                 vCurrentRec.SHIFT_START_DAY, vCurrentRec.SHIFT_START_TIME,
+                                 vCurrentRec.SHIFT_END_DAY, vCurrentRec.SHIFT_END_TIME,
+                                 vCurrentRec.SITE_ID_FK, vCurrentRec.SHIFT_DAY_ID, 
+                                 vCurrentRec.STARTOFFSET, vCurrentRec.ENDOFFSET;
+                                 
+            END;
+          END LOOP;  
+          pb_util.logdata(3, lProcName, 'FOUND: ', 'found ' || vRecCount ||
+                          ' shifts in machine interval: ' || R1.MACHINE_INTERVAL_ID);
+
+
+
+and help or suggestions are greatly appreciated. 
+Thanks",oracle,plsql,cursors,,,,open,0,3977,15,"a better way to handle cursors as to not get maxium cursors open exceed error So i have a stored procedure that i thought was caught in an infinite loop, but after taking it apart and running the various loops individually it turns out that my code is causing a 
+
+> ORA-01000: maximum open cursors exceeded
+
+The problem seems to occur with the way i am populating the first two cursors. This may seem like a dumb questions, but i was hoping someone could give me some advice on how to better handle the population of these cursors?
+
+Below you will find my procedure in full, and i will then break down the area that seems to be causing the problem.
+
+Full procedure:
+
+        procedure SplitIntrvlsAtShiftBoundaries is
+    
+    vRecCount number;
+    RC number;
+    vShiftIDAtIntervalStart number;
+    vShiftIDAtIntervalEnd number;
+    vDummyRecSecs number(6,4) := 0.0;
+    
+    vStartTimestamp timestamp with time zone;
+    vEndTimestamp timestamp with time zone;
+    
+    cCurs Sys_refcursor;
+    
+    vCurrentRec TMP_SHIFT_LIST_TBL%rowtype;
+    vCurrentInterval MACHINE_INTERVAL%rowtype;
+    vNewInterval MACHINE_INTERVAL%rowtype;
+    
+    lProcName    CONST.PBString;
+    
+    
+    vIntervalDOW smallint; -- intervals never span a midnite boundary 
+                           -- are split over midnite in prior steps.
+    
+    CURSOR C1 IS SELECT * FROM TMP_SHIFT_MI_TBL ORDER BY START_DATE_TIME ASC, MACHINE_ID;
+    CURSOR C2 IS SELECT * FROM TMP_SHIFT_LIST_TBL ORDER BY SHIFT_START_DAY ASC, SHIFT_START_TIME; 
+    
+    BEGIN
+     
+      lProcName := 'TRANSFORM_PROCESS_2.SplitIntrvlsAtShiftBoundaries';
+      pb_util.logdata(3, lProcName, 'Process Started ' );
+      
+      DELETE FROM TMP_SHIFT_MI_TBL;
+      DELETE FROM TMP_SHIFT_LIST_TBL;
+      
+      INSERT INTO TMP_SHIFT_MI_TBL
+      SELECT *
+      FROM MACHINE_INTERVAL
+      WHERE  interval_state = 0
+      AND start_date_time <> CONST.STARTDATE
+      AND  trunc(calc_end_time) < trunc( CONST.ENDDATE) - 144;
+      
+      BEGIN
+        FOR R1 IN C1
+          LOOP  
+           
+            -- gets the current interval from the machine interval table by using the interval id found from the tmp_table
+            SELECT * INTO vCurrentInterval 
+            FROM Machine_Interval MI 
+            WHERE R1.Machine_Interval_ID = MI.Machine_Interval_Id; 
+            
+            -- gets the shifts containning the start and end dates obtained from the machine interval
+            Shift_pkg.getShiftsContaining(R1.start_date_time, R1.calc_end_time, cCurs, vRecCount);
+            
+            FETCH cCurs INTO vCurrentRec;
+              LOOP
+               
+                -- populates the tmp_shift_list_tbl dynamically
+                BEGIN          
+                  EXIT WHEN cCurs%notfound;
+                  
+                  EXECUTE IMMEDIATE 'insert into tmp_shift_list_tbl
+                                     (shift_id_pk, shift_name, shift_start_day, shift_start_time, 
+                                      shift_end_day, shift_end_time, site_id_fk, shift_day_id,
+                                      startoffset, endoffset) 
+                               VALUES(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10)' 
+                               USING vCurrentRec.SHIFT_ID_PK, vCurrentRec.SHIFT_NAME,
+                                     vCurrentRec.SHIFT_START_DAY, vCurrentRec.SHIFT_START_TIME,
+                                     vCurrentRec.SHIFT_END_DAY, vCurrentRec.SHIFT_END_TIME,
+                                     vCurrentRec.SITE_ID_FK, vCurrentRec.SHIFT_DAY_ID, 
+                                     vCurrentRec.STARTOFFSET, vCurrentRec.ENDOFFSET;
+                                     
+                END;
+              END LOOP;  
+              pb_util.logdata(3, lProcName, 'FOUND: ', 'found ' || vRecCount ||
+                              ' shifts in machine interval: ' || R1.MACHINE_INTERVAL_ID);
+           
+            -- depending on the # of shifts found in vRecCount different cases are applied.
+            CASE
+            WHEN vRecCount = 1 -- apply shift id to interval   
+               THEN 
+                 BEGIN             
+                   FOR R2 IN C2
+                     LOOP
+                     
+                        UPDATE MACHINE_INTERVAL MI
+                        SET MI.SHIFT_ID = R2.SHIFT_ID_PK
+                        WHERE MI.MACHINE_INTERVAL_ID = R1.MACHINE_INTERVAL_ID;
+                     
+                     END LOOP;
+                 END;      
+            WHEN vRecCount > 1 -- split up the interval between the shifts i.e. create intervals
+               THEN 
+                BEGIN            
+                  FOR R2 IN C2
+                    LOOP  
+                    
+                      -- make copy of the current interval.
+                      vNewInterval := vCurrentInterval;
+                      -- set the new interval duration
+                      vCurrentInterval.Interval_Duration := pb_util.intervaltosecond(R2.shift_Start_Time - 
+                                                                                     vCurrentInterval.Start_Date_Time);
+                      -- set the new shift id for the machine interval table
+                      vCurrentInterval.Shift_ID := R2.Shift_ID_PK;
+                      
+                      -- update the record.
+                      DM.MachineIntervalRecordUpdate(MachineIntervalID => vCurrentInterval.Machine_Interval_ID,
+                                                     StartDateTime => vCurrentInterval.Start_Date_Time,                                                 
+                                                     IntervalDuration => vCurrentInterval.Interval_Duration,
+                                                     IntervalCategory => vCurrentInterval.INTERVAL_CATEGORY,
+                                                     NPTCategoryID => vCurrentInterval.NPT_CATEGORY_ID,
+                                                     NPTControlledID => vCurrentInterval.CATEGORYTYPENUMERIC,
+                                                     NPTOPStateID => vCurrentInterval.OPERATIONALSTATENUMERIC,
+                                                     pExecutionSecs => vDummyRecsecs);
+                      
+                      UPDATE MACHINE_INTERVAL MI
+                      SET MI.Shift_ID = vCurrentInterval.Shift_ID
+                      WHERE MI.Machine_Interval_ID = vCurrentInterval.Machine_Interval_ID;
+                      
+                       -- set new start date time & interval duration                              
+                      vNewInterval.Start_Date_Time := R2.Shift_End_Time;
+                      vNewInterval.Interval_Duration := pb_util.intervaltosecond(vNewInterval.Calc_End_Time - 
+                                                                                 vNewInterval.Start_Date_Time);
+                     
+                      -- create new record in interval table.
+                      RC := DM.MachineIntervalRecordInsert(MachineIntervalRecord_IN => vNewInterval, 
+                                                           pExecutionSecs => vDummyRecsecs);
+                                        
+                      -- set current interval to the newly created interval and loop.
+                      vCurrentInterval := vNewInterval;
+                    
+                    END LOOP;
+                END;      
+            ELSE -- if no shifts are found then set id to null
+            
+              UPDATE MACHINE_INTERVAL MI
+              SET SHIFT_ID = 0
+              WHERE MI.MACHINE_INTERVAL_ID = R1.MACHINE_INTERVAL_ID;
+            
+            END CASE;   
+          END LOOP;
+          pb_util.logdata(3, lProcName, 'Process Completed ' );
+          COMMIT;
+      END;
+      
+    exception when others then
+    pb_util.logdata(1, 'TRANSFORM_PROCESS_2.SplitIntrvlsAtShiftBoundaries', 'EXCEPTION THROWN (880B)', SQLERRM || ' STACK: ' || DBMS_UTILITY.FORMAT_ERROR_BACKTRACE);
+     
+    END SplitIntrvlsAtShiftBoundaries;
+
+The cursors that i'm pretty sure is causing the problem are these two:
+
+        CURSOR C1 IS SELECT * FROM TMP_SHIFT_MI_TBL ORDER BY START_DATE_TIME ASC, MACHINE_ID;
+    CURSOR C2 IS SELECT * FROM TMP_SHIFT_LIST_TBL ORDER BY SHIFT_START_DAY ASC, SHIFT_START_TIME; 
+
+The area that the procedure seems to hit the maximum cursor opened exceeds:
+
+ 
+
+     FOR R1 IN C1
+      LOOP  
+       
+        -- gets the current interval from the machine interval table by using the interval id found from the tmp_table
+        SELECT * INTO vCurrentInterval 
+        FROM Machine_Interval MI 
+        WHERE R1.Machine_Interval_ID = MI.Machine_Interval_Id; 
+        
+        -- gets the shifts containning the start and end dates obtained from the machine interval
+        Shift_pkg.getShiftsContaining(R1.start_date_time, R1.calc_end_time, cCurs, vRecCount);
+        
+        FETCH cCurs INTO vCurrentRec;
+          LOOP
+           
+            -- populates the tmp_shift_list_tbl dynamically
+            BEGIN          
+              EXIT WHEN cCurs%notfound;
+              
+              EXECUTE IMMEDIATE 'insert into tmp_shift_list_tbl
+                                 (shift_id_pk, shift_name, shift_start_day, shift_start_time, 
+                                  shift_end_day, shift_end_time, site_id_fk, shift_day_id,
+                                  startoffset, endoffset) 
+                           VALUES(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10)' 
+                           USING vCurrentRec.SHIFT_ID_PK, vCurrentRec.SHIFT_NAME,
+                                 vCurrentRec.SHIFT_START_DAY, vCurrentRec.SHIFT_START_TIME,
+                                 vCurrentRec.SHIFT_END_DAY, vCurrentRec.SHIFT_END_TIME,
+                                 vCurrentRec.SITE_ID_FK, vCurrentRec.SHIFT_DAY_ID, 
+                                 vCurrentRec.STARTOFFSET, vCurrentRec.ENDOFFSET;
+                                 
+            END;
+          END LOOP;  
+          pb_util.logdata(3, lProcName, 'FOUND: ', 'found ' || vRecCount ||
+                          ' shifts in machine interval: ' || R1.MACHINE_INTERVAL_ID);
+
+
+
+and help or suggestions are greatly appreciated. 
+Thanks",3
+9298375,02/15/2012 17:40:11,583865,01/21/2011 02:08:58,8,0,What is the best GUI Tool for Oracle?,"I have heard Toad is pretty good and then there is the Oracle SQL Developer that is maintained by Oracle, but are there others? And which is the best?",oracle,toad,,,,02/16/2012 04:00:07,not a real question,1,29,8,"What is the best GUI Tool for Oracle? I have heard Toad is pretty good and then there is the Oracle SQL Developer that is maintained by Oracle, but are there others? And which is the best?",2
+3940522,10/15/2010 08:12:32,411718,08/05/2010 08:38:27,25,5,Why is no_data_found ORA-01403 an exception in Oracle?,"If the SELECT INTO statement doesn't return at least one row, ORA-01403 is thrown.
+
+For every other DBMS I know this is normal on a SELECT.
+Only Oracle treats a SELECT INTO like this. 
+
+    CREATE OR REPLACE PROCEDURE no_data_proc IS
+       dummy dual.dummy%TYPE;
+    BEGIN
+      BEGIN 
+         SELECT dummy  
+           INTO dummy
+           FROM dual
+          WHERE dummy = 'Y';   
+      EXCEPTION 
+         WHEN no_data_found THEN
+            dbms_output.put_line('Why is this needed?');
+      END;
+    END no_data_proc;
+
+**Why?**
+
+In my opinion you don't need this exception really. It is too much overhead.
+Sometimes it is handy but you have to write a whole BEGIN, EXCEPTION, WHEN, END Block.
+
+Are there any essential reasons I don't see?
+",oracle,exception,exception-handling,plsql,,,open,0,192,8,"Why is no_data_found ORA-01403 an exception in Oracle? If the SELECT INTO statement doesn't return at least one row, ORA-01403 is thrown.
+
+For every other DBMS I know this is normal on a SELECT.
+Only Oracle treats a SELECT INTO like this. 
+
+    CREATE OR REPLACE PROCEDURE no_data_proc IS
+       dummy dual.dummy%TYPE;
+    BEGIN
+      BEGIN 
+         SELECT dummy  
+           INTO dummy
+           FROM dual
+          WHERE dummy = 'Y';   
+      EXCEPTION 
+         WHEN no_data_found THEN
+            dbms_output.put_line('Why is this needed?');
+      END;
+    END no_data_proc;
+
+**Why?**
+
+In my opinion you don't need this exception really. It is too much overhead.
+Sometimes it is handy but you have to write a whole BEGIN, EXCEPTION, WHEN, END Block.
+
+Are there any essential reasons I don't see?
+",4
+9668462,03/12/2012 14:00:57,231957,12/15/2009 09:23:38,1561,30,Segmentation when using node-oracle on ubuntu,"I'm using node-oracle module with the following code (from the node-oracle documentation):  
+
+    var oracle = require(""oracle"");
+
+    oracle.connect({ ""hostname"": ""192.168.1.120/orcl"", ""user"": ""USER"", ""password"": ""PASS"" }, function(err, connection) {
+      if(err){ console.log(""Connect err:"" + err); }
+      if(connection){ console.log(""Connection:"" + connection); }
+
+      // selecting rows
+    connection.execute(""SELECT nickname FROM users WHERE nickname = :1"", ['luc'], function(err, results) {
+      console.log(""execution"");
+      console.log(""RESULTS:"" + results);
+      console.log(""Err:"" + err);
+    });
+
+    connection.setAutoCommit(true);
+
+    connection.commit(function(err) {
+      console.log(""commiting"");
+      // transaction committed
+    });
+
+    connection.rollback(function(err) {
+      console.log(""rollback"");
+      // transaction rolledback
+    });
+
+    connection.close(); // call this when you are done with the connection
+    });
+
+This gives me the following error message:  
+
+    $ node test_node_oracle.js 
+    Connection:[object Connection]
+    rollback
+    commiting
+    execution
+    RESULTS:undefined
+    Err:Error: ORA-24324: service handle not initialized
+
+Sometimes it also gives:  
+
+    $ node test_node_oracle.js 
+    Connection:[object Connection]
+    Segmentation fault
+",oracle,node.js,node-oracle,,,,open,0,240,6,"Segmentation when using node-oracle on ubuntu I'm using node-oracle module with the following code (from the node-oracle documentation):  
+
+    var oracle = require(""oracle"");
+
+    oracle.connect({ ""hostname"": ""192.168.1.120/orcl"", ""user"": ""USER"", ""password"": ""PASS"" }, function(err, connection) {
+      if(err){ console.log(""Connect err:"" + err); }
+      if(connection){ console.log(""Connection:"" + connection); }
+
+      // selecting rows
+    connection.execute(""SELECT nickname FROM users WHERE nickname = :1"", ['luc'], function(err, results) {
+      console.log(""execution"");
+      console.log(""RESULTS:"" + results);
+      console.log(""Err:"" + err);
+    });
+
+    connection.setAutoCommit(true);
+
+    connection.commit(function(err) {
+      console.log(""commiting"");
+      // transaction committed
+    });
+
+    connection.rollback(function(err) {
+      console.log(""rollback"");
+      // transaction rolledback
+    });
+
+    connection.close(); // call this when you are done with the connection
+    });
+
+This gives me the following error message:  
+
+    $ node test_node_oracle.js 
+    Connection:[object Connection]
+    rollback
+    commiting
+    execution
+    RESULTS:undefined
+    Err:Error: ORA-24324: service handle not initialized
+
+Sometimes it also gives:  
+
+    $ node test_node_oracle.js 
+    Connection:[object Connection]
+    Segmentation fault
+",3
+10897772,06/05/2012 12:59:35,595234,01/29/2011 19:50:30,319,0,Oracle database server evalution expiration,"I want to download Oracle database server evalution version from Orace website for self-education. do you know how long the evalution will be expired ? 180 days ? any limitation ?
+
+Thanks
+",oracle,,,,,06/05/2012 15:39:09,off topic,1,31,5,"Oracle database server evalution expiration I want to download Oracle database server evalution version from Orace website for self-education. do you know how long the evalution will be expired ? 180 days ? any limitation ?
+
+Thanks
+",1
+4491226,12/20/2010 15:47:14,319694,04/18/2010 13:52:59,100,0,Any books on IBM MQ series and Oracle DB,Can you suggest some books for IBM MQ series and Oracle from a developer standpoint?,oracle,mq,,,,09/28/2011 11:29:32,not constructive,1,15,9,Any books on IBM MQ series and Oracle DB Can you suggest some books for IBM MQ series and Oracle from a developer standpoint?,2
+6055135,05/19/2011 07:20:01,647480,03/07/2011 01:26:15,1,0,How oracle parse sql statement?,"such as:
+select country from table1 
+inner join table2 on table1.id=table2.id
+where table1.name='a' and table2.name='b'
+group by country 
+
+after parse,which part will first execution",oracle,,,,,,open,0,21,5,"How oracle parse sql statement? such as:
+select country from table1 
+inner join table2 on table1.id=table2.id
+where table1.name='a' and table2.name='b'
+group by country 
+
+after parse,which part will first execution",1
+2510225,03/24/2010 18:01:06,54320,01/12/2009 20:02:05,411,11,How to find if an Oracle APEX session is expired,"I have created a single-sign-on system for our Oracle APEX applications, roughly based on this tutorial:
+
+http://www.oracle.com/technology/oramag/oracle/09-may/o39security.html
+
+The only difference is that my master SSO login is in Perl, rather than another APEX app. It sets an SSO cookie, and the app can check if it's valid with a database procedure.
+
+I have noticed that when I arrive in the morning, the whole system doesn't work. I reload a page from the APEX app, it then sends me to the SSO page because the session was expired, I logon, and get redirected back to my original APEX app page. This usually works except first thing in the morning. It seems the APEX session is expired. In that case it seems to find the session, but then refuse to use it, and sends me back to the login page.
+
+I've tried my best to trace the problem. The ""wwv_flow_custom_auth_std.is_session_valid"" function returns true, so I'm assuming the session is valid. But nothing works until I remove the APEX session cookie. Then I can log back in easily.
+
+Anybody knows if there is another call that would tell me if the session is expired or not?
+
+Thanks",oracle,apex,sso,,,,open,0,188,10,"How to find if an Oracle APEX session is expired I have created a single-sign-on system for our Oracle APEX applications, roughly based on this tutorial:
+
+http://www.oracle.com/technology/oramag/oracle/09-may/o39security.html
+
+The only difference is that my master SSO login is in Perl, rather than another APEX app. It sets an SSO cookie, and the app can check if it's valid with a database procedure.
+
+I have noticed that when I arrive in the morning, the whole system doesn't work. I reload a page from the APEX app, it then sends me to the SSO page because the session was expired, I logon, and get redirected back to my original APEX app page. This usually works except first thing in the morning. It seems the APEX session is expired. In that case it seems to find the session, but then refuse to use it, and sends me back to the login page.
+
+I've tried my best to trace the problem. The ""wwv_flow_custom_auth_std.is_session_valid"" function returns true, so I'm assuming the session is valid. But nothing works until I remove the APEX session cookie. Then I can log back in easily.
+
+Anybody knows if there is another call that would tell me if the session is expired or not?
+
+Thanks",3
+11257421,06/29/2012 07:00:23,413748,08/07/2010 09:54:26,98,3,Learning Oracle,"I am new to Oracle. I have been using SQL-Server for the past 3 yrs. I want to learn basic Database queries in Oracle, creating functions, storedProcedures and operations like Database, restore, backup and attach.
+
+Do I need to install Oracle client or Server. Is Oracle 10g a good choice? Any tutorial or links for Oracle will be of great help. 
+
+Thanks ",oracle,,,,,06/29/2012 07:54:17,off topic,1,62,2,"Learning Oracle I am new to Oracle. I have been using SQL-Server for the past 3 yrs. I want to learn basic Database queries in Oracle, creating functions, storedProcedures and operations like Database, restore, backup and attach.
+
+Do I need to install Oracle client or Server. Is Oracle 10g a good choice? Any tutorial or links for Oracle will be of great help. 
+
+Thanks ",1

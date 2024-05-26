@@ -1,0 +1,982 @@
+PostId,PostCreationDate,OwnerUserId,OwnerCreationDate,ReputationAtPostCreation,OwnerUndeletedAnswerCountAtPostTime,Title,BodyMarkdown,Tag1,Tag2,Tag3,Tag4,Tag5,PostClosedDate,OpenStatus,OpenStatusInt,BodyLength,TitleLength,TitleConcatWithBody,NumberOfTags
+9132206,02/03/2012 16:46:10,1165419,01/23/2012 17:01:31,1,0,Why does my website load slow?,"Could anyone possibly figure out why or what it is that makes my website sometimes load slow (or in some cases not fully load at all).
+
+http://searching-islam.com/
+
+I thought it was that facebook recommend button, but apparently it isn't... Been tirelessly trying to figure it out. Any help is appreciated.",performance,website,loading,,,02/03/2012 20:50:57,too localized,1,48,6,"Why does my website load slow? Could anyone possibly figure out why or what it is that makes my website sometimes load slow (or in some cases not fully load at all).
+
+http://searching-islam.com/
+
+I thought it was that facebook recommend button, but apparently it isn't... Been tirelessly trying to figure it out. Any help is appreciated.",3
+7184293,08/25/2011 01:53:11,717595,04/20/2011 17:27:23,108,1,Matlab code optimization and removing loops,"I can't remove this loops by myself, if anybody can help me with optimization this piece of code - welcome.
+
+    M = length(w);
+    expt = exp(-t .* (phis * w'));
+    hessian = zeros(M, M);
+    for i = 1 : M
+        for j = 1 : M
+            last = 2 * reg_coef * eye(M);
+            G(i,j) = last(i, j) + mean(expt .* t .^2 .* phis(:,i) .* phis(:,j) ./ (1 + expt) .^ 2);
+        end
+    end
+
+- **w** - size is (1xM)
+- **phis** - size is (NxM)
+- **t** - size is (Nx1)",performance,optimization,matlab,loops,,08/28/2011 12:18:39,too localized,1,140,6,"Matlab code optimization and removing loops I can't remove this loops by myself, if anybody can help me with optimization this piece of code - welcome.
+
+    M = length(w);
+    expt = exp(-t .* (phis * w'));
+    hessian = zeros(M, M);
+    for i = 1 : M
+        for j = 1 : M
+            last = 2 * reg_coef * eye(M);
+            G(i,j) = last(i, j) + mean(expt .* t .^2 .* phis(:,i) .* phis(:,j) ./ (1 + expt) .^ 2);
+        end
+    end
+
+- **w** - size is (1xM)
+- **phis** - size is (NxM)
+- **t** - size is (Nx1)",4
+8027393,11/06/2011 13:46:08,357538,06/03/2010 13:40:57,139,2,Can this matlab code be made more efficient/simpler?,"I'm new to matlab, and coming from a background of C/C++, i'm not used to matlab's versatile options relating to matrices. The code I have written below uses a lot of loops and breaks, and I think that is why it is so slow. Could please suggest an alternative? I've explained a little bit about it below.
+Also the numbers i'm dealing with go upto the range of 512*10^5, so is there a way to let matlab know that i'm dealing with such large numbers to speed up processing?
+
+I have a boolean sparse matrix( maxmatrix1, defined as a ""normal"" matrix ) of size 512x15525 and i'm mapping each one to the first ten ones in an anchor region defined by a submatrix of 30x75 and then generating a hash value( fingerprints ) of order 512*10^5, which is the index of another vector( offsets ). ""row"" and ""col"" are the dimensions of the ""maxmatrix1"".
+
+    while(x<row)
+        y=1;
+        while(y<col)
+            if(maxmatrix1(x,y)==1)
+                %Define Target Region for the Modelling
+                n=0;
+    			for l=(x-15):(x+15)
+    				if(l>0 && l<=row)
+                        for k=(y+1):(y+76)
+    						if(k<=col)
+                                if(maxmatrix1(l,k)==1)
+                                    %Define Fingerprint :P
+                                     
+                                    if(n>=10)
+                                        break;
+                                    end
+                                    
+    								f=f+1;
+                                    fingerprint=x*10^5+l*10^2+(k-y);
+                                    offsets(fingerprint)=y;
+                                    n=n+1;
+                                    count=count+1;
+                                end
+                            end
+                        end
+                    end
+                    if(n>=10)
+                        break;
+                    end
+                end
+            end
+            y=y+1;
+        end
+        x=x+1;
+    end",performance,homework,matlab,,,11/07/2011 22:37:30,off topic,1,892,8,"Can this matlab code be made more efficient/simpler? I'm new to matlab, and coming from a background of C/C++, i'm not used to matlab's versatile options relating to matrices. The code I have written below uses a lot of loops and breaks, and I think that is why it is so slow. Could please suggest an alternative? I've explained a little bit about it below.
+Also the numbers i'm dealing with go upto the range of 512*10^5, so is there a way to let matlab know that i'm dealing with such large numbers to speed up processing?
+
+I have a boolean sparse matrix( maxmatrix1, defined as a ""normal"" matrix ) of size 512x15525 and i'm mapping each one to the first ten ones in an anchor region defined by a submatrix of 30x75 and then generating a hash value( fingerprints ) of order 512*10^5, which is the index of another vector( offsets ). ""row"" and ""col"" are the dimensions of the ""maxmatrix1"".
+
+    while(x<row)
+        y=1;
+        while(y<col)
+            if(maxmatrix1(x,y)==1)
+                %Define Target Region for the Modelling
+                n=0;
+    			for l=(x-15):(x+15)
+    				if(l>0 && l<=row)
+                        for k=(y+1):(y+76)
+    						if(k<=col)
+                                if(maxmatrix1(l,k)==1)
+                                    %Define Fingerprint :P
+                                     
+                                    if(n>=10)
+                                        break;
+                                    end
+                                    
+    								f=f+1;
+                                    fingerprint=x*10^5+l*10^2+(k-y);
+                                    offsets(fingerprint)=y;
+                                    n=n+1;
+                                    count=count+1;
+                                end
+                            end
+                        end
+                    end
+                    if(n>=10)
+                        break;
+                    end
+                end
+            end
+            y=y+1;
+        end
+        x=x+1;
+    end",3
+10558483,05/11/2012 20:53:53,490326,10/28/2010 16:02:27,2285,114,Automate text replace in Visual Studio,"I have a web project that I am ripping out all the inline styling and adding it to a CSS file, and I can't help but think there is an easier way to do this.
+
+My current process is:
+
+ 1. Search Solution for `style=""`, if none selected, goto: `9`
+ 2. Cut all the text between the quote marks
+ 3. Create new class in CSS file
+ 4. Paste code in class
+ 5. Copy class name
+ 6. Return to html line and paste class name in between quote marks
+ 7. Rename `style` to `class`
+ 8. goto: `1`
+ 9. Rejoice!
+
+I would really like to rejoice, but there seems to be a never ending supply of inline styling.
+
+Is there a way to automate this process in Visual Studio 2010?  If it requires writing a plugin, that is totally fine!  I have this same task to do on many a project.
+
+Also, I'd like to be able to do this for arbitrary tags. For example, I'm also taking all of the `data-*` tags and doing roughly the same thing, but adding a line of jQuery to add it back in.  Something like:
+
+    $('SELECTOR').attr('data-bind','visible: IsValid');
+
+The work is too repetitious for me not to believe there is an automated (or at least faster/better/less time consuming) way of doing this.
+
+The project is an MVC project if that changes anything.",performance,asp.net-mvc-3,visual-studio-2010,automation,search-and-replace,06/19/2012 21:47:29,not constructive,1,225,6,"Automate text replace in Visual Studio I have a web project that I am ripping out all the inline styling and adding it to a CSS file, and I can't help but think there is an easier way to do this.
+
+My current process is:
+
+ 1. Search Solution for `style=""`, if none selected, goto: `9`
+ 2. Cut all the text between the quote marks
+ 3. Create new class in CSS file
+ 4. Paste code in class
+ 5. Copy class name
+ 6. Return to html line and paste class name in between quote marks
+ 7. Rename `style` to `class`
+ 8. goto: `1`
+ 9. Rejoice!
+
+I would really like to rejoice, but there seems to be a never ending supply of inline styling.
+
+Is there a way to automate this process in Visual Studio 2010?  If it requires writing a plugin, that is totally fine!  I have this same task to do on many a project.
+
+Also, I'd like to be able to do this for arbitrary tags. For example, I'm also taking all of the `data-*` tags and doing roughly the same thing, but adding a line of jQuery to add it back in.  Something like:
+
+    $('SELECTOR').attr('data-bind','visible: IsValid');
+
+The work is too repetitious for me not to believe there is an automated (or at least faster/better/less time consuming) way of doing this.
+
+The project is an MVC project if that changes anything.",5
+5280669,03/12/2011 04:59:11,479794,10/18/2010 20:55:28,68,4,"On average, how efficient is a scripting engine?","When dealing with a scripting engine, I'd expect them to be fractions slower than code compiled to assembly. What sort of efficiency numbers are there for major scripting languages (if any)?
+
+Or is this a futile question?
+
+Thanks.",performance,scripting-language,,,,03/12/2011 08:21:41,not a real question,1,36,8,"On average, how efficient is a scripting engine? When dealing with a scripting engine, I'd expect them to be fractions slower than code compiled to assembly. What sort of efficiency numbers are there for major scripting languages (if any)?
+
+Or is this a futile question?
+
+Thanks.",2
+5745945,04/21/2011 15:04:48,702656,04/11/2011 17:51:27,28,5,metrics for algorithms,"Can anyone provide a complete list of metrics for rating an algorithm? 
+
+For example, my list starts with:
+
+ - elegance
+ - readability
+ - computational efficiency
+ - space efficiency
+ - correctness
+
+This list is not in order and my suspicion is that it isn't near complete. Can anyone provide a more complete list?
+",performance,complexity,metrics,code-elegance,,04/30/2012 20:05:56,not constructive,1,51,3,"metrics for algorithms Can anyone provide a complete list of metrics for rating an algorithm? 
+
+For example, my list starts with:
+
+ - elegance
+ - readability
+ - computational efficiency
+ - space efficiency
+ - correctness
+
+This list is not in order and my suspicion is that it isn't near complete. Can anyone provide a more complete list?
+",4
+10352895,04/27/2012 14:52:58,1194466,02/07/2012 11:02:53,78,0,which PHP Framework use for jquery +HTML5 mobile website?,"    i have made website in Zend Framework.now i am making the same site with less
+    functionality for mobile phones in jquery + HTML5. but which framework i need to use for 
+    this ?? Because ZF slow my website very much although 92% performance on Y-Slow.i am
+    afraid  that if i use ZF again it will slow it again on Mobile Phones.
+   
+ so i need to know which php framework i use ?? or core php etc
+
+ Thanking you all in anticipation..",performance,php5,jquery-mobile,frameworks,mobile-website,05/02/2012 15:05:28,not constructive,1,99,9,"which PHP Framework use for jquery +HTML5 mobile website?     i have made website in Zend Framework.now i am making the same site with less
+    functionality for mobile phones in jquery + HTML5. but which framework i need to use for 
+    this ?? Because ZF slow my website very much although 92% performance on Y-Slow.i am
+    afraid  that if i use ZF again it will slow it again on Mobile Phones.
+   
+ so i need to know which php framework i use ?? or core php etc
+
+ Thanking you all in anticipation..",5
+7380345,09/11/2011 18:25:57,824633,07/01/2011 09:48:39,11,0,OpenCV vs simpleCV,"I used to use Matlab for image and video processing applications, now I'm planning to do more time critical applications, should I start with opencv pure C/C++, or the opencv python interface, or something called simpleCV? 
+Could somebody give a (coding-time/available-fuctions/performance) chart? thanks ",performance,matlab,opencv,computer-vision,simplecv,09/12/2011 00:16:58,not constructive,1,44,3,"OpenCV vs simpleCV I used to use Matlab for image and video processing applications, now I'm planning to do more time critical applications, should I start with opencv pure C/C++, or the opencv python interface, or something called simpleCV? 
+Could somebody give a (coding-time/available-fuctions/performance) chart? thanks ",5
+4118458,11/07/2010 15:52:44,386208,07/08/2010 03:22:03,25,1,How to tuning informix database performance,"I want to how to do following general step:
+1. where to find slow SQL
+2. how to dubug sql (include function)
+3. how to create index properly
+4. when using ""update stasitices"" , when should I use HIGH or LOW , and why ?
+
+Guys , I am going to write a paper about this topic , any help is welcomed.
+best wishes ",performance,informix,,,,,open,0,59,6,"How to tuning informix database performance I want to how to do following general step:
+1. where to find slow SQL
+2. how to dubug sql (include function)
+3. how to create index properly
+4. when using ""update stasitices"" , when should I use HIGH or LOW , and why ?
+
+Guys , I am going to write a paper about this topic , any help is welcomed.
+best wishes ",2
+10256019,04/21/2012 03:47:00,504239,11/11/2010 08:30:08,1265,72,Performance implications of long double. Why does C choose 64-bits instead of the hardware's 80-bit for its default?,"For specifics I am talking about x87 PC architecture and the C compiler.
+
+I am writing my own interpreter and the reasoning behind the `double` datatype confuses me. Especially where efficiency is concerned. Could someone explain WHY C has decided on a 64-bit double and not the hardware native 80-bit double? And why has the hardware settled on an 80-bit double, since that is not aligned? What are the performance implications of each? **I would like to use an 80-bit double for my default numeric type.** But the choices of the compiler developers make me concerned that this is not the best choice.
+
+ 1. `double` on x86 is only 2 bytes shorter, why doesn't the compiler use the 10 byte `long double` by default?
+ 2. Can I get an example of the extra precision gotten by 80-bit `long double` vs `double`?
+ 3. Why does Microsoft disable `long double` **by default**?
+ 4. In terms of magnitude, how much worse / slower is `long double` on typical x86/x64 PC hardware?",performance,double,interpreter,numeric,long-double,,open,0,167,18,"Performance implications of long double. Why does C choose 64-bits instead of the hardware's 80-bit for its default? For specifics I am talking about x87 PC architecture and the C compiler.
+
+I am writing my own interpreter and the reasoning behind the `double` datatype confuses me. Especially where efficiency is concerned. Could someone explain WHY C has decided on a 64-bit double and not the hardware native 80-bit double? And why has the hardware settled on an 80-bit double, since that is not aligned? What are the performance implications of each? **I would like to use an 80-bit double for my default numeric type.** But the choices of the compiler developers make me concerned that this is not the best choice.
+
+ 1. `double` on x86 is only 2 bytes shorter, why doesn't the compiler use the 10 byte `long double` by default?
+ 2. Can I get an example of the extra precision gotten by 80-bit `long double` vs `double`?
+ 3. Why does Microsoft disable `long double` **by default**?
+ 4. In terms of magnitude, how much worse / slower is `long double` on typical x86/x64 PC hardware?",5
+7626449,10/02/2011 12:55:02,312853,04/09/2010 13:58:48,611,14,Which programming language is the most suitable to approximate in run time how long a set of operations will execute?,"It is needed to write a program that processes a big set of operations (they are not fixed). Operations may be of various type starting from increment to a more complex set of IO. Platform or system, on which they will be performed is not known (well ok, it will be either win or *nix but it should be irrelevant). All the operations are sequentially processed in chunks (subset of all operations) which are formed by the program in run time. It is not possible to process a chunk, total execution time of which is more that a second.
+
+The question is which programming language is the most suitable to measure/approximate in run time how long a chunk will execute? (probable criteria may include operation cost, memory management, etc.)
+
+A second criteria is whether it is possible to adjust/optimize chunk size and content (modify number and type of operations present in chunk) afterwards?",performance,memory-management,mathematical-optimization,approximation,,10/03/2011 07:00:20,not a real question,1,151,20,"Which programming language is the most suitable to approximate in run time how long a set of operations will execute? It is needed to write a program that processes a big set of operations (they are not fixed). Operations may be of various type starting from increment to a more complex set of IO. Platform or system, on which they will be performed is not known (well ok, it will be either win or *nix but it should be irrelevant). All the operations are sequentially processed in chunks (subset of all operations) which are formed by the program in run time. It is not possible to process a chunk, total execution time of which is more that a second.
+
+The question is which programming language is the most suitable to measure/approximate in run time how long a chunk will execute? (probable criteria may include operation cost, memory management, etc.)
+
+A second criteria is whether it is possible to adjust/optimize chunk size and content (modify number and type of operations present in chunk) afterwards?",4
+9367148,02/20/2012 19:23:57,139667,07/16/2009 17:35:29,88,1,How to make Visual Studio 2010 use more than 600Mb of memory,"I am tired of how slow the VS2010 is. I know there are a lot of topics here about tuning the settings and I've read/applied them all with not much luck though. Namely the things I've already done:
+
+ - removed all the extensions
+ - never had a resharper
+ - tuned the settings to get maximum performance
+ - tried SSD and RAM disks
+
+Nothing helped it is still unacceptably slow. I know what I am saying because with VS2008 I never had such problems.
+
+Now, I am working on a quite big C# solution with about 20 projects in it. Visual Studio works quite fast when just opened, but as time goes it starts lagging and eventually gets so slow that I have to restart it. The resource monitor shows that the amount of memory consumed by it is about 200 MB in the beginning and goes up to ~600 MB and then doesn't go any higher. I have 8 GB of total RAM on a x64 laptop with about 4GB that are always free. I find it weird how little memory the VS uses and from what my common sense tells me the more memory the faster the app should work. So I believe my question is how to make the VS use more of the available memory.
+
+PS
+I tried a recipe from http://stackoverflow.com/questions/3845188/configure-visual-studio-to-use-more-ram Didn't work out.
+",performance,visual-studio-2010,memory,,,,open,0,224,12,"How to make Visual Studio 2010 use more than 600Mb of memory I am tired of how slow the VS2010 is. I know there are a lot of topics here about tuning the settings and I've read/applied them all with not much luck though. Namely the things I've already done:
+
+ - removed all the extensions
+ - never had a resharper
+ - tuned the settings to get maximum performance
+ - tried SSD and RAM disks
+
+Nothing helped it is still unacceptably slow. I know what I am saying because with VS2008 I never had such problems.
+
+Now, I am working on a quite big C# solution with about 20 projects in it. Visual Studio works quite fast when just opened, but as time goes it starts lagging and eventually gets so slow that I have to restart it. The resource monitor shows that the amount of memory consumed by it is about 200 MB in the beginning and goes up to ~600 MB and then doesn't go any higher. I have 8 GB of total RAM on a x64 laptop with about 4GB that are always free. I find it weird how little memory the VS uses and from what my common sense tells me the more memory the faster the app should work. So I believe my question is how to make the VS use more of the available memory.
+
+PS
+I tried a recipe from http://stackoverflow.com/questions/3845188/configure-visual-studio-to-use-more-ram Didn't work out.
+",3
+8947109,01/20/2012 19:54:14,539076,12/11/2010 18:54:52,303,18,How to see GDI objects in performance monitor,"What performance counter should be selected in perfmon in order to see GDI objects , like in task manager ? 
+",performance,counters,,,,,open,0,21,8,"How to see GDI objects in performance monitor What performance counter should be selected in perfmon in order to see GDI objects , like in task manager ? 
+",2
+10848231,06/01/2012 10:01:57,1161813,01/21/2012 02:42:13,1,0,Should I trust Redis for data integrity?,"In my current project, I have PostgreSQL as my master DB, and Redis as kind of a slave, e.g., when some user adds another as a friend, first the relationship will be stored in PostgreSQL and then a friend list in Redis will be updated. When some user's friend list is requested, it will be pulled out of Redis instead of PostgreSQL.
+
+The question is: when I update the friend list in Redis, should I get a fresh copy outof PostgreSQL, and replace the old list in Redis with the new one or should I keep the old list and simply SADD the userid into the list? The latter is of course best for performance, but intuitively the former does a better job in keep the data integrity? And if something like Celery is used, is the second method worth the risk?",performance,redis,data-integrity,,,,open,0,141,7,"Should I trust Redis for data integrity? In my current project, I have PostgreSQL as my master DB, and Redis as kind of a slave, e.g., when some user adds another as a friend, first the relationship will be stored in PostgreSQL and then a friend list in Redis will be updated. When some user's friend list is requested, it will be pulled out of Redis instead of PostgreSQL.
+
+The question is: when I update the friend list in Redis, should I get a fresh copy outof PostgreSQL, and replace the old list in Redis with the new one or should I keep the old list and simply SADD the userid into the list? The latter is of course best for performance, but intuitively the former does a better job in keep the data integrity? And if something like Celery is used, is the second method worth the risk?",3
+5311374,03/15/2011 11:59:44,478995,10/18/2010 05:41:09,1,0,Live site slowed down too much.,"We have a vehicle tracking system. We are using MySQL as database server. One TCP communicator fetches data from GPS device and inserts it into the database. Right now, we have 50 - 60 GPS devices communicating with the server. We have 4 GB RAM on the server. But still, the web-application which shows the data on maps, slowed down too much. How should we optimize the performance of our application? 
+
+Thanks,
+Saurabh",performance,,,,,03/16/2011 13:10:46,not a real question,1,72,6,"Live site slowed down too much. We have a vehicle tracking system. We are using MySQL as database server. One TCP communicator fetches data from GPS device and inserts it into the database. Right now, we have 50 - 60 GPS devices communicating with the server. We have 4 GB RAM on the server. But still, the web-application which shows the data on maps, slowed down too much. How should we optimize the performance of our application? 
+
+Thanks,
+Saurabh",1
+4905926,02/05/2011 08:39:12,475511,10/14/2010 08:27:02,31,4,Which programming languages work well together and when?,"Every programming language has advantages and disadvantages which make it more suitable to a specific solution. Sometimes it makes sense to combine the advantages of two (sometimes more) languages to solve the ""bigger picture"" problem in the most efficient manner (execution time vs programming time, etc.).
+
+Some programming languages play better together than others because they are closely related in design, and some also provide better interfaces to other programming languages, which are not directly related.
+ 
+It's obviously *possible* to use any two languages together in some way or another, but I know there are instances where it definitely makes more sense to do so. 
+
+I know it's impossible to list all the different combinations, but I'm only interested in the interaction capability between the most popular programming languages, e.g. the top 10 on the [TIOBE index][1].
+
+  [1]: http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html ""TIOBE index""",performance,,,,,02/05/2011 09:14:51,not a real question,1,141,8,"Which programming languages work well together and when? Every programming language has advantages and disadvantages which make it more suitable to a specific solution. Sometimes it makes sense to combine the advantages of two (sometimes more) languages to solve the ""bigger picture"" problem in the most efficient manner (execution time vs programming time, etc.).
+
+Some programming languages play better together than others because they are closely related in design, and some also provide better interfaces to other programming languages, which are not directly related.
+ 
+It's obviously *possible* to use any two languages together in some way or another, but I know there are instances where it definitely makes more sense to do so. 
+
+I know it's impossible to list all the different combinations, but I'm only interested in the interaction capability between the most popular programming languages, e.g. the top 10 on the [TIOBE index][1].
+
+  [1]: http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html ""TIOBE index""",1
+11250320,06/28/2012 17:57:18,664160,03/17/2011 10:49:16,240,3,Detecting aborted client requests in a web server,"In order to prevent unnecessary and time consuming actions from the server I want to able to detect aborted connections in the web server (Apace2) , is that possible?
+
+Does it common practice to do that?
+
+Thank you",performance,apache2,webrequest,connections,,,open,0,36,8,"Detecting aborted client requests in a web server In order to prevent unnecessary and time consuming actions from the server I want to able to detect aborted connections in the web server (Apace2) , is that possible?
+
+Does it common practice to do that?
+
+Thank you",4
+3905640,10/11/2010 11:09:41,41540,11/28/2008 07:34:28,169,14,Books about performance management,"I'm currently working on performance management for a bigger application. The application itself is written in Java, but it is clear that our performance problems lay not only in Java alone. I would like to read about managing the performance of a whole system, not only the database or Java on the application server.
+
+I have found some nice papers from Cary V. Millsap, but the books in the reference list were some older ones. Is there current literature about the state of the art in performance management?",performance,management,,,,09/30/2011 12:25:28,not constructive,1,87,4,"Books about performance management I'm currently working on performance management for a bigger application. The application itself is written in Java, but it is clear that our performance problems lay not only in Java alone. I would like to read about managing the performance of a whole system, not only the database or Java on the application server.
+
+I have found some nice papers from Cary V. Millsap, but the books in the reference list were some older ones. Is there current literature about the state of the art in performance management?",2
+6071822,05/20/2011 12:21:44,762719,05/20/2011 12:21:44,1,0,Magento checkout slooooow,"I've got a huge problem with my Magento webshop. It runs good except for the last step when placing a new order.
+Especially if the customer wants to order lots of products.
+
+Each product adds ~5 seconds to the checkout process (after the customer pushed the Place Order button).
+
+A lot of customers orders 20+ products at a time so this is a huge problem for us.
+
+The site is hosted at Properhost.net.
+
+Nothing seems to help, is there anyone with some kind of solution here?
+
+Regards
+Michael
+www.swedishfoodshop.com
+",performance,magento,checkout,hang,,11/03/2011 21:32:09,off topic,1,81,3,"Magento checkout slooooow I've got a huge problem with my Magento webshop. It runs good except for the last step when placing a new order.
+Especially if the customer wants to order lots of products.
+
+Each product adds ~5 seconds to the checkout process (after the customer pushed the Place Order button).
+
+A lot of customers orders 20+ products at a time so this is a huge problem for us.
+
+The site is hosted at Properhost.net.
+
+Nothing seems to help, is there anyone with some kind of solution here?
+
+Regards
+Michael
+www.swedishfoodshop.com
+",4
+10391096,04/30/2012 21:54:27,1290720,03/25/2012 01:29:51,3,1,Resource intensive website,"I am making a website which would be both processor and memory intensive (like Google, for instance). What would be the best way to make the webpage run fastest?
+
+The major considerations might be:
+<br>1.Programming language used
+<br>2.Platform (Windows/Linux)
+
+Also, does anything else other than these affect the speed (except the algorithm and hosting method)?",performance,,,,,05/01/2012 18:43:01,not constructive,1,51,3,"Resource intensive website I am making a website which would be both processor and memory intensive (like Google, for instance). What would be the best way to make the webpage run fastest?
+
+The major considerations might be:
+<br>1.Programming language used
+<br>2.Platform (Windows/Linux)
+
+Also, does anything else other than these affect the speed (except the algorithm and hosting method)?",1
+2010252,01/06/2010 00:46:30,131433,07/01/2009 01:11:25,4700,266,Float versus Integer arithmetic performance on modern chips,"Consider a Viterbi decoder on an additive model. It spends its time doing additions and comparisons. Now, consider two: one with C/C++ `float` as the data type, and another with `int`. On modern chips, would you expect `int` to run significantly faster than `float`? Or will the wonders of pipelining (and the absence of multiplication and division) make it all come out about even?",performance,math,floating-point,integer,,,open,0,64,8,"Float versus Integer arithmetic performance on modern chips Consider a Viterbi decoder on an additive model. It spends its time doing additions and comparisons. Now, consider two: one with C/C++ `float` as the data type, and another with `int`. On modern chips, would you expect `int` to run significantly faster than `float`? Or will the wonders of pipelining (and the absence of multiplication and division) make it all come out about even?",4
+7377838,09/11/2011 11:13:53,609042,02/09/2011 01:00:18,111,5,Benefit from concurrent programming (-languages)?,"lately i'm trying to dive into the world of concurrent programming. at the beginning i thought the only reason of multicore processors is an improved performance of the programs. but now i'm not so sure anymore...
+
+considering the fact that writing multithreading programs in most languages is diffucult, many tend to recommend exspecially designed languages like Erlang or Clojure as the language of choice for concurrent computing.
+Sure, Erlang makes it a lot easier to write concurrent programs, but is it worth it?
+
+i've look up some of the Erlang programs on shootout (yeah i know that microbenchmark doesnt say much...) and was surprised that many of the single-core C programs even outperform quad-core Erlang programs.
+
+so my questions is, what are the advantages of languages like Erlang, Clojure etc?
+why should i use a language, which makes it easy to write multicore program, when single-core programs in C/Java are even faster?
+
+(i forgot to mention, these questions are only related to multicore machines, distributed computing is something different, and i can see Erlangs advantages here)",performance,concurrency,clojure,erlang,,09/11/2011 13:07:13,not constructive,1,170,5,"Benefit from concurrent programming (-languages)? lately i'm trying to dive into the world of concurrent programming. at the beginning i thought the only reason of multicore processors is an improved performance of the programs. but now i'm not so sure anymore...
+
+considering the fact that writing multithreading programs in most languages is diffucult, many tend to recommend exspecially designed languages like Erlang or Clojure as the language of choice for concurrent computing.
+Sure, Erlang makes it a lot easier to write concurrent programs, but is it worth it?
+
+i've look up some of the Erlang programs on shootout (yeah i know that microbenchmark doesnt say much...) and was surprised that many of the single-core C programs even outperform quad-core Erlang programs.
+
+so my questions is, what are the advantages of languages like Erlang, Clojure etc?
+why should i use a language, which makes it easy to write multicore program, when single-core programs in C/Java are even faster?
+
+(i forgot to mention, these questions are only related to multicore machines, distributed computing is something different, and i can see Erlangs advantages here)",4
+3007164,06/09/2010 15:15:33,12597,09/16/2008 14:53:25,5710,168,Delphi: Fast(er) widestring concatenation,"i have a function who's job is to convert an ADO [`Recordset`][1] into html:
+
+
+    class function RecordsetToHtml(const rs: _Recordset): WideString;
+
+And the guts of the function involves a lot of wide string concatenation:
+
+
+       while not rs.EOF do
+       begin
+          Result := Result+CRLF+
+             '<TR>';
+
+          for i := 0 to rs.Fields.Count-1 do
+             Result := Result+'<TD>'+VarAsString(rs.Fields[i].Value)+'</TD>';
+
+          Result := Result+'</TR>';
+          rs.MoveNext;
+        end;
+
+With a few thousand results, the function takes, what any user would feel, is too long to run. The [Delphi Sampling Profiler][2] shows that **99.3%** of the time is spent in widestring concatenation (`@WStrCatN` and `@WstrCat`).
+
+Can anyone think of a way to improve widestring concatenation? i don't think Delphi 5 has any kind of string builder. And `Format` doesn't support Unicode.
+
+
+----------
+
+
+And to make sure nobody tries to weasel out: pretend you are implementing the interface:
+
+    IRecordsetToHtml = interface(IUnknown)
+        function RecordsetToHtml(const rs: _Recordset): WideString;
+    end;
+
+    
+
+  [1]: http://msdn.microsoft.com/en-us/library/ms681510(VS.85).aspx
+  [2]: http://delphitools.info/samplingprofiler/",performance,widestring,dephi,dephi-5,,,open,0,244,4,"Delphi: Fast(er) widestring concatenation i have a function who's job is to convert an ADO [`Recordset`][1] into html:
+
+
+    class function RecordsetToHtml(const rs: _Recordset): WideString;
+
+And the guts of the function involves a lot of wide string concatenation:
+
+
+       while not rs.EOF do
+       begin
+          Result := Result+CRLF+
+             '<TR>';
+
+          for i := 0 to rs.Fields.Count-1 do
+             Result := Result+'<TD>'+VarAsString(rs.Fields[i].Value)+'</TD>';
+
+          Result := Result+'</TR>';
+          rs.MoveNext;
+        end;
+
+With a few thousand results, the function takes, what any user would feel, is too long to run. The [Delphi Sampling Profiler][2] shows that **99.3%** of the time is spent in widestring concatenation (`@WStrCatN` and `@WstrCat`).
+
+Can anyone think of a way to improve widestring concatenation? i don't think Delphi 5 has any kind of string builder. And `Format` doesn't support Unicode.
+
+
+----------
+
+
+And to make sure nobody tries to weasel out: pretend you are implementing the interface:
+
+    IRecordsetToHtml = interface(IUnknown)
+        function RecordsetToHtml(const rs: _Recordset): WideString;
+    end;
+
+    
+
+  [1]: http://msdn.microsoft.com/en-us/library/ms681510(VS.85).aspx
+  [2]: http://delphitools.info/samplingprofiler/",4
+6050941,05/18/2011 20:58:45,40480,11/25/2008 02:35:25,1648,49,Anything wrong using display lists in OpenGL for a single object?,"First of all, I know that displays lists were deprecated in OpenGL 3.0 and removed on 3.1. But I still have to use them on this university project for which OpenGL 2.1 is being used.
+
+Every article or tutorial I read on display lists use them on some kind of object that is drawn multiple times, for instance, trees. Is there anything wrong in creating one list for a single object?
+
+For instance, I have an object (in .obj format) for a building. This specific building is only drawn once. For basic performance analysis I have the current frames per second on the window title bar.
+
+Doing it like this:
+
+    glmDraw(objBuilding.model, GLM_SMOOTH | GLM_TEXTURE);
+
+I get around 260 FPS. If you don't about the GLM library, the `glmDraw` function basically makes a bunch of `glVertex` calls.
+
+But doing it like this:
+
+    glNewList(gameDisplayLists.building, GL_COMPILE);
+    	glmDraw(objBuilding.model, GLM_SMOOTH | GLM_TEXTURE);
+    glEndList();
+    
+    glCallList(gameDisplayLists.building);
+
+I get around 420 FPS. Of course, the screen refresh rate doesn't refresh that fast but like I said, it's just a simple and basic way to measure performance.
+
+It looks much better to me.
+
+I'm also using display lists for when I have some type of object that I repeat many times, like defense towers. Again, is there anything wrong doing this for a single object or can I keep doing this?",performance,opengl,object-model,displaylist,,,open,0,233,11,"Anything wrong using display lists in OpenGL for a single object? First of all, I know that displays lists were deprecated in OpenGL 3.0 and removed on 3.1. But I still have to use them on this university project for which OpenGL 2.1 is being used.
+
+Every article or tutorial I read on display lists use them on some kind of object that is drawn multiple times, for instance, trees. Is there anything wrong in creating one list for a single object?
+
+For instance, I have an object (in .obj format) for a building. This specific building is only drawn once. For basic performance analysis I have the current frames per second on the window title bar.
+
+Doing it like this:
+
+    glmDraw(objBuilding.model, GLM_SMOOTH | GLM_TEXTURE);
+
+I get around 260 FPS. If you don't about the GLM library, the `glmDraw` function basically makes a bunch of `glVertex` calls.
+
+But doing it like this:
+
+    glNewList(gameDisplayLists.building, GL_COMPILE);
+    	glmDraw(objBuilding.model, GLM_SMOOTH | GLM_TEXTURE);
+    glEndList();
+    
+    glCallList(gameDisplayLists.building);
+
+I get around 420 FPS. Of course, the screen refresh rate doesn't refresh that fast but like I said, it's just a simple and basic way to measure performance.
+
+It looks much better to me.
+
+I'm also using display lists for when I have some type of object that I repeat many times, like defense towers. Again, is there anything wrong doing this for a single object or can I keep doing this?",4
+2208315,02/05/2010 15:40:03,57883,01/22/2009 12:36:38,1037,71,Why is Any Slower than contains?,"I designed the following test:
+
+    var arrayLength=5000;
+    object[] objArray=new object[arrayLength];
+
+    for(var x=0;x<arrayLength;x++)
+    {
+	objArray[x]=new object();
+    }
+    objArray[4000]=null;
+    const int TestSize=int.MaxValue;
+
+    System.Diagnostics.Stopwatch v= new Stopwatch();
+    v.Start();
+    for(var x=0;x<10000;x++)
+    {
+    objArray.Contains(null);
+    }
+    v.Stop();
+    objArray.Contains(null).Dump();
+    v.Elapsed.ToString().Dump(""Contains"");
+
+    //Any ==
+    v.Reset();
+    v.Start();
+    for(var x=0;x<10000;x++)
+    {
+    objArray.Any(o=>o==null);
+    }
+    v.Stop();
+    objArray.Any(x=>x==null).Dump();
+    v.Elapsed.ToString().Dump(""Any"");
+
+    //Any Equals
+    v.Reset();
+    v.Start();
+    for(var x=0;x<10000;x++)
+    {
+    objArray.Any(obj=>object.Equals( obj,null));
+    }
+    v.Stop();
+    objArray.Any(obj=>object.Equals( obj,null)).Dump();
+    v.Elapsed.ToString().Dump(""Any"");
+
+
+The results when null is not present:
+
+ - Contains False 00:00:00.0606484
+ - Any == False 00:00:00.7532898
+ - Any  object.Equals False 00:00:00.8431783
+
+When null is present at element 4000:
+
+ - Contains  True 00:00:00.0494515
+ - Any == True 00:00:00.5929247
+ - Any object.Equals True 00:00:00.6700742
+
+When null is present at element 10:
+
+ - Contains True 00:00:00.0038035
+ - Any == True 00:00:00.0025687
+ - Any True 00:00:00.0033769
+ 
+So when the object is near the front, Any is slightly faster, when it's at the back, it's much much slower, why?
+
+ 
+
+
+
+",performance,c#,,,,,open,0,250,6,"Why is Any Slower than contains? I designed the following test:
+
+    var arrayLength=5000;
+    object[] objArray=new object[arrayLength];
+
+    for(var x=0;x<arrayLength;x++)
+    {
+	objArray[x]=new object();
+    }
+    objArray[4000]=null;
+    const int TestSize=int.MaxValue;
+
+    System.Diagnostics.Stopwatch v= new Stopwatch();
+    v.Start();
+    for(var x=0;x<10000;x++)
+    {
+    objArray.Contains(null);
+    }
+    v.Stop();
+    objArray.Contains(null).Dump();
+    v.Elapsed.ToString().Dump(""Contains"");
+
+    //Any ==
+    v.Reset();
+    v.Start();
+    for(var x=0;x<10000;x++)
+    {
+    objArray.Any(o=>o==null);
+    }
+    v.Stop();
+    objArray.Any(x=>x==null).Dump();
+    v.Elapsed.ToString().Dump(""Any"");
+
+    //Any Equals
+    v.Reset();
+    v.Start();
+    for(var x=0;x<10000;x++)
+    {
+    objArray.Any(obj=>object.Equals( obj,null));
+    }
+    v.Stop();
+    objArray.Any(obj=>object.Equals( obj,null)).Dump();
+    v.Elapsed.ToString().Dump(""Any"");
+
+
+The results when null is not present:
+
+ - Contains False 00:00:00.0606484
+ - Any == False 00:00:00.7532898
+ - Any  object.Equals False 00:00:00.8431783
+
+When null is present at element 4000:
+
+ - Contains  True 00:00:00.0494515
+ - Any == True 00:00:00.5929247
+ - Any object.Equals True 00:00:00.6700742
+
+When null is present at element 10:
+
+ - Contains True 00:00:00.0038035
+ - Any == True 00:00:00.0025687
+ - Any True 00:00:00.0033769
+ 
+So when the object is near the front, Any is slightly faster, when it's at the back, it's much much slower, why?
+
+ 
+
+
+
+",2
+9413207,02/23/2012 12:36:54,947040,09/15/2011 14:27:50,66,6,Dijkstra linear running time on dense graph with Binary Heap,"**First**: The general running time of Dijkstras Shortest Path algorithm is
+
+![Dijkstra generalrunning time][1]
+
+where m is the number of edges and n the number of vertices
+
+**Second**: the number of expected decreasekey operations is the following
+
+![enter image description here][2]
+
+**Third**: The expected running time of dijkstra with a binary Heap which allows all operations in log(n) time is
+
+![enter image description here][3]
+
+But why is the running time on dense graphs linear if we consider a graph dense if
+![enter image description here][4]
+
+Can someone help with the O-notation and log calculations here?
+
+  [1]: http://i.stack.imgur.com/MYugN.png
+  [2]: http://i.stack.imgur.com/pcgd4.png
+  [3]: http://i.stack.imgur.com/fmlpI.png
+  [4]: http://i.stack.imgur.com/vpiDE.png",performance,data-structures,graph-algorithm,dijkstra,shortest-path,,open,0,98,10,"Dijkstra linear running time on dense graph with Binary Heap **First**: The general running time of Dijkstras Shortest Path algorithm is
+
+![Dijkstra generalrunning time][1]
+
+where m is the number of edges and n the number of vertices
+
+**Second**: the number of expected decreasekey operations is the following
+
+![enter image description here][2]
+
+**Third**: The expected running time of dijkstra with a binary Heap which allows all operations in log(n) time is
+
+![enter image description here][3]
+
+But why is the running time on dense graphs linear if we consider a graph dense if
+![enter image description here][4]
+
+Can someone help with the O-notation and log calculations here?
+
+  [1]: http://i.stack.imgur.com/MYugN.png
+  [2]: http://i.stack.imgur.com/pcgd4.png
+  [3]: http://i.stack.imgur.com/fmlpI.png
+  [4]: http://i.stack.imgur.com/vpiDE.png",5
+8685530,12/31/2011 01:00:44,588299,01/24/2011 23:48:07,1,0,how to design cassandra (or another nosql) scheme?,"We are about to move a project on apache cassandra from test to pilot and as a rdbms team, we were propably missing something.
+
+**Basic rules (or lessons learned):**
+
+ - be sure you have big or almost no data (nothing between)
+ - do not believe in extremely cheap storage (cheap or not expensive might be
+   better)
+ - think of your primary key as it was a reverse index
+ - think of time (or another data creation order) as it was a row/clustering key
+ - forgot about 100% foreign keys whenewer you can
+ - sample if you can
+ - do not care about dups
+ - json and asynchronous time aggregation on client can make cpus more relaxed
+
+**ETL:**
+
+- sample history if you can (or sample it just for reporting usage on separate reporting cluster)
+- single threaded data streams spreaded over couple of servers will come in hand
+- if you can afford asynchronous processing you can profit from knowledge of data patterns
+- throw scrap data away (horizontaly and vertically) - or it will mislead BI people or even board members in worse case
+- do not care about dups
+
+The question is am I still missing something?
+Are there another ways to achieve even better performance?",performance,design,architecture,nosql,live,02/24/2012 01:52:40,not constructive,1,201,8,"how to design cassandra (or another nosql) scheme? We are about to move a project on apache cassandra from test to pilot and as a rdbms team, we were propably missing something.
+
+**Basic rules (or lessons learned):**
+
+ - be sure you have big or almost no data (nothing between)
+ - do not believe in extremely cheap storage (cheap or not expensive might be
+   better)
+ - think of your primary key as it was a reverse index
+ - think of time (or another data creation order) as it was a row/clustering key
+ - forgot about 100% foreign keys whenewer you can
+ - sample if you can
+ - do not care about dups
+ - json and asynchronous time aggregation on client can make cpus more relaxed
+
+**ETL:**
+
+- sample history if you can (or sample it just for reporting usage on separate reporting cluster)
+- single threaded data streams spreaded over couple of servers will come in hand
+- if you can afford asynchronous processing you can profit from knowledge of data patterns
+- throw scrap data away (horizontaly and vertically) - or it will mislead BI people or even board members in worse case
+- do not care about dups
+
+The question is am I still missing something?
+Are there another ways to achieve even better performance?",5
+7836487,10/20/2011 13:15:55,1005234,10/20/2011 12:56:35,1,0,is there any stock management design pattern?,"We want to design an e-commerce application, and we are mental about **consitent stock** numbers. We don't want our customers finding out, after they have bought an item, that that item is out of stock, that's a big thing here. The **average order here has about 60 different items**, which will makes things even trickier.
+
+Let's imagine these two scenarios:
+
+**1st Scenario:**
+
+1) Customer C1 opens the online store and find a product he/she wants to buy;
+
+2) That product is shown as ""in stock"" (but the current stock is 1);
+
+3) Customer C1 puts 1 item in the basket;
+
+4) Customer C2 gets into the website and select the same item (put in the basket), which is still marked as ""in stock"" (stock is still 1);
+
+5) Customer C1 goes to checkout and confirms his purchase and the application decreases the current stock for that item to 0;
+
+6) Customer C2 keeps buying items, let's say 35 other distinct items (it took 20 minutes to customer c2 to select the items he wanted);
+
+7) Customer C2 goes to checkout and confirms this purchase, but now, the first item he bought is no longer available (and we CAN NOT sell it);
+
+8) The application warns customer C2 that the first item is no longer available and that he has to check his basket;
+
+9) Customer C2 gets pissed and close the browser without buying anything.
+
+**2nd scenario (but I think it is unnecessarily complex and buggy):**
+
+1) Customer C1 opens the online store and find a product he/she wants to buy;
+
+2) That product is shown as ""in stock"" (but the current stock is 1);
+
+3) Customer C1 puts 1 item in the basket (and the application decreases the current stock for that item to 0);
+
+4) Customer C2 gets into the website and see the item he/she wanted is out of stock;
+
+5) Customer C2 leaves the website;
+
+6) Customer C1 keeps buying items (the stock decreases for it of these items);
+
+7) Customer C1 closes the browser;
+
+8) Every now and then some batch routine kicks in to remove the items which had decreased the stock but didn't get bought/confirmed.
+
+
+We have just a few distinct products, but we have been selling about 30.000.000 items by phone, some products get sold as much as 2.000.000 every day, so the concurrency in the row responsible for the stock of that product might get many updates at the same time, so it's important we get a good performance.
+
+Those are usual scenario, but is there any design pattern which gives the user a better experience while keeping the stock numbers consistent and yet yield a great application performance?
+
+Any help will be much appreciated.
+
+Cheers",performance,design,design-patterns,architecture,concurrency,,open,0,431,7,"is there any stock management design pattern? We want to design an e-commerce application, and we are mental about **consitent stock** numbers. We don't want our customers finding out, after they have bought an item, that that item is out of stock, that's a big thing here. The **average order here has about 60 different items**, which will makes things even trickier.
+
+Let's imagine these two scenarios:
+
+**1st Scenario:**
+
+1) Customer C1 opens the online store and find a product he/she wants to buy;
+
+2) That product is shown as ""in stock"" (but the current stock is 1);
+
+3) Customer C1 puts 1 item in the basket;
+
+4) Customer C2 gets into the website and select the same item (put in the basket), which is still marked as ""in stock"" (stock is still 1);
+
+5) Customer C1 goes to checkout and confirms his purchase and the application decreases the current stock for that item to 0;
+
+6) Customer C2 keeps buying items, let's say 35 other distinct items (it took 20 minutes to customer c2 to select the items he wanted);
+
+7) Customer C2 goes to checkout and confirms this purchase, but now, the first item he bought is no longer available (and we CAN NOT sell it);
+
+8) The application warns customer C2 that the first item is no longer available and that he has to check his basket;
+
+9) Customer C2 gets pissed and close the browser without buying anything.
+
+**2nd scenario (but I think it is unnecessarily complex and buggy):**
+
+1) Customer C1 opens the online store and find a product he/she wants to buy;
+
+2) That product is shown as ""in stock"" (but the current stock is 1);
+
+3) Customer C1 puts 1 item in the basket (and the application decreases the current stock for that item to 0);
+
+4) Customer C2 gets into the website and see the item he/she wanted is out of stock;
+
+5) Customer C2 leaves the website;
+
+6) Customer C1 keeps buying items (the stock decreases for it of these items);
+
+7) Customer C1 closes the browser;
+
+8) Every now and then some batch routine kicks in to remove the items which had decreased the stock but didn't get bought/confirmed.
+
+
+We have just a few distinct products, but we have been selling about 30.000.000 items by phone, some products get sold as much as 2.000.000 every day, so the concurrency in the row responsible for the stock of that product might get many updates at the same time, so it's important we get a good performance.
+
+Those are usual scenario, but is there any design pattern which gives the user a better experience while keeping the stock numbers consistent and yet yield a great application performance?
+
+Any help will be much appreciated.
+
+Cheers",5
+9252660,02/12/2012 21:06:13,1082782,12/06/2011 03:42:21,80,0,How to optimize F# programs generally,"I have an interpreter for a lisp-style language in F#, and have just gotten into the optimization phase. Simple tests of the evaluator reveal that I need to optimize it in an extreme manner. However, I don't have a general background in F# performance or optimization.
+
+Are there any good general knowledge resources for F# program optimization? Particularly useful are tips of keeping cache coherency and surprising primitive performance issues. A cursory search hasn't revealed much on the internet.
+
+Thank you!",performance,optimization,f#,,,02/13/2012 13:43:14,not a real question,1,79,6,"How to optimize F# programs generally I have an interpreter for a lisp-style language in F#, and have just gotten into the optimization phase. Simple tests of the evaluator reveal that I need to optimize it in an extreme manner. However, I don't have a general background in F# performance or optimization.
+
+Are there any good general knowledge resources for F# program optimization? Particularly useful are tips of keeping cache coherency and surprising primitive performance issues. A cursory search hasn't revealed much on the internet.
+
+Thank you!",3
+6425684,06/21/2011 13:05:33,125332,06/18/2009 19:15:27,225,19,T-SQL Use Table Variable or Sum Against Parent Table,"The scenario is this, I am creating a log table that will end up being quite large once it is all said and done and I want to create a status table that will query from the table with different date ranges and sum the results into multiple total fields. 
+
+I plan on writing this into a Stored Procedure but my question would I gain the best performance from reading all my records from the log table into a temp table before doing the sum operations.
+
+IE I have this table:
+
+    SummaryValues
+    90DayValues 
+    60DayValues
+    30DayValues
+    14DayValues
+    7DayValues
+    1DayValues
+
+Would it be logical to make a take all values for the previous 90 days and then insert them into a table value before then calculating my sum for my 6 fields in my summary table or would it be just as fast to execute 6 sum statements from the log table?
+
+",performance,tsql,,,,,open,0,170,9,"T-SQL Use Table Variable or Sum Against Parent Table The scenario is this, I am creating a log table that will end up being quite large once it is all said and done and I want to create a status table that will query from the table with different date ranges and sum the results into multiple total fields. 
+
+I plan on writing this into a Stored Procedure but my question would I gain the best performance from reading all my records from the log table into a temp table before doing the sum operations.
+
+IE I have this table:
+
+    SummaryValues
+    90DayValues 
+    60DayValues
+    30DayValues
+    14DayValues
+    7DayValues
+    1DayValues
+
+Would it be logical to make a take all values for the previous 90 days and then insert them into a table value before then calculating my sum for my 6 fields in my summary table or would it be just as fast to execute 6 sum statements from the log table?
+
+",2
+11423330,07/10/2012 23:10:02,49485,12/28/2008 08:57:41,13366,320,"Web inspector ""frames"": finding the cause of performance problems when nothing appears in the timeline","I just watched the Google I/O session [Jank Busters: Building Performant Web Apps](https://developers.google.com/events/io/sessions/gooio2012/209/) where the speakers explained how to use the new ""Frames"" view in the Chrome web inspector Timeline.
+
+Here's an example recording that I got when scrolling on a page I'm developing:
+
+![dev tools][1]
+
+As you can see, there are huge delays in some of the frames but without any apparent cause in the timeline (there are large gaps in between the yellow ""Timer Fired"" events). How can I troubleshoot the performance problems in order to increase the frame rate consistently?
+
+
+  [1]: http://i.stack.imgur.com/wtqRK.png",performance,google-chrome,web-inspector,,,,open,0,93,15,"Web inspector ""frames"": finding the cause of performance problems when nothing appears in the timeline I just watched the Google I/O session [Jank Busters: Building Performant Web Apps](https://developers.google.com/events/io/sessions/gooio2012/209/) where the speakers explained how to use the new ""Frames"" view in the Chrome web inspector Timeline.
+
+Here's an example recording that I got when scrolling on a page I'm developing:
+
+![dev tools][1]
+
+As you can see, there are huge delays in some of the frames but without any apparent cause in the timeline (there are large gaps in between the yellow ""Timer Fired"" events). How can I troubleshoot the performance problems in order to increase the frame rate consistently?
+
+
+  [1]: http://i.stack.imgur.com/wtqRK.png",3
+7857478,10/22/2011 04:55:04,809487,06/22/2011 00:57:15,27,0,Are there reports or thesis about the performance of Google App Engine or other cloud platforms,"Are there reports or thesis about the performance of Google App Engine or other cloud platforms?
+I'am writing an article about how to choose an appropriate cloud platform, and want to reference some test data.",performance,google-app-engine,azure,amazon-ec2,cloud,11/16/2011 20:12:18,off topic,1,34,16,"Are there reports or thesis about the performance of Google App Engine or other cloud platforms Are there reports or thesis about the performance of Google App Engine or other cloud platforms?
+I'am writing an article about how to choose an appropriate cloud platform, and want to reference some test data.",5
+1317491,08/23/2009 01:21:09,54680,01/13/2009 17:11:55,11763,525,Becoming the most efficient one-man team,"Like many here, I am a one-man development team. I'm responsible for everything from gathering project requirements, designing concept-screens, planning and developing databases, and writing all code.
+
+Being a one-man team is nice, but has its negatives. I don't have the ability to quickly consult with other developers, I rarely get a second set of eyes for my code, and I'm sure you guys can come up with many other negatives too.
+
+To make the most of my time, and commit myself most efficiently to my work, what tips or practices could I implement into my day-to-day routine to be the best one-man team possible?",performance,time-management,,,,08/03/2011 21:22:13,off topic,1,103,6,"Becoming the most efficient one-man team Like many here, I am a one-man development team. I'm responsible for everything from gathering project requirements, designing concept-screens, planning and developing databases, and writing all code.
+
+Being a one-man team is nice, but has its negatives. I don't have the ability to quickly consult with other developers, I rarely get a second set of eyes for my code, and I'm sure you guys can come up with many other negatives too.
+
+To make the most of my time, and commit myself most efficiently to my work, what tips or practices could I implement into my day-to-day routine to be the best one-man team possible?",2
+9909133,03/28/2012 14:01:56,1202349,02/10/2012 15:40:43,115,3,What are alternative cache solutions to Output Cache in asp.net MVC3?,"What are the alternative solutions to Output Cache in asp.net MVC3? I don't know whether its the only one or there are other alternative solutions and hence asked. This is just for gk, and not a technical question.
+
+Thanks",performance,asp.net-mvc-3,outputcache,,,04/01/2012 04:12:07,not constructive,1,38,11,"What are alternative cache solutions to Output Cache in asp.net MVC3? What are the alternative solutions to Output Cache in asp.net MVC3? I don't know whether its the only one or there are other alternative solutions and hence asked. This is just for gk, and not a technical question.
+
+Thanks",3
+8610502,12/22/2011 22:39:23,1112588,12/22/2011 22:35:21,1,0,How can I display the NHibernate log4net SQL output on a web page?,"I have NHibernate configured with log4net to output the SQL generated to the log file. 
+
+I am trying to figure out a way to display the SQL generated by NHibernate for a page request on the web page itself (mostly so that developers keep an eye on what's going on 'under the hood').
+
+Thanks in advance!",performance,nhibernate,testing,log4net,,,open,0,55,13,"How can I display the NHibernate log4net SQL output on a web page? I have NHibernate configured with log4net to output the SQL generated to the log file. 
+
+I am trying to figure out a way to display the SQL generated by NHibernate for a page request on the web page itself (mostly so that developers keep an eye on what's going on 'under the hood').
+
+Thanks in advance!",4
+6477406,06/25/2011 11:22:40,676829,03/25/2011 13:44:41,31,0,performance issue,"Our is a considerably big project developed in Asp.Net 2.0 Web forms (Three layer architecture). The project consitutes of;
+
+    * separate Class Library for each module (thus the count for web site is more)
+    * Class having a const for each stored procedure name
+    * multiple .resx files to store keep value pairs + separate Class Library to fetch data from them
+    * separate class Library to fetch values from Web.config appsettings
+    * enterprise library to avoid passing stored procedure parameter names
+    * Assignment of href for anchors at run time
+    * Thus lengthy call stack for all operations
+
+Is it so above one or multiple things are causing the web site to run slow.
+
+Suggestions will be highly appreciated.
+
+thanks in advance
+",performance,,,,,06/25/2011 11:45:39,too localized,1,141,2,"performance issue Our is a considerably big project developed in Asp.Net 2.0 Web forms (Three layer architecture). The project consitutes of;
+
+    * separate Class Library for each module (thus the count for web site is more)
+    * Class having a const for each stored procedure name
+    * multiple .resx files to store keep value pairs + separate Class Library to fetch data from them
+    * separate class Library to fetch values from Web.config appsettings
+    * enterprise library to avoid passing stored procedure parameter names
+    * Assignment of href for anchors at run time
+    * Thus lengthy call stack for all operations
+
+Is it so above one or multiple things are causing the web site to run slow.
+
+Suggestions will be highly appreciated.
+
+thanks in advance
+",1
+5691947,04/17/2011 06:27:36,711844,04/17/2011 05:33:02,1,0,The role of determination of the variable type in software performance,"I know with changing the variable type, the speed of the program change. I want to understand the other effects of this change in the software performance.
+",performance,,,,,04/17/2011 09:55:42,not a real question,1,27,11,"The role of determination of the variable type in software performance I know with changing the variable type, the speed of the program change. I want to understand the other effects of this change in the software performance.
+",1
+9461293,02/27/2012 07:17:21,420613,08/14/2010 20:15:21,1170,121,DB2 Varchar field length,"I got in a confusion whether to choose DB2 Varchar length of 255 or 256. What will be good length w.r.t performance etc. From my search on google I think 255 is best as its equal to 1 byte. I am more concerned about 255 = 1 byte or 256 = 1 byte.
+
+",performance,db2,length,,,,open,0,53,4,"DB2 Varchar field length I got in a confusion whether to choose DB2 Varchar length of 255 or 256. What will be good length w.r.t performance etc. From my search on google I think 255 is best as its equal to 1 byte. I am more concerned about 255 = 1 byte or 256 = 1 byte.
+
+",3
+922599,05/28/2009 18:58:59,27456,10/13/2008 15:00:47,23,1,Is sqrt still slow in C as 2009?,"Is sqrt still slow in C as 2009?
+
+Are the old tricks (lookup table, approx functions) still useful?
+",performance,c,optimization,,,,open,0,17,8,"Is sqrt still slow in C as 2009? Is sqrt still slow in C as 2009?
+
+Are the old tricks (lookup table, approx functions) still useful?
+",3
+4460922,12/16/2010 12:49:23,331000,05/02/2010 21:44:58,1,0,PHP XMPP bot performance,Hey guys. I need to write xmpp bot which will be receiving and sending about 2000 messages per hour and work 24/7. Is it bad idea to write it on php? What about performance if i'll use php 5.3?,performance,xmpp,php-5.3,,,,open,0,39,4,PHP XMPP bot performance Hey guys. I need to write xmpp bot which will be receiving and sending about 2000 messages per hour and work 24/7. Is it bad idea to write it on php? What about performance if i'll use php 5.3?,3
+10341218,04/26/2012 20:48:26,1293964,03/26/2012 20:27:30,1,1,Jmeter remote/distributed test throughput error,"I have created a simple test (just to download a file from famous site like flickr or google.) I run the test locally (either from jmeter directly or talk to the locally running jmeter-server,) the average time is 250ms and the throughput 29.4/s. Then I remote start this test on a host (which has much better internet connection,) the resulting average time is 225ms but the throughput is extremely low -- like 2/s or even below 1/s. The average time number looks reasonable. The throughput number is totally useless. It appears that the jmeter is somehow counting the time between the local jmeter driver and the jmeter server, rather than just averaging the throughput a experienced by every jmeter servers. How can we get the right throughput numbers in remote/distributed tests? ",performance,testing,jmeter,throughput,,,open,0,132,5,"Jmeter remote/distributed test throughput error I have created a simple test (just to download a file from famous site like flickr or google.) I run the test locally (either from jmeter directly or talk to the locally running jmeter-server,) the average time is 250ms and the throughput 29.4/s. Then I remote start this test on a host (which has much better internet connection,) the resulting average time is 225ms but the throughput is extremely low -- like 2/s or even below 1/s. The average time number looks reasonable. The throughput number is totally useless. It appears that the jmeter is somehow counting the time between the local jmeter driver and the jmeter server, rather than just averaging the throughput a experienced by every jmeter servers. How can we get the right throughput numbers in remote/distributed tests? ",4
