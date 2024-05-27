@@ -198,6 +198,7 @@ class BertTrainer:
         """ Calls the batch iterator to evaluate the model."""
         epoch = 0
         self.iteration(epoch, self.eval_dataloader, train=False)
+        return self.eval_acc, self.eval_loss
 
     def iteration(self, epoch, data_loader, train=True):
         """ Iterates through one epoch of training or evaluation"""
