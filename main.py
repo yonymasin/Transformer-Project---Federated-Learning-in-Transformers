@@ -138,8 +138,8 @@ def init_hyper(args, sam_node=None):
                            depth=args.depth, client_sample=sam_node)
 
     elif args.dataset == "stack_overflow_questions":
-        hnet = LoraHyper(args.n_parties, embed_dim, hidden_dim=args.hyper_hid, dim=128,
-                           heads=8, dim_head=64, n_hidden=args.n_hidden,
+        hnet = LoraHyper(args.n_parties, embed_dim, hidden_dim=args.hyper_hid, bert_emb_dim=768,
+                           lora_rank=8, n_hidden=args.n_hidden,
                            depth=args.depth, client_sample=sam_node)
 
     return hnet
@@ -227,7 +227,7 @@ if __name__ == '__main__':
         args.n_parties = len(train_dl_global)
     elif args.dataset == 'stack_overflow_questions':
         #data_dir = './data/stack_overflow_questions/'
-        data_dir = os.path.join("data", "stack_overflow_questions", "train")
+        data_dir = os.path.join("data", "stack_overflow_dataset", "train")
         train_dl_global, val_dl_global, test_dl_global, original_c_num = get_spe_dataloaders(args.dataset, data_dir,
                                                                                              args.batch_size,
                                                                                              args.chunk_len)
@@ -298,7 +298,7 @@ if __name__ == '__main__':
             global_model.load_state_dict(global_para)
 
             if (round + 1) >= test_round and (round + 1) % eval_step == 0:
-                if args.dataset == 'shakespeare':
+                if args.dataset == 'shakespeare' or args.dataset == 'stack_overflow_questions':
                     train_results, train_avg_loss, train_acc, train_all_acc, test_results, test_avg_loss, test_acc, test_all_acc = compute_accuracy_per_client_simple(
                         global_model, args, train_dl_global, test_dl_global, nets, device=device)
 
@@ -429,7 +429,7 @@ if __name__ == '__main__':
             del grads_update, weights, global_para, nets_list
 
             if (round + 1) >= test_round and (round + 1) % eval_step == 0:
-                if args.dataset == 'shakespeare':
+                if args.dataset == 'shakespeare' or args.dataset == 'stack_overflow_questions':
                     train_results, train_avg_loss, train_acc, train_all_acc, test_results, test_avg_loss, test_acc, test_all_acc = compute_accuracy_per_client(
                         hnet, nets, global_model, args, train_dl_global, test_dl_global, 0, device=device)
 

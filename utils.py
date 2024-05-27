@@ -78,6 +78,7 @@ def compute_accuracy_shakes(model, dataloader, device="cpu"):
     with torch.no_grad():
         for tmp in dataloader:
             for x, y, indices in tmp:
+                logger.info(x)
                 x = x.to(device)
                 y = y.to(device)
                 n_samples += y.size(0)
@@ -107,7 +108,7 @@ def compute_accuracy_per_client_simple(global_model, args, net_dataidx_map_train
         local_model = copy.deepcopy(global_model)
         local_model.eval()
 
-        if args.dataset == 'shakespeare':
+        if args.dataset == 'shakespeare' or args.dataset == 'stack_overflow_questions':
             train_dl_local = net_dataidx_map_train[net_id]
             test_dl_local = net_dataidx_map_test[net_id]
             test_correct, test_total, test_avg_loss = compute_accuracy_shakes(local_model, test_dl_local, device=device)
@@ -156,7 +157,7 @@ def compute_accuracy_per_client(hyper, nets, global_model, args, net_dataidx_map
         local_model.load_state_dict(node_weights, strict=False)
         local_model.eval()
 
-        if args.dataset == "shakespeare":
+        if args.dataset == "shakespeare" or args.dataset == 'stack_overflow_questions':
             train_dl_local = net_dataidx_map_train[net_id]
             test_dl_local = net_dataidx_map_test[net_id]
 
