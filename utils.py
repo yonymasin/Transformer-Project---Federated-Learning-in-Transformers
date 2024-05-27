@@ -4,12 +4,12 @@ import torch
 import torch.utils.data as data
 import copy
 from collections import defaultdict
+import torch.nn as nn
+from transformers import BertTokenizer
 
 from create_datasets import CharacterDataset, create_stack_overflow_questions_dataset
-
 from constants import *
-
-import torch.nn as nn
+from methods import BertTrainer
 
 
 logging.basicConfig()
@@ -98,6 +98,38 @@ def compute_accuracy_shakes(model, dataloader, device="cpu"):
     return global_metric, n_samples, global_loss / n_samples
 
 
+def compute_accuracy_stack_overflow_questions(model, model_id, dataloader, device="cpu"):
+    was_training = False
+    if model.training:
+        model.eval()
+        was_training = True
+
+    n_samples = len(dataloader.dataset)
+
+    tokenizer_base = BertTokenizer.from_pretrained('bert-base-uncased')
+    trainer_bert_base_lora = BertTrainer(
+        model,
+        model_id,
+        tokenizer_base,
+        lr=None,
+        epochs=0,
+        optimizer_type=None,
+        device=device,
+        train_dataloader=dataloader,
+        eval_dataloader=dataloader,
+        output_dir=f"./eval_models/net_{model_id}_bert_fine_tuned_lora",
+        output_filename='bert_base_lora',
+        save=True,
+    )
+    
+    eval_acc, eval_loss = trainer_bert_base_lora.evaluate()
+
+    if was_training:
+        model.train()
+
+    return eval_acc * n_samples, n_samples, eval_loss / n_samples
+
+
 def compute_accuracy_per_client_simple(global_model, args, net_dataidx_map_train, net_dataidx_map_test, nets=None,
                                        device="cpu"):
     if args.train_acc_pre:
@@ -108,13 +140,23 @@ def compute_accuracy_per_client_simple(global_model, args, net_dataidx_map_train
         local_model = copy.deepcopy(global_model)
         local_model.eval()
 
-        if args.dataset == 'shakespeare' or args.dataset == 'stack_overflow_questions':
+        if args.dataset == 'shakespeare':
             train_dl_local = net_dataidx_map_train[net_id]
             test_dl_local = net_dataidx_map_test[net_id]
             test_correct, test_total, test_avg_loss = compute_accuracy_shakes(local_model, test_dl_local, device=device)
             if args.train_acc_pre:
                 train_correct, train_total, train_avg_loss = compute_accuracy_shakes(local_model, train_dl_local,
                                                                                      device=device)
+
+        if args.dataset == 'stack_overflow_questions':
+            train_dl_local = net_dataidx_map_train[net_id]
+            test_dl_local = net_dataidx_map_test[net_id]
+
+            test_correct, test_total, test_avg_loss = compute_accuracy_stack_overflow_questions(local_model, net_id, test_dl_local, device=device)
+            if args.train_acc_pre:
+                train_correct, train_total, train_avg_loss = compute_accuracy_stack_overflow_questions(local_model, net_id, train_dl_local,
+                                                                                     device=device)
+
         if args.train_acc_pre:
             train_results[net_id]['loss'] = train_avg_loss
             train_results[net_id]['correct'] = train_correct
@@ -157,13 +199,22 @@ def compute_accuracy_per_client(hyper, nets, global_model, args, net_dataidx_map
         local_model.load_state_dict(node_weights, strict=False)
         local_model.eval()
 
-        if args.dataset == "shakespeare" or args.dataset == 'stack_overflow_questions':
+        if args.dataset == "shakespeare":
             train_dl_local = net_dataidx_map_train[net_id]
             test_dl_local = net_dataidx_map_test[net_id]
 
             test_correct, test_total, test_avg_loss = compute_accuracy_shakes(local_model, test_dl_local, device=device)
             if args.train_acc_pre:
                 train_correct, train_total, train_avg_loss = compute_accuracy_shakes(local_model, train_dl_local,
+                                                                                     device=device)
+
+        if args.dataset == 'stack_overflow_questions':
+            train_dl_local = net_dataidx_map_train[net_id]
+            test_dl_local = net_dataidx_map_test[net_id]
+
+            test_correct, test_total, test_avg_loss = compute_accuracy_stack_overflow_questions(local_model, net_id, test_dl_local, device=device)
+            if args.train_acc_pre:
+                train_correct, train_total, train_avg_loss = compute_accuracy_stack_overflow_questions(local_model, net_id, train_dl_local,
                                                                                      device=device)
         if args.train_acc_pre:
             train_results[net_id]['loss'] = train_avg_loss
