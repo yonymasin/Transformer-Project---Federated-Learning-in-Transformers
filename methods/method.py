@@ -68,7 +68,6 @@ def train_net_bert(net_id, net, train_dataloader, test_dataloader, epochs, lr, a
         tokenizer_base,
         lr=lr,
         epochs=epochs,
-        optimizer_type=args_optimizer,
         device=device,
         train_dataloader=train_dataloader,
         eval_dataloader=test_dataloader,

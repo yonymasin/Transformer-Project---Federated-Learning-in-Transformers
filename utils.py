@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 from create_datasets import CharacterDataset, create_stack_overflow_questions_dataset
 from constants import *
-from methods import BertTrainer
+
 
 
 logging.basicConfig()
@@ -114,9 +114,6 @@ def compute_accuracy_stack_overflow_questions(model, model_id, dataloader, devic
         model,
         model_id,
         tokenizer_base,
-        lr=None,
-        epochs=0,
-        optimizer_type=None,
         device=device,
         train_dataloader=dataloader,
         eval_dataloader=dataloader,
@@ -124,7 +121,7 @@ def compute_accuracy_stack_overflow_questions(model, model_id, dataloader, devic
         output_filename='bert_base_lora',
         save=True,
     )
-    
+
     eval_acc, eval_loss = trainer_bert_base_lora.evaluate()
 
     if was_training:
@@ -320,7 +317,7 @@ class BertTrainer:
             eval_dataloader=None,
             epochs=1,
             lr=5e-04,
-            optimizer_type='AdamW',
+            optimizer_type='adamW',
             device='cpu',
             output_dir='./',
             output_filename='model_state_dict.pt',
