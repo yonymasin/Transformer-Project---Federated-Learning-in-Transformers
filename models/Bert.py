@@ -36,8 +36,8 @@ class BertConfig:
     layer_norm_eps: float = 1e-12
     pad_token_id: int = 103
     return_pooler_output: bool = False
-
-
+   
+    #test
 class BertEmbeddings(nn.Module):
     def __init__(self, config):
         super().__init__()
