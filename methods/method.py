@@ -101,13 +101,13 @@ def local_train_net_per(nets, selected, args, net_dataidx_map_train, net_dataidx
             train_dl_local = net_dataidx_map_train[net_id]
             test_dl_local = net_dataidx_map_test[net_id]
             trainacc, testacc = train_net_bert(net_id, net, train_dl_local, test_dl_local, n_epoch, args.lr, args.optimizer, args, device=device)
-        logger.info("net %d final test acc %f" % (net_id, testacc))
+        logger.info("[LOCAL] net %d final test acc %f" % (net_id, testacc))
         avg_acc += testacc
         del trainacc, testacc, train_dl_local, test_dl_local, net
 
     avg_acc /= len(selected)
     if args.alg == 'local_training':
-        logger.info("avg test acc %f" % avg_acc)
+        logger.info("[LOCAL] avg test acc %f" % avg_acc)
     nets_list = list(nets.values())
 
     del avg_acc, nets

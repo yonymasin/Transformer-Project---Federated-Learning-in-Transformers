@@ -81,7 +81,6 @@ def compute_accuracy_shakes(model, dataloader, device="cpu"):
     with torch.no_grad():
         for tmp in dataloader:
             for x, y, indices in tmp:
-                logger.info(x)
                 x = x.to(device)
                 y = y.to(device)
                 n_samples += y.size(0)
@@ -151,7 +150,7 @@ def compute_accuracy_per_client_simple(global_model, args, net_dataidx_map_train
         if args.dataset == 'stack_overflow_questions':
             train_dl_local = net_dataidx_map_train[net_id]
             test_dl_local = net_dataidx_map_test[net_id]
-
+            logger.info("computing local accuracy:")
             test_correct, test_total, test_avg_loss = compute_accuracy_stack_overflow_questions(local_model, net_id, test_dl_local, device=device)
             if args.train_acc_pre:
                 train_correct, train_total, train_avg_loss = compute_accuracy_stack_overflow_questions(local_model, net_id, train_dl_local,
@@ -202,7 +201,6 @@ def compute_accuracy_per_client(hyper, nets, global_model, args, net_dataidx_map
         if args.dataset == "shakespeare":
             train_dl_local = net_dataidx_map_train[net_id]
             test_dl_local = net_dataidx_map_test[net_id]
-
             test_correct, test_total, test_avg_loss = compute_accuracy_shakes(local_model, test_dl_local, device=device)
             if args.train_acc_pre:
                 train_correct, train_total, train_avg_loss = compute_accuracy_shakes(local_model, train_dl_local,
@@ -211,7 +209,7 @@ def compute_accuracy_per_client(hyper, nets, global_model, args, net_dataidx_map
         if args.dataset == 'stack_overflow_questions':
             train_dl_local = net_dataidx_map_train[net_id]
             test_dl_local = net_dataidx_map_test[net_id]
-
+            logger.info("computing local accuracy:")
             test_correct, test_total, test_avg_loss = compute_accuracy_stack_overflow_questions(local_model, net_id, test_dl_local, device=device)
             if args.train_acc_pre:
                 train_correct, train_total, train_avg_loss = compute_accuracy_stack_overflow_questions(local_model, net_id, train_dl_local,
